@@ -16,7 +16,7 @@ here and **carries a G5 flag** (see the list at the foot of this file).
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
 | CON:GQUR-300-6-1 | Takings are not profit | آمدنی منافع نہیں ہوتی | - | 6.1 | SLO:GQUR-300-2-2 | MCQ-01, MCQ-02, RRQ-01, RRQ-04 |
-| CON:GQUR-300-6-2 | Profit and loss percent against costs | منافع اور نقصان کا فیصد لاگت کے حساب سے | CON:GQUR-300-6-1 | 6.1 | SLO:GQUR-300-2-2 | RRQ-01, ERQ-01 |
+| CON:GQUR-300-6-2 | Profit and loss percent against costs | منافع اور نقصان کا فیصد لاگت کے حساب سے | CON:GQUR-300-6-1 | 6.1 | SLO:GQUR-300-2-2 | RRQ-01, ERQ-01, ERQ-04 |
 | CON:GQUR-300-6-3 | Simple interest: principal x rate x time | سودِ سادہ: اصل ضرب شرح ضرب مدت | CON:GQUR-300-6-1 | 6.1 | SLO:GQUR-300-2-2 | MCQ-03, RRQ-02 |
 | CON:GQUR-300-6-4 | The budget's order: savings before spending | بجٹ کی ترتیب: بچت خرچ سے پہلے | CON:GQUR-300-6-1 | 6.1 | SLO:GQUR-300-2-2 | MCQ-04, RRQ-03 |
 | CON:GQUR-300-6-5 | The four persuasion moves (axis, base, comparison, hidden rate) | چار قائل کرنے والے ہتھکنڈے | - | 6.2 | SLO:GQUR-300-5-5 | MCQ-05, MCQ-06, RRQ-05 |

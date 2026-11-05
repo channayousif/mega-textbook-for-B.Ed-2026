@@ -7,8 +7,8 @@ topic_no: 2
 topic_label: "2.2"
 clo_refs:
   - "SLO:GQUR-301-2-2"
-blooms_summary: "Remember the three main chart types and their uses; understand when each is appropriate; apply the skill to produce a bar chart, histogram, and pie chart from the same data set and compare what each reveals."
-est_reading_minutes: 7
+blooms_summary: "Remember the three main chart types and their uses; understand when each is appropriate; apply the skill to produce bar and pie charts from categories and a histogram from grouped numeric data; compare what each reveals."
+est_reading_minutes: 10
 translation_status: draft
 ---
 
@@ -27,7 +27,7 @@ read the numbers aloud, but she knows that people remember pictures better than
 lists. She is not sure whether to use a bar chart, a histogram, or a pie chart,
 or whether it matters which one she picks.
 
-<Figure id="fig-U2-3" kind="diagram" src="/img/figures/gqur-301/unit-02/fig-U2-3.svg" alt="Three charts side by side using the same school examination results data: a bar chart on the left, a histogram in the middle, and a pie chart on the right, with brief labels showing what each emphasizes." width={780} height={470} />
+<Figure id="fig-U2-3" kind="diagram" src="/img/figures/gqur-301/unit-02/fig-U2-3.svg" alt="School examination results: a correctly scaled bar chart and pie chart compare categories and shares; the crossed-out middle chart intentionally misuses touching histogram bars for categories." width={780} height={470} />
 
 <Figure id="fig-U2-4" kind="table" src="/img/figures/gqur-301/unit-02/fig-U2-4.svg" alt="Table with rows for bar chart, histogram, and pie chart, comparing the data type each requires, what each emphasizes, and when to choose it, with school examples." width={780} height={470} />
 
@@ -94,6 +94,51 @@ For the examination results, a pie chart would show what fraction of all 172
 pupils falls into each division. It answers the question "what proportion?"
 rather than "how many?"
 
+### Worked chart construction
+
+**Bar chart.** For the 172 results, put the five result categories on the
+horizontal axis and number of pupils on the vertical axis. Start at zero,
+mark equal steps of 10 up to 80, and use the same scale for every bar.
+Draw separated bars to heights 45, 78, 32, 12 and 5. Label both axes and give
+the chart a title. Check that the counts sum to 172.
+
+**Pie chart.** First find the total, 172. For each category, calculate
+percentage = count ÷ 172 × 100 and sector angle = count ÷ 172 × 360°.
+Distinction gives 45 ÷ 172 × 100 = 26.16% and 45 ÷ 172 × 360° = 94.19°.
+The other angles are 163.26°, 66.98°, 25.12° and 10.47° in category order.
+They total 360.02° after rounding; use the unrounded angles or make the last
+sector fill the small rounding remainder. Draw a circle, mark its centre,
+and use a protractor to measure consecutive sectors from one starting ray.
+Label sectors with category names and percentages, or use numbered sectors
+with a matching legend. Rounded percentages should total about 100%.
+
+**Histogram.** Use numeric marks, not result categories. Suppose ten pupils'
+whole-number marks out of 29 give this table:
+
+| Marks | Boundaries | Frequency |
+|---|---|---|
+| 0-9 | -0.5 to 9.5 | 2 |
+| 10-19 | 9.5 to 19.5 | 5 |
+| 20-29 | 19.5 to 29.5 | 3 |
+
+The half-mark boundaries assign each integer score to exactly one bin.
+Each bin has width 10. Label the horizontal axis "Mark" with boundaries at
+-0.5, 9.5, 19.5 and 29.5. Label the vertical axis "Number of pupils", starting
+at zero with equal steps of 1. Draw touching rectangles of heights 2, 5 and 3.
+Check that their frequencies sum to 10. The tallest bar shows the 10-19 bin.
+
+**Unequal widths need a different scale.** A histogram represents frequency
+by bar area. Equal widths let us use frequency as height. With unequal
+widths, height must be frequency ÷ width, called frequency density. For
+example, journey times from 0 up to but not including 10 minutes have
+frequency 6, and 10 up to but not including 30 minutes have frequency 8.
+Widths are 10 and 20 minutes, so density heights are 0.6 and 0.4 pupils per
+minute. Areas are 10 × 0.6 = 6 and 20 × 0.4 = 8. Draw actual widths on the
+time axis and label the vertical axis "Frequency density (pupils per minute)".
+Using count heights for unequal widths would distort the areas. Alternatively,
+re-group raw observations into equal-width bins. Aggregated counts cannot
+reveal how observations split into smaller bins.
+
 ### Choosing between them: a simple guide
 
 | Use a bar chart when... | Use a histogram when... | Use a pie chart when... |
@@ -157,7 +202,8 @@ next session.
 ## Summative task
 
 The following table shows the number of pupils (out of 200) who scored in each
-mark range on a school test:
+mark range on a school test marked in whole numbers from 0 to 99. Use
+boundaries -0.5, 19.5, 39.5, 59.5, 79.5 and 99.5, giving equal widths of 20:
 
 | Mark range | Number of pupils |
 |---|---|
@@ -165,7 +211,7 @@ mark range on a school test:
 | 20-39 | 35 |
 | 40-59 | 60 |
 | 60-79 | 55 |
-| 80-100 | 35 |
+| 80-99 | 35 |
 
 1. Produce a histogram for this data. (Describe the axes and the height of
    each bar; you may draw it on paper.)
@@ -180,7 +226,7 @@ mark range on a school test:
 |---|---|
 | *Chart choice and drawing* | 0-3: correct histogram with labelled axes and correct heights / two of three correct / one or none. |
 | *Explanation* | 0-2: explanation referencing the continuous nature of grouped quantitative data / partial explanation / none. |
-| *Interpretation* | 0-2: correct description of the shape (central peak, roughly symmetric) / partial / incorrect. |
+| *Interpretation* | 0-2: describes the peak at 40-59 and compares lower and upper ranges using counts / partial / incorrect. |
 
 ## Further reading
 
