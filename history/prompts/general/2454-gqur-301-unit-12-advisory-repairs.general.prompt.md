@@ -24,6 +24,8 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-12/unit-assessment.mdx
   - specs/content/gqur-301/tasks.md
   - specs/content/gqur-301/reviews/unit-12/repair-20261105.md
+  - specs/content/gqur-301/reviews/unit-12/G2/20261105T145541931Z-gates.json
+  - specs/content/gqur-301/reviews/unit-12/G2/logs-20261105T145541931Z/
 tests:
   - npm run check:content (baseline and repaired state)
   - scripts/heavy.sh npm test
@@ -41,7 +43,7 @@ Applied bounded English and Urdu repairs from the latest G3 report. Added actual
 ## Outcome
 
 - ✅ Impact: Resolves authorable semantic and assessment findings without certification.
-- 🧪 Tests: Baseline all 14 content gates passed. Final checks pending; refresh stale Unit 12 G2 evidence after committing bound inputs.
+- 🧪 Tests: Baseline all 14 content gates passed; 31 test files / 368 tests passed. Initial repaired run exposed only stale Unit 12 G2 evidence and generated content status. Committed bound inputs, generated new scoped G2 evidence with all eight draft gates passing, appended its G2 row and regenerated ignored content status. Final 14-gate rerun PASS with no findings relative to origin/main. Coordinate-table checks and baseline child-panel rectangle checks also passed; these are static checks, not rendered inspection.
 - 📁 Files: Six EN/UR MDX pages, advisory tracker row, author repair handoff, this PHR and scoped deterministic G2 evidence.
 - 🔁 Next prompts: Host to arrange fresh independent review, authorised browser/print inspection, provenance and G1/source evidence.
 - 🧠 Reflection: Missing coordinates require conditional reasoning; axis rescaling has no fixed stronger/weaker visual rule.
@@ -56,6 +58,6 @@ Applied bounded English and Urdu repairs from the latest G3 report. Added actual
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Reviewed SVG overlap had already been repaired in baseline. Editing English invalidates deterministic G2 inputs; preserve history and refresh only this unit.
-- Graders run and results (PASS/FAIL): Baseline content gates PASS; repaired gates and unit tests pending.
+- Graders run and results (PASS/FAIL): Baseline content gates PASS; unit tests PASS (368); scoped G2 draft gates PASS (8); initial repaired full content run FAIL only for stale G2 manifest and generated status, both refreshed; final content rerun PASS (14/14); git diff --check PASS.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Inspect current light/dark figures at narrow width and A4 under explicit browser authorisation.
