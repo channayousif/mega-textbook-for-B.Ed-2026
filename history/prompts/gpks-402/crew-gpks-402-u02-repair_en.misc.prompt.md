@@ -16,41 +16,38 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/gpks-402/unit-02/topic-01.mdx
-  - docs/semester-2/gpks-402/unit-02/topic-02.mdx
-  - docs/semester-2/gpks-402/unit-02/unit-assessment.mdx
-  - docs/semester-2/gpks-402/unit-02/unit-teacher-notes.mdx
-  - history/prompts/gpks-402/crew-gpks-402-u02-repair_en.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-teacher-notes.mdx
-  - specs/content/gpks-402/figures/unit-02.md
-  - specs/content/gpks-402/reviews/unit-02/G2/20261105T111715992Z-gates.json
-  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-bloom-bands.txt
-  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-concept-graph.txt
-  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-depth-gate.txt
-  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-docs-sync.txt
-  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-figures.txt
-  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-no-answer-keys.txt
-  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-no-em-dash.txt
-  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/validate-content.txt
-  - specs/content/gpks-402/sources/texts/khan-khan-2020-aligarh.md
-  - specs/content/gpks-402/sources/unit-02.md
-  - specs/content/gpks-402/tasks.md
-  - static/content-status.json
-  - static/img/figures/gpks-402/unit-02/fig-U2-1.dark.svg
-  - static/img/figures/gpks-402/unit-02/fig-U2-1.svg
-  - static/img/figures/gpks-402/unit-02/fig-U2-1.ur.dark.svg
-  - static/img/figures/gpks-402/unit-02/fig-U2-1.ur.svg
-  - static/img/figures/gpks-402/unit-02/fig-U2-4.dark.svg
-  - static/img/figures/gpks-402/unit-02/fig-U2-4.svg
-  - static/img/figures/gpks-402/unit-02/fig-U2-4.ur.dark.svg
-  - static/img/figures/gpks-402/unit-02/fig-U2-4.ur.svg
+ - docs/semester-2/gpks-402/unit-02/topic-01.mdx
+ - docs/semester-2/gpks-402/unit-02/topic-02.mdx
+ - docs/semester-2/gpks-402/unit-02/unit-assessment.mdx
+ - docs/semester-2/gpks-402/unit-02/unit-teacher-notes.mdx
+ - history/prompts/gpks-402/crew-gpks-402-u02-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-teacher-notes.mdx
+ - specs/content/gpks-402/figures/unit-02.md
+ - specs/content/gpks-402/reviews/unit-02/G2/20261105T111715992Z-gates.json
+ - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-bloom-bands.txt
+ - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-concept-graph.txt
+ - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-depth-gate.txt
+ - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-docs-sync.txt
+ - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-figures.txt
+ - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-no-answer-keys.txt
+ - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-no-em-dash.txt
+ - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/validate-content.txt
+ - specs/content/gpks-402/sources/texts/khan-khan-2020-aligarh.md
+ - specs/content/gpks-402/sources/unit-02.md
+ - specs/content/gpks-402/tasks.md
+ - static/img/figures/gpks-402/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-1.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-1.ur.dark.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-1.ur.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-4.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-4.ur.dark.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-4.ur.svg
 tests:
-  - npm run check:content
-  - node scripts/measure-figure-text.mjs static/img/figures/gpks-402/unit-02/fig-U2-*.svg
-  - npm run build:content-status
+ - npm run check:content
 ---
 
 ## Prompt
@@ -102,28 +99,31 @@ From `specs/content/gpks-402/reviews/unit-02/G3/20261102T212207Z-g3-desk-94983dc
 - (gpks-402-u02-translate-conflict1, fix, agy) English draft inconsistencies (fig-U2-4 width, MCQ 10 duration, MCQ 4 weightage) and bank spelling الی گڑھ remain carried into Urdu and need review before G5.
 - (gpks-402-u02-translate-conflict1, fix, agy) Rendered page inspection (render-inspect --locale ur) was not run because builds are forbidden; G5 review needs it.
 
+
 ## Response snapshot
 
-Repaired all blocking and advisory findings from G3 review report `20261102T212207Z-g3-desk-94983dc8.json` across English content, assessment items, figures, source declarations, and Urdu translations; refreshed G2 gate evidence and appended advisory revise tracker row.
+Repaired GPKS-402 Unit 2 chronology, 1945–46 electoral statistics, assessment keys, rubrics, and source declarations per G3 report 20261102T212207Z-g3-desk-94983dc8.json with full Urdu parity.
 
 ## Outcome
 
-- ✅ Impact: repair_en for GPKS-402 Unit 2 by agy.
-- 🧪 Tests: npm run check:content passed cleanly with no scope findings.
-- 📁 Files: 31 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: All 7 blocking and 1 advisory findings from the latest G3 review report were resolved with exact source verification, chronological precision, and full English-Urdu parity.
+- Impact: repair_en for GPKS-402 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 30 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Repaired GPKS-402 Unit 2 chronology (1875 school / 1877 college; 1916–1929 13-year interval; 1945–46 90.1% mandate), MCQ stems/keys/rubrics, source declarations (Khan & Khan 2020 bound excerpt + D-2026-0001 declarations), simplified HSC terms, updated SVG figures, mirrored all changes in Urdu, and appended the advisory revise tracker row.
-- Decisions the team must respect: G3 stays advisory and unticked; 1945–46 electoral mandate is 446/495 provincial Muslim seats (90.1%) under restricted franchise, which must not be conflated with universal suffrage or a referendum.
-- Pending / next owner: Independent G3 reviewer for fresh English review, followed by G5 Urdu review.
+- Shipped / changed: Repaired GPKS-402 Unit 2 chronology, 1945–46 electoral statistics, assessment keys, rubrics, and source declarations per G3 report 20261102T212207Z-g3-desk-94983dc8.json with full Urdu parity.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - GPKS-402 Unit 2 G2 gate evidence refreshed and all 14 content gates pass; ready for fresh independent G3 English review followed by G5 Urdu review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none.
-- Graders run and results (PASS/FAIL): PASS (check:content, measure-figure-text, report-content-status).
-- Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): proceed to independent G3 review run.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
