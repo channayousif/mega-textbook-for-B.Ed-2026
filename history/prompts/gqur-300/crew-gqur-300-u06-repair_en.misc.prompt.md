@@ -29,6 +29,15 @@ files:
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/unit-teacher-notes.mdx
  - specs/content/gqur-300/concepts/unit-06.md
  - specs/content/gqur-300/coverage/unit-06.md
+ - specs/content/gqur-300/reviews/unit-06/G2/20261105T125412430Z-gates.json
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-bloom-bands.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-concept-graph.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-depth-gate.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-docs-sync.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-figures.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-no-answer-keys.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-no-em-dash.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/validate-content.txt
  - specs/content/gqur-300/sources/texts/mcclure2020.md
  - specs/content/gqur-300/sources/unit-06.md
  - specs/content/gqur-300/tasks.md
@@ -72,7 +81,7 @@ Repaired all open blocking and advisory findings from G3 review report `20261102
 
 - ✅ Impact: repair_en for GQUR-300 Unit 6 by agy.
 - 🧪 Tests: npm run check:content passed cleanly with no scope findings.
-- 📁 Files: 16 file(s), listed above.
+- 📁 Files: 25 file(s), listed above.
 - 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
 - 🧠 Reflection: All blocking (S2, S4, A2, S5) and advisory (S3, A3, R1, AU1, P1, C1) findings were resolved with exact arithmetic corrections, point-of-use disclosures, and full English-Urdu parity.
 
