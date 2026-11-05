@@ -16,22 +16,22 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/efmp-304/unit-02/index.mdx
-  - history/prompts/efmp-304/crew-efmp-304-u02-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-02/index.mdx
-  - specs/content/efmp-304/figures/unit-02.banner.md
-  - specs/content/efmp-304/reviews/unit-02/G2/20261105T162929826Z-gates.json
-  - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-bloom-bands.txt
-  - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-concept-graph.txt
-  - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-depth-gate.txt
-  - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-docs-sync.txt
-  - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-figures.txt
-  - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-no-answer-keys.txt
-  - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-no-em-dash.txt
-  - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/validate-content.txt
-  - specs/content/efmp-304/tasks.md
+ - docs/semester-2/efmp-304/unit-02/index.mdx
+ - history/prompts/efmp-304/crew-efmp-304-u02-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-02/index.mdx
+ - specs/content/efmp-304/figures/unit-02.banner.md
+ - specs/content/efmp-304/reviews/unit-02/G2/20261105T162929826Z-gates.json
+ - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-bloom-bands.txt
+ - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-concept-graph.txt
+ - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-depth-gate.txt
+ - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-docs-sync.txt
+ - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-figures.txt
+ - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-no-answer-keys.txt
+ - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/check-no-em-dash.txt
+ - specs/content/efmp-304/reviews/unit-02/G2/logs-20261105T162929826Z/validate-content.txt
+ - specs/content/efmp-304/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -63,30 +63,38 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
 ## Notes from earlier jobs on this unit
-- (efmp-304-u02-repair_en, repair_en, codex) Course owner must address overview weighting and audit Unit 3's shared source attribution.
+- (efmp-304-u02-repair_en, repair_en, codex) Course owner must address overview weighting and audit Unit 3’s shared source attribution.
 - (efmp-304-u02-repair_en, repair_en, codex) G3 remains unticked; fresh independent G3/G5 and permitted browser geometry/rendering checks are required.
-- (efmp-304-u02-repair_en, repair_en, codex) Course owner must address overview weighting and audit Unit 3's shared source attribution.
+- (efmp-304-u02-repair_en, repair_en, codex) Course owner must address overview weighting and audit Unit 3’s shared source attribution.
 - (efmp-304-u02-fix, fix, codex) Fresh independent G3 remains required; G3/G5 were not certified.
 - (efmp-304-u02-fix, fix, codex) Fresh independent G3 remains required; G3/G5 were not certified.
 
 
 ## Response snapshot
 
-Inspected and placed EFMP-304 Unit 2 banner illustration (fig-U2-9) into English and Urdu index.mdx, advanced unit-02.banner.md to placed, refreshed G2 gate evidence, and verified check:content.
+Inspected and placed EFMP-304 Unit 2 banner illustration (fig-U2-9) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and verified check:content clean across all 14 gates.
 
 ## Outcome
 
-- Impact: EFMP-304 Unit 2 banner illustration placed in English and Urdu editions.
-- Tests: npm run check:content passed clean (all 14 content gates green).
-- Files: docs, i18n, figures banner manifest, G2 evidence logs, tasks.md, and this prompt record.
-- Next prompts: fresh independent G3 review for EFMP-304 Unit 2.
-- Reflection: None.
+- Impact: illustrate for EFMP-304 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 14 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Placed EFMP-304 Unit 2 banner illustration (fig-U2-9.webp) with bilingual Figure tags in English and Urdu unit index.mdx, moved unit-02.banner.md row to placed, refreshed G2 gate evidence, and verified check:content passes clean.
-- Decisions the team must respect: No em dashes; G3/G5 remain unticked; fresh independent G3/G5 review required.
-- Pending / next owner: crew lead or independent reviewer for fresh G3 review.
+- Shipped / changed: Inspected and placed EFMP-304 Unit 2 banner illustration (fig-U2-9) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and verified check:content clean across all 14 gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Fresh independent G3 remains required; G3/G5 were not certified.
   - Course owner must address overview weighting and audit Unit 3's shared source attribution.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
