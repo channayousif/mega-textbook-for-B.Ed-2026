@@ -1,0 +1,158 @@
+
+> bed-mega-textbook@0.1.0 test
+> vitest run
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /home/a2ahs/crew-wt/gqur-301-u06-repair_en
+
+ ✓ tests/unit/figures-gate.test.mjs (44 tests) 20203ms
+   ✓ check-figures.mjs > skips a legacy unit with no topic files 1245ms
+   ✓ check-figures.mjs > refuses the marker-only path: prompt-only carriers render nothing 470ms
+   ✓ check-figures.mjs > fails and names a topic file with fewer than two figures 447ms
+   ✓ check-figures.mjs > fails a topic file with no marker at all 555ms
+   ✓ check-figures.mjs > fails on a malformed figure id 503ms
+   ✓ check-figures.mjs > fails on a duplicate id across two topics 385ms
+   ✓ check-figures.mjs > fails when a marker is absent from the manifest 636ms
+   ✓ check-figures.mjs > fails when the manifest has a row with no matching marker 731ms
+   ✓ check-figures.mjs > fails on empty alt text in a marker 565ms
+   ✓ check-figures.mjs > fails on a Topic mismatch between manifest and topic file 347ms
+   ✓ check-figures.mjs > fails on a bad Status value 533ms
+   ✓ check-figures.mjs > fails when the manifest file is missing 418ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > an all-prompt-only unit under the v2 header now fails the density floor 491ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > the Spec 008 five-column manifest + comment markers now fails the density floor 379ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > accepts <Figure> elements as carriers for a fully placed unit 344ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > fails a placed row whose Src file is missing under static/ 970ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > fails a generated/placed row with a Kind not in the archetype set 707ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > fails a placed row whose EN topic file still has only the comment marker 797ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > fails when Src is non-blank on a prompt-only row 689ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > fails when Src is blank on a generated row 507ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > [US1] passes a unit with >= 2 carriers per topic and a timeline somewhere 775ms
+   ✓ check-figures.mjs — Spec 009 rendered figures + Spec 012 density > [US1] fails when a topic-NN.mdx has only one carrier 586ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > passes when every asset carries the published tokens and the wordmark 308ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects a colour literal outside the :root token block 350ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects an asset whose :root block is not the published palette 387ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects a figure with no wordmark 452ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects a wordmark that is exposed to assistive technology 651ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects an em dash in a text node (Art. III.9, which no other gate scans in static/) 357ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects a missing dark variant 479ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects an external reference 423ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > requires an .ur.svg for a NON-diagram schematic in a reviewed unit 601ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects a figure whose <desc> differs from carrier alt (EN light) 502ms
+   ✓ check-figures.mjs - Spec 013 asset lint and bilingual parity > rejects a dark variant whose <desc> differs from carrier alt, pointing to light source 368ms
+ ✓ tests/unit/depth-gate.test.mjs (40 tests) 15638ms
+   ✓ check-unit-depth.mjs > passes a fully valid in-scope unit 549ms
+   ✓ check-unit-depth.mjs > skips a unit whose content-spec subsection has no `### Sub-topic checklist` 456ms
+   ✓ check-unit-depth.mjs > fails and names the checklist ID that has no coverage row 430ms
+   ✓ check-unit-depth.mjs > fails on a coverage row with a blank Section 391ms
+   ✓ check-unit-depth.mjs > fails on a coverage row whose File is not one of the five folding-rule files 582ms
+   ✓ check-unit-depth.mjs > fails when a coverage Source has no matching Key in sources/unit-01.md 455ms
+   ✓ check-unit-depth.mjs > fails when a Supports cell omits a sub-topic the coverage matrix grounds in that key 301ms
+   ✓ check-unit-depth.mjs > fails when a Supports cell claims a sub-topic the coverage matrix does not ground in it 391ms
+   ✓ check-unit-depth.mjs > reads a slash-joined run as every ID in it, not just the first 357ms
+   ✓ check-unit-depth.mjs > fails when a non-no-external-source sources Key is unreferenced by the coverage matrix 362ms
+   ✓ check-unit-depth.mjs > missing sources/unit-01.md fails 333ms
+   ✓ check-unit-depth.mjs > fails when index.mdx lacks `## Common misconceptions` (further reading present) 338ms
+   ✓ check-unit-depth.mjs > fails when index.mdx lacks `## Further reading` (misconceptions present) 567ms
+   ✓ check-unit-depth.mjs > fails when formative.mdx has fewer than 5 numbered items 635ms
+   ✓ check-unit-depth.mjs > fails when the unit-total est_reading_minutes is below the budget band 830ms
+   ✓ check-unit-depth.mjs > fails when the unit-total est_reading_minutes is above the budget band 745ms
+   ✓ check-unit-depth.mjs > fails when the in-scope unit has no `**Depth budget**` line 435ms
+   ✓ check-unit-depth.mjs — new-shape (per-topic) layout > fails and names the topic for an out-of-order cycle heading 317ms
+   ✓ check-unit-depth.mjs — new-shape (per-topic) layout > fails when a `##` heading follows `## Answers and marking guidance` 731ms
+   ✓ check-unit-depth.mjs — new-shape (per-topic) layout > counts the 10/10/5 bands per-###-band, not file-wide 893ms
+   ✓ check-unit-depth.mjs — new-shape (per-topic) layout > fails on a coverage row whose File is not in the new-shape set 489ms
+   ✓ check-unit-depth.mjs — new-shape (per-topic) layout > fails when a topic file is unreferenced by any coverage row 629ms
+   ✓ check-unit-depth.mjs — new-shape (per-topic) layout > fails when a checklist ID coverage row names a different topic file than its `### Topic list` assignment 393ms
+   ✓ check-unit-depth.mjs — new-shape (per-topic) layout > fails loudly when only one opt-in signal is present (topic files, no `### Topic list`) 384ms
+ ✓ tests/unit/content-status-report.test.mjs (8 tests) 2438ms
+   ✓ report-content-status.mjs > takes the LAST row for a stage, so a revision row re-opens a done gate 685ms
+ ✓ tests/unit/g3Desk.test.mjs (26 tests) 75ms
+ ✓ tests/unit/pipeline-gate.test.mjs (20 tests) 7808ms
+   ✓ check-pipeline-gate.mjs > approval check > passes with status: approved 310ms
+   ✓ check-pipeline-gate.mjs > approval check > fails when content-spec.md is missing 619ms
+   ✓ check-pipeline-gate.mjs > EN tracker check > passes when G2/G3 are ✅ with initials 765ms
+   ✓ check-pipeline-gate.mjs > EN tracker check > fails when G2 en-draft is in-progress (▣) 349ms
+   ✓ check-pipeline-gate.mjs > EN tracker check > re-blocks on an appended, in-progress Revision Task row even though an earlier done row for the same stage exists (FR-011) 320ms
+   ✓ check-pipeline-gate.mjs > UR tracker + terminology checks > fails when UR is reviewed but G4/G5 rows are missing 315ms
+   ✓ check-pipeline-gate.mjs > UR tracker + terminology checks > flags a key_terms entry absent from the bank 327ms
+   ✓ check-pipeline-gate.mjs > UR tracker + terminology checks > flags a key_terms ur value mismatching the bank 309ms
+   ✓ check-pipeline-gate.mjs > UR tracker + terminology checks > passes with a fully matching key_terms pair 366ms
+   ✓ check-pipeline-gate.mjs > bank shape and accepted-term pairs > accepts a key term matching the first side of a banked pair 507ms
+   ✓ check-pipeline-gate.mjs > bank shape and accepted-term pairs > accepts a key term matching the second side of a banked pair 450ms
+   ✓ check-pipeline-gate.mjs > bank shape and accepted-term pairs > still rejects a key term matching neither side of a pair 322ms
+   ✓ check-pipeline-gate.mjs > bank shape and accepted-term pairs > flags an empty term_ur 342ms
+   ✓ check-pipeline-gate.mjs > provisional rows (Art. VII.7) > passes on a provisional G3 row and names the unit as provisional 383ms
+   ✓ check-pipeline-gate.mjs > provisional rows (Art. VII.7) > still refuses a provisional row with no reviewer at all 517ms
+   ✓ check-pipeline-gate.mjs > provisional rows (Art. VII.7) > reports a fully certified course without the provisional wording 524ms
+ ✓ tests/unit/reviewQueue.test.mjs (28 tests) 110ms
+ ✓ tests/unit/content-roots.test.mjs (21 tests) 230ms
+ ✓ tests/unit/validate-layout.test.mjs (11 tests) 11070ms
+   ✓ validate-content.mjs — per-topic layout > passes a legacy five-file unit 749ms
+   ✓ validate-content.mjs — per-topic layout > passes a minimal new-shape unit (index + topic-01 + topic-02 + unit-assessment) 549ms
+   ✓ validate-content.mjs — per-topic layout > fails and names the gap when topic ordinals are not contiguous from 01 833ms
+   ✓ validate-content.mjs — per-topic layout > fails when a pooled legacy file sits in a new-shape folder 1108ms
+   ✓ validate-content.mjs — per-topic layout > fails when a topic file has topic_no != its filename ordinal 749ms
+   ✓ validate-content.mjs — per-topic layout > fails a topic title without its "Topic N.M - " lead (owner report, 2026-11-03) 2236ms
+   ✓ validate-content.mjs — per-topic layout > fails a topic_label that is not unit.topic 729ms
+   ✓ validate-content.mjs — per-topic layout > fails when a topic file has no topic_label 1203ms
+   ✓ validate-content.mjs — per-topic layout > fails when course-review.mdx has a course_code that does not match the folder 856ms
+   ✓ validate-content.mjs — per-topic layout > fails when course-review.mdx is missing its required course_code 1011ms
+   ✓ validate-content.mjs — per-topic layout > passes a valid course-review.mdx alongside a new-shape unit 1036ms
+ ✓ tests/unit/no-answer-keys.test.mjs (10 tests) 1129ms
+ ✓ tests/unit/loggable-content-kinds.test.mjs (7 tests) 1550ms
+   ✓ loggable content kinds > leaves every authored course with at least one loggable item 714ms
+   ✓ loggable content kinds > offers nothing the database would refuse 760ms
+ ✓ tests/unit/bloom-bands.test.mjs (6 tests) 843ms
+ ✓ tests/unit/rls-fixture-isolation.test.mjs (6 tests) 101ms
+ ✓ tests/unit/parity.test.mjs (7 tests) 8401ms
+   ✓ EN<->UR parity gate > passes when a reviewed unit has matching heading structure 1427ms
+   ✓ EN<->UR parity gate > fails when the UR version drops a heading 1059ms
+   ✓ EN<->UR parity gate > fails when a reviewed unit has no UR mirror at all 975ms
+   ✓ EN<->UR parity gate > passes when a reviewed unit has no UR mirror but its course is bilingual: false 909ms
+   ✓ EN<->UR parity gate — per-topic layout > passes when EN and UR per-topic files match structurally 1200ms
+   ✓ EN<->UR parity gate — per-topic layout > fails when a UR topic file drops a heading 705ms
+   ✓ EN<->UR parity gate — per-topic layout > fails when a UR topic file is missing entirely 2117ms
+ ✓ tests/unit/profile-dependents.test.mjs (5 tests) 79ms
+ ✓ tests/unit/feedback-export.test.mjs (11 tests) 21ms
+ ✓ tests/unit/source-floor.test.mjs (7 tests) 3457ms
+   ✓ check-source-floor.mjs > passes when the floor is met 713ms
+   ✓ check-source-floor.mjs > fails when too few sources are registry-verified 532ms
+   ✓ check-source-floor.mjs > does not count a row naming a registry but carrying no date 719ms
+   ✓ check-source-floor.mjs > does not count a no-external-source row, however it is annotated 367ms
+   ✓ check-source-floor.mjs > skips a course that declares no floor 625ms
+ ✓ tests/unit/figure-palette.test.mjs (46 tests) 43ms
+ ✓ tests/unit/svg-style.test.mjs (9 tests) 947ms
+   ✓ check-svg-style ratchet > fails a new violation and passes once it is baselined 413ms
+ ✓ tests/unit/print-page.test.mjs (9 tests) 47ms
+ ✓ tests/unit/map-sources-gate.test.mjs (5 tests) 897ms
+ ✓ tests/unit/no-em-dash-gate.test.mjs (7 tests) 2051ms
+   ✓ check-no-em-dash.mjs > does NOT flag a U+2013 en dash (numeric range) 433ms
+   ✓ check-no-em-dash.mjs > does NOT flag an ASCII hyphen-minus 678ms
+ ✓ tests/unit/nav-crumbs.test.mjs (6 tests) 7ms
+ ✓ tests/unit/optimize-figure.test.mjs (4 tests) 770ms
+ ✓ tests/unit/course-guide-gate.test.mjs (4 tests) 4246ms
+   ✓ course guide gate > fails a B.Ed overview with no course-guides.json entry 1150ms
+   ✓ course guide gate > fails when the entry points at a PDF that does not exist 929ms
+   ✓ course guide gate > passes the guide check when the entry and PDF both exist 922ms
+   ✓ course guide gate > does not require a guide for licence-track courses 1241ms
+ ✓ tests/unit/licence.test.mjs (5 tests) 51ms
+ ✓ tests/unit/auth-errors.test.mjs (5 tests) 48ms
+ ✓ tests/unit/review-scope-catalog.test.mjs (2 tests) 21ms
+ ✓ tests/unit/missing-metadata.test.mjs (2 tests) 2058ms
+   ✓ missing-metadata gate > fails and names the file when clo_refs is missing 995ms
+   ✓ missing-metadata gate > fails when an answer-key field is present (FR-012) 1058ms
+ ✓ tests/unit/glossary.test.mjs (3 tests) 2451ms
+   ✓ glossary-reference check > passes when every <Glossary term> resolves to a bilingual entry 804ms
+   ✓ glossary-reference check > fails when a <Glossary term> has no matching glossary.json key 853ms
+   ✓ glossary-reference check > fails when a glossary entry is missing the Urdu definition 790ms
+ ✓ tests/unit/weighting-sum.test.mjs (2 tests) 2461ms
+   ✓ assessment_weighting sum check > passes with the default 60/40 split 1268ms
+   ✓ assessment_weighting sum check > fails when the weighting does not sum to 100 1189ms
+ ✓ tests/unit/agent-job-pr.test.mjs (2 tests) 5ms
+
+ Test Files  31 passed (31)
+      Tests  368 passed (368)
+   Start at  18:06:14
+   Duration  126.05s (transform 2.11s, setup 0ms, collect 3.81s, tests 89.25s, environment 28ms, prepare 9.67s)
+
