@@ -24,4 +24,24 @@ print monograph with no open-access full text.
 
 - `lock2008`: Lock, R. H., Lock, P. F., Lock Morgan, K., & Lock, E. F. (2012). *Statistics:
   Unlocking the Power of Data* (1st ed.). Wiley. ISBN 9780470601877. Guide-required for Unit 13.
-  Referenced in the prose only as a course text; no passage reproduced.
+  Listed here as a guide-required bibliography entry only; neither topic cites its text.
+  No passage reproduced and no instructional claim relies on this unread book.
+
+## Unverifiable sources
+
+`lock2008`: Could not be retrieved on 2026-11-05. A web search for the exact ISBN
+9780470601877 with the title and Wiley domain found publisher sales listings for
+later editions, not open full text of this edition. No paid access was attempted.
+The existing 2026-10-20 record provides no detailed earlier retrieval log; no
+additional historical attempts are claimed. Owner authorisation to proceed with
+this explicitly unverified bibliography entry is the corpus-wide confirmed
+D-2026-0001 (`specs/decisions/log.md`). The edition's text remains unchecked;
+open-access substitutes support instruction instead.
+
+## Passage-level repair bundle (2026-11-05)
+
+See [Unit 13 source notes](./unit-13/passage-notes.md) for exact primary page URLs,
+short retrieved excerpts, section locators and claim-specific paraphrases. These
+are new author inputs for the next frozen review bundle, not retroactive evidence
+for the previous G3 report. The .30/.70 exercise convention is not attributed to
+Lane and is not a universal empirical classification.
