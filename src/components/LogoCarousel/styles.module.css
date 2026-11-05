@@ -1,0 +1,21 @@
+.band { background: var(--ifm-background-surface-color); border-top: 1px solid var(--ifm-color-emphasis-200); padding: 18px 24px 22px; }
+.head { max-width: 1180px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.label { margin: 0; font-size: 1rem; font-weight: 700; }
+.pause { background: var(--ifm-background-surface-color); color: var(--ifm-font-color-base); border: 1px solid var(--ifm-color-emphasis-400); border-radius: 999px; padding: 6px 14px; min-height: 44px; font: inherit; font-size: .92rem; font-weight: 600; cursor: pointer; }
+.pause:hover { border-color: var(--ifm-color-primary); }
+.marquee { max-width: 1180px; margin-inline: auto; overflow: hidden; padding-block: 14px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+.track { display: flex; width: max-content; animation: revolve 84s linear infinite; }
+.marquee:hover .track, .marquee:focus-within .track, .paused .track { animation-play-state: paused; }
+.set { list-style: none; display: flex; align-items: center; gap: 56px; margin: 0; padding: 0; padding-inline-end: 56px; flex: none; }
+.set li { margin: 0; flex: none; }
+.set img { display: block; height: 48px; width: auto; max-width: 150px; object-fit: contain; }
+/* Through a variable because the Urdu build's RTL pass flips literal translates,
+   and this track is always left-to-right. */
+.track { --revolve-end: -50%; }
+@keyframes revolve { from { transform: translateX(0); } to { transform: translateX(var(--revolve-end)); } }
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; width: auto; }
+  .set { flex-wrap: wrap; justify-content: center; gap: 20px 36px; padding-inline-end: 0; flex: 1; }
+  .set + .set, .pause { display: none; }
+  .marquee { -webkit-mask-image: none; mask-image: none; }
+}

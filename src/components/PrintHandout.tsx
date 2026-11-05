@@ -1,4 +1,5 @@
 import React from 'react';
+import { translate } from '@docusaurus/Translate';
 import { printHandout } from '@site/src/lib/printPage';
 
 /**
@@ -9,7 +10,7 @@ import { printHandout } from '@site/src/lib/printPage';
  * each link (src/lib/printPage.ts), so the PDF has every figure and scannable links.
  */
 export default function PrintHandout({
-  label = 'Print / Save as PDF',
+  label = translate({ id: 'print.label', message: 'Print / Save as PDF' }),
 }: {
   label?: string;
 }): React.ReactElement {
@@ -17,7 +18,7 @@ export default function PrintHandout({
     <button
       type="button"
       className="print-handout print-hidden"
-      aria-label="Print or save this handout as a PDF"
+      aria-label={translate({ id: 'print.aria', message: 'Print or save this handout as a PDF' })}
       onClick={() => typeof window !== 'undefined' && void printHandout()}
     >
       <span aria-hidden="true">🖨 </span>

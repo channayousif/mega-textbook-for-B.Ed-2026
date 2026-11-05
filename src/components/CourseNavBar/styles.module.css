@@ -264,3 +264,16 @@ html[dir='rtl'] .optionCurrent {
     display: none;
   }
 }
+
+/* Slim bar: quiet text crumbs on one line, so the title comes first. */
+.trigger { background: none; }
+.trigger:hover, .triggerOpen { background: var(--ifm-color-emphasis-200); }
+.crumb:last-child .trigger { background: none; }
+.barMenu { flex: none; }
+@media (max-width: 996px) {
+  .barMenu { display: none; }
+  .treeToggle { display: none; }
+  /* Programme and semester stay reachable from the site menu; the phone keeps the near path. */
+  .crumb:nth-last-child(n + 4) { display: none; }
+  .crumb:nth-last-child(3)::before { content: none; }
+}
