@@ -33,3 +33,10 @@ must be checked at G5 before the Urdu mirror is translated:
 - `CON:GQUR-301-13-7` Intercept (regression): تقاطع
 - `CON:GQUR-301-13-8` Residual: باقیہ
 - `CON:GQUR-301-13-9` Correlation vs causation: تعلق بہ سببیت
+
+## Translation-owner handoff
+
+The correlation-coefficient Urdu label in CON:GQUR-301-13-2 and its authored-label
+entry contains U+FFFD (replacement character). The translation/G5 owner must
+recover and verify the intended label against the terminology bank before reuse.
+This English repair does not certify or silently replace any Urdu wording.
