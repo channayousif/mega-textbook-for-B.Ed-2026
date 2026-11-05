@@ -1,4 +1,4 @@
-<svg font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d"><title id="t">Three charts from the same data</title><desc id="d">Three charts side by side using the same school examination results data: a bar chart on the left, a histogram in the middle, and a pie chart on the right, with brief labels showing what each emphasizes.</desc>
+<svg font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d"><title id="t">Three charts from the same data</title><desc id="d">School examination results: a correctly scaled bar chart and pie chart compare categories and shares; the crossed-out middle chart intentionally misuses touching histogram bars for categories.</desc>
   <defs>
     <style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2} line.axis{stroke:var(--ink);stroke-width:1.5;fill:none} rect.bar-fill{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} text.caption{font-size:12px;fill:var(--muted)} text.chart-title{font-size:12px;font-weight:600;fill:var(--ink)} line.cross{stroke:var(--a3);stroke-width:3;fill:none} text.label{font-size:10px;font-weight:600;fill:var(--ink)} path.slice1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} path.slice2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} path.slice3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} path.slice4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} path.slice5{fill:var(--panel);stroke:var(--muted);stroke-width:2} text.title{font-size:14px;font-weight:700;fill:var(--ink)}</style>
   </defs>
@@ -18,11 +18,11 @@
   <line x1="55" y1="320" x2="245" y2="320" class="axis"/>
 
   <!-- Bars -->
-  <rect x="70" y="170" width="25" height="150" rx="2" class="bar-fill"/>
-  <rect x="110" y="110" width="25" height="210" rx="2" class="bar-fill"/>
-  <rect x="150" y="230" width="25" height="90" rx="2" class="bar-fill"/>
-  <rect x="190" y="285" width="25" height="35" rx="2" class="bar-fill"/>
-  <rect x="225" y="305" width="25" height="15" rx="2" class="bar-fill"/>
+  <rect x="70" y="248" width="25" height="72" rx="2" class="bar-fill"/>
+  <rect x="110" y="195.2" width="25" height="124.8" rx="2" class="bar-fill"/>
+  <rect x="150" y="268.8" width="25" height="51.2" rx="2" class="bar-fill"/>
+  <rect x="190" y="300.8" width="25" height="19.2" rx="2" class="bar-fill"/>
+  <rect x="225" y="312" width="25" height="8" rx="2" class="bar-fill"/>
 
   <!-- Bar labels -->
   <text x="82" y="335" text-anchor="middle" class="label">Dist</text>
@@ -47,11 +47,11 @@
   <line x1="305" y1="320" x2="495" y2="320" class="axis"/>
 
   <!-- Touching bars (histogram style - wrong) -->
-  <rect x="305" y="170" width="40" height="150" rx="0" fill="var(--a3)" opacity="0.3"/>
-  <rect x="345" y="110" width="40" height="210" rx="0" fill="var(--a3)" opacity="0.3"/>
-  <rect x="385" y="230" width="40" height="90" rx="0" fill="var(--a3)" opacity="0.3"/>
-  <rect x="425" y="285" width="40" height="35" rx="0" fill="var(--a3)" opacity="0.3"/>
-  <rect x="465" y="305" width="30" height="15" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="305" y="248" width="40" height="72" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="345" y="195.2" width="40" height="124.8" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="385" y="268.8" width="40" height="51.2" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="425" y="300.8" width="40" height="19.2" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="465" y="312" width="30" height="8" rx="0" fill="var(--a3)" opacity="0.3"/>
 
   <!-- Cross mark -->
   <line x1="290" y1="100" x2="490" y2="320" class="cross"/>
@@ -62,25 +62,25 @@
   <text x="640" y="85" text-anchor="middle" class="chart-title">Pie chart (also correct)</text>
   <text x="640" y="100" text-anchor="middle" class="label">Shares proportions of whole</text>
 
-  <!-- Pie slices -->
   <circle cx="620" cy="210" r="85" fill="none" stroke="var(--line)" stroke-width="0.5"/>
-  <!-- Distinction 26% -->
-  <path d="M 620,210 L 620,125 A 85,85 0 0,1 701.5,184 Z" class="slice1"/>
-  <!-- First 45% -->
-  <path d="M 620,210 L 701.5,184 A 85,85 0 0,1 644,293 Z" class="slice2"/>
-  <!-- Second 19% -->
-  <path d="M 620,210 L 644,293 A 85,85 0 0,1 541,278 Z" class="slice3"/>
-  <!-- Third 7% -->
-  <path d="M 620,210 L 541,278 A 85,85 0 0,1 535,210 Z" class="slice4"/>
-  <!-- Failed 3% -->
-  <path d="M 620,210 L 535,210 A 85,85 0 0,1 537,195 Z" class="slice5"/>
+  <!-- Contiguous sectors: count / 172 * 360 degrees; numbers match legend. -->
+  <path d="M 620,210 L 620.000000,125.000000 A 85,85 0 0,1 704.773244,216.204602 Z" class="slice1"/>
+  <path d="M 620,210 L 704.773244,216.204602 A 85,85 0 0,1 537.033550,228.481565 Z" class="slice2"/>
+  <path d="M 620,210 L 537.033550,228.481565 A 85,85 0 0,1 570.541992,140.870372 Z" class="slice3"/>
+  <path d="M 620,210 L 570.541992,140.870372 A 85,85 0 0,1 604.560868,126.413917 Z" class="slice4"/>
+  <path d="M 620,210 L 604.560868,126.413917 A 85,85 0 0,1 620.000000,125.000000 Z" class="slice5"/>
+  <text x="667.61" y="169.75" text-anchor="middle" class="label">1</text>
+  <text x="624.74" y="278.83" text-anchor="middle" class="label">2</text>
+  <text x="559.29" y="190.78" text-anchor="middle" class="label">3</text>
+  <text x="594.58" y="154.18" text-anchor="middle" class="label">4</text>
+  <text x="614.07" y="149.27" text-anchor="middle" class="label">5</text>
 
   <!-- Pie legend -->
-  <text x="540" y="320" class="label" font-size="9px">Distinction 26%</text>
-  <text x="540" y="335" class="label" font-size="9px">First division 45%</text>
-  <text x="540" y="350" class="label" font-size="9px">Second 19%</text>
-  <text x="655" y="320" class="label" font-size="9px">Third 7%</text>
-  <text x="655" y="335" class="label" font-size="9px">Failed 3%</text>
+  <text x="540" y="320" class="label" font-size="9px">1: Distinction 26%</text>
+  <text x="540" y="335" class="label" font-size="9px">2: First division 45%</text>
+  <text x="540" y="350" class="label" font-size="9px">3: Second 19%</text>
+  <text x="655" y="320" class="label" font-size="9px">4: Third 7%</text>
+  <text x="655" y="335" class="label" font-size="9px">5: Failed 3%</text>
 
   <!-- Caption -->
   <text x="30" y="380" class="caption">Caption: Bar chart and pie chart are both appropriate for categorical data. A histogram is wrong here</text>
