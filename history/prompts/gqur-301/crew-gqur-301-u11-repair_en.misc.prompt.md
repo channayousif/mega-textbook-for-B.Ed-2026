@@ -16,28 +16,28 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/gqur-301/unit-11/topic-01.mdx
-  - docs/semester-2/gqur-301/unit-11/unit-assessment.mdx
-  - docs/semester-2/gqur-301/unit-11/unit-teacher-notes.mdx
-  - history/prompts/gqur-301/crew-gqur-301-u11-repair_en.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-11/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-11/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-11/unit-teacher-notes.mdx
-  - specs/content/gqur-301/reviews/unit-11/G2/20261105T142816987Z-gates.json
-  - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-bloom-bands.txt
-  - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-concept-graph.txt
-  - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-depth-gate.txt
-  - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-docs-sync.txt
-  - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-figures.txt
-  - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-no-answer-keys.txt
-  - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-no-em-dash.txt
-  - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/validate-content.txt
-  - specs/content/gqur-301/reviews/unit-11/repairs/20261105-agy.md
-  - specs/content/gqur-301/reviews/unit-11/repairs/check-content-final.txt
-  - specs/content/gqur-301/sources/unit-11.md
-  - specs/content/gqur-301/tasks.md
+ - docs/semester-2/gqur-301/unit-11/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-11/unit-assessment.mdx
+ - docs/semester-2/gqur-301/unit-11/unit-teacher-notes.mdx
+ - history/prompts/gqur-301/crew-gqur-301-u11-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-11/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-11/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-11/unit-teacher-notes.mdx
+ - specs/content/gqur-301/reviews/unit-11/G2/20261105T142816987Z-gates.json
+ - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-11/G2/logs-20261105T142816987Z/validate-content.txt
+ - specs/content/gqur-301/reviews/unit-11/repairs/20261105-agy.md
+ - specs/content/gqur-301/reviews/unit-11/repairs/check-content-final.txt
+ - specs/content/gqur-301/sources/unit-11.md
+ - specs/content/gqur-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -87,27 +87,28 @@ From `specs/content/gqur-301/reviews/unit-11/G3/20261102T212207Z-g3-desk-7832f50
 - (gqur-301-u11-translate-conflict3, fix, opencode) G3 F1 defect (RRQ 10 model answer says 5.0, correct is 2.75) still in English source  -  Urdu mirrors uncorrected text; re-check after author repair.
 - (gqur-301-u11-translate-conflict3, fix, opencode) No render-inspect.mjs run on Urdu Nastaliq shaping or A4 print  -  G5 should verify before certification.
 
+
 ## Response snapshot
 
-Repaired Unit 11 RRQ 10 distractor calculation, explicit rubric values in Topic 11.1 and ERQ 1, normal-tail area credits in ERQ 3, MCQ 2 bloom label, OpenStax source locator, and teacher notes phrasing, mirrored edits into Urdu, refreshed G2 draft gate evidence, and appended the advisory G3 tracker row.
+Repaired Unit 11 assessment distractor calculations, rubric values, Bloom taxonomy label, source locator, and teacher notes prompt, mirrored edits into Urdu, refreshed G2 gate evidence, and recorded the G3 repair tracker row.
 
 ## Outcome
 
-- Impact: repair_en for GQUR-301 Unit 11 by agy.
-- Tests: npm run check:content passed with all 14 gates green.
+- Impact: repair_en for GQUR-301 Unit 11 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 20 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Repaired Unit 11 assessment calculations, rubric reference values, Bloom taxonomy label, source locator, and teacher notes prompt; mirrored changes into Urdu; refreshed G2 gate evidence and recorded G3 repair row.
-- Decisions the team must respect: G3 remains unticked pending fresh independent review; G1 intake re-evaluation (D-2026-0070) remains open for owner/evaluator resolution.
-- Pending / next owner: fresh independent G3 reviewer session.
+- Shipped / changed: Repaired Unit 11 assessment distractor calculations, rubric values, Bloom taxonomy label, source locator, and teacher notes prompt, mirrored edits into Urdu, refreshed G2 gate evidence, and recorded the G3 repair tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains unticked and open.
-  - G1 unit-spec approval and source binding in manifest remain uncertain findings requiring host/owner action.
-- Paperclip issues affected: none.
+  - G3 remains unticked pending fresh independent review; G1 intake re-evaluation (D-2026-0070) remains open for owner/evaluator resolution.
+  - Source passages in manifest and rendered accessibility (Playwright/Chromium prohibited per host limits) remain unresolved uncertain findings.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
