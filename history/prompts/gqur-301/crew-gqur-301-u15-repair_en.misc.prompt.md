@@ -16,24 +16,33 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/gqur-301/unit-15/topic-01.mdx
-  - docs/semester-2/gqur-301/unit-15/topic-02.mdx
-  - docs/semester-2/gqur-301/unit-15/topic-03.mdx
-  - docs/semester-2/gqur-301/unit-15/unit-assessment.mdx
-  - docs/semester-2/gqur-301/unit-15/unit-teacher-notes.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/unit-teacher-notes.mdx
-  - specs/content/gqur-301/sources/unit-15.md
-  - specs/content/gqur-301/sources/texts/u15-openstax-2026.md
-  - specs/content/gqur-301/sources/texts/u15-lane-2026.md
-  - specs/content/gqur-301/sources/texts/u15-nist-2026.md
-  - specs/content/gqur-301/tasks.md
-  - specs/content/gqur-301/reviews/unit-15/G2/20261105T153507950Z-gates.json
+ - docs/semester-2/gqur-301/unit-15/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-15/topic-02.mdx
+ - docs/semester-2/gqur-301/unit-15/topic-03.mdx
+ - docs/semester-2/gqur-301/unit-15/unit-assessment.mdx
+ - docs/semester-2/gqur-301/unit-15/unit-teacher-notes.mdx
+ - history/prompts/gqur-301/crew-gqur-301-u15-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/unit-teacher-notes.mdx
+ - specs/content/gqur-301/reviews/unit-15/G2/20261105T153507950Z-gates.json
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/validate-content.txt
+ - specs/content/gqur-301/sources/texts/u15-lane-2026.md
+ - specs/content/gqur-301/sources/texts/u15-nist-2026.md
+ - specs/content/gqur-301/sources/texts/u15-openstax-2026.md
+ - specs/content/gqur-301/sources/unit-15.md
+ - specs/content/gqur-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -88,28 +97,33 @@ From `specs/content/gqur-301/reviews/unit-15/G3/20261102T212207Z-g3-desk-b5cee40
 - (gqur-301-u15-review_en, review_en, claude) Fix fig-U15-3 to match the z = 1.84 right-tailed reject, fix the fig-U15-2 alt text (75 is inside the 75.31 cutoff), and rewrite the ERQ 2 and RRQ 10 keys.
 - (gqur-301-u15-review_en, review_en, claude) Replace the 6 broken citation links with real pages (e.g. onlinestatbook.com/2/logic_of_hypothesis_testing/significance.html, /2/tests_of_means/single_mean.html, OpenStax 9.3), correct sources/unit-15.md, and store the source passages so the next review can check them offline.
 
+
 ## Response snapshot
 
-Applied the G3 findings to GQUR-301 Unit 15 in English and Urdu: rewrote the ERQ 2 key and RRQ 10 working, replaced six broken citation links with verified pages, fixed the garbled Ghotki class size, the ERQ 5 grammar and the teacher-notes df wording, stated both rounding routes, turned RRQ 7 into a scenario, added a multiple-testing and effect-size passage, corrected sources/unit-15.md and bound new reading notes, and refreshed the G2 evidence.
+Applied the G3 findings to GQUR-301 Unit 15 in English and Urdu (ERQ 2 key, RRQ 10 working, six broken citations, garbled class size, grammar, rounding, RRQ 7 scenario, multiple-testing passage, source binding), appended the unticked G3 tracker row, and refreshed the G2 evidence.
 
 ## Outcome
 
-- ✅ Impact: Every blocking and advisory finding from the 2026-11-02 G3 report is resolved in the English source and mirrored into the Urdu translation; the uncertain findings are recorded for the evaluator.
-- 🧪 Tests: `npm run check:content` passes all 14 content gates after the content-status and G2 evidence refresh.
-- 📁 Files: English and Urdu topic/assessment/teacher-notes, sources/unit-15.md, three new bound reading notes, tracker row and refreshed G2 evidence.
-- 🔁 Next prompts: Fresh independent G3 review; G5 Urdu review after G4.
-- 🧠 Reflection: The G3 report's F1 was already resolved by the figures job; the remaining defects were concentrated in the assessment keys and the citation locators.
+- Impact: repair_en for GQUR-301 Unit 15 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 25 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: G3 finding repairs for GQUR-301 Unit 15 (EN + UR), corrected source locators and bound reading notes, refreshed G2 evidence.
-- Decisions the team must respect: G3 stays open and unticked (ADR-0019); no reviewer initials or self-certification were used. The uncertain findings (rendered accessibility, G1 authority, source bundle provenance) are not author-repairable.
-- Pending / next owner: crew lead owns the fresh independent G3 review; a qualified reviewer must inspect the rendered pages and figures in both themes.
-- Paperclip issues affected: GQUR-301 Unit 15; no linked issue.
+- Shipped / changed: Applied the G3 findings to GQUR-301 Unit 15 in English and Urdu (ERQ 2 key, RRQ 10 working, six broken citations, garbled class size, grammar, rounding, RRQ 7 scenario, multiple-testing passage, source binding), appended the unticked G3 tracker row, and refreshed the G2 evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - F12 rendered accessibility and F14 G1 authority remain open for the evaluator; a fresh authorised render session must inspect all six figures in both themes.
+  - The Urdu mirror now matches the repaired English; the G5 reviewer should confirm the new statistical Urdu terminology.
+  - Next G3 should re-verify the ERQ 2 key (two-tailed p = 0.036, one-tailed p = 0.018) and the newly bound source notes.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: The G3 report's F1 was stale (the figures job had already added the SVGs); the remaining findings were real and are now fixed.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS (14/14).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
