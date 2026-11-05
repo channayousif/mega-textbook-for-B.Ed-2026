@@ -16,8 +16,53 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-305/tasks.md
+ - docs/semester-2/efmp-305/unit-05/topic-01.mdx
+ - docs/semester-2/efmp-305/unit-05/topic-02.mdx
+ - docs/semester-2/efmp-305/unit-05/topic-03.mdx
+ - docs/semester-2/efmp-305/unit-05/unit-assessment.mdx
+ - docs/semester-2/efmp-305/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-305/crew-efmp-305-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-305/crew-efmp-305-u05-repair_en-conflict2.misc.prompt.md
  - history/prompts/efmp-305/crew-efmp-305-u05-repair_en-conflict3.misc.prompt.md
+ - history/prompts/efmp-305/crew-efmp-305-u05-repair_en.misc.prompt.md
+ - history/prompts/general/20261035-repair-efmp305-unit-five-findings.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/unit-teacher-notes.mdx
+ - specs/content/efmp-305/figures/unit-05.md
+ - specs/content/efmp-305/reviews/unit-05/G2/20261103T131119616Z-gates.json
+ - specs/content/efmp-305/reviews/unit-05/G2/20261103T180403253Z-gates.json
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-bloom-bands.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-concept-graph.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-depth-gate.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-docs-sync.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-figures.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-no-answer-keys.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-no-em-dash.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/validate-content.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-bloom-bands.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-concept-graph.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-depth-gate.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-docs-sync.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-figures.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-no-answer-keys.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-no-em-dash.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/validate-content.txt
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/content-baseline.log
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/content-final.log
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/geometry.log
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/repair-notes.md
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/source-check.md
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/unit-tests.log
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/validation.md
+ - specs/content/efmp-305/sources/unit-05.md
+ - specs/content/efmp-305/tasks.md
+ - static/img/figures/efmp-305/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-305/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-305/unit-05/fig-U5-4.ur.dark.svg
+ - static/img/figures/efmp-305/unit-05/fig-U5-4.ur.svg
 tests:
  - npm run check:content
 ---
@@ -55,25 +100,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-305-u05-repair_en-conflict1, fix, opencode) The branch's Unit 5 G2 row (`20261103T180403253Z-gates.json`) is the authoritative last matching row; main's Unit 3 row is preserved unchanged.
 - (efmp-305-u05-repair_en-conflict1, fix, opencode) F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work; G3 stays unticked.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/efmp-305-u05-repair_en`, resolved the sole `specs/content/efmp-305/tasks.md` conflict by keeping main's Unit 6 G3 row then this branch's Unit 5 G3/G2 rows, regenerated gitignored `static/content-status.json`, and committed the conflict3 PHR so all 14 content gates pass.
+Merged origin/main into `crew/efmp-305-u05-repair_en`, resolved the sole `specs/content/efmp-305/tasks.md` conflict keeping both sides' rows, regenerated the gitignored content-status file, and committed the merge plus PHR so all 14 content gates pass.
 
 ## Outcome
 
 - Impact: fix for EFMP-305 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14) in the job worktree.
-- Files: 2 file(s) changed by this job; the merge also synced 142 files from origin/main.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 47 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merge commit `503ca8904` resolved the tasks.md conflict (main's Unit 6 G3 advisory row kept first, then this branch's Unit 5 G3/G2 rows); `static/content-status.json` regenerated locally; all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into `crew/efmp-305-u05-repair_en`, resolved the sole `specs/content/efmp-305/tasks.md` conflict keeping both sides' rows, regenerated the gitignored content-status file, and committed the merge plus PHR so all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The tasks.md conflict is resolved; no other conflicted paths remained.
+  - tasks.md conflict resolved by keeping main's Unit 6 G3 advisory row then this branch's Unit 5 G3/G2 rows; no other paths conflicted.
   - F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work; G3 stays unticked.
   - `static/content-status.json` is gitignored and was regenerated locally; CI generates it before the gate.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
