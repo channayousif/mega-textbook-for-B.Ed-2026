@@ -42,8 +42,9 @@ toward the open-access floor.
 **Crossref REST API** and the **OpenAlex API** on **2026-10-15** from this authoring host. The
 returned title, journal, volume, issue, pages, year, author surnames, licence URL and OpenAlex
 open-access status were compared field by field with the citation recorded here. That is a
-*metadata and licence* verification. **No full text was retrieved for any row in this section**, so
-no row here supports a quotation or a page-specific claim; statements of a study's own argument are
+*metadata and licence* verification. **Full text was originally unavailable for these rows; anis2025 was retrieved on 2026-11-03
+and checked as recorded below.** For the other rows,
+no quotation or page-specific claim is supported; statements of a study's own argument are
 taken from its abstract and are marked as such. No other registry (ERIC, DOAJ) was queried for
 these rows beyond the DOAJ listing OpenAlex itself reports, and none is claimed.
 
@@ -51,7 +52,7 @@ these rows beyond the DOAJ listing OpenAlex itself reports, and none is claimed.
 |---|---|---|---|---|
 | parveen2022 | Parveen, Z., Batool, S. B., & Arif, A. (2022). Attitudes and concerns towards inclusive education in Pakistani context: Pre-service teachers' perspectives. *Human Nature Journal of Social Sciences, 3*(4), 82-91. | https://doi.org/10.71016/hnjss/2j482c30 | U5-4 (that Pakistani pre-service teachers report generally favourable attitudes to inclusion, with markedly less favourable attitudes toward pupils with visual impairment and pupils needing individualised functional reading and mathematics, and that their strongest reported concerns are shortage of time, the anticipated reaction of parents of children without disabilities, and inappropriate infrastructure), U5-5 (that a teacher's shortage-of-time concern is a true description of her working conditions and belongs at the system and school levels of a gap analysis rather than being dismissed) | author-selected; open access, CC BY-NC 4.0, OpenAlex `oa_status: diamond`; Crossref and OpenAlex verified (metadata and licence) 2026-10-15; full text not retrieved, the bound claims are from the article's own structured abstract |
 | virani2022 | Virani, Z., & Ali, N. H. (2022). Perceived challenges in inclusive education: An exploratory study of primary schools in Pakistan. *Journal of Education and Educational Development, 9*(2), 302-321. | https://doi.org/10.22555/joeed.v9i2.669 | U5-4 (that teachers in this study name negative attitudes among the public, and particularly among teachers and parents, as among the most significant deterrents to inclusive education, and that they name comprehension of diverse learning needs, responsible management and a stronger parent-teacher relationship as what successful inclusion requires) | author-selected; open access, CC BY 4.0, OpenAlex `oa_status: gold`, journal listed in DOAJ per OpenAlex; Crossref and OpenAlex verified (metadata and licence) 2026-10-15; full text not retrieved, the bound claims are from the article's own abstract |
-| anis2025 | Anis, F., Waqar, Y., & Muhammad, Y. (2025). Understanding Pakistani elementary school teachers' attitudes toward inclusive education: Development of the Teacher Inclusion Attitude Questionnaire. *Indus Journal of Social Sciences, 3*(1), 238-250. | https://doi.org/10.59075/ijss.v3i1.619 | U5-4 (that a validated Pakistani instrument recovers four roughly equal dimensions of teacher attitude to inclusion - professional knowledge and preparedness, attitudes and beliefs, resource availability and support, and collaboration and development - which is the evidence that attitude does not come apart from preparedness, resources and collaboration in this context) | author-selected; open access, CC BY 4.0, OpenAlex `oa_status: diamond`; Crossref and OpenAlex verified (metadata and licence) 2026-10-15; full text not retrieved, the bound claim is from the article's own abstract |
+| anis2025 | Anis, F., Waqar, Y., & Muhammad, Y. (2025). Understanding Pakistani elementary school teachers' attitudes toward inclusive education: Development of the Teacher Inclusion Attitude Questionnaire. *Indus Journal of Social Sciences, 3*(1), 238-250. | https://doi.org/10.59075/ijss.v3i1.619 | U5-4: questionnaire development with 300 teachers; four reported factors, with inconsistent names and variance totals across Results and Discussion. No inference of equal effects or inseparability. | author-selected; open access, CC BY 4.0; Crossref and OpenAlex metadata verified 2026-10-15; full text retrieved 2026-11-03; results bound at `reviews/unit-05/repair-en-20261103/source-check.md` |
 | ainscow2020b | Ainscow, M. (2020). Promoting inclusion and equity in education: Lessons from international experiences. *Nordic Journal of Studies in Educational Policy, 6*, 7-16. | https://doi.org/10.1080/20020317.2020.1729587 | U5-5 (that the field remains confused as to the actions needed to move policy and practice forward, and that moving them is as much a matter of school culture, collaboration and the use of existing resources as of new money) | author-selected; open access, CC BY-NC 4.0, OpenAlex `oa_status: diamond`; Crossref and OpenAlex verified (metadata and licence) 2026-10-15, which returned volume 6, issue 1, pages 7-16; the course registry row omits the issue number and this row follows the registry; full text not retrieved, the bound claims are from the article's own abstract. **Meets this unit's open-access floor** |
 
 ## Author-selected bindings, verified by URL only, no registry record
@@ -68,7 +69,7 @@ retrieved in full, read, and bound as committed excerpts with checksums, so a re
 support offline and reproducibly. That is the whole reason this unit is safe to publish: the only
 claims it makes about what a document requires are grounded in text that travels with it.
 
-The six remaining keys are unverifiable at G1 in the sense the depth gate means: the bibliographic
+Five remaining keys are unverifiable at G1 in the sense the depth gate means: the bibliographic
 record and, where a licence exists, the licence have been checked, but **no full text was retrieved
 from this authoring host** and no excerpt is bound. Support is bibliographic or abstract level only,
 per `D-2026-0001`; a reviewer must verify each specific claim against the source text at G2.
@@ -87,13 +88,10 @@ per `D-2026-0001`; a reviewer must verify each specific claim against the source
   measurement. The prose names the number and treats the attitude finding as the authors' own
   characterisation rather than as an established fact about Pakistan. The study's point about the
   parent-teacher relationship is carried forward to Unit 6 rather than used here.
-- `anis2025`: supports U5-4. CC BY 4.0. **Scope cautions:** an **instrument-development** study,
-  300 elementary teachers from public and private schools, principal axis factoring with varimax
-  rotation. The only claim bound to it is the **four-factor structure** and the inference that
-  attitude, preparedness, resources and collaboration are not separable in this context. It is not
-  cited for any teacher's attitude level, for any variance figure, or for anything about pupils.
-  This is the row whose use is most abstract, and a G2 reviewer should confirm the factor names are
-  reported as given here before accepting the inference.
+- `anis2025`: full text retrieved on 2026-11-03; no longer in the unavailable set.
+  See `reviews/unit-05/repair-en-20261103/source-check.md` for retrieval identity and
+  the inconsistent Results/Discussion labels and variance totals. The unit now teaches
+  the reporting limitation, not equal dimensions or inseparability.
 - `ainscow2020b`: supports U5-5. CC BY-NC 4.0 and the unit's open-access floor. **Scope cautions:**
   a conceptual and comparative paper drawing on international experience, not an empirical study
   and not about Pakistan. The quoted phrase about the field remaining confused as to the actions
@@ -117,8 +115,8 @@ per `D-2026-0001`; a reviewer must verify each specific claim against the source
 - Retrieve `parveen2022` in full and confirm the three concern items and the two least-favourable
   categories are reported as stated. Topic 5.3's central empirical paragraph and the Summary both
   rest on them.
-- Retrieve `virani2022` and `anis2025`. Both are freely licensed and neither should be difficult;
-  `anis2025` matters most because the four-factor inference is doing conceptual work in the topic.
+- Retrieve `virani2022`. The `anis2025` retrieval is now recorded; a fresh independent
+  reviewer must check the narrowed interpretation against the bound result summary.
 - Pin `ainscow2020b`'s culture-and-collaboration argument to the body text rather than the abstract.
 - Retrieve UNCRPD Article 24 and record the retrieval date, since the page is a living web document.
 - **No further verification is owed on the three primary texts for the claims this unit makes.**

@@ -15,6 +15,7 @@ has at least one row naming the exact `topic-NN.mdx` its `### Topic list` row as
 | U3-01 | topic-01.mdx | Literacy as a social and cultural practice | papen-2023-nls |
 | U3-02 | topic-01.mdx | Language, identity, and power relations | papen-2023-nls |
 | U3-03 | topic-02.mdx | Literacy for citizenship and democratic participation | ashraf-2021-multilingual |
+| U3-03 | topic-02.mdx | Literacy for citizenship and democratic participation | pak-constitution-1973 |
 | U3-04 | topic-02.mdx | Multilingualism and literacy development | ashraf-2021-multilingual |
 
 ## Reinforcement
