@@ -1,6 +1,6 @@
 ---
 id: crew-gsos-301-u05-repair_en-conflict1
-title: crew merge GSOS-301 unit 5
+title: crew fix GSOS-301 unit 5
 stage: misc
 date: 2026-11-05
 surface: agent
@@ -8,16 +8,33 @@ model: opencode
 feature: gsos-301
 branch: crew/gsos-301-u05-repair_en
 user: crew
-command: crew merge
-labels: ["crew", "opencode", "merge"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/gsos-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - specs/content/gsos-301/tasks.md
+ - history/prompts/general/550-repair-gsos301-unit-five-sources.general.prompt.md
  - history/prompts/gsos-301/crew-gsos-301-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u05-repair_en.misc.prompt.md
+ - specs/content/gsos-301/coverage/unit-05.md
+ - specs/content/gsos-301/reviews/unit-05/G2/20261105T173800809Z-gates.json
+ - specs/content/gsos-301/reviews/unit-05/G2/logs-20261105T173800809Z/check-bloom-bands.txt
+ - specs/content/gsos-301/reviews/unit-05/G2/logs-20261105T173800809Z/check-concept-graph.txt
+ - specs/content/gsos-301/reviews/unit-05/G2/logs-20261105T173800809Z/check-depth-gate.txt
+ - specs/content/gsos-301/reviews/unit-05/G2/logs-20261105T173800809Z/check-docs-sync.txt
+ - specs/content/gsos-301/reviews/unit-05/G2/logs-20261105T173800809Z/check-figures.txt
+ - specs/content/gsos-301/reviews/unit-05/G2/logs-20261105T173800809Z/check-no-answer-keys.txt
+ - specs/content/gsos-301/reviews/unit-05/G2/logs-20261105T173800809Z/check-no-em-dash.txt
+ - specs/content/gsos-301/reviews/unit-05/G2/logs-20261105T173800809Z/validate-content.txt
+ - specs/content/gsos-301/reviews/unit-05/G3/repair-handoff-20261105.md
+ - specs/content/gsos-301/sources/texts/u05-andrabi2015.md
+ - specs/content/gsos-301/sources/texts/u05-cii-functions.md
+ - specs/content/gsos-301/sources/texts/u05-who-lhw.md
+ - specs/content/gsos-301/sources/unit-05.md
+ - specs/content/gsos-301/tasks.md
 tests:
  - npm run check:content
 ---
@@ -55,25 +72,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gsos-301-u05-author, author, claude) Three Pakistani facts are not tied to a source and are marked `no-external-source` for the G3 reviewer to check: the Lady Health Worker programme starting in 1994, the spread of low-fee private schools, and the Council of Islamic Ideology's advisory role.
 - (gsos-301-u05-author, author, claude) The Urdu translation job needs to make `.ur.svg` versions of fig-U5-1 to fig-U5-4. All 14 Urdu concept labels are newly authored (none are in `terminology.csv`) and need G5 review.
 
+
 ## Response snapshot
 
-Merged origin/main onto crew/gsos-301-u05-repair_en, resolved the single conflict in specs/content/gsos-301/tasks.md (kept main's Unit 3 G3 row then this branch's Unit 5 G3 row), regenerated static/content-status.json, and confirmed all 14 content gates pass.
+Merged origin/main into crew/gsos-301-u05-repair_en, resolved the tasks.md conflict by keeping both sides' G3 rows, regenerated content-status.json, and committed the merge plus PHR with all content gates passing.
 
 ## Outcome
 
-- Impact: merge for GSOS-301 Unit 5 by opencode (attempt 2).
+- Impact: fix for GSOS-301 Unit 5 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 2 file(s), listed above.
+- Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main onto crew/gsos-301-u05-repair_en, resolved the single conflict in specs/content/gsos-301/tasks.md (kept main's Unit 3 G3 row then this branch's Unit 5 G3 row), regenerated static/content-status.json, and confirmed all 14 content gates pass.
+- Shipped / changed: Merged origin/main into crew/gsos-301-u05-repair_en, resolved the tasks.md conflict by keeping both sides' G3 rows, regenerated content-status.json, and committed the merge plus PHR with all content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Render inspection remains blocked by the brief; a permitted session must perform mobile/print checks before G3 can close.
+  - The Urdu translation job still needs `.ur.svg` variants of fig-U5-1 to fig-U5-4 (14 new Urdu concept labels pending G5 review).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
