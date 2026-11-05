@@ -25,10 +25,14 @@ files:
   - specs/content/gqur-301/reviews/unit-02/repairs/20261105-codex.md
   - static/img/figures/gqur-301/unit-02/fig-U2-3.svg
   - static/img/figures/gqur-301/unit-02/fig-U2-3.dark.svg
+  - specs/content/gqur-301/reviews/unit-02/G2/20261105T125533159Z-gates.json
+  - specs/content/gqur-301/reviews/unit-02/G2/logs-20261105T125533159Z/
+  - specs/content/gqur-301/reviews/unit-02/repairs/check-content-main.txt
+  - specs/content/gqur-301/reviews/unit-02/repairs/check-content-final.txt
 tests:
   - Unchanged origin/main content baseline passed all 14 gates
   - SVG arithmetic and dark variant checks passed
-  - Full repair checks and npm test results recorded in the repair handoff
+  - Final content checks passed 14/14; npm test passed 31 files and 368 tests
 ---
 
 ## Prompt
@@ -42,8 +46,8 @@ Applied the four blocking author repairs and appended the required unticked advi
 ## Outcome
 
 - ✅ Impact: Corrected quantitative figure geometry and assessment pedagogy.
-- 🧪 Tests: Baseline passes; final checks recorded in repair handoff after G2 refresh.
-- 📁 Files: Unit 2 topics, assessment, teacher notes, figure pair, manifest, tracker and repair handoff.
+- 🧪 Tests: Baseline and repaired content checks passed 14/14; npm test passed 368/368; SVG arithmetic, variants and diff checks passed. Playwright text geometry is prohibited by the brief and remains pending.
+- 📁 Files: Unit 2 topics, assessment, teacher notes, figure pair, manifest, tracker, fresh G2 evidence/logs and repair validation handoff.
 - 🔁 Next prompts: Fresh independent G3 review with frozen source and render evidence; resolve G1/provenance.
 - 🧠 Reflection: Repairs stale the existing G2 input manifest, requiring fresh deterministic evidence without G3 certification.
 
@@ -57,6 +61,6 @@ Applied the four blocking author repairs and appended the required unticked advi
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Initial changed-input check exposed stale G2 evidence and removal of a grandfathered SVG outline; outline restored.
-- Graders run and results (PASS/FAIL): Baseline 14/14 PASS; arithmetic and variants PASS; final results in repair handoff.
+- Graders run and results (PASS/FAIL): Baseline 14/14 PASS; final content 14/14 PASS; 368 tests PASS; arithmetic and variants PASS.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent answer-blind assessment and rendered review of repaired version.
