@@ -83,11 +83,11 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/gqur-301-u15-repair_en, resolved the sole tasks.md conflict by keeping both sides' tracker rows (main's Unit 13 and Unit 12 rows first, then this branch's Unit 15 row), regenerated the gitignored content-status digest, and committed the merge plus its PHR.
+Merged origin/main into `crew/gqur-301-u15-repair_en`, resolved the sole `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 13 and Unit 12 rows then this branch's Unit 15 row, regenerated the content-status digest, and left all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for GQUR-301 Unit 15 by opencode (attempt 2).
+- Impact: fix for GQUR-301 Unit 15 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 27 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -95,13 +95,13 @@ Merged origin/main into crew/gqur-301-u15-repair_en, resolved the sole tasks.md 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gqur-301-u15-repair_en, resolved the sole tasks.md conflict by keeping both sides' tracker rows (main's Unit 13 and Unit 12 rows first, then this branch's Unit 15 row), regenerated the gitignored content-status digest, and committed the merge plus its PHR.
+- Shipped / changed: Merged origin/main into `crew/gqur-301-u15-repair_en`, resolved the sole `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 13 and Unit 12 rows then this branch's Unit 15 row, regenerated the content-status digest, and left all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `static/content-status.json` is gitignored and must be regenerated locally (`npm run build:content-status`) after content edits or `check:content-status` fails.
-  - The merge pulled in main's repairs for other courses and units (efmp-304 unit 2, gqur-301 units 12 and 13); those are main's work, not this branch's.
   - Unit 15 G3 stays open/unticked; F12 rendered accessibility, F13 source bundle and F14 G1 authority remain for the review host, and the Urdu mirror needs a G5 read of the new statistical terminology.
+  - The merge pulled in main's repairs for efmp-304 unit 2 and gqur-301 units 12/13; those are main's work, not this branch's.
+  - `static/content-status.json` is gitignored and was regenerated locally after the merge.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
