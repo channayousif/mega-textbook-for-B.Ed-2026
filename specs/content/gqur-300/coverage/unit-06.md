@@ -14,4 +14,3 @@ key it is grounded in.
 | U6-04 | topic-02.mdx | Quantitative reasoning in media and advertisements | tout2020 |
 | U6-05 | topic-03.mdx | Decision-making using quantitative data | mcclure2020 |
 | U6-06 | topic-03.mdx | Interpreting quantitative information in education and society | pbs |
-| U6-06 | topic-03.mdx | Interpreting quantitative information in education and society | mcclure2020 |
