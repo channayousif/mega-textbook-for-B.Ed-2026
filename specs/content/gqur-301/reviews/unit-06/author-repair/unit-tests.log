@@ -1,0 +1,7 @@
+$ scripts/heavy.sh npm test
+ Test Files  31 passed (31)
+      Tests  368 passed (368)
+   Start at  18:06:14
+   Duration  126.05s (transform 2.11s, setup 0ms, collect 3.81s, tests 89.25s, environment 28ms, prepare 9.67s)
+
+exit_code=0

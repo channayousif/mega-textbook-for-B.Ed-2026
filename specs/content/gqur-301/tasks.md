@@ -50,7 +50,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ▢ | | guide Chapter 6; intake re-evaluation advised (D-2026-0070) |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-06/G2/20261103T112245438Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-06/G2/20261105T130949430Z-gates.json |
 | Unit 6 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation: specs/content/gqur-301/reviews/unit-06/G3/01a16060-0dfb-7512-a36b-afc1aeed712a.json; precision and real-data assessment repairs requested; G1, provenance and narrow/A4 render evidence unresolved. G3 remains open and unsigned. |
 | Unit 6 | G4 ur-translation | ▢ | | Blocked by unresolved English precision and assessment defects under translate-unit prerequisite; see reviews/unit-06/translation-validation/handoff.md. No translation or completion claim; translation_status remains draft. |
 | Unit 6 | G5 ur-review | ▢ | | |
@@ -186,4 +186,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261102T212207Z-g3-desk-b6a93c25.json |
 | Unit 15 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-15/G3/20261102T212207Z-g3-desk-b5cee406.json |
 | Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-07/G3/20261102T213256Z-g3-desk-017a8f92.json |
+| Unit 2 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied for F1-F4 from specs/content/gqur-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-7dd700f4.json; corrected chart geometry and alt, conditional interval choices, scored grouping analysis and worked chart procedures. G3 remains open; fresh independent review and unresolved evidence/authority checks required. |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-02/G2/20261105T135028825Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied for F3-F7 in report specs/content/gqur-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f6cc2233.json; F1 authority, F2 historical provenance and F8 rendered inspection remain open. Fresh independent G3 required; no certification. |
 | Unit 10 | G3 en-review | ▢ | | advisory: revise; repairs applied to tracking and handoff only for report specs/content/gqur-301/reviews/unit-10/G3/20261102T212207Z-g3-desk-36d2970a.json; no content repair was possible or required. The sole blocking render-review finding remains unresolved because the crew brief prohibits builds, dev servers and Playwright on this production host. Owner must arrange a non-production review host for independent desktop, 360px table-scroll and A4 inspection with actual rendered artifacts. See reviews/unit-10/repair-en-handoff.md. G3 stays open, unsigned (ADR-0019); Urdu remains draft and unchanged. |

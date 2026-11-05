@@ -22,9 +22,9 @@ here and **carries a G5 flag** (see the list at the foot of this file).
 | CON:GQUR-300-4-5 | Perimeter as boundary | اطراف کی پیمائش بطور حد | CON:GQUR-300-4-1 | 4.2 | SLO:GQUR-300-2-2 | MCQ-04, MCQ-09, RRQ-03 |
 | CON:GQUR-300-4-6 | Area as cover | رقبہ بطور احاطہ | CON:GQUR-300-4-5 | 4.2 | SLO:GQUR-300-2-2 | MCQ-05, RRQ-03 |
 | CON:GQUR-300-4-7 | Volume as fill | حجم بطور بھرائی | CON:GQUR-300-4-6 | 4.2 | SLO:GQUR-300-2-2 | MCQ-07, RRQ-09 |
-| CON:GQUR-300-4-8 | The formulas as pictures: the half and the pi | فارمولے بطور تصویر: آدھا اور پائی | CON:GQUR-300-4-6 | 4.2 | SLO:GQUR-300-2-2 | RRQ-04, RRQ-05 |
+| CON:GQUR-300-4-8 | The formulas as pictures: the half and the pi | فارمولے بطور تصویر: آدھا اور پائی | CON:GQUR-300-4-6 | 4.2 | SLO:GQUR-300-2-2 | MCQ-06, RRQ-04, RRQ-05 |
 | CON:GQUR-300-4-9 | Area and perimeter move independently | رقبہ اور اطراف الگ الگ بدلتے ہیں | CON:GQUR-300-4-5, CON:GQUR-300-4-6 | 4.2 | SLO:GQUR-300-2-2 | MCQ-08 |
-| CON:GQUR-300-4-10 | The four-move measurement task | چار مرحلوں والا پیمائشی کام | CON:GQUR-300-4-3 | 4.3 | SLO:GQUR-300-2-2 | MCQ-10, RRQ-10, ERQ-02, ERQ-03 |
+| CON:GQUR-300-4-10 | The four-move measurement task | چار مرحلوں والا پیمائشی کام | CON:GQUR-300-4-3 | 4.3 | SLO:GQUR-300-2-2 | MCQ-10, RRQ-06, RRQ-10, ERQ-02, ERQ-03 |
 | CON:GQUR-300-4-11 | The round-number check | گول اعداد والی جانچ | CON:GQUR-300-4-10 | 4.3 | SLO:GQUR-300-2-2 | RRQ-07, ERQ-01 |
 | CON:GQUR-300-4-12 | The plan as a re-checkable report | منصوبہ بطور دوبارہ جانچے جانے والی رپورٹ | CON:GQUR-300-4-10 | 4.3 | SLO:GQUR-300-4-4 | ERQ-04, ERQ-05 |
 
