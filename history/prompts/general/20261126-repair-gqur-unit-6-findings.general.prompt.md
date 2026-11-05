@@ -43,8 +43,8 @@ Applied F3-F7 author repairs, sourced PBS census data, corrected figure teaching
 ## Outcome
 
 - ✅ Impact: Corrected statistical precision, assessment alignment and unsupported teaching inferences.
-- 🧪 Tests: 368 unit tests pass; content baseline passes; final content validation recorded in author-repair logs.
-- 📁 Files: Three English MDX files, figure pair, Unit 6 governance records, tracker and author handoff.
+- 🧪 Tests: 368 unit tests pass; content baseline passes; final content validation passes all 14 gates, recorded in author-repair logs.
+- 📁 Files: Three English MDX files, figure pair, Unit 6 governance records and bound PBS excerpt, tracker, refreshed G2 evidence and author handoff.
 - 🔁 Next prompts: Fresh independent G3 after authority/provenance resolution, authorised geometry and narrow/A4 inspection, then translation.
 - 🧠 Reflection: Summary statistics prompt diagnosis; they cannot select a programme or establish universal claims.
 
@@ -57,7 +57,7 @@ Applied F3-F7 author repairs, sourced PBS census data, corrected figure teaching
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Stale G2 evidence expected after content edits; browser-based validation unavailable under explicit brief.
-- Graders run and results (PASS/FAIL): Baseline content PASS; unit tests PASS; final content result recorded in author-repair evidence.
+- Failure modes observed: Post-repair checks identified stale G2 evidence, a missing bound PBS excerpt and a stale derived status report. Added the excerpt, regenerated G2 evidence for Unit 6 and rebuilt the ignored status report. Browser-based validation remains unavailable under the explicit brief.
+- Graders run and results (PASS/FAIL): Baseline content PASS; unit tests PASS; final content PASS (14/14), recorded in author-repair evidence.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent review of committed repaired inputs.

@@ -17,4 +17,4 @@ No feedback quote was skipped as stale. This input was a G3 findings report, not
 - F2: The old author's session provenance remains unverified; this repair session identity does not retroactively establish it. The next review host must supply a committed bundle and genuine author/reviewer identities.
 - F8: A fresh independent reviewer on an authorised host must inspect narrow-screen and A4 pages. The crew brief prohibits Playwright and all browser runs, so neither rendered review nor the Chromium-based measure-figure-text.mjs was run. Changed figure text still needs that geometry check on an authorised host. Static SVG/manifest gates do not establish rendered geometry.
 
-G3 remains unticked. No G5, publication or certification claim is made. Existing G2 evidence becomes stale when the English inputs change; any replacement is deterministic draft evidence only.
+G3 remains unticked. No G5, publication or certification claim is made. The stale G2 reference was replaced with fresh deterministic draft evidence at G2/20261105T130949430Z-gates.json. This changes no G3 status or certification.
