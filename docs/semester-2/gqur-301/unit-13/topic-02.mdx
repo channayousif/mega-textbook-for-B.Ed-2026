@@ -45,7 +45,7 @@ line. That method is called **least squares**, and the resulting line is the
 
 The equation of the regression line has the form:
 
-$$\hat\{y\} = a + bx$$
+ŷ = a + bx
 
 where:
 
@@ -78,7 +78,9 @@ For a pupil who studies 7 hours per week:
 
 The predicted test score is about 68 or 69 out of 100. This prediction is an
 **interpolation** if 7 hours lies within the range of the original data (which it
-does, since the data cover 2 to 10 hours). Interpolation is generally reliable.
+does, since the data cover 2 to 10 hours). Interpolation avoids going beyond the observed range, but reliability also
+depends on linear fit, residual scatter, representative sampling and whether the
+new case resembles the sample. Report a prediction as uncertain, not guaranteed.
 **Extrapolation** (predicting for an x value outside the data range) is riskier
 because the linear pattern may not hold beyond what you have observed.
 
@@ -118,10 +120,14 @@ is associated with a 5.5-point higher score. Confusing prediction with causation
 is the same error as confusing correlation with causation (Topic 13.1), and it
 matters just as much.
 
-Also, a regression line is only as good as the linear pattern it summarises. If r
-is near 0, the line's slope will be near 0 and the prediction will be close to the
-mean ȷ for every x, which is uninformative. Always check that the correlation is
-meaningful before relying on a regression prediction.
+Also, a regression line is only as good as the linear pattern it summarises.
+The slope is b = r × sY / sX, where sX and sY are the sample standard deviations.
+A small r does not guarantee a numerically small slope because units and scales
+matter. With both variables standardised, the slope equals r: at x one standard
+deviation above its mean, the fitted response is r standard deviations above
+y-bar (the response mean). Near-zero r therefore gives little linear predictive
+variation relative to response variation. Inspect the scatter plot and residuals
+before relying on predictions (Lane, Chapter 14, Standardized Variables).
 
 ## Activity: Fit a line and predict
 
@@ -178,8 +184,10 @@ compute b, then a, then write the line equation. Then answer the following:
    exercise and heart rate?
 2. Predict the heart rate for an adult who exercises 4 hours per week.
 3. Compute the residual for Person 4 (5 hours, heart rate 68 bpm).
-4. In one sentence, explain why this prediction does not prove that exercise
-   causes the predicted heart rate.
+4. Suppose residuals for low and high exercise hours are positive, while those
+   for middle hours are negative. Diagnose what this pattern suggests about the
+   straight-line model and explain what you would inspect before using it for
+   an individual health decision. Also explain why prediction does not prove causation.
 
 **Mini-rubric**
 
@@ -188,7 +196,7 @@ compute b, then a, then write the line equation. Then answer the following:
 | *Line computation* | 0-3: slope and intercept both correct / one correct / neither. |
 | *Slope interpretation* | 0-2: correct direction and plain-language meaning / partial / none. |
 | *Prediction and residual* | 0-3: both correct / one correct / neither. |
-| *Limitation (Analyze)* | 0-2: clearly distinguishes prediction from causation / vague / none. |
+| *Model diagnosis (Analyze)* | 0-2: links the residual pattern to possible curvature and justifies inspecting the scatter plot or another model / identifies only the pattern or check / generic causation caveat or none. |
 
 ## Further reading
 

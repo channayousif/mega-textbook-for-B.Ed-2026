@@ -74,14 +74,15 @@ between two variables. It always lies between -1 and +1:
 - **-1 < r < 0**: negative correlation; the closer to -1, the stronger the linear
   pattern.
 
-A common rule of thumb (Lane, 2023, Chapter 4) for interpreting the magnitude of r
-in classroom data:
+For exercises in this unit, use this classroom convention for the magnitude of r.
+These cut-offs are not universal standards or attributed to Lane; interpretation
+depends on the subject, sample and scatter plot:
 
 | Range of \|r\| | Descriptor |
 |---|---|
-| 0.00 - 0.30 | Weak or none |
-| 0.30 - 0.70 | Moderate |
-| 0.70 - 1.00 | Strong |
+| 0.00 ≤ magnitude < 0.30 | Weak or none |
+| 0.30 ≤ magnitude < 0.70 | Moderate |
+| 0.70 ≤ magnitude ≤ 1.00 | Strong |
 
 Note that this scale describes *linear* correlation. Two variables can have a clear
 non-linear relationship (for example, a U-shaped curve) and still have r close to 0.
@@ -92,7 +93,7 @@ The correlation coefficient only measures straight-line association.
 The formula for the Pearson correlation coefficient between two variables x and y,
 for n paired cases, is:
 
-$$r = \frac\{n\sum xy - \sum x \sum y\}\{\sqrt\{[n\sum x^2 - (\sum x)^2][n\sum y^2 - (\sum y)^2]\}\}$$
+r = [nΣxy - (Σx)(Σy)] / √([nΣx² - (Σx)²][nΣy² - (Σy)²])
 
 You do not need to memorise this formula, but you should be able to compute r step
 by step for a small data set using a table. The steps are:
@@ -142,9 +143,10 @@ report a correlation.
 In practicum work you will often face a question like, "Is there a link between
 pupil attendance and test performance?" Computing r gives you a defensible answer:
 
-- If r is close to -1 or +1, the linear pattern is strong; you can be confident the
-  link exists (though not that one causes the other).
-- If r is close to 0, there is no straight-line link; attendance and performance may
+- If r is close to -1 or +1, the observed sample has a strong linear pattern.
+  Population claims also require suitable sampling and uncertainty analysis; a
+  large sample correlation alone establishes neither a population link nor causation.
+- If r is close to 0, the observed linear association is negligible; attendance and performance may
   still relate in a non-linear way, but a straight-line summary would be misleading.
 - The sign tells you the direction: negative r means higher attendance goes with
   lower scores (unusual, worth checking your data), positive r means they move
@@ -201,6 +203,9 @@ Using the data below (weekly hours of physical exercise and resting heart rate f
 sign, its magnitude using the rule-of-thumb scale, and what the sign means in the
 context of exercise and heart rate. Finally, write one sentence explaining why a
 negative r here does not prove that exercise *causes* a lower heart rate.
+Identify a specific alternative explanation involving age or prior health, explain
+how it could affect both variables, and propose a comparison that could distinguish
+it from an exercise effect.
 
 | Person | Exercise hrs/week | Heart rate (bpm) |
 |---|---|---|
@@ -216,8 +221,8 @@ negative r here does not prove that exercise *causes* a lower heart rate.
 | Criterion | Levels |
 |---|---|
 | *Computation* | 0-3: all columns correct, r computed accurately / minor arithmetic error / major error or incomplete. |
-| *Interpretation (Analyze)* | 0-3: sign, magnitude (with scale) and plain-language meaning all stated correctly / two elements correct / one or none. |
-| *Limitation* | 0-2: clearly states that correlation does not imply causation / vague statement / none. |
+| *Interpretation* | 0-3: sign, magnitude (with scale) and plain-language meaning all stated correctly / two elements correct / one or none. |
+| *Alternative explanation (Analyze)* | 0-2: explains how age or prior health could affect both variables and proposes a relevant comparison / names a factor without a comparison / generic caveat or none. |
 
 ## Further reading
 
