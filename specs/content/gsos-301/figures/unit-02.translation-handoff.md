@@ -53,3 +53,7 @@ These existing draft renderings are proposals, not approved bank entries. The co
 | Play stage | کھیل کا مرحلہ |
 | Game stage | گیم کا مرحلہ |
 | Adult socialization | بالغوں کی معاشرتی بندی |
+
+## English repair alignment (2026-11-05)
+
+This supplement supersedes the earlier pending English citation/stage/Bloom/mapping list above. F1-F5 and F8 repairs were mirrored into the draft Urdu pages and fig-U2-4 variants. The table uses developmental periods, separates adult learning from Mead childhood stages and no longer assigns generalized-other understanding only to adults. All assessment item numbering, keys, mark totals, checklist counts and draft status are retained; RRQ 4 and 10 now assess culture to restore the approved 5/5 topic split. Fresh independent G3 and then G5 are still required. Actual desktop, narrow and A4 rendering and original author/source provenance remain review-host work, not completed checks.
