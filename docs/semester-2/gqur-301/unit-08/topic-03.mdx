@@ -34,7 +34,7 @@ The first trainee says, "These are all just combinations." The second says,
 "No, they are all permutations." Both are wrong, and neither can explain why.
 What both are missing is a method for deciding.
 
-<Figure id="fig-U8-5" kind="flowchart" src="/img/figures/gqur-301/unit-08/fig-U8-5.svg" alt="A flowchart for choosing a counting method. If order does not matter, use a combination. If order matters and items can repeat, use the multiplicative rule, n to the power r. If order matters without repetition, use n factorial when all items are arranged, or P(n, r) when only some are. A note says to multiply across stages and add across separate cases." width={780} height={600} />
+<Figure id="fig-U8-5" kind="flowchart" src="/img/figures/gqur-301/unit-08/fig-U8-5.svg" alt="A flowchart for choosing a counting method among distinct items. If order does not matter and items cannot repeat, use a combination C(n, r). If order matters and items can repeat, use the multiplicative rule, n to the power r. If order matters without repetition, use n factorial when all items are arranged, or P(n, r) when only some are. A note says to multiply across stages and add across disjoint cases." width={780} height={600} />
 
 ## Explanation
 
@@ -67,8 +67,8 @@ wrong method does not give a slightly wrong answer; it answers a different
 question.
 
 **Worked example 1 (the lock).** A lock code is an ordered string, and the
-problem says digits may repeat: 10³ = **1,000** codes. If the school wanted a
-safer rule of "no repeated digit", the count would fall to P(10, 3) = 720.
+problem says digits may repeat: 10³ = **1,000** codes. If the school instead
+required a rule of "no repeated digit", the count would fall to P(10, 3) = 720.
 
 ### Combining methods: stages, restrictions and cases
 
