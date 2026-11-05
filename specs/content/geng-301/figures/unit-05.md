@@ -10,3 +10,10 @@
 | fig-U5-7 | 5.3 | table | clean flat vector table, landscape: three rows (Opinion column, Newsletter, Blog) and three columns (Length, Tone, Features); labelled, high contrast, no colour-only meaning | Table comparing three public writing forms. | /img/figures/geng-301/unit-05/fig-U5-7.svg | placed |
 | fig-U5-4 | 5.4 | table | clean flat vector table, landscape: three rows showing the same content for three audiences (Academic, Public, Personal); labelled, high contrast, no colour-only meaning | Table showing how the same content changes in tone for different audiences. | /img/figures/geng-301/unit-05/fig-U5-4.svg | placed |
 | fig-U5-8 | 5.4 | table | clean flat vector table, landscape: three rows (Formal, Semi-formal, Informal) and three columns (Features, Appropriate for, Example); labelled, high contrast, no colour-only meaning | A style checklist for formal, semi-formal and informal register. | /img/figures/geng-301/unit-05/fig-U5-8.svg | placed |
+
+## Content correction, 2026-11-03
+
+G3 finding 5: fig-U5-2 and fig-U5-8 now describe person as a genre choice and formal
+vocabulary as precise and clear. First person is not inherently informal. Both light and dark
+labels were updated; figure IDs, prompts and alt text are preserved. Geometry measurement
+requires Playwright and is pending under the crew brief's prohibition on Playwright.
