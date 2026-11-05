@@ -56,8 +56,8 @@ Completed inherited Unit 3 repairs against the latest G3 findings, corrected rem
 ## Outcome
 
 - ✅ Impact: Aligned the unit with the approved thesis scope and repaired assessment and pedagogy defects.
-- 🧪 Tests: Results recorded in the Unit 3 repair record after completion.
-- 📁 Files: Unit 3 English pages, governance tables, four light/dark figure pairs, repair record and this PHR.
+- 🧪 Tests: Unit tests: 31 files, 368 tests passed. All 14 origin/main content gates passed; all 14 repaired-branch content gates also passed.
+- 📁 Files: Unit 3 English pages, governance tables, four light/dark figure pairs, fresh G2 evidence, check logs, repair record and this PHR.
 - 🔁 Next prompts: Parent prepares frozen handoff and commissions independent assessment/render review within the authorized cycle limit.
 - 🧠 Reflection: The inherited repair missed contradictory SVG labels and concept mappings; checked both before completion.
 
@@ -71,6 +71,6 @@ Completed inherited Unit 3 repairs against the latest G3 findings, corrected rem
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Shared writing2015 excerpt edits would invalidate other units, so Unit 3 excerpts were placed in its own sources file. Browser inspection is prohibited by this brief.
-- Graders run and results (PASS/FAIL): Final results recorded in specs/content/geng-301/reviews/unit-03/repairs-20261105.md.
+- Graders run and results (PASS/FAIL): PASS: 368 unit tests, dark-variant freshness, diff whitespace and all 14 origin/main content gates. PASS: all 14 final repaired-branch content gates; fresh Unit 3 G2 evidence recorded.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent reviewer checks the committed repair without author reasoning.
