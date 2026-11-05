@@ -79,8 +79,8 @@
   <text x="540" y="320" class="label" font-size="9px">1: Distinction 26%</text>
   <text x="540" y="335" class="label" font-size="9px">2: First division 45%</text>
   <text x="540" y="350" class="label" font-size="9px">3: Second 19%</text>
-  <text x="655" y="320" class="label" font-size="9px">4: Third 7%</text>
-  <text x="655" y="335" class="label" font-size="9px">5: Failed 3%</text>
+  <text x="675" y="320" class="label" font-size="9px">4: Third 7%</text>
+  <text x="675" y="335" class="label" font-size="9px">5: Failed 3%</text>
 
   <!-- Caption -->
   <text x="30" y="380" class="caption">Caption: Bar chart and pie chart are both appropriate for categorical data. A histogram is wrong here</text>
