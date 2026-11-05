@@ -28,7 +28,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261103T112247433Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261105T153101802Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ▣ | auto:gates | full UR mirror (5 files) and 4 figure variants retained; 2026-10-19 semantic and untranslated-prose repairs; 13 draft gates pass; parity probe has only expected G4/G5 status and derived-status failures; render pending; translation_status stays draft; handoff: figures/unit-02.translation-handoff.md |
 | Unit 2 | G5 ur-review | ▢ | | |
@@ -97,3 +97,5 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-92fc9b44.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67a.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-06/G3/20261102T212740Z-g3-desk-c2180039.json |
+
+| Unit 2 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67a.json; F1-F5 and F8 repaired in EN/UR; F6 render inspection and F7 original provenance/complete source evidence remain open; fresh independent review required; no certification |
