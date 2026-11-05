@@ -79,9 +79,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u15-figures, figures, claude) Urdu labels in fig-U15-1 to fig-U15-6 were only checked by font measurement, not in a browser; run `scripts/measure-figure-text.mjs` and do a G5 read. The glossary has no Urdu statistics terms, so "نارمل منحنی" and "فیصلہ کن قدر" are unconfirmed.
 - (gqur-301-u15-figures, figures, claude) The fig-U15-2 and fig-U15-3 fixes are figure-only. The G3 findings on the ERQ 2 and RRQ 10 keys, the 6 broken citation links and sources/unit-15.md are still open for the author repair.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gqur-301-u15-repair_en, resolved the tasks.md conflict by keeping both sides' rows (main's Unit 8 row, then this branch's Unit 15 row), regenerated the stale content-status artifact, and confirmed all 14 content gates pass.
+Merged origin/main into crew/gqur-301-u15-repair_en, resolved the tasks.md conflict by keeping both sides' rows, regenerated content-status, and left all 14 content gates passing with the merge and PHR committed.
 
 ## Outcome
 
@@ -93,12 +94,12 @@ Merged origin/main into crew/gqur-301-u15-repair_en, resolved the tasks.md confl
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gqur-301-u15-repair_en, resolved the tasks.md conflict by keeping both sides' rows (main's Unit 8 row, then this branch's Unit 15 row), regenerated the stale content-status artifact, and confirmed all 14 content gates pass.
+- Shipped / changed: Merged origin/main into crew/gqur-301-u15-repair_en, resolved the tasks.md conflict by keeping both sides' rows, regenerated content-status, and left all 14 content gates passing with the merge and PHR committed.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `static/content-status.json` is a gitignored build artifact; regenerate it (`npm run build:content-status`) after any content-affecting merge or the `check:content-status` gate fails.
-  - The merge pulled in main's repairs for other courses/units (geng-301 unit 3, gqur-301 unit 8, gsos-301 unit 2); those are main's work, not this branch's.
+  - `static/content-status.json` is a gitignored build artifact; regenerate it (`npm run build:content-status`) after any content-affecting merge or `check:content-status` fails.
+  - The merge pulled in main's repairs for other courses (geng-301 unit 3, gqur-301 unit 8, gsos-301 unit 2); those are main's work, not this branch's.
   - Unit 15 G3 stays open/unticked; F12 rendered accessibility, F13 source bundle and F14 G1 authority remain for the review host, and the Urdu mirror needs a G5 read of the new statistical terminology.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
