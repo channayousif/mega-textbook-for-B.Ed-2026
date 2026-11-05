@@ -8,14 +8,14 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▣ | | intake in progress; spec drafted, repairs pending |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261103T112242759Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261103T183724789Z-gates.json |
 | Unit 1 | G3 en-review | ▣ | | Advisory revise only: see reviews/unit-01/G3/20261019T000000000Z-g3.json and continuation-summary.md; RRQ 5 repair pending; render evidence unavailable; no certification. |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-02/G2/20261103T112242910Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-02/G2/20261103T184648108Z-gates.json |
 | Unit 2 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 04ddc645-f479-4d6d-a614-8f7e23db9fc0): SVG text geometry overflow (all 8 figures), subtopic U2-05 assessment omission, RRQ 5 mark scheme arithmetic contradiction, and unverifiable source declarations. Report: specs/content/geng-301/reviews/unit-02/G3/04ddc645-f479-4d6d-a614-8f7e23db9fc0.json. G3 stays open, unsigned (ADR-0019). |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
@@ -43,7 +43,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-06/G2/20261103T112243533Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-06/G2/20261105T095511606Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 6 | G4 ur-translation | ▢ | | |
 | Unit 6 | G5 ur-review | ▢ | | |
@@ -73,5 +73,11 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-bbbec948.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-0ea60289.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f5b7ea25.json |
+
+| Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-01/G3/20261102T212207Z-g3-desk-df5b9545.json (Codex crew geng-301-u01-repair_en-r1, 2026-11-03). Six approved types now taught and assessed; fig-U1-1 and fig-U1-5 corrected; RRQ 3 component diagnosis repaired; dated source retrieval limits and D-2026-0001 recorded, unchecked attributions removed; paragraph count scaffold clarified; Bloom tags and ERQ 5 descriptors repaired. See reviews/unit-01/repair-en-r1.md. G3 remains open, unsigned; no certification. |
+
+| Unit 6 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f5b7ea25.json (Codex crew geng-301-u06-repair_en, 2026-11-05). F1-F8: fictional practice provenance, dated retrieval audit and D-2026-0001, discovery/citation/quotation models, evidence-based source evaluation, assessment ambiguity and Bloom/coverage repairs, figure meaning and Week 16 scheduling corrected. See reviews/unit-06/repair-en.md. G3 remains open and unsigned; fresh independent review and host provenance/render evidence pending. |
+
+| Unit 2 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-90a85687.json (crew geng-301-u02-repair_en-r1, 2026-11-03). Blocking: uncorroborated chapter claims in topic-02 and topic-03 Further reading removed and qualified; topic-04 fresh-eyes advice removed from Strunk & White attribution and qualified as general writing instructor guidance; topic-04 Summative task updated to require authentic peer exchange and reflection on received feedback (satisfying Unit Outcome 5) with rubric rewarding documented accurate checks on error-free drafts; Figure fig-U2-4 alt text, SVG description and manifest aligned with the actual sequence (peer review as penultimate step before publishing). Advisories: RRQ 10 stem updated to explicitly request the explanation rewarded in the mark scheme; MCQ 10 revised to authentic application testing outlining for scattered ideas; ERQ 2 retagged Analyze with task and rubric demanding analysis of structural versus sentence-level flaws. F1 wordmark geometry, openstax2021 source mapping, and session provenance remain deferred to owner. Needs a fresh independent G3 review; row stays open (ADR-0019). |
 
 | Unit 3 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-bbbec948.json (crew geng-301-u03-repair_en, 2026-11-05). Thesis scope aligned across prose, figures and concept graph; unsupported source claims removed or qualified; coverage and assessment mappings, MCQ 5, RRQ floors/scoring, mixed conclusions, whole-essay evaluation and jumbled-essay practice repaired; activity inputs and weeks 8-10 aligned. No Urdu mirror exists. Fresh independent assessment, frozen handoff, actual provenance and narrow/print/figure geometry verification remain pending; no certification. |

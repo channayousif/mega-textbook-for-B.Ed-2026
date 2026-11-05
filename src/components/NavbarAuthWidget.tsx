@@ -1,3 +1,4 @@
+import Translate from '@docusaurus/Translate';
 import React from 'react';
 import { useLocation } from '@docusaurus/router';
 import { useAuth } from '@site/src/contexts/AuthContext';
@@ -49,7 +50,7 @@ export default function NavbarAuthWidget({
         href={loginUrlWithReturnTo(location.pathname, 'login')}
         onClick={onClick}
       >
-        Sign in
+        <Translate id="nav.signIn">Sign in</Translate>
       </a>
     );
     return mobile ? <li className="menu__list-item">{link}</li> : link;
