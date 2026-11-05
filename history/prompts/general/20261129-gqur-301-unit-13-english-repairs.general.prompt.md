@@ -37,12 +37,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Applied bounded English statistical and assessment repairs; documented source support and external evidence gaps; retained unticked advisory G3. Required validation and commits completed in this branch.
+Applied bounded English statistical and assessment repairs; documented source support and external evidence gaps; retained unticked advisory G3. Scoped validation and commits completed in this branch; full completion awaits a scope exception for the generated status file.
 
 ## Outcome
 
 - ✅ Impact: Corrected same-data r guidance, scale and prediction claims, analytical demands and real-data assessment.
-- 🧪 Tests: Baseline passed. Repair checks exposed stale Unit 13 G2 evidence, requiring refresh after committing source changes. Final results recorded in the repair handoff.
+- 🧪 Tests: Baseline passed. Repair checks exposed stale Unit 13 G2 evidence, requiring refresh after committing source changes. Final results: 13/14 content gates pass, only the out-of-scope generated status file is stale; 368 unit tests pass. Scope exception requested, not received.
 - 📁 Files: Unit 13 English topics, assessment, coverage, concepts note, source notes, tracker and repair handoff.
 - 🔁 Next prompts: Fresh independent G3; owner/evaluator G1; authorised rendering; translation/G5.
 - 🧠 Reflection: Historical missing identities and forbidden rendering cannot be manufactured by an English repair.

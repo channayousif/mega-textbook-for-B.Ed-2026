@@ -33,3 +33,17 @@ Report addressed: G3/20261102T212207Z-g3-desk-ddaaaeb1.json (advisory revise).
   site inspection including mathematical notation and assets. This brief forbids
   build/server/Playwright, so no such evidence is claimed.
 - Fresh independent G3 review remains required. G3/G5 are not marked done.
+
+## Validation and scope blocker
+
+- Baseline HEAD and origin/main were both c8cf9e9d7d80280e4bffca4a35ff443bacad4e1a;
+  all 14 content gates passed before edits.
+- Final scoped repair: 13 of 14 content gates pass. Only check:content-status
+  fails because static/content-status.json hashes the required changed tracker.
+  This is a new finding, not a baseline failure. The brief excludes that generated
+  file from scope; an exception was requested and no approval has been received.
+  Owner must authorise its regeneration to meet the full done criterion.
+- Unit tests: 31 files, 368 tests passed through scripts/heavy.sh npm test.
+  git diff --check passed. No build, server or browser run was performed.
+- Fresh Unit 13 G2 evidence: G2/20261105T150901818Z-gates.json; all eight
+  draft commands passed and the tracker points at it. G3 remains unticked.
