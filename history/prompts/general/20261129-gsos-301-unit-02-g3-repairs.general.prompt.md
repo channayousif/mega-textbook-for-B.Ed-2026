@@ -36,8 +36,19 @@ files:
   - static/img/figures/gsos-301/unit-02/fig-U2-4.ur.svg
   - specs/content/gsos-301/reviews/unit-02/repair-20261105.md
   - specs/content/gsos-301/sources/unit-02/retrieval.json
+  - specs/content/gsos-301/reviews/unit-02/G2/20261105T153101802Z-gates.json
+  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261105T153101802Z/check-bloom-bands.txt
+  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261105T153101802Z/check-concept-graph.txt
+  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261105T153101802Z/check-depth-gate.txt
+  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261105T153101802Z/check-docs-sync.txt
+  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261105T153101802Z/check-figures.txt
+  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261105T153101802Z/check-no-answer-keys.txt
+  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261105T153101802Z/check-no-em-dash.txt
+  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261105T153101802Z/validate-content.txt
 tests:
-  - npm run check:content (clean origin/main baseline, 14 pass; repair rerun pending refreshed G2 evidence)
+  - npm run check:content (clean origin/main baseline and final repaired checkout both pass all 14 gates)
+  - node scripts/prepare-gate-evidence.mjs GSOS-301 2 (eight draft gates pass)
+  - acceptGateEvidence: other five GSOS-301 units retain valid original G2 evidence
   - scripts/heavy.sh npm test (31 files, 368 tests pass)
   - node scripts/measure-figure-text.mjs (four changed variants pass)
   - FIGURE_ROOT=static/img/figures/gsos-301/unit-02 node scripts/build-figure-variants.mjs --check
@@ -98,19 +109,19 @@ From `specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67
 
 ## Response snapshot
 
-Applied F1-F5 and F8 repairs to EN/UR content, assessment, figure and mappings. Appended an advisory G3 row; G3 stays unticked. F6 render and F7 original provenance/complete source evidence remain open. Refresh deterministic G2 evidence after committing inputs; no push or PR.
+Applied F1-F5 and F8 repairs to EN/UR content, assessment, figure and mappings. Appended an advisory G3 row; G3 stays unticked. F6 render and F7 original provenance/complete source evidence remain open. Deterministic G2 evidence refreshed after committing inputs; all content gates passed; no push or PR.
 
 ## Outcome
 
 - ✅ Impact: Bounded English and Urdu repairs for the latest G3 report.
-- 🧪 Tests: 368 unit tests passed; content gate repair loop found stale G2 evidence, a now-unused historical source row, stale generated status and an evidence folder name that initially bound across units; source row corrected, deterministic refresh follows committed inputs.
+- 🧪 Tests: All 14 content gates and 368 unit tests passed. The repair loop corrected an unused historical source row, scoped the evidence folder to Unit 2, refreshed G2 evidence from committed inputs and regenerated ignored content status. Other five units retain their original valid G2 evidence.
 - 📁 Files: Unit 2 only, plus this required PHR.
 - 🔁 Next prompts: Independent review after rendering and provenance evidence are supplied.
 - 🧠 Reflection: Deterministic gate evidence must be regenerated after any bound content changes.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Citation, stage, assessment, rubric, source and mapping repairs mirrored in Urdu.
+- Shipped / changed: Citation, stage, assessment, rubric, source and mapping repairs mirrored in Urdu; deterministic G2 evidence refreshed at committed repaired inputs and existing G2 reference repointed.
 - Decisions the team must respect: No G3/G5 certification, no publication change, draft translation retained.
 - Pending / next owner: Rendering host owns desktop/narrow/A4 inspection; owner/review host owns missing original author identity, model revision and complete sources.
 - Paperclip issues affected: No issue number supplied; crew job gsos-301-u02-repair_en.
@@ -118,6 +129,6 @@ Applied F1-F5 and F8 repairs to EN/UR content, assessment, figure and mappings. 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Inherited prose attribution and stage conflation; label-only Bloom checks; stale evidence after repairs.
-- Graders run and results (PASS/FAIL): Unit tests PASS; geometry PASS; dark variants PASS; baseline content PASS; final content rerun follows G2 refresh.
+- Graders run and results (PASS/FAIL): Unit tests PASS; geometry PASS; dark variants PASS; baseline content PASS; final content PASS (14/14), with zero additional findings versus origin/main.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Freeze repaired inputs and commission independent G3 with missing evidence supplied.
