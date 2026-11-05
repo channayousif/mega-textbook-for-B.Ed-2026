@@ -101,3 +101,5 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 2 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67a.json; F1-F5 and F8 repaired in EN/UR; F6 render inspection and F7 original provenance/complete source evidence remain open; fresh independent review required; no certification |
 
 | Unit 3 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-ece43fa7.json; terminology, assessment, source/mapping and figure inputs repaired; see reviews/unit-03/repair-20261105.md for remaining owner/provenance/render work; fresh independent review required; no certification |
+
+| Unit 6 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-06/G3/20261102T212740Z-g3-desk-c2180039.json; media claim, Sialkot typo, coverage/concept mappings and source-retrieval governance repaired; browser/print inspection remains unverified under brief restrictions; fresh independent review required; no certification |

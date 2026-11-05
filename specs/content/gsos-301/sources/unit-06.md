@@ -8,5 +8,7 @@
 
 ## Unverifiable sources
 
-- `conerly2021`: Open-access textbook; the authoring host cannot download the full text for excerpt binding. URL verified to resolve.
-- `hammondnd`: U6-05 (Chapter 1.8, Deviance and Social Problems) and U6-07 (Chapter 1.16, Media and Society). Open-access LibreTexts text; chapter pages identified for scope, but no excerpt is bound, so support for each claim is unverified until a reviewer checks it.
+Retrieval re-attempts below were made on 2026-11-05. Under Constitution Art. VII and the curriculum owner's confirmed decision D-2026-0001 (2026-09-19), unavailable source text may be declared and work may proceed. This is not verification of claim support or G3 certification; claims beyond the available evidence still require review.
+
+- `conerly2021`: GET of the listed OpenStax URL on 2026-11-05 returned HTTP 200 with the site's application shell, not the textbook text. Full text could not be retrieved through that request on 2026-11-05; no excerpt is bound. The earlier URL-resolution note did not record an attempt date. Claim-level support remains unverified under D-2026-0001.
+- `hammondnd`: GET of the listed LibreTexts URL on 2026-11-05 returned HTTP 200 with the book's category/index page, not the chapter text for U6-05 (Chapter 1.8, Deviance and Social Problems) or U6-07 (Chapter 1.16, Media and Society). Chapter text could not be retrieved through that request on 2026-11-05; no excerpt is bound. The earlier chapter-identification note did not record an attempt date. Claim-level support remains unverified under D-2026-0001. Topic 6.2's unsupported Pakistan majority-reach claim has been replaced with an illustrative observation, without attributing Pakistani demographics to this source.
