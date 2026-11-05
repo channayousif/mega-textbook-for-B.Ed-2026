@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-301-u13-repair_en-conflict1
-title: crew repair_en GQUR-301 unit 13 conflict merge
+title: crew fix GQUR-301 unit 13
 stage: misc
 date: 2026-11-05
 surface: agent
@@ -8,15 +8,34 @@ model: opencode
 feature: gqur-301
 branch: crew/gqur-301-u13-repair_en
 user: crew
-command: crew repair_en conflict
-labels: ["crew", "opencode", "repair_en"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/gqur-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - docs/semester-2/gqur-301/unit-13/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-13/topic-02.mdx
+ - docs/semester-2/gqur-301/unit-13/unit-assessment.mdx
+ - history/prompts/general/20261129-gqur-301-unit-13-english-repairs.general.prompt.md
  - history/prompts/gqur-301/crew-gqur-301-u13-repair_en-conflict1.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u13-repair_en.misc.prompt.md
+ - specs/content/gqur-301/concepts/unit-13.md
+ - specs/content/gqur-301/coverage/unit-13.md
+ - specs/content/gqur-301/reviews/unit-13/G2/20261105T150901818Z-gates.json
+ - specs/content/gqur-301/reviews/unit-13/G2/logs-20261105T150901818Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-13/G2/logs-20261105T150901818Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-13/G2/logs-20261105T150901818Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-13/G2/logs-20261105T150901818Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-13/G2/logs-20261105T150901818Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-13/G2/logs-20261105T150901818Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-13/G2/logs-20261105T150901818Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-13/G2/logs-20261105T150901818Z/validate-content.txt
+ - specs/content/gqur-301/reviews/unit-13/repair-en-handoff.md
+ - specs/content/gqur-301/sources/unit-13.md
+ - specs/content/gqur-301/sources/unit-13/passage-notes.md
  - specs/content/gqur-301/tasks.md
 tests:
  - npm run check:content
@@ -55,23 +74,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u13-fix, fix, codex) Final gate remains blocked by the content-status digest; fresh G3 review remains required.
 - (gqur-301-u13-translate-r1, translate, claude) English Unit 13 still has G3 F1-F5 unfixed (question 8 same-data contradiction, the r-to-slope claim, unqualified interpolation), plus a stray "ȷ" (U+0237) at topic-02.mdx:123. A separate English repair has to land on main before translation can start.
 
+
 ## Response snapshot
 
-Merged origin/main into the branch, resolved the single tasks.md conflict by keeping both sides' tracker rows, regenerated the gitignored content-status digest, and confirmed all content gates pass.
+Merged origin/main into crew/gqur-301-u13-repair_en, resolved the sole tasks.md conflict by keeping both sides' tracker rows (main's Unit 8 row first, then this branch's Unit 13 rows), regenerated the gitignored content-status digest, and committed the merge plus its PHR.
 
 ## Outcome
 
-- ✅ Impact: conflict merge for crew/gqur-301-u13-repair_en against origin/main (attempt 1).
-- 🧪 Tests: npm run check:content passed (14/14 content gates).
-- 📁 Files: 2 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: fix for GQUR-301 Unit 13 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 21 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merge commit `0b593576a` resolving the tasks.md conflict (both sides' Unit 8 and Unit 13 rows kept, main's order first); `static/content-status.json` regenerated locally.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing and changes no Unit 13 prose.
+- Shipped / changed: Merged origin/main into crew/gqur-301-u13-repair_en, resolved the sole tasks.md conflict by keeping both sides' tracker rows (main's Unit 8 row first, then this branch's Unit 13 rows), regenerated the gitignored content-status digest, and committed the merge plus its PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G3 remains open; G1 authority, provenance, rendered inspection and Urdu translation still need separate owners.
+  - `static/content-status.json` is gitignored and must be regenerated locally (`npm run build:content-status`) after content edits or `check:content-status` fails.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
