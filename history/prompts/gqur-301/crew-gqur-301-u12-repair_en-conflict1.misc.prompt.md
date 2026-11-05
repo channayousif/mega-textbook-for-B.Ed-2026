@@ -20,6 +20,7 @@ files:
  - docs/semester-2/gqur-301/unit-12/topic-02.mdx
  - docs/semester-2/gqur-301/unit-12/unit-assessment.mdx
  - history/prompts/general/2454-gqur-301-unit-12-advisory-repairs.general.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u12-repair_en-conflict1.misc.prompt.md
  - history/prompts/gqur-301/crew-gqur-301-u12-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-12/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-12/topic-02.mdx
@@ -75,26 +76,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/gqur-301-u12-repair_en, resolved the tasks.md conflict by keeping both sides' rows (main's Unit 8 row first, then this branch's Unit 12 rows), regenerated the stale content-status artifact, and confirmed all content gates pass.
+Merged origin/main into crew/gqur-301-u12-repair_en, resolved the tasks.md conflict by keeping both sides' rows, regenerated the stale content-status artifact, and committed the merge plus its PHR with all content gates passing.
 
 ## Outcome
 
 - Impact: fix for GQUR-301 Unit 12 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 19 file(s), listed above.
+- Files: 20 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gqur-301-u12-repair_en and resolved the tasks.md conflict by keeping both sides' rows.
+- Shipped / changed: Merged origin/main into crew/gqur-301-u12-repair_en, resolved the tasks.md conflict by keeping both sides' rows, regenerated the stale content-status artifact, and committed the merge plus its PHR with all content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `static/content-status.json` is a gitignored build artifact; regenerate it (`npm run build:content-status`) after any content-affecting merge or the `check:content-status` gate fails.
-  - The merge pulled in main's repairs for other courses/units (geng-301 unit 3, gsos-301 unit 2, gqur-301 unit 8); those are main's work, not this branch's.
-  - Unit 12 G3 stays open/unticked; browser/print inspection, historical provenance, G1 and bound source evidence remain for the review host.
-  - `.ur.svg` figure variants for all 4 figures still need a `generate-figures` Step 5 run before the unit can be flipped to `reviewed`.
+  - `static/content-status.json` is a gitignored artifact; regenerate it with `npm run build:content-status` if `check:content-status` fails on a fresh checkout.
+  - Unit 12 G3 stays open/unticked; browser/print inspection, historical provenance, G1 and bound source evidence remain for the review host, and the 4 `.ur.svg` figure variants still need a `generate-figures` Step 5 run.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
