@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-300-u06-repair_en-conflict1
-title: crew repair_en GQUR-300 unit 6 (conflict1)
+title: crew fix GQUR-300 unit 6
 stage: misc
 date: 2026-11-05
 surface: agent
@@ -8,18 +8,42 @@ model: opencode
 feature: gqur-300
 branch: crew/gqur-300-u06-repair_en
 user: crew
-command: crew repair_en
-labels: ["crew", "opencode", "repair_en", "merge"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/gqur-300/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - history/prompts/gqur-300/crew-gqur-300-u06-repair_en-conflict1.misc.prompt.md
-  - specs/content/gqur-300/tasks.md
+ - docs/semester-1/gqur-300/unit-06/topic-01.mdx
+ - docs/semester-1/gqur-300/unit-06/topic-02.mdx
+ - docs/semester-1/gqur-300/unit-06/topic-03.mdx
+ - docs/semester-1/gqur-300/unit-06/unit-assessment.mdx
+ - docs/semester-1/gqur-300/unit-06/unit-teacher-notes.mdx
+ - history/prompts/gqur-300/crew-gqur-300-u06-repair_en-conflict1.misc.prompt.md
+ - history/prompts/gqur-300/crew-gqur-300-u06-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/unit-teacher-notes.mdx
+ - specs/content/gqur-300/concepts/unit-06.md
+ - specs/content/gqur-300/coverage/unit-06.md
+ - specs/content/gqur-300/reviews/unit-06/G2/20261105T125412430Z-gates.json
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-bloom-bands.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-concept-graph.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-depth-gate.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-docs-sync.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-figures.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-no-answer-keys.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/check-no-em-dash.txt
+ - specs/content/gqur-300/reviews/unit-06/G2/logs-20261105T125412430Z/validate-content.txt
+ - specs/content/gqur-300/sources/texts/mcclure2020.md
+ - specs/content/gqur-300/sources/unit-06.md
+ - specs/content/gqur-300/tasks.md
 tests:
-  - npm run check:content (all 14 content gates passed)
+ - npm run check:content
 ---
 
 ## Prompt
@@ -61,31 +85,32 @@ npm run check:content has 3 finding(s) that main does not have:
 - GQUR-300 Unit 2 (docs/semester-1/gqur-300/unit-02): G2 en-draft: ENOENT: no such file or directory, open '/home/a2ahs/crew-wt/gqur-300-u06-repair_en-conflict1/specs/content/gqur-300/reviews/unit-02/G2/20261105T123854707Z-gates.json'
 - GQUR-300 Unit 4 (docs/semester-1/gqur-300/unit-04): G2 en-draft: ENOENT: no such file or directory, open '/home/a2ahs/crew-wt/gqur-300-u06-repair_en-conflict1/specs/content/gqur-300/reviews/unit-04/G2/20261105T122519489Z-gates.json'
 
+
 ## Response snapshot
 
-Merged origin/main (08a727a13) into crew/gqur-300-u06-repair_en. The only conflict was specs/content/gqur-300/tasks.md: main's tracker table plus this branch's Unit 6 advisory G3 row were both kept (main's order first, then the branch's row), with no duplicate rows. Neither side had touched the shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv), so no append-only repair was needed. The branch's unit-06 content, G2 evidence and PHR were unchanged by the merge. Regenerated the gitignored static/content-status.json with `npm run build:content-status` so the local tree matches the merged trackers; all 14 content gates then passed.
+Merged origin/main into crew/gqur-300-u06-repair_en, resolved the tasks.md tracker conflict keeping both sides, and regenerated content-status so all 14 content gates pass.
 
 ## Outcome
 
-- Impact: merge conflict1 resolution for GQUR-300 Unit 6 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14) after regenerating content-status.
-- Files: 2 file(s), listed above.
+- Impact: fix for GQUR-300 Unit 6 by opencode (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 26 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gqur-300-u06-repair_en, kept both sides of the tasks.md tracker conflict, and regenerated static/content-status.json so all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. The branch's Unit 6 G3 row remains unticked.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into crew/gqur-300-u06-repair_en, resolved the tasks.md tracker conflict keeping both sides, and regenerated content-status so all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - static/content-status.json is gitignored and was regenerated locally; CI regenerates it before the gate, so no commit is needed.
-  - The two ENOENT findings from the previous attempt are resolved by main's added unit-02 and unit-04 G2 gate manifests now present in the merge.
+  - static/content-status.json is gitignored and was regenerated locally (CI regenerates it before the gate, so no commit needed).
+  - Unit 6 G3 remains unticked (`▢`) awaiting fresh independent review; the branch's unit-06 repairs and G2 evidence are unchanged by the merge.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
