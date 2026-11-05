@@ -2,7 +2,7 @@
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
-| U1-01 | topic-01.mdx | ### The four modes of writing | graff2011 |
+| U1-01 | topic-01.mdx | ### The six expository types | graff2011 |
 | U1-02 | topic-01.mdx | ### Purpose and applications | graff2011 |
 | U1-03 | topic-02.mdx | ### Clarity | williams2017 |
 | U1-04 | topic-02.mdx | ### Coherence | williams2017 |

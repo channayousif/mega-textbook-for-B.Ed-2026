@@ -8,7 +8,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▣ | | intake in progress; spec drafted, repairs pending |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261103T112242759Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261103T183724789Z-gates.json |
 | Unit 1 | G3 en-review | ▣ | | Advisory revise only: see reviews/unit-01/G3/20261019T000000000Z-g3.json and continuation-summary.md; RRQ 5 repair pending; render evidence unavailable; no certification. |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
@@ -43,7 +43,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-06/G2/20261103T112243533Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-06/G2/20261105T095511606Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 6 | G4 ur-translation | ▢ | | |
 | Unit 6 | G5 ur-review | ▢ | | |
@@ -73,3 +73,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-bbbec948.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-0ea60289.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f5b7ea25.json |
+
+| Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-01/G3/20261102T212207Z-g3-desk-df5b9545.json (Codex crew geng-301-u01-repair_en-r1, 2026-11-03). Six approved types now taught and assessed; fig-U1-1 and fig-U1-5 corrected; RRQ 3 component diagnosis repaired; dated source retrieval limits and D-2026-0001 recorded, unchecked attributions removed; paragraph count scaffold clarified; Bloom tags and ERQ 5 descriptors repaired. See reviews/unit-01/repair-en-r1.md. G3 remains open, unsigned; no certification. |
+
+| Unit 6 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f5b7ea25.json (Codex crew geng-301-u06-repair_en, 2026-11-05). F1-F8: fictional practice provenance, dated retrieval audit and D-2026-0001, discovery/citation/quotation models, evidence-based source evaluation, assessment ambiguity and Bloom/coverage repairs, figure meaning and Week 16 scheduling corrected. See reviews/unit-06/repair-en.md. G3 remains open and unsigned; fresh independent review and host provenance/render evidence pending. |

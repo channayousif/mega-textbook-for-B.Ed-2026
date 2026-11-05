@@ -6,6 +6,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useLocation } from '@docusaurus/router';
 import { useActivePlugin, useDocsSidebar, useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
 import { buildNavLevels, type NavLevel, type NavOption, type SidebarItem } from '@site/src/lib/navCrumbs';
+import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import { ReadingMenu } from '@site/src/components/ReadingTools';
 import { useTreeState } from './treeState';
 import styles from './styles.module.css';
 
@@ -95,7 +97,7 @@ function Menu({ level, locale, labelPrefix }: { level: NavLevel; locale: Locale;
         className={clsx(styles.trigger, open && styles.triggerOpen)}
         aria-expanded={open}
         aria-controls={listId}
-        aria-label={labelPrefix ? `${labelPrefix}: ${level.label}` : undefined}
+        aria-label={labelPrefix ? `${labelPrefix}: ${level.label}` : level.label}
         onClick={() => setOpen((v) => !v)}
         onKeyDown={(e) => {
           if (e.key === 'ArrowDown' && !open) {
@@ -104,7 +106,8 @@ function Menu({ level, locale, labelPrefix }: { level: NavLevel; locale: Locale;
           }
         }}
       >
-        <span className={styles.triggerLabel}>{level.label}</span>
+        {/* The bar shows "EFMP-302", "Unit 1", "Topic 1.1"; the full name is the button's label and in its menu. */}
+        <span className={styles.triggerLabel}>{level.label.split(' · ')[0]}</span>
         <span className={styles.caret} aria-hidden="true" />
       </button>
       {open && (
@@ -132,6 +135,20 @@ function Menu({ level, locale, labelPrefix }: { level: NavLevel; locale: Locale;
   );
 }
 
+/**
+ * This bar also renders on generated category pages (such as /licence/pedagogy/), which
+ * have no doc context, and useDoc throws there. It reads one context either way, so the
+ * hook order stays stable.
+ */
+function useDocMinutes(): number | null {
+  try {
+    const minutes = useDoc().frontMatter?.est_reading_minutes;
+    return typeof minutes === 'number' ? minutes : null;
+  } catch {
+    return null;
+  }
+}
+
 export default function CourseNavBar(): React.ReactElement | null {
   const sidebar = useDocsSidebar();
   const breadcrumbs = useSidebarBreadcrumbs();
@@ -140,6 +157,7 @@ export default function CourseNavBar(): React.ReactElement | null {
   const { i18n } = useDocusaurusContext();
   const locale: Locale = i18n.currentLocale === 'ur' ? 'ur' : 'en';
   const tree = useTreeState();
+  const minutes = useDocMinutes();
   const bedHref = useBaseUrl('/intro');
   const licenceHref = useBaseUrl('/licence/');
 
@@ -183,9 +201,10 @@ export default function CourseNavBar(): React.ReactElement | null {
           onClick={tree.toggle}
         >
           <span className={styles.treeIcon} aria-hidden="true" />
-          {MESSAGES.tree[locale]}
+          <span className={styles.treeText}>{MESSAGES.tree[locale]}</span>
         </button>
       )}
+      <span className={styles.barMenu}><ReadingMenu minutes={minutes} locale={locale} /></span>
     </nav>
   );
 }
