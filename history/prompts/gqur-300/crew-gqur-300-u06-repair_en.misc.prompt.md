@@ -73,28 +73,58 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+## Open findings from the latest G3 report
+From `specs/content/gqur-300/reviews/unit-06/G3/20261102T212207Z-g3-desk-48a77ab7.json` (disposition: revise). Resolve each one:
+- [blocking] S2: U6-01 and U6-02 now cite Steen in their named sections; U6-03 now cites PBS in budgeting. U6-05 still maps mcclure2020 to Decision-making using quantitative data, which contains no McClure citation. Adding Steen attribution does not verify its support.
+- [blocking] S4: topic-03 Interpreting quantitative information still claims McClure built the unit around exactly this skill. ERIC abstract describes a teacher course, pre/post surveys and classroom effects, without specifying indicator-construction training. The local excerpt is an interpretive record summary, not full text.
+- [blocking] A2: unit-assessment RRQ model 9 still uses one class of 80 and three of 20 as a ratio of 30: (80+3*20)/4 = 35. State teacher allocation or choose a consistent illustration. Escalated to blocking because the supplied model is numerically false.
+- [blocking] S5: topic-01 profit/loss and interest passages and topic-02 classroom situation attribute substantive conclusions to Steen (2001), while sources/unit-06.md declares bibliographic-only access and discloses the limit only in Further reading. A title-level locator cannot verify these paraphrases. Supply bound supporting text or explicitly disclose the claims as uncorroborated at their points of use.
+- [advisory] S3: sources/unit-06.md pbs row still says guide-required. content-spec Reading list classifies PBS as curated-supplementary; guide Recommended Books does not name it.
+- [advisory] A3: unit-assessment MCQ key remains b,b,c,b,a,b,c,b,b,b: seven b, two c, one a, zero d.
+- [advisory] R1: topic-01 Summary still lists variable costs before savings while insisting on savings before spending. unit-assessment Unit summary repeats this order.
+- [advisory] AU1: content-spec Unit 6 key terms still include Markup, Discount, Claim, Evidence. Markup and Discount remain untaught; topic files link only Profit, Loss, Interest, Simple interest and Budget. glossary.json contains Claim, but no Claim component in this unit; Evidence remains absent.
+- [advisory] P1: topic-01 explains borrower cost, but the planned interest-only-helps-saver misconception is still absent from the explicit misconception block and teacher-notes list.
+- [advisory] C1: concepts/unit-06.md still has no ERQ-04 assessment mapping; profit-percent concept maps RRQ-01 and ERQ-01 only.
+- [advisory] PR1: Current 98-input manifest still omits sources/texts/pbs.md despite the declared committed excerpt. No validator changes made in this review.
+- [advisory] PR2: No current narrow-screen, desktop or A4 print inspection is available. Brief prohibits build/dev server/Playwright. measure-figure-text also imports and launches Playwright Chromium, so it was not run. Prior captures do not verify repaired bytes.
+- [uncertain] E1: Required current render inspection and SVG glyph measurements unavailable under brief restrictions. Accessibility remains unverified; no synthetic render-review execution or recycled image evidence is claimed.
+- [uncertain] E2: Parent-prepared current manifest, actual author/reviewer platform run identities and exact serving model version were not supplied. Local preparation binds current bytes but cannot establish external run provenance. This fresh session did not edit review inputs.
+- [uncertain] E3: All assessment answers were recomputed, but the supplied answers had already been displayed during file inspection. This is not the required blind solve and is not represented as independent pre-key evidence.
+- ...and 1 more in the report.
+
+## Notes from earlier jobs on this unit
+- (gqur-300-u06-review_en-conflict1, fix, agy) Final cycle escalates remaining source, assessment and budget-order defects; current visual evidence is unavailable and G3 remains open.
+- (gqur-300-u06-review_en, review_en, codex) Final cycle escalates remaining source, assessment and budget-order defects; current visual evidence is unavailable and G3 remains open.
+- (gqur-300-u06-review_en, review_en, codex) Final cycle escalates remaining source, assessment and budget-order defects; current visual evidence is unavailable and G3 remains open.
+- (gqur-300-u06-fix, fix, codex) Unit 6 needs a fresh independent G3 review.
+- (gqur-300-u06-fix, fix, codex) Unit 6 needs a fresh independent G3 review.
+
+
 ## Response snapshot
 
-Repaired all open blocking and advisory findings from G3 review report `20261102T212207Z-g3-desk-48a77ab7.json` for GQUR-300 Unit 6 across English docs, Urdu mirrors, coverage matrix, concept graph, sources, and task tracker.
+Repaired GQUR-300 Unit 6 source citations, RRQ-09 arithmetic, MCQ key distribution, summary budget sequences, key terms, and concept mappings across English docs and Urdu mirrors per G3 review report 48a77ab7, appended an unticked G3 tracker row, and refreshed G2 gate evidence with all content gates passing.
 
 ## Outcome
 
-- ✅ Impact: repair_en for GQUR-300 Unit 6 by agy.
-- 🧪 Tests: npm run check:content passed cleanly with no scope findings.
-- 📁 Files: 25 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: All blocking (S2, S4, A2, S5) and advisory (S3, A3, R1, AU1, P1, C1) findings were resolved with exact arithmetic corrections, point-of-use disclosures, and full English-Urdu parity.
+- Impact: repair_en for GQUR-300 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 25 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: GQUR-300 Unit 6 G3 review findings repaired; McClure 2020 cited in U6-05 and aligned with ERIC abstract; RRQ-9 pupil-teacher ratio arithmetic corrected; Steen 2001 bibliographic disclosures added; PBS reclassified as curated-supplementary; MCQ answer keys balanced across a-d; budget sequence corrected in summaries; markup, discount, and interest misconceptions taught; ERQ-04 mapped to concept graph; G3 tracker row appended (unticked).
-- Decisions the team must respect: Content-spec remains approved and unedited; G3 remains unticked pending fresh independent review; zero em dashes maintained.
-- Pending / next owner: Fresh independent G3 review run for GQUR-300 Unit 6.
-- Paperclip issues affected: null
+- Shipped / changed: Repaired GQUR-300 Unit 6 source citations, RRQ-09 arithmetic, MCQ key distribution, summary budget sequences, key terms, and concept mappings across English docs and Urdu mirrors per G3 review report 48a77ab7, appended an unticked G3 tracker row, and refreshed G2 gate evidence with all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G2 gate manifest was refreshed and committed under `specs/content/gqur-300/reviews/unit-06/G2/20261105T125412430Z-gates.json`; G3 remains unticked (`▢`) awaiting fresh independent review.
+  - Point-of-use Steen (2001) disclosures (`cited at bibliographic level under D-2026-0001; claims uncorroborated by local full text`) and balanced MCQ options (3 a, 2 b, 3 c, 2 d) are mirrored identically across EN and Urdu.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none.
-- Graders run and results (PASS/FAIL): validate:content PASS, check:pipeline-gate PASS, check:depth-gate PASS, check:figures PASS, check:svg-style PASS, check:no-em-dash PASS, check:no-answer-keys PASS, check:concept-graph PASS, check:bloom-bands PASS, check:source-floor PASS, check:licence PASS, licence:map:check PASS, check:content-status PASS, check:docs-sync PASS.
-- Prompt variant (if applicable): null
-- Next experiment (smallest change to try): Fresh G3 review run on the repaired unit.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
