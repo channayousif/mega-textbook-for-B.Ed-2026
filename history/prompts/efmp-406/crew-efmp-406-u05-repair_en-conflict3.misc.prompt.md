@@ -78,31 +78,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u05-repair_en, repair_en, codex) G3 remains open; fresh independent review, browser/print checks and the owner’s catalog ruling remain pending.
 - (efmp-406-u05-translate, translate, codex) Urdu rendering, SVG geometry inspection and independent G5 review remain pending.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/efmp-406-u05-repair_en`, resolved the single `specs/content/efmp-406/tasks.md` conflict by keeping main's Unit 3 G2 and G3 revise rows then this branch's Unit 5 G3 revise row, regenerated the gitignored content-status report, and passed all 14 content gates.
+Merged origin/main into `crew/efmp-406-u05-repair_en`, resolved the `specs/content/efmp-406/tasks.md` conflict by keeping main's Unit 3 rows then this branch's Unit 5 G3 revise row, regenerated the gitignored content-status report, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: fix for EFMP-406 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed (14 of 14 gates) after regenerating the local content-status report.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: origin/main merged into `crew/efmp-406-u05-repair_en`; main's Unit 3 rows and this branch's Unit 5 G3 revise row are both present in the tracker, main's first.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything and does not push or open a PR.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path); independent G3/G5 review, browser/print checks and the owner's catalog ruling remain pending.
+- Shipped / changed: Merged origin/main into `crew/efmp-406-u05-repair_en`, resolved the `specs/content/efmp-406/tasks.md` conflict by keeping main's Unit 3 rows then this branch's Unit 5 G3 revise row, regenerated the gitignored content-status report, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G3 and G5 remain open and unsigned; independent review, browser/print checks and the owner's catalog ruling are still pending for Unit 5.
   - `static/content-status.json` is gitignored and was regenerated locally after the merge; a clean checkout will need `npm run build:content-status` before `check:content` passes.
+  - This conflict was against main's newer efmp-406 Unit 3 rows (PR #447), not the old main; the tracker now carries both units' rows.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
