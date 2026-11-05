@@ -52,7 +52,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ✅ | owner:D-2026-0066 | approved by confirmed intake decision D-2026-0066 (2026-10-10); content-spec status approved; nothing remains blocked at G0/G1 |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261103T112247694Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261105T174150992Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-04/G3/20261022-codex.json; numeric guidance, ERQ tables, RRQ demand and coverage mappings need author repair; provenance/source/render evidence incomplete; no certification; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▢ | | Blocked before translation: confirmed English assessment errors trigger translate-unit stop rule; separate author repair required; handoff reviews/unit-04/G4/translation-handoff.md; translation_status stays draft |
 | Unit 4 | G5 ur-review | ▢ | | |
