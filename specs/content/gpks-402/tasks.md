@@ -97,3 +97,4 @@ Only Unit 3 is updated by this authoring job. The approved content-spec is the d
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-06/G3/20261102T211054Z-g3-desk-fd0a1ec1.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-02/G3/20261102T212207Z-g3-desk-94983dc8.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-06/G3/20261102T212207Z-g3-desk-181b4e13.json |
+| Unit 6 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/gpks-402/reviews/unit-06/G3/20261102T212207Z-g3-desk-181b4e13.json; F02/F03/F05/F06/F07 repairs applied; F04 ledger URLs and qualifications added; F01/F08 provenance and rendered evidence remain host-supplied; G3 stays open (ADR-0019) |
