@@ -26,6 +26,15 @@ files:
   - specs/content/gqur-300/tasks.md
   - specs/content/gqur-300/reviews/unit-02/G3/repair-en-20261105.md
   - history/prompts/general/2453-repair-gqur-unit-two.general.prompt.md
+  - specs/content/gqur-300/reviews/unit-02/G2/20261105T123854707Z-gates.json
+  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261105T123854707Z/validate-content.txt
+  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261105T123854707Z/check-depth-gate.txt
+  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261105T123854707Z/check-figures.txt
+  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261105T123854707Z/check-concept-graph.txt
+  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261105T123854707Z/check-bloom-bands.txt
+  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261105T123854707Z/check-no-em-dash.txt
+  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261105T123854707Z/check-no-answer-keys.txt
+  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261105T123854707Z/check-docs-sync.txt
 tests:
   - npm run check:content (repair and origin/main snapshot)
   - scripts/heavy.sh npm test
@@ -43,7 +52,7 @@ Repaired N01, N02, P05, N03, N04 and E03 in English and Urdu; recorded outstandi
 ## Outcome
 
 - ✅ Impact: Correct factor definition, complete scoring, consistent comparison question, cash ledger, tile-area question and supported attribution.
-- 🧪 Tests: Final validation results are recorded in the Unit 2 repair handoff.
+- 🧪 Tests: 368 tests passed in 31 files; origin/main passed all 14 content gates. Refreshed Unit 2 G2 evidence and local generated content status and all 14 final content gates passed.
 - 📁 Files: Six bilingual pages, Unit 2 sources, tracker, repair handoff and this PHR.
 - 🔁 Next prompts: Owner evidence provisioning and independent review after repair-cycle policy handling.
 - 🧠 Reflection: Narrow unsupported attribution to the evidence already available; never manufacture review provenance or rendered evidence.
@@ -57,7 +66,7 @@ Repaired N01, N02, P05, N03, N04 and E03 in English and Urdu; recorded outstandi
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Existing pipeline evidence and generated content-status failures; baseline comparison required.
-- Graders run and results (PASS/FAIL): See repair handoff for final results; no build, server or browser run.
+- Failure modes observed: Repair invalidated Unit 2 G2 evidence and generated status. Refreshed both using repository tooling; isolated origin/main baseline passed.
+- Graders run and results (PASS/FAIL): Unit tests PASS (368); baseline content gates PASS (14); final repaired content gates PASS (14). No build, server or browser run.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Review corrected unit with an authoritative frozen bundle and permitted rendered inspection.
