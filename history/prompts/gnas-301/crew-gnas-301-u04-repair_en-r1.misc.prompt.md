@@ -16,23 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/gnas-301/crew-gnas-301-u04-repair_en-r1.misc.prompt.md
-  - specs/content/gnas-301/reviews/unit-04/G2/20261105T114859786Z-gates.json
-  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-bloom-bands.txt
-  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-concept-graph.txt
-  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-depth-gate.txt
-  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-docs-sync.txt
-  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-figures.txt
-  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-no-answer-keys.txt
-  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-no-em-dash.txt
-  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/validate-content.txt
-  - specs/content/gnas-301/reviews/unit-04/G3/repair-desk-94b67cf2.md
-  - specs/content/gnas-301/sources/texts/who-mental-health-work.md
-  - specs/content/gnas-301/sources/texts/who-occupational-health.md
-  - specs/content/gnas-301/sources/unit-04.md
-  - specs/content/gnas-301/tasks.md
+ - history/prompts/gnas-301/crew-gnas-301-u04-repair_en-r1.misc.prompt.md
+ - specs/content/gnas-301/reviews/unit-04/G2/20261105T114859786Z-gates.json
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-bloom-bands.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-concept-graph.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-depth-gate.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-docs-sync.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-figures.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-no-answer-keys.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-no-em-dash.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/validate-content.txt
+ - specs/content/gnas-301/reviews/unit-04/G3/repair-desk-94b67cf2.md
+ - specs/content/gnas-301/sources/texts/who-mental-health-work.md
+ - specs/content/gnas-301/sources/texts/who-occupational-health.md
+ - specs/content/gnas-301/sources/unit-04.md
+ - specs/content/gnas-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -65,7 +65,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Open findings from the latest G3 report
 From `specs/content/gnas-301/reviews/unit-04/G3/20261102T213139Z-g3-desk-94b67cf2.json` (disposition: revise). Resolve each one:
-- [advisory] Excerpt support note section headings in shared text files: in specs/content/gnas-301/sources/texts/who-hearing-2026.md line 17 and who-occupational-health.md line 23, the section headings read "## What this supports in GNAS-301 Unit 3", though Unit 4 cites them for U4-13 and U4-01 respectively (the underlying facts support both uses). In who-mental-health-work.md lines 19-21, the support note asserts a Topic 4.5 citation that was removed. As documented under "## Unit 4 excerpt support notes" in specs/content/gnas-301/sources/unit-04.md, these shared excerpts bind multiple units; when the shared texts are next refreshed across units, the headings should be made unit-neutral and the notes aligned.
+- [advisory] Excerpt support note section headings in shared text files: in specs/content/gnas-301/sources/texts/who-hearing-2026.md line 17 and who-occupational-health.md line 23, the section headings read "## What this supports in GNAS-301 Unit 3", though Unit 4 cites them for U4-13 and U4-01 respectively (the underlying facts support both uses). In who-mental-health-work.md lines 19-21, the support note asserts a Topic 4.5 citation that was removed. As documented under "## Unit 4 excerpt support notes" in specs/content/gnas-301/sources/unit-04.md, these shared excerpts bind multiple units; when the s...
 - [uncertain] Visual browser and print inspection (360px viewport, keyboard table scrolling, desktop layout, and A4 print view) could not be executed because the crew job brief explicitly prohibits running npm run build, a dev server, or Playwright (render-review command unperformed, exit code 1). Structural accessibility checks (alt text, heading hierarchy, link text, SVG role/title/desc, figure text measurement) pass from source, but visual accessibility remains unverified in this session until a permitted browser/print inspection can be run on a live build.
 
 ## Notes from earlier jobs on this unit
@@ -75,22 +75,23 @@ From `specs/content/gnas-301/reviews/unit-04/G3/20261102T213139Z-g3-desk-94b67cf
 - (gnas-301-u04-review_en, review_en, agy) Content repairs from round 2 were verified and confirmed resolved, and figure text geometry across all 56 SVG variants passes cleanly.
 - (gnas-301-u04-review_en, review_en, agy) Live 360px small-screen and A4 print view render inspection remains unperformed due to host job brief limits and must be verified on a live build before G3 certification.
 
+
 ## Response snapshot
 
-Applied latest G3 desk report repairs for GNAS-301 Unit 4 (aligned excerpt support notes and unit-neutral headings in who-occupational-health.md and who-mental-health-work.md; updated sources/unit-04.md support notes; preserved who-hearing-2026 to protect Unit 3 G2 gate evidence), documented findings in repair-desk-94b67cf2.md, and appended the unticked G3 tracker row.
+Aligned excerpt support notes in who-occupational-health.md and who-mental-health-work.md with unit-neutral headings, updated sources/unit-04.md, preserved who-hearing-2026.md to protect Unit 3 G2 evidence, appended the unticked G3 tracker row, and refreshed G2 gate evidence.
 
 ## Outcome
 
 - Impact: repair_en for GNAS-301 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
-- Files: 6 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Aligned excerpt support notes in who-occupational-health.md and who-mental-health-work.md with unit-neutral headings; updated sources/unit-04.md; preserved who-hearing-2026.md to protect Unit 3 G2 gate evidence; appended unticked G3 tracker row naming report 20261102T213139Z-g3-desk-94b67cf2.json.
-- Decisions the team must respect: G3 stays unticked; third review cycle requires curriculum-owner authorization under G-2026-31; live render inspection remains open for a live build.
+- Shipped / changed: Aligned excerpt support notes in who-occupational-health.md and who-mental-health-work.md with unit-neutral headings, updated sources/unit-04.md, preserved who-hearing-2026.md to protect Unit 3 G2 evidence, appended the unticked G3 tracker row, and refreshed G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G3 remains unticked; third review cycle requires owner authorization under G-2026-31.
