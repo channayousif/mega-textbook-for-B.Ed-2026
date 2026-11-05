@@ -63,20 +63,20 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged `origin/main` into `crew/gqur-301-u10-repair_en`, resolved the single conflict in `specs/content/gqur-301/tasks.md` by keeping main's Unit 8 G3 row then the branch's Unit 10 G3 row, confirmed the shared registries were untouched by both sides, regenerated `static/content-status.json`, and confirmed all 14 content gates pass.
+Merged origin/main into crew/gqur-301-u10-repair_en, resolved the tasks.md conflict keeping both sides' rows, and confirmed all 14 content gates pass.
 
 ## Outcome
 
 - Impact: fix for GQUR-301 Unit 10 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14 gates) after the merge.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 7 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged `origin/main` into `crew/gqur-301-u10-repair_en`; resolved the `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 8 G3 row then the branch's Unit 10 G3 row; regenerated `static/content-status.json`; all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into crew/gqur-301-u10-repair_en, resolved the tasks.md conflict keeping both sides' rows, and confirmed all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 10 G3 stays open and unsigned (ADR-0019), blocked on an authorised non-production render host; no content repair was possible or required.
