@@ -9,15 +9,33 @@ feature: gqur-301
 branch: crew/gqur-301-u05-repair_en
 user: crew
 command: crew fix
-labels: ["crew", "opencode"]
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/gqur-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - specs/content/gqur-301/tasks.md
+ - docs/semester-2/gqur-301/unit-05/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-05/unit-assessment.mdx
+ - history/prompts/gqur-301/crew-gqur-301-u05-repair_en-conflict1.misc.prompt.md
  - history/prompts/gqur-301/crew-gqur-301-u05-repair_en-conflict2.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u05-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-05/unit-assessment.mdx
+ - specs/content/gqur-301/coverage/unit-05.md
+ - specs/content/gqur-301/reviews/unit-05/G2/20261105T131356969Z-gates.json
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/validate-content.txt
+ - specs/content/gqur-301/sources/texts/lane-u05-2026.md
+ - specs/content/gqur-301/sources/unit-05.md
+ - specs/content/gqur-301/tasks.md
 tests:
  - npm run check:content
 ---
@@ -55,27 +73,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u05-repair_en, repair_en, opencode) P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host.
 - (gqur-301-u05-repair_en, repair_en, opencode) Other GQUR-301 units still cite the shared `lane2023` excerpt, which lacks Chapter 3; that course-level gap is outside this Unit 5 job.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gqur-301-u05-repair_en, resolved the append-only tasks.md conflict keeping main's Unit 6 row then this branch's Unit 5 row, regenerated the gitignored content-status report, and passed all 14 content gates.
+Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 6 row then this branch's Unit 5 row (no registry changes or ID renumbering needed), regenerated the gitignored content-status report, and passed all 14 `check:content` gates.
 
 ## Outcome
 
-- Impact: fix for GQUR-301 Unit 5 by opencode (attempt 2).
-- Tests: npm run check:content passed in the job worktree (14/14 gates).
-- Files: 2 file(s), listed above.
+- Impact: fix for GQUR-301 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 20 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gqur-301-u05-repair_en and resolved the tasks.md conflict by keeping main's Unit 6 row then this branch's Unit 5 row; regenerated static/content-status.json (gitignored) and passed all 14 content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 6 row then this branch's Unit 5 row (no registry changes or ID renumbering needed), regenerated the gitignored content-status report, and passed all 14 `check:content` gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The only conflict was specs/content/gqur-301/tasks.md; shared registries were untouched by this branch, so no ID renumbering was needed.
   - Unit 5 P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host; G3 stays open (ADR-0019).
   - G5 should verify Nastaliq rendering and text-fit inside the inherited viewBox at narrow width and A4 print.
+  - Other GQUR-301 units still cite the shared `lane2023` excerpt, which lacks Chapter 3; that course-level gap is outside this Unit 5 job.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
