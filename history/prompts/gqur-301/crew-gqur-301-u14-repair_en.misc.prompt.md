@@ -94,7 +94,7 @@ From `specs/content/gqur-301/reviews/unit-14/G3/20261102T212207Z-g3-desk-b6a93c2
 
 ## Response snapshot
 
-Repaired GQUR-301 Unit 14 G3 review findings F1-F11 across English docs and Urdu mirrors per review report b6a93c25 (data values adjusted to sum 513, mean 34.2, s 3.8; worked interval 32.3 to 36.1; z* = 1.96 pedagogical rationale with Unit 15 t-distribution forward pointer; mini-rubric interval 2.13 to 2.67; MCQ 10 option A (69.1, 74.9); rounding flexibility for RRQ 7 and ERQ 1; NIST 1.3.5.2 citation and Lane chapter 10 locator; consistent x-bar notation; ERQ 4 pupils sampling unit; character clarification to director), authored repair record, appended unticked advisory G3 tracker row, and refreshed G2 gate evidence with all 14 content gates passing.
+Repaired GQUR-301 Unit 14 G3 review findings across English docs and Urdu mirrors, authored repair record, appended unticked advisory G3 tracker row, and refreshed G2 gate evidence with all 14 content gates passing.
 
 ## Outcome
 
@@ -106,14 +106,13 @@ Repaired GQUR-301 Unit 14 G3 review findings F1-F11 across English docs and Urdu
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Repaired GQUR-301 Unit 14 G3 review findings F1-F11 across English docs and Urdu mirrors per review report b6a93c25 (data values adjusted to sum 513, mean 34.2, s 3.8; worked interval 32.3 to 36.1; z* = 1.96 pedagogical rationale with Unit 15 t-distribution forward pointer; mini-rubric interval 2.13 to 2.67; MCQ 10 option A (69.1, 74.9); rounding flexibility for RRQ 7 and ERQ 1; NIST 1.3.5.2 citation and Lane chapter 10 locator; consistent x-bar notation; ERQ 4 pupils sampling unit; character clarification to director), authored repair record, appended unticked advisory G3 tracker row, and refreshed G2 gate evidence with all 14 content gates passing.
+- Shipped / changed: Repaired GQUR-301 Unit 14 G3 review findings across English docs and Urdu mirrors, authored repair record, appended unticked advisory G3 tracker row, and refreshed G2 gate evidence with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G2 gate manifest was refreshed and committed under `specs/content/gqur-301/reviews/unit-14/G2/20261105T152528893Z-gates.json`; G3 remains unticked (`▢`) awaiting fresh independent review.
-  - 15 classroom data values adjusted to sum 513, mean 34.2, and sample SD 3.8023 (rounds to 3.8), aligning with all existing figures and text.
-  - Normal critical value z* = 1.96 pedagogical rationale clarified with explicit note that Student's t distribution is taught in Unit 15; question stems supply z* = 1.96.
-  - Uncertain review findings (accessibility rendering inspection, intake provenance, source passage binding) remain open for an authorized evaluation session.
+  - G2 gate evidence was refreshed with input hashes matching the repaired content; G3 remains unticked pending fresh independent review.
+  - Classroom data values in Topic 01 now strictly produce sum 513, mean 34.2, and sample SD 3.80, perfectly matching all existing figures and references.
+  - Uncertain findings from review (render accessibility inspection, G1 status under D-2026-0070, and external source binding) remain open for an authorized evaluation session.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
