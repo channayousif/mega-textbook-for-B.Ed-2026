@@ -26,6 +26,15 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-assessment.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-teacher-notes.mdx
   - specs/content/gpks-402/figures/unit-02.md
+  - specs/content/gpks-402/reviews/unit-02/G2/20261105T111715992Z-gates.json
+  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-bloom-bands.txt
+  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-concept-graph.txt
+  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-depth-gate.txt
+  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-docs-sync.txt
+  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-figures.txt
+  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-no-answer-keys.txt
+  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-no-em-dash.txt
+  - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/validate-content.txt
   - specs/content/gpks-402/sources/texts/khan-khan-2020-aligarh.md
   - specs/content/gpks-402/sources/unit-02.md
   - specs/content/gpks-402/tasks.md
@@ -101,7 +110,7 @@ Repaired all blocking and advisory findings from G3 review report `20261102T2122
 
 - ✅ Impact: repair_en for GPKS-402 Unit 2 by agy.
 - 🧪 Tests: npm run check:content passed cleanly with no scope findings.
-- 📁 Files: 22 file(s), listed above.
+- 📁 Files: 31 file(s), listed above.
 - 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
 - 🧠 Reflection: All 7 blocking and 1 advisory findings from the latest G3 review report were resolved with exact source verification, chronological precision, and full English-Urdu parity.
 
