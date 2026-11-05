@@ -3,7 +3,7 @@
 Per `specs/007-content-depth-standard/contracts/sources-consulted.md`. Every key cited in
 `specs/content/gqur-301/coverage/unit-14.md` appears here.
 
-Course guide: `Scheme-and-Course-guides/extracted-text/2nd 2026.txt`, GQUR-301 Chapter 14. Section locators used: Lane Chapters 9-10 (sampling distributions, confidence intervals); OpenStax Chapter 8 (confidence intervals); NIST/SEMATECH Section 1.3.5.2 (estimation). The Lane and OpenStax section pages were re-checked on 2026-10-22 (HTTP 200, titles matching).
+Course guide: `Scheme-and-Course-guides/extracted-text/2nd 2026.txt`, GQUR-301 Chapter 14. Section locators used: Lane Chapter 10 (characteristics of estimators, confidence intervals); OpenStax Chapter 8 (confidence intervals); NIST/SEMATECH Section 1.3.5.2 (estimation). The Lane and OpenStax section pages were re-checked on 2026-10-22 (HTTP 200, titles matching).
 
 ## Open-access sources (registry-verified)
 

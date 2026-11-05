@@ -3,8 +3,8 @@
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
 | CON:GSOS-301-3-1 | Status as social position | مقام بطور معاشرتی پوزیشن | - | 3.1 | SLO:GSOS-301-3-1 | MCQ-01 |
-| CON:GSOS-301-3-2 | Role as expected behaviour | کردار بطور متوقع رویہ | CON:GSOS-301-3-1 | 3.1 | SLO:GSOS-301-3-1 | MCQ-03 |
-| CON:GSOS-301-3-3 | Role strain | کردار کا تناؤ | CON:GSOS-301-3-2 | 3.1 | SLO:GSOS-301-3-1 | RRQ-01 |
+| CON:GSOS-301-3-2 | Role as expected behaviour | کردار بطور متوقع رویہ | CON:GSOS-301-3-1 | 3.1 | SLO:GSOS-301-3-1 | RRQ-01 |
+| CON:GSOS-301-3-3 | Role strain | کردار کا تناؤ | CON:GSOS-301-3-2 | 3.1 | SLO:GSOS-301-3-1 | RRQ-03 |
 | CON:GSOS-301-3-4 | Social group | معاشرتی گروہ | - | 3.1 | SLO:GSOS-301-3-1 | MCQ-02 |
 | CON:GSOS-301-3-5 | Primary group | ابتدائی گروہ | CON:GSOS-301-3-4 | 3.1 | SLO:GSOS-301-3-1 | MCQ-02 |
 | CON:GSOS-301-3-6 | Secondary group | ثانوی گروہ | CON:GSOS-301-3-4 | 3.1 | SLO:GSOS-301-3-1 | RRQ-02 |
@@ -12,10 +12,10 @@
 | CON:GSOS-301-3-8 | Bureaucracy | بوروکریسی | CON:GSOS-301-3-7 | 3.1 | SLO:GSOS-301-3-1 | MCQ-04 |
 | CON:GSOS-301-3-9 | Cooperation | تعاون | - | 3.2 | SLO:GSOS-301-3-1 | MCQ-06 |
 | CON:GSOS-301-3-10 | Competition | مقابلہ | - | 3.2 | SLO:GSOS-301-3-1 | MCQ-05 |
-| CON:GSOS-301-3-11 | Conflict | تصادم | - | 3.2 | SLO:GSOS-301-3-1 | MCQ-09 |
+| CON:GSOS-301-3-11 | Conflict | تصادم | - | 3.2 | SLO:GSOS-301-3-1 | RRQ-06 |
 | CON:GSOS-301-3-12 | Social interaction | معاشرتی تعامل | CON:GSOS-301-3-9, CON:GSOS-301-3-10, CON:GSOS-301-3-11 | 3.2 | SLO:GSOS-301-3-1 | MCQ-10 |
-| CON:GSOS-301-3-13 | Communication in society | معاشرے میں مواصلات | CON:GSOS-301-3-12 | 3.2 | SLO:GSOS-301-3-1 | MCQ-07 |
-| CON:GSOS-301-3-14 | Verbal communication | زبانی ابلاغ | CON:GSOS-301-3-13 | 3.2 | SLO:GSOS-301-3-1 | RRQ-05 |
+| CON:GSOS-301-3-13 | Communication in society | معاشرے میں ابلاغ | CON:GSOS-301-3-12 | 3.2 | SLO:GSOS-301-3-1 | MCQ-07 |
+| CON:GSOS-301-3-14 | Verbal communication | زبانی ابلاغ | CON:GSOS-301-3-13 | 3.2 | SLO:GSOS-301-3-1 | RRQ-07 |
 | CON:GSOS-301-3-15 | Non-verbal communication | غیر زبانی ابلاغ | CON:GSOS-301-3-13 | 3.2 | SLO:GSOS-301-3-1 | MCQ-07 |
 
 ## Authored labels (not in terminology.csv)
@@ -34,6 +34,8 @@
 | Competition | مقابلہ |
 | Conflict | تصادم |
 | Social interaction | معاشرتی تعامل |
-| Communication in society | معاشرے میں مواصلات |
+| Communication in society | معاشرے میں ابلاغ |
 | Verbal communication | زبانی ابلاغ |
 | Non-verbal communication | غیر زبانی ابلاغ |
+
+Role conflict is explicitly distinguished from strain in Topic 3.1 and elicited by MCQ-03, RRQ-03 and ERQ-01. The approved worked-example conflation is referred to the curriculum owner in reviews/unit-03/repair-20261105.md.

@@ -35,12 +35,12 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 
-**Unit 3 - Social Structure and Social Interaction:** not started.
+**Unit 3 - Social Structure and Social Interaction:** English and Urdu drafts authored; G3 repairs applied, independent review still pending. G0/G1 authority is recorded in confirmed D-2026-0066; this note does not re-certify its historical inputs.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 3 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-03/G2/20261103T112247561Z-gates.json |
+| Unit 3 | G1 unit-spec | ▢ | | approved authority recorded in confirmed D-2026-0066; owner to reconcile gate metadata |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-03/G2/20261105T172625106Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-03/G3/01a16968-f1c8-7233-add1-497c86787970.json; role conflict/strain, missing figures, assessment and source/mapping repairs; provenance/render evidence incomplete; no certification |
 | Unit 3 | G4 ur-translation | ▢ | agent:claude-translate-unit | Urdu mirror drafted (5 files, .ur.svg wired, key_terms bank-conformant; flip probe clean except G4/G5 rows) against English 27261f59; faithful to unrepaired English incl. G3 role conflict/strain and RRQ 3 defects; handoff reviews/unit-03/G4/translation-handoff.md; translation_status stays draft; awaits English repair and independent G5 |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -100,4 +100,5 @@ G1 unit-spec drafted (pending G0 intake approval).
 
 | Unit 2 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67a.json; F1-F5 and F8 repaired in EN/UR; F6 render inspection and F7 original provenance/complete source evidence remain open; fresh independent review required; no certification |
 
+| Unit 3 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-ece43fa7.json; terminology, assessment, source/mapping and figure inputs repaired; see reviews/unit-03/repair-20261105.md for remaining owner/provenance/render work; fresh independent review required; no certification |
 | Unit 5 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-92fc9b44.json; OpenStax 15.1 passage and Pakistani fact sources recorded in sources/unit-05.md; blocking 360px/table-scroll/A4-print/figure-clipping render inspection remains unperformed because brief prohibits build/server/Playwright; permitted render inspection and fresh independent review required; no certification |
