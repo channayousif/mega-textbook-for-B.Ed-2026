@@ -17,6 +17,15 @@ links:
   pr: null
 files:
   - history/prompts/gnas-301/crew-gnas-301-u04-repair_en-r1.misc.prompt.md
+  - specs/content/gnas-301/reviews/unit-04/G2/20261105T114859786Z-gates.json
+  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-bloom-bands.txt
+  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-concept-graph.txt
+  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-depth-gate.txt
+  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-docs-sync.txt
+  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-figures.txt
+  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-no-answer-keys.txt
+  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-no-em-dash.txt
+  - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/validate-content.txt
   - specs/content/gnas-301/reviews/unit-04/G3/repair-desk-94b67cf2.md
   - specs/content/gnas-301/sources/texts/who-mental-health-work.md
   - specs/content/gnas-301/sources/texts/who-occupational-health.md
