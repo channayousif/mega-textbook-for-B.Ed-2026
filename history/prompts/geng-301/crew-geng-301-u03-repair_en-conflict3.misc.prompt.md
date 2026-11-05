@@ -16,8 +16,47 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/geng-301/tasks.md
+ - docs/semester-2/geng-301/unit-03/index.mdx
+ - docs/semester-2/geng-301/unit-03/topic-01.mdx
+ - docs/semester-2/geng-301/unit-03/topic-02.mdx
+ - docs/semester-2/geng-301/unit-03/topic-03.mdx
+ - docs/semester-2/geng-301/unit-03/topic-04.mdx
+ - docs/semester-2/geng-301/unit-03/unit-assessment.mdx
+ - docs/semester-2/geng-301/unit-03/unit-teacher-notes.mdx
+ - history/prompts/general/20261122-geng-301-unit-03-g3-repairs.general.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u03-repair_en-conflict1.misc.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u03-repair_en-conflict2.misc.prompt.md
  - history/prompts/geng-301/crew-geng-301-u03-repair_en-conflict3.misc.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u03-repair_en.misc.prompt.md
+ - specs/content/geng-301/concepts/unit-03.md
+ - specs/content/geng-301/coverage/unit-03.md
+ - specs/content/geng-301/figures/unit-03.md
+ - specs/content/geng-301/reviews/unit-03/G2/20261105T104115802Z-gates.json
+ - specs/content/geng-301/reviews/unit-03/G2/logs-20261105T104115802Z/check-bloom-bands.txt
+ - specs/content/geng-301/reviews/unit-03/G2/logs-20261105T104115802Z/check-concept-graph.txt
+ - specs/content/geng-301/reviews/unit-03/G2/logs-20261105T104115802Z/check-depth-gate.txt
+ - specs/content/geng-301/reviews/unit-03/G2/logs-20261105T104115802Z/check-docs-sync.txt
+ - specs/content/geng-301/reviews/unit-03/G2/logs-20261105T104115802Z/check-figures.txt
+ - specs/content/geng-301/reviews/unit-03/G2/logs-20261105T104115802Z/check-no-answer-keys.txt
+ - specs/content/geng-301/reviews/unit-03/G2/logs-20261105T104115802Z/check-no-em-dash.txt
+ - specs/content/geng-301/reviews/unit-03/G2/logs-20261105T104115802Z/validate-content.txt
+ - specs/content/geng-301/reviews/unit-03/repair-checks-20261105/check-content-final.log
+ - specs/content/geng-301/reviews/unit-03/repair-checks-20261105/check-content-first.log
+ - specs/content/geng-301/reviews/unit-03/repair-checks-20261105/check-content-main.log
+ - specs/content/geng-301/reviews/unit-03/repair-checks-20261105/check-content-verified.log
+ - specs/content/geng-301/reviews/unit-03/repair-checks-20261105/unit-tests-summary.log
+ - specs/content/geng-301/reviews/unit-03/repair-checks-20261105/variants-check.log
+ - specs/content/geng-301/reviews/unit-03/repairs-20261105.md
+ - specs/content/geng-301/sources/unit-03.md
+ - specs/content/geng-301/tasks.md
+ - static/img/figures/geng-301/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/geng-301/unit-03/fig-U3-1.svg
+ - static/img/figures/geng-301/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/geng-301/unit-03/fig-U3-2.svg
+ - static/img/figures/geng-301/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/geng-301/unit-03/fig-U3-6.svg
+ - static/img/figures/geng-301/unit-03/fig-U3-7.dark.svg
+ - static/img/figures/geng-301/unit-03/fig-U3-7.svg
 tests:
  - npm run check:content
 ---
@@ -55,22 +94,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (geng-301-u03-repair_en-conflict1, fix, opencode) `static/content-status.json` is generated; run `npm run build:content-status` after any content-status edit or `check:content` will fail.
 - (geng-301-u03-repair_en, repair_en, codex) G3 remains open; independent assessment, frozen handoff/provenance, narrow/print rendering and SVG geometry verification remain pending.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/geng-301-u03-repair_en, resolved the one conflict in specs/content/geng-301/tasks.md by keeping main's Unit 5 row then this branch's Unit 3 row, regenerated static/content-status.json, and passed all 14 content gates.
+Resolved the geng-301 tasks.md merge conflict preserving both main's Unit 5 and the branch's Unit 3 rows, committed the merge and PHR, and left all content gates passing.
 
 ## Outcome
 
-- Impact: fix for GENG-301 Unit 3 by opencode (attempt 3, conflict resolution).
-- Tests: npm run check:content passed (14/14 gates) after regenerating static/content-status.json.
-- Files: 2 file(s), listed above.
+- Impact: fix for GENG-301 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 41 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: resolved the merge conflict in specs/content/geng-301/tasks.md (main's Unit 5 row kept first, this branch's Unit 3 row kept after it), committed the merge, regenerated static/content-status.json, all content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this work does not certify anything.
+- Shipped / changed: Resolved the geng-301 tasks.md merge conflict preserving both main's Unit 5 and the branch's Unit 3 rows, committed the merge and PHR, and left all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G3 remains open; independent assessment, frozen handoff/provenance, narrow/print rendering and SVG geometry verification are still pending.
