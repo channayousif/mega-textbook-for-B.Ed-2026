@@ -20,10 +20,15 @@ page's overview was read and is excerpted below.
   stress and extreme heat, airborne particulates, occupational injuries, violence and
   harassment.
 
-## What this supports in GNAS-301 Unit 3
+## What this supports in GNAS-301
 
-Topic 3.3 (U3-03) cites this source for the definition and aims of the occupational-health
-field, including its coverage of physical, mental and social well-being. Topics 3.3 and 3.4
-(U3-04, U3-05, U3-06) cite it for the named hazard concerns, heat stress, airborne
-particulates and mental health among them, which ground the five-class teaching and the
-field's scope. The unit does not rely on this source for any claim it does not state here.
+In Unit 3, Topic 3.3 (U3-03) cites this source for the definition and aims of the
+occupational-health field, including its coverage of physical, mental and social
+well-being. Topics 3.3 and 3.4 (U3-04, U3-05, U3-06) cite it for the named hazard concerns,
+heat stress, airborne particulates and mental health among them, which ground the
+five-class teaching and the field's scope.
+
+In Unit 4, Topic 4.1 (U4-01) cites it for services-sector concerns including mental
+health and workplace violence.
+
+Neither unit relies on this source for any claim it does not state here.
