@@ -133,7 +133,10 @@ Answer each question in a few sentences or a short paragraph.
    (two-tailed) as 2.093. For the *t* you computed in RRQ 5, state the decision
    and explain what it means.
 
-7. *(Apply)* State three conditions that must hold for a z-test for a mean.
+7. *(Apply)* A school tests whether its Class 8 mean differs from the district
+   mean. The district standard deviation is known, but the class is small and
+   the data are not random. For each of the three conditions for a z-test for a
+   mean, state whether it holds in this scenario and why.
 
 8. *(Analyze)* A teacher rejects the null hypothesis that her class mean equals
    the district mean of 70. She says: "This proves my teaching method is
@@ -240,17 +243,17 @@ Answer each question in a structured paragraph or set of paragraphs.
 
 4. The trainee is wrong. A p-value of 0.03 does not mean there is a 3% chance the null is true. It means that if the null hypothesis were true, the probability of observing a sample result at least this extreme is 0.03. The p-value measures how surprising the data are under the null, not the probability that the null is true. (3 marks: 1 for identifying the error, 1 for the correct interpretation, 1 for explaining what the p-value actually measures.)
 
-5. SE = 10/√20 = 10/4.47 = 2.24. *t* = (65 − 60)/2.24 = 5/2.24 = 2.23. df = 20 − 1 = 19. (3 marks: 1 for SE, 1 for t, 1 for df.)
+5. SE = 10/√20 = 2.236. *t* = (65 − 60)/2.236 = 5/2.236 = 2.24. df = 20 − 1 = 19. (3 marks: 1 for SE, 1 for t, 1 for df. Rounding the SE to 2.24 first gives *t* = 2.23; either route earns full marks.)
 
-6. The critical value for df = 19 at *α* = 0.05 (two-tailed) is 2.093. Since 2.23 &gt; 2.093, reject *H*<sub>0</sub>. The data provide sufficient evidence at the 5% level that the true mean differs from 60. (2 marks: 1 for the decision, 1 for the meaning.)
+6. The critical value for df = 19 at *α* = 0.05 (two-tailed) is 2.093. Since 2.24 &gt; 2.093, reject *H*<sub>0</sub>. The data provide sufficient evidence at the 5% level that the true mean differs from 60. (2 marks: 1 for the decision, 1 for the meaning.)
 
-7. (1) The data are a random sample from the population. (2) The population standard deviation *σ* is known. (3) The population is normally distributed or the sample is large enough (*n* ≥ 30) for the Central Limit Theorem to apply. (3 marks: 1 per condition.)
+7. (1) Random sample: does not hold, because the class was not randomly selected from the district. (2) Known *σ*: holds, because the district standard deviation is known. (3) Normality or large *n*: does not hold, because the class is small and there is no information that the population is normal. (3 marks: 1 per condition.)
 
 8. The test shows only that the sample mean is surprisingly far from the district mean of 70 if the null were true. It does not prove the teaching method caused the difference. Other explanations include a stronger year group, extra tutoring, or the class being particularly motivated. The test judges the number, not the cause. (3 marks: 1 for what the test shows, 1 for naming an alternative explanation, 1 for stating that the test does not prove causation.)
 
 9. The t-distribution has thicker tails than the normal because using the sample standard deviation *s* instead of the known *σ* adds uncertainty. For the same test statistic, the t-test gives a larger p-value than the z-test, so it is harder to reject the null. This is the correct penalty for not knowing the population spread. (2 marks: 1 for the thicker-tail reason, 1 for the larger p-value consequence.)
 
-10. Each test at *α* = 0.05 has a 5% false-alarm risk. Running two tests raises the chance of at least one false alarm to about 1 − (0.95 × 0.05) ≈ 0.0975, or roughly 10%. A practical way to be more careful is to lower the significance level for each comparison (for example, 0.025 per test) or to focus on the size of the observed differences rather than just significance. (3 marks: 1 for explaining the combined risk, 1 for the approximate combined probability, 1 for a practical suggestion.)
+10. Each test at *α* = 0.05 has a 5% false-alarm risk. Running two independent tests raises the chance of at least one false alarm to about 1 − (0.95 × 0.95) = 0.0975, or roughly 10%. A practical way to be more careful is to lower the significance level for each comparison (for example, 0.025 per test) or to focus on the size of the observed differences rather than just significance. (3 marks: 1 for explaining the combined risk, 1 for the approximate combined probability, 1 for a practical suggestion.)
 
 ### ERQ rubrics
 
@@ -266,12 +269,12 @@ Correct values: *H*<sub>0</sub>: *μ* = 65, *H*<sub>1</sub>: *μ* ≠ 65. SE = 1
 
 **ERQ 2 (Evaluate - tail choice and the p-value)**
 
-Teacher A's error: a one-tailed p-value of 0.036 corresponds to *z* = 1.80 (approx), but the test claimed is two-tailed. A two-tailed test with *z* = 2.10 gives p = 0.036. Teacher A treats the one-tailed p-value as if the test is two-tailed and also overstates the conclusion ("the new method works"). Teacher B's error: a one-tailed p-value of 0.036 with *z* = 2.10 is not consistent; also, if the alternative is "differs" the test must be two-tailed, in which case the one-tailed p-value of 0.036 would become a two-tailed p-value of 0.072, and the result would not be significant at 5%. The tail choice matters because a two-tailed test splits *α* between both tails, so the p-value is twice the one-tailed p-value.
+Teacher A's *p* = 0.036 is the correct two-tailed p-value for *z* = 2.10 (the one-tailed p-value is 0.018). A's only error is the causal claim "the new method works": a significant result does not prove the method caused the improvement. Teacher B mislabels 0.036 as a one-tailed p-value; it is the two-tailed value (the one-tailed p-value is 0.018). B then says the result is not significant, but the correct two-tailed p-value 0.036 &lt; 0.05 is significant, so B's conclusion is wrong. The tail choice matters because a two-tailed test splits *α* between both tails, so the two-tailed p-value is twice the one-tailed p-value.
 
 | Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
 |---|---|---|---|---|
-| Error in A | Identifies the tail mismatch and the overstated conclusion | One of the two | Identifies a problem without precision | None |
-| Error in B | Identifies the inconsistency and the correct tail rule | Partial | Vague | None |
+| Error in A | Identifies that A's p-value is correct and that the causal claim is overstated | One of the two | Identifies a problem without precision | None |
+| Error in B | Identifies that B mislabels the p-value and reaches the wrong decision | Partial | Vague | None |
 | Evaluation (Evaluate) | Explains the effect of the tail choice on the p-value and the conclusion clearly | Partial explanation | Restates the question | None |
 
 **ERQ 3 (Analyze - small-sample t-test)**
@@ -296,7 +299,7 @@ Trainee B is correct. "Not rejected" means the data do not provide enough eviden
 
 **ERQ 5 (Evaluate - using tests to reward and punish classes)**
 
-Errors/risks: (1) Running many tests at *α* = 0.05 produces many false alarms (roughly 5% of classes with no real difference will be falsely flagged). (2) Statistical significance does not mean practical importance - a class 1 marks above average with a large sample can be "significant" but meaningless. (3) The plan treats the test as an objective judge, but the significance level is a choice and the result depends on sample size. (4) Rewarding significance and punishing non-significance confuses "not enough evidence" with "no difference". Fairer approach: look at effect sizes, use confidence intervals, combine data across terms, and consider many factors (pupil background, resources) rather than a single test.
+Errors/risks: (1) Running many tests at *α* = 0.05 produces many false alarms (roughly 5% of classes with no real difference will be falsely flagged). (2) Statistical significance does not mean practical importance - a class 1 mark above average with a large sample can be "significant" but meaningless. (3) The plan treats the test as an objective judge, but the significance level is a choice and the result depends on sample size. (4) Rewarding significance and punishing non-significance confuses "not enough evidence" with "no difference". Fairer approach: look at effect sizes, use confidence intervals, combine data across terms, and consider many factors (pupil background, resources) rather than a single test.
 
 | Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
 |---|---|---|---|---|

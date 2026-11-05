@@ -43,7 +43,9 @@ import PrintHandout from '@site/src/components/PrintHandout';
 
 ### قدم 2: اہمیت کی سطح منتخب کریں
 
-**اہمیت کی سطح (Significance level)**، جسے *α* لکھا جاتا ہے، «بہت حیران کن» کا حد ہے۔ یہ اس کے *H*<sub>0</sub> کو خارج کرنے کا احتمل ہے جب *H*<sub>0</sub> درست ہو (ایک «غلط انتباہ»)۔ سب سے عام انتخاب *α* = 0.05 ہے، یعنی ہم غلط انتباہ کا 5% خطرہ قبول کرتے ہیں۔ *α* = 0.01 سخت ہے؛ *α* = 0.10 زیادہ چھوٹا ہے (Lane & Ziemer, n.d., "Hypothesis Testing")۔
+**اہمیت کی سطح (Significance level)**، جسے *α* لکھا جاتا ہے، «بہت حیران کن» کا حد ہے۔ یہ اس کے *H*<sub>0</sub> کو خارج کرنے کا احتمل ہے جب *H*<sub>0</sub> درست ہو (ایک «غلط انتباہ»)۔ سب سے عام انتخاب *α* = 0.05 ہے، یعنی ہم غلط انتباہ کا 5% خطرہ قبول کرتے ہیں۔ *α* = 0.01 سخت ہے؛ *α* = 0.10 زیادہ چھوٹا ہے (Lane & Ziemer, n.d., "Significance Testing")۔
+
+**کئی جانچوں اور اثر کے سائز پر ایک نوٹ۔** 5% غلط انتباہ کا خطرہ ہر جانچ پر لاگو ہوتا ہے۔ اگر ایک صدر معلم دس جماعتوں کو *α* = 0.05 پر جاتا ہے، تو کم از کم ایک «اہم» نتیجہ غلط انتباہ ہونے کا خطرہ تقریباً 1 − 0.95<sup>10</sup> = 0.40 ہے، 5% نہیں۔ اس لیے کئی جانچ چلانے کے لیے ہر جانچ کے لیے سخت سطح درکار ہے۔ پی-قدر اثر کے سائز کے بارے میں کچھ نہیں کہتی: 1 نمبر کا فرق بڑے نمونے پر شماریاتی طور پر اہم ہو سکتا ہے مگر عملی طور پر بے معنی ہو سکتا ہے۔ فیصلے کے ساتھ ہمیشہ اصل فرق بھی رپورٹ کریں۔
 
 ### قدم 3: جانچ منتخب کریں اور جانچ شماریات معلوم کریں
 
@@ -63,7 +65,7 @@ import PrintHandout from '@site/src/components/PrintHandout';
 
 ### قدم 4: پی-قدر تلاش کریں
 
-**پی-قدر (p-value)** اس نتیجے کا احتمل ہے جو مشاہدہ کردہ سے کم از کم اتنا انتہائی ہو، *اگر H*<sub>0</sub> *درست ہو* (Illowsky & Dean, 2023, Section 9.2, NIST/SEMATECH, Section 1.3.5.3)۔ چھوٹی پی-قدر کا مطلب ہے کہ مشاہدہ کردہ نتیجہ *H*<sub>0</sub> کے تحت ناقابل یقین ہے۔
+**پی-قدر (p-value)** اس نتیجے کا احتمل ہے جو مشاہدہ کردہ سے کم از کم اتنا انتہائی ہو، *اگر H*<sub>0</sub> *درست ہو* (Illowsky & Dean, 2023, Section 9.4, NIST/SEMATECH, Section 1.3.5)۔ چھوٹی پی-قدر کا مطلب ہے کہ مشاہدہ کردہ نتیجہ *H*<sub>0</sub> کے تحت ناقابل یقین ہے۔
 
 <Figure id="fig-U15-2" src="/img/figures/gqur-301/unit-15/fig-U15-2.ur.svg" alt="عدم فروض کے اوسط 72 پر مرکوز ایک نارمل منحنی۔ تقریباً 68.69 اور 75.31 کی فیصلہ کن قدروں سے آگے دونوں سرے سایہ دار ہیں، جو 5% اہمیت کی سطح پر دو طرفہ جانچ کے خارج کرنے کے خطے دکھاتے ہیں۔ نمونے کا مشاہدہ کردہ اوسط 75 اوپری فیصلہ کن قدر سے ذرا اندر ہے، اس لیے یہ خارج کرنے کے خطے میں نہیں آتا۔" />
 
@@ -137,11 +139,11 @@ Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
 https://openstax.org/books/introductory-statistics-2e/pages/9-introduction -
 باب 9 کا تعارف، جو عدم فروض اور متبادل فروض کا بیان کرتا ہے۔
 
-Lane, D. M., & Ziemer, H. (n.d.). *Hypothesis Testing.* Online Statistics
+Lane, D. M., & Ziemer, H. (n.d.). *Significance Testing.* Online Statistics
 Education. Rice University.
-https://onlinestatbook.com/2/more_studies/hypothesis_testing.html -
-«فروضی جانچ کا منطق»، جس میں پی-قدر عام زبان میں بیان کیا گیا ہے۔
+https://onlinestatbook.com/2/logic_of_hypothesis_testing/significance.html -
+پی-قدر اور 0.05 کو روایت، شماریاتی اہمیت کو عملی اہمیت سے ممتاز کرتے ہوئے۔
 
-NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 1.3.5.3, "What is
-a Hypothesis Test?"
-https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 1.3.5,
+"Quantitative Techniques".
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda35.htm

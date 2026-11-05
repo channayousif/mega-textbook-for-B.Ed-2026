@@ -26,7 +26,7 @@ import PrintHandout from '@site/src/components/PrintHandout';
 
 ### زیڈ-جانچ کب استعمال کریں
 
-**اوسط کی زیڈ-جانچ** اس وقت لاگو ہوتی ہے جب تین شرائط پوری ہوں (Illowsky & Dean, 2023, Section 9.3, NIST/SEMATECH, Section 7.1.3):
+**اوسط کی زیڈ-جانچ** اس وقت لاگو ہوتی ہے جب تین شرائط پوری ہوں (Illowsky & Dean, 2023, Section 9.3; NIST/SEMATECH, Section 7.1.3, "What are statistical tests?"):
 
 1. ڈیٹا دلچسپی کی آبادی سے ایک تصادفی نمونہ ہو۔
 2. آبادی کا معیاری انحرف *σ* **معلوم** ہو۔
@@ -65,7 +65,7 @@ import PrintHandout from '@site/src/components/PrintHandout';
 
 ### ایک طرفہ اور دو طرفہ پی-قدر
 
-پی-قدر کیسے نکالی جاتی ہے یہ متبادل فروض پر منحصر ہے (Illowsky & Dean, 2023, Section 9.2):
+پی-قدر کیسے نکالی جاتی ہے یہ متبادل فروض پر منحصر ہے (Illowsky & Dean, 2023, Section 9.5):
 
 - **دائیں طرفہ** (*H*<sub>1</sub>: *μ* &gt; μ<sub>0</sub>): پی-قدر = P(*Z* &gt; *z*)۔
 - **بائیں طرفہ** (*H*<sub>1</sub>: *μ* &lt; μ<sub>0</sub>): پی-قدر = P(*Z* &lt; *z*)۔
@@ -123,20 +123,20 @@ import PrintHandout from '@site/src/components/PrintHandout';
 | معیار | درجے |
 |---|---|
 | *جانچ شماریات اور پی-قدر (اطلاق کرنا)* | 0-3: دونوں صحیح، حساب کے ساتھ / ایک صحیں / طریقہ صحیں، حساب کی غلطی / غلط۔ |
-| *فیصلہ (اطلاق کرنا)* | 0-1: فیصلہ پی-قدر کے ساتھ ہم آہنگ اور عام زبان میں بیان کردہ۔ |
+| *فیصلہ (اطلاق کرنا)* | 0-1: فیصلہ سیکھنے والے کی بیان کردہ *α* اور پی-قدر کے ساتھ ہم آہنگ اور عام زبان میں بیان کردہ۔ *α* = 0.05 پر نتیجہ اہم ہے؛ *α* = 0.01 پر اہم نہیں۔ |
 | *نتیجے کا تجزیہ (تجزیہ کرنا)* | 0-3: شماریاتی اہمیت کو عملی اہمیت سے ممتاز کرتا ہے، دوسرے وجوہات نوٹ کرتا ہے (پہلے سے صلاحیت، اضافی مدد)، اور بتاتا ہے کہ جانچ کیا نہیں دکھاتی / ان میں سے دو / ایک یا کوئی نہیں۔ |
 
 ## مزید مطالعہ
 
 Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
-https://openstax.org/books/introductory-statistics-2e/pages/9-3-single-mean-and-known-standard-deviation -
-Section 9.3، ایک اوسط کی زیڈ-جانچ جب معیاری انحرف معلوم ہو۔
+https://openstax.org/books/introductory-statistics-2e/pages/9-3-probability-distribution-needed-for-hypothesis-testing -
+Section 9.3، فروضی جانچ کے لیے درکار احتمال تقسیم، بشمول معلوم معیاری انحرف کے ساتھ ایک اوسط کی زیڈ-جانچ۔
 
-NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 7.1.3, "What is a
-Z-test?"
-https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm#ZTEST
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 7.1.3, "What are
+statistical tests?"
+https://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm
 
-Lane, D. M., & Ziemer, H. (n.d.). *Hypothesis Testing with z.* Online
-Statistics Education. Rice University.
-https://onlinestatbook.com/2/more_studies/hypothesis_testing_z.html -
-معیاری معیاری جدول کے ساتھ زیڈ-جانچ کی حل شدہ مثالیں۔
+Lane, D. M., & Ziemer, H. (n.d.). *Testing a Single Mean.* Online Statistics
+Education. Rice University.
+https://onlinestatbook.com/2/tests_of_means/single_mean.html -
+معلوم آبادی معیاری انحرف کے ساتھ اوسط کی زیڈ-جانچ۔
