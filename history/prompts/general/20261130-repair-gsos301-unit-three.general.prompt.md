@@ -45,7 +45,7 @@ files:
 tests:
   - "scripts/heavy.sh npm test: 368 tests passed, 31 files"
   - "measure-figure-text: all 16 Unit 3 SVG variants passed"
-  - "npm run check:content: baseline comparison and G2 refresh pending final record"
+  - "npm run check:content: all 14 gates pass; separate origin/main baseline also passes after ignored status regeneration"
 ---
 
 ## Prompt
@@ -59,7 +59,7 @@ Completed the English author repairs and mirrored core changes into Urdu. Correc
 ## Outcome
 
 - ✅ Impact: Repaired Unit 3 findings without editing approved authority or certifying review.
-- 🧪 Tests: 368 tests passed; 16 figure measurements passed; final gate comparison follows.
+- 🧪 Tests: 368 tests passed; all 16 SVG measurements passed; all 14 content gates passed.
 - 📁 Files: Unit 3 EN/UR content, figures, governance records and this PHR.
 - 🔁 Next prompts: Owner spec correction, independent review with source scrutiny, permitted rendered review.
 - 🧠 Reflection: Earlier partial edits were completed; historic source and identity limitations remain explicit.
@@ -74,6 +74,14 @@ Completed the English author repairs and mirrored core changes into Urdu. Correc
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Stale G2 evidence after content edits; old source declarations lacked dated support; global status failure reproduced separately.
-- Graders run and results (PASS/FAIL): PASS: unit tests and SVG text measurement. Final content results recorded below.
+- Graders run and results (PASS/FAIL): PASS: 368 unit tests, 16 SVG measurements, all 14 content gates, and all 8 refreshed G2 draft gates.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent review of the committed repaired inputs, subject to review-cycle authority.
+
+## Final validation and commits
+
+- Content repair commits: `1c7d1cfed` and `6770b3915`; the final evidence commit accompanies this record.
+- Refreshed G2 evidence: `specs/content/gsos-301/reviews/unit-03/G2/20261105T172625106Z-gates.json`, bound to the committed repaired English version. Existing G2 row repointed; G3/G5 remain open.
+- Final `npm run check:content`: all 14 gates pass. A separate origin/main tree with the same dependencies also passed all 14 after generating its ignored `static/content-status.json`. The initial extracted baseline without its own git context was discarded as an invalid comparison because it falsely reported corpus-wide stale evidence.
+- Regenerated only the ignored local content-status report; no global generated status file enters the commit.
+- No build, preview server, browser, push or PR. The complete action brief remains in `.crew/brief.md`; this PHR preserves the user prompt verbatim above.
