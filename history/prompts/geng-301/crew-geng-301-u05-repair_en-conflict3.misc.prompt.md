@@ -16,8 +16,32 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-2/geng-301/unit-05/topic-03.mdx
+ - docs/semester-2/geng-301/unit-05/topic-04.mdx
+ - docs/semester-2/geng-301/unit-05/unit-assessment.mdx
+ - docs/semester-2/geng-301/unit-05/unit-teacher-notes.mdx
+ - history/prompts/006-content-pipeline/0027-repair-geng301-unit-five-english.green.prompt.md
+ - history/prompts/general/20261125-merge-geng-unit-five-repair-branch.general.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u05-repair_en-conflict2.misc.prompt.md
  - history/prompts/geng-301/crew-geng-301-u05-repair_en-conflict3.misc.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u05-repair_en.misc.prompt.md
+ - specs/content/geng-301/figures/unit-05.md
+ - specs/content/geng-301/reviews/unit-05/G2/20261103T185029661Z-gates.json
+ - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/check-bloom-bands.txt
+ - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/check-concept-graph.txt
+ - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/check-depth-gate.txt
+ - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/check-docs-sync.txt
+ - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/check-figures.txt
+ - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/check-no-answer-keys.txt
+ - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/check-no-em-dash.txt
+ - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/validate-content.txt
+ - specs/content/geng-301/reviews/unit-05/repairs/20261103-repair-en.md
  - specs/content/geng-301/tasks.md
+ - static/img/figures/geng-301/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/geng-301/unit-05/fig-U5-2.svg
+ - static/img/figures/geng-301/unit-05/fig-U5-8.dark.svg
+ - static/img/figures/geng-301/unit-05/fig-U5-8.svg
 tests:
  - npm run check:content
 ---
@@ -55,26 +79,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (geng-301-u05-repair_en-conflict1, fix, opencode) G3 remains open for Unit 5; a fresh independent G3 review is still required after the figure-geometry repair.
 - (geng-301-u05-repair_en, repair_en, codex) G3 remains open; original provenance, SVG geometry and desktop/narrow/A4 inspection need an authorised host.
 
+
 ## Response snapshot
 
-Merged origin/main, resolved the single tasks.md conflict by keeping both sides' G3 rows, regenerated the gitignored content-status report, and committed the merge.
+Merged origin/main into crew/geng-301-u05-repair_en, resolved the tasks.md conflict by keeping both sides' G3 rows, regenerated the content-status report, and committed the merge plus its PHR.
 
 ## Outcome
 
-- Impact: fix for GENG-301 Unit 5 by opencode (attempt 3).
-- Tests: npm run check:content passed (14/14 content gates).
-- Files: 2 file(s), listed above.
+- Impact: fix for GENG-301 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 26 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into the branch; resolved the tasks.md conflict by keeping main's Unit 2 G3 row then this branch's Unit 5 G3 row; regenerated static/content-status.json (gitignored) so check:content-status passes.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into crew/geng-301-u05-repair_en, resolved the tasks.md conflict by keeping both sides' G3 rows, regenerated the content-status report, and committed the merge plus its PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 5 still needs fresh independent G3 review and provenance/render inspection.
-  - The merge brought in main's changes to efmp-305 unit-05, efmp-406 unit-03, geng-301 unit-02 and gict-300; they are outside this job's scope but now sit on the branch.
+  - Unit 5 still needs a fresh independent G3 review plus provenance/render inspection; G3/G5 stay advisory and unsigned.
+  - The merge pulled main's changes to efmp-305 unit-05, efmp-406 unit-03, geng-301 unit-02 and gict-300 onto this branch; they are outside this job's scope.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
