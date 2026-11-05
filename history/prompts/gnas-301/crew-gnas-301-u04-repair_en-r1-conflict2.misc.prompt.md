@@ -16,7 +16,23 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/general/2453-verify-unit-4-merge-readiness.general.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u04-repair_en-r1-conflict1.misc.prompt.md
  - history/prompts/gnas-301/crew-gnas-301-u04-repair_en-r1-conflict2.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u04-repair_en-r1.misc.prompt.md
+ - specs/content/gnas-301/reviews/unit-04/G2/20261105T114859786Z-gates.json
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-bloom-bands.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-concept-graph.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-depth-gate.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-docs-sync.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-figures.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-no-answer-keys.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/check-no-em-dash.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261105T114859786Z/validate-content.txt
+ - specs/content/gnas-301/reviews/unit-04/G3/repair-desk-94b67cf2.md
+ - specs/content/gnas-301/sources/texts/who-mental-health-work.md
+ - specs/content/gnas-301/sources/texts/who-occupational-health.md
+ - specs/content/gnas-301/sources/unit-04.md
  - specs/content/gnas-301/tasks.md
 tests:
  - npm run check:content
@@ -55,26 +71,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gnas-301-u04-repair_en-r1, repair_en, agy) Live 360px small-screen and A4 print view render inspection remains unperformed due to host limits and must be verified on a live build before G3 certification.
 - (gnas-301-u04-repair_en-r1, repair_en, agy) who-hearing-2026.md heading is retained as-is because modifying it invalidates Unit 3's bound G2 gate evidence.
 
+
 ## Response snapshot
 
-Merged origin/main into the branch, union-resolved the one conflict in the Unit 4 tracker, and refreshed the generated content-status report so every content gate passes.
+Merged origin/main into crew/gnas-301-u04-repair_en-r1, union-resolved the Unit 4 tracker conflict preserving both main's Unit 1 row and the branch's Unit 4 G3 row, refreshed the generated content-status report, and committed the merge plus its PHR.
 
 ## Outcome
 
-- Impact: fix for GNAS-301 Unit 4 by opencode (attempt 2).
-- Tests: npm run check:content passed after the merge and the content-status refresh.
-- Files: 2 file(s), listed above.
+- Impact: fix for GNAS-301 Unit 4 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of origin/main with the Unit 4 G3 advisory tracker row preserved; both main's Unit 1 row and this branch's Unit 4 row kept in main-then-branch order.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into crew/gnas-301-u04-repair_en-r1, union-resolved the Unit 4 tracker conflict preserving both main's Unit 1 row and the branch's Unit 4 G3 row, refreshed the generated content-status report, and committed the merge plus its PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
+  - `static/content-status.json` is gitignored and was regenerated locally after the merge; CI regenerates it via `prestart`, so no commit was needed.
   - G3 remains open pending owner authorization; live mobile and A4 print inspection remains outstanding.
-  - Shared registries were untouched on both sides of the merge, so no ID re-keying was needed.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
