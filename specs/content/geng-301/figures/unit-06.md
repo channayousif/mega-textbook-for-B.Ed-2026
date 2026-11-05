@@ -9,4 +9,14 @@
 | fig-U6-3 | 6.3 | table | clean flat vector table, landscape: three rows (Quoting, Paraphrasing, Summarizing) and three columns (What, When, Key rule); labelled, high contrast, no colour-only meaning | Table comparing quoting, paraphrasing and summarizing. | /img/figures/geng-301/unit-06/fig-U6-3.svg | placed |
 | fig-U6-7 | 6.3 | table | clean flat vector table, landscape: paraphrasing example (Original, Poor, Good); labelled, high contrast, no colour-only meaning | Table showing a paraphrasing example. | /img/figures/geng-301/unit-06/fig-U6-7.svg | placed |
 | fig-U6-4 | 6.4 | diagram | clean flat vector diagram, landscape: four branches of plagiarism (Direct, Self, Mosaic, Accidental); labelled, high contrast, no colour-only meaning | A diagram showing four types of plagiarism. | /img/figures/geng-301/unit-06/fig-U6-4.svg | placed |
-| fig-U6-8 | 6.4 | table | clean flat vector table, landscape: four rows of prevention strategies; columns show (Risk, Prevention, What to do); labelled, high contrast, no colour-only meaning | Table showing plagiarism prevention strategies. | /img/figures/geng-301/unit-06/fig-U6-8.svg | placed |
+| fig-U6-8 | 6.4 | table | clean flat vector table, landscape: four rows of prevention strategies; columns show (Risk, Risk description, What to do); labelled, high contrast, no colour-only meaning | Table showing plagiarism prevention strategies. | /img/figures/geng-301/unit-06/fig-U6-8.svg | placed |
+
+## Author corrections, 2026-11-05
+
+F1/F6 in `20261102T212207Z-g3-desk-f5b7ea25.json`: fig-U6-7 now labels its original
+exercise text and Channa citation as fictional, matching Topic 6.3. This does not authenticate a
+Channa publication. fig-U6-8 names its middle column "Risk description"; the last column retains
+the prevention actions. fig-U6-2 tests common knowledge or personal original work first, then
+requires citation of borrowed material, including remembered ideas. Its citation arrow now meets
+the destination box. These corrections preserve IDs and the existing alt text; dark assets are
+regenerated from the corrected sources. Pedagogical acceptance remains for independent review.
