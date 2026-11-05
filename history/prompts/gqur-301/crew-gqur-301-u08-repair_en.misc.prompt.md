@@ -16,32 +16,32 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/gqur-301/unit-08/topic-01.mdx
-  - docs/semester-2/gqur-301/unit-08/topic-03.mdx
-  - history/prompts/gqur-301/crew-gqur-301-u08-repair_en.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-08/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-08/topic-03.mdx
-  - specs/content/gqur-301/figures/unit-08.md
-  - specs/content/gqur-301/reviews/unit-08/G2/20261105T132237455Z-gates.json
-  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-bloom-bands.txt
-  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-concept-graph.txt
-  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-depth-gate.txt
-  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-docs-sync.txt
-  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-figures.txt
-  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-no-answer-keys.txt
-  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-no-em-dash.txt
-  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/validate-content.txt
-  - specs/content/gqur-301/tasks.md
-  - static/img/figures/gqur-301/unit-08/fig-U8-2.dark.svg
-  - static/img/figures/gqur-301/unit-08/fig-U8-2.svg
-  - static/img/figures/gqur-301/unit-08/fig-U8-2.ur.dark.svg
-  - static/img/figures/gqur-301/unit-08/fig-U8-2.ur.svg
-  - static/img/figures/gqur-301/unit-08/fig-U8-5.dark.svg
-  - static/img/figures/gqur-301/unit-08/fig-U8-5.svg
-  - static/img/figures/gqur-301/unit-08/fig-U8-5.ur.dark.svg
-  - static/img/figures/gqur-301/unit-08/fig-U8-5.ur.svg
+ - docs/semester-2/gqur-301/unit-08/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-08/topic-03.mdx
+ - history/prompts/gqur-301/crew-gqur-301-u08-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-08/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-08/topic-03.mdx
+ - specs/content/gqur-301/figures/unit-08.md
+ - specs/content/gqur-301/reviews/unit-08/G2/20261105T132237455Z-gates.json
+ - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-08/G2/logs-20261105T132237455Z/validate-content.txt
+ - specs/content/gqur-301/tasks.md
+ - static/img/figures/gqur-301/unit-08/fig-U8-2.dark.svg
+ - static/img/figures/gqur-301/unit-08/fig-U8-2.svg
+ - static/img/figures/gqur-301/unit-08/fig-U8-2.ur.dark.svg
+ - static/img/figures/gqur-301/unit-08/fig-U8-2.ur.svg
+ - static/img/figures/gqur-301/unit-08/fig-U8-5.dark.svg
+ - static/img/figures/gqur-301/unit-08/fig-U8-5.svg
+ - static/img/figures/gqur-301/unit-08/fig-U8-5.ur.dark.svg
+ - static/img/figures/gqur-301/unit-08/fig-U8-5.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -90,9 +90,10 @@ From `specs/content/gqur-301/reviews/unit-08/G3/20261102T212207Z-g3-desk-d528518
 - (gqur-301-u08-review_en-conflict1, fix, opencode) course-overview.mdx still lists Unit 8 as "(coming soon)" - outside this job's scope.
 - (gqur-301-u08-review_en, review_en, codex) Separate author corrections and a fresh review with provenance, bound sources and rendered accessibility evidence are required.
 
+
 ## Response snapshot
 
-Repaired GQUR-301 Unit 8 G3 findings F1-F4: removed the unjustified "safer rule" lock security claim in topic-03; removed the unsupported Chaudhry & Kamal attribution for P(n, r) notation in topic-01; qualified the fig-U8-2 caption to distinguish swapping distinct items from identical letters; limited fig-U8-5 flowchart and alt text to distinct items without unordered repetition and specified disjoint cases for addition in the side note; mirrored all changes in the Urdu translation files and SVGs; refreshed G2 gate evidence and appended an advisory repair row with G3 unticked.
+Repaired Unit 8 G3 findings F1-F4 across English and Urdu topics and SVGs, qualified figure captions, refreshed G2 gate evidence, and appended an advisory G3 repair row with G3 unticked.
 
 ## Outcome
 
@@ -104,6 +105,17 @@ Repaired GQUR-301 Unit 8 G3 findings F1-F4: removed the unjustified "safer rule"
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Repaired GQUR-301 Unit 8 G3 findings F1-F4 across EN and UR topics and SVGs, updated figure manifest prompt and alt text, refreshed G2 gate evidence, and appended an advisory G3 tracker row.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit leaves G3 unticked and does not certify anything. F5-F8 (author-run provenance, open G1, rendered inspection, bound sources and answer-blind evidence) remain for review host / evaluator.
-- Pending / next: Unit 8 requires a fresh independent G3 English review once evaluator resolves G1 and bound sources.
+- Shipped / changed: Repaired Unit 8 G3 findings F1-F4 across English and Urdu topics and SVGs, qualified figure captions, refreshed G2 gate evidence, and appended an advisory G3 repair row with G3 unticked.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Non-author findings F5-F8 (author run ID provenance, open G1 under D-2026-0070, browser/print render inspection under crew constraints, and bound Lane Chapter 5 source excerpt / answer-blind evidence) remain for review host and evaluator resolution.
+  - G3 remains open and unticked in tasks.md awaiting fresh independent review once external provenance and G1 authority are settled.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
