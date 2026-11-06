@@ -16,6 +16,35 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-2/gqur-301/unit-15/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-15/topic-02.mdx
+ - docs/semester-2/gqur-301/unit-15/topic-03.mdx
+ - docs/semester-2/gqur-301/unit-15/unit-assessment.mdx
+ - docs/semester-2/gqur-301/unit-15/unit-teacher-notes.mdx
+ - history/prompts/gqur-301/20261024-verify-unit15-merge-content.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u15-repair_en-conflict1.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u15-repair_en-conflict2.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u15-repair_en-conflict3.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u15-repair_en-conflict4.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u15-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/unit-teacher-notes.mdx
+ - specs/content/gqur-301/reviews/unit-15/G2/20261105T153507950Z-gates.json
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261105T153507950Z/validate-content.txt
+ - specs/content/gqur-301/sources/texts/u15-lane-2026.md
+ - specs/content/gqur-301/sources/texts/u15-nist-2026.md
+ - specs/content/gqur-301/sources/texts/u15-openstax-2026.md
+ - specs/content/gqur-301/sources/unit-15.md
  - specs/content/gqur-301/tasks.md
 tests:
  - npm run check:content
@@ -54,26 +83,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u15-repair_en-conflict2, fix, opencode) The merge pulled in main's repairs for efmp-304 unit 2 and gqur-301 units 12/13; those are main's work, not this branch's.
 - (gqur-301-u15-repair_en-conflict2, fix, opencode) `static/content-status.json` is gitignored and was regenerated locally after the merge.
 
+
 ## Response snapshot
 
-Merged origin/main into the branch, resolved the single tasks.md conflict by keeping both main's Unit 14 G3 row and this branch's Unit 15 G3 row, regenerated the gitignored content-status report, and passed all content gates.
+Resolved the unit-15 branch's tasks.md merge conflict with main (keeping both sides' G3 rows), regenerated content-status, and left the branch with all content gates passing.
 
 ## Outcome
 
-- Impact: fix for GQUR-301 Unit 15 by opencode (attempt 4).
-- Tests: npm run check:content passed (14 of 14 gates).
-- Files: 1 file(s), listed above.
+- Impact: fix for GQUR-301 Unit 15 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main and resolved the tasks.md conflict; both main's Unit 14 G3 row and this branch's Unit 15 G3 row are preserved. All content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (merge when CI is green).
+- Shipped / changed: Resolved the unit-15 branch's tasks.md merge conflict with main (keeping both sides' G3 rows), regenerated content-status, and left the branch with all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3/G5 remain open; existing review-host follow-ups still apply.
-  - Unit 15 G3 stays open/unticked; F12 rendered accessibility, F13 source bundle and F14 G1 authority remain for the review host.
+  - Unit 15 G3/G5 stay open; F12 rendered accessibility, F13 source bundle and F14 G1 authority remain for the review host, and the Urdu mirror needs a G5 read of the new statistical terminology.
+  - The merge also pulled in main's repairs for efmp-304 unit 3, gqur-301 units 11/14 and gsos-301 units 3/5; those are main's work, not this branch's.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
