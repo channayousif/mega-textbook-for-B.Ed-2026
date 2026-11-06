@@ -17,5 +17,4 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 
 Reading estimates use final visible text at 180 words per minute: index 3, Topic 1.1 15, Topic 1.2 17, assessment 17, total 52 minutes within the approved 40-55 band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with public self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies no teaching strategies or practical-work block, so no teacher-notes page was invented.
 
-
 Unit 4 figure handoff: Urdu figure localisation belongs to the translation job. Keep the original-versus-later distinction in fig-U4-4 and the interruption-versus-survival distinction in fig-U4-5. No freehand territorial map is planned. Non-browser font-metric checks and light/dark preview inspection passed.
