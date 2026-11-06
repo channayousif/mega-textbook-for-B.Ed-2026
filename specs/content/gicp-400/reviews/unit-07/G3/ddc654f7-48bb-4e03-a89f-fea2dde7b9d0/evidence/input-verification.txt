@@ -1,0 +1,4 @@
+Bundle: specs/content/gicp-400/reviews/unit-07/G3/ddc654f7-48bb-4e03-a89f-fea2dde7b9d0/bundle/manifest.json, prepared in this session by scripts/review-evidence.mjs at commit 864814f473d418241aae7d897d01d4c579b7599e (HEAD equal to origin/main, clean tree).
+88 inputs bound. No parent-prepared bundle was supplied, so there is no earlier digest to compare against.
+Author identity: branch crew/gicp-400-u07-author, model opencode-longcat-2.0, per history/prompts/general/20261137-gicp400-unit-seven-author.general.prompt.md frontmatter. Only frontmatter and the file list of author PHRs were read.
+Reviewer identity: Claude Code session ddc654f7-48bb-4e03-a89f-fea2dde7b9d0, model claude-opus-5-5.

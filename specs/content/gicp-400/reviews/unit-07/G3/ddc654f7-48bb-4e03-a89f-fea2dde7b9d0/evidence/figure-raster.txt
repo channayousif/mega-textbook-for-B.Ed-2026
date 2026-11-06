@@ -1,0 +1,3 @@
+rendered .crew/rev/svg/fig-U7-1.svg -> fig-U7-1.sharp.png
+rendered .crew/rev/svg/fig-U7-2.svg -> fig-U7-2.sharp.png
+rendered .crew/rev/svg/fig-U7-3.svg -> fig-U7-3.sharp.png

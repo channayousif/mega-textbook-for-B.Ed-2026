@@ -1,0 +1,34 @@
+Retrieved via Firecrawl (PDF parser) 2026-11-07 from https://ecommons.aku.edu/cgi/viewcontent.cgi?article=1029&context=pakistan_ied_pdck
+Direct curl to same URL returned HTTP 403; not retried by other means. Full paper text not committed (copyright); hash of retrieved markdown:
+sha256 6e39fbe20e907a9f01e811076cf6e9c07b983dab61a6c11143d74b7271ded05f words 9803
+Sections present through ## REFERENCES, so the retrieved text is the whole paper. Search is case-insensitive with whitespace normalised.
+  0  dimension
+  0  civic knowledge
+  0  civic skills
+  1  civic values
+  0  primary agent
+  0  civic formation
+  0  media literacy
+  1  pluralis
+  0  deliberat
+  0  conflict resolution
+  0  collaborative inquiry
+  0  indoctrinat
+  0  nation building
+  0  nation-building
+  0  government department
+  0  departments
+  0  historical dates
+  0  constitutional bod
+  0  equal dignity
+  3  transmission
+  4  passive
+  1  rote memorization
+ 18  problem
+  9  decision-making
+  2  critical consciousness
+  1  civic mindedness
+  3  exclusionary
+  3  islamic education
+  1  essential to the reconceptualization
+  1  knowledge, pedagogical skills and dispositions

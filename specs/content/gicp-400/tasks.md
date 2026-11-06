@@ -4,7 +4,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-01/G2/20261106T152656845Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-01/G2/20261106T211315685Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: escalate by agent:opencode-g3-reviewer; report at specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/crew-gicp-400-u01-review_en.json; 5 criteria pass, sources and accessibility unverified; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; Hassan full text, author run provenance and browser/print evidence unavailable; G3 remains open and unsigned |
 | Unit 1 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localised schematic SVGs with dark twins; translator handoff: specs/content/gicp-400/reviews/unit-01/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
@@ -32,7 +32,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 6 | G6 assets | ▢ | | Four EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Previews rendered and inspected with sharp; Chromium geometry check not run under the crew brief's browser prohibition |
 | Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-07/G2/20261106T190031290Z-gates.json |
-| Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 7 | G3 en-review | ▢ | | Advisory escalation by agent:claude-g3; report at specs/content/gicp-400/reviews/unit-07/G3/ddc654f7-48bb-4e03-a89f-fea2dde7b9d0.json; readability passes, sources, coverage, assessment and pedagogy fail, authority and accessibility unverified; 10 blocking findings (Dean misattributions, Article 251 and 5(2) misstatements, unsourced integration and 1971 claims, ERQ rubric mismatches, Zainab scenario, fig-U7-1 overprint) plus an owner ruling on the ideology strand; no browser or print inspection; G3 remains open and unsigned |
 | Unit 7 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 7 | G6 assets | ▢ | | Three EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry and visual inspection pending under the crew brief's browser prohibition |
@@ -56,7 +56,7 @@ Unit 4 figure handoff: Urdu figure localisation belongs to the translation job. 
 |---|---|---|---|---|
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-03/G2/20261106T184345301Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Advisory escalation by agent:agy; report at specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd.json; 5 criteria pass, sources and accessibility unverified; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; secondary source access, author run provenance and browser/print evidence unavailable; G3 remains open and unsigned |
-| Unit 3 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 3 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localised schematic SVGs with dark twins; translator handoff: specs/content/gicp-400/reviews/unit-03/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 3 | G5 ur-review | ▢ | | Independent Urdu review pending; authored concept labels need checking |
 | Unit 3 | G6 assets | ▢ | | Four EN schematics placed with dark twins; font-metric and non-browser preview checks passed. Chromium geometry validation pending under crew browser prohibition; banner prompt-only |
 
