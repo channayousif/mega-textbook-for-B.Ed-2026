@@ -2,7 +2,7 @@
 id: crew-gicp-400-u01-illustrate
 title: crew illustrate GICP-400 unit 1
 stage: misc
-date: 2026-11-07
+date: 2026-11-06
 surface: agent
 model: agy
 feature: gicp-400
@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed GICP-400 Unit 1 banner illustration (fig-U1-5) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and verified check:content clean across all 14 gates.
+Generated, inspected, and placed the GICP-400 Unit 1 banner illustration (`fig-U1-5`) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -85,14 +85,12 @@ Generated, inspected, and placed GICP-400 Unit 1 banner illustration (fig-U1-5) 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GICP-400 Unit 1 banner illustration (fig-U1-5) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and verified check:content clean across all 14 gates.
+- Shipped / changed: Generated, inspected, and placed the GICP-400 Unit 1 banner illustration (`fig-U1-5`) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open and advisory under escalate disposition: sources and accessibility are unverified due to unbound Hassan full text and execution prohibitions on build/browser tooling.
-  - Live browser rendering (360px viewport, table scrolling, A4 print) and SVG text-geometry checks must be executed on a host permitted to run Chromium.
-  - Secondary attributions to Hassan (2020) in Topic 1.2 require repo binding of full article text or an authorized unavailable-source declaration in sources/unit-01.md.
-  - Translation remains draft; English G3 resolution, independent G5 and browser/print inspection remain pending.
+  - G3 remains open and advisory under escalate disposition; secondary attributions to Hassan (2020) in Topic 1.2 require repo binding or an authorized unavailable-source declaration.
+  - Urdu translation remains draft; independent G5 review, browser/print inspection, and SVG text-geometry checks remain pending on a host permitted to run Chromium.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
