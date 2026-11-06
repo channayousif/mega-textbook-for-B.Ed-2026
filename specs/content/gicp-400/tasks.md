@@ -33,3 +33,5 @@ Unit 5 reading estimates use final visible text at 180 words per minute: index 4
 Unit 5 owner flag: the approved Figure plan and the reading-list note for pak-constitution-1973 predate the Constitution (Twenty-seventh Amendment) Act, 2025, which omitted Article 184 and moved its Fundamental Rights power to the Federal Constitutional Court (Article 175E(3)). fig-U5-4 and Topic 5.2 teach the current text and name Article 184(3) as the former provision. The content spec is not edited by this job. Unit 6 (Judiciary) should make the same check.
 
 Unit 4 figure handoff: Urdu figure localisation belongs to the translation job. Keep the original-versus-later distinction in fig-U4-4 and the interruption-versus-survival distinction in fig-U4-5. No freehand territorial map is planned. Non-browser font-metric checks and light/dark preview inspection passed.
+
+| Unit 4 | G3 en-review | ▢ | agent:codex-g3 | Advisory escalation only: specs/content/gicp-400/reviews/unit-04/G3/codex-20261106.json; missing run provenance, independent source/assessment verification and prohibited render inspection. G3 remains open. |
