@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "course_code": "GICP-400",
+  "unit_no": 3,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:agy",
+  "author_run_id": "crew/gicp-400-u03-author",
+  "reviewer_run_id": "f6947550-7510-4662-98d5-9c955da536bd",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-11-06T20:32:00.000Z",
+  "completed_at": "2026-11-06T20:48:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/3rd 2026.pdf": "f0de34d0a166d0306afbb87aaca2caa58a077ca6024b26e192b6aa02e09eb028",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "37ef2085bd3cfce1d47db8ee24ef8a0d1859ed7670eb6a689d4221f6bcd6c264",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-3/gicp-400/course-overview.mdx": "a50b5ea88cd222d473cdc9570c2155d33a85856b7987da5cbfa487df69892cbe",
+    "docs/semester-3/gicp-400/unit-03/index.mdx": "a767dfbcd19305bae6c80e5e168967ac9cbd6a0623a2df396fd893c82240aaba",
+    "docs/semester-3/gicp-400/unit-03/topic-01.mdx": "9263ec7285a25bc9f25c7046beae2896be787cd801096a57ee2fd9d71e894a74",
+    "docs/semester-3/gicp-400/unit-03/topic-02.mdx": "c58b4f3e44d91e686134c52f01888013f4a8b5ec1f9ac4a7815e5d4b18a54991",
+    "docs/semester-3/gicp-400/unit-03/unit-assessment.mdx": "6d58c04b1e0bf518946e5ebae41635d2b58964db4bebf69f3d921bc0785563bc",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "33e46f435128a99f53a38c597b289d730c85b398a7f27b068392552540128622",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "22eaaee128cd13f1756a1c1d4037a8ed7143cfc9f0428c12f49a8b4752fb7f93",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gicp-400/authoring/unit-03.md": "f60dd93f65b58d026176cfa6551e2e03051d85167895ee462761310f53a24dcb",
+    "specs/content/gicp-400/concepts/unit-03.md": "b6cd247a8504bd114f9605def1b742bcf8d5d0defdca980d6a10401821322b0a",
+    "specs/content/gicp-400/content-spec.md": "e416536bcdb67cbf4bf3961d31f6fe04d1c77fcda15178ac77d9791a493c583e",
+    "specs/content/gicp-400/coverage/unit-03.md": "67cb258dc2f7b5dc724c09732f39b811d78a89ee33a36530c3ab148c271a974e",
+    "specs/content/gicp-400/figures/unit-03.banner.md": "892ebce26d1ecb22ee29315c31a2bfc511546a96d9a826031dd3d4659acca4b7",
+    "specs/content/gicp-400/figures/unit-03.md": "3652ecec058f8460984c65c0d08426aeb30ce4bf8a66a33d3e7adf1c45356625",
+    "specs/content/gicp-400/sources/texts/goi-act-1935.md": "3293694e6490156db406166fd84cd50a6037a4a8c5d0ac3f82e1c9080bd4fc2c",
+    "specs/content/gicp-400/sources/texts/pak-constitution-1973.md": "173c30b9d848f115316010aea7adbd52df6e79e1e77962e619f17715a6fff2b9",
+    "specs/content/gicp-400/sources/unit-03.md": "5fee0fddbc42a9812c0ef59ca6b9133045cb5907f9ab74e41f6adc1ceca11e3f",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/gicp-400/unit-03/fig-U3-1.dark.svg": "0850cfdd86490456ee59dd33f2d429a722c5e07259035d65049b8481f3c6e53f",
+    "static/img/figures/gicp-400/unit-03/fig-U3-1.svg": "9a83589e5e88c830797b5298427b4df5794a65daaccfaf0a0c80af872c63aa48",
+    "static/img/figures/gicp-400/unit-03/fig-U3-2.dark.svg": "25928ad99ca2a98821ae93313159c7c09162fa4ea08766fffd78aa87e077d04a",
+    "static/img/figures/gicp-400/unit-03/fig-U3-2.svg": "638cfd2ae79dcb81e00145a82678009f5869cce10934745ee5ef81293cd84e30",
+    "static/img/figures/gicp-400/unit-03/fig-U3-3.dark.svg": "29ea5334ed101893d9e2f7b9a9799aeaf8e0054474480b8cdb90bbe617bb6762",
+    "static/img/figures/gicp-400/unit-03/fig-U3-3.svg": "7f5e5c52e78639dbad92d4383ff91d849aa0fc6a3c3f6ee56c8497144e208c30",
+    "static/img/figures/gicp-400/unit-03/fig-U3-4.dark.svg": "450e6d7a5bf066c03f1f6f66cad1f157a172a63586669feb59002e7704f0b4fd",
+    "static/img/figures/gicp-400/unit-03/fig-U3-4.svg": "b69fbef5b6d144e36f0b64da8a7b9e59c94d3d9e51c3b5b1d7e5ca2b190b7ba6"
+  },
+  "required_criteria": [
+    "authority",
+    "sources",
+    "coverage",
+    "assessment",
+    "accessibility",
+    "readability",
+    "pedagogy"
+  ],
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/summary.md: Authority and coverage",
+        "specs/content/gicp-400/content-spec.md: Unit 3 (Weeks 5-6, U3-01 to U3-06)",
+        "specs/content/gicp-400/coverage/unit-03.md: all six leaves mapped to exact headings and verified sources",
+        "Scheme-and-Course-guides/extracted-text/3rd 2026.txt:601-608: guide week titles and sub-topics match"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "unverified",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/sources.md: full source audit table",
+        "specs/content/gicp-400/sources/unit-03.md: sources consulted and consultation limits",
+        "specs/content/gicp-400/sources/texts/goi-act-1935.md: Government of India Act 1935 and s. 8 Indian Independence Act 1947",
+        "specs/content/gicp-400/sources/texts/pak-constitution-1973.md: Preamble and Article 2A",
+        "Khan (2017), Newberg (1995), and Senate fundamental rights history declared unverifiable under D-2026-0001; Abbas (2023) and Shah (2026) full text not bound locally"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/summary.md: Authority and coverage",
+        "topic-01.mdx: U3-01 (The Objectives Resolution), U3-02 (The interim constitution: Government of India Act 1935, as adapted), U3-03 (The Constitution of 1956)",
+        "topic-02.mdx: U3-04 (Salient features of the 1962 Constitution), U3-05 (Causes of its abrogation), U3-06 (Comparative overview of the 1956 and 1962 constitutions)",
+        "unit-assessment.mdx: 10 MCQ, 10 RRQ, 5 ERQ with ERQ 5 as the required comparative constitutional design synthesis"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/assessment.md: independent solutions for all 10 MCQ, 10 RRQ and 5 ERQ",
+        "unit-assessment.mdx: all keys match derived solutions; no ambiguous distractor; rubrics distinguish performance levels",
+        "check:bloom-bands exit 0; check:no-answer-keys exit 0"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/summary.md: Accessibility",
+        "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/render-review.txt: render not run under .crew/brief.md prohibition",
+        "static/img/figures/gicp-400/unit-03/fig-U3-1.svg to fig-U3-4.svg: static inspection only; dynamic browser viewport and print inspection unavailable"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/summary.md: Readability and pedagogy",
+        "topic-01.mdx and topic-02.mdx: plain definitions before use, worked examples, Sindhi classroom situations",
+        "check:no-em-dash exit 0"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/summary.md: Readability and pedagogy",
+        "topic-01.mdx and topic-02.mdx: feasible group activities, practicum tasks, analytic mini-rubrics",
+        "topic-01.mdx and topic-02.mdx: corrects common misconceptions regarding early constitutional governance and the 1962 presidential system"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "uncertain",
+      "message": "Actual narrow-screen (360px) and A4 print inspection plus SVG glyph geometry unavailable because .crew/brief.md prohibits builds, a dev server, and Playwright. Accessibility remains unverified.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "Khan (2017) print monograph, Newberg (1995), and Senate fundamental rights history are declared unverifiable under D-2026-0001; full texts of Abbas (2023) and Shah (2026) are not bound in offline repository files. Secondary claims remain unverified from the bundle.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "Actual author run identity (crew/gicp-400-u03-author / commit 4a904f852) was reconstructed from commit history; independent coordinator run attestation was not supplied in a parent handoff bundle.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Bind complete offline texts for secondary sources or record authorized unavailable-source declarations, and have an authorized host with Chromium access execute visual rendering and print checks.",
+      "resolved": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-docs-sync.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-content.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/render-review.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/bundle/manifest.json": "b2c5b44c28d40332260cebc857064f07b926c6d295d16c9035e1f01cde719dc5",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/assessment.md": "810b62e4600674058e2bdedfa5a63ff34609987cf926e48b6c5c10c8781d5f6b",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-bloom-bands.txt": "ea6d7f931b08e9a65d12304359779eada000076b815095f56694abf1c9fff9c6",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-concept-graph.txt": "489b5f2c09d24d15206c56f4f092cee19b9f6c4fa91d61bae33abf82b46fba8a",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-content.txt": "083530fd38d93b2ad346c0339a9d2778e87455230ec8310ee8e11679c9cb2f3c",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/input-verification.txt": "631622fb2071d316c84b062ffe21e4ebba8a41281938df6372e2a34705cda019",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/render-review.txt": "a7e069c4d6c162f1fa49f0607af712baaf2d1d3c6a49e49711ecd952ee2f3122",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/sources.md": "9ee4fb0dfcf1a6c9202829d930bfcfa7382c833e47f392a836d9d47548d99cd5",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/evidence/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd/summary.md": "9d3080fc93c0fd613ca98fdbc5e2f46b64b32a2a14c5a742400bd3f5d3ed6629"
+  },
+  "reviewed_commit": "4a904f85203432f66c7c4069da4a1684f53e3f9b",
+  "limitations": [
+    "No parent-prepared manifest or coordinator author run identity was supplied; manifest was prepared locally over clean committed inputs.",
+    "No rendered PNG/WebP/JPG artifact exists because the crew brief prohibits builds, dev servers, and Playwright.",
+    "Khan (2017), Newberg (1995), and Senate fundamental rights history are declared unverifiable under D-2026-0001; Abbas (2023) and Shah (2026) full text not bound locally."
+  ]
+}
