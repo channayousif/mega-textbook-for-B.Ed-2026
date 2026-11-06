@@ -47,11 +47,14 @@ files:
   - specs/content/gicp-400/tasks.md
   - history/prompts/general/551-author-gicp400-unit-one.general.prompt.md
 tests:
-  - npm run check:content (iterative; final run after G2 evidence)
-  - origin/main baseline check:content in isolated .crew/baseline checkout
+  - npm run check:content: all 14 gates PASS after G2 evidence (2026-11-06)
+  - origin/main 3464fcac89aaf5c285276244c1ff7727a0324d35 baseline check:content: all 14 gates PASS in isolated .crew/baseline checkout
   - FIGURE_ROOT=static/img/figures/gicp-400/unit-01 node scripts/build-figure-variants.mjs --check
   - node scripts/prepare-gate-evidence.mjs GICP-400 1
-  - git diff --check
+  - MDX parse of all five pages: PASS
+  - XML parse of all eight SVG variants: PASS
+  - Visible-text reading estimates (excluding MDX tags and imports): 52 minutes
+  - git diff --check: PASS
 ---
 
 ## Prompt
@@ -94,7 +97,7 @@ Continued inherited untracked Unit 1 content, verified sources, completed govern
 ## Outcome
 
 - ✅ Impact: English Unit 1 covers all six approved leaves with two topic cycles, 10/10/5 assessment, worked examples, local contexts, and concept-to-assessment traceability.
-- 🧪 Tests: Content gate loop found and repaired missing tracker, coverage, source evidence, figure records and rendered figure floor. G2 evidence preparation also required the missing course-overview.mdx input. Added minimal course navigation and approved course metadata as the required dependency; final G2 and gate results recorded in the follow-up commit.
+- 🧪 Tests: Content gate loop found and repaired missing tracker, coverage, source evidence, figure records and rendered figure floor. G2 evidence preparation also required the missing course-overview.mdx input. Added minimal course navigation and approved course metadata as the required dependency; final G2 evidence records all eight draft commands passing; final check:content passes all 14 gates.
 - 📁 Files: Four MDX pages, minimal course overview and its category link, tracker, coverage, nine source-evidence files, concept graph, figure and banner manifests, and eight schematic variants.
 - 🔁 Next prompts: Independent G3 review; Urdu translation and G5; browser geometry and visual inspection; banner production.
 - 🧠 Reflection: The author-unit checklist still permits prompt-only figures, but the current gates require rendered figures and bound source excerpts. Followed the brief's explicit gate-fix requirement using inherited SVGs and transparent source notes; no policy or gate edits.
@@ -109,6 +112,6 @@ Continued inherited untracked Unit 1 content, verified sources, completed govern
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Missing governance and obsolete prompt-only figure assumptions; coverage parser reads every pipe table, so assessment design trace uses prose bullets; isolated baseline required its own Git index to validate committed manifests correctly.
-- Graders run and results (PASS/FAIL): Depth, figure consistency, source floor, concept and Bloom gates repaired. Browser geometry, build, dev server and Playwright intentionally not run under the brief. Final deterministic evidence follows.
+- Graders run and results (PASS/FAIL): All 14 content gates PASS on the authored tree and origin/main baseline. All eight G2 commands PASS with evidence at specs/content/gicp-400/reviews/unit-01/G2/20261106T152656845Z-gates.json. MDX and SVG XML parses PASS. Browser geometry, build, dev server and Playwright intentionally not run under the brief. G2 tracker records auto:gates only; G3/G5 remain open.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Run independent source and assessment review on the frozen English draft, including the historical edition limits and figure text geometry.

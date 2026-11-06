@@ -4,7 +4,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ▣ | | English draft and governance complete; deterministic evidence pending committed inputs |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-01/G2/20261106T152656845Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 1 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
