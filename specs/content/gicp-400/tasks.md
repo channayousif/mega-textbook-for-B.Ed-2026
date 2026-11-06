@@ -32,7 +32,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 6 | G6 assets | ▢ | | Four EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Previews rendered and inspected with sharp; Chromium geometry check not run under the crew brief's browser prohibition |
 | Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-07/G2/20261106T190031290Z-gates.json |
-| Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 7 | G3 en-review | ▢ | | Advisory escalation by agent:claude-g3; report at specs/content/gicp-400/reviews/unit-07/G3/ddc654f7-48bb-4e03-a89f-fea2dde7b9d0.json; readability passes, sources, coverage, assessment and pedagogy fail, authority and accessibility unverified; 10 blocking findings (Dean misattributions, Article 251 and 5(2) misstatements, unsourced integration and 1971 claims, ERQ rubric mismatches, Zainab scenario, fig-U7-1 overprint) plus an owner ruling on the ideology strand; no browser or print inspection; G3 remains open and unsigned |
 | Unit 7 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 7 | G6 assets | ▢ | | Three EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry and visual inspection pending under the crew brief's browser prohibition |
