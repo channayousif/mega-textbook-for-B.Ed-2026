@@ -2,7 +2,7 @@
 id: crew-gicp-400-u06-review_en
 title: crew review_en GICP-400 unit 6
 stage: misc
-date: 2026-11-07
+date: 2026-11-06
 surface: agent
 model: agy
 feature: gicp-400
@@ -69,7 +69,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Recorded independent G3 English advisory escalation review, evidence bundle, and unchecked tracker row for GICP-400 Unit 6.
+Recorded independent G3 English advisory escalation review, evidence bundle, and open tracker row for GICP-400 Unit 6.
 
 ## Outcome
 
@@ -81,13 +81,13 @@ Recorded independent G3 English advisory escalation review, evidence bundle, and
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded independent G3 English advisory escalation review, evidence bundle, and unchecked tracker row for GICP-400 Unit 6.
+- Shipped / changed: Recorded independent G3 English advisory escalation review, evidence bundle, and open tracker row for GICP-400 Unit 6.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open and advisory under escalate disposition due to unbound secondary source texts and execution prohibitions on browser/print inspection tooling.
-  - Live browser rendering (360px viewport, table scrolling, A4 print) and dynamic visual inspection must be executed on a host permitted to run Chromium.
-  - Official gazette text of the 25th Amendment (Act 37 of 2018) should be obtained or verified against official Ministry of Law archives.
+  - G3 remains open and advisory under an escalate disposition because Chromium browser rendering and print inspection are prohibited in this environment.
+  - Live browser rendering (360px small-screen viewport, table scroll reachability, A4 print) should be executed on an authorized host.
+  - Primary constitutional text is updated to the Twenty-seventh Amendment (2025); verify official gazette text for the 25th Amendment when available.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
