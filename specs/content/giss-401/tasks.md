@@ -98,3 +98,9 @@ The full UDHR text could not be fetched from official routes on this host; its i
 ### Final crew validation
 
 After merging `origin/main` (which added the course overview), `node scripts/prepare-gate-evidence.mjs GISS-401 6` passed all eight draft gates and wrote `reviews/unit-06/G2/20261103T000422959Z-gates.json`. All five authored MDX bodies compile with `@mdx-js/mdx`; six light and six dark figure variants pass the figure gate and dark freshness check. Unit 6 appended its own sections to the shared bound excerpts `quran-translation.md` and `bhat-2019-education.md`; Unit 1's entries there are unchanged.
+
+## Unit 2 advisory English review, 2026-11-06
+
+| Unit | Stage | Status | Initials | Notes |
+|---|---|---|---|---|
+| Unit 2 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-02/G3/01a1b085-18a8-79d2-8bc8-93c034c663a8.json; non-direct-ruling Ijma/Qiyas blueprint unmet; author-run provenance, qualified scholar review, full source verification, independent solve and browser/print evidence pending; G3 remains open and unsigned |
