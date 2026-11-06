@@ -85,12 +85,12 @@ async function sendConfirmationEmail(email: string, token: string, locale: strin
     method: 'POST',
     headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: `B.Ed Textbook <${from}>`,
+      from: `textbook.com.pk <${from}>`,
       to: [email],
-      subject: 'Confirm your feedback on B.Ed Mega Textbook',
-      text: `Thanks for leaving feedback on the B.Ed Mega Textbook.\n\n`
+      subject: 'Confirm your feedback on textbook.com.pk',
+      text: `Thanks for leaving feedback on textbook.com.pk.\n\n`
         + `Click this link to confirm it reached us and add it to the curriculum owner's queue:\n${confirmUrl}\n\n`
-        + `If you didn't leave this feedback, you can ignore this email — nothing happens until the link above is clicked.`,
+        + `If you didn't leave this feedback, you can ignore this email - nothing happens until the link above is clicked.`,
     }),
   });
   return res.ok;
