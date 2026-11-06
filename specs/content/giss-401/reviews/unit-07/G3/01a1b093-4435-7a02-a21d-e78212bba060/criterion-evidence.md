@@ -1,0 +1,33 @@
+# G3 criterion evidence
+
+## Authority and coverage
+
+Approved content-spec.md Unit 7 and confirmed owner ruling D-2026-0079 match the guide's Week 15 at Scheme-and-Course-guides/extracted-text/3rd 2026.txt:463-466. The three leaf topics map to topic-01.mdx's exact headings Ethical responsibilities of teachers, Islamic values in educational leadership and Role modelling in education. U7-01 develops amanah and four circles, with two notebook examples and MCQ 1-4/RRQ 1-4/ERQ 1 and 4. U7-02 explains five values and compares duty rosters, assessed by MCQ 5-7/RRQ 5-7/ERQ 2. U7-03 contrasts teacher responses to an error, assessed by MCQ 8-9/RRQ 8-10/ERQ 3. The decision process adds application, not a new guide topic. ERQ 4 supplies the required Create task; ERQ 5 integrates Units 1, 3 and 6. Six formative items fall within the approved 5-8 range. No missing guide leaf was observed. The guide has no separate strategies/practical-work prescription, so absence of teacher notes is appropriate. Authority remains unverified for full G3 because parent provenance and the stipulated specialist review are absent.
+
+## Sources
+
+Compared all Unit 7 scriptural citations with source-quran-translation.md section U7-01/U7-02/U7-03: 4:58 and 23:8 support trust; 28:26 joins strength and trustworthiness; 17:34 supports commitments; 5:8 and 4:135 support impartial justice; 49:6 investigation; 42:38 and 3:159 consultation and gentleness; 33:21/68:4 exemplary character; 61:2-3 and 2:44 word/action consistency. 33:72 and 83:1-3 classroom applications are interpretation, not literal statements about teaching, and need scholar confirmation. source-sahih-bukhari-33-893.md supports the three failures and scope of guardianship. Arabic ra'in appears there, but no independently qualified lexical interpretation is supplied.
+
+source-tambak-2020-teachers.md p.65 reports 397 teachers and stronger contribution of Islamic behaviour; pp.67-69 support competency dimensions and worship motivation. Page 71 attributes exemplary-behaviour support to earlier studies, as topic-01.mdx does. The unit discloses the Indonesian correlational setting and avoids suspect statistics. These excerpts support the narrower claims. They do not verify the full paper, its methods or an absolute comparison of the effects of teacher speech and action on pupil learning. No external retrieval was performed in this attempt. Sources are unverified overall because the supplied diagnostic input manifest excludes the three actual source-text files, scholarly full text was not inspected, and doctrinal interpretation requires the specified scholar. Saved copies identify exactly the excerpt evidence read, without claiming a compliant parent source bundle.
+
+## Readability and pedagogy
+
+Ethics, professional ethics, amanah, educational leadership and role model are defined on first substantive use. Short concrete cases in Larkana, Mirpurkhas and Sukkur precede the explanatory material. The 40-minute group task specifies four roles, eight commitments, peer checking and a role play, using paper and classroom time. The cycle progresses through worked examples, retrieval, reflection and a realistic analytical task. The practicum journal avoids naming teachers. No specialist graduate vocabulary blocks comprehension. Readability passes on source inspection.
+
+Pedagogy needs repair: topic-01.mdx's two-roster table, Hard cases row, and fig-U7-2's Mercy row recommend telling staff why a teacher with a sick parent receives relief. This models disclosure of family health circumstances without mentioning consent, despite the unit's emphasis on keeping family matters private. Ask the author to explain the workload rule without disclosing private reasons unless the affected teacher agrees, then update the schematic and its variants through the separate authoring job. The absolute claim that pupils learn more from actions than words should also be qualified to avoid presenting a comparative empirical result that the cited teacher survey does not establish.
+
+## Assessment
+
+independent-solutions.md was saved before the guidance section was read. All 10 derived MCQ choices match the supplied sequence B,A,C,B,B,C,A,C,D,A. Each MCQ has a defensible best option, with the specialist caveat for item 5. All ten RRQ outlines are compatible with the supplied guidance; RRQ 7 permits alternative justified values. ERQs 1 and 3-5 have appropriate analysis/evaluation/creation demands, with analytic levels distinguishing evidence, reasoning and completeness. The topic summative task genuinely requires analysis and evaluation and its 12 marks align with the requested outputs.
+
+Blocking mismatch: unit-assessment.mdx:109 ERQ 2 asks evaluation of three decisions and an overall judgement, but its rubric at :164 awards 0-3 marks for Practical advice, which was never requested. Add an explicit advice instruction or reallocate that criterion to requested reasoning. Do not make learners infer a quarter of the marks from the final guidance.
+
+Bloom mismatch: unit-assessment.mdx:83-87 MCQ 10 adds a gift scenario but asks only what follows Identify in a taught sequence. The student need not use the scenario at all. Relabel Remember or rewrite to require applying principles to that gift decision. MCQ 4 is also very close to the taught short-measure example, so its Apply classification is weak; the existing bank still has Analyze/Evaluate/Create demand elsewhere.
+
+## Accessibility
+
+Source inspection found ordered heading hierarchy, descriptive figure alternatives, all three Figure carriers and matching SVG descriptions, a table/map/flowchart with textual labels independent of colour, and prose restating the four circles and five steps. The leadership image's alternative names values but omits its school examples; surrounding roster discussion supplies examples but a full prose/table equivalent would improve independent access to every row. Light and dark SVG files exist. No rendered-page or print evidence exists for this attempt, so accessibility is unverified, not passed. See handoff-and-render-limitations.md.
+
+## Gate rerun and generated status cache
+
+The exact origin/main baseline passed all 14 gates. After the advisory tracker edit, check-content-final.txt records a single check:content-status failure because the ignored static/content-status.json cache retained the old tracker digest. Ran npm run build:content-status successfully, which reported 15 courses. This updates generated metadata only; git reports no tracked static/content-status.json diff. The subsequent full check is retained in check-content-refreshed.txt. No review input was repaired.

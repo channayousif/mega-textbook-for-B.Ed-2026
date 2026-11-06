@@ -63,7 +63,7 @@
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
 | Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261103T141633592Z-gates.json |
-| Unit 7 | G3 en-review | ▢ | | awaiting an independent reviewer and a qualified Islamic Studies reviewer (content spec, drafting note 2); no review performed by author |
+| Unit 7 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-07/G3/01a1b093-4435-7a02-a21d-e78212bba060.json; ERQ 2 question/rubric mismatch, MCQ 10 Bloom tag and private family circumstances need author repair; parent provenance, source bundle, qualified Islamic Studies scholar and browser/print evidence pending; G3 remains open and unsigned |
 | Unit 7 | G4 ur-translation | ▢ | | separate job |
 | Unit 7 | G5 ur-review | ▢ | | |
 | Unit 7 | G6 assets | ▣ | | three English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
