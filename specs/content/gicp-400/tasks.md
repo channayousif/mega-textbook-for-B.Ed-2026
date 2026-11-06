@@ -65,3 +65,6 @@ Unit 3 final visible-text estimates at 190 words per minute: index 3, Topic 3.1 
 Unit 6 reading estimates use final visible text at 180 words per minute: index 3, Topic 6.1 15, Topic 6.2 15, assessment 16, total 49 minutes within the approved 40-55 band. The guide supplies no teaching strategies or practical-work block, so no teacher-notes page was invented.
 
 Unit 6 owner flag: the reading-list note for pak-constitution-1973 names only the 25th Amendment as later than the 2012 PDF, but the 26th (2024) and 27th (2025) Amendments also change Unit 6's articles, including the Federal Constitutional Court and Article 239(5). Unit 6 teaches the current text and records the mapped reading separately from the amended text in its sources file. The content spec is not edited by this job. Glossary entries for Majlis-e-Shoora and Constitutional amendment do not exist, and glossary.json is outside this job's scope, so both terms are defined in the prose.
+
+| Unit 6 | G3 en-review | ▢ | | Advisory escalation by agent:agy; report at specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1.json; 5 criteria pass, sources and accessibility unverified; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; official 25th Amendment gazette text, author run provenance and browser/print evidence unavailable; G3 remains open and unsigned |
+
