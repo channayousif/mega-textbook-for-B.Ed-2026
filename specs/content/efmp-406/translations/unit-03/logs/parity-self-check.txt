@@ -1,0 +1,5 @@
+EN files: index.mdx, topic-01.mdx, topic-02.mdx, unit-assessment.mdx
+UR files: index.mdx, topic-01.mdx, topic-02.mdx, unit-assessment.mdx
+file set equal: true
+key_terms: Assessment=تشخیص, Formative Assessment=تشکیلی تشخیص, Summative Assessment=مجموعی جائزہ, Rubric=معیارِ جانچ, Self-Assessment=خود جائزہ, Mother Tongue=مادری زبان, Scaffolding=معاونتی تدریس, Learning Outcome=نتیجہ ہائے تعلم, Pedagogy=تدریسیات, Curriculum=نصاب, Reflective Journal=تاملی جریدہ
+PARITY SELF-CHECK: ALL PASS
