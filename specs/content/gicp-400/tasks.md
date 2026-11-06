@@ -26,6 +26,11 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 2 | G6 assets | ▢ | | Four English schematic SVGs and dark twins placed; browser geometry check blocked by crew prohibition; Urdu and banner are separate jobs |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G3 en-review | ▢ | agent:codex-g3 | Advisory escalation; specs/content/gicp-400/reviews/unit-05/G3/01a1b1eb-32bb-7f02-87be-49f565e1880b.json; source/alt repair and incomplete render, provenance and blind-solve evidence; not certified |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-06/G2/20261106T164758754Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 6 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
+| Unit 6 | G6 assets | ▢ | | Four EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Previews rendered and inspected with sharp; Chromium geometry check not run under the crew brief's browser prohibition |
 
 Reading estimates use final visible text at 180 words per minute: index 3, Topic 1.1 15, Topic 1.2 17, assessment 17, total 52 minutes within the approved 40-55 band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with public self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies no teaching strategies or practical-work block, so no teacher-notes page was invented.
 
@@ -49,3 +54,7 @@ Unit 4 figure handoff: Urdu figure localisation belongs to the translation job. 
 | Unit 3 | G6 assets | ▢ | | Four EN schematics placed with dark twins; font-metric and non-browser preview checks passed. Chromium geometry validation pending under crew browser prohibition; banner prompt-only |
 
 Unit 3 final visible-text estimates at 190 words per minute: index 3, Topic 3.1 16, Topic 3.2 14, assessment 20, total 53 within the approved 40-55 band. Bank: 10 MCQs, 10 RRQs, 5 ERQs; default 60/40 weighting. No teaching-strategies or practical-work block appears in the guide, so no teacher-notes file was invented. Independent review should verify source-access limitations, the Tamizuddin/Reference distinction, and formal constitutional constraints on presidential powers. Publication is not claimed.
+
+Unit 6 reading estimates use final visible text at 180 words per minute: index 3, Topic 6.1 15, Topic 6.2 15, assessment 16, total 49 minutes within the approved 40-55 band. The guide supplies no teaching strategies or practical-work block, so no teacher-notes page was invented.
+
+Unit 6 owner flag: the reading-list note for pak-constitution-1973 names only the 25th Amendment as later than the 2012 PDF, but the 26th (2024) and 27th (2025) Amendments also change Unit 6's articles, including the Federal Constitutional Court and Article 239(5). Unit 6 teaches the current text and records the mapped reading separately from the amended text in its sources file. The content spec is not edited by this job. Glossary entries for Majlis-e-Shoora and Constitutional amendment do not exist, and glossary.json is outside this job's scope, so both terms are defined in the prose.
