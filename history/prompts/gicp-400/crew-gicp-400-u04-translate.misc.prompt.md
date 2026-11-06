@@ -16,27 +16,43 @@ links:
   adr: null
   pr: null
 files:
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/unit-assessment.mdx
-  - specs/content/gicp-400/tasks.md
-  - specs/content/gicp-400/translations/unit-04/handoff.md
-  - static/img/figures/gicp-400/unit-04/fig-U4-1.ur.dark.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-1.ur.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-2.ur.dark.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-2.ur.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-3.ur.dark.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-3.ur.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-4.ur.dark.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-4.ur.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-5.ur.dark.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-5.ur.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-6.ur.dark.svg
-  - static/img/figures/gicp-400/unit-04/fig-U4-6.ur.svg
+ - history/prompts/general/20261137-refresh-unit-4-translation-evidence.general.prompt.md
+ - history/prompts/general/20261138-complete-unit-4-urdu-mirror.general.prompt.md
+ - history/prompts/gicp-400/crew-gicp-400-u04-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/unit-assessment.mdx
+ - specs/content/gicp-400/reviews/unit-04/G2/20261106T191728706Z-gates.json
+ - specs/content/gicp-400/reviews/unit-04/G2/logs-20261106T191728706Z/check-bloom-bands.txt
+ - specs/content/gicp-400/reviews/unit-04/G2/logs-20261106T191728706Z/check-concept-graph.txt
+ - specs/content/gicp-400/reviews/unit-04/G2/logs-20261106T191728706Z/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-04/G2/logs-20261106T191728706Z/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-04/G2/logs-20261106T191728706Z/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-04/G2/logs-20261106T191728706Z/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-04/G2/logs-20261106T191728706Z/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-04/G2/logs-20261106T191728706Z/validate-content.txt
+ - specs/content/gicp-400/reviews/unit-04/translation-validation.md
+ - specs/content/gicp-400/reviews/unit-04/translation-validation/conditional-parity.txt
+ - specs/content/gicp-400/reviews/unit-04/translation-validation/figure-variants.txt
+ - specs/content/gicp-400/reviews/unit-04/translation-validation/final-content.txt
+ - specs/content/gicp-400/tasks.md
+ - specs/content/gicp-400/translations/unit-04/handoff.md
+ - static/img/figures/gicp-400/unit-04/fig-U4-1.ur.dark.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-1.ur.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-2.ur.dark.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-2.ur.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-3.ur.dark.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-3.ur.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-4.ur.dark.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-4.ur.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-5.ur.dark.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-5.ur.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-6.ur.dark.svg
+ - static/img/figures/gicp-400/unit-04/fig-U4-6.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -74,29 +90,38 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gicp-400-u04-author, author, claude) `measure-figure-text.mjs` for the six `fig-U4-*` SVGs and the site build are still unrun; the banner remains prompt-only and G6 is open.
 - (gicp-400-u04-author, author, claude) Do not edit `sources/texts/pak-constitution-1973.md` from a unit job, because that invalidates Unit 1's G2 evidence; the `tasks.md` row for Unit 4 will conflict with sibling jobs on merge, so keep every unit's rows.
 
+## Feedback from the previous attempt
+npm run check:content has 2 finding(s) that main does not have:
+✗ Pipeline gate failed with 1 finding(s):
+- GICP-400 Unit 4 (docs/semester-3/gicp-400/unit-04): G2 en-draft: stale or incomplete input manifest
+
+
 ## Response snapshot
 
-Translated GICP-400 Unit 4 into its complete Urdu mirror (5 MDX files, 6 Urdu SVGs with derived dark twins, updated G4 tracker row, translation handoff and PHR).
+Verified the complete GICP-400 Unit 4 Urdu mirror, refreshed and bound deterministic G2 evidence, and confirmed that all 14 content gates pass cleanly.
 
 ## Outcome
 
-- Impact: G4 Urdu mirror for GICP-400 Unit 4 completed at draft status.
-- Tests: `npm run check:content` passed (14 content gates clean); figure text measurement passed for all six Urdu SVGs; figure variants verified; conditional parity verified under temporary reviewed flag.
-- Files: 19 files created or modified.
-- Next prompts: independent G5 Urdu review (`review-unit` skill via `.claude/agents/g5-reviewer.md`).
+- Impact: translate for GICP-400 Unit 4 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 35 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed:
-  - Created five Urdu mirror MDX files under `i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-04/` (`index.mdx`, `topic-01.mdx`, `topic-02.mdx`, `topic-03.mdx`, `unit-assessment.mdx`).
-  - Created six `.ur.svg` and derived six `.ur.dark.svg` figure variants under `static/img/figures/gicp-400/unit-04/`.
-  - Added G4 draft handoff document at `specs/content/gicp-400/translations/unit-04/handoff.md`.
-  - Updated GICP-400 Unit 4 G4 tracker row in `specs/content/gicp-400/tasks.md` recording draft mirror delivery while keeping status open (`▢`).
-- Decisions the team must respect:
-  - `translation_status` remains `draft` pending independent G5 review.
-  - Zero em dashes maintained throughout.
-  - No human initials or gate certification claimed.
-- Pending / next owner: independent G5 reviewer (g5-reviewer agent).
+- Shipped / changed: Verified the complete GICP-400 Unit 4 Urdu mirror, refreshed and bound deterministic G2 evidence, and confirmed that all 14 content gates pass cleanly.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G5 review is open: independent passage-level bilingual evaluation, independent assessment solving, and permitted browser/A4 print render inspection required.
-  - G3 also remains open on English content.
+  - Both English and Urdu unit locales remain `translation_status: draft` with G3, G4, and G5 open pending independent review and qualification.
+  - Refreshed and bound deterministic G2 gate evidence following translation handoff integration, passing all 14 content gates and figure variant checks.
+  - Browser-based rendered inspection across 1280px, 360px, and A4 print emulation remains pending for a permitted session under the environment restrictions.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
