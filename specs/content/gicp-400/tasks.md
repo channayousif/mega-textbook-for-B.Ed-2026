@@ -36,6 +36,7 @@ Unit 5 owner flag: the approved Figure plan and the reading-list note for pak-co
 Unit 4 figure handoff: Urdu figure localisation belongs to the translation job. Keep the original-versus-later distinction in fig-U4-4 and the interruption-versus-survival distinction in fig-U4-5. No freehand territorial map is planned. Non-browser font-metric checks and light/dark preview inspection passed.
 
 | Unit 4 | G3 en-review | ▢ | agent:codex-g3 | Advisory escalation only: specs/content/gicp-400/reviews/unit-04/G3/codex-20261106.json; missing run provenance, independent source/assessment verification and prohibited render inspection. G3 remains open. |
+| Unit 1 | G3 en-review | ▢ | | Advisory escalation (Round 1) by agent:agy; report at specs/content/gicp-400/reviews/unit-01/G3/7b8da038-290a-4b3b-9ba4-c275e02839bf.json; 5 criteria pass, sources and accessibility unverified; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; Hassan full text, author run provenance and browser/print evidence unavailable; supersedes crew-gicp-400-u01-review_en; G3 remains open and unsigned |
 
 ## Unit 3 English authoring
 
