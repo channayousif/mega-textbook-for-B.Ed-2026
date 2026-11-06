@@ -16,23 +16,59 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/gicp-400/course-overview.mdx
-  - history/prompts/gicp-400/crew-gicp-400-u02-author-conflict1.misc.prompt.md
-  - specs/content/gicp-400/reviews/unit-02/G2/20261106T172059990Z-gates.json
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-bloom-bands.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-concept-graph.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-depth-gate.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-docs-sync.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-figures.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-no-answer-keys.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-no-em-dash.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/validate-content.txt
-  - specs/content/gicp-400/sources/texts/hassan-2020-two-nation.md
-  - specs/content/gicp-400/sources/texts/iqbal-reconstruction.md
-  - specs/content/gicp-400/sources/texts/jinnah-1947-assembly.md
-  - specs/content/gicp-400/tasks.md
+ - docs/semester-3/gicp-400/unit-02/index.mdx
+ - docs/semester-3/gicp-400/unit-02/topic-01.mdx
+ - docs/semester-3/gicp-400/unit-02/topic-02.mdx
+ - docs/semester-3/gicp-400/unit-02/unit-assessment.mdx
+ - history/prompts/general/2457-author-gicp400-unit-two.general.prompt.md
+ - history/prompts/general/2458-complete-gicp400-unit-two-g2.general.prompt.md
+ - history/prompts/gicp-400/crew-gicp-400-u02-author-conflict1.misc.prompt.md
+ - history/prompts/gicp-400/crew-gicp-400-u02-author.green.prompt.md
+ - specs/content/gicp-400/concepts/unit-02.md
+ - specs/content/gicp-400/coverage/unit-02.md
+ - specs/content/gicp-400/figures/unit-02.banner.md
+ - specs/content/gicp-400/figures/unit-02.md
+ - specs/content/gicp-400/reviews/unit-02/G2/20261106T152644075Z-gates.json
+ - specs/content/gicp-400/reviews/unit-02/G2/20261106T172059990Z-gates.json
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-bloom-bands.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-concept-graph.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/validate-content.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-bloom-bands.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-concept-graph.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/validate-content.txt
+ - specs/content/gicp-400/reviews/unit-02/authoring-handoff.md
+ - specs/content/gicp-400/sources/texts/akhter-2023-iqbal.md
+ - specs/content/gicp-400/sources/texts/amu-english-history.md
+ - specs/content/gicp-400/sources/texts/assembly-history.md
+ - specs/content/gicp-400/sources/texts/hayat-2022-jinnah.md
+ - specs/content/gicp-400/sources/texts/independence-act-1947.md
+ - specs/content/gicp-400/sources/texts/iqbal-1930-allahabad.md
+ - specs/content/gicp-400/sources/texts/javid-iqbal-2012-lahore.md
+ - specs/content/gicp-400/sources/texts/kamran-2009-franchise.md
+ - specs/content/gicp-400/sources/texts/khan-khan-2020-aligarh.md
+ - specs/content/gicp-400/sources/texts/national-archives-independence.md
+ - specs/content/gicp-400/sources/unit-02.md
+ - specs/content/gicp-400/tasks.md
+ - static/img/figures/gicp-400/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-1.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-2.dark.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-2.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-3.dark.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-3.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-4.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -71,27 +107,27 @@ npm run check:content has 2 finding(s) that main does not have:
 ✗ Pipeline gate failed with 1 finding(s):
 - GICP-400 Unit 2 (docs/semester-3/gicp-400/unit-02): G2 en-draft: stale or incomplete input manifest
 
+
 ## Response snapshot
 
-The merge with origin/main was already committed on this branch. Verified main's course overview and its three bound source notes are byte-identical after the merge, and the Unit 2 tracker rows follow main's. Refreshed the Unit 2 G2 gate evidence against the merged bytes with `prepare-gate-evidence.mjs --refresh-stale`, repointed the Unit 2 G2 tracker row, regenerated `static/content-status.json`, and confirmed all 14 content gates pass.
+Verified the origin/main merge kept main's course overview and bound source notes byte-identical with both sides' tracker rows, then refreshed the stale Unit 2 G2 gate evidence against the merged bytes and repointed its tracker row so all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix for GICP-400 Unit 2 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
-- Files: 15 file(s), listed above.
+- Impact: fix for GICP-400 Unit 2 by opencode (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 51 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the origin/main merge kept main's course overview and three bound source notes byte-identical, refreshed the Unit 2 G2 gate evidence against the merged bytes, repointed the Unit 2 G2 tracker row, and regenerated the content-status report.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. The branch added no entries to the shared registries, so no ID reallocation was needed.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Verified the origin/main merge kept main's course overview and bound source notes byte-identical with both sides' tracker rows, then refreshed the stale Unit 2 G2 gate evidence against the merged bytes and repointed its tracker row so all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The old Unit 2 G2 evidence (`20261106T152644075Z-gates.json`) is now orphaned but left in place, matching the repo's refresh convention.
-  - G3/G5 remain open; no independent review, human initials or signing was performed.
-  - The Playwright-based SVG geometry check was not run (crew prohibition); the banner figure remains prompt-only.
+  - The orphaned pre-merge Unit 2 G2 evidence (20261106T152644075Z-gates.json) is left in place per the repo's refresh convention.
+  - G3/G5 remain open (no independent review or signing), and the banner figure stays prompt-only under the crew browser prohibition.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
