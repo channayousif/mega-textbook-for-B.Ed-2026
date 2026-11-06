@@ -1,0 +1,15 @@
+$ render-review (attempted under .crew/brief.md constraints)
+
+Status: NOT RUN. The crew brief explicitly prohibits npm run build, a dev server, and Playwright.
+The review contract requires actual host browser and print inspection for a pass.
+
+Attempted: no build, no docusaurus serve, no Playwright, no Chromium.
+Reason: .crew/brief.md line 4 forbids them; AGENTS.md forbids heavy jobs outside
+scripts/heavy.sh and forbids leaving a dev/preview server running.
+
+Consequence: no rendered PNG/WebP/JPG artifact exists for this attempt. Narrow-viewport
+layout (360px), A4 print pagination, table scroll reachability, and keyboard focus attributes
+were not inspected in a live browser. SVG glyph geometry was not measured because
+scripts/measure-figure-text.mjs imports playwright-core.
+
+exit_code=1

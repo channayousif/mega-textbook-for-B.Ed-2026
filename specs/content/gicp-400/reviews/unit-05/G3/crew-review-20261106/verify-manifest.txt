@@ -1,0 +1,5 @@
+Command: inputManifest(process.cwd(), 'GICP-400', 5, 'G3') compared with prepared manifest.json
+Prepared entries: 99
+Current entries: 99
+Exact map equality: true
+Exit code: 0

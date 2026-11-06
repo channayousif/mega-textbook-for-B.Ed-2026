@@ -1,0 +1,13 @@
+Static inspection only. No rendered layout, glyph geometry, narrow viewport, or A4 inspection.
+static/img/figures/gicp-400/unit-05/fig-U5-1.dark.svg: XML parsed; viewBox=0 0 780 500; desc equals page alt=True; text nodes=25
+static/img/figures/gicp-400/unit-05/fig-U5-1.svg: XML parsed; viewBox=0 0 780 500; desc equals page alt=True; text nodes=25
+static/img/figures/gicp-400/unit-05/fig-U5-2.dark.svg: XML parsed; viewBox=0 0 780 580; desc equals page alt=True; text nodes=38
+static/img/figures/gicp-400/unit-05/fig-U5-2.svg: XML parsed; viewBox=0 0 780 580; desc equals page alt=True; text nodes=38
+static/img/figures/gicp-400/unit-05/fig-U5-3.dark.svg: XML parsed; viewBox=0 0 780 572; desc equals page alt=True; text nodes=50
+static/img/figures/gicp-400/unit-05/fig-U5-3.svg: XML parsed; viewBox=0 0 780 572; desc equals page alt=True; text nodes=50
+static/img/figures/gicp-400/unit-05/fig-U5-4.dark.svg: XML parsed; viewBox=0 0 780 610; desc equals page alt=True; text nodes=30
+static/img/figures/gicp-400/unit-05/fig-U5-4.svg: XML parsed; viewBox=0 0 780 610; desc equals page alt=True; text nodes=30
+static/img/figures/gicp-400/unit-05/fig-U5-5.dark.svg: XML parsed; viewBox=0 0 780 652; desc equals page alt=True; text nodes=44
+static/img/figures/gicp-400/unit-05/fig-U5-5.svg: XML parsed; viewBox=0 0 780 652; desc equals page alt=True; text nodes=44
+static/img/figures/gicp-400/unit-05/fig-U5-6.dark.svg: XML parsed; viewBox=0 0 780 490; desc equals page alt=True; text nodes=24
+static/img/figures/gicp-400/unit-05/fig-U5-6.svg: XML parsed; viewBox=0 0 780 490; desc equals page alt=True; text nodes=24
