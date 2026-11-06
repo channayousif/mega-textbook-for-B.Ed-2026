@@ -1,0 +1,17 @@
+# Independent derivations written before reading RRQ 4-10 and ERQ 1-5 guidance
+
+RRQ 4: Art 33 asks the State to discourage parochial, racial, tribal, sectarian, provincial prejudices. Matters because prejudice blocks equal citizenship; integration needs mutual respect, not sameness; Art 33 targets prejudice, not diversity.
+RRQ 5: Art 251(1) makes Urdu the national language, a shared medium. Art 251(3) permits (does not compel) a Provincial Assembly to prescribe by law measures for teaching, promotion and use of a provincial language in addition to the national language, without prejudice to Urdu's status.
+RRQ 6: Passive citizenship: pupils hold facts for examinations but lack skills and values for democratic life. Example: copying and memorising three tiers of local government for a test.
+RRQ 7: Practice is assimilationist; devalues mother tongue; breeds resentment and shame; pupils learn that one group ranks above another; contrary to the spirit of Art 33; Urdu use itself is legitimate under 251(1), but the "backward" label is the harm. Weakens integration.
+RRQ 8: (1) Constitution is the shared framework of citizenship, not party politics; teaching it is non-partisan. (2) Avoidance leaves pupils to less fair, less accurate outside sources. Also: Art 25A/37(b) educational duty; indoctrination vs education distinction.
+RRQ 9: Presents all provinces with dignity, turns difference into shared knowledge, reduces provincial prejudice, which is what Art 33 asks the State to discourage; limit: a one-off show needs daily practice. 
+RRQ 10: Constitution sets the right and State duty (25A enforceable right for 5-16 as determined by law; 37(b) a Principle of Policy on illiteracy and secondary education). Teacher turns it into practice (identifying absent pupils, family contact, keeping them in class). The Constitution binds the State; teacher acts at the point of delivery but cannot enforce.
+ERQ 1: Claim false / conflates integration with assimilation. Art 33: prejudice, not diversity. Art 251(1) national language with 251(3) provincial language measures: Constitution itself foresees more than one language in use. School example. Judgement: claim rejected; shared Urdu is compatible with mother tongues.
+ERQ 2: Reject the claim. Dean: knowledge alone is the transmission model producing passive citizenship; three interlinked dimensions; example drain lesson. Concede knowledge is necessary. Judgement: knowledge is necessary not sufficient.
+ERQ 3: Create. Value + article, concrete problem, steps, product, reflection, explanation of experience. e.g. Art 25A out-of-school survey, or fairness/agreed rule. Must have Class 9 feasibility, 20 min.
+ERQ 4: Strengthen: mixed-group work, respect for languages. Weaken: mocking dialect, favouring a group. Tie to Art 33 prejudices. Judgement or conclusion on daily practice.
+ERQ 5: Evaluate. Unit 1 values become principles and articles; Unit 5 rights/PoP (25A, 37(b)); Unit 6 structure of government (federal/provincial/local; teacher as public servant, does not hold constitutional office: limit). Judgement: largely true in practice; limit: the teacher is not a state organ in the constitutional sense, must remain non-partisan; "civic actor" is a role claim not a legal status.
+
+MCQ note: MCQ key and RRQ 1-3 model answers were displayed in the same output as the questions on first read, so these items are re-derived from topic and constitution, not strictly blind.
+MCQ derived: 1 B; 2 A; 3 B; 4 B; 5 B; 6 B; 7 A; 8 B; 9 B; 10 A.
