@@ -2,7 +2,7 @@
 id: crew-gicp-400-u02-translate
 title: crew translate GICP-400 unit 2
 stage: misc
-date: 2026-11-07
+date: 2026-11-06
 surface: agent
 model: opencode
 feature: gicp-400
@@ -16,22 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/general/20261138-gicp-400-unit-02-urdu-mirror.general.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/unit-assessment.mdx
-  - specs/content/gicp-400/reviews/unit-02/G4/translation-handoff.md
-  - static/img/figures/gicp-400/unit-02/fig-U2-1.ur.dark.svg
-  - static/img/figures/gicp-400/unit-02/fig-U2-1.ur.svg
-  - static/img/figures/gicp-400/unit-02/fig-U2-2.ur.dark.svg
-  - static/img/figures/gicp-400/unit-02/fig-U2-2.ur.svg
-  - static/img/figures/gicp-400/unit-02/fig-U2-3.ur.dark.svg
-  - static/img/figures/gicp-400/unit-02/fig-U2-3.ur.svg
-  - static/img/figures/gicp-400/unit-02/fig-U2-4.ur.dark.svg
-  - static/img/figures/gicp-400/unit-02/fig-U2-4.ur.svg
+ - history/prompts/general/20261138-gicp-400-unit-02-urdu-mirror.general.prompt.md
+ - history/prompts/gicp-400/crew-gicp-400-u02-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/unit-assessment.mdx
+ - specs/content/gicp-400/reviews/unit-02/G4/translation-handoff.md
+ - static/img/figures/gicp-400/unit-02/fig-U2-1.ur.dark.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-1.ur.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-2.ur.dark.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-2.ur.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-3.ur.dark.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-3.ur.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-4.ur.dark.svg
+ - static/img/figures/gicp-400/unit-02/fig-U2-4.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -69,26 +70,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gicp-400-u02-author-conflict1, fix, opencode) G3/G5 remain open (no independent review or signing), and the banner figure stays prompt-only under the crew browser prohibition.
 - (gicp-400-u02-author, author, opencode) The G2 evidence path requires a course-level `course-overview.mdx`; I added it and the course `_category_.json` as a prerequisite, which is just outside the strict Unit 2 scope.
 
+
 ## Response snapshot
 
-Completed GICP-400 Unit 2's Urdu mirror, full assessment, four localised SVGs with dark variants, G4 handoff and PHR.
+Translated GICP-400 Unit 2 into a complete Urdu mirror (index, topic-01, topic-02, unit-assessment with the 10/10/5 bank and bounded answers) plus four localised `.ur.svg` figures with derived dark twins, and recorded the G4 handoff with all gates green at draft.
 
 ## Outcome
 
 - Impact: translate for GICP-400 Unit 2 by opencode (attempt 1).
-- Tests: npm run check:content passed in draft state and after the temporary reviewed flip and revert; figures:variants:check passed.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed GICP-400 Unit 2's Urdu mirror, full assessment, four localised SVGs with dark variants, G4 handoff and PHR.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. `translation_status` stays `draft`; the G4 tracker row is unchanged per translate-unit Step 7.
+- Shipped / changed: Translated GICP-400 Unit 2 into a complete Urdu mirror (index, topic-01, topic-02, unit-assessment with the 10/10/5 bank and bounded answers) plus four localised `.ur.svg` figures with derived dark twins, and recorded the G4 handoff with all gates green at draft.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Translation remains draft; English G3 resolution, independent G5 and browser/print inspection remain pending.
-  - `measure-figure-text.mjs` and `render-inspect.mjs --locale ur` were not run under the crew browser prohibition.
+  - `measure-figure-text.mjs` and `render-inspect.mjs --locale ur` were not run (brief forbids Chromium/builds/servers); Urdu SVG label geometry is hand-checked against each viewBox only.
+  - G4/G5 tracker rows stay open; the G4 handoff is at `specs/content/gicp-400/reviews/unit-02/G4/translation-handoff.md`, and the proposed non-banked Urdu terms are listed there for the owner.
+  - English G3 remains escalated and unsigned; a fresh reviewer must resolve its source/provenance dependencies before accepted G5 can bind.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
