@@ -12,6 +12,9 @@
 | U5-05 | topic-02.mdx | ### Politics as a social institution | conerly2021 |
 | U5-06 | topic-02.mdx | ### Healthcare as a social institution | conerly2021 |
 
+| U5-05 | topic-02.mdx | ### Politics as a social institution | u05-cii-functions |
+| U5-06 | topic-02.mdx | ### Healthcare as a social institution | u05-who-lhw |
+
 ## Reinforcement
 
 | Sub-topic ID | File | Section | Source |
@@ -20,6 +23,7 @@
 | U5-01 | topic-01.mdx | ## Further reading | andersen2014 |
 | U5-02 | topic-01.mdx | ### What is a social institution? | conerly2021 |
 | U5-04 | topic-02.mdx | ### How institutions connect and change | no-external-source |
+| U5-04 | topic-02.mdx | ### How institutions connect and change | u05-andrabi2015 |
 | U5-05 | topic-02.mdx | ## Further reading | andersen2014 |
 | U5-06 | topic-02.mdx | ### How institutions connect and change | no-external-source |
 | U5-01 | unit-assessment.mdx | ### Multiple-choice questions (MCQs) | no-external-source |
