@@ -76,28 +76,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u05-repair_en-conflict3, fix, opencode) Unit 5 P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host; G3 stays open (ADR-0019).
 - (gqur-301-u05-repair_en-conflict3, fix, opencode) G5 should verify Nastaliq rendering and text-fit inside the inherited viewBox at narrow width and A4 print.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the single `specs/content/gqur-301/tasks.md` conflict main-first (Unit 14 then Unit 5), verified every shared registry kept both sides' lines, and left all 14 content gates passing.
+Merged origin/main into crew/gqur-301-u05-repair_en, resolved the tasks.md conflict main-first, and left all 14 content gates passing with the PHR committed.
 
 ## Outcome
 
-- Impact: fix for GQUR-301 Unit 5 by opencode (attempt 5).
-- Tests: npm run check:content passed in the job worktree (14/14 gates).
+- Impact: fix for GQUR-301 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 23 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into `crew/gqur-301-u05-repair_en` (merge commit 3a586a6e0), resolved the single `specs/content/gqur-301/tasks.md` conflict main-first (Unit 14 row then Unit 5 row), and regenerated the gitignored `static/content-status.json` so `npm run check:content` passes 14/14.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into crew/gqur-301-u05-repair_en, resolved the tasks.md conflict main-first, and left all 14 content gates passing with the PHR committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 5 P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host; G3 stays open (ADR-0019).
   - G5 should verify Nastaliq rendering and text-fit inside the inherited viewBox at narrow width and A4 print.
-  - Other GQUR-301 units still cite the shared `lane2023` excerpt, which lacks Chapter 3; that course-level gap is outside this Unit 5 job.
-  - `static/content-status.json` is gitignored and generated; a fresh origin/main checkout lacks it, so `check:content-status` fails there until `npm run build:content-status` runs.
+  - `static/content-status.json` is gitignored and generated; a fresh origin/main checkout lacks it, so run `npm run build:content-status` before `check:content`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
