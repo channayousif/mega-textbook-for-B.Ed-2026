@@ -1,6 +1,6 @@
 ---
 id: crew-gicp-400-u06-author-conflict1
-title: crew merge GICP-400 unit 6
+title: crew fix GICP-400 unit 6
 stage: misc
 date: 2026-11-06
 surface: agent
@@ -8,8 +8,8 @@ model: opencode
 feature: gicp-400
 branch: crew/gicp-400-u06-author
 user: crew
-command: crew merge
-labels: ["crew", "opencode", "merge"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/gicp-400/content-spec.md
   ticket: null
@@ -87,26 +87,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gicp-400-u06-author, author, codex) Independent review, Urdu translation, banner production and browser geometry checks remain pending.
 - (gicp-400-u06-author, author, codex) Independent review, Urdu translation, banner production and browser geometry checks remain pending.
 
+
 ## Response snapshot
 
-Merged origin/main into the branch, resolved the tasks.md conflict by keeping both sides' rows and notes (main's Unit 5 and Unit 4 entries first, then this branch's Unit 6 entries, with the shared Unit 1 reading-estimate paragraph kept once), confirmed no shared-registry or ID collisions, and regenerated the gitignored content-status report.
+Merged origin/main into crew/gicp-400-u06-author, resolved the tasks.md conflict preserving both sides, regenerated content-status, and committed the merge plus its PHR with all content gates green.
 
 ## Outcome
 
-- Impact: merge conflict resolution for GICP-400 Unit 6 by opencode (attempt 1).
-- Tests: npm run check:content passed after the merge (14 of 14 gates).
-- Files: 36 file(s), listed above.
+- Impact: fix for GICP-400 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 37 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: origin/main merged into `crew/gicp-400-u06-author`; the only conflict, `specs/content/gicp-400/tasks.md`, now carries main's Unit 5 and Unit 4 rows and notes followed by this branch's Unit 6 rows and notes, with the duplicated Unit 1 reading-estimate paragraph kept once. Main's Unit 4 and Unit 5 docs, specs, sources, figures and PHRs are now present on the branch.
-- Decisions the team must respect: the shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) were untouched by both sides, so no entries were renumbered or dropped; the branch's only decision reference is D-2026-0001, which already exists on main. G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into crew/gicp-400-u06-author, resolved the tasks.md conflict preserving both sides, regenerated content-status, and committed the merge plus its PHR with all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Independent review, Urdu translation, banner production and browser geometry checks remain pending.
-  - `static/content-status.json` is gitignored and was regenerated locally after the merge; a fresh checkout must run `npm run build:content-status` before `check:content` will pass.
+  - Independent G3 review, Urdu translation, banner production and browser geometry checks for Unit 6 remain pending.
+  - `static/content-status.json` is gitignored; a fresh checkout must run `npm run build:content-status` before `check:content` passes.
+  - Main's Unit 4 and Unit 5 docs/specs/sources/figures now sit on this branch after the merge.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
