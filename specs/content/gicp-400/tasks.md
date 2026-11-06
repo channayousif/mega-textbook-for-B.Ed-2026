@@ -4,7 +4,7 @@ This authoring job covers Unit 2 only. G0/G1 authority: approved `content-spec.m
 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
-| Unit 2 | G2 en-draft | ▣ | agent:codex | English draft and governance artefacts prepared; G2 evidence blocked by missing course-overview.mdx outside Unit 2 scope; no completion claim |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-02/G2/20261106T152644075Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Independent review pending; author does not certify content |
 | Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 2 | G5 ur-review | ▢ | | Separate independent review after translation |
