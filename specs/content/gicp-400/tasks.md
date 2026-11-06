@@ -36,3 +36,15 @@ Unit 5 owner flag: the approved Figure plan and the reading-list note for pak-co
 Unit 4 figure handoff: Urdu figure localisation belongs to the translation job. Keep the original-versus-later distinction in fig-U4-4 and the interruption-versus-survival distinction in fig-U4-5. No freehand territorial map is planned. Non-browser font-metric checks and light/dark preview inspection passed.
 
 | Unit 4 | G3 en-review | ▢ | agent:codex-g3 | Advisory escalation only: specs/content/gicp-400/reviews/unit-04/G3/codex-20261106.json; missing run provenance, independent source/assessment verification and prohibited render inspection. G3 remains open. |
+
+## Unit 3 English authoring
+
+| Unit | Stage | Status | Initials | Notes |
+|---|---|---|---|---|
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-03/G2/20261106T184345301Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | Independent qualified review pending; source-access limits recorded in sources/unit-03.md |
+| Unit 3 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 3 | G5 ur-review | ▢ | | Independent Urdu review pending; authored concept labels need checking |
+| Unit 3 | G6 assets | ▢ | | Four EN schematics placed with dark twins; font-metric and non-browser preview checks passed. Chromium geometry validation pending under crew browser prohibition; banner prompt-only |
+
+Unit 3 final visible-text estimates at 190 words per minute: index 3, Topic 3.1 16, Topic 3.2 14, assessment 20, total 53 within the approved 40-55 band. Bank: 10 MCQs, 10 RRQs, 5 ERQs; default 60/40 weighting. No teaching-strategies or practical-work block appears in the guide, so no teacher-notes file was invented. Independent review should verify source-access limitations, the Tamizuddin/Reference distinction, and formal constitutional constraints on presidential powers. Publication is not claimed.
