@@ -74,22 +74,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gsos-301-u06-translate-r1, translate, codex) English author must repair the citation, Sialkot typo and assessment mappings before G4 resumes.
 - (gsos-301-u06-translate, translate, codex) English author must repair the citation, Sialkot typo and coverage/concept mappings before translation resumes.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gsos-301-u06-repair_en, resolved the single tasks.md conflict by keeping both sides' G3 repair rows (main's Unit 5 row then this branch's Unit 6 row), regenerated the gitignored static/content-status.json, and committed the merge plus this PHR with all content gates passing.
+Merged origin/main, resolved the tasks.md conflict keeping both Unit 5 and Unit 6 G3 rows, regenerated content-status.json, and committed the merge plus PHR with all content gates passing.
 
 ## Outcome
 
 - Impact: fix for GSOS-301 Unit 6 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree after the merge.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gsos-301-u06-repair_en, resolved the tasks.md conflict by keeping both sides' G3 repair rows, regenerated static/content-status.json, and committed the merge plus PHR with all content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Merged origin/main, resolved the tasks.md conflict keeping both Unit 5 and Unit 6 G3 rows, regenerated content-status.json, and committed the merge plus PHR with all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G3 remains unticked; permitted browser/print inspection and fresh independent review are pending.
