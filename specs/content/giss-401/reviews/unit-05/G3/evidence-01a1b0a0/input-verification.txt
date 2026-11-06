@@ -1,0 +1,4 @@
+Command: compare saved preparation manifest with recomputed inputManifest and skillDigest
+Exit code: 0
+All 92 bound input paths and normalized digests, plus skill digest, unchanged.
+No parent handoff or missing-source verification is implied.

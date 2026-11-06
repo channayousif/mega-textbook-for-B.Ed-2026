@@ -54,6 +54,7 @@
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-05/G2/20261103T141633226Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 5 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-05/G3/01a1b0a0-8bb6-7fa3-8dbd-f1262f8137cd.json; source binding, provenance, scholar review and browser/print evidence incomplete; actionable F04-F14 recorded; G3 remains open and unsigned |
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
@@ -63,7 +64,7 @@
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
 | Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261103T141633592Z-gates.json |
-| Unit 7 | G3 en-review | ▢ | | awaiting an independent reviewer and a qualified Islamic Studies reviewer (content spec, drafting note 2); no review performed by author |
+| Unit 7 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-07/G3/01a1b093-4435-7a02-a21d-e78212bba060.json; ERQ 2 question/rubric mismatch, MCQ 10 Bloom tag and private family circumstances need author repair; parent provenance, source bundle, qualified Islamic Studies scholar and browser/print evidence pending; G3 remains open and unsigned |
 | Unit 7 | G4 ur-translation | ▢ | | separate job |
 | Unit 7 | G5 ur-review | ▢ | | |
 | Unit 7 | G6 assets | ▣ | | three English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
@@ -98,3 +99,9 @@ The full UDHR text could not be fetched from official routes on this host; its i
 ### Final crew validation
 
 After merging `origin/main` (which added the course overview), `node scripts/prepare-gate-evidence.mjs GISS-401 6` passed all eight draft gates and wrote `reviews/unit-06/G2/20261103T000422959Z-gates.json`. All five authored MDX bodies compile with `@mdx-js/mdx`; six light and six dark figure variants pass the figure gate and dark freshness check. Unit 6 appended its own sections to the shared bound excerpts `quran-translation.md` and `bhat-2019-education.md`; Unit 1's entries there are unchanged.
+
+## Unit 2 advisory English review, 2026-11-06
+
+| Unit | Stage | Status | Initials | Notes |
+|---|---|---|---|---|
+| Unit 2 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-02/G3/01a1b085-18a8-79d2-8bc8-93c034c663a8.json; non-direct-ruling Ijma/Qiyas blueprint unmet; author-run provenance, qualified scholar review, full source verification, independent solve and browser/print evidence pending; G3 remains open and unsigned |
