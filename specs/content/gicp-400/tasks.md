@@ -6,7 +6,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-01/G2/20261106T152656845Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: escalate by agent:opencode-g3-reviewer; report at specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/crew-gicp-400-u01-review_en.json; 5 criteria pass, sources and accessibility unverified; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; Hassan full text, author run provenance and browser/print evidence unavailable; G3 remains open and unsigned |
-| Unit 1 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 1 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localised schematic SVGs with dark twins; translator handoff: specs/content/gicp-400/reviews/unit-01/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 1 | G6 assets | ▢ | | Four inherited EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry and visual inspection pending under the crew brief's browser prohibition |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-05/G2/20261106T160348752Z-gates.json |
