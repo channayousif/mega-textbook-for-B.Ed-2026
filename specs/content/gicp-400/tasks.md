@@ -9,5 +9,14 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 1 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 1 | G6 assets | ▢ | | Four inherited EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry and visual inspection pending under the crew brief's browser prohibition |
+| Unit 6 | G2 en-draft | ▣ | | Draft complete; deterministic gate evidence recorded separately |
+| Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 6 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
+| Unit 6 | G6 assets | ▢ | | Four EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Previews rendered and inspected with sharp; Chromium geometry check not run under the crew brief's browser prohibition |
 
 Reading estimates use final visible text at 180 words per minute: index 3, Topic 1.1 15, Topic 1.2 17, assessment 17, total 52 minutes within the approved 40-55 band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with public self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies no teaching strategies or practical-work block, so no teacher-notes page was invented.
+
+Unit 6 reading estimates use final visible text at 180 words per minute: index 3, Topic 6.1 15, Topic 6.2 15, assessment 16, total 49 minutes within the approved 40-55 band. The guide supplies no teaching strategies or practical-work block, so no teacher-notes page was invented.
+
+Unit 6 owner flag: the reading-list note for pak-constitution-1973 names only the 25th Amendment as later than the 2012 PDF, but the 26th (2024) and 27th (2025) Amendments also change Unit 6's articles, including the Federal Constitutional Court and Article 239(5). Unit 6 teaches the current text and records the mapped reading separately from the amended text in its sources file. The content spec is not edited by this job. Glossary entries for Majlis-e-Shoora and Constitutional amendment do not exist, and glossary.json is outside this job's scope, so both terms are defined in the prose.
