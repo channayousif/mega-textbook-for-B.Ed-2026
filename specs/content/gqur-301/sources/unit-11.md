@@ -4,7 +4,7 @@ Per `specs/007-content-depth-standard/contracts/sources-consulted.md`. Every key
 `specs/content/gqur-301/coverage/unit-11.md` appears here.
 
 Course guide: `Scheme-and-Course-guides/extracted-text/2nd 2026.txt`, GQUR-301 Chapter 11. Section
-locators used in this unit: Lane Chapter 5 ("Binomial Distribution") and Chapter 7 ("Normal Distribution"); OpenStax Section 4.3 ("Binomial Distribution") and Section 6.1-6.2 ("The Standard Normal Distribution"). The OpenStax and Lane section pages were consulted on
+locators used in this unit: Lane Chapter 5 ("Binomial Distribution") and Chapter 7 ("Normal Distribution"); OpenStax Section 4.3 ("Binomial Distribution") and Section 6.1 ("The Standard Normal Distribution"). The OpenStax and Lane section pages were consulted on
 2026-10-21. The pages below supplied the binomial formula, conditions and normal
 curve properties. School examples and policy discussions are authored applications,
 not empirical findings from these sources. The year 2023 follows the approved
