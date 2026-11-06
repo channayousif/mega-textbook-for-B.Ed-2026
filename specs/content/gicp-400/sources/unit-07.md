@@ -1,0 +1,15 @@
+# GICP-400 Unit 7 - Sources consulted
+
+Checked 2026-11-06. Prose is original. Quotations stay under 15 words. The unit reads the Constitution through the accessible transcription linked below, whose notes show amendments up to the Twenty-seventh Amendment of 2025. The National Assembly 2012 PDF named in the content spec timed out from this host on 2026-10-31 and was not re-tried for this unit. No claim here is legal advice.
+
+| Key | Citation | URL/DOI | Supports | Kind |
+|---|---|---|---|---|
+| kennedy-2012-civic | Kennedy, K. J. (2012). Global trends in civic and citizenship education: What are the lessons for nation states? *Education Sciences, 2*(3), 121-135. | https://doi.org/10.3390/educsci2030121 | U7-01, U7-02: the place of civic and citizenship education in a national curriculum; globalisation and the continuing responsibility of the nation state; active and engaged citizenship. Crossref DOI and OpenAlex W2063556125 checked 2026-11-06; CC BY 3.0; DOAJ listed | open-access-substitute |
+| dean-2005-citizenship | Dean, B. L. (2005). Citizenship education in Pakistani schools: Problems and possibilities. *International Journal of Citizenship and Teacher Education, 1*(2), 35-55. | https://ecommons.aku.edu/pakistan_ied_pdck/30/ | U7-01, U7-03: the transmission model and passive citizenship; the three dimensions of civic education; the teacher as the primary agent of civic formation. Aga Khan University eCommons record checked 2026-11-06; the bound excerpt holds clearly labelled paraphrase, not authenticated verbatim passages | open-access-substitute |
+| pak-constitution-1973 | Government of Pakistan. The Constitution of the Islamic Republic of Pakistan (adopted 1973; as amended). Accessible transcription with amendment notes to the Constitution (Twenty-seventh Amendment) Act, 2025. | https://www.pakistani.org/pakistan/constitution/ ; 2012 National Assembly edition: https://na.gov.pk/uploads/documents/1333523681_951.pdf | U7-02, U7-03: Articles 5, 33, 36, 37(b), 25A and 251. Transcription pages read 2026-11-06 | guide-required |
+
+## Verification and access limits
+
+- Kennedy (2012) is a diamond open-access article. The DOI resolves and the Crossref record gives the abstract, volume, issue and pages. The full text sits behind the publisher's bot protection, so the bound excerpt uses the verified abstract and metadata, not an authenticated full-text passage.
+- Dean (2005) is available through the Aga Khan University eCommons repository. The record was checked on 2026-11-06; the article PDF was not authenticated against the publisher version in this session. The bound excerpt therefore holds clearly labelled paraphrase. A reviewer should check the original passages.
+- The Constitution text is read through the accessible transcription, which carries amendment notes. Article 25A was inserted by the Eighteenth Amendment in 2010; the transcription shows this. The 2012 National Assembly PDF predates later amendments and was not used for this unit's current-text claims.
