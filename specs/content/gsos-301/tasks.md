@@ -47,12 +47,12 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 
-**Unit 4 - Social Stratification and Gender:** not started.
+**Unit 4 - Social Stratification and Gender:** English content authored to the Spec 008 per-topic layout: `index.mdx` + `topic-01..02.mdx` (nine-part cycles) + `unit-assessment.mdx` (10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. Coverage, sources, figures and concepts committed; four schematic SVG figures placed with dark variants. G0/G1 intake approved (D-2026-0066); G3 en-review advisory repairs applied; Urdu mirror not started.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 4 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261103T112247694Z-gates.json |
+| Unit 4 | G1 unit-spec | ✅ | owner:D-2026-0066 | approved by confirmed intake decision D-2026-0066 (2026-10-10); content-spec status approved; nothing remains blocked at G0/G1 |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261105T174150992Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-04/G3/20261022-codex.json; numeric guidance, ERQ tables, RRQ demand and coverage mappings need author repair; provenance/source/render evidence incomplete; no certification; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▢ | | Blocked before translation: confirmed English assessment errors trigger translate-unit stop rule; separate author repair required; handoff reviews/unit-04/G4/translation-handoff.md; translation_status stays draft |
 | Unit 4 | G5 ur-review | ▢ | | |
@@ -99,6 +99,6 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-06/G3/20261102T212740Z-g3-desk-c2180039.json |
 
 | Unit 2 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67a.json; F1-F5 and F8 repaired in EN/UR; F6 render inspection and F7 original provenance/complete source evidence remain open; fresh independent review required; no certification |
-
 | Unit 3 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-ece43fa7.json; terminology, assessment, source/mapping and figure inputs repaired; see reviews/unit-03/repair-20261105.md for remaining owner/provenance/render work; fresh independent review required; no certification |
 | Unit 5 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-92fc9b44.json; OpenStax 15.1 passage and Pakistani fact sources recorded in sources/unit-05.md; blocking 360px/table-scroll/A4-print/figure-clipping render inspection remains unperformed because brief prohibits build/server/Playwright; permitted render inspection and fresh independent review required; no certification |
+| Unit 4 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-04/G3/20261102T212207Z-g3-desk-a27ebd77.json; A1 numeric guidance corrected to 68.00%, A2 ERQ rubric rows restored to two columns, A3 RRQ 1-2 rewritten to Understand with matching keys, C1 reinforcement mappings corrected (MCQ 5 and 8 to U4-03, MCQ 10 to U4-01, MCQ 6 removed from U4-02, MCQ 9 added to U4-06), T1 tracker reconciled with confirmed D-2026-0066; advisory: MCQ keys rebalanced to a1/b3/c3/d3 and distractors improved, RRQ 7/9 analysis descriptors strengthened, teacher activity moved after feminist instruction; S1 declarations completed with dates and D-2026-0001 authorisation; P1 author-run provenance and X1 render inspection remain open (brief prohibits build/server/browser); no Urdu mirror (G4 blocked pending fresh G3); fresh independent review required; no certification |
