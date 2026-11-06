@@ -1,0 +1,15 @@
+render-review attempt, 2026-11-05T18:30:00Z, host textbook.com.pk
+Crew brief forbids npm run build, dev/preview servers and Playwright/Chromium in this job, so no page, narrow-viewport (360px) or A4 print render was produced.
+Fallback rasteriser probe:
+$ command -v rsvg-convert inkscape chromium google-chrome
+(none found, exit 1)
+$ convert -list format | grep -i svg
+     MSVG  SVG       rw+   ImageMagick's own SVG internal renderer
+      SVG  SVG       rw+   Scalable Vector Graphics (XML 2.9.14)
+     SVGZ  SVG       rw+   Compressed Scalable Vector Graphics (XML 2.9.14)
+ImageMagick falls back to its internal MSVG renderer (rsvg-convert delegate missing), which cannot resolve CSS variables or perform Arabic-script Nastaliq shaping, so its output cannot evidence Nastaliq legibility. No PNG was produced.
+Source-level inspection performed instead:
+- Alt text and SVG title/desc compared between EN and UR for all 4 figures.
+- Font family explicitly declared as 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif in all 8 Urdu SVGs.
+- RTL layout checked in SVG source coordinates (fig-U6-1 table columns mirrored; fig-U6-2 concept map links mirrored; fig-U6-3 panels mirrored; fig-U6-4 timeline runs RTL from 2000 on right to 2030 on left).
+RESULT: visual inspection not performed in crew environment (exit 1)

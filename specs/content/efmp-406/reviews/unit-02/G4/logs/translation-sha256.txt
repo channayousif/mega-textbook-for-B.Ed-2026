@@ -1,0 +1,14 @@
+Translation input identity (SHA-256, final draft bytes):
+e1f159cc1aa61e996fb20df89887748cc76ec107ddb02f560a49a5766f0ab632  i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-02/index.mdx
+13c1854c5f6dcde7a6176035201cdb8ff7d365615f0e11774d45ca903fdf99b8  i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-02/topic-01.mdx
+38884f4d8e6b9c55de3e846e7457333393e212e27c86afa892821694ddeb6e81  i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-02/topic-02.mdx
+457591abc9f568919d1ff3c07899fa2c07b31e7ffceee47dff5b21af5648f4e5  i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-02/unit-assessment.mdx
+c8a7c5f2241fe571ecb00688746c6b492b2c3b826cfa2df09e8c017e22529de3  i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-02/unit-teacher-notes.mdx
+aec62fbcf6608147250a51c57ef497ec0bb8b62be975a175c514e26fbbdc42e6  static/img/figures/efmp-406/unit-02/fig-U2-1.ur.dark.svg
+9b8ac68b34a3aca7fdb7b39860dfaebcafd03aa7e8f8c362f2c9efc35783f875  static/img/figures/efmp-406/unit-02/fig-U2-1.ur.svg
+a8aaa36b30743ca993ea3ff96c650f0d29efe4db88eaeae448807674730f3c85  static/img/figures/efmp-406/unit-02/fig-U2-2.ur.dark.svg
+8be83db54efe27baecc042e9c34a1432d65d6a433f2e97c8f9d3a567c6004b2e  static/img/figures/efmp-406/unit-02/fig-U2-2.ur.svg
+087828cef08b214b3ea3ed6a7643b242b8f415706a913246d0442c06d5c2dff9  static/img/figures/efmp-406/unit-02/fig-U2-3.ur.dark.svg
+bc50e94abe5017e50a10519d3771b0cf23aa7c7e86897f6abcba215e2a70ce72  static/img/figures/efmp-406/unit-02/fig-U2-3.ur.svg
+64c8b5adc2852a11aa059bb1fe4d67c513ec5d2e6a0c2fe2e637896345d6e1d9  static/img/figures/efmp-406/unit-02/fig-U2-4.ur.dark.svg
+2767d4f74a4cce378b4201e83278b4e0e251b55b06c7c4678a8ff78576f8f80f  static/img/figures/efmp-406/unit-02/fig-U2-4.ur.svg
