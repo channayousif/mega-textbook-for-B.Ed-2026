@@ -2,7 +2,7 @@
 id: crew-gicp-400-u02-illustrate
 title: crew illustrate GICP-400 unit 2
 stage: misc
-date: 2026-11-07
+date: 2026-11-06
 surface: agent
 model: agy
 feature: gicp-400
@@ -16,23 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/gicp-400/unit-02/index.mdx
-  - history/prompts/gicp-400/crew-gicp-400-u02-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/index.mdx
-  - specs/content/gicp-400/figures/unit-02.banner.md
-  - specs/content/gicp-400/reviews/unit-02/G2/20261106T230323831Z-gates.json
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-bloom-bands.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-concept-graph.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-depth-gate.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-docs-sync.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-figures.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-no-answer-keys.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-no-em-dash.txt
-  - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/validate-content.txt
-  - specs/content/gicp-400/tasks.md
-  - static/img/figures/gicp-400/unit-02/fig-U2-5.webp
+ - docs/semester-3/gicp-400/unit-02/index.mdx
+ - history/prompts/gicp-400/crew-gicp-400-u02-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-02/index.mdx
+ - specs/content/gicp-400/figures/unit-02.banner.md
+ - specs/content/gicp-400/reviews/unit-02/G2/20261106T230323831Z-gates.json
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-bloom-bands.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-concept-graph.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T230323831Z/validate-content.txt
+ - specs/content/gicp-400/tasks.md
+ - static/img/figures/gicp-400/unit-02/fig-U2-5.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -73,24 +73,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, visually inspected, and placed the GICP-400 Unit 2 banner illustration (`fig-U2-5`) in the English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed the GICP-400 Unit 2 banner illustration (fig-U2-5) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate for GICP-400 Unit 2 by agy.
-- Tests: npm run check:content passed with all 14 gates clean.
+- Impact: illustrate for GICP-400 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the GICP-400 Unit 2 banner illustration (`fig-U2-5`) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify review stages.
+- Shipped / changed: Generated, inspected, and placed the GICP-400 Unit 2 banner illustration (fig-U2-5) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - English G3 remains escalated and unsigned; partial source verification, missing run provenance, and prohibited browser/A4 inspection remain open.
-  - Urdu translation remains draft; independent G5 review, browser/print inspection, and SVG text-geometry checks remain pending on a host permitted to run Chromium.
+  - English G3 remains escalated and unsigned pending source verification, run provenance, and browser/A4 inspection.
+  - Urdu translation remains draft; G4/G5 tracker rows remain open with handoff at specs/content/gicp-400/reviews/unit-02/G4/translation-handoff.md.
+  - Urdu SVG label geometry and rendered browser checks require execution on an environment permitted to run Chromium.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
