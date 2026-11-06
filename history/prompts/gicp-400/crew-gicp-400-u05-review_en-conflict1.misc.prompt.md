@@ -1,6 +1,6 @@
 ---
 id: crew-gicp-400-u05-review_en-conflict1
-title: crew merge GICP-400 unit 5 review branch
+title: crew fix GICP-400 unit 5
 stage: misc
 date: 2026-11-06
 surface: agent
@@ -8,15 +8,33 @@ model: opencode
 feature: gicp-400
 branch: crew/gicp-400-u05-review_en
 user: crew
-command: crew merge
-labels: ["crew", "opencode", "merge"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/gicp-400/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - history/prompts/general/20261136-review-gicp400-unit-five.general.prompt.md
  - history/prompts/gicp-400/crew-gicp-400-u05-review_en-conflict1.misc.prompt.md
+ - history/prompts/gicp-400/crew-gicp-400-u05-review_en.misc.prompt.md
+ - specs/content/gicp-400/reviews/unit-05/G3/01a1b1eb-32bb-7f02-87be-49f565e1880b.json
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/assessment-check.md
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-content-direct.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-content.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/commands.json
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/manifest.json
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/review-notes.md
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/source-check.md
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/static-inspection.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/validate-content.txt
+ - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/verify-manifest.txt
  - specs/content/gicp-400/tasks.md
 tests:
  - npm run check:content
@@ -49,35 +67,36 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
 ## Notes from earlier jobs on this unit
-- (gicp-400-u05-review_en, review_en, codex) Author should correct Figure 5.6's resource-condition alt text.
+- (gicp-400-u05-review_en, review_en, codex) Author should correct Figure 5.6’s resource-condition alt text.
 - (gicp-400-u05-review_en, review_en, codex) G3 remains escalated pending source/provenance checks, rendered review and a fresh blind assessment solve.
-- (gicp-400-u05-review_en, review_en, codex) Author should correct Figure 5.6's resource-condition alt text.
+- (gicp-400-u05-review_en, review_en, codex) Author should correct Figure 5.6’s resource-condition alt text.
 - (gicp-400-u05-author, author, claude) GPKS-402 Unit 4 (`topic-01`, `topic-02`, `unit-assessment`) still mentions Article 184(3), and the `glossary.json` entry "Judiciary" omits the Federal Constitutional Court; both are out of this job's scope, so check them against the Twenty-seventh Amendment, and make the same check on GICP-400 Unit 6.
 - (gicp-400-u05-author, author, claude) The G3 reviewer should check the legal paraphrases of Articles 175E, 175F, 199 and 233, and the owner should decide whether to update the content-spec's figure plan and `pak-constitution-1973` reading-list note.
 
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Merged origin/main and resolved the single conflict in `specs/content/gicp-400/tasks.md` by keeping main's Unit 2 rows first and this branch's Unit 5 G3 advisory row after them; no shared-registry or ID collisions were found, and the gitignored `static/content-status.json` was regenerated so all 14 content gates pass.
+Merged origin/main into `crew/gicp-400-u05-review_en`, resolving the sole conflict in `specs/content/gicp-400/tasks.md` by keeping main's Unit 2 rows then this branch's Unit 5 G3 advisory row, with no ID or shared-registry collisions, and left all 14 content gates passing.
 
 ## Outcome
 
-- Impact: merge fix for GICP-400 Unit 5 by opencode (attempt 2).
-- Tests: npm run check:content passed in the job worktree after regenerating content-status.json.
-- Files: 2 file(s), listed above.
+- Impact: fix for GICP-400 Unit 5 by opencode (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 20 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into `crew/gicp-400-u05-review_en`; the only conflict was the GICP-400 task tracker, resolved by preserving main's Unit 2 rows then this branch's Unit 5 G3 advisory row. No glossary, decision-log, gap or terminology entries were touched by either side.
-- Decisions the team must respect: the Unit 5 G3 row stays `▢` and advisory (`agent:codex-g3`); nothing was certified or signed. The `D-2026-0001/0072/0078` references in the review report are bindings to existing main decisions, not new IDs.
+- Shipped / changed: Merged origin/main into `crew/gicp-400-u05-review_en`, resolving the sole conflict in `specs/content/gicp-400/tasks.md` by keeping main's Unit 2 rows then this branch's Unit 5 G3 advisory row, with no ID or shared-registry collisions, and left all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `static/content-status.json` is gitignored and must be regenerated (`node scripts/report-content-status.mjs`) before `check:content` is meaningful in a fresh worktree.
-  - G3 remains escalated (Figure 5.6 alt-text repair, source/provenance checks, rendered review, fresh blind assessment solve).
+  - `static/content-status.json` is gitignored and must be regenerated before `check:content` in a fresh worktree.
+  - G3 stays `▢` advisory; Figure 5.6 alt-text repair, source/provenance checks, rendered review and a fresh blind assessment solve remain open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
