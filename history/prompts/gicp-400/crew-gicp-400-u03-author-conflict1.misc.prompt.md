@@ -2,7 +2,7 @@
 id: crew-gicp-400-u03-author-conflict1
 title: crew fix GICP-400 unit 3
 stage: misc
-date: 2026-11-07
+date: 2026-11-06
 surface: agent
 model: opencode
 feature: gicp-400
@@ -16,141 +16,39 @@ links:
   adr: null
   pr: null
 files:
- - docs/semester-3/gicp-400/unit-02/index.mdx
- - docs/semester-3/gicp-400/unit-02/topic-01.mdx
- - docs/semester-3/gicp-400/unit-02/topic-02.mdx
- - docs/semester-3/gicp-400/unit-02/unit-assessment.mdx
- - history/prompts/014-agent-review-governance/0009-gicp400-unit-two-english-review.misc.prompt.md
- - history/prompts/general/20261136-gicp-unit-four-advisory-review.general.prompt.md
- - history/prompts/general/20261136-review-gicp400-unit-five.general.prompt.md
- - history/prompts/general/20261137-gicp-400-unit-01-urdu-mirror.general.prompt.md
- - history/prompts/general/2457-author-gicp400-unit-two.general.prompt.md
- - history/prompts/general/2458-complete-gicp400-unit-two-g2.general.prompt.md
- - history/prompts/gicp-400/crew-gicp-400-u01-review_en.misc.prompt.md
- - history/prompts/gicp-400/crew-gicp-400-u01-translate.misc.prompt.md
- - history/prompts/gicp-400/crew-gicp-400-u02-author-conflict1.misc.prompt.md
- - history/prompts/gicp-400/crew-gicp-400-u02-author.green.prompt.md
- - history/prompts/gicp-400/crew-gicp-400-u02-review_en.misc.prompt.md
+ - docs/semester-3/gicp-400/unit-03/index.mdx
+ - docs/semester-3/gicp-400/unit-03/topic-01.mdx
+ - docs/semester-3/gicp-400/unit-03/topic-02.mdx
+ - docs/semester-3/gicp-400/unit-03/unit-assessment.mdx
+ - history/prompts/008-rich-unit-pedagogy/20261136-finish-gicp-400-unit-three.green.prompt.md
  - history/prompts/gicp-400/crew-gicp-400-u03-author-conflict1.misc.prompt.md
- - history/prompts/gicp-400/crew-gicp-400-u04-review_en.misc.prompt.md
- - history/prompts/gicp-400/crew-gicp-400-u05-review_en-conflict1.misc.prompt.md
- - history/prompts/gicp-400/crew-gicp-400-u05-review_en.misc.prompt.md
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-01/index.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-01/topic-01.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-01/topic-02.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-01/unit-assessment.mdx
- - specs/content/gicp-400/concepts/unit-02.md
- - specs/content/gicp-400/coverage/unit-02.md
- - specs/content/gicp-400/figures/unit-02.banner.md
- - specs/content/gicp-400/figures/unit-02.md
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/assessment-independent.md
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/crew-gicp-400-u01-review_en.json
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/findings.md
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/input-verification.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/check-content.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/check_bloom-bands.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/check_concept-graph.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/check_depth-gate.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/check_docs-sync.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/check_figures.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/check_no-answer-keys.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/check_no-em-dash.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/logs/validate_content.txt
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/manifest.json
- - specs/content/gicp-400/reviews/unit-01/G3/crew-gicp-400-u01-review_en/render-review.txt
- - specs/content/gicp-400/reviews/unit-01/G4/translation-handoff.md
- - specs/content/gicp-400/reviews/unit-02/G2/20261106T152644075Z-gates.json
- - specs/content/gicp-400/reviews/unit-02/G2/20261106T172059990Z-gates.json
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-bloom-bands.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-concept-graph.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-depth-gate.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-docs-sync.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-figures.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-no-answer-keys.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/check-no-em-dash.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T152644075Z/validate-content.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-bloom-bands.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-concept-graph.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-depth-gate.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-docs-sync.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-figures.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-no-answer-keys.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/check-no-em-dash.txt
- - specs/content/gicp-400/reviews/unit-02/G2/logs-20261106T172059990Z/validate-content.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106.json
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/bundle/manifest.json
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/assessment.md
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-content-before-cache-refresh.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-content-final.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-content.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-depth-gate.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-docs-sync.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-figures.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-no-answer-keys.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-no-em-dash.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/commands.json
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/input-verification.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/render-limitation.md
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/sources.md
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/validate-content.txt
- - specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/summary.md
- - specs/content/gicp-400/reviews/unit-02/authoring-handoff.md
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106.json
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/bundle/manifest.json
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/check-content-final.txt
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/check-content.txt
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/check-depth-gate.txt
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/check-docs-sync.txt
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/check-figures.txt
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/check-no-answer-keys.txt
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/check-no-em-dash.txt
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/command-records.json
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/summary.md
- - specs/content/gicp-400/reviews/unit-04/G3/codex-20261106/validate-content.txt
- - specs/content/gicp-400/reviews/unit-05/G3/01a1b1eb-32bb-7f02-87be-49f565e1880b.json
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/assessment-check.md
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-content-direct.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-content.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-depth-gate.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-docs-sync.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-figures.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-no-answer-keys.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/check-no-em-dash.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/commands.json
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/manifest.json
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/review-notes.md
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/source-check.md
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/static-inspection.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/validate-content.txt
- - specs/content/gicp-400/reviews/unit-05/G3/crew-review-20261106/verify-manifest.txt
- - specs/content/gicp-400/sources/texts/akhter-2023-iqbal.md
- - specs/content/gicp-400/sources/texts/amu-english-history.md
- - specs/content/gicp-400/sources/texts/assembly-history.md
- - specs/content/gicp-400/sources/texts/hayat-2022-jinnah.md
- - specs/content/gicp-400/sources/texts/independence-act-1947.md
- - specs/content/gicp-400/sources/texts/iqbal-1930-allahabad.md
- - specs/content/gicp-400/sources/texts/javid-iqbal-2012-lahore.md
- - specs/content/gicp-400/sources/texts/kamran-2009-franchise.md
- - specs/content/gicp-400/sources/texts/khan-khan-2020-aligarh.md
- - specs/content/gicp-400/sources/texts/national-archives-independence.md
- - specs/content/gicp-400/sources/unit-02.md
+ - history/prompts/gicp-400/crew-gicp-400-u03-author.green.prompt.md
+ - specs/content/gicp-400/authoring/unit-03.md
+ - specs/content/gicp-400/concepts/unit-03.md
+ - specs/content/gicp-400/coverage/unit-03.md
+ - specs/content/gicp-400/figures/unit-03.banner.md
+ - specs/content/gicp-400/figures/unit-03.md
+ - specs/content/gicp-400/reviews/unit-03/G2/20261106T184345301Z-gates.json
+ - specs/content/gicp-400/reviews/unit-03/G2/logs-20261106T184345301Z/check-bloom-bands.txt
+ - specs/content/gicp-400/reviews/unit-03/G2/logs-20261106T184345301Z/check-concept-graph.txt
+ - specs/content/gicp-400/reviews/unit-03/G2/logs-20261106T184345301Z/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-03/G2/logs-20261106T184345301Z/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-03/G2/logs-20261106T184345301Z/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-03/G2/logs-20261106T184345301Z/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-03/G2/logs-20261106T184345301Z/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-03/G2/logs-20261106T184345301Z/validate-content.txt
+ - specs/content/gicp-400/sources/texts/goi-act-1935.md
+ - specs/content/gicp-400/sources/texts/shah-2026-objectives-resolution.md
+ - specs/content/gicp-400/sources/unit-03.md
  - specs/content/gicp-400/tasks.md
- - static/img/figures/gicp-400/unit-01/fig-U1-1.ur.dark.svg
- - static/img/figures/gicp-400/unit-01/fig-U1-1.ur.svg
- - static/img/figures/gicp-400/unit-01/fig-U1-2.ur.dark.svg
- - static/img/figures/gicp-400/unit-01/fig-U1-2.ur.svg
- - static/img/figures/gicp-400/unit-01/fig-U1-3.ur.dark.svg
- - static/img/figures/gicp-400/unit-01/fig-U1-3.ur.svg
- - static/img/figures/gicp-400/unit-01/fig-U1-4.ur.dark.svg
- - static/img/figures/gicp-400/unit-01/fig-U1-4.ur.svg
- - static/img/figures/gicp-400/unit-02/fig-U2-1.dark.svg
- - static/img/figures/gicp-400/unit-02/fig-U2-1.svg
- - static/img/figures/gicp-400/unit-02/fig-U2-2.dark.svg
- - static/img/figures/gicp-400/unit-02/fig-U2-2.svg
- - static/img/figures/gicp-400/unit-02/fig-U2-3.dark.svg
- - static/img/figures/gicp-400/unit-02/fig-U2-3.svg
- - static/img/figures/gicp-400/unit-02/fig-U2-4.dark.svg
- - static/img/figures/gicp-400/unit-02/fig-U2-4.svg
+ - static/img/figures/gicp-400/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/gicp-400/unit-03/fig-U3-1.svg
+ - static/img/figures/gicp-400/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/gicp-400/unit-03/fig-U3-2.svg
+ - static/img/figures/gicp-400/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/gicp-400/unit-03/fig-U3-3.svg
+ - static/img/figures/gicp-400/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/gicp-400/unit-03/fig-U3-4.svg
 tests:
  - npm run check:content
 ---
@@ -185,31 +83,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gicp-400-u03-author, author, codex) Independent review, Urdu translation, browser geometry validation and banner production remain pending.
 - (gicp-400-u03-author, author, codex) Independent review, Urdu translation, browser geometry validation and banner production remain pending.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gicp-400-u03-author, keeping main's Unit 4 G3 advisory tracker row ahead of this branch's Unit 3 section in specs/content/gicp-400/tasks.md, then refreshed static/content-status.json so all 14 content gates pass.
+Merged origin/main, resolved the tasks.md conflict preserving both sides' entries, refreshed content-status, and committed the merge and PHR with all content gates passing.
 
 ## Outcome
 
-- Impact: fix for GICP-400 Unit 3 by opencode (attempt 2).
+- Impact: fix for GICP-400 Unit 3 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 135 file(s), listed above.
+- Files: 33 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gicp-400-u03-author, keeping main's Unit 4 G3 advisory tracker row ahead of this branch's Unit 3 section in specs/content/gicp-400/tasks.md, then refreshed static/content-status.json so all 14 content gates pass.
+- Shipped / changed: Merged origin/main, resolved the tasks.md conflict preserving both sides' entries, refreshed content-status, and committed the merge and PHR with all content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Independent review, Urdu translation, browser geometry validation and banner production remain pending.
-  - The merge brought in main's Unit 1/2/4/5 content and review evidence; only the tasks.md conflict was resolved by this job.
+  - Independent review, Urdu translation, browser geometry validation and banner production remain pending for Unit 3.
+  - The merge brought in main's Unit 1/2/4/5 content and review evidence; only the tasks.md conflict was resolved here.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 1 earlier attempt(s); see the board history
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
