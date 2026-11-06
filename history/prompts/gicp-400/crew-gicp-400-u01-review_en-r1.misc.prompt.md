@@ -1,8 +1,8 @@
 ---
 id: crew-gicp-400-u01-review_en-r1
-title: crew review_en-r1 GICP-400 unit 1
+title: crew review_en GICP-400 unit 1
 stage: misc
-date: 2026-11-07
+date: 2026-11-06
 surface: agent
 model: agy
 feature: gicp-400
@@ -69,30 +69,30 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Executed independent G3 English review of GICP-400 Unit 1 with Antigravity (agy). Produced validated advisory escalation report, prepared manifest, independent assessment solutions, source audit table, deterministic gate check logs, review summary, and advisory tracker row.
+Recorded independent G3 English advisory escalation review, evidence bundle, and unchecked tracker row for GICP-400 Unit 1.
 
 ## Outcome
 
-- Impact: review_en for GICP-400 Unit 1 by agy (attempt r1).
-- Tests: npm run check:content passed in the worktree.
+- Impact: review_en for GICP-400 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced the independent G3 English advisory review report (disposition: escalate), evidence bundle, independent assessment solving record, source audit table, gate check logs, and advisory tracker row for GICP-400 Unit 1.
-- Decisions the team must respect: G3 remains open and advisory; no certification or G3 gate completion is claimed.
-- Pending / next owner: crew lead / host coordinator for browser visual inspection and full-text source clearance.
+- Shipped / changed: Recorded independent G3 English advisory escalation review, evidence bundle, and unchecked tracker row for GICP-400 Unit 1.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open with disposition escalate: authority, coverage, assessment, readability, and pedagogy pass cleanly; sources and accessibility remain unverified.
-  - Accessibility requires dynamic browser inspection (360px viewport, table scrolling, A4 print) on a host permitted to run Chromium / Playwright.
-  - Secondary historical context attributions in Topic 1.2 to Hassan (2020) require either repo binding of the full article text or an authorized unavailable-source declaration under ## Unverifiable sources.
+  - G3 remains open and advisory under escalate disposition: sources and accessibility are unverified due to unbound Hassan full text and execution prohibitions on build/browser tooling.
+  - Live browser rendering (360px viewport, table scrolling, A4 print) and SVG text-geometry checks must be executed on a host permitted to run Chromium.
+  - Secondary attributions to Hassan (2020) in Topic 1.2 require repo binding of full article text or an authorized unavailable-source declaration in sources/unit-01.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (all 14 content gates)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
