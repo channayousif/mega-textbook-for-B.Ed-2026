@@ -4,9 +4,9 @@ Guide Chapter 5 (`D-2026-0070`: one unit per guide chapter).
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
-| U5-01 | topic-01.mdx | ## Explanation > ### The mode: the most frequent value | lane2023 |
+| U5-01 | topic-01.mdx | ## Explanation > ### The mode: the most frequent value | lane-u05-2026 |
 | U5-02 | topic-02.mdx | ## Explanation > ### Comparing mean, median and mode | openstax-stats |
-| U5-03 | topic-03.mdx | ## Explanation > ### Applying the three measures to school decisions | lane2023 |
+| U5-03 | topic-03.mdx | ## Explanation > ### Applying the three measures to school decisions | lane-u05-2026 |
 
 ## Reinforcement
 
