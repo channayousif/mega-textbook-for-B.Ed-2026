@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-301-u07-repair_en-r1-conflict1
-title: crew fix GQUR-301 unit 7 repair_en-r1 conflict1
+title: crew fix GQUR-301 unit 7
 stage: misc
 date: 2026-11-06
 surface: agent
@@ -71,9 +71,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u07-review_en-r1, review_en, codex) Owner must resolve ERQ 4 projection assumptions, G1/provenance, rendered evidence and answer-blind verification; further cycles require recorded authorization.
 - (gqur-301-u07-translate-r1, translate, codex) Translation remains draft; independent G3/G5 review and authorized rendered Urdu inspection remain pending.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gqur-301-u07-repair_en-r1, resolved the append-only tasks.md conflict keeping main's Unit 5 row then this branch's Unit 7 rows, regenerated content-status.json, and passed all 14 content gates.
+Merged origin/main into crew/gqur-301-u07-repair_en-r1, resolved the append-only tasks.md conflict keeping both sides' rows, regenerated content-status.json, and passed all content gates.
 
 ## Outcome
 
@@ -85,13 +86,12 @@ Merged origin/main into crew/gqur-301-u07-repair_en-r1, resolved the append-only
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gqur-301-u07-repair_en-r1, resolved the append-only tasks.md conflict keeping main's Unit 5 row then this branch's Unit 7 rows, regenerated content-status.json, and passed all 14 content gates.
+- Shipped / changed: Merged origin/main into crew/gqur-301-u07-repair_en-r1, resolved the append-only tasks.md conflict keeping both sides' rows, regenerated content-status.json, and passed all content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The only conflict was specs/content/gqur-301/tasks.md; shared registries were untouched by this branch, so no ID renumbering was needed.
   - Unit 7 P1-P4 (author-run provenance, open G1, rendered inspection, answer-blind verification) and immutable source captures remain open for the evaluator/review host; G3 stays open (ADR-0019).
-  - ERQ 4's constant-intake assumption is an author choice for owner adjudication; the final review cycle is exhausted, so a further review needs recorded owner authorization in `specs/decisions/log.md`.
+  - ERQ 4's constant-intake assumption is an author choice for owner adjudication; the final review cycle is exhausted, so further review needs recorded owner authorization in specs/decisions/log.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
