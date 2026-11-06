@@ -19,7 +19,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 4 | G4 ur-translation | ▢ | | Draft mirror delivered: five MDX files and six Urdu light/dark SVG pairs; handoff at specs/content/gicp-400/translations/unit-04/handoff.md. Stage remains open per translate-unit Step 7; independent G5 pending. |
 | Unit 4 | G5 ur-review | ▢ | | Independent Urdu review pending |
 | Unit 4 | G6 assets | ▢ | | Six EN schematic SVGs placed with dark variants; banner remains prompt-only. Browser geometry check not run under the crew brief's browser prohibition |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-02/G2/20261106T172059990Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-02/G2/20261106T230323831Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | agent:codex-g3 | Advisory escalation only: specs/content/gicp-400/reviews/unit-02/G3/codex-20261106.json; partial source verification, missing run provenance and prohibited browser/A4 inspection. All 25 assessment items checked; G3 remains open and unsigned. |
 | Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 2 | G5 ur-review | ▢ | | Separate independent review after translation |
