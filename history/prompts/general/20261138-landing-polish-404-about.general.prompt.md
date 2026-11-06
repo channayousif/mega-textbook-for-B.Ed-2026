@@ -1,5 +1,5 @@
 ---
-id: 20261131
+id: 20261138
 title: Polish before the redesign, 404 and About wording
 stage: general
 date: 2026-11-07
@@ -14,7 +14,7 @@ links:
   spec: null
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/464
 files:
   - src/theme/NotFound/Content/index.tsx
   - src/theme/NotFound/Content/styles.module.css
