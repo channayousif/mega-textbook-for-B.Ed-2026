@@ -57,12 +57,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Authored the English unit, assessment and governance records; placed six English schematics with dark twins. Freezing inputs before deterministic G2 evidence and final content gate verification.
+Authored the English unit, assessment and governance records; placed six English schematics with dark twins. Committed content at 7e166617c. G2 evidence preparation then exposed a missing course-level overview outside the brief scope. Requested authorisation and prepared a compiled scratch candidate; no response received before handoff.
 
 ## Outcome
 
 - ✅ Impact: Eight guide sub-topics covered across three complete learning cycles with a 10/10/5 assessment bank.
-- 🧪 Tests: Baseline and focused checks passed. Final suite awaits G2 evidence; initial findings were read and addressed.
+- 🧪 Tests: Baseline and focused checks passed. Full suite run: content checks pass except the G2 pipeline prerequisite and a stale generated status report after tracker edits. Regenerate status after the final commit. Deterministic G2 evidence remains blocked by the missing course overview.
 - 📁 Files: Five MDX pages, coverage, sources and bound notes, concepts, authoring design, figure manifests, twelve SVGs and unit tracker.
 - 🔁 Next prompts: Independent G3, Urdu translation and G5; banner raster production.
 - 🧠 Reflection: Author-unit references lag the gate authority on rendered figures and bound source notes; followed the actual gates without changing policy.
@@ -71,12 +71,12 @@ Authored the English unit, assessment and governance records; placed six English
 
 - Shipped / changed: English draft, 25 public practice items with bounded response guidance, six placed schematics and reproducible source notes.
 - Decisions the team must respect: No G3/G5 certification; historical constitutional snapshot is the downloaded official 2024 Ministry edition because the mapped 2012 link timed out.
-- Pending / next owner: Codex completes deterministic G2 evidence and final suite below; independent reviewers own G3/G5, translator owns Urdu, raster job owns the banner. Browser geometry check is pending a session permitted to use Playwright.
+- Pending / next owner: Owner must authorise adding the missing course-level overview; the next authorised worker then records G2 evidence and reruns the final suite. Independent reviewers own G3/G5, translator owns Urdu, raster job owns the banner. Browser geometry check is pending a session permitted to use Playwright.
 - Paperclip issues affected: No issue number supplied; crew job gicp-400-u04-author.
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Initial source-note, rendered-figure and pipeline findings; generated status report was stale. No baseline findings existed.
-- Graders run and results (PASS/FAIL): Focused checks PASS; final content suite pending G2 record.
+- Failure modes observed: Initial source-note, rendered-figure and pipeline findings; generated status report was stale. Source/figure findings repaired. G2 preparation fails on missing course-overview.mdx, which the Unit 4 scope does not authorise adding. No baseline findings existed.
+- Graders run and results (PASS/FAIL): Focused checks PASS. Full suite: 12/14 PASS before final tracker commit; pipeline blocked on G2, generated status requires regeneration after that commit. No gate certification fabricated.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Run the browser geometry script when a later brief permits Playwright, without changing reviewed meaning.
