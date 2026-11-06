@@ -2,7 +2,7 @@
 id: crew-gicp-400-u07-author-conflict1
 title: crew fix GICP-400 unit 7
 stage: misc
-date: 2026-11-07
+date: 2026-11-06
 surface: agent
 model: opencode
 feature: gicp-400
@@ -16,8 +16,34 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-3/gicp-400/unit-07/index.mdx
+ - docs/semester-3/gicp-400/unit-07/topic-01.mdx
+ - docs/semester-3/gicp-400/unit-07/unit-assessment.mdx
+ - history/prompts/general/20261137-gicp400-unit-seven-author.general.prompt.md
  - history/prompts/gicp-400/crew-gicp-400-u07-author-conflict1.misc.prompt.md
+ - history/prompts/gicp-400/crew-gicp-400-u07-author.green.prompt.md
+ - specs/content/gicp-400/concepts/unit-07.md
+ - specs/content/gicp-400/coverage/unit-07.md
+ - specs/content/gicp-400/figures/unit-07.md
+ - specs/content/gicp-400/reviews/unit-07/G2/20261106T190031290Z-gates.json
+ - specs/content/gicp-400/reviews/unit-07/G2/logs-20261106T190031290Z/check-bloom-bands.txt
+ - specs/content/gicp-400/reviews/unit-07/G2/logs-20261106T190031290Z/check-concept-graph.txt
+ - specs/content/gicp-400/reviews/unit-07/G2/logs-20261106T190031290Z/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-07/G2/logs-20261106T190031290Z/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-07/G2/logs-20261106T190031290Z/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-07/G2/logs-20261106T190031290Z/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-07/G2/logs-20261106T190031290Z/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-07/G2/logs-20261106T190031290Z/validate-content.txt
+ - specs/content/gicp-400/sources/texts/dean-2005-citizenship.md
+ - specs/content/gicp-400/sources/texts/kennedy-2012-civic.md
+ - specs/content/gicp-400/sources/unit-07.md
  - specs/content/gicp-400/tasks.md
+ - static/img/figures/gicp-400/unit-07/fig-U7-1.dark.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-1.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-2.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-3.dark.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-3.svg
 tests:
  - npm run check:content
 ---
@@ -53,26 +79,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gicp-400-u07-author, author, opencode) `dean-2005-citizenship` is shared with GPKS-402 Unit 6; the GICP-400 bound excerpt is an original paraphrase of the verified abstract, so a reviewer should check the original passages.
 - (gicp-400-u07-author, author, opencode) The branch is based on PR #461 (`f4bf69fd3`); origin/main has since advanced to PR #462 (`fa7d7fa89`), so the crew lead should expect a merge and a possible `tasks.md` conflict.
 
+
 ## Response snapshot
 
-Merged origin/main, resolved the tasks.md conflict preserving both sides' entries, refreshed content-status, and committed the merge and PHR with all content gates passing.
+Merged origin/main into crew/gicp-400-u07-author, resolved the tasks.md conflict preserving both sides' entries, regenerated content-status, and committed the merge and PHR with all content gates passing.
 
 ## Outcome
 
 - Impact: fix for GICP-400 Unit 7 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
-- Files: 2 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main, resolved the tasks.md conflict preserving both sides' entries, refreshed content-status, and committed the merge and PHR with all content gates passing.
+- Shipped / changed: Merged origin/main into crew/gicp-400-u07-author, resolved the tasks.md conflict preserving both sides' entries, regenerated content-status, and committed the merge and PHR with all content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Independent review, Urdu translation, browser geometry validation and banner production remain pending for Unit 7.
-  - The merge brought in main's Unit 1/2/3/4/5 content and review evidence; only the tasks.md conflict was resolved here.
+  - tasks.md now has two Unit 5 G3 en-review rows (main's codex advisory escalation plus the older placeholder); both were kept on purpose under the append-only rule, not a duplication bug.
+  - `static/content-status.json` is gitignored and was regenerated locally; fresh checkouts and CI regenerate it via the prestart hook.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
