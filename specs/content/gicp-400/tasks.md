@@ -32,7 +32,7 @@ Unit 4 figure handoff: Urdu figure localisation belongs to the translation job. 
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 3 | G2 en-draft | ▣ | | English draft authored; deterministic evidence being prepared |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-03/G2/20261106T184345301Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Independent qualified review pending; source-access limits recorded in sources/unit-03.md |
 | Unit 3 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 3 | G5 ur-review | ▢ | | Independent Urdu review pending; authored concept labels need checking |

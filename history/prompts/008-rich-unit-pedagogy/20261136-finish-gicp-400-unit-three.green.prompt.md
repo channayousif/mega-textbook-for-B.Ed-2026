@@ -81,7 +81,7 @@ Continued the inherited English draft, corrected unsupported quotations and hist
 ## Outcome
 
 - ✅ Impact: Unit 3 English draft and downstream handoffs prepared.
-- 🧪 Tests: Content gates and generated G2 evidence are recorded with the work; no build, dev server or browser run.
+- 🧪 Tests: All 14 content gates passed on the final draft and on origin/main after generating the ignored content-status report. All eight G2 evidence commands passed. Figure variant freshness, SVG optimisation, font-metric bounds and non-browser light/dark previews passed. No build, dev server or browser run.
 - 📁 Files: Four MDX pages, unit governance, authoring notes, source notes, tracker and draft evidence.
 - 🔁 Next prompts: Independent G3 review, Urdu translation and schematic/banner production.
 - 🧠 Reflection: A structurally passing inherited draft still required historical and assessment corrections.
@@ -96,6 +96,6 @@ Continued the inherited English draft, corrected unsupported quotations and hist
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Earlier timeout left uncommitted content; unsupported quotations, a court-case conflation and uninspected SVGs required correction.
-- Graders run and results (PASS/FAIL): See committed G2 evidence and final content-gate result.
+- Graders run and results (PASS/FAIL): PASS all 14 content gates; PASS all eight recorded G2 commands; PASS figure variant freshness and SVG style. Canonical Chromium geometry validation remains unrun under the brief prohibition.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Have independent review verify source accessibility and exact statutory claims.
