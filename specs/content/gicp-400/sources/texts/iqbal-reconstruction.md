@@ -1,21 +1,19 @@
-# Bound source note - iqbal-reconstruction
-
-Iqbal, M. (1930/1934). The principle of movement in the structure of Islam. The Reconstruction of Religious Thought in Islam, Lecture VI.
+# Bound source evidence: iqbal-reconstruction
 
 Source: https://allamaiqbal.com/works/prose/english/reconstruction/06.htm
 
 Consulted: 2026-11-06.
 
-## Locator and access
+Locator: Lecture VI, The Principle of Movement in the Structure of Islam. Paragraphs on Tawhid, the Turkish republic, and legislative ijtihad.
 
-Electronic Lecture VI, especially paragraphs beginning with the essence of Tawhid and the concluding discussion of reconstruction.
+## Evidence notes (original paraphrase)
 
-## Support in original paraphrase
+Iqbal links Tawhid with equality, solidarity and freedom. He describes the state as an effort to realise these ideals in social organisation. He rejects a ruler claiming divine representation and infallibility, while allowing a special ethical sense of theocracy. He treats republican government as consistent with Islam and discusses transferring interpretive authority to a Muslim legislative assembly. This supports teaching his account, not claiming that all Muslim thinkers share one model.
 
-Iqbal relates Islamic ethical principles to the aims of organised social life and discusses renewed legal reasoning. This supports the unit's treatment of moral purposes and institutions. The teaching analogies are the author's, not historical quotations or methods prescribed by Iqbal.
+These notes identify the checked passages and their support limits. They are not verbatim extracts or a substitute for independent source review.
 
-Short checkable excerpt: "The essence of Tawhid, as a working idea, is equality, solidarity, and freedom."
+## Short passage anchor
 
-## Limits
+> equality, solidarity, and freedom
 
-This chapter is not a constitution or a boundary document. Its metaphysical arguments are not reduced to claims about later state practice.
+From the cited source and locator above.

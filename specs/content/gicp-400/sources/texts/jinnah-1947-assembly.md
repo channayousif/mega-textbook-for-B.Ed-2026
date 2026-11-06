@@ -1,21 +1,19 @@
-# Bound source note - jinnah-1947-assembly
+# Bound source evidence: jinnah-1947-assembly
 
-Jinnah, M. A. (1947, August 11). Address to the first Constituent Assembly of Pakistan.
-
-Source: https://na.gov.pk/en/content.php?id=74
+Source: https://franpritchett.com/00islamlinks/txt_jinnah_assembly_1947.html
 
 Consulted: 2026-11-06.
 
-## Locator and access
+Locator: Concluding paragraphs on religious freedom and equal citizenship; Allana edition, 1969, pp. 407-411.
 
-National Assembly transcript, opening on the Assembly's functions and later discussion of equal citizenship and religious identity.
+## Evidence notes (original paraphrase)
 
-## Support in original paraphrase
+Jinnah addresses the new Constituent Assembly and sets out protection of religious belief as a government duty. He connects freedom of worship with equal membership of the State regardless of faith. The unit uses this founding statement as evidence of an ideal, while distinguishing its political force from the later Constitution's binding provisions.
 
-Jinnah identifies constitution-making and legislative work as Assembly responsibilities. He also stresses public order, corruption and equal civic treatment regardless of religion. Topic 2.1 uses the speech to establish expressed governing principles; it does not claim that a speech proves their complete later implementation.
+These notes identify the checked passages and their support limits. They are not verbatim extracts or a substitute for independent source review.
 
-Short checkable excerpt: "equal citizens of one State"
+## Short passage anchor
 
-## Limits
+> we are all citizens, and equal citizens, of one State
 
-Official transcript access was intermittent. The published debate is also at https://www.na.gov.pk/uploads/documents/1434523779_849.pdf. A civic principle and a movement's claim to nationhood answer distinguishable questions.
+From the cited source and locator above.
