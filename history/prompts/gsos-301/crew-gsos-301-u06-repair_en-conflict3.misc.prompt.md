@@ -16,10 +16,31 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/gsos-301/tasks.md
-  - history/prompts/gsos-301/crew-gsos-301-u06-repair_en-conflict3.misc.prompt.md
+ - docs/semester-2/gsos-301/unit-06/topic-01.mdx
+ - docs/semester-2/gsos-301/unit-06/topic-02.mdx
+ - history/prompts/general/20261131-repair-gsos-unit-six-findings.general.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u06-repair_en-conflict1.misc.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u06-repair_en-conflict2.misc.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u06-repair_en-conflict3.misc.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u06-repair_en.misc.prompt.md
+ - specs/content/gsos-301/concepts/unit-06.md
+ - specs/content/gsos-301/coverage/unit-06.md
+ - specs/content/gsos-301/reviews/unit-06/G2/20261105T181031722Z-gates.json
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261105T181031722Z/check-bloom-bands.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261105T181031722Z/check-concept-graph.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261105T181031722Z/check-depth-gate.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261105T181031722Z/check-docs-sync.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261105T181031722Z/check-figures.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261105T181031722Z/check-no-answer-keys.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261105T181031722Z/check-no-em-dash.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261105T181031722Z/validate-content.txt
+ - specs/content/gsos-301/reviews/unit-06/repair-20261105.md
+ - specs/content/gsos-301/reviews/unit-06/repair-checks-20261105/content-final.log
+ - specs/content/gsos-301/reviews/unit-06/repair-checks-20261105/content-origin-main.log
+ - specs/content/gsos-301/sources/unit-06.md
+ - specs/content/gsos-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -55,23 +76,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gsos-301-u06-repair_en, repair_en, codex) G3 remains unticked; permitted browser/print inspection and fresh independent review are pending.
 - (gsos-301-u06-translate-r1, translate, codex) English author must repair the citation, Sialkot typo and assessment mappings before G4 resumes.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gsos-301-u06-repair_en and resolved the single conflict in specs/content/gsos-301/tasks.md.
+Merged origin/main into crew/gsos-301-u06-repair_en, resolved the tasks.md conflict append-only (main's Unit 4 row before this branch's Unit 6 row), regenerated content-status.json, and committed the merge plus PHR with check:content green.
 
 ## Outcome
 
-- Impact: merge conflict resolution for GSOS-301 Unit 6 by opencode (attempt 1).
-- Tests: npm run check:content passed after regenerating the gitignored static/content-status.json.
-- Files: 2 file(s), listed above.
+- Impact: fix for GSOS-301 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 23 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of origin/main; tasks.md keeps main's Unit 4 G3 repair row before this branch's Unit 6 G3 repair row.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into crew/gsos-301-u06-repair_en, resolved the tasks.md conflict append-only (main's Unit 4 row before this branch's Unit 6 row), regenerated content-status.json, and committed the merge plus PHR with check:content green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G3 for Unit 6 stays unticked/advisory; G4 remains blocked until a fresh independent G3 confirms the repairs.
+  - Browser/print render inspection is still unperformed under the brief's no-build/no-server/no-Playwright rule.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
