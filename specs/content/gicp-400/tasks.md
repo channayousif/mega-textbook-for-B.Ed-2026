@@ -19,6 +19,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 4 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored |
 | Unit 4 | G5 ur-review | ▢ | | Independent Urdu review pending |
 | Unit 4 | G6 assets | ▢ | | Six EN schematic SVGs placed with dark variants; banner remains prompt-only. Browser geometry check not run under the crew brief's browser prohibition |
+| Unit 5 | G3 en-review | ▢ | agent:codex-g3 | Advisory escalation; specs/content/gicp-400/reviews/unit-05/G3/01a1b1eb-32bb-7f02-87be-49f565e1880b.json; source/alt repair and incomplete render, provenance and blind-solve evidence; not certified |
 
 Reading estimates use final visible text at 180 words per minute: index 3, Topic 1.1 15, Topic 1.2 17, assessment 17, total 52 minutes within the approved 40-55 band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with public self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies no teaching strategies or practical-work block, so no teacher-notes page was invented.
 
