@@ -2,7 +2,7 @@
 id: crew-gicp-400-u03-review_en
 title: crew review_en GICP-400 unit 3
 stage: misc
-date: 2026-11-07
+date: 2026-11-06
 surface: agent
 model: agy
 feature: gicp-400
@@ -66,6 +66,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
 Recorded independent G3 English advisory escalation review, evidence bundle, and unchecked tracker row for GICP-400 Unit 3.
@@ -73,7 +74,7 @@ Recorded independent G3 English advisory escalation review, evidence bundle, and
 ## Outcome
 
 - Impact: review_en for GICP-400 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
@@ -84,9 +85,9 @@ Recorded independent G3 English advisory escalation review, evidence bundle, and
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open and advisory under escalate disposition: sources and accessibility are unverified due to secondary source access limits and execution prohibitions on build/browser tooling.
-  - Live browser rendering (360px viewport, table scrolling, A4 print) and SVG text-geometry checks must be executed on a host permitted to run Chromium.
-  - Print monograph Khan (2017), Newberg (1995), and Senate fundamental rights history remain declared unverifiable under D-2026-0001; journal articles Abbas (2023) and Shah (2026) full texts should be bound in the repository or declared under unverifiable sources.
+  - G3 remains open and advisory under escalate disposition due to unbound secondary source texts and execution prohibitions on browser/print inspection tooling.
+  - Live browser rendering (360px viewport, table scrolling, A4 print) and SVG text-geometry validation must be executed on a host permitted to run Chromium.
+  - Journal articles Abbas (2023) and Shah (2026) full texts should be bound in the repository or declared under unverifiable sources.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
