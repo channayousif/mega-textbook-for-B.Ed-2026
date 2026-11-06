@@ -14,7 +14,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 5 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 5 | G6 assets | ▢ | | Six EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Chromium geometry check not run under the crew brief's browser prohibition |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-04/G2/20261106T162054269Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-04/G2/20261106T191728706Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Independent qualified review pending; author has not certified this content |
 | Unit 4 | G4 ur-translation | ▢ | | Draft mirror delivered: five MDX files and six Urdu light/dark SVG pairs; handoff at specs/content/gicp-400/translations/unit-04/handoff.md. Stage remains open per translate-unit Step 7; independent G5 pending. |
 | Unit 4 | G5 ur-review | ▢ | | Independent Urdu review pending |

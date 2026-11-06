@@ -1,0 +1,39 @@
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 14 content gates
+
+  validate:content        PASS  1.3s
+  check:pipeline-gate     FAIL  26.8s
+  check:depth-gate        PASS  0.9s
+  check:figures           PASS  1.4s
+  check:svg-style         PASS  0.6s
+  check:no-em-dash        PASS  0.7s
+  check:no-answer-keys    PASS  0.9s
+  check:concept-graph     PASS  0.9s
+  check:bloom-bands       PASS  0.4s
+  check:source-floor      PASS  0.3s
+  check:licence           PASS  0.4s
+  licence:map:check       PASS  0.3s
+  check:content-status    FAIL  0.7s
+  check:docs-sync         PASS  0.3s
+
+============================================================
+check:pipeline-gate
+============================================================
+
+✗ Pipeline gate failed with 2 finding(s):
+
+  - GICP-400 Unit 4 (docs/semester-3/gicp-400/unit-04): 'G4 ur-translation' row for Unit 4 is not done (status: '▢')
+  - GICP-400 Unit 4 (docs/semester-3/gicp-400/unit-04): 'G5 ur-review' row for Unit 4 is not done (status: '▢')
+
+
+============================================================
+check:content-status
+============================================================
+✗ static/content-status.json is stale - it no longer describes the working tree.
+  Every publication banner is derived from this file, so a stale report
+  publishes units under the wrong tier. Run: npm run build:content-status
+
+2 of 14 content gates failed: check:pipeline-gate, check:content-status.
