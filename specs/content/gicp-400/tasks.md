@@ -9,7 +9,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 1 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 1 | G6 assets | ▢ | | Four inherited EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry and visual inspection pending under the crew brief's browser prohibition |
-| Unit 4 | G2 en-draft | ▣ | | English authored; deterministic evidence pending final checks |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-04/G2/20261106T162054269Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Independent qualified review pending; author has not certified this content |
 | Unit 4 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored |
 | Unit 4 | G5 ur-review | ▢ | | Independent Urdu review pending |
