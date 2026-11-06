@@ -56,7 +56,7 @@ Unit 4 figure handoff: Urdu figure localisation belongs to the translation job. 
 |---|---|---|---|---|
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-03/G2/20261106T184345301Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Advisory escalation by agent:agy; report at specs/content/gicp-400/reviews/unit-03/G3/f6947550-7510-4662-98d5-9c955da536bd.json; 5 criteria pass, sources and accessibility unverified; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; secondary source access, author run provenance and browser/print evidence unavailable; G3 remains open and unsigned |
-| Unit 3 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 3 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localised schematic SVGs with dark twins; translator handoff: specs/content/gicp-400/reviews/unit-03/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 3 | G5 ur-review | ▢ | | Independent Urdu review pending; authored concept labels need checking |
 | Unit 3 | G6 assets | ▢ | | Four EN schematics placed with dark twins; font-metric and non-browser preview checks passed. Chromium geometry validation pending under crew browser prohibition; banner prompt-only |
 
