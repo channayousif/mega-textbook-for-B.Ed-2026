@@ -23,3 +23,12 @@ The brief prohibits build, server and Playwright execution. Browser-based SVG me
 ## Validation
 
 `npm run check:content` passed all 14 gates both before edits (HEAD identical to local `origin/main`) and after the handoff and PHR were written. No additional finding relative to main was introduced. Scratch logs are `.crew/content-current.log` and `.crew/content-final.log`. `git diff --check` and explicit new-file punctuation/placeholder checks passed. No build, server, browser, signing, push or PR command was run. These results establish documentation hygiene only; translation remains unstarted and blocked.
+
+
+## Follow-up: stale evidence repair
+
+The follow-up inspection again found the Category 2 teaching and Category 1 ERQ 4 guidance unchanged. Translation remains blocked by the required skill's English-baseline stop rule. No Urdu pages, figure variants, G4 completion, G3/G5 certification or publication change is claimed.
+
+The previous handoff itself added a unit-scoped input to the G2 manifest. Its reported successful pre-commit gate run did not establish post-commit freshness: the committed handoff invalidated the old G2 evidence. This follow-up commits the handoff first, then regenerates Unit 3 G2 evidence using the repository tool against committed inputs and repoints only Unit 3's G2 reference. This repairs deterministic evidence freshness, not the independent English findings. The generated content-status cache must also be rebuilt after the tracker edit.
+
+The follow-up PHR records the actual final gate result and comparison with a detached local origin/main baseline. English author repair remains the prerequisite for G4. Keep this handoff stable after preparing evidence, because editing it again invalidates G2.
