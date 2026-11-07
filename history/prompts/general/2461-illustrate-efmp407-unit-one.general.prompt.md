@@ -20,10 +20,13 @@ files:
   - specs/content/efmp-407/figures/unit-01.banner.md
   - specs/content/efmp-407/figures/unit-01.illustration-notes.md
   - static/img/figures/efmp-407/unit-01/fig-U1-7.webp
+  - specs/content/efmp-407/tasks.md
+  - specs/content/efmp-407/reviews/unit-01/G2/20261107T123059043Z-gates.json
 tests:
   - Baseline and final npm run check:content
   - Standard WebP optimizer and visual inspection
   - git diff --check
+  - npm run build:content-status (regenerated ignored local cache)
 ---
 
 ## Prompt
@@ -37,7 +40,7 @@ Generated and placed the Unit 1 banner using the approved Codex fallback after a
 ## Outcome
 
 - ✅ Impact: English unit banner placed with original prompt and alt retained.
-- 🧪 Tests: Baseline passed all 14 content gates; final result recorded below after completion. Optimizer passed at 143.4 KB and 960 x 540.
+- 🧪 Tests: Baseline passed all 14 content gates. Placement invalidated the prior G2 manifest; scoped deterministic draft gates passed and fresh evidence was recorded with the tracker reference repointed. Optimizer passed at 143.4 KB and 960 x 540.
 - 📁 Files: One WebP, English index placement, banner lifecycle, illustration handoff and this PHR.
 - 🔁 Next prompts: Translation owner creates Urdu mirror and inserts the recorded snippet. English author supplies any desired topic scene prompts.
 - 🧠 Reflection: Inspect alt consistency before placement; reject a visually attractive but contradictory pose.
@@ -52,6 +55,6 @@ Generated and placed the Unit 1 banner using the approved Codex fallback after a
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: agy exited 3 after 611 seconds without PNG. Initial fallback showed seated group and was rejected. Larger WebP versions exceeded budget; final resized version passed.
-- Graders run and results (PASS/FAIL): Baseline content gates PASS; optimizer PASS; visual inspection PASS; final content gates recorded after completion.
+- Graders run and results (PASS/FAIL): Baseline content gates PASS; optimizer PASS; visual inspection PASS; final content gates PASS after G2 refresh.
 - Prompt variant (if applicable): Approved banner prompt plus repository house style, followed by pose-only correction.
 - Next experiment (smallest change to try): Place existing shared WebP in Urdu when a mirror becomes available.
