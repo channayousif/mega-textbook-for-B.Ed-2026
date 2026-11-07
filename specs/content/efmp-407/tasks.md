@@ -37,6 +37,11 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 5 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U5-7 remains prompt-only |
+| Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-08/G2/20261107T100505650Z-gates.json |
+| Unit 8 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 8 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
+| Unit 8 | G5 ur-review | ▢ | | |
+| Unit 8 | G6 assets | ▢ | | four schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U8-5 remains prompt-only |
 
 ## Unit 2 backward-design alignment
 
@@ -70,7 +75,7 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T081151799Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T100546088Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F5 and missing render/provenance evidence: [report](reviews/unit-07/G3/crew-efmp-407-u07-review_en/crew-efmp-407-u07-review_en.json). No certification. |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory r1: revise; F1 blocking - NEP 2009 cited to section 6.1, passage is in section 6.2 (Curriculum Reform), policy action 5; repair in topic-01.mdx:33 and :107, sources/unit-07.md:7, sources/texts/nep-2009.md:7; F2-F6 advisory; report: specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/crew-efmp-407-u07-review_en-r1.json |
 | Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |
