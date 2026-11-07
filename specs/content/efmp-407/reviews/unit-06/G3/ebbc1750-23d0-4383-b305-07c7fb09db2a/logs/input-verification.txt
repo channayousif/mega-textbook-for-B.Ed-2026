@@ -1,0 +1,8 @@
+Input verification for EFMP-407 Unit 6 G3 English review
+Reviewer agent: agent:agy
+Reviewer run ID: ebbc1750-23d0-4383-b305-07c7fb09db2a
+Reviewed commit: e24d9e2b2
+Bound inputs count: 100
+All 100 input paths and SHA-256 digests in manifest.json verified against repository index and disk bytes.
+Author run ID: crew-job:efmp-407-u06-author (commit 61761ff6f).
+No uncommitted modifications in bound inputs prior to manifest preparation.

@@ -374,6 +374,8 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
         }
 
         item.checkbox.disabled = false;
+        // These checkboxes come from the GFM renderer with no label of their own.
+        item.checkbox.setAttribute('aria-label', item.text);
         item.checkbox.checked = initialChecked;
         item.checkbox.setAttribute('data-testid', `self-assessment-checkbox-${item.position}`);
 
