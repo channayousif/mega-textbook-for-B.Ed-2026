@@ -46,3 +46,13 @@ Estimated reading at 190 words per minute, rounded up per file: index 3, Topic 2
 The live gate requires rendered figures despite the author-unit skill's older prompt-only stopping point. The brief's zero-new-findings requirement was followed using the current Codex generate-figures skill. All six approved schematic IDs, kinds, prompts and alt strings were retained. English and dark SVGs were visually inspected using local Sharp raster previews with palette variables resolved in scratch copies. No build, server, Playwright or Chromium run was performed. The mandatory browser-based SVG text measurement remains for CI or the next permitted inspection job.
 
 The root glossary is outside this job's scope. New unit vocabulary is defined in the English prose; global glossary integration can be handled by the shared terminology owner. The concept graph's authored Urdu labels await G5 review. No catalog, approved specification, standard, gate or publication setting was changed.
+
+## Unit 7 - English authoring
+
+| Unit | Stage | Status | Initials | Notes |
+|---|---|---|---|---|
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T081151799Z-gates.json |
+| Unit 7 | G3 en-review | ▢ | | independent review pending; no author certification |
+| Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |
+| Unit 7 | G5 ur-review | ▢ | | pending translation and independent review |
+| Unit 7 | G6 assets | ▢ | | four English schematics placed with dark variants; Playwright geometry check prohibited by brief and pending; banner prompt-only |
