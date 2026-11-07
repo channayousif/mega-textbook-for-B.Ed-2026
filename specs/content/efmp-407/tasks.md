@@ -42,7 +42,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-08/G2/20261107T161942041Z-gates.json |
 | Unit 8 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 8 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory: revise; F1 blocking - Jumani and Abbasi (2015) bound passage is not in the paper (full PDF checked 2026-11-07); F4/F8 uncertain - Tilbury causal claim exceeds title-level support and topic-02 formative item 3 is tagged Analyze above the band; F2,F3,F5,F6,F7,F9 advisory; report: specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json |
-| Unit 8 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
+| Unit 8 | G4 ur-translation | ▣ | agent:claude | Five Urdu pages and four RTL schematic variants with derived dark twins prepared from English 0d10bb72b; draft pending independent G5, CI figure-geometry and permitted render/A4 inspection; open G3 findings (F1 Jumani and Abbasi) carried over unfixed. [Translation handoff](translation/unit-08.md). No completion or review certification claimed. |
 | Unit 8 | G5 ur-review | ▢ | | |
 | Unit 8 | G6 assets | ▢ | | four schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U8-5 remains prompt-only |
 
