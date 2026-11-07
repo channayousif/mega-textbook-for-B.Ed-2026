@@ -16,28 +16,29 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/crew-efmp-407-u07-review_en.json
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/manifest.json
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/summary.md
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/assessment-independent.md
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/source-verification.md
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check-content.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_bloom-bands.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_concept-graph.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_depth-gate.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_docs-sync.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_figures.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_no-answer-keys.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_no-em-dash.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_source-floor.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_svg-style.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/input-verification.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/measure-figure-text.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/render-review.txt
-  - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/validate_content.txt
-  - specs/content/efmp-407/tasks.md
+ - history/prompts/efmp-407/crew-efmp-407-u07-review_en.misc.prompt.md
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/assessment-independent.md
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/crew-efmp-407-u07-review_en.json
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check-content.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_figures.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_source-floor.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/check_svg-style.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/input-verification.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/measure-figure-text.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/render-review.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/logs/validate_content.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/manifest.json
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/source-verification.md
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en/summary.md
+ - specs/content/efmp-407/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -68,26 +69,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Added EFMP-407 Unit 7 advisory G3 escalation evidence, hashed logs, an open tracker row and the required PHR.
+Added the EFMP-407 Unit 7 independent G3 English advisory escalation evidence (wrong NEP 2009 section locator, no render possible) with hashed logs, an open tracker row and the PHR, committed on the branch.
 
 ## Outcome
 
 - Impact: review_en for EFMP-407 Unit 7 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added EFMP-407 Unit 7 advisory G3 escalation evidence, hashed logs, an open tracker row and the required PHR.
+- Shipped / changed: Added the EFMP-407 Unit 7 independent G3 English advisory escalation evidence (wrong NEP 2009 section locator, no render possible) with hashed logs, an open tracker row and the PHR, committed on the branch.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Repair the NEP 2009 locator (section 6.2 Curriculum Reform, policy action 5, not section 6.1) and add the `## Unverifiable sources` heading for the National SDG Framework.
-  - A fresh review needs an actual narrow-view and A4 print inspection of the rendered Unit 7 pages; the live site does not publish Unit 7.
+  - F1 blocking - NEP 2009 is cited to section 6.1; the passage is in section 6.2 (Curriculum Reform), policy action 5. Repair in topic-01.mdx:33 and :107, sources/unit-07.md:7 and sources/texts/nep-2009.md:7.
+  - F2 - a fresh review needs an actual narrow-view and A4 print inspection of the rendered Unit 7 pages; the live site does not publish Unit 7 and the brief bars build, dev server and Playwright.
+  - F4 advisory - move the National SDG Framework unavailable-source declaration to `## Unverifiable sources` with attempts, date and D-2026-0001.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
