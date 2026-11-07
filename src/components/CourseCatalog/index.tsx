@@ -21,7 +21,7 @@ const T = {
 };
 
 /** Course covers come from the code, so a new course needs no artwork: same code, same cover. */
-const COVERS = ['#102B35', '#087C6B', '#0B5F55', '#1F4E5F', '#3C5A3A', '#6F4509'];
+const COVERS = ['#123E43', '#1B5A60', '#164D53', '#22686E', '#0D2E32', '#8A5A0B'];
 const MOTIFS = ['dots', 'lines', 'diamonds', 'rings'];
 function hash(code: string): number {
   return [...code].reduce((sum, ch) => (sum * 31 + ch.charCodeAt(0)) >>> 0, 7);

@@ -11,33 +11,33 @@
   unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
 }
 
-/* --- Brand palette (owner's logo kit, 2026-11-04) ---------------------------
+/* --- Brand palette (logo kit v2, 2026-11-07) -------------------------------
    Infima needs all SEVEN shades, or the missing ones fall back to its stock
-   green. Jade on the warm page ground in light mode, mint on deep ink in dark.
-   Ratios are against the mode's own ground. Anything used for body text or a
-   button ground must clear WCAG AA.
+   green. Teal on the warm paper ground in light mode, pale teal on deep teal in
+   dark. Ratios are against the mode's own ground (paper #f8f5ef, dark #0e2a2e).
+   Anything used for body text or a button ground must clear WCAG AA; white on
+   the light primary is 7.84:1.
 
-   Figures keep token `--a1` #1f6f5c (scripts/lib/figure-palette.mjs), a close
-   relative of jade. That file is imported by gate scripts: do not edit it to
-   follow a site colour change. */
+   Figures keep token `--a1` #1f6f5c (scripts/lib/figure-palette.mjs). That file
+   is imported by gate scripts: do not edit it to follow a site colour change. */
 :root {
-  --ifm-color-primary-darkest: #065548;  /* 8.04:1 */
-  --ifm-color-primary-darker: #066255;   /* 6.69:1 */
-  --ifm-color-primary-dark: #076F60;     /* 5.59:1 */
-  --ifm-color-primary: #087C6B;         /* 4.70:1 */
-  --ifm-color-primary-light: #0A8878;    /* 4.02:1 */
-  --ifm-color-primary-lighter: #0C9482;  /* 3.46:1 */
-  --ifm-color-primary-lightest: #10AE97; /* 2.57:1 */
+  --ifm-color-primary-darkest: #0D2E32;  /* 13.27:1 */
+  --ifm-color-primary-darker: #123E43;   /* 10.75:1 */
+  --ifm-color-primary-dark: #164D53;     /* 8.69:1 */
+  --ifm-color-primary: #1B5A60;         /* 7.21:1 */
+  --ifm-color-primary-light: #22686E;    /* 5.90:1 */
+  --ifm-color-primary-lighter: #2F7C80;  /* 4.47:1 */
+  --ifm-color-primary-lightest: #3F9498; /* 3.27:1 */
 }
 
 html[data-theme='dark'] {
-  --ifm-color-primary-darkest: #42CDA3;  /* 8.07:1 */
-  --ifm-color-primary-darker: #52D3AC;   /* 8.66:1 */
-  --ifm-color-primary-dark: #64DAB6;     /* 9.41:1 */
-  --ifm-color-primary: #77E2C1;         /* 10.32:1 */
-  --ifm-color-primary-light: #8AE7CB;    /* 11.05:1 */
-  --ifm-color-primary-lighter: #9DEBD3;  /* 11.73:1 */
-  --ifm-color-primary-lightest: #B6F0DF; /* 12.70:1 */
+  --ifm-color-primary-darkest: #6CC4C2;  /* 7.42:1 */
+  --ifm-color-primary-darker: #7FCDCB;   /* 8.28:1 */
+  --ifm-color-primary-dark: #93D6D3;     /* 9.21:1 */
+  --ifm-color-primary: #A6DFDC;         /* 10.23:1 */
+  --ifm-color-primary-light: #B7E6E3;    /* 11.11:1 */
+  --ifm-color-primary-lighter: #C8EDEB;  /* 12.07:1 */
+  --ifm-color-primary-lightest: #DCF4F2; /* 13.15:1 */
 }
 
 /* --- RTL / Nastaliq rendering (FR-002, FR-013, T019) ----------------------- */
@@ -147,7 +147,7 @@ html[data-theme='dark'] .topic-section > h2 {
   --tone-story-bg: #fdf6e7;
   --tone-story-edge: #d99a2b;
   --tone-task-bg: #eaf5f1;
-  --tone-task-edge: #0C9482;
+  --tone-task-edge: #2F7C80;
   --tone-warn-bg: #fdefee;
   --tone-warn-edge: #c4473f;
   --tone-example-bg: #edf2fb;
@@ -279,7 +279,7 @@ html[data-theme='dark'] {
 }
 
 .bloom-chip--remember { background: #4b6584; }
-.bloom-chip--understand { background: #087C6B; }
+.bloom-chip--understand { background: #1B5A60; }
 .bloom-chip--apply { background: #8a5a00; }
 .bloom-chip--analyze { background: #7655c2; }
 .bloom-chip--evaluate { background: #b03a48; }
@@ -561,14 +561,14 @@ html[data-theme='dark'] .review-banner--gated {
 .print-handout {
   border: 1px solid var(--ifm-color-primary);
   background: var(--ifm-color-primary);
-  color: #fff; /* 5.11:1 on jade */
+  color: #fff; /* 7.84:1 on teal */
   border-radius: 6px;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   margin-bottom: 1rem;
 }
 html[data-theme='dark'] .print-handout {
-  color: var(--brand-ink); /* white on mint is 1.56:1 */
+  color: var(--brand-ink); /* white on pale teal fails; teal on it passes */
 }
 .bloom-tag {
   display: inline-block;
@@ -869,13 +869,13 @@ html[data-theme='dark'] .figure__img--dark {
   html[data-theme='dark'] {
     --ifm-background-color: #fff;
     --ifm-background-surface-color: #fff;
-    --ifm-color-primary-darkest: #065548;
-    --ifm-color-primary-darker: #066255;
-    --ifm-color-primary-dark: #076F60;
-    --ifm-color-primary: #087C6B;
-    --ifm-color-primary-light: #0A8878;
-    --ifm-color-primary-lighter: #0C9482;
-    --ifm-color-primary-lightest: #10AE97;
+    --ifm-color-primary-darkest: #0D2E32;
+    --ifm-color-primary-darker: #123E43;
+    --ifm-color-primary-dark: #164D53;
+    --ifm-color-primary: #1B5A60;
+    --ifm-color-primary-light: #22686E;
+    --ifm-color-primary-lighter: #2F7C80;
+    --ifm-color-primary-lightest: #3F9498;
     --ifm-color-emphasis-0: #fff;
     --ifm-color-emphasis-100: #f5f6f7;
     --ifm-color-emphasis-200: #ebedf0;

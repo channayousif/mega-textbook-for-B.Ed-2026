@@ -1,7 +1,7 @@
 /* Landing page. Colours come from Infima variables, so dark mode and the reader's
    high-contrast option apply here too. Decorative glow and dots stay in the hero. */
-.root { --lp-mint: #e3f6ef; --lp-warm: #fbf0d9; --lp-warm-ink: #6f4509; --lp-eye: #066255; --lp-line: #e4dfd5; --lp-card-line: #ede8dd; position: relative; overflow: hidden; }
-:global(html[data-theme='dark']) .root { --lp-mint: rgba(119, 226, 193, .14); --lp-warm: rgba(251, 240, 217, .12); --lp-warm-ink: #f4d9a0; --lp-eye: #77e2c1; --lp-line: #2d444e; --lp-card-line: #2d444e; }
+.root { --lp-mint: #e3eeec; --lp-warm: #fbf0d9; --lp-warm-ink: #6f4509; --lp-eye: #164d53; --lp-line: #e4dfd5; --lp-card-line: #ede8dd; position: relative; overflow: hidden; }
+:global(html[data-theme='dark']) .root { --lp-mint: rgba(166, 223, 220, .14); --lp-warm: rgba(251, 240, 217, .12); --lp-warm-ink: #f4d9a0; --lp-eye: #a6dfdc; --lp-line: #2a4d52; --lp-card-line: #2a4d52; }
 .wrap { max-width: 1180px; margin-inline: auto; padding-inline: 24px; position: relative; z-index: 1; }
 .backdrop { position: absolute; inset-inline: 0; top: 0; height: 800px; pointer-events: none;
   background-image: radial-gradient(circle at 1px 1px, rgba(16, 43, 53, .09) 1px, transparent 0), radial-gradient(640px 420px at 12% 8%, rgba(8, 124, 107, .15), transparent 70%), radial-gradient(620px 460px at 88% 34%, rgba(119, 226, 193, .28), transparent 70%);
@@ -116,7 +116,7 @@
 .faq[open] .chev { transform: rotate(180deg); }
 .faq p { padding-block: 0 12px; max-width: 70ch; }
 
-.final { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 30px; align-items: center; border-radius: 26px; padding: 48px; color: #fff; background: linear-gradient(135deg, #102b35, #102b35 55%, #0b5f55); overflow: hidden; }
+.final { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 30px; align-items: center; border-radius: 26px; padding: 48px; color: #fff; background: linear-gradient(135deg, #123e43, #123e43 55%, #1b5a60); overflow: hidden; }
 .final .h2 { color: #fff; margin-bottom: 8px; }
 .final p { margin: 0 0 20px; color: #e6f0ec; }
 .finalBtn, .finalBtn:hover { background: #fff; border-color: #fff; color: var(--brand-ink); }

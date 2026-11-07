@@ -1,6 +1,5 @@
 .page { max-width: 720px; padding-block: 72px 88px; text-align: center; }
 .mark { display: block; margin-inline: auto; margin-bottom: 20px; }
-html[data-theme='dark'] .mark { filter: brightness(0) invert(0.85); }
 .title { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin-bottom: 14px; }
 html[dir='rtl'] .title { line-height: 1.9; }
 .text { max-width: 52ch; margin: 0 auto 28px; font-size: 1.1rem; color: var(--ifm-color-content-secondary); }

@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import ThemedImage from '@theme/ThemedImage';
 import styles from './styles.module.css';
 
 const T = {
@@ -30,10 +31,11 @@ const T = {
 export default function NotFoundContent({ className }: { className?: string }): React.ReactElement {
   const { i18n } = useDocusaurusContext();
   const t = T[i18n.currentLocale === 'ur' ? 'ur' : 'en'];
-  const mark = useBaseUrl('/img/brand/book-color.svg');
+  const light = useBaseUrl('/img/brand/icon-color.svg');
+  const dark = useBaseUrl('/img/brand/icon-reverse.svg');
   return (
     <main className={clsx('container', styles.page, className)}>
-      <img className={styles.mark} src={mark} width={64} height={64} alt="" />
+      <ThemedImage className={styles.mark} sources={{ light, dark }} width={64} height={64} alt="" />
       <h1 className={styles.title}>{t.title}</h1>
       <p className={styles.text}>{t.text}</p>
       <div className={styles.actions}>

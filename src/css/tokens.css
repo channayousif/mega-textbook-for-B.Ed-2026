@@ -22,20 +22,29 @@
 }
 
 :root {
-  /* Logo kit */
-  --brand-ink: #102b35;
-  --brand-jade: #087c6b;
-  --brand-mint: #77e2c1;
+  /* Logo kit v2 (2026-11-07). Amber is never text on a light ground (2.18:1 on
+     white): use it for fills and on teal (5.36:1). --brand-amber-text is the
+     amber for words on paper (5.44:1). */
+  --brand-teal: #123e43;
+  --brand-teal-mid: #1b5a60;
+  --brand-amber: #e5a333;
+  --brand-amber-soft: #f8e3b8;
+  --brand-amber-text: #8a5a0b;
+  --brand-paper: #f8f5ef;
+  /* Old names kept so existing rules follow the new kit. */
+  --brand-ink: var(--brand-teal);
+  --brand-jade: var(--brand-teal-mid);
+  --brand-mint: #a6dfdc;
 
   /* Surfaces and text */
   --ifm-background-color: #f8f5ef;
   --ifm-background-surface-color: #ffffff;
-  --ifm-font-color-base: #102b35;
-  --ifm-heading-color: #102b35;
-  --ifm-color-content: #102b35;
-  --ifm-color-content-secondary: #2c3f47; /* 10.11:1 on the page ground */
+  --ifm-font-color-base: #123e43;   /* 10.75:1 on paper */
+  --ifm-heading-color: #123e43;
+  --ifm-color-content: #123e43;
+  --ifm-color-content-secondary: #3b5154; /* 7.75:1 on paper */
 
-  /* Links: darker than jade so they pass on tinted table rows and cards. */
+  /* Links: one step darker than the primary so they pass on tinted rows and cards. */
   --ifm-link-color: var(--ifm-color-primary-dark);
 
   /* Type */
@@ -54,21 +63,20 @@
 }
 
 html[data-theme='dark'] {
-  --ifm-background-color: #12232b;
-  --ifm-background-surface-color: #1a2f38;
-  --ifm-font-color-base: #e9f1ef;
+  --brand-amber-text: #e5a333; /* 6.92:1 on the dark ground */
+  --ifm-background-color: #0e2a2e;
+  --ifm-background-surface-color: #163a3f;
+  --ifm-font-color-base: #e9f1ef; /* 13.17:1, 10.69:1 on surface */
   --ifm-heading-color: #e9f1ef;
   --ifm-color-content: #e9f1ef;
-  --ifm-color-content-secondary: #c3d3d1;
+  --ifm-color-content-secondary: #c3d3d1; /* 9.76:1 */
   --ifm-link-color: var(--ifm-color-primary);
 }
 
 .navbar__brand { margin-inline-end: 1.25rem; }
-.brand-logo { display: block; width: auto; height: 32px; }
-html[dir='rtl'] .brand-logo { height: 48px; }
+.brand-logo { display: block; width: auto; height: 48px; } /* 242px wide, the kit's minimum */
 @media (max-width: 996px) {
-  .brand-logo { height: 24px; }
-  html[dir='rtl'] .brand-logo { height: 42px; }
+  .brand-logo { height: 40px; }
 }
 
 /* Urdu small text is Naskh: Nastaliq needs too much height at these sizes. */
