@@ -9,7 +9,7 @@ English-only authoring from approved unit specs (D-2026-0076). No publication or
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
-| Unit 6 | G2 en-draft | ▣ | | pending gate evidence |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-06/G2/20261107T081746587Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 6 | G5 ur-review | ▢ | | |
