@@ -1,0 +1,9 @@
+Source retrieval limitations for EFMP-407 Unit 4 G3 English review
+1. unesco-2017-esd-objectives:
+   Official unesdoc URI (https://unesdoc.unesco.org/ark:/48223/pf0000247444) returns no readable browser text to host. Consulted through Austrian UNESCO Commission open mirror (https://www.unesco.at/fileadmin/Redaktion/Publikationen/Publikations-Dokumente/2017_Education_for_SDG.pdf) and German BNE open PDF.
+2. lim-allan-2016-futures:
+   Adelaide institutional repository (https://digital.library.adelaide.edu.au/items/653a5611-dce4-4183-8571-f1ac8e815162) is restricted; Dundee University accepted manuscript repository (https://discovery.dundee.ac.uk/ws/files/11549857/Future_Law_in_the_classroom_Lim_Allan_AAM.pdf) provides open access.
+3. boeve-de-pauw-2015:
+   Publisher direct full-text PDF download timed out; publisher indexed text at MDPI (https://www.mdpi.com/2071-1050/7/11/15693) supplied accessible passages.
+4. Input manifest binding omission:
+   In scripts/lib/review-evidence.mjs, citedKeysFor() regex extracts keys ending with four digits (and optional letter) or hyphen-four-digits. As a result, lim-allan-2016-futures.md and unesco-2017-esd-objectives.md were not captured by citedKeysFor and remain unbound in the prepared manifest despite existing under specs/content/efmp-407/sources/texts/.
