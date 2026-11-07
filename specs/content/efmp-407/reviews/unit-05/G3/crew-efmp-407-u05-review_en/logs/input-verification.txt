@@ -1,0 +1,31 @@
+input-verification: EFMP-407 Unit 5 (G3 English)
+Date: 2026-11-07
+Reviewer: agent:opencode-g3-reviewer
+
+Prepared manifest: specs/content/efmp-407/reviews/unit-05/G3/crew-efmp-407-u05-review_en/manifest.json
+Prepared by: node scripts/review-evidence.mjs prepare EFMP-407 5 G3 <output-dir>
+Inputs bound: 100
+
+Verification
+------------
+The manifest was recomputed with scripts/lib/review-evidence.mjs inputManifest(root, 'EFMP-407', 5, 'G3')
+and compared byte-for-byte with the prepared input_manifest. Result: MATCH (100/100 paths, identical
+digests).
+
+Raw-file SHA-256 differs for 8 paths (catalog/courses.json, the six unit MDX files, and
+specs/content/efmp-407/content-spec.md). This is expected, not a defect: the manifest normalizes
+MDX front matter (translation_status: draft|reviewed -> lifecycle), slices the content-spec to this
+unit's own section, and slices the catalog to this course's entry. The recomputation applies the
+same normalization, and the two agree.
+
+Skill digest: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+Required criteria: authority, sources, coverage, assessment, accessibility, readability, pedagogy
+
+Source texts bound: specs/content/efmp-407/sources/texts/pakistan-constitution-1973.md and
+specs/content/efmp-407/sources/texts/un-crc-1989.md. The remaining cited source texts
+(unesco-2017-esd-objectives, unesco-2020-gemr, zidny-2020-indigenous, owuor-2008-indigenous,
+kahlown-1994-karez, iucn-pakistan-2004-tek) are present in the repository and were read directly,
+but they are not in the digest set: the citation-key extractor does not bind keys carrying a
+hyphenated suffix after the year. Recorded as a limitation (see report limitations).
+
+exit code: 0

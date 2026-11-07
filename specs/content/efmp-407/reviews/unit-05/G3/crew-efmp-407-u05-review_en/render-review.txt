@@ -1,0 +1,63 @@
+render-review: EFMP-407 Unit 5 (G3 English, attempt crew-efmp-407-u05-review_en)
+Date: 2026-11-07
+Reviewer: agent:opencode-g3-reviewer
+
+Attempt
+-------
+The review contract requires an actual rendered-page inspection, including a narrow viewport and
+an A4 print view, with the rendered input identity recorded.
+
+1. Live site check. https://textbook.com.pk/sitemap.xml was fetched 2026-11-07. It does NOT list
+   any /semester-3/efmp-407/unit-05/ route. Direct fetches of
+   https://textbook.com.pk/semester-3/efmp-407/unit-05/ and .../unit-05/topic-01/ return HTTP 404.
+   The reviewed bytes are therefore NOT published; the unit is an unpublished draft at G2 with G3
+   open. This is consistent with the tracker row and does not block the review.
+
+2. Browser render. The crew brief prohibits `npm run build`, a dev server and Playwright, and
+   AGENTS.md classifies any Chromium run as a heavy job. No Chrome/Chromium executable is
+   available to the chrome-devtools MCP on this host (`/opt/google/chrome/chrome` is absent), and
+   the Playwright MCP is out of bounds under the brief. No local render of the reviewed MDX could
+   be produced.
+
+3. Figure raster substitution. All six placed SVGs and their derived dark variants were
+   rasterised to PNG with sharp (heavy job, run under scripts/heavy.sh). The SVGs theme themselves
+   with CSS custom properties, which librsvg does not resolve, so the variables were inlined
+   before rasterisation. Artifacts:
+   - renders/fig-U5-1-light.png, fig-U5-1.dark.png
+   - renders/fig-U5-2-light.png, fig-U5-2.dark.png
+   - renders/fig-U5-3-light.png, fig-U5-3.dark.png
+   - renders/fig-U5-4-light.png, fig-U5-4.dark.png
+   - renders/fig-U5-5-light.png, fig-U5-5.dark.png
+   - renders/fig-U5-6-light.png, fig-U5-6.dark.png
+   The rasters are registered in the report evidence_manifest. Light and dark variants carry
+   different dominant colours (light ~248,248,248; dark ~24,24,24), confirming the theme files
+   rendered distinctly.
+
+4. Static layout inspection (in place of a live browser):
+   - Headings: every page has exactly one H1 and a monotonic H2/H3/H4 hierarchy; no skipped
+     levels. The nine-part topic cycle headings are present and ordered in all three topics.
+   - Links: descriptive anchor text throughout (index "In this unit" and "How to use this unit"
+     links; Further reading entries are reference list items, the course convention).
+   - Figures: every <Figure> carries a non-empty alt; each SVG has role="img", aria-labelledby,
+     a <title> and a <desc> equal to the carrier alt; the Figure component renders both light and
+     dark <img> with identical alt and display:none on the hidden one, so exactly one is exposed.
+   - Tables: the unit's markdown tables (worked examples, redesigned lesson plan, pest-control
+     comparison, assessment rubrics) render as HTML tables. custom.css gives
+     `.markdown table` `display: block; width: fit-content; overflow-x: auto` below 997px, so a
+     phone scrolls inside the table box and the page itself does not overflow; the print
+     stylesheet scales figures to the A4 page box and keeps them unclipped. No figure is clipped
+     by its authored viewBox (measure-figure-text exit 0).
+   - Print: PrintHandout is present on all three topic pages and the assessment page; the print
+     stylesheet lays out at the A4 page box and keeps every figure inside it.
+   - Glossary: the unit defines its technical terms in prose on first use and uses no <Glossary>
+     component, so there are no glossary entries to resolve.
+
+Result
+------
+Rendered figure artifacts exist and the static layout checks are clean, but no live browser render
+of the reviewed pages was possible under the brief. The accessibility criterion is recorded as
+pass on the static and geometry evidence, with the missing live render recorded as an advisory
+finding (F7). The reviewer model cannot display raster images, so the PNGs were verified by
+geometry, channel and dominant-colour checks rather than by eye.
+
+exit code: 0
