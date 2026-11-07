@@ -1,0 +1,1 @@
+✓ svg-style: 1276 figure(s) checked, 464 grandfathered.
