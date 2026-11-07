@@ -6,7 +6,7 @@ Only Unit 4 is tracked by this job. G0/G1 rely on the existing approved spec and
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 4 | G2 en-draft | ▣ | agent:codex | English draft, coverage, sources, concept graph and six English schematics authored; deterministic evidence pending committed inputs. |
+| Unit 4 | G2 en-draft | ▣ | agent:codex | English draft and scoped artefacts committed at 1c6f897fa. G2 evidence blocked: required docs/semester-3/efmp-407/course-overview.mdx is absent and adding a course-level page exceeds this brief. Owner scope clarification requested; no evidence fabricated. All other content gates pass after refreshing the ignored status report. |
 | Unit 4 | G3 en-review | ▢ | | Fresh independent review required; no self-review certification claimed. |
 | Unit 4 | G4 ur-translation | ▢ | | Separate job: translate all six pages and six schematics with RTL layout; glossary candidates and concept labels need language review. |
 | Unit 4 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation. |

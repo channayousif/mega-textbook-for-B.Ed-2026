@@ -50,7 +50,8 @@ tests:
   - npm run check:depth-gate: pass after bound source notes added
   - MDX compile of all six pages: pass
   - SVG optimisation and style gates; Sharp contact-sheet visual inspection
-  - G2 deterministic evidence and final content gate results recorded in unit tracker and evidence logs
+  - prepare-gate-evidence EFMP-407 4: blocked by missing required course-overview.mdx
+  - Final check:content after status refresh: 13 PASS, pipeline FAIL because G2 cannot be prepared
 ---
 
 ## Prompt
@@ -87,21 +88,21 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored the English Unit 4 learning cycles, worked examples, inclusive lesson planning, 10/10/5 assessment bank, teacher notes, governance tables and six rendered schematics. Record G2 only through actual deterministic evidence; G3/G5 remain open.
+Authored the English Unit 4 learning cycles, worked examples, inclusive lesson planning, 10/10/5 assessment bank, teacher notes, governance tables and six rendered schematics. G2 is blocked by the missing course overview, outside the unit-only scope; scope clarification requested. G3/G5 remain open.
 
 ## Outcome
 
 - ✅ Impact: An English-only draft aligned with the approved Unit 4 topic partition and 35-55 minute depth band.
-- 🧪 Tests: Baseline content gates passed. Scoped source-binding defects repaired; final results live in committed G2 logs and the final response. No build, dev server or Playwright was run.
+- 🧪 Tests: Baseline content gates passed. Scoped source-binding defects repaired; final results are 13 PASS and pipeline FAIL because G2 preparation requires an absent course overview outside the authorized scope. No build, dev server or Playwright was run.
 - 📁 Files: Six MDX pages, coverage, sources and bound notes, concepts, figure manifests, twelve SVG assets, unit tracker and this PHR.
 - 🔁 Next prompts: Independent G3 review, Urdu translation and G5 review, banner illustration and CI geometry verification.
-- 🧠 Reflection: Current gates require placed figures and bound source notes beyond older author-unit prose. Followed current gates without changing shared policy or tooling.
+- 🧠 Reflection: Current gates require placed figures, bound source notes and a course-level overview beyond the unit-only authoring brief. The overview dependency requires an owner scope decision, requested asynchronously and still unanswered at handoff. Followed current gates without changing shared policy or tooling.
 
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: English Unit 4 with three learning cycles, full self-study assessment, teacher notes, source evidence and six light/dark schematic pairs. All classroom cases and counts are labelled invented.
 - Decisions the team must respect: Preserve topic labels 4.1-4.3 and figure IDs fig-U4-1 through fig-U4-6. No review certification or publication authority claimed. Urdu is a separate job.
-- Pending / next owner: Independent reviewers own G3/G5. Translation job owns six pages and six RTL SVGs. Illustration job owns banner fig-U4-7. CI or a permitted follow-up owns browser text geometry because the crew brief prohibits Playwright. Shared glossary maintainer should consider the listed inline-defined terms; Lesson planning uses the existing glossary entry.
+- Pending / next owner: Independent reviewers own G3/G5. Translation job owns six pages and six RTL SVGs. Illustration job owns banner fig-U4-7. CI or a permitted follow-up owns browser text geometry because the crew brief prohibits Playwright. Owner must first authorize adding the missing course overview or provide it through a separate course-scaffolding job; a syntax-checked proposal remains in ignored .crew/course-overview.proposed.mdx. This dependency blocks G2 and the required all-green content result. Shared glossary maintainer should consider the listed inline-defined terms; Lesson planning uses the existing glossary entry.
 - Paperclip issues affected: No ticket supplied; EFMP-407 Unit 4 authoring crew job only.
 
 ## Evaluation notes (flywheel)
