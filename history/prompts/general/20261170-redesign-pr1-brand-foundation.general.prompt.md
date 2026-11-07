@@ -1,5 +1,5 @@
 ---
-id: 20261161
+id: 20261170
 title: Redesign PR 1 brand foundation and worktree clean-up
 stage: general
 date: 2026-11-07
