@@ -1,9 +1,14 @@
 # EFMP-407 Education for Sustainable Development - Task tracker
 
-English-only authoring from the approved content-spec (D-2026-0076). No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved content-spec (D-2026-0076). No publication or review certification is claimed by this tracker.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T065935249Z-gates.json |
+| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
+| Unit 1 | G5 ur-review | ▢ | | |
+| Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
 | Unit 3 | G2 en-draft | ▣ | | Five English files drafted; six English schematics placed with derived dark variants; structural depth validated; unpublished with coming_soon: true |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 3 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
