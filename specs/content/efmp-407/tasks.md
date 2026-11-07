@@ -9,3 +9,4 @@ English-only authoring from the approved Unit 1 spec (D-2026-0076). No publicati
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
+| Unit 1 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F8 and missing render/provenance evidence: [report](reviews/unit-01/G3/20261107-codex.json). No certification. |
