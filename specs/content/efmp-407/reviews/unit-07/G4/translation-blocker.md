@@ -22,3 +22,22 @@ No G4 tracker row is appended: Step 7 explicitly prohibits it. No G3/G5 row, pub
 The crew brief prohibits build, dev server and Playwright execution. No browser inspection or rendered Urdu evidence is claimed. A later permitted job must perform actual narrow-width and A4 inspection after translation, followed by independent G5 review. Until accepted G5, translation status must remain draft.
 
 Validation: `npm run check:content` passed all 14 gates with no findings. `git diff --check` passed. These deterministic results do not resolve the English review finding.
+
+## Retry r1 baseline verification
+
+Job `efmp-407-u07-translate-r1` rechecked commit
+`5c3000f9e855230e6f505c38bdc6c79cf57c4a27`, identical to `origin/main`
+at job start. The branch was clean with no commits ahead of main. The independent
+r1 G3 report has disposition `revise`; all four F1 locators above still say
+section 6.1. The prerequisite English repair has not landed. Translation remains
+unstarted under the skill's explicit stop rule. The existing open G4 row and
+`translation_status: draft` remain unchanged. No Urdu render or review is claimed.
+
+Next owner: `repair_en` must correct the four F1 locators against the independent
+report, then return a settled baseline for translation. Repeating translation
+jobs before that repair cannot discharge G4.
+
+Retry validation: `npm run check:content` passed all 14 gates with no findings;
+`git diff --check` passed. No baseline comparison run was needed because there
+were zero findings. Build, dev server and Playwright were not run, as the brief
+prohibits them.

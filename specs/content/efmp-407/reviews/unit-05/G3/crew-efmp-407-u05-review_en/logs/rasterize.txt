@@ -1,0 +1,13 @@
+fig-U5-1.dark.png: 2167x1222 196538 bytes entropy=1.442
+fig-U5-1.light.png: 2167x1222 166399 bytes entropy=1.433
+fig-U5-2.dark.png: 2167x1194 245949 bytes entropy=1.642
+fig-U5-2.light.png: 2167x1194 239151 bytes entropy=1.641
+fig-U5-3.dark.png: 2167x1222 268030 bytes entropy=1.708
+fig-U5-3.light.png: 2167x1222 262659 bytes entropy=1.699
+fig-U5-4.dark.png: 2167x1222 230428 bytes entropy=2.138
+fig-U5-4.light.png: 2167x1222 221668 bytes entropy=2.620
+fig-U5-5.dark.png: 2167x1278 239672 bytes entropy=1.594
+fig-U5-5.light.png: 2167x1278 232648 bytes entropy=1.595
+fig-U5-6.dark.png: 2167x1194 244790 bytes entropy=2.103
+fig-U5-6.light.png: 2167x1194 228413 bytes entropy=2.105
+done
