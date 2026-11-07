@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-407-u03-author-conflict2
-title: crew fix EFMP-407 unit 3 conflict2
+title: crew fix EFMP-407 unit 3
 stage: misc
 date: 2026-11-07
 surface: agent
@@ -16,11 +16,39 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/efmp-407/sources/texts/unesco-2017-esd-objectives.md
-  - specs/content/efmp-407/tasks.md
-  - history/prompts/efmp-407/crew-efmp-407-u03-author-conflict2.misc.prompt.md
+ - docs/semester-3/efmp-407/unit-03/index.mdx
+ - docs/semester-3/efmp-407/unit-03/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-03/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-03/topic-03.mdx
+ - docs/semester-3/efmp-407/unit-03/unit-assessment.mdx
+ - history/prompts/efmp-407/crew-efmp-407-u03-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-author.green.prompt.md
+ - history/prompts/general/20261144-author-efmp-407-unit-three.general.prompt.md
+ - specs/content/efmp-407/authoring/unit-03.md
+ - specs/content/efmp-407/concepts/unit-03.md
+ - specs/content/efmp-407/coverage/unit-03.md
+ - specs/content/efmp-407/figures/unit-03.banner.md
+ - specs/content/efmp-407/figures/unit-03.md
+ - specs/content/efmp-407/sources/texts/akkari-maleq-2020-gce.md
+ - specs/content/efmp-407/sources/texts/khoo-jorgensen-2021.md
+ - specs/content/efmp-407/sources/texts/unesco-2017-esd-objectives.md
+ - specs/content/efmp-407/sources/unit-03.md
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-1.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-2.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-3.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-4.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-5.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-6.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -55,27 +83,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u03-author-conflict1, fix, opencode) the branch's author PHR is now `20261144` (was `20261143`, taken on main by Unit 1's PHR).
 - (efmp-407-u03-author, author, agy) Staged with `coming_soon: true` and tracker `G2: ▣` matching repo precedent (`efmp-406` Unit 4) because `course-overview.mdx` is owned and created by concurrent sibling job `crew/efmp-407-u01-author`; once `course-overview.mdx` merges, `coming_soon: true` can be cleared to ungate full G2 evidence generation and subsequent G3 review. Chromium figure geometry measurement is deferred to CI.
 
+
 ## Response snapshot
 
-Fetched origin and merged origin/main (8 commits, Unit 2 authoring) into `crew/efmp-407-u03-author`. Resolved the two conflicts: combined main's Unit 2 tracker rows and source note with this branch's Unit 3 rows and bound excerpt (main first, then branch), and merged the two `unesco-2017-esd-objectives.md` bound files into one excerpt file because both Unit 2 and Unit 3 cite that source key. Regenerated `static/content-status.json` and left all 14 content gates passing.
+Merged advanced main into the Unit 3 branch, resolved the `tasks.md` and shared `unesco-2017-esd-objectives.md` conflicts append-only, regenerated the content-status report, and left all 14 content gates passing with the merge and PHR committed.
 
 ## Outcome
 
-- Impact: fix for EFMP-407 Unit 3 by opencode (attempt 2, conflict with advanced main).
-- Tests: npm run check:content passed (14/14) after regenerating the ignored content-status report.
-- Files: 3 file(s) listed above; the merge also imported main's Unit 2 docs, specs, figures and PHRs.
+- Impact: fix for EFMP-407 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 31 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into `crew/efmp-407-u03-author`; resolved the `tasks.md` and `unesco-2017-esd-objectives.md` conflicts by keeping main's entries first and appending this branch's; regenerated `static/content-status.json`; all 14 content gates pass.
-- Decisions the team must respect: the shared source key `unesco-2017-esd-objectives` is cited by both Unit 2 and Unit 3, so its two bound files were merged into one file rather than renamed; G3/G5 stay advisory and unsigned.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged advanced main into the Unit 3 branch, resolved the `tasks.md` and shared `unesco-2017-esd-objectives.md` conflicts append-only, regenerated the content-status report, and left all 14 content gates passing with the merge and PHR committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `course-overview.mdx` is now on main, so Unit 3's `coming_soon: true` can be cleared by the next job; doing so requires real G2 evidence first or `check:pipeline-gate` will fail on the `G2: ▣` row. Regenerate `static/content-status.json` afterwards.
+  - Unit 3 `coming_soon: true` can now be cleared, but only after real G2 evidence exists (tracker row is `G2: ▣`, so clearing it now fails `check:pipeline-gate`); regenerate `static/content-status.json` afterwards.
+  - main's `## Unit 2 backward-design alignment` table still carries five stray Unit 1 tracker rows (merge artifact from `48c3d7c21`); harmless to gates but a cleanup owner may remove them.
   - banner `fig-U3-7` remains `prompt-only`; Chromium figure geometry measurement is deferred to CI.
-  - main's `tasks.md` `## Unit 2 backward-design alignment` table still carries five stray Unit 1 tracker rows (a merge artifact from `48c3d7c21`). They are harmless to the gates (the parser reads them as duplicate Unit 1 rows) but a cleanup owner may remove them.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
