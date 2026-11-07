@@ -39,6 +39,12 @@ check system performance, memory, storage and proces Status now,
 
 ok good, delete the safer ones, now continue to redesign job
 
+retry
+
+raise the agents slice limit to 5G
+
+raise the parent slice too
+
 ## Response snapshot
 
 Status: load about 0.6 on 2 CPUs, 8.4 GB memory available, memory and I/O pressure near 0, root disk 78% used. Removed 15 git worktrees under ~/wt-* whose trees were clean, fully pushed and whose PRs had merged (46 GB freed, disk now 56%); kept wt-hec and wt-urdu-badge, which hold uncommitted work with no PR. Took "continue" as sign-off on the v2 boards and opened redesign PR 1: logo kit v2 assets (em dashes and editor metadata stripped), favicons, install manifest, theme colour, a new social card, the teal ramp with measured contrast for light, dark and print, and the remaining hardcoded v1 colours on landing and catalogue.
@@ -46,7 +52,7 @@ Status: load about 0.6 on 2 CPUs, 8.4 GB memory available, memory and I/O pressu
 ## Outcome
 
 - ✅ Impact: the site wears kit v2 colours and logo; first of nine redesign PRs.
-- 🧪 Tests: build and check:all, see PR.
+- 🧪 Tests: npm run build PASS (427 s); npm run check:all 20/20 PASS; screenshots of landing EN and UR, 404 and catalogue at 1440 and 360px, light and dark, checked by eye.
 - 📁 Files: brand assets, tokens, ramps, navbar logo, 404 mark, head tags.
 - 🔁 Next prompts: PR 2 icons, patterns, motion and ui primitives; PR 3 landing.
 - 🧠 Reflection: the v2 horizontal logo needs 48px height to reach the kit's 240px minimum width, taller than the v1 wordmark.
@@ -55,6 +61,7 @@ Status: load about 0.6 on 2 CPUs, 8.4 GB memory available, memory and I/O pressu
 
 - Shipped / changed: kit v2 logo in the navbar (horizontal in both locales), 404 mark, favicons at static/img/brand/, /site.webmanifest, theme-color #123E43, social card. Light primary #1B5A60 (white text 7.84:1), dark ground #0E2A2E with pale teal primary #A6DFDC (10.23:1). --brand-ink/jade/mint now alias the v2 values.
 - Decisions the team must respect: amber #E5A333 is never text on a light ground; use --brand-amber-text #8A5A0B. static/img/favicon.svg stays as the v1 mark because video-studio/brand/brand-bible.yaml pins it as owner-approved; changing the video mark is the owner's call. figure-palette.mjs is untouched. Kit v2 has no Urdu-first logo, so Urdu pages show the horizontal logo until PR 4 adds the bilingual header logo that shrinks on scroll (owner ruling 2026-11-06).
+- Host ops (2026-11-08): local builds took 7 to 13 hours because development-agents.slice had MemoryHigh=3G and a build needs about 2.9 GB, so the kernel throttled the slice (memory pressure about 90%) with memory free. On the owner's instruction the slice is now MemoryHigh=5G, MemoryMax=6G, in ~/.config/systemd/user/ and the untracked ops/development/systemd/ copy in the main checkout. The parent development.slice was then raised from 5G high, 6G max to 7G high, 8G max, so agents (5G) and editor (2.5G) fit together under the user slice cap (8G high, 9G max).
 - Pending / next owner: owner review and merge (merging deploys live; PRs 1 to 5 should merge close together). Trademark check of the kit is the owner's call.
 - Paperclip issues affected: none.
 
