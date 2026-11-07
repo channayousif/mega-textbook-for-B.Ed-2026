@@ -16,11 +16,66 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-407/tasks.md
+ - docs/semester-3/efmp-407/unit-06/index.mdx
+ - docs/semester-3/efmp-407/unit-06/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-06/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-06/topic-03.mdx
+ - docs/semester-3/efmp-407/unit-06/unit-assessment.mdx
+ - docs/semester-3/efmp-407/unit-06/unit-teacher-notes.mdx
+ - history/prompts/efmp-407/20261156-author-efmp407-unit06-english.general.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u06-author-conflict1.misc.prompt.md
  - history/prompts/efmp-407/crew-efmp-407-u06-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u06-author.green.prompt.md
+ - specs/content/efmp-407/authoring/unit-06.md
+ - specs/content/efmp-407/concepts/unit-06.md
+ - specs/content/efmp-407/coverage/unit-06.md
+ - specs/content/efmp-407/figures/unit-06.banner.md
+ - specs/content/efmp-407/figures/unit-06.md
+ - specs/content/efmp-407/reviews/unit-06/G2/20261107T081746587Z-gates.json
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261107T081746587Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261107T081746587Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261107T081746587Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261107T081746587Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261107T081746587Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261107T081746587Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261107T081746587Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261107T081746587Z/validate-content.txt
+ - specs/content/efmp-407/sources/texts/al-nuaimi-2022-consumption.md
+ - specs/content/efmp-407/sources/texts/app-2026-senate.md
+ - specs/content/efmp-407/sources/texts/arabnews-2025-solar.md
+ - specs/content/efmp-407/sources/texts/baloch-2019-plastic.md
+ - specs/content/efmp-407/sources/texts/delmas-burbano-2011.md
+ - specs/content/efmp-407/sources/texts/ecchr-2020-rina.md
+ - specs/content/efmp-407/sources/texts/emf-circular-economy.md
+ - specs/content/efmp-407/sources/texts/fafen-2026-csr.md
+ - specs/content/efmp-407/sources/texts/fairtrade-minimum-price.md
+ - specs/content/efmp-407/sources/texts/ilo-2018-greening.md
+ - specs/content/efmp-407/sources/texts/mahmood-2019-labeling.md
+ - specs/content/efmp-407/sources/texts/neeca-fan-label.md
+ - specs/content/efmp-407/sources/texts/pakistan-halal-act-2016.md
+ - specs/content/efmp-407/sources/texts/psqca-compulsory-list.md
+ - specs/content/efmp-407/sources/texts/rina-statement.md
+ - specs/content/efmp-407/sources/texts/secp-2009-csr.md
+ - specs/content/efmp-407/sources/texts/szmigin-2009-conscious.md
+ - specs/content/efmp-407/sources/texts/un-sdg12.md
+ - specs/content/efmp-407/sources/texts/unep-green-economy.md
+ - specs/content/efmp-407/sources/texts/zulfiqar-2019-csr.md
+ - specs/content/efmp-407/sources/unit-06.md
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-06/fig-U6-1.dark.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-1.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-2.dark.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-2.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-3.dark.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-3.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-4.dark.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-4.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-5.dark.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-5.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-6.dark.svg
+ - static/img/figures/efmp-407/unit-06/fig-U6-6.svg
 tests:
  - npm run check:content
- - node scripts/report-content-status.mjs
 ---
 
 ## Prompt
@@ -56,27 +111,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u06-author, author, claude) Topic 6.2 reports the disputed Ali Enterprises audit from both parties and leaves it undecided, so keep that balance in the Urdu mirror and check the two search-excerpt sources (`rina-statement`, `pakistan-halal-act-2016`).
 - (efmp-407-u06-author, author, claude) `tasks.md` gains Unit 6 rows and a retitled header, so expect the usual tracker conflict with sibling EFMP-407 branches at merge.
 
+
 ## Response snapshot
 
-Merged origin/main into the EFMP-407 unit 6 author branch. The only conflict was the tracker table in `specs/content/efmp-407/tasks.md`; kept main's Unit 4 and Unit 7 sections and this branch's Unit 6 rows (main order first, then branch). Shared registries had no branch changes and no ID collisions. Regenerated the git-ignored content-status cache, then all 14 content gates passed.
+Merged origin/main into `crew/efmp-407-u06-author`, resolving the `specs/content/efmp-407/tasks.md` tracker conflict by keeping main's Unit 4/7 sections plus this branch's Unit 6 rows, and left all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFMP-407 Unit 6 by opencode (attempt 2).
-- Tests: npm run check:content passed after regenerating the local content-status cache.
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-407 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 58 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Resolved the origin/main merge conflict in the EFMP-407 tracker by keeping main's Unit 4 and Unit 7 sections and this branch's Unit 6 rows, then committed the merge with all 14 content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything and main's entries remain unchanged.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into `crew/efmp-407-u06-author`, resolving the `specs/content/efmp-407/tasks.md` tracker conflict by keeping main's Unit 4/7 sections plus this branch's Unit 6 rows, and left all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Merge conflict was limited to `specs/content/efmp-407/tasks.md`; kept main's Unit 4 and Unit 7 sections, then Unit 6's five tracker rows.
-  - `check:content-status` initially failed because the git-ignored `static/content-status.json` cache was stale; regenerated with `node scripts/report-content-status.mjs`. The same cache absence occurs on a clean main checkout.
-  - main's Unit 2 backward-design table still carries five erroneous Unit 1 tracker rows (pre-existing on origin/main, left untouched per the merge rule).
+  - main's Unit 2 backward-design table still carries five erroneous Unit 1 tracker rows (pre-existing on main, left untouched per the merge rule).
+  - the stale content-status finding is a local cache artifact; a clean main checkout also lacks the git-ignored `static/content-status.json`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
