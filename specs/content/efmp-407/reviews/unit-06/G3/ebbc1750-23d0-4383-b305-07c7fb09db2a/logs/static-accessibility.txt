@@ -1,0 +1,17 @@
+Static accessibility inspection for EFMP-407 Unit 6
+1. Headings:
+   - Proper markdown hierarchy used (H1 title, H2 main sections, H3 sub-topics). No skipped levels.
+2. Descriptive links:
+   - All internal links use descriptive anchor text (e.g., [A green economy and sustainable consumption](./topic-01), [Corporate social responsibility](./topic-02), [Ethical consumerism](./topic-03), [unit assessment](./unit-assessment), [teacher notes](./unit-teacher-notes)). No generic 'click here' or bare URLs.
+3. Figures:
+   - 6 figures placed in MDX (fig-U6-1 to fig-U6-6) with valid /img/figures/efmp-407/unit-06/ paths.
+   - 6 dark variants exist on disk and match naming convention (.dark.svg).
+   - Figure alt attributes are descriptive and match specs/content/efmp-407/figures/unit-06.md.
+   - Figures use text, contrast, and distinct visual shapes/boundaries; no information is conveyed by color alone.
+4. Handout & Badges:
+   - <PrintHandout /> component included on all topic and assessment pages.
+   - <TranslationStatusBadge status="untranslated" /> included on index.mdx.
+5. Host constraints limitation:
+   - Brief prohibits npm run build, dev server, and Playwright/Chromium.
+   - Live browser rendering, 360px viewport horizontal table scrollability, and A4 print layout inspection were not executed in this session.
+   - Browser-based SVG text-geometry measurement (measure-figure-text.mjs) deferred to CI.
