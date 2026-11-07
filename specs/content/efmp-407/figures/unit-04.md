@@ -1,6 +1,6 @@
 # EFMP-407 Unit 4 - Figure manifest
 
-Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`. Original teaching schematics, planned from the approved Unit 4 figure plan, generated and placed in this authoring pass. Browser geometry measurement remains for CI because the crew brief prohibits Playwright. Urdu assets belong to the separate translation job.
+Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`. Original teaching schematics, planned from the approved Unit 4 figure plan, generated and placed in this authoring pass. Banner illustration (fig-U4-7) is placed via unit-04.banner.md. Browser geometry measurement remains for CI because the crew brief prohibits Playwright. Urdu assets belong to the separate translation job.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
