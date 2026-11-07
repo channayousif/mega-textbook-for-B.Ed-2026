@@ -61,7 +61,7 @@ The root glossary is outside this job's scope. New unit vocabulary is defined in
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T081151799Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T100546088Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F5 and missing render/provenance evidence: [report](reviews/unit-07/G3/crew-efmp-407-u07-review_en/crew-efmp-407-u07-review_en.json). No certification. |
 | Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |
 | Unit 7 | G5 ur-review | ▢ | | pending translation and independent review |
