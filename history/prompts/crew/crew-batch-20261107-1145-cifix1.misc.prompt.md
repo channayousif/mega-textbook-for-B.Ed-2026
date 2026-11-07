@@ -1,32 +1,106 @@
 ---
 id: crew-batch-20261107-1145-cifix1
-title: crew fix EFMP-407 unit 3 figure geometry
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-07
 surface: agent
 model: opencode
-feature: efmp-407
+feature: crew
 branch: crew/batch-20261107-1145
 user: crew
 command: crew fix
 labels: ["crew", "opencode", "fix"]
 links:
-  spec: specs/content/efmp-407/content-spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: 477
+  pr: null
 files:
-  - static/img/figures/efmp-407/unit-03/fig-U3-1.svg
-  - static/img/figures/efmp-407/unit-03/fig-U3-1.dark.svg
-  - static/img/figures/efmp-407/unit-03/fig-U3-2.svg
-  - static/img/figures/efmp-407/unit-03/fig-U3-2.dark.svg
-  - static/img/figures/efmp-407/unit-03/fig-U3-4.svg
-  - static/img/figures/efmp-407/unit-03/fig-U3-4.dark.svg
-  - static/img/figures/efmp-407/unit-03/fig-U3-6.svg
-  - static/img/figures/efmp-407/unit-03/fig-U3-6.dark.svg
-  - history/prompts/crew/crew-batch-20261107-1145-cifix1.misc.prompt.md
+ - docs/semester-3/efmp-407/unit-03/index.mdx
+ - docs/semester-3/efmp-407/unit-03/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-03/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-03/topic-03.mdx
+ - docs/semester-3/efmp-407/unit-03/unit-assessment.mdx
+ - history/prompts/crew/crew-batch-20261107-1145-cifix1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u02-translate.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-author.green.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u07-review_en-r1.misc.prompt.md
+ - history/prompts/general/20261144-author-efmp-407-unit-three.general.prompt.md
+ - history/prompts/general/2461-efmp407-unit2-urdu-mirror.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-02/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-02/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-02/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-02/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-02/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-02/unit-teacher-notes.mdx
+ - specs/content/efmp-407/authoring/unit-03.md
+ - specs/content/efmp-407/concepts/unit-03.md
+ - specs/content/efmp-407/coverage/unit-03.md
+ - specs/content/efmp-407/figures/unit-03.banner.md
+ - specs/content/efmp-407/figures/unit-03.md
+ - specs/content/efmp-407/reviews/unit-02/G4/translation-handoff.md
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/assessment-independent.md
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/crew-efmp-407-u07-review_en-r1.json
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/input-verification.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check-content.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_figures.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_source-floor.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/check_svg-style.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/measure-figure-text.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/rasterize.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/logs/validate_content.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/manifest.json
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/render-review.txt
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/renders/fig-U7-1-light.png
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/renders/fig-U7-1.dark.png
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/renders/fig-U7-2-light.png
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/renders/fig-U7-2.dark.png
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/renders/fig-U7-3-light.png
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/renders/fig-U7-3.dark.png
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/renders/fig-U7-4-light.png
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/renders/fig-U7-4.dark.png
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/source-verification.md
+ - specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/summary.md
+ - specs/content/efmp-407/sources/texts/akkari-maleq-2020-gce.md
+ - specs/content/efmp-407/sources/texts/khoo-jorgensen-2021.md
+ - specs/content/efmp-407/sources/texts/unesco-2017-esd-objectives.md
+ - specs/content/efmp-407/sources/unit-03.md
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-02/fig-U2-1.ur.dark.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-1.ur.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-2.ur.dark.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-2.ur.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-3.ur.dark.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-3.ur.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-4.ur.dark.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-4.ur.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-5.ur.dark.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-5.ur.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-6.ur.dark.svg
+ - static/img/figures/efmp-407/unit-02/fig-U2-6.ur.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-1.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-2.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-3.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-4.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-5.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efmp-407/unit-03/fig-U3-6.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -61,28 +135,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261106-1031-cifix1, fix, opencode) CI must confirm browser geometry; local Playwright was prohibited. The fix was validated with a DejaVu advance-metric simulation (`.crew/sim-geometry.py`) that reproduces the CI log's spills and reports all 8 changed SVGs clean at 1.0x and 1.02x safety.
 - (batch-20261106-1031-cifix1, fix, opencode) fig-U3-2 cell 3 row 3 still has one Urdu line ("روزمرہ خاندانی، ثقافتی، تجارتی، اور اجتماعی زندگی کو برقرار رکھتی ہے۔") that runs off the left edge of its panel; measure-figure-text.mjs does not check the left edge, so CI stays green, but the rendered figure is clipped and needs a wrap or a taller row.
 
+
 ## Response snapshot
 
-Fixed the four failing EFMP-407 unit 3 English figures and their derived dark twins. In `fig-U3-1` the two overflowing SDG-number cells were wrapped onto two lines and the label class dropped 15px to 14px; `fig-U3-2`, `fig-U3-4` and `fig-U3-6` also moved the label class to 14px; `fig-U3-6` moved the body class 13px to 12px and rewrapped its three Learning Objective cells. A DejaVu advance-metric simulation of `scripts/measure-figure-text.mjs` reports all 12 unit 3 SVGs clean, and `npm run check:content` passes.
+Fixed the figure-geometry CI failure on PR #477 by wrapping the overflowing SDG-number cells in fig-U3-1, reducing the label class to 14px in fig-U3-1/2/4/6, and reducing fig-U3-6 body text to 12px with rewrapped Learning Objective cells, then regenerating the four dark twins.
 
 ## Outcome
 
-- Impact: fix for EFMP-407 unit 3 figure geometry by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates).
-- Files: 9 file(s), listed above.
+- Impact: fix for CREW Unit 0 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 83 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Wrapped the overflowing SDG-number cells in `fig-U3-1`, reduced the label class 15px to 14px in `fig-U3-1`, `fig-U3-2`, `fig-U3-4` and `fig-U3-6`, reduced the body class 13px to 12px and rewrapped the three Learning Objective cells in `fig-U3-6`, and regenerated the four dark twins with `scripts/build-figure-variants.mjs`.
-- Decisions the team must respect: text content is unchanged; only line breaks and font sizes moved. The label class is now 14px and the fig-U3-6 body class 12px in these files, so a later corpus-wide typography pass must not assume the 15px/13px boilerplate for unit 3.
+- Shipped / changed: Fixed the figure-geometry CI failure on PR #477 by wrapping the overflowing SDG-number cells in fig-U3-1, reducing the label class to 14px in fig-U3-1/2/4/6, and reducing fig-U3-6 body text to 12px with rewrapped Learning Objective cells, then regenerating the four dark twins.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - CI must confirm browser geometry (local Playwright prohibited). The fix was validated with `.crew/sim-geometry.py`, a DejaVu advance-metric simulation of `scripts/measure-figure-text.mjs`; it reproduces the CI log's spills on the pre-fix files and reports all 12 unit 3 SVGs clean after.
-  - `fig-U3-1` col 4 line "Water conservation, waste audits," still has only about 1.7px of panel margin (pre-existing, passes CI); a later font or width change could tip it.
-  - `fig-U3-2` still has panel descriptions wider than their 220px panels (for example "Heritage and mutual learning" and "Resource care and moderation"); `measure-figure-text.mjs` does not flag them because their left edge falls outside the holder rect, but they render slightly outside the panel.
-  - `fig-U3-6` body text is now 12px; if the unit's figures are later standardised on 13px body, this figure needs a matching rewrap.
+  - CI must confirm browser geometry (local Playwright prohibited); validated with `.crew/sim-geometry.py` (DejaVu advance metrics), which reproduces the CI spills and reports all 12 unit 3 SVGs clean.
+  - `fig-U3-1` col 4 "Water conservation, waste audits," keeps only ~1.7px panel margin (pre-existing, passes CI); `fig-U3-2` descriptions such as "Heritage and mutual learning" still render slightly outside their 220px panels because `measure-figure-text.mjs` does not flag text whose left edge is outside the holder.
+  - `fig-U3-6` body text is now 12px and its label 14px; a later corpus-wide typography pass must not assume the 15px/13px boilerplate for unit 3.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
