@@ -90,7 +90,7 @@ Generated, inspected, and placed the GICP-400 Unit 4 banner illustration (fig-U4
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Both English and Urdu unit locales remain translation_status: draft with G3, G4, and G5 open pending independent review and qualification.
-  - Browser-based rendered inspection across 1280px, 360px, and A4 print emulation remains pending for a permitted session under the environment restrictions.
+  - Browser-based rendered inspection across 1280px, 360px, and A4 print emulation remains pending for a permitted session under the host environment restrictions.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
