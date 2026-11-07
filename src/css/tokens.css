@@ -103,6 +103,16 @@ html[data-theme='dark'] .navbar .navbar-cta.navbar__link:hover { color: var(--br
 
 .footer--dark { --ifm-footer-background-color: var(--brand-ink); }
 
+/* Reveal on scroll (src/lib/useReveal.ts): "bubble in", a short rise. Content is
+   visible unless JavaScript has marked it pending, and print always shows it. */
+[data-reveal='pending'] { opacity: 0; transform: translateY(14px); }
+[data-reveal='shown'] {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--motion-slow) var(--motion-ease-out), transform var(--motion-slow) var(--motion-ease-out);
+}
+@media print { [data-reveal] { opacity: 1 !important; transform: none !important; } }
+
 /* press */
 .button {
   transition: transform var(--motion-fast) var(--motion-ease-out),

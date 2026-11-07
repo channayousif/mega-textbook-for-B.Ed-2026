@@ -1,0 +1,4 @@
+.icon { display: inline-block; flex: none; vertical-align: middle; }
+.accent { stroke: var(--icon-accent, #e5a333); }
+:global(html[dir='rtl']) .flip { transform: scaleX(-1); }
+@media print { .accent { stroke: currentColor; } }
