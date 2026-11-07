@@ -42,7 +42,7 @@ Rebuilt the landing page from the approved v2 boards, with the owner's canvas ed
 ## Outcome
 
 - ✅ Impact: the landing page takes the v2 identity; the tour, how-it-works and opportunity sections are replaced by the climb and gallery as on the boards.
-- 🧪 Tests: tsc clean for changed files; build and gates, see PR.
+- 🧪 Tests: tsc clean for changed files; npm run check:all 20/20 PASS including build; full-page screenshots EN and UR, 1440 and 390px, light and dark: no horizontal overflow, no broken images, student ends on the top step in both locales.
 - 📁 Files: landing page, styles, copy, scene list, edge and climb components, site images.
 - 🔁 Next prompts: PR 4 catalogue, covers, navbar with the bilingual header logo, footer and public pages.
 - 🧠 Reflection: the owner changed "climb" to "ladder" on the English phone board only; the site uses "ladder" everywhere in English, and the Urdu heading keeps the board's سفر.
@@ -57,6 +57,6 @@ Rebuilt the landing page from the approved v2 boards, with the owner's canvas ed
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: PHR ID collision with crew PHRs on main; PR 1 and 2 PHRs moved to 20261170 and 20261171.
-- Graders run and results (PASS/FAIL): see PR.
+- Graders run and results (PASS/FAIL): check:all PASS. Screenshots caught three faults, all fixed: minifier reordering equal-specificity rules (teal access card, white ticks), the RTL build negating translate() in the climb keyframes (student off canvas on Urdu pages), and a hard-coded paper fill on the hero edge in dark mode.
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): none.
