@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed the GICP-400 Unit 3 banner illustration (fig-U3-5) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed the GICP-400 Unit 3 banner illustration (fig-U3-5) across English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -85,15 +85,17 @@ Generated, inspected, and placed the GICP-400 Unit 3 banner illustration (fig-U3
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the GICP-400 Unit 3 banner illustration (fig-U3-5) in English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed the GICP-400 Unit 3 banner illustration (fig-U3-5) across English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - English G3 remains open and advisory under escalate disposition due to unbound secondary sources (Abbas 2023, Shah 2026), missing run provenance, and browser/A4 inspection prohibitions.
-  - Urdu translation remains draft; independent G5 review, browser/print inspection, and SVG text-geometry validation remain pending on a host permitted to run Chromium.
+  - English G3 remains open and advisory under escalate disposition due to unbound secondary source texts (Abbas 2023, Shah 2026), missing run provenance, and host prohibitions on browser/print inspection tooling.
+  - Urdu translation remains draft; independent G5 review, live browser rendering (360px viewport, table scrolling, A4 print), and SVG text-geometry validation remain pending on an environment permitted to run Chromium.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
