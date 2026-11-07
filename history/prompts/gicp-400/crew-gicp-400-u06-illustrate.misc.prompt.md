@@ -16,23 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/gicp-400/unit-06/index.mdx
-  - history/prompts/gicp-400/crew-gicp-400-u06-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-06/index.mdx
-  - specs/content/gicp-400/figures/unit-06.banner.md
-  - specs/content/gicp-400/reviews/unit-06/G2/20261107T054012031Z-gates.json
-  - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-bloom-bands.txt
-  - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-concept-graph.txt
-  - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-depth-gate.txt
-  - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-docs-sync.txt
-  - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-figures.txt
-  - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-no-answer-keys.txt
-  - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-no-em-dash.txt
-  - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/validate-content.txt
-  - specs/content/gicp-400/tasks.md
-  - static/img/figures/gicp-400/unit-06/fig-U6-5.webp
+ - docs/semester-3/gicp-400/unit-06/index.mdx
+ - history/prompts/gicp-400/crew-gicp-400-u06-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-06/index.mdx
+ - specs/content/gicp-400/figures/unit-06.banner.md
+ - specs/content/gicp-400/reviews/unit-06/G2/20261107T054012031Z-gates.json
+ - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-bloom-bands.txt
+ - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-concept-graph.txt
+ - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-06/G2/logs-20261107T054012031Z/validate-content.txt
+ - specs/content/gicp-400/tasks.md
+ - static/img/figures/gicp-400/unit-06/fig-U6-5.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -70,6 +70,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gicp-400-u06-review_en, review_en, agy) Live browser rendering (360px small-screen viewport, table scroll reachability, A4 print) should be executed on an authorized host.
 - (gicp-400-u06-review_en, review_en, agy) Primary constitutional text is updated to the Twenty-seventh Amendment (2025); verify official gazette text for the 25th Amendment when available.
 
+
 ## Response snapshot
 
 Generated and placed the GICP-400 Unit 6 banner illustration (fig-U6-5) in English and Urdu unit indexes, updated banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
@@ -89,7 +90,7 @@ Generated and placed the GICP-400 Unit 6 banner illustration (fig-U6-5) in Engli
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Both English and Urdu unit locales remain translation_status: draft with G3, G4, and G5 open pending independent review and qualification.
-  - Chromium browser-based rendered inspection across 1280px, 360px, and A4 print emulation remains pending for an authorized session under host environment restrictions.
+  - Live browser rendering across small-screen viewports (360px) and A4 print emulation remains pending for an authorized host.
   - Primary constitutional text is updated to the Twenty-seventh Amendment (2025); verify official gazette text for the 25th Amendment when available.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
