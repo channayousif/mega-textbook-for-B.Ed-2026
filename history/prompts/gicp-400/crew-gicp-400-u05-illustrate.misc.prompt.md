@@ -70,9 +70,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gicp-400-u05-review_en-conflict1, fix, opencode) `static/content-status.json` is gitignored and must be regenerated before `check:content` in a fresh worktree.
 - (gicp-400-u05-review_en-conflict1, fix, opencode) G3 stays `▢` advisory; Figure 5.6 alt-text repair, source/provenance checks, rendered review and a fresh blind assessment solve remain open.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed the GICP-400 Unit 5 banner illustration (fig-U5-7) across English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated and placed the GICP-400 Unit 5 banner illustration (fig-U5-7) in English and Urdu unit indexes, updated banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -84,13 +85,13 @@ Generated, inspected, and placed the GICP-400 Unit 5 banner illustration (fig-U5
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the GICP-400 Unit 5 banner illustration (fig-U5-7) across English and Urdu index files, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated and placed the GICP-400 Unit 5 banner illustration (fig-U5-7) in English and Urdu unit indexes, updated banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Both English and Urdu unit locales remain translation_status: draft with G3, G4, and G5 open pending independent review and qualification.
-  - Figure 5.6 resource-condition alt text, source/provenance checks and fresh blind assessment solve remain open on English G3.
-  - Browser-based rendered inspection across 1280px, 360px, and A4 print emulation remains pending for a permitted session under the host environment restrictions.
+  - Figure 5.6 resource-condition alt text, source/provenance checks and a fresh blind assessment solve remain open on English G3.
+  - Browser-based rendered inspection across 1280px, 360px, and A4 print emulation remains pending for an authorized session under host environment restrictions.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
