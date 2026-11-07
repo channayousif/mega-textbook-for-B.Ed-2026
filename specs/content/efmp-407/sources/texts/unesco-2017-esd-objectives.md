@@ -1,15 +1,33 @@
-# Bound excerpt - unesco-2017-esd-objectives
+# Bound source note: unesco-2017-esd-objectives
 
-UNESCO. (2017). *Education for Sustainable Development Goals: Learning Objectives.* UNESCO Publishing.
-https://unesdoc.unesco.org/ark:/48223/pf0000247444
+UNESCO. (2017). *Education for Sustainable Development Goals: Learning Objectives*. UNESCO Publishing.
+
+- Official record: https://unesdoc.unesco.org/ark:/48223/pf0000247444
+- Consulted open PDF: https://bne.unesco.de/sites/default/files/2018-08/unesco_education_for_sustainable_development_goals.pdf
+- Access checked: 2026-11-07. Publisher copyright page identifies UNESCO, 2017, ISBN 978-92-3-100209-0, CC BY-SA 3.0 IGO.
+- Locator: printed pp. 10-11, cross-cutting competencies and learning domains; introduction on using the guidance.
+
+## Short excerpt
+
+> Systems thinking competency: the abilities to recognize and understand relationships
+
+## Support and limits
+
+Page 10 names eight competencies: systems thinking, anticipatory, normative, strategic, collaboration, critical thinking, self-awareness and integrated problem-solving. Page 11 distinguishes cognitive, socio-emotional and behavioural objectives. These ground U2-01 and the systems-thinking framing in U2-04.
+
+The source does not supply the unit's fictional tank quantities, reporting loop, classroom role cards or worked arithmetic. Those are original applications. Its guidance is adaptable, not a requirement to teach all eight competencies in one primary lesson. The official record had no readable browser text; the linked UNESCO commission-hosted copy supplied the content.
+
+## Unit 3 bound excerpt
+
+UNESCO. (2017). *Education for Sustainable Development Goals: Learning Objectives.* UNESCO Publishing. https://unesdoc.unesco.org/ark:/48223/pf0000247444
 
 Open access (CC BY-SA 3.0 IGO). Document published by UNESCO Paris. The excerpts below record the core conceptual framework for SDG Target 4.7, cross-cutting sustainability competencies, and the three learning dimensions (cognitive, socio-emotional, and behavioural) used across EFMP-407 Unit 3.
 
-## 1. SDG Target 4.7 (p. 7)
+### 1. SDG Target 4.7 (p. 7)
 
 "Target 4.7: By 2030, ensure that all learners acquire the knowledge and skills needed to promote sustainable development, including, among others, through education for sustainable development and sustainable lifestyles, human rights, gender equality, promotion of a culture of peace and non-violence, global citizenship and appreciation of cultural diversity and of culture's contribution to sustainable development."
 
-## 2. Cross-cutting Key Competencies for Sustainability (p. 10)
+### 2. Cross-cutting Key Competencies for Sustainability (p. 10)
 
 "To create a more sustainable world and to engage with sustainability-related issues as outlined in the SDGs, individuals must become sustainability change-makers. They require the knowledge, skills, values and attitudes that empower them to contribute to sustainable development. Education, therefore, is crucial for the achievement of sustainable development. However, not all kinds of education support sustainable development. Education that promotes economic growth alone may also lead to an increase in unsustainable consumption patterns."
 
@@ -23,14 +41,14 @@ Open access (CC BY-SA 3.0 IGO). Document published by UNESCO Paris. The excerpts
 - Self-awareness competency: the ability to reflect on one's own role in the local community and global society; to continually evaluate and further motivate one's actions; and to deal with one's feelings and desires.
 - Integrated problem-solving competency: the overarching ability to apply different problem-solving frameworks to complex sustainability problems and develop viable, inclusive and equitable solution options that promote sustainable development."
 
-## 3. The Three Domains of Learning (p. 11)
+### 3. The Three Domains of Learning (p. 11)
 
 "ESD aims at developing cross-cutting sustainability competencies in learners. The learning objectives are categorized into three domains:
 - Cognitive domain comprises knowledge and thinking skills necessary to better understand the SDG and the challenges in achieving it.
 - Socio-emotional domain includes social skills that enable learners to collaborate, negotiate and communicate to promote the SDGs as well as self-reflection skills, values, attitudes and motivations that enable learners to develop themselves.
 - Behavioural domain describes action competencies."
 
-## 4. What this source supports in EFMP-407 Unit 3
+### 4. What this source supports in EFMP-407 Unit 3
 
 - Sub-topic U3-01: The overview of the 17 SDGs and their holistic nature.
 - Sub-topic U3-02: Target 4.7 text, the six thematic strands of Target 4.7, the three domains of learning (cognitive, socio-emotional, behavioural), and the key competencies for sustainability.
