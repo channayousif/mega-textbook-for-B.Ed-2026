@@ -1,7 +1,7 @@
 # EFMP-407 - Task tracker
 
 Each authoring job records its own unit. Other units belong to separate crew jobs. No publication or review certification is claimed by this tracker.
-The course content-spec is approved; this tracker does not re-evaluate G0 or G1. English-only authoring from the approved unit specs (D-2026-0076).
+The course content-spec is approved; this tracker does not re-evaluate G0 or G1. English-only authoring from the approved unit specs (D-2026-0076). Other units are outside this job.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
@@ -32,6 +32,11 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 6 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U6-7 remains prompt-only |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261107T075510461Z-gates.json |
+| Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 5 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
+| Unit 5 | G5 ur-review | ▢ | | |
+| Unit 5 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U5-7 remains prompt-only |
 
 ## Unit 2 backward-design alignment
 

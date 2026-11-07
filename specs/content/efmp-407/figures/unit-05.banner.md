@@ -1,0 +1,7 @@
+# Unit banner - EFMP-407 Unit 5 (Cultural and Social Dimensions)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into every unit's review evidence, does not need to change. To be produced with Gemini via `agy` (`scripts/generate-illustration.mjs efmp-407 5 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U5-7 | index | illustration | unit banner, wide 16:9 landscape scene: an inclusive rural Pakistani school courtyard in interior Sindh during morning group learning; a female trainee teacher and a diverse group of primary and middle school pupils (boys and girls, including a girl using crutches and boys from different ethnic backgrounds in neat shalwar kameez uniforms) sit together under the shade of a large neem tree; one pupil holds a traditional clay pitcher and notes down an elder community farmer's explanation of water harvesting while other pupils take notes in their notebooks; warm morning sunlight filtering through leaves, respectful engaged expressions; shalwar kameez uniforms, dupattas for girls and teacher; no readable text, no map, flag or emblem in frame; documentary realism | An inclusive classroom group of boys and girls with their trainee teacher sitting under a neem tree in a Pakistani school courtyard, listening to a community elder explain traditional water conservation. |  | prompt-only |
