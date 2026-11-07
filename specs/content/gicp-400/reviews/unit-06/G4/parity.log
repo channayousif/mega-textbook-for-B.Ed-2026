@@ -1,0 +1,7 @@
+PASS index.mdx : metadata, headings, components, glossary keys, figure IDs/descriptions, numbering, MDX compile
+PASS topic-01.mdx : metadata, headings, components, glossary keys, figure IDs/descriptions, numbering, MDX compile
+PASS topic-02.mdx : metadata, headings, components, glossary keys, figure IDs/descriptions, numbering, MDX compile
+PASS unit-assessment.mdx : metadata, headings, components, glossary keys, figure IDs/descriptions, numbering, MDX compile
+PASS terminology: all eight key_terms match frozen bank
+PASS MCQ option order: 40 options preserved
+PASS assessment: 10/10/5, final bounded answers, option sequence preserved
