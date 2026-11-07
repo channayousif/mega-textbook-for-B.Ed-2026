@@ -1,5 +1,5 @@
 ---
-id: 20261143
+id: 20261145
 title: Author EFMP407 Unit Four
 stage: general
 date: 2026-11-07
@@ -43,7 +43,7 @@ files:
   - static/img/figures/efmp-407/unit-04/fig-U4-6.dark.svg
   - static/img/figures/efmp-407/unit-04/fig-U4-6.svg
   - specs/content/efmp-407/tasks.md
-  - history/prompts/general/20261143-author-efmp407-unit-four.general.prompt.md
+  - history/prompts/general/20261145-author-efmp407-unit-four.general.prompt.md
 tests:
   - Baseline npm run check:content at origin/main b3042833d: all 14 pass
   - Initial npm run check:content: source binding and G2 evidence findings; repaired before final run

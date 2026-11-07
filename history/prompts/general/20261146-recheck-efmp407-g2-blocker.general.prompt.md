@@ -1,5 +1,5 @@
 ---
-id: 20261144
+id: 20261146
 title: Recheck EFMP407 G2 blocker
 stage: general
 date: 2026-11-07
@@ -16,7 +16,7 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/general/20261144-recheck-efmp407-g2-blocker.general.prompt.md
+  - history/prompts/general/20261146-recheck-efmp407-g2-blocker.general.prompt.md
 tests:
   - "check:content: 13 PASS, pipeline FAIL"
   - "G2 preparation: missing required overview"
