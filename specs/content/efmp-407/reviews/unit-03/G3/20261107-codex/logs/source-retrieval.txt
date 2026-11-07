@@ -1,0 +1,4 @@
+Actual web tool attempts during this session:
+open https://doi.org/10.1080/14767724.2021.1889361 -> Failed to fetch: (403) Forbidden.
+open https://doi.org/10.1007/978-3-030-44617-8 -> (500) redirected to https://link.springer.com/10.1007/978-3-030-44617-8 which is inaccessible via this tool (non-retryable).
+Bound source notes read; these failures do not authenticate their quotations. No new external text used for an accepted finding.
