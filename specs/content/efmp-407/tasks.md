@@ -16,7 +16,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 2 | G5 ur-review | ▢ | | Pending English review and Urdu translation; authored concept labels need register review. |
 | Unit 2 | G6 assets | ▣ | | Six English SVG schematics placed with derived dark variants; browser geometry check barred by crew brief and pending CI; Urdu and banner remain separate jobs. |
 | Unit 2 | G7 publish | ▢ | | Publication and catalog integration are outside this authoring job. |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-03/G2/20261107T131920558Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-03/G2/20261107T173333898Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. Source support, conflicting category guidance, readability and pedagogy require repairs; render/provenance incomplete. [Report](reviews/unit-03/G3/20261107-codex.json). No certification. |
 | Unit 3 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |

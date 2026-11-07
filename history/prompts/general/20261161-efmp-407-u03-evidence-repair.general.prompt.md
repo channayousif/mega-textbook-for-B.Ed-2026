@@ -38,7 +38,7 @@ Confirmed the existing SDG 5 category contradiction still blocks translation und
 ## Outcome
 
 - ✅ Impact: Unit-scoped evidence freshness repair; complete Urdu mirror remains blocked by defective English baseline.
-- 🧪 Tests: Final validation pending; update after actual checks.
+- 🧪 Tests: PASS: all 14 branch content gates after evidence refresh; all eight evidence preparation commands; diff whitespace and prose punctuation/placeholders. PASS: all 14 origin/main gates after generating its ignored content-status cache; no additional branch findings.
 - 📁 Files: Handoff, PHR, regenerated G2 logs/evidence and Unit 3 tracker reference.
 - 🔁 Next prompts: English author repairs existing G3 findings before translator resumes G4.
 - 🧠 Reflection: A unit-scoped handoff is a bound input; prepare evidence only after committing it.
@@ -53,6 +53,6 @@ Confirmed the existing SDG 5 category contradiction still blocks translation und
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Pre-commit gate success missed the new handoff entering the committed input manifest.
-- Graders run and results (PASS/FAIL): Pending final rerun and origin/main comparison.
+- Graders run and results (PASS/FAIL): PASS: final branch check:content (14/14); evidence preparation (8/8); git diff --check; punctuation/placeholders. The initial branch run failed only the stale Unit 3 G2 manifest. A fresh origin/main checkout first lacked its ignored content-status cache; regenerated it before comparison, then all 14 origin/main gates passed. No additional branch findings.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Refresh G2 after committing bound documentation, then rerun content gates.
