@@ -4,7 +4,7 @@ title: crew author EFMP-407 unit 8
 stage: misc
 date: 2026-11-07
 surface: agent
-model: gemini
+model: agy
 feature: efmp-407
 branch: crew/efmp-407-u08-author
 user: crew
@@ -16,41 +16,41 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/efmp-407/unit-08/index.mdx
-  - docs/semester-3/efmp-407/unit-08/topic-01.mdx
-  - docs/semester-3/efmp-407/unit-08/topic-02.mdx
-  - docs/semester-3/efmp-407/unit-08/unit-assessment.mdx
-  - docs/semester-3/efmp-407/unit-08/unit-teacher-notes.mdx
-  - history/prompts/efmp-407/crew-efmp-407-u08-author.green.prompt.md
-  - specs/content/efmp-407/authoring/unit-08.md
-  - specs/content/efmp-407/concepts/unit-08.md
-  - specs/content/efmp-407/coverage/unit-08.md
-  - specs/content/efmp-407/figures/unit-08.banner.md
-  - specs/content/efmp-407/figures/unit-08.md
-  - specs/content/efmp-407/reviews/unit-08/G2/20261107T082658818Z-gates.json
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-bloom-bands.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-concept-graph.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-depth-gate.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-docs-sync.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-figures.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-no-answer-keys.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-no-em-dash.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/validate-content.txt
-  - specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md
-  - specs/content/efmp-407/sources/texts/sindh-rte-act-2013.md
-  - specs/content/efmp-407/sources/texts/wals-2024-whole-school.md
-  - specs/content/efmp-407/sources/unit-08.md
-  - specs/content/efmp-407/tasks.md
-  - static/img/figures/efmp-407/unit-08/fig-U8-1.dark.svg
-  - static/img/figures/efmp-407/unit-08/fig-U8-1.svg
-  - static/img/figures/efmp-407/unit-08/fig-U8-2.dark.svg
-  - static/img/figures/efmp-407/unit-08/fig-U8-2.svg
-  - static/img/figures/efmp-407/unit-08/fig-U8-3.dark.svg
-  - static/img/figures/efmp-407/unit-08/fig-U8-3.svg
-  - static/img/figures/efmp-407/unit-08/fig-U8-4.dark.svg
-  - static/img/figures/efmp-407/unit-08/fig-U8-4.svg
+ - docs/semester-3/efmp-407/unit-08/index.mdx
+ - docs/semester-3/efmp-407/unit-08/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-08/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-08/unit-assessment.mdx
+ - docs/semester-3/efmp-407/unit-08/unit-teacher-notes.mdx
+ - history/prompts/efmp-407/crew-efmp-407-u08-author.green.prompt.md
+ - specs/content/efmp-407/authoring/unit-08.md
+ - specs/content/efmp-407/concepts/unit-08.md
+ - specs/content/efmp-407/coverage/unit-08.md
+ - specs/content/efmp-407/figures/unit-08.banner.md
+ - specs/content/efmp-407/figures/unit-08.md
+ - specs/content/efmp-407/reviews/unit-08/G2/20261107T082658818Z-gates.json
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/validate-content.txt
+ - specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md
+ - specs/content/efmp-407/sources/texts/sindh-rte-act-2013.md
+ - specs/content/efmp-407/sources/texts/wals-2024-whole-school.md
+ - specs/content/efmp-407/sources/unit-08.md
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-08/fig-U8-1.dark.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-1.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-2.dark.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-2.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-3.dark.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-3.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-4.dark.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-4.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -81,28 +81,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFMP-407 Unit 8 in English with index, two nine-part topic cycles, 10/10/5 assessment bank with bounded answers and marking guidance, teacher notes, four placed SVG figures with derived dark variants, coverage matrix, sources with bound excerpts, concept graph, banner plan, tracker update, and G2 gate evidence, leaving G3, G4 and G5 open.
+Authored EFMP-407 Unit 8 in English with index, two topic cycles, 10/10/5 assessment bank, teacher notes, four placed SVG figures with dark variants, governance files, tracker update, and G2 gate evidence.
 
 ## Outcome
 
-- Impact: author for EFMP-407 Unit 8 by agy worker (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the job.
+- Impact: author for EFMP-407 Unit 8 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 33 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFMP-407 Unit 8 in English with index, two nine-part topic cycles, 10/10/5 assessment bank with bounded answers, teacher notes, four placed SVG figures with derived dark variants, coverage matrix, sources with bound excerpts, concept graph, and G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay open awaiting an independent reviewer; this commit does not certify review.
-- Pending / next owner: crew lead / G3 independent reviewer.
+- Shipped / changed: Authored EFMP-407 Unit 8 in English with index, two topic cycles, 10/10/5 assessment bank, teacher notes, four placed SVG figures with dark variants, governance files, tracker update, and G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All ten Urdu concept labels in `concepts/unit-08.md` are authored because none is banked in `terminology.csv`.
-  - Banner figure `fig-U8-5` in `figures/unit-08.banner.md` remains `prompt-only` for the illustrator pass.
-  - Figure text geometry is unmeasured locally (`measure-figure-text.mjs` requires Chromium, forbidden by the brief); CI `figure-geometry` measures them.
-- Paperclip issues affected: none (work tracked by the crew board).
+  - Banner figure fig-U8-5 is prompt-only in specs/content/efmp-407/figures/unit-08.banner.md awaiting illustration pass.
+  - All ten Urdu concept labels in specs/content/efmp-407/concepts/unit-08.md are authored and require G5 review.
+  - Figure text geometry on four placed SVGs is unmeasured locally (Chromium forbidden by brief); CI figure-geometry measures them.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
