@@ -35,6 +35,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261107T134915417Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 5 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory: revise; F1 blocking - IUCN Pakistan 2004 citation URL resolves to an unrelated Tanzania report and the glacier-grafting claim is not in the bound excerpt; F2 uncertain - two per-topic retrieval items tagged Analyze above the formative band; F3-F7 advisory; report: specs/content/efmp-407/reviews/unit-05/G3/crew-efmp-407-u05-review_en/crew-efmp-407-u05-review_en.json |
+| Unit 5 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory r1 escalation on unchanged inputs; prior F1-F7 unresolved; missing parent provenance and required browser/print evidence. [Report](reviews/unit-05/G3/crew-efmp-407-u05-review_en-r1.json). G3 remains open and unsigned. |
 | Unit 5 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U5-7 remains prompt-only |
