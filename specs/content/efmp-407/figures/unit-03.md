@@ -1,6 +1,6 @@
 # EFMP-407 Unit 3 - Figure manifest
 
-Six schematics planned in the approved content-spec figure plan (two concept maps, three tables, one diagram). Six English schematic SVGs are placed with derived dark twins. Browser geometry validation remains pending under the crew brief's Chromium prohibition. Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
+Six schematics planned in the approved content-spec figure plan (two concept maps, three tables, one diagram). Six English schematic SVGs are placed with derived dark twins. Browser geometry validation remains pending under the crew brief's Chromium prohibition. Banner illustration (fig-U3-7) is placed via unit-03.banner.md. Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
