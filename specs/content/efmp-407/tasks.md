@@ -1,21 +1,31 @@
 # EFMP-407 - Task tracker
 
-This authoring job records Unit 2 only. Other units belong to separate crew jobs.
+Each authoring job records its own unit. Other units belong to separate crew jobs. No publication or review certification is claimed by this tracker.
 The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 2 | G2 en-draft | ▣ | | English draft and deterministic content checks complete; G2 evidence blocked because required course-overview.mdx does not exist. Course overview is outside this Unit 2 brief; no done claim made. |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T065935249Z-gates.json |
+| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
+| Unit 1 | G5 ur-review | ▢ | | |
+| Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
+| Unit 2 | G2 en-draft | ▣ | | English draft and deterministic content checks complete; evidence pending. |
 | Unit 2 | G3 en-review | ▢ | | Fresh independent English review required; no author certification. |
 | Unit 2 | G4 ur-translation | ▢ | | Separate Urdu job; retain draft front matter until accepted translation. |
 | Unit 2 | G5 ur-review | ▢ | | Pending English review and Urdu translation; authored concept labels need register review. |
 | Unit 2 | G6 assets | ▣ | | Six English SVG schematics placed with derived dark variants; browser geometry check barred by crew brief and pending CI; Urdu and banner remain separate jobs. |
 | Unit 2 | G7 publish | ▢ | | Publication and catalog integration are outside this authoring job. |
 
-## Backward-design alignment
+## Unit 2 backward-design alignment
 
 | Sub-topic | Enduring understanding | Target Bloom level | Explanation heading | Evidence |
 |---|---|---|---|---|
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T065935249Z-gates.json |
+| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
+| Unit 1 | G5 ur-review | ▢ | | |
+| Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
 | U2-01 | Learning domains need distinct evidence; competencies are used in a situation. | Apply | The UNESCO framework of ESD | Topic 2.1 retrieval 1-3, checklist, lesson revision; MCQ 1-4, RRQ 1-3, ERQ 1 |
 | U2-02 | EE and ESD overlap; classification rests on connected learning evidence. | Analyze | ESD compared with environmental education | Topic 2.2 retrieval 1-3, checklist, comparison; MCQ 5-7, RRQ 4-6, ERQ 2 |
 | U2-03 | Reflection tests assumptions while preserving learner agency. | Analyze | Transformative learning | Topic 2.3 retrieval 1-2, checklist, claim analysis; MCQ 8, RRQ 7-8, ERQ 3 |
@@ -23,16 +33,10 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 
 ERQs 4-5 integrate all three topics. Each topic summative task and all five ERQs require analysis or higher. Formative items remain Remember/Understand/Apply. The backward-design table is planning evidence, not independent review.
 
-## Author checks and remaining handoff
+## Unit 2 author checks and remaining handoff
 
 Estimated reading at 190 words per minute, rounded up per file: index 3, Topic 2.1 8, Topic 2.2 9, Topic 2.3 9, assessment 14, teacher notes 5; total 48 minutes within the approved 35-55 band. Estimates exclude front matter, imports, invisible comments, component markup and link destinations.
 
 The live gate requires rendered figures despite the author-unit skill's older prompt-only stopping point. The brief's zero-new-findings requirement was followed using the current Codex generate-figures skill. All six approved schematic IDs, kinds, prompts and alt strings were retained. English and dark SVGs were visually inspected using local Sharp raster previews with palette variables resolved in scratch copies. No build, server, Playwright or Chromium run was performed. The mandatory browser-based SVG text measurement remains for CI or the next permitted inspection job.
 
 The root glossary is outside this job's scope. New unit vocabulary is defined in the English prose; global glossary integration can be handled by the shared terminology owner. The concept graph's authored Urdu labels await G5 review. No catalog, approved specification, standard, gate or publication setting was changed.
-
-## G2 dependency blocker
-
-`node scripts/prepare-gate-evidence.mjs EFMP-407 2` was attempted after committing all bound unit inputs at `ec48c1b9c`. It refused before running its gate set: `missing required input: docs/semester-3/efmp-407/course-overview.mdx`. No evidence report was created and G2 remains in progress. The required course-level overview is outside this job's Unit 2 scope. The course-integration owner must supply it, plus any separately required course-guide registration, without weakening the evidence contract. Then rerun evidence preparation, reference the resulting genuine G2 record, rebuild the ignored content-status report and rerun `npm run check:content`.
-
-The final content run passes 13 of 14 gates; only `check:pipeline-gate` fails because the G2 row remains in progress. The `origin/main` baseline at `b3042833d` passed all 14 gates. Thus the brief's zero-new-findings condition is not yet met. No baseline defect is being used to excuse this dependency.
