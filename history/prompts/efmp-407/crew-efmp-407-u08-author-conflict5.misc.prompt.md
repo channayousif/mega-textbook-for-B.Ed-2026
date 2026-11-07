@@ -16,8 +16,63 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-407/tasks.md
+ - docs/semester-3/efmp-407/unit-08/index.mdx
+ - docs/semester-3/efmp-407/unit-08/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-08/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-08/unit-assessment.mdx
+ - docs/semester-3/efmp-407/unit-08/unit-teacher-notes.mdx
+ - history/prompts/efmp-407/20261148-verify-unit-eight-merge.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u08-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u08-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u08-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u08-author-conflict4.misc.prompt.md
  - history/prompts/efmp-407/crew-efmp-407-u08-author-conflict5.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u08-author.green.prompt.md
+ - specs/content/efmp-407/authoring/unit-08.md
+ - specs/content/efmp-407/concepts/unit-08.md
+ - specs/content/efmp-407/coverage/unit-08.md
+ - specs/content/efmp-407/figures/unit-08.banner.md
+ - specs/content/efmp-407/figures/unit-08.md
+ - specs/content/efmp-407/reviews/unit-07/G2/20261107T100546088Z-gates.json
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T100546088Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T100546088Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T100546088Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T100546088Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T100546088Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T100546088Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T100546088Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T100546088Z/validate-content.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/20261107T082658818Z-gates.json
+ - specs/content/efmp-407/reviews/unit-08/G2/20261107T100505650Z-gates.json
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T082658818Z/validate-content.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T100505650Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T100505650Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T100505650Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T100505650Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T100505650Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T100505650Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T100505650Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261107T100505650Z/validate-content.txt
+ - specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md
+ - specs/content/efmp-407/sources/texts/sindh-rte-act-2013.md
+ - specs/content/efmp-407/sources/texts/wals-2024-whole-school.md
+ - specs/content/efmp-407/sources/unit-08.md
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-08/fig-U8-1.dark.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-1.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-2.dark.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-2.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-3.dark.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-3.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-4.dark.svg
+ - static/img/figures/efmp-407/unit-08/fig-U8-4.svg
 tests:
  - npm run check:content
 ---
@@ -55,27 +110,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u08-author-conflict3, fix, opencode) Unit 8 banner fig-U8-5 is still prompt-only and its ten Urdu concept labels await G5.
 - (efmp-407-u08-author-conflict3, fix, opencode) `specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md` is shared with Unit 7, so future edits re-stale both G2 manifests and need `prepare-gate-evidence.mjs` for each.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-407-u08-author. The only conflict was specs/content/efmp-407/tasks.md, where main added Unit 5 rows and this branch added Unit 8 rows; both sets were kept, main's Unit 5 rows first, with no duplicates. The shared registries were untouched by both sides since the last merge. Regenerated the gitignored static/content-status.json after the merge, committed the merge and PHR, and all 14 content gates pass.
+Merged origin/main into crew/efmp-407-u08-author, resolving the tasks.md conflict by preserving both sides' rows, and committed the merge plus PHR with all 14 content gates passing.
 
 ## Outcome
 
 - Impact: fix for EFMP-407 Unit 8 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates).
-- Files: 2 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 57 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-407-u08-author, resolved the tasks.md conflict by keeping main's Unit 5 rows then this branch's Unit 8 rows, regenerated the gitignored content-status report, and committed the merge plus PHR so all 14 content gates pass.
-- Decisions the team must respect: main's Unit 6 G3 row and Unit 1 G2 evidence timestamp were left exactly as main has them; no main entry was changed or removed. G3/G5 stay advisory until a qualified sign-off.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into crew/efmp-407-u08-author, resolving the tasks.md conflict by preserving both sides' rows, and committed the merge plus PHR with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 8 banner fig-U8-5 is still prompt-only and its ten Urdu concept labels await G5.
   - `specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md` is shared with Unit 7, so future edits re-stale both G2 manifests and need `prepare-gate-evidence.mjs` for each.
-  - main's Unit 2 backward-design table still carries five erroneous Unit 1 tracker rows (pre-existing on main, left untouched per the merge rule).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
