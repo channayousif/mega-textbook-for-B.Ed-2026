@@ -1,12 +1,12 @@
 # EFMP-407 - Task tracker
 
 Each authoring job records its own unit. Other units belong to separate crew jobs. No publication or review certification is claimed by this tracker.
-The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
+The course content-spec is approved; this tracker does not re-evaluate G0 or G1. English-only authoring from the approved unit specs (D-2026-0076).
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T065935249Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 1 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F8 and missing render/provenance evidence: [report](reviews/unit-01/G3/20261107-codex.json). No certification. |
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
@@ -16,6 +16,12 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 2 | G5 ur-review | ▢ | | Pending English review and Urdu translation; authored concept labels need register review. |
 | Unit 2 | G6 assets | ▣ | | Six English SVG schematics placed with derived dark variants; browser geometry check barred by crew brief and pending CI; Urdu and banner remain separate jobs. |
 | Unit 2 | G7 publish | ▢ | | Publication and catalog integration are outside this authoring job. |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-04/G2/20261107T074842577Z-gates.json |
+| Unit 4 | G3 en-review | ▢ | | Fresh independent review required; no self-review certification claimed. |
+| Unit 4 | G4 ur-translation | ▢ | | Separate job: translate all six pages and six schematics with RTL layout; glossary candidates and concept labels need language review. |
+| Unit 4 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation. |
+| Unit 4 | G6 assets | ▣ | agent:codex | Six English schematics placed with derived dark twins. Browser text-geometry measurement deferred to CI because crew prohibits Playwright. Banner remains prompt-only for illustration job; Urdu assets pending. |
+| Unit 4 | G7 publish | ▢ | | No publication, push or PR requested in this job. |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-06/G2/20261107T081746587Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
@@ -45,3 +51,13 @@ Estimated reading at 190 words per minute, rounded up per file: index 3, Topic 2
 The live gate requires rendered figures despite the author-unit skill's older prompt-only stopping point. The brief's zero-new-findings requirement was followed using the current Codex generate-figures skill. All six approved schematic IDs, kinds, prompts and alt strings were retained. English and dark SVGs were visually inspected using local Sharp raster previews with palette variables resolved in scratch copies. No build, server, Playwright or Chromium run was performed. The mandatory browser-based SVG text measurement remains for CI or the next permitted inspection job.
 
 The root glossary is outside this job's scope. New unit vocabulary is defined in the English prose; global glossary integration can be handled by the shared terminology owner. The concept graph's authored Urdu labels await G5 review. No catalog, approved specification, standard, gate or publication setting was changed.
+
+## Unit 7 - English authoring
+
+| Unit | Stage | Status | Initials | Notes |
+|---|---|---|---|---|
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T081151799Z-gates.json |
+| Unit 7 | G3 en-review | ▢ | | independent review pending; no author certification |
+| Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |
+| Unit 7 | G5 ur-review | ▢ | | pending translation and independent review |
+| Unit 7 | G6 assets | ▢ | | four English schematics placed with dark variants; Playwright geometry check prohibited by brief and pending; banner prompt-only |
