@@ -10,7 +10,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-02/G2/20261107T073248216Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-02/G2/20261107T151215073Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Advisory escalation by agent:agy; report at specs/content/efmp-407/reviews/unit-02/G3/fa119959-1e9c-4a6e-a37c-5c0336b92ab6.json; authority, sources, coverage, assessment, readability and pedagogy pass; visual render uninspected (brief prohibits build/server/browser); G3 remains open and unsigned |
 | Unit 2 | G4 ur-translation | ▢ | | Separate Urdu job; retain draft front matter until accepted translation. |
 | Unit 2 | G5 ur-review | ▢ | | Pending English review and Urdu translation; authored concept labels need register review. |
