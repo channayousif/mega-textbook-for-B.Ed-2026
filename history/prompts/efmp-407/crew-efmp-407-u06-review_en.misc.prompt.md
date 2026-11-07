@@ -16,25 +16,25 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-407/crew-efmp-407-u06-review_en.misc.prompt.md
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a.json
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/commands.json
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-content-after-tracker.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-content.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-depth-gate.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-docs-sync.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-figures.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-no-answer-keys.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-no-em-dash.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/input-verification.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/retrieval-limitations.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/static-accessibility.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/validate-content.txt
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/manifest.json
-  - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/summary.md
-  - specs/content/efmp-407/tasks.md
+ - history/prompts/efmp-407/crew-efmp-407-u06-review_en.misc.prompt.md
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a.json
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/commands.json
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-content-after-tracker.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-content.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/input-verification.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/retrieval-limitations.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/static-accessibility.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/validate-content.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/manifest.json
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/summary.md
+ - specs/content/efmp-407/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -68,25 +68,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Recorded independent advisory G3 escalation review for EFMP-407 Unit 6 with validated evidence logs and an open advisory tracker row.
+Conducted independent G3 English review of EFMP-407 Unit 6, recorded validated advisory escalation report with evidence bundle, and updated tasks.md tracker row while keeping G3 open.
 
 ## Outcome
 
 - Impact: review_en for EFMP-407 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the commit was made.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 17 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded independent advisory G3 escalation review for EFMP-407 Unit 6 with validated evidence logs and an open advisory tracker row.
+- Shipped / changed: Conducted independent G3 English review of EFMP-407 Unit 6, recorded validated advisory escalation report with evidence bundle, and updated tasks.md tracker row while keeping G3 open.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Multiple excerpt files exist on disk under specs/content/efmp-407/sources/texts/ but were omitted from input_manifest due to citedKeysFor regex; engineering owner should bind them before final qualification.
-  - Live browser rendering, 360px viewport table scrollability, and A4 print handout inspection remain uninspected under brief execution constraints.
-  - Candidate English content files in docs/semester-3/efmp-407/unit-06/ remain unchanged and clean across all 14 gates.
+  - Multiple excerpt files exist on disk under specs/content/efmp-407/sources/texts/ but were omitted from input_manifest due to citedKeysFor regex; engineering owner should update regex or keys before qualification.
+  - Live browser rendering (360px viewport, table scrolling, A4 print) was barred under brief constraints and remains to be inspected on an authorized host.
+  - Candidate English content in docs/semester-3/efmp-407/unit-06/ remains clean and passed all 14 content gates.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
