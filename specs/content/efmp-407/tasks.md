@@ -1,6 +1,8 @@
 # EFMP-407 - Task tracker
 
-Each authoring job records its own unit. Other units belong to separate crew jobs. English-only authoring from approved unit specs. No publication or review certification is claimed by this tracker. The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
+Each authoring job records its own unit. Other units belong to separate crew jobs. No publication or review certification is claimed by this tracker.
+The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
+English-only authoring from approved unit specs. Other units are outside this job.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
