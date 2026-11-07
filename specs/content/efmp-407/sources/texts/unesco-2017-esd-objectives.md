@@ -1,8 +1,16 @@
-# Bound excerpt - unesco-2017-esd-objectives
+# Bound source note: unesco-2017-esd-objectives
 
-UNESCO. (2017). *Education for Sustainable Development Goals: Learning Objectives.* UNESCO Publishing. https://unesdoc.unesco.org/ark:/48223/pf0000247444
+UNESCO. (2017). *Education for Sustainable Development Goals: Learning Objectives*. UNESCO Publishing.
 
-Metadata and core learning frameworks consulted on 2026-11-07; summary descriptions verified through open UNESCO SDG guidance frameworks.
+- Official record: https://unesdoc.unesco.org/ark:/48223/pf0000247444
+- Consulted open PDF: https://bne.unesco.de/sites/default/files/2018-08/unesco_education_for_sustainable_development_goals.pdf
+- Access checked: 2026-11-07. Publisher copyright page identifies UNESCO, 2017, ISBN 978-92-3-100209-0, CC BY-SA 3.0 IGO.
+- Locator: printed pp. 10-11, cross-cutting competencies and learning domains; introduction on using the guidance.
+- Metadata and core learning frameworks consulted on 2026-11-07; summary descriptions verified through open UNESCO SDG guidance frameworks.
+
+## Short excerpt
+
+> Systems thinking competency: the abilities to recognize and understand relationships
 
 ## Passages used by Unit 5
 
@@ -13,3 +21,9 @@ Metadata and core learning frameworks consulted on 2026-11-07; summary descripti
 "SDG 16 focuses on promoting peaceful and inclusive societies for sustainable development, providing access to justice for all, and building effective, accountable, and inclusive institutions at all levels" (U5-01, U5-03, U5-04).
 
 "Education for Sustainable Development emphasises cognitive, socio-emotional, and behavioural learning dimensions that foster peaceful dialogue, empathy, critical reflection on inequality, and cooperative civic action" (U5-01, U5-03).
+
+## Support and limits
+
+Page 10 names eight competencies: systems thinking, anticipatory, normative, strategic, collaboration, critical thinking, self-awareness and integrated problem-solving. Page 11 distinguishes cognitive, socio-emotional and behavioural objectives. These ground U2-01 and the systems-thinking framing in U2-04.
+
+The source does not supply the unit's fictional tank quantities, reporting loop, classroom role cards or worked arithmetic. Those are original applications. Its guidance is adaptable, not a requirement to teach all eight competencies in one primary lesson. The official record had no readable browser text; the linked UNESCO commission-hosted copy supplied the content.
