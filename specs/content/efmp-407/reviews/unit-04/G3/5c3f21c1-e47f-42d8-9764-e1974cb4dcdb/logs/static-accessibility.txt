@@ -1,0 +1,17 @@
+Static accessibility inspection for EFMP-407 Unit 4
+1. Headings:
+   - Proper markdown hierarchy used (H1 title, H2 main sections, H3 sub-topics). No skipped levels.
+2. Descriptive links:
+   - All internal links use descriptive anchor text (e.g., [Learning through projects and inquiry](./topic-01), [unit assessment](./unit-assessment)). No generic 'click here' or bare URLs.
+3. Figures:
+   - 6 figures placed in MDX (fig-U4-1 to fig-U4-6) with valid /img/figures/efmp-407/unit-04/ paths.
+   - 6 dark variants exist on disk and match naming convention (.dark.svg).
+   - Figure alt attributes are descriptive and match specs/content/efmp-407/figures/unit-04.md.
+   - Figures use text and distinct visual shapes/boundaries; no information is conveyed by color alone.
+4. Handout & Badges:
+   - <PrintHandout /> component included on all unit pages.
+   - <TranslationStatusBadge status="draft" /> included on index.mdx.
+5. Host constraints limitation:
+   - Brief prohibits npm run build, dev server, and Playwright/Chromium.
+   - Live browser rendering, 360px viewport horizontal table scrollability, and A4 print layout inspection were not executed in this session.
+   - Browser-based SVG text-geometry measurement (measure-figure-text.mjs) deferred to CI.
