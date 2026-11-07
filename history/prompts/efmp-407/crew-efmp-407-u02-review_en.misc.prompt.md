@@ -66,27 +66,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Recorded independent G3 English advisory escalation review, evidence bundle, and open tracker row for EFMP-407 Unit 2.
+Conducted independent G3 English review of EFMP-407 Unit 2, recorded validated advisory escalation report with evidence bundle, and updated tasks.md tracker row while keeping G3 open.
 
 ## Outcome
 
 - Impact: review_en for EFMP-407 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded independent G3 English advisory escalation review, evidence bundle, and open tracker row for EFMP-407 Unit 2.
+- Shipped / changed: Conducted independent G3 English review of EFMP-407 Unit 2, recorded validated advisory escalation report with evidence bundle, and updated tasks.md tracker row while keeping G3 open.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open and advisory under an escalate disposition because Chromium browser rendering and print inspection are prohibited in this environment.
-  - Live browser rendering (360px small-screen viewport, table scroll reachability, A4 print view) should be executed on an authorized host.
-  - In tasks.md, lines 24-28 in the backward-design alignment table contain duplicated Unit 1 tracker rows from authoring copy-paste that can be tidied during maintenance.
+  - G3 remains open under an advisory escalate disposition because live browser and print inspection are barred by brief constraints.
+  - Live browser rendering (360px viewport, keyboard table scrolling, A4 print view) should be verified on an authorized host.
+  - In tasks.md lines 24-28 under backward-design alignment, 5 duplicated Unit 1 tracker rows from author copy-paste can be cleaned up during maintenance.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
