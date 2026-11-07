@@ -1,0 +1,9 @@
+fig-U8-1.png: 2167x1222 151795 bytes
+fig-U8-1.dark.png: 2167x1222 179905 bytes
+fig-U8-2.png: 2167x1056 222555 bytes
+fig-U8-2.dark.png: 2167x1056 226545 bytes
+fig-U8-3.png: 2167x1222 155869 bytes
+fig-U8-3.dark.png: 2167x1222 182020 bytes
+fig-U8-4.png: 2167x1056 217602 bytes
+fig-U8-4.dark.png: 2167x1056 222070 bytes
+done
