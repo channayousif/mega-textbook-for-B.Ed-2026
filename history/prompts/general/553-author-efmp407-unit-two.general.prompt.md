@@ -49,7 +49,8 @@ tests:
   - MDX compilation passed for all six authored pages
   - check:depth-gate, check:figures, check:svg-style and check:source-floor passed
   - figures:variants:check passed
-  - final G2 evidence and check:content pending the content commit
+  - final check:content: 13 of 14 pass; pipeline blocked by missing course overview required for G2
+  - prepare-gate-evidence: refused missing required course-overview.mdx; no evidence written
 ---
 
 ## Prompt
@@ -58,12 +59,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Authored English EFMP-407 Unit 2 from the approved specification: orientation, three complete topic cycles, 10/10/5 assessment bank with bounded public guidance, and guide-supported teacher notes. Added coverage, consulted-source notes, concept graph, tracker and banner handoff. Placed six approved SVG schematics and derived dark variants because the current figure gate requires visible figures. Recorded the source verification and inspected raster previews. G2 evidence is the next deterministic recording step after committing the bound inputs.
+Authored English EFMP-407 Unit 2 from the approved specification: orientation, three complete topic cycles, 10/10/5 assessment bank with bounded public guidance, and guide-supported teacher notes. Added coverage, consulted-source notes, concept graph, tracker and banner handoff. Placed six approved SVG schematics and derived dark variants because the current figure gate requires visible figures. Recorded the source verification and inspected raster previews. After the content commit, G2 preparation refused a missing course-level overview outside the Unit 2 scope. The final suite passes 13 of 14 gates, with only the open G2 pipeline row failing. No evidence or certification was fabricated.
 
 ## Outcome
 
 - Impact: The English unit is drafted at the approved topic partition and a 48-minute reading estimate; independent review and Urdu remain open.
-- Tests: Main baseline all green; draft-specific structural, source, figure and MDX checks pass. Final gate evidence and content-suite rerun follow the content commit.
+- Tests: Main baseline all green; draft-specific structural, source, figure and MDX checks pass. Final content-suite rerun passed 13 of 14; pipeline remains blocked because G2 requires the absent course overview.
 - Files: Six MDX pages, twelve SVG assets, per-unit governance records, three bound source notes and this PHR.
 - Next prompts: Independent G3 review, Urdu translation and G5, banner production, permitted browser geometry inspection.
 - Reflection: Inspect current gate code when authoring-skill prose describes an older figure lifecycle; preserve the approved figure meaning while satisfying the live gate.
@@ -72,12 +73,16 @@ Authored English EFMP-407 Unit 2 from the approved specification: orientation, t
 
 - Shipped / changed: Complete English Unit 2 draft, original school examples, aligned bank and rubrics, six schematics with dark twins and source provenance.
 - Decisions the team must respect: No G3/G5 self-certification, no Urdu parity claim, no catalog/spec/standard/gate changes, no publish step. English-only brief controls localisation scope.
-- Pending / next owner: G3 reviewer must assess pedagogy and source support; Urdu job owns translation, mirrored diagrams and concept-label register; illustrate job owns the prompt-only banner; CI/inspection job must run measure-figure-text because this brief forbids Playwright.
+- Pending / next owner: G3 reviewer must assess pedagogy and source support; Urdu job owns translation, mirrored diagrams and concept-label register; illustrate job owns the prompt-only banner; CI/inspection job must run measure-figure-text because this brief forbids Playwright. Course integration must add the required course overview before G2 can be evidenced; scope expansion was requested and has not been supplied.
 - Paperclip issues affected: efmp-407-u02-author; no issue number supplied.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Older skill text allows prompt-only figures but current gates require placed figures; source notes and registry verification are also mandatory. An initial raw MDX parse included YAML; rerunning over the parsed MDX body passed all six files. Sharp previews required resolving CSS variables in scratch copies; committed SVG tokens were preserved.
-- Graders run and results (PASS/FAIL): Baseline PASS; MDX and focused draft checks PASS; final suite/evidence pending post-commit.
+- Graders run and results (PASS/FAIL): Baseline PASS; MDX and focused draft checks PASS; final suite 13/14 PASS, pipeline FAIL; G2 preparation blocked by missing course overview.
 - Prompt variant (if applicable): None.
 - Next experiment (smallest change to try): Run the mandated browser text-geometry check in a permitted inspection job without modifying the reviewed prose.
+
+## Final validation and dependency
+
+The content was committed at `ec48c1b9c`. All twelve English light/dark assets were visually inspected from Sharp scratch previews with palette variables resolved, preserving the committed token blocks. The final full content run has one new finding relative to the clean main baseline: G2 is not done. Preparing its evidence refuses the absent `docs/semester-3/efmp-407/course-overview.mdx`, which is outside the brief's explicit Unit 2 scope. The author requested a scope ruling, retained G2 as in progress and did not author unrelated course files. No browser geometry, build, development server or Playwright check ran. This job is authored and committed but cannot claim the brief's zero-new-findings acceptance condition yet.

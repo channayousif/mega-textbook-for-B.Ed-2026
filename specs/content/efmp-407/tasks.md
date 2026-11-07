@@ -5,7 +5,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 2 | G2 en-draft | ▣ | | English learning cycles, assessment bank and governance records drafted; deterministic evidence pending final checks. |
+| Unit 2 | G2 en-draft | ▣ | | English draft and deterministic content checks complete; G2 evidence blocked because required course-overview.mdx does not exist. Course overview is outside this Unit 2 brief; no done claim made. |
 | Unit 2 | G3 en-review | ▢ | | Fresh independent English review required; no author certification. |
 | Unit 2 | G4 ur-translation | ▢ | | Separate Urdu job; retain draft front matter until accepted translation. |
 | Unit 2 | G5 ur-review | ▢ | | Pending English review and Urdu translation; authored concept labels need register review. |
@@ -30,3 +30,9 @@ Estimated reading at 190 words per minute, rounded up per file: index 3, Topic 2
 The live gate requires rendered figures despite the author-unit skill's older prompt-only stopping point. The brief's zero-new-findings requirement was followed using the current Codex generate-figures skill. All six approved schematic IDs, kinds, prompts and alt strings were retained. English and dark SVGs were visually inspected using local Sharp raster previews with palette variables resolved in scratch copies. No build, server, Playwright or Chromium run was performed. The mandatory browser-based SVG text measurement remains for CI or the next permitted inspection job.
 
 The root glossary is outside this job's scope. New unit vocabulary is defined in the English prose; global glossary integration can be handled by the shared terminology owner. The concept graph's authored Urdu labels await G5 review. No catalog, approved specification, standard, gate or publication setting was changed.
+
+## G2 dependency blocker
+
+`node scripts/prepare-gate-evidence.mjs EFMP-407 2` was attempted after committing all bound unit inputs at `ec48c1b9c`. It refused before running its gate set: `missing required input: docs/semester-3/efmp-407/course-overview.mdx`. No evidence report was created and G2 remains in progress. The required course-level overview is outside this job's Unit 2 scope. The course-integration owner must supply it, plus any separately required course-guide registration, without weakening the evidence contract. Then rerun evidence preparation, reference the resulting genuine G2 record, rebuild the ignored content-status report and rerun `npm run check:content`.
+
+The final content run passes 13 of 14 gates; only `check:pipeline-gate` fails because the G2 row remains in progress. The `origin/main` baseline at `b3042833d` passed all 14 gates. Thus the brief's zero-new-findings condition is not yet met. No baseline defect is being used to excuse this dependency.
