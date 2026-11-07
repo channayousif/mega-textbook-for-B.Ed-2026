@@ -13,28 +13,29 @@ labels: ["crew", "agy", "review_en"]
 links:
   spec: specs/content/efmp-407/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
-  - history/prompts/general/20261148-review-efmp407-unit-four-english.general.prompt.md
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb.json
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/commands.json
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/manifest.json
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/summary.md
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-content-after-tracker.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-content.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-depth-gate.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-docs-sync.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-figures.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-no-answer-keys.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-no-em-dash.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/input-verification.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/retrieval-limitations.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/static-accessibility.txt
-  - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/validate-content.txt
-  - specs/content/efmp-407/tasks.md
+ - history/prompts/efmp-407/crew-efmp-407-u04-review_en.misc.prompt.md
+ - history/prompts/general/20261148-review-efmp407-unit-four-english.general.prompt.md
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb.json
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/commands.json
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-content-after-tracker.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-content.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/input-verification.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/retrieval-limitations.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/static-accessibility.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/logs/validate-content.txt
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/manifest.json
+ - specs/content/efmp-407/reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb/summary.md
+ - specs/content/efmp-407/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -65,26 +66,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Added EFMP-407 Unit 4 advisory G3 escalation evidence, hashed command and validation logs, an open advisory tracker row and the required PHR.
+Recorded independent advisory G3 escalation review for EFMP-407 Unit 4 with validated evidence logs and an open advisory tracker row.
 
 ## Outcome
 
 - Impact: review_en for EFMP-407 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before and after tracker updates.
-- Files: 17 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added EFMP-407 Unit 4 advisory G3 escalation evidence, hashed logs, an open tracker row and the required PHR.
+- Shipped / changed: Recorded independent advisory G3 escalation review for EFMP-407 Unit 4 with validated evidence logs and an open advisory tracker row.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Fresh review needs complete source binding for lim-allan-2016-futures and unesco-2017-esd-objectives in manifest, author run provenance, and browser/print evidence.
-  - Candidate inputs remain intact and unedited.
+  - Excerpt files lim-allan-2016-futures and unesco-2017-esd-objectives exist on disk but were omitted from input_manifest due to citedKeysFor regex; engineering owner should bind them before final qualification.
+  - Live browser rendering, 360px viewport table scrollability, and A4 print handout inspection remain uninspected under brief execution constraints.
+  - Candidate English content files in docs/semester-3/efmp-407/unit-04/ remain unchanged and clean across all 14 gates.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
