@@ -17,7 +17,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 2 | G6 assets | ▣ | | Six English SVG schematics placed with derived dark variants; browser geometry check barred by crew brief and pending CI; Urdu and banner remain separate jobs. |
 | Unit 2 | G7 publish | ▢ | | Publication and catalog integration are outside this authoring job. |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-04/G2/20261107T074842577Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | Fresh independent review required; no self-review certification claimed. |
+| Unit 4 | G3 en-review | ▢ | agent:agy | Advisory escalation only; G3 remains open. Findings F1-F4 and missing render/provenance evidence: [report](reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb.json). No certification. |
 | Unit 4 | G4 ur-translation | ▢ | | Separate job: translate all six pages and six schematics with RTL layout; glossary candidates and concept labels need language review. |
 | Unit 4 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation. |
 | Unit 4 | G6 assets | ▣ | agent:codex | Six English schematics placed with derived dark twins. Browser text-geometry measurement deferred to CI because crew prohibits Playwright. Banner remains prompt-only for illustration job; Urdu assets pending. |
