@@ -1,0 +1,4 @@
+✓ static/img/figures/efmp-407/unit-07/fig-U7-1.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-407/unit-07/fig-U7-2.svg (780x585, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-407/unit-07/fig-U7-3.svg (780x590, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-407/unit-07/fig-U7-4.svg (780x585, widest text ends at 768.4, wordmark at 675.7)
