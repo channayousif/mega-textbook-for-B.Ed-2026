@@ -14,16 +14,55 @@ links:
   spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/478
+  pr: null
 files:
- - static/img/figures/efmp-407/unit-05/fig-U5-4.svg
- - static/img/figures/efmp-407/unit-05/fig-U5-4.dark.svg
- - static/img/figures/efmp-407/unit-05/fig-U5-5.svg
- - static/img/figures/efmp-407/unit-05/fig-U5-5.dark.svg
- - static/img/figures/efmp-407/unit-05/fig-U5-6.svg
- - static/img/figures/efmp-407/unit-05/fig-U5-6.dark.svg
- - specs/content/efmp-407/tasks.md
+ - docs/semester-3/efmp-407/unit-01/index.mdx
+ - docs/semester-3/efmp-407/unit-05/index.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-03.mdx
+ - docs/semester-3/efmp-407/unit-05/unit-assessment.mdx
+ - docs/semester-3/efmp-407/unit-05/unit-teacher-notes.mdx
+ - history/prompts/crew/crew-batch-20261107-1315-cifix1.misc.prompt.md
+ - history/prompts/efmp-407/20261145-author-efmp407-unit05-english.general.prompt.md
+ - history/prompts/efmp-407/20261146-resolve-efmp407-unit05-conflicts.general.prompt.md
+ - history/prompts/efmp-407/20261147-verify-efmp407-unit05-merge.general.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u01-illustrate.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict4.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author.green.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u06-review_en.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u07-translate.misc.prompt.md
+ - history/prompts/general/20261157-efmp407-unit-seven-translation-blocker.general.prompt.md
+ - history/prompts/general/2461-illustrate-efmp407-unit-one.general.prompt.md
+ - specs/content/efmp-407/authoring/unit-05.md
+ - specs/content/efmp-407/concepts/unit-05.md
+ - specs/content/efmp-407/coverage/unit-05.md
+ - specs/content/efmp-407/figures/unit-01.banner.md
+ - specs/content/efmp-407/figures/unit-01.illustration-notes.md
+ - specs/content/efmp-407/figures/unit-05.banner.md
+ - specs/content/efmp-407/figures/unit-05.md
+ - specs/content/efmp-407/reviews/unit-01/G2/20261107T123059043Z-gates.json
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/validate-content.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/20261107T075510461Z-gates.json
  - specs/content/efmp-407/reviews/unit-05/G2/20261107T134915417Z-gates.json
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/validate-content.txt
  - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T134915417Z/check-bloom-bands.txt
  - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T134915417Z/check-concept-graph.txt
  - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T134915417Z/check-depth-gate.txt
@@ -32,7 +71,45 @@ files:
  - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T134915417Z/check-no-answer-keys.txt
  - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T134915417Z/check-no-em-dash.txt
  - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T134915417Z/validate-content.txt
- - history/prompts/crew/crew-batch-20261107-1315-cifix1.misc.prompt.md
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a.json
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/commands.json
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-content-after-tracker.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-content.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/input-verification.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/retrieval-limitations.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/static-accessibility.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/logs/validate-content.txt
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/manifest.json
+ - specs/content/efmp-407/reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a/summary.md
+ - specs/content/efmp-407/reviews/unit-07/G4/translation-blocker.md
+ - specs/content/efmp-407/sources/texts/iucn-pakistan-2004-tek.md
+ - specs/content/efmp-407/sources/texts/kahlown-1994-karez.md
+ - specs/content/efmp-407/sources/texts/owuor-2008-indigenous.md
+ - specs/content/efmp-407/sources/texts/pakistan-constitution-1973.md
+ - specs/content/efmp-407/sources/texts/un-crc-1989.md
+ - specs/content/efmp-407/sources/texts/unesco-2017-esd-objectives.md
+ - specs/content/efmp-407/sources/texts/unesco-2020-gemr.md
+ - specs/content/efmp-407/sources/texts/zidny-2020-indigenous.md
+ - specs/content/efmp-407/sources/unit-05.md
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-01/fig-U1-7.webp
+ - static/img/figures/efmp-407/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-3.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-5.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-5.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-6.svg
 tests:
  - npm run check:content
 ---
@@ -69,26 +146,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261106-2100-cifix1, fix, opencode) CI must confirm browser geometry (local Playwright prohibited); the fix was validated with a DejaVu advance-metric sim (`.crew/sim-geometry.py`) that reproduces the 145.0px spill before the edit and reports both files clean after.
 - (batch-20261106-2100-cifix1, fix, opencode) The other Urdu panel labels in `fig-U2-2.ur.svg` still carry `text-anchor="end"` at panel centres (a translation artifact); they pass CI today but sit off-centre.
 
+
 ## Response snapshot
 
-Fixed the figure-geometry CI failure on PR #478 by reducing the font size of the overflowing text in EFMP-407 unit 5 figures: `.small` from 13px to 12px in fig-U5-4 and `.ink` from 14px to 12px in fig-U5-5 and fig-U5-6, in both light and dark SVGs. The unit 5 G2 gate evidence binds those SVG files, so the edit made its input manifest stale; refreshed it with `node scripts/prepare-gate-evidence.mjs --refresh-stale`, which repointed the tracker row. `npm run check:content` passes.
+Reduced overflowing figure font sizes in EFMP-407 unit 5 (U5-4 `.small`, U5-5/U5-6 `.ink` to 12px, light and dark) and refreshed the unit 5 G2 gate evidence that binds those SVGs.
 
 ## Outcome
 
 - Impact: fix for CREW Unit 0 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
-- Files: 17 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 94 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Fixed the figure-geometry CI failure on PR #478 by reducing the font size of the overflowing text in EFMP-407 unit 5 figures (fig-U5-4 `.small` to 12px, fig-U5-5 and fig-U5-6 `.ink` to 12px, light and dark), then refreshed the unit 5 G2 gate evidence whose input manifest binds those files.
+- Shipped / changed: Reduced overflowing figure font sizes in EFMP-407 unit 5 (U5-4 `.small`, U5-5/U5-6 `.ink` to 12px, light and dark) and refreshed the unit 5 G2 gate evidence that binds those SVGs.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - CI must confirm browser geometry (local Playwright prohibited); validated with `.crew/sim-geometry.py` (DejaVu advance metrics), which reproduces the CI spills (19.1/6.2/16.2/5.4/14.7/29.6 against CI 18.9/6.0/16.0/5.2/14.5/29.4) and reports all 12 unit 5 SVGs clean after.
-  - The unit 5 G2 input manifest binds `static/img/figures/`; any future figure edit in unit 5 requires `node scripts/prepare-gate-evidence.mjs --refresh-stale` before `check:pipeline-gate` can pass.
+  - CI must confirm browser geometry (local Playwright prohibited); `.crew/sim-geometry.py` reproduces the CI spills (19.1/6.2/16.2/5.4/14.7/29.6 vs CI 18.9/6.0/16.0/5.2/14.5/29.4) and reports all 12 unit 5 SVGs clean.
+  - The unit 5 G2 input manifest binds `static/img/figures/`; any future figure edit in unit 5 needs `node scripts/prepare-gate-evidence.mjs --refresh-stale` before `check:pipeline-gate` passes.
+  - Unit 5 now uses `.small` 12px and `.ink` 12px; a later corpus-wide typography pass must not assume the 13px/14px boilerplate for this unit.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
