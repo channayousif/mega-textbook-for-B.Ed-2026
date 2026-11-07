@@ -1,0 +1,22 @@
+/**
+ * The branded loading mark: the logo's t with its amber step rising, for the places
+ * that said "Loading". The label is real text for screen readers; under reduced
+ * motion the step holds still.
+ */
+import React from 'react';
+import clsx from 'clsx';
+import styles from './ui.module.css';
+
+export default function LoadingMark({ label, size = 48, className }: { label: string; size?: number; className?: string }): React.ReactElement {
+  return (
+    <div className={clsx(styles.loading, className)} role="status">
+      <svg width={size} height={size} viewBox="0 0 128 128" aria-hidden="true" focusable="false">
+        <g transform="translate(12 3) scale(0.88)">
+          <path className={styles.loadingStep} d="M91 26 H110 V51 Q110 65 91 69 L78 71 V50 Q78 42 91 42Z" />
+          <path className={styles.loadingT} d="M38 5 H57 V31 H80 Q80 49 62 49 H57 V60 L45 74 Q65 63 86 61 Q103 58 110 50 V64 Q109 82 83 82 H65 Q45 82 45 94 Q45 105 60 105 H70 L77 115 L76 102 Q84 98 83 88 Q104 98 96 116 Q88 132 62 128 Q22 124 22 94 V49 H4 Q4 31 22 31 V22 Q22 5 38 5Z" />
+        </g>
+      </svg>
+      <span className={styles.loadingLabel}>{label}</span>
+    </div>
+  );
+}
