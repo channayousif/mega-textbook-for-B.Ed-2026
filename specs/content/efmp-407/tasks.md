@@ -42,7 +42,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 
 | Sub-topic | Enduring understanding | Target Bloom level | Explanation heading | Evidence |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T101732391Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T123059043Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
