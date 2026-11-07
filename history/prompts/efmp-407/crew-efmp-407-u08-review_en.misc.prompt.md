@@ -16,38 +16,38 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-407/crew-efmp-407-u08-review_en.misc.prompt.md
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/assessment-independent.md
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-bloom-bands.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-concept-graph.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-content.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-depth-gate.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-docs-sync.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-figures.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-no-answer-keys.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-no-em-dash.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-source-floor.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-svg-style.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/input-verification.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/measure-figure-text.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/rasterize.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/validate_content.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/manifest.json
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/render-review.txt
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-1.dark.png
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-1.png
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-2.dark.png
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-2.png
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-3.dark.png
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-3.png
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-4.dark.png
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-4.png
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/source-verification.md
-  - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/summary.md
-  - specs/content/efmp-407/tasks.md
+ - history/prompts/efmp-407/crew-efmp-407-u08-review_en.misc.prompt.md
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/assessment-independent.md
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check-content.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_figures.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_source-floor.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/check_svg-style.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/input-verification.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/measure-figure-text.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/rasterize.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/logs/validate_content.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/manifest.json
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/render-review.txt
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-1.dark.png
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-1.png
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-2.dark.png
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-2.png
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-3.dark.png
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-3.png
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-4.dark.png
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/renders/fig-U8-4.png
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/source-verification.md
+ - specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/summary.md
+ - specs/content/efmp-407/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -78,28 +78,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Added the EFMP-407 Unit 8 independent G3 English advisory revise evidence (Jumani and Abbasi passage not in the paper, per-topic formative band tension, figure rasters, hashed gate logs), an open tracker row and the PHR, committed on the branch.
+Added the independent G3 English review of EFMP-407 Unit 8 (advisory revise: Jumani and Abbasi passage not in the paper, per-topic formative band breach, figure rasters, hashed gate logs) plus an open tracker row and PHR, committed on the branch.
 
 ## Outcome
 
 - Impact: review_en for EFMP-407 Unit 8 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the commit.
-- Files: 32 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added the EFMP-407 Unit 8 independent G3 English advisory revise evidence (Jumani and Abbasi passage not in the paper, per-topic formative band tension, figure rasters, hashed gate logs), an open tracker row and the PHR, committed on the branch.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the commit touches a protected path).
+- Shipped / changed: Added the independent G3 English review of EFMP-407 Unit 8 (advisory revise: Jumani and Abbasi passage not in the paper, per-topic formative band breach, figure rasters, hashed gate logs) plus an open tracker row and PHR, committed on the branch.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - F1 blocking - the Jumani and Abbasi (2015) bound passage is fabricated or misattributed. The full publisher PDF contains none of its phrases. Repair the attribution at topic-01.mdx:57 and :78, sources/unit-08.md:9, sources/texts/jumani-abbasi-2015.md:23 and coverage/unit-08.md:9,11.
-  - F8 uncertain - topic-02.mdx:138 is tagged Analyze above the formative band; reword or obtain an owner ruling before the next review cycle.
-  - F3 - the Sindh Act URL is dead; an official copy exists at sja.gos.pk. F4 - the Tilbury causal claim exceeds title-level support.
-  - F9 - the live site publishes Unit 8, but the brief bars build/dev-server/Playwright, so a fresh review still needs a real narrow-view and A4 print inspection when a render path is available.
+  - F1 blocking - repair the Jumani and Abbasi (2015) attribution at topic-01.mdx:57 and :78, sources/unit-08.md:9, sources/texts/jumani-abbasi-2015.md:23 and coverage/unit-08.md:9,11 (remove or replace the source, or rewrite the claims to the paper's actual content).
+  - F8 uncertain - topic-02.mdx:138 is tagged Analyze above the formative band; reword the item or record an owner ruling before the next review cycle.
+  - F3 - the Sindh Act URL is dead, use the official sja.gos.pk copy. F9 - a fresh review still needs a real narrow-view and A4 print inspection when a render path is available.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
