@@ -21,8 +21,8 @@ files:
  - docs/semester-3/efmp-407/unit-08/topic-02.mdx
  - docs/semester-3/efmp-407/unit-08/unit-assessment.mdx
  - docs/semester-3/efmp-407/unit-08/unit-teacher-notes.mdx
- - history/prompts/efmp-407/crew-efmp-407-u08-author.green.prompt.md
  - history/prompts/efmp-407/crew-efmp-407-u08-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u08-author.green.prompt.md
  - specs/content/efmp-407/authoring/unit-08.md
  - specs/content/efmp-407/concepts/unit-08.md
  - specs/content/efmp-407/coverage/unit-08.md
@@ -70,7 +70,6 @@ files:
  - static/img/figures/efmp-407/unit-08/fig-U8-4.svg
 tests:
  - npm run check:content
- - git diff --check
 ---
 
 ## Prompt
@@ -104,28 +103,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u08-author, author, agy) All ten Urdu concept labels in specs/content/efmp-407/concepts/unit-08.md are authored and require G5 review.
 - (efmp-407-u08-author, author, agy) Figure text geometry on four placed SVGs is unmeasured locally (Chromium forbidden by brief); CI figure-geometry measures them.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-407-u08-author, combining the shared jumani-abbasi-2015 bound source note (main's Unit 7 passage first, this branch's Unit 8 excerpt second) and preserving every tracker row, then refreshed the Unit 8 and Unit 7 G2 evidence that the shared source change invalidated and regenerated the ignored content-status report.
+Merged origin/main into crew/efmp-407-u08-author, combining the shared jumani-abbasi-2015 bound source note and preserving all tracker rows, then refreshed the Unit 7 and Unit 8 G2 evidence so all 14 content gates pass.
 
 ## Outcome
 
 - Impact: fix for EFMP-407 Unit 8 by opencode (attempt 1).
-- Tests: npm run check:content passed 14/14 in the job worktree; origin/main baseline passed 13/14 with only its stale ignored content-status report failing; git diff --check passed.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 52 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: Shared bound source changes invalidate every unit that cites the key, so a successful textual merge still needs fresh G2 evidence for each affected unit.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merge committed; main's Unit 7 bound source passage retained verbatim and this branch's Unit 8 excerpt appended in the same file; all main and branch tracker rows preserved; Unit 8 G2 evidence refreshed and its row repointed; Unit 7 G2 evidence refreshed and its row repointed because the shared source file is bound to both units; ignored static/content-status.json regenerated.
-- Decisions the team must respect: Main entries retained; no registry changes, no G3/G5 certification, no human initials, no push or PR.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). Unit 8 G3 review, Urdu translation, banner fig-U8-5 illustration and browser figure geometry remain separate jobs.
+- Shipped / changed: Merged origin/main into crew/efmp-407-u08-author, combining the shared jumani-abbasi-2015 bound source note and preserving all tracker rows, then refreshed the Unit 7 and Unit 8 G2 evidence so all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - `specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md` is bound to both Unit 7 and Unit 8, so any future edit to it re-stales both G2 manifests and needs `prepare-gate-evidence.mjs` for each.
+  - Unit 8 banner fig-U8-5 is still prompt-only, its ten Urdu concept labels await G5, and browser figure geometry is unmeasured locally (CI `figure-geometry` covers it).
+  - `static/content-status.json` is gitignored and was regenerated locally only; it is not part of the commit.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Initial merged run found stale Unit 7 and Unit 8 G2 manifests and a stale ignored content-status report.
-- Graders run and results (PASS/FAIL): npm run check:content PASS (14/14); git diff --check PASS.
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
