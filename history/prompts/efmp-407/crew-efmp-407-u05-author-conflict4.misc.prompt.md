@@ -16,8 +16,56 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-407/tasks.md
+ - docs/semester-3/efmp-407/unit-05/index.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-03.mdx
+ - docs/semester-3/efmp-407/unit-05/unit-assessment.mdx
+ - docs/semester-3/efmp-407/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-407/20261145-author-efmp407-unit05-english.general.prompt.md
+ - history/prompts/efmp-407/20261146-resolve-efmp407-unit05-conflicts.general.prompt.md
+ - history/prompts/efmp-407/20261147-verify-efmp407-unit05-merge.general.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict3.misc.prompt.md
  - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict4.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author.green.prompt.md
+ - specs/content/efmp-407/authoring/unit-05.md
+ - specs/content/efmp-407/concepts/unit-05.md
+ - specs/content/efmp-407/coverage/unit-05.md
+ - specs/content/efmp-407/figures/unit-05.banner.md
+ - specs/content/efmp-407/figures/unit-05.md
+ - specs/content/efmp-407/reviews/unit-05/G2/20261107T075510461Z-gates.json
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/validate-content.txt
+ - specs/content/efmp-407/sources/texts/iucn-pakistan-2004-tek.md
+ - specs/content/efmp-407/sources/texts/kahlown-1994-karez.md
+ - specs/content/efmp-407/sources/texts/owuor-2008-indigenous.md
+ - specs/content/efmp-407/sources/texts/pakistan-constitution-1973.md
+ - specs/content/efmp-407/sources/texts/un-crc-1989.md
+ - specs/content/efmp-407/sources/texts/unesco-2017-esd-objectives.md
+ - specs/content/efmp-407/sources/texts/unesco-2020-gemr.md
+ - specs/content/efmp-407/sources/texts/zidny-2020-indigenous.md
+ - specs/content/efmp-407/sources/unit-05.md
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-3.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-5.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-5.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-6.svg
 tests:
  - npm run check:content
 ---
@@ -55,23 +103,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u05-author-conflict2, fix, opencode) Banner fig-U5-7 remains prompt-only and G3/G4/G5 stay open for downstream jobs.
 - (efmp-407-u05-author-conflict2, fix, opencode) tasks.md's "Unit 2 backward-design alignment" table still contains Unit 1 rows from main (pre-existing, preserved verbatim).
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-407-u05-author, resolved the single tasks.md conflict keeping main's Unit 6 rows then this branch's Unit 5 rows, regenerated the gitignored content-status report, and committed the merge plus PHR with check:content green.
+Merged origin/main into crew/efmp-407-u05-author, resolved the single tasks.md conflict by keeping main's Unit 6 rows then this branch's Unit 5 rows, regenerated the gitignored content-status report, and committed the merge plus PHR with check:content green.
 
 ## Outcome
 
 - Impact: fix for EFMP-407 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates).
-- Files: 2 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 50 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-407-u05-author and resolved the tasks.md conflict by keeping main's Unit 6 tracker rows first and this branch's Unit 5 rows second (append-only, main's order then branch's). Regenerated the gitignored static/content-status.json so check:content-status passes. No shared registry changed on either side relative to the merge base, so no ID rekeying or duplicate drops were needed.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the merge touches a protected path).
+- Shipped / changed: Merged origin/main into crew/efmp-407-u05-author, resolved the single tasks.md conflict by keeping main's Unit 6 rows then this branch's Unit 5 rows, regenerated the gitignored content-status report, and committed the merge plus PHR with check:content green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Banner fig-U5-7 remains prompt-only; G3/G4/G5 stay open for downstream jobs.
   - tasks.md "Unit 2 backward-design alignment" table still contains Unit 1 rows from main (pre-existing, preserved verbatim).
