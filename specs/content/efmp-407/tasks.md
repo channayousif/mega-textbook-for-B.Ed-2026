@@ -56,7 +56,7 @@ The root glossary is outside this job's scope. New unit vocabulary is defined in
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T081151799Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T100546088Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | independent review pending; no author certification |
 | Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |
 | Unit 7 | G5 ur-review | ▢ | | pending translation and independent review |
