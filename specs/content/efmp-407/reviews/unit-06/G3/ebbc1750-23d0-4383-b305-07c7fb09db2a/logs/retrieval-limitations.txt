@@ -1,0 +1,9 @@
+Source retrieval limitations for EFMP-407 Unit 6 G3 English review
+1. Ember solar data:
+   Ember page was not directly reachable from host; cited and verified via Arab News Pakistan (2025-04-14) reporting Ember Global Electricity Review 2025.
+2. Search-excerpt sources:
+   rina-statement and pakistan-halal-act-2016 were retrieved and consulted via search excerpts due to host retrieval and scanned PDF limits.
+3. Legislative status of 2026 CSR Bill:
+   National Assembly passage on 2026-01-21 (FAFEN) and Senate passage on 2026-05-11 (APP) reported; presidential assent or notified Act could not be confirmed as of review date.
+4. Input manifest binding omission:
+   In scripts/lib/review-evidence.mjs, citedKeysFor() regex only extracts keys ending with four digits (and optional letter) or hyphen-four-digits. Consequently, multiple Unit 6 source excerpt files existing under specs/content/efmp-407/sources/texts/ (al-nuaimi-2022-consumption, baloch-2019-plastic, emf-circular-economy, fafen-2026-csr, fairtrade-minimum-price, ilo-2018-greening, mahmood-2019-labeling, neeca-fan-label, psqca-compulsory-list, secp-2009-csr, szmigin-2009-conscious, un-sdg12, unep-green-economy, zulfiqar-2019-csr) were omitted from input_manifest despite existing on disk. Only delmas-burbano-2011 and pakistan-halal-act-2016 bound into the manifest.

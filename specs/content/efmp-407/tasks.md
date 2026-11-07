@@ -1,7 +1,7 @@
 # EFMP-407 - Task tracker
 
 Each authoring job records its own unit. Other units belong to separate crew jobs. No publication or review certification is claimed by this tracker.
-The course content-spec is approved; this tracker does not re-evaluate G0 or G1. English-only authoring from the approved unit specs (D-2026-0076).
+The course content-spec is approved; this tracker does not re-evaluate G0 or G1. English-only authoring from the approved unit specs (D-2026-0076). Other units are outside this job.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
@@ -28,16 +28,21 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 4 | G6 assets | ▣ | agent:codex | Six English schematics placed with derived dark twins. Browser text-geometry measurement deferred to CI because crew prohibits Playwright. Banner remains prompt-only for illustration job; Urdu assets pending. |
 | Unit 4 | G7 publish | ▢ | | No publication, push or PR requested in this job. |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-06/G2/20261107T081746587Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 6 | G3 en-review | ▢ | agent:agy | Advisory escalation only; G3 remains open. Findings F1-F4 and missing render/provenance evidence: [report](reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a.json). No certification. |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U6-7 remains prompt-only |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261107T075510461Z-gates.json |
+| Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 5 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
+| Unit 5 | G5 ur-review | ▢ | | |
+| Unit 5 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U5-7 remains prompt-only |
 
 ## Unit 2 backward-design alignment
 
 | Sub-topic | Enduring understanding | Target Bloom level | Explanation heading | Evidence |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T101732391Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T123059043Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
