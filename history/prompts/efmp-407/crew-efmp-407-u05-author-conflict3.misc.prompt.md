@@ -16,104 +16,57 @@ links:
   adr: null
   pr: null
 files:
- - docs/semester-3/efmp-407/unit-04/index.mdx
- - docs/semester-3/efmp-407/unit-04/topic-01.mdx
- - docs/semester-3/efmp-407/unit-04/topic-02.mdx
- - docs/semester-3/efmp-407/unit-04/topic-03.mdx
- - docs/semester-3/efmp-407/unit-04/unit-assessment.mdx
- - docs/semester-3/efmp-407/unit-04/unit-teacher-notes.mdx
- - docs/semester-3/efmp-407/unit-07/index.mdx
- - docs/semester-3/efmp-407/unit-07/topic-01.mdx
- - docs/semester-3/efmp-407/unit-07/topic-02.mdx
- - docs/semester-3/efmp-407/unit-07/unit-assessment.mdx
- - docs/semester-3/efmp-407/unit-07/unit-teacher-notes.mdx
- - history/prompts/efmp-407/crew-efmp-407-u01-review_en-conflict1.misc.prompt.md
- - history/prompts/efmp-407/crew-efmp-407-u01-review_en.misc.prompt.md
- - history/prompts/efmp-407/crew-efmp-407-u04-author-conflict1.misc.prompt.md
- - history/prompts/efmp-407/crew-efmp-407-u04-author.green.prompt.md
- - history/prompts/efmp-407/crew-efmp-407-u07-author-conflict1.misc.prompt.md
- - history/prompts/efmp-407/crew-efmp-407-u07-author.green.prompt.md
- - history/prompts/general/20261143-author-efmp-407-unit-seven.general.prompt.md
- - history/prompts/general/20261144-review-efmp407-unit-one-english.general.prompt.md
- - history/prompts/general/20261145-author-efmp407-unit-four.general.prompt.md
- - history/prompts/general/20261145-merge-efmp407-unit-seven.general.prompt.md
- - history/prompts/general/20261145-resolve-efmp407-review-merge.general.prompt.md
- - history/prompts/general/20261146-recheck-efmp407-g2-blocker.general.prompt.md
- - history/prompts/general/20261147-efmp407-unit-four-g2-evidence.general.prompt.md
- - specs/content/efmp-407/concepts/unit-04.md
- - specs/content/efmp-407/concepts/unit-07.md
- - specs/content/efmp-407/coverage/unit-04.md
- - specs/content/efmp-407/coverage/unit-07.md
- - specs/content/efmp-407/figures/unit-04.banner.md
- - specs/content/efmp-407/figures/unit-04.md
- - specs/content/efmp-407/figures/unit-07.banner.md
- - specs/content/efmp-407/figures/unit-07.md
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex.json
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/commands.json
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/check-content-after-tracker.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/check-content-final.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/check-content.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/check-depth-gate.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/check-docs-sync.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/check-figures.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/check-no-answer-keys.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/check-no-em-dash.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/input-verification.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/retrieval-limitations.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/static-accessibility.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/logs/validate-content.txt
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/manifest.json
- - specs/content/efmp-407/reviews/unit-01/G3/20261107-codex/summary.md
- - specs/content/efmp-407/reviews/unit-04/G2/20261107T074842577Z-gates.json
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261107T074842577Z/check-bloom-bands.txt
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261107T074842577Z/check-concept-graph.txt
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261107T074842577Z/check-depth-gate.txt
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261107T074842577Z/check-docs-sync.txt
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261107T074842577Z/check-figures.txt
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261107T074842577Z/check-no-answer-keys.txt
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261107T074842577Z/check-no-em-dash.txt
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261107T074842577Z/validate-content.txt
- - specs/content/efmp-407/reviews/unit-07/G2/20261107T081151799Z-gates.json
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T081151799Z/check-bloom-bands.txt
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T081151799Z/check-concept-graph.txt
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T081151799Z/check-depth-gate.txt
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T081151799Z/check-docs-sync.txt
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T081151799Z/check-figures.txt
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T081151799Z/check-no-answer-keys.txt
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T081151799Z/check-no-em-dash.txt
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261107T081151799Z/validate-content.txt
- - specs/content/efmp-407/sources/texts/boeve-de-pauw-2015.md
- - specs/content/efmp-407/sources/texts/hopkins-mckeown-2005.md
- - specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md
- - specs/content/efmp-407/sources/texts/lim-allan-2016-futures.md
- - specs/content/efmp-407/sources/texts/nep-2009.md
+ - docs/semester-3/efmp-407/unit-05/index.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-03.mdx
+ - docs/semester-3/efmp-407/unit-05/unit-assessment.mdx
+ - docs/semester-3/efmp-407/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-407/20261145-author-efmp407-unit05-english.general.prompt.md
+ - history/prompts/efmp-407/20261146-resolve-efmp407-unit05-conflicts.general.prompt.md
+ - history/prompts/efmp-407/20261147-verify-efmp407-unit05-merge.general.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-author.green.prompt.md
+ - specs/content/efmp-407/authoring/unit-05.md
+ - specs/content/efmp-407/concepts/unit-05.md
+ - specs/content/efmp-407/coverage/unit-05.md
+ - specs/content/efmp-407/figures/unit-05.banner.md
+ - specs/content/efmp-407/figures/unit-05.md
+ - specs/content/efmp-407/reviews/unit-05/G2/20261107T075510461Z-gates.json
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261107T075510461Z/validate-content.txt
+ - specs/content/efmp-407/sources/texts/iucn-pakistan-2004-tek.md
+ - specs/content/efmp-407/sources/texts/kahlown-1994-karez.md
+ - specs/content/efmp-407/sources/texts/owuor-2008-indigenous.md
+ - specs/content/efmp-407/sources/texts/pakistan-constitution-1973.md
+ - specs/content/efmp-407/sources/texts/un-crc-1989.md
  - specs/content/efmp-407/sources/texts/unesco-2017-esd-objectives.md
- - specs/content/efmp-407/sources/unit-04.md
- - specs/content/efmp-407/sources/unit-07.md
+ - specs/content/efmp-407/sources/texts/unesco-2020-gemr.md
+ - specs/content/efmp-407/sources/texts/zidny-2020-indigenous.md
+ - specs/content/efmp-407/sources/unit-05.md
  - specs/content/efmp-407/tasks.md
- - static/img/figures/efmp-407/unit-04/fig-U4-1.dark.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-1.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-2.dark.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-2.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-3.dark.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-3.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-4.dark.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-4.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-5.dark.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-5.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-6.dark.svg
- - static/img/figures/efmp-407/unit-04/fig-U4-6.svg
- - static/img/figures/efmp-407/unit-07/fig-U7-1.dark.svg
- - static/img/figures/efmp-407/unit-07/fig-U7-1.svg
- - static/img/figures/efmp-407/unit-07/fig-U7-2.dark.svg
- - static/img/figures/efmp-407/unit-07/fig-U7-2.svg
- - static/img/figures/efmp-407/unit-07/fig-U7-3.dark.svg
- - static/img/figures/efmp-407/unit-07/fig-U7-3.svg
- - static/img/figures/efmp-407/unit-07/fig-U7-4.dark.svg
- - static/img/figures/efmp-407/unit-07/fig-U7-4.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-3.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-5.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-5.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/efmp-407/unit-05/fig-U5-6.svg
 tests:
  - npm run check:content
- - npm run build:content-status
 ---
 
 ## Prompt
@@ -149,27 +102,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u05-author-conflict1, fix, opencode) Banner fig-U5-7 is still prompt-only in specs/content/efmp-407/figures/unit-05.banner.md and needs an illustrate job; G3/G4/G5 remain open.
 - (efmp-407-u05-author-conflict1, fix, opencode) The shared UNESCO 2017 source note now serves both Unit 2 and Unit 5; future merges must preserve both units' passages.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-407-u05-author, resolved the single tasks.md conflict by keeping main's header line (with D-2026-0076) plus this branch's scope note and both Unit 4 and Unit 5 tracker rows, regenerated static/content-status.json, and confirmed 14/14 content gates pass.
+Merged origin/main into crew/efmp-407-u05-author, resolved the tasks.md conflict preserving both sides, regenerated content-status, and committed the merge plus PHR with check:content green.
 
 ## Outcome
 
 - Impact: fix for EFMP-407 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14) after regenerating the gitignored content-status report.
-- Files: 95 file(s) from the merge, listed above; the only conflict resolved was specs/content/efmp-407/tasks.md.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 49 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-407-u05-author and resolved the tasks.md conflict (main header plus branch scope note; Unit 4 then Unit 5 rows).
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
+- Shipped / changed: Merged origin/main into crew/efmp-407-u05-author, resolved the tasks.md conflict preserving both sides, regenerated content-status, and committed the merge plus PHR with check:content green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Banner fig-U5-7 remains prompt-only and G3/G4/G5 stay open for downstream jobs.
-  - tasks.md's "Unit 2 backward-design alignment" table still contains Unit 1 rows from main (pre-existing, preserved verbatim).
-  - static/content-status.json is gitignored and must be regenerated locally after any tracker edit.
+  - Banner fig-U5-7 remains prompt-only; G3/G4/G5 stay open for downstream jobs.
+  - tasks.md "Unit 2 backward-design alignment" table still contains Unit 1 rows from main (pre-existing, preserved verbatim).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
