@@ -1,0 +1,38 @@
+Input verification: EFMP-407 Unit 7 (G3 English)
+Date: 2026-11-07
+Reviewer: agent:opencode-g3-reviewer
+
+Reviewed commit
+---------------
+26305ee6f2ed93c010150c36717bc540bbfbcd52 (branch crew/efmp-407-u07-review_en, equal to origin/main
+at preparation time).
+
+Preparation
+-----------
+Command: node scripts/review-evidence.mjs prepare EFMP-407 7 G3
+  specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en
+Output: Prepared 95 inputs. Give the bundle to a fresh reviewer.
+The working tree was clean for every bound input at preparation (git status --porcelain
+--untracked-files=all was empty).
+
+Manifest
+--------
+skill_digest: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+required_criteria: authority, sources, coverage, assessment, accessibility, readability, pedagogy
+The manifest binds the unit's five English files, the course overview, the course content-spec,
+coverage, sources (including the three bound source texts), figures and banner manifest, concepts,
+style guide, constitution, catalogue, contracts, review skill and agent config, and the course
+guides. Reviews/, intake/ and tasks.md are excluded by the contract.
+
+Verification
+------------
+The manifest was not regenerated during the review. The report's input_manifest is the prepared
+manifest verbatim. No bound input was edited by this review.
+
+Provenance limitation
+---------------------
+No parent-prepared manifest or host author session id was supplied with the task. The manifest was
+prepared locally over the committed inputs. The author identity recorded in the report is the crew
+job id `crew-efmp-407-u07-author` taken from the authoring PHR
+(history/prompts/efmp-407/crew-efmp-407-u07-author.green.prompt.md). This reviewer did not author
+or translate the unit.
