@@ -9,7 +9,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 1 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localised schematic SVGs with dark twins; translator handoff: specs/content/gicp-400/reviews/unit-01/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 1 | G6 assets | ▢ | | Four inherited EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry and visual inspection pending under the crew brief's browser prohibition |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-05/G2/20261106T160348752Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-05/G2/20261107T044305246Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 5 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and six localised schematic SVGs with dark twins; translator handoff: specs/content/gicp-400/reviews/unit-05/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
