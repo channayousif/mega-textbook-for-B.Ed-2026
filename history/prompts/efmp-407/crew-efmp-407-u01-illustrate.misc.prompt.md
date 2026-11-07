@@ -1,0 +1,102 @@
+---
+id: crew-efmp-407-u01-illustrate
+title: crew illustrate EFMP-407 unit 1
+stage: misc
+date: 2026-11-07
+surface: agent
+model: codex
+feature: efmp-407
+branch: crew/efmp-407-u01-illustrate
+user: crew
+command: crew illustrate
+labels: ["crew", "codex", "illustrate"]
+links:
+  spec: specs/content/efmp-407/content-spec.md
+  ticket: null
+  adr: null
+  pr: null
+files:
+ - docs/semester-3/efmp-407/unit-01/index.mdx
+ - history/prompts/general/2461-illustrate-efmp407-unit-one.general.prompt.md
+ - specs/content/efmp-407/figures/unit-01.banner.md
+ - specs/content/efmp-407/figures/unit-01.illustration-notes.md
+ - specs/content/efmp-407/reviews/unit-01/G2/20261107T123059043Z-gates.json
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261107T123059043Z/validate-content.txt
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-01/fig-U1-7.webp
+tests:
+ - npm run check:content
+---
+
+## Prompt
+
+# Crew job efmp-407-u01-illustrate
+
+You are the codex worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-407-u01-illustrate`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+Produce the raster illustrations for EFMP-407 Unit 1 per ADR-0029. Run `scripts/heavy.sh node scripts/generate-illustration.mjs EFMP-407 1` for the topic scenes and again with `--banner` for the unit banner (unit-NN.banner.md); it generates with agy, optimises to WebP and moves each row to generated. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with `--id <fig>`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job.
+
+Follow `.claude/skills/generate-figures/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFMP-407 Unit 1 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efmp-407/`, and `static/img/figures/efmp-407/unit-01/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Notes from earlier jobs on this unit
+- (efmp-407-u01-translate, translate, codex) English author must repair Orr attribution disclosure and RRQ-09 source uncertainty before G4 resumes.
+- (efmp-407-u01-translate, translate, codex) English author must repair Orr attribution disclosure and RRQ-09 source uncertainty before G4 resumes.
+- (efmp-407-u01-review_en, review_en, codex) Fresh review needs complete source binding, run provenance, independent assessment solving and browser/print evidence.
+- (efmp-407-u01-review_en, review_en, codex) Author must repair Orr attribution disclosure and RRQ-09 source qualifications.
+- (efmp-407-u01-review_en, review_en, codex) Fresh review needs complete source binding, run provenance, independent assessment solving and browser/print evidence.
+
+
+## Response snapshot
+
+Generated and placed the EFMP-407 Unit 1 English banner, documented Urdu placement, and refreshed passing draft evidence.
+
+## Outcome
+
+- Impact: illustrate for EFMP-407 Unit 1 by codex (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
+
+## Handoff (for CEO and agents)
+
+- Shipped / changed: Generated and placed the EFMP-407 Unit 1 English banner, documented Urdu placement, and refreshed passing draft evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - No topic illustration prompts exist; the topic generation command had no matching rows.
+  - Urdu mirror is absent; a translated Figure snippet is recorded for the translation job.
+  - No topic illustration prompts exist; the topic generation command had no matching rows.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
