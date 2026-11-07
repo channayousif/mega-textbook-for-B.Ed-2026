@@ -25,7 +25,7 @@ files:
  - history/prompts/efmp-407/crew-efmp-407-u03-author-conflict2.misc.prompt.md
  - history/prompts/efmp-407/crew-efmp-407-u03-author-conflict3.misc.prompt.md
  - history/prompts/efmp-407/crew-efmp-407-u03-author.green.prompt.md
- - history/prompts/general/20261144-author-efmp407-unit-three.general.prompt.md
+ - history/prompts/general/20261144-author-efmp-407-unit-three.general.prompt.md
  - specs/content/efmp-407/authoring/unit-03.md
  - specs/content/efmp-407/concepts/unit-03.md
  - specs/content/efmp-407/coverage/unit-03.md
@@ -85,22 +85,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u03-author-conflict1, fix, opencode) `course-overview.mdx` is now on main, so Unit 3's `coming_soon: true` can be cleared by the next job (regenerate `static/content-status.json` after).
 - (efmp-407-u03-author-conflict1, fix, opencode) banner `fig-U3-7` remains `prompt-only`; Chromium figure geometry measurement is deferred to CI.
 
+
 ## Response snapshot
 
-Merged current main into the Unit 3 branch, resolved the `tasks.md` and shared `unesco-2017-esd-objectives.md` conflicts keeping both sides' content, regenerated the stale `static/content-status.json`, and left all 14 content gates passing with the merge and PHR committed.
+Merged origin/main into crew/efmp-407-u03-author, resolved the tasks.md and unesco-2017-esd-objectives.md conflicts keeping both sides' content, regenerated static/content-status.json, and committed the merge and PHR with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFMP-407 Unit 3 by opencode (attempt 3).
-- Tests: npm run check:content passed in the job worktree (14/14 gates).
+- Impact: fix for EFMP-407 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 32 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged current main into the Unit 3 branch, resolved the `tasks.md` and shared `unesco-2017-esd-objectives.md` conflicts keeping both sides' content, regenerated the stale `static/content-status.json`, and left all 14 content gates passing with the merge and PHR committed.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything. The shared registries were unchanged by either side since the merge base, so no ID renumbering was needed.
+- Shipped / changed: Merged origin/main into crew/efmp-407-u03-author, resolved the tasks.md and unesco-2017-esd-objectives.md conflicts keeping both sides' content, regenerated static/content-status.json, and committed the merge and PHR with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 3 `coming_soon: true` can now be cleared, but only after real G2 evidence exists (tracker row is `G2: ▣`, so clearing it now fails `check:pipeline-gate`); regenerate `static/content-status.json` afterwards.
