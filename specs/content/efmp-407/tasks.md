@@ -14,7 +14,7 @@ English-only authoring from the approved Unit 1 spec (D-2026-0076). No publicati
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 7 | G2 en-draft | ▣ | | English draft authored; deterministic validation pending |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T081151799Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | independent review pending; no author certification |
 | Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |
 | Unit 7 | G5 ur-review | ▢ | | pending translation and independent review |
