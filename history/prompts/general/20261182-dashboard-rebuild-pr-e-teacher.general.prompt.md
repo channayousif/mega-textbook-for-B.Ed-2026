@@ -40,7 +40,7 @@ Approved plan PR E on the shell from PR C. Teacher home: a welcome card with the
 ## Outcome
 
 - ✅ Impact: the teaching area shares the student area's layout and components.
-- 🧪 Tests: see PR.
+- 🧪 Tests: tsc clean; npm run check:all 20/20 PASS; 72 signed-in teacher shots (EN and UR, light and dark, 1440 and 390): no overflow, no broken images, zero axe violations; 21 tests in 16 teacher, classes and a11y e2e specs PASS locally against the live Supabase after two CSS fixes.
 - 📁 Files: teacher and classes pages, AppPageTitle, ui and app CSS.
 - 🔁 Next prompts: PR F admin, reviewer and profile.
 - 🧠 Reflection: card styling on bare tables needs a scroll wrapper, or wide tables push the page sideways on phones.
@@ -54,7 +54,7 @@ Approved plan PR E on the shell from PR C. Teacher home: a welcome card with the
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: chips squeezed row titles to one letter; bare tables overflowed phones; a scripted edit left a duplicate className that tsc caught.
-- Graders run and results (PASS/FAIL): see PR.
+- Failure modes observed: forcing display: table on bare tables removed Infima's in-place scrolling (caught by teacher-dashboard-rtl on /ur/app/admin/suggestions); an absolutely positioned sr-only label escaped a scroll box; chips squeezed row titles to one letter; bare tables overflowed phones; a scripted edit left a duplicate className that tsc caught.
+- Graders run and results (PASS/FAIL): check:all PASS; e2e PASS; shots clean.
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): none.
