@@ -27,9 +27,9 @@ import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeAppendOnly } from './batch.mjs';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse, IN_FLIGHT, isCorpusStage, figureBacklog, limitIllustrate } from './planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, IN_FLIGHT, isCorpusStage, figureBacklog, limitIllustrate } from './planner.mjs';
 import { readManifest } from '../lib/figure-manifest.mjs';
-import { walkUnits } from '../lib/content-roots.mjs';
+import { walkUnits, walkCourses } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
 import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
 import { OWN_PR, queueReview, recordReview, fanOutJobs } from './maintjobs.mjs';
@@ -151,14 +151,14 @@ function plan() {
   const dirs = unitDirs();
   const added = [];
   const awaiting = [];
-  const queue = (course, unit, stage) => {
+  const queue = (course, unit, stage, extra = {}) => {
     const base = jobId(course, unit, stage);
     const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
     if (prior.some((j) => ACTIVE.includes(j.status) || j.status === 'blocked')) return;
     // A merged job whose need persists means its output did not change main's state; do not loop on it.
     if (prior.filter((j) => j.status === 'merged').length >= 2) return;
     const id = prior.length ? `${base}-r${prior.length}` : base;
-    added.push({ id, course, unit, stage, status: 'queued', attempts: 0, tried: [], createdAt: now() });
+    added.push({ id, course, unit, stage, status: 'queued', attempts: 0, tried: [], createdAt: now(), ...extra });
   };
   for (const c of status.courses) {
     for (const u of c.units) {
@@ -170,9 +170,18 @@ function plan() {
     }
   }
   // Units an approved spec defines but nobody has written yet are not in the content status at all.
+  // A course with no course-overview.mdx and no unit on disk queues only its lowest missing unit:
+  // review-evidence binds the overview as a required G2/G3 input, so that job writes it first
+  // (2026-W45 M5; GICP-400 and EFMP-406 evidence).
+  const courseDirs = new Map(walkCourses(ROOT).map((c) => [c.courseCode, c.courseDir]));
+  const waitingOverview = [];
   for (const [course, units] of specUnits()) {
     const onDisk = new Set((status.courses.find((c) => c.course_code === course)?.units || []).map((u) => u.unit_no));
-    for (const n of units) if (!onDisk.has(n)) queue(course, n, 'author');
+    const courseDir = courseDirs.get(course);
+    const hasOverview = courseDir ? existsSync(join(courseDir, 'course-overview.mdx')) : false;
+    const needsOverview = !hasOverview && onDisk.size === 0;
+    if (needsOverview && units.length) waitingOverview.push(course);
+    for (const n of authorQueue(units, onDisk, hasOverview)) queue(course, n, 'author', needsOverview ? { overview: false } : {});
   }
   // One course at a time (owner ruling 2026-10-28): finish what was started; only the focus
   // course may start, so author jobs for every other unstarted course are withheld.
@@ -189,7 +198,7 @@ function plan() {
   // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
   board.awaitingG3 = { at: now(), units: awaiting };
   if (!DRY) { board.jobs.push(...added); save('board', board); }
-  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off; focus: ${board.focus.course ?? 'none'} (${board.focus.reason})${held.length ? `; held ${held.length} author job(s) for ${[...new Set(held.map((j) => j.course))].join(', ')}` : ''}`);
+  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off; focus: ${board.focus.course ?? 'none'} (${board.focus.reason})${held.length ? `; held ${held.length} author job(s) for ${[...new Set(held.map((j) => j.course))].join(', ')}` : ''}${waitingOverview.length ? `; waiting for course overview: ${waitingOverview.join(', ')}` : ''}`);
   for (const j of added) console.log(`  + ${j.id}`);
   return added;
 }
@@ -198,7 +207,7 @@ function plan() {
 
 const STAGE_TASK = {
   salvage: (j) => `This branch carries earlier, unfinished work from ${j.pr ? `PR #${j.pr}` : 'an earlier branch'} (${j.base}). Run \`git fetch origin && git rebase origin/main\`, resolve every conflict (keep this unit's content; take main's version of shared files such as the style guide, gates and catalog), then make every content gate pass.${j.task ? ` Extra instructions: ${j.task}` : ''}`,
-  author: (j) => `Author ${j.course} Unit ${j.unit} from its approved content-spec, following the author-unit skill end to end (English only; the Urdu mirror is a separate job). Topic titles read "Topic N.M - Title" (validate:content checks it).`,
+  author: (j) => `Author ${j.course} Unit ${j.unit} from its approved content-spec, following the author-unit skill end to end (English only; the Urdu mirror is a separate job). Topic titles read "Topic N.M - Title" (validate:content checks it).${j.overview === false ? ` This course has no course-overview.mdx yet: write it as part of this commit, modelled on docs/semester-3/gicp-400/course-overview.mdx, so later author jobs and the course's G2 evidence can bind it.` : ''}`,
   repair_en: (j) => `Apply the findings of the latest G3 report under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit ${j.unit} G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.`,
   figures: (j) => `Render every prompt-only schematic figure for ${j.course} Unit ${j.unit} (generate-figures skill): diagrams, tables, concept maps, flowcharts and timelines as SVG with their .ur.svg variants. Leave raster illustrations at prompt-only for the illustrate job. Every SVG must pass npm run check:svg-style; render each one to PNG and look at it (light and dark) before placing it.`,
   illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it generates with agy, optimises to WebP and moves each row to generated. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job.`,

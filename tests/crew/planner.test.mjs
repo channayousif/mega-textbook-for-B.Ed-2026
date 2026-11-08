@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse, figureBacklog, limitIllustrate } from '../../scripts/crew/planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, figureBacklog, limitIllustrate } from '../../scripts/crew/planner.mjs';
 
 const unit = (G3 = 'open', G5 = 'open', over = {}) => ({ authored: true, gates: { G3, G5 }, figures: { prompt_only: 0 }, ...over });
 const facts = (over = {}) => ({ bilingual: true, g3Report: null, g3Repaired: false, g5Report: null, mirrorComplete: true, ...over });
@@ -100,6 +100,21 @@ test('specUnitNumbers: units an approved spec defines, so unwritten ones get aut
   assert.deepEqual(specUnitNumbers(spec('draft', '## Unit 1: A\n')), []);
   assert.deepEqual(specUnitNumbers(spec('approved', '## Units overview\n## Unit 3: C\n')), [3]);
   assert.deepEqual(specUnitNumbers('no front matter\n## Unit 1: A\n'), []);
+});
+
+test('authorQueue: no overview and no units queues only the lowest missing unit (2026-W45 M5)', () => {
+  // GICP-400 Units 1, 2 and 4 stopped on "missing required input: course-overview.mdx" (11-07 C6);
+  // EFMP-406 Units 2 to 5 collided on the same file (11-03 C6). The first author job writes it.
+  assert.deepEqual(authorQueue([1, 2, 3], new Set(), false), [1]);
+  // Overview present: every missing unit is queued.
+  assert.deepEqual(authorQueue([1, 2, 3], new Set(), true), [1, 2, 3]);
+  assert.deepEqual(authorQueue([1, 2, 3], new Set([1]), true), [2, 3]);
+  // No overview but one unit on disk: the rest are queued.
+  assert.deepEqual(authorQueue([1, 2, 3], new Set([1]), false), [2, 3]);
+  // Every unit written: nothing to queue.
+  assert.deepEqual(authorQueue([1, 2, 3], new Set([1, 2, 3]), false), []);
+  // Array input works too.
+  assert.deepEqual(authorQueue([1, 2, 3], [1], false), [2, 3]);
 });
 
 test('focusCourse: finish a started course before a new one starts (owner ruling 2026-10-28)', () => {
