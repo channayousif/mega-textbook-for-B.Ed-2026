@@ -11,6 +11,7 @@ for (const self of [false, true]) {
       'never run `npm run build`, a dev server or the Playwright e2e suite',
       'keep all scratch files inside your worktree (for example `.crew/`)',
       'never use `/tmp`',
+      'a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server',
       'Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0.',
       '`static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git',
     ]) assert.ok(rules.includes(sentence), sentence);
