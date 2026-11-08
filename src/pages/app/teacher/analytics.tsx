@@ -5,6 +5,7 @@ import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { fetchClassAnalytics, type ClassAnalytics, type AtRiskStudent } from '@site/src/lib/teacherAnalytics';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { AppPageTitle } from '@site/src/components/ui';
 
 /**
  * Analytics (Spec 005, T037) - FR-009: score distribution per assignment,
@@ -46,9 +47,9 @@ function atRiskReasonText(student: AtRiskStudent, locale: 'en' | 'ur'): string {
 
 function Bar({ fraction }: { fraction: number }): React.ReactElement {
   return (
-    <div style={{ background: 'var(--ifm-color-emphasis-200)', height: '8px', width: '160px', display: 'inline-block' }}>
-      <div style={{ background: 'var(--ifm-color-primary)', height: '100%', width: `${Math.round(fraction * 100)}%` }} />
-    </div>
+    <span className="inline-bar" aria-hidden="true">
+      <span className="inline-bar__fill" style={{ inlineSize: `${Math.round(fraction * 100)}%` }} />
+    </span>
   );
 }
 
@@ -145,6 +146,7 @@ export default function AnalyticsPage(): React.ReactElement {
   return (
     <Layout title="Analytics">
       <AppDashboardShell role="teacher">
+          <AppPageTitle en="Class analytics" ur="کلاس کے تجزیات" icon="analytics" />
           <AnalyticsContent />
       </AppDashboardShell>
     </Layout>

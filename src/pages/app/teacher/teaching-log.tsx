@@ -9,6 +9,7 @@ import { logActivity, fetchOwnLog } from '@site/src/lib/teachingLog';
 import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback';
 import type { Class, TeachingLogEntry } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { AppPageTitle } from '@site/src/components/ui';
 
 /**
  * My Teaching Log (Spec 005, T024/T030) - FR-006: log a teaching activity
@@ -364,6 +365,7 @@ export default function TeachingLogPage(): React.ReactElement {
   return (
     <Layout title="My Teaching Log">
       <AppDashboardShell role="teacher">
+          <AppPageTitle en="Teaching log" ur="تدریسی نوٹ بک" icon="log" />
           <TeachingLogContent />
       </AppDashboardShell>
     </Layout>

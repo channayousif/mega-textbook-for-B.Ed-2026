@@ -4,6 +4,8 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
+import Icon, { type IconName } from '@site/src/components/icons/Icon';
 
 const sections = [
   ['users', 'Users and roles', 'صارفین اور کردار', 'Select an account, manage access and suspension.'],
@@ -18,6 +20,11 @@ const sections = [
   ['audit', 'Privilege audit', 'اختیارات کا ریکارڈ', 'View role and capability changes.'],
 ] as const;
 
+const HUB_ICONS: Record<(typeof sections)[number][0], IconName> = {
+  users: 'users', records: 'records', reviewers: 'shield', 'g3-signoff': 'signoff', 'review-decisions': 'review',
+  'feedback-queue': 'feedback', suggestions: 'suggest', overview: 'analytics', 'agent-jobs': 'jobs', audit: 'audit',
+};
+
 export default function AdminHome(): React.ReactElement {
   const { i18n } = useDocusaurusContext();
   const ur = i18n.currentLocale === 'ur';
@@ -25,10 +32,11 @@ export default function AdminHome(): React.ReactElement {
       <AppDashboardShell>
     <OwnerConsoleGuard>
       <div className="app-page-body" dir={ur ? 'rtl' : 'ltr'}>
-        <h1>{ur ? 'منتظم کا ڈیش بورڈ' : 'Admin dashboard'}</h1>
-        <p>{ur ? 'کام شروع کرنے کے لیے ایک حصہ منتخب کریں۔' : 'Choose the record or workflow you need.'}</p>
+        <PageHeader title={ur ? 'منتظم کا ڈیش بورڈ' : 'Admin dashboard'} icon="overview"
+          lead={ur ? 'کام شروع کرنے کے لیے ایک حصہ منتخب کریں۔' : 'Choose the record or workflow you need.'} />
         <div className="work-grid">
-          {sections.map(([path, en, urLabel, description]) => <Link className="work-card" key={path} to={`/app/admin/${path}`}>
+          {sections.map(([path, en, urLabel, description]) => <Link className="work-card hub-card" key={path} to={`/app/admin/${path}`}>
+            <span className="hub-card__icon" aria-hidden="true"><Icon name={HUB_ICONS[path]} size={24} accent={false} /></span>
             <strong>{ur ? urLabel : en}</strong><span>{ur ? urLabel : description}</span>
           </Link>)}
         </div>

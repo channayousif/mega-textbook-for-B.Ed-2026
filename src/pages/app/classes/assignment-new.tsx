@@ -14,6 +14,7 @@ import { listOwnTemplates, createTemplate } from '@site/src/lib/assignmentTempla
 import type { AssignmentSourceKind, AssignmentTemplate } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Assignment creation - unit-item picker, quiz picker, or custom (Spec 003,
@@ -199,7 +200,7 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
 
   return (
     <div>
-      <h2>New assignment - {classRow.name}</h2>
+      <PageHeader title={`New assignment - ${classRow.name}`} icon="assignment" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}

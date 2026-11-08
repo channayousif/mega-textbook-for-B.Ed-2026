@@ -12,6 +12,7 @@ import type { QuizAttemptResult, ClassBestScoreRow } from '@site/src/lib/quiz';
 import type { Assignment, QuizItem } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Auto-graded practice quiz - student take/retake UI, teacher best-score
@@ -170,6 +171,7 @@ function TeacherResults({ classId, assignmentId, maxMark }: { classId: string; a
   if (!rows) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
+    <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
     <table>
       <thead>
         <tr>
@@ -186,6 +188,7 @@ function TeacherResults({ classId, assignmentId, maxMark }: { classId: string; a
         ))}
       </tbody>
     </table>
+        </div>
   );
 }
 
@@ -216,7 +219,7 @@ function QuizContent({ classId, assignmentId }: { classId: string; assignmentId:
 
   return (
     <div>
-      <h2>{assignment.title}</h2>
+      <PageHeader title={assignment.title} icon="quiz" />
       <p>Due {new Date(assignment.due_at).toLocaleString()} · Max mark {assignment.max_mark}</p>
       {role === 'teacher' ? (
         <TeacherResults classId={classId} assignmentId={assignmentId} maxMark={assignment.max_mark} />

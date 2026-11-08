@@ -10,6 +10,7 @@ import {
 } from '@site/src/lib/classes';
 import type { Class, Enrollment } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader, EmptyState, DataTable } from '@site/src/components/ui';
 
 /**
  * Student "My classes" - join by code and see current classes, without leaving the
@@ -89,11 +90,11 @@ function ClassesContent(): React.ReactElement {
 
   return (
     <div>
-      <h1>{MESSAGES.title[locale]}</h1>
+      <PageHeader title={MESSAGES.title[locale]} icon="classes" />
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
       {message && <div className="alert alert--success" role="status">{message}</div>}
 
-      <form onSubmit={handleJoin} className="margin-bottom--lg">
+      <form onSubmit={handleJoin} className="work-panel work-form">
         <h2>{MESSAGES.joinHeading[locale]}</h2>
         <label htmlFor="join-code">{MESSAGES.codeLabel[locale]}</label>
         <input
@@ -109,13 +110,14 @@ function ClassesContent(): React.ReactElement {
         </button>
       </form>
 
+      <section className="work-panel">
       <h2>{MESSAGES.yourClasses[locale]}</h2>
       {!rows ? (
         <LoadingMark label={MESSAGES.loading[locale]} />
       ) : rows.length === 0 ? (
-        <p>{MESSAGES.none[locale]}</p>
+        <EmptyState icon="classes" title={MESSAGES.none[locale]} />
       ) : (
-        <table>
+        <DataTable caption={MESSAGES.yourClasses[locale]} hideCaption>
           <thead>
             <tr>
               <th>{MESSAGES.colName[locale]}</th>
@@ -132,8 +134,9 @@ function ClassesContent(): React.ReactElement {
               </tr>
             ))}
           </tbody>
-        </table>
+        </DataTable>
       )}
+      </section>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { useAuth } from '@site/src/contexts/AuthContext';
 import { getSupabase } from '@site/src/lib/supabase';
 import { fetchCatalog, type Catalog } from '@site/src/lib/catalog';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 function ApplicationForm(): React.ReactElement {
   const { profile } = useAuth();
@@ -28,7 +29,7 @@ function ApplicationForm(): React.ReactElement {
     setMessage(error ? error.message : 'Application submitted. An admin will review your evidence.');
     if (!error) { setEvidence(''); const { data } = await db.from('reviewer_applications').select('id,track,course_code,status').eq('applicant_id', profile.id); setApplications(data ?? []); }
   }
-  return <div className="app-page-body"><h1>Apply to review content</h1>
+  return <div className="app-page-body"><PageHeader title="Apply to review content" icon="review" />
     <p>Request access to one track or a single course. Approval depends on recorded qualification evidence.</p>
     <form className="work-form" onSubmit={e => void submit(e)}>
       <label>Track <select className="input" value={track} onChange={e => { setTrack(e.target.value as 'bed' | 'licence'); setCourse(''); }}><option value="bed">B.Ed</option><option value="licence">Teaching licence</option></select></label>

@@ -5,6 +5,7 @@ import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchAllGrades, type GradeItem } from '@site/src/lib/dashboardQueries';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader, DataTable, EmptyState } from '@site/src/components/ui';
 
 /**
  * Grades area (Spec 004, T017, FR-004). Every returned assignment/quiz
@@ -52,14 +53,15 @@ function GradesContent(): React.ReactElement {
 
   return (
     <div>
-      <h2>{MESSAGES.title[locale]}</h2>
+      <PageHeader title={MESSAGES.title[locale]} icon="grades" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
       {grades.length === 0 ? (
-        <p>{MESSAGES.noGrades[locale]}</p>
+        <div className="work-panel"><EmptyState icon="grades" title={MESSAGES.noGrades[locale]} /></div>
       ) : (
-        <table>
+        <div className="work-panel">
+        <DataTable caption={MESSAGES.title[locale]} hideCaption>
           <thead>
             <tr>
               <th>{MESSAGES.colTitle[locale]}</th>
@@ -72,11 +74,15 @@ function GradesContent(): React.ReactElement {
               <tr key={`${g.kind}-${g.title}-${i}`}>
                 <td>{g.title}</td>
                 <td>{g.className}</td>
-                <td>{g.mark} / {g.maxMark}</td>
+                <td className="grade-cell">
+                  <span>{g.mark} / {g.maxMark}</span>
+                  <span className="grade-cell__bar" aria-hidden="true"><span style={{ inlineSize: `${g.maxMark > 0 ? Math.round((g.mark / g.maxMark) * 100) : 0}%` }} /></span>
+                </td>
               </tr>
             ))}
           </tbody>
-        </table>
+        </DataTable>
+        </div>
       )}
     </div>
   );

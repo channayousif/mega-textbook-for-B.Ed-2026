@@ -27,12 +27,12 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 4 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation. |
 | Unit 4 | G6 assets | ▣ | agent:codex | Six English schematics placed with derived dark twins. Browser text-geometry measurement deferred to CI because crew prohibits Playwright. Banner remains prompt-only for illustration job; Urdu assets pending. |
 | Unit 4 | G7 publish | ▢ | | No publication, push or PR requested in this job. |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-06/G2/20261107T081746587Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-06/G2/20261108T144356015Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | agent:agy | Advisory escalation only; G3 remains open. Findings F1-F4 and missing render/provenance evidence: [report](reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a.json). No certification. |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U6-7 remains prompt-only |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261107T183151050Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261108T130249567Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 5 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory: revise; F1 blocking - IUCN Pakistan 2004 citation URL resolves to an unrelated Tanzania report and the glacier-grafting claim is not in the bound excerpt; F2 uncertain - two per-topic retrieval items tagged Analyze above the formative band; F3-F7 advisory; report: specs/content/efmp-407/reviews/unit-05/G3/crew-efmp-407-u05-review_en/crew-efmp-407-u05-review_en.json |
 | Unit 5 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory r1 escalation on unchanged inputs; prior F1-F7 unresolved; missing parent provenance and required browser/print evidence. [Report](reviews/unit-05/G3/crew-efmp-407-u05-review_en-r1.json). G3 remains open and unsigned. |
@@ -79,7 +79,7 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T100546088Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261108T155607697Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F5 and missing render/provenance evidence: [report](reviews/unit-07/G3/crew-efmp-407-u07-review_en/crew-efmp-407-u07-review_en.json). No certification. |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory r1: revise; F1 blocking - NEP 2009 cited to section 6.1, passage is in section 6.2 (Curriculum Reform), policy action 5; repair in topic-01.mdx:33 and :107, sources/unit-07.md:7, sources/texts/nep-2009.md:7; F2-F6 advisory; report: specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/crew-efmp-407-u07-review_en-r1.json |
 | Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |

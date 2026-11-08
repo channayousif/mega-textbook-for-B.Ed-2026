@@ -6,6 +6,7 @@ import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { exportGradebook } from '@site/src/lib/gradebookExport';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Gradebook export (Spec 003, T052/T062). Teacher-only export button
@@ -49,7 +50,7 @@ function GradebookContent({ classId }: { classId: string }): React.ReactElement 
 
   return (
     <div>
-      <h2>Gradebook - {classRow.name}</h2>
+      <PageHeader title={`Gradebook - ${classRow.name}`} icon="gradebook" />
       <p>{classRow.course_code} - {classRow.term_label}</p>
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>

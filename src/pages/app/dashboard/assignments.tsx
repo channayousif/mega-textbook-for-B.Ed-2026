@@ -5,6 +5,7 @@ import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchDueSoon, type DueSoonItem } from '@site/src/lib/dashboardQueries';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader, DataTable, StatusPill, EmptyState } from '@site/src/components/ui';
 
 /**
  * Full Assignments area (Spec 004, T013, FR-003). Shares `fetchDueSoon()`
@@ -63,14 +64,15 @@ function AssignmentsContent(): React.ReactElement {
 
   return (
     <div>
-      <h2>{MESSAGES.title[locale]}</h2>
+      <PageHeader title={MESSAGES.title[locale]} icon="assignment" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
       {items.length === 0 ? (
-        <p>{MESSAGES.nothingDue[locale]}</p>
+        <div className="work-panel"><EmptyState icon="success" title={MESSAGES.nothingDue[locale]} /></div>
       ) : (
-        <table>
+        <div className="work-panel">
+        <DataTable caption={MESSAGES.title[locale]} hideCaption>
           <thead>
             <tr>
               <th>{MESSAGES.colTitle[locale]}</th>
@@ -84,12 +86,13 @@ function AssignmentsContent(): React.ReactElement {
               <tr key={item.assignment.id} data-testid="assignment-row">
                 <td>{item.assignment.title}</td>
                 <td>{item.className}</td>
-                <td>{new Date(item.assignment.due_at).toLocaleString()}</td>
-                <td>{stateLabel(item, locale)}</td>
+                <td>{new Date(item.assignment.due_at).toLocaleString(locale === 'ur' ? 'ur-PK' : 'en-GB')}</td>
+                <td><StatusPill tone={item.state === 'closed' ? 'error' : item.state === 'open' ? 'info' : 'warning'}>{stateLabel(item, locale)}</StatusPill></td>
               </tr>
             ))}
           </tbody>
-        </table>
+        </DataTable>
+        </div>
       )}
     </div>
   );

@@ -25,7 +25,7 @@ html[data-theme='dark'] {
 }
 
 /* --- The site chrome becomes the app top bar --------------------------------- */
-html.app-page body { background: var(--app-bg); }
+html.app-page body, html.app-page .main-wrapper { background: var(--app-bg); }
 html.app-page .navbar { box-shadow: 0 1px 0 var(--app-line); }
 html.app-page .navbar__items:not(.navbar__items--right) > .navbar__item,
 html.app-page .navbar .navbar-cta { display: none; }
@@ -104,7 +104,7 @@ html[data-theme='dark'] .dashboard-shell__navlink:hover { background: #1f4a50; c
 html[data-theme='dark'] .dashboard-shell__navlink--active,
 html[data-theme='dark'] .dashboard-shell__navlink--active:hover { background: linear-gradient(90deg, #a6dfdc, #c8edeb); color: #123e43; }
 html[data-theme='dark'] .dashboard-shell__navlink--active svg { color: #123e43; }
-.dashboard-shell__navtext { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dashboard-shell__navtext { min-width: 0; line-height: 1.25; overflow-wrap: anywhere; }
 
 .dashboard-shell__collapse {
   display: flex;
@@ -199,7 +199,7 @@ html[data-theme='dark'] :is(.work-card, .work-panel) { border: 1px solid var(--a
 .work-form label { display: grid; gap: 0.3rem; font-weight: 600; }
 .work-form .button { justify-self: start; }
 .work-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.table-scroll { max-width: 100%; overflow-x: auto; }
+.table-scroll { position: relative; max-width: 100%; overflow-x: auto; } /* relative: keeps absolutely positioned sr-only labels inside the scroll box */
 .work-pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .dashboard-shell__main > :is(div, section) > h1:first-child,
 .dashboard-shell__main > h1:first-child,
@@ -225,3 +225,87 @@ html[data-theme='dark'] .dashboard-shell__main :is(input:not([type='checkbox']):
   .dashboard-shell__sidebar, .dashboard-shell__topbar { display: none; }
   .work-card, .work-panel { box-shadow: none; border: 1px solid #999; }
 }
+
+/* --- Student progress page ------------------------------------------------------- */
+.coverage-bar { height: 10px; border-radius: 999px; background: #e3e8e6; overflow: hidden; }
+.coverage-bar__fill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #1b5a60, #2f7c80); }
+html[data-theme='dark'] .coverage-bar { background: #1f4a50; }
+html[data-theme='dark'] .coverage-bar__fill { background: #a6dfdc; }
+.progress-summary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px; }
+.progress-summary__donut { display: flex; align-items: center; gap: 18px; }
+.progress-summary__donut p { margin: 0; color: var(--app-muted); }
+.progress-courses, .progress-checklists { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.progress-courses > li, .progress-checklists > li { margin: 0; }
+.progress-checklists { gap: 16px; }
+.progress-course__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-block-end: 8px; }
+.progress-course__code { font-family: var(--ifm-heading-font-family); font-weight: 800; font-size: 1.1rem; }
+.progress-course__count { color: var(--app-muted); font-variant-numeric: tabular-nums; }
+.progress-course__units { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 14px 0 0; padding: 0; }
+.progress-course__units > li { margin: 0; }
+.progress-unit { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; font-size: 0.88rem; font-weight: 600; }
+.progress-unit--done { background: #e2f1e6; color: #1d5a2c; }
+html[data-theme='dark'] .progress-unit--done { background: #1d4029; color: #cdebd5; }
+@media (max-width: 860px) { .progress-summary { grid-template-columns: minmax(0, 1fr); } }
+.grade-cell { display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+.grade-cell__bar { display: block; width: 90px; height: 6px; border-radius: 999px; background: #e3e8e6; overflow: hidden; }
+.grade-cell__bar > span { display: block; height: 100%; border-radius: 999px; background: #2f7c80; }
+html[data-theme='dark'] .grade-cell__bar { background: #1f4a50; }
+html[data-theme='dark'] .grade-cell__bar > span { background: #a6dfdc; }
+.history-class + .history-class { margin-block-start: 16px; padding-block-start: 16px; border-block-start: 1px solid var(--app-line); }
+.notes-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-block-end: 16px; }
+.notes-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 24px; }
+.notes-list > li { margin: 0; }
+.note-card { margin: 0; }
+.note-card__meta { margin: 0; font-size: 0.82rem; color: var(--app-muted); }
+.note-card__title { margin: 0.35rem 0; font-weight: 700; }
+.note-card__body { margin: 0.25rem 0; white-space: pre-wrap; }
+/* --- Teacher and classes ---------------------------------------------------------- */
+.row-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.chip-link {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border-radius: 999px;
+  background: #e3eeec; color: #123e43; font-size: 0.85rem; font-weight: 700; text-decoration: none;
+}
+.chip-link:hover { background: #cfe0dd; color: #123e43; text-decoration: none; }
+.chip-link:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
+html[data-theme='dark'] .chip-link { background: #1f4a50; color: #e9f1ef; }
+html[data-theme='dark'] .chip-link:hover { background: #2a5a60; color: #fff; }
+.inline-bar { display: inline-block; vertical-align: middle; width: 160px; height: 8px; margin-inline: 8px; border-radius: 999px; background: #e3e8e6; overflow: hidden; }
+.inline-bar__fill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #1b5a60, #2f7c80); }
+html[data-theme='dark'] .inline-bar { background: #1f4a50; }
+html[data-theme='dark'] .inline-bar__fill { background: #a6dfdc; }
+.plain-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.plain-list > li { margin: 0; }
+.quiz-item__q { font-weight: 700; margin: 0 0 0.5rem; }
+.quiz-item__opts { margin: 0; }
+.quiz-item { padding: 14px 16px; border: 1px solid var(--app-line); border-radius: 12px; background: var(--app-card); }
+
+/* Forms and tables that are not already inside a card get a card surface. */
+.dashboard-shell__main form:not(.work-panel):not(.work-panel form):not(.notes-filter) {
+  padding: 22px; margin-block-end: 24px; border-radius: var(--app-radius); background: var(--app-card); box-shadow: var(--app-shadow);
+}
+.dashboard-shell__main :is(table, .table-scroll):not(.work-panel *):not([class*='table_']) {
+  background: var(--app-card); border-radius: 12px; box-shadow: var(--app-shadow);
+}
+/* No display override: Infima's block display lets a bare table scroll in place on phones. */
+.dashboard-shell__main table:not(.work-panel *):not([class*='table_']) { border-collapse: separate; border-spacing: 0; }
+.dashboard-shell__main .table-scroll:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
+html[data-theme='dark'] .dashboard-shell__main form:not(.work-panel):not(.work-panel form) { border: 1px solid var(--app-line); }
+
+/* --- Admin console hub --------------------------------------------------------- */
+.hub-card { gap: 0.5rem; }
+.hub-card__icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-block-end: 4px; border-radius: 12px; background: #e3eeec; color: #123e43; }
+html[data-theme='dark'] .hub-card__icon { background: #1f4a50; color: #dcf4f2; }
+.hub-card > span:last-child { color: var(--app-muted); }
+
+/* --- Profile ------------------------------------------------------------------- */
+.profile-page { max-width: 720px; }
+.profile-page > form { margin-block-end: 24px; }
+.profile-facts { display: grid; grid-template-columns: minmax(0, max-content) minmax(0, 1fr); gap: 10px 20px; }
+@media (max-width: 560px) { .profile-facts { grid-template-columns: minmax(0, 1fr); gap: 2px; } .profile-facts dd { margin-block-end: 10px; } }
+.profile-facts dt { font-weight: 700; color: var(--app-muted); }
+.profile-facts dd { margin: 0; overflow-wrap: anywhere; }
+.danger-zone { border-inline-start: 5px solid #b4231a; }
+.danger-zone h2 { color: #a3261c; }
+html[data-theme='dark'] .danger-zone h2 { color: #f5b7b1; }
+.danger-zone__confirm { display: flex; }
+.table-scroll > table { display: table; width: 100%; overflow: visible; } /* the region scrolls, not the table */

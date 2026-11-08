@@ -12,6 +12,7 @@ import { fetchCatalog, type Catalog, type CatalogCourse } from '@site/src/lib/ca
 import type { ContentFeedback, ContentFeedbackStatus } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Curriculum-owner console (Spec 010, T025/T030, Story 3) - one page
@@ -459,7 +460,7 @@ function OverviewContent(): React.ReactElement {
 
   return (
     <div>
-      <h1>{MESSAGES.title[locale]}</h1>
+      <PageHeader title={MESSAGES.title[locale]} icon="analytics" />
       <ContentStatusPanel locale={locale} />
       <FeedbackPanel locale={locale} />
       <SelfAssessmentAggregatePanel locale={locale} />

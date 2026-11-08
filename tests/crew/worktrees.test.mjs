@@ -4,7 +4,8 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, 
 import { join, resolve } from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { runInNewContext } from 'node:vm';
-import { mergeAppendOnly } from '../../scripts/crew/batch.mjs';
+import { briefRules } from '../../scripts/crew/brief.mjs';
+import { mergeTrackerRows } from '../../scripts/crew/batch.mjs';
 
 // Exercise the orchestrator functions without importing its stateful CLI entry point.
 const source = readFileSync(new URL('../../scripts/crew/crew.mjs', import.meta.url), 'utf8');
@@ -115,14 +116,14 @@ function trackerRepo(t) {
   git('config', 'user.name', 'Crew test');
   mkdirSync(join(wt, 'specs/content/gpks-402'), { recursive: true });
   const file = join(wt, 'specs/content/gpks-402/tasks.md');
-  const base = '| Unit | Stage | Status | Initials | Notes |\n|---|---|---|---|---|\n| 1 | G2 | done | crew | u1 |\n';
+  const base = '| Unit | Stage | Status | Initials | Notes |\n|---|---|---|---|---|\n| 1 | G2 | done | crew | u1 |\n| 2 | G2 | open | | u2 |\n';
   writeFileSync(file, base);
   git('add', '.');
   git('commit', '-qm', 'base');
   git('branch', 'other');
   const commit = (text) => { writeFileSync(file, text); git('add', '-u'); git('commit', '-qm', 'change'); };
   const resolveConflicts = loadFunction('resolveSharedConflicts', '\n/**', {
-    join, writeFileSync, spawnSync, mergeAppendOnly,
+    join, writeFileSync, spawnSync, mergeTrackerRows,
     sh(cmd, args, cwd, { allowFail = false } = {}) {
       try { return { ok: true, out: git(...args) }; }
       catch (error) { if (!allowFail) throw error; return { ok: false, out: '' }; }
@@ -133,17 +134,29 @@ function trackerRepo(t) {
 
 test('a course tracker conflict where both sides append rows is merged and committed', (t) => {
   const { git, file, base, commit, resolveConflicts } = trackerRepo(t);
-  commit(`${base}| 2 | G2 | done | crew | u2 |\n`);
-  git('checkout', '-q', 'other');
   commit(`${base}| 3 | G2 | done | crew | u3 |\n`);
+  git('checkout', '-q', 'other');
+  commit(`${base}| 4 | G2 | done | crew | u4 |\n`);
   git('checkout', '-q', '-');
   assert.throws(() => git('merge', '--no-edit', 'other'));
   assert.equal(resolveConflicts(git('rev-parse', '--show-toplevel')), true);
   assert.equal(git('status', '--porcelain'), '');
-  assert.equal(readFileSync(file, 'utf8'), `${base}| 2 | G2 | done | crew | u2 |\n| 3 | G2 | done | crew | u3 |\n`);
+  assert.equal(readFileSync(file, 'utf8'), `${base}| 3 | G2 | done | crew | u3 |\n| 4 | G2 | done | crew | u4 |\n`);
 });
 
-test('a course tracker conflict where one side edits a row is left for a merge fix', (t) => {
+test('a course tracker conflict where each side rewrites its own unit row is merged and committed', (t) => {
+  const { git, file, base, commit, resolveConflicts } = trackerRepo(t);
+  commit(base.replace('| u1 |', '| u1 redone |'));
+  git('checkout', '-q', 'other');
+  commit(base.replace('| 2 | G2 | open | | u2 |', '| 2 | G2 | done | crew | u2 authored |'));
+  git('checkout', '-q', '-');
+  assert.throws(() => git('merge', '--no-edit', 'other'));
+  assert.equal(resolveConflicts(git('rev-parse', '--show-toplevel')), true);
+  assert.equal(git('status', '--porcelain'), '');
+  assert.equal(readFileSync(file, 'utf8'), base.replace('| u1 |', '| u1 redone |').replace('| 2 | G2 | open | | u2 |', '| 2 | G2 | done | crew | u2 authored |'));
+});
+
+test('a course tracker conflict where both sides rewrite one row differently is left for a merge fix', (t) => {
   const { git, base, commit, resolveConflicts } = trackerRepo(t);
   commit(base.replace('| u1 |', '| u1 redone |'));
   git('checkout', '-q', 'other');
@@ -156,7 +169,7 @@ test('a course tracker conflict where one side edits a row is left for a merge f
 });
 
 test('common brief rules keep every worker scratch file inside its worktree', () => {
-  const rules = loadFunction('briefRules', '\n/**', {});
+  const rules = briefRules;
   for (const self of [true, false]) {
     assert.match(rules({}, self), /keep all scratch files inside your worktree/);
     assert.match(rules({}, self), /never use `\/tmp`/);

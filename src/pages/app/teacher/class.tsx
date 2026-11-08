@@ -9,6 +9,7 @@ import { listForTeacher } from '@site/src/lib/assignments';
 import { fetchClassAnalytics, type AtRiskStudent } from '@site/src/lib/teacherAnalytics';
 import type { Assignment } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Per-class command centre (Spec 011, US7 / FR-015): one place for a single class - roster
@@ -82,7 +83,7 @@ function ClassContent({ classId }: { classId: string }): React.ReactElement {
 
   return (
     <div>
-      <h1>{MESSAGES.title[locale]}</h1>
+      <PageHeader title={MESSAGES.title[locale]} icon="classes" />
       <p>
         <Link to={`/app/teacher/analytics?classId=${classId}`}>{MESSAGES.openAnalytics[locale]}</Link>
         {' · '}

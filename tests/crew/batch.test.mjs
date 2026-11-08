@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeAppendOnly } from '../../scripts/crew/batch.mjs';
+import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeAppendOnly, mergeTrackerRows } from '../../scripts/crew/batch.mjs';
 
 const at = (iso) => Date.parse(iso);
 
@@ -137,4 +137,82 @@ test('mergeAppendOnly: a missing stage returns null', () => {
   assert.equal(mergeAppendOnly(undefined, rowA, rowB), null);
   assert.equal(mergeAppendOnly(tracker, null, `${tracker}${rowB}\n`), null);
   assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, null), null);
+});
+
+const rowTracker = [
+  '# GICP-400 tracker',
+  '',
+  'Intro prose.',
+  '',
+  '| Unit | Stage | Status | Initials | Notes |',
+  '|---|---|---|---|---|',
+  '| Unit 1 | G2 en-draft | ▢ | | pending |',
+  '| Unit 1 | G3 en-review | ▢ | | pending |',
+  '| Unit 2 | G2 en-draft | ▢ | | pending |',
+  '| Unit 2 | G3 en-review | ▢ | | pending |',
+  '',
+  'Closing prose.',
+  '',
+].join('\n');
+const u1g2 = '| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:unit-01.json |';
+const u2g2 = '| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:unit-02.json |';
+const rewrite = (text, unit, stage, line) => text.replace(new RegExp(`^\\| ${unit} \\| ${stage} \\|.*$`, 'm'), line);
+
+test('mergeTrackerRows: two units each rewriting their own G2 row are merged', () => {
+  const ours = rewrite(rowTracker, 'Unit 1', 'G2 en-draft', u1g2);
+  const theirs = rewrite(rowTracker, 'Unit 2', 'G2 en-draft', u2g2);
+  const want = rewrite(ours, 'Unit 2', 'G2 en-draft', u2g2);
+  assert.equal(mergeTrackerRows(rowTracker, ours, theirs), want);
+  assert.equal(mergeTrackerRows(rowTracker, theirs, ours), want);
+  assert.equal(mergeAppendOnly(rowTracker, ours, theirs), null);
+});
+
+test('mergeTrackerRows: both sides rewriting one row differently returns null', () => {
+  const ours = rewrite(rowTracker, 'Unit 1', 'G2 en-draft', u1g2);
+  const theirs = rewrite(rowTracker, 'Unit 1', 'G2 en-draft', '| Unit 1 | G2 en-draft | ▢ | | gates red |');
+  assert.equal(mergeTrackerRows(rowTracker, ours, theirs), null);
+  assert.equal(mergeTrackerRows(rowTracker, ours, ours), ours);
+});
+
+test('mergeTrackerRows: a revision row appended for an existing key is kept as a new occurrence', () => {
+  const last = '| Unit 2 | G3 en-review | ▢ | | pending |';
+  const revision = '| Unit 1 | G3 en-review | ▢ | agent:g3 | advisory escalation |';
+  const ours = insertAfter(rowTracker, last, revision);
+  const theirs = rewrite(rowTracker, 'Unit 1', 'G3 en-review', '| Unit 1 | G3 en-review | ▢ | | first review queued |');
+  const merged = mergeTrackerRows(rowTracker, ours, theirs);
+  assert.equal(merged, insertAfter(theirs, last, revision));
+  // New rows from both sides go after the table's last row, ours first.
+  const u3 = '| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:unit-03.json |';
+  assert.equal(mergeTrackerRows(rowTracker, ours, insertAfter(rowTracker, '| Unit 1 | G3 en-review | ▢ | | pending |', u3)), insertAfter(rowTracker, last, `${revision}\n${u3}`));
+});
+
+test('mergeTrackerRows: a row deleted on one side and unchanged on the other is deleted', () => {
+  const ours = rowTracker.replace('| Unit 2 | G3 en-review | ▢ | | pending |\n', '');
+  const theirs = rewrite(rowTracker, 'Unit 1', 'G2 en-draft', u1g2);
+  assert.equal(mergeTrackerRows(rowTracker, ours, theirs), rewrite(ours, 'Unit 1', 'G2 en-draft', u1g2));
+  // Deleted on one side but changed on the other is a real conflict.
+  assert.equal(mergeTrackerRows(rowTracker, ours, rewrite(rowTracker, 'Unit 2', 'G3 en-review', '| Unit 2 | G3 en-review | ✅ | | x |')), null);
+});
+
+test('mergeTrackerRows: a prose line edited on one side returns null', () => {
+  const ours = rowTracker.replace('Closing prose.', 'Closing prose, edited.');
+  const theirs = rewrite(rowTracker, 'Unit 2', 'G2 en-draft', u2g2);
+  assert.equal(mergeTrackerRows(rowTracker, ours, theirs), null);
+  // Pure insertions of prose still merge.
+  const added = rowTracker.replace('Closing prose.\n', 'Closing prose.\nAdded line.\n');
+  assert.equal(mergeTrackerRows(rowTracker, added, theirs), rewrite(added, 'Unit 2', 'G2 en-draft', u2g2));
+});
+
+test('mergeTrackerRows: a missing stage returns null', () => {
+  assert.equal(mergeTrackerRows(null, rowTracker, rowTracker), null);
+  assert.equal(mergeTrackerRows(rowTracker, null, rowTracker), null);
+  assert.equal(mergeTrackerRows(rowTracker, rowTracker, null), null);
+});
+
+test('mergeTrackerRows: agrees with mergeAppendOnly on pure row appends', () => {
+  const last = '| 1 | G2 | done | crew | authored |';
+  const ours = insertAfter(tracker, last, rowA);
+  const theirs = insertAfter(tracker, last, rowB);
+  assert.equal(mergeTrackerRows(tracker, ours, theirs), mergeAppendOnly(tracker, ours, theirs));
+  assert.equal(mergeTrackerRows(tracker, `${tracker}${rowA}\n`, `${tracker}${rowB}\n`), `${tracker}${rowA}\n${rowB}\n`);
 });
