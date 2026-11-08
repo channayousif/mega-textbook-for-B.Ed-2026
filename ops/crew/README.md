@@ -55,8 +55,14 @@ is healthy, the review waits while every other kind of job keeps flowing.
 5. **batch** (`scripts/crew/batch.mjs`, owner ruling 2026-10-19): at most once an hour, and only
    when no batch PR is open, the dispatcher merges every `ready` job onto main's head in a fresh
    `crew/batch-<UTC time>` worktree, runs `npm run check:content` on the result and opens ONE PR for
-   all of them (its jobs become `batched`). A job that conflicts, or fails the gate only in
-   combination, is left out and gets a merge fix on its own branch; the rest go on. Why: one PR per
+   all of them (its jobs become `batched`). The batch attempts to resolve conflicts confined to
+   `glossary.json`, `static/content-status.json` and course `specs/content/<course>/tasks.md`
+   files itself (`resolveSharedConflicts` in `scripts/crew/crew.mjs`, with the merge helpers in
+   `scripts/crew/batch.mjs`): it merges the glossary and the trackers when it can and regenerates
+   content-status, then the same registry and content gates run on the result. A job whose
+   conflict stays unresolved (any other file, or a shared file the helpers cannot merge), or that
+   fails the gate only in combination, is left out and gets a merge fix on its own branch, five
+   at most; the rest go on. Why: one PR per
    job pushed to main every few minutes, each push queued a full CI run (rls and e2e share one
    database and run one at a time), and `scripts/deploy-prod.sh` deploys only main's head once its
    own run passes, so main moved on before any run finished and production stopped deploying.
