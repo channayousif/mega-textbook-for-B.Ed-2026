@@ -411,5 +411,44 @@
   },
   "partners.play": {
     "message": "لوگو چلائیں"
+  },
+  "news.label": {
+    "message": "تازہ ترین"
+  },
+  "news.region": {
+    "message": "تازہ خبریں اور نیا مواد"
+  },
+  "news.pause": {
+    "message": "روکیں"
+  },
+  "news.play": {
+    "message": "چلائیں"
+  },
+  "news.badge.course": {
+    "message": "نیا کورس"
+  },
+  "news.badge.unit": {
+    "message": "نیا یونٹ"
+  },
+  "news.badge.urdu": {
+    "message": "اردو میں"
+  },
+  "news.badge.review": {
+    "message": "جائزہ مکمل"
+  },
+  "news.badge.offer": {
+    "message": "پیشکش"
+  },
+  "news.badge.event": {
+    "message": "تقریب"
+  },
+  "news.badge.alert": {
+    "message": "اطلاع"
+  },
+  "news.badge.update": {
+    "message": "اپ ڈیٹ"
+  },
+  "news.badge.news": {
+    "message": "خبر"
   }
 }

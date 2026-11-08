@@ -1,0 +1,131 @@
+/* Feature 028 news ticker. Teal band in both themes: amber is a fill and an accent
+   on teal (5.36:1), never text on a light ground (tokens.css). */
+.bar {
+  background: var(--brand-teal);
+  color: #fff;
+}
+.band { border-bottom: 3px solid var(--brand-amber); }
+.card { border-radius: var(--ifm-card-border-radius, 18px); margin-block: 0 24px; overflow: hidden; }
+
+.inner {
+  max-width: 1180px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 16px;
+  min-height: 52px;
+}
+.card .inner { max-width: none; }
+
+.label {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--brand-amber);
+  color: var(--brand-teal);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 800;
+  font-size: .9rem;
+  --icon-accent: #fff;
+}
+
+.marquee {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+.track {
+  display: flex;
+  width: max-content;
+  animation: revolve var(--ticker-duration, 60s) linear infinite;
+}
+/* Through a variable because the Urdu build's RTL pass flips literal translates. In
+   Urdu the track starts at the right edge and moves right, so items enter in reading
+   order from the left. */
+.track { --revolve-end: -50%; }
+.track.rtl { --revolve-end: 50%; }
+.marquee:hover .track, .marquee:focus-within .track, .paused .track { animation-play-state: paused; }
+@keyframes revolve { from { transform: translateX(0); } to { transform: translateX(var(--revolve-end)); } }
+
+.set { list-style: none; display: flex; align-items: center; gap: 28px; margin: 0; padding: 0; padding-inline-end: 28px; flex: none; }
+.item { margin: 0; flex: none; }
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  white-space: nowrap;
+  min-height: 40px;
+  padding-inline: 4px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+a.link:hover { color: #fff; text-decoration: underline; text-decoration-color: var(--brand-amber); text-underline-offset: 4px; }
+a.link:focus-visible { outline: 2px solid var(--brand-amber); outline-offset: 2px; }
+
+.chip {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .14);
+  color: #fff;
+  flex: none;
+}
+.k_course, .k_offer { background: var(--brand-amber); color: var(--brand-teal); }
+.k_unit, .k_news { background: #2f7f86; }
+.k_urdu { background: #6a4c93; }
+.k_review { background: #2e7d4f; }
+.k_event, .k_update { background: var(--brand-teal-mid); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35); }
+.k_alert { background: #b3261e; }
+
+.badge {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--brand-amber-soft);
+}
+.context { font-size: .82rem; font-weight: 700; opacity: .8; }
+.title { font-weight: 600; }
+.date { font-size: .8rem; opacity: .75; }
+
+.pause {
+  flex: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 999px;
+  padding: 4px 12px;
+  min-height: 44px;
+  min-width: 44px;
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.pause:hover { border-color: var(--brand-amber); }
+.pause:focus-visible { outline: 2px solid var(--brand-amber); outline-offset: 2px; }
+
+[dir='rtl'] .badge { text-transform: none; letter-spacing: 0; font-size: .8rem; }
+[dir='rtl'] .title { line-height: 2; }
+
+@media (max-width: 600px) {
+  .label span { display: none; }
+  .inner { gap: 8px; padding-inline: 10px; }
+}
+
+/* Reduced motion: the bar stands still as one row the reader scrolls by hand, so it
+   keeps its height instead of growing into a block of wrapped items. */
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; }
+  .set + .set, .pause, .item[aria-hidden='true'] { display: none; }
+  .marquee { overflow-x: auto; scrollbar-width: thin; -webkit-mask-image: none; mask-image: none; }
+}

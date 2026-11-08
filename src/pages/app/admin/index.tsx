@@ -15,6 +15,7 @@ const sections = [
   ['review-decisions','Review decisions', 'جائزے کے فیصلے', 'Read criteria and comments, then record a decision.'],
   ['feedback-queue', 'Reader feedback', 'قارئین کی رائے', 'Triage reader reports.'],
   ['suggestions', 'Improvement suggestions', 'بہتری کی تجاویز', 'Moderate teacher suggestions.'],
+  ['news', 'News and announcements', 'خبریں اور اعلانات', 'Write ticker news and offers; preview the weekly email.'],
   ['overview', 'Content status', 'مواد کی صورتحال', 'Inspect units, figures and progress.'],
   ['agent-jobs', 'Agent jobs and settings', 'ایجنٹ کے کام اور ترتیبات', 'Queue approved improvements and inspect draft PRs.'],
   ['audit', 'Privilege audit', 'اختیارات کا ریکارڈ', 'View role and capability changes.'],
@@ -22,7 +23,7 @@ const sections = [
 
 const HUB_ICONS: Record<(typeof sections)[number][0], IconName> = {
   users: 'users', records: 'records', reviewers: 'shield', 'g3-signoff': 'signoff', 'review-decisions': 'review',
-  'feedback-queue': 'feedback', suggestions: 'suggest', overview: 'analytics', 'agent-jobs': 'jobs', audit: 'audit',
+  'feedback-queue': 'feedback', suggestions: 'suggest', news: 'megaphone', overview: 'analytics', 'agent-jobs': 'jobs', audit: 'audit',
 };
 
 export default function AdminHome(): React.ReactElement {

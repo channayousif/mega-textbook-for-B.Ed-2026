@@ -21,6 +21,7 @@ import ReturningStrip from '@site/src/components/landing/ReturningStrip';
 import StepsEdge from '@site/src/components/landing/StepsEdge';
 import ClimbArt from '@site/src/components/landing/ClimbArt';
 import s from '@site/src/components/landing/landing.module.css';
+import NewsTicker from '@site/src/components/NewsTicker';
 
 type Stats = { courses: number; units: number; urduUnits: number; figures: number };
 type Locale = 'en' | 'ur';
@@ -108,6 +109,7 @@ export default function Home(): React.ReactElement {
       {/* Without JavaScript every audience panel stays readable. */}
       <noscript><style>{`.${s.panel}[hidden]{display:block}`}</style></noscript>
       <ReturningStrip c={c} />
+      <NewsTicker />
       <main className={s.root}>
         <section className={s.hero}>
           <svg className={s.heroMark} viewBox="0 0 116 135" aria-hidden="true" focusable="false">
