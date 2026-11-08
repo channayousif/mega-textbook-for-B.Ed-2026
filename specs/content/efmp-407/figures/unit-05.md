@@ -1,6 +1,6 @@
 # EFMP-407 Unit 5 - Figure manifest
 
-Six schematic figures from the content-spec Figure plan, hand-authored as SVG by the author job (ADR-0024: deterministic schematics), placed with derived dark variants. Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
+Six schematic figures from the content-spec Figure plan, hand-authored as SVG by the author job (ADR-0024: deterministic schematics), placed with derived dark variants. Banner illustration (fig-U5-7) is placed via unit-05.banner.md. Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|

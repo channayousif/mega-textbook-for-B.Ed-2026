@@ -6,6 +6,7 @@ import { useAuth } from '@site/src/contexts/AuthContext';
 import { listOwnNotes, createNote, updateNote, deleteNote } from '@site/src/lib/studentNotes';
 import type { StudentNote } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader, EmptyState } from '@site/src/components/ui';
 
 /**
  * Personal notes area (Spec 011, US3 / FR-008). List newest-first, create, edit, delete,
@@ -138,11 +139,10 @@ function NotesContent(): React.ReactElement {
 
   return (
     <div>
-      <h1>{MESSAGES.title[locale]}</h1>
-      <p>{MESSAGES.intro[locale]}</p>
+      <PageHeader title={MESSAGES.title[locale]} icon="notes" lead={MESSAGES.intro[locale]} />
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 
-      <form onSubmit={handleCreate} className="margin-bottom--lg">
+      <form onSubmit={handleCreate} className="work-panel work-form">
         <h2>{MESSAGES.newNote[locale]}</h2>
         <div className="margin-bottom--sm">
           <label htmlFor="note-title">{MESSAGES.titleLabel[locale]}</label>
@@ -170,7 +170,7 @@ function NotesContent(): React.ReactElement {
       </form>
 
       {courseCodes.length > 0 && (
-        <div className="margin-bottom--md">
+        <div className="notes-filter">
           <label htmlFor="note-filter">{MESSAGES.filterLabel[locale]} </label>
           <select
             id="note-filter"
@@ -187,17 +187,16 @@ function NotesContent(): React.ReactElement {
       )}
 
       {visible.length === 0 ? (
-        <p>{MESSAGES.empty[locale]}</p>
+        <div className="work-panel"><EmptyState icon="notes" title={MESSAGES.empty[locale]} /></div>
       ) : (
-        <ul style={{ listStyle: 'none', padding: 0 }}>
+        <ul className="notes-list">
           {visible.map((n) => (
             <li
               key={n.id}
-              className="margin-bottom--md"
-              style={{ border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: 6, padding: '0.75rem 1rem' }}
+              className="work-panel note-card"
               data-testid="note-item"
             >
-              <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--ifm-color-emphasis-600)' }}>
+              <p className="note-card__meta">
                 {noteTag(n, locale)} · {new Date(n.created_at).toLocaleDateString()}
               </p>
               {editingId === n.id ? (
@@ -231,8 +230,8 @@ function NotesContent(): React.ReactElement {
                 </div>
               ) : (
                 <>
-                  {n.title && <p style={{ margin: '0.25rem 0', fontWeight: 700 }}>{n.title}</p>}
-                  <p style={{ margin: '0.25rem 0', whiteSpace: 'pre-wrap' }}>{n.body}</p>
+                  {n.title && <p className="note-card__title">{n.title}</p>}
+                  <p className="note-card__body">{n.body}</p>
                   <div className="margin-top--sm">
                     <button
                       type="button"

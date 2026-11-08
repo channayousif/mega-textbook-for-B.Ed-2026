@@ -4,6 +4,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, 
 import { join, resolve } from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { runInNewContext } from 'node:vm';
+import { briefRules } from '../../scripts/crew/brief.mjs';
 import { mergeTrackerRows } from '../../scripts/crew/batch.mjs';
 
 // Exercise the orchestrator functions without importing its stateful CLI entry point.
@@ -168,7 +169,7 @@ test('a course tracker conflict where both sides rewrite one row differently is 
 });
 
 test('common brief rules keep every worker scratch file inside its worktree', () => {
-  const rules = loadFunction('briefRules', '\n/**', {});
+  const rules = briefRules;
   for (const self of [true, false]) {
     assert.match(rules({}, self), /keep all scratch files inside your worktree/);
     assert.match(rules({}, self), /never use `\/tmp`/);
