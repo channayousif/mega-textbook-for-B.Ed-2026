@@ -56,7 +56,7 @@ export const STAGES = {
   fix:        { chain: ['opencode', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.
-  intel_distill:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'intel-distill' },
+  intel_distill:  { chain: ['agy', 'codex', 'claude', 'agy_claude'], skill: 'intel-distill' },
   maint_survey:   { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'weekly-maintenance' },
   maint_refactor: { chain: ['codex', 'claude', 'agy_claude', 'opencode', 'agy'], skill: 'weekly-maintenance' },
   maint_docs:     { chain: ['claude', 'agy_claude', 'agy', 'codex', 'opencode'], skill: 'weekly-maintenance' },

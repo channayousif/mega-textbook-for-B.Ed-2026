@@ -36,6 +36,7 @@ import { OWN_PR, queueReview, recordReview, fanOutJobs } from './maintjobs.mjs';
 import { boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from './intel.mjs';
 import { noteStall, clearStall, stallAlertDue, heldFor, stallLine } from './stall.mjs';
 import { resumeHere } from './resume.mjs';
+import { briefRules } from './brief.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -216,15 +217,6 @@ const STAGE_TASK = {
 };
 
 /** The rules line every brief opens with; self-maintenance may touch what content jobs must not. */
-function briefRules(j, self) {
-  const common = 'no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`';
-  if (!self) return `${common}, never mark G3/G5 done, never self-sign or use\nhuman initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.`;
-  return `${common}, and never touch course content (\`docs/\`, \`licence/\`, the Urdu docs trees,
-\`specs/content/\`, \`static/img/figures/\`, \`glossary.json\`): the dispatcher rejects any such change. Never change
-what an ADR decided, never self-sign, never mark G3/G5 done. Protected paths (scripts, ADRs, skills, CLAUDE.md,
-AGENTS.md, catalog, CI) may change only inside your task; those PRs go to the owner.`;
-}
-
 /** How a job proves it is finished. */
 function doneWhen(j, self) {
   if (j.stage === 'maint_review') return `1. You changed nothing and committed nothing.

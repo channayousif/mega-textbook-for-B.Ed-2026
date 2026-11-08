@@ -1,6 +1,6 @@
 # EFMP-407 Unit 6 - Figure manifest
 
-Six schematic figures from the content-spec Figure plan, hand-authored as SVG by the Claude author job (ADR-0024: Claude owns deterministic schematics), placed with derived dark variants. Rasterised with `sharp` and inspected by eye; the Chromium measurement (`scripts/measure-figure-text.mjs`) was not run because the crew brief forbids browser runs, and CI's `figure-geometry` job measures them. Topic is the carrier file's `topic_label`.
+Six schematic figures from the content-spec Figure plan, hand-authored as SVG by the Claude author job (ADR-0024: Claude owns deterministic schematics), placed with derived dark variants. Banner illustration (fig-U6-7) is placed via unit-06.banner.md. Rasterised with `sharp` and inspected by eye; the Chromium measurement (`scripts/measure-figure-text.mjs`) was not run because the crew brief forbids browser runs, and CI's `figure-geometry` job measures them. Topic is the carrier file's `topic_label`.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
