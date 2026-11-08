@@ -48,7 +48,7 @@ Owner chose (2026-11-08) a segmented EN | اردو toggle and an icon plus "Text
 ## Outcome
 
 - ✅ Impact: the two most used reader controls say what they do; the gallery no longer implies site art is in the textbooks.
-- 🧪 Tests: tsc clean; build PASS; 29 e2e tests in five affected specs PASS locally; screenshots of the bar EN light and UR dark, the open panel, phone bars EN and UR, and the gallery; check:all see PR.
+- 🧪 Tests: tsc clean; npm run check:all 20/20 PASS including build; 29 e2e tests in five affected specs PASS locally; screenshots of the bar EN light and UR dark, the open panel, phone bars EN and UR, and the gallery.
 - 📁 Files: toggle component and navbar item, phone bar, reading menu, landing captions.
 - 🔁 Next prompts: PR C, the app foundation for the dashboard rebuild.
 - 🧠 Reflection: a first screenshot caught "اردو" mid font swap with unjoined letters; a second after document.fonts.ready showed it correct.
