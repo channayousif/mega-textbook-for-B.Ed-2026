@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import { getSupabase } from '@site/src/lib/supabase';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 type Job = { id: string; suggestion_id: string | null; review_id: string | null; instructions: string; status: string; provider: string; host_config_name: string; branch_name: string; attempt: number; diff_summary: string | null; checks: unknown; error_text: string | null; pr_url: string | null; created_at: string };
 type Source = { id: string; body?: string; comments?: string; course_code?: string; unit_no?: number };
@@ -68,7 +69,7 @@ function Jobs(): React.ReactElement {
   }
   const sources = kind === 'suggestion' ? suggestions : reviews;
   return <div className="app-page-body"><p><Link to="/app/admin/">Admin dashboard</Link></p>
-    <h1>Agent jobs and settings</h1>
+    <PageHeader title="Agent jobs and settings" icon="jobs" />
     <p>Approved jobs propose changes through draft pull requests. Host credentials and named CLI configurations stay on the heartbeat host.</p>
     {error && <div className="alert alert--danger" role="alert">{error}</div>}{notice && <div className="alert alert--success" role="status">{notice}</div>}
     <section className="work-panel"><h2>Host agent choice</h2><div className="work-form">

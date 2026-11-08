@@ -290,3 +290,22 @@ html[data-theme='dark'] .inline-bar__fill { background: #a6dfdc; }
 .dashboard-shell__main table:not(.work-panel *):not([class*='table_']) { border-collapse: separate; border-spacing: 0; }
 .dashboard-shell__main .table-scroll:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
 html[data-theme='dark'] .dashboard-shell__main form:not(.work-panel):not(.work-panel form) { border: 1px solid var(--app-line); }
+
+/* --- Admin console hub --------------------------------------------------------- */
+.hub-card { gap: 0.5rem; }
+.hub-card__icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-block-end: 4px; border-radius: 12px; background: #e3eeec; color: #123e43; }
+html[data-theme='dark'] .hub-card__icon { background: #1f4a50; color: #dcf4f2; }
+.hub-card > span:last-child { color: var(--app-muted); }
+
+/* --- Profile ------------------------------------------------------------------- */
+.profile-page { max-width: 720px; }
+.profile-page > form { margin-block-end: 24px; }
+.profile-facts { display: grid; grid-template-columns: minmax(0, max-content) minmax(0, 1fr); gap: 10px 20px; }
+@media (max-width: 560px) { .profile-facts { grid-template-columns: minmax(0, 1fr); gap: 2px; } .profile-facts dd { margin-block-end: 10px; } }
+.profile-facts dt { font-weight: 700; color: var(--app-muted); }
+.profile-facts dd { margin: 0; overflow-wrap: anywhere; }
+.danger-zone { border-inline-start: 5px solid #b4231a; }
+.danger-zone h2 { color: #a3261c; }
+html[data-theme='dark'] .danger-zone h2 { color: #f5b7b1; }
+.danger-zone__confirm { display: flex; }
+.table-scroll > table { display: table; width: 100%; overflow: visible; } /* the region scrolls, not the table */

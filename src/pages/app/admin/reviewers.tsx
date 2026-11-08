@@ -6,6 +6,7 @@ import { getSupabase } from '@site/src/lib/supabase';
 import { fetchCatalog, type Catalog } from '@site/src/lib/catalog';
 import { fetchAllPages } from '@site/src/lib/pagination';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 type Profile = { id: string; full_name: string | null; email: string | null; role: string; status: string; deleted_at: string | null };
 type Application = { id: string; applicant_id: string; track: string; course_code: string | null; qualification_evidence: string; status: string; created_at: string };
@@ -74,12 +75,12 @@ function ReviewersContent(): React.ReactElement {
 
   return <div className="app-page-body">
     <p><Link to="/app/admin/">Admin dashboard</Link></p>
-    <h1>Reviewer applications and scopes</h1>
+    <PageHeader title="Reviewer applications and scopes" icon="shield" />
     {error && <div className="alert alert--danger" role="alert">{error}</div>}
     <section><h2>Applications</h2>
       <label>Decision note <input className="input" value={note} onChange={e => setNote(e.target.value)} /></label>
       {applications.filter(a => a.status === 'pending').length === 0 ? <p>No applications are pending.</p> :
-        <div className="table-scroll"><table><thead><tr><th>Applicant</th><th>Scope</th><th>Qualification evidence</th><th>Action</th></tr></thead><tbody>
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}><table><thead><tr><th>Applicant</th><th>Scope</th><th>Qualification evidence</th><th>Action</th></tr></thead><tbody>
           {applications.filter(a => a.status === 'pending').map(a => <tr key={a.id}>
             <td>{label(a.applicant_id)}</td><td>{a.track} {a.course_code ?? 'all courses'}</td><td>{a.qualification_evidence}</td>
             <td><button className="button button--sm button--primary" disabled={busy} onClick={() => void decide(a.id, true)}>Approve</button>{' '}
@@ -98,7 +99,7 @@ function ReviewersContent(): React.ReactElement {
       </div>
     </section>
     <section><h2>Active grants</h2>
-      {grants.filter(g => !g.revoked_at).length === 0 ? <p>No active grants.</p> : <div className="table-scroll"><table><thead><tr><th>Reviewer</th><th>Scope</th><th>Evidence</th><th>Action</th></tr></thead><tbody>{grants.filter(g => !g.revoked_at).map(g => <tr key={g.id}><td>{label(g.subject_id)}</td><td>{g.track} {g.course_code ?? 'all courses'}</td><td>{g.qualification_evidence}</td><td><button className="button button--sm button--secondary" disabled={busy} onClick={() => void revoke(g.id)}>Revoke</button></td></tr>)}</tbody></table></div>}
+      {grants.filter(g => !g.revoked_at).length === 0 ? <p>No active grants.</p> : <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}><table><thead><tr><th>Reviewer</th><th>Scope</th><th>Evidence</th><th>Action</th></tr></thead><tbody>{grants.filter(g => !g.revoked_at).map(g => <tr key={g.id}><td>{label(g.subject_id)}</td><td>{g.track} {g.course_code ?? 'all courses'}</td><td>{g.qualification_evidence}</td><td><button className="button button--sm button--secondary" disabled={busy} onClick={() => void revoke(g.id)}>Revoke</button></td></tr>)}</tbody></table></div>}
     </section>
   </div>;
 }

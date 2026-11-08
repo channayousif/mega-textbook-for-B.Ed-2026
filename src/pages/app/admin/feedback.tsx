@@ -4,6 +4,7 @@ import AuthGuard from '@site/src/components/AuthGuard';
 import { fetchAllAggregatedFeedback, type ActivityAggregateSummary } from '@site/src/lib/activityFeedback';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Admin: aggregated Activity Feedback per activity (Spec 005, T032, FR-008)
@@ -29,7 +30,7 @@ function AdminFeedbackContent(): React.ReactElement {
 
   return (
     <div className="app-page-body">
-      <h1>Aggregated Activity Feedback</h1>
+      <PageHeader title="Aggregated Activity Feedback" icon="analytics" />
 
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 

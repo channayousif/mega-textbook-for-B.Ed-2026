@@ -5,6 +5,7 @@ import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import { getSupabase } from '@site/src/lib/supabase';
 import { fetchAllPages } from '@site/src/lib/pagination';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 type Person = { id: string; full_name: string | null; email: string | null; role: string; status: string; deleted_at: string | null };
 type ClassRow = { id: string; name: string; course_code: string; teacher_id: string; status: string };
@@ -47,7 +48,7 @@ function Records(): React.ReactElement {
     setBusy(false); if (e) setError(e.message); else { setClassNote(''); await load(); }
   }
   return <div className="app-page-body"><p><Link to="/app/admin/">Admin dashboard</Link></p>
-    <h1>Classes and learner records</h1><p>Select a record to inspect it. This view uses your admin access and does not enter another person&apos;s session.</p>
+    <PageHeader title="Classes and learner records" icon="records" /><p>Select a record to inspect it. This view uses your admin access and does not enter another person&apos;s session.</p>
     {error && <div className="alert alert--danger" role="alert">{error}</div>}
     <div className="work-grid"><section className="work-panel"><h2>Class</h2>
       <label>Select class <select className="input" value={classId} onChange={e => setClassId(e.target.value)}><option value="">Choose a class</option>{classes.map(c => <option key={c.id} value={c.id}>{c.name} | {c.course_code}</option>)}</select></label>
