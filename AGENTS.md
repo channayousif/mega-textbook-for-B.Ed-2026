@@ -62,6 +62,13 @@ host (and the live site) on 2026-09-20 and 2026-09-24. Therefore:
   stacking, e.g. `scripts/heavy.sh npm run build`. The script holds one of two slots
   (`/tmp/mega-book-heavy.lock`, `/tmp/mega-book-heavy.2.lock`); a bare
   `flock /tmp/mega-book-heavy.lock` still counts as slot 1.
+- After a slot is acquired, `scripts/heavy.sh` waits for 30 healthy seconds with
+  MemAvailable >= 3 GiB and memory/I/O PSI `some avg10` <= 10%. Admission times out
+  after 30 minutes with exit 75. Do not bypass admission when pressure is high.
+- Use the dedicated contained VS Code SSH alias; open project folders rather than home.
+  Start persistent Claude sessions using `~/.local/bin/agent-terminal <name>`. Existing
+  sessions must finish or be explicitly resumed, never silently terminated for migration.
+  Setup, diagnostics and rollback: `ops/development/README.md`.
 - Never run heavy jobs in parallel subagents. Subagents may read, grep and edit; builds,
   dev servers and browser runs happen from the main session.
 - Stop any dev/preview server you start (`kill` it) as soon as the check is done; never leave

@@ -1,0 +1,10 @@
+[Unit]
+Description=development-agents resource budget
+
+[Slice]
+MemoryAccounting=yes
+CPUAccounting=yes
+IOAccounting=yes
+MemoryHigh=5G
+MemoryMax=6G
+MemorySwapMax=256M
