@@ -25,7 +25,7 @@ html[data-theme='dark'] {
 }
 
 /* --- The site chrome becomes the app top bar --------------------------------- */
-html.app-page body { background: var(--app-bg); }
+html.app-page body, html.app-page .main-wrapper { background: var(--app-bg); }
 html.app-page .navbar { box-shadow: 0 1px 0 var(--app-line); }
 html.app-page .navbar__items:not(.navbar__items--right) > .navbar__item,
 html.app-page .navbar .navbar-cta { display: none; }
@@ -226,6 +226,39 @@ html[data-theme='dark'] .dashboard-shell__main :is(input:not([type='checkbox']):
   .work-card, .work-panel { box-shadow: none; border: 1px solid #999; }
 }
 
+/* --- Student progress page ------------------------------------------------------- */
+.coverage-bar { height: 10px; border-radius: 999px; background: #e3e8e6; overflow: hidden; }
+.coverage-bar__fill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #1b5a60, #2f7c80); }
+html[data-theme='dark'] .coverage-bar { background: #1f4a50; }
+html[data-theme='dark'] .coverage-bar__fill { background: #a6dfdc; }
+.progress-summary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px; }
+.progress-summary__donut { display: flex; align-items: center; gap: 18px; }
+.progress-summary__donut p { margin: 0; color: var(--app-muted); }
+.progress-courses, .progress-checklists { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.progress-courses > li, .progress-checklists > li { margin: 0; }
+.progress-checklists { gap: 16px; }
+.progress-course__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-block-end: 8px; }
+.progress-course__code { font-family: var(--ifm-heading-font-family); font-weight: 800; font-size: 1.1rem; }
+.progress-course__count { color: var(--app-muted); font-variant-numeric: tabular-nums; }
+.progress-course__units { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 14px 0 0; padding: 0; }
+.progress-course__units > li { margin: 0; }
+.progress-unit { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; font-size: 0.88rem; font-weight: 600; }
+.progress-unit--done { background: #e2f1e6; color: #1d5a2c; }
+html[data-theme='dark'] .progress-unit--done { background: #1d4029; color: #cdebd5; }
+@media (max-width: 860px) { .progress-summary { grid-template-columns: minmax(0, 1fr); } }
+.grade-cell { display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+.grade-cell__bar { display: block; width: 90px; height: 6px; border-radius: 999px; background: #e3e8e6; overflow: hidden; }
+.grade-cell__bar > span { display: block; height: 100%; border-radius: 999px; background: #2f7c80; }
+html[data-theme='dark'] .grade-cell__bar { background: #1f4a50; }
+html[data-theme='dark'] .grade-cell__bar > span { background: #a6dfdc; }
+.history-class + .history-class { margin-block-start: 16px; padding-block-start: 16px; border-block-start: 1px solid var(--app-line); }
+.notes-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-block-end: 16px; }
+.notes-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 24px; }
+.notes-list > li { margin: 0; }
+.note-card { margin: 0; }
+.note-card__meta { margin: 0; font-size: 0.82rem; color: var(--app-muted); }
+.note-card__title { margin: 0.35rem 0; font-weight: 700; }
+.note-card__body { margin: 0.25rem 0; white-space: pre-wrap; }
 /* --- Teacher and classes ---------------------------------------------------------- */
 .row-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
 .chip-link {

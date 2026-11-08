@@ -11,6 +11,7 @@ import { checkFullCoverageAchievement } from '@site/src/lib/achievements';
 import { fetchContentIndex } from '@site/src/lib/assignments';
 import { fetchOwnChecksForCourses } from '@site/src/lib/selfAssessment';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader, Panel, EmptyState, Donut, BarChart } from '@site/src/components/ui';
 
 /**
  * Progress area (Spec 004, T020/T024/T041, FR-005/FR-006). Per-course
@@ -41,6 +42,7 @@ const MESSAGES = {
   studied: { en: 'Studied', ur: 'پڑھا ہوا' },
   markStudied: { en: 'Mark as studied', ur: 'پڑھا ہوا نشان زد کریں' },
   selfAssessmentTitle: { en: 'Self-assessment checklists', ur: 'خود جانچ کی فہرستیں' },
+  coverageChart: { en: 'Units covered per course (%)', ur: 'ہر کورس میں مکمل یونٹس (%)' },
   selfAssessmentEmpty: {
     en: 'No self-assessment checklists ticked yet.',
     ur: 'ابھی تک کوئی خود جانچ کی فہرست نشان زد نہیں کی گئی۔',
@@ -53,19 +55,11 @@ const MESSAGES = {
 
 export type CourseCoverage = { courseCode: string; covered: Set<number>; total: number; unitNumbers: number[] };
 
-function CoverageBar({ covered, total }: { covered: number; total: number }): React.ReactElement {
+function CoverageBar({ covered, total, label }: { covered: number; total: number; label: string }): React.ReactElement {
   const pct = total > 0 ? Math.min(100, Math.round((covered / total) * 100)) : 0;
   return (
-    <div
-      style={{
-        background: 'var(--ifm-color-emphasis-200)', borderRadius: 4, height: 10, width: '100%', overflow: 'hidden',
-      }}
-      role="progressbar"
-      aria-valuenow={pct}
-      aria-valuemin={0}
-      aria-valuemax={100}
-    >
-      <div style={{ background: 'var(--ifm-color-primary)', height: '100%', width: `${pct}%` }} />
+    <div className="coverage-bar" role="progressbar" aria-label={label} aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} aria-valuetext={`${pct}%`}>
+      <span className="coverage-bar__fill" style={{ inlineSize: `${pct}%` }} />
     </div>
   );
 }
@@ -99,17 +93,20 @@ function CourseRow({
   }
 
   return (
-    <li data-testid="course-progress" style={{ marginBottom: '1.5rem' }}>
-      <div>{course.courseCode} - {course.covered.size} / {course.total} {MESSAGES.units[locale]}</div>
-      <CoverageBar covered={course.covered.size} total={course.total} />
+    <li data-testid="course-progress" className="work-panel progress-course">
+      <div className="progress-course__head">
+        <span className="progress-course__code" dir="ltr">{course.courseCode}</span>
+        <span className="progress-course__count">{course.covered.size} / {course.total} {MESSAGES.units[locale]}</span>
+      </div>
+      <CoverageBar covered={course.covered.size} total={course.total} label={`${course.courseCode} ${MESSAGES.title[locale]}`} />
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
-      <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', listStyle: 'none', padding: 0, marginTop: '0.5rem' }}>
+      <ul className="progress-course__units">
         {course.unitNumbers.map((unitNo) => {
           const isCovered = course.covered.has(unitNo);
           return (
             <li key={unitNo}>
               {isCovered ? (
-                <span>{MESSAGES.unit[locale]} {unitNo}: {MESSAGES.studied[locale]}</span>
+                <span className="progress-unit progress-unit--done">{MESSAGES.unit[locale]} {unitNo}: {MESSAGES.studied[locale]}</span>
               ) : (
                 <button
                   type="button"
@@ -204,19 +201,19 @@ function SelfAssessmentPanel({
   const withProgress = units.filter((u) => u.total > 0 && u.ticked > 0);
 
   return (
-    <section className="margin-top--lg" data-testid="self-assessment-progress-panel">
-      <h3>{MESSAGES.selfAssessmentTitle[locale]}</h3>
+    <section className="work-panel" data-testid="self-assessment-progress-panel">
+      <h2>{MESSAGES.selfAssessmentTitle[locale]}</h2>
       {withProgress.length === 0 ? (
         <p>{MESSAGES.selfAssessmentEmpty[locale]}</p>
       ) : (
-        <ul style={{ listStyle: 'none', padding: 0 }}>
+        <ul className="progress-checklists">
           {withProgress.map((u) => {
             const key = `${u.courseCode}|${u.unitNo}`;
             const complete = u.ticked >= u.total && u.total > 0;
             return (
-              <li key={key} data-testid="self-assessment-unit-fraction" style={{ marginBottom: '1rem' }}>
+              <li key={key} data-testid="self-assessment-unit-fraction">
                 <div>{u.courseCode} - {MESSAGES.unit[locale]} {u.unitNo}: {u.ticked} / {u.total}</div>
-                <CoverageBar covered={u.ticked} total={u.total} />
+                <CoverageBar covered={u.ticked} total={u.total} label={`${u.courseCode} ${MESSAGES.unit[locale]} ${u.unitNo}`} />
                 {complete && !dismissed.has(key) && (
                   <div className="margin-top--sm">
                     <p>{MESSAGES.selfAssessmentComplete[locale]}</p>
@@ -304,19 +301,39 @@ function ProgressContent(): React.ReactElement {
 
   const withProgress = coverage.filter((c) => c.covered.size > 0).length;
 
+  const chart = coverage.filter((c) => c.total > 0).map((c) => ({
+    // A space, not the hyphen: the course cards below carry the exact code, which specs match once.
+    label: c.courseCode.replace('-', ' '),
+    value: Math.round((c.covered.size / c.total) * 100),
+    display: `${c.covered.size} / ${c.total}`,
+  }));
+
   return (
     <div>
-      <h2>{MESSAGES.title[locale]}</h2>
+      <PageHeader title={MESSAGES.title[locale]} icon="progress" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
       {coverage.every((c) => c.covered.size === 0) ? (
-        <p>{MESSAGES.noProgress[locale]}</p>
+        <EmptyState icon="progress" title={MESSAGES.noProgress[locale]} />
       ) : null}
       {coverage.length > 0 && (
-        <p>{MESSAGES.semesterFigure[locale]}: {withProgress} / {coverage.length}</p>
+        <div className="progress-summary">
+          <Panel title={MESSAGES.semesterFigure[locale]}>
+            <div className="progress-summary__donut">
+              <Donut percent={(withProgress / coverage.length) * 100} label={`${withProgress} / ${coverage.length}`} />
+              <p>{MESSAGES.semesterFigure[locale]}: {withProgress} / {coverage.length}</p>
+            </div>
+          </Panel>
+          {chart.length > 0 && (
+            <Panel title={MESSAGES.coverageChart[locale]}>
+              <BarChart data={chart} caption={MESSAGES.coverageChart[locale]} valueLabel={MESSAGES.units[locale]} max={100}
+                highlight={chart.reduce((best, d, i) => (d.value > chart[best].value ? i : best), 0)} />
+            </Panel>
+          )}
+        </div>
       )}
-      <ul style={{ listStyle: 'none', padding: 0 }}>
+      <ul className="progress-courses">
         {coverage.map((c) => (
           <CourseRow key={c.courseCode} course={c} locale={locale} studentId={profile.id} onMarked={handleMarked} />
         ))}

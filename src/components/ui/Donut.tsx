@@ -13,7 +13,7 @@ export default function Donut({ percent, label, size = 120 }: { percent: number;
     <div className={styles.donut} style={{ inlineSize: size }}>
       <svg viewBox="0 0 100 100" width={size} height={size} aria-hidden="true" focusable="false">
         <circle cx="50" cy="50" r={r} className={styles.donutTrack} />
-        <circle cx="50" cy="50" r={r} className={styles.donutFill} strokeDasharray={`${(p / 100) * c} ${c}`} transform="rotate(-90 50 50)" />
+        {p > 0 && <circle cx="50" cy="50" r={r} className={styles.donutFill} strokeDasharray={`${(p / 100) * c} ${c}`} transform="rotate(-90 50 50)" />}
       </svg>
       <span className={styles.donutText}><strong>{p}%</strong><span>{label}</span></span>
     </div>
