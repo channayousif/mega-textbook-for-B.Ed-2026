@@ -16,16 +16,25 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/efmp-407/unit-05/index.mdx
-  - history/prompts/general/2465-efmp-407-u05-illustrate.general.prompt.md
-  - specs/content/efmp-407/figures/unit-05.banner.md
-  - specs/content/efmp-407/figures/unit-05.illustration-notes.md
-  - specs/content/efmp-407/figures/unit-05.md
-  - specs/content/efmp-407/reviews/unit-05/G2/20261108T130249567Z-gates.json
-  - specs/content/efmp-407/tasks.md
-  - static/img/figures/efmp-407/unit-05/fig-U5-7.webp
+ - docs/semester-3/efmp-407/unit-05/index.mdx
+ - history/prompts/efmp-407/crew-efmp-407-u05-illustrate.misc.prompt.md
+ - history/prompts/general/2465-efmp-407-u05-illustrate.general.prompt.md
+ - specs/content/efmp-407/figures/unit-05.banner.md
+ - specs/content/efmp-407/figures/unit-05.illustration-notes.md
+ - specs/content/efmp-407/figures/unit-05.md
+ - specs/content/efmp-407/reviews/unit-05/G2/20261108T130249567Z-gates.json
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261108T130249567Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261108T130249567Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261108T130249567Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261108T130249567Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261108T130249567Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261108T130249567Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261108T130249567Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261108T130249567Z/validate-content.txt
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-05/fig-U5-7.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -63,26 +72,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u05-review_en-r1, review_en, codex) G3 remains open; prior findings need author repairs, followed by fresh review with verified provenance and browser/print evidence.
 - (efmp-407-u05-review_en, review_en, opencode) F1 blocking - repair the IUCN Pakistan 2004 citation (URL `.../2004-099.pdf` is a Tanzania report) or declare it under `## Unverifiable sources` with attempts, date and D-2026-0001.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed the EFMP-407 Unit 5 raster banner in English index page, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated, visually inspected, and placed the EFMP-407 Unit 5 raster banner illustration, documented inspection and draft Urdu alt text, and refreshed G2 gate evidence.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-407 Unit 5 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 6 file(s), listed above.
+- Files: 17 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the EFMP-407 Unit 5 raster banner in English index page, refreshed G2 gate evidence, and verified all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything. Urdu translation mirror does not yet exist; when created, banner should be placed reusing English WebP.
+- Shipped / changed: Generated, visually inspected, and placed the EFMP-407 Unit 5 raster banner illustration, documented inspection and draft Urdu alt text, and refreshed G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Placed banner fig-U5-7.webp in English unit index, updating unit-05.banner.md to placed.
-  - Refreshed G2 gate evidence and updated tasks.md pointer following English file updates.
+  - Placed banner fig-U5-7.webp in English unit index; Urdu placement awaits the missing translation mirror with draft alt text recorded in unit-05.illustration-notes.md.
+  - Refreshed stale G2 gate evidence to 20261108T130249567Z-gates.json with all 14 content gates passing cleanly.
   - Independent G3 English review and G5 Urdu review remain open and uncertified.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
