@@ -42,7 +42,7 @@ Video mark: video-studio/brand/brand-bible.yaml now points at the kit v2 square 
 ## Outcome
 
 - ✅ Impact: PRs 1 and 2 live; catalogue and chrome take the v2 look.
-- 🧪 Tests: tsc clean for changed files; build PASS; screenshots below; check:all see PR.
+- 🧪 Tests: tsc clean for changed files; npm run check:all 19/20 first run, check:content-status failed on the stale git-ignored status file and passed after regenerating it (no tracked change); screenshots of header at top and scrolled, phone, catalogue EN and UR dark, About, Contact UR and footer checked by eye.
 - 📁 Files: cover script, catalogue, header logo, footer, Markdown page headings.
 - 🔁 Next prompts: PR 5 reader chrome.
 - 🧠 Reflection: ThemedImage's own display rule beat a class on the img, so the logo swap toggles wrapper spans; the RTL build flips left and right positions itself, so no explicit Urdu position rules.
