@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchPastSemesters, type PastSemesterGroup } from '@site/src/lib/dashboardQueries';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * History area (Spec 004, T029, FR-007). Past (archived) semesters, grouped,
@@ -45,7 +46,7 @@ function HistoryContent(): React.ReactElement {
     load();
   }, [load]);
 
-  if (!groups) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!groups) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>

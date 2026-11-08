@@ -9,6 +9,7 @@ import {
   listJoinedClasses,
 } from '@site/src/lib/classes';
 import type { Class, Enrollment } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Student "My classes" - join by code and see current classes, without leaving the
@@ -110,7 +111,7 @@ function ClassesContent(): React.ReactElement {
 
       <h2>{MESSAGES.yourClasses[locale]}</h2>
       {!rows ? (
-        <p>{MESSAGES.loading[locale]}</p>
+        <LoadingMark label={MESSAGES.loading[locale]} />
       ) : rows.length === 0 ? (
         <p>{MESSAGES.none[locale]}</p>
       ) : (

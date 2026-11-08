@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
+import AuthFrame from '@site/src/components/AuthFrame';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { getSupabase } from '@site/src/lib/supabase';
@@ -92,7 +93,7 @@ export default function ResetPage(): React.ReactElement {
   if (recoveryMode) {
     return (
       <Layout title="Set a new password">
-        <main className="container auth-page margin-vert--lg" style={{ maxWidth: 420 }}>
+        <AuthFrame>
           <h1>Set a new password</h1>
 
           {passwordUpdated ? (
@@ -128,14 +129,14 @@ export default function ResetPage(): React.ReactElement {
               </button>
             </form>
           )}
-        </main>
+        </AuthFrame>
       </Layout>
     );
   }
 
   return (
     <Layout title="Reset your password">
-      <main className="container auth-page margin-vert--lg" style={{ maxWidth: 420 }}>
+      <AuthFrame>
         <h1>Reset your password</h1>
 
         {requestSent ? (
@@ -174,7 +175,7 @@ export default function ResetPage(): React.ReactElement {
         <p className="margin-top--md">
           <a href="/app/login">Back to sign in</a>
         </p>
-      </main>
+      </AuthFrame>
     </Layout>
   );
 }
