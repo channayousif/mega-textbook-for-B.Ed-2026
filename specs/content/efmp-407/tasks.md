@@ -79,7 +79,7 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261107T100546088Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261108T155607697Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F5 and missing render/provenance evidence: [report](reviews/unit-07/G3/crew-efmp-407-u07-review_en/crew-efmp-407-u07-review_en.json). No certification. |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory r1: revise; F1 blocking - NEP 2009 cited to section 6.1, passage is in section 6.2 (Curriculum Reform), policy action 5; repair in topic-01.mdx:33 and :107, sources/unit-07.md:7, sources/texts/nep-2009.md:7; F2-F6 advisory; report: specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/crew-efmp-407-u07-review_en-r1.json |
 | Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |
