@@ -4,6 +4,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { ACHIEVEMENT_CATALOG, fetchEarnedAchievements } from '@site/src/lib/achievements';
 import type { AchievementKey, StudentAchievement } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AchievementBadge from '@site/src/components/AchievementBadge';
 
 /**
  * Achievements area (Spec 004, T039, FR-009). Full fixed catalog, earned and
@@ -39,7 +41,7 @@ function AchievementsContent(): React.ReactElement {
     load();
   }, [load]);
 
-  if (!earned) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!earned) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   const earnedByKey = new Map(earned.map((e) => [e.achievement_key, e]));
 
@@ -49,12 +51,13 @@ function AchievementsContent(): React.ReactElement {
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
-      <ul style={{ listStyle: 'none', padding: 0 }}>
+      <ul className="achievement-list">
         {(Object.keys(ACHIEVEMENT_CATALOG) as AchievementKey[]).map((key) => {
           const definition = ACHIEVEMENT_CATALOG[key];
           const earnedRow = earnedByKey.get(key);
           return (
-            <li key={key} data-testid="achievement-row" style={{ marginBottom: '1.5rem' }}>
+            <li key={key} data-testid="achievement-row" className="work-card achievement-card">
+              <AchievementBadge id={key} earned={Boolean(earnedRow)} />
               <h3>{definition.title[locale]}</h3>
               <p>{definition.description[locale]}</p>
               {earnedRow ? (

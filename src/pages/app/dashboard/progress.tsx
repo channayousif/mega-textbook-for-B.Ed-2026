@@ -10,6 +10,7 @@ import {
 import { checkFullCoverageAchievement } from '@site/src/lib/achievements';
 import { fetchContentIndex } from '@site/src/lib/assignments';
 import { fetchOwnChecksForCourses } from '@site/src/lib/selfAssessment';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Progress area (Spec 004, T020/T024/T041, FR-005/FR-006). Per-course
@@ -299,7 +300,7 @@ function ProgressContent(): React.ReactElement {
     )) ?? null);
   }
 
-  if (!coverage || !profile) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!coverage || !profile) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   const withProgress = coverage.filter((c) => c.covered.size > 0).length;
 
