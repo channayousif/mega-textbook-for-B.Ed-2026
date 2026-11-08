@@ -1,6 +1,6 @@
 # EFMP-407 Unit 7 figure manifest
 
-Contract: specs/009-figure-rendering/contracts/figure-manifest-v2.md. Four English schematics placed with derived dark variants. Browser geometry validation is pending because the crew brief prohibits Playwright. Urdu assets belong to the separate translation job.
+Contract: specs/009-figure-rendering/contracts/figure-manifest-v2.md. Four English schematics placed with derived dark variants. Banner illustration (fig-U7-5) is placed via unit-07.banner.md. Browser geometry validation is pending because the crew brief prohibits Playwright. Urdu assets belong to the separate translation job.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
