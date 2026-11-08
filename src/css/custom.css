@@ -568,7 +568,7 @@ html[data-theme='dark'] .review-banner--gated {
   margin-bottom: 1rem;
 }
 html[data-theme='dark'] .print-handout {
-  color: var(--brand-ink); /* white on pale teal fails; teal on it passes */
+  color: var(--brand-teal); /* white on pale teal fails; teal on it passes */
 }
 .bloom-tag {
   display: inline-block;

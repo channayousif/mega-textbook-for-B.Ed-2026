@@ -31,10 +31,7 @@
   --brand-amber-soft: #f8e3b8;
   --brand-amber-text: #8a5a0b;
   --brand-paper: #f8f5ef;
-  /* Old names kept so existing rules follow the new kit. */
-  --brand-ink: var(--brand-teal);
-  --brand-jade: var(--brand-teal-mid);
-  --brand-mint: #a6dfdc;
+  --brand-teal-pale: #a6dfdc; /* dark-mode accent ground */
 
   /* Surfaces and text */
   --ifm-background-color: #f8f5ef;
@@ -125,7 +122,7 @@ html[dir='rtl'] :is(
 }
 .navbar .navbar-cta.navbar__link:hover { background: var(--ifm-color-primary-dark); color: #fff; }
 html[data-theme='dark'] .navbar .navbar-cta.navbar__link,
-html[data-theme='dark'] .navbar .navbar-cta.navbar__link:hover { color: var(--brand-ink); }
+html[data-theme='dark'] .navbar .navbar-cta.navbar__link:hover { color: var(--brand-teal); }
 
 /* Footer: deeper teal than the hero bands, with the logo's amber step as its top edge. */
 .footer--dark { --ifm-footer-background-color: #0e3136; --ifm-footer-link-color: #e8f0ee; --ifm-footer-title-color: #fff; border-top: 4px solid var(--brand-amber); }
