@@ -8,6 +8,7 @@ import {
 import type { ContentFeedback, ContentFeedbackScope, ContentFeedbackStatus } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Owner triage queue (Spec 010, T022, FR-018-021) - every content-feedback item
@@ -178,7 +179,7 @@ function AdminFeedbackQueueContent(): React.ReactElement {
 
   return (
     <div className="app-page-body">
-      <h1>Content feedback queue</h1>
+      <PageHeader title="Content feedback queue" icon="feedback" />
 
       <ExportUnitFeedbackControl />
 

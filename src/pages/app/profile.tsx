@@ -4,6 +4,7 @@ import { useAuth } from '@site/src/contexts/AuthContext';
 import { getSupabase } from '@site/src/lib/supabase';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 type RoleChoice = 'student' | 'teacher';
 
@@ -116,8 +117,8 @@ export default function ProfilePage(): React.ReactElement {
   return (
     <Layout title="Your account">
       <AppDashboardShell>
-      <div className="app-page-body" style={{ maxWidth: 480 }}>
-        <h1>Your account</h1>
+      <div className="app-page-body profile-page">
+        <PageHeader title="Your account" icon="settings" />
 
         {!profile.role_chosen_at && (
           <section className="alert alert--info margin-bottom--lg">
@@ -176,7 +177,7 @@ export default function ProfilePage(): React.ReactElement {
             verified-teacher status are server-authoritative; only an admin
             changes them (0008_guard_privileged_columns.sql). */}
         {profile.role_chosen_at && (
-          <dl className="margin-top--lg">
+          <dl className="work-panel profile-facts">
             <dt>Role</dt>
             <dd>{profile.role}</dd>
             <dt>Verified teacher (answer-key access)</dt>
@@ -193,7 +194,7 @@ export default function ProfilePage(): React.ReactElement {
         {/* T057 - FR-021/FR-022: identity removed, submitted work retained
             anonymously. Requires an explicit acknowledgement before the
             (irreversible) delete button is even clickable. */}
-        <section className="margin-top--lg">
+        <section className="work-panel danger-zone">
           <h2>Delete account</h2>
           <p>
             Deleting your account removes your sign-in and personal details permanently. Any work
@@ -201,7 +202,7 @@ export default function ProfilePage(): React.ReactElement {
             your coursework record without your name attached. This cannot be undone.
           </p>
           {deleteError && <p role="alert" aria-live="assertive" className="alert alert--danger">{deleteError}</p>}
-          <label className="auth-tap-target margin-bottom--sm" style={{ display: 'flex' }}>
+          <label className="auth-tap-target margin-bottom--sm danger-zone__confirm">
             <input
               type="checkbox"
               checked={deleteAcknowledged}

@@ -10,6 +10,7 @@ import { buildReviewQueue, type ContentIndexEntry, type ReviewQueueItem } from '
 import { canReview, courseTrack, type ReviewerGrant } from '@site/src/lib/reviewerScopes';
 import licenceRegistry from '@site/catalog/licence-objectives.json';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 type Topic = ContentIndexEntry & { kind: string; topic_no: number | null; title: string };
 type Target = { track: 'bed' | 'licence'; course_code: string | null; unit_no: number | null; topic_no: number | null; page_slug?: string | null; stage: 'topic' | 'G3' | 'G5' | 'licence'; title: string; permalink: string | null };
@@ -63,7 +64,7 @@ function Workbench(): React.ReactElement {
   }
 
   return <div className="app-page-body">
-    <h1>Review workbench</h1>
+    <PageHeader title="Review workbench" icon="review" />
     <p>Choose a topic or a formal unit review within your grant. Read the source before completing the checklist.</p>
     <p><Link to="/app/reviewer/apply">Apply for another scope</Link>{' · '}<Link to="/app/admin/review-queue">Prepare formal G3/G5 evidence</Link></p>
     {error && <div className="alert alert--danger" role="alert">{error}</div>}
@@ -81,7 +82,7 @@ function Workbench(): React.ReactElement {
       })}</ul>
     </>}
     <h2>Topic queue</h2>
-    {scopedTopics.length === 0 ? <p>No topics in your scope are available.</p> : <div className="table-scroll"><table><thead><tr><th>Course</th><th>Topic</th><th>Action</th></tr></thead><tbody>{scopedTopics.map(t => <tr key={`${t.course_code}-${t.unit_no}-${t.topic_no}`}><td>{t.course_code}</td><td>{t.title}</td><td><button className="button button--sm button--secondary" onClick={() => { const track = courseTrack(catalog!, t.course_code); if (track) select({ track, course_code: t.course_code, unit_no: t.unit_no, topic_no: t.topic_no, stage: 'topic', title: t.title, permalink: t.permalink }); }}>Review</button></td></tr>)}</tbody></table></div>}
+    {scopedTopics.length === 0 ? <p>No topics in your scope are available.</p> : <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}><table><thead><tr><th>Course</th><th>Topic</th><th>Action</th></tr></thead><tbody>{scopedTopics.map(t => <tr key={`${t.course_code}-${t.unit_no}-${t.topic_no}`}><td>{t.course_code}</td><td>{t.title}</td><td><button className="button button--sm button--secondary" onClick={() => { const track = courseTrack(catalog!, t.course_code); if (track) select({ track, course_code: t.course_code, unit_no: t.unit_no, topic_no: t.topic_no, stage: 'topic', title: t.title, permalink: t.permalink }); }}>Review</button></td></tr>)}</tbody></table></div>}
     {target && <section className="work-panel"><h2>{target.title}</h2>
       {target.permalink && <p><a href={target.permalink} target="_blank" rel="noreferrer">Open source in a new tab</a></p>}
       <form className="work-form" onSubmit={e => void submit(e)}>

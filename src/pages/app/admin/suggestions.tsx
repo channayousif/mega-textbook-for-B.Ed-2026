@@ -9,6 +9,7 @@ import {
 import type { ImprovementSuggestion, SuggestionCategory, SuggestionStatus } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Admin moderation queue (Spec 005, T019, FR-005) - every suggestion from
@@ -68,7 +69,7 @@ function AdminSuggestionsContent(): React.ReactElement {
 
   return (
     <div className="app-page-body">
-      <h1>Suggestion moderation queue</h1>
+      <PageHeader title="Suggestion moderation queue" icon="suggest" />
 
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 

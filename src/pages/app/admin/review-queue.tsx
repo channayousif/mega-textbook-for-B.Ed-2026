@@ -15,6 +15,7 @@ import {
 } from '@site/src/lib/reviewQueue';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * The review surface (Spec 017 FR-004, T022-T024, T031-T032).
@@ -180,7 +181,7 @@ function ReviewQueueContent(): React.ReactElement {
 
   return (
     <div className="app-page-body">
-      <h1>Review queue</h1>
+      <PageHeader title="Review queue" icon="queue" />
       <p><Link to="/app/reviewer/workbench">Topic checklist and recommendations</Link></p>
       {role === 'admin' && <p><Link to="/app/admin/g3-signoff">G3 sign-off desk</Link>: decide many units at once and let the crew commit them.</p>}
       <p>

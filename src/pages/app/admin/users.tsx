@@ -6,6 +6,7 @@ import { getSupabase } from '@site/src/lib/supabase';
 import type { UserRole, AccountStatus } from '@site/src/contexts/AuthContext';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 type AdminUserRow = {
   id: string;
@@ -116,7 +117,7 @@ function AdminUsersContent(): React.ReactElement {
 
   return (
     <div className="app-page-body">
-      <h1>Users</h1>
+      <PageHeader title="Users" icon="users" />
 
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 

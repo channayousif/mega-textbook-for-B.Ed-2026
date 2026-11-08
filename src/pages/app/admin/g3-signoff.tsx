@@ -13,6 +13,7 @@ import {
 } from '@site/src/lib/g3Desk';
 import styles from '@site/src/components/G3Desk.module.css';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * The G3 sign-off desk (ADR-0032). Shows every authored unit's G3 position in
@@ -395,7 +396,7 @@ function Desk(): React.ReactElement {
 
   return <div className="app-page-body">
     <p><Link to="/app/admin/">Admin dashboard</Link></p>
-    <h1>G3 sign-off desk</h1>
+    <PageHeader title="G3 sign-off desk" icon="signoff" />
     <p>
       Your English (G3) review decisions, sorted into what to do: certify the clean passes, answer the open
       questions, and send the rest back for repair. A decision you record here is an instruction: the crew writes
