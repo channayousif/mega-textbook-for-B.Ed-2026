@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { normalise, feedbackHead, boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from '../../scripts/crew/intel.mjs';
+import { normalise, feedbackHead, boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, findingClause, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from '../../scripts/crew/intel.mjs';
 
 const MISSING = 'npm run check:content has 1 finding(s) that main does not have:\n✗ static/content-status.json is missing. Run: npm run build:content-status';
 
@@ -39,6 +39,37 @@ test('handoff notes, log errors, cron errors, PHR lessons and review findings be
   const phr = '- Reflection: the Write tool turned escapes into literal em dashes; caught by grep\n- Failure modes observed: none\n- Next experiment (smallest change to try): none';
   assert.deepEqual(phrSignals(phr, 'phr:x', 't').map((s) => s.kind), ['phr']);
   assert.equal(reviewSignals({ findings: [{ message: 'Bare-URL link text: Further Reading uses raw URLs', resolved: false }, { message: 'done', resolved: true }] }, 'g3:x', 't').length, 1);
+});
+
+test('reviewSignals keeps the defect clause behind a rubric or carry-forward label (2026-11-04 C5)', () => {
+  const sigs = (...messages) => reviewSignals({ findings: messages.map((message) => ({ message })) }, 'g3:x', 't').map((s) => s.text);
+  assert.deepEqual(sigs(
+    'F02 sources: Topic 3 cites a 2012 constitution PDF that the 27th Amendment superseded. Replace it.',
+    'Previous finding 1: Partially repaired. The MCQ key still names option B.',
+  ), ['Topic 3 cites a 2012 constitution PDF that the 27th Amendment superseded', 'Partially repaired']);
+  assert.deepEqual(sigs(
+    'R3, blocking, accuracy: The timeline places 1973 before 1962. Fix it.',
+    'Prior finding 2 remains: Further Reading uses raw URLs. See topic 4.',
+    'P4 carried: Urdu headings break the line. Raise line-height.',
+    'A-7 uncertain sources: The quotation has no page number. Add it.',
+  ), ['The timeline places 1973 before 1962', 'Further Reading uses raw URLs', 'Urdu headings break the line', 'The quotation has no page number']);
+  // An unlabelled message and a message that is only a label keep the old behaviour.
+  assert.equal(findingClause('Bare-URL link text: Further Reading uses raw URLs'), 'Bare-URL link text');
+  assert.equal(findingClause('F02 sources: '), 'F02 sources');
+  assert.equal(findingClause('Previous finding 1:'), 'Previous finding 1:');
+  assert.deepEqual(sigs('Bare-URL link text: Further Reading uses raw URLs'), ['Bare-URL link text']);
+});
+
+test('foldSignals keeps the five newest distinct sources, dropping the oldest', () => {
+  const s = (n) => ({ kind: 'review', sig: 'same defect clause', text: 'x', source: `g3:${n}`, at: `2026-11-0${n}T00:00:00Z` });
+  const clusters = foldSignals({}, [1, 2, 3, 4, 5, 6, 7].map(s), 'slot');
+  const c = Object.values(clusters)[0];
+  assert.equal(c.count, 7);
+  assert.deepEqual(c.evidence, ['g3:3', 'g3:4', 'g3:5', 'g3:6', 'g3:7']);
+  // A source seen again is not duplicated; it becomes the newest.
+  foldSignals(clusters, [s(4)], 'slot');
+  assert.deepEqual(c.evidence, ['g3:3', 'g3:5', 'g3:6', 'g3:7', 'g3:4']);
+  assert.match(distillDigest(clusters, ['slot']), /evidence: g3:6, g3:7, g3:4$/);
 });
 
 test('distillDigest lists clusters that grew, largest first', () => {
