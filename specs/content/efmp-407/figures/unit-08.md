@@ -1,6 +1,6 @@
 # EFMP-407 Unit 8 - Figure manifest
 
-Four schematic figures from the content-spec Figure plan, hand-authored as SVG following ADR-0024 and Spec 009/012, placed with derived dark variants. Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
+Four schematic figures from the content-spec Figure plan, hand-authored as SVG following ADR-0024 and Spec 009/012, placed with derived dark variants. Banner illustration (fig-U8-5) is placed via unit-08.banner.md. Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
