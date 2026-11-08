@@ -104,7 +104,7 @@ html[data-theme='dark'] .dashboard-shell__navlink:hover { background: #1f4a50; c
 html[data-theme='dark'] .dashboard-shell__navlink--active,
 html[data-theme='dark'] .dashboard-shell__navlink--active:hover { background: linear-gradient(90deg, #a6dfdc, #c8edeb); color: #123e43; }
 html[data-theme='dark'] .dashboard-shell__navlink--active svg { color: #123e43; }
-.dashboard-shell__navtext { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dashboard-shell__navtext { min-width: 0; line-height: 1.25; overflow-wrap: anywhere; }
 
 .dashboard-shell__collapse {
   display: flex;
@@ -225,3 +225,33 @@ html[data-theme='dark'] .dashboard-shell__main :is(input:not([type='checkbox']):
   .dashboard-shell__sidebar, .dashboard-shell__topbar { display: none; }
   .work-card, .work-panel { box-shadow: none; border: 1px solid #999; }
 }
+
+/* --- Teacher and classes ---------------------------------------------------------- */
+.row-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.chip-link {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border-radius: 999px;
+  background: #e3eeec; color: #123e43; font-size: 0.85rem; font-weight: 700; text-decoration: none;
+}
+.chip-link:hover { background: #cfe0dd; color: #123e43; text-decoration: none; }
+.chip-link:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
+html[data-theme='dark'] .chip-link { background: #1f4a50; color: #e9f1ef; }
+html[data-theme='dark'] .chip-link:hover { background: #2a5a60; color: #fff; }
+.inline-bar { display: inline-block; vertical-align: middle; width: 160px; height: 8px; margin-inline: 8px; border-radius: 999px; background: #e3e8e6; overflow: hidden; }
+.inline-bar__fill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #1b5a60, #2f7c80); }
+html[data-theme='dark'] .inline-bar { background: #1f4a50; }
+html[data-theme='dark'] .inline-bar__fill { background: #a6dfdc; }
+.plain-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.plain-list > li { margin: 0; }
+.quiz-item__q { font-weight: 700; margin: 0 0 0.5rem; }
+.quiz-item__opts { margin: 0; }
+.quiz-item { padding: 14px 16px; border: 1px solid var(--app-line); border-radius: 12px; background: var(--app-card); }
+
+/* Forms and tables that are not already inside a card get a card surface. */
+.dashboard-shell__main form:not(.work-panel):not(.work-panel form):not(.notes-filter) {
+  padding: 22px; margin-block-end: 24px; border-radius: var(--app-radius); background: var(--app-card); box-shadow: var(--app-shadow);
+}
+.dashboard-shell__main :is(table, .table-scroll):not(.work-panel *):not([class*='table_']) {
+  background: var(--app-card); border-radius: 12px; box-shadow: var(--app-shadow);
+}
+.dashboard-shell__main table:not(.work-panel *):not([class*='table_']) { border-collapse: separate; border-spacing: 0; overflow: hidden; display: table; width: 100%; }
+html[data-theme='dark'] .dashboard-shell__main form:not(.work-panel):not(.work-panel form) { border: 1px solid var(--app-line); }

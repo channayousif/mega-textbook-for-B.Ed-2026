@@ -13,6 +13,7 @@ import { fetchGradeForSubmission } from '@site/src/lib/grading';
 import type { Assignment, Grade, Submission } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Assignment detail - student submit/resubmit view (Spec 003, T036/T062).
@@ -239,7 +240,7 @@ function AssignmentContent({
 
   return (
     <div>
-      <h2>{assignment.title}</h2>
+      <PageHeader title={assignment.title} icon="assignment" />
       <p>Due {new Date(assignment.due_at).toLocaleString()} · Max mark {assignment.max_mark}</p>
       {assignment.instructions && <p>{assignment.instructions}</p>}
 

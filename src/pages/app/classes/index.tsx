@@ -11,6 +11,7 @@ import type { Class, Enrollment } from '@site/src/lib/types';
 import { fetchCourseOptions, type CourseOptionGroup } from '@site/src/lib/courseOptions';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Class list + create (teacher) / join-by-code + joined list (student) -
@@ -101,7 +102,7 @@ function TeacherClassesView(): React.ReactElement {
 
   return (
     <div>
-      <h2>Your classes</h2>
+      <PageHeader title="Your classes" icon="classes" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
@@ -237,7 +238,7 @@ function StudentClassesView(): React.ReactElement {
 
   return (
     <div>
-      <h2>Your classes</h2>
+      <PageHeader title="Your classes" icon="classes" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}

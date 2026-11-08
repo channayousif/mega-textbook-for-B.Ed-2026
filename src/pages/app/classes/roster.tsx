@@ -10,6 +10,7 @@ import {
 import type { RosterRow } from '@site/src/lib/classes';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Roster management - join-code reissue/revoke, archive/reactivate,
@@ -173,7 +174,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
 
   return (
     <div>
-      <h2>{classRow.name}</h2>
+      <PageHeader title={classRow.name} icon="roster" />
       <p>
         {classRow.course_code} - {classRow.term_label}
         {' · '}

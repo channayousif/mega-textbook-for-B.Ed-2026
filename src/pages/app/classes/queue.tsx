@@ -12,6 +12,7 @@ import { fetchAnswerKey } from '@site/src/lib/answerKeys';
 import type { Assignment, AnswerKey } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Teacher's grading queue (Spec 003, T044/T049/T062). List view, one row per
@@ -277,7 +278,7 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
 
   return (
     <div>
-      <h2>Grading queue - {assignment.title}</h2>
+      <PageHeader title={`Grading queue - ${assignment.title}`} icon="queue" />
       <p>Due {new Date(assignment.due_at).toLocaleString()} · Max mark {assignment.max_mark}</p>
       {verifiedTeacher && <AnswerKeyPanel assignment={assignment} />}
       {rows.length === 0 ? (
