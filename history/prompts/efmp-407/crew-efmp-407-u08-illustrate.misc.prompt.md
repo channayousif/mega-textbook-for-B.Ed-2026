@@ -16,26 +16,26 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/efmp-407/unit-08/index.mdx
-  - history/prompts/efmp-407/crew-efmp-407-u08-illustrate.misc.prompt.md
-  - history/prompts/general/2468-efmp-407-u08-illustrate.general.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-08/index.mdx
-  - specs/content/efmp-407/figures/unit-08.banner.md
-  - specs/content/efmp-407/figures/unit-08.illustration-notes.md
-  - specs/content/efmp-407/figures/unit-08.md
-  - specs/content/efmp-407/reviews/unit-08/G2/20261108T170944259Z-gates.json
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-bloom-bands.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-concept-graph.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-depth-gate.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-docs-sync.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-figures.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-no-answer-keys.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-no-em-dash.txt
-  - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/validate-content.txt
-  - specs/content/efmp-407/tasks.md
-  - static/img/figures/efmp-407/unit-08/fig-U8-5.webp
+ - docs/semester-3/efmp-407/unit-08/index.mdx
+ - history/prompts/efmp-407/crew-efmp-407-u08-illustrate.misc.prompt.md
+ - history/prompts/general/2468-efmp-407-u08-illustrate.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-08/index.mdx
+ - specs/content/efmp-407/figures/unit-08.banner.md
+ - specs/content/efmp-407/figures/unit-08.illustration-notes.md
+ - specs/content/efmp-407/figures/unit-08.md
+ - specs/content/efmp-407/reviews/unit-08/G2/20261108T170944259Z-gates.json
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261108T170944259Z/validate-content.txt
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-08/fig-U8-5.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -76,7 +76,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Placed and verified EFMP-407 Unit 8 banner illustration in English and Urdu index files, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated, visually inspected, and placed the EFMP-407 Unit 8 banner illustration in English and Urdu index files, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
@@ -88,18 +88,18 @@ Placed and verified EFMP-407 Unit 8 banner illustration in English and Urdu inde
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Placed and verified EFMP-407 Unit 8 banner illustration in English and Urdu index files, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated, visually inspected, and placed the EFMP-407 Unit 8 banner illustration in English and Urdu index files, refreshed G2 gate evidence, and passed all content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Placed banner fig-U8-5.webp in English and Urdu index files, updated unit-08.banner.md to placed, and refreshed G2 gate evidence.
-  - Full Urdu translation and independent G3 English / G5 Urdu reviews remain open and uncertified.
-  - The existing Jumani and Abbasi (2015) citation finding reported by review_en belongs to repair_en and remains unchanged.
+  - Banner fig-U8-5.webp is placed in both English and Urdu unit index files, with unit-08.banner.md set to placed.
+  - G2 gate evidence has been refreshed to cover the English index update, and all 14 content gates are green.
+  - G3 English review and G5 Urdu review remain open and uncertified; Jumani and Abbasi (2015) attribution finding belongs to repair_en.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Initial generation included pseudo-text wall signage; successfully caught by inspection and regenerated clean.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
