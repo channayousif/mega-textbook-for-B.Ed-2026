@@ -190,6 +190,7 @@ export const COPY = {
     "climb": ["Read", "Practise", "Check", "Apply in your school"],
     "e_gal": "Learning aids",
     "h_gal": "Illustrations that help you learn",
+    "gal_inspired": "Inspired by",
     "e_trust": "How content is made",
     "h_trust": "Clear about what has been checked",
     "tr": [
@@ -488,6 +489,7 @@ export const COPY = {
     "climb": ["پڑھیں", "مشق کریں", "جانچیں", "اپنے اسکول میں لاگو کریں"],
     "e_gal": "تدریسی معاونات",
     "h_gal": "ایسی تصویریں جو سیکھنے میں مدد دیں",
+    "gal_inspired": "سے ماخوذ",
     "e_trust": "مواد کیسے بنتا ہے",
     "h_trust": "جو جانچا گیا، وہ صاف بتایا جاتا ہے",
     "tr": [

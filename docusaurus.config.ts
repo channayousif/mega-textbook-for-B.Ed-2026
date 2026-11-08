@@ -340,7 +340,9 @@ const config: Config = {
         // desktop widths, a compact locale-switch + sign-in-status pair at
         // <=996px, placed first so it sits left of the mobile search icon.
         { type: 'custom-mobileTopBar', position: 'right' },
-        { type: 'localeDropdown', position: 'right' },
+        // EN | اردو segmented toggle (owner choice 2026-11-08), replacing the stock
+        // localeDropdown: src/components/LanguageToggleNavbarItem.tsx.
+        { type: 'custom-languageToggle', position: 'right' },
         { type: 'search', position: 'right' },
         // Spec 004, T007 - registers src/components/DashboardNavLink.tsx;
         // renders nothing unless signed in as a student.

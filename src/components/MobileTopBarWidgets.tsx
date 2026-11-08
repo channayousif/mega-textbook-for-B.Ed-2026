@@ -6,6 +6,7 @@ import { useAlternatePageUtils } from '@docusaurus/theme-common/internal';
 import { useWindowSize } from '@docusaurus/theme-common';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
+import LanguageToggle from './LanguageToggle';
 import styles from './MobileTopBarWidgets.module.css';
 
 /**
@@ -81,16 +82,7 @@ export default function MobileTopBarWidgets({
 
   return (
     <div className={styles.widgetGroup}>
-      {other && (
-        <a
-          className={styles.pill}
-          href={other.url}
-          lang={other.code}
-          aria-label={`Switch to ${other.label}`}
-        >
-          {other.label}
-        </a>
-      )}
+      {other && <LanguageToggle compact />}
       {isConfigured && !loading && (
         session ? (
           <a className={styles.pill} href="/app/profile" title={displayName ?? undefined}>
