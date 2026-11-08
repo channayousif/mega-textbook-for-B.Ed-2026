@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { getSupabase } from '@site/src/lib/supabase';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 type AuditRow = {
   id: number;
@@ -71,7 +72,7 @@ function AuditHistoryContent(): React.ReactElement {
   }
 
   return (
-    <main className="container auth-page margin-vert--lg">
+    <div className="app-page-body">
       <h1>Privilege audit history</h1>
 
       <h2>Admin workflow actions</h2>
@@ -109,16 +110,18 @@ function AuditHistoryContent(): React.ReactElement {
           </tbody>
         </table>
       )}
-    </main>
+    </div>
   );
 }
 
 export default function AdminAuditPage(): React.ReactElement {
   return (
     <Layout title="Admin: audit history">
+      <AppDashboardShell>
       <AuthGuard requireRole="admin">
         <AuditHistoryContent />
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

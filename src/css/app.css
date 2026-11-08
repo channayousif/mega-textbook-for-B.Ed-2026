@@ -1,0 +1,227 @@
+/* ==========================================================================
+   App screens (every /app page), dashboard redesign 2026-11-08.
+   Layout follows the owner's chosen reference (a grouped sidebar with a filled pill
+   for the current page, a compact top bar, cards with soft shadows), drawn in the
+   logo kit's teal and amber. AppDashboardShell sets `app-page` on <html>.
+   RTL: logical properties only; the RTL build mirrors left/right and rotations.
+   ========================================================================== */
+
+:root {
+  --app-bg: #f4f6f5;
+  --app-card: #ffffff;
+  --app-line: #e3e8e6;
+  --app-muted: #4b5f62;      /* 6.75:1 on white, 6.22:1 on the page */
+  --app-shadow: 0 4px 18px rgba(18, 62, 67, 0.08);
+  --app-radius: 16px;
+  --app-side: 264px;
+  --app-side-collapsed: 76px;
+}
+html[data-theme='dark'] {
+  --app-bg: #0e2a2e;
+  --app-card: #163a3f;
+  --app-line: #2a4d52;
+  --app-muted: #c3d3d1;      /* 7.92:1 on the dark card */
+  --app-shadow: none;
+}
+
+/* --- The site chrome becomes the app top bar --------------------------------- */
+html.app-page body { background: var(--app-bg); }
+html.app-page .navbar { box-shadow: 0 1px 0 var(--app-line); }
+html.app-page .navbar__items:not(.navbar__items--right) > .navbar__item,
+html.app-page .navbar .navbar-cta { display: none; }
+html.app-page .footer,
+html.app-page .footer-logos { display: none; }
+
+/* --- Shell grid ----------------------------------------------------------------- */
+.dashboard-shell {
+  display: grid;
+  grid-template-columns: var(--app-side) minmax(0, 1fr);
+  align-items: start;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  transition: grid-template-columns var(--motion-base) var(--motion-ease-out);
+}
+.dashboard-shell--collapsed { grid-template-columns: var(--app-side-collapsed) minmax(0, 1fr); }
+.dashboard-shell__main.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0;
+  padding: 28px 32px 56px;
+}
+
+/* --- Sidebar -------------------------------------------------------------------- */
+.dashboard-shell__sidebar {
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  height: calc(100vh - var(--ifm-navbar-height));
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 14px 14px 0;
+  background: var(--app-card);
+  border-inline-end: 1px solid var(--app-line);
+}
+.dashboard-shell__section { display: grid; gap: 2px; margin-block-end: 10px; }
+.dashboard-shell__section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 4px;
+  padding-inline-start: 22px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--app-muted);
+}
+.dashboard-shell__section-label::after { content: ''; flex: 1; height: 1px; background: var(--app-line); }
+html[dir='rtl'] .dashboard-shell__section-label { letter-spacing: 0; text-transform: none; font-size: 0.85rem; }
+.dashboard-shell__navlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.dashboard-shell__navlist > li { margin: 0; }
+.dashboard-shell__navlink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 14px 0 22px;
+  border-radius: 0 999px 999px 0;
+  color: var(--ifm-font-color-base);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--motion-fast), color var(--motion-fast);
+}
+.dashboard-shell__navlink svg { flex: none; color: var(--app-muted); }
+.dashboard-shell__navlink:hover { background: #e3eeec; color: #123e43; text-decoration: none; }
+.dashboard-shell__navlink:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: -2px; }
+.dashboard-shell__navlink--active,
+.dashboard-shell__navlink--active:hover {
+  background: linear-gradient(90deg, #123e43, #1b5a60);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(18, 62, 67, 0.25);
+}
+.dashboard-shell__navlink--active svg { color: #fff; }
+html[data-theme='dark'] .dashboard-shell__navlink:hover { background: #1f4a50; color: #fff; }
+html[data-theme='dark'] .dashboard-shell__navlink--active,
+html[data-theme='dark'] .dashboard-shell__navlink--active:hover { background: linear-gradient(90deg, #a6dfdc, #c8edeb); color: #123e43; }
+html[data-theme='dark'] .dashboard-shell__navlink--active svg { color: #123e43; }
+.dashboard-shell__navtext { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.dashboard-shell__collapse {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  min-height: 44px;
+  padding: 0 14px 0 22px;
+  border: 0;
+  border-radius: 0 999px 999px 0;
+  background: none;
+  color: var(--app-muted);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.dashboard-shell__collapse:hover { background: #e3eeec; color: #123e43; }
+html[data-theme='dark'] .dashboard-shell__collapse:hover { background: #1f4a50; color: #fff; }
+.dashboard-shell__collapse-icon { transform: rotate(90deg); transition: transform var(--motion-base); }
+.dashboard-shell--collapsed .dashboard-shell__collapse-icon { transform: rotate(-90deg); }
+
+/* Collapsed: icons only. Labels stay in the accessibility tree; title shows them. */
+.dashboard-shell--collapsed .dashboard-shell__sidebar { padding-inline-end: 10px; }
+.dashboard-shell--collapsed .dashboard-shell__navtext,
+.dashboard-shell--collapsed .dashboard-shell__section-label {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.dashboard-shell--collapsed .dashboard-shell__section { padding-block-start: 6px; border-block-start: 1px solid var(--app-line); }
+.dashboard-shell--collapsed .dashboard-shell__section:first-child { border: 0; }
+.dashboard-shell--collapsed :is(.dashboard-shell__navlink, .dashboard-shell__collapse) { justify-content: center; padding: 0; margin-inline-start: 10px; border-radius: 12px; }
+
+/* --- Phone: a toggle and a drawer ------------------------------------------------- */
+.dashboard-shell__topbar { display: none; padding: 12px 16px 0; }
+.dashboard-shell__toggle,
+.dashboard-shell__drawer-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--app-line);
+  border-radius: 999px;
+  background: var(--app-card);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.dashboard-shell__backdrop { position: fixed; inset: 0; z-index: 300; background: rgba(14, 42, 46, 0.45); }
+.dashboard-shell__drawer {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  z-index: 301;
+  width: min(300px, 86vw);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 14px 24px 0;
+  background: var(--app-card);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+.dashboard-shell__drawer-close { align-self: flex-start; margin-inline-start: 16px; margin-block-end: 6px; }
+@media (max-width: 996px) {
+  .dashboard-shell, .dashboard-shell--collapsed { grid-template-columns: minmax(0, 1fr); }
+  .dashboard-shell__sidebar { display: none; }
+  .dashboard-shell__topbar { display: block; }
+  .dashboard-shell__main.container { padding: 16px 16px 40px; }
+}
+
+/* --- Cards: the shared classes every page already uses ----------------------------- */
+.dashboard-home { max-width: none; margin: 0; }
+.work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 24px; align-items: start; }
+.work-card, .work-panel {
+  min-width: 0;
+  padding: 22px;
+  border: 0;
+  border-radius: var(--app-radius);
+  background: var(--app-card);
+  box-shadow: var(--app-shadow);
+}
+html[data-theme='dark'] :is(.work-card, .work-panel) { border: 1px solid var(--app-line); }
+.work-card { display: flex; flex-direction: column; gap: 0.35rem; min-height: 7rem; color: var(--ifm-font-color-base); text-decoration: none; transition: box-shadow var(--motion-base), transform var(--motion-base) var(--motion-ease-out); }
+.work-card:hover, .work-card:focus-visible { box-shadow: 0 10px 26px rgba(18, 62, 67, 0.14); transform: translateY(-2px); text-decoration: none; }
+.work-card strong { color: var(--ifm-heading-color); font-size: 1.05rem; }
+.work-panel { margin-block-end: 24px; }
+.work-panel h2 { font-size: 1.15rem; margin-block-end: 0.85rem; }
+.work-panel h3 { font-size: 1rem; }
+.work-panel--accent { border-inline-start: 5px solid var(--brand-amber); }
+.work-form { display: grid; gap: 0.85rem; max-width: 45rem; }
+.work-form label { display: grid; gap: 0.3rem; font-weight: 600; }
+.work-form .button { justify-self: start; }
+.work-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.table-scroll { max-width: 100%; overflow-x: auto; }
+.work-pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.dashboard-shell__main > :is(div, section) > h1:first-child,
+.dashboard-shell__main > h1:first-child,
+.dashboard-shell__main > :is(div, section) > h2:first-child { margin-block-end: 1.25rem; }
+@media (max-width: 768px) { .work-panel, .work-card { padding: 16px; } }
+
+/* Form controls inside the app: one height, a visible focus ring. */
+.dashboard-shell__main :is(input:not([type='checkbox']):not([type='radio']), select, textarea) {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #b9c7c4;
+  border-radius: 10px;
+  background: var(--app-card);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+}
+.dashboard-shell__main textarea { min-height: 96px; }
+.dashboard-shell__main :is(input, select, textarea):focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 1px; border-color: var(--ifm-color-primary); }
+html[data-theme='dark'] .dashboard-shell__main :is(input:not([type='checkbox']):not([type='radio']), select, textarea) { border-color: #3d6a6e; }
+
+@media print {
+  .dashboard-shell { display: block; }
+  .dashboard-shell__sidebar, .dashboard-shell__topbar { display: none; }
+  .work-card, .work-panel { box-shadow: none; border: 1px solid #999; }
+}

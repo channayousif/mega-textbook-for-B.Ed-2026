@@ -9,6 +9,7 @@ import {
 } from '@site/src/lib/classes';
 import type { RosterRow } from '@site/src/lib/classes';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Roster management - join-code reissue/revoke, archive/reactivate,
@@ -334,11 +335,13 @@ export default function RosterPage(): React.ReactElement {
   const classId = useQueryParam('classId');
   return (
     <Layout title="Class roster">
+      <AppDashboardShell>
       <AuthGuard requireRole="teacher">
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId ? <RosterContent classId={classId} /> : <p>No class selected.</p>}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

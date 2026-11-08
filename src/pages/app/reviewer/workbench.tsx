@@ -9,6 +9,7 @@ import { fetchContentStatus } from '@site/src/lib/contentStatus';
 import { buildReviewQueue, type ContentIndexEntry, type ReviewQueueItem } from '@site/src/lib/reviewQueue';
 import { canReview, courseTrack, type ReviewerGrant } from '@site/src/lib/reviewerScopes';
 import licenceRegistry from '@site/catalog/licence-objectives.json';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 type Topic = ContentIndexEntry & { kind: string; topic_no: number | null; title: string };
 type Target = { track: 'bed' | 'licence'; course_code: string | null; unit_no: number | null; topic_no: number | null; page_slug?: string | null; stage: 'topic' | 'G3' | 'G5' | 'licence'; title: string; permalink: string | null };
@@ -61,7 +62,7 @@ function Workbench(): React.ReactElement {
     else { setNotice('Recommendation submitted to the admin. Formal G3/G5 status changes only after committed evidence passes Git gates.'); setTarget(null); }
   }
 
-  return <main className="container auth-page margin-vert--lg">
+  return <div className="app-page-body">
     <h1>Review workbench</h1>
     <p>Choose a topic or a formal unit review within your grant. Read the source before completing the checklist.</p>
     <p><Link to="/app/reviewer/apply">Apply for another scope</Link>{' · '}<Link to="/app/admin/review-queue">Prepare formal G3/G5 evidence</Link></p>
@@ -91,6 +92,8 @@ function Workbench(): React.ReactElement {
         <button type="submit" className="button button--primary">Submit recommendation</button>
       </form>
     </section>}
-  </main>;
+  </div>;
 }
-export default function ReviewerWorkbenchPage(): React.ReactElement { return <Layout title="Review workbench"><ReviewerGuard><Workbench /></ReviewerGuard></Layout>; }
+export default function ReviewerWorkbenchPage(): React.ReactElement { return <Layout title="Review workbench">
+      <AppDashboardShell><ReviewerGuard><Workbench /></ReviewerGuard></AppDashboardShell>
+    </Layout>; }

@@ -11,6 +11,7 @@ import type { QueueRow } from '@site/src/lib/grading';
 import { fetchAnswerKey } from '@site/src/lib/answerKeys';
 import type { Assignment, AnswerKey } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Teacher's grading queue (Spec 003, T044/T049/T062). List view, one row per
@@ -313,15 +314,17 @@ export default function QueuePage(): React.ReactElement {
   const assignmentId = useQueryParam('assignmentId');
   return (
     <Layout title="Grading queue">
+      <AppDashboardShell>
       <AuthGuard requireRole="teacher">
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId && assignmentId ? (
             <QueueContent classId={classId} assignmentId={assignmentId} />
           ) : (
             <p>No assignment selected.</p>
           )}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

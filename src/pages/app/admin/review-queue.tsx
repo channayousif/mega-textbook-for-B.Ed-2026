@@ -14,6 +14,7 @@ import {
   type CertificationCriterion, type CertificationFinding, type CriterionStatus,
 } from '@site/src/lib/reviewQueue';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * The review surface (Spec 017 FR-004, T022-T024, T031-T032).
@@ -178,7 +179,7 @@ function ReviewQueueContent(): React.ReactElement {
   }
 
   return (
-    <main className="container margin-vert--lg">
+    <div className="app-page-body">
       <h1>Review queue</h1>
       <p><Link to="/app/reviewer/workbench">Topic checklist and recommendations</Link></p>
       {role === 'admin' && <p><Link to="/app/admin/g3-signoff">G3 sign-off desk</Link>: decide many units at once and let the crew commit them.</p>}
@@ -431,7 +432,7 @@ function ReviewQueueContent(): React.ReactElement {
           </div>
         </section>
       )}
-    </main>
+    </div>
   );
 }
 
@@ -441,9 +442,11 @@ export default function ReviewQueuePage(): React.ReactElement {
       title="Review queue"
       description="Units awaiting a G3 English or G5 Urdu content review, for qualified reviewers."
     >
+      <AppDashboardShell>
       <ReviewerGuard>
         <ReviewQueueContent />
       </ReviewerGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

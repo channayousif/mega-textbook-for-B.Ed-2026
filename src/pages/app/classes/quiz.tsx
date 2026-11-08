@@ -11,6 +11,7 @@ import {
 import type { QuizAttemptResult, ClassBestScoreRow } from '@site/src/lib/quiz';
 import type { Assignment, QuizItem } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Auto-graded practice quiz - student take/retake UI, teacher best-score
@@ -233,15 +234,17 @@ export default function QuizPage(): React.ReactElement {
   const assignmentId = useQueryParam('assignmentId');
   return (
     <Layout title="Quiz">
+      <AppDashboardShell>
       <AuthGuard requireRole={['teacher', 'student']}>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId && assignmentId ? (
             <QuizContent classId={classId} assignmentId={assignmentId} />
           ) : (
             <p>No quiz selected.</p>
           )}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

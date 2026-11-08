@@ -11,6 +11,7 @@ import { fetchContentStatus, type ContentStatusReport } from '@site/src/lib/cont
 import { fetchCatalog, type Catalog, type CatalogCourse } from '@site/src/lib/catalog';
 import type { ContentFeedback, ContentFeedbackStatus } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Curriculum-owner console (Spec 010, T025/T030, Story 3) - one page
@@ -471,11 +472,13 @@ function OverviewContent(): React.ReactElement {
 export default function AdminOverviewPage(): React.ReactElement {
   return (
     <Layout title="Curriculum-owner console">
+      <AppDashboardShell>
       <OwnerConsoleGuard>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           <OverviewContent />
-        </main>
+        </div>
       </OwnerConsoleGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

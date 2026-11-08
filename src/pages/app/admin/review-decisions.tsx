@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import { getSupabase } from '@site/src/lib/supabase';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 type Review = {
   id: string; reviewer_id: string; track: string; course_code: string | null; unit_no: number | null;
@@ -28,7 +29,7 @@ function Decisions(): React.ReactElement {
     const { error: e } = await db.rpc('decide_review', { p_id: id, p_decision: decision, p_note: note[id] || '' });
     setBusy(false); if (e) setError(e.message); else await load();
   }
-  return <main className="container auth-page margin-vert--lg"><p><Link to="/app/admin/">Admin dashboard</Link></p>
+  return <div className="app-page-body"><p><Link to="/app/admin/">Admin dashboard</Link></p>
     <h1>Review decisions</h1>
     <p>These are reviewer recommendations. A formal G3/G5 unit becomes reviewed only when its evidence is committed and passes the Git gates.</p>
     {error && <div className="alert alert--danger" role="alert">{error}</div>}
@@ -46,6 +47,8 @@ function Decisions(): React.ReactElement {
       </div> : <p>Admin note: {r.decision_note}</p>}
       {r.decision === 'improve' && <p><Link to={`/app/admin/agent-jobs?review=${r.id}`}>Queue an agent improvement</Link></p>}
     </article>)}
-  </main>;
+  </div>;
 }
-export default function AdminReviewDecisionsPage(): React.ReactElement { return <Layout title="Review decisions"><OwnerConsoleGuard><Decisions /></OwnerConsoleGuard></Layout>; }
+export default function AdminReviewDecisionsPage(): React.ReactElement { return <Layout title="Review decisions">
+      <AppDashboardShell><OwnerConsoleGuard><Decisions /></OwnerConsoleGuard></AppDashboardShell>
+    </Layout>; }

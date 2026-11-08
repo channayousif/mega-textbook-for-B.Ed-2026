@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import { getSupabase } from '@site/src/lib/supabase';
 import { fetchAllPages } from '@site/src/lib/pagination';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 type Person = { id: string; full_name: string | null; email: string | null; role: string; status: string; deleted_at: string | null };
 type ClassRow = { id: string; name: string; course_code: string; teacher_id: string; status: string };
@@ -45,7 +46,7 @@ function Records(): React.ReactElement {
     const { error: e } = await db.rpc('admin_set_class_status', { p_id: selectedClass.id, p_archive: selectedClass.status === 'active', p_note: classNote });
     setBusy(false); if (e) setError(e.message); else { setClassNote(''); await load(); }
   }
-  return <main className="container auth-page margin-vert--lg"><p><Link to="/app/admin/">Admin dashboard</Link></p>
+  return <div className="app-page-body"><p><Link to="/app/admin/">Admin dashboard</Link></p>
     <h1>Classes and learner records</h1><p>Select a record to inspect it. This view uses your admin access and does not enter another person&apos;s session.</p>
     {error && <div className="alert alert--danger" role="alert">{error}</div>}
     <div className="work-grid"><section className="work-panel"><h2>Class</h2>
@@ -61,6 +62,8 @@ function Records(): React.ReactElement {
         {selectedPerson.role === 'teacher' && <><h3>Classes taught</h3>{classes.filter(c => c.teacher_id === personId).length === 0 ? <p>No classes.</p> : <ul>{classes.filter(c => c.teacher_id === personId).map(c => <li key={c.id}>{c.name} | {c.course_code}</li>)}</ul>}</>}
         <p><Link to="/app/admin/users">Manage account</Link>{' · '}<Link to={`/app/admin/reviewers?user=${personId}`}>Manage reviewer scopes</Link></p></>}
     </section></div>
-  </main>;
+  </div>;
 }
-export default function AdminRecordsPage(): React.ReactElement { return <Layout title="Admin records"><OwnerConsoleGuard><Records /></OwnerConsoleGuard></Layout>; }
+export default function AdminRecordsPage(): React.ReactElement { return <Layout title="Admin records">
+      <AppDashboardShell><OwnerConsoleGuard><Records /></OwnerConsoleGuard></AppDashboardShell>
+    </Layout>; }

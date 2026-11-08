@@ -5,6 +5,7 @@ import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import { getSupabase } from '@site/src/lib/supabase';
 import { fetchCatalog, type Catalog } from '@site/src/lib/catalog';
 import { fetchAllPages } from '@site/src/lib/pagination';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 type Profile = { id: string; full_name: string | null; email: string | null; role: string; status: string; deleted_at: string | null };
 type Application = { id: string; applicant_id: string; track: string; course_code: string | null; qualification_evidence: string; status: string; created_at: string };
@@ -71,7 +72,7 @@ function ReviewersContent(): React.ReactElement {
     setBusy(false); if (e) setError(e.message); else await load();
   }
 
-  return <main className="container auth-page margin-vert--lg">
+  return <div className="app-page-body">
     <p><Link to="/app/admin/">Admin dashboard</Link></p>
     <h1>Reviewer applications and scopes</h1>
     {error && <div className="alert alert--danger" role="alert">{error}</div>}
@@ -99,9 +100,11 @@ function ReviewersContent(): React.ReactElement {
     <section><h2>Active grants</h2>
       {grants.filter(g => !g.revoked_at).length === 0 ? <p>No active grants.</p> : <div className="table-scroll"><table><thead><tr><th>Reviewer</th><th>Scope</th><th>Evidence</th><th>Action</th></tr></thead><tbody>{grants.filter(g => !g.revoked_at).map(g => <tr key={g.id}><td>{label(g.subject_id)}</td><td>{g.track} {g.course_code ?? 'all courses'}</td><td>{g.qualification_evidence}</td><td><button className="button button--sm button--secondary" disabled={busy} onClick={() => void revoke(g.id)}>Revoke</button></td></tr>)}</tbody></table></div>}
     </section>
-  </main>;
+  </div>;
 }
 
 export default function AdminReviewersPage(): React.ReactElement {
-  return <Layout title="Reviewer applications"><OwnerConsoleGuard><ReviewersContent /></OwnerConsoleGuard></Layout>;
+  return <Layout title="Reviewer applications">
+      <AppDashboardShell><OwnerConsoleGuard><ReviewersContent /></OwnerConsoleGuard></AppDashboardShell>
+    </Layout>;
 }

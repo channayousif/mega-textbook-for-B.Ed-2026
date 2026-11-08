@@ -5,6 +5,7 @@ import AuthGuard from '@site/src/components/AuthGuard';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { exportGradebook } from '@site/src/lib/gradebookExport';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Gradebook export (Spec 003, T052/T062). Teacher-only export button
@@ -64,11 +65,13 @@ export default function GradebookPage(): React.ReactElement {
   const classId = useQueryParam('classId');
   return (
     <Layout title="Gradebook">
+      <AppDashboardShell>
       <AuthGuard requireRole="teacher">
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId ? <GradebookContent classId={classId} /> : <p>No class selected.</p>}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

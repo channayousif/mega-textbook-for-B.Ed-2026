@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { getSupabase } from '@site/src/lib/supabase';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 type RoleChoice = 'student' | 'teacher';
 
@@ -114,7 +115,8 @@ export default function ProfilePage(): React.ReactElement {
 
   return (
     <Layout title="Your account">
-      <main className="container auth-page margin-vert--lg" style={{ maxWidth: 480 }}>
+      <AppDashboardShell>
+      <div className="app-page-body" style={{ maxWidth: 480 }}>
         <h1>Your account</h1>
 
         {!profile.role_chosen_at && (
@@ -216,7 +218,8 @@ export default function ProfilePage(): React.ReactElement {
             {deleteSubmitting ? 'Deleting…' : 'Delete my account'}
           </button>
         </section>
-      </main>
+      </div>
+    </AppDashboardShell>
     </Layout>
   );
 }
