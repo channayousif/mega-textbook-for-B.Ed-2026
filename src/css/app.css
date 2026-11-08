@@ -199,7 +199,7 @@ html[data-theme='dark'] :is(.work-card, .work-panel) { border: 1px solid var(--a
 .work-form label { display: grid; gap: 0.3rem; font-weight: 600; }
 .work-form .button { justify-self: start; }
 .work-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.table-scroll { max-width: 100%; overflow-x: auto; }
+.table-scroll { position: relative; max-width: 100%; overflow-x: auto; } /* relative: keeps absolutely positioned sr-only labels inside the scroll box */
 .work-pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .dashboard-shell__main > :is(div, section) > h1:first-child,
 .dashboard-shell__main > h1:first-child,
@@ -286,6 +286,7 @@ html[data-theme='dark'] .inline-bar__fill { background: #a6dfdc; }
 .dashboard-shell__main :is(table, .table-scroll):not(.work-panel *):not([class*='table_']) {
   background: var(--app-card); border-radius: 12px; box-shadow: var(--app-shadow);
 }
-.dashboard-shell__main table:not(.work-panel *):not([class*='table_']) { border-collapse: separate; border-spacing: 0; display: table; width: 100%; }
+/* No display override: Infima's block display lets a bare table scroll in place on phones. */
+.dashboard-shell__main table:not(.work-panel *):not([class*='table_']) { border-collapse: separate; border-spacing: 0; }
 .dashboard-shell__main .table-scroll:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
 html[data-theme='dark'] .dashboard-shell__main form:not(.work-panel):not(.work-panel form) { border: 1px solid var(--app-line); }
