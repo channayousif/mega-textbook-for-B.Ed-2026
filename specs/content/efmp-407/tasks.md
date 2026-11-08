@@ -39,7 +39,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 5 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U5-7 remains prompt-only |
-| Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-08/G2/20261107T194631162Z-gates.json |
+| Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-08/G2/20261108T170944259Z-gates.json |
 | Unit 8 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 8 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory: revise; F1 blocking - Jumani and Abbasi (2015) bound passage is not in the paper (full PDF checked 2026-11-07); F4/F8 uncertain - Tilbury causal claim exceeds title-level support and topic-02 formative item 3 is tagged Analyze above the band; F2,F3,F5,F6,F7,F9 advisory; report: specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json |
 | Unit 8 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory r1 escalation on unchanged inputs; prior F1-F9 unresolved; missing parent runtime provenance and required browser/print evidence. [Report](reviews/unit-08/G3/crew-efmp-407-u08-review_en-r1.json). G3 remains open and unsigned. |
