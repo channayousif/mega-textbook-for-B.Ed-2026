@@ -103,3 +103,137 @@ export function mergeAppendOnly(base, ours, theirs) {
   }
   return out.join('\n');
 }
+
+/**
+ * Split one tracker into lines and tag each table row that belongs to a table whose header has
+ * "Unit" and "Stage" columns with a key: Unit, Stage and the occurrence number of that pair in
+ * the file (a revision row for an existing pair is occurrence 2). Jobs often append rows after a
+ * blank line below the table; such headerless rows use the columns of the last header above them.
+ * Every other line, including a table's header and separator rows, is a plain line.
+ */
+function trackerLines(text) {
+  const lines = text.split('\n');
+  const cells = (line) => line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
+  const isRow = (line) => line.trim().startsWith('|');
+  const isSeparator = (line) => isRow(line) && cells(line).every((c) => /^:?-+:?$/.test(c));
+  const seen = new Map();
+  const out = [];
+  let cols = null;
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i];
+    if (!isRow(line)) { out.push({ line }); continue; }
+    if (i + 1 < lines.length && isSeparator(lines[i + 1]) && !isSeparator(line) && (i === 0 || !isRow(lines[i - 1]))) {
+      const head = cells(line).map((c) => c.toLowerCase());
+      cols = { unit: head.indexOf('unit'), stage: head.indexOf('stage') };
+      out.push({ line });
+      continue;
+    }
+    if (!cols || cols.unit < 0 || cols.stage < 0 || isSeparator(line)) { out.push({ line }); continue; }
+    const c = cells(line);
+    const pair = `${c[cols.unit] ?? ''}\u0000${c[cols.stage] ?? ''}`;
+    const n = (seen.get(pair) || 0) + 1;
+    seen.set(pair, n);
+    out.push({ line, key: `${pair}\u0000${n}` });
+  }
+  return out;
+}
+
+/**
+ * Three-way merge for a course tracker (specs/content/<course>/tasks.md, W45 M2) that keys table
+ * rows by Unit, Stage and occurrence number, because unit jobs rewrite their own rows in place
+ * (G2 evidence, G3 notes) and mergeAppendOnly rejects any change to a base line.
+ * - A keyed row changed or removed on one side only takes that side; changed the same way on
+ *   both sides is kept once; changed differently on both sides returns null.
+ * - New keyed rows (a key not in base) from both sides are kept, ours first, after the last row
+ *   of their table; an identical new row on both sides is kept once.
+ * - Every other line (prose, headings, table headers) merges only when both sides purely insert
+ *   lines, as in mergeAppendOnly (an insertion that starts the other side's is kept once); any
+ *   other change returns null.
+ * Returns null when a stage is missing, so the caller falls back to a merge fix.
+ */
+export function mergeTrackerRows(base, ours, theirs) {
+  if (typeof base !== 'string' || typeof ours !== 'string' || typeof theirs !== 'string') return null;
+  const docs = [base, ours, theirs].map(trackerLines);
+  // Plain lines of each side, and for every keyed row the index of the plain line before it.
+  const split = (doc) => {
+    const plain = [];
+    const rows = [];
+    for (const item of doc) {
+      if (item.key) rows.push({ ...item, anchor: plain.length - 1 });
+      else plain.push(item.line);
+    }
+    return { plain, rows };
+  };
+  const [b, o, t] = docs.map(split);
+  // Match each side's plain lines to base in order; anything unmatched is an insertion.
+  const inserts = (side) => {
+    const gaps = b.plain.map(() => []).concat([[]]);
+    const at = [];
+    let i = 0;
+    for (const line of side.plain) {
+      if (i < b.plain.length && line === b.plain[i]) { at.push({ base: i }); i += 1; }
+      else { at.push({ gap: i, k: gaps[i].length }); gaps[i].push(line); }
+    }
+    return i === b.plain.length ? { gaps, at } : null;
+  };
+  const oi = inserts(o);
+  const ti = inserts(t);
+  if (!oi || !ti) return null;
+  const isPrefix = (x, y) => x.length <= y.length && x.every((line, k) => line === y[k]);
+  // Merged plain lines, with the merged index of every base, ours and theirs plain line. When one
+  // side's insertion at a point starts the other's (both carry the same earlier append), the
+  // longer one is kept once instead of repeating the shared lines.
+  const plain = [];
+  const baseAt = [];
+  const oursGap = [];
+  const theirsGap = [];
+  for (let i = 0; i <= b.plain.length; i += 1) {
+    const [og, tg] = [oi.gaps[i], ti.gaps[i]];
+    if (isPrefix(tg, og)) {
+      oursGap[i] = og.map((line) => plain.push(line) - 1);
+      theirsGap[i] = oursGap[i].slice(0, tg.length);
+    } else if (isPrefix(og, tg)) {
+      theirsGap[i] = tg.map((line) => plain.push(line) - 1);
+      oursGap[i] = theirsGap[i].slice(0, og.length);
+    } else {
+      oursGap[i] = og.map((line) => plain.push(line) - 1);
+      theirsGap[i] = tg.map((line) => plain.push(line) - 1);
+    }
+    if (i < b.plain.length) baseAt[i] = plain.push(b.plain[i]) - 1;
+  }
+  const mapAnchor = (side, gaps, anchor) => {
+    if (anchor < 0) return -1;
+    const a = side.at[anchor];
+    return 'base' in a ? baseAt[a.base] : gaps[a.gap][a.k];
+  };
+  // Resolve base rows, then collect each side's new rows; group rows by merged anchor.
+  const oRows = new Map(o.rows.map((r) => [r.key, r]));
+  const tRows = new Map(t.rows.map((r) => [r.key, r]));
+  const after = new Map();
+  const put = (anchor, line) => { if (!after.has(anchor)) after.set(anchor, []); after.get(anchor).push(line); };
+  const baseKeys = new Set();
+  for (const r of b.rows) {
+    baseKeys.add(r.key);
+    const ol = oRows.get(r.key)?.line ?? null;
+    const tl = tRows.get(r.key)?.line ?? null;
+    let line;
+    if (ol === tl) line = ol;
+    else if (ol === r.line) line = tl;
+    else if (tl === r.line) line = ol;
+    else return null;
+    if (line !== null) put(baseAt[r.anchor] ?? -1, line);
+  }
+  const oursNew = new Map();
+  for (const r of o.rows) {
+    if (baseKeys.has(r.key)) continue;
+    oursNew.set(r.key, r.line);
+    put(mapAnchor(oi, oursGap, r.anchor), r.line);
+  }
+  for (const r of t.rows) {
+    if (baseKeys.has(r.key) || oursNew.get(r.key) === r.line) continue;
+    put(mapAnchor(ti, theirsGap, r.anchor), r.line);
+  }
+  const out = [...(after.get(-1) || [])];
+  plain.forEach((line, i) => out.push(line, ...(after.get(i) || [])));
+  return out.join('\n');
+}
