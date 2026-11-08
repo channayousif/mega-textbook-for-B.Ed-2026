@@ -131,3 +131,8 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8a.json; sources registered with bound excerpts, concepts remapped, assessment scoring and distractors repaired, illustrative opening scenarios framed, and figure remits/geometry resolved; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-01/G3/20261102T212819Z-g3-desk-140ce781.json; stale G1 tracker note reconciled with D-2026-0063 (status left for CurriculumOwner); fig-U1-8 wordmark moved below the last panel in EN, dark and UR variants (measure-figure-text clean, no collision). Narrow 360px and A4 print render inspection still not done (crew host forbids build/browser); needs a fresh independent G3 run |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-01/G2/20261103T183510555Z-gates.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-01/G3/20261108T203238Z-g3-desk-727e527b.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-02/G3/20261108T203238Z-g3-desk-0f2a9132.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-03/G3/20261108T203238Z-g3-desk-d0b970f8.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-04/G3/20261108T203238Z-g3-desk-a67ec0a3.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261108T203238Z-g3-desk-b2674e94.json |
