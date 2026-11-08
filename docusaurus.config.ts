@@ -354,7 +354,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      logo: { alt: 'textbook.com.pk', src: 'img/brand/bilingual-reverse.svg', height: 64 },
+      logo: { alt: 'textbook.com.pk', src: 'img/brand/bilingual-reverse.svg', height: 96 }, // 384px wide, above the kit's 360px minimum
       links: [
         { title: 'Programmes', items: [{ label: 'B.Ed', to: '/intro' }, { label: 'Teaching licence', to: '/licence/' }] },
         { title: 'For you', items: [{ label: 'Create an account', to: '/app/signup' }, { label: 'Become a reviewer', to: '/app/reviewer/apply' }] },

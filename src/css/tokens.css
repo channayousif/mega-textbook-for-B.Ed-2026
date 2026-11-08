@@ -74,10 +74,28 @@ html[data-theme='dark'] {
 }
 
 .navbar__brand { margin-inline-end: 1.25rem; }
-.brand-logo { display: block; width: auto; height: 48px; } /* 242px wide, the kit's minimum */
-@media (max-width: 996px) {
-  .brand-logo { height: 40px; }
+/* Header logo (src/theme/Navbar/Logo): the bilingual logo at 90px (360px wide, the
+   kit's minimum) at the top of wide pages, the horizontal logo at 44px once scrolled
+   and always on phones. The swap is instant; only the navbar height eases. */
+.brand-logo-slot { display: block; }
+.brand-logo { display: block; width: auto; }
+.brand-logo-slot--tall .brand-logo { height: 90px; }
+.brand-logo-slot--short { display: none; }
+.brand-logo-slot--short .brand-logo { height: 44px; }
+.navbar { transition: min-height var(--motion-base) var(--motion-ease-out); }
+@media (min-width: 997px) {
+  html:not([data-nav-scrolled]):not(.plugin-docs) .navbar { --ifm-navbar-height: 106px; height: auto; min-height: 106px; }
 }
+/* Course pages keep the compact header from the start, so the topic title stays near
+   the top (tests/e2e/reader-chrome.spec.ts): calm on the page. */
+html[data-nav-scrolled] .brand-logo-slot--tall, html.plugin-docs .brand-logo-slot--tall { display: none; }
+html[data-nav-scrolled] .brand-logo-slot--short, html.plugin-docs .brand-logo-slot--short { display: block; }
+@media (max-width: 996px) {
+  .brand-logo-slot--tall { display: none; }
+  .brand-logo-slot--short { display: block; }
+  .brand-logo-slot--short .brand-logo { height: 40px; }
+}
+@media print { .brand-logo-slot--short { display: none; } .brand-logo-slot--tall { display: block; } }
 
 /* Urdu small text is Naskh: Nastaliq needs too much height at these sizes. */
 html[dir='rtl'] :is(
@@ -109,7 +127,9 @@ html[dir='rtl'] :is(
 html[data-theme='dark'] .navbar .navbar-cta.navbar__link,
 html[data-theme='dark'] .navbar .navbar-cta.navbar__link:hover { color: var(--brand-ink); }
 
-.footer--dark { --ifm-footer-background-color: var(--brand-ink); }
+/* Footer: deeper teal than the hero bands, with the logo's amber step as its top edge. */
+.footer--dark { --ifm-footer-background-color: #0e3136; --ifm-footer-link-color: #e8f0ee; --ifm-footer-title-color: #fff; border-top: 4px solid var(--brand-amber); }
+.footer--dark .footer__link-item:hover { color: var(--brand-amber); }
 
 /* Reveal on scroll (src/lib/useReveal.ts): "bubble in", a short rise. Content is
    visible unless JavaScript has marked it pending, and print always shows it. */
