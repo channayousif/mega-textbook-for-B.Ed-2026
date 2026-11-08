@@ -138,3 +138,6 @@ video-studio-sdd-ri*.zip
 
 # Course covers, generated before build and start (scripts/design/course-covers.mjs)
 static/img/covers/
+
+# Python bytecode (scripts/development, tests/ops)
+__pycache__/
