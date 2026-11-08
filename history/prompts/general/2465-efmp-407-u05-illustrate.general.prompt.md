@@ -20,6 +20,8 @@ files:
   - specs/content/efmp-407/figures/unit-05.banner.md
   - specs/content/efmp-407/figures/unit-05.illustration-notes.md
   - specs/content/efmp-407/figures/unit-05.md
+  - specs/content/efmp-407/reviews/unit-05/G2/20261108T130249567Z-gates.json
+  - specs/content/efmp-407/tasks.md
   - static/img/figures/efmp-407/unit-05/fig-U5-7.webp
   - history/prompts/general/2465-efmp-407-u05-illustrate.general.prompt.md
 tests:
