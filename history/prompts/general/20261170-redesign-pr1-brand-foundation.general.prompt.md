@@ -45,6 +45,8 @@ raise the agents slice limit to 5G
 
 raise the parent slice too
 
+Change the video mark, continue merge  PR 1 2 3, move to next
+
 ## Response snapshot
 
 Status: load about 0.6 on 2 CPUs, 8.4 GB memory available, memory and I/O pressure near 0, root disk 78% used. Removed 15 git worktrees under ~/wt-* whose trees were clean, fully pushed and whose PRs had merged (46 GB freed, disk now 56%); kept wt-hec and wt-urdu-badge, which hold uncommitted work with no PR. Took "continue" as sign-off on the v2 boards and opened redesign PR 1: logo kit v2 assets (em dashes and editor metadata stripped), favicons, install manifest, theme colour, a new social card, the teal ramp with measured contrast for light, dark and print, and the remaining hardcoded v1 colours on landing and catalogue.
@@ -60,7 +62,7 @@ Status: load about 0.6 on 2 CPUs, 8.4 GB memory available, memory and I/O pressu
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: kit v2 logo in the navbar (horizontal in both locales), 404 mark, favicons at static/img/brand/, /site.webmanifest, theme-color #123E43, social card. Light primary #1B5A60 (white text 7.84:1), dark ground #0E2A2E with pale teal primary #A6DFDC (10.23:1). --brand-ink/jade/mint now alias the v2 values.
-- Decisions the team must respect: amber #E5A333 is never text on a light ground; use --brand-amber-text #8A5A0B. static/img/favicon.svg stays as the v1 mark because video-studio/brand/brand-bible.yaml pins it as owner-approved; changing the video mark is the owner's call. figure-palette.mjs is untouched. Kit v2 has no Urdu-first logo, so Urdu pages show the horizontal logo until PR 4 adds the bilingual header logo that shrinks on scroll (owner ruling 2026-11-06).
+- Decisions the team must respect: amber #E5A333 is never text on a light ground; use --brand-amber-text #8A5A0B. The owner changed the video mark on 2026-11-08: video-studio/brand/brand-bible.yaml now uses static/img/brand/favicon.svg as the mark and static/img/brand/horizontal-color.svg as the full logo (its old static/img/logo.svg target no longer existed), and the v1 static/img/favicon.svg is removed. figure-palette.mjs is untouched. Kit v2 has no Urdu-first logo, so Urdu pages show the horizontal logo until PR 4 adds the bilingual header logo that shrinks on scroll (owner ruling 2026-11-06).
 - Host ops (2026-11-08): local builds took 7 to 13 hours because development-agents.slice had MemoryHigh=3G and a build needs about 2.9 GB, so the kernel throttled the slice (memory pressure about 90%) with memory free. On the owner's instruction the slice is now MemoryHigh=5G, MemoryMax=6G, in ~/.config/systemd/user/ and the untracked ops/development/systemd/ copy in the main checkout. The parent development.slice was then raised from 5G high, 6G max to 7G high, 8G max, so agents (5G) and editor (2.5G) fit together under the user slice cap (8G high, 9G max).
 - Pending / next owner: owner review and merge (merging deploys live; PRs 1 to 5 should merge close together). Trademark check of the kit is the owner's call.
 - Paperclip issues affected: none.
