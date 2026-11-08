@@ -5,6 +5,7 @@ import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { fetchStudentDrilldown, type StudentDrilldown } from '@site/src/lib/teacherAnalytics';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { AppPageTitle } from '@site/src/components/ui';
 
 /**
  * Student drill-down (Spec 005, T041, FR-011) - one student's submissions,
@@ -113,6 +114,7 @@ export default function StudentDrilldownPage(): React.ReactElement {
   return (
     <Layout title="Student record">
       <AppDashboardShell role="teacher">
+          <AppPageTitle en="Student record" ur="طالب علم کا ریکارڈ" icon="student" />
           <StudentDrilldownContent />
       </AppDashboardShell>
     </Layout>

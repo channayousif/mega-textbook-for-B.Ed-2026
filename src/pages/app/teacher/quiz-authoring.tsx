@@ -12,6 +12,7 @@ import {
 } from '@site/src/lib/quizAuthoring';
 import type { QuizItem, AnswerKey, SubmissionQuizItemKind } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Verified-teacher quiz-item / answer-key authoring (Spec 011, US6 / FR-014). Gated on
@@ -81,8 +82,7 @@ function ItemForm({
   return (
     <form
       onSubmit={(e) => { e.preventDefault(); onSave(d); }}
-      className="margin-bottom--md"
-      style={{ border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: 6, padding: '0.75rem 1rem' }}
+      className="work-panel"
     >
       <div className="margin-bottom--sm">
         <label htmlFor="qa-stem">{MESSAGES.stem[locale]}</label>
@@ -247,7 +247,7 @@ function AuthoringContent(): React.ReactElement {
 
   return (
     <div>
-      <h1>{MESSAGES.title[locale]}</h1>
+      <PageHeader title={MESSAGES.title[locale]} icon="quiz" />
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 
       <div className="margin-bottom--md">
@@ -287,7 +287,7 @@ function AuthoringContent(): React.ReactElement {
           ) : (
             <>
               {items.length === 0 && <p>{MESSAGES.noItems[locale]}</p>}
-              <ul style={{ listStyle: 'none', padding: 0 }}>
+              <ul className="plain-list">
                 {items.map((it) => (
                   <li key={it.id} className="margin-bottom--md">
                     {editingId === it.id ? (
@@ -303,9 +303,9 @@ function AuthoringContent(): React.ReactElement {
                         locale={locale}
                       />
                     ) : (
-                      <div style={{ border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: 6, padding: '0.75rem 1rem' }} data-testid="quiz-item">
-                        <p style={{ fontWeight: 700, margin: '0 0 0.5rem' }}>{it.question_text}</p>
-                        <ul style={{ margin: 0 }}>
+                      <div className="quiz-item" data-testid="quiz-item">
+                        <p className="quiz-item__q">{it.question_text}</p>
+                        <ul className="quiz-item__opts">
                           {it.options.map((o) => (
                             <li key={o.key}>
                               <strong>{o.key}.</strong> {o.text}{' '}

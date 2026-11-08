@@ -12,3 +12,4 @@ export { default as Tabs, type TabItem } from './Tabs';
 export { default as BarChart, type Bar } from './BarChart';
 export { default as Donut } from './Donut';
 export { default as ProgressBar } from './ProgressBar';
+export { default as AppPageTitle } from './AppPageTitle';
