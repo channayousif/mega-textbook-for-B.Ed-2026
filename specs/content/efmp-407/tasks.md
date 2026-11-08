@@ -85,3 +85,7 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 | Unit 7 | G4 ur-translation | ▢ | | separate job; English untranslated notice retained |
 | Unit 7 | G5 ur-review | ▢ | | pending translation and independent review |
 | Unit 7 | G6 assets | ▢ | | four English schematics placed with dark variants; Playwright geometry check prohibited by brief and pending; banner prompt-only |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-01/G3/20261108T203238Z-g3-desk-fb34f257.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-03/G3/20261108T203238Z-g3-desk-dd5ef8ea.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-05/G3/20261108T203238Z-g3-desk-7b51d549.json |
+| Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-08/G3/20261108T203238Z-g3-desk-04abd597.json |

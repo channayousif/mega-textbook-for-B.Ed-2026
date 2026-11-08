@@ -135,3 +135,5 @@ recorded resolved and F3 (no Urdu `.ur.svg` figure variants anywhere in EFMP-304
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261105T162929826Z-gates.json |
 | Unit 3 | G3 en-review | ⏳ | agy | advisory: revise; repairs applied for specs/content/efmp-304/reviews/unit-03/G3/20261102T212207Z-g3-desk-fc9b67f2.json; removed specific claims attributed to unverifiable monograph bassham2010 in topic prose and disclosed bibliographic-only limit at point of use in Further reading in EN and UR; recorded 2026-11-03 publisher retrieval attempt in sources. Visual browser/print inspection remains unexecuted under crew constraints; full G3 certification is not claimed and stage stays open (ADR-0019) |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-03/G2/20261105T173239705Z-gates.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261108T203238Z-g3-desk-5daf97ba.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261108T203238Z-g3-desk-ef4a8074.json |

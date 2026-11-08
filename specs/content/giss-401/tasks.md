@@ -105,3 +105,6 @@ After merging `origin/main` (which added the course overview), `node scripts/pre
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-02/G3/01a1b085-18a8-79d2-8bc8-93c034c663a8.json; non-direct-ruling Ijma/Qiyas blueprint unmet; author-run provenance, qualified scholar review, full source verification, independent solve and browser/print evidence pending; G3 remains open and unsigned |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-02/G3/20261108T203238Z-g3-desk-82690fcb.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-05/G3/20261108T203238Z-g3-desk-922808a1.json |
+| Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-07/G3/20261108T203238Z-g3-desk-750f7524.json |

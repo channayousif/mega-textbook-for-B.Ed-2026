@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-407",
+  "unit_no": 8,
+  "stage": "G3",
+  "reviewer_id": "CMY",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/3rd 2026.pdf": "f0de34d0a166d0306afbb87aaca2caa58a077ca6024b26e192b6aa02e09eb028",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "57cb7c1833d82819a3cb674823c9d4d56ca457071b4cefc2e065cb6b8e2b6350",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-3/efmp-407/course-overview.mdx": "211dc9160da9304234988ea143fbf24f06c541e3e8e42a99e3af313af1302b49",
+    "docs/semester-3/efmp-407/unit-08/index.mdx": "ec544b901627e374cd250db191a857892abd2796c24f400b18852397f44af1c3",
+    "docs/semester-3/efmp-407/unit-08/topic-01.mdx": "ec97f049849483ade48a14d5f9dab7b041da9013d6510290c845211ceb7fe749",
+    "docs/semester-3/efmp-407/unit-08/topic-02.mdx": "8e4841e11f7351691f51110365b285f69b57389aa476b357167ac4860b3a6afa",
+    "docs/semester-3/efmp-407/unit-08/unit-assessment.mdx": "eaf8d46544ab834a5b06a41e151116d4832dc3b29effc465bc8d5df964d6e9df",
+    "docs/semester-3/efmp-407/unit-08/unit-teacher-notes.mdx": "b820153f673bdfe448369f10382913a8dae08228dd9d1c13bb6606e2eb6090aa",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "33e46f435128a99f53a38c597b289d730c85b398a7f27b068392552540128622",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "22eaaee128cd13f1756a1c1d4037a8ed7143cfc9f0428c12f49a8b4752fb7f93",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-407/authoring/unit-08.md": "01375cf721f5e047347e6768ecfe373db2af0c894c2d111665de1804fc95f78f",
+    "specs/content/efmp-407/concepts/unit-08.md": "43004ef28e27a081e18569676cb1d5787a8e32c4b45206a20d31d7f4e8880738",
+    "specs/content/efmp-407/content-spec.md": "49567f92314bce46a41d2109cdf675564fc1e25311473d4300436a54e06eb42d",
+    "specs/content/efmp-407/coverage/unit-08.md": "2dc5077bd511054be8a374f95bb72d28b6f97a9b00eb18e83faca0563219c343",
+    "specs/content/efmp-407/figures/unit-08.banner.md": "af877765796308f30c556494707c3507d433ba6fa92b8ed4bf4878c43ddf956c",
+    "specs/content/efmp-407/figures/unit-08.illustration-notes.md": "145edd6fb79413d119d44a5f147c0087911d5627af9ddf2fe735c9e523b4df3a",
+    "specs/content/efmp-407/figures/unit-08.md": "53b0c9ff513f0ad28946b50074edd38971d67a592735a28cc1ee11c083a7dbf3",
+    "specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md": "c5d022710f87074a6334aa5deb30788cddc50899c266e1ca82bd8b378def1d0b",
+    "specs/content/efmp-407/sources/texts/sindh-rte-act-2013.md": "f7e0dd9b4a528d7ddffb8940251a2d378f5f6573e025da9f5a8d93e26c436694",
+    "specs/content/efmp-407/sources/unit-08.md": "6d9a5d5ca592aa399d91722eae0f9e6dc54286fb7259b348a4890dad749b09dc",
+    "specs/content/efmp-407/translation/unit-08.md": "0c8daee9f829b487855dd95324a96142128bc7c06a8f99a90c201ef723d0a604",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/efmp-407/unit-08/fig-U8-1.dark.svg": "ba3333745f5607721ee81821109368281e4c61144ca12521e7b431282109a152",
+    "static/img/figures/efmp-407/unit-08/fig-U8-1.svg": "6b345df1dfae360d3170143245bf0656dfbb225662c11e363c4a244483158134",
+    "static/img/figures/efmp-407/unit-08/fig-U8-2.dark.svg": "e63e381f52b5ef1da96e5e959f2aeb07519e6c775970fc3124f28f3d2a98c015",
+    "static/img/figures/efmp-407/unit-08/fig-U8-2.svg": "a25016cdd653dfb29622cd97e866cc989b60938041c12b4edc8222519b226218",
+    "static/img/figures/efmp-407/unit-08/fig-U8-3.dark.svg": "b8eb480ce3562e32cac00242dfd01f763d17275f21f18a8891d6825fa0321041",
+    "static/img/figures/efmp-407/unit-08/fig-U8-3.svg": "dc52673c2fba73640bb9b6ea81566f767ecb7b2b2171afbf98f609c5ad3945de",
+    "static/img/figures/efmp-407/unit-08/fig-U8-4.dark.svg": "b538a93daa6c7006cacae8fb7500c50dc4754309f4dcd5de6122a06479efd710",
+    "static/img/figures/efmp-407/unit-08/fig-U8-4.svg": "a28fc2219161b94fe03e13461843bd3418f1dd564907ff688034a3113b921f9c",
+    "static/img/figures/efmp-407/unit-08/fig-U8-5.webp": "505692362dbdef6dce69cc532d59512f0994d34e413ca976c3769735d6d2330d"
+  },
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1
+    }
+  ],
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "unverified",
+      "evidence": [
+        "G3 sign-off desk, ledger row 04abd597-eb06-4931-b739-21f55ce6e16d"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "G3 sign-off desk, ledger row 04abd597-eb06-4931-b739-21f55ce6e16d"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "unverified",
+      "evidence": [
+        "G3 sign-off desk, ledger row 04abd597-eb06-4931-b739-21f55ce6e16d"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "G3 sign-off desk, ledger row 04abd597-eb06-4931-b739-21f55ce6e16d"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "G3 sign-off desk, ledger row 04abd597-eb06-4931-b739-21f55ce6e16d"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "unverified",
+      "evidence": [
+        "G3 sign-off desk, ledger row 04abd597-eb06-4931-b739-21f55ce6e16d"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "unverified",
+      "evidence": [
+        "G3 sign-off desk, ledger row 04abd597-eb06-4931-b739-21f55ce6e16d"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: The Jumani and Abbasi (2015) bound passage is not in the paper. The publisher abstract and the full 7-page PDF contain none of its distinctive phrases. Repair the attribution at docs/semester-3/efmp-407/unit-08/topic-01.mdx:57 and :78, specs/content/efmp-407/sources/unit-08.md:9, specs/content/efmp-407/sources/texts/jumani-abbasi-2015.md:23 and specs/content/efmp-407/coverage/unit-08.md:9,11: remove or replace the source, or rewrite the claims to match the paper.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: The Wals et al. (2024) bound passages are presented in quotation marks but are not verbatim from the open-access book. The unit paraphrases fairly and the concepts are present; present the excerpts as paraphrases.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: The Sindh Right of Children to Free and Compulsory Education Act, 2013 URL (pas.gov.pk/uploads/acts/SN-Act-No.XIV-of-2013.pdf) returns HTTP 404. An official copy with the same Section 16 text exists at sja.gos.pk. Update the URL in sources/unit-08.md:10 and topic-02.mdx Further reading.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: topic-02.mdx:61 says Tilbury and Wortman (2004) \"demonstrate that lasting sustainability occurs only when participation reaches active collaboration\". The source is unretrievable and the declaration supports title-level claims only; a demonstrated causal relationship is more than the declaration supports. Soften the claim or replace the source.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: topic-02.mdx:75 attributes a four-part reporting taxonomy to Wals et al. (2024); the \"Community mobilization\" purpose is not in the bound passage. Either support it from the book or drop it from the attribution.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: The six-stage project cycle (topic-01.mdx:48-55, fig-U8-1) is an author elaboration of the bound Wals excerpt's five phases, but coverage/unit-08.md maps U8-01 to Wals for \"project cycle\". Note the elaboration or attribute the six stages to the unit's own synthesis.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: MCQ 6 (unit-assessment.mdx:59) asks which group sits \"alongside teachers and government officials\" on the SMC, but the Act requires equal representation from four groups (Government, teachers, parents and school management); \"school management\" is not among the choices. The key (C) is still the only defensible answer.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: topic-02.mdx:138 (Check your understanding item 3) is tagged Analyze, above the approved formative band Remember/Understand/Apply (content-spec.md:424; style-guide.md:237). The label matches the actual demand, so either reword the item to the band or record an owner ruling that the band extends.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Inherited unresolved finding from specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json: No live browser render of the reviewed pages was possible: the brief prohibits a build, a dev server and Playwright. The live site does publish Unit 8, but the live build is not the reviewed commit. Figure rasters and static layout checks stand in for it.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "Mandatory fresh browser/narrow viewport/A4 print evidence unavailable under crew prohibition; prior accessibility pass not adopted.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "No parent-prepared frozen handoff or independently verified author runtime identity; exact deployed model version unavailable.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "All 95 bound input digests unchanged. Preserve unresolved findings; no full semantic retry, external retrieval or independent bank solve repeated.",
+      "resolved": false
+    }
+  ],
+  "disposition": "revise",
+  "started_at": "2026-11-08T20:32:38.617872+00:00",
+  "completed_at": "2026-11-08T20:45:47.586Z"
+}
