@@ -49,3 +49,57 @@ export function activeKey(items: readonly NavItem[], pathname: string): string |
   const p = pathname.replace(/^\/ur(?=\/|$)/, '') || '/';
   return items.find((it) => it.activeMatch.test(p))?.key ?? null;
 }
+
+/** Admin console pages (src/pages/app/admin/), in the order of the admin hub. */
+export const adminNav: readonly NavItem[] = [
+  { key: 'admin-home', label: { en: 'Console', ur: 'کنسول' }, to: '/app/admin/', activeMatch: /^\/app\/admin\/?$/, icon: 'overview' },
+  { key: 'users', label: { en: 'Users and roles', ur: 'صارفین اور کردار' }, to: '/app/admin/users', activeMatch: /^\/app\/admin\/users/, icon: 'users' },
+  { key: 'records', label: { en: 'Class records', ur: 'کلاسوں کا ریکارڈ' }, to: '/app/admin/records', activeMatch: /^\/app\/admin\/records/, icon: 'records' },
+  { key: 'reviewers', label: { en: 'Reviewers', ur: 'جائزہ کار' }, to: '/app/admin/reviewers', activeMatch: /^\/app\/admin\/reviewers/, icon: 'shield' },
+  { key: 'g3-signoff', label: { en: 'G3 sign-off', ur: 'جی تھری منظوری' }, to: '/app/admin/g3-signoff', activeMatch: /^\/app\/admin\/g3-signoff/, icon: 'signoff' },
+  { key: 'review-decisions', label: { en: 'Review decisions', ur: 'جائزے کے فیصلے' }, to: '/app/admin/review-decisions', activeMatch: /^\/app\/admin\/review-decisions/, icon: 'review' },
+  { key: 'feedback-queue', label: { en: 'Reader feedback', ur: 'قارئین کی رائے' }, to: '/app/admin/feedback-queue', activeMatch: /^\/app\/admin\/feedback-queue/, icon: 'feedback' },
+  { key: 'suggestions', label: { en: 'Suggestions', ur: 'تجاویز' }, to: '/app/admin/suggestions', activeMatch: /^\/app\/admin\/suggestions/, icon: 'suggest' },
+  { key: 'content-status', label: { en: 'Content status', ur: 'مواد کی صورتحال' }, to: '/app/admin/overview', activeMatch: /^\/app\/admin\/overview/, icon: 'analytics' },
+  { key: 'agent-jobs', label: { en: 'Agent jobs', ur: 'ایجنٹ کے کام' }, to: '/app/admin/agent-jobs', activeMatch: /^\/app\/admin\/agent-jobs/, icon: 'jobs' },
+  { key: 'audit', label: { en: 'Privilege audit', ur: 'اختیارات کا ریکارڈ' }, to: '/app/admin/audit', activeMatch: /^\/app\/admin\/(audit|feedback\/?$)/, icon: 'audit' },
+] as const;
+
+/** Reviewer tools, shown to accounts with the reviewer capability. */
+export const reviewerNav: readonly NavItem[] = [
+  { key: 'workbench', label: { en: 'Review workbench', ur: 'جائزے کی میز' }, to: '/app/reviewer/workbench', activeMatch: /^\/app\/reviewer\/workbench/, icon: 'review' },
+  { key: 'review-queue', label: { en: 'Formal review queue', ur: 'باقاعدہ جائزے کی قطار' }, to: '/app/admin/review-queue', activeMatch: /^\/app\/admin\/review-queue/, icon: 'queue' },
+] as const;
+
+export const accountNav: readonly NavItem[] = [
+  { key: 'profile', label: { en: 'Your account', ur: 'آپ کا اکاؤنٹ' }, to: '/app/profile', activeMatch: /^\/app\/profile/, icon: 'settings' },
+] as const;
+
+export type NavSection = { key: string; label: { en: string; ur: string }; items: readonly NavItem[] };
+
+/**
+ * The sidebar for one signed-in user (redesign, 2026-11-08): grouped sections chosen
+ * from the account's role and capabilities, so every /app page shares one menu. A
+ * reviewer keeps the "Review content" apply link out of their learn/teach list.
+ */
+export function navSections(opts: { role: string | null; reviewer: boolean }): NavSection[] {
+  const { role, reviewer } = opts;
+  const withoutApply = (items: readonly NavItem[]) => (reviewer ? items.filter((i) => i.key !== 'review') : items);
+  const sections: NavSection[] = [];
+  if (role === 'student') sections.push({ key: 'learn', label: { en: 'Learn', ur: 'سیکھیں' }, items: withoutApply(studentNav) });
+  if (role === 'teacher') sections.push({ key: 'teach', label: { en: 'Teach', ur: 'پڑھائیں' }, items: withoutApply(teacherNav) });
+  if (role === 'admin') sections.push({ key: 'manage', label: { en: 'Manage', ur: 'انتظام' }, items: adminNav });
+  if (reviewer) sections.push({ key: 'review', label: { en: 'Review', ur: 'جائزہ' }, items: reviewerNav });
+  sections.push({ key: 'account', label: { en: 'Account', ur: 'اکاؤنٹ' }, items: accountNav });
+  return sections;
+}
+
+/** The current item's key across all sections; the most specific match wins. */
+export function activeKeyIn(sections: readonly NavSection[], pathname: string): string | null {
+  const p = pathname.replace(/^\/ur(?=\/|$)/, '') || '/';
+  let best: NavItem | null = null;
+  for (const s of sections) for (const it of s.items) {
+    if (it.activeMatch.test(p) && (!best || it.to.length > best.to.length)) best = it;
+  }
+  return best?.key ?? null;
+}

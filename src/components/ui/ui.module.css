@@ -9,16 +9,7 @@
 .pageLead { margin: 0.35rem 0 0; color: var(--ifm-color-content-secondary); }
 .pageActions { display: flex; flex-wrap: wrap; gap: 8px; }
 
-/* Panel */
-.panel { background: var(--ifm-background-surface-color); border: 1px solid var(--ifm-color-emphasis-200); border-radius: var(--ifm-card-border-radius, 18px); padding: 20px; margin-block-end: 1.25rem; }
-.panelHead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-block-end: 0.75rem; }
-.panelTitle { margin: 0; font-size: 1.15rem; }
 
-/* Stat tile with a step-capped meter */
-.stat { background: var(--ifm-background-surface-color); border: 1px solid var(--ifm-color-emphasis-200); border-radius: 14px; padding: 16px; }
-.statLabel { display: flex; align-items: center; gap: 0.4rem; color: var(--ifm-color-content-secondary); font-size: 0.9rem; font-weight: 600; }
-.statValue { margin-block-start: 0.25rem; font-family: var(--ifm-heading-font-family); font-size: 1.9rem; font-weight: 800; line-height: 1.2; color: var(--ifm-heading-color); }
-.statHint { margin-block-start: 0.35rem; font-size: 0.85rem; color: var(--ifm-color-content-secondary); }
 .meter { position: relative; height: 8px; margin-block-start: 0.6rem; border-radius: 999px; background: var(--ifm-color-emphasis-200); overflow: hidden; }
 .meterFill { position: absolute; inset-block: 0; inset-inline-start: 0; border-radius: 999px; background: var(--ifm-color-primary); }
 .meterFill::after { content: ''; position: absolute; inset-block: 0; inset-inline-end: 0; width: 8px; border-radius: 999px; background: var(--brand-amber, #e5a333); }
@@ -70,3 +61,101 @@
 .loadingLabel { font-size: 0.95rem; }
 @keyframes ui-step { from { transform: translateY(18%); opacity: 0.55; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .loadingStep { animation: none; } }
+
+/* --- Dashboard redesign 2026-11-08: cards, stat tiles, lists, tabs and charts --------
+   Surfaces use the app tokens from src/css/app.css (--app-card, --app-shadow,
+   --app-muted). Tone squares are decorative; every number is real text. */
+.panel { background: var(--app-card, var(--ifm-background-surface-color)); border: 0; border-radius: var(--app-radius, 16px); box-shadow: var(--app-shadow, none); padding: 22px; margin-block-end: 24px; min-width: 0; }
+:global(html[data-theme='dark']) .panel { border: 1px solid var(--app-line, #2a4d52); }
+.panelHead { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-block-end: 1rem; }
+.panelTitle { margin: 0; font-size: 1.15rem; line-height: 1.3; }
+.panelSub { margin: 0.2rem 0 0; font-size: 0.9rem; color: var(--app-muted, var(--ifm-color-content-secondary)); }
+.panelActions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.stat { display: flex; align-items: center; gap: 14px; min-width: 0; padding: 18px; background: var(--app-card, var(--ifm-background-surface-color)); border: 0; border-radius: var(--app-radius, 16px); box-shadow: var(--app-shadow, none); }
+:global(html[data-theme='dark']) .stat { border: 1px solid var(--app-line, #2a4d52); }
+.statIcon { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 48px; height: 48px; border-radius: 14px; }
+.statBody { min-width: 0; flex: 1; }
+.statLabel { color: var(--app-muted, var(--ifm-color-content-secondary)); font-size: 0.9rem; font-weight: 600; }
+.statValue { font-family: var(--ifm-heading-font-family); font-size: 1.6rem; font-weight: 800; line-height: 1.25; color: var(--ifm-heading-color); }
+.statHint { margin-block-start: 0.2rem; font-size: 0.85rem; color: var(--app-muted, var(--ifm-color-content-secondary)); }
+.statGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 24px; margin-block-end: 24px; }
+
+.tone_teal { background: #e3eeec; color: #123e43; }
+.tone_amber { background: #f8e3b8; color: #5c3c05; }
+.tone_green { background: #e2f1e6; color: #1d5a2c; }
+.tone_blue { background: #e3ebf7; color: #1f3f73; }
+.tone_plum { background: #efe6f3; color: #5a2a6e; }
+:global(html[data-theme='dark']) .tone_teal { background: #1f4a50; color: #dcf4f2; }
+:global(html[data-theme='dark']) .tone_amber { background: #4a3510; color: #f8e3b8; }
+:global(html[data-theme='dark']) .tone_green { background: #1d4029; color: #cdebd5; }
+:global(html[data-theme='dark']) .tone_blue { background: #1e2f4d; color: #d4e2f7; }
+:global(html[data-theme='dark']) .tone_plum { background: #3a2244; color: #ecdcf3; }
+
+.welcome { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 24px; overflow: hidden; padding: 26px 28px; margin-block-end: 24px; border-radius: var(--app-radius, 16px); background: linear-gradient(120deg, #123e43, #1b5a60); color: #fff; box-shadow: var(--app-shadow, none); }
+.welcomeText { position: relative; min-width: 0; }
+.welcomeTitle { margin: 0 0 0.35rem; color: #fff; font-size: 1.6rem; line-height: 1.25; }
+.welcomeLead { margin: 0 0 0.9rem; color: #e8f0ee; max-width: 52ch; }
+.welcomeFigure { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin: 0 0 1rem; }
+.welcomeNumber { font-family: var(--ifm-heading-font-family); font-size: 2.25rem; font-weight: 800; line-height: 1; color: #e5a333; }
+.welcomeFigureLabel { color: #e8f0ee; }
+.welcome :global(.button--primary) { background: #e5a333; border-color: #e5a333; color: #123e43; }
+.welcome :global(.button--primary:hover) { background: #f0b44b; border-color: #f0b44b; color: #123e43; }
+.welcomeArt { flex: none; width: min(180px, 30%); }
+:global(html[dir='rtl']) .welcomeTitle { line-height: 2.6; font-size: 1.4rem; }
+@media (max-width: 640px) { .welcomeArt { display: none; } .welcome { padding: 22px; } }
+
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.row { margin: 0; }
+.rowLink { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 10px; margin-inline: -10px; border-radius: 12px; color: inherit; text-decoration: none; }
+a.rowLink:hover { background: #f1f6f5; color: inherit; text-decoration: none; }
+:global(html[data-theme='dark']) a.rowLink:hover { background: #1f4a50; }
+a.rowLink:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 0; }
+.rowIcon { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 40px; height: 40px; border-radius: 12px; }
+.rowText { display: grid; min-width: 0; flex: 1; }
+.rowTitle { font-weight: 700; overflow-wrap: anywhere; }
+.rowSub { font-size: 0.88rem; color: var(--app-muted, var(--ifm-color-content-secondary)); overflow-wrap: anywhere; }
+.rowEnd { display: grid; justify-items: end; gap: 4px; flex: none; }
+.rowValue { font-weight: 700; font-variant-numeric: tabular-nums; }
+.rowBar { display: block; width: 72px; height: 5px; border-radius: 999px; background: #e3e8e6; overflow: hidden; }
+.rowBar > span { display: block; height: 100%; border-radius: 999px; background: var(--ifm-color-primary); }
+.listEmpty { color: var(--app-muted, var(--ifm-color-content-secondary)); }
+.listFooter { margin-block-start: 0.75rem; font-weight: 600; }
+
+.tabsWrap { display: grid; gap: 16px; }
+.tabList { display: flex; flex-wrap: wrap; gap: 6px; padding: 4px; border-radius: 14px; background: var(--app-card, var(--ifm-background-surface-color)); box-shadow: var(--app-shadow, none); width: fit-content; max-width: 100%; }
+.tab { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 0; border-radius: 10px; background: none; color: var(--ifm-font-color-base); font: inherit; font-weight: 700; cursor: pointer; }
+.tab:hover { background: #e3eeec; color: #123e43; }
+.tab:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
+.tabOn, .tabOn:hover { background: #123e43; color: #fff; }
+:global(html[data-theme='dark']) .tab:hover { background: #1f4a50; color: #fff; }
+:global(html[data-theme='dark']) .tabOn, :global(html[data-theme='dark']) .tabOn:hover { background: #a6dfdc; color: #123e43; }
+.tabPanel:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 4px; border-radius: 8px; }
+
+.chart { margin: 0; }
+.chartSvg { display: block; width: 100%; max-height: 220px; }
+.bar { fill: #2f7c80; transform-box: fill-box; transform-origin: 50% 100%; animation: ui-bar var(--motion-slow) var(--motion-ease-out) both; }
+.barHot { fill: #e5a333; transform-box: fill-box; transform-origin: 50% 100%; animation: ui-bar var(--motion-slow) var(--motion-ease-out) both; }
+.barTrack { fill: #eef2f1; }
+.barLabel { font-size: 11px; fill: var(--app-muted, #4b5f62); font-family: inherit; }
+:global(html[data-theme='dark']) .barTrack { fill: #1f4a50; }
+:global(html[data-theme='dark']) .bar { fill: #a6dfdc; }
+.chartCaption { margin-block-start: 0.5rem; font-size: 0.88rem; color: var(--app-muted, var(--ifm-color-content-secondary)); }
+@keyframes ui-bar { from { transform: scaleY(0.05); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .bar, .barHot { animation: none; } }
+
+.donut { position: relative; display: inline-grid; place-items: center; }
+.donutTrack { fill: none; stroke: #e3e8e6; stroke-width: 10; }
+.donutFill { fill: none; stroke: #e5a333; stroke-width: 10; stroke-linecap: round; }
+:global(html[data-theme='dark']) .donutTrack { stroke: #1f4a50; }
+.donutText { position: absolute; display: grid; justify-items: center; text-align: center; line-height: 1.15; }
+.donutText strong { font-family: var(--ifm-heading-font-family); font-size: 1.4rem; }
+.donutText span { font-size: 0.78rem; color: var(--app-muted, var(--ifm-color-content-secondary)); }
+
+.progress { display: grid; gap: 6px; }
+.progressTop { display: flex; justify-content: space-between; gap: 12px; font-size: 0.92rem; font-weight: 600; }
+.progressValue { font-variant-numeric: tabular-nums; color: var(--app-muted, var(--ifm-color-content-secondary)); }
+.progressTrack { height: 8px; border-radius: 999px; background: #e3e8e6; overflow: hidden; }
+:global(html[data-theme='dark']) .progressTrack { background: #1f4a50; }
+.progressFill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #1b5a60, #2f7c80); }
+:global(html[data-theme='dark']) .progressFill { background: #a6dfdc; }

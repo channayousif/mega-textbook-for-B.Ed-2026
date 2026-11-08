@@ -8,6 +8,7 @@ import {
 } from '@site/src/lib/suggestions';
 import type { ImprovementSuggestion, SuggestionCategory, SuggestionStatus } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Admin moderation queue (Spec 005, T019, FR-005) - every suggestion from
@@ -66,7 +67,7 @@ function AdminSuggestionsContent(): React.ReactElement {
   }
 
   return (
-    <main className="container auth-page margin-vert--lg">
+    <div className="app-page-body">
       <h1>Suggestion moderation queue</h1>
 
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
@@ -157,16 +158,18 @@ function AdminSuggestionsContent(): React.ReactElement {
           </tbody>
         </table>
       )}
-    </main>
+    </div>
   );
 }
 
 export default function AdminSuggestionsPage(): React.ReactElement {
   return (
     <Layout title="Admin: suggestion moderation">
+      <AppDashboardShell>
       <AuthGuard requireRole="admin">
         <AdminSuggestionsContent />
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

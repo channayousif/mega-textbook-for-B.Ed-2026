@@ -13,6 +13,7 @@ import { fetchOwnSubmission, computeStudentStatus, statusLabel } from '@site/src
 import { fetchOwnBestScore } from '@site/src/lib/quiz';
 import type { Assignment, AssignmentStudentStatus } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /** A quiz-sourced assignment has no `submissions` row at all (it's scored via `quiz_attempts`) - routes to quiz.tsx, not assignment.tsx/queue.tsx. */
 function detailHref(classId: string, a: Assignment): string {
@@ -385,11 +386,13 @@ export default function AssignmentsPage(): React.ReactElement {
   const classId = useQueryParam('classId');
   return (
     <Layout title="Assignments">
+      <AppDashboardShell>
       <AuthGuard requireRole={['teacher', 'student']}>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId ? <AssignmentsContent classId={classId} /> : <p>No class selected.</p>}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

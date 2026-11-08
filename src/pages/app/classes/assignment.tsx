@@ -12,6 +12,7 @@ import {
 import { fetchGradeForSubmission } from '@site/src/lib/grading';
 import type { Assignment, Grade, Submission } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Assignment detail - student submit/resubmit view (Spec 003, T036/T062).
@@ -262,15 +263,17 @@ export default function AssignmentPage(): React.ReactElement {
   const assignmentId = useQueryParam('assignmentId');
   return (
     <Layout title="Assignment">
+      <AppDashboardShell>
       <AuthGuard requireRole={['teacher', 'student']}>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId && assignmentId ? (
             <AssignmentContent classId={classId} assignmentId={assignmentId} />
           ) : (
             <p>No assignment selected.</p>
           )}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

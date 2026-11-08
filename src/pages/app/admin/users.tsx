@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import { getSupabase } from '@site/src/lib/supabase';
 import type { UserRole, AccountStatus } from '@site/src/contexts/AuthContext';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 type AdminUserRow = {
   id: string;
@@ -114,7 +115,7 @@ function AdminUsersContent(): React.ReactElement {
   }
 
   return (
-    <main className="container auth-page margin-vert--lg">
+    <div className="app-page-body">
       <h1>Users</h1>
 
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
@@ -186,16 +187,18 @@ function AdminUsersContent(): React.ReactElement {
       <p className="margin-top--md">
         <a href="/app/admin/audit">View the privilege-change audit history</a>
       </p>
-    </main>
+    </div>
   );
 }
 
 export default function AdminUsersPage(): React.ReactElement {
   return (
     <Layout title="Admin: users">
+      <AppDashboardShell>
       <AuthGuard requireRole="admin">
         <AdminUsersContent />
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

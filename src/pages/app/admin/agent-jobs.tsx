@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import { getSupabase } from '@site/src/lib/supabase';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 type Job = { id: string; suggestion_id: string | null; review_id: string | null; instructions: string; status: string; provider: string; host_config_name: string; branch_name: string; attempt: number; diff_summary: string | null; checks: unknown; error_text: string | null; pr_url: string | null; created_at: string };
 type Source = { id: string; body?: string; comments?: string; course_code?: string; unit_no?: number };
@@ -66,7 +67,7 @@ function Jobs(): React.ReactElement {
     const a = document.createElement('a'); a.href = url; a.download = `${job.id}.json`; a.click(); URL.revokeObjectURL(url);
   }
   const sources = kind === 'suggestion' ? suggestions : reviews;
-  return <main className="container auth-page margin-vert--lg"><p><Link to="/app/admin/">Admin dashboard</Link></p>
+  return <div className="app-page-body"><p><Link to="/app/admin/">Admin dashboard</Link></p>
     <h1>Agent jobs and settings</h1>
     <p>Approved jobs propose changes through draft pull requests. Host credentials and named CLI configurations stay on the heartbeat host.</p>
     {error && <div className="alert alert--danger" role="alert">{error}</div>}{notice && <div className="alert alert--success" role="status">{notice}</div>}
@@ -95,6 +96,8 @@ function Jobs(): React.ReactElement {
       <button className="button button--sm button--secondary" onClick={() => exportJob(j)}>Manual export</button>
       {j.status === 'failed' && <button className="button button--sm button--primary margin-left--sm" disabled={busy} onClick={() => void retry(j.id)}>Retry job</button>}
     </article>)}
-  </main>;
+  </div>;
 }
-export default function AdminAgentJobsPage(): React.ReactElement { return <Layout title="Agent jobs"><OwnerConsoleGuard><Jobs /></OwnerConsoleGuard></Layout>; }
+export default function AdminAgentJobsPage(): React.ReactElement { return <Layout title="Agent jobs">
+      <AppDashboardShell><OwnerConsoleGuard><Jobs /></OwnerConsoleGuard></AppDashboardShell>
+    </Layout>; }

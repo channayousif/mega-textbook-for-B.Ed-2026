@@ -10,6 +10,7 @@ import {
 import type { Class, Enrollment } from '@site/src/lib/types';
 import { fetchCourseOptions, type CourseOptionGroup } from '@site/src/lib/courseOptions';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Class list + create (teacher) / join-by-code + joined list (student) -
@@ -287,11 +288,13 @@ function ClassesContent(): React.ReactElement {
 export default function ClassesIndexPage(): React.ReactElement {
   return (
     <Layout title="Classes">
+      <AppDashboardShell>
       <AuthGuard requireRole={['teacher', 'student']}>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           <ClassesContent />
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

@@ -13,6 +13,7 @@ import { useAuth } from '@site/src/contexts/AuthContext';
 import { listOwnTemplates, createTemplate } from '@site/src/lib/assignmentTemplates';
 import type { AssignmentSourceKind, AssignmentTemplate } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 /**
  * Assignment creation - unit-item picker, quiz picker, or custom (Spec 003,
@@ -334,11 +335,13 @@ export default function AssignmentNewPage(): React.ReactElement {
   const classId = useQueryParam('classId');
   return (
     <Layout title="New assignment">
+      <AppDashboardShell>
       <AuthGuard requireRole="teacher">
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId ? <AssignmentNewContent classId={classId} /> : <p>No class selected.</p>}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

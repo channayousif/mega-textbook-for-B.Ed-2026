@@ -5,6 +5,7 @@ import AuthGuard from '@site/src/components/AuthGuard';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { getSupabase } from '@site/src/lib/supabase';
 import { fetchCatalog, type Catalog } from '@site/src/lib/catalog';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 function ApplicationForm(): React.ReactElement {
   const { profile } = useAuth();
@@ -27,7 +28,7 @@ function ApplicationForm(): React.ReactElement {
     setMessage(error ? error.message : 'Application submitted. An admin will review your evidence.');
     if (!error) { setEvidence(''); const { data } = await db.from('reviewer_applications').select('id,track,course_code,status').eq('applicant_id', profile.id); setApplications(data ?? []); }
   }
-  return <main className="container auth-page margin-vert--lg"><h1>Apply to review content</h1>
+  return <div className="app-page-body"><h1>Apply to review content</h1>
     <p>Request access to one track or a single course. Approval depends on recorded qualification evidence.</p>
     <form className="work-form" onSubmit={e => void submit(e)}>
       <label>Track <select className="input" value={track} onChange={e => { setTrack(e.target.value as 'bed' | 'licence'); setCourse(''); }}><option value="bed">B.Ed</option><option value="licence">Teaching licence</option></select></label>
@@ -39,6 +40,8 @@ function ApplicationForm(): React.ReactElement {
     {message && <p role="status">{message}</p>}
     <h2>Your applications</h2>{applications.length === 0 ? <p>No applications yet.</p> : <ul>{applications.map(a => <li key={a.id}>{a.track} {a.course_code ?? 'all courses'}: {a.status}</li>)}</ul>}
     <p><Link to="/app/reviewer/workbench">Open review workbench</Link></p>
-  </main>;
+  </div>;
 }
-export default function ReviewerApplyPage(): React.ReactElement { return <Layout title="Apply to review"><AuthGuard><ApplicationForm /></AuthGuard></Layout>; }
+export default function ReviewerApplyPage(): React.ReactElement { return <Layout title="Apply to review">
+      <AppDashboardShell><AuthGuard><ApplicationForm /></AuthGuard></AppDashboardShell>
+    </Layout>; }

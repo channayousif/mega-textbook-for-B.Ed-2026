@@ -81,12 +81,13 @@ html[data-theme='dark'] {
 .brand-logo-slot--short .brand-logo { height: 44px; }
 .navbar { transition: min-height var(--motion-base) var(--motion-ease-out); }
 @media (min-width: 997px) {
-  html:not([data-nav-scrolled]):not(.plugin-docs) .navbar { --ifm-navbar-height: 106px; height: auto; min-height: 106px; }
+  html:not([data-nav-scrolled]):not(.plugin-docs):not(.app-page) .navbar { --ifm-navbar-height: 106px; height: auto; min-height: 106px; }
 }
-/* Course pages keep the compact header from the start, so the topic title stays near
-   the top (tests/e2e/reader-chrome.spec.ts): calm on the page. */
-html[data-nav-scrolled] .brand-logo-slot--tall, html.plugin-docs .brand-logo-slot--tall { display: none; }
-html[data-nav-scrolled] .brand-logo-slot--short, html.plugin-docs .brand-logo-slot--short { display: block; }
+/* Course pages and app pages keep the compact header from the start, so the topic
+   title stays near the top (tests/e2e/reader-chrome.spec.ts) and the app top bar is
+   one fixed height: calm on the page. */
+html[data-nav-scrolled] .brand-logo-slot--tall, html.plugin-docs .brand-logo-slot--tall, html.app-page .brand-logo-slot--tall { display: none; }
+html[data-nav-scrolled] .brand-logo-slot--short, html.plugin-docs .brand-logo-slot--short, html.app-page .brand-logo-slot--short { display: block; }
 @media (max-width: 996px) {
   .brand-logo-slot--tall { display: none; }
   .brand-logo-slot--short { display: block; }

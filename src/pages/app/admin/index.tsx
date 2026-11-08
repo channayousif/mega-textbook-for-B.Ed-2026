@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 
 const sections = [
   ['users', 'Users and roles', 'صارفین اور کردار', 'Select an account, manage access and suspension.'],
@@ -21,8 +22,9 @@ export default function AdminHome(): React.ReactElement {
   const { i18n } = useDocusaurusContext();
   const ur = i18n.currentLocale === 'ur';
   return <Layout title={ur ? 'منتظم کا ڈیش بورڈ' : 'Admin dashboard'}>
+      <AppDashboardShell>
     <OwnerConsoleGuard>
-      <main className="container auth-page margin-vert--lg" dir={ur ? 'rtl' : 'ltr'}>
+      <div className="app-page-body" dir={ur ? 'rtl' : 'ltr'}>
         <h1>{ur ? 'منتظم کا ڈیش بورڈ' : 'Admin dashboard'}</h1>
         <p>{ur ? 'کام شروع کرنے کے لیے ایک حصہ منتخب کریں۔' : 'Choose the record or workflow you need.'}</p>
         <div className="work-grid">
@@ -30,7 +32,8 @@ export default function AdminHome(): React.ReactElement {
             <strong>{ur ? urLabel : en}</strong><span>{ur ? urLabel : description}</span>
           </Link>)}
         </div>
-      </main>
+      </div>
     </OwnerConsoleGuard>
-  </Layout>;
+  </AppDashboardShell>
+    </Layout>;
 }
