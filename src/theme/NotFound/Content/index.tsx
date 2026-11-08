@@ -31,8 +31,8 @@ const T = {
 export default function NotFoundContent({ className }: { className?: string }): React.ReactElement {
   const { i18n } = useDocusaurusContext();
   const t = T[i18n.currentLocale === 'ur' ? 'ur' : 'en'];
-  const light = useBaseUrl('/img/brand/icon-color.svg');
-  const dark = useBaseUrl('/img/brand/icon-reverse.svg');
+  const light = useBaseUrl('/img/kit/icon-color.svg');
+  const dark = useBaseUrl('/img/kit/icon-reverse.svg');
   return (
     <main className={clsx('container', styles.page, className)}>
       <ThemedImage className={styles.mark} sources={{ light, dark }} width={64} height={64} alt="" />

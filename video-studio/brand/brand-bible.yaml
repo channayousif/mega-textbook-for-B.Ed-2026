@@ -44,8 +44,8 @@ typography:              # LOCK after Phase 1
   digits: "western"                 # "western" (123) or "urdu" (۱۲۳)
 
 logo:
-  full: "repo:static/img/brand/horizontal-color.svg"   # logo kit v2 (2026-11-07); reverse version beside it for dark backgrounds
-  mark: "repo:static/img/brand/favicon.svg"            # square mark, logo kit v2; owner changed the video mark to v2 on 2026-11-08
+  full: "repo:static/img/kit/horizontal-color.svg"   # logo kit v2 (2026-11-07); reverse version beside it for dark backgrounds
+  mark: "repo:static/img/kit/favicon.svg"            # square mark, logo kit v2; owner changed the video mark to v2 on 2026-11-08
 
 sets:                    # backgrounds drawn once, reused
   classroom: { file: "assets/sets/classroom.png", description: "Bright Sindh government-school classroom, green board, ceramic-tile floor, window light, potted plant, flat 2D illustration" }
