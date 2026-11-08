@@ -141,18 +141,20 @@ function courseStatus() {
 const config: Config = {
   title: SITE_TITLE,
   tagline: 'A bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/brand/favicon.svg',
   url: 'https://textbook.com.pk',
   baseUrl: '/',
   trailingSlash: true, // emit /path/index.html so plain static file servers (nginx/Apache) serve directory URLs
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // The declared favicon had no file behind it, so every page requested a 404.
-  // An SVG icon plus a PNG fallback covers everything current.
+  // Logo kit v2 icons (2026-11-07): SVG favicon above, PNG fallback, touch icon and
+  // the install manifest. The video studio's brand-bible uses the same v2 mark.
   headTags: [
-    { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/favicon.png' } },
-    { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' } },
+    { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/brand/icon-48.png' } },
+    { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/brand/icon-180.png' } },
+    { tagName: 'link', attributes: { rel: 'manifest', href: '/site.webmanifest' } },
+    { tagName: 'meta', attributes: { name: 'theme-color', content: '#123E43' } },
     // Marks a returning visitor before paint, the reason `data-theme` works without a
     // flash (ADR-0018), so the landing page can reserve the welcome strip's height.
     {
