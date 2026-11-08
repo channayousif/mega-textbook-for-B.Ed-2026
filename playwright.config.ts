@@ -34,6 +34,11 @@ loadEnv({ path: '.env.local', quiet: true });
  */
 export default defineConfig({
   testDir: './tests/e2e',
+  // Sweep leaked @example.test fixtures before and after every run. Specs
+  // clean up after themselves, but not when a test times out mid-way
+  // (tests/test-account-sweep.mjs).
+  globalSetup: './tests/e2e/global-sweep.ts',
+  globalTeardown: './tests/e2e/global-sweep.ts',
   // CI gets double the per-test and per-assertion time. Its Supabase backend
   // shares a 2-CPU host with production and the crew, and under that load
   // Supabase-backed specs rotated through 30s timeouts on 2026-10-28/29 with

@@ -21,7 +21,7 @@ import { describe, it, expect } from 'vitest';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { PROFILE_DEPENDENTS } from '../profile-dependents.mjs';
+import { PROFILE_DEPENDENTS, PROFILE_REFERENCES } from '../profile-dependents.mjs';
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const MIGRATIONS = join(REPO, 'supabase', 'migrations');
@@ -97,5 +97,13 @@ describe('PROFILE_DEPENDENTS covers every foreign key to profiles(id)', () => {
     expect(listed.has('privilege_audit.subject_id')).toBe(false);
     expect(keys.find((k) => k.table === 'privilege_audit' && k.column === 'subject_id')?.onDelete)
       .toBe('cascade');
+  });
+});
+
+describe('PROFILE_REFERENCES names every foreign key to profiles(id), whatever its delete rule', () => {
+  it('matches the migrations exactly, so the tombstone purge cannot miss a reference', () => {
+    const real = [...new Set(keys.map((k) => `${k.table}.${k.column}`))].sort();
+    const refs = PROFILE_REFERENCES.map(([t, c]) => `${t}.${c}`).sort();
+    expect(refs).toEqual(real);
   });
 });

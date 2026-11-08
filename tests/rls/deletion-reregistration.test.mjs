@@ -10,6 +10,7 @@ import {
   rlsConfigured, callEdgeFunction, serviceClient,
   testEmail, cleanupUsers, signIn,
 } from './_helpers.mjs';
+import { TEST_PASSWORD } from './_password.mjs';
 
 describe.skipIf(!rlsConfigured)('re-registering a deleted email is unrelated to its tombstone', () => {
   const created = [];
@@ -45,7 +46,7 @@ describe.skipIf(!rlsConfigured)('re-registering a deleted email is unrelated to 
 /** createSignedInUser, but with a caller-chosen email (needed to reuse the same address). */
 async function createSignedInUserAt(email) {
   const svc = serviceClient();
-  const password = 'Test-Passw0rd!';
+  const password = TEST_PASSWORD;
   const { data, error } = await svc.auth.admin.createUser({ email, password, email_confirm: true });
   if (error) throw new Error(`createUser(${email}): ${error.message}`);
   const { client, error: signInError, accessToken } = await signIn(email, password);
