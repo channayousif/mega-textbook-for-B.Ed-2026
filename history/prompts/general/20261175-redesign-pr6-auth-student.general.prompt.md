@@ -45,7 +45,7 @@ Merged #489 (PR 5) on green. #488 (PR 4) failed e2e: the tall header pushed topi
 ## Outcome
 
 - ✅ Impact: auth pages and the student area take the v2 look; teacher, classes, admin and reviewer pages pick up the shared panel and sidebar styles too.
-- 🧪 Tests: tsc clean for changed files; build PASS; auth screenshots EN light, UR dark and phone; see PR for gates and e2e.
+- 🧪 Tests: tsc clean for changed files; npm run check:all 20/20 PASS including build; auth screenshots EN light, UR dark and phone; signed-in dashboard e2e runs in CI (needs live Supabase).
 - 📁 Files: AuthFrame, four auth pages, badges, student pages, custom.css.
 - 🔁 Next prompts: PR 7 teacher and classes; PR 8 admin, reviewer and G3 desk.
 - 🧠 Reflection: signed-in dashboard screens could not be checked by eye without test logins; the owner was asked for them.
@@ -60,6 +60,6 @@ Merged #489 (PR 5) on green. #488 (PR 4) failed e2e: the tall header pushed topi
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: an inline max-width on the form's main element included the new padding and squeezed the form; the width moved to an inner wrapper.
-- Graders run and results (PASS/FAIL): build PASS.
+- Graders run and results (PASS/FAIL): check:all PASS.
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): none.
