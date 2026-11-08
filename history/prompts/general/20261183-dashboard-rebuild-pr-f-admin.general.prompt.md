@@ -38,7 +38,7 @@ Approved plan PR F, the last dashboard part. Every admin, reviewer and profile p
 ## Outcome
 
 - ✅ Impact: all six parts of the dashboard rebuild are done; every signed-in page shares one layout and component set.
-- 🧪 Tests: tsc clean; 176 signed-in admin and teacher shots (EN and UR, light and dark, 1440 and 390): no overflow, no broken images, zero axe violations; 17 tests in 11 admin, reviewer and auth e2e specs PASS locally against the live Supabase; check:all see PR.
+- 🧪 Tests: tsc clean; 176 signed-in admin and teacher shots (EN and UR, light and dark, 1440 and 390): no overflow, no broken images, zero axe violations; 17 tests in 11 admin, reviewer and auth e2e specs PASS locally against the live Supabase; npm run check:all 20/20 PASS.
 - 📁 Files: admin, reviewer and profile pages, app.css.
 - 🔁 Next prompts: owner review of the live dashboards; delete the QA accounts with scripts/qa/seed-qa-accounts.mjs --delete when no longer needed.
 - 🧠 Reflection: Infima makes bare tables scroll containers; inside a focusable wrapper the table must be a plain table or axe flags the unfocusable inner scroller.
