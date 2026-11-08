@@ -13,29 +13,29 @@ labels: ["crew", "agy", "illustrate"]
 links:
   spec: specs/content/efmp-407/content-spec.md
   ticket: null
-  adr: history/adr/0029-gemini-agy-raster-illustration-producer.md
+  adr: null
   pr: null
 files:
-  - docs/semester-3/efmp-407/unit-07/index.mdx
-  - history/prompts/efmp-407/crew-efmp-407-u07-illustrate.misc.prompt.md
-  - history/prompts/general/2467-efmp-407-u07-illustrate.general.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-07/index.mdx
-  - specs/content/efmp-407/figures/unit-07.banner.md
-  - specs/content/efmp-407/figures/unit-07.illustration-notes.md
-  - specs/content/efmp-407/figures/unit-07.md
-  - specs/content/efmp-407/reviews/unit-07/G2/20261108T155607697Z-gates.json
-  - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-bloom-bands.txt
-  - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-concept-graph.txt
-  - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-depth-gate.txt
-  - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-docs-sync.txt
-  - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-figures.txt
-  - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-no-answer-keys.txt
-  - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-no-em-dash.txt
-  - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/validate-content.txt
-  - specs/content/efmp-407/tasks.md
-  - static/img/figures/efmp-407/unit-07/fig-U7-5.webp
+ - docs/semester-3/efmp-407/unit-07/index.mdx
+ - history/prompts/efmp-407/crew-efmp-407-u07-illustrate.misc.prompt.md
+ - history/prompts/general/2467-efmp-407-u07-illustrate.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-407/unit-07/index.mdx
+ - specs/content/efmp-407/figures/unit-07.banner.md
+ - specs/content/efmp-407/figures/unit-07.illustration-notes.md
+ - specs/content/efmp-407/figures/unit-07.md
+ - specs/content/efmp-407/reviews/unit-07/G2/20261108T155607697Z-gates.json
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261108T155607697Z/validate-content.txt
+ - specs/content/efmp-407/tasks.md
+ - static/img/figures/efmp-407/unit-07/fig-U7-5.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -73,9 +73,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u07-translate, translate, codex) repair_en must resolve F1 before G4 resumes; translation status remains draft.
 - (efmp-407-u07-review_en-r1, review_en, opencode) F1 blocking - NEP 2009 is cited to section 6.1 in topic-01.mdx:33 and :107, sources/unit-07.md:7 and sources/texts/nep-2009.md:7; the passage is in section 6.2 (Curriculum Reform), policy action 5 (printed page 36), so repair_en should fix those four locators.
 
+
 ## Response snapshot
 
-Produced, visually inspected, and placed the EFMP-407 Unit 7 raster banner illustration in English and Urdu index files, refreshed G2 gate evidence, and verified all 14 content gates pass cleanly.
+Placed and verified EFMP-407 Unit 7 banner illustration in English and draft Urdu index files, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -87,13 +88,13 @@ Produced, visually inspected, and placed the EFMP-407 Unit 7 raster banner illus
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the EFMP-407 Unit 7 raster banner illustration in English and Urdu unit index files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Shipped / changed: Placed and verified EFMP-407 Unit 7 banner illustration in English and draft Urdu index files, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Placed banner fig-U7-5.webp in English and Urdu index.mdx and updated unit-07.banner.md to placed.
-  - Refreshed G2 gate evidence to 20261108T155607697Z-gates.json with all 14 content gates passing cleanly.
-  - Independent G3 English review and G5 Urdu review remain open and uncertified; NEP 2009 locator finding belongs to repair_en.
+  - Placed banner fig-U7-5.webp in English and draft Urdu index files, updated unit-07.banner.md to placed, and refreshed G2 gate evidence.
+  - Full Urdu translation and independent G3 English / G5 Urdu reviews remain open and uncertified.
+  - The existing NEP 2009 locator finding reported by review_en belongs to repair_en and remains unchanged.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
