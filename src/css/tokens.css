@@ -74,10 +74,26 @@ html[data-theme='dark'] {
 }
 
 .navbar__brand { margin-inline-end: 1.25rem; }
-.brand-logo { display: block; width: auto; height: 48px; } /* 242px wide, the kit's minimum */
-@media (max-width: 996px) {
-  .brand-logo { height: 40px; }
+/* Header logo (src/theme/Navbar/Logo): the bilingual logo at 90px (360px wide, the
+   kit's minimum) at the top of wide pages, the horizontal logo at 44px once scrolled
+   and always on phones. The swap is instant; only the navbar height eases. */
+.brand-logo-slot { display: block; }
+.brand-logo { display: block; width: auto; }
+.brand-logo-slot--tall .brand-logo { height: 90px; }
+.brand-logo-slot--short { display: none; }
+.brand-logo-slot--short .brand-logo { height: 44px; }
+.navbar { transition: min-height var(--motion-base) var(--motion-ease-out); }
+@media (min-width: 997px) {
+  html:not([data-nav-scrolled]) .navbar { --ifm-navbar-height: 106px; height: auto; min-height: 106px; }
 }
+html[data-nav-scrolled] .brand-logo-slot--tall { display: none; }
+html[data-nav-scrolled] .brand-logo-slot--short { display: block; }
+@media (max-width: 996px) {
+  .brand-logo-slot--tall { display: none; }
+  .brand-logo-slot--short { display: block; }
+  .brand-logo-slot--short .brand-logo { height: 40px; }
+}
+@media print { .brand-logo-slot--short { display: none; } .brand-logo-slot--tall { display: block; } }
 
 /* Urdu small text is Naskh: Nastaliq needs too much height at these sizes. */
 html[dir='rtl'] :is(
@@ -109,7 +125,9 @@ html[dir='rtl'] :is(
 html[data-theme='dark'] .navbar .navbar-cta.navbar__link,
 html[data-theme='dark'] .navbar .navbar-cta.navbar__link:hover { color: var(--brand-ink); }
 
-.footer--dark { --ifm-footer-background-color: var(--brand-ink); }
+/* Footer: deeper teal than the hero bands, with the logo's amber step as its top edge. */
+.footer--dark { --ifm-footer-background-color: #0e3136; --ifm-footer-link-color: #e8f0ee; --ifm-footer-title-color: #fff; border-top: 4px solid var(--brand-amber); }
+.footer--dark .footer__link-item:hover { color: var(--brand-amber); }
 
 /* Reveal on scroll (src/lib/useReveal.ts): "bubble in", a short rise. Content is
    visible unless JavaScript has marked it pending, and print always shows it. */
@@ -165,3 +183,13 @@ html[data-theme='dark'] .navbar .navbar-cta.navbar__link:hover { color: var(--br
   .topic-section--summative { --section-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3.500l2.600 5.400 5.900.8-4.300 4.100 1 5.900L12 16.900l-5.200 2.800 1-5.900-4.300-4.100 5.900-.8z'/%3E%3C/svg%3E"); }
   .topic-section--reading { --section-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 3.500h9l3 3v14H6zM9 10h6M9 14h6'/%3E%3C/svg%3E"); }
 }
+
+/* Standalone Markdown pages (About, Contact, Privacy): the kit's amber step under the
+   title and the step divider above each section. Course pages are not affected. The
+   RTL build moves the bars to the right by itself. */
+html.mdx-page article > header > h1 {
+  padding-block-end: 0.6rem;
+  margin-block-end: 1.5rem;
+  background: linear-gradient(var(--brand-amber), var(--brand-amber)) no-repeat left bottom / 96px 4px;
+}
+html.mdx-page article > h2 { padding-block-start: 1.6rem; background: url('/img/patterns/steps-divider.svg') no-repeat left top / 120px 12px; }

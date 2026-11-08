@@ -135,3 +135,6 @@ base-voice-samples/
 *.ogg
 # The package archive the sub-project was installed from
 video-studio-sdd-ri*.zip
+
+# Course covers, generated before build and start (scripts/design/course-covers.mjs)
+static/img/covers/
