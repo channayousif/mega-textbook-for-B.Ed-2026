@@ -41,3 +41,27 @@ export const PROFILE_DEPENDENTS = [
   ['answer_keys', 'created_by'],
   ['classes', 'teacher_id'],
 ];
+
+/**
+ * Every column that points at `profiles(id)`, whatever its delete rule.
+ *
+ * PROFILE_DEPENDENTS above is only the NO ACTION subset, the keys that block a
+ * delete. Deciding whether a tombstone is still needed (FR-021) has to look
+ * wider: a SET NULL audit column or a CASCADE grant history also records who
+ * did what, and deleting the tombstone would erase or blank it. Used by
+ * scripts/ops/purge-test-accounts.mjs, and checked for exact agreement with the
+ * migrations by tests/unit/profile-dependents.test.mjs.
+ */
+export const PROFILE_REFERENCES = [
+  ...PROFILE_DEPENDENTS,
+  ['privilege_audit', 'subject_id'],
+  ['privilege_audit', 'actor_id'],
+  ['student_notes', 'student_id'],
+  ['assignment_templates', 'teacher_id'],
+  ['reviewer_applications', 'decided_by'],
+  ['reviewer_grants', 'granted_by'],
+  ['reviewer_grants', 'revoked_by'],
+  ['review_submissions', 'decided_by'],
+  ['agent_configuration', 'updated_by'],
+  ['g3_signoffs', 'decided_by'],
+].filter(([t, c], i, all) => all.findIndex(([t2, c2]) => t2 === t && c2 === c) === i);

@@ -38,6 +38,12 @@ Deno.serve(async (req: Request) => {
   const { data: profiles, error: profilesError } = await service
     .from('profiles')
     .select('id, auth_user_id, full_name, role, verified_teacher, reviewer, status, role_chosen_at, created_at, deleted_at')
+    // Only accounts someone can sign in to. Tombstones (deleted_at set) are kept
+    // for FR-021 but there is nothing to manage on them, and a profile with no
+    // auth_user_id and no deleted_at is a stranded test fixture, which listed
+    // as an anonymous "-" row (scripts/ops/purge-test-accounts.mjs).
+    .is('deleted_at', null)
+    .not('auth_user_id', 'is', null)
     .order('created_at', { ascending: false });
   if (profilesError) {
     return new Response(JSON.stringify({ error: profilesError.message }), { status: 500 });
@@ -63,9 +69,7 @@ Deno.serve(async (req: Request) => {
 
   const combined = (profiles ?? []).map((p) => ({
     ...p,
-    // Tombstones (deleted_at set) have auth_user_id already nulled — no email
-    // to show, which is correct: the identity is gone, only the record remains.
-    email: p.auth_user_id ? emailByAuthId.get(p.auth_user_id) ?? null : null,
+    email: emailByAuthId.get(p.auth_user_id) ?? null,
   }));
 
   return new Response(JSON.stringify({ users: combined }), {

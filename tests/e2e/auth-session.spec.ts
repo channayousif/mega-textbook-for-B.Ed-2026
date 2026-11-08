@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { deleteUsers } from './_cleanup';
+import { TEST_PASSWORD } from './_password';
 
 /**
  * T046 [US4] — session persists across docs<->app navigation and across a
@@ -22,7 +23,7 @@ const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const configured = Boolean(SUPABASE_URL && ANON_KEY && SERVICE_KEY);
 test.skip(!configured, 'requires DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY');
 
-const PASSWORD = 'Test-Passw0rd!';
+const PASSWORD = TEST_PASSWORD;
 const DOCS_PAGE = '/semester-1/efmp-301/unit-01/';
 
 test('session persists navigating docs <-> app pages, and across a simulated browser restart', async ({ page, browser }) => {
