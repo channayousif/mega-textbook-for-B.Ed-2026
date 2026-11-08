@@ -36,7 +36,7 @@ Merged #487 after its CI passed on the main-merged head; #485 and #486 deployed 
 ## Outcome
 
 - ✅ Impact: reader pages take the v2 identity around the text; reading column, tools and print unchanged.
-- 🧪 Tests: tsc clean for changed files; build PASS; screenshots of a topic page EN light, UR dark, phone, section heading and Next card; strip labels read "Topic 2 of 4 in this unit" and its Urdu form; no overflow.
+- 🧪 Tests: tsc clean for changed files; npm run check:all 20/20 PASS including build; screenshots of a topic page EN light, UR dark, phone, section heading and Next card; strip labels read "Topic 2 of 4 in this unit" and its Urdu form; no overflow.
 - 📁 Files: course bar, its styles, tokens.css reader rules.
 - 🔁 Next prompts: PR 6 auth and student dashboard.
 - 🧠 Reflection: the strip shows position, not completion, so it needs no account or stored progress.
@@ -51,6 +51,6 @@ Merged #487 after its CI passed on the main-merged head; #485 and #486 deployed 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: custom.css loads after tokens.css, so the Next card rule needed a two-class selector to win.
-- Graders run and results (PASS/FAIL): build PASS; check:all see PR.
+- Graders run and results (PASS/FAIL): check:all PASS.
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): none.
