@@ -36,7 +36,7 @@ PR 7 combines the plan's PRs 7 and 8, because PR 6's shared CSS already restyled
 ## Outcome
 
 - ✅ Impact: all signed-in areas share the v2 look.
-- 🧪 Tests: tsc clean for changed files; check:all see PR; signed-in e2e in CI.
+- 🧪 Tests: tsc clean for changed files; npm run check:all 19/20 first run, check:content-status failed on the stale git-ignored status file and passed after regenerating it (no tracked change); signed-in e2e in CI.
 - 📁 Files: staff pages' loading states, guards, G3 desk CSS, app table CSS.
 - 🔁 Next prompts: PR 8 clean-up (v1 leftovers, unused CSS, budgets).
 - 🧠 Reflection: the plan's separate teacher and admin PRs were mostly covered by shared CSS in PR 6, so one smaller PR replaced two.
@@ -51,6 +51,6 @@ PR 7 combines the plan's PRs 7 and 8, because PR 6's shared CSS already restyled
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none.
-- Graders run and results (PASS/FAIL): see PR.
+- Graders run and results (PASS/FAIL): check:all PASS after the status refresh.
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): none.
