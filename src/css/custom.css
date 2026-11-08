@@ -1174,6 +1174,7 @@ html[dir='rtl'] .dashboard-shell__sidebar {
 .dashboard-shell__navlink {
   display: flex;
   align-items: center;
+  gap: 0.6rem;
   min-height: 44px;
   padding: 0 0.75rem;
   border-radius: 6px;

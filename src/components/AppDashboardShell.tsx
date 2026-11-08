@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import StudentDashboardGuard from '@site/src/components/StudentDashboardGuard';
 import TeacherDashboardGuard from '@site/src/components/TeacherDashboardGuard';
 import { studentNav, teacherNav, activeKey, type NavItem } from '@site/src/lib/dashboardNav';
+import Icon from '@site/src/components/icons/Icon';
 
 /**
  * Shared authenticated app shell (Spec 011, US1 / FR-001..FR-005).
@@ -54,7 +55,8 @@ function NavList({
               data-nav-key={it.key}
               onClick={onNavigate}
             >
-              {it.label[locale]}
+              {it.icon && <Icon name={it.icon} size={20} accent={isActive} />}
+              <span>{it.label[locale]}</span>
             </Link>
           </li>
         );
