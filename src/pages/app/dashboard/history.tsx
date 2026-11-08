@@ -5,6 +5,7 @@ import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchPastSemesters, type PastSemesterGroup } from '@site/src/lib/dashboardQueries';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader, EmptyState } from '@site/src/components/ui';
 
 /**
  * History area (Spec 004, T029, FR-007). Past (archived) semesters, grouped,
@@ -50,19 +51,19 @@ function HistoryContent(): React.ReactElement {
 
   return (
     <div>
-      <h2>{MESSAGES.title[locale]}</h2>
+      <PageHeader title={MESSAGES.title[locale]} icon="history" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
       {groups.length === 0 ? (
-        <p>{MESSAGES.noHistory[locale]}</p>
+        <div className="work-panel"><EmptyState icon="history" title={MESSAGES.noHistory[locale]} /></div>
       ) : (
         groups.map((group) => (
-          <section key={group.termLabel} data-testid="semester-group" style={{ marginBottom: '2rem' }}>
-            <h3>{group.termLabel}</h3>
+          <section key={group.termLabel} data-testid="semester-group" className="work-panel">
+            <h2>{group.termLabel}</h2>
             {group.classes.map(({ klass, grades }) => (
-              <div key={klass.id} style={{ marginBottom: '1rem' }}>
-                <h4>{klass.name} - {klass.course_code}</h4>
+              <div key={klass.id} className="history-class">
+                <h3>{klass.name} - {klass.course_code}</h3>
                 {grades.length === 0 ? (
                   <p>-</p>
                 ) : (

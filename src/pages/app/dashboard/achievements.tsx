@@ -6,6 +6,7 @@ import { ACHIEVEMENT_CATALOG, fetchEarnedAchievements } from '@site/src/lib/achi
 import type { AchievementKey, StudentAchievement } from '@site/src/lib/types';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AchievementBadge from '@site/src/components/AchievementBadge';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Achievements area (Spec 004, T039, FR-009). Full fixed catalog, earned and
@@ -47,7 +48,7 @@ function AchievementsContent(): React.ReactElement {
 
   return (
     <div>
-      <h2>{MESSAGES.title[locale]}</h2>
+      <PageHeader title={MESSAGES.title[locale]} icon="award" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
