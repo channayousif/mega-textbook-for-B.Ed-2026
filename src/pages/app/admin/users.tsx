@@ -4,6 +4,7 @@ import AuthGuard from '@site/src/components/AuthGuard';
 import Link from '@docusaurus/Link';
 import { getSupabase } from '@site/src/lib/supabase';
 import type { UserRole, AccountStatus } from '@site/src/contexts/AuthContext';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 type AdminUserRow = {
   id: string;
@@ -119,7 +120,7 @@ function AdminUsersContent(): React.ReactElement {
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 
       {!rows ? (
-        <p>Loading…</p>
+        <LoadingMark label="Loading…" />
       ) : (
         <table>
           <thead>

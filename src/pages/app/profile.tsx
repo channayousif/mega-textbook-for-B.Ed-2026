@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { getSupabase } from '@site/src/lib/supabase';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 type RoleChoice = 'student' | 'teacher';
 
@@ -40,7 +41,7 @@ export default function ProfilePage(): React.ReactElement {
   }, [profile?.full_name]);
 
   if (loading) {
-    return <Layout title="Your account"><p>Loading…</p></Layout>;
+    return <Layout title="Your account"><LoadingMark label="Loading…" /></Layout>;
   }
 
   if (!session || !profile) {

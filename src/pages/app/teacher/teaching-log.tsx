@@ -8,6 +8,7 @@ import { fetchContentIndex, loggableOptions, type ContentIndexEntry } from '@sit
 import { logActivity, fetchOwnLog } from '@site/src/lib/teachingLog';
 import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback';
 import type { Class, TeachingLogEntry } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * My Teaching Log (Spec 005, T024/T030) - FR-006: log a teaching activity
@@ -247,7 +248,7 @@ function TeachingLogContent(): React.ReactElement {
     await load();
   }
 
-  if (!classes || !entries) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!classes || !entries) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
