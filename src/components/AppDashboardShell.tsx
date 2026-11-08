@@ -42,22 +42,22 @@ function useLocale(): Locale {
   return i18n.currentLocale === 'ur' ? 'ur' : 'en';
 }
 
-function Sections({ sections, current, locale, collapsed, onNavigate, idPrefix }: {
+function Sections({ sections, current, locale, collapsed, onNavigate }: {
   sections: NavSection[];
   current: string | null;
   locale: Locale;
   collapsed: boolean;
   onNavigate?: () => void;
-  idPrefix: string;
 }): React.ReactElement {
   return (
     <>
       {sections.map((section) => {
-        const headingId = `${idPrefix}-${section.key}`;
+        // The section label is visible text only. It does not name the list: an
+        // aria-labelledby "Account" list collided with getByLabel('Account') form fields.
         return (
           <div key={section.key} className="dashboard-shell__section">
-            <p id={headingId} className="dashboard-shell__section-label">{section.label[locale]}</p>
-            <ul className="dashboard-shell__navlist" aria-labelledby={headingId}>
+            <p className="dashboard-shell__section-label">{section.label[locale]}</p>
+            <ul className="dashboard-shell__navlist">
               {section.items.map((it) => {
                 const isActive = it.key === current;
                 return (
@@ -97,7 +97,6 @@ export default function AppDashboardShell({
   // Before the profile loads, fall back to the area's own role so the menu does not jump.
   const sections = navSections({ role: auth.role ?? role ?? null, reviewer: auth.reviewer });
   const current = activeKeyIn(sections, location.pathname);
-  const navId = useId();
 
   const [collapsed, setCollapsed] = useState(false);
   useEffect(() => {
@@ -156,7 +155,7 @@ export default function AppDashboardShell({
   const body = (
     <div className={clsx('dashboard-shell', collapsed && 'dashboard-shell--collapsed')}>
       <nav className="dashboard-shell__sidebar" aria-label={MESSAGES.dashboardNav[locale]}>
-        <Sections sections={sections} current={current} locale={locale} collapsed={collapsed} idPrefix={`${navId}-side`} />
+        <Sections sections={sections} current={current} locale={locale} collapsed={collapsed} />
         <button
           type="button"
           className="dashboard-shell__collapse"
@@ -198,7 +197,7 @@ export default function AppDashboardShell({
               <Icon name="close" size={20} accent={false} />
               <span>{MESSAGES.closeMenu[locale]}</span>
             </button>
-            <Sections sections={sections} current={current} locale={locale} collapsed={false} onNavigate={closeDrawer} idPrefix={`${navId}-drawer`} />
+            <Sections sections={sections} current={current} locale={locale} collapsed={false} onNavigate={closeDrawer} />
           </div>
         </>
       )}

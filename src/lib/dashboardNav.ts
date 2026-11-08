@@ -56,7 +56,7 @@ export const adminNav: readonly NavItem[] = [
   { key: 'users', label: { en: 'Users and roles', ur: 'صارفین اور کردار' }, to: '/app/admin/users', activeMatch: /^\/app\/admin\/users/, icon: 'users' },
   { key: 'records', label: { en: 'Class records', ur: 'کلاسوں کا ریکارڈ' }, to: '/app/admin/records', activeMatch: /^\/app\/admin\/records/, icon: 'records' },
   { key: 'reviewers', label: { en: 'Reviewers', ur: 'جائزہ کار' }, to: '/app/admin/reviewers', activeMatch: /^\/app\/admin\/reviewers/, icon: 'shield' },
-  { key: 'g3-signoff', label: { en: 'G3 sign-off desk', ur: 'جی تھری منظوری ڈیسک' }, to: '/app/admin/g3-signoff', activeMatch: /^\/app\/admin\/g3-signoff/, icon: 'signoff' },
+  { key: 'g3-signoff', label: { en: 'G3 sign-off', ur: 'جی تھری منظوری' }, to: '/app/admin/g3-signoff', activeMatch: /^\/app\/admin\/g3-signoff/, icon: 'signoff' },
   { key: 'review-decisions', label: { en: 'Review decisions', ur: 'جائزے کے فیصلے' }, to: '/app/admin/review-decisions', activeMatch: /^\/app\/admin\/review-decisions/, icon: 'review' },
   { key: 'feedback-queue', label: { en: 'Reader feedback', ur: 'قارئین کی رائے' }, to: '/app/admin/feedback-queue', activeMatch: /^\/app\/admin\/feedback-queue/, icon: 'feedback' },
   { key: 'suggestions', label: { en: 'Suggestions', ur: 'تجاویز' }, to: '/app/admin/suggestions', activeMatch: /^\/app\/admin\/suggestions/, icon: 'suggest' },

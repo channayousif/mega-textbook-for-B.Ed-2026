@@ -40,7 +40,7 @@ Approved plan PR C (owner chose the full app layout inspired by the Materio temp
 ## Outcome
 
 - ✅ Impact: every signed-in area shares one navigable layout; the pieces for the page redesigns exist.
-- 🧪 Tests: tsc clean for changed files; 33 signed-in pages at 1440 light: no overflow, no broken images; axe found three pre-existing page-content issues (progress bar name, links in text blocks on the teacher home, a scrollable audit table) that PRs D to F fix; gates and e2e see PR.
+- 🧪 Tests: tsc clean for changed files; 33 signed-in pages at 1440 light: no overflow, no broken images; axe found three pre-existing page-content issues (progress bar name, links in text blocks on the teacher home, a scrollable audit table) that PRs D to F fix; npm run check:all 20/20 PASS; 16 shell-related e2e tests run locally against the live Supabase: two failed on duplicate accessible names the sidebar introduced (a 'G3 sign-off desk' link and an aria-labelledby 'Account' list matching getByLabel('Account')), both fixed (sidebar label 'G3 sign-off', section labels no longer name their lists), then all 16 PASS.
 - 📁 Files: shell, nav model, app.css, primitives, 24 wrapped pages, QA scripts.
 - 🔁 Next prompts: PR D student pages, PR E teacher and classes, PR F admin, reviewer and profile.
 - 🧠 Reflection: a build started in the same worktree while editing mixes old and new files; edit only after builds finish, or draft elsewhere.
@@ -54,7 +54,7 @@ Approved plan PR C (owner chose the full app layout inspired by the Materio temp
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none in the product so far.
-- Graders run and results (PASS/FAIL): see PR.
+- Failure modes observed: sidebar link and list names collided with names e2e specs select by.
+- Graders run and results (PASS/FAIL): check:all PASS; e2e PASS after the two fixes.
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): none.
