@@ -11,7 +11,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 type Props = { width?: number; dir?: 'ltr' | 'rtl'; children: React.ReactNode };
 
 export default function AuthFrame({ width = 420, dir, children }: Props): React.ReactElement {
-  const logo = useBaseUrl('/img/brand/bilingual-reverse.svg');
+  const logo = useBaseUrl('/img/kit/bilingual-reverse.svg');
   const scene = useBaseUrl('/img/site/hero-efmp-302-fig-U1-10.webp');
   return (
     <div className="auth-frame">

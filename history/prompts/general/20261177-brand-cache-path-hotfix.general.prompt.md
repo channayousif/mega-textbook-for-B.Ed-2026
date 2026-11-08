@@ -32,21 +32,21 @@ main logo https://textbook.com.pk/img/brand/horizontal-color.svg is still the ol
 
 ## Response snapshot
 
-The server already returned the v2 file at that URL (checked with curl: amber step, teal t, last-modified 2026-11-08), but static images are served with cache-control max-age=2592000, and the v2 logos reused the v1 file names, so browsers and Cloudflare edges that had the v1 file keep it for up to 30 days. Fix: copy the brand folder to static/img/kit/ (and the social card to static/img/kit/social-card.png) and point every reference on main at the new path: favicon, touch icon, manifest icons, social card, navbar logos, footer logo, 404 mark and the video brand bible. The old static/img/brand/ stays for now because the open PR 6 (#490) references it from AuthFrame; PR 7 moves that reference and removes the old folder.
+The server already returned the v2 file at that URL (checked with curl: amber step, teal t, last-modified 2026-11-08), but static images are served with cache-control max-age=2592000, and the v2 logos reused the v1 file names, so browsers and Cloudflare edges that had the v1 file keep it for up to 30 days. Fix: copy the brand folder to static/img/kit/ (and the social card to static/img/kit/social-card.png) and point every reference on main at the new path: favicon, touch icon, manifest icons, social card, navbar logos, footer logo, 404 mark and the video brand bible. PR 6 (#490) merged meanwhile, so its AuthFrame moved to /img/kit/ in the same change and the old static/img/brand/ and static/img/social-card.png are removed.
 
 ## Outcome
 
 - ✅ Impact: every visitor gets the v2 logo on the next page load, without a cache purge.
 - 🧪 Tests: build, see PR.
 - 📁 Files: new kit folder and six reference updates.
-- 🔁 Next prompts: PR 7 removes static/img/brand/ after PR 6 merges.
+- 🔁 Next prompts: PR 7 (staff screens) after this.
 - 🧠 Reflection: replacing a long-cached asset under the same URL never reaches returning visitors; new assets need new URLs.
 
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: brand assets now live at /img/kit/.
 - Decisions the team must respect: when an image changes, give it a new path or name; the 30-day cache means same-name replacements stay stale for returning visitors and at Cloudflare.
-- Pending / next owner: PR 7 deletes static/img/brand/ once nothing references it.
+- Pending / next owner: none.
 - Paperclip issues affected: none.
 
 ## Evaluation notes (flywheel)
