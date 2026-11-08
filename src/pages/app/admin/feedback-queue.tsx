@@ -6,6 +6,7 @@ import {
   type FeedbackQueueFilters,
 } from '@site/src/lib/contentFeedback';
 import type { ContentFeedback, ContentFeedbackScope, ContentFeedbackStatus } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Owner triage queue (Spec 010, T022, FR-018-021) - every content-feedback item
@@ -250,7 +251,7 @@ function AdminFeedbackQueueContent(): React.ReactElement {
       </div>
 
       {!rows ? (
-        <p>Loading…</p>
+        <LoadingMark label="Loading…" />
       ) : rows.length === 0 ? (
         <p>No feedback items match these filters.</p>
       ) : (

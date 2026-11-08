@@ -11,6 +11,7 @@ import {
   fetchAnswerKeys, upsertAnswerKey,
 } from '@site/src/lib/quizAuthoring';
 import type { QuizItem, AnswerKey, SubmissionQuizItemKind } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Verified-teacher quiz-item / answer-key authoring (Spec 011, US6 / FR-014). Gated on
@@ -282,7 +283,7 @@ function AuthoringContent(): React.ReactElement {
         <>
           <h2>{MESSAGES.items[locale]}</h2>
           {!items ? (
-            <p>{MESSAGES.loading[locale]}</p>
+            <LoadingMark label={MESSAGES.loading[locale]} />
           ) : (
             <>
               {items.length === 0 && <p>{MESSAGES.noItems[locale]}</p>}
@@ -373,7 +374,7 @@ export default function QuizAuthoringPage(): React.ReactElement {
     <Layout title="Quiz authoring">
       <AppDashboardShell role="teacher">
         {loading ? (
-          <p>{MESSAGES.loading[locale]}</p>
+          <LoadingMark label={MESSAGES.loading[locale]} />
         ) : verifiedTeacher ? (
           <AuthoringContent />
         ) : (

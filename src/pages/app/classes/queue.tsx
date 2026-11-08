@@ -10,6 +10,7 @@ import { fetchQueue, gradeAndReturn, editGrade, isMaxMarkError } from '@site/src
 import type { QueueRow } from '@site/src/lib/grading';
 import { fetchAnswerKey } from '@site/src/lib/answerKeys';
 import type { Assignment, AnswerKey } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Teacher's grading queue (Spec 003, T044/T049/T062). List view, one row per
@@ -260,7 +261,7 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
     load();
   }, [load]);
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow || role !== 'teacher') {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -271,7 +272,7 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
   if (error) {
     return <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>;
   }
-  if (!assignment || !rows || !profile) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!assignment || !rows || !profile) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>

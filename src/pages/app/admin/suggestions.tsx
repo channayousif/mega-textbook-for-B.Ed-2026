@@ -7,6 +7,7 @@ import {
   type ModerationQueueFilters,
 } from '@site/src/lib/suggestions';
 import type { ImprovementSuggestion, SuggestionCategory, SuggestionStatus } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Admin moderation queue (Spec 005, T019, FR-005) - every suggestion from
@@ -106,7 +107,7 @@ function AdminSuggestionsContent(): React.ReactElement {
       </div>
 
       {!rows ? (
-        <p>Loading…</p>
+        <LoadingMark label="Loading…" />
       ) : rows.length === 0 ? (
         <p>No suggestions match these filters.</p>
       ) : (

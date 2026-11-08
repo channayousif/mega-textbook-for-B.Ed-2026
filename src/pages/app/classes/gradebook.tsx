@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { exportGradebook } from '@site/src/lib/gradebookExport';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Gradebook export (Spec 003, T052/T062). Teacher-only export button
@@ -36,7 +37,7 @@ function GradebookContent({ classId }: { classId: string }): React.ReactElement 
     if (exportError) setError(MESSAGES.exportError[locale]);
   }
 
-  if (loading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (loading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow || role !== 'teacher') {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">

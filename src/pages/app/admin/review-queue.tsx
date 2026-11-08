@@ -13,6 +13,7 @@ import {
   type ReviewQueueItem, type ContentIndexEntry, type Disposition,
   type CertificationCriterion, type CertificationFinding, type CriterionStatus,
 } from '@site/src/lib/reviewQueue';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * The review surface (Spec 017 FR-004, T022-T024, T031-T032).
@@ -188,7 +189,7 @@ function ReviewQueueContent(): React.ReactElement {
 
       {error && <div className="alert alert--danger" role="alert">{error}</div>}
 
-      {queue === null && <p>Loading…</p>}
+      {queue === null && <LoadingMark label="Loading…" />}
 
       {queue !== null && queue.length === 0 && (
         <div className="alert alert--success" role="status">Nothing is awaiting review.</div>

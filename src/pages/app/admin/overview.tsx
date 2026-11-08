@@ -10,6 +10,7 @@ import { fetchAllPages } from '@site/src/lib/pagination';
 import { fetchContentStatus, type ContentStatusReport } from '@site/src/lib/contentStatus';
 import { fetchCatalog, type Catalog, type CatalogCourse } from '@site/src/lib/catalog';
 import type { ContentFeedback, ContentFeedbackStatus } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Curriculum-owner console (Spec 010, T025/T030, Story 3) - one page
@@ -103,7 +104,7 @@ function FeedbackPanel({ locale }: { locale: 'en' | 'ur' }): React.ReactElement 
     await load();
   }
 
-  if (rows === null) return <p>{MESSAGES.loading[locale]}</p>;
+  if (rows === null) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   const counts = STATUS_ORDER.reduce<Record<string, number>>((acc, status) => {
     acc[status] = rows.filter((r) => r.status === status).length;
@@ -169,7 +170,7 @@ function SelfAssessmentAggregatePanel({ locale }: { locale: 'en' | 'ur' }): Reac
     fetchAdminAggregate().then(({ data }) => setRows(data ?? []));
   }, []);
 
-  if (rows === null) return <p>{MESSAGES.loading[locale]}</p>;
+  if (rows === null) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <section className="margin-top--lg" data-testid="owner-self-assessment-panel">
@@ -232,7 +233,7 @@ function ProgressAggregatesPanel({ locale }: { locale: 'en' | 'ur' }): React.Rea
     fetchAdminAchievementCounts().then(setAchievementsByKey);
   }, []);
 
-  if (!progressByCourseCode || !achievementsByKey) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!progressByCourseCode || !achievementsByKey) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   const progressEntries = Object.entries(progressByCourseCode);
   const achievementEntries = Object.entries(achievementsByKey);
@@ -275,7 +276,7 @@ function ContentStatusPanel({ locale }: { locale: 'en' | 'ur' }): React.ReactEle
     load();
   }, [load]);
 
-  if (!loaded) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!loaded) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   const allPending = (report?.courses ?? []).flatMap((c) => c.units.flatMap((u) => u.figures_pending));
 
@@ -362,7 +363,7 @@ function CatalogEditPanel({ locale }: { locale: 'en' | 'ur' }): React.ReactEleme
     setDownloadUrl(URL.createObjectURL(new Blob([JSON.stringify(updated, null, 2)], { type: 'application/json' })));
   }
 
-  if (!loaded) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!loaded) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <section className="margin-top--lg" data-testid="owner-catalog-panel">

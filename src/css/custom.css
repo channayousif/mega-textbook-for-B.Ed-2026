@@ -1287,3 +1287,20 @@ html[data-theme='dark'] .dashboard-shell__sidebar { background: #0e3136; }
 .achievement-card h3 { margin: 0.5rem 0 0.25rem; }
 .achievement-card p { margin: 0; }
 .achievement-badge--locked { opacity: 0.4; filter: grayscale(1); }
+
+/* App tables (redesign v2, the Gradebook board): a teal rule under the header row,
+   light row rules, numbers that line up. Course-page tables are not affected. */
+.dashboard-shell__main table, .work-panel table, .table-scroll table { border-collapse: collapse; }
+.dashboard-shell__main thead th, .work-panel thead th, .table-scroll thead th {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  text-align: start;
+  white-space: nowrap;
+}
+.dashboard-shell__main tbody :is(td, th), .work-panel tbody :is(td, th), .table-scroll tbody :is(td, th) {
+  border: 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+.dashboard-shell__main tbody tr:nth-child(2n), .work-panel tbody tr:nth-child(2n), .table-scroll tbody tr:nth-child(2n) { background: transparent; }
+.dashboard-shell__main td, .work-panel td, .table-scroll td { font-variant-numeric: tabular-nums; }
