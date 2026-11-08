@@ -37,7 +37,7 @@ Approved plan PR D, the student area on PR C's shell and primitives. Home: a wel
 ## Outcome
 
 - ✅ Impact: the student area reads as one app with a clear next step and real numbers.
-- 🧪 Tests: tsc clean; 88 signed-in student shots (EN and UR, light and dark, 1440 and 390): no overflow, no broken images, zero axe violations; 16 student e2e tests PASS locally against the live Supabase after one fix; check:all see PR.
+- 🧪 Tests: tsc clean; 88 signed-in student shots (EN and UR, light and dark, 1440 and 390): no overflow, no broken images, zero axe violations; 16 student e2e tests PASS locally against the live Supabase after one fix; npm run check:all 19/20 first run, check:content-status failed on the stale git-ignored status file and passed after regenerating it (no tracked change).
 - 📁 Files: eight student pages, Donut, app.css.
 - 🔁 Next prompts: PR E teacher and classes; PR F admin, reviewer and profile.
 - 🧠 Reflection: chart labels that repeat a course code broke two specs' exact text matches; data shown twice needs a different spelling in the chart.
