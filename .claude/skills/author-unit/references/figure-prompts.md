@@ -12,7 +12,10 @@ optimises and places the raster.
 as the manifest; see `efmp-304/figures/unit-02.banner.md`). A topic may add one `illustration`
 marker for a classroom scene where a picture teaches something the prose cannot. It is extra:
 it does not count toward the topic's ≥ 2 schematic figures. Every prompt says Sindh setting,
-Pakistani dress, and no text, maps, flags or emblems. The rendering workflow **replaces** the
+Pakistani dress, and no text, maps, flags or emblems. No prompt depicts a prophet, companion,
+angel or other sacred person, or shows scripture or calligraphy (owner ruling 2026-11-09): for
+Islamic studies and Qur'an courses, show teachers and pupils learning, not sacred figures. The
+rendering workflow **replaces** the
 marker with a `<Figure>` element, mirrors it into the Urdu topic file, and moves the manifest
 row `prompt-only → generated → placed`. That is **not this skill's job** - author-unit stops at
 **≥ 2 good markers per topic** (with a planned archetype each) + matching `Status: prompt-only`
