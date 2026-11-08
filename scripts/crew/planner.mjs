@@ -33,6 +33,13 @@
  * allows two repair/review cycles per stage, so a repaired `revise` from the first cycle now gets a
  * fresh `review_en`, as does an `escalate` the owner sent back for repair. Only a unit whose
  * cycles are used up waits for the owner.
+ *
+ * On 2026-11-08 (maintenance M5 of 2026-W45, GICP-400 and EFMP-406 evidence): a course with no
+ * course-overview.mdx and no unit on disk queues only its lowest missing unit's `author` job.
+ * review-evidence binds `<course>/course-overview.mdx` as a required G2/G3 input, so sibling
+ * author jobs stopped on "missing required input" and then collided on that file (GICP-400 Units
+ * 1, 2 and 4, 2026-11-07 C6; EFMP-406 Units 2 to 5, 2026-11-03 C6). The first job writes the
+ * overview, modelled on an existing course's, before its siblings are queued.
  */
 
 /** ADR-0019: at most two repair/review cycles per stage per submission. */
@@ -143,6 +150,25 @@ export function specUnitNumbers(specText) {
   const fm = /^---\n([\s\S]*?)\n---/.exec(specText);
   if (!fm || !/^status:\s*approved\s*$/m.test(fm[1])) return [];
   return [...new Set([...specText.matchAll(/^## Unit (\d+)\b/gm)].map((m) => Number(m[1])))].sort((a, b) => a - b);
+}
+
+/**
+ * Unit numbers to queue `author` for from an approved spec: every spec unit not on disk, except
+ * that a course with no course-overview.mdx and no unit on disk gets only its lowest missing
+ * unit. review-evidence binds `<course>/course-overview.mdx` as a required G2/G3 input, so the
+ * first author job writes the overview before its siblings are queued (2026-W45 M5; GICP-400
+ * Units 1, 2 and 4 stopped on the missing input, EFMP-406 Units 2 to 5 collided on the file).
+ *
+ * @param {number[]} unitsInSpec  sorted unit numbers the approved spec defines
+ * @param {Set<number>|number[]} onDisk  unit numbers already written
+ * @param {boolean} hasOverview  the course content root already has course-overview.mdx
+ * @returns {number[]}
+ */
+export function authorQueue(unitsInSpec, onDisk, hasOverview) {
+  const written = onDisk instanceof Set ? onDisk : new Set(onDisk);
+  const missing = unitsInSpec.filter((n) => !written.has(n));
+  if (!hasOverview && written.size === 0) return missing.slice(0, 1);
+  return missing;
 }
 
 /** Job states that are crew work in flight. `gate_red` and `blocked` wait on a person, so they never hold the crew. */
