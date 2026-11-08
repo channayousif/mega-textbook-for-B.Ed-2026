@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { deleteUsers } from './_cleanup';
+import { TEST_PASSWORD } from './_password';
 
 /**
  * T041 [US3] — non-admin reaching `/app/admin/users` is denied (FR-015).
@@ -20,7 +21,7 @@ const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const configured = Boolean(SUPABASE_URL && ANON_KEY && SERVICE_KEY);
 test.skip(!configured, 'requires DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY');
 
-const PASSWORD = 'Test-Passw0rd!';
+const PASSWORD = TEST_PASSWORD;
 
 test('a signed-out visitor reaching /app/admin/users is redirected to sign in', async ({ page }) => {
   await page.goto('/app/admin/users');

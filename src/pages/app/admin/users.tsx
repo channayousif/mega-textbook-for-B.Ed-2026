@@ -139,7 +139,7 @@ function AdminUsersContent(): React.ReactElement {
           <tbody>
             {rows.map((row) => (
               <tr key={row.id}>
-                <td>{row.deleted_at ? '(deleted account)' : row.email ?? '-'}</td>
+                <td>{row.email ?? '-'}</td>
                 <td>{row.full_name ?? '-'}</td>
                 <td>
                   <select
