@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Forced command for the dedicated editor key only. SSH owns forwarding channels.
+set -euo pipefail
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
+# Keep the exact SSH command as one shell argument. Never eval in this wrapper.
+command=${SSH_ORIGINAL_COMMAND:-}
+if [[ -n $command ]]; then
+  exec systemd-run --user --scope --quiet --collect --expand-environment=no \
+    --slice=development-editor.slice -- "${SHELL:-/bin/bash}" -c "$command"
+else
+  exec systemd-run --user --scope --quiet --collect --expand-environment=no \
+    --slice=development-editor.slice -- "${SHELL:-/bin/bash}" -l
+fi
