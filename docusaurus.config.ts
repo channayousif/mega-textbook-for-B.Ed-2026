@@ -149,8 +149,7 @@ const config: Config = {
   onBrokenMarkdownLinks: 'warn',
 
   // Logo kit v2 icons (2026-11-07): SVG favicon above, PNG fallback, touch icon and
-  // the install manifest. static/img/favicon.svg stays: the video studio's
-  // brand-bible pins it as the owner-approved square mark.
+  // the install manifest. The video studio's brand-bible uses the same v2 mark.
   headTags: [
     { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/brand/icon-48.png' } },
     { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/brand/icon-180.png' } },
