@@ -10,6 +10,7 @@ import {
 } from '@site/src/lib/dashboardQueries';
 import { ACHIEVEMENT_CATALOG, fetchEarnedAchievements } from '@site/src/lib/achievements';
 import type { StudentAchievement } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Dashboard Home (Spec 004, T012/T040) - FR-002: current semester, enrolled
@@ -91,7 +92,7 @@ function HomeContent(): React.ReactElement {
     load();
   }, [load]);
 
-  if (!loaded) return <p role="status">{MESSAGES.loading[locale]}</p>;
+  if (!loaded) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   if (error || !semester || !dueSoon || !recentGrades || !recentAchievements) return <div className="work-panel" role="alert"><h1>{MESSAGES.title[locale]}</h1><p>{error || MESSAGES.loadError[locale]}</p><button className="button button--primary" onClick={() => void load()}>{MESSAGES.retry[locale]}</button></div>;
 

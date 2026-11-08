@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { fetchAllAggregatedFeedback, type ActivityAggregateSummary } from '@site/src/lib/activityFeedback';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Admin: aggregated Activity Feedback per activity (Spec 005, T032, FR-008)
@@ -32,7 +33,7 @@ function AdminFeedbackContent(): React.ReactElement {
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 
       {!summaries ? (
-        <p>Loading…</p>
+        <LoadingMark label="Loading…" />
       ) : summaries.length === 0 ? (
         <p>No activities have been rated yet.</p>
       ) : (

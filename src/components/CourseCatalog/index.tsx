@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import catalog from '@site/catalog/courses.json';
 import styles from './styles.module.css';
@@ -20,11 +21,10 @@ const T = {
   },
 };
 
-/** Course covers come from the code, so a new course needs no artwork: same code, same cover. */
-const COVERS = ['#102B35', '#087C6B', '#0B5F55', '#1F4E5F', '#3C5A3A', '#6F4509'];
-const MOTIFS = ['dots', 'lines', 'diamonds', 'rings'];
-function hash(code: string): number {
-  return [...code].reduce((sum, ch) => (sum * 31 + ch.charCodeAt(0)) >>> 0, 7);
+/** Covers are drawn per course by scripts/design/course-covers.mjs before every build. */
+function Cover({ code }: { code: string }): React.ReactElement {
+  const src = useBaseUrl(`/img/covers/${code.toLowerCase()}.svg`);
+  return <img className={styles.cover} src={src} width={320} height={180} alt="" loading="lazy" decoding="async" />;
 }
 
 export default function CourseCatalog(): React.ReactElement {
@@ -50,15 +50,11 @@ export default function CourseCatalog(): React.ReactElement {
           <ul className={styles.grid}>
             {(s.courses as Course[]).map((course) => {
               const stat = status[course.code];
-              const n = hash(course.code);
               const title = (locale === 'ur' && course.title_ur) || course.title_en;
-              const cover = (
-                <span className={`${styles.cover} ${styles[MOTIFS[n % MOTIFS.length]]}`} style={{ backgroundColor: COVERS[n % COVERS.length] }}>
-                  <span className={styles.code} dir="ltr">{course.code}</span>
-                </span>
-              );
+              const cover = <Cover code={course.code} />;
               const body = (
                 <span className={styles.body}>
+                  <span className={styles.code} dir="ltr">{course.code}</span>
                   <span className={styles.title}>{title}</span>
                   {stat ? (
                     <span className={styles.meta}>

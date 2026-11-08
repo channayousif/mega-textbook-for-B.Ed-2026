@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { getSupabase } from '@site/src/lib/supabase';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 type AuditRow = {
   id: number;
@@ -79,7 +80,7 @@ function AuditHistoryContent(): React.ReactElement {
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 
       {!rows ? (
-        <p>Loading…</p>
+        <LoadingMark label="Loading…" />
       ) : rows.length === 0 ? (
         <p>No privilege changes recorded yet.</p>
       ) : (

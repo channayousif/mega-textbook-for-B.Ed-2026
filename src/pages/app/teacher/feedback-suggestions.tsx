@@ -5,6 +5,7 @@ import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { fetchOwnSuggestions } from '@site/src/lib/suggestions';
 import { fetchOwnFeedbackHistory } from '@site/src/lib/activityFeedback';
 import type { ImprovementSuggestion, ActivityFeedback } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Feedback & Suggestions area (Spec 005, T015/T031) - "My Suggestions" list
@@ -71,7 +72,7 @@ function FeedbackSuggestionsContent(): React.ReactElement {
     load();
   }, [load]);
 
-  if (!suggestions || !feedbackHistory) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!suggestions || !feedbackHistory) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>

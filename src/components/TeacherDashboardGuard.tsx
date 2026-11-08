@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Client-side gate for `/app/teacher/*` pages (Spec 005, T002, FR-013).
@@ -48,7 +49,7 @@ export default function TeacherDashboardGuard({
   const locale = useLocale();
   const { loading, session, role } = useAuth();
 
-  if (loading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (loading) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   if (!session) {
     if (typeof window !== 'undefined') {

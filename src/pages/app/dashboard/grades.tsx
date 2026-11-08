@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchAllGrades, type GradeItem } from '@site/src/lib/dashboardQueries';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Grades area (Spec 004, T017, FR-004). Every returned assignment/quiz
@@ -47,7 +48,7 @@ function GradesContent(): React.ReactElement {
     load();
   }, [load]);
 
-  if (!grades) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!grades) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>

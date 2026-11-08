@@ -9,6 +9,7 @@ import {
 } from '@site/src/lib/classes';
 import type { Class, Enrollment } from '@site/src/lib/types';
 import { fetchCourseOptions, type CourseOptionGroup } from '@site/src/lib/courseOptions';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Class list + create (teacher) / join-by-code + joined list (student) -
@@ -155,7 +156,7 @@ function TeacherClassesView(): React.ReactElement {
       </form>
 
       {!classes ? (
-        <p>{MESSAGES.loading[locale]}</p>
+        <LoadingMark label={MESSAGES.loading[locale]} />
       ) : classes.length === 0 ? (
         <p>You haven&apos;t created any classes yet.</p>
       ) : (
@@ -260,7 +261,7 @@ function StudentClassesView(): React.ReactElement {
       </form>
 
       {!enrollments ? (
-        <p>{MESSAGES.loading[locale]}</p>
+        <LoadingMark label={MESSAGES.loading[locale]} />
       ) : enrollments.length === 0 ? (
         <p>You haven&apos;t joined any classes yet.</p>
       ) : (

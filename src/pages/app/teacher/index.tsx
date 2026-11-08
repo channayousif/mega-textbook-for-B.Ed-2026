@@ -7,6 +7,7 @@ import {
   fetchUngradedCountsByClass, fetchSoonestDueAssignments, fetchRecentActivity,
   type UngradedCount, type SoonestDueAssignment, type RecentActivityItem,
 } from '@site/src/lib/teacherOverview';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Teacher Overview (Spec 005, T008) - FR-002: per-class ungraded submission
@@ -82,7 +83,7 @@ function OverviewContent(): React.ReactElement {
     load();
   }, [load]);
 
-  if (!loaded) return <p role="status">{MESSAGES.loading[locale]}</p>;
+  if (!loaded) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   if (error || !ungraded || !soonestDue || !recentActivity) return <div className="work-panel" role="alert"><h1>{MESSAGES.title[locale]}</h1><p>{error || MESSAGES.loadError[locale]}</p><button className="button button--primary" onClick={() => void load()}>{MESSAGES.retry[locale]}</button></div>;
 

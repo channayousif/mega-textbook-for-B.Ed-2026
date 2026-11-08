@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
 import { getSupabase } from '@site/src/lib/supabase';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Client-side gate for `/app/admin/review-queue` (Spec 017 FR-002, T021).
@@ -75,7 +76,7 @@ export default function ReviewerGuard({
     };
   }, [loading, session, role]);
 
-  if (loading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (loading) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   if (!session) {
     if (typeof window !== 'undefined') {
@@ -84,7 +85,7 @@ export default function ReviewerGuard({
     return <p>{MESSAGES.redirecting[locale]}</p>;
   }
 
-  if (capability === 'checking') return <p>{MESSAGES.loading[locale]}</p>;
+  if (capability === 'checking') return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   if (capability === 'no') {
     return (

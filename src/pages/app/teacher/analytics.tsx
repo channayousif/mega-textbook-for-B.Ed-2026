@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { fetchClassAnalytics, type ClassAnalytics, type AtRiskStudent } from '@site/src/lib/teacherAnalytics';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Analytics (Spec 005, T037) - FR-009: score distribution per assignment,
@@ -72,9 +73,9 @@ function AnalyticsContent(): React.ReactElement {
     if (classRole === 'teacher') load();
   }, [classRole, load]);
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (classRole !== 'teacher') return <p>{MESSAGES.noAccess[locale]}</p>;
-  if (!analytics) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!analytics) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   const hasAnyScores = analytics.distribution.some((d) => d.scores.length > 0);
 

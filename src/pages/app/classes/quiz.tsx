@@ -10,6 +10,7 @@ import {
 } from '@site/src/lib/quiz';
 import type { QuizAttemptResult, ClassBestScoreRow } from '@site/src/lib/quiz';
 import type { Assignment, QuizItem } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Auto-graded practice quiz - student take/retake UI, teacher best-score
@@ -95,7 +96,7 @@ function StudentQuiz({ assignment, studentId }: { assignment: Assignment; studen
   }
 
   if (error) return <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>;
-  if (!items) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!items) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (items.length === 0) return <p>{MESSAGES.noQuestions[locale]}</p>;
 
   return (
@@ -165,7 +166,7 @@ function TeacherResults({ classId, assignmentId, maxMark }: { classId: string; a
   }, [classId, assignmentId, locale]);
 
   if (error) return <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>;
-  if (!rows) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!rows) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <table>
@@ -201,7 +202,7 @@ function QuizContent({ classId, assignmentId }: { classId: string; assignmentId:
     });
   }, [assignmentId, locale]);
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow) {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -210,7 +211,7 @@ function QuizContent({ classId, assignmentId }: { classId: string; assignmentId:
     );
   }
   if (error) return <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>;
-  if (!assignment) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!assignment) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>

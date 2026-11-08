@@ -8,6 +8,7 @@ import {
   removeStudent, restoreStudent, updateClass,
 } from '@site/src/lib/classes';
 import type { RosterRow } from '@site/src/lib/classes';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Roster management - join-code reissue/revoke, archive/reactivate,
@@ -137,7 +138,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
     await reload();
   }
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   if (!classRow || role !== 'teacher') {
     return (
@@ -147,7 +148,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
     );
   }
 
-  if (!roster) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!roster) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   const activeStudents = roster.filter((r) => r.status === 'active');
   const removedStudents = roster.filter((r) => r.status === 'removed');

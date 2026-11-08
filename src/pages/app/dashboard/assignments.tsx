@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchDueSoon, type DueSoonItem } from '@site/src/lib/dashboardQueries';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Full Assignments area (Spec 004, T013, FR-003). Shares `fetchDueSoon()`
@@ -58,7 +59,7 @@ function AssignmentsContent(): React.ReactElement {
     load();
   }, [load]);
 
-  if (!items) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!items) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>

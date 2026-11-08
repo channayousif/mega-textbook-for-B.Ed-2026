@@ -11,6 +11,7 @@ import {
 } from '@site/src/lib/submissions';
 import { fetchGradeForSubmission } from '@site/src/lib/grading';
 import type { Assignment, Grade, Submission } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Assignment detail - student submit/resubmit view (Spec 003, T036/T062).
@@ -220,7 +221,7 @@ function AssignmentContent({
     });
   }, [assignmentId, locale]);
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow) {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -233,7 +234,7 @@ function AssignmentContent({
       <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
     );
   }
-  if (!assignment) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!assignment) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>

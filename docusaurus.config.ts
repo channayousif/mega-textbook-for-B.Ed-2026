@@ -141,18 +141,22 @@ function courseStatus() {
 const config: Config = {
   title: SITE_TITLE,
   tagline: 'A bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/kit/favicon.svg',
   url: 'https://textbook.com.pk',
   baseUrl: '/',
   trailingSlash: true, // emit /path/index.html so plain static file servers (nginx/Apache) serve directory URLs
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // The declared favicon had no file behind it, so every page requested a 404.
-  // An SVG icon plus a PNG fallback covers everything current.
+  // Logo kit v2 icons (2026-11-07), served from img/kit/: the v1 files had the same
+  // names under img/brand/, and a 30-day cache kept showing them. SVG favicon above,
+  // PNG fallback, touch icon and
+  // the install manifest. The video studio's brand-bible uses the same v2 mark.
   headTags: [
-    { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/favicon.png' } },
-    { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' } },
+    { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/kit/icon-48.png' } },
+    { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/kit/icon-180.png' } },
+    { tagName: 'link', attributes: { rel: 'manifest', href: '/site.webmanifest' } },
+    { tagName: 'meta', attributes: { name: 'theme-color', content: '#123E43' } },
     // Marks a returning visitor before paint, the reason `data-theme` works without a
     // flash (ADR-0018), so the landing page can reserve the welcome strip's height.
     {
@@ -305,7 +309,7 @@ const config: Config = {
     // Without this there is no og:image at all, while twitter:card is
     // summary_large_image - so every WhatsApp/social share rendered a blank
     // card. WhatsApp matters a great deal for this audience.
-    image: 'img/social-card.png',
+    image: 'img/kit/social-card.png',
     metadata: [
       { name: 'keywords', content: 'textbooks, Grades 9-12, teacher education, ADE, B.Ed Hons, STEDA, teaching licence, Sindh, learning platform, LMS, Pakistan, bilingual textbook, Urdu, EFMP, GECE' },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -336,7 +340,9 @@ const config: Config = {
         // desktop widths, a compact locale-switch + sign-in-status pair at
         // <=996px, placed first so it sits left of the mobile search icon.
         { type: 'custom-mobileTopBar', position: 'right' },
-        { type: 'localeDropdown', position: 'right' },
+        // EN | اردو segmented toggle (owner choice 2026-11-08), replacing the stock
+        // localeDropdown: src/components/LanguageToggleNavbarItem.tsx.
+        { type: 'custom-languageToggle', position: 'right' },
         { type: 'search', position: 'right' },
         // Spec 004, T007 - registers src/components/DashboardNavLink.tsx;
         // renders nothing unless signed in as a student.
@@ -352,7 +358,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      logo: { alt: 'textbook.com.pk', src: 'img/brand/bilingual-reverse.svg', height: 64 },
+      logo: { alt: 'textbook.com.pk', src: 'img/kit/bilingual-reverse.svg', height: 96 }, // 384px wide, above the kit's 360px minimum
       links: [
         { title: 'Programmes', items: [{ label: 'B.Ed', to: '/intro' }, { label: 'Teaching licence', to: '/licence/' }] },
         { title: 'For you', items: [{ label: 'Create an account', to: '/app/signup' }, { label: 'Become a reviewer', to: '/app/reviewer/apply' }] },

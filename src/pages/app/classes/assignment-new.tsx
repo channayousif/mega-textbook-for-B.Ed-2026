@@ -12,6 +12,7 @@ import { fetchQuizUnitsForCourse } from '@site/src/lib/quiz';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { listOwnTemplates, createTemplate } from '@site/src/lib/assignmentTemplates';
 import type { AssignmentSourceKind, AssignmentTemplate } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Assignment creation - unit-item picker, quiz picker, or custom (Spec 003,
@@ -179,7 +180,7 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
     setDone(true);
   }
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow || role !== 'teacher') {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">

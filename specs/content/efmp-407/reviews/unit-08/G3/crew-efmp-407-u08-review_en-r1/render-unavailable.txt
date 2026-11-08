@@ -1,0 +1,1 @@
+Not executed: reviewed-commit browser/narrow viewport/A4 print inspection. Crew brief forbids build, server and Playwright. No render-review success or images claimed.
