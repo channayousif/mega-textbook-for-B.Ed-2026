@@ -41,6 +41,8 @@ const GALLERY: readonly (readonly [SceneId, string])[] = [
   ['E305', 'EFMP-305'], ['GNAS', 'GNAS-301'], ['GICT', 'GICT-300'],
   ['GQUR', 'GQUR-301'], ['GSOS', 'GSOS-301'], ['GENG', 'GENG-300'],
 ];
+/** Gallery pictures that are published textbook figures; the rest were made for the site. */
+const FROM_TEXTBOOK: ReadonlySet<SceneId> = new Set<SceneId>(['U1-9', 'E304']);
 const CLIMB_ICONS: readonly IconName[] = ['explain', 'activity', 'check', 'chalkboard'];
 const FEATURE_ICONS: readonly IconName[] = ['language', 'scenario', 'chalkboard', 'ict', 'bookmark', 'classes'];
 const TRUST_ICONS: readonly IconName[] = ['foundations', 'pedagogy', 'reading', 'shield'];
@@ -209,7 +211,13 @@ export default function Home(): React.ReactElement {
             {GALLERY.map(([id, code]) => (
               <figure key={id} className={s.photo}>
                 <Scene id={id} locale={locale} />
-                <figcaption><strong>{code}</strong> {(locale === 'ur' && TITLES[code]?.ur) || TITLES[code]?.en}</figcaption>
+                <figcaption>
+                  {/* Seven of these are site scenes, not textbook figures: say so (owner, 2026-11-08). */}
+                  {FROM_TEXTBOOK.has(id)
+                    ? <strong>{code}</strong>
+                    : <strong>{locale === 'ur' ? `${code} ${c.gal_inspired}` : `${c.gal_inspired} ${code}`}</strong>}
+                  {' '}{(locale === 'ur' && TITLES[code]?.ur) || TITLES[code]?.en}
+                </figcaption>
               </figure>
             ))}
           </div>
