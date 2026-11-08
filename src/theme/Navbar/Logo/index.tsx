@@ -44,12 +44,12 @@ function useScrolledFlag(): void {
 export default function NavbarLogo(): React.ReactElement {
   useScrolledFlag();
   const horizontal = {
-    light: useBaseUrl('/img/brand/horizontal-color.svg'),
-    dark: useBaseUrl('/img/brand/horizontal-reverse.svg'),
+    light: useBaseUrl('/img/kit/horizontal-color.svg'),
+    dark: useBaseUrl('/img/kit/horizontal-reverse.svg'),
   };
   const bilingual = {
-    light: useBaseUrl('/img/brand/bilingual-color.svg'),
-    dark: useBaseUrl('/img/brand/bilingual-reverse.svg'),
+    light: useBaseUrl('/img/kit/bilingual-color.svg'),
+    dark: useBaseUrl('/img/kit/bilingual-reverse.svg'),
   };
   return (
     <Link to="/" className="navbar__brand" aria-label={WORDMARK_TEXT}>
