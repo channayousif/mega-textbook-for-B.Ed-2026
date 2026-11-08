@@ -14,7 +14,7 @@ links:
   spec: specs/028-news-ticker/spec.md
   ticket: null
   adr: history/adr/0034-news-feed-sources-and-public-news-table.md, history/adr/0035-weekly-digest-email-delivery.md
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/517
 files:
   - scripts/build-news-feed.mjs
   - docusaurus.config.ts

@@ -32,7 +32,7 @@ import { walkUnits } from './lib/content-roots.mjs';
 const REPO = resolve(process.env.CONTENT_ROOT ?? fileURLToPath(new URL('..', import.meta.url)));
 
 export const LOOKBACK_DAYS = 60;
-export const MAX_EVENTS = 24;
+export const MAX_EVENTS = 60;
 
 /** Event types, in the order the email groups them. */
 export const EVENT_TYPES = Object.freeze(['course', 'unit', 'urdu', 'review']);

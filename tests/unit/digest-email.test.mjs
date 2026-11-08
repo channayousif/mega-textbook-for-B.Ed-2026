@@ -71,6 +71,18 @@ describe('renderDigest', () => {
   });
 });
 
+describe('long weeks', () => {
+  it('shows eight items per section and links the rest', () => {
+    const many = Array.from({ length: 11 }, (_, i) => event({ id: `unit:X:${i}`, title_en: `Unit title ${i}` }));
+    const email = renderDigest({ ...base, events: many, news: [] });
+    expect(email.html).toContain('Unit title 7');
+    expect(email.html).not.toContain('Unit title 8');
+    expect(email.html).toContain('and 3 more');
+    expect(email.text).toContain('and 3 more: https://textbook.com.pk/');
+    expect(email.subject).toContain('11 new units');
+  });
+});
+
 describe('isoWeek', () => {
   it.each([
     ['2026-11-08T05:00:00Z', '2026-W45'], // a Sunday

@@ -14,7 +14,7 @@ links:
   spec: specs/028-news-ticker/spec.md
   ticket: null
   adr: history/adr/0034-news-feed-sources-and-public-news-table.md, history/adr/0035-weekly-digest-email-delivery.md
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/517
 files:
   - history/adr/0034-news-feed-sources-and-public-news-table.md
   - history/adr/0035-weekly-digest-email-delivery.md
@@ -39,14 +39,14 @@ Checked against ADR-0006/0007/0008/0032: consistent, no conflicts. Both indexed 
 - ✅ Impact: two accepted ADRs recording why news is git-derived and how the weekly email is delivered and consented.
 - 🧪 Tests: check-docs-sync passes.
 - 📁 Files: two ADRs and the ADR index.
-- 🔁 Next prompts: commit, PR, then rollout of migrations, secrets, functions and cron.
+- 🔁 Next prompts: merge PR #517, admin test send, confirm cron.
 - 🧠 Reflection: the ticker data model and the email delivery can evolve independently, so they are separate ADRs rather than one Feature 028 ADR.
 
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: ADR-0034 and ADR-0035 (Accepted), ADR index updated.
 - Decisions the team must respect: never store private data in `news_items` (it is public once live); content news comes from git, not from CI database writes; the weekly email is one per ISO week via `digest_runs`, and unsubscribe links must stay POST-only behind the confirm page.
-- Pending / next owner: rollout per ops/news/README.md (board).
+- Pending / next owner: rollout done 2026-11-09 for migrations 0052/0053 (live DB, one transaction), DIGEST_* secrets in ~/supabase-project/.env + compose (backups *.bak-<ts>), functions copied and container recreated, endpoints probed (401/403/405/400 as designed). Remaining: admin test send after merge and deploy; crontab line (see PR #517).
 - Paperclip issues affected: none.
 
 ## Evaluation notes (flywheel)

@@ -44,6 +44,8 @@ const PAPER = '#f8f5ef';
 const INK = '#123e43';
 const MUTED = '#3b5154';
 const URDU_FONTS = "'Noto Nastaliq Urdu','Jameel Noori Nastaleeq','Urdu Typesetting',Tahoma,serif";
+/** Items shown per section; the rest become one "and N more" link to the site. */
+export const MAX_PER_GROUP = 8;
 const LATIN_FONTS = "Nunito,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
 
 type Group = {
@@ -118,15 +120,18 @@ function summary(groups: Group[]): { en: string; ur: string } {
   return { en: en.join(', '), ur: ur.join('، ') };
 }
 
-function groupHtml(g: Group, ur: boolean): string {
-  const rows = g.items.map((it) => {
+function groupHtml(g: Group, ur: boolean, site: string): string {
+  const extra = g.items.length - MAX_PER_GROUP;
+  const rows = g.items.slice(0, MAX_PER_GROUP).map((it) => {
     const title = escapeHtml(ur ? it.titleUr : it.titleEn);
     const href = escapeHtml(ur ? it.hrefUr : it.href);
     const chip = it.context
       ? `<span style="display:inline-block;background:#e6f2f1;color:${TEAL};border-radius:999px;padding:2px 8px;font-size:12px;font-weight:700;font-family:${LATIN_FONTS};direction:ltr;unicode-bidi:isolate;">${escapeHtml(it.context)}</span>&nbsp;`
       : '';
     return `<tr><td style="padding:6px 0;border-bottom:1px solid #eee7da;">${chip}<a href="${href}" style="color:${TEAL};font-weight:700;text-decoration:none;">${title}</a></td></tr>`;
-  }).join('');
+  }).join('') + (extra > 0
+    ? `<tr><td style="padding:6px 0;"><a href="${escapeHtml(ur ? `${site}/ur/` : `${site}/`)}" style="color:${MUTED};">${ur ? `اور ${extra} مزید` : `and ${extra} more`}</a></td></tr>`
+    : '');
   return `<tr><td style="padding:18px 0 4px;"><h2 style="margin:0;font-size:${ur ? 20 : 17}px;line-height:${ur ? 2.2 : 1.4};color:${INK};">${g.emoji} ${escapeHtml(ur ? g.ur : g.en)}</h2></td></tr>
 <tr><td><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${rows}</table></td></tr>`;
 }
@@ -162,7 +167,7 @@ export function renderDigest(input: DigestInput): DigestEmail | null {
 <h1 style="margin:0 0 6px;font-size:24px;line-height:1.3;color:${INK};">New on textbook.com.pk this week</h1>
 <p style="margin:0;color:${MUTED};font-size:15px;line-height:1.5;">${escapeHtml(sum.en)}.</p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:15px;line-height:1.5;">
-${groups.map((g) => groupHtml(g, false)).join('\n')}
+${groups.map((g) => groupHtml(g, false, site)).join('\n')}
 </table>
 ${button(`${site}/`, 'Continue learning', false)}
 </td></tr>
@@ -171,7 +176,7 @@ ${button(`${site}/`, 'Continue learning', false)}
 <h1 style="margin:0 0 6px;font-size:24px;line-height:2.3;color:${INK};">اس ہفتے textbook.com.pk پر نیا مواد</h1>
 <p style="margin:0;color:${MUTED};font-size:16px;line-height:2.2;">${escapeHtml(sum.ur)}۔</p>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:16px;line-height:2.2;" dir="rtl">
-${groups.map((g) => groupHtml(g, true)).join('\n')}
+${groups.map((g) => groupHtml(g, true, site)).join('\n')}
 </table>
 ${button(`${site}/ur/`, 'پڑھائی جاری رکھیں', true)}
 </td></tr>
@@ -185,7 +190,8 @@ You are receiving this because you have an account at textbook.com.pk. One email
 
   const textGroups = (ur: boolean) => groups.map((g) => [
     `${g.emoji} ${ur ? g.ur : g.en}`,
-    ...g.items.map((it) => `- ${it.context ? `${it.context}: ` : ''}${ur ? it.titleUr : it.titleEn}\n  ${ur ? it.hrefUr : it.href}`),
+    ...g.items.slice(0, MAX_PER_GROUP).map((it) => `- ${it.context ? `${it.context}: ` : ''}${ur ? it.titleUr : it.titleEn}\n  ${ur ? it.hrefUr : it.href}`),
+    ...(g.items.length > MAX_PER_GROUP ? [ur ? `اور ${g.items.length - MAX_PER_GROUP} مزید: ${site}/ur/` : `and ${g.items.length - MAX_PER_GROUP} more: ${site}/`] : []),
   ].join('\n')).join('\n\n');
 
   const text = [
