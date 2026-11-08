@@ -23,6 +23,16 @@ files:
   - specs/content/efmp-407/figures/unit-06.banner.md
   - specs/content/efmp-407/figures/unit-06.illustration-notes.md
   - specs/content/efmp-407/figures/unit-06.md
+  - specs/content/efmp-407/reviews/unit-06/G2/20261108T144356015Z-gates.json
+  - specs/content/efmp-407/reviews/unit-06/G2/logs-20261108T144356015Z/check-bloom-bands.txt
+  - specs/content/efmp-407/reviews/unit-06/G2/logs-20261108T144356015Z/check-concept-graph.txt
+  - specs/content/efmp-407/reviews/unit-06/G2/logs-20261108T144356015Z/check-depth-gate.txt
+  - specs/content/efmp-407/reviews/unit-06/G2/logs-20261108T144356015Z/check-docs-sync.txt
+  - specs/content/efmp-407/reviews/unit-06/G2/logs-20261108T144356015Z/check-figures.txt
+  - specs/content/efmp-407/reviews/unit-06/G2/logs-20261108T144356015Z/check-no-answer-keys.txt
+  - specs/content/efmp-407/reviews/unit-06/G2/logs-20261108T144356015Z/check-no-em-dash.txt
+  - specs/content/efmp-407/reviews/unit-06/G2/logs-20261108T144356015Z/validate-content.txt
+  - specs/content/efmp-407/tasks.md
   - static/img/figures/efmp-407/unit-06/fig-U6-7.webp
 tests:
   - npm run check:content
