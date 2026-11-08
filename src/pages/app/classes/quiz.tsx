@@ -171,6 +171,7 @@ function TeacherResults({ classId, assignmentId, maxMark }: { classId: string; a
   if (!rows) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
+    <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
     <table>
       <thead>
         <tr>
@@ -187,6 +188,7 @@ function TeacherResults({ classId, assignmentId, maxMark }: { classId: string; a
         ))}
       </tbody>
     </table>
+        </div>
   );
 }
 

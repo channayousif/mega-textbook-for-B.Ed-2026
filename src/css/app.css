@@ -253,5 +253,6 @@ html[data-theme='dark'] .inline-bar__fill { background: #a6dfdc; }
 .dashboard-shell__main :is(table, .table-scroll):not(.work-panel *):not([class*='table_']) {
   background: var(--app-card); border-radius: 12px; box-shadow: var(--app-shadow);
 }
-.dashboard-shell__main table:not(.work-panel *):not([class*='table_']) { border-collapse: separate; border-spacing: 0; overflow: hidden; display: table; width: 100%; }
+.dashboard-shell__main table:not(.work-panel *):not([class*='table_']) { border-collapse: separate; border-spacing: 0; display: table; width: 100%; }
+.dashboard-shell__main .table-scroll:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
 html[data-theme='dark'] .dashboard-shell__main form:not(.work-panel):not(.work-panel form) { border: 1px solid var(--app-line); }

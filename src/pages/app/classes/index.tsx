@@ -162,6 +162,7 @@ function TeacherClassesView(): React.ReactElement {
       ) : classes.length === 0 ? (
         <p>You haven&apos;t created any classes yet.</p>
       ) : (
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
         <table>
           <thead>
             <tr>
@@ -188,6 +189,7 @@ function TeacherClassesView(): React.ReactElement {
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );

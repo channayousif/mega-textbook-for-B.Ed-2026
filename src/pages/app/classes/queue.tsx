@@ -284,6 +284,7 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
       {rows.length === 0 ? (
         <p>No students enrolled yet.</p>
       ) : (
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
         <table>
           <thead>
             <tr>
@@ -305,6 +306,7 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );

@@ -82,7 +82,6 @@ function ItemForm({
   return (
     <form
       onSubmit={(e) => { e.preventDefault(); onSave(d); }}
-      className="margin-bottom--md"
       className="work-panel"
     >
       <div className="margin-bottom--sm">

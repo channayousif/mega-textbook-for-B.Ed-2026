@@ -200,6 +200,7 @@ function TeacherAssignmentsList({ classId }: { classId: string }): React.ReactEl
       {assignments.length === 0 ? (
         <p>No assignments yet.</p>
       ) : (
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
         <table>
           <thead>
             <tr>
@@ -283,6 +284,7 @@ function TeacherAssignmentsList({ classId }: { classId: string }): React.ReactEl
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );
@@ -339,6 +341,7 @@ function StudentAssignmentsList({ classId }: { classId: string }): React.ReactEl
       {rows.length === 0 ? (
         <p>No assignments yet.</p>
       ) : (
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
         <table>
           <thead>
             <tr>
@@ -359,6 +362,7 @@ function StudentAssignmentsList({ classId }: { classId: string }): React.ReactEl
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );

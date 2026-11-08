@@ -257,6 +257,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
       </div>
 
       <h3>Roster ({activeStudents.length})</h3>
+      <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
       <table>
         <thead>
           <tr>
@@ -292,10 +293,12 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
           )}
         </tbody>
       </table>
+        </div>
 
       {removedStudents.length > 0 && (
         <>
           <h3>Removed students ({removedStudents.length})</h3>
+          <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
           <table>
             <thead>
               <tr>
@@ -326,6 +329,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
               })}
             </tbody>
           </table>
+        </div>
         </>
       )}
     </div>
