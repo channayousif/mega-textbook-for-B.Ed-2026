@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
+import AuthFrame from '@site/src/components/AuthFrame';
 import { useLocation } from '@docusaurus/router';
 import { confirmGuestFeedback } from '@site/src/lib/contentFeedback';
 
@@ -80,11 +81,7 @@ export default function ConfirmFeedbackPage(): React.ReactElement {
 
   return (
     <Layout title="Confirm feedback">
-      <main
-        className="container auth-page margin-vert--lg"
-        style={{ maxWidth: 480 }}
-        dir={locale === 'ur' ? 'rtl' : 'ltr'}
-      >
+      <AuthFrame width={480} dir={locale === 'ur' ? 'rtl' : 'ltr'}>
         <div
           className={`alert ${state === 'success' ? 'alert--success' : state === 'pending' ? 'alert--info' : 'alert--danger'}`}
           role={state === 'pending' ? 'status' : 'alert'}
@@ -97,7 +94,7 @@ export default function ConfirmFeedbackPage(): React.ReactElement {
             <a href="/">{MESSAGES.backToSite[locale]}</a>
           </p>
         )}
-      </main>
+      </AuthFrame>
     </Layout>
   );
 }

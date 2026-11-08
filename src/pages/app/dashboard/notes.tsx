@@ -5,6 +5,7 @@ import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { listOwnNotes, createNote, updateNote, deleteNote } from '@site/src/lib/studentNotes';
 import type { StudentNote } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Personal notes area (Spec 011, US3 / FR-008). List newest-first, create, edit, delete,
@@ -133,7 +134,7 @@ function NotesContent(): React.ReactElement {
     await load();
   }
 
-  if (!notes) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!notes) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
