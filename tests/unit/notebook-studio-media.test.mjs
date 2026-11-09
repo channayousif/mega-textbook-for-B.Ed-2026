@@ -5,7 +5,7 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { planItem, advance, block, uploadsOn, spotCheckSheet, itemKey, DAILY_UPLOAD_LIMIT } from '../../scripts/notebook-studio/media-ledger.mjs';
 import { parseProbe, parseEbur128, parseSilences, parseBlack, evaluate } from '../../scripts/notebook-studio/media-qa.mjs';
-import { buildMeta, lessonRoute } from '../../scripts/notebook-studio/youtube-meta.mjs';
+import { buildMeta, routeFromIndex } from '../../scripts/notebook-studio/youtube-meta.mjs';
 import { wrap, cardSvg } from '../../scripts/notebook-studio/audio-to-video.mjs';
 import { placeIntoManifest } from '../../scripts/notebook-studio/place-media.mjs';
 import { checkStudio } from '../../scripts/check-studio-manifest.mjs';
@@ -119,8 +119,14 @@ describe('QG1 technical gate', () => {
 describe('YouTube metadata', () => {
   const item = { ...base, key: 't1-en-audio-p1', thumbnail_file: '~/studio-media/t.jpg' };
   it('resolves the published lesson route from the content index', () => {
-    expect(lessonRoute('efmp-301', 4, 1)).toBe('/semester-1/efmp-301/unit-04/topic-01');
-    expect(() => lessonRoute('efmp-301', 99, 1)).toThrow(/no published route/);
+    // static/content-index.json is generated at build time and absent in CI unit tests, so use a fixture.
+    const idx = [
+      { course_code: 'EFMP-301', unit_no: 4, topic_no: 1, kind: 'topic', coming_soon: false, permalink: '/semester-1/efmp-301/unit-04/topic-01' },
+      { course_code: 'EFMP-301', unit_no: 4, topic_no: 2, kind: 'topic', coming_soon: true, permalink: '/semester-1/efmp-301/unit-04/topic-02' },
+    ];
+    expect(routeFromIndex(idx, 'efmp-301', 4, 1)).toBe('/semester-1/efmp-301/unit-04/topic-01');
+    expect(() => routeFromIndex(idx, 'efmp-301', 4, 2)).toThrow(/no published route/);
+    expect(() => routeFromIndex(idx, 'efmp-301', 99, 1)).toThrow(/no published route/);
   });
   it('builds private-first metadata with disclosure, lesson link and limits', () => {
     const m = buildMeta({ ...item, title: `${'Long title '.repeat(12)}\u2014 <b>` }, { course: 'efmp-301', unit: 4, route: '/semester-1/efmp-301/unit-04/topic-01', playlistId: 'PLx' });

@@ -17,11 +17,15 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const SITE = 'https://textbook.com.pk';
 const LONG_DASH = /[\u2014\u2015\u2E3A\u2E3B]/g;
 
-export function lessonRoute(course, unit, topic, root = ROOT) {
-  const idx = JSON.parse(readFileSync(join(root, 'static', 'content-index.json'), 'utf8'));
+/** Pure lookup over a content index (static/content-index.json is generated at build time). */
+export function routeFromIndex(idx, course, unit, topic) {
   const hit = idx.find((e) => e.course_code?.toLowerCase() === course && e.unit_no === unit && e.topic_no === topic && e.kind === 'topic' && !e.coming_soon);
   if (!hit?.permalink) throw new Error(`no published route for ${course} ${unit}.${topic} in static/content-index.json`);
   return hit.permalink;
+}
+
+export function lessonRoute(course, unit, topic, root = ROOT) {
+  return routeFromIndex(JSON.parse(readFileSync(join(root, 'static', 'content-index.json'), 'utf8')), course, unit, topic);
 }
 
 const clean = (s) => String(s).replace(LONG_DASH, ' - ').replace(/[<>]/g, '').replace(/\s+/g, ' ').trim();
