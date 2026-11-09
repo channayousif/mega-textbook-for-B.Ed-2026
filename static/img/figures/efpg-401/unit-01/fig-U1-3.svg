@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Classroom Factors Supporting Spoken English</title>
+  <desc id="d">Concept map illustrating factors that foster classroom speaking skills: psychological safety, collaborative pair work, interactive language games, teacher modelling and structured vocabulary support.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="440"/>
+
+  <text class="h" x="390" y="32" text-anchor="middle">Foundations of Spoken English Development</text>
+  <text class="muted" x="390" y="50" text-anchor="middle">Five interdependent classroom pillars supporting young learners' oral fluency</text>
+
+  <!-- Connecting Lines -->
+  <line class="stroke-a" x1="230" y1="170" x2="310" y2="215"/>
+  <polygon class="ah-a" points="305,210 315,218 310,225"/>
+
+  <line class="stroke" x1="390" y1="145" x2="390" y2="200"/>
+  <polygon class="ah" points="385,195 390,205 395,195"/>
+
+  <line class="stroke-b" x1="550" y1="170" x2="470" y2="215"/>
+  <polygon class="ah-b" points="470,225 465,218 475,210"/>
+
+  <line class="stroke-c" x1="230" y1="310" x2="310" y2="265"/>
+  <polygon class="ah-c" points="310,255 315,262 305,270"/>
+
+  <line class="stroke-d" x1="550" y1="310" x2="470" y2="265"/>
+  <polygon class="ah-d" points="475,270 465,262 470,255"/>
+
+  <!-- Center Hub -->
+  <rect class="panel" x="300" y="200" width="180" height="80" rx="40"/>
+  <text class="sh" x="390" y="236" text-anchor="middle">Spoken Fluency</text>
+  <text class="sh" x="390" y="256" text-anchor="middle">&amp; Confidence</text>
+
+  <!-- Pillar 1: Low-Anxiety Climate -->
+  <rect class="panel-a" x="40" y="90" width="200" height="90" rx="8"/>
+  <text class="sh" x="140" y="115" text-anchor="middle">1. Safe Climate</text>
+  <text class="body" x="55" y="140">• Lower affective filter</text>
+  <text class="body" x="55" y="162">• Delayed error correction</text>
+
+  <!-- Pillar 2: Modelling & Intonation -->
+  <rect class="panel" x="290" y="65" width="200" height="80" rx="8"/>
+  <text class="sh" x="390" y="90" text-anchor="middle">2. Spoken Models</text>
+  <text class="body" x="305" y="115">• Pitch &amp; intonation tunes</text>
+  <text class="body" x="305" y="135">• Intelligible pronunciation</text>
+
+  <!-- Pillar 3: Collaborative Pair Work -->
+  <rect class="panel-b" x="540" y="90" width="200" height="90" rx="8"/>
+  <text class="sh" x="640" y="115" text-anchor="middle">3. Pair Collaboration</text>
+  <text class="body" x="555" y="140">• Maximize talking time</text>
+  <text class="body" x="555" y="162">• Remove public spotlight</text>
+
+  <!-- Pillar 4: Language Games -->
+  <rect class="panel-c" x="40" y="280" width="200" height="90" rx="8"/>
+  <text class="sh" x="140" y="305" text-anchor="middle">4. Language Games</text>
+  <text class="body" x="55" y="330">• Information-gap need</text>
+  <text class="body" x="55" y="352">• Purposeful repetition</text>
+
+  <!-- Pillar 5: Vocabulary Building -->
+  <rect class="panel-d" x="540" y="280" width="200" height="90" rx="8"/>
+  <text class="sh" x="640" y="305" text-anchor="middle">5. Lexical Building</text>
+  <text class="body" x="555" y="330">• Ready phrases &amp; chunks</text>
+  <text class="body" x="555" y="352">• Realia &amp; word walls</text>
+
+  <text class="muted" x="390" y="410" text-anchor="middle">All five components interact simultaneously to build functional communicative competence</text>
+  <text class="wm" x="768" y="430" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
