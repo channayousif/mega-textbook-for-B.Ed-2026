@@ -1,0 +1,66 @@
+{
+  "_comment": "VS-005 fixed shot list, 9:16. Image paths are relative to $MEDIA_ROOT/brand-assets/. The brand art_style suffix and negative are appended at pack time from brand/brand-bible.yaml; style arms replace the suffix for the shots that name them. Prompts describe motion and camera only; never on-screen text (captions stay in Remotion).",
+  "motion_negative": "static image, frozen frame, flicker, morphing face, melting features, deformed hands, extra limbs, jitter, sudden cuts, writing on the board",
+  "style_arms": {
+    "polished_3d": {
+      "prompt_suffix": "polished stylised 3D animated film look, soft global illumination, gentle depth of field, smooth character animation, warm natural light, palette of deep teal green and burnt orange with pale sage, South Asian (Sindh, Pakistan) setting and people, modest everyday clothing, no text, no letters, no logos, no watermarks",
+      "negative": "photorealistic, live action, text, captions, subtitles, logos, distorted hands, extra fingers"
+    }
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "title": "Ustani explains with a gesture",
+      "kind": "i2v",
+      "image": { "background": "sets/classroom.png", "layers": [{ "file": "cast/ustani/pose_explain.png", "height": 0.78, "x": 0.5 }] },
+      "prompt": "A warm South Asian woman teacher educator stands at the front of a bright classroom and explains an idea to the viewer, moving one open hand in a calm explaining gesture, small natural head nods, soft smile, gentle breathing, dupatta moves slightly. The camera holds a steady medium shot with a very slow push in."
+    },
+    {
+      "id": "S2",
+      "title": "Bilal nods and thinks",
+      "kind": "i2v",
+      "image": { "background": "sets/staffroom.png", "layers": [{ "file": "cast/shagird/pose_think.png", "height": 0.78, "x": 0.5 }] },
+      "prompt": "A young South Asian trainee teacher in a staffroom listens thoughtfully, touches his chin, then nods slowly as he understands, a small smile appears. Natural blinking, relaxed shoulders. Steady medium shot, the camera stays still."
+    },
+    {
+      "id": "S3",
+      "title": "Classroom establishing shot",
+      "kind": "i2v",
+      "image": { "background": "sets/classroom.png", "layers": [] },
+      "prompt": "An empty bright government-school classroom in the morning. Sunlight moves softly across the tiled floor, leaves of the potted plant sway in a light breeze from the window, dust motes float in the light. The camera glides slowly forward between the desks towards the blank green board."
+    },
+    {
+      "id": "S4",
+      "title": "Concept B-roll: group work",
+      "kind": "t2v",
+      "prompt": "Four primary-school children in a Sindh classroom sit around a desk working together on a paper chart, one girl points at the chart and the others lean in and smile, a woman teacher in a shalwar kameez and dupatta walks over and kneels beside them to encourage them. Bright window light, the camera slowly arcs around the group at child eye level."
+    },
+    {
+      "id": "S5",
+      "title": "Ustani and Bilal talk",
+      "kind": "i2v",
+      "image": { "background": "sets/staffroom.png", "layers": [{ "file": "cast/ustani/pose_explain.png", "height": 0.7, "x": 0.3 }, { "file": "cast/shagird/pose_think.png", "height": 0.7, "x": 0.72 }] },
+      "prompt": "Two colleagues in a teachers' staffroom have a friendly conversation: the woman teacher educator on the left explains with a small hand gesture, the young man on the right listens, nods and replies with a smile. Natural blinking and small body movement. Steady two-shot, the camera stays still."
+    },
+    {
+      "id": "S6",
+      "title": "Hands close-up (stress test)",
+      "kind": "t2v",
+      "prompt": "Close-up of a teacher's hands placing coloured picture cards one by one in a neat row on a wooden classroom desk, then sliding one card into place, fingers natural and steady. Soft window light, shallow depth of field, the camera stays still."
+    },
+    {
+      "id": "S7",
+      "title": "Style arm: S1 in polished 3D",
+      "kind": "i2v",
+      "style": "polished_3d",
+      "base": "S1"
+    },
+    {
+      "id": "S8",
+      "title": "Style arm: S3 in polished 3D",
+      "kind": "i2v",
+      "style": "polished_3d",
+      "base": "S3"
+    }
+  ]
+}
