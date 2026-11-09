@@ -158,6 +158,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261108T203238Z-g3-desk-e5f319f8.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261108T203238Z-g3-desk-ad4c974d.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261108T205835Z-g3-desk-6a389e2c.json |
+| Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-301/reviews/unit-03/G3/20261108T203238Z-g3-desk-abd7d7ca.json; RRQ 10 model answer distinguishes hypotheses from stated facts regarding copying rewards, observed failed attempts, and assisted reach in EN and UR; ERQ rubrics remove unstated word count condition in EN and UR; observational learning acquisition vs performance distinction verified across topic-03, summary, and fig-U3-6; topic-01 corridor silence framed as hypothesis with consequence-based alternatives; coverage and sources bindings confirmed accurate; render/glyph geometry and provenance remain owner handoffs; Unit 3 G3 remains open pending fresh independent review |
 
 ## Re-restructure in progress (2026-09-11)
 
