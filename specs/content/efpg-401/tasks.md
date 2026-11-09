@@ -24,7 +24,7 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-01/G2/20261109T231800734Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 1 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notices |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
