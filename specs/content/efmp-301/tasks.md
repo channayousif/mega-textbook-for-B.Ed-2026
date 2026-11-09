@@ -158,6 +158,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261108T203238Z-g3-desk-e5f319f8.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261108T203238Z-g3-desk-ad4c974d.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261108T205835Z-g3-desk-6a389e2c.json |
+| Unit 9 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report specs/content/efmp-301/reviews/unit-09/G3/20261108T203238Z-g3-desk-cb72c312.json; verified the current unit already satisfies the report's findings (MCQ 4/3/3 with MCQ-08 mapped to 9.1, balanced keys, two-phase activity, reliability uncertainty, qualified formative/summative claims, authored practical-work label, fig-U9-1 board examination, ERQ word limits and model outlines); no new content edits required; current render and authenticated provenance remain owner handoffs; no certification |
 
 ## Re-restructure in progress (2026-09-11)
 
