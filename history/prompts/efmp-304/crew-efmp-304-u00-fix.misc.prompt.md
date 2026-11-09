@@ -1,31 +1,29 @@
 ---
 id: crew-efmp-304-u00-fix
-title: crew add EFMP-304 Urdu course overview
+title: crew fix EFMP-304 unit 0
 stage: misc
-date: 2026-11-10
+date: 2026-11-09
 surface: agent
-model: gemini-flash
+model: agy
 feature: efmp-304
 branch: crew/efmp-304-u00-fix
 user: crew
 command: crew fix
-labels: ["crew", "agy", "fix", "efmp-304"]
+labels: ["crew", "agy", "fix"]
 links:
   spec: specs/content/efmp-304/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/course-overview.mdx
+ - history/prompts/efmp-304/crew-efmp-304-u00-fix.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/course-overview.mdx
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-
-Brief contents:
 # Crew job efmp-304-u00-fix
 
 You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-304-u00-fix`.
@@ -52,31 +50,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Added the Urdu course overview for EFMP-304 at `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/course-overview.mdx`, mirroring English `docs/semester-2/efmp-304/course-overview.mdx` exactly with frontmatter matching `contracts/course-overview.schema.json`, `translation_status: draft`, no em dashes, and compliant terminology. Verified that all 14 content gates pass cleanly.
+Added the draft Urdu course overview for EFMP-304 with full frontmatter, zero em dashes, and clean content gate checks.
 
 ## Outcome
 
-- Impact: Urdu course overview for EFMP-304 added with draft translation status.
-- Tests: `npm run build:content-status && npm run check:content` passed (14/14 content gates).
-- Files: `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/course-overview.mdx`.
-- Next prompts: Independent review when scheduled.
-- Reflection: None.
+- Impact: fix for EFMP-304 Unit 0 by agy (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/course-overview.mdx`.
-- Decisions the team must respect: `translation_status` remains `draft`; no G4/G5 rows ticked; G3/G5 stay open without qualified sign-off.
-- Pending / next owner: independent G5 review when scheduled.
+- Shipped / changed: Added the draft Urdu course overview for EFMP-304 with full frontmatter, zero em dashes, and clean content gate checks.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu overview translation_status is draft.
-  - No G4 or G5 gates were modified.
-- Paperclip issues affected: none.
+  - Urdu course overview for EFMP-304 added at i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/course-overview.mdx with translation_status set to draft.
+  - Tracker rows for G4 and G5 were left unticked in accordance with review governance.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 2 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
