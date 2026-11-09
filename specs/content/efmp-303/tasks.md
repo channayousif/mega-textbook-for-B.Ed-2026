@@ -136,3 +136,4 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-03/G3/20261108T203238Z-g3-desk-d0b970f8.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-04/G3/20261108T203238Z-g3-desk-a67ec0a3.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261108T203238Z-g3-desk-b2674e94.json |
+| Unit 3 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-03/G3/20261108T203238Z-g3-desk-d0b970f8.json; fig-U3-3 and fig-U3-5 redrawn to reading order 1-2-3 / 4-5-6 with an explicit wrap arrow and, in U3-3, a dashed outer feedback loop from stage 6 to stage 1 (EN, UR and dark variants); findings 2-7 verified already repaired on main. G3 remains open; fresh independent blind solving, author provenance, frozen handoff, page renders and owner G1 reconciliation pending. |
