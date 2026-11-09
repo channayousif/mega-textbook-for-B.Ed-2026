@@ -58,12 +58,14 @@ export function stagesFor(u, f) {
   const backlog = f.figureBacklog ?? { schematic: u.figures?.prompt_only || 0, illustration: 0 };
   if (backlog.schematic > 0) need.push('figures');
   if (backlog.illustration > 0) need.push('illustrate');
+  if (needsIllustrationPlan(u, f)) need.push('plan_illustrations');
+  const hold = illustrationsPending(u, f);
   const unrepairedRevise = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'revise' && !f.g3Repaired;
   const unrepairedEscalate = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'escalate' && !f.g3Repaired;
   if (u.gates.G3 !== 'done') {
-    if (!f.g3Report) need.push('review_en');
+    if (!f.g3Report) { if (!hold) need.push('review_en'); }
     else if (unrepairedRevise) need.push('repair_en');
-    else if (reReviewDue(f)) need.push('review_en');
+    else if (!hold && (reReviewDue(f) || passStale(f))) need.push('review_en');
   }
   if (f.bilingual) {
     if (!f.mirrorComplete) {
@@ -100,9 +102,62 @@ export function limitIllustrate(added, inFlight) {
   });
 }
 
+/**
+ * ADR-0029 backfill (owner ruling 2026-11-09). A unit authored before the author-unit skill
+ * planned raster images (c74f8afb3, 2026-11-03) has no `unit-NN.banner.md`, and nothing queued
+ * one: `illustrate` runs only for illustration rows that exist. GISS-401 Unit 1 reached the desk
+ * as "Suggested: Certify" with no banner or scene; 98 of 120 units had no banner. A certified
+ * unit is left alone, since placing images would change its certified inputs.
+ * `hasBanner` is absent in callers that do not gather it, which keeps their old behaviour.
+ */
+export function needsIllustrationPlan(u, f) {
+  return u.authored && u.gates.G3 !== 'done' && f.hasBanner === false;
+}
+
+/**
+ * Owner ruling 2026-11-09: hold, do not certify, until a unit's raster images are planned and
+ * placed. While this is true the crew does not review the unit and the desk does not offer it.
+ */
+export function illustrationsPending(u, f) {
+  return needsIllustrationPlan(u, f) || (f.figureBacklog?.illustration ?? 0) > 0;
+}
+
+/**
+ * Paths whose hash differs between a report's `input_manifest` and the current one, kept only
+ * when they belong to this unit (`unit-NN` as a path segment or a `unit-NN.` file stem). Shared
+ * inputs (gate scripts, the style guide, course guides) change every unit's manifest at once;
+ * re-reviewing the corpus for those would be a wave, so only the unit's own changes count.
+ */
+export function unitScopedChanges(before, after, unit) {
+  const nn = String(unit).padStart(2, '0');
+  const mine = new RegExp(`(^|/)unit-${nn}(/|\\.|$)`);
+  const keys = new Set([...Object.keys(before ?? {}), ...Object.keys(after ?? {})]);
+  return [...keys].filter((k) => mine.test(k) && (before ?? {})[k] !== (after ?? {})[k]).sort();
+}
+
+/**
+ * A `pass` whose unit files changed after the review (images placed, a later fix) describes
+ * content the reviewer never saw. It gets a fresh review; a pass used no repair cycle, so the
+ * ADR-0019 limit is untouched. `g3UnitChanges` is the unitScopedChanges list for the report.
+ */
+function passStale(f) {
+  return f.g3Report?.disposition === 'pass' && (f.g3UnitChanges?.length ?? 0) > 0;
+}
+
+/**
+ * Backfilling ~100 units at once would edit as many bound inputs in one tick and invalidate their
+ * evidence in a burst (sibling jobs also collide on tasks.md). Keep at most two plan jobs in flight.
+ */
+export const MAX_PLAN_ILLUSTRATIONS = 2;
+export function limitPlanIllustrations(added, inFlight) {
+  let slots = MAX_PLAN_ILLUSTRATIONS - inFlight.filter((j) => j.stage === 'plan_illustrations').length;
+  return added.filter((j) => j.stage !== 'plan_illustrations' || slots-- > 0);
+}
+
 /** A unit the crew has finished reviewing that waits only for a person's G3 sign-off. */
 export function awaitingG3(u, f) {
   if (!u.authored || u.gates.G3 === 'done' || !f.g3Report || reReviewDue(f)) return false;
+  if (illustrationsPending(u, f) || passStale(f)) return false;
   return f.g3Report.disposition !== 'revise' || f.g3Repaired;
 }
 

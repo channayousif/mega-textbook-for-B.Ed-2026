@@ -21,6 +21,7 @@ import { walkUnits } from './lib/content-roots.mjs';
 import { loadTracker } from './lib/tracker-rows.mjs';
 import { inputManifest, dirtyInputs } from './lib/review-evidence.mjs';
 import { deskUnit, manifestDigest, pickLatestReport } from './lib/g3-desk.mjs';
+import { illustrationFacts, g3UnitChanges } from './crew/review-facts.mjs';
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const pad = (n) => String(n).padStart(2, '0');
@@ -71,8 +72,14 @@ for (const c of status.courses) {
         process.stderr.write(`g3-desk: ${c.course_code} unit ${u.unit_no}: ${e.message}\n`);
       }
     }
+    // Same illustration and stale-pass facts the crew planner uses, so a unit missing its
+    // ADR-0029 images is not offered for certify (owner ruling 2026-11-09).
+    const facts = {
+      ...illustrationFacts(ROOT, c.course_code, u.unit_no),
+      g3UnitChanges: u.gates.G3 === 'done' ? [] : g3UnitChanges(ROOT, c.course_code, u.unit_no, report),
+    };
     units.push(deskUnit({
-      course: c.course_code, u, report, reportPath: path, rows, digest, dirty,
+      course: c.course_code, u, report, reportPath: path, rows, digest, dirty, facts,
       index: {
         title: dir ? unitTitle(dir.unitDir) : null,
         permalink: assessment ? assessment.permalink.replace(/unit-assessment$/, '') : null,

@@ -1,6 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { deleteUsers } from './_cleanup';
+import { TEST_PASSWORD } from './_password';
 
 // ADR-0032. This spec never records a decision: CI's Supabase is the live instance, and a
 // queued ledger row there would become a real sign-off PR at the crew's next tick. The
@@ -9,7 +10,7 @@ const url = process.env.DOCUSAURUS_SUPABASE_URL;
 const anon = process.env.DOCUSAURUS_SUPABASE_ANON_KEY;
 const service = process.env.SUPABASE_SERVICE_ROLE_KEY;
 test.skip(!(url && anon && service), 'requires a migrated Supabase test instance');
-const password = 'Test-Passw0rd!';
+const password = TEST_PASSWORD;
 
 async function signIn(page: Page, email: string) {
   await page.goto('/app/login');

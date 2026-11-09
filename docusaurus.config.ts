@@ -122,6 +122,21 @@ function siteStats() {
   };
 }
 
+/**
+ * Feature 028: the newest automatic news events for the ticker, from the feed that
+ * prebuild derives from git history (scripts/build-news-feed.mjs). Embedding them
+ * here prerenders the ticker, so it shows without JavaScript and never shifts the
+ * layout. A missing feed (a bare `docusaurus start`) is simply an empty ticker.
+ */
+function newsFeed() {
+  try {
+    const feed = JSON.parse(readFileSync('./static/news-feed.json', 'utf8'));
+    return (feed.events ?? []).slice(0, 12);
+  } catch {
+    return [];
+  }
+}
+
 /** Per-course counts for the catalogue, from the same sources as siteStats(). */
 function courseStatus() {
   const report = JSON.parse(readFileSync('./static/content-status.json', 'utf8'));
@@ -191,6 +206,7 @@ const config: Config = {
     reviewNotices: reviewNotices(),
     siteStats: siteStats(),
     courseStatus: courseStatus(),
+    newsFeed: newsFeed(),
   },
 
   presets: [

@@ -26,6 +26,10 @@ export default defineConfig({
     // a suite of negative assertions reporting success while asserting nothing.
     // See tests/rls/_setup.mjs.
     setupFiles: ['./tests/rls/_setup.mjs'],
+    // Sweeps leaked @example.test fixtures before and after the suite, since
+    // a test that dies before its afterAll strands its users
+    // (tests/test-account-sweep.mjs).
+    globalSetup: ['./tests/rls/_global-sweep.mjs'],
     // Policy failures surface as network/DB round-trips; the default 5s is tight
     // when the suite runs against a hosted project rather than a local stack.
     testTimeout: 30_000,

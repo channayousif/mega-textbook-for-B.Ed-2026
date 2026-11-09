@@ -32,9 +32,13 @@ The repo-native crew replaces paused Paperclip, derives jobs from repository sta
 
 The Urdu shorts pipeline is a separate, read-only consumer of published content, with its own subordinate specs and rules ([ADR-0031](0031-video-studio-sub-project.md)). Media stays outside Git, media compute runs on Kaggle, and only the owner approves scripts, assets and renders.
 
+### News and weekly email
+
+Automatic news (new units, Urdu translations, new courses, certified reviews) is derived from git history at build time, and admin news lives in the first anon-readable table, written only through audited RPCs ([ADR-0034](0034-news-feed-sources-and-public-news-table.md)). The weekly bilingual email is sent by an edge function on a host cron, once per ISO week, default-on with signed one-click unsubscribe ([ADR-0035](0035-weekly-digest-email-delivery.md)).
+
 ## All decisions
 
-There are 33 ADR files in the 0001–0033 sequence.
+There are 35 ADR files in the 0001–0035 sequence.
 
 | ADR | Decision | Status | Date | What it means in practice | Links |
 |---|---|---|---|---|---|
@@ -71,3 +75,5 @@ There are 33 ADR files in the 0001–0033 sequence.
 | [0031](0031-video-studio-sub-project.md) | Video Studio Sub-project for Urdu Shorts | Accepted by owner instruction on 2026-10-26 ("start the work on plan", approving the video-studio integration plan of 2026-10-25) | 2026-10-26 | Keep the Urdu shorts pipeline in a separate sub-project that only reads published content. Keep media outside Git, run media compute on Kaggle and reserve script, asset and render approvals to the owner. | None |
 | [0032](0032-g3-signoff-intent-ledger.md) | G3 Sign-off Intent Ledger | Accepted by owner instruction on 2026-10-27 | 2026-10-27 | The admin sign-off desk records owner G3 decisions in a Supabase ledger that no gate reads. The crew turns queued rows into Spec 017 certifications and tracker rows in one PR, refuses stale inputs, and never merges it. | amends Spec 017 FR-009 |
 | [0033](0033-sourced-geographic-and-real-world-figures.md) | Sourced Geographic and Real-World Figures | Accepted by owner instruction on 2026-10-29 | 2026-10-29 | Maps of real territory are built from Natural Earth (Pakistan point of view) checked against the Survey of Pakistan, rebuilt from a committed script and signed off by the owner; never drawn freehand or generated. Real-world photos and documents may be reused under PD, CC0 or CC BY with provenance; schematics stay hand-authored. | amends [0024](0024-capability-based-claude-and-codex-visual-authoring.md), [0029](0029-gemini-agy-raster-illustration-producer.md) |
+| [0034](0034-news-feed-sources-and-public-news-table.md) | News Feed Sources and Public News Table | Accepted by owner instruction on 2026-11-09 | 2026-11-09 | Content news is computed from git and content-status at build time (static/news-feed.json, prerendered); no CI database writes. `news_items` is publicly readable for live rows only and written only through admin-checked, audited RPCs; never store private data in it. | builds on [0007](0007-authentication-and-authorization-architecture.md), [0032](0032-g3-signoff-intent-ledger.md) |
+| [0035](0035-weekly-digest-email-delivery.md) | Weekly Digest Email Delivery | Accepted by owner instruction on 2026-11-09 | 2026-11-09 | The `weekly-digest` edge function sends one bilingual email per ISO week via Resend, triggered by host cron with a shared secret; `digest_runs` prevents double sends; users opt out by profile switch or signed one-click link. | builds on [0006](0006-self-hosted-supabase-backend.md), [0034](0034-news-feed-sources-and-public-news-table.md) |

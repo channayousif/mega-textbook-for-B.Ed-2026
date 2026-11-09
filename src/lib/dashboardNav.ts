@@ -60,6 +60,7 @@ export const adminNav: readonly NavItem[] = [
   { key: 'review-decisions', label: { en: 'Review decisions', ur: 'جائزے کے فیصلے' }, to: '/app/admin/review-decisions', activeMatch: /^\/app\/admin\/review-decisions/, icon: 'review' },
   { key: 'feedback-queue', label: { en: 'Reader feedback', ur: 'قارئین کی رائے' }, to: '/app/admin/feedback-queue', activeMatch: /^\/app\/admin\/feedback-queue/, icon: 'feedback' },
   { key: 'suggestions', label: { en: 'Suggestions', ur: 'تجاویز' }, to: '/app/admin/suggestions', activeMatch: /^\/app\/admin\/suggestions/, icon: 'suggest' },
+  { key: 'news', label: { en: 'News', ur: 'خبریں' }, to: '/app/admin/news', activeMatch: /^\/app\/admin\/news/, icon: 'megaphone' },
   { key: 'content-status', label: { en: 'Content status', ur: 'مواد کی صورتحال' }, to: '/app/admin/overview', activeMatch: /^\/app\/admin\/overview/, icon: 'analytics' },
   { key: 'agent-jobs', label: { en: 'Agent jobs', ur: 'ایجنٹ کے کام' }, to: '/app/admin/agent-jobs', activeMatch: /^\/app\/admin\/agent-jobs/, icon: 'jobs' },
   { key: 'audit', label: { en: 'Privilege audit', ur: 'اختیارات کا ریکارڈ' }, to: '/app/admin/audit', activeMatch: /^\/app\/admin\/(audit|feedback\/?$)/, icon: 'audit' },

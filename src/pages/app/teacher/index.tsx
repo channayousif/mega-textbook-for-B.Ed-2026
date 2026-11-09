@@ -12,6 +12,7 @@ import { WelcomeCard, StatTile, ListCard } from '@site/src/components/ui';
 import uiStyles from '@site/src/components/ui/ui.module.css';
 import AchievementBadge from '@site/src/components/AchievementBadge';
 import { useAuth } from '@site/src/contexts/AuthContext';
+import NewsTicker from '@site/src/components/NewsTicker';
 
 const statGrid = uiStyles.statGrid;
 
@@ -203,6 +204,7 @@ export default function TeacherOverviewPage(): React.ReactElement {
   return (
     <Layout title="Teacher Dashboard">
       <AppDashboardShell role="teacher">
+          <NewsTicker variant="card" />
           <OverviewContent />
       </AppDashboardShell>
     </Layout>

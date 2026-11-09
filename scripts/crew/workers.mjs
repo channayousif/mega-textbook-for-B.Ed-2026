@@ -49,6 +49,8 @@ export const STAGES = {
   author:     { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'author-unit' },
   repair_en:  { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'revise-topic' },
   figures:    { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'generate-figures' },
+  // Claude owns raster prompts and alt text (ADR-0024); the skill reference is named in the task.
+  plan_illustrations: { chain: ['claude', 'agy_claude'], skill: null },
   illustrate: { chain: ['agy', 'codex'], skill: 'generate-figures' },
   review_en:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
   translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'translate-unit' },

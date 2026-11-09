@@ -8,7 +8,7 @@ definition of done. Paperclip is paused (its data is kept); nothing here depends
 
 | Worker | CLI | Family | Rank-1 stages |
 |---|---|---|---|
-| claude | `claude -p` | anthropic | author, repair_en, review_ur, salvage |
+| claude | `claude -p` | anthropic | author, repair_en, review_ur, salvage, plan_illustrations (ADR-0029 backfill, D-2026-0081) |
 | codex | `codex exec` | openai | figures (SVG), translate (G4) |
 | agy | `agy -p` | google | review_en (G3), illustrate (ADR-0029) |
 | agy_claude | `agy -p --model claude-opus-4-6-thinking` | anthropic | none: next after claude in every chain that has claude (agy's separate Claude/GPT quota) |
@@ -32,6 +32,10 @@ is healthy, the review waits while every other kind of job keeps flowing.
    untracked file is in the way, it logs `owner-sync: ... blocked` to `cron.log` and changes nothing.
 2. **plan**: `crew.mjs plan` derives each unit's next stage from main (`report-content-status.mjs`,
    the course tracker, the review reports) and queues missing jobs. Nothing is hand-typed.
+   **Images before sign-off** (D-2026-0081): a unit whose G3 is not done and that has no
+   `unit-NN.banner.md` gets `plan_illustrations` (at most two in flight), then `illustrate`; until
+   its images are placed it is neither reviewed nor listed as awaiting G3. A `pass` whose own unit
+   files changed after the review is reviewed again before it reaches the desk.
    **One course at a time** (owner ruling 2026-10-28, `focusCourse` in `scripts/crew/planner.mjs`):
    a course is started once it has an authored unit or crew work in flight on the board. The focus
    is the started course with crew work left and the fewest jobs remaining (ties in catalog order);

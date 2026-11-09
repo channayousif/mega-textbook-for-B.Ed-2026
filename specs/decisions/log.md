@@ -4607,3 +4607,29 @@ content-improvement loop with no further cycle.
     intake runs on a newly prepared manifest.
   - Certifies no content, qualifies no reviewer (including the scholar review drafting note 7
     asks for), and authorises no publication.
+
+---
+
+## D-2026-0081 - Backfill raster illustrations, hold G3 until placed, and keep sacred figures out of every image
+
+- **Status:** confirmed
+- **Gate:** G3 (English review and owner sign-off desk); figure planning (ADR-0029 point 5)
+- **Scope:** every unit whose G3 is not done; first seen on GISS-401 Unit 1
+- **Decided by:** curriculum owner, 2026-11-09 (board-direct, relayed through Claude Code), after
+  the G3 desk offered GISS-401 Unit 1 as "Suggested: Certify" with no raster images
+- **Decision:**
+  1. **Backfill.** A unit authored before the author-unit skill planned raster images
+     (`c74f8afb3`, 2026-11-03) gets them now: a `unit-NN.banner.md` banner row and, where a
+     picture teaches, one classroom scene per topic, planned by Claude and produced by the
+     crew's `illustrate` job. Certified units are left alone.
+  2. **Hold, do not certify.** A unit with no banner sidecar, or with an illustration row not yet
+     placed, is neither reviewed by the crew nor offered on the desk. Once its images are placed,
+     a `pass` whose unit files changed after the review gets a fresh review before sign-off.
+  3. **Religious courses get illustrations, with limits, and the limits apply to every course.**
+     Classroom and school scenes only; no prophet, companion, angel or other sacred person, and no
+     scripture or calligraphy. Each image is inspected for cultural accuracy before `placed`.
+- **Basis:** owner answers 2026-11-09 ("Yes, with limits"; "Hold until illustrated"); ADR-0029
+  point 5 (one banner per unit index).
+- **Limits:** Certifies no content, qualifies no reviewer and authorises no publication
+  (Art. VII.8). Changes no approved content-spec; the backfilled images are additions the spec's
+  schematic figure plan does not forbid.

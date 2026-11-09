@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, figureBacklog, limitIllustrate } from '../../scripts/crew/planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, figureBacklog, limitIllustrate,
+  needsIllustrationPlan, illustrationsPending, unitScopedChanges, limitPlanIllustrations } from '../../scripts/crew/planner.mjs';
 
 const unit = (G3 = 'open', G5 = 'open', over = {}) => ({ authored: true, gates: { G3, G5 }, figures: { prompt_only: 0 }, ...over });
 const facts = (over = {}) => ({ bilingual: true, g3Report: null, g3Repaired: false, g5Report: null, mirrorComplete: true, ...over });
@@ -162,4 +163,50 @@ test('one illustrate job at a time: generation is serial', () => {
   const added = [j('a', 'illustrate'), j('b', 'figures'), j('c', 'illustrate')];
   assert.deepEqual(limitIllustrate(added, []).map((x) => x.id), ['a', 'b']);
   assert.deepEqual(limitIllustrate(added, [j('z', 'illustrate')]).map((x) => x.id), ['b']);
+});
+
+test('a unit with no banner is planned, held from review and kept off the desk (D-2026-0081)', () => {
+  // 2026-11-09: GISS-401 Unit 1 reached the desk as "Suggested: Certify" with no raster images.
+  const noBanner = facts({ hasBanner: false, mirrorComplete: true });
+  assert.deepEqual(stagesFor(unit(), noBanner), ['plan_illustrations']);
+  const passedNoBanner = facts({ hasBanner: false, g3Report: { disposition: 'pass' } });
+  assert.deepEqual(stagesFor(unit(), passedNoBanner), ['plan_illustrations']);
+  assert.equal(awaitingG3(unit(), passedNoBanner), false);
+  // Planned but not yet placed: illustrate runs, review and desk still wait.
+  const planned = facts({ hasBanner: true, figureBacklog: { schematic: 0, illustration: 2 }, g3Report: { disposition: 'pass' } });
+  assert.deepEqual(stagesFor(unit(), planned), ['illustrate']);
+  assert.equal(awaitingG3(unit(), planned), false);
+  assert.equal(illustrationsPending(unit(), planned), true);
+  // A certified unit is never backfilled; callers that gather no hasBanner keep the old rules.
+  assert.equal(needsIllustrationPlan(unit('done'), facts({ hasBanner: false })), false);
+  assert.equal(needsIllustrationPlan(unit(), facts()), false);
+  assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'pass' } })), true);
+});
+
+test('a pass whose own unit files changed is re-reviewed; shared-input churn is not (D-2026-0081)', () => {
+  const placed = { hasBanner: true, figureBacklog: { schematic: 0, illustration: 0 } };
+  const stale = facts({ ...placed, g3Report: { disposition: 'pass' }, g3UnitChanges: ['docs/x/unit-01/index.mdx'] });
+  assert.deepEqual(stagesFor(unit(), stale), ['review_en']);
+  assert.equal(awaitingG3(unit(), stale), false);
+  const clean = facts({ ...placed, g3Report: { disposition: 'pass' }, g3UnitChanges: [] });
+  assert.deepEqual(stagesFor(unit(), clean), []);
+  assert.equal(awaitingG3(unit(), clean), true);
+  // An exhausted escalate is not re-reviewed by this rule; it returns to the owner once placed.
+  const esc = facts({ ...placed, g3Report: { disposition: 'escalate' }, g3Repaired: true, g3Cycles: 2, g3UnitChanges: ['docs/x/unit-01/index.mdx'] });
+  assert.deepEqual(stagesFor(unit(), esc), []);
+  assert.equal(awaitingG3(unit(), esc), true);
+
+  const before = { 'docs/x/unit-01/topic-01.mdx': 'a', 'scripts/lib/gates.mjs': 'a', 'specs/content/x/figures/unit-010.md': 'a' };
+  const after = { 'docs/x/unit-01/topic-01.mdx': 'b', 'scripts/lib/gates.mjs': 'b', 'specs/content/x/figures/unit-010.md': 'b',
+    'specs/content/x/figures/unit-01.banner.md': 'n' };
+  assert.deepEqual(unitScopedChanges(before, after, 1), ['docs/x/unit-01/topic-01.mdx', 'specs/content/x/figures/unit-01.banner.md']);
+  assert.deepEqual(unitScopedChanges(before, before, 1), []);
+});
+
+test('at most two plan_illustrations jobs are in flight', () => {
+  const job = (n) => ({ id: `u${n}`, stage: 'plan_illustrations' });
+  const other = { id: 'r', stage: 'review_en' };
+  assert.deepEqual(limitPlanIllustrations([job(1), job(2), job(3), other], []).map((j) => j.id), ['u1', 'u2', 'r']);
+  assert.deepEqual(limitPlanIllustrations([job(1), other], [job(9)]).map((j) => j.id), ['u1', 'r']);
+  assert.deepEqual(limitPlanIllustrations([job(1)], [job(8), job(9)]), []);
 });

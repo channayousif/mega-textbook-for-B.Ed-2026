@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { deleteUsers } from './_cleanup';
+import { TEST_PASSWORD } from './_password';
 
 /**
  * T022 [US4] — marks a unit studied from its content page, confirms it
@@ -15,7 +16,7 @@ const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const configured = Boolean(SUPABASE_URL && ANON_KEY && SERVICE_KEY);
 test.skip(!configured, 'requires DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY');
 
-const PASSWORD = 'Test-Passw0rd!';
+const PASSWORD = TEST_PASSWORD;
 
 test('marking a unit studied from its content page reflects in Progress without a reload', async ({ page }) => {
   const svc = createClient(SUPABASE_URL!, SERVICE_KEY!, { auth: { persistSession: false } });
