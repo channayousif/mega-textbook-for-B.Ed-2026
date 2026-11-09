@@ -1,8 +1,8 @@
 ---
 id: crew-efmp-301-u03-repair_en-r1
-title: crew repair_en EFMP-301 unit 3 round 1
+title: crew repair_en EFMP-301 unit 3
 stage: misc
-date: 2026-11-10
+date: 2026-11-09
 surface: agent
 model: agy
 feature: efmp-301
@@ -68,27 +68,28 @@ From `specs/content/efmp-301/reviews/unit-03/G3/20261108T203238Z-g3-desk-abd7d7c
 - (efmp-301-u03-repair_en, repair_en, codex) Owner must resolve render/glyph and provenance evidence before acceptance.
 - (efmp-301-u03-review_en, review_en, codex) Advisory tracker row is supplied as an artifact for parent insertion.
 
+
 ## Response snapshot
 
-Applied findings of G3 review report 20261108T203238Z-g3-desk-abd7d7ca.json, documented repair notes in specs/content/efmp-301/reviews/unit-03/G3/20261110-repair-notes.md, appended advisory tracker row in specs/content/efmp-301/tasks.md leaving G3 open, and verified all 14 content gates pass cleanly.
+Applied findings of Unit 3 G3 desk review abd7d7ca, recorded repair notes in specs/content/efmp-301/reviews/unit-03/G3/20261110-repair-notes.md, appended the advisory tracker row leaving G3 open in tasks.md, and verified all 14 content gates pass cleanly.
 
 ## Outcome
 
 - Impact: repair_en for EFMP-301 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed with all 14 gates green.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
-- Next prompts: fresh independent G3 review cycle once ready.
-- Reflection: None needed; substantive content repairs were previously landed and verified against the G2 manifest, and repair notes and tracker entries cleanly document resolution without invalidating gate hashes.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Documented repair evidence in specs/content/efmp-301/reviews/unit-03/G3/20261110-repair-notes.md and appended advisory tracker row in specs/content/efmp-301/tasks.md referencing report 20261108T203238Z-g3-desk-abd7d7ca.json.
-- Decisions the team must respect: G3 remains advisory and unticked (▢); this repair does not certify or sign off the unit.
-- Pending / next owner: Owner/crew lead for fresh independent review cycle.
+- Shipped / changed: Applied findings of Unit 3 G3 desk review abd7d7ca, recorded repair notes in specs/content/efmp-301/reviews/unit-03/G3/20261110-repair-notes.md, appended the advisory tracker row leaving G3 open in tasks.md, and verified all 14 content gates pass cleanly.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Owner must resolve render/glyph and provenance evidence before acceptance.
-  - Unit 3 G3 remains open pending a fresh independent review cycle.
-- Paperclip issues affected: none.
+  - Owner must resolve render/glyph accessibility and model provenance evidence before final acceptance.
+  - Unit 3 G3 remains open and unticked pending a fresh independent review cycle.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
