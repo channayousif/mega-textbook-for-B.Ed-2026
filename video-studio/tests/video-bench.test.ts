@@ -88,6 +88,10 @@ test('video_bench.py --selftest builds every graph and --verify-only catches tam
   const n = benchJobs(packCandidates(cands, { only: cands.candidates.map((c) => c.id) }), shots).length + cands.candidates.length;
   assert.match(out, new RegExp(`selftest: ${n} graphs ok`));
   execFileSync('python3', ['-I', script, '--verify-only', tmp]);
+  // Pack ships only active workflows: the job must not need an inactive candidate's file.
+  rmSync(join(tmp, 'hunyuan15_i2v.json'));
+  assert.equal(execFileSync('python3', ['-I', script, '--list-workflows', tmp], { encoding: 'utf8' }).trim(), 'wan22_ti2v.json');
+  copyFileSync(join(WORKFLOW_DIR, 'hunyuan15_i2v.json'), join(tmp, 'hunyuan15_i2v.json'));
   copyFileSync(join(WORKFLOW_DIR, workflows[0]), join(tmp, 'shots.json'));
   assert.throws(() => execFileSync('python3', ['-I', script, '--verify-only', tmp], { stdio: 'pipe' }), /Command failed/);
 });

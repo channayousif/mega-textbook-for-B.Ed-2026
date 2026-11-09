@@ -14,7 +14,11 @@
 - [x] OV014 `scripts/video-bench.ts` (pack, run, fetch, all, `--smoke`, `--only`).
 - [x] OV015 `scripts/video-blind.ts` and `scorecard.csv`.
 - [x] OV016 `tests/video-bench.test.ts`.
-- [ ] OV017 Smoke run on Kaggle (`npm run video:bench -- all --smoke`); compare with the 214 s reference.
+- [x] OV017 Smoke run on Kaggle (2026-11-09, session 13.3 min, torch 2.11.0+cu130, 2x T4): Wan2.2-5B S1, 704x1280, 25 frames,
+  20 steps: 285 s cold on GPU 0 and 276 s cold on GPU 1 while GPU 0 was busy (both include model load; the 214 s reference
+  excludes it). Peak VRAM 14.9 GB of 15, peak host RAM 26.3 GB of 31 with two workers, 0 black frames. Identity, outfit and
+  flat-2D style held in every frame. The two "warm" rows (6 s) were ComfyUI cache hits on an identical graph, now fixed by
+  a distinct seed per smoke run. Both GPUs produced byte-identical clips for the same seed.
 - [ ] OV018 Full bench run; record GPU minutes.
 - [ ] OV019 Owner supplies `flow_<shot>_s1.mp4` and `puppet_<shot>_s1.mp4` reference clips in `$MEDIA_ROOT/video-benchmark/inbox/`.
 - [ ] OV020 Blind review and unblind; write the verdict against the pass criteria in spec.md.

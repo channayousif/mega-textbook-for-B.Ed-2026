@@ -13,6 +13,7 @@ Only /kaggle/working/out is uploaded back; weights and frames live in /tmp.
 
 No GPU needed:  python3 -I video_bench.py --selftest <inputs-dir>   (build and check every graph)
                 python3 -I video_bench.py --verify-only <inputs-dir> (input tamper test)
+                python3 -I video_bench.py --list-workflows <inputs-dir> (workflows a run would load)
 """
 import copy, glob, hashlib, json, os, shutil, subprocess, sys, threading, time, traceback, urllib.error, urllib.request, uuid
 
@@ -63,12 +64,14 @@ def verify_inputs(inputs):
     return manifest
 
 
-def load_spec(inputs):
+def load_spec(inputs, all_workflows=False):
+    """Pack ships only the active candidates' workflows; the selftest packs and checks them all."""
     cands = json.load(open(os.path.join(inputs, "candidates.json")))
     shots = json.load(open(os.path.join(inputs, "shots.json"), encoding="utf-8"))
     workflows = {}
     for c in cands["candidates"]:
-        workflows[c["workflow"]] = json.load(open(os.path.join(inputs, c["workflow"])))
+        if all_workflows or c.get("active", True):
+            workflows[c["workflow"]] = json.load(open(os.path.join(inputs, c["workflow"])))
     return cands, shots, workflows
 
 
@@ -356,8 +359,12 @@ def run_candidate(cand, jobs, cands, shots, workflows, inputs, mode, sampler, cl
     length = cands["smoke"]["length"] if mode == "smoke" else None
     try:
         if mode == "smoke":
-            # Phase 1: one job alone on GPU 0 (cold, then warm). Phase 2: the same job on every GPU at once.
-            phases = [[(0, jobs[0])], [(0, jobs[0])], [(g, jobs[0]) for g in range(n_workers)]]
+            # Phase 1: one job alone on GPU 0 (cold, then warm). Phase 2: the same shot on every GPU at once.
+            # Each run gets its own seed: ComfyUI returns a cached result for an identical graph
+            # (the first smoke run, 2026-11-09, logged 6 s "warm" renders that were cache hits).
+            c0, s0, seed0 = jobs[0]
+            phases = [[(0, (c0, s0, seed0))], [(0, (c0, s0, seed0 + 1))],
+                      [(g, (c0, s0, seed0 + 2 + g)) for g in range(n_workers)]]
             labels = ["solo-cold", "solo-warm", "parallel-%d" % n_workers]
         else:
             queues = [[] for _ in range(n_workers)]
@@ -424,7 +431,7 @@ def write_output_manifest(inputs):
 
 
 def selftest(inputs):
-    cands, shots, workflows = load_spec(inputs)
+    cands, shots, workflows = load_spec(inputs, all_workflows=True)
     tmp = os.path.join("/tmp", "vs-video-selftest")
     os.makedirs(tmp, exist_ok=True)
     n = 0
@@ -443,6 +450,9 @@ def selftest(inputs):
 def main():
     if len(sys.argv) == 3 and sys.argv[1] == "--verify-only":
         verify_inputs(sys.argv[2])
+        return
+    if len(sys.argv) == 3 and sys.argv[1] == "--list-workflows":
+        print("\n".join(sorted(load_spec(sys.argv[2])[2])))
         return
     if len(sys.argv) == 3 and sys.argv[1] == "--selftest":
         selftest(sys.argv[2])
