@@ -1,0 +1,21 @@
+# Tasks: Feature 029
+
+- [x] Connect the official Gemini Notebook MCP (notebooks/sources) and the community MCP (generation), user scope
+- [x] Source pack builder + tests
+- [x] Pilot generation for EFMP-301 4.1 (EN + UR), reviews logged
+- [x] Round 2: audio brief + parts with mnemonics, Urdu register v2, quiz trial, study guide, visuals bake-off
+- [x] Owner rulings: poster A, deck B (v4 script-fed), audio brief format, Urdu audio approved
+- [x] Report post-processor, ingest, manifest schema, gate, index builder + tests
+- [x] Study Studio panel (poster, mind map with recall, brief, study guide, listen, slides)
+- [x] Owner ruling 2026-11-09: audio and video on YouTube / YouTube Music, slides on Google Drive; schema enforces hosts per kind; panel embeds youtube-nocookie and Drive /embed or /preview (`src/lib/studioMedia.ts`), adds a Watch tab
+- [x] Phone-width browser check EN/UR light/dark: tab selected state (shared fix in PR #518), table overflow, ASCII diagram stripped by postprocess, Urdu mind-map tab label
+- [x] studio-media pipeline skill (`.claude/skills/studio-media/`): ledger state machine with sha256 dedupe and 95/day quota guard, QG1 media-qa (ffprobe/ebur128/silence/black), audio-to-video brand card + loudnorm, youtube-meta, place-media, ledger schema in check-studio-manifest, 14 tests; youtube-uploader MCP v0.3.1 built for arm64 and registered; ffmpeg 7.0.2 static in ~/.local/bin
+- [ ] Owner: create textbook.com.pk channel + podcast/video playlists; enable YouTube Data API v3, add test user, publish OAuth app to production; complete consent (skill "YouTube authentication")
+- [x] Smoke upload (private) and delete (eh1SNfJPPBs, 2026-11-09)
+- [x] Pilot EFMP-301 Unit 4: 14 items generated and gated; owner approved; 9 public and placed, embeds browser-checked EN/UR (2026-11-10)
+- [ ] Upload, publish and place the remaining 5 (t2-ur-video, t3-en-audio-p1, t3-ur-audio-p1, t3-en-video, t3-ur-video) after the channel cap resets or verification
+- [ ] Slides: upload deck v4 to Google Drive (owner confirms "anyone with the link" sharing) and place
+- [ ] Quiz v2 import script into quiz_items as drafts (service role, owner-run) + RLS test
+- [ ] Urdu-reader check of UR assets before wider rollout
+- [ ] Separate track: Urdu corpus register proposal (style guide + terminology), not in this feature
+- [ ] Rollout plan per course after the pilot is live

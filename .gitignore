@@ -18,6 +18,7 @@ static/content-index.json
 static/content-status.json
 # Feature 028: automatic news feed, derived from git history by prebuild.
 static/news-feed.json
+static/studio-index.json
 # G3 sign-off desk data (ADR-0032), rebuilt by prestart/prebuild.
 static/g3-desk.json
 static/catalog-courses.json
@@ -143,3 +144,6 @@ static/img/covers/
 
 # Python bytecode (scripts/development, tests/ops)
 __pycache__/
+
+# Feature 029: Gemini Notebook source packs and downloads (local only)
+.studio/
