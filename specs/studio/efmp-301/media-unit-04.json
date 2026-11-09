@@ -1,0 +1,1541 @@
+{
+ "course": "efmp-301",
+ "unit": 4,
+ "items": [
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 92.41542,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 92.415,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 92.333333
+      },
+      "loudness": {
+       "integrated_lufs": -16.2,
+       "true_peak_dbfs": -1.4
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Matches the topic and teaches all three hooks exactly. Transcript renders Miss Hina / Nawabshah as Hannah / Nabcha: check the pronunciation."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:32:00.349Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:32:00.560Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:32:00.601Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:43:10.576Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:48:08.852Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T17:50:49.598Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:19:51.100Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.486Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.480Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.561Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.961Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Winning Student Attention Through Lesson Structure",
+   "alt": "Audio brief, about 3 minutes, with the three memory hooks.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t1-en-audio-p1",
+   "artifact_id": "85dfd5a1-64b3-4f08-bb81-356938a623de",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p1.m4a",
+   "sha256": "c573a0e35b5ae17d082332ba6f548b0f89e4dbb1d4fa8b8940e965d78367b62d",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p1.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p1.yt.mp4.thumb.jpg",
+   "youtube_id": "k07MXsbcpWg",
+   "uploaded_at": "2026-11-09T18:19:51Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 86.238912,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 86.239,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 86.166667
+      },
+      "loudness": {
+       "integrated_lufs": -16.1,
+       "true_peak_dbfs": -1
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Overstates the gorilla study: says viewers completely missed the gorilla; the text says nearly half failed to notice. Owner decides keep or regenerate."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:32:00.389Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:32:00.646Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:32:00.687Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:44:05.087Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:48:08.962Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T17:50:49.644Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:20:07.104Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.534Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.522Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.603Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.961Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 2,
+   "title": "Attention Is a System, Not a Trait",
+   "alt": "Go deeper, part 2: the spotlight and its three properties.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t1-en-audio-p2",
+   "artifact_id": "0dbcf67a-f806-4321-85b5-af1c2991ccd7",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p2.m4a",
+   "sha256": "cae9b652b8e10403c5b83263dd63d22d7bcb9622d93b529ef33adf412acce548",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p2.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p2.yt.mp4.thumb.jpg",
+   "youtube_id": "dYYufpu1LfQ",
+   "uploaded_at": "2026-11-09T18:20:07Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 93.158458,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 93.166667,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 93.166667
+      },
+      "loudness": {
+       "integrated_lufs": -16.4,
+       "true_peak_dbfs": -1.1
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:32:00.430Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:32:00.733Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:32:00.775Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:44:57.417Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:48:09.055Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T17:50:49.688Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:20:25.836Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.581Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.572Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.647Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.961Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 3,
+   "title": "Teaching Perception and Auditing Classroom Attention",
+   "alt": "Go deeper, part 3: perception, expertise and the attention audit.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t1-en-audio-p3",
+   "artifact_id": "2302a82b-3e18-4398-a68c-258d0d3e94c9",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p3.m4a",
+   "sha256": "2e7e2ebbeb8b07460a378636aecf0bda916c52991be3246e529458b101e11807",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p3.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-audio-p3.yt.mp4.thumb.jpg",
+   "youtube_id": "fajgUCy82Hs",
+   "uploaded_at": "2026-11-09T18:20:25Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 111.850522,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 111.851,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 111.833333
+      },
+      "loudness": {
+       "integrated_lufs": -16.3,
+       "true_peak_dbfs": -1.3
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Meaning matches the topic; hooks kept in English as ruled.",
+     "urdu_flag": "Transcript came back in Devanagari, so exact Urdu wording was not checked; one phrase near the end is garbled. Listen in full."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:32:00.472Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:32:00.822Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:32:00.863Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:45:50.524Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:48:09.131Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T17:50:49.729Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:20:43.442Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.629Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.616Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.690Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.961Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "Attention کا مختصر بریف",
+   "alt": "Urdu audio brief with the memory hooks kept in English.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t1-ur-audio-p1",
+   "artifact_id": "e2d116b3-88dc-46f9-8914-63e238f9f20f",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-ur-audio-p1.m4a",
+   "sha256": "ff2aafbbf18462b2ca14472570373981682047f6dc781b10486e13768fd1b444",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-ur-audio-p1.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-ur-audio-p1.yt.mp4.thumb.jpg",
+   "youtube_id": "v9uS6DY1N0c",
+   "uploaded_at": "2026-11-09T18:20:43Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 478.632925,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 478.583333
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.755125,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 478.7,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 478.583333
+      },
+      "loudness": {
+       "integrated_lufs": -16.3,
+       "true_peak_dbfs": -1.3
+      },
+      "silences": 1,
+      "longest_silence_s": 3.739333,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Faithful to the text (60 pupils, eleven o clock, timetable move, head-teacher example). Names drift: Hina/Henna, Nawabshah/Nabshaw/Noab. Corrected: an earlier note wrongly said the head-teacher example was not in the text."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:32:00.511Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:32:00.932Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:32:00.972Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:46:46.758Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:48:09.205Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T17:50:49.780Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:21:02.941Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.679Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.656Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.733Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.961Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "video",
+   "title": "Attention and Perception in the Classroom",
+   "alt": "Video overview of attention as a spotlight and perception as interpretation, set in a Pakistani classroom.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t1-en-video",
+   "artifact_id": "ea36e498-bda9-43da-8b11-a187b9d6ee65",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-video.mp4",
+   "sha256": "70180787d30fc28a29aea71d747c6f96245355b32cc7257bd062fc9722a832b7",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-en-video.yt.mp4.thumb.jpg",
+   "youtube_id": "N1budjAfItU",
+   "uploaded_at": "2026-11-09T18:21:02Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 441.434558,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 441.375
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.710068,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 441.5,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 441.375
+      },
+      "loudness": {
+       "integrated_lufs": -16.3,
+       "true_peak_dbfs": -1.4
+      },
+      "silences": 1,
+      "longest_silence_s": 3.717729,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Faithful to the text, including nearly half missing the gorilla and the timetable move.",
+     "urdu_flag": "Transcript in Devanagari; one place says Miss Sena for Miss Hina. Listen for names and register."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:01.467Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:01.580Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:57:14.922Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:58:00.010Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:59:08.515Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:04:13.267Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:21:27.210Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.764Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.698Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.782Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.962Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "ur",
+   "kind": "video",
+   "title": "کلاس روم میں توجہ و ادراک",
+   "alt": "Urdu video overview of attention and perception in the classroom, technical terms in English.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t1-ur-video",
+   "artifact_id": "2dec27c8-db23-44b8-9ad0-85bcb9388b10",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-ur-video.mp4",
+   "sha256": "3fe109a71d777d6163f86e3d1f90fc0d9b6909572844d6a2bb8385e99cf3c4c2",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-ur-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-01/t1-ur-video.yt.mp4.thumb.jpg",
+   "youtube_id": "X4DeqVQE_Jo",
+   "uploaded_at": "2026-11-09T18:21:27Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 545.924354,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 545.875
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.620567,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 546,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 545.875
+      },
+      "loudness": {
+       "integrated_lufs": -16.6,
+       "true_peak_dbfs": -1.3
+      },
+      "silences": 1,
+      "longest_silence_s": 3.635063,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Faithful to the text (three systems, four-item workbench, encoding/storage/retrieval, three faces of forgetting, evidence-based strategies). Small added details: test on Tuesday, mid-year exam."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:01.720Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:01.788Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:59:08.632Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:59:57.511Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T18:01:16.549Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:04:13.309Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:22:18.194Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.949Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.821Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.918Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.962Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "video",
+   "title": "The Memory Myth",
+   "alt": "Video overview of the three memory systems, encoding, storage and retrieval, and why forgetting happens.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t2-en-video",
+   "artifact_id": "9981e5c7-c152-4134-ae31-09cb73fd652a",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-en-video.mp4",
+   "sha256": "f367c8b1418605b728b99a9c17254353fe5f7b4f3fb18ea311be7c33d10b4c4e",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-en-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-en-video.yt.mp4.thumb.jpg",
+   "youtube_id": "4i63wB-aj74",
+   "uploaded_at": "2026-11-09T18:22:18Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 362.602812,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 362.541667
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.684059,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 362.7,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 362.541667
+      },
+      "loudness": {
+       "integrated_lufs": -16.5,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 1,
+      "longest_silence_s": 3.527146,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Faithful to the text: October/December cramming, four-item workbench, three processes, three faces of forgetting, three strategies.",
+     "urdu_flag": "Transcript in Devanagari; listen for register."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:01.860Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:02.020Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T18:01:16.655Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T18:02:00.294Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T18:03:03.536Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:05:02.807Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "ur",
+   "kind": "video",
+   "title": "اکتوبر ٹیسٹ کا راز",
+   "alt": "Urdu video overview of memory and information processing, technical terms in English.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t2-ur-video",
+   "artifact_id": "d640e220-5caf-4c57-ab86-8db42fb62bea",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-video.mp4",
+   "sha256": "1cbae7b40eddd49e66238d3646f26e3c08a4b8a86cc50c6b40071b796b207169",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-video.yt.mp4.thumb.jpg"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 526.605351,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 526.5
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.753537,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 526.7,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 526.5
+      },
+      "loudness": {
+       "integrated_lufs": -16.5,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 1,
+      "longest_silence_s": 3.751354,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Faithful to the text: rickshaw problem, concepts and near-misses, five strategies, three obstacles, induction and deduction, lesson redesign (costs no money is in the text)."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:02.133Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:02.193Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T18:16:32.123Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T18:17:36.845Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T18:19:13.575Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:19:13.619Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "video",
+   "title": "Decoding the Classroom Mind",
+   "alt": "Video overview of concepts, named problem-solving strategies and their obstacles, and inductive and deductive reasoning.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t3-en-video",
+   "artifact_id": "894e11b4-2573-45e3-b434-8d3f103ab22b",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-video.mp4",
+   "sha256": "ff7b9d33f6def85d8374de005835421299fe67fed0f4d827a4b9649c78435abb",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-video.yt.mp4.thumb.jpg"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 452.301497,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 452.25
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.755782,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 452.4,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 452.25
+      },
+      "loudness": {
+       "integrated_lufs": -16.4,
+       "true_peak_dbfs": -1.3
+      },
+      "silences": 1,
+      "longest_silence_s": 3.755271,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Faithful to the text: rickshaw problem, five strategies, three obstacles, induction and deduction, lesson redesign; practice problems come from the topic activity, posed without answers.",
+     "urdu_flag": "Transcript in Devanagari; listen for register."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:02.233Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:02.306Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T18:03:03.693Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T18:03:50.409Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T18:05:06.985Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:18:56.924Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "ur",
+   "kind": "video",
+   "title": "سوچ، مسائل حل کرنا، استدلال",
+   "alt": "Urdu video overview of thinking, problem-solving and reasoning, technical terms in English.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t3-ur-video",
+   "artifact_id": "9fa0d6ff-2492-4e17-9863-13e7bbf8b1dc",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-ur-video.mp4",
+   "sha256": "b9409847684ea2ebcbdfa6bc925e5256229ccc787fc3c13a4473c870f86f73a7",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-ur-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-ur-video.yt.mp4.thumb.jpg"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 94.040816,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 94.041,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 94
+      },
+      "loudness": {
+       "integrated_lufs": -15.8,
+       "true_peak_dbfs": -1.4
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "All three hooks exact; Pakistan Studies cramming vignette and the five-question exit quiz are from the text."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:02.355Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:02.403Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:51:30.481Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:52:00.924Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:52:54.086Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:04:13.110Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:21:44.967Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.809Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.739Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.833Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.962Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Why Active Retrieval Beats Passive Re-Reading",
+   "alt": "Audio brief, about 2 minutes, with the three memory hooks for memory systems, processes and forgetting.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t2-en-audio-p1",
+   "artifact_id": "0ccdb31a-59c1-4253-95f3-46129cf00525",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-en-audio-p1.m4a",
+   "sha256": "0403d86b6446c4eb6a8a7000039b89f7c7115e6fb9dd41a7be743c9dcdf3deb2",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-en-audio-p1.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-en-audio-p1.yt.mp4.thumb.jpg",
+   "youtube_id": "-gxwXU5V0Q0",
+   "uploaded_at": "2026-11-09T18:21:44Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 100.844263,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 100.844,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 100.833333
+      },
+      "loudness": {
+       "integrated_lufs": -16.2,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Meaning matches the topic; hooks in English as ruled.",
+     "urdu_flag": "Transcript in Devanagari, so exact Urdu wording unchecked. Listen for register."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-09",
+     "notes": "on channel UC7cQfkGkdNABCiyjmV5ZaFQ, private, custom thumbnail, playlist add success; embed check deferred to the placement build"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-09",
+     "notes": "approve unit 4 (spot-check sheet of 7, 2026-11-09)"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:02.451Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:02.496Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:52:54.174Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:53:24.611Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:54:18.676Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:04:13.155Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-09T18:22:00.638Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-09T18:22:45.860Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-09T18:53:16.779Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-09T18:53:39.875Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-09T18:53:39.962Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "کمزور یادداشت یا غلط طرز مطالعہ",
+   "alt": "Urdu audio brief with the memory hooks kept in English.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t2-ur-audio-p1",
+   "artifact_id": "0d94436d-05b8-48aa-9bc0-ba9fcb5e3c08",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-audio-p1.m4a",
+   "sha256": "1cd5e2c7a7f1c13550e960ec56737bdfd6d02f0a744400112f801972dedd77f7",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-audio-p1.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-audio-p1.yt.mp4.thumb.jpg",
+   "youtube_id": "R9L76P04LfM",
+   "uploaded_at": "2026-11-09T18:22:00Z",
+   "published_at": "2026-11-09T18:53:39Z"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 104.652336,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "notes": "first encode peaked at 0 dBFS; re-encoded with limiter",
+     "metrics": {
+      "duration_s": 104.666667,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 104.666667
+      },
+      "loudness": {
+       "integrated_lufs": -16.3,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "All three hooks exact; Ayesha and Bilal rickshaw problem and the strategy wall are from the text. Adds that the four steps cost zero money (not in the text)."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:02.543Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:02.587Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:54:18.772Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:54:49.407Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T18:16:32.010Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:17:36.769Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Teaching Mental Moves for Problem Solving",
+   "alt": "Audio brief, about 2 minutes, with the three memory hooks for strategies, obstacles and classroom activities.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t3-en-audio-p1",
+   "artifact_id": "37928397-e083-46c1-bc52-b9af7b21ca2f",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-audio-p1.m4a",
+   "sha256": "c780ae154071552a99245a15d507a53f41ac6d37d68a17159d094bb482de0c9e",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-audio-p1.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-audio-p1.yt.mp4.thumb.jpg"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 115.449615,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-09",
+     "metrics": {
+      "duration_s": 115.5,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 115.5
+      },
+      "loudness": {
+       "integrated_lufs": -15.7,
+       "true_peak_dbfs": -1.3
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-09",
+     "notes": "Strategies, obstacles and activities match the topic.",
+     "urdu_flag": "Transcript has the third hook as All Need Space (Friends missing): check it is said as All Friends Need Space. Transcript in Devanagari."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-09T17:40:02.634Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-09T17:40:02.697Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-09T17:55:44.692Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-09T17:56:15.166Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-09T17:57:14.650Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-09T18:04:13.208Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "مسئلہ حل کرنے کی ۵ بہترین تدبیریں",
+   "alt": "Urdu audio brief with the memory hooks kept in English.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+   "key": "t3-ur-audio-p1",
+   "artifact_id": "66f669fc-485e-4ca4-adf2-84e115a77bb4",
+   "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-ur-audio-p1.m4a",
+   "sha256": "43a8c78ae72ccafe6506f5003ccac646251d0ed8386dc25097cf381afae5951b",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-ur-audio-p1.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-ur-audio-p1.yt.mp4.thumb.jpg"
+  }
+ ]
+}

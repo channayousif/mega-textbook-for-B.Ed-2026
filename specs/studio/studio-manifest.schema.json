@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://textbook.com.pk/specs/studio/studio-manifest.schema.json",
+  "title": "Gemini Notebook Studio manifest (Feature 029)",
+  "description": "One file per unit at specs/studio/<course>/unit-NN.json. Each row is one Studio artifact for one topic and locale. Only rows with status 'placed' reach the site (scripts/build-studio-index.mjs). Quiz items never appear here: they go to the RLS-protected quiz_items table.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["course", "unit", "notebook_id", "artifacts"],
+  "properties": {
+    "course": { "type": "string", "pattern": "^[a-z]{2,6}-[0-9]{3}$" },
+    "unit": { "type": "integer", "minimum": 1 },
+    "notebook_id": { "type": "string", "minLength": 8 },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["topic", "locale", "kind", "status", "title", "prompt_ref"],
+        "properties": {
+          "topic": { "type": "integer", "minimum": 1 },
+          "locale": { "enum": ["en", "ur"] },
+          "kind": { "enum": ["audio", "mindmap", "poster", "brief", "studyguide", "slides", "video"] },
+          "part": { "type": "integer", "minimum": 1, "description": "Audio series order: 1 = brief, 2+ = go deeper." },
+          "status": { "enum": ["planned", "generated", "reviewed", "placed"] },
+          "audience": { "enum": ["all", "teacher"], "default": "all" },
+          "title": { "type": "string", "minLength": 3 },
+          "artifact_id": { "type": "string" },
+          "prompt_ref": { "type": "string", "pattern": "^specs/studio/prompts/.+\\.md( v[0-9]+[a-z-]*)?$" },
+          "asset_path": { "type": "string", "pattern": "^/studio/[a-z0-9-]+/unit-[0-9]{2}/topic-[0-9]{2}/[a-z0-9.-]+\\.(json|md)$" },
+          "host_url": { "type": "string", "pattern": "^https://" },
+          "alt": { "type": "string", "description": "Text alternative for audio/video/slides (what it covers)." },
+          "generated_at": { "type": "string", "format": "date" },
+          "review": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["by", "date", "verdict"],
+            "properties": {
+              "by": { "type": "string", "description": "Role, never human initials for an agent result (ADR-0019)." },
+              "date": { "type": "string", "format": "date" },
+              "verdict": { "enum": ["pass", "pass-with-notes", "revise", "reject"] },
+              "notes": { "type": "string" }
+            }
+          }
+        },
+        "allOf": [
+          { "if": { "properties": { "status": { "const": "placed" } } },
+            "then": { "required": ["review", "alt"], "anyOf": [{ "required": ["asset_path"] }, { "required": ["host_url"] }] } },
+          { "$comment": "Owner ruling 2026-11-09: audio and video are hosted on YouTube / YouTube Music.",
+            "if": { "properties": { "kind": { "enum": ["audio", "video"] } }, "required": ["kind", "host_url"] },
+            "then": { "properties": { "host_url": { "pattern": "^https://((www\\.|m\\.|music\\.)?youtube\\.com/(watch\\?v=|shorts/|embed/)|youtu\\.be/)[A-Za-z0-9_-]{11}([?&#].*)?$" } } } },
+          { "$comment": "Owner ruling 2026-11-09: slides are hosted on Google Drive (Slides or a Drive file).",
+            "if": { "properties": { "kind": { "const": "slides" } }, "required": ["kind", "host_url"] },
+            "then": { "properties": { "host_url": { "pattern": "^https://(docs\\.google\\.com/presentation/d/|drive\\.google\\.com/file/d/)[A-Za-z0-9_-]{20,}(/.*)?([?#].*)?$" } } } }
+        ]
+      }
+    }
+  }
+}

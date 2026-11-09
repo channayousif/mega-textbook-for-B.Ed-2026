@@ -83,7 +83,7 @@ host (and the live site) on 2026-09-20 and 2026-09-24. Therefore:
 
 ## Content work
 
-Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring, translation, review and revision skills live in `.claude/skills/` (`author-unit`, `translate-unit`, `generate-figures`, `review-unit`, `revise-topic`, `evaluate-intake`).
+Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring, translation, review and revision skills live in `.claude/skills/` (`author-unit`, `translate-unit`, `generate-figures`, `review-unit`, `revise-topic`, `evaluate-intake`); Study Studio audio and video go through `studio-media` (NotebookLM to YouTube with quality gates).
 
 Unit structure (Spec 008 per-topic standard): `unit-NN/index.mdx`, `topic-NN.mdx`, `unit-assessment.mdx` (+ optional `unit-teacher-notes.mdx`); optional course-level `course-review.mdx`. Legacy five-file units are exempt from per-topic rules.
 
@@ -126,6 +126,17 @@ ADR-0024 defines the cross-agent boundary for course visuals; ADR-0029 adds Gemi
   successfully. G3/G5 independence and human escalation rules remain unchanged.
 - The figure marker and `specs/content/<course>/figures/unit-NN.md` row are the handoff contract.
   Both agents preserve the figure ID, prompt and alt text unless a content correction is recorded.
+
+## Gemini Notebook Studio (Feature 029)
+
+Study Studio extras (poster, mind map, audio brief, practicum brief, study guide, teaching deck) are
+generated with Gemini Notebook through the community `nlm` CLI/MCP on the owner's account: local,
+serial, owner-run, never in CI or the crew (the tool uses browser cookies and Google's internal APIs).
+Every artifact is checked against the topic text before its manifest row in
+`specs/studio/<course>/unit-NN.json` reaches `placed`; assets live in `static/studio/`. Keep all
+Studio files out of `specs/content/`, `contracts/` and `scripts/lib/gates.mjs` so no review evidence
+goes stale. Quiz items never go in a Studio asset, only into `quiz_items` as teacher-review drafts.
+Spec: `specs/029-notebook-studio/spec.md`.
 
 ## Work records
 

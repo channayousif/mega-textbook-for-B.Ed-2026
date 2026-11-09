@@ -1,0 +1,68 @@
+{
+ "title": "Attention and Perception in Learning",
+ "tagline": "Understanding attention as a spotlight gateway and perception as active mental interpretation",
+ "key_terms": [
+  {
+   "term": "Attention",
+   "meaning": "The selective gateway letting sensory information through for memory encoding."
+  },
+  {
+   "term": "Sensation",
+   "meaning": "Raw physical detection of sensory inputs by sensory organs like eyes."
+  },
+  {
+   "term": "Perception",
+   "meaning": "Active mental organization and conscious interpretation of detected sensory inputs."
+  },
+  {
+   "term": "Inattentional Blindness",
+   "meaning": "Failing to perceive visible objects because attention is occupied elsewhere."
+  }
+ ],
+ "properties": [
+  {
+   "name": "Captured, Not Commanded",
+   "line": "Novelty, contrast, meaning, and emotion pull focus rather than instructions."
+  },
+  {
+   "name": "Divides Only at Price",
+   "line": "Splitting attention across multiple tasks reduces capacity and hinders understanding."
+  },
+  {
+   "name": "Tires with Use",
+   "line": "Focus flags over time, especially in warm rooms or late periods."
+  }
+ ],
+ "mnemonics": [
+  {
+   "phrase": "Can't Divide Time",
+   "expands": "Captured, Divides, Tires"
+  },
+  {
+   "phrase": "Nice Colours Mean Excitement",
+   "expands": "Novelty, Contrast, Meaning, Emotion"
+  },
+  {
+   "phrase": "Big City Streets",
+   "expands": "Beam, Competitors, Split"
+  }
+ ],
+ "teacher_moves": [
+  {
+   "name": "Move Hard Listening Early",
+   "line": "Schedule attention-heavy tasks during quiet periods before external noise increases."
+  },
+  {
+   "name": "Separate Copying from Explaining",
+   "line": "Avoid requiring simultaneous writing and listening so pupils focus on understanding."
+  },
+  {
+   "name": "Teach Perception Through Encounters",
+   "line": "Provide structured practice with named components until interpretation becomes automatic."
+  }
+ ],
+ "misconception": {
+  "myth": "Attention is a fixed trait that a pupil either possesses or lacks.",
+  "reality": "Attention is a dynamic system governed by environment and task design."
+ }
+}

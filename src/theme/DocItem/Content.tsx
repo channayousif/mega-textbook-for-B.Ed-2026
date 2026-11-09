@@ -12,6 +12,7 @@ import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/sel
 import { useLocation } from '@docusaurus/router';
 import { ReadingMenu, ReadingProgress, useAnswerNotes } from '@site/src/components/ReadingTools';
 import ReaderBottomBar from '@site/src/components/ReaderBottomBar';
+import StudioPanel from '@site/src/components/Studio/StudioPanel';
 import { useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
 
 /**
@@ -452,6 +453,10 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
       {!hasNavBar && <div className="reader-menu-fallback"><ReadingMenu minutes={minutes} locale={locale} /></div>}
       {isCourseOverview && <CourseGuideNotice courseCode={courseCode} locale={locale} />}
       <ContentOriginal {...props} />
+      {/* Feature 029: reviewed Gemini Notebook extras, data-driven from static/studio-index.json (no MDX edits). */}
+      {courseCode !== null && unitNo !== null && topicNo !== null && (
+        <StudioPanel courseCode={courseCode} unitNo={unitNo} topicNo={topicNo} locale={locale} />
+      )}
       {(courseCode !== null && unitNo !== null) && <FeedbackWidget />}
       <ReaderBottomBar locale={locale} minutes={minutes} previous={metadata?.previous} next={metadata?.next} />
     </>

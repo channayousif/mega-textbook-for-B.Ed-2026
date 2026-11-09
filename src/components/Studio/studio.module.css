@@ -1,0 +1,96 @@
+/* Feature 029 Studio panel. Every colour comes from the site tokens (src/css/tokens.css), so
+   light and dark themes follow html[data-theme] like the rest of the reader. */
+
+.panel {
+  margin-block: 2.5rem 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  background: var(--ifm-background-surface-color);
+  padding: 1.25rem 1.25rem 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+.head { display: grid; gap: 0.25rem; }
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--brand-amber-text);
+}
+:global(html[dir='rtl']) .eyebrow { text-transform: none; letter-spacing: 0; font-size: 0.85rem; }
+.title { margin: 0; font-size: 1.25rem; }
+.note { margin: 0; font-size: 0.85rem; color: var(--ifm-color-content-secondary); }
+
+/* Poster (option A): fixed section order, brand header band, real text. */
+.poster { display: grid; gap: 1rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 12px; overflow: hidden; padding-bottom: 1rem; }
+.posterHead { background: var(--brand-teal); color: var(--brand-paper); padding: 1rem 1.1rem; display: grid; gap: 0.2rem; }
+.posterHead h3 { margin: 0; color: var(--brand-paper); font-size: 1.3rem; }
+.posterHead p { margin: 0; color: var(--brand-amber-soft); }
+.posterHead .eyebrow { color: var(--brand-amber); }
+.section { padding-inline: 1rem; display: grid; gap: 0.5rem; }
+.section h4 { margin: 0; font-size: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 0.6rem; }
+.card { border: 1px solid var(--ifm-color-emphasis-300); border-radius: 8px; padding: 0.55rem 0.7rem; display: grid; gap: 0.15rem; min-width: 0; }
+.card b { color: var(--ifm-heading-color); }
+.card span, .props span { font-size: 0.9rem; color: var(--ifm-color-content-secondary); }
+.props { margin: 0; padding-inline-start: 1.3em; display: grid; gap: 0.4rem; }
+.props li { display: grid; }
+.props li::marker { color: var(--brand-amber-text); font-weight: 800; }
+.hooks { background: var(--brand-amber-soft); border-radius: 10px; margin-inline: 1rem; padding: 0.8rem 1rem; display: grid; gap: 0.5rem; }
+:global(html[data-theme='dark']) .hooks { background: color-mix(in srgb, var(--brand-amber) 18%, transparent); }
+.hooks h4 { margin: 0; }
+.hook { display: grid; direction: ltr; text-align: start; font-family: var(--ifm-heading-font-family); line-height: 1.35; }
+.hook b { color: var(--brand-amber-text); font-size: 1.05rem; }
+.hook span { font-size: 0.9rem; }
+.myth { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 0.6rem; padding-inline: 1rem; }
+.myth > div { border-radius: 8px; padding: 0.55rem 0.7rem; display: grid; min-width: 0; }
+.mythBad { border: 1px dashed var(--ifm-color-danger); }
+.mythBad b { color: var(--ifm-color-danger-dark); }
+.mythGood { border: 1px solid var(--ifm-color-success); }
+.mythGood b { color: var(--ifm-color-success-dark); }
+:global(html[data-theme='dark']) .mythBad b { color: var(--ifm-color-danger-light); }
+:global(html[data-theme='dark']) .mythGood b { color: var(--ifm-color-success-light); }
+
+/* Mind map */
+.mapBar { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.btn {
+  font: inherit; font-weight: 700; font-size: 0.9rem;
+  border: 1px solid var(--ifm-color-emphasis-400); background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base); border-radius: 999px; padding: 0.25rem 0.9rem; cursor: pointer;
+}
+.btn[aria-pressed='true'] { background: var(--brand-teal); color: var(--brand-paper); border-color: var(--brand-teal); }
+:global(html[data-theme='dark']) .btn[aria-pressed='true'] { background: var(--brand-teal-pale); color: var(--brand-teal); border-color: var(--brand-teal-pale); }
+.btn:focus-visible, .node button:focus-visible { outline: 3px solid var(--brand-amber); outline-offset: 2px; }
+.tree, .tree ul { list-style: none; margin: 0; padding-inline-start: 1.1rem; display: grid; gap: 0.3rem; }
+.tree { padding-inline-start: 0; }
+.tree ul { border-inline-start: 2px solid var(--ifm-color-emphasis-300); margin-top: 0.3rem; }
+.node { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: baseline; }
+.node button {
+  font: inherit; text-align: start; border: 0; background: none; color: var(--ifm-font-color-base);
+  cursor: pointer; padding: 0.1rem 0.2rem; border-radius: 4px; display: inline-flex; gap: 0.35rem; align-items: baseline;
+}
+.caret { color: var(--brand-amber-text); font-weight: 800; width: 1em; display: inline-block; }
+.root > .node button { font-weight: 800; font-size: 1.05rem; color: var(--ifm-heading-color); }
+.hidden { color: var(--ifm-color-content-secondary); font-style: italic; font-size: 0.9rem; }
+.tick { font-size: 0.8rem; color: var(--ifm-color-content-secondary); display: inline-flex; gap: 0.25rem; align-items: center; }
+.score { font-weight: 700; color: var(--brand-amber-text); }
+
+/* Report text (brief, study guide) */
+.prose { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+.prose :global(h2), .prose :global(h3), .prose :global(h4) { margin: 0.9rem 0 0.3rem; font-size: 1.05rem; }
+.prose :global(hr) { margin: 0.6rem 0; }
+.prose :global(.studio-table) { overflow-x: auto; min-width: 0; max-width: 100%; }
+.prose :global(.studio-table table) { min-width: 32rem; }
+.prose :global(table) { font-size: 0.9rem; }
+
+/* Audio */
+.parts { display: grid; gap: 0.75rem; }
+.part { display: grid; gap: 0.3rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 10px; padding: 0.7rem 0.9rem; }
+.part h4 { margin: 0; font-size: 1rem; }
+.part audio { width: 100%; }
+
+/* Hosted media (owner ruling 2026-11-09): YouTube for audio/video, Google Drive for slides. */
+.frame { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: var(--ifm-color-emphasis-200); }
+.frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
