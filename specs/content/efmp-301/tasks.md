@@ -157,6 +157,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-09/G3/20261108T203238Z-g3-desk-cb72c312.json |
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261108T203238Z-g3-desk-e5f319f8.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261108T203238Z-g3-desk-ad4c974d.json |
+| Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261108T205835Z-g3-desk-6a389e2c.json |
 
 ## Re-restructure in progress (2026-09-11)
 
