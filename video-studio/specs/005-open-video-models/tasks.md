@@ -19,7 +19,19 @@
   excludes it). Peak VRAM 14.9 GB of 15, peak host RAM 26.3 GB of 31 with two workers, 0 black frames. Identity, outfit and
   flat-2D style held in every frame. The two "warm" rows (6 s) were ComfyUI cache hits on an identical graph, now fixed by
   a distinct seed per smoke run. Both GPUs produced byte-identical clips for the same seed.
-- [ ] OV018 Full bench run; record GPU minutes.
+- [x] OV018 Full bench run (2026-11-09, session 400.8 min on 2x T4; 16/16 clips verified, 0 black frames):
+  Wan2.2-5B, 704x1280, 121 frames (5 s at 24 fps), 20 steps. 2,666-3,098 s per clip per GPU (median about 2,800 s);
+  with two workers about 25 quota-minutes per clip. Peak VRAM 12.3-14.7 GB, peak host RAM 20.0-26.7 GB. Claude's
+  frame review of the contact sheets (`$MEDIA_ROOT/video-benchmark/sheets/`), pending the owner's blind scores:
+  - I2V character shots (S1, S2, S5) keep identity, outfit and the flat-2D style; motion is subtle and natural
+    (hand gestures, nods, blinks; in S5 Ustani turns towards Bilal).
+  - I2V set shot S3: smooth forward camera glide, stable geometry.
+  - T2V shots (S4, S6) ignore the brand style suffix: S4 is a semi-realistic mixed look with mosque-like arches
+    (cultural framing to check), S6 is photorealistic (hands are good). Use I2V from brand stills, not T2V.
+  - Style arm (S7, S8) has no visible effect: an I2V start frame fixes the look, so a 3D style needs a 3D start
+    image, not a prompt.
+  - Speed fails pass criterion 2 (no more than 20 GPU-minutes per accepted clip). Next levers: fewer frames
+    (81 = 3.4 s), a step-distillation LoRA (4-8 steps), or a smaller frame size.
 - [ ] OV019 Owner supplies `flow_<shot>_s1.mp4` and `puppet_<shot>_s1.mp4` reference clips in `$MEDIA_ROOT/video-benchmark/inbox/`.
 - [ ] OV020 Blind review and unblind; write the verdict against the pass criteria in spec.md.
 
