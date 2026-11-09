@@ -136,3 +136,4 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-03/G3/20261108T203238Z-g3-desk-d0b970f8.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-04/G3/20261108T203238Z-g3-desk-a67ec0a3.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261108T203238Z-g3-desk-b2674e94.json |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-02/G3/20261108T203238Z-g3-desk-0f2a9132.json; fig-U2-1.svg geometry overflow resolved via PR #150 (TEX-74) with measure-figure-text clean (774.8 <= 780); external URLs in topic-02 and topic-03 verified accessible; repository check:figures green with 0 errors in Unit 2; needs a fresh independent G3 run |
