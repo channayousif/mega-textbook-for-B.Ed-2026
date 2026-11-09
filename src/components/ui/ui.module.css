@@ -127,7 +127,7 @@ a.rowLink:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-o
 .tab { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 0; border-radius: 10px; background: none; color: var(--ifm-font-color-base); font: inherit; font-weight: 700; cursor: pointer; }
 .tab:hover { background: #e3eeec; color: #123e43; }
 .tab:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
-.tabOn, .tabOn:hover { background: #123e43; color: #fff; }
+.tab.tabOn, .tab.tabOn:hover { background: #123e43; color: #fff; }
 :global(html[data-theme='dark']) .tab:hover { background: #1f4a50; color: #fff; }
 :global(html[data-theme='dark']) .tabOn, :global(html[data-theme='dark']) .tabOn:hover { background: #a6dfdc; color: #123e43; }
 .tabPanel:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 4px; border-radius: 8px; }
