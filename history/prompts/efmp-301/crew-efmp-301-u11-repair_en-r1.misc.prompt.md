@@ -2,7 +2,7 @@
 id: crew-efmp-301-u11-repair_en-r1
 title: crew repair_en EFMP-301 unit 11
 stage: misc
-date: 2026-11-10
+date: 2026-11-09
 surface: agent
 model: agy
 feature: efmp-301
@@ -74,28 +74,30 @@ From `specs/content/efmp-301/reviews/unit-11/G3/20261108T203238Z-g3-desk-e5f319f
 
 ## Response snapshot
 
-Applied findings of Unit 11 G3 desk review report 20261108T203238Z-g3-desk-e5f319f8.json, recorded repair notes in specs/content/efmp-301/reviews/unit-11/G3/20261110-repair-notes.md, appended the advisory tracker row leaving G3 open in tasks.md, and verified all 14 content gates pass cleanly.
+Applied findings of Unit 11 G3 desk review report e5f319f8, documented repair evidence, and appended the advisory unticked tracker row in tasks.md.
 
 ## Outcome
 
 - Impact: repair_en for EFMP-301 Unit 11 by agy (attempt 1).
-- Tests: npm run check:content passed with all 14 gates green.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: None needed; substantive content repairs were previously landed and verified against the G2 manifest, and repair notes and tracker entries cleanly document resolution without invalidating gate hashes.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded repair evidence in specs/content/efmp-301/reviews/unit-11/G3/20261110-repair-notes.md and appended advisory tracker row in specs/content/efmp-301/tasks.md referencing report 20261108T203238Z-g3-desk-e5f319f8.json.
-- Decisions the team must respect: G3 remains advisory and unticked (▢); this repair does not certify or sign off the unit.
-- Pending / next owner: Owner/crew lead for fresh independent review cycle.
+- Shipped / changed: Applied findings of Unit 11 G3 desk review report e5f319f8, documented repair evidence, and appended the advisory unticked tracker row in tasks.md.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Owner must resolve qualified subject review for WHO-bound clinical interpretation, urgency, and local referral procedure, along with visual render and provenance evidence before final acceptance.
-  - Unit 11 G3 remains open and unticked pending owner authorisation for another review cycle under ADR-0019.
+  - Qualified subject review of WHO-bound clinical interpretation, urgency, and local referral procedure remains an owner escalation item prior to certification.
+  - Visual render (360px/print) and author session provenance evidence remain unverified under host resource controls.
+  - Unit 11 G3 remains open and unticked pending owner authorisation for a subsequent review cycle under ADR-0019.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Clean validation: all 14 content gates pass (`npm run check:content`).
-- Figure geometry: all 16 SVGs in Unit 11 passed `measure-figure-text.mjs` cleanly.
-- Zero em dashes across all touched files (`npm run check:no-em-dash`).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
