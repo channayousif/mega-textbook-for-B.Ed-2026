@@ -157,8 +157,8 @@ On the need for accommodation: "Without accommodation to their unusual level of 
 or knowledge, students who are gifted or talented can become bored by school, and
 eventually the boredom can even turn into behavior problems."
 
-Used for (Unit 5): giftedness recognised and supported (U5-5); the gifted stereotype
-corrected (U5-1's reinforcement row).
+Used for (Unit 5): giftedness recognised and supported (U5-5), including the gifted
+stereotype corrected.
 
 ## Chapter 6 - Student motivation (verified; used by Unit 6)
 
