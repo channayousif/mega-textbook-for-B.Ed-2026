@@ -1,31 +1,28 @@
 ---
 id: crew-efmp-301-u08-repair_en-r1
-title: crew repair_en EFMP-301 unit 8 (r1)
+title: crew repair_en EFMP-301 unit 8
 stage: misc
-date: 2026-11-10
+date: 2026-11-09
 surface: agent
 model: opencode
 feature: efmp-301
 branch: crew/efmp-301-u08-repair_en-r1
 user: crew
-command: Read .crew/brief.md and carry it out
-labels: ["crew", "opencode", "repair_en", "efmp-301", "unit-08"]
+command: crew repair_en
+labels: ["crew", "opencode", "repair_en"]
 links:
   spec: specs/content/efmp-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - specs/content/efmp-301/tasks.md
+ - history/prompts/efmp-301/crew-efmp-301-u08-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-
-The delegated brief, preserved verbatim:
 
 # Crew job efmp-301-u08-repair_en-r1
 
@@ -72,28 +69,32 @@ From `specs/content/efmp-301/reviews/unit-08/G3/20261108T203238Z-g3-desk-dd96108
 - (efmp-301-u08-repair_en-conflict2, fix, opencode) `check:content-status` fails on both branches because the gitignored `static/content-status.json` is stale/missing; regenerating it needs `npm run build:content-status` (separate fix job).
 - (efmp-301-u08-repair_en-conflict2, fix, opencode) Urdu Unit 8 still carries the "کاؤنٹرائزنگ" mistranslation for "management" and the narrow-screen/A4 render check is uninspected; both need a G5/translation or owner job.
 
+
 ## Response snapshot
 
-Verified the latest G3 report against the current committed bytes before editing. The 20261108 desk report's findings array is byte-identical to the 20261102 report already repaired at 44e895fb, and its input manifest matches current HEAD exactly (100/100 paths), so it is a verbatim re-report rather than a fresh review. Every editable finding is already present in the current tree: RRQ-10 is the taught Topic 8.2 feedback item with aligned guidance and concept mapping (RRQs 3/4/3), ERQs carry an explicit 400-500 word limit, MCQ keys are 3a/3b/2c/2d, sources/unit-08.md carries the corrected course-generic guide attribution and the scope-of-support note, and fig-U8-1's manifest prompt carries the not-silence tagline. No new content edits were required. Appended an unticked advisory G3 tracker row naming the report.
+Verified the 20261108 G3 desk report is a verbatim re-report of the already-repaired 20261102 findings (input manifest matches current HEAD 100/100), made no content edits, and appended an unticked Unit 8 G3 tracker row plus PHR recording that every editable finding is already present at 44e895fb.
 
 ## Outcome
 
-- Impact: verified the 20261108 desk report is a stale re-report and recorded the verification in the Unit 8 G3 tracker row.
-- Tests: npm run check:content passed 14/14 after regenerating static/content-status.json; npm test passed 448/448 (39 files).
-- Files: specs/content/efmp-301/tasks.md (one advisory tracker row); this PHR.
-- Next prompts: owner retains the narrow-screen/A4 render and review-handoff provenance items; a G5/translation job owns the Urdu "کاؤنٹرائزنگ" mistranslation.
-- Reflection: the desk report pipeline re-issues prior findings verbatim under a fresh manifest; a repair job must verify current bytes before editing.
+- Impact: repair_en for EFMP-301 Unit 8 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: one unticked Unit 8 G3 tracker row naming reviews/unit-08/G3/20261108T203238Z-g3-desk-dd961083.json and recording that its findings are already repaired at 44e895fb; this PHR.
-- Decisions the team must respect: G3 stays unticked and advisory; no certification, no push, no PR.
-- Pending / next owner: owner must provide permitted narrow-screen/A4 render evidence and a parent-prepared frozen handoff for any further G3 cycle (ADR-0019 cycles exhausted); a G5/translation job owns the Urdu "کاؤنٹرائزنگ" mistranslation for "management".
-- Paperclip issues affected: none (work tracked by the crew board).
+- Shipped / changed: Verified the 20261108 G3 desk report is a verbatim re-report of the already-repaired 20261102 findings (input manifest matches current HEAD 100/100), made no content edits, and appended an unticked Unit 8 G3 tracker row plus PHR recording that every editable finding is already present at 44e895fb.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The 20261108 desk report's findings array is byte-identical to the 20261102 report already repaired at 44e895fb; the desk pipeline re-issues prior findings under a fresh manifest, so verify current bytes before editing.
+  - Owner still owes narrow-screen/A4 render evidence and a parent-prepared frozen handoff (ADR-0019 cycles exhausted); the Urdu "کاؤنٹرائزنگ" mistranslation for "management" needs a G5/translation job.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a desk report can carry a fresh input manifest while its findings text is a verbatim copy of an already-repaired prior report; applying it blindly would revert correct repairs.
-- Graders run and results (PASS/FAIL): PASS: npm run check:content 14/14 after npm run build:content-status; npm test 448/448 (39 files); input-manifest comparison 100/100 current; findings-array equality check against the 20261102 report.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): have the desk report generator compare its findings against the current tracker/repair state and mark already-repaired findings resolved before queueing a repair job.
+- Next experiment (smallest change to try): none
