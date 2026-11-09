@@ -1,8 +1,8 @@
 ---
 id: crew-efmp-303-u01-repair_en-r1
-title: crew repair_en EFMP-303 unit 1 continuation
+title: crew repair_en EFMP-303 unit 1
 stage: misc
-date: 2026-11-10
+date: 2026-11-09
 surface: agent
 model: opencode
 feature: efmp-303
@@ -16,11 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/efmp-303/tasks.md
-  - history/prompts/efmp-303/crew-efmp-303-u01-repair_en-r1.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u01-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-303/tasks.md
 tests:
-  - npm run check:content
-  - node scripts/measure-figure-text.mjs static/img/figures/efmp-303/unit-01/fig-U1-8.svg static/img/figures/efmp-303/unit-01/fig-U1-8.dark.svg static/img/figures/efmp-303/unit-01/fig-U1-8.ur.svg static/img/figures/efmp-303/unit-01/fig-U1-8.ur.dark.svg
+ - npm run check:content
 ---
 
 ## Prompt
@@ -64,31 +63,33 @@ From `specs/content/efmp-303/reviews/unit-01/G3/20261108T203238Z-g3-desk-727e527
 - (efmp-303-u01-translate-r1, translate, opencode) G4 tracker row stays ▣; independent G5 Urdu review remains pending.
 - (efmp-303-u01-translate-r1, translate, opencode) G3 escalated, board G0/G1 intake still pending.
 
+
 ## Response snapshot
 
-Verified the latest G3 findings against the current tree: the Unit 1 G1 tracker note already cites D-2026-0063 and the fig-U1-8 wordmark already sits below the last panel in all four variants (measure-figure-text clean, no collision). Appended an unticked Unit 1 G3 row naming report 727e527b.
+Appended an unticked Unit 1 G3 advisory-repair tracker row naming report 20261108T203238Z-g3-desk-727e527b and verified the G1 note and fig-U1-8 geometry were already repaired on main.
 
 ## Outcome
 
-- Impact: repair_en continuation for EFMP-303 Unit 1 by opencode.
-- Tests: `npm run check:content` 14/14 PASS; `node scripts/measure-figure-text.mjs` exit 0 on all four fig-U1-8 variants.
+- Impact: repair_en for EFMP-303 Unit 1 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: the latest G3 report repeats the previous report's findings verbatim; its fig-U1-8 overlap finding is stale because commit 4f36f05ad already moved the wordmark from y=510 to y=517, and the G1 note was reconciled in the same commit.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: appended an unticked Unit 1 G3 "advisory: revise; repairs applied" row naming report 20261108T203238Z-g3-desk-727e527b; confirmed the G1 note and fig-U1-8 geometry were already repaired on main.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: fresh independent G3 review owns acceptance; CurriculumOwner owns the G1 tick.
+- Shipped / changed: Appended an unticked Unit 1 G3 advisory-repair tracker row naming report 20261108T203238Z-g3-desk-727e527b and verified the G1 note and fig-U1-8 geometry were already repaired on main.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Checking Unit 1 at 360px width and in A4 print is still not done; it needs a host that is allowed to build and run a browser.
-  - The G1 row stays unticked until the CurriculumOwner formally signs off on the D-2026-0063 approval.
-- Paperclip issues affected: none (ticket null).
+  - Latest G3 report 20261108T203238Z repeats the previous report's findings verbatim; the fig-U1-8 wordmark and G1 note were already repaired on main (4f36f05ad), so a fresh G3 run should re-measure rather than re-apply.
+  - Narrow 360px and A4 print render inspection remains undone; it needs a host allowed to build and run a browser.
+  - G1 row stays unticked until the CurriculumOwner formally signs off on D-2026-0063.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a fresh G3 run repeated the previous report's findings verbatim even though the repairs were already on main; the report's own input_manifest hash for fig-U1-8.svg matches the repaired file, so the finding was not re-measured.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14), measure-figure-text PASS (exit 0).
-- Prompt variant (if applicable): crew brief v1, continuation r1.
-- Next experiment (smallest change to try): before opening a repair job from a G3 report, diff the report's findings against the current tree so stale findings are not re-applied.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
