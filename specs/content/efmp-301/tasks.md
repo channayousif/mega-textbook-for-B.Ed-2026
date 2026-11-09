@@ -158,6 +158,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261108T203238Z-g3-desk-e5f319f8.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261108T203238Z-g3-desk-ad4c974d.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261108T205835Z-g3-desk-6a389e2c.json |
+| Unit 8 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-08/G3/20261108T203238Z-g3-desk-dd961083.json; the 20261108 desk report is a verbatim re-report of the 20261102 findings, and current committed bytes re-verify every editable finding already repaired at 44e895fb: RRQ-10 is the taught Topic 8.2 feedback item with guidance and concept mapping aligned (RRQs 3/4/3), ERQs carry an explicit 400-500 word limit, MCQ keys are 3a/3b/2c/2d, sources/unit-08.md attributes the guide practical-work list as course-generic and separates the unit ladder and five-part framework from the bound Seifert Chapter 7 findings, and fig-U8-1's manifest prompt carries the not-silence tagline; all 14 content gates pass; narrow-screen/A4 render and review-handoff provenance remain owner handoffs; no new content edits required |
 
 ## Re-restructure in progress (2026-09-11)
 
