@@ -1,8 +1,8 @@
 ---
 id: crew-efmp-302-u06-repair_en-r1
-title: crew repair_en EFMP-302 unit 6 (r1)
+title: crew repair_en EFMP-302 unit 6
 stage: misc
-date: 2026-11-10
+date: 2026-11-09
 surface: agent
 model: opencode
 feature: efmp-302
@@ -16,8 +16,8 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-302/tasks.md
  - history/prompts/efmp-302/crew-efmp-302-u06-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-302/tasks.md
 tests:
  - npm run check:content
 ---
@@ -74,27 +74,28 @@ From `specs/content/efmp-302/reviews/unit-06/G3/20261108T203238Z-g3-desk-c1793ea
 - (efmp-302-u06-fix, fix, opencode) G3 en-review for Unit 6 is stale and needs a fresh run; all figure text-geometry checks and content gates pass on the branch.
 - (efmp-302-u06-translate-r1, translate, codex) Translation remains draft; independent G3/G5, full-page rendering and existing owner decisions remain pending.
 
+
 ## Response snapshot
 
-Confirmed that every finding in G3 report desk-c1793ead was already repaired on main by c79f0e34a and added an unticked advisory G3 row for EFMP-302 Unit 6 recording the evidence, with no content edits.
+Verified every finding in G3 desk-c1793ead is already resolved on main by c79f0e34a, appended the unticked advisory Unit 6 G3 tracker row, and committed the PHR with no content edits.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-302 Unit 6 by opencode (attempt 1, r1).
-- Tests: npm run check:content passed in the job worktree.
+- Impact: repair_en for EFMP-302 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Confirmed that every finding in G3 report desk-c1793ead was already repaired on main by c79f0e34a and added an unticked advisory G3 row for EFMP-302 Unit 6 recording the evidence, with no content edits.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the commit touches a protected path).
+- Shipped / changed: Verified every finding in G3 desk-c1793ead is already resolved on main by c79f0e34a, appended the unticked advisory Unit 6 G3 tracker row, and committed the PHR with no content edits.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All c1793ead findings were already resolved on main by c79f0e34a, so the next step is a fresh independent G3 review, and running it needs owner authorisation under G-2026-64 / ADR-0019 (D-2026-0005 refuses further cycles unless the owner grants one).
-  - S3 full-text source verification remains uncertain; no Unit 6 source excerpt is bound under sources/texts/.
+  - S3 full-text source verification remains uncertain; no Unit 6 source excerpt is bound under `specs/content/efmp-302/sources/texts/`.
   - X1 generic scroll-region names need platform work outside unit scope; browser inspection remains pending under the brief's restrictions.
+  - A fresh independent G3 review needs owner authorisation under G-2026-64 / ADR-0019 (D-2026-0005).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
