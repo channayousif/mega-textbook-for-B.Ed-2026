@@ -5,6 +5,7 @@ import { getSupabase } from '@site/src/lib/supabase';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { PageHeader } from '@site/src/components/ui';
+import DigestPreference from '@site/src/components/DigestPreference';
 
 type RoleChoice = 'student' | 'teacher';
 
@@ -190,6 +191,8 @@ export default function ProfilePage(): React.ReactElement {
             needs to change.
           </p>
         )}
+
+        <DigestPreference profileId={profile.id} />
 
         {/* T057 - FR-021/FR-022: identity removed, submitted work retained
             anonymously. Requires an explicit acknowledgement before the

@@ -14,6 +14,7 @@ import { WelcomeCard, StatTile, ListCard } from '@site/src/components/ui';
 import uiStyles from '@site/src/components/ui/ui.module.css';
 import AchievementBadge from '@site/src/components/AchievementBadge';
 import LoadingMark from '@site/src/components/ui/LoadingMark';
+import NewsTicker from '@site/src/components/NewsTicker';
 
 const statGrid = uiStyles.statGrid;
 
@@ -226,6 +227,7 @@ export default function DashboardHomePage(): React.ReactElement {
   return (
     <Layout title="Dashboard">
       <AppDashboardShell role="student">
+          <NewsTicker variant="card" />
           <HomeContent />
       </AppDashboardShell>
     </Layout>

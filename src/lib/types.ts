@@ -291,3 +291,51 @@ export type AssignmentTemplate = {
   allow_late: boolean;
   created_at: string;
 };
+
+/** Feature 028 - an admin-written ticker item (public.news_items). */
+export type NewsKind = 'news' | 'offer' | 'update' | 'event' | 'alert';
+export type NewsItem = {
+  id: string;
+  kind: NewsKind;
+  title_en: string;
+  title_ur: string | null;
+  link_url: string | null;
+  icon: string;
+  pinned: boolean;
+  published: boolean;
+  starts_at: string;
+  ends_at: string | null;
+  created_by: string | null;
+  created_at: string;
+  updated_at: string;
+  archived_at: string | null;
+};
+
+/** Feature 028 - an automatic content event from static/news-feed.json. */
+export type NewsEventType = 'course' | 'unit' | 'urdu' | 'review';
+export type NewsEvent = {
+  id: string;
+  type: NewsEventType;
+  gate?: 'G3' | 'G5';
+  date: string;
+  course_code: string;
+  unit_no: number | null;
+  title_en: string;
+  title_ur: string | null;
+  course_title_en: string;
+  course_title_ur: string | null;
+  permalink: string;
+};
+
+/** Feature 028 - one row of the weekly digest ledger (public.digest_runs). */
+export type DigestRun = {
+  iso_week: string;
+  status: 'claimed' | 'sent' | 'skipped' | 'failed';
+  items: number;
+  recipients: number;
+  sent: number;
+  failed: number;
+  error: string | null;
+  started_at: string;
+  finished_at: string | null;
+};
