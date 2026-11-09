@@ -79,7 +79,7 @@ Verified the latest G3 report against the current committed bytes before editing
 ## Outcome
 
 - Impact: verified the 20261108 desk report is a stale re-report and recorded the verification in the Unit 8 G3 tracker row.
-- Tests: npm run check:content passed 14/14 after regenerating static/content-status.json.
+- Tests: npm run check:content passed 14/14 after regenerating static/content-status.json; npm test passed 448/448 (39 files).
 - Files: specs/content/efmp-301/tasks.md (one advisory tracker row); this PHR.
 - Next prompts: owner retains the narrow-screen/A4 render and review-handoff provenance items; a G5/translation job owns the Urdu "کاؤنٹرائزنگ" mistranslation.
 - Reflection: the desk report pipeline re-issues prior findings verbatim under a fresh manifest; a repair job must verify current bytes before editing.
@@ -94,6 +94,6 @@ Verified the latest G3 report against the current committed bytes before editing
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: a desk report can carry a fresh input manifest while its findings text is a verbatim copy of an already-repaired prior report; applying it blindly would revert correct repairs.
-- Graders run and results (PASS/FAIL): PASS: npm run check:content 14/14 after npm run build:content-status; input-manifest comparison 100/100 current; findings-array equality check against the 20261102 report.
+- Graders run and results (PASS/FAIL): PASS: npm run check:content 14/14 after npm run build:content-status; npm test 448/448 (39 files); input-manifest comparison 100/100 current; findings-array equality check against the 20261102 report.
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): have the desk report generator compare its findings against the current tracker/repair state and mark already-repaired findings resolved before queueing a repair job.
