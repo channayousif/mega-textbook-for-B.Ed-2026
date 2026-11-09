@@ -1,8 +1,8 @@
 ---
 id: crew-efpg-401-u01-author
 title: crew author EFPG-401 unit 1
-stage: green
-date: 2026-11-10
+stage: misc
+date: 2026-11-09
 surface: agent
 model: agy
 feature: efpg-401
@@ -90,28 +90,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored English EFPG-401 Unit 1 ("Four Skills of Language Learning") with course overview, category file, four topic files, unit assessment with complete answer key, 8 placed SVGs with dark twins, governance artifacts (coverage, sources, concept graph, figures manifest, tasks tracker), and verified G2 gate evidence.
+Authored English EFPG-401 Unit 1 with course overview, 4 pedagogical topics, 25 assessment items, 8 placed SVGs with dark twins, governance specs, and validated G2 gate evidence.
 
 ## Outcome
 
-- Impact: author for EFPG-401 Unit 1 by agy.
-- Tests: all 14 content gates passed cleanly via `npm run build:content-status && npm run check:content`.
-- Files: 42 files across docs, specs, static, and prompt history.
-- Next prompts: crew planner will schedule G3 English review or Urdu translation mirror.
-- Reflection: schematic figure text geometry was measured and adjusted before gate runs to guarantee zero overlaps and zero clipping.
+- Impact: author for EFPG-401 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 42 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: EFPG-401 Unit 1 authored with course-overview, 4 topics, assessment, 8 figures, governance artifacts, and G2 evidence recorded in tasks.md.
-- Decisions the team must respect: print sources (Abbas 1993, Corder 1973, Harrison 1973) documented under unretrievable sources with owner ruling D-2026-0001 per depth-gate standards.
-- Pending / next owner: independent qualified G3 English reviewer (or Urdu translation mirror).
-- Paperclip issues affected: null.
+- Shipped / changed: Authored English EFPG-401 Unit 1 with course overview, 4 pedagogical topics, 25 assessment items, 8 placed SVGs with dark twins, governance specs, and validated G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Print monographs by Abbas (1993), Corder (1973), and Harrison (1973) are registered under unretrievable sources with owner ruling D-2026-0001 per depth-gate standards.
+  - Eight schematic SVGs are placed and measured; Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: initial SVG text geometry measurement identified label overlaps and panel spill in fig-U1-2, fig-U1-4, fig-U1-5, and fig-U1-8; fixed and re-measured cleanly.
-- Graders run and results (PASS/FAIL): validate:content PASS, check:pipeline-gate PASS, check:depth-gate PASS, check:figures PASS, check:svg-style PASS, check:no-em-dash PASS, check:no-answer-keys PASS, check:concept-graph PASS, check:bloom-bands PASS, check:source-floor PASS, check:licence PASS, licence:map:check PASS, check:content-status PASS, check:docs-sync PASS.
-- Prompt variant (if applicable): null.
-- Next experiment (smallest change to try): proceed with G3 review.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
