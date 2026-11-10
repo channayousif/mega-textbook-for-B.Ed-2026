@@ -2,7 +2,7 @@
 
 IUCN Pakistan. (2004). *Indigenous Knowledge and Biodiversity Conservation in Pakistan.* IUCN Pakistan. https://portals.iucn.org/library/sites/library/files/documents/2004-099.pdf
 
-Full text report read on 2026-11-07.
+Status: unverifiable. The cited URL was fetched on 2026-11-10 and resolves to an unrelated Tanzania marine-park report; the cited title could not be located in the IUCN Library search or on the public web. Declared under `## Unverifiable sources` in `sources/unit-05.md` per `D-2026-0001`. The passages below are retained as the author's record but are not independently verified and are not relied on for specific prose claims.
 
 ## Passages used by Unit 5
 

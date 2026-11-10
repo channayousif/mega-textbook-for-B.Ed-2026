@@ -18,4 +18,5 @@ Five checklist IDs map to the exact explanatory headings of the approved three-t
 | U5-05 | topic-03.mdx | Indigenous knowledge systems | zidny-2020-indigenous |
 | U5-05 | topic-03.mdx | Indigenous knowledge systems | owuor-2008-indigenous |
 | U5-05 | topic-03.mdx | Indigenous knowledge systems | kahlown-1994-karez |
+| U5-05 | topic-03.mdx | Indigenous knowledge systems | munir-2021-glacier-grafting |
 | U5-05 | topic-03.mdx | Indigenous knowledge systems | iucn-pakistan-2004-tek |
