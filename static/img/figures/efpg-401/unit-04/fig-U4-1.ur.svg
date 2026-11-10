@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">گرائمر کا ایک جزو تین جہتوں میں</title>
+  <desc id="d">تصوراتی خاکہ جس میں گرائمر کے ایک جزو (فعل حال جاری) کا تین جہتوں میں تجزیہ کیا گیا ہے: صورت (فاعل مع am، is یا are مع فعل-ing)، معنی (وہ عمل جو ابھی ہو رہا ہو) اور استعمال (تصویر، ویڈیو یا منظر میں لوگوں کے کاموں کی وضاحت)۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+    .ah { fill: var(--ink); }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <text class="h" x="390" y="38" text-anchor="middle">گرائمر کا ایک جزو تین جہتوں میں</text>
+  <text class="muted" x="390" y="58" text-anchor="middle">فعل حال جاری (present continuous) بطورِ مثال</text>
+
+  <!-- Centre: grammar item -->
+  <rect class="panel" x="300" y="175" width="180" height="90" rx="12"/>
+  <text class="sh" x="390" y="212" text-anchor="middle">گرائمر کا ایک جزو</text>
+  <text class="body" x="390" y="236" text-anchor="middle">فعل حال جاری</text>
+
+  <!-- Form panel (top left) -->
+  <rect class="panel-a" x="30" y="70" width="200" height="100" rx="8"/>
+  <text class="sh" x="130" y="98" text-anchor="middle">صورت (Form)</text>
+  <text class="body" x="130" y="120" text-anchor="middle" direction="ltr">Subject + am/is/are</text>
+  <text class="body" x="130" y="138" text-anchor="middle" direction="ltr">+ verb-ing</text>
+  <text class="muted" x="130" y="158" text-anchor="middle" direction="ltr">She is reading.</text>
+
+  <!-- Meaning panel (bottom left) -->
+  <rect class="panel-b" x="30" y="250" width="200" height="100" rx="8"/>
+  <text class="sh" x="130" y="278" text-anchor="middle">معنی (Meaning)</text>
+  <text class="body" x="130" y="302" text-anchor="middle">وہ عمل جو ابھی ہو رہا ہو</text>
+  <text class="body" x="130" y="324" text-anchor="middle">بولنے کے عین وقت پر</text>
+
+  <!-- Use panel (right) -->
+  <rect class="panel-c" x="550" y="165" width="200" height="120" rx="8"/>
+  <text class="sh" x="650" y="193" text-anchor="middle">استعمال (Use)</text>
+  <text class="body" x="650" y="218" text-anchor="middle">وضاحت کرنا کہ لوگ کسی</text>
+  <text class="body" x="650" y="240" text-anchor="middle">تصویر، ویڈیو یا منظر میں</text>
+  <text class="body" x="650" y="262" text-anchor="middle">کیا کر رہے ہیں</text>
+
+  <!-- Connectors -->
+  <path class="stroke-a" d="M 230 120 L 295 190"/>
+  <polygon class="ah" points="292,183 300,193 289,195"/>
+  <path class="stroke-b" d="M 230 300 L 295 250"/>
+  <polygon class="ah" points="289,245 300,247 292,257"/>
+  <path class="stroke-c" d="M 550 225 L 485 220"/>
+  <polygon class="ah" points="491,215 483,220 491,225"/>
+
+  <text class="wm" x="768" y="410" text-anchor="end" direction="ltr" aria-hidden="true">textbook.com.pk</text>
+</svg>
