@@ -16,24 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/efmp-406/unit-03/topic-01.mdx
-  - docs/semester-3/efmp-406/unit-03/topic-02.mdx
-  - history/prompts/efmp-406/crew-efmp-406-u03-repair_en-r1.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-03/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-03/topic-02.mdx
-  - specs/content/efmp-406/reviews/unit-03/G2/20261110T013623738Z-gates.json
-  - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-bloom-bands.txt
-  - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-concept-graph.txt
-  - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-depth-gate.txt
-  - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-docs-sync.txt
-  - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-figures.txt
-  - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-no-answer-keys.txt
-  - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-no-em-dash.txt
-  - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/validate-content.txt
-  - specs/content/efmp-406/tasks.md
+ - docs/semester-3/efmp-406/unit-03/topic-01.mdx
+ - docs/semester-3/efmp-406/unit-03/topic-02.mdx
+ - history/prompts/efmp-406/crew-efmp-406-u03-repair_en-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-03/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-03/topic-02.mdx
+ - specs/content/efmp-406/reviews/unit-03/G2/20261110T013623738Z-gates.json
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261110T013623738Z/validate-content.txt
+ - specs/content/efmp-406/tasks.md
 tests:
-  - npm run check:content
-  - npx vitest run tests/unit/pipeline-gate.test.mjs tests/unit/reviewQueue.test.mjs tests/unit/content-status-report.test.mjs tests/unit/g3Desk.test.mjs
+ - npm run check:content
 ---
 
 ## Prompt
@@ -84,25 +83,26 @@ From `specs/content/efmp-406/reviews/unit-03/G3/20261108T203238Z-g3-desk-c8508ca
 - (efmp-406-u03-repair_en-conflict2, fix, opencode) G3/G5 remain open and unsigned; the Unit 3 G3 advisory row still records missing author run identity and browser/print evidence.
 - (efmp-406-u03-repair_en-conflict2, fix, opencode) Merge is local only on `crew/efmp-406-u03-repair_en`; do not push or open a PR.
 
+
 ## Response snapshot
 
-Verified that the earlier 24e7302b2 repair already resolved the report's S1/S2/S3/A1/P3 findings, simplified the remaining graduate-level terms in the cited passages (codified, multimodal, constitutional jurisprudence) in EN and UR, refreshed the G2 gate evidence, and appended the advisory Unit 3 G3 tracker row naming report c8508ca2 while leaving G3 unticked.
+Simplified the remaining graduate-level terms in EFMP-406 Unit 3's R1-cited passages in EN and UR, refreshed the G2 gate evidence, and appended the advisory Unit 3 G3 tracker row naming report c8508ca2 while leaving G3 unticked.
 
 ## Outcome
 
 - Impact: repair_en for EFMP-406 Unit 3 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14 gates); focused vitest on pipeline-gate, reviewQueue, content-status-report and g3Desk passed (82 tests).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Simplified the remaining graduate-level terms in the R1-cited passages (codified, multimodal, constitutional jurisprudence) in EN and UR, refreshed the G2 gate evidence, and appended the advisory Unit 3 G3 tracker row naming report c8508ca2 while leaving G3 unticked.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Simplified the remaining graduate-level terms in EFMP-406 Unit 3's R1-cited passages in EN and UR, refreshed the G2 gate evidence, and appended the advisory Unit 3 G3 tracker row naming report c8508ca2 while leaving G3 unticked.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The c8508ca2 report is a stale re-review of the pre-24e7302b2 bytes; its S1/S2/S3/A1/P3 findings were already resolved there. The current residual was only the R1 readability terms, now simplified.
+  - Report c8508ca2 is a stale re-review of the pre-24e7302b2 bytes; its S1/S2/S3/A1/P3 findings were already resolved there, and the only residual was the R1 readability terms now simplified.
   - P1 provenance, P2 rendered desktop/narrow/A4 evidence and A2 blind solve remain unavailable to this job and need the coordinator and an authorised browser host.
   - No external source is bound for the literacy event/practice or dominant/vernacular terms; Topic 3.1 presents them as textbook working labels.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
