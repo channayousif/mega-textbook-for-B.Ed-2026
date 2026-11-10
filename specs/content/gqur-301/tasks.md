@@ -212,3 +212,4 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-12/G3/20261108T203238Z-g3-desk-b983456a.json |
 | Unit 13 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-13/G3/20261108T203238Z-g3-desk-09998f44.json |
 | Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261108T203238Z-g3-desk-332287bd.json |
+| Unit 6 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied for F3-F7 in report specs/content/gqur-301/reviews/unit-06/G3/20261108T203238Z-g3-desk-79674f38.json; content repairs landed in commit 6110bffe8 and were verified against this report's frozen inputs, so no further content edits were required. F1 authority, F2 historical provenance and F8 rendered inspection remain open. Fresh independent G3 required; no certification. |
