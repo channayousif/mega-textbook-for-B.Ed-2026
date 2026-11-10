@@ -16,10 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/efmp-407/tasks.md
-  - history/prompts/efmp-407/crew-efmp-407-u03-repair_en-conflict2.misc.prompt.md
+ - docs/semester-3/efmp-407/unit-03/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-03/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-03/topic-03.mdx
+ - docs/semester-3/efmp-407/unit-03/unit-assessment.mdx
+ - history/prompts/efmp-407/20261160-resolve-efmp407-unit03-repair-en-conflicts.general.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-repair_en-conflict2.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u03-repair_en.misc.prompt.md
+ - history/prompts/general/20261110-efmp-407-u03-repair-en.general.prompt.md
+ - specs/content/efmp-407/coverage/unit-03.md
+ - specs/content/efmp-407/reviews/unit-03/G2/20261110T021245039Z-gates.json
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261110T021245039Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261110T021245039Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261110T021245039Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261110T021245039Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261110T021245039Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261110T021245039Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261110T021245039Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261110T021245039Z/validate-content.txt
+ - specs/content/efmp-407/sources/texts/unesco-2015-gced.md
+ - specs/content/efmp-407/sources/unit-03.md
+ - specs/content/efmp-407/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -55,31 +75,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u03-repair_en, repair_en, opencode) F3 narrow-screen/print rendering and F4 host provenance remain unverified under the crew prohibition; a fresh independent G3 run should verify the repairs.
 - (efmp-407-u03-repair_en, repair_en, opencode) No Urdu mirror exists for Unit 3; G4 must reconcile the SDG 5 category guidance and wire the banner figure from `specs/content/efmp-407/figures/unit-03.illustration-notes.md`.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-407-u03-repair_en, resolved the single conflict in specs/content/efmp-407/tasks.md by keeping both sides' advisory rows (main's Unit 1 entry first, then this branch's Unit 3 entry), regenerated content status, passed all 14 content gates, and committed the merge plus this PHR.
+Merged origin/main into crew/efmp-407-u03-repair_en, resolved the single tasks.md conflict by keeping both sides' advisory rows, and left all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFMP-407 Unit 3 by opencode (attempt 2, merge conflict resolution).
-- Tests: npm run check:content passed (all 14 content gates).
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-407 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-407-u03-repair_en; the only conflict was specs/content/efmp-407/tasks.md, resolved by keeping both sides' rows (main's Unit 1 G3 advisory row first, then this branch's Unit 3 G3 advisory row), no duplicates. Regenerated content status and passed all 14 content gates.
-- Decisions the team must respect: shared registries are append-only; no main entry was changed or removed. G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Merged origin/main into crew/efmp-407-u03-repair_en, resolved the single tasks.md conflict by keeping both sides' advisory rows, and left all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - F3 (narrow-screen/print rendering) and F4 (host provenance) remain unverified under the crew prohibition; a fresh independent G3 run should verify the repairs.
-  - No Urdu mirror exists for Unit 3; G4 must reconcile the SDG 5 category guidance and wire the banner figure from specs/content/efmp-407/figures/unit-03.illustration-notes.md.
+  - No Urdu mirror exists for Unit 3; G4 must reconcile the SDG 5 category guidance and wire the banner figure from `specs/content/efmp-407/figures/unit-03.illustration-notes.md`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none beyond the expected append-only tracker conflict.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
