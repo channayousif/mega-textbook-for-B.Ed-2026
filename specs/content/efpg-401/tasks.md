@@ -8,7 +8,7 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | Four Skills of Language Learning | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; eight schematic SVGs placed with dark variants; G3 and Urdu remain open |
+| 1 | Four Skills of Language Learning | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-10; eight schematic SVGs placed with dark variants; Urdu mirror drafted at G4 with 8 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
 | 2 | Teaching of English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 3 | Methods of Teaching English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 4 | Teaching of Grammar | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
@@ -26,7 +26,7 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-01/G2/20261109T231800734Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
-| Unit 1 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notices |
+| Unit 1 | G4 ur-translation | ▣ | agent:agy | Six-file Urdu mirror and eight localized SVG schematics with derived dark variants prepared from English 73c0c4c73; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-01/G4/translation-handoff.md). |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 1 | G6 assets | ▣ | | Eight English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
