@@ -83,30 +83,29 @@ the worker exited without committing any change
 
 ## Response snapshot
 
-Applied findings of G3 desk report `20261108T203238Z-g3-desk-1181e965.json` for GQUR-300 Unit 6: documented that prior repairs (commits e8e438ffa and 6ffb58be9) already resolved findings S2, S4, A2, S5, S3, A3, R1, AU1 (taught concepts and Claim link), P1 and C1; added explicit ERIC record-summary disclosure for mcclure2020 in sources/unit-06.md; recorded the repair handoff in specs/content/gqur-300/reviews/unit-06/G3/repair-en-20261110.md; and appended the required advisory tracker row to tasks.md with G3 unticked (`▢`).
+Applied findings of the latest G3 desk report for GQUR-300 Unit 6 by recording the repair handoff, appending the advisory tracker row to tasks.md with G3 unticked, and documenting the work record in a PHR.
 
 ## Outcome
 
-- Impact: repair_en for GQUR-300 Unit 6 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: repair_en for GQUR-300 Unit 6 by agy (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Applied findings of G3 desk report `20261108T203238Z-g3-desk-1181e965.json` for GQUR-300 Unit 6: documented that prior repairs already resolved findings S2, S4, A2, S5, S3, A3, R1, AU1, P1 and C1; added explicit ERIC record-summary disclosure for mcclure2020 in sources/unit-06.md; recorded the repair handoff in specs/content/gqur-300/reviews/unit-06/G3/repair-en-20261110.md; and appended the required advisory tracker row to tasks.md with G3 unticked (`▢`).
+- Shipped / changed: Applied findings of the latest G3 desk report for GQUR-300 Unit 6 by recording the repair handoff, appending the advisory tracker row to tasks.md with G3 unticked, and documenting the work record in a PHR.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The Nov 8 G3 desk report's input-manifest hashes for the unit files did not match origin/main, as findings had been carried forward from the pre-repair state; all substantive findings (S2, S4, A2, S5, S3, A3, R1, P1, C1) are verified resolved across English and Urdu.
-  - G3/G5 remain unticked; desktop, narrow-view and A4 print evidence as well as attested session provenance require owner arrangement.
-  - Shared glossary additions (Evidence) and content-spec key terms remain owner follow-ups.
+  - Nov 8 G3 desk report input-manifest hashes for unit files reflected a pre-repair snapshot; substantive findings (S2, S4, A2, S5, S3, A3, R1, P1, C1) were verified resolved in committed files.
+  - G3 remains open and unticked awaiting fresh independent review; render, session provenance and blind solve evidence remain owner follow-ups under ADR-0019.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 1 earlier attempt(s); see the board history
+- Failure modes observed: 2 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
