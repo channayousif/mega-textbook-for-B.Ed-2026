@@ -12,3 +12,7 @@
 ## Repair record (2026-11-03)
 
 Figure U3-2 was redesigned because the earlier allocation column had no verifiable values. It now teaches reported Vision baselines versus targets; the approved spec remains unchanged for owner review. U3-3 and U3-5 follow numeric order, with evaluation feedback to needs assessment in U3-3. U3-4 treats strategic planning as an approach at either scale. Corrected descriptions replace obsolete allocation and missing-stage descriptions.
+
+## Repair record (2026-11-10)
+
+U3-3 and U3-5 were redrawn so the boxes read 1-2-3 on the top row and 4-5-6 on the bottom row, with an explicit wrap arrow from stage 3 to stage 4. U3-3 keeps a dashed outer feedback loop from stage 6 back to stage 1. The previous snake layout let a reader scan the lower row as 6-5-4. EN, UR and dark variants updated; `measure-figure-text.mjs` clean.
