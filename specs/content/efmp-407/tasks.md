@@ -18,7 +18,6 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 2 | G7 publish | ▢ | | Publication and catalog integration are outside this authoring job. |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-03/G2/20261110T021245039Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. Source support, conflicting category guidance, readability and pedagogy require repairs; render/provenance incomplete. [Report](reviews/unit-03/G3/20261107-codex.json). No certification. |
-| Unit 3 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; F1 source note added and tier lists softened, F2 SDG 5 category guidance reconciled, F5 Target 4.1/ESD-GCED/rubric zero/formative labels revised, F6 specialist terms defined or replaced, F7 fictional case and water-safety safeguards added; F3 render and F4 host provenance remain unverified; report: specs/content/efmp-407/reviews/unit-03/G3/20261108T203238Z-g3-desk-dd5ef8ea.json |
 | Unit 3 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 3 | G6 assets | ▣ | | Six EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry check pending under crew prohibition |
@@ -90,3 +89,4 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-03/G3/20261108T203238Z-g3-desk-dd5ef8ea.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-05/G3/20261108T203238Z-g3-desk-7b51d549.json |
 | Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-08/G3/20261108T203238Z-g3-desk-04abd597.json |
+| Unit 3 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; F1 source note added and tier lists softened, F2 SDG 5 category guidance reconciled, F5 Target 4.1/ESD-GCED/rubric zero/formative labels revised, F6 specialist terms defined or replaced, F7 fictional case and water-safety safeguards added; F3 render and F4 host provenance remain unverified; report: specs/content/efmp-407/reviews/unit-03/G3/20261108T203238Z-g3-desk-dd5ef8ea.json |
