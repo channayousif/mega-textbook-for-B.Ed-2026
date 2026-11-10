@@ -2,7 +2,7 @@
 id: crew-efpg-401-u05-author-conflict4
 title: crew fix EFPG-401 unit 5
 stage: misc
-date: 2026-11-11
+date: 2026-11-10
 surface: agent
 model: opencode
 feature: efpg-401
@@ -75,7 +75,6 @@ files:
  - static/img/figures/efpg-401/unit-05/fig-U5-9.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/efpg-401/unit-05/*.svg
 ---
 
 ## Prompt
@@ -111,32 +110,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u05-author-conflict2, fix, opencode) Unit 5 EN is authored with 14 placed figures; no Urdu mirror exists, so G4 translation and independent G3/G5 reviews are the open next steps.
 - (efpg-401-u05-author, author, opencode) Urdu mirror (G4) and independent G3/G5 review remain open; no UR files were created.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efpg-401-u05-author, resolved the tasks.md status-header conflict so it records Units 1, 2, 5, 6 and 7 as authored, and left all 14 content gates passing.
+Merged origin/main into crew/efpg-401-u05-author, resolved the specs/content/efpg-401/tasks.md status conflict by keeping both sides' unit facts, and left all content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFPG-401 Unit 5 by opencode (attempt 4).
-- Tests: npm run check:content passed (all 14 gates PASS); measure-figure-text exited 0 on all 28 unit-05 SVGs.
+- Impact: fix for EFPG-401 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 57 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efpg-401-u05-author and resolved the tasks.md conflict by combining both sides' status lines (Units 1, 2, 5, 6 and 7 authored) while keeping every table and stage row from both sides.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything. The branch did not touch glossary.json, specs/decisions/log.md, specs/gaps.md or specs/content/terminology.csv, so no ID or glossary-key renumbering was needed.
+- Shipped / changed: Merged origin/main into crew/efpg-401-u05-author, resolved the specs/content/efpg-401/tasks.md status conflict by keeping both sides' unit facts, and left all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 5 EN is authored with 14 placed figures; no Urdu mirror exists, so G4 translation and independent G3/G5 reviews are the open next steps.
-  - Unit 6 EN and Unit 7 EN landed from main with 10 and 4 placed figures respectively; their G4 Urdu mirrors are separate jobs.
-  - The merge brought in main's Unit 2 and Unit 6 Urdu mirrors and Unit 7 English; tasks.md now carries all of their rows.
+  - Unit 5 EN still has no Urdu mirror, so G4 translation and independent G3/G5 review remain the open next steps.
+  - The merge brought in main's Unit 2/6 Urdu mirrors and Unit 7 EN; tasks.md now carries all their rows, so a future job should not re-add them.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14); measure-figure-text PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
