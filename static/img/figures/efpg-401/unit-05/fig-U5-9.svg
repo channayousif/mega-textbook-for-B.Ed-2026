@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 450" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Prose and poetry lesson plans side by side</title>
+  <desc id="d">Table comparing a prose lesson and a poetry lesson side by side, showing the stages, teacher questions, pupil activities and aims.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="450"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">Prose and Poetry Lessons Side by Side</text>
+
+  <rect class="panel" x="30" y="50" width="720" height="32" rx="4"/>
+  <text class="sh" x="40" y="71">Stage</text>
+  <text class="sh" x="170" y="71">Prose lesson</text>
+  <text class="sh" x="460" y="71">Poetry lesson</text>
+
+  <rect class="panel-a" x="30" y="90" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="120">Opening</text>
+  <text class="body" x="170" y="112">Show a picture; ask</text>
+  <text class="body" x="170" y="130">"Have you seen a goat?"</text>
+  <text class="body" x="460" y="112">Read the poem aloud twice,</text>
+  <text class="body" x="460" y="130">books closed</text>
+
+  <rect class="panel-b" x="30" y="158" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="180">First</text>
+  <text class="sh" x="40" y="198">encounter</text>
+  <text class="body" x="170" y="180">Read the story silently</text>
+  <text class="body" x="170" y="198">for the main idea</text>
+  <text class="body" x="460" y="188">Read the poem aloud in chorus</text>
+
+  <rect class="panel-c" x="30" y="226" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="256">Deeper work</text>
+  <text class="body" x="170" y="256">Ask "Why did the boy help the goat?"</text>
+  <text class="body" x="460" y="256">Ask "What picture do you see?"</text>
+
+  <rect class="panel-d" x="30" y="294" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="324">Language work</text>
+  <text class="body" x="170" y="316">Teach three words from</text>
+  <text class="body" x="170" y="334">the story in context</text>
+  <text class="body" x="460" y="316">Talk about one or two words</text>
+  <text class="body" x="460" y="334">through the poem</text>
+
+  <rect class="panel-a" x="30" y="362" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="392">Response</text>
+  <text class="body" x="170" y="392">Role-play the boy meeting the owner</text>
+  <text class="body" x="460" y="384">Draw the scene and</text>
+  <text class="body" x="460" y="402">write two lines</text>
+
+  <text class="wm" x="768" y="440" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

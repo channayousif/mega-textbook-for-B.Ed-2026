@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">The four teacher moves during group work</title>
+  <desc id="d">Diagram of the four teacher moves during group work: set up the task, monitor the groups, support struggling pupils, and bring the class back to report.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="ah"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">Four Teacher Moves During Group Work</text>
+
+  <rect class="panel-a" x="80" y="70" width="260" height="80" rx="4"/>
+  <text class="sh" x="210" y="100" text-anchor="middle">1. Set up</text>
+  <text class="small" x="210" y="124" text-anchor="middle">State the task, time and roles</text>
+
+  <rect class="panel-b" x="440" y="70" width="260" height="80" rx="4"/>
+  <text class="sh" x="570" y="100" text-anchor="middle">2. Monitor</text>
+  <text class="small" x="570" y="124" text-anchor="middle">Walk around and listen</text>
+
+  <rect class="panel-c" x="440" y="230" width="260" height="80" rx="4"/>
+  <text class="sh" x="570" y="260" text-anchor="middle">3. Support</text>
+  <text class="small" x="570" y="284" text-anchor="middle">Help with a question, not an answer</text>
+
+  <rect class="panel-d" x="80" y="230" width="260" height="80" rx="4"/>
+  <text class="sh" x="210" y="260" text-anchor="middle">4. Report back</text>
+  <text class="small" x="210" y="284" text-anchor="middle">Bring the class together and correct</text>
+
+  <ellipse class="panel" cx="390" cy="185" rx="90" ry="40"/>
+  <text class="sh" x="390" y="190" text-anchor="middle">Group work</text>
+
+  <line class="stroke" x1="340" y1="110" x2="440" y2="110" marker-end="url(#arrow)"/>
+  <line class="stroke" x1="570" y1="150" x2="570" y2="230" marker-end="url(#arrow)"/>
+  <line class="stroke" x1="440" y1="270" x2="340" y2="270" marker-end="url(#arrow)"/>
+  <line class="stroke" x1="210" y1="230" x2="210" y2="150" marker-end="url(#arrow)"/>
+
+  <text class="wm" x="768" y="408" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

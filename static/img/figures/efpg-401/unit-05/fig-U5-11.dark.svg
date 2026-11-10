@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Paragraph, story and essay lessons compared</title>
+  <desc id="d">Table comparing paragraph, story and essay lessons on the model text, the support given, the pupil output and the teacher's role.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="380"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">Three Writing Lessons Compared</text>
+
+  <rect class="panel" x="30" y="50" width="720" height="32" rx="4"/>
+  <text class="sh" x="40" y="71">Lesson</text>
+  <text class="sh" x="140" y="71">Model</text>
+  <text class="sh" x="360" y="71">Support</text>
+  <text class="sh" x="560" y="71">Output</text>
+
+  <rect class="panel-a" x="30" y="90" width="720" height="82" rx="4"/>
+  <text class="sh" x="40" y="130">Paragraph</text>
+  <text class="body" x="140" y="116">A four-sentence model</text>
+  <text class="body" x="140" y="134">paragraph</text>
+  <text class="body" x="360" y="107">A frame with topic,</text>
+  <text class="body" x="360" y="125">supporting and closing</text>
+  <text class="body" x="360" y="143">sentences</text>
+  <text class="body" x="560" y="130">One organised paragraph</text>
+
+  <rect class="panel-b" x="30" y="180" width="720" height="82" rx="4"/>
+  <text class="sh" x="40" y="220">Story</text>
+  <text class="body" x="140" y="206">A short story with a</text>
+  <text class="body" x="140" y="224">beginning, middle</text>
+  <text class="body" x="140" y="242">and end</text>
+  <text class="body" x="360" y="206">A story map of setting,</text>
+  <text class="body" x="360" y="224">characters, problem</text>
+  <text class="body" x="360" y="242">and solution</text>
+  <text class="body" x="560" y="220">A short narrative</text>
+
+  <rect class="panel-c" x="30" y="270" width="720" height="82" rx="4"/>
+  <text class="sh" x="40" y="310">Essay</text>
+  <text class="body" x="140" y="296">A short essay with</text>
+  <text class="body" x="140" y="314">introduction, body</text>
+  <text class="body" x="140" y="332">and conclusion</text>
+  <text class="body" x="360" y="305">A brainstorm and a</text>
+  <text class="body" x="360" y="323">paragraph plan</text>
+  <text class="body" x="560" y="310">A short composition</text>
+
+  <text class="wm" x="768" y="368" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

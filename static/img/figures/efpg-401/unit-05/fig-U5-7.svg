@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 450" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">A filled structural-lesson plan for one sentence pattern</title>
+  <desc id="d">Table of a filled structural-lesson plan for the pattern "There is a / There are", showing each stage, the teacher action, the pupil action and its purpose.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="450"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">A Filled Structural Lesson: "There is a / There are"</text>
+
+  <rect class="panel" x="30" y="50" width="720" height="32" rx="4"/>
+  <text class="sh" x="40" y="71">Stage</text>
+  <text class="sh" x="150" y="71">Time</text>
+  <text class="sh" x="212" y="71">Teacher action</text>
+  <text class="sh" x="400" y="71">Pupil action</text>
+  <text class="sh" x="580" y="71">Purpose</text>
+
+  <rect class="panel-a" x="30" y="90" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="120">Warm-up</text>
+  <text class="body" x="150" y="120">4 min</text>
+  <text class="body" x="212" y="112">Show a market picture;</text>
+  <text class="body" x="212" y="130">ask what pupils see</text>
+  <text class="body" x="400" y="120">Name things in English</text>
+  <text class="body" x="580" y="112">Activate</text>
+  <text class="body" x="580" y="130">vocabulary</text>
+
+  <rect class="panel-b" x="30" y="158" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="188">Presentation</text>
+  <text class="body" x="150" y="188">8 min</text>
+  <text class="body" x="212" y="180">Draw a room and model</text>
+  <text class="body" x="212" y="198">"There is a table"</text>
+  <text class="body" x="400" y="188">Repeat and point</text>
+  <text class="body" x="580" y="180">Introduce the</text>
+  <text class="body" x="580" y="198">pattern</text>
+
+  <rect class="panel-c" x="30" y="226" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="248">Controlled</text>
+  <text class="sh" x="40" y="266">practice</text>
+  <text class="body" x="150" y="256">10 min</text>
+  <text class="body" x="212" y="248">Hold up flashcards;</text>
+  <text class="body" x="212" y="266">ask "What is there?"</text>
+  <text class="body" x="400" y="248">Answer with</text>
+  <text class="body" x="400" y="266">"There is/are"</text>
+  <text class="body" x="580" y="256">Build accuracy</text>
+
+  <rect class="panel-d" x="30" y="294" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="324">Free practice</text>
+  <text class="body" x="150" y="324">10 min</text>
+  <text class="body" x="212" y="316">Ask pairs to describe</text>
+  <text class="body" x="212" y="334">their classroom</text>
+  <text class="body" x="400" y="324">Describe to a partner</text>
+  <text class="body" x="580" y="316">Use the pattern</text>
+  <text class="body" x="580" y="334">freely</text>
+
+  <rect class="panel-a" x="30" y="362" width="720" height="62" rx="4"/>
+  <text class="sh" x="40" y="392">Assessment</text>
+  <text class="body" x="150" y="392">4 min</text>
+  <text class="body" x="212" y="384">Ask each pupil to write</text>
+  <text class="body" x="212" y="402">two sentences</text>
+  <text class="body" x="400" y="392">Write two sentences</text>
+  <text class="body" x="580" y="392">Check the pattern</text>
+
+  <text class="wm" x="768" y="440" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
