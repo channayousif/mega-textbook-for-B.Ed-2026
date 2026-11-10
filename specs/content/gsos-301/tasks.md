@@ -109,3 +109,4 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-02/G3/20261108T203238Z-g3-desk-a2c0932a.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-03/G3/20261108T203238Z-g3-desk-193c20bb.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-05/G3/20261108T203238Z-g3-desk-563e3167.json |
+| Unit 6 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-06/G3/20261108T203238Z-g3-desk-c052da40.json; media claim, Sialkot typo, coverage/concept mappings and source-retrieval governance already repaired on main (commit 8a99e8e4e) and verified against this report; browser/print inspection remains unverified under brief restrictions; fresh independent review required; no certification |
