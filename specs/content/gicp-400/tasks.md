@@ -9,7 +9,7 @@ English-only authoring from the approved Unit 1 spec. No publication or review c
 | Unit 1 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localised schematic SVGs with dark twins; translator handoff: specs/content/gicp-400/reviews/unit-01/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 1 | G6 assets | ▢ | | Four inherited EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry and visual inspection pending under the crew brief's browser prohibition |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-05/G2/20261107T044305246Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gicp-400/reviews/unit-05/G2/20261110T040923255Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 5 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and six localised schematic SVGs with dark twins; translator handoff: specs/content/gicp-400/reviews/unit-05/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
@@ -68,5 +68,6 @@ Unit 6 owner flag: the reading-list note for pak-constitution-1973 names only th
 
 | Unit 6 | G3 en-review | ▢ | | Advisory escalation by agent:agy; report at specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1.json; 5 criteria pass, sources and accessibility unverified; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; official 25th Amendment gazette text, author run provenance and browser/print evidence unavailable; G3 remains open and unsigned |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gicp-400/reviews/unit-05/G3/20261108T203238Z-g3-desk-f91ffb71.json |
+| Unit 5 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report: specs/content/gicp-400/reviews/unit-05/G3/20261108T203238Z-g3-desk-f91ffb71.json; F1 fig-U5-6 alt, manifest and SVG desc qualified to "each may depend on resources" in EN and UR with both dark variants rederived; F2 topic-03 examples now state the full five-to-sixteen range in EN and UR; F3 LUMS Shehla Zia citation corrected to Mansoor (2025, February 11) in EN and UR topic-02 and sources/unit-05; F8 RRQs 4, 6, 9 and 10 retagged Analyze to Understand to match their reproduction demand in EN and UR; F4-F7 rendered accessibility, provenance, primary-source and blind-solve evidence remain unavailable to this job and need an authorised host and a fresh reviewer; G3 remains open and unticked |
 | Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/gicp-400/reviews/unit-07/G3/20261108T203238Z-g3-desk-8314fbc3.json |
 
