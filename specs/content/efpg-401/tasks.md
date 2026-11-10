@@ -30,7 +30,7 @@ English-only authoring from the approved Unit 1 and Unit 2 content-specs. No pub
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 1 | G6 assets | ▣ | | Eight English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 2 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-02/G2/20261110T115742025Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 2 | G4 ur-translation | ☐ | | Separate job; English-only draft with untranslated notices |
 | Unit 2 | G5 ur-review | ☐ | | Awaiting translation and independent review |
