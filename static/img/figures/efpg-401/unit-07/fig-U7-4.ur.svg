@@ -16,7 +16,7 @@
     .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
     .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
     .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
-    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
     .body { font-size: 13px; fill: var(--ink); }
     .muted { font-size: 13px; fill: var(--muted); }
     .small { font-size: 12px; fill: var(--muted); }
@@ -78,7 +78,7 @@
 
   <!-- Criterion 4: Grammar and spelling -->
   <rect class="panel-d" x="40" y="350" width="340" height="64" rx="8"/>
-  <text class="sh" x="364" y="376" text-anchor="end">4. گرامر اور املا (Grammar and spelling)</text>
+  <text class="sh" x="364" y="376" text-anchor="end">4. گرامر اور املا (Grammar)</text>
   <text class="body" x="364" y="398" text-anchor="end">مکمل اور زیادہ تر درست جملے</text>
   <text class="sh" x="56" y="386" text-anchor="start">0-3 نمبر</text>
 
