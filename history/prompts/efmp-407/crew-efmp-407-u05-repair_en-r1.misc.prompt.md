@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-407-u05-repair_en-r1
-title: crew repair_en EFMP-407 unit 5 (r1 branch)
+title: crew repair_en EFMP-407 unit 5
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,10 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-407/crew-efmp-407-u05-repair_en-r1.misc.prompt.md
-  - specs/content/efmp-407/tasks.md
+ - history/prompts/efmp-407/crew-efmp-407-u05-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-407/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -70,27 +70,28 @@ From `specs/content/efmp-407/reviews/unit-05/G3/20261108T203238Z-g3-desk-7b51d54
 - (efmp-407-u05-illustrate, illustrate, agy) Placed banner fig-U5-7.webp in English unit index; Urdu placement awaits the missing translation mirror with draft alt text recorded in unit-05.illustration-notes.md.
 - (efmp-407-u05-illustrate, illustrate, agy) Refreshed stale G2 gate evidence to 20261108T130249567Z-gates.json with all 14 content gates passing cleanly.
 
+
 ## Response snapshot
 
-Verified every open finding from the latest G3 desk report against the branch state and found F1-F6 already repaired on main by the earlier `efmp-407-u05-repair_en` job: the glacier-grafting claim is re-sourced to Munir et al. (2021) with IUCN Pakistan (2004) declared under `## Unverifiable sources` per D-2026-0001, the two per-topic retrieval items are reworded to the Apply band, the Karez specifics are removed, the "concentric" wording is corrected, the Purvis attribution is removed, and a standalone peace-education definition is added. No further content edit was needed. Appended the unticked Unit 5 G3 advisory-repair tracker row naming report 20261108T203238Z-g3-desk-7b51d549.
+Verified the already-merged F1-F6 G3 repairs on main and appended the unticked Unit 5 advisory-repair tracker row plus PHR, with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-407 Unit 5 by opencode (r1 branch).
-- Tests: npm run check:content passed all 14 content gates.
+- Impact: repair_en for EFMP-407 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the earlier repair job's F1-F6 fixes on main and appended the unticked Unit 5 G3 advisory-repair tracker row naming report 20261108T203238Z-g3-desk-7b51d549.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Verified the already-merged F1-F6 G3 repairs on main and appended the unticked Unit 5 advisory-repair tracker row plus PHR, with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Narrow-screen and A4 print render inspection remains undone (crew brief blocks build/browser); accessibility is unverified.
-  - The glacier-grafting paragraph is framed at the level Munir et al. (2021)'s abstract supports; a fresh reviewer should check the full text for the ice-combination mechanics.
+  - Narrow-screen and A4 print render inspection plus author-runtime provenance remain unverifiable under the crew brief.
   - G3/G5 stay open and unsigned; a fresh independent review bundle is required after these repairs.
+  - The glacier-grafting paragraph is framed at the level Munir et al. (2021)'s abstract supports; a fresh reviewer should check the full text for the ice-combination mechanics.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
