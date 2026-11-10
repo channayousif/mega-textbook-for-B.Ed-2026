@@ -52,7 +52,7 @@
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T112249582Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/giss-401/reviews/unit-06/G3/ad110b4d-3d0d-4777-98c5-9930d6961900.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; 6 Sharp PNG renders verified; G3 remains open and unsigned |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-05/G2/20261103T141633226Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-05/G2/20261110T045015770Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 5 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-05/G3/01a1b0a0-8bb6-7fa3-8dbd-f1262f8137cd.json; source binding, provenance, scholar review and browser/print evidence incomplete; actionable F04-F14 recorded; G3 remains open and unsigned |
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
@@ -107,4 +107,5 @@ After merging `origin/main` (which added the course overview), `node scripts/pre
 | Unit 2 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-02/G3/01a1b085-18a8-79d2-8bc8-93c034c663a8.json; non-direct-ruling Ijma/Qiyas blueprint unmet; author-run provenance, qualified scholar review, full source verification, independent solve and browser/print evidence pending; G3 remains open and unsigned |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-02/G3/20261108T203238Z-g3-desk-82690fcb.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-05/G3/20261108T203238Z-g3-desk-922808a1.json |
+| Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied for report specs/content/giss-401/reviews/unit-05/G3/20261108T203238Z-g3-desk-922808a1.json (opencode crew giss-401-u05-repair_en, 2026-11-10). F04-F14: Unverifiable sources declared and translation named; over-15-word quotations shortened or paraphrased; Mudarabah/Musharakah loss rules and ihtikar item repaired; risk-transfer and poverty claims qualified; Articles 20/22/25/36/38(f) stated with their qualifications; Ali, Umar and Charter accounts labelled reported; secular caricatures removed; plain-language rewrites; concept-item audit; hypothetical labels and funding/authority/confidentiality limits; formative set clarified. See authoring/unit-05.md. G3 remains open and unsigned; host provenance, frozen source bundle, render inspection and qualified scholar review pending. |
 | Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-07/G3/20261108T203238Z-g3-desk-750f7524.json |
