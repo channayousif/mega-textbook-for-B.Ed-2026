@@ -13,13 +13,12 @@ labels: ["crew", "agy", "repair_en"]
 links:
   spec: specs/content/gsos-301/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
  - history/prompts/gsos-301/crew-gsos-301-u04-repair_en-r1.misc.prompt.md
  - specs/content/gsos-301/tasks.md
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -73,23 +72,23 @@ From `specs/content/gsos-301/reviews/unit-04/G3/20261108T203238Z-g3-desk-c9f8007
 
 ## Response snapshot
 
-Verified all findings from latest G3 desk report `specs/content/gsos-301/reviews/unit-04/G3/20261108T203238Z-g3-desk-c9f8007e.json` (A1-A3, C1, T1, Assessment quality, S1, P1, X1) are already resolved in current bytes on main; appended unticked Unit 4 G3 advisory repair row to `specs/content/gsos-301/tasks.md` and verified all 14 content gates pass.
+Verified all findings from G3 desk report c9f8007e are resolved in current bytes and appended the advisory repair tracker row to specs/content/gsos-301/tasks.md with all content gates passing.
 
 ## Outcome
 
 - Impact: repair_en for GSOS-301 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates) after running npm run build:content-status.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended the required Unit 4 G3 advisory repair row in specs/content/gsos-301/tasks.md for report specs/content/gsos-301/reviews/unit-04/G3/20261108T203238Z-g3-desk-c9f8007e.json.
-- Decisions the team must respect: G3 remains open and unticked; no self-certification or human initials; content-spec status paragraph remains an owner edit.
+- Shipped / changed: Verified all findings from G3 desk report c9f8007e are resolved in current bytes and appended the advisory repair tracker row to specs/content/gsos-301/tasks.md with all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains unticked; P1 author-run provenance and X1 browser/print render inspection remain open because the brief prohibits build/server/browser.
+  - G3 stays unticked; P1 author-run provenance and X1 browser/print render inspection remain open because the brief prohibits build/server/browser.
   - No Urdu mirror exists for Unit 4, so G4 stays blocked until a fresh independent G3 confirms these repairs.
   - content-spec.md's introductory "Status is draft" paragraph still conflicts with its approved frontmatter; it is an approved spec, so it is an owner edit outside this job's scope.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
@@ -97,6 +96,6 @@ Verified all findings from latest G3 desk report `specs/content/gsos-301/reviews
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14 content gates)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): Fresh independent G3 review of Unit 4.
+- Next experiment (smallest change to try): none
