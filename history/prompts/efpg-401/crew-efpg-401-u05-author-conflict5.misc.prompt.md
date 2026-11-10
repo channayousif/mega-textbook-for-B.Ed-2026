@@ -2,7 +2,7 @@
 id: crew-efpg-401-u05-author-conflict5
 title: crew fix EFPG-401 unit 5
 stage: misc
-date: 2026-11-11
+date: 2026-11-10
 surface: agent
 model: opencode
 feature: efpg-401
@@ -16,10 +16,66 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-3/efpg-401/unit-05/index.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-01.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-02.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-03.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-04.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-05.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-06.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-07.mdx
+ - docs/semester-3/efpg-401/unit-05/unit-assessment.mdx
+ - history/prompts/efpg-401/crew-efpg-401-u05-author-conflict1.misc.prompt.md
+ - history/prompts/efpg-401/crew-efpg-401-u05-author-conflict2.misc.prompt.md
+ - history/prompts/efpg-401/crew-efpg-401-u05-author-conflict3.misc.prompt.md
+ - history/prompts/efpg-401/crew-efpg-401-u05-author-conflict4.misc.prompt.md
  - history/prompts/efpg-401/crew-efpg-401-u05-author-conflict5.misc.prompt.md
+ - history/prompts/efpg-401/crew-efpg-401-u05-author.green.prompt.md
+ - specs/content/efpg-401/concepts/unit-05.md
+ - specs/content/efpg-401/coverage/unit-05.md
+ - specs/content/efpg-401/figures/unit-05.md
+ - specs/content/efpg-401/reviews/unit-05/G2/20261110T132807524Z-gates.json
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-bloom-bands.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-concept-graph.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-depth-gate.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-docs-sync.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-figures.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-no-answer-keys.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-no-em-dash.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/validate-content.txt
+ - specs/content/efpg-401/sources/texts/paulsrud-2024-lesson-planning.md
+ - specs/content/efpg-401/sources/unit-05.md
+ - specs/content/efpg-401/tasks.md
+ - static/img/figures/efpg-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-1.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-10.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-10.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-11.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-11.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-12.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-12.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-13.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-13.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-14.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-14.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-2.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-3.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-4.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-5.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-5.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-6.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-7.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-7.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-8.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-8.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-9.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-9.svg
 tests:
  - npm run check:content
- - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efpg-401/unit-05/*.svg
 ---
 
 ## Prompt
@@ -55,31 +111,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u05-author-conflict3, fix, opencode) Unit 6 EN landed from main with 10 placed figures; its G4 Urdu mirror is a separate job.
 - (efpg-401-u05-author-conflict3, fix, opencode) No D-/G-ID or glossary-key conflicts were found; main's 6 new glossary terms were retained in main's order.
 
+
 ## Response snapshot
 
-Verified origin/main (6e5c58cc0) is already an ancestor of crew/efpg-401-u05-author, so `git merge origin/main` is a no-op; no conflict markers or unmerged paths remain. The merged specs/content/efpg-401/tasks.md keeps main's Unit 6 and 7 rows and adds the Unit 5 rows. All 14 content gates pass and measure-figure-text exits 0 on the 28 Unit 5 SVGs.
+Verified origin/main was already merged with no remaining conflicts, confirmed all content gates pass, and committed the conflict5 PHR.
 
 ## Outcome
 
-- Impact: fix verification for EFPG-401 Unit 5 by opencode (attempt 5); no content changes were needed.
-- Tests: npm run check:content passed (14/14 gates); measure-figure-text exited 0 on 28 Unit 5 SVGs.
-- Files: 1 file(s), listed above.
+- Impact: fix for EFPG-401 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 58 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the origin/main merge is current and the content gates pass; no new content changes.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Verified origin/main was already merged with no remaining conflicts, confirmed all content gates pass, and committed the conflict5 PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 5 EN still has no Urdu mirror, so G4 translation and independent G3/G5 review remain the open next steps.
-  - The merge already brought in main's Unit 2/6 Urdu mirrors and Unit 7 EN; tasks.md carries all their rows, so a future job should not re-add them.
+  - tasks.md already carries main's Unit 2/6 Urdu mirror and Unit 7 EN rows; a future job should not re-add them.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
