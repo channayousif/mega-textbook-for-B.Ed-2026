@@ -16,21 +16,28 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/giss-401/unit-07/topic-01.mdx
-  - docs/semester-3/giss-401/unit-07/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-07/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-07/unit-assessment.mdx
-  - specs/content/giss-401/figures/unit-07.md
-  - specs/content/giss-401/tasks.md
-  - specs/content/giss-401/reviews/unit-07/G2/20261110T051317873Z-gates.json
-  - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/
-  - static/img/figures/giss-401/unit-07/fig-U7-2.svg
-  - static/img/figures/giss-401/unit-07/fig-U7-2.dark.svg
-  - static/img/figures/giss-401/unit-07/fig-U7-2.ur.svg
-  - static/img/figures/giss-401/unit-07/fig-U7-2.ur.dark.svg
+ - docs/semester-3/giss-401/unit-07/topic-01.mdx
+ - docs/semester-3/giss-401/unit-07/unit-assessment.mdx
+ - history/prompts/giss-401/crew-giss-401-u07-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-07/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-07/unit-assessment.mdx
+ - specs/content/giss-401/figures/unit-07.md
+ - specs/content/giss-401/reviews/unit-07/G2/20261110T051317873Z-gates.json
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261110T051317873Z/validate-content.txt
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-2.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-2.ur.dark.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-2.ur.svg
 tests:
-  - npm run check:content
-  - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/giss-401/unit-07/fig-U7-2.svg static/img/figures/giss-401/unit-07/fig-U7-2.dark.svg static/img/figures/giss-401/unit-07/fig-U7-2.ur.svg static/img/figures/giss-401/unit-07/fig-U7-2.ur.dark.svg
+ - npm run check:content
 ---
 
 ## Prompt
@@ -80,28 +87,33 @@ From `specs/content/giss-401/reviews/unit-07/G3/20261108T203238Z-g3-desk-750f752
 - (giss-401-u07-review_en, review_en, codex) G3 remains pending: repair assessment and privacy findings; obtain scholar review, provenance and browser/print evidence.
 - (giss-401-u07-review_en, review_en, codex) G3 remains pending: repair assessment and privacy findings; obtain scholar review, provenance and browser/print evidence.
 
+
 ## Response snapshot
 
-Applied the five author-repairable G3 findings to GISS-401 Unit 7 in English and Urdu, refreshed the stale G2 gate evidence, and appended the advisory repair tracker row.
+Applied the five author-repairable G3 findings to GISS-401 Unit 7 in English and Urdu (ERQ 2 deliverable, MCQ 10 retag, privacy fix in the roster table and fig-U7-2 schematics, qualified role-modelling claims, fig-U7-2 text equivalent), refreshed the stale G2 evidence, and appended the advisory repair tracker row.
 
 ## Outcome
 
-- ✅ Impact: ERQ 2 now asks for the practical-advice deliverable its rubric marks; MCQ 10 retagged Remember; the private family detail removed from the roster table and fig-U7-2 (light, dark and Urdu variants); role-modelling claims qualified as contextual; a prose text equivalent added for fig-U7-2 in both locales.
-- 🧪 Tests: `npm run check:content` passes all 14 gates; `measure-figure-text` exits 0 on all four edited SVGs.
-- 📁 Files: 12 file(s), listed above.
-- 🔁 Next prompts: a fresh independent G3 review of the repaired bytes; the host must supply provenance, a qualified Islamic Studies scholar review and browser/print evidence.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: repair_en for GISS-401 Unit 7 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 20 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: EN/UR topic-01 and unit-assessment repairs for the five author-repairable G3 findings; fig-U7-2 light/dark/Urdu schematics updated; figure manifest prompt updated; G2 gate evidence refreshed and tracker row repointed; new advisory repair tracker row appended.
-- Decisions the team must respect: the private family detail is now generalised to "a pressing family circumstance" and the disclosure clause removed from the schematic; the prose equivalent and the roster table carry the "unless the teacher agrees" qualifier. G3 stays unticked and unsigned (ADR-0019).
-- Pending / next owner: crew lead and host. Parent provenance, compliant source bundle, qualified Islamic Studies scholar review of doctrinal interpretation and the ra'i/shepherd gloss, and actual browser/narrow-viewport/A4 print inspection remain open and are not author-repairable under this brief.
+- Shipped / changed: Applied the five author-repairable G3 findings to GISS-401 Unit 7 in English and Urdu (ERQ 2 deliverable, MCQ 10 retag, privacy fix in the roster table and fig-U7-2 schematics, qualified role-modelling claims, fig-U7-2 text equivalent), refreshed the stale G2 evidence, and appended the advisory repair tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G3 is repaired but unticked and unsigned; a fresh independent G3 run on the current bytes is needed before any G5.
+  - Host-owned items remain: parent provenance, compliant source bundle, qualified Islamic Studies scholar review of doctrinal interpretation and the ra'i/shepherd gloss, and actual browser/narrow-viewport/A4 print inspection.
+  - The Urdu pages and `.ur.svg` figures still need a permitted build, `measure-figure-text` and `render-inspect --locale ur` run; check the U+200F bidi marks in the browser.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text PASS (4 SVGs)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
