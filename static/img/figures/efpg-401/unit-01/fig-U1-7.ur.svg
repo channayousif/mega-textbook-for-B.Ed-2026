@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">تحریری عمل کا پانچ مرحلہ جاتی طریقہ</title>
+  <desc id="d">فلو چارٹ جو تحریری عمل کے پانچ مراحل دکھاتا ہے: خیالات کی منصوبہ بندی، جملے بنانا، املا اور قواعد کی جانچ، وضاحت کے لیے نظر ثانی، اور حتمی صاف کاپی کی اشاعت۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 11px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 11px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">پرائمری انگریزی میں تحریری عمل کا طریقہ کار</text>
+  <text class="muted" x="390" y="52" text-anchor="middle">لکھنے کو میکانیکی نقل سے نکال کر ایک منظم تخلیقی عمل میں تبدیل کرنا</text>
+
+  <!-- Step 1: Pre-writing (Rightmost) -->
+  <rect class="panel-a" x="625" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="690" y="112" text-anchor="middle">1. قبل از تحریر</text>
+  <text class="small" x="690" y="128" text-anchor="middle">منصوبہ بندی</text>
+  <line class="grid" x1="635" y1="138" x2="745" y2="138"/>
+  <text class="body" x="745" y="162" text-anchor="end">• برین اسٹارمنگ</text>
+  <text class="body" x="745" y="187" text-anchor="end">• مکڑی نما خاکے</text>
+  <text class="body" x="745" y="212" text-anchor="end">• خیالات کا چناؤ</text>
+  <text class="body" x="745" y="237" text-anchor="end">• اہم نکات کی ترتیب</text>
+  <text class="body" x="745" y="262" text-anchor="end">• تصویری اشارے</text>
+  <text class="small" x="690" y="295" text-anchor="middle">خیالات جمع کرنا</text>
+
+  <!-- Arrow 1 to 2 (Points Left) -->
+  <path class="stroke" d="M 625 197 L 608 197"/>
+  <polygon class="ah" points="612,193 605,197 612,201"/>
+
+  <!-- Step 2: Drafting -->
+  <rect class="panel-b" x="475" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="540" y="112" text-anchor="middle">2. مسودہ نگاری</text>
+  <text class="small" x="540" y="128" text-anchor="middle">تحریر کا بہاؤ</text>
+  <line class="grid" x1="485" y1="138" x2="595" y2="138"/>
+  <text class="body" x="595" y="162" text-anchor="end">• جملے لکھنا</text>
+  <text class="body" x="595" y="187" text-anchor="end">• خیالات پر توجہ</text>
+  <text class="body" x="595" y="212" text-anchor="end">• بغیر رکے لکھنا</text>
+  <text class="body" x="595" y="237" text-anchor="end">• کچا مسودہ</text>
+  <text class="body" x="595" y="262" text-anchor="end">• اظہارِ خیال</text>
+  <text class="small" x="540" y="295" text-anchor="middle">خیالات کی ریکارڈنگ</text>
+
+  <!-- Arrow 2 to 3 (Points Left) -->
+  <path class="stroke" d="M 475 197 L 458 197"/>
+  <polygon class="ah" points="462,193 455,197 462,201"/>
+
+  <!-- Step 3: Revising -->
+  <rect class="panel-c" x="325" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="390" y="112" text-anchor="middle">3. نظرِ ثانی</text>
+  <text class="small" x="390" y="128" text-anchor="middle">مفہوم کی وضاحت</text>
+  <line class="grid" x1="335" y1="138" x2="445" y2="138"/>
+  <text class="body" x="445" y="162" text-anchor="end">• ترتیبِ نو</text>
+  <text class="body" x="445" y="187" text-anchor="end">• موضوعی جملہ</text>
+  <text class="body" x="445" y="212" text-anchor="end">• تفصیل کا اضافہ</text>
+  <text class="body" x="445" y="237" text-anchor="end">• ربط والے الفاظ</text>
+  <text class="body" x="445" y="262" text-anchor="end">• ساتھیوں کی رائے</text>
+  <text class="small" x="390" y="295" text-anchor="middle">معنی کی تشکیل</text>
+
+  <!-- Arrow 3 to 4 (Points Left) -->
+  <path class="stroke" d="M 325 197 L 308 197"/>
+  <polygon class="ah" points="312,193 305,197 312,201"/>
+
+  <!-- Step 4: Editing -->
+  <rect class="panel-d" x="175" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="240" y="112" text-anchor="middle">4. تدوین (تصحیح)</text>
+  <text class="small" x="240" y="128" text-anchor="middle">ظاہری درستگی</text>
+  <line class="grid" x1="185" y1="138" x2="295" y2="138"/>
+  <text class="body" x="295" y="162" text-anchor="end">• املا کی جانچ</text>
+  <text class="body" x="295" y="187" text-anchor="end">• بڑے حروف</text>
+  <text class="body" x="295" y="212" text-anchor="end">• فل اسٹاپ</text>
+  <text class="body" x="295" y="237" text-anchor="end">• فاعل فعل مطابقت</text>
+  <text class="body" x="295" y="262" text-anchor="end">• الفاظ کا فاصلہ</text>
+  <text class="small" x="240" y="295" text-anchor="middle">شکل کی صفائی</text>
+
+  <!-- Arrow 4 to 5 (Points Left) -->
+  <path class="stroke" d="M 175 197 L 158 197"/>
+  <polygon class="ah" points="162,193 155,197 162,201"/>
+
+  <!-- Step 5: Publishing (Leftmost) -->
+  <rect class="panel" x="25" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="90" y="112" text-anchor="middle">5. اشاعت</text>
+  <text class="small" x="90" y="128" text-anchor="middle">تخلیق کا اشتراک</text>
+  <line class="grid" x1="35" y1="138" x2="145" y2="138"/>
+  <text class="body" x="145" y="162" text-anchor="end">• صاف حتمی کاپی</text>
+  <text class="body" x="145" y="187" text-anchor="end">• عمدہ خوشخطی</text>
+  <text class="body" x="145" y="212" text-anchor="end">• جماعتی ڈسپلے</text>
+  <text class="body" x="145" y="237" text-anchor="end">• ساتھیوں سے اشتراک</text>
+  <text class="body" x="145" y="262" text-anchor="end">• بلند آواز میں سنانا</text>
+  <text class="small" x="90" y="295" text-anchor="middle">حاصلِ کار</text>
+
+  <!-- Recursive loop from Revising (x=390) back to Drafting (x=540) -->
+  <path class="stroke-a" stroke-dasharray="3 3" d="M 390 310 L 390 340 L 540 340 L 540 315"/>
+  <polygon class="ah-a" points="536,317 540,311 544,317"/>
+  <text class="small" x="465" y="355" text-anchor="middle">دوری چکر: نظرِ ثانی اکثر دوبارہ مسودہ لکھنے کا تقاضا کرتی ہے</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
