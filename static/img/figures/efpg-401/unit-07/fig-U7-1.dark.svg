@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Four Objective Item Types</title>
+  <desc id="d">Table of four objective item types - multiple choice, true/false, matching and fill in the blank - with the rules for writing each.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <text class="h" x="390" y="38" text-anchor="middle">Four Objective Item Types</text>
+  <text class="muted" x="390" y="58" text-anchor="middle">What each type looks like and the rule for writing it well</text>
+
+  <!-- Table Header -->
+  <rect class="panel" x="30" y="75" width="720" height="35" rx="4"/>
+  <text class="sh" x="45" y="98">Item type</text>
+  <text class="sh" x="245" y="98">What it looks like</text>
+  <text class="sh" x="490" y="98">Rule for writing it</text>
+
+  <!-- Row 1: Multiple choice -->
+  <rect class="panel-a" x="30" y="118" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="142">1. Multiple choice</text>
+  <text class="muted" x="45" y="162">Stem plus options</text>
+  <text class="body" x="245" y="142">A stem with four options</text>
+  <text class="body" x="245" y="162">labelled A to D</text>
+  <text class="body" x="490" y="142">One fixed key; three plausible</text>
+  <text class="body" x="490" y="162">distractors; parallel options</text>
+
+  <!-- Row 2: True/false -->
+  <rect class="panel-b" x="30" y="186" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="210">2. True/false</text>
+  <text class="muted" x="45" y="230">Statement to judge</text>
+  <text class="body" x="245" y="210">A statement marked true</text>
+  <text class="body" x="245" y="230">or false</text>
+  <text class="body" x="490" y="210">Clearly true or false; avoid</text>
+  <text class="body" x="490" y="230">"always" and "never"; balance</text>
+
+  <!-- Row 3: Matching -->
+  <rect class="panel-c" x="30" y="254" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="278">3. Matching</text>
+  <text class="muted" x="45" y="298">Two columns to join</text>
+  <text class="body" x="245" y="278">Two columns joined</text>
+  <text class="body" x="245" y="298">by lines</text>
+  <text class="body" x="490" y="278">Equal number in each column;</text>
+  <text class="body" x="490" y="298">one match per item</text>
+
+  <!-- Row 4: Fill in the blank -->
+  <rect class="panel-d" x="30" y="322" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="346">4. Fill in the blank</text>
+  <text class="muted" x="45" y="366">Sentence with a gap</text>
+  <text class="body" x="245" y="346">A sentence with a gap</text>
+  <text class="body" x="245" y="366">to complete</text>
+  <text class="body" x="490" y="346">One fixed answer per gap; gap</text>
+  <text class="body" x="490" y="366">not at the start of the sentence</text>
+
+  <text class="wm" x="768" y="410" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
