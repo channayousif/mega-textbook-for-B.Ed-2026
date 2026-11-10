@@ -1,6 +1,6 @@
 ---
 id: crew-gsos-301-u06-repair_en-r1
-title: crew repair_en GSOS-301 unit 6 (r1)
+title: crew repair_en GSOS-301 unit 6
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,9 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/gsos-301/tasks.md
+ - history/prompts/gsos-301/crew-gsos-301-u06-repair_en-r1.misc.prompt.md
+ - specs/content/gsos-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -65,28 +66,32 @@ From `specs/content/gsos-301/reviews/unit-06/G3/20261108T203238Z-g3-desk-c052da4
 - (gsos-301-u06-repair_en-conflict1, fix, opencode) G4 stays blocked until a fresh independent G3 review confirms the Unit 6 repairs.
 - (gsos-301-u06-repair_en, repair_en, codex) G3 remains unticked; permitted browser/print inspection and fresh independent review are pending.
 
+
 ## Response snapshot
 
-Verified every Nov 8 G3 finding against the current bytes and found them already repaired on main by commit 8a99e8e4e (the Nov 5 repair of the identical Nov 2 report). Appended the required advisory Unit 6 G3 tracker row naming the Nov 8 report. No content edits were needed; no Urdu or licence mirror exists. All 14 content gates passed. Committed locally without pushing or opening a PR.
+Verified the Nov 8 G3 findings were already repaired on main and appended the required advisory Unit 6 G3 tracker row naming the report.
 
 ## Outcome
 
-- Impact: documented the Nov 8 G3 report's resolution in the Unit 6 tracker.
-- Tests: npm run build:content-status then npm run check:content (all 14 gates passed).
-- Files: specs/content/gsos-301/tasks.md.
-- Next prompts: fresh independent G3 review on a permitted rendering host, then G4 translation.
-- Reflection: the Nov 8 report duplicated the Nov 2 findings after the repairs landed; the worker verified current bytes rather than re-editing.
+- Impact: repair_en for GSOS-301 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: appended the Unit 6 G3 advisory repairs-applied row for the Nov 8 report.
-- Decisions the team must respect: no self-certification, no browser/build runs, no publication change.
-- Pending / next owner: rendering host owns browser/print inspection; independent reviewer owns G3; translator owns the missing Urdu mirror.
+- Shipped / changed: Verified the Nov 8 G3 findings were already repaired on main and appended the required advisory Unit 6 G3 tracker row naming the report.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Browser/print visual inspection (360px viewport, keyboard table scrolling, desktop layout, A4 print) remains unverified because the brief prohibits build/server/Playwright; a permitted rendering host must close it.
+  - The Nov 8 findings were already repaired on main by commit 8a99e8e4e (the Nov 5 repair of the identical Nov 2 report), so this job verified current bytes and appended only the tracker row; G3 stays unticked and G4 stays blocked until a fresh independent G3 confirms the repairs.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a re-review can re-report already-repaired findings when its snapshot predates the repair; verify current bytes before editing.
-- Graders run and results (PASS/FAIL): npm run check:content PASS (14/14).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
