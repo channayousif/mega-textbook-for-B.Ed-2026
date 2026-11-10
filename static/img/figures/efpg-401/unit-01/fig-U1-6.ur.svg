@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">متن پر مطالعے کی ذیلی مہارتوں کے عدسے</title>
+  <desc id="d">ڈایاگرام جو ظاہر کرتا ہے کہ کس طرح پڑھنے کی ذیلی مہارتیں بشمول سرسری مطالعہ (skimming)، مخصوص تلاش (scanning)، تفصیلی مطالعہ اور استنباط، ایک ہی عبارت سے مفہوم کی مختلف تہیں اخذ کرتی ہیں۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 12px; fill: var(--ink); }
+    .muted { font-size: 12px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">مطالعے کی ذیلی مہارتوں سے مفہوم کا اخراج</text>
+  <text class="muted" x="390" y="52" text-anchor="middle">ایک ہی تحریری عبارت پر لاگو کیے جانے والے چار با مقصد تفہیمی عدسے</text>
+
+  <!-- Connecting Lines from Lenses to Text -->
+  <line class="stroke-a" x1="540" y1="150" x2="500" y2="180"/>
+  <polygon class="ah-a" points="510,185 495,183 505,172"/>
+
+  <line class="stroke-b" x1="240" y1="150" x2="280" y2="180"/>
+  <polygon class="ah-b" points="275,172 285,183 270,185"/>
+
+  <line class="stroke-c" x1="540" y1="290" x2="500" y2="250"/>
+  <polygon class="ah-c" points="505,258 495,247 510,245"/>
+
+  <line class="stroke-d" x1="240" y1="290" x2="280" y2="250"/>
+  <polygon class="ah-d" points="270,245 285,247 275,258"/>
+
+  <!-- Center Text Card -->
+  <rect class="panel" x="280" y="150" width="220" height="120" rx="6"/>
+  <text class="sh" x="390" y="185" text-anchor="middle">ہدف تحریری عبارت</text>
+  <text class="body" x="390" y="210" text-anchor="middle">چھپا ہوا پیراگراف</text>
+  <text class="body" x="390" y="230" text-anchor="middle">(مثلاً کوٹری بیراج، 80 الفاظ)</text>
+  <text class="muted" x="390" y="250" text-anchor="middle">بامعنی متنی ماخذ</text>
+
+  <!-- Lens 1: Skimming (Top Right) -->
+  <rect class="panel-a" x="540" y="80" width="200" height="110" rx="8"/>
+  <text class="sh" x="640" y="105" text-anchor="middle">1. سرسری مطالعہ (Gist)</text>
+  <text class="body" x="725" y="130" text-anchor="end">• 30 سیکنڈ کا جائزہ</text>
+  <text class="body" x="725" y="150" text-anchor="end">• عنوان، پہلی و آخری سطر</text>
+  <text class="body" x="725" y="170" text-anchor="end">• "یہ کس بارے میں ہے؟"</text>
+
+  <!-- Lens 2: Scanning (Top Left) -->
+  <rect class="panel-b" x="40" y="80" width="200" height="110" rx="8"/>
+  <text class="sh" x="140" y="105" text-anchor="middle">2. مخصوص تلاش (Details)</text>
+  <text class="body" x="225" y="130" text-anchor="end">• تیز رفتار بصری تلاش</text>
+  <text class="body" x="225" y="150" text-anchor="end">• تاریخوں و ہندسوں کی کھوج</text>
+  <text class="body" x="225" y="170" text-anchor="end">• "سال 1955 تلاش کریں"</text>
+
+  <!-- Lens 3: Intensive (Bottom Right) -->
+  <rect class="panel-c" x="540" y="240" width="200" height="110" rx="8"/>
+  <text class="sh" x="640" y="265" text-anchor="middle">3. گہرا تفصیلی مطالعہ</text>
+  <text class="body" x="725" y="290" text-anchor="end">• باریک بینی سے مطالعہ</text>
+  <text class="body" x="725" y="310" text-anchor="end">• سیاق میں ذخیرۂ الفاظ</text>
+  <text class="body" x="725" y="330" text-anchor="end">• "پانی کیسے جمع ہوتا ہے؟"</text>
+
+  <!-- Lens 4: Inferential (Bottom Left) -->
+  <rect class="panel-d" x="40" y="240" width="200" height="110" rx="8"/>
+  <text class="sh" x="140" y="265" text-anchor="middle">4. استنباطی مطالعہ</text>
+  <text class="body" x="225" y="290" text-anchor="end">• پس پردہ معانی کا فہم</text>
+  <text class="body" x="225" y="310" text-anchor="end">• غیر واضح باتوں کا ادراک</text>
+  <text class="body" x="225" y="330" text-anchor="end">• "وہ کیوں پریشان تھے؟"</text>
+
+  <text class="muted" x="390" y="390" text-anchor="middle">مختلف تعلیمی مقاصد طے کرتے ہیں کہ مطالعے کا کون سا عدسہ استعمال کیا جائے</text>
+  <text class="wm" x="768" y="410" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
