@@ -66,31 +66,32 @@ From `specs/content/gsos-301/reviews/unit-05/G3/20261108T203238Z-g3-desk-563e316
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Verified the 20261108 G3 desk report restates the already-repaired 20261102 findings against the post-repair bytes, appended the unticked advisory Unit 5 G3 tracker row naming it, and committed the row plus PHR with all 14 content gates passing.
+Verified the 20261108 G3 desk report restates the already-repaired 20261102 findings against the post-repair bytes (a72755753), appended the unticked advisory Unit 5 G3 tracker row naming it, and committed the row plus PHR with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: repair_en for GSOS-301 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14) in the job worktree.
+- Impact: repair_en for GSOS-301 Unit 5 by opencode (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the 20261108 G3 desk report restates the already-repaired 20261102 findings against the post-repair bytes, appended the unticked advisory Unit 5 G3 tracker row naming it, and committed the row plus PHR with all 14 content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the commit touches a protected path).
+- Shipped / changed: Verified the 20261108 G3 desk report restates the already-repaired 20261102 findings against the post-repair bytes (a72755753), appended the unticked advisory Unit 5 G3 tracker row naming it, and committed the row plus PHR with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 stays unticked; the blocking 360px/table-scroll/A4-print/figure-clipping render inspection remains unperformed because the brief prohibits build/server/Playwright; a permitted session must inspect both topics and the assessment before a fresh independent G3 decision.
+  - G3 stays unticked; the blocking 360px/table-scroll/A4-print/figure-clipping render inspection remains unperformed because the brief prohibits build/server/Playwright.
   - The Urdu translation job still needs `.ur.svg` variants of fig-U5-1 to fig-U5-4 (14 new Urdu concept labels pending G5 review).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
