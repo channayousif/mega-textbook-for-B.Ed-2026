@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">انشائی سوال مع تجزیاتی معیارِ جانچ</title>
+  <desc id="d">انشائی سوال 'میرا پسندیدہ تہوار' مع تجزیاتی معیارِ جانچ جس میں چار معیارات اور ان کے نمبروں کی حدود دکھائی گئی ہیں۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="480"/>
+
+  <text class="h" x="390" y="38" text-anchor="middle">انشائی سوال مع تجزیاتی معیارِ جانچ</text>
+  <text class="muted" x="390" y="58" text-anchor="middle">دائیں جانب سوال اور بائیں جانب نمبروں کے تعین کے لیے چار معیارات</text>
+
+  <!-- Essay question box on right -->
+  <rect class="panel-a" x="480" y="110" width="260" height="304" rx="8"/>
+  <text class="sh" x="610" y="140" text-anchor="middle">انشائی سوال</text>
+  <line class="stroke-a" x1="496" y1="154" x2="724" y2="154"/>
+  <text class="body" x="724" y="180" text-anchor="end">'میرا پسندیدہ تہوار' پر</text>
+  <text class="body" x="724" y="202" text-anchor="end">ایک مختصر پیراگراف</text>
+  <text class="body" x="724" y="224" text-anchor="end">تحریر کریں۔</text>
+  <text class="muted" x="724" y="252" text-anchor="end">چھ تا آٹھ جملے۔</text>
+  <text class="small" x="610" y="398" text-anchor="middle">ایک سوال، معیارات کے تحت جانچ</text>
+
+  <!-- Arrow 1 to Content -->
+  <path class="stroke-a" d="M 480 142 L 388 142"/>
+  <polygon class="ah-a" points="388,137 380,142 388,147"/>
+
+  <!-- Arrow 2 to Organisation -->
+  <path class="stroke-b" d="M 480 222 L 388 222"/>
+  <polygon class="ah-b" points="388,217 380,222 388,227"/>
+
+  <!-- Arrow 3 to Vocabulary -->
+  <path class="stroke-c" d="M 480 302 L 388 302"/>
+  <polygon class="ah-c" points="388,297 380,302 388,307"/>
+
+  <!-- Arrow 4 to Grammar -->
+  <path class="stroke-d" d="M 480 382 L 388 382"/>
+  <polygon class="ah-d" points="388,377 380,382 388,387"/>
+
+  <!-- Criterion 1: Content -->
+  <rect class="panel-a" x="40" y="110" width="340" height="64" rx="8"/>
+  <text class="sh" x="364" y="136" text-anchor="end">1. مواد (Content)</text>
+  <text class="body" x="364" y="158" text-anchor="end">تہوار کے بارے میں واضح خیالات</text>
+  <text class="sh" x="56" y="146" text-anchor="start">0-5 نمبر</text>
+
+  <!-- Criterion 2: Organisation -->
+  <rect class="panel-b" x="40" y="190" width="340" height="64" rx="8"/>
+  <text class="sh" x="364" y="216" text-anchor="end">2. ترتیب و تنظیم (Organisation)</text>
+  <text class="body" x="364" y="238" text-anchor="end">واضح آغاز، درمیانی حصہ اور اختتام</text>
+  <text class="sh" x="56" y="226" text-anchor="start">0-4 نمبر</text>
+
+  <!-- Criterion 3: Vocabulary -->
+  <rect class="panel-c" x="40" y="270" width="340" height="64" rx="8"/>
+  <text class="sh" x="364" y="296" text-anchor="end">3. ذخیرہ الفاظ (Vocabulary)</text>
+  <text class="body" x="364" y="318" text-anchor="end">تہوار سے متعلقہ الفاظ کا درست استعمال</text>
+  <text class="sh" x="56" y="306" text-anchor="start">0-3 نمبر</text>
+
+  <!-- Criterion 4: Grammar and spelling -->
+  <rect class="panel-d" x="40" y="350" width="340" height="64" rx="8"/>
+  <text class="sh" x="364" y="376" text-anchor="end">4. گرامر اور املا (Grammar)</text>
+  <text class="body" x="364" y="398" text-anchor="end">مکمل اور زیادہ تر درست جملے</text>
+  <text class="sh" x="56" y="386" text-anchor="start">0-3 نمبر</text>
+
+  <text class="wm" x="768" y="470" text-anchor="end" direction="ltr" aria-hidden="true">textbook.com.pk</text>
+</svg>
