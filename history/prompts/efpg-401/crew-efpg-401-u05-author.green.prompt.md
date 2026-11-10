@@ -16,61 +16,61 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/efpg-401/unit-05/index.mdx
-  - docs/semester-3/efpg-401/unit-05/topic-01.mdx
-  - docs/semester-3/efpg-401/unit-05/topic-02.mdx
-  - docs/semester-3/efpg-401/unit-05/topic-03.mdx
-  - docs/semester-3/efpg-401/unit-05/topic-04.mdx
-  - docs/semester-3/efpg-401/unit-05/topic-05.mdx
-  - docs/semester-3/efpg-401/unit-05/topic-06.mdx
-  - docs/semester-3/efpg-401/unit-05/topic-07.mdx
-  - docs/semester-3/efpg-401/unit-05/unit-assessment.mdx
-  - specs/content/efpg-401/concepts/unit-05.md
-  - specs/content/efpg-401/coverage/unit-05.md
-  - specs/content/efpg-401/figures/unit-05.md
-  - specs/content/efpg-401/sources/unit-05.md
-  - specs/content/efpg-401/sources/texts/paulsrud-2024-lesson-planning.md
-  - specs/content/efpg-401/tasks.md
-  - specs/content/efpg-401/reviews/unit-05/G2/20261110T132807524Z-gates.json
-  - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/validate-content.txt
-  - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-depth-gate.txt
-  - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-figures.txt
-  - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-concept-graph.txt
-  - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-bloom-bands.txt
-  - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-no-em-dash.txt
-  - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-no-answer-keys.txt
-  - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-docs-sync.txt
-  - static/img/figures/efpg-401/unit-05/fig-U5-1.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-1.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-2.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-2.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-3.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-3.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-4.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-4.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-5.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-5.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-6.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-6.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-7.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-7.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-8.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-8.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-9.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-9.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-10.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-10.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-11.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-11.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-12.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-12.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-13.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-13.dark.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-14.svg
-  - static/img/figures/efpg-401/unit-05/fig-U5-14.dark.svg
-  - history/prompts/efpg-401/crew-efpg-401-u05-author.green.prompt.md
+ - docs/semester-3/efpg-401/unit-05/index.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-01.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-02.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-03.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-04.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-05.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-06.mdx
+ - docs/semester-3/efpg-401/unit-05/topic-07.mdx
+ - docs/semester-3/efpg-401/unit-05/unit-assessment.mdx
+ - history/prompts/efpg-401/crew-efpg-401-u05-author.green.prompt.md
+ - specs/content/efpg-401/concepts/unit-05.md
+ - specs/content/efpg-401/coverage/unit-05.md
+ - specs/content/efpg-401/figures/unit-05.md
+ - specs/content/efpg-401/reviews/unit-05/G2/20261110T132807524Z-gates.json
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-bloom-bands.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-concept-graph.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-depth-gate.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-docs-sync.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-figures.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-no-answer-keys.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/check-no-em-dash.txt
+ - specs/content/efpg-401/reviews/unit-05/G2/logs-20261110T132807524Z/validate-content.txt
+ - specs/content/efpg-401/sources/texts/paulsrud-2024-lesson-planning.md
+ - specs/content/efpg-401/sources/unit-05.md
+ - specs/content/efpg-401/tasks.md
+ - static/img/figures/efpg-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-1.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-10.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-10.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-11.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-11.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-12.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-12.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-13.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-13.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-14.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-14.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-2.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-3.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-4.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-5.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-5.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-6.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-7.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-7.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-8.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-8.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-9.dark.svg
+ - static/img/figures/efpg-401/unit-05/fig-U5-9.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -101,27 +101,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored English EFPG-401 Unit 5 (Lesson Planning) with seven pedagogical topics, a 25-item assessment bank, fourteen placed schematic SVGs with dark twins, governance specs, and validated G2 gate evidence.
+Authored English EFPG-401 Unit 5 (Lesson Planning) with an index, seven nine-part topic files, a 10/10/5 assessment, fourteen placed schematic SVGs with dark variants, coverage/sources/figures/concepts governance files, G2 gate evidence, and tracker rows, all committed on branch `crew/efpg-401-u05-author` with `npm run check:content` passing all 14 gates.
 
 ## Outcome
 
 - Impact: author for EFPG-401 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed (all 14 content gates).
-- Files: 52 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 53 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English EFPG-401 Unit 5 (Lesson Planning): index, seven nine-part topic files, a 10/10/5 unit assessment with bounded answers, coverage/sources/figures/concepts governance files, and fourteen placed schematic SVGs with derived dark variants. Recorded G2 gate evidence and tracker rows.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything. The Urdu mirror is a separate job and was not started.
+- Shipped / changed: Authored English EFPG-401 Unit 5 (Lesson Planning) with an index, seven nine-part topic files, a 10/10/5 assessment, fourteen placed schematic SVGs with dark variants, coverage/sources/figures/concepts governance files, G2 gate evidence, and tracker rows, all committed on branch `crew/efpg-401-u05-author` with `npm run check:content` passing all 14 gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The two guide-required print monographs (celce-murcia-1991, sheikh-1998-tesl) are declared under `## Unverifiable sources` with title-level support under owner ruling D-2026-0001.
-  - Fourteen schematic SVGs are placed and measured; Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
-  - The author-unit skill still says figures are out of scope, but `check:figures` now requires two rendered `<Figure>` elements per topic, so this job placed them; a future skill/gate alignment may be worth an ADR.
+  - Urdu mirror (G4) and independent G3/G5 review remain open; no UR files were created.
+  - The author-unit skill still says figures are out of scope, but `check:figures` now requires two rendered `<Figure>` elements per topic, so this job placed all fourteen; a future skill/gate alignment may be worth an ADR.
+  - `celce-murcia-1991` and `sheikh-1998-tesl` are declared unverifiable (print, title-level) under `D-2026-0001`; `paulsrud-2024-lesson-planning` has a bound excerpt at `specs/content/efpg-401/sources/texts/`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
