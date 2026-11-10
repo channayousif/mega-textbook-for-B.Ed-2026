@@ -9,24 +9,20 @@ feature: efmp-303
 branch: crew/efmp-303-u04-repair_en-r1
 user: crew
 command: crew repair_en
-labels: ["crew", "opencode", "repair_en", "efmp-303", "unit-04"]
+labels: ["crew", "opencode", "repair_en"]
 links:
   spec: specs/content/efmp-303/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-303/crew-efmp-303-u04-repair_en-r1.misc.prompt.md
-  - specs/content/efmp-303/tasks.md
+ - history/prompts/efmp-303/crew-efmp-303-u04-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-303/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-
-The delegated brief, preserved verbatim:
 
 # Crew job efmp-303-u04-repair_en-r1
 
@@ -68,28 +64,33 @@ From `specs/content/efmp-303/reviews/unit-04/G3/20261108T203238Z-g3-desk-a67ec0a
 - (efmp-303-u04-translate-r1, translate, agy) All 4 .ur.svg figure variants and derived dark variants are wired in topics 1-2 with passing figures:variants:check.
 - (efmp-303-u04-translate-r1, translate, agy) Full structural, heading, component, and bank-bound key_terms parity verified clean under temporary reviewed flip.
 
+
 ## Response snapshot
 
-Verified the latest G3 report against the current committed bytes before editing. The 20261108 desk report's findings array is byte-identical to the 20261102 reports already repaired at 13f55bb64, and its input manifest matches current HEAD exactly (95/95 paths), so it is a verbatim re-report rather than a fresh review. Every editable finding is already present in the current tree: the unsupported GDP percentages and NEP 2009 attribution are removed from topic-02 EN and UR, the Coombs cycle attribution is removed from topic-01 EN and UR, and the concept label is M&E process (SLO 4-1 retained per the approved Topic 4.1 mapping). No new content edits were required. Appended an unticked advisory G3 tracker row naming the report.
+Appended an unticked Unit 4 G3 advisory tracker row and PHR recording that the 20261108 desk report is a verbatim re-report whose editable findings were already repaired at 13f55bb64, with all 14 content gates passing and no new content edits required.
 
 ## Outcome
 
-- Impact: verified the 20261108 desk report is a stale re-report and recorded the verification in the Unit 4 G3 tracker row.
-- Tests: npm run check:content passed 14/14 after regenerating static/content-status.json.
-- Files: specs/content/efmp-303/tasks.md (one advisory tracker row); this PHR.
-- Next prompts: owner retains the narrow-screen/A4 render inspection; a fresh independent G3 run is required.
-- Reflection: the desk report pipeline re-issues prior findings verbatim under a fresh manifest; a repair job must verify current bytes before editing.
+- Impact: repair_en for EFMP-303 Unit 4 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: one unticked Unit 4 G3 tracker row naming specs/content/efmp-303/reviews/unit-04/G3/20261108T203238Z-g3-desk-a67ec0a3.json and recording that its findings are already repaired at 13f55bb64; this PHR.
-- Decisions the team must respect: G3 stays unticked and advisory; no certification, no push, no PR.
-- Pending / next owner: owner must provide permitted narrow-screen/A4 render evidence for any further G3 cycle; render-review remains host-blocked (crew brief forbids build, dev server and Playwright).
-- Paperclip issues affected: none (work tracked by the crew board).
+- Shipped / changed: Appended an unticked Unit 4 G3 advisory tracker row and PHR recording that the 20261108 desk report is a verbatim re-report whose editable findings were already repaired at 13f55bb64, with all 14 content gates passing and no new content edits required.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The 20261108 desk report repeats the 20261102 findings verbatim under a fresh manifest; do not re-apply them, current bytes already resolve all three advisory items.
+  - The blocking render-review finding remains host-blocked: narrow-screen (360px), A4 print and figure-clipping inspection need a host permitted to run a build/browser.
+  - G3 stays unticked and translation_status stays draft pending independent G5 across all 5 mirror files.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a desk report can carry a fresh input manifest while its findings text is a verbatim copy of an already-repaired prior report; applying it blindly would revert correct repairs.
-- Graders run and results (PASS/FAIL): PASS: npm run check:content 14/14 after npm run build:content-status; input-manifest comparison 95/95 current; findings-array equality check against the 20261102 reports.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): have the desk report generator compare its findings against the current tracker/repair state and mark already-repaired findings resolved before queueing a repair job.
+- Next experiment (smallest change to try): none
