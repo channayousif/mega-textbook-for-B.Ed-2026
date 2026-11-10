@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-305-u03-repair_en-r1
-title: crew repair_en EFMP-305 unit 3 attempt 2
+title: crew repair_en EFMP-305 unit 3
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,28 +16,26 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/efmp-305/unit-03/topic-02.mdx
-  - history/prompts/efmp-305/crew-efmp-305-u03-repair_en-r1.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-03/topic-02.mdx
-  - specs/content/efmp-305/concepts/unit-03.md
-  - specs/content/efmp-305/reviews/unit-03/G2/20261110T010218845Z-gates.json
-  - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-bloom-bands.txt
-  - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-concept-graph.txt
-  - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-depth-gate.txt
-  - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-docs-sync.txt
-  - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-figures.txt
-  - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-no-answer-keys.txt
-  - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-no-em-dash.txt
-  - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/validate-content.txt
-  - specs/content/efmp-305/sources/unit-03.md
-  - specs/content/efmp-305/tasks.md
+ - docs/semester-2/efmp-305/unit-03/topic-02.mdx
+ - history/prompts/efmp-305/crew-efmp-305-u03-repair_en-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-03/topic-02.mdx
+ - specs/content/efmp-305/concepts/unit-03.md
+ - specs/content/efmp-305/reviews/unit-03/G2/20261110T010218845Z-gates.json
+ - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-bloom-bands.txt
+ - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-concept-graph.txt
+ - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-depth-gate.txt
+ - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-docs-sync.txt
+ - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-figures.txt
+ - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-no-answer-keys.txt
+ - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/check-no-em-dash.txt
+ - specs/content/efmp-305/reviews/unit-03/G2/logs-20261110T010218845Z/validate-content.txt
+ - specs/content/efmp-305/sources/unit-03.md
+ - specs/content/efmp-305/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
 
 # Crew job efmp-305-u03-repair_en-r1
 
@@ -67,7 +65,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Open findings from the latest G3 report
 From `specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80fc.json` (disposition: revise). Resolve each one:
-- [blocking] Repository-wide gate exit codes: Repository-level execution of npm run check:depth-gate exits with code 1 due to EFMP-305 Unit 6 (unit-total estimated reading time is 193 minutes, exceeding the 140–170 min band). In addition, npm run check:figures exits with code 1 due to figure alt-text differences in EFMP-304 Units 3–6. While EFMP-305 Unit 3 itself is fully compliant on reading time (176 min total, 145 min across topics, within the 150–180 min band) and figure density/archetypes (all 6 figures placed with clean SVG text metrics and 0 collisions), the repository-level command exit codes prevent automated contract pass. Escalated to CurriculumOwner for repository gate resolution.
+- [blocking] Repository-wide gate exit codes: Repository-level execution of npm run check:depth-gate exits with code 1 due to EFMP-305 Unit 6 (unit-total estimated reading time is 193 minutes, exceeding the 140–170 min band). In addition, npm run check:figures exits with code 1 due to figure alt-text differences in EFMP-304 Units 3–6. While EFMP-305 Unit 3 itself is fully compliant on reading time (176 min total, 145 min across topics, within the 150–180 min band) and figure density/archetypes (all 6 figures placed with clean SVG text metrics and 0 collisions), the repository-level command exit codes pr...
 - [advisory] Terminology banking proposal: In specs/content/efmp-305/concepts/unit-03.md:24-30, several Urdu concept labels (such as مواد میں تنوع, عمل میں تنوع, حاصلِ کار میں تنوع, سہولت کاری, ترمیم, تعلم کے لیے عالمگیر ڈیزائن, اشتراکی تعلم) are proposed for banking in the TEX-69 handoff rather than committed directly into frozen specs/content/terminology.csv. Trainee translators at G4 must adhere to these banked labels.
 - [uncertain] Unverifiable source full-text retrieval at G1: Per specs/content/efmp-305/sources/unit-03.md:40-62 and decision D-2026-0001, all 5 sources (subandiyah2025, serman2026, vernon2020, florian2014, cast2024) are author-selected and Crossref/web verified at metadata and licence level, but full texts were not retrieved to this host and no excerpts are bound under sources/texts/. Conceptual citations in prose are appropriately qualified and bounded, but full-text verification remains pending at G2.
 
@@ -79,28 +77,33 @@ From `specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80f
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Applied repairs addressing the findings from G3 report `specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80fc.json`: corrected the `serman2026` author initials to Serman, S., & Ningrum, E. S. C. and adjusted peer tutoring mechanism nuance in topic-02.mdx (English and Urdu mirror) and sources/unit-03.md; clarified sources/unit-03.md notes distinguishing retrieved excerpts from metadata-only works; updated concepts/unit-03.md terminology note explicitly reaffirming G4 translator adherence to banked and unit labels; refreshed G2 gate evidence for Unit 3 and repointed tasks.md; appended a new G3 tracker row with G3 left unticked.
+Applied Unit 3 G3 desk findings by correcting serman2026 author initials and peer tutoring mechanism nuance in topic-02 (EN+UR), clarifying sources/unit-03.md retrieval notes, reaffirming G4 translator adherence in concepts/unit-03.md, refreshing G2 gate evidence, and appending an unticked G3 advisory repair row to tasks.md.
 
 ## Outcome
 
 - Impact: repair_en for EFMP-305 Unit 3 by agy (attempt 2).
-- Tests: npm run check:content passes all 14 gates cleanly.
-- Files: 15 files changed/added across the branch.
-- Next prompts: fresh G3 independent review for EFMP-305 Unit 3.
-- Reflection: accurately resolved source attribution, mechanism nuance, terminology banking notes, and evidence refresh.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Corrected `serman2026` initials and peer tutoring mechanism nuance in topic-02.mdx (EN+UR) and sources/unit-03.md; clarified sources/unit-03.md verification status; updated concepts/unit-03.md terminology note; refreshed G2 gate evidence and repointed tasks.md; appended unticked G3 advisory repair row.
-- Decisions the team must respect: G3 remains open and unticked pending independent G3 review; vernon2020 and florian2014 remain metadata-only subscription works.
-- Pending / next owner: independent G3 reviewer for EFMP-305 Unit 3.
+- Shipped / changed: Applied Unit 3 G3 desk findings by correcting serman2026 author initials and peer tutoring mechanism nuance in topic-02 (EN+UR), clarifying sources/unit-03.md retrieval notes, reaffirming G4 translator adherence in concepts/unit-03.md, refreshing G2 gate evidence, and appending an unticked G3 advisory repair row to tasks.md.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - vernon2020 and florian2014 remain metadata-only subscription works.
-  - casts2024.md should not be modified unnecessarily as it binds both Unit 3 and Unit 4.
+  - vernon2020 and florian2014 remain declared unverifiable subscription sources; their claims in topic-02 stay bounded to the bibliographic level.
+  - Do not edit sources/texts/cast2024.md as it binds G2 evidence for both Unit 3 and Unit 4.
+  - Unit 3 G3 remains unticked and open pending fresh independent review under ADR-0019.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none.
-- Graders run and results (PASS/FAIL): PASS (all 14 content gates pass).
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
