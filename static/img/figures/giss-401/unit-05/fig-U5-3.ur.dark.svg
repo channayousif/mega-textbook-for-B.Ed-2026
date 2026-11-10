@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">اسلام میں مشاورتی نظام (شوریٰ)</title>
+  <desc id="d">خاکہ: اسلامی حکمرانی میں شوریٰ کا مشاورتی نظام جو قانونِ الٰہی کے تحت انتظامی قیادت، اہلِ علم اور عام شہریوں کے باہمی مشاورتی تعامل کو ظاہر کرتا ہے۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .panel { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-blue { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-amber { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .cell { fill: var(--panel); stroke: var(--line); stroke-width: 1; }
+    .link { fill: none; stroke: var(--line); stroke-width: 2; stroke-linecap: round; }
+    .arrow { fill: var(--line); }
+    text { fill: var(--ink); }
+    .h { font-size: 16px; font-weight: 700; }
+    .th { font-size: 13px; font-weight: 700; }
+    .label { font-size: 12px; font-weight: 600; }
+    .support { font-size: 11px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="780" height="480" />
+
+  <!-- Title -->
+  <text class="h" x="760" y="32" text-anchor="end">اسلام میں مشاورتی نظامِ حکومت (شوریٰ) کی بنیادیں</text>
+
+  <!-- Top Banner: Divine Sovereignty -->
+  <rect class="panel" x="20" y="52" width="740" height="50" rx="8" />
+  <text class="th" x="390" y="74" text-anchor="middle">اعلیٰ اخلاقی و قانونی دائرہ کار: اللہ تعالیٰ کی حاکمیت (حاکمیتِ اعلیٰ)</text>
+  <text class="support" x="390" y="92" text-anchor="middle">آئینی بنیاد: عدل، انسانی وقار، اور مفادِ عامہ کی حفاظت کے نازل کردہ اصول</text>
+
+  <!-- Connective stem down from Sovereignty -->
+  <path class="link" d="M 390 102 L 390 130" />
+  <polygon class="arrow" points="385,130 390,140 395,130" />
+
+  <!-- Central Box: Executive Leadership -->
+  <rect class="panel-blue" x="245" y="140" width="290" height="85" rx="8" />
+  <text class="th" x="390" y="165" text-anchor="middle">انتظامی قیادت (امیر / خلیفہ)</text>
+  <text class="support" x="390" y="185" text-anchor="middle">اختیار بطورِ امانتِ الٰہی (امانت، 4:58)</text>
+  <text class="support" x="390" y="203" text-anchor="middle">معاشرے سے مشاورت کا لازمی حکم (قرآن 3:159؛ 42:38)</text>
+
+  <!-- Right Consultation Node: Ahl al-Hall wal-Aqd -->
+  <rect class="panel-amber" x="555" y="140" width="205" height="85" rx="8" />
+  <text class="th" x="657" y="165" text-anchor="middle">ماہرین کی کونسل</text>
+  <text class="label" x="657" y="185" text-anchor="middle">(اہلِ حل و عقد)</text>
+  <text class="support" x="657" y="203" text-anchor="middle">فقہا اور اہلِ دانش</text>
+
+  <!-- Left Consultation Node: Public & Community -->
+  <rect class="panel-amber" x="20" y="140" width="205" height="85" rx="8" />
+  <text class="th" x="122" y="165" text-anchor="middle">عوام اور شہری</text>
+  <text class="label" x="122" y="185" text-anchor="middle">(عام معاشرہ)</text>
+  <text class="support" x="122" y="203" text-anchor="middle">عوامی آراء اور تجاویز</text>
+
+  <!-- Bidirectional Arrows Right <-> Center -->
+  <path class="link" d="M 535 175 L 555 175" />
+  <polygon class="arrow" points="540,170 530,175 540,180" />
+  <polygon class="arrow" points="550,170 560,175 550,180" />
+
+  <!-- Bidirectional Arrows Center <-> Left -->
+  <path class="link" d="M 225 175 L 245 175" />
+  <polygon class="arrow" points="230,170 220,175 230,180" />
+  <polygon class="arrow" points="240,170 250,175 240,180" />
+
+  <!-- Connector down to Core Principles -->
+  <path class="link" d="M 390 225 L 390 255" />
+  <polygon class="arrow" points="385,255 390,265 395,255" />
+
+  <!-- Pillar 1 (Right): Impartial Justice -->
+  <rect class="cell" x="524" y="270" width="236" height="150" rx="8" />
+  <text class="th" x="748" y="295" text-anchor="end">1. غیر جانب دار عدل (انصاف)</text>
+  <text class="support" x="748" y="320" text-anchor="end">• قانون کی بالادستی حکمران اور عوام پر یکساں</text>
+  <text class="support" x="748" y="340" text-anchor="end">• عدلیہ کی مکمل آزادی اور قانونی جوابدہی</text>
+  <text class="support" x="748" y="358" text-anchor="end">  کسی کو قانونی استثنا حاصل نہیں</text>
+  <text class="support" x="748" y="378" text-anchor="end">• مذہب، نسل اور سماجی حیثیت سے قطع نظر</text>
+  <text class="support" x="748" y="396" text-anchor="end">  تمام شہریوں کو یکساں تحفظ (5:8)</text>
+
+  <!-- Pillar 2 (Middle): Mutual Consultation -->
+  <rect class="cell" x="272" y="270" width="236" height="150" rx="8" />
+  <text class="th" x="496" y="295" text-anchor="end">2. باہمی مشاورت (شوریٰ)</text>
+  <text class="support" x="496" y="320" text-anchor="end">• غیر منصوص عوامی امور میں مشترکہ</text>
+  <text class="support" x="496" y="340" text-anchor="end">  فیصلہ سازی اور اجتہاد کا طریقہ کار</text>
+  <text class="support" x="496" y="358" text-anchor="end">• اہلِ علم اور متنوع آراء کی قدر شناسی</text>
+  <text class="support" x="496" y="378" text-anchor="end">• مشاورتی کونسلیں فرد واحد کے تسلط،</text>
+  <text class="support" x="496" y="396" text-anchor="end">  آمریت اور استبداد کو روکتی ہیں</text>
+
+  <!-- Pillar 3 (Left): Public Accountability -->
+  <rect class="cell" x="20" y="270" width="236" height="150" rx="8" />
+  <text class="th" x="244" y="295" text-anchor="end">3. عوامی احتساب (محاسبہ)</text>
+  <text class="support" x="244" y="320" text-anchor="end">• حکمران عوام کے سامنے براہِ راست جواب دہ</text>
+  <text class="support" x="244" y="340" text-anchor="end">• بیت المال اور عوامی وسائل کا شفاف انتظام</text>
+  <text class="support" x="244" y="358" text-anchor="end">  اور دیانت دارانہ نگرانی</text>
+  <text class="support" x="244" y="378" text-anchor="end">• انتظامی فیصلوں پر سوال اٹھانے اور اصلاح</text>
+  <text class="support" x="244" y="396" text-anchor="end">  کی تجاویز دینے کا شہری حق</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="20" y="465" text-anchor="start" aria-hidden="true">textbook.com.pk</text>
+</svg>
