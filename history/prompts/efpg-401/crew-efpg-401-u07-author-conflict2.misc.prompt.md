@@ -1,6 +1,6 @@
 ---
 id: crew-efpg-401-u07-author-conflict2
-title: crew merge main into EFPG-401 unit 7
+title: crew fix EFPG-401 unit 7
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,9 +16,38 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-3/efpg-401/unit-07/index.mdx
+ - docs/semester-3/efpg-401/unit-07/topic-01.mdx
+ - docs/semester-3/efpg-401/unit-07/topic-02.mdx
+ - docs/semester-3/efpg-401/unit-07/unit-assessment.mdx
  - glossary.json
- - specs/content/efpg-401/tasks.md
+ - history/prompts/efpg-401/crew-efpg-401-u07-author-conflict1.misc.prompt.md
  - history/prompts/efpg-401/crew-efpg-401-u07-author-conflict2.misc.prompt.md
+ - history/prompts/efpg-401/crew-efpg-401-u07-author.green.prompt.md
+ - specs/content/efpg-401/concepts/unit-07.md
+ - specs/content/efpg-401/coverage/unit-07.md
+ - specs/content/efpg-401/figures/unit-07.md
+ - specs/content/efpg-401/reviews/unit-07/G2/20261110T141529122Z-gates.json
+ - specs/content/efpg-401/reviews/unit-07/G2/logs-20261110T141529122Z/check-bloom-bands.txt
+ - specs/content/efpg-401/reviews/unit-07/G2/logs-20261110T141529122Z/check-concept-graph.txt
+ - specs/content/efpg-401/reviews/unit-07/G2/logs-20261110T141529122Z/check-depth-gate.txt
+ - specs/content/efpg-401/reviews/unit-07/G2/logs-20261110T141529122Z/check-docs-sync.txt
+ - specs/content/efpg-401/reviews/unit-07/G2/logs-20261110T141529122Z/check-figures.txt
+ - specs/content/efpg-401/reviews/unit-07/G2/logs-20261110T141529122Z/check-no-answer-keys.txt
+ - specs/content/efpg-401/reviews/unit-07/G2/logs-20261110T141529122Z/check-no-em-dash.txt
+ - specs/content/efpg-401/reviews/unit-07/G2/logs-20261110T141529122Z/validate-content.txt
+ - specs/content/efpg-401/sources/texts/dibattista-2011-mcq.md
+ - specs/content/efpg-401/sources/texts/indrayani-2020-mcq-english.md
+ - specs/content/efpg-401/sources/unit-07.md
+ - specs/content/efpg-401/tasks.md
+ - static/img/figures/efpg-401/unit-07/fig-U7-1.dark.svg
+ - static/img/figures/efpg-401/unit-07/fig-U7-1.svg
+ - static/img/figures/efpg-401/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/efpg-401/unit-07/fig-U7-2.svg
+ - static/img/figures/efpg-401/unit-07/fig-U7-3.dark.svg
+ - static/img/figures/efpg-401/unit-07/fig-U7-3.svg
+ - static/img/figures/efpg-401/unit-07/fig-U7-4.dark.svg
+ - static/img/figures/efpg-401/unit-07/fig-U7-4.svg
 tests:
  - npm run check:content
 ---
@@ -54,23 +83,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u07-author, author, opencode) The four EN figures are placed and `measure-figure-text` exits 0; the G2 evidence is recorded at `specs/content/efpg-401/reviews/unit-07/G2/20261110T141529122Z-gates.json`.
 - (efpg-401-u07-author, author, opencode) `celce-murcia-1991` is declared under `## Unverifiable sources` (D-2026-0001); G3/G5 remain open.
 
+
 ## Response snapshot
 
-merge origin/main into crew/efpg-401-u07-author
+Merged origin/main into crew/efpg-401-u07-author, resolving glossary.json (main's six entries in main's order, then this branch's two) and specs/content/efpg-401/tasks.md (both units' rows, stage rows and reading estimates), and committed the merge plus its PHR with npm run check:content passing.
 
 ## Outcome
 
-- Impact: resolved the glossary.json and specs/content/efpg-401/tasks.md conflicts for EFPG-401 Unit 7 by opencode (attempt 2).
-- Tests: npm run check:content passed (all 14 content gates).
-- Files: 3 file(s), listed above; the merge commit also carries main's Unit 6 authoring work.
+- Impact: fix for EFPG-401 Unit 7 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 32 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merged origin/main into crew/efpg-401-u07-author; kept main's glossary entries (Audio-visual aid, Chart, Flash card, Realia, Language laboratory, Overhead projector) in main's order, then this branch's Objective-type test and Subjective-type test; merged the tracker status, Unit 6/7 rows, and Unit 6/7 stage rows and reading estimates.
-- Decisions the team must respect: D-2026-0001 is the pre-existing owner ruling for unretrievable sources, so no renumbering was needed; G3/G5 stay open.
+- Shipped / changed: Merged origin/main into crew/efpg-401-u07-author, resolving glossary.json (main's six entries in main's order, then this branch's two) and specs/content/efpg-401/tasks.md (both units' rows, stage rows and reading estimates), and committed the merge plus its PHR with npm run check:content passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 7 stays English-only; the G4 Urdu mirror is the next job and needs four `.ur.svg` plus `.ur.dark.svg` schematics, a `key_terms` block, and a UR index.
+  - G3/G5 remain open; `celce-murcia-1991` is unverifiable under D-2026-0001 (a pre-existing owner ruling, so no renumbering was needed).
+  - This branch now also carries main's Unit 6 authoring work from the merge; `npm run check:content` passes all 14 gates.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
