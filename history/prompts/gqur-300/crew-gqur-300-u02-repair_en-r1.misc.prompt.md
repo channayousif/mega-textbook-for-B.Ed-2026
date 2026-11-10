@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-300-u02-repair_en-r1
-title: crew repair_en GQUR-300 unit 2 r1
+title: crew repair_en GQUR-300 unit 2
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,28 +16,27 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/gqur-300/unit-02/topic-03.mdx
-  - docs/semester-1/gqur-300/unit-02/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-02/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-02/unit-assessment.mdx
-  - specs/content/gqur-300/reviews/unit-02/G2/20261110T054829615Z-gates.json
-  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-bloom-bands.txt
-  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-concept-graph.txt
-  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-depth-gate.txt
-  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-docs-sync.txt
-  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-figures.txt
-  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-no-answer-keys.txt
-  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-no-em-dash.txt
-  - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/validate-content.txt
-  - specs/content/gqur-300/reviews/unit-02/G3/repair-en-20261110.md
-  - specs/content/gqur-300/tasks.md
+ - docs/semester-1/gqur-300/unit-02/topic-03.mdx
+ - docs/semester-1/gqur-300/unit-02/unit-assessment.mdx
+ - history/prompts/gqur-300/crew-gqur-300-u02-repair_en-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-02/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-02/unit-assessment.mdx
+ - specs/content/gqur-300/reviews/unit-02/G2/20261110T054829615Z-gates.json
+ - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-bloom-bands.txt
+ - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-concept-graph.txt
+ - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-depth-gate.txt
+ - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-docs-sync.txt
+ - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-figures.txt
+ - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-no-answer-keys.txt
+ - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/check-no-em-dash.txt
+ - specs/content/gqur-300/reviews/unit-02/G2/logs-20261110T054829615Z/validate-content.txt
+ - specs/content/gqur-300/reviews/unit-02/G3/repair-en-20261110.md
+ - specs/content/gqur-300/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
 
 # Crew job gqur-300-u02-repair_en-r1
 
@@ -81,25 +80,34 @@ From `specs/content/gqur-300/reviews/unit-02/G3/20261108T203238Z-g3-desk-9e1e2df
 - [uncertain] E03: topic-03.mdx:63-65 attributes an exact operation-choice definition to Gula and Lovric; bound sources/texts/gula2025.md supports task-category distinction and transfer, not that definition. Publisher abstract does not establish the stronger attribution and full text is subscription-only. sources/unit-02.md declares none unverifiable and calls this source open access. Obtain supporting passage and accurate access disclosure or narrow attribution; see source-inspection.md. Old missing-citation finding is repaired only as to presence.
 - [uncertain] E04: Prepared manifest omits glossary.json, terminology.csv, NCC and OpenStax source-text excerpts, despite skill requiring these dependencies. Historical source artifacts and publisher lookup are supplementary, not accepted bound inputs. No full OpenStax explanatory passages verified in this attempt. Request authoritative source evidence and corrected bundle through owner; do not modify input policy in this review.
 
+## Notes from earlier jobs on this unit
+- (gqur-300-u02-repair_en, repair_en, codex) G3/G5 remain open; owner must resolve render, provenance, source-bundle and editorial evidence needs recorded in the repair handoff.
+- (gqur-300-u02-repair_en, repair_en, codex) G3/G5 remain open; owner must resolve render, provenance, source-bundle and editorial evidence needs recorded in the repair handoff.
+- (gqur-300-u02-review_en, review_en, codex) Owner must resolve exponent-definition and ERQ-04 scoring defects, source-support uncertainty, and missing render/provenance evidence; G3/G5 remain open.
+- (gqur-300-u02-review_en, review_en, codex) Owner must resolve exponent-definition and ERQ-04 scoring defects, source-support uncertainty, and missing render/provenance evidence; G3/G5 remain open.
+- (gqur-300-u02-fix, fix, codex) G3 is marked stale and needs a fresh independent review.
+
+
 ## Response snapshot
 
-Repaired Unit 2 definitions and assessment stems in English and mirrored in Urdu, created repair handoff record, refreshed G2 draft gate evidence, and appended the Unit 2 G3 and G2 tracker rows in tasks.md.
+Resolved Unit 2 G3 desk findings by clarifying exponent factor-counting definitions and aligning ERQ-04 stem with teacher notes across English and Urdu, recorded the repair handoff, refreshed G2 gate evidence, and updated the tasks tracker.
 
 ## Outcome
 
-- Impact: repair_en for GQUR-300 Unit 2 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before commit.
-- Files: 15 file(s), listed above.
+- Impact: repair_en for GQUR-300 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 16 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Clarified exponent definitions in topic 2.3 and aligned ERQ-04 stem with teacher notes in unit assessment in English and Urdu, recorded findings disposition in repair-en-20261110.md, refreshed Unit 2 G2 gate evidence, and updated tasks.md tracker rows.
+- Shipped / changed: Resolved Unit 2 G3 desk findings by clarifying exponent factor-counting definitions and aligning ERQ-04 stem with teacher notes across English and Urdu, recorded the repair handoff, refreshed G2 gate evidence, and updated the tasks tracker.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3/G5 remain open; owner must resolve render, provenance, source-bundle and editorial evidence needs recorded in the repair handoff.
+  - G3/G5 remain unticked; desktop, narrow-view and A4 print evidence as well as attested session provenance require owner arrangement.
+  - Full explanatory passages and review bundle binding for NCC, OpenStax, and shared glossary remain owner follow-ups.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
