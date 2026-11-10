@@ -75,32 +75,34 @@ worker exited 3:
 error: Our servers are experiencing high traffic right now, please try again in a minute. (UNAVAILABLE (code 503): No capacity available for model gemini-3.8-flash-high on the server)
 AGY_ERROR: {"short_error":"UNAVAILABLE (code 503): No capacity available for model gemini-3.8-flash-high on the server","status":"UNAVAILABLE","error_code":503,"code_kind":"http","retryable":true,"error_id":"7d3fb3f9-b5e8-4652-9803-fcd163be539c-15-2010"}
 
+
+
 ## Response snapshot
 
-Generated and placed the GICP-400 Unit 7 banner illustration (fig-U7-4) in English and Urdu unit indexes, updated banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated and placed the GICP-400 Unit 7 banner illustration (fig-U7-4) in English and Urdu indexes, updated banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: illustrate for GICP-400 Unit 7 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed the GICP-400 Unit 7 banner illustration (fig-U7-4) in English and Urdu unit indexes, updated banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated and placed the GICP-400 Unit 7 banner illustration (fig-U7-4) in English and Urdu indexes, updated banner manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Both English and Urdu unit locales remain translation_status: draft with G3, G4, and G5 open pending independent review and qualification.
   - Live browser rendering across small-screen viewports (360px) and A4 print emulation remains pending for an authorized host.
-  - Ideology strand remains pending an owner ruling before translation (G4) or final certification.
+  - The ideology strand remains pending an owner ruling before translation (G4) or final certification.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
