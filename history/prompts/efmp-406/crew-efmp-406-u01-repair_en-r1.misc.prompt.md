@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-406-u01-repair_en-r1
-title: crew repair_en EFMP-406 unit 1 (r1)
+title: crew repair_en EFMP-406 unit 1
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,11 +16,11 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-406/crew-efmp-406-u01-repair_en-r1.misc.prompt.md
-  - specs/content/efmp-406/reviews/unit-01/G3/20261110-repair-notes.md
-  - specs/content/efmp-406/tasks.md
+ - history/prompts/efmp-406/crew-efmp-406-u01-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-406/reviews/unit-01/G3/20261110-repair-notes.md
+ - specs/content/efmp-406/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -65,27 +65,28 @@ From `specs/content/efmp-406/reviews/unit-01/G3/20261108T203238Z-g3-desk-5985010
 - (efmp-406-u01-translate, translate, claude) Proposed Urdu terms the term bank does not hold are listed in specs/content/efmp-406/translations/unit-01/handoff.md and need an owner ruling.
 - (efmp-406-u01-translate, translate, claude) Merging main made the Unit 1 G2 gate record stale; after any later main merge, rerun prepare-gate-evidence.mjs and point the G2 row at the new file.
 
+
 ## Response snapshot
 
-Applied G3 advisory repairs for EFMP-406 Unit 1 report `20261108T203238Z-g3-desk-5985010a.json`, recorded repair handoff documentation, and appended the advisory revise repair tracker row leaving G3 unticked.
+Addressed EFMP-406 Unit 1 G3 desk report 20261108T203238Z-g3-desk-5985010a.json findings, recorded repair handoff notes, and appended an open advisory revise tracker row in tasks.md leaving G3 unticked.
 
 ## Outcome
 
-- Impact: repair_en-r1 for EFMP-406 Unit 1 by agy.
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: repair_en for EFMP-406 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
-- Next prompts: fresh independent G3 English review and G5 Urdu review.
-- Reflection: all four advisory items from the 2026-11-08 desk review are fully accounted for without modifying frozen specs, gates or catalog files.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded G3 advisory repair notes for EFMP-406 Unit 1 report `20261108T203238Z-g3-desk-5985010a.json`, appended the advisory revise repair tracker row in `specs/content/efmp-406/tasks.md` leaving G3 unticked, and passed all 14 content gates.
-- Decisions the team must respect: G3 remains open and unsigned; no author self-certification or human initials used; catalog entry for EFMP-406 remains pending curriculum-owner ruling.
-- Pending / next owner: fresh independent G3 English review session and authorized browser inspection.
+- Shipped / changed: Addressed EFMP-406 Unit 1 G3 desk report 20261108T203238Z-g3-desk-5985010a.json findings, recorded repair handoff notes, and appended an open advisory revise tracker row in tasks.md leaving G3 unticked.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Urdu pages remain uninspected on Playwright Chromium, narrow width (360px), and A4 print per crew host constraints; the G5 review must verify these.
   - Proposed Urdu terms in specs/content/efmp-406/translations/unit-01/handoff.md and catalog/courses.json entry for EFMP-406 remain pending owner rulings.
-- Paperclip issues affected: none.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
