@@ -43,6 +43,8 @@ files:
  - specs/content/efpg-401/tasks.md
  - static/img/figures/efpg-401/unit-06/fig-U6-1.dark.svg
  - static/img/figures/efpg-401/unit-06/fig-U6-1.svg
+ - static/img/figures/efpg-401/unit-06/fig-U6-10.dark.svg
+ - static/img/figures/efpg-401/unit-06/fig-U6-10.svg
  - static/img/figures/efpg-401/unit-06/fig-U6-2.dark.svg
  - static/img/figures/efpg-401/unit-06/fig-U6-2.svg
  - static/img/figures/efpg-401/unit-06/fig-U6-3.dark.svg
@@ -59,8 +61,6 @@ files:
  - static/img/figures/efpg-401/unit-06/fig-U6-8.svg
  - static/img/figures/efpg-401/unit-06/fig-U6-9.dark.svg
  - static/img/figures/efpg-401/unit-06/fig-U6-9.svg
- - static/img/figures/efpg-401/unit-06/fig-U6-10.dark.svg
- - static/img/figures/efpg-401/unit-06/fig-U6-10.svg
 tests:
  - npm run check:content
 ---
@@ -93,27 +93,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored English EFPG-401 Unit 6 (A.V. Aids in Teaching of English) with five pedagogical topics, a 10/10/5 assessment bank, ten placed SVGs with dark twins, governance specs, and validated G2 gate evidence.
+Authored EFPG-401 Unit 6 (A.V. Aids in Teaching of English) in English with five per-topic cycles, a 10/10/5 assessment bank, ten placed SVG figures with dark variants, governance specs, bound source excerpts, glossary terms and validated G2 gate evidence; all 14 content gates pass.
 
 ## Outcome
 
 - Impact: author for EFPG-401 Unit 6 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree (all 14 content gates).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 45 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English EFPG-401 Unit 6 (A.V. Aids in Teaching of English) with five topics, a 10/10/5 assessment bank, ten placed SVGs with dark twins, governance specs (coverage, sources, figures, concepts), two new bound source excerpts, six new glossary terms, and validated G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. The Urdu mirror is a separate job. The two new sources (mahmood-2024-visual-aids, hussain-khan-2022-images) were verified through Crossref and OpenAlex on 2026-11-10 and carry bound excerpts.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored EFPG-401 Unit 6 (A.V. Aids in Teaching of English) in English with five per-topic cycles, a 10/10/5 assessment bank, ten placed SVG figures with dark variants, governance specs, bound source excerpts, glossary terms and validated G2 gate evidence; all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The ten SVGs are placed and measured; `measure-figure-text` reports two cosmetic wordmark collisions (fig-U6-8, fig-U6-9) that exit 0.
-  - The unit's reading total is 54 minutes against the approved 35-55 depth budget band; assessment is 15 minutes.
-  - Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
+  - Urdu mirror (G4) and independent G3 review remain open; figures are EN-only, no `.ur.svg` yet.
+  - G2 evidence is at `specs/content/efpg-401/reviews/unit-06/G2/20261110T133127223Z-gates.json`; re-run `prepare-gate-evidence` if unit bytes change.
+  - `measure-figure-text` reports two cosmetic wordmark collisions (fig-U6-8, fig-U6-9) that exit 0.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
