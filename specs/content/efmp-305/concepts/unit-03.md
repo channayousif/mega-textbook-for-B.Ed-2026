@@ -21,7 +21,7 @@ inclusion (`CON:EFMP-305-1-7`) and Unit 2's observation and identification
 `CON:EFMP-305-1-7`; and the Barrier table (`CON:EFMP-305-3-18`) depends on
 `CON:EFMP-305-2-5`. Unit 3's `index.mdx` states the same dependencies as prerequisite knowledge.
 
-**Terminology note.** Three labels below use pairs already banked in
+**Terminology note.** Three labels below use pairs originally banked in
 `specs/content/terminology.csv`: Differentiated instruction `متنوع ہدایات`, Scaffolding
 `معاونتی تدریس`, Formative assessment `تشکیلی تشخیص`. The owner then banked nine EFMP-305
 pairs in `terminology.csv` (TEX-80, 2026-10-16): Differentiating content / process / product
@@ -32,8 +32,9 @@ accountability `انفرادی جوابدہی` and Flexible assessment `لچکد
 unbanked unit-level phrases: Cooperative structures, Assessment criteria held constant, Inclusive
 lesson planning order and Barrier table. They are not written into `terminology.csv` here,
 because `terminology.csv` freezes as a pair with `style-guide.md` (Spec 006 FR-007) and banking
-is an owner decision (precedent: `D-2026-0067`). The G4 translator must use the labels in this
-table, not invent alternatives.
+is an owner decision (precedent: `D-2026-0067`). In accordance with the G3 advisory finding,
+trainee translators at G4 must adhere to these banked labels and the unit-level phrases in this
+table, and not invent alternatives.
 
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
