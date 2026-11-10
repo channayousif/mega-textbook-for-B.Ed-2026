@@ -16,52 +16,52 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/efpg-401/unit-02/index.mdx
-  - docs/semester-3/efpg-401/unit-02/topic-01.mdx
-  - docs/semester-3/efpg-401/unit-02/topic-02.mdx
-  - docs/semester-3/efpg-401/unit-02/topic-03.mdx
-  - docs/semester-3/efpg-401/unit-02/topic-04.mdx
-  - docs/semester-3/efpg-401/unit-02/topic-05.mdx
-  - docs/semester-3/efpg-401/unit-02/unit-assessment.mdx
-  - history/prompts/efpg-401/crew-efpg-401-u02-author.green.prompt.md
-  - specs/content/efpg-401/concepts/unit-02.md
-  - specs/content/efpg-401/coverage/unit-02.md
-  - specs/content/efpg-401/figures/unit-02.md
-  - specs/content/efpg-401/reviews/unit-02/G2/20261110T115742025Z-gates.json
-  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-bloom-bands.txt
-  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-concept-graph.txt
-  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-depth-gate.txt
-  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-docs-sync.txt
-  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-figures.txt
-  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-no-answer-keys.txt
-  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-no-em-dash.txt
-  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/validate-content.txt
-  - specs/content/efpg-401/sources/texts/antika-2017-poetry.md
-  - specs/content/efpg-401/sources/texts/tamimi-2018-vocabulary.md
-  - specs/content/efpg-401/sources/unit-02.md
-  - specs/content/efpg-401/tasks.md
-  - static/img/figures/efpg-401/unit-02/fig-U2-1.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-1.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-2.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-2.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-3.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-3.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-4.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-4.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-5.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-5.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-6.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-6.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-7.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-7.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-8.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-8.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-9.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-9.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-10.dark.svg
-  - static/img/figures/efpg-401/unit-02/fig-U2-10.svg
+ - docs/semester-3/efpg-401/unit-02/index.mdx
+ - docs/semester-3/efpg-401/unit-02/topic-01.mdx
+ - docs/semester-3/efpg-401/unit-02/topic-02.mdx
+ - docs/semester-3/efpg-401/unit-02/topic-03.mdx
+ - docs/semester-3/efpg-401/unit-02/topic-04.mdx
+ - docs/semester-3/efpg-401/unit-02/topic-05.mdx
+ - docs/semester-3/efpg-401/unit-02/unit-assessment.mdx
+ - history/prompts/efpg-401/crew-efpg-401-u02-author.green.prompt.md
+ - specs/content/efpg-401/concepts/unit-02.md
+ - specs/content/efpg-401/coverage/unit-02.md
+ - specs/content/efpg-401/figures/unit-02.md
+ - specs/content/efpg-401/reviews/unit-02/G2/20261110T115742025Z-gates.json
+ - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-bloom-bands.txt
+ - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-concept-graph.txt
+ - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-depth-gate.txt
+ - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-docs-sync.txt
+ - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-figures.txt
+ - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-no-answer-keys.txt
+ - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/check-no-em-dash.txt
+ - specs/content/efpg-401/reviews/unit-02/G2/logs-20261110T115742025Z/validate-content.txt
+ - specs/content/efpg-401/sources/texts/antika-2017-poetry.md
+ - specs/content/efpg-401/sources/texts/tamimi-2018-vocabulary.md
+ - specs/content/efpg-401/sources/unit-02.md
+ - specs/content/efpg-401/tasks.md
+ - static/img/figures/efpg-401/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-1.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-10.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-10.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-2.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-2.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-3.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-3.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-4.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-5.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-5.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-6.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-6.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-7.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-7.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-8.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-8.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-9.dark.svg
+ - static/img/figures/efpg-401/unit-02/fig-U2-9.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -92,27 +92,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored English EFPG-401 Unit 2 with five pedagogical topics, a 25-item assessment bank, ten placed schematic SVGs with dark twins, governance specs, and validated G2 gate evidence.
+Authored English EFPG-401 Unit 2 (Teaching of English) with an index, five nine-part topic cycles, a 10/10/5 assessment bank, ten placed schematic SVGs with dark variants, governance files, and validated G2 gate evidence.
 
 ## Outcome
 
-- Impact: author EFPG-401 Unit 2 (Teaching of English) by opencode.
-- Tests: `npm run check:content` passed in the job worktree after the G2 evidence was recorded.
-- Files: 48 file(s), listed above.
+- Impact: author for EFPG-401 Unit 2 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 44 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English EFPG-401 Unit 2 (Teaching of English) with an index, five nine-part topic cycles (prose, poems, composition, vocabulary, pronunciation), a 10/10/5 unit assessment with a bounded answers section, ten placed schematic SVGs with derived dark variants, and the coverage, sources, figure and concept-graph governance files.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything. The unit carries two open-access sources (Antika 2017; Tamimi Sa'd and Rajabi 2018) and three guide-required print monographs cited at title level under `D-2026-0001`.
+- Shipped / changed: Authored English EFPG-401 Unit 2 (Teaching of English) with an index, five nine-part topic cycles, a 10/10/5 assessment bank, ten placed schematic SVGs with dark variants, governance files, and validated G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The ten figures are hand-authored schematics at `placed`; the Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
-  - The unit's depth budget is met at 47 reading-minutes (index 2, topics 7/6/6/7/6, assessment 13) against the approved 40-60 band.
-  - `specs/content/efpg-401/sources/texts/` holds bound excerpts for the two open-access sources; the three print monographs are declared under `## Unverifiable sources` in `sources/unit-02.md`.
+  - Ten EN schematics are placed; the G4 Urdu mirror still needs `.ur.svg` translations and UR `<Figure>` wiring.
+  - G3 independent review remains open; the unit is G2 gate-checked only, not certified.
+  - The three guide-required print monographs (Sheikh 1998, Mohammad 1998, Celce-Murcia 1991) are cited at title level under `D-2026-0001`; only Antika (2017) and Tamimi Sa'd and Rajabi (2018) are open-access.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
