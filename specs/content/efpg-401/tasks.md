@@ -1,8 +1,8 @@
 # EFPG-401 Teaching of English - Task tracker
 
-## Status: content spec approved (G0/G1); Units 1, 2 and 5 authored
+## Status: content spec approved (G0/G1); Units 1, 2, 5 and 6 authored
 
-English-only authoring from the approved Unit 1, Unit 2 and Unit 5 content-specs. No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved Unit 1, Unit 2, Unit 5 and Unit 6 content-specs. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
 ## Units
 
@@ -13,7 +13,7 @@ English-only authoring from the approved Unit 1, Unit 2 and Unit 5 content-specs
 | 3 | Methods of Teaching English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 4 | Teaching of Grammar | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 5 | Lesson Planning | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; fourteen schematic SVGs placed with dark variants; Urdu mirror and G3/G5 remain open |
-| 6 | A.V. Aids in Teaching of English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 6 | A.V. Aids in Teaching of English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; ten schematic SVGs placed with dark variants; Urdu mirror is a separate job; G3 and G5 remain open |
 | 7 | Assessment | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
@@ -42,7 +42,12 @@ English-only authoring from the approved Unit 1, Unit 2 and Unit 5 content-specs
 | Unit 5 | G5 ur-review | ☐ | | Awaiting translation and independent review |
 | Unit 5 | G6 assets | ▣ | | Fourteen English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-06/G2/20261110T133127223Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 6 | G6 assets | ▣ | | Ten English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 
 Reading estimates use final visible text at 180-200 words per minute: index 3, Topic 1.1 15, Topic 1.2 15, Topic 1.3 14, Topic 1.4 15, assessment 14, total 76 minutes within the approved 55-80 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
 
 Unit 5 reading estimates: index 3, Topic 5.1 6, Topic 5.2 6, Topic 5.3 6, Topic 5.4 6, Topic 5.5 6, Topic 5.6 6, Topic 5.7 6, assessment 10, total 55 minutes within the approved 45-70 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section.
+
+Unit 6 reading estimates use the same 180-200 words per minute: index 3, Topic 6.1 7, Topic 6.2 8, Topic 6.3 7, Topic 6.4 7, Topic 6.5 7, assessment 15, total 54 minutes within the approved 35-55 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
