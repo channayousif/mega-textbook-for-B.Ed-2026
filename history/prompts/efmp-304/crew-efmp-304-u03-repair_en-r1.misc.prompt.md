@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-304-u03-repair_en-r1
-title: crew repair_en EFMP-304 unit 3 (r1)
+title: crew repair_en EFMP-304 unit 3
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,8 +16,8 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-304/tasks.md
  - history/prompts/efmp-304/crew-efmp-304-u03-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-304/tasks.md
 tests:
  - npm run check:content
 ---
@@ -63,24 +63,28 @@ From `specs/content/efmp-304/reviews/unit-03/G3/20261108T203238Z-g3-desk-ef4a807
 - (efmp-304-u03-repair_en, repair_en, agy) Visual browser and print inspection (360px viewport, table scrollability, A4 print) remains unexecuted because crew job constraints prohibit build/server/Playwright; full G3 certification needs permitted browser tooling on a live build.
 - (efmp-304-u03-repair_en, repair_en, agy) Fresh independent G3 and dependent G5 review remain pending; stage stays open without certification.
 
+
 ## Response snapshot
 
-Verified the latest G3 desk report's only content finding (bassham2010 over-attribution) is already resolved in the current bytes by repair commit 8e7f76c4a; appended an unticked Unit 3 G3 advisory repair row naming the report and recorded this PHR.
+Appended an unticked Unit 3 G3 advisory repair row naming the 20261108T203238Z desk report and committed the PHR; check:content passes 14/14.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-304 Unit 3 (attempt r1, opencode).
-- Tests: npm run build:content-status and npm run check:content passed (14/14) on the clean tree and after the tracker edit.
+- Impact: repair_en for EFMP-304 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended an unticked Unit 3 G3 advisory repair row naming `20261108T203238Z-g3-desk-ef4a8074.json`; no content edit was needed because the bassham2010 attribution finding is already resolved in current bytes (repair commit 8e7f76c4a).
-- Decisions the team must respect: G3 stays open and unticked; the render inspection findings cannot be resolved by content edits and need a separate permitted render inspection on a live build.
-- Pending / next owner: crew lead; a permitted render inspection (360px viewport, table scrollability, A4 print) and fresh independent G3/G5 remain open.
-- Paperclip issues affected: none.
+- Shipped / changed: Appended an unticked Unit 3 G3 advisory repair row naming the 20261108T203238Z desk report and committed the PHR; check:content passes 14/14.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The 20261108T203238Z desk report's bassham2010 finding quotes pre-repair text; current bytes already resolved it in commit 8e7f76c4a, so no content edit was made.
+  - Render inspection (360px viewport, table scrollability, A4 print) remains unexecuted and needs a separate permitted render-inspect run on a live build; G3 stays unticked.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
