@@ -2,7 +2,7 @@
 id: crew-efpg-401-u04-author-conflict4
 title: crew fix EFPG-401 unit 4
 stage: misc
-date: 2026-11-11
+date: 2026-11-10
 surface: agent
 model: opencode
 feature: efpg-401
@@ -22,6 +22,7 @@ files:
  - history/prompts/efpg-401/crew-efpg-401-u04-author-conflict1.misc.prompt.md
  - history/prompts/efpg-401/crew-efpg-401-u04-author-conflict2.misc.prompt.md
  - history/prompts/efpg-401/crew-efpg-401-u04-author-conflict3.misc.prompt.md
+ - history/prompts/efpg-401/crew-efpg-401-u04-author-conflict4.misc.prompt.md
  - history/prompts/efpg-401/crew-efpg-401-u04-author.green.prompt.md
  - specs/content/efpg-401/concepts/unit-04.md
  - specs/content/efpg-401/coverage/unit-04.md
@@ -82,25 +83,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u04-author-conflict1, fix, opencode) G4 Urdu mirror still needs `.ur.svg` variants and UR `<Figure>` wiring; G3 review remains open.
 - (efpg-401-u04-author, author, opencode) Three EN schematics are placed; the G4 Urdu mirror still needs `.ur.svg` variants and UR `<Figure>` wiring.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efpg-401-u04-author, resolved the tasks.md conflict by keeping main's Unit 7 rows and status alongside the branch's Unit 4 rows, and left all 14 content gates passing.
+Merged origin/main into crew/efpg-401-u04-author, resolved the tasks.md conflict preserving both main's Unit 7 and the branch's Unit 4 tracker entries, and committed the merge plus PHR with all content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFPG-401 Unit 4 by opencode (attempt 4).
-- Tests: npm run check:content passed (14/14 gates) after `npm run build:content-status`.
-- Files: 28 file(s), listed above.
+- Impact: fix for EFPG-401 Unit 4 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efpg-401-u04-author; resolved the only conflict in specs/content/efpg-401/tasks.md by combining main's Unit 7 status/rows with the branch's Unit 4 status/rows; all content gates pass.
+- Shipped / changed: Merged origin/main into crew/efpg-401-u04-author, resolved the tasks.md conflict preserving both main's Unit 7 and the branch's Unit 4 tracker entries, and committed the merge plus PHR with all content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The branch added no registry IDs, so nothing was renumbered; D-2026-0001 is a pre-existing corpus-wide ruling, not a branch addition.
+  - The only conflict was specs/content/efpg-401/tasks.md; main's Unit 7 rows/status and the branch's Unit 4 rows/status were both kept, and the branch added no registry IDs so nothing was renumbered.
   - The merge brought main's EFPG-401 Unit 2 and Unit 7 authoring files into this branch; they are outside this job's scope.
   - G4 Urdu mirror still needs `.ur.svg` variants and UR `<Figure>` wiring; G3 review remains open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
