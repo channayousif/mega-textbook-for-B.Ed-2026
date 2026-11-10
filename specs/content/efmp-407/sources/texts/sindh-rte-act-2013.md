@@ -1,6 +1,6 @@
 # Bound excerpt - sindh-rte-act-2013
 
-Government of Sindh. (2013). *The Sindh Right of Children to Free and Compulsory Education Act, 2013* (Sindh Act No. XIV of 2013). Published in the Sindh Government Gazette, March 2013. Text accessed 2026-11-07 from official legal records (http://www.pas.gov.pk/uploads/acts/SN-Act-No.XIV-of-2013.pdf).
+Government of Sindh. (2013). *The Sindh Right of Children to Free and Compulsory Education Act, 2013* (Sindh Act No. XIV of 2013). Published in the Sindh Government Gazette, March 2013. Text accessed 2026-11-07 from official legal records (https://sja.gos.pk/assets/Updated_Laws/Sindh%20Right%20of%20Children%20to%20Free%20and%20Compulsory%20Education%20Act,%202013.pdf).
 
 ## Section 16 - School Management Committee (U8-03, U8-04)
 
