@@ -1,20 +1,54 @@
-# GICP-400 Unit 7: G4 blocked before translation
+# GICP-400 Unit 7: G4 translation handoff
 
-- Baseline: `5bdac2d80b2b2580eb983fa2408b380be36a8adb`, identical to origin/main at intake. No earlier branch commits or tracked changes were present.
-- No Urdu MDX or figure assets were authored. Both the English draft status and the open G3/G5 stages remain unchanged.
-- The translate-unit skill explicitly requires stopping when the English is wrong. Its G2 fallback does not authorise translating known errors.
+## Files translated
 
-## Blocking English dependency
+Translated from English baseline commit `7e4b23d33` (`fix(gicp-400): apply Unit 7 G3 desk report findings`):
 
-The existing advisory G3 report is at `specs/content/gicp-400/reviews/unit-07/G3/ddc654f7-48bb-4e03-a89f-fea2dde7b9d0/summary.md`. Its findings remain visible in the baseline: `topic-01.mdx:40` attributes the three-dimension framework to Dean, `topic-01.mdx:82` attributes primary-agent and indoctrination claims to Dean, `topic-01.mdx:70` calls Article 251 protection, and `topic-01.mdx:90` connects the accused example to Article 5(2). This is a baseline readiness check, not a new independent review or certification.
+- `i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/index.mdx`
+- `i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/topic-01.mdx`
+- `i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/unit-assessment.mdx`
+- `static/img/figures/gicp-400/unit-07/fig-U7-1.ur.svg` (and derived dark `fig-U7-1.ur.dark.svg`)
+- `static/img/figures/gicp-400/unit-07/fig-U7-2.ur.svg` (and derived dark `fig-U7-2.ur.dark.svg`)
+- `static/img/figures/gicp-400/unit-07/fig-U7-3.ur.svg` (and derived dark `fig-U7-3.ur.dark.svg`)
 
-## Next owners
+## Terminology conformance and proposed terms
 
-1. English repair worker: resolve the source, constitutional, scenario, rubric and figure findings already enumerated by G3. Use the actual Dean and Kennedy texts, not the disputed local Dean excerpt.
-2. Curriculum owner: resolve the ideology-strand scope ruling requested by G3.
-3. Translator: resume this skill against the repaired, settled English commit; build the terminology working set, complete every mirror file and figure, and run temporary-reviewed parity checks before restoring draft.
-4. Independent G5 reviewer: evaluate the translated frozen bundle after the English dependency is accepted. Browser, narrow-width and A4 inspection remain outstanding; this job's brief prohibits browser/build work.
+Declared `key_terms` in `index.mdx` all match `specs/content/terminology.csv`:
+- `Pakistan Studies` -> `پاکستان کے مطالعہ`
+- `Assessment` -> `تشخیص`
+- `Summative Assessment` -> `مجموعی جائزہ`
+- `Curriculum` -> `نصاب`
+- `Rubric` -> `معیارِ جانچ`
+- `Self-Assessment` -> `خود جائزہ`
+- `Mother Tongue` -> `مادری زبان`
+- `Learning Outcome` -> `نتیجہ ہائے تعلم`
+- `Collaborative Learning` -> `باہمی تعلم`
+- `Group Work` -> `گروہی کام`
+- `Problem Solving` -> `مسئلہ حل کرنا`
+- `Critical Thinking` -> `تنقیدی سوچ`
+- `Rote Learning` -> `رٹا لگانا`
 
-## Tracker and validation
+Proposed terms for curriculum owner from `specs/content/gicp-400/concepts/unit-07.md` not currently in `terminology.csv`:
+- `Civic education` -> `شہری تعلیم`
+- `Active citizenship` -> `فعال شہریت`
+- `National integration` -> `قومی یکجہتی`
+- `Unity in diversity` -> `تنوع میں وحدت`
+- `Teacher responsibility` -> `استاد کی ذمہ داری`
+- `Constitutional values in the classroom` -> `کلاس روم میں آئینی اقدار`
 
-The brief requests a G4 record, while translate-unit Step 7 forbids appending a G4 row. The existing open G4 row is preserved and this handoff records the blocked attempt without claiming delivery. No terminology proposals were produced because translation did not start. Content-check results are recorded in the accompanying PHR.
+## Parity and validation
+
+- **Structural parity**: Heading vectors match 1:1 across all three files (`index.mdx`, `topic-01.mdx`, `unit-assessment.mdx`).
+- **Component parity**: Component counts match English baseline 1:1 (`Figure`: 3, `Glossary`: 2, `PrintHandout`: 2, `TranslationStatusBadge`: 1).
+- **Assessment parity**: 10 MCQs, 10 RRQs, 5 ERQs (45 numbered items total across both locales). Option letters transliterated (الف, ب, ج, د), keys and mark allocations strictly preserved.
+- **Answer keys**: The bounded answers section heading is translated (`## جوابات اور نمبر دہی کی رہنمائی`) and placed at the end of `unit-assessment.mdx`. No forbidden answer-key English strings or front-matter keys leaked.
+- **Em dash**: Zero em dashes (U+2014, U+2015, U+2E3A, U+2E3B) across all authored files.
+- **Figure text and variants**: `scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/gicp-400/unit-07/*.ur.svg` passed with exit code 0. Dark variants generated via `npm run figures:variants` and verified clean via `npm run figures:variants:check`.
+- **Parity probe**: Temporary flip probe (`translation_status: reviewed` on both index files) confirmed that parity, figure, and terminology checks pass cleanly, reporting only the expected open G4/G5 rows before reversion to `draft`.
+- **Content gates**: All 14 content gates pass (`npm run check:content`).
+
+## Next steps and G5 handoff
+
+- `translation_status` remains `draft` pending independent G5 review.
+- Independent G5 reviewer must evaluate the translated bundle using `.claude/skills/review-unit/SKILL.md`.
+- Rendered Urdu inspection (desktop, narrow-width mobile 360px, and A4 print emulation) remains pending as browser/build runs are prohibited in the crew execution environment.
