@@ -78,27 +78,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored English EFPG-401 Unit 7 (Assessment) with two pedagogical topics, a 10/10/5 assessment bank, four placed SVGs with dark twins, governance specs, two new bound source excerpts, and validated G2 gate evidence.
+Authored English EFPG-401 Unit 7 (Assessment) with two topics, a 10/10/5 assessment bank, four placed SVGs, governance specs, G2 evidence, and a PHR, all content gates green.
 
 ## Outcome
 
 - Impact: author for EFPG-401 Unit 7 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree (all 14 content gates).
-- Files: 28 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English EFPG-401 Unit 7 (Assessment) with two topics, a 10/10/5 assessment bank, four placed SVGs with dark twins, governance specs (coverage, sources, figures, concepts), two new bound source excerpts, two new glossary terms, and validated G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. The Urdu mirror is a separate job. The two new sources (dibattista-2011-mcq, indrayani-2020-mcq-english) were verified through Crossref and OpenAlex on 2026-11-10 and carry bound excerpts. The guide-required print monograph celce-murcia-1991 is declared under `## Unverifiable sources` per owner ruling D-2026-0001.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored English EFPG-401 Unit 7 (Assessment) with two topics, a 10/10/5 assessment bank, four placed SVGs, governance specs, G2 evidence, and a PHR, all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The four SVGs are placed and measured; `measure-figure-text` exits 0 with no cosmetic wordmark collisions.
-  - The unit's reading total is 33 minutes against the approved 25-40 depth budget band; assessment is 13 minutes.
-  - Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
+  - Unit 7 is English-only; the Urdu mirror (G4) is the next job and needs four `.ur.svg` plus `.ur.dark.svg` schematics, a `key_terms` block, and a UR index.
+  - The four EN figures are placed and `measure-figure-text` exits 0; the G2 evidence is recorded at `specs/content/efpg-401/reviews/unit-07/G2/20261110T141529122Z-gates.json`.
+  - `celce-murcia-1991` is declared under `## Unverifiable sources` (D-2026-0001); G3/G5 remain open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
