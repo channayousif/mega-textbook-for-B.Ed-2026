@@ -16,10 +16,10 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/gsos-301/tasks.md
  - history/prompts/gsos-301/crew-gsos-301-u03-repair_en-r1.misc.prompt.md
+ - specs/content/gsos-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -73,26 +73,27 @@ From `specs/content/gsos-301/reviews/unit-03/G3/20261108T203238Z-g3-desk-193c20b
 - (gsos-301-u03-translate-r1, translate, claude) Concept graph labels CON:GSOS-301-3-13 as مواصلات while the Urdu prose uses the banked ابلاغ; the owner should align them. Proposed Urdu terms are listed in reviews/unit-03/G4/translation-handoff.md.
 - (gsos-301-u03-translate-r1, translate, claude) Rendered Urdu (desktop, 360px, A4) has not been inspected; run render-inspect --locale ur on a permitted host before G5.
 
+
 ## Response snapshot
 
-Verified that the latest G3 desk report's findings were already repaired on main by commits 1c7d1cfed and 6770b3915, and appended an unticked advisory tracker row naming report 20261108T203238Z-g3-desk-193c20bb.json. No content edits were required.
+Verified GSOS-301 Unit 3's latest G3 findings were already repaired on main, appended the unticked advisory tracker row naming report 20261108T203238Z-g3-desk-193c20bb.json, and committed the PHR.
 
 ## Outcome
 
 - Impact: repair_en for GSOS-301 Unit 3 by opencode (attempt 1).
-- Tests: npm run check:content passed (all 14 content gates) after regenerating static/content-status.json.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the latest G3 desk report's findings were already repaired on main and appended an unticked advisory tracker row naming report 20261108T203238Z-g3-desk-193c20bb.json.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the commit touches a protected path).
+- Shipped / changed: Verified GSOS-301 Unit 3's latest G3 findings were already repaired on main, appended the unticked advisory tracker row naming report 20261108T203238Z-g3-desk-193c20bb.json, and committed the PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The 20261108 desk report carries findings identical to the 20261102 report, but its input manifest binds the current repaired files, so treat it as a carry-forward rather than a fresh review.
-  - The approved content-spec Unit 3 worked example still calls a multi-status clash role strain; the curriculum owner must correct that bounded conflation.
+  - The 20261108 desk report repeats the 20261102 findings, but its input manifest already binds the repaired files, so treat it as a carry-forward, not a fresh review.
+  - Curriculum owner still owns the approved-spec worked-example conflation (`content-spec.md` line 279 calls a multi-status clash role strain).
   - Historical author provenance and rendered narrow-screen/A4 inspection remain open and are not author-repairable.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
