@@ -93,3 +93,4 @@ The following labels are specific to this unit and not yet banked in `specs/cont
 
 - `translation_status` remains `draft` pending independent G5 review per constitution Article III.2 and ADR-0019.
 - No certification or approval is claimed by this translation pass.
+- Rendered-page inspection (`scripts/render-inspect.mjs`) was not run in this job: the crew brief forbids `npm run build`, a dev server and the Playwright e2e suite, and restricts `render-inspect.mjs` to review jobs against the live base. Figure text geometry was verified with `scripts/measure-figure-text.mjs` (exit 0 on all ten `.ur.svg`). The G5 reviewer should inspect the rendered Urdu at 1280x900, 360x780 and A4 print, and check Nastaliq shaping, bidi punctuation at line ends, table column order and figure label fit.

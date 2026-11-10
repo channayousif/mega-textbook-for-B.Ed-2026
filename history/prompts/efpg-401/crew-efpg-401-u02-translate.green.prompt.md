@@ -91,7 +91,7 @@ Translated EFPG-401 Unit 2 into a full 7-file Urdu mirror with 10 localized SVG 
 
 - Impact: translate for EFPG-401 Unit 2 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the commit; the temporary `reviewed` flip surfaced only the two expected G4/G5 tracker findings.
-- Files: 32 file(s), listed above.
+- Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
