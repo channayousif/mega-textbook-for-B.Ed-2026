@@ -16,11 +16,10 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/geng-300/tasks.md
  - history/prompts/geng-300/crew-geng-300-u04-repair_en-r1.misc.prompt.md
+ - specs/content/geng-300/tasks.md
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/geng-300/unit-04/*.svg
 ---
 
 ## Prompt
@@ -63,32 +62,33 @@ From `specs/content/geng-300/reviews/unit-04/G3/20261108T203238Z-g3-desk-d45ca89
 - (geng-300-u04-repair_en, repair_en, agy) G3 remains open (unticked) with an advisory repairs tracker row citing report 20261102T212207Z-g3-desk-f85a6c35.json.
 - (geng-300-u04-fix, fix, opencode) G3 en-review row is marked stale  -  needs a fresh independent G3 review run after this geometry fix. The figure geometry check (measure-figure-text.mjs) exits 0 for all unit-04 SVGs; the earlier "panel collides with wordmark" note is cosmetic only.
 
+
 ## Response snapshot
 
-Verified the three findings of report 20261108T203238Z-g3-desk-d45ca89b.json against the current bytes. The fig-U4-1 geometry finding is stale: the label was re-wrapped to two lines in 69e32dca7 and the canvas/wordmark separated in ab85b5815, and `measure-figure-text.mjs` now exits 0 for every unit-04 SVG (only the pre-existing cosmetic fig-U4-6 panel/wordmark warning remains, reported not failed). The source limitation is already disclosed in topics 4.1-4.3 and the sources ledger. The render-review blocker is not author-repairable under this job's build/server prohibition. Appended the advisory Unit 4 G3 tracker row naming the report and left G3 unticked.
+Verified the three findings of G3 report 20261108T203238Z are already resolved or not author-repairable, and appended the advisory Unit 4 G3 tracker row naming the report with G3 left unticked.
 
 ## Outcome
 
 - Impact: repair_en for GENG-300 Unit 4 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates); measure-figure-text.mjs exited 0 for all unit-04 SVGs.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended the advisory Unit 4 G3 tracker row naming report 20261108T203238Z-g3-desk-d45ca89b.json and left G3 unticked; no content edit was required.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Verified the three findings of G3 report 20261108T203238Z are already resolved or not author-repairable, and appended the advisory Unit 4 G3 tracker row naming the report with G3 left unticked.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Report 20261108T203238Z repeats the 20261102T212207Z findings verbatim; its fig-U4-1 geometry text describes the pre-69e32dca7 single-line label and the pre-ab85b5815 wordmark position. The current SVGs pass measure-figure-text.mjs.
-  - The next independent G3 review must be run in a browser-capable environment to execute render-review; the sources remain declared unverified under D-2026-0001 until the four print monographs are retrieved.
+  - Report 20261108T203238Z repeats the 20261102T212207Z findings verbatim; its fig-U4-1 geometry text describes the pre-69e32dca7 single-line label and pre-ab85b5815 wordmark position, and the current SVGs pass measure-figure-text.mjs.
+  - The next independent G3 review must run in a browser-capable environment to execute render-review; the four primary sources remain declared unverified under D-2026-0001 until the print monographs are retrieved.
   - fig-U4-6 still reports a cosmetic .panel/wordmark collision (92.7 x 8.5px, reported not failed); the wordmark is aria-hidden, so it hides no instructional label.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
