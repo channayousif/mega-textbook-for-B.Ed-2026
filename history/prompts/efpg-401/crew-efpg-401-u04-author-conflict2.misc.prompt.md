@@ -80,22 +80,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u04-author, author, opencode) Three EN schematics are placed; the G4 Urdu mirror still needs `.ur.svg` variants and UR `<Figure>` wiring.
 - (efpg-401-u04-author, author, opencode) G3 independent review is open; the unit is G2 gate-checked only, not certified.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efpg-401-u04-author, resolved the tasks.md conflict by combining the status line and keeping main's Unit 2 stage rows then this branch's Unit 4 stage rows, and left all content gates passing.
+Merged origin/main into crew/efpg-401-u04-author, resolved the tasks.md conflict by keeping both sides' status and stage rows, and left all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFPG-401 Unit 4 by opencode (attempt 2).
-- Tests: npm run check:content passed (14/14 content gates).
+- Impact: fix for EFPG-401 Unit 4 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efpg-401-u04-author and resolved the tasks.md conflict by combining the status line and keeping main's Unit 2 rows then this branch's Unit 4 rows; all content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything. No registry IDs were renumbered because the branch added none.
+- Shipped / changed: Merged origin/main into crew/efpg-401-u04-author, resolved the tasks.md conflict by keeping both sides' status and stage rows, and left all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G4 Urdu mirror still needs `.ur.svg` variants and UR `<Figure>` wiring; G3 review remains open.
