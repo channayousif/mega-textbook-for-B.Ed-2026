@@ -2,7 +2,7 @@
 id: crew-efmp-303-u02-repair_en-r1
 title: crew repair_en EFMP-303 unit 2
 stage: misc
-date: 2026-11-09
+date: 2026-11-10
 surface: agent
 model: agy
 feature: efmp-303
@@ -71,8 +71,8 @@ Applied findings of Unit 2 G3 desk review 0f2a9132, recorded repair notes in spe
 
 ## Outcome
 
-- Impact: repair_en for EFMP-303 Unit 2 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before the commit was made.
+- Impact: repair_en for EFMP-303 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
@@ -80,10 +80,10 @@ Applied findings of Unit 2 G3 desk review 0f2a9132, recorded repair notes in spe
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: Applied findings of Unit 2 G3 desk review 0f2a9132, recorded repair notes in specs/content/efmp-303/reviews/unit-02/G3/20261110-repair-notes.md, appended the advisory tracker row leaving G3 open in tasks.md, and verified all 14 content gates pass cleanly.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All findings from G3 report 20261108T203238Z-g3-desk-0f2a9132 are confirmed resolved; Unit 2 requires a fresh independent G3 review.
+  - All findings from G3 report 20261108T203238Z-g3-desk-0f2a9132 resolved; Unit 2 requires a fresh independent G3 review.
   - Existing G4 Urdu mirror (6 files, 6 figures) remains verified and intact with translation_status set to draft pending independent G5 review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
