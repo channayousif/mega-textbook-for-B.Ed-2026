@@ -1,12 +1,12 @@
 ---
 id: crew-efmp-303-u05-repair_en-r1
-title: crew repair_en EFMP-303 unit 5 continuation
+title: crew repair_en EFMP-303 unit 5
 stage: misc
-date: 2026-11-03
+date: 2026-11-10
 surface: agent
 model: opencode
 feature: efmp-303
-branch: crew/efmp-303-u05-repair_en
+branch: crew/efmp-303-u05-repair_en-r1
 user: crew
 command: crew repair_en
 labels: ["crew", "opencode", "repair_en"]
@@ -16,45 +16,18 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/efmp-303/unit-05/topic-01.mdx
-  - docs/semester-2/efmp-303/unit-05/topic-02.mdx
-  - docs/semester-2/efmp-303/unit-05/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/unit-assessment.mdx
-  - specs/content/efmp-303/concepts/unit-05.md
-  - specs/content/efmp-303/coverage/unit-05.md
-  - specs/content/efmp-303/reviews/unit-05/G2/20261103T084218376Z-gates.json
-  - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/
-  - specs/content/efmp-303/reviews/unit-05/G3/crew-repair-en-handoff.md
-  - specs/content/efmp-303/sources/texts/gem-unitfive-2020.md
-  - specs/content/efmp-303/sources/texts/nep-unitfive-2009.md
-  - specs/content/efmp-303/sources/texts/wb-unitfive-2023.md
-  - specs/content/efmp-303/sources/texts/wb_hci.md
-  - specs/content/efmp-303/sources/unit-05.md
-  - specs/content/efmp-303/sources/unit-05/ncc.md
-  - specs/content/efmp-303/tasks.md
-  - static/img/figures/efmp-303/unit-05/fig-U5-2.dark.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-2.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-2.ur.dark.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-2.ur.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-4.dark.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-4.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-4.ur.dark.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-4.ur.svg
-  - history/prompts/efmp-303/crew-efmp-303-u05-repair_en-r1.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u05-repair_en-r2.misc.prompt.md
+ - specs/content/efmp-303/tasks.md
 tests:
-  - npm run check:content
-  - npm test
-  - node scripts/measure-figure-text.mjs static/img/figures/efmp-303/unit-05/*.svg
+ - npm run check:content
 ---
 
 ## Prompt
 
-# Crew job efmp-303-u05-repair_en
+# Crew job efmp-303-u05-repair_en-r1
 
-You are the opencode worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-303-u05-repair_en`.
-Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`, never mark G3/G5 done, never self-sign or use
+You are the opencode worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-303-u05-repair_en-r1`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or the Playwright e2e suite (a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server), keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`. Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0. `static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git, never mark G3/G5 done, never self-sign or use
 human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
 
 ## Task
@@ -78,7 +51,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
 ## Open findings from the latest G3 report
-From `specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8a.json` (disposition: revise). Resolve each one:
+From `specs/content/efmp-303/reviews/unit-05/G3/20261108T203238Z-g3-desk-b2674e94.json` (disposition: revise). Resolve each one:
 - [blocking] F3: sources/unit-05.md, Unverifiable sources: no retrieval-attempt record or explicit owner authorization; claim-level disclaimer conflicts with specific policy and national trend assertions in both topics. Khan 2018 is used but absent from the source table; wb_hci has no retrievable document locator. Repair source register and bind actual supporting passages before fresh review.
 - [blocking] F4: concepts/unit-05.md assessment mappings are semantically incorrect: curriculum maps MCQ-02 (teacher development), teacher training maps MCQ-04 (human capital), human capital maps MCQ-05/06 and RRQ-04 (quality cycle/inclusion), inequality maps MCQ-07 (training), inclusion maps MCQ-09 (standardization). Remap to actual item demand.
 - [blocking] F5: unit-assessment.mdx RRQ-08 and its model assert a greatest-barriers pair without comparative evidence. Remove the ranking or supply justified comparative criteria; accept defensible examples.
@@ -91,43 +64,39 @@ From `specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8
 - [uncertain] F8: Topic 5.1 Standardization calls SNC the most recent effort and implies all-province reach without dated authoritative support. Verify scope and currency, including provincial adaptation, in a new bound source bundle.
 
 ## Notes from earlier jobs on this unit
-- (efmp-303-u05-fix, fix, codex) Regenerated static/content-status.json remains uncommitted; it was already modified at task start.
-- (efmp-303-u05-fix, fix, codex) G3 needs a fresh independent run.
-- (efmp-303-u05-fix, fix, codex) Regenerated static/content-status.json remains uncommitted; it was already modified at task start.
-- (efmp-303-u05-translate-r1, translate, agy) EFMP-303 Unit 5 Urdu mirror is complete at G4 (5 files, 4 localized .ur.svg figures with dark variants, 13/13 content gates pass); translation_status stays draft pending independent G5 review.
-- (efmp-303-u05-translate-r1, translate, agy) Render inspection (desktop, narrow 360px, A4 print) was omitted per brief constraints and should be run during the independent G5 review session.
+- (efmp-303-u05-repair_en-conflict1, fix, opencode) `specs/content/efmp-303/tasks.md` now carries main's Unit 4 and Unit 3 advisory rows followed by this branch's Unit 5 row; the merge also pulled main's Unit 3/Unit 4 repair changes into the branch.
+- (efmp-303-u05-repair_en-conflict1, fix, opencode) `static/content-status.json` is gitignored and was regenerated with `npm run build:content-status`; regenerate it again after any tracker edit or `check:content-status` fails as stale.
+- (efmp-303-u05-repair_en-conflict1, fix, opencode) Unit 5 G3 stays advisory/open; a fresh independent G3 run (then G5) owns acceptance.
+- (efmp-303-u05-repair_en, repair_en, opencode) G3 row left unticked with the advisory repair suggestion; a fresh independent G3 run (then G5) owns acceptance.
+- (efmp-303-u05-repair_en, repair_en, opencode) `specs/content/efmp-303/sources/texts/nep2009.md` and `gem-report2020.md` must stay deleted because other units cite those keys and their presence invalidates Units 1, 2, 4 and 6 G2 evidence.
 
-## Feedback from the previous attempt
-npm run check:content has 5 finding(s) that main does not have:
-✗ Pipeline gate failed with 4 finding(s):
-- EFMP-303 Unit 1 (docs/semester-2/efmp-303/unit-01): G2 en-draft: stale or incomplete input manifest
-- EFMP-303 Unit 2 (docs/semester-2/efmp-303/unit-02): G2 en-draft: stale or incomplete input manifest
-- EFMP-303 Unit 4 (docs/semester-2/efmp-303/unit-04): G2 en-draft: stale or incomplete input manifest
-- EFMP-303 Unit 6 (docs/semester-2/efmp-303/unit-06): G2 en-draft: stale or incomplete input manifest
 
 ## Response snapshot
 
-Continued the existing repair branch. Corrected the NEP 2009 qualification wording to the differentiated elementary and secondary targets with their stated exceptions, replaced the unsourced SNC/NCP standardisation claims with a dated NCC FAQ description, finished the source-register repair with unit-specific bound paraphrases, restored the shared World Bank excerpt to its origin/main state, and removed the short-lived shared NEP/GEM excerpts that were invalidating Units 1, 2, 4 and 6 G2 evidence. Fixed the EN/UR MCQ-02 distractor mismatch, regenerated Unit 5 G2 gate evidence, and repointed the Unit 5 tracker row.
+Verified G3 findings F3-F10 were already resolved on main by the 2026-11-03 repair, appended the unticked Unit 5 G3 advisory tracker row naming report 20261108T203238Z-g3-desk-b2674e94, and committed it with a PHR.
 
 ## Outcome
 
-- Impact: repair_en continuation for EFMP-303 Unit 5 by opencode.
-- Tests: `npm run check:content` 13/13 PASS; `npm test` 347/347 PASS; `node scripts/measure-figure-text.mjs` exit 0.
-- Files: 28 file(s), listed above.
+- Impact: repair_en for EFMP-303 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: the first repair pass added shared source excerpts that other units' tables name; creating files is enough to invalidate their committed G2 evidence even when the new unit does not cite them. Delete unused shared keys rather than restoring them.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: completed all blocking and advisory G3 repairs in EN and UR; added unit-specific bound excerpts (`nep-unitfive-2009`, `gem-unitfive-2020`, `wb-unitfive-2023`, `ncc`); refreshed Unit 5 G2 evidence at `specs/content/efmp-303/reviews/unit-05/G2/20261103T084218376Z-gates.json`; kept the Unit 5 G3 row unticked with the advisory repair suggestion.
-- Decisions the team must respect: G3/G5 remain open and unsigned; translation_status stays draft; the shared `texts/nep2009.md` and `texts/gem-report2020.md` must stay deleted because Units 1, 2, 4 and 6 cite those keys and their presence breaks those units' G2 manifests.
-- Pending / next owner: fresh independent G3 review owns acceptance of these repairs; independent G5 owns the Urdu mirror and rendered inspection.
-- Notes for the next job on this unit: F1 author identity and F2 narrow-screen/A4 rendered evidence remain unresolved under the no-build/no-server constraint. `static/content-status.json` is gitignored and must be regenerated locally after tracker edits.
-- Paperclip issues affected: none (ticket null).
+- Shipped / changed: Verified G3 findings F3-F10 were already resolved on main by the 2026-11-03 repair, appended the unticked Unit 5 G3 advisory tracker row naming report 20261108T203238Z-g3-desk-b2674e94, and committed it with a PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Latest G3 report 20261108T203238Z repeats the previous report's findings verbatim; F3-F10 were already resolved on main by 9403865b5, so a fresh G3 run should re-read rather than re-apply.
+  - Narrow 360px and A4 print render inspection remains undone; it needs a host allowed to build and run a browser.
+  - PHR ID is crew-efmp-303-u05-repair_en-r2 because crew-efmp-303-u05-repair_en-r1 was already taken by the earlier continuation on branch crew/efmp-303-u05-repair_en.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: first-pass repair created shared excerpt files that other units cite; tracked-but-unused files invalidate committed G2 evidence for unrelated units. Also the EN/UR MCQ-02 distractor drifted during rebalancing.
-- Graders run and results (PASS/FAIL): check:content PASS (13/13), npm test PASS (347/347), measure-figure-text PASS, pipeline-gate PASS.
-- Prompt variant (if applicable): crew brief v1, continuation r1.
-- Next experiment (smallest change to try): when adding a source excerpt under `sources/texts/`, first grep every unit's coverage/sources table for that key; if any other unit cites it, use a unit-namespaced key instead.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
