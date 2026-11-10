@@ -5,7 +5,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T101732391Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261110T020358345Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F8 and missing render/provenance evidence: [report](reviews/unit-01/G3/20261107-codex.json). No certification. |
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -32,10 +32,11 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 6 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U6-7 remains prompt-only |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261108T130249567Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261110T022251179Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 5 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory: revise; F1 blocking - IUCN Pakistan 2004 citation URL resolves to an unrelated Tanzania report and the glacier-grafting claim is not in the bound excerpt; F2 uncertain - two per-topic retrieval items tagged Analyze above the formative band; F3-F7 advisory; report: specs/content/efmp-407/reviews/unit-05/G3/crew-efmp-407-u05-review_en/crew-efmp-407-u05-review_en.json |
 | Unit 5 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory r1 escalation on unchanged inputs; prior F1-F7 unresolved; missing parent provenance and required browser/print evidence. [Report](reviews/unit-05/G3/crew-efmp-407-u05-review_en-r1.json). G3 remains open and unsigned. |
+| Unit 5 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report: specs/content/efmp-407/reviews/unit-05/G3/20261108T203238Z-g3-desk-7b51d549.json; F1 glacier grafting re-sourced to Munir et al. (2021) and IUCN Pakistan (2004) declared under Unverifiable sources per D-2026-0001; F2 two per-topic retrieval items reworded to the formative band; F3-F6 advisory repairs applied; G3 remains open; fresh independent review required |
 | Unit 5 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U5-7 remains prompt-only |
@@ -51,7 +52,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 
 | Sub-topic | Enduring understanding | Target Bloom level | Explanation heading | Evidence |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261107T123059043Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261110T020358345Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -89,4 +90,5 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-03/G3/20261108T203238Z-g3-desk-dd5ef8ea.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-05/G3/20261108T203238Z-g3-desk-7b51d549.json |
 | Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-08/G3/20261108T203238Z-g3-desk-04abd597.json |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-407/reviews/unit-01/G3/20261108T203238Z-g3-desk-fb34f257.json; topic-01.mdx adds learner-facing disclosure of secondary Orr (1992) attribution and unverified primary text; unit-assessment.mdx RRQ-09 marking guidance restores IUCN (2003) attribution, expert framing, and causal uncertainty; RRQ-03 Bloom tag adjusted from Analyze to Understand; topic-03.mdx activity adds explicit emergency budget constraint and assumption guidance; browser/print visual inspection, reviewer provenance, excerpt manifest binding and blind solving remain owner handoffs; G3 remains open and unticked |
 | Unit 8 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-407/reviews/unit-08/G3/20261108T203238Z-g3-desk-04abd597.json; F1 Jumani & Abbasi attribution removed from topic-01, sources, texts and coverage; F2 Wals et al. excerpts formatted as paraphrases; F3 dead Sindh Act URL updated to sja.gos.pk; F4 Tilbury & Wortman causal claim softened; F5 community mobilization reporting purpose separated from Wals attribution; F6 six-stage project cycle noted as Wals elaboration; F7 MCQ 6 stem includes school management; F8 topic-02 formative item 3 reworded to Apply band; EN/UR parity preserved; G3 remains open and unsigned |
