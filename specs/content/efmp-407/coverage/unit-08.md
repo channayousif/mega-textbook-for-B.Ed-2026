@@ -6,11 +6,11 @@ Four checklist IDs map to the exact explanatory headings of the approved two-top
 |---|---|---|---|
 | U8-01 | topic-01.mdx | Planning sustainability projects | wals-2024-whole-school |
 | U8-01 | topic-01.mdx | Planning sustainability projects | tilbury-wortman-2004 |
-| U8-01 | topic-01.mdx | Planning sustainability projects | jumani-abbasi-2015 |
 | U8-02 | topic-01.mdx | Implementing sustainability projects | wals-2024-whole-school |
-| U8-02 | topic-01.mdx | Implementing sustainability projects | jumani-abbasi-2015 |
 | U8-03 | topic-02.mdx | Community participation | wals-2024-whole-school |
 | U8-03 | topic-02.mdx | Community participation | tilbury-wortman-2004 |
 | U8-03 | topic-02.mdx | Community participation | sindh-rte-act-2013 |
 | U8-04 | topic-02.mdx | Reporting project outcomes | wals-2024-whole-school |
 | U8-04 | topic-02.mdx | Reporting project outcomes | sindh-rte-act-2013 |
+
+Note: The six-stage project cycle under U8-01 elaborates the five phases in Wals et al. (2024) by distinguishing outcome reporting from institutional reflection.
