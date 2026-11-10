@@ -43,7 +43,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ▢ | | guide Chapter 5; intake re-evaluation advised (D-2026-0070) |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-05/G2/20261105T131356969Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-05/G2/20261110T070719044Z-gates.json |
 | Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: reviews/unit-05/G3/crew-review.json; RRQ 6 counterexample, RRQ 7 majority language, source/provenance and G1 evidence need resolution; current render inspection unavailable. No G3 sign-off. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 5 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 5 | G5 ur-review | ▢ | | |
@@ -213,3 +213,4 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 13 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-13/G3/20261108T203238Z-g3-desk-09998f44.json |
 | Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261108T203238Z-g3-desk-332287bd.json |
 | Unit 2 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied for specs/content/gqur-301/reviews/unit-02/G3/20261108T203238Z-g3-desk-e1b082b9.json; F1-F4 are already resolved in the current bytes (repair commit b35bd9059 corrected chart geometry and alt, conditional interval choices, scored grouping analysis and worked chart procedures); no further content edit was needed; provenance, G1, rendered accessibility, answer-blind assessment and bound-source checks remain for the owner/evaluator; G3 remains open and unticked (ADR-0019) |
+| Unit 5 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied for report specs/content/gqur-301/reviews/unit-05/G3/20261108T203238Z-g3-desk-13351a7b.json (crew gqur-301-u05-repair_en-r1, 2026-11-10). RRQ 6 now uses an unmistakably right-skewed counterexample (1, 2, 2, 2, 3, 100) and states that the median equals the mode, so the median is not greater than the mode. RRQ 7 states the modal wage is earned by 3 of 12 workers, is not what most workers earn and is not a majority figure. Topic 5.1 attributes the grouped-mode estimate to Lane (2023, Chapter 3), matching the bound Lane excerpt. All edits mirrored in Urdu. G2 evidence refreshed (20261110T070719044Z-gates.json). P1-P4 (author/run provenance, open G1, solve-before-key verification, rendered narrow/A4 inspection) are not author-repairable and remain for the evaluator/review host. Needs a fresh independent G3 review; G3 stays open (ADR-0019). |
