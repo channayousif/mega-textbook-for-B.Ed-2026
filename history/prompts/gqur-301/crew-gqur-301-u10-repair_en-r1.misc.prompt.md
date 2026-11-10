@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-301-u10-repair_en-r1
-title: crew fix GQUR-301 unit 10
+title: crew repair_en GQUR-301 unit 10
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -8,8 +8,8 @@ model: opencode
 feature: gqur-301
 branch: crew/gqur-301-u10-repair_en-r1
 user: crew
-command: crew fix
-labels: ["crew", "opencode", "fix"]
+command: crew repair_en
+labels: ["crew", "opencode", "repair_en"]
 links:
   spec: specs/content/gqur-301/content-spec.md
   ticket: null
@@ -17,11 +17,23 @@ links:
   pr: null
 files:
  - history/prompts/gqur-301/crew-gqur-301-u10-repair_en-r1.misc.prompt.md
- - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/desktop-index.png
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/desktop-topic-01.png
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/desktop-topic-02.png
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/desktop-unit-assessment.png
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/narrow360-index.png
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/narrow360-topic-01.png
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/narrow360-topic-02.png
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/narrow360-unit-assessment.png
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/print-a4-index.pdf
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/print-a4-topic-01.pdf
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/print-a4-topic-02.pdf
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/print-a4-unit-assessment.pdf
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/render-inspect.json
+ - specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/render-inspect.log
  - specs/content/gqur-301/reviews/unit-10/repair-en-handoff.md
  - specs/content/gqur-301/tasks.md
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -64,35 +76,32 @@ From `specs/content/gqur-301/reviews/unit-10/G3/20261108T203238Z-g3-desk-29dbcc6
 - (gqur-301-u10-repair_en-conflict2, fix, opencode) `static/content-status.json` is gitignored and goes stale after any content-tree change; regenerate with `npm run build:content-status` before running `check:content`.
 - (gqur-301-u10-repair_en-conflict1, fix, opencode) Unit 10 G3 stays open and unsigned (ADR-0019), blocked on an authorised non-production render host; no content repair was possible or required.
 
+
 ## Response snapshot
 
-Ran the sanctioned production render inspection for GQUR-301 Unit 10
-(`scripts/render-inspect.mjs GQUR-301 10 --base https://textbook.com.pk`), which
-exited 0 with zero defects across desktop 1280x900, narrow 360x780 and A4 print
-794px viewports, and saved 12 PNG/PDF artifacts plus logs under
-`specs/content/gqur-301/reviews/unit-10/renders-20261110T-prod/`. Appended the
-Unit 10 G3 tracker row naming report
-`20261108T203238Z-g3-desk-29dbcc60.json`, added a dated addendum to the repair
-handoff, and confirmed all 14 content gates pass.
+Resolved the Unit 10 G3 blocking render-review finding by running the sanctioned production render inspection (exit 0, zero defects, 12 PNG/PDF artifacts committed), appended the advisory repair tracker row naming report 20261108T203238Z-g3-desk-29dbcc60.json with G3 left unticked, and all 14 content gates pass.
 
 ## Outcome
 
-- Impact: repair for GQUR-301 Unit 10 by opencode (attempt r1).
-- Tests: `npm run build:content-status` then `npm run check:content` passed (14/14 gates).
-- Files: 4 path(s), listed above.
+- Impact: repair_en for GQUR-301 Unit 10 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 17 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: the production render inspection closes the render-review evidence gap for the live unit; the frozen G3 report itself remains advisory and unsigned.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: production render inspection evidence (12 PNG/PDF artifacts plus logs) under `reviews/unit-10/renders-20261110T-prod/`; Unit 10 G3 tracker row appended; repair handoff addendum.
-- Decisions the team must respect: G3 stays open and unticked; no content edit was required because the inspection found zero defects; the render inspection ran against the live production host under the brief's explicit allowance, not a local server.
-- Pending / next owner: fresh independent G3 review on a frozen bundle; the review host must still run its own render-review for certification.
+- Shipped / changed: Resolved the Unit 10 G3 blocking render-review finding by running the sanctioned production render inspection (exit 0, zero defects, 12 PNG/PDF artifacts committed), appended the advisory repair tracker row naming report 20261108T203238Z-g3-desk-29dbcc60.json with G3 left unticked, and all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Render evidence is against the live production host (base https://textbook.com.pk, captured 2026-11-10); it verifies the published unit, so a fresh independent G3 review must still run its own render-review on a frozen bundle for certification.
+  - G3 remains open and unticked (ADR-0019); no content edit was needed because the inspection found zero defects.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
-- Prompt variant (if applicable): crew brief v1 (r1)
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
