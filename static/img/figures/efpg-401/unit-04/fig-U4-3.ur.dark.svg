@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">اصول سے استعمال تک چار مراحل</title>
+  <desc id="d">فلو چارٹ جس میں گرائمر کے سبق کے چار مراحل دکھائے گئے ہیں: بامعنی سیاق میں ساخت پر غور کرنا، صورت معنی اور استعمال کو سمجھنا، محدود مشقیں کرنا، اور ابلاغی سرگرمی میں آزادانہ استعمال۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="38" text-anchor="middle">اصول سے استعمال تک چار مراحل</text>
+  <text class="muted" x="390" y="58" text-anchor="middle">فعلی تدریسِ گرائمر کا مرحلہ وار سفر</text>
+
+  <!-- Step 1: Notice (Top Right) -->
+  <rect class="panel-a" x="400" y="72" width="340" height="130" rx="8"/>
+  <text class="sh" x="570" y="98" text-anchor="middle">1. غور کرنا (Notice)</text>
+  <line class="grid" x1="415" y1="108" x2="725" y2="108"/>
+  <text class="body" x="720" y="130" text-anchor="end">بامعنی سیاق میں ساخت کو دیکھنا</text>
+  <text class="body" x="720" y="152" text-anchor="end">یا سننا</text>
+  <text class="small" x="720" y="176" text-anchor="end">کوئی تصویر، کہانی یا حقیقی منظر</text>
+
+  <!-- Step 2: Understand (Top Left) -->
+  <rect class="panel-b" x="40" y="72" width="340" height="130" rx="8"/>
+  <text class="sh" x="210" y="98" text-anchor="middle">2. فہم حاصل کرنا (Understand)</text>
+  <line class="grid" x1="55" y1="108" x2="365" y2="108"/>
+  <text class="body" x="360" y="130" text-anchor="end">ساخت کی صورت، معنی اور استعمال</text>
+  <text class="body" x="360" y="152" text-anchor="end">کو اچھی طرح سمجھنا</text>
+  <text class="small" x="360" y="176" text-anchor="end">استاد واضح الفاظ میں اصول بتاتا ہے</text>
+
+  <!-- Step 3: Practise in control (Bottom Left) -->
+  <rect class="panel-c" x="40" y="222" width="340" height="130" rx="8"/>
+  <text class="sh" x="210" y="248" text-anchor="middle">3. محدود مشق (Practise in control)</text>
+  <line class="grid" x1="55" y1="258" x2="365" y2="258"/>
+  <text class="body" x="360" y="280" text-anchor="end">طے شدہ ساخت کے ساتھ محدود</text>
+  <text class="body" x="360" y="302" text-anchor="end">اور پابند مشقیں مکمل کرنا</text>
+  <text class="small" x="360" y="326" text-anchor="end">خالی جگہ، متبادلات، جوڑ ملانا</text>
+
+  <!-- Step 4: Use freely (Bottom Right) -->
+  <rect class="panel-d" x="400" y="222" width="340" height="130" rx="8"/>
+  <text class="sh" x="570" y="248" text-anchor="middle">4. آزادانہ استعمال (Use freely)</text>
+  <line class="grid" x1="415" y1="258" x2="725" y2="258"/>
+  <text class="body" x="720" y="280" text-anchor="end">کسی حقیقی ابلاغی کام میں ساخت</text>
+  <text class="body" x="720" y="302" text-anchor="end">کا بامقصد استعمال کرنا</text>
+  <text class="small" x="720" y="326" text-anchor="end">تصویر کی وضاحت، کردار نگاری، سروے</text>
+
+  <!-- Arrows -->
+  <!-- 1 to 2 (right to left) -->
+  <path class="stroke-a" d="M 400 137 L 385 137"/>
+  <polygon class="ah-a" points="385,132 377,137 385,142"/>
+
+  <!-- 2 to 3 (top left down to bottom left) -->
+  <path class="stroke-b" d="M 210 202 L 210 217"/>
+  <polygon class="ah-b" points="205,217 210,225 215,217"/>
+
+  <!-- 3 to 4 (bottom left to bottom right) -->
+  <path class="stroke-c" d="M 380 287 L 395 287"/>
+  <polygon class="ah-c" points="395,282 403,287 395,292"/>
+
+  <text class="wm" x="768" y="390" text-anchor="end" direction="ltr" aria-hidden="true">textbook.com.pk</text>
+</svg>
