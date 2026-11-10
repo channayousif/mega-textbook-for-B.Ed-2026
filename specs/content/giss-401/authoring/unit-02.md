@@ -6,9 +6,11 @@ This is an author self-check and backward-design record, not an independent revi
 ## Enduring understandings and evidence
 
 - Topic 2.1: source authority differs from confidence or popularity; Hadith reports preserve
-  knowledge of the Sunnah; dependent legal reasoning needs a relevant basis. Evidence: three
-  retrieval questions, source-sorting activity, four self-check statements and an analytical
-  response to Amina with an explicit limit on classroom authority.
+  knowledge of the Sunnah; dependent legal reasoning needs a relevant basis. Classical
+  non-direct-ruling cases include Sahaba consensus on compiling the Qur'an and Qiyas on
+  Friday prayer commercial contracts. Evidence: three retrieval questions, source-sorting
+  activity, four self-check statements and an analytical response to Amina with an explicit
+  limit on classroom authority.
 - Topic 2.2: exact references enable checking; meanings and applications need distinguishing;
   Qur'anic moral themes guide conduct with attention to context. Evidence: three retrieval
   questions, peer-checked theme cards, four self-check statements and an analysis of Bilal's
@@ -61,13 +63,13 @@ range. Reading time excludes carrying out activities and writing responses.
 
 | File | Body words | Minutes |
 |---|---|---|
-| index.mdx | 424 | 3 |
-| topic-01.mdx | 2433 | 13 |
-| topic-02.mdx | 2491 | 14 |
-| topic-03.mdx | 2511 | 14 |
-| unit-assessment.mdx | 3035 | 16 |
+| index.mdx | 428 | 3 |
+| topic-01.mdx | 2815 | 15 |
+| topic-02.mdx | 2494 | 14 |
+| topic-03.mdx | 2514 | 14 |
+| unit-assessment.mdx | 3118 | 17 |
 
-Total: 60 minutes, within the approved 55–75 minute band. No re-baselining required.
+Total: 63 minutes, within the approved 55–75 minute band. No re-baselining required.
 
 ## Integration handoff
 

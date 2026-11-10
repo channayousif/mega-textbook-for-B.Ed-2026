@@ -43,7 +43,7 @@
 | Unit 4 | G6 assets | ▣ | | Four English schematics and dark variants placed to meet current figure gates; geometry validation pending; Urdu localisation is a separate job. |
 | Unit 4 | G7 publish | ▢ | | Publication is outside this authoring job. |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | Approved spec and owner ruling D-2026-0079, 2026-11-02; not a new intake evaluation |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261103T141632651Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261110T051749123Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Fresh independent review needed, including qualified Islamic Studies scholar review of belief and law |
 | Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 2 | G5 ur-review | ▢ | | Pending G3 and Urdu translation; authored concept labels also need review |
@@ -109,3 +109,4 @@ After merging `origin/main` (which added the course overview), `node scripts/pre
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-05/G3/20261108T203238Z-g3-desk-922808a1.json |
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied for report specs/content/giss-401/reviews/unit-05/G3/20261108T203238Z-g3-desk-922808a1.json (opencode crew giss-401-u05-repair_en, 2026-11-10). F04-F14: Unverifiable sources declared and translation named; over-15-word quotations shortened or paraphrased; Mudarabah/Musharakah loss rules and ihtikar item repaired; risk-transfer and poverty claims qualified; Articles 20/22/25/36/38(f) stated with their qualifications; Ali, Umar and Charter accounts labelled reported; secular caricatures removed; plain-language rewrites; concept-item audit; hypothetical labels and funding/authority/confidentiality limits; formative set clarified. See authoring/unit-05.md. G3 remains open and unsigned; host provenance, frozen source bundle, render inspection and qualified scholar review pending. |
 | Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-07/G3/20261108T203238Z-g3-desk-750f7524.json |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/giss-401/reviews/unit-02/G3/20261108T203238Z-g3-desk-82690fcb.json |

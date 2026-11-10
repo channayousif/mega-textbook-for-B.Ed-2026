@@ -201,6 +201,7 @@ the surrounding explanations are author paraphrases. Read the full linked passag
 | [17:23–24](https://quran.com/17/23-24) | "be kind to parents" | Worship of Allah is joined with kindness, respectful speech and care towards parents. |
 | [33:21](https://quran.com/33/21) | "an excellent example" | The Messenger is presented as an example. |
 | [33:70](https://quran.com/33/70) | "say what is right" | Upright speech supports the honesty theme. |
+| [62:9](https://quran.com/62/9) | "leave off business" | The text directly prohibits trade during the Friday prayer call; Qiyas extends this prohibition to other transactions sharing the cause of distraction from prayer. |
 | [96:1–5](https://quran.com/96/1-5) | "Who taught by the pen" | Reading or reciting, creation and teaching are connected in the opening passage. |
 
 [Al-'Alaq surah information](https://quran.com/al-alaq/info) distinguishes the first five
