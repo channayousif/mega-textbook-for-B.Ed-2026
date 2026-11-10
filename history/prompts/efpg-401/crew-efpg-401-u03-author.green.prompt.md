@@ -100,24 +100,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored English EFPG-401 Unit 3 with index opening, 6 pedagogical topic files, 25 assessment items with self-study guidance, 12 placed SVGs with dark twins, governance specs, and validated G2 gate evidence.
+Authored English EFPG-401 Unit 3 with six pedagogical topics, 12 placed SVGs with dark variants, 25 assessment items, and verified G2 gate evidence.
 
 ## Outcome
 
 - Impact: author for EFPG-401 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 49 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English EFPG-401 Unit 3 with 6 pedagogical topics, 25 assessment items (10 MCQ, 10 RRQ, 5 ERQ), 12 placed SVGs with derived dark twins, governance specs (coverage, sources, figures, concepts), and validated G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay open until qualified independent review; this PR does not certify anything.
-- Pending / next owner: crew lead (Urdu mirror translation G4 and independent review G3).
+- Shipped / changed: Authored English EFPG-401 Unit 3 with six pedagogical topics, 12 placed SVGs with dark variants, 25 assessment items, and verified G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Print monographs by Cook (1991), Mohammad (1998), and Celce-Murcia (1991) are registered under unretrievable sources with owner ruling D-2026-0001 per depth-gate standards.
-  - Twelve schematic SVGs are placed and measured; Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
+  - Twelve schematic SVGs with derived dark twins are placed and text-geometry verified; Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
