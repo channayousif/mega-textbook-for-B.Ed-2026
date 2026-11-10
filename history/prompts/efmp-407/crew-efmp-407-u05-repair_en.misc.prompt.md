@@ -16,20 +16,29 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-407/crew-efmp-407-u05-repair_en.misc.prompt.md
-  - docs/semester-3/efmp-407/unit-05/topic-01.mdx
-  - docs/semester-3/efmp-407/unit-05/topic-02.mdx
-  - docs/semester-3/efmp-407/unit-05/topic-03.mdx
-  - docs/semester-3/efmp-407/unit-05/unit-assessment.mdx
-  - specs/content/efmp-407/authoring/unit-05.md
-  - specs/content/efmp-407/coverage/unit-05.md
-  - specs/content/efmp-407/sources/texts/iucn-pakistan-2004-tek.md
-  - specs/content/efmp-407/sources/texts/munir-2021-glacier-grafting.md
-  - specs/content/efmp-407/sources/unit-05.md
-  - specs/content/efmp-407/tasks.md
-  - specs/content/efmp-407/translation/unit-05.md
+ - docs/semester-3/efmp-407/unit-05/topic-01.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-02.mdx
+ - docs/semester-3/efmp-407/unit-05/topic-03.mdx
+ - docs/semester-3/efmp-407/unit-05/unit-assessment.mdx
+ - history/prompts/efmp-407/crew-efmp-407-u05-repair_en.misc.prompt.md
+ - specs/content/efmp-407/authoring/unit-05.md
+ - specs/content/efmp-407/coverage/unit-05.md
+ - specs/content/efmp-407/reviews/unit-05/G2/20261110T022251179Z-gates.json
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261110T022251179Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261110T022251179Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261110T022251179Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261110T022251179Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261110T022251179Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261110T022251179Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261110T022251179Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261110T022251179Z/validate-content.txt
+ - specs/content/efmp-407/sources/texts/iucn-pakistan-2004-tek.md
+ - specs/content/efmp-407/sources/texts/munir-2021-glacier-grafting.md
+ - specs/content/efmp-407/sources/unit-05.md
+ - specs/content/efmp-407/tasks.md
+ - specs/content/efmp-407/translation/unit-05.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -83,32 +92,33 @@ From `specs/content/efmp-407/reviews/unit-05/G3/20261108T203238Z-g3-desk-7b51d54
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Repaired every open G3 finding in scope. F1: re-sourced the glacier-grafting claim to Munir et al. (2021), a peer-reviewed open-access source verified through Crossref (DOI 10.3390/su13095208), and declared the IUCN Pakistan (2004) row under `## Unverifiable sources` with the retrieval attempts, date and owner authorisation D-2026-0001; removed the in-text IUCN citations. F2: reworded the two per-topic `## Check your understanding` items tagged `*(Analyze)*` to the approved `Remember/Understand/Apply` band. F3: softened the Karez crisis numbers and place names to the bound Kahlown & Hamilton excerpt. F4: changed the UNESCO attribution and related prose from "concentric" to "interconnected". F5: removed the Purvis et al. (2019) citation from the social-justice definition. F6: added a standalone peace-education definition. Appended an unticked Unit 5 G3 advisory-repair tracker row naming report 20261108T203238Z-g3-desk-7b51d549. Refreshed the stale G2 gate evidence and repointed the tracker row.
+Repaired every open G3 finding for EFMP-407 Unit 5 (glacier grafting re-sourced to Munir et al. 2021, IUCN Pakistan 2004 declared unverifiable per D-2026-0001, formative items reworded to Apply, Karez/concentric/Purvis/peace-education advisories resolved), refreshed the G2 gate evidence, and appended the unticked advisory-repair tracker row.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-407 Unit 5 by opencode.
-- Tests: npm run check:content 14/14 PASS.
-- Files: 13 file(s), listed above.
+- Impact: repair_en for EFMP-407 Unit 5 by opencode (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: re-sourced glacier grafting to Munir et al. (2021); declared IUCN Pakistan (2004) under `## Unverifiable sources` per D-2026-0001; reworded the two formative items to Apply; softened the Karez crisis claims; changed "concentric" to "interconnected"; removed the Purvis attribution; added a peace-education definition; refreshed the G2 gate evidence; appended the unticked G3 advisory-repair tracker row.
-- Decisions the team must respect: G3/G5 stay advisory/open until a qualified sign-off; this branch does not certify anything. The IUCN Pakistan (2004) row is cited by reference only and no prose claim rests on it.
-- Pending / next owner: fresh independent G3 review owns acceptance of the repairs; independent G5 owns the Urdu mirror and rendered inspection.
+- Shipped / changed: Repaired every open G3 finding for EFMP-407 Unit 5 (glacier grafting re-sourced to Munir et al. 2021, IUCN Pakistan 2004 declared unverifiable per D-2026-0001, formative items reworded to Apply, Karez/concentric/Purvis/peace-education advisories resolved), refreshed the G2 gate evidence, and appended the unticked advisory-repair tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Narrow 360px and A4 print render inspection remains undone; it needs a host allowed to build and run a browser.
-  - The glacier-grafting paragraph is deliberately framed at the level Munir et al. (2021)'s abstract supports; a fresh reviewer may check the full text for the ice-combination mechanics.
-  - `static/content-status.json` is gitignored and must be regenerated locally after tracker edits.
-- Paperclip issues affected: none (ticket null).
+  - Narrow-screen and A4 print render inspection remains undone (crew brief blocks build/browser); accessibility is unverified.
+  - The glacier-grafting paragraph is framed at the level Munir et al. (2021)'s abstract supports; a fresh reviewer should check the full text for the ice-combination mechanics.
+  - G3/G5 stay open and unsigned; a fresh independent review bundle is required after these repairs.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
