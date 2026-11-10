@@ -1,46 +1,49 @@
 ---
 id: crew-gicp-400-u05-repair_en
-title: Repair GICP-400 Unit 5 from the latest G3 report
+title: crew repair_en GICP-400 unit 5
 stage: misc
 date: 2026-11-10
 surface: agent
-model: crew
+model: opencode
 feature: gicp-400
 branch: crew/gicp-400-u05-repair_en
 user: crew
-command: opencode worker on .crew/brief.md
-labels: ["crew", "opencode", "gicp-400", "unit-05", "g3-repair"]
+command: crew repair_en
+labels: ["crew", "opencode", "repair_en"]
 links:
   spec: specs/content/gicp-400/content-spec.md
   ticket: null
-  adr: history/adr/0019-agent-review-independence.md
+  adr: null
   pr: null
 files:
-  - docs/semester-3/gicp-400/unit-05/topic-02.mdx
-  - docs/semester-3/gicp-400/unit-05/topic-03.mdx
-  - docs/semester-3/gicp-400/unit-05/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-05/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-05/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-05/unit-assessment.mdx
-  - specs/content/gicp-400/figures/unit-05.md
-  - specs/content/gicp-400/sources/unit-05.md
-  - specs/content/gicp-400/tasks.md
-  - specs/content/gicp-400/reviews/unit-05/G2/20261110T040923255Z-gates.json
-  - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/
-  - static/img/figures/gicp-400/unit-05/fig-U5-6.svg
-  - static/img/figures/gicp-400/unit-05/fig-U5-6.dark.svg
-  - static/img/figures/gicp-400/unit-05/fig-U5-6.ur.svg
-  - static/img/figures/gicp-400/unit-05/fig-U5-6.ur.dark.svg
+ - docs/semester-3/gicp-400/unit-05/topic-02.mdx
+ - docs/semester-3/gicp-400/unit-05/topic-03.mdx
+ - docs/semester-3/gicp-400/unit-05/unit-assessment.mdx
+ - history/prompts/gicp-400/crew-gicp-400-u05-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-05/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-05/unit-assessment.mdx
+ - specs/content/gicp-400/figures/unit-05.md
+ - specs/content/gicp-400/reviews/unit-05/G2/20261110T040923255Z-gates.json
+ - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/check-bloom-bands.txt
+ - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/check-concept-graph.txt
+ - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/check-depth-gate.txt
+ - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/check-docs-sync.txt
+ - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/check-figures.txt
+ - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/check-no-answer-keys.txt
+ - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/check-no-em-dash.txt
+ - specs/content/gicp-400/reviews/unit-05/G2/logs-20261110T040923255Z/validate-content.txt
+ - specs/content/gicp-400/sources/unit-05.md
+ - specs/content/gicp-400/tasks.md
+ - static/img/figures/gicp-400/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/gicp-400/unit-05/fig-U5-6.svg
+ - static/img/figures/gicp-400/unit-05/fig-U5-6.ur.dark.svg
+ - static/img/figures/gicp-400/unit-05/fig-U5-6.ur.svg
 tests:
-  - npm run check:content
-  - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/gicp-400/unit-05/fig-U5-6*.svg
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-
-The brief (verbatim):
 
 # Crew job gicp-400-u05-repair_en
 
@@ -86,28 +89,32 @@ From `specs/content/gicp-400/reviews/unit-05/G3/20261108T203238Z-g3-desk-f91ffb7
 - (gicp-400-u05-translate, translate, opencode) Chromium `measure-figure-text.mjs` and `render-inspect.mjs --locale ur` were not run (crew brief prohibits Playwright); a Pillow + Raqm approximation of the gate’s geometry checks passed on all six `.ur.svg`, so the next authorised session should run the real browser geometry and A4/narrow-width render inspection.
 - (gicp-400-u05-translate, translate, opencode) The UR index declares `key_terms: []` because none of the unit’s key concepts is in `terminology.csv`; the handoff at `specs/content/gicp-400/reviews/unit-05/G4/translation-handoff.md` lists every unbanked term used, as owner proposals.
 
+
 ## Response snapshot
 
-Applied the latest G3 report's actionable findings to GICP-400 Unit 5 in EN and UR. F1: qualified the fig-U5-6 alt text, manifest and SVG desc to "each may depend on resources and none can be enforced in court" (the visible SVG already said "may"), then rederived both dark variants with `build-figure-variants.mjs`. F2: replaced "under sixteen" with "aged five to sixteen" in the two topic-03 examples. F3: verified the LUMS page (Arooba Mansoor, 11 February 2025) and corrected the citation in topic-02 EN/UR, its inline citation, and sources/unit-05. F8: retagged RRQs 4, 6, 9 and 10 from Analyze to Understand in EN/UR to match their actual reproduction demand. Appended the Unit 5 G3 repair tracker row (unticked), refreshed the now-stale G2 gate evidence, and committed.
+Applied GICP-400 Unit 5's latest G3 findings (F1 fig-U5-6 alt/manifest/SVG desc qualified with both dark variants rederived, F2 full five-to-sixteen range, F3 LUMS citation corrected to Mansoor 2025, F8 RRQs 4/6/9/10 retagged to Understand) in EN and UR, appended the unticked repair tracker row, refreshed the G2 gate evidence, and committed with a PHR.
 
 ## Outcome
 
-- ✅ Impact: F1, F2, F3 and F8 resolved in EN and UR; G2 evidence fresh; Unit 5 G3 stays open and unticked.
-- 🧪 Tests: `npm run check:content` all 14 gates pass; `measure-figure-text.mjs` exits 0 on all four fig-U5-6 SVGs (two cosmetic wordmark notes only).
-- 📁 Files: 6 content/topic/assessment MDX files, figure manifest, sources file, tracker, 4 SVG variants, 1 G2 evidence bundle refreshed.
-- 🔁 Next prompts: fresh independent G3 review of Unit 5 after owner authorisation; render inspection (narrow viewport and A4 print) on an authorised browser host.
-- 🧠 Reflection: The blocking alt-text defect was in the description layer only; the visible SVG text already carried the correct conditional wording, so the repair was to bring the alt, manifest and desc into line with it.
+- Impact: repair_en for GICP-400 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 23 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: F1 fig-U5-6 alt/manifest/SVG desc qualified in EN and UR with both dark variants rederived; F2 five-to-sixteen range stated in topic-03 examples (EN/UR); F3 LUMS Shehla Zia citation corrected to Mansoor (2025, February 11) in topic-02 EN/UR and sources/unit-05; F8 RRQs 4, 6, 9, 10 retagged Analyze to Understand (EN/UR); Unit 5 G3 repair tracker row appended unticked; G2 gate evidence refreshed.
-- Decisions the team must respect: F8 was resolved by recalibrating the Bloom demand of the four RRQs to Understand (the finding's first option), not by adding unfamiliar evidence; the RRQ band in the approved spec is "Understand to Analyze", so the retag stays inside the blueprint. The G2 evidence file is now `specs/content/gicp-400/reviews/unit-05/G2/20261110T040923255Z-gates.json`.
-- Pending / next owner: F4 rendered accessibility/narrow-view/A4 evidence, F5 author-run provenance, F6 official Twenty-seventh Amendment primary-source verification and F7 a fresh blind assessment solve all remain unavailable to this job and need an authorised host and a fresh independent reviewer. G3 remains open and unticked.
-- Paperclip issues affected: none.
+- Shipped / changed: Applied GICP-400 Unit 5's latest G3 findings (F1 fig-U5-6 alt/manifest/SVG desc qualified with both dark variants rederived, F2 full five-to-sixteen range, F3 LUMS citation corrected to Mansoor 2025, F8 RRQs 4/6/9/10 retagged to Understand) in EN and UR, appended the unticked repair tracker row, refreshed the G2 gate evidence, and committed with a PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - F4-F7 (rendered accessibility/narrow-view/A4 evidence, author-run provenance, official Twenty-seventh Amendment primary-source verification, fresh blind assessment solve) remain unavailable to this job and need an authorised browser host plus a fresh independent reviewer; G3 stays open and unticked.
+  - The G2 gate evidence was refreshed to `specs/content/gicp-400/reviews/unit-05/G2/20261110T040923255Z-gates.json`; F8 was resolved by retagging RRQs 4, 6, 9, 10 to Understand (the finding's "recalibrate demand" option), which stays inside the approved "Understand to Analyze" band.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: editing any file inside a unit's G3 input manifest invalidates its G2 gate evidence; `check:pipeline-gate` fails with "stale or incomplete input manifest" until `prepare-gate-evidence.mjs --refresh-stale` is run on a clean tree.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS (14/14); `measure-figure-text.mjs` PASS (exit 0).
-- Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
