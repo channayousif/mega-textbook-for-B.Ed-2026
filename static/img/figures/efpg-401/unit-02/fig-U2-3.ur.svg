@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">نثر اور شاعری کی تدریس کا موازنہ</title>
+  <desc id="d">جدول جو نثر اور شاعری کی تدریس کا مقصد، بلند خوانی، رٹا لگانا اور لطف اٹھانا پر موازنہ کرتا ہے۔</desc>
+  <style> :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg { fill: var(--bg); } .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; } .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; } .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; } .h { font-size: 16px; font-weight: 700; fill: var(--ink); } .sh { font-size: 14px; font-weight: 600; fill: var(--ink); } .body { font-size: 13px; fill: var(--ink); } .muted { font-size: 13px; fill: var(--muted); } .wm { fill: var(--wm); font-size: 11px; } </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+  <text class="h" x="390" y="34" text-anchor="middle">نثر اور شاعری کی تدریس کا موازنہ</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">دو قسم کے عبارت، دو مختلف درس</text>
+  <rect class="panel" x="30" y="72" width="720" height="36" rx="4"/>
+  <text class="sh" x="735" y="96" text-anchor="end">خصوصیت</text>
+  <text class="sh" x="535" y="96" text-anchor="end">نثر کی تدریس</text>
+  <text class="sh" x="275" y="96" text-anchor="end">شاعری کی تدریس</text>
+  <rect class="panel-a" x="30" y="116" width="720" height="58" rx="4"/>
+  <text class="sh" x="735" y="140" text-anchor="end">مقصد</text>
+  <text class="body" x="535" y="140" text-anchor="end">مسلسل عبارت کو سمجھنا</text>
+  <text class="body" x="535" y="158" text-anchor="end">اور اس پر جواب دینا</text>
+  <text class="body" x="275" y="140" text-anchor="end">منظم عبارت سے لطف اٹھانا</text>
+  <text class="body" x="275" y="158" text-anchor="end">اور اس کے مفہوم پر جواب دینا</text>
+  <rect class="panel-b" x="30" y="182" width="720" height="58" rx="4"/>
+  <text class="sh" x="735" y="206" text-anchor="end">بلند خوانی</text>
+  <text class="body" x="535" y="206" text-anchor="end">ماڈل خوانی، پھر</text>
+  <text class="body" x="535" y="224" text-anchor="end">مفہوم کے لیے خاموش خوانی</text>
+  <text class="body" x="275" y="206" text-anchor="end">آواز اور جذبات کے لیے</text>
+  <text class="body" x="275" y="224" text-anchor="end">بلند خوانی، پھر باجماعت</text>
+  <rect class="panel-a" x="30" y="248" width="720" height="58" rx="4"/>
+  <text class="sh" x="735" y="272" text-anchor="end">رٹا لگانا</text>
+  <text class="body" x="535" y="272" text-anchor="end">اصل مقصد نہیں؛</text>
+  <text class="body" x="535" y="290" text-anchor="end">پہلے مفہوم آتا ہے</text>
+  <text class="body" x="275" y="272" text-anchor="end">ایک ممکنہ نتیجہ،</text>
+  <text class="body" x="275" y="290" text-anchor="end">مگر مقصد نہیں</text>
+  <rect class="panel-b" x="30" y="314" width="720" height="58" rx="4"/>
+  <text class="sh" x="735" y="338" text-anchor="end">لطف اٹھانا</text>
+  <text class="body" x="535" y="338" text-anchor="end">کہانی یا موضوع میں دلچسپی سے</text>
+  <text class="body" x="535" y="356" text-anchor="end">آتا ہے</text>
+  <text class="body" x="275" y="338" text-anchor="end">مرکزی؛ نظم کا تجربہ</text>
+  <text class="body" x="275" y="356" text-anchor="end">تجزیہ سے پہلے ہوتا ہے</text>
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

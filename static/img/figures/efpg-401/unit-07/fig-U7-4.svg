@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">An Essay Question with its Analytic Rubric</title>
+  <desc id="d">Diagram of an essay question on 'My Favourite Festival' with an analytic marking rubric showing four criteria and their mark ranges.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="480"/>
+
+  <text class="h" x="390" y="38" text-anchor="middle">An Essay Question with its Analytic Rubric</text>
+  <text class="muted" x="390" y="58" text-anchor="middle">The task on the left and the four criteria that carry the marks on the right</text>
+
+  <!-- Essay question box -->
+  <rect class="panel-a" x="40" y="110" width="260" height="304" rx="8"/>
+  <text class="sh" x="170" y="140" text-anchor="middle">Essay question</text>
+  <line class="stroke-a" x1="56" y1="154" x2="284" y2="154"/>
+  <text class="body" x="56" y="180">Write a short paragraph</text>
+  <text class="body" x="56" y="200">about my favourite</text>
+  <text class="body" x="56" y="220">festival.</text>
+  <text class="muted" x="56" y="248">Six to eight sentences.</text>
+  <text class="small" x="170" y="398" text-anchor="middle">One task, judged by criteria</text>
+
+  <!-- Arrow 1 to Content -->
+  <path class="stroke-a" d="M 300 142 L 392 142"/>
+  <polygon class="ah-a" points="392,137 400,142 392,147"/>
+
+  <!-- Arrow 2 to Organisation -->
+  <path class="stroke-b" d="M 300 222 L 392 222"/>
+  <polygon class="ah-b" points="392,217 400,222 392,227"/>
+
+  <!-- Arrow 3 to Vocabulary -->
+  <path class="stroke-c" d="M 300 302 L 392 302"/>
+  <polygon class="ah-c" points="392,297 400,302 392,307"/>
+
+  <!-- Arrow 4 to Grammar -->
+  <path class="stroke-d" d="M 300 382 L 392 382"/>
+  <polygon class="ah-d" points="392,377 400,382 392,387"/>
+
+  <!-- Criterion 1: Content -->
+  <rect class="panel-a" x="400" y="110" width="340" height="64" rx="8"/>
+  <text class="sh" x="416" y="136">1. Content</text>
+  <text class="body" x="416" y="158">Clear ideas about the festival</text>
+  <text class="sh" x="724" y="146" text-anchor="end">0-5 marks</text>
+
+  <!-- Criterion 2: Organisation -->
+  <rect class="panel-b" x="400" y="190" width="340" height="64" rx="8"/>
+  <text class="sh" x="416" y="216">2. Organisation</text>
+  <text class="body" x="416" y="238">A clear beginning, middle and end</text>
+  <text class="sh" x="724" y="226" text-anchor="end">0-4 marks</text>
+
+  <!-- Criterion 3: Vocabulary -->
+  <rect class="panel-c" x="400" y="270" width="340" height="64" rx="8"/>
+  <text class="sh" x="416" y="296">3. Vocabulary</text>
+  <text class="body" x="416" y="318">Festival words used correctly</text>
+  <text class="sh" x="724" y="306" text-anchor="end">0-3 marks</text>
+
+  <!-- Criterion 4: Grammar and spelling -->
+  <rect class="panel-d" x="400" y="350" width="340" height="64" rx="8"/>
+  <text class="sh" x="416" y="376">4. Grammar and spelling</text>
+  <text class="body" x="416" y="398">Complete, mostly correct sentences</text>
+  <text class="sh" x="724" y="386" text-anchor="end">0-3 marks</text>
+
+  <text class="wm" x="768" y="470" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

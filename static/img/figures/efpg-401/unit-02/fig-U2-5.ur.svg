@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">رہنمائی سے آزاد تحریر کا سلسلہ</title>
+  <desc id="d">فلو چارٹ جو رہنمائی سے آزاد تحریر کے سلسلے کے چار مراحل دکھاتا ہے، کاپی سے آزاد تحریر تک، ہر مرحلے پر سہارا کم ہوتا ہوا۔</desc>
+  <style> :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg { fill: var(--bg); } .stroke { stroke: var(--ink); stroke-width: 2; fill: none; } .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; } .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; } .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; } .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; } .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; } .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; } .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; } .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; } .h { font-size: 16px; font-weight: 700; fill: var(--ink); } .sh { font-size: 14px; font-weight: 600; fill: var(--ink); } .body { font-size: 13px; fill: var(--ink); } .muted { font-size: 13px; fill: var(--muted); } .small { font-size: 12px; fill: var(--muted); } .wm { fill: var(--wm); font-size: 11px; } .ah-a { fill: var(--a1); } .ah-b { fill: var(--a2); } .ah-c { fill: var(--a3); } .ah-d { fill: var(--a4); } .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; } </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+  <text class="h" x="390" y="34" text-anchor="middle">رہنمائی سے آزاد تحریر کا سلسلہ</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">بچے کی مواد پر ذمہ داری بڑھنے پر سہارا کم ہوتا ہے</text>
+  <rect class="panel-a" x="595" y="76" width="150" height="250" rx="8"/>
+  <text class="sh" x="670" y="104" text-anchor="middle">1. کاپی کرنا</text>
+  <line class="grid" x1="607" y1="114" x2="733" y2="114"/>
+  <text class="body" x="733" y="140" text-anchor="end">نمونہ عبارت کا نقل</text>
+  <text class="body" x="733" y="160" text-anchor="end">یا کاپی کریں</text>
+  <text class="small" x="733" y="196" text-anchor="end">خوشخطی پروان چڑھاتا ہے</text>
+  <text class="small" x="733" y="214" text-anchor="end">اور املا</text>
+  <rect class="panel-b" x="410" y="76" width="150" height="250" rx="8"/>
+  <text class="sh" x="485" y="104" text-anchor="middle">2. مکمل کرنا</text>
+  <line class="grid" x1="422" y1="114" x2="548" y2="114"/>
+  <text class="body" x="548" y="140" text-anchor="end">جزوی لکھی گئی</text>
+  <text class="body" x="548" y="160" text-anchor="end">عبارت مکمل کریں</text>
+  <text class="small" x="548" y="196" text-anchor="end">مواد کے بارے میں سوچیں</text>
+  <text class="small" x="548" y="214" text-anchor="end">ڈھانچے کے ساتھ</text>
+  <rect class="panel-c" x="225" y="76" width="150" height="250" rx="8"/>
+  <text class="sh" x="300" y="104" text-anchor="middle">3. رہنمائی والی تحریر</text>
+  <line class="grid" x1="237" y1="114" x2="363" y2="114"/>
+  <text class="body" x="363" y="140" text-anchor="end">اشاروں یا سوالات</text>
+  <text class="body" x="363" y="160" text-anchor="end">کے ساتھ لکھیں</text>
+  <text class="small" x="363" y="196" text-anchor="end">ڈھانچہ خیالات کی</text>
+  <text class="small" x="363" y="214" text-anchor="end">رہنمائی کرتا ہے</text>
+  <rect class="panel-d" x="40" y="76" width="150" height="250" rx="8"/>
+  <text class="sh" x="115" y="104" text-anchor="middle">4. آزاد تحریر</text>
+  <line class="grid" x1="52" y1="114" x2="178" y2="114"/>
+  <text class="body" x="178" y="140" text-anchor="end">نئے موضوع پر آزادانہ</text>
+  <text class="body" x="178" y="160" text-anchor="end">لکھیں</text>
+  <text class="small" x="178" y="196" text-anchor="end">خیالات منتخب کریں</text>
+  <text class="small" x="178" y="214" text-anchor="end">اور منظم کریں</text>
+  <path class="stroke-a" d="M 595 200 L 565 200"/>
+  <polygon class="ah-a" points="565,195 557,200 565,205"/>
+  <path class="stroke-b" d="M 410 200 L 380 200"/>
+  <polygon class="ah-b" points="380,195 372,200 380,205"/>
+  <path class="stroke-c" d="M 225 200 L 195 200"/>
+  <polygon class="ah-c" points="195,195 187,200 195,205"/>
+  <path class="stroke-d" stroke-dasharray="4 4" d="M 720 350 L 60 350"/>
+  <polygon class="ah-d" points="60,345 52,350 60,355"/>
+  <text class="small" x="390" y="372" text-anchor="middle">سہارا کاپی سے آزاد تحریر تک کم ہوتا ہے</text>
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

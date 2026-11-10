@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">تدریس کے لیے نشان لگائی گئی بارش کی نظم</title>
+  <desc id="d">چھوٹی بارش کی نظم کا ڈایاگرام جس میں قافیے کے الفاظ، تال کے ٹھپٹھ اور ایک نشان لگائی گئی تصویر تدریس کے لیے نشان لگائے گئے ہیں۔</desc>
+  <style> :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg { fill: var(--bg); } .stroke { stroke: var(--ink); stroke-width: 2; fill: none; } .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; } .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; } .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; } .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; } .h { font-size: 16px; font-weight: 700; fill: var(--ink); } .poem { font-size: 16px; fill: var(--ink); } .body { font-size: 13px; fill: var(--ink); } .muted { font-size: 13px; fill: var(--muted); } .small { font-size: 12px; fill: var(--muted); } .wm { fill: var(--wm); font-size: 11px; } </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+  <text class="h" x="390" y="34" text-anchor="middle">تدریس کے لیے نشان لگائی گئی بارش کی نظم</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">قافیہ، تال اور خیالِ تصویری کو نظر آتا بنانا</text>
+  <rect class="panel" x="60" y="70" width="660" height="270" rx="8"/>
+  <text class="poem" x="650" y="150" text-anchor="end">Soft rain falls,</text>
+  <text class="poem" x="650" y="195" text-anchor="end">Silver threads on the street,</text>
+  <text class="poem" x="650" y="240" text-anchor="end">Children splash with glee,</text>
+  <text class="poem" x="650" y="285" text-anchor="end">Happy sound of little feet.</text>
+  <ellipse class="stroke-c" cx="583" cy="188" rx="76" ry="17"/>
+  <text class="small" x="583" y="170" text-anchor="middle">تصویر</text>
+  <line class="stroke-a" x1="381" y1="200" x2="448" y2="200"/>
+  <line class="stroke-a" x1="391" y1="290" x2="439" y2="290"/>
+  <text class="small" x="370" y="200" text-anchor="end">قافیہ</text>
+  <text class="small" x="380" y="290" text-anchor="end">قافیہ</text>
+  <text class="small" x="650" y="170" text-anchor="end">1 2 3 4</text>
+  <text class="small" x="650" y="215" text-anchor="end">1 2 3 4</text>
+  <text class="small" x="650" y="260" text-anchor="end">1 2 3 4</text>
+  <text class="small" x="650" y="305" text-anchor="end">1 2 3 4</text>
+  <text class="small" x="590" y="305" text-anchor="end">تال</text>
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
