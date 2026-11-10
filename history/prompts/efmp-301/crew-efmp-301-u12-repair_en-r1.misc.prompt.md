@@ -70,22 +70,23 @@ From `specs/content/efmp-301/reviews/unit-12/G3/20261108T203238Z-g3-desk-ad4c974
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Verified that committed Unit 12 EN and UR content already satisfies every editable finding in G3 desk report ad4c974d, documented repair verification in repair-notes, and appended an unticked advisory tracker row in tasks.md; all 14 content gates pass.
+Verified Unit 12 EN and UR content resolves all editable findings of G3 desk report ad4c974d, documented repair verification, and appended the advisory unticked tracker row in tasks.md with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-301 Unit 12 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: repair_en for EFMP-301 Unit 12 by agy (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified Unit 12 EN/UR files satisfy G3 desk review report ad4c974d findings, added 20261110-repair-notes.md, and appended the advisory unticked tracker row in tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Verified Unit 12 EN and UR content resolves all editable findings of G3 desk report ad4c974d, documented repair verification, and appended the advisory unticked tracker row in tasks.md with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Owner must arrange authorised visual inspection (desktop, narrow-screen, A4 print) for fig-U12-1 and fig-U12-3.
@@ -95,7 +96,7 @@ Verified that committed Unit 12 EN and UR content already satisfies every editab
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 2 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
