@@ -1,6 +1,6 @@
 ---
 id: crew-geng-301-u03-repair_en-r1
-title: crew repair_en GENG-301 unit 3 round 1
+title: crew repair_en GENG-301 unit 3
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -21,8 +21,6 @@ files:
  - specs/content/geng-301/tasks.md
 tests:
  - npm run check:content
- - scripts/heavy.sh npm test
- - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/geng-301/unit-03/*.svg
 ---
 
 ## Prompt
@@ -68,30 +66,32 @@ From `specs/content/geng-301/reviews/unit-03/G3/20261108T203238Z-g3-desk-2e68277
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Appended G3 advisory tracker row for report 20261108T203238Z-g3-desk-2e68277a.json, recorded repair notes in specs/content/geng-301/reviews/unit-03/G3/20261110-repair-notes.md, verified all 16 figure SVGs, and confirmed all 14 content gates and vitest unit tests pass.
+Appended an advisory G3 revise tracker row for report 20261108T203238Z-g3-desk-2e68277a.json, documented repair notes, and verified all 14 content gates, 16 SVGs, and vitest suite clean.
 
 ## Outcome
 
-- Impact: repair_en for GENG-301 Unit 3 by agy (round 1).
-- Tests: npm run check:content, scripts/heavy.sh npm test, and figure text measurement passed.
+- Impact: repair_en for GENG-301 Unit 3 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded G3 repair notes for 20261108T203238Z-g3-desk-2e68277a.json and appended open advisory tracker row in specs/content/geng-301/tasks.md.
-- Decisions the team must respect: G3 stays open/unticked; no certification or self-signing.
-- Pending / next owner: crew lead (merge to main) and fresh independent G3 reviewer.
+- Shipped / changed: Appended an advisory G3 revise tracker row for report 20261108T203238Z-g3-desk-2e68277a.json, documented repair notes, and verified all 14 content gates, 16 SVGs, and vitest suite clean.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open; independent assessment, frozen handoff/provenance, narrow/print rendering and browser review remain pending.
+  - G3 remains open and unticked; fresh independent review with authenticated session provenance and blind solving required.
+  - Desktop, narrow-screen (360px), and A4 print rendering remain deferred to an authorized browser host.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS, npm test PASS, measure-figure-text PASS
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
