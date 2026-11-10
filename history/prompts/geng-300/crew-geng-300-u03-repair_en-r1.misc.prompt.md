@@ -1,6 +1,6 @@
 ---
 id: crew-geng-300-u03-repair_en-r1
-title: crew repair_en GENG-300 unit 3 (r1)
+title: crew repair_en GENG-300 unit 3
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,11 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/geng-300/crew-geng-300-u03-repair_en-r1.misc.prompt.md
-  - specs/content/geng-300/tasks.md
+ - history/prompts/geng-300/crew-geng-300-u03-repair_en-r1.misc.prompt.md
+ - specs/content/geng-300/tasks.md
 tests:
-  - npm run build:content-status
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -64,27 +63,28 @@ From `specs/content/geng-300/reviews/unit-03/G3/20261108T203238Z-g3-desk-8a32ad9
 - (geng-300-u03-repair_en-conflict1, fix, agy) Fresh independent G3 review requires owner authorisation under ADR-0019 (cycle limit); G3 remains unticked.
 - (geng-300-u03-repair_en-conflict1, fix, agy) Branch is level with origin/main and passes all 13 content gates.
 
+
 ## Response snapshot
 
-Verified the three latest Unit 3 G3 desk findings (report 20261108T203238Z-g3-desk-8a32ad91.json) are provenance, authority and render handoff items with no author-repairable content defect, and appended the required unticked advisory repair row naming that report.
+Appended an unticked Unit 3 G3 advisory repair row naming report 20261108T203238Z-g3-desk-8a32ad91.json (no content edits; all findings owner/host handoff), wrote its PHR, and committed both on branch crew/geng-300-u03-repair_en-r1 with check:content 14/14 passing.
 
 ## Outcome
 
-- Impact: repair_en for GENG-300 Unit 3 by opencode (attempt 1, -r1 branch).
-- Tests: npm run build:content-status then npm run check:content passed 14/14 in the job worktree.
+- Impact: repair_en for GENG-300 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended an unticked Unit 3 G3 advisory repair row naming report 20261108T203238Z-g3-desk-8a32ad91.json; no content edit was made because the desk report contains no author-repairable content finding.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit certifies nothing.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the commit touches a protected path).
+- Shipped / changed: Appended an unticked Unit 3 G3 advisory repair row naming report 20261108T203238Z-g3-desk-8a32ad91.json (no content edits; all findings owner/host handoff), wrote its PHR, and committed both on branch crew/geng-300-u03-repair_en-r1 with check:content 14/14 passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All three desk-report findings are owner/host handoff, not author-repairable: author-run identity and parent frozen-bundle handoff unavailable; the D-2026-0019 three-vs-four-unit authority conflict and the D-2026-00XX intake Partition placeholder need owner clarification; fresh narrow-view/A4 render inspection needs a permitted render host.
-  - The duplicate D-2026-0019 entries cited by the report are no longer present in specs/decisions/log.md (one entry remains); the underlying three-vs-four-unit conflict and the intake placeholder remain open.
-  - Fresh independent G3 needs owner authorisation under ADR-0019 (cycle limit); G3 remains unticked.
+  - All three G3 findings are owner/render-host handoff, not author-repairable; G3 stays unticked.
+  - The duplicate D-2026-0019 entries cited by the report are gone from specs/decisions/log.md, but the three-vs-four-unit authority conflict and the intake Partition D-2026-00XX placeholder remain open for the owner.
+  - Fresh independent G3 needs owner authorisation under ADR-0019 (cycle limit).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
