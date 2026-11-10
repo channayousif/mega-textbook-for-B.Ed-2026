@@ -13,18 +13,18 @@ bound below.
 **Registry verification actually performed.** Each DOI-bearing row was resolved against the
 **Crossref REST API on 2026-10-15** from this authoring host, and the returned title, journal,
 volume, issue, pages, year, author surnames and licence URL were compared field by field with the
-citation recorded here. That is a *metadata and licence* verification. **No full text was
-retrieved**, so no row below supports a quotation or a page-specific claim. No other registry
-(OpenAlex, ERIC, DOAJ) was queried and none is claimed. On 2026-11-03 the full texts of
-`subandiyah2025`, `serman2026` and `cast2024` were retrieved and bound; see "Full-text
-verification, 2026-11-03" below. `vernon2020` and `florian2014` remain metadata-only.
+citation recorded here. That initial check was a *metadata and licence* verification. No other
+registry (OpenAlex, ERIC, DOAJ) was queried and none is claimed. On 2026-11-03 the full texts of
+`subandiyah2025`, `serman2026` and `cast2024` were retrieved, read and bound (see "Full-text
+verification, 2026-11-03" below). The two subscription works (`vernon2020` and `florian2014`)
+remain metadata-only (see "Unverifiable sources" below).
 
 ## Author-selected bindings, open access, Crossref-verified
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | subandiyah2025 | Subandiyah, H., Nasrullah, R., Ramadhan, R., Supratno, H., Raharjo, R. P., & Lukman, F. (2025). The impact of differentiated instruction on student engagement and achievement in Indonesian language learning. *Cogent Education, 12*(1). | https://doi.org/10.1080/2331186X.2025.2516378 | U3-1 (that differentiation changes engagement as well as attainment), U3-2 (differentiating content, process and product in a real school system) | author-selected; open access, CC BY 4.0; Crossref-verified (metadata and licence) 2026-10-15; full text read 2026-11-03, excerpt bound at `sources/texts/subandiyah2025.md` |
-| serman2026 | Serman, & Ningrum. (2026). Cooperative learning in inclusive classrooms: Improving slow learners' fraction addition achievement. *Journal of Innovation and Research in Primary Education, 5*(3), 5273-5281. | https://doi.org/10.56916/jirpe.v5i3.3993 | U3-3 (cooperative structures used with pupils who are behind, in an ordinary primary classroom) | author-selected; open access, CC BY-SA 4.0; Crossref-verified (metadata and licence) 2026-10-15; full text read 2026-11-03, excerpt bound at `sources/texts/serman2026.md` |
+| serman2026 | Serman, S., & Ningrum, E. S. C. (2026). Cooperative learning in inclusive classrooms: Improving slow learners' fraction addition achievement. *Journal of Innovation and Research in Primary Education, 5*(3), 5273-5281. | https://doi.org/10.56916/jirpe.v5i3.3993 | U3-3 (cooperative structures used with pupils who are behind, in an ordinary primary classroom) | author-selected; open access, CC BY-SA 4.0; Crossref-verified (metadata and licence) 2026-10-15; full text read 2026-11-03, excerpt bound at `sources/texts/serman2026.md` |
 
 ## Author-selected bindings, Crossref-verified, not open access
 
@@ -56,7 +56,8 @@ and what the text does and does not support.
   inclusive Grade 6 classroom, 26 pupils including six slow learners, with fraction-addition
   mastery rising across two action-research cycles. Peer tutoring was the weakest observed
   behaviour, so the study supports the peer-mediated structure more firmly than peer
-  explanation as the mechanism.
+  explanation as the mechanism. Topic 3.2 reflects this distinction and formats the authors as
+  Serman, S., & Ningrum, E. S. C.
 - `cast2024` (`texts/cast2024.md`): the version 3.0 page names the three principles as multiple
   means of engagement, representation, and action and expression, as the unit uses them.
 

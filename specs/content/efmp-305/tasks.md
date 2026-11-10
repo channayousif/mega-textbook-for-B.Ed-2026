@@ -65,7 +65,7 @@ the 4 expected prompt-only findings until G6 renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261103T141631810Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261110T010218845Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -192,3 +192,4 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80fc.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261108T203238Z-g3-desk-79043796.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261108T203238Z-g3-desk-2a3b76c3.json |
+| Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80fc.json; serman2026 author initials (Serman, S., & Ningrum, E. S. C.) and peer tutoring mechanism nuance corrected in topic-02.mdx (EN+UR) and sources/unit-03.md; sources/unit-03.md retrieval notes clarified between retrieved excerpts and metadata-only subscription works; concepts/unit-03.md terminology note explicitly reaffirms G4 translator adherence to TEX-80 banked labels and unit phrases; repo gate findings (EFMP-305 U6, EFMP-304) verified outside U3 scope; G3 left unticked |
