@@ -30,6 +30,9 @@ English-only authoring from the approved Unit 1 and Unit 6 content-specs. No pub
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 1 | G6 assets | ▣ | | Eight English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-06/G2/20261110T133127223Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 6 | G6 assets | ▣ | | Ten English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 
 Reading estimates use final visible text at 180-200 words per minute: index 3, Topic 1.1 15, Topic 1.2 15, Topic 1.3 14, Topic 1.4 15, assessment 14, total 76 minutes within the approved 55-80 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
 
