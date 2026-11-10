@@ -1,6 +1,6 @@
 ---
 id: crew-gicp-400-u07-translate-r1
-title: crew translate GICP-400 unit 7 (round 1)
+title: crew translate GICP-400 unit 7
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -13,25 +13,24 @@ labels: ["crew", "agy", "translate"]
 links:
   spec: specs/content/gicp-400/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
-  - history/prompts/general/20261191-gicp-400-unit-07-urdu-translation.general.prompt.md
-  - history/prompts/gicp-400/crew-gicp-400-u07-translate-r1.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/unit-assessment.mdx
-  - specs/content/gicp-400/reviews/unit-07/G4/translation-handoff.md
-  - specs/content/gicp-400/tasks.md
-  - static/img/figures/gicp-400/unit-07/fig-U7-1.ur.dark.svg
-  - static/img/figures/gicp-400/unit-07/fig-U7-1.ur.svg
-  - static/img/figures/gicp-400/unit-07/fig-U7-2.ur.dark.svg
-  - static/img/figures/gicp-400/unit-07/fig-U7-2.ur.svg
-  - static/img/figures/gicp-400/unit-07/fig-U7-3.ur.dark.svg
-  - static/img/figures/gicp-400/unit-07/fig-U7-3.ur.svg
+ - history/prompts/general/20261191-gicp-400-unit-07-urdu-translation.general.prompt.md
+ - history/prompts/gicp-400/crew-gicp-400-u07-translate-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/unit-assessment.mdx
+ - specs/content/gicp-400/reviews/unit-07/G4/translation-handoff.md
+ - specs/content/gicp-400/tasks.md
+ - static/img/figures/gicp-400/unit-07/fig-U7-1.ur.dark.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-1.ur.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-2.ur.dark.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-2.ur.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-3.ur.dark.svg
+ - static/img/figures/gicp-400/unit-07/fig-U7-3.ur.svg
 tests:
-  - npm run build:content-status
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -75,23 +74,29 @@ the worker exited without committing any change
 
 ## Response snapshot
 
-Completed the GICP-400 Unit 7 Urdu mirror translation at G4:
-- Refined and polished the Urdu translations for `index.mdx`, `topic-01.mdx`, and `unit-assessment.mdx`, aligning with academic-plain Urdu register, fixing typos, and ensuring exact heading, component, and assessment item parity.
-- Derived dark variants (`.ur.dark.svg`) for all three localised SVG figures (`fig-U7-1.ur.svg`, `fig-U7-2.ur.svg`, `fig-U7-3.ur.svg`) and verified clean font metrics with `measure-figure-text.mjs`.
-- Confirmed zero em dashes, strict adherence to `specs/content/terminology.csv`, and validated that parity checks pass under temporary `reviewed` flip.
-- Documented G4 handoff and updated the G4 tracker row in `specs/content/gicp-400/tasks.md` with status `▢` (`draft`).
+Completed GICP-400 Unit 7 draft Urdu translation at G4 across all three MDX files and three localised schematic SVGs with derived dark twins, passing all 14 content gates.
 
 ## Outcome
 
-- Impact: Complete draft Urdu mirror for GICP-400 Unit 7 at G4.
-- Tests: `npm run check:content` (14/14 passed), `npm run figures:variants:check` (clean), `measure-figure-text.mjs` (exit 0).
-- Files: 13 files (Urdu MDX, localised SVGs, derived dark SVGs, handoff, tasks.md, prompt records).
+- Impact: translate for GICP-400 Unit 7 by agy (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 13 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Complete draft Urdu mirror for GICP-400 Unit 7 with 3 MDX files, 3 localised RTL SVGs and derived dark twins, updated G4 handoff and tasks.md tracker row.
-- Decisions the team must respect: `translation_status` remains `draft`; G5 review requires a fresh, independent reviewer session and must not certify its own translation.
-- Pending / next owner: Independent G5 reviewer for Urdu review; browser/A4 inspection in an authorized environment.
+- Shipped / changed: Completed GICP-400 Unit 7 draft Urdu translation at G4 across all three MDX files and three localised schematic SVGs with derived dark twins, passing all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 7 G4 mirror is fully draft-gate compliant and parity-clean.
-  - Rendered mobile/A4 inspection is pending due to crew headless/no-browser constraint.
+  - Unit 7 draft Urdu mirror has full structural, component and figure parity; translation_status remains draft awaiting independent G5 review.
+  - Rendered mobile 360px and A4 print layout inspection remain outstanding under the crew browser restriction.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: 2 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
