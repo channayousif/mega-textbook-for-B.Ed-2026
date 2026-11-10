@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 580" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">سیکھنے والے کی درجہ بندی کی الفاظی حکمت عملی</title>
+  <desc id="d">الفاظی حکمت عملی کا جدول جو دکھاتا ہے کہ سیکھنے والے کون سی مؤثر اور غیر مؤثر قرار دیتے ہیں، ہر ایک کے لیے کلاس روم کی مثال کے ساتھ۔</desc>
+  <style> :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg { fill: var(--bg); } .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; } .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; } .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; } .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; } .h { font-size: 16px; font-weight: 700; fill: var(--ink); } .sh { font-size: 14px; font-weight: 600; fill: var(--ink); } .body { font-size: 13px; fill: var(--ink); } .muted { font-size: 13px; fill: var(--muted); } .wm { fill: var(--wm); font-size: 11px; } </style>
+  <rect class="bg" x="0" y="0" width="780" height="580"/>
+  <text class="h" x="390" y="34" text-anchor="middle">سیکھنے والے کی درجہ بندی کی الفاظی حکمت عملی</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">تمیمی سعد اور راجبی (2018) کے نتائج</text>
+  <rect class="panel" x="30" y="72" width="720" height="36" rx="4"/>
+  <text class="sh" x="735" y="96" text-anchor="end">حکمت عملی</text>
+  <text class="sh" x="495" y="96" text-anchor="end">سیکھنے والوں کی درجہ بندی</text>
+  <text class="sh" x="305" y="96" text-anchor="end">کلاس روم کی مثال</text>
+  <rect class="panel-a" x="30" y="116" width="720" height="56" rx="4"/>
+  <text class="sh" x="735" y="140" text-anchor="end">الفاظ پڑھنا اور دہرانا</text>
+  <text class="muted" x="735" y="158" text-anchor="end">سب سے زیادہ پسندیدہ</text>
+  <text class="body" x="495" y="140" text-anchor="end">مؤثر</text>
+  <text class="body" x="305" y="140" text-anchor="end">باجماعت اور جوڑی میں</text>
+  <text class="body" x="305" y="158" text-anchor="end">نئے الفاظ کی دہرائی</text>
+  <rect class="panel-a" x="30" y="180" width="720" height="56" rx="4"/>
+  <text class="sh" x="735" y="204" text-anchor="end">سیاق میں الفاظ کا استعمال</text>
+  <text class="muted" x="735" y="222" text-anchor="end">مخصوص سیاق</text>
+  <text class="body" x="495" y="204" text-anchor="end">مؤثر</text>
+  <text class="body" x="305" y="204" text-anchor="end">ایک جملہ لکھیں</text>
+  <text class="body" x="305" y="222" text-anchor="end">جس میں لفظ صورتحال میں ہو</text>
+  <rect class="panel-b" x="30" y="244" width="720" height="56" rx="4"/>
+  <text class="sh" x="735" y="268" text-anchor="end">جملوں میں الفاظ کا استعمال</text>
+  <text class="muted" x="735" y="286" text-anchor="end">سب سے زیادہ کثرت</text>
+  <text class="body" x="495" y="268" text-anchor="end">کثرت</text>
+  <text class="body" x="305" y="268" text-anchor="end">The mango is sweet.</text>
+  <rect class="panel-b" x="30" y="308" width="720" height="56" rx="4"/>
+  <text class="sh" x="735" y="332" text-anchor="end">مادری زبان میں ترجمہ</text>
+  <text class="muted" x="735" y="350" text-anchor="end">بہت کثرت</text>
+  <text class="body" x="495" y="332" text-anchor="end">کثرت، مگر سطحی</text>
+  <text class="body" x="305" y="332" text-anchor="end">جلدی جانچ، پھر</text>
+  <text class="body" x="305" y="350" text-anchor="end">لفظ انگریزی میں استعمال کریں</text>
+  <rect class="panel-a" x="30" y="372" width="720" height="56" rx="4"/>
+  <text class="sh" x="735" y="396" text-anchor="end">لغت کا استعمال</text>
+  <text class="muted" x="735" y="414" text-anchor="end">کم استعمال</text>
+  <text class="body" x="495" y="396" text-anchor="end">کم استعمال مگر مؤثر</text>
+  <text class="body" x="305" y="396" text-anchor="end">لفظ تلاش کریں اور</text>
+  <text class="body" x="305" y="414" text-anchor="end">اس کا مثال جملہ پڑھیں</text>
+  <rect class="panel-c" x="30" y="436" width="720" height="56" rx="4"/>
+  <text class="sh" x="735" y="460" text-anchor="end">سطحی توجہ</text>
+  <text class="muted" x="735" y="478" text-anchor="end">صرف سطح</text>
+  <text class="body" x="495" y="460" text-anchor="end">غیر مؤثر</text>
+  <text class="body" x="305" y="460" text-anchor="end">فہرست ایک بار کاپی کریں</text>
+  <text class="body" x="305" y="478" text-anchor="end">اور الفاظ کا استعمال نہ کریں</text>
+  <rect class="panel-c" x="30" y="500" width="720" height="44" rx="4"/>
+  <text class="sh" x="735" y="522" text-anchor="end">مادری زبان کا افراط</text>
+  <text class="body" x="495" y="522" text-anchor="end">غیر مؤثر</text>
+  <text class="body" x="305" y="522" text-anchor="end">پورا درس اردو میں پڑھائیں</text>
+  <text class="wm" x="768" y="570" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

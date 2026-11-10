@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">جماعت کے درجے کے مطابق تحریری کام</title>
+  <desc id="d">جدول جماعت کے درجے کے مطابق تحریری کاموں کا، ہر کام کو درکار سہارا اور استاد کے کردار کے ساتھ۔</desc>
+  <style> :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg { fill: var(--bg); } .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; } .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; } .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; } .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; } .h { font-size: 16px; font-weight: 700; fill: var(--ink); } .sh { font-size: 14px; font-weight: 600; fill: var(--ink); } .body { font-size: 13px; fill: var(--ink); } .muted { font-size: 13px; fill: var(--muted); } .wm { fill: var(--wm); font-size: 11px; } </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+  <text class="h" x="390" y="34" text-anchor="middle">جماعت کے درجے کے مطابق تحریری کام</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">کام، سہارا اور استاد کے کردار کا ملاپ</text>
+  <rect class="panel" x="30" y="72" width="720" height="36" rx="4"/>
+  <text class="sh" x="738" y="96" text-anchor="end">پہلو</text>
+  <text class="sh" x="600" y="96" text-anchor="end">پہلی سے دوسری جماعت</text>
+  <text class="sh" x="410" y="96" text-anchor="end">تیسری سے پانچویں جماعت</text>
+  <text class="sh" x="220" y="96" text-anchor="end">چھٹی سے آٹھویں جماعت</text>
+  <rect class="panel-a" x="30" y="116" width="720" height="64" rx="4"/>
+  <text class="sh" x="738" y="140" text-anchor="end">نمونہ کام</text>
+  <text class="muted" x="738" y="158" text-anchor="end">بچے کیا کرتے ہیں</text>
+  <text class="body" x="600" y="140" text-anchor="end">تصویر پر نشان لگائیں؛</text>
+  <text class="body" x="600" y="158" text-anchor="end">تین الفاظ کاپی کریں</text>
+  <text class="body" x="410" y="140" text-anchor="end">اشاروں کے ساتھ</text>
+  <text class="body" x="410" y="158" text-anchor="end">پیراگراف لکھیں</text>
+  <text class="body" x="220" y="140" text-anchor="end">آزادانہ مضمون یا</text>
+  <text class="body" x="220" y="158" text-anchor="end">کہانی لکھیں</text>
+  <rect class="panel-b" x="30" y="188" width="720" height="64" rx="4"/>
+  <text class="sh" x="738" y="212" text-anchor="end">درکار سہارا</text>
+  <text class="muted" x="738" y="230" text-anchor="end">کتنی مدد</text>
+  <text class="body" x="600" y="212" text-anchor="end">نمونہ اور</text>
+  <text class="body" x="600" y="230" text-anchor="end">الفاظی ذخیرہ</text>
+  <text class="body" x="410" y="212" text-anchor="end">اشارے اور</text>
+  <text class="body" x="410" y="230" text-anchor="end">جملے کا ڈھانچہ</text>
+  <text class="body" x="220" y="212" text-anchor="end">واضح کام اور</text>
+  <text class="body" x="220" y="230" text-anchor="end">منصوبہ بندی کا وقت</text>
+  <rect class="panel-c" x="30" y="260" width="720" height="64" rx="4"/>
+  <text class="sh" x="738" y="284" text-anchor="end">استاد کا کردار</text>
+  <text class="muted" x="738" y="302" text-anchor="end">استاد کا کام</text>
+  <text class="body" x="600" y="284" text-anchor="end">مظاہرہ کریں اور</text>
+  <text class="body" x="600" y="302" text-anchor="end">ہر مرحلے کی رہنمائی</text>
+  <text class="body" x="410" y="284" text-anchor="end">رہنمائی والے سوالات پوچھیں؛</text>
+  <text class="body" x="410" y="302" text-anchor="end">خیالات کی جانچ</text>
+  <text class="body" x="220" y="284" text-anchor="end">کام طے کریں؛</text>
+  <text class="body" x="220" y="302" text-anchor="end">خیالات پر تاثرات دوں</text>
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
