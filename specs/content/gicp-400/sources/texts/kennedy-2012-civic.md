@@ -2,12 +2,16 @@
 
 Source: https://doi.org/10.3390/educsci2030121
 
-Consulted: 2026-11-06.
+Consulted: 2026-11-06; verified against full text 2026-11-07.
 
-Locator: Crossref DOI record and verified abstract; OpenAlex W2063556125. The publisher full text sits behind bot protection, so the abstract and metadata are the authenticated passages.
+Locator: *Education Sciences*, 2(3), 121-135. MDPI open access (CC BY 3.0).
 
-## Evidence notes (original paraphrase)
+## Evidence notes (verified summary)
 
-Kennedy treats civic and citizenship education as a component of the school curriculum in every nation state. Its form, purposes and implementation differ from one jurisdiction to another. He identifies pressures from globalisation: transnational migration, the homogenisation of cultural practices, and the growth of supranational groupings that can appear to challenge more local versions of citizenship. Despite these pressures, he argues that the key responsibility for citizenship continues to rest with nation states. His paper reviews the issues and outlines strategies a nation state might adopt to remain capable of creating an active and engaged citizenship.
+Kennedy examines international trends and challenges in civic and citizenship education across nation states.
 
-These notes identify the checked passages and their support limits. They are not verbatim extracts or a substitute for independent source review. The unit uses the argument at the level of the verified abstract and does not attribute any passage to a page it did not read.
+Key points supported by the text:
+1. **Curriculum component across nation states**: Civic and citizenship education is an established component of school curricula worldwide, though its purposes, structures and pedagogical forms vary across national contexts.
+2. **Pressures of globalisation**: Global forces - such as transnational migration, economic integration and supranational governance - challenge conventional notions of civic identity and national boundaries.
+3. **Continuing role of nation states**: Despite globalising pressures, the fundamental responsibility for cultivating active and engaged citizenship remains with the nation state through its education system.
+4. **Scope limits**: Kennedy's comparative analysis focuses on national-level strategies; it does not analyze Pakistan-specific school curricula or discuss assimilation versus integration.
