@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 390" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Grammar-Translation Lesson Sequence</title>
+  <desc id="d">Diagram detailing the four sequential phases of a Grammar-Translation lesson: explicit rule presentation, bilingual vocabulary memorization, model examples, and bidirectional translation practice.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="390"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Four Phases of a Grammar-Translation Lesson</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">The classic deductive cycle: from abstract rule to translation practice</text>
+
+  <!-- Step 1 -->
+  <rect class="panel-a" x="40" y="80" width="160" height="240" rx="8"/>
+  <text class="sh" x="120" y="108" text-anchor="middle">1. Rule Statement</text>
+  <text class="small" x="120" y="128" text-anchor="middle">Deductive delivery</text>
+  <line class="grid" x1="50" y1="140" x2="190" y2="140"/>
+  <text class="body" x="50" y="170">• Teacher explains rule</text>
+  <text class="body" x="50" y="195">• Formula on board</text>
+  <text class="body" x="50" y="220">• Delivered in L1</text>
+  <text class="body" x="50" y="245">• Memorise terms</text>
+  <text class="small" x="120" y="295" text-anchor="middle">Abstract principle</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path class="stroke-a" d="M 200 200 L 220 200"/>
+  <polygon class="ah-a" points="220,195 228,200 220,205"/>
+
+  <!-- Step 2 -->
+  <rect class="panel-b" x="230" y="80" width="150" height="240" rx="8"/>
+  <text class="sh" x="305" y="108" text-anchor="middle">2. Word List</text>
+  <text class="small" x="305" y="128" text-anchor="middle">Bilingual lexicon</text>
+  <line class="grid" x1="240" y1="140" x2="370" y2="140"/>
+  <text class="body" x="240" y="170">• Isolated words</text>
+  <text class="body" x="240" y="195">• L1 equivalents</text>
+  <text class="body" x="240" y="220">• Written copies</text>
+  <text class="body" x="240" y="245">• Rote repetition</text>
+  <text class="small" x="305" y="295" text-anchor="middle">Decontextualised</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path class="stroke-b" d="M 380 200 L 400 200"/>
+  <polygon class="ah-b" points="400,195 408,200 400,205"/>
+
+  <!-- Step 3 -->
+  <rect class="panel-a" x="410" y="80" width="150" height="240" rx="8"/>
+  <text class="sh" x="485" y="108" text-anchor="middle">3. Model Sentences</text>
+  <text class="small" x="485" y="128" text-anchor="middle">Exemplar analysis</text>
+  <line class="grid" x1="420" y1="140" x2="550" y2="140"/>
+  <text class="body" x="420" y="170">• Rule in action</text>
+  <text class="body" x="420" y="195">• Teacher translates</text>
+  <text class="body" x="420" y="220">• Identify parts</text>
+  <text class="body" x="420" y="245">• Check structure</text>
+  <text class="small" x="485" y="295" text-anchor="middle">Grammar parsing</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path class="stroke-a" d="M 560 200 L 580 200"/>
+  <polygon class="ah-a" points="580,195 588,200 580,205"/>
+
+  <!-- Step 4 -->
+  <rect class="panel-c" x="590" y="80" width="150" height="240" rx="8"/>
+  <text class="sh" x="665" y="108" text-anchor="middle">4. Translation</text>
+  <text class="small" x="665" y="128" text-anchor="middle">Written practice</text>
+  <line class="grid" x1="600" y1="140" x2="730" y2="140"/>
+  <text class="body" x="600" y="170">• L1 to English</text>
+  <text class="body" x="600" y="195">• English to L1</text>
+  <text class="body" x="600" y="220">• Silent desk work</text>
+  <text class="body" x="600" y="245">• Written feedback</text>
+  <text class="small" x="665" y="295" text-anchor="middle">Accuracy focus</text>
+
+  <!-- Connecting summary line -->
+  <path class="stroke" stroke-dasharray="4 4" d="M 120 320 L 120 345 L 665 345 L 665 320"/>
+  <text class="small" x="390" y="362" text-anchor="middle">Primary learning outcome: reading comprehension and grammatical parsing</text>
+
+  <text class="wm" x="768" y="380" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

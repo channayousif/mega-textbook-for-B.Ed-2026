@@ -10,7 +10,7 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 |---|---|---|---|---|---|---|---|
 | 1 | Four Skills of Language Learning | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-10; eight schematic SVGs placed with dark variants; Urdu mirror drafted at G4 with 8 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
 | 2 | Teaching of English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
-| 3 | Methods of Teaching English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 3 | Methods of Teaching English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; twelve schematic SVGs placed with dark variants; G3 and G5 remain open |
 | 4 | Teaching of Grammar | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 5 | Lesson Planning | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 6 | A.V. Aids in Teaching of English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |

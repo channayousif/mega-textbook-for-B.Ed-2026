@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Audio-Lingual Dialogue Drill Progression</title>
+  <desc id="d">Flowchart illustrating the five stages of an Audio-Lingual dialogue drill: listen, repeat, substitute, transform, and communicative use.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="370"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Audio-Lingual Dialogue Drill Cycle</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Five progressive stages from oral modelling to semi-independent use</text>
+
+  <!-- Step 1: Listen -->
+  <rect class="panel-a" x="30" y="80" width="125" height="210" rx="8"/>
+  <text class="sh" x="92" y="108" text-anchor="middle">1. Listen</text>
+  <text class="small" x="92" y="128" text-anchor="middle">Oral Model</text>
+  <line class="grid" x1="40" y1="138" x2="145" y2="138"/>
+  <text class="body" x="40" y="165">• Teacher reads</text>
+  <text class="body" x="40" y="190">• Natural speed</text>
+  <text class="body" x="40" y="215">• Clear tone</text>
+  <text class="body" x="40" y="240">• Books closed</text>
+  <text class="small" x="92" y="275" text-anchor="middle">Aural input</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path class="stroke-a" d="M 155 185 L 175 185"/>
+  <polygon class="ah-a" points="175,180 183,185 175,190"/>
+
+  <!-- Step 2: Repeat -->
+  <rect class="panel-b" x="183" y="80" width="125" height="210" rx="8"/>
+  <text class="sh" x="245" y="108" text-anchor="middle">2. Repeat</text>
+  <text class="small" x="245" y="128" text-anchor="middle">Choral Mimicry</text>
+  <line class="grid" x1="193" y1="138" x2="298" y2="138"/>
+  <text class="body" x="193" y="165">• Whole-class</text>
+  <text class="body" x="193" y="190">• Bench groups</text>
+  <text class="body" x="193" y="215">• Individuals</text>
+  <text class="body" x="193" y="240">• Exact rhythm</text>
+  <text class="small" x="245" y="275" text-anchor="middle">Motor habit</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path class="stroke-b" d="M 308 185 L 328 185"/>
+  <polygon class="ah-b" points="328,180 336,185 328,190"/>
+
+  <!-- Step 3: Substitute -->
+  <rect class="panel-a" x="336" y="80" width="125" height="210" rx="8"/>
+  <text class="sh" x="398" y="108" text-anchor="middle">3. Substitute</text>
+  <text class="small" x="398" y="128" text-anchor="middle">Slot Variation</text>
+  <line class="grid" x1="346" y1="138" x2="451" y2="138"/>
+  <text class="body" x="346" y="165">• Teacher cue</text>
+  <text class="body" x="346" y="190">• Swap noun</text>
+  <text class="body" x="346" y="215">• Swap verb</text>
+  <text class="body" x="346" y="240">• Keep frame</text>
+  <text class="small" x="398" y="275" text-anchor="middle">Pattern control</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path class="stroke-a" d="M 461 185 L 481 185"/>
+  <polygon class="ah-a" points="481,180 489,185 481,190"/>
+
+  <!-- Step 4: Transform -->
+  <rect class="panel-b" x="489" y="80" width="125" height="210" rx="8"/>
+  <text class="sh" x="551" y="108" text-anchor="middle">4. Transform</text>
+  <text class="small" x="551" y="128" text-anchor="middle">Form Shift</text>
+  <line class="grid" x1="499" y1="138" x2="604" y2="138"/>
+  <text class="body" x="499" y="165">• Positive to neg</text>
+  <text class="body" x="499" y="190">• Statement to Q</text>
+  <text class="body" x="499" y="215">• Rapid replies</text>
+  <text class="body" x="499" y="240">• Fast prompt</text>
+  <text class="small" x="551" y="275" text-anchor="middle">Syntax control</text>
+
+  <!-- Arrow 4 to 5 -->
+  <path class="stroke-b" d="M 614 185 L 634 185"/>
+  <polygon class="ah-b" points="634,180 642,185 634,190"/>
+
+  <!-- Step 5: Use -->
+  <rect class="panel-c" x="642" y="80" width="120" height="210" rx="8"/>
+  <text class="sh" x="702" y="108" text-anchor="middle">5. Use</text>
+  <text class="small" x="702" y="128" text-anchor="middle">Pair Dialogue</text>
+  <line class="grid" x1="652" y1="138" x2="752" y2="138"/>
+  <text class="body" x="652" y="165">• Pair dialogue</text>
+  <text class="body" x="652" y="190">• Personal info</text>
+  <text class="body" x="652" y="215">• Meaning focus</text>
+  <text class="body" x="652" y="240">• Role play</text>
+  <text class="small" x="702" y="275" text-anchor="middle">Oral transfer</text>
+
+  <!-- Return loop -->
+  <path class="stroke" stroke-dasharray="4 4" d="M 702 290 L 702 320 L 92 320 L 92 295"/>
+  <polygon class="ah" points="87,295 92,287 97,295"/>
+  <text class="small" x="390" y="338" text-anchor="middle">Habit formation: repetition establishes automated second-language neural pathways</text>
+
+  <text class="wm" x="768" y="360" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

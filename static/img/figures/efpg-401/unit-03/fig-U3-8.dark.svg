@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Graded Sentence Structures</title>
+  <desc id="d">Diagram illustrating the pedagogical gradation of English sentence structures from simple Subject-Verb patterns to ditransitive and complex adverbial structures.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="370"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Graded Sentence Structures in Primary English</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Structural approach: sequencing patterns from simple foundation to complex clauses</text>
+
+  <!-- Level 4: Complex Pattern -->
+  <rect class="panel-c" x="40" y="75" width="700" height="52" rx="6"/>
+  <text class="sh" x="55" y="98">Level 4: Complex Pattern (Main Clause + Subordinate Clause)</text>
+  <text class="body" x="55" y="117">"The pupils listened attentively when the teacher spoke."</text>
+
+  <!-- Upward Arrow 3 to 4 -->
+  <path class="stroke-c" d="M 390 135 L 390 127"/>
+
+  <!-- Level 3: Ditransitive -->
+  <rect class="panel-b" x="40" y="135" width="700" height="52" rx="6"/>
+  <text class="sh" x="55" y="158">Level 3: Ditransitive Pattern (Subject + Verb + Indirect Object + Direct Object)</text>
+  <text class="body" x="55" y="177">"The headmaster gave Bilal an English dictionary."</text>
+
+  <!-- Upward Arrow 2 to 3 -->
+  <path class="stroke-b" d="M 390 195 L 390 187"/>
+
+  <!-- Level 2: Transitive -->
+  <rect class="panel-a" x="40" y="195" width="700" height="52" rx="6"/>
+  <text class="sh" x="55" y="218">Level 2: Transitive Pattern (Subject + Verb + Direct Object)</text>
+  <text class="body" x="55" y="237">"Sana writes a clean paragraph."</text>
+
+  <!-- Upward Arrow 1 to 2 -->
+  <path class="stroke-a" d="M 390 255 L 390 247"/>
+
+  <!-- Level 1: Basic Intransitive -->
+  <rect class="panel" x="40" y="255" width="700" height="52" rx="6"/>
+  <text class="sh" x="55" y="278">Level 1: Basic Intransitive Pattern (Subject + Verb)</text>
+  <text class="body" x="55" y="297">"Birds sing." / "Children play."</text>
+
+  <text class="small" x="390" y="332" text-anchor="middle">Pedagogical gradation principle: master foundational syntactic slots before introducing embedded modifiers</text>
+
+  <text class="wm" x="768" y="355" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

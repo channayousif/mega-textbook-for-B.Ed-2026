@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Communicative Activity Archetypes</title>
+  <desc id="d">Table detailing four communicative language activities: information gap, role play, classroom survey, and problem-solving strip story, including target grades and targeted structures.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Communicative Activity Matrix for Primary English</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Practical task designs fostering genuine information exchange and social interaction</text>
+
+  <!-- Row 1: Information Gap -->
+  <rect class="panel-a" x="40" y="75" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="102">Information Gap Map</text>
+  <text class="small" x="52" y="122">Grade 4 • Prepositions</text>
+  <rect class="panel" x="275" y="75" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="100">• Partners A and B hold complementary maps with missing shops</text>
+  <text class="body" x="290" y="124">• Language: "Where is the post office?" / "It is opposite the school."</text>
+
+  <!-- Row 2: Role Play -->
+  <rect class="panel-b" x="40" y="150" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="177">Marketplace Role Play</text>
+  <text class="small" x="52" y="197">Grade 5 • Modals &amp; requests</text>
+  <rect class="panel" x="275" y="150" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="175">• Buyer and fruit seller negotiate purchases in a busy village bazaar</text>
+  <text class="body" x="290" y="199">• Language: "How much are these apples?" / "One kilo, please."</text>
+
+  <!-- Row 3: Class Survey -->
+  <rect class="panel-a" x="40" y="225" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="252">Classroom Survey</text>
+  <text class="small" x="52" y="272">Grade 5 • Present questions</text>
+  <rect class="panel" x="275" y="225" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="250">• Pupils interview classmates to record data on favourite games</text>
+  <text class="body" x="290" y="274">• Language: "Do you play cricket?" / "Yes, I play every Friday."</text>
+
+  <!-- Row 4: Strip Story -->
+  <rect class="panel-c" x="40" y="300" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="327">Jumbled Strip Story</text>
+  <text class="small" x="52" y="347">Grade 6 • Discourse sequencing</text>
+  <rect class="panel" x="275" y="300" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="325">• Groups describe narrative strips without showing cards to others</text>
+  <text class="body" x="290" y="349">• Language: "First the boy fell," / "Then his friend helped him up."</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
