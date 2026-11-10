@@ -81,32 +81,33 @@ From `specs/content/efmp-407/reviews/unit-01/G3/20261108T203238Z-g3-desk-fb34f25
 - (efmp-407-u01-translate, translate, codex) English author must repair Orr attribution disclosure and RRQ-09 source uncertainty before G4 resumes.
 - (efmp-407-u01-translate, translate, codex) English author must repair Orr attribution disclosure and RRQ-09 source uncertainty before G4 resumes.
 
+
 ## Response snapshot
 
-Applied all findings of G3 desk report fb34f257 to EFMP-407 Unit 1: added learner-facing disclosure of secondary Orr (1992) attribution in topic-01.mdx; restored IUCN (2003) attribution, expert framing and causal uncertainty in unit-assessment.mdx RRQ-09 marking guidance; adjusted RRQ-03 Bloom tag from Analyze to Understand; added budget constraint and assumption guidance to topic-03.mdx activity; refreshed G2 gate evidence; documented repair verification in repair-notes; and appended the advisory unticked tracker row in tasks.md with all 14 content gates passing.
+Applied G3 desk review repairs to EFMP-407 Unit 1 content and assessment files, refreshed G2 gate evidence, and appended the unticked advisory G3 tracker row with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-407 Unit 1 by agy.
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: repair_en for EFMP-407 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Resolved all editable findings of G3 desk report fb34f257 in topic-01.mdx, topic-03.mdx, and unit-assessment.mdx; added 20261110-repair-notes.md; refreshed G2 gate evidence after content changes; appended unticked advisory G3 tracker row in tasks.md with all 14 content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Applied G3 desk review repairs to EFMP-407 Unit 1 content and assessment files, refreshed G2 gate evidence, and appended the unticked advisory G3 tracker row with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - English author repairs for Orr disclosure and RRQ-09 uncertainty are resolved; Unit 1 is unblocked for Urdu translation (G4).
-  - Browser, narrow-screen, and A4 print rendering remain host-prohibited in the crew environment and are left as owner handoffs.
+  - Browser, narrow-screen, and A4 print rendering remain host-prohibited under the crew brief and are left as owner handoffs.
   - Unit 1 G3 remains unticked pending fresh independent review and owner disposition under ADR-0019.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: G2 input manifest went stale upon editing unit content files; resolved by re-running prepare-gate-evidence at repaired HEAD and repointing tasks.md.
-- Graders run and results (PASS/FAIL): check:content PASS (all 14 gates pass).
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
