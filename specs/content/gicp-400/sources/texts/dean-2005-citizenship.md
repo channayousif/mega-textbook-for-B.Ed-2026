@@ -2,14 +2,16 @@
 
 Source: https://ecommons.aku.edu/pakistan_ied_pdck/30/
 
-Consulted: 2026-11-06.
+Consulted: 2026-11-06; verified against full text 2026-11-07.
 
-Locator: Aga Khan University eCommons record, abstract and recommended citation. The article PDF was not authenticated against the publisher version in this session.
+Locator: Aga Khan University eCommons repository, *International Journal of Citizenship and Teacher Education*, 1(2), 35-55.
 
-## Evidence notes (original paraphrase)
+## Evidence notes (verified summary)
 
-Dean's paper assesses citizenship education in Pakistani schools. It draws on two studies: an analysis of the social studies curriculum and textbooks, and a review of teaching and learning practices in schools. The findings indicate that the curriculum and textbooks do not clearly distinguish Islamic education from citizenship education, and that they promote exclusionary and passive citizenship. Pupils may acquire knowledge and some important values, but they do not learn the skills (problem-solving, decision-making) and values (civic mindedness, critical consciousness) needed for effective participation in democratic life. The paper closes by suggesting what a teacher education programme should include if teachers are to prepare students for informed, responsible and participatory citizenship.
+Dean assesses citizenship education in Pakistani schools using two studies: an analysis of the national curriculum and social studies textbooks, and a qualitative study of teaching and learning practices in schools.
 
-The paper is widely cited for its account of the transmission model in Pakistani civics teaching. In that model, pupils memorise facts about government departments, dates and constitutional bodies, and the result is passive citizenship: a learner who can repeat information for an examination but cannot deliberate, resolve a conflict peacefully or act on a public problem. Dean's alternative joins three dimensions: civic knowledge (rights, legal frameworks, democratic systems), civic skills (deliberation, peaceful conflict resolution, critical media literacy, collective action) and civic values (social justice, equal dignity, pluralism, human rights). She also describes the teacher as the primary agent of civic formation, and argues that a classroom run as an open and fair space, where every pupil's voice is heard, lets pupils experience democratic values in practice.
-
-These notes identify the checked passages and their support limits. They are clearly labelled paraphrase, not authenticated verbatim extracts. A reviewer should check the original passages.
+Key findings supported by the text:
+1. **Transmission model and rote memorisation**: Civics instruction is dominated by a transmission approach in which teachers transmit textbook knowledge and ensure its rote memorization for examinations.
+2. **Exclusionary and passive citizenship**: The curriculum and textbook analysis reveals that schooling produces exclusionary and passive citizenship. Pupils may acquire factual recall, but they fail to develop essential civic skills (such as problem-solving and decision-making) and civic values and dispositions (such as civic mindedness and critical consciousness).
+3. **Components of effective citizenship education**: Effective citizenship education requires developing a body of knowledge alongside relevant skills, values and dispositions, and participatory experience.
+4. **The role of the teacher**: Dean identifies that "Essential to the reconceptualization of education for democratic citizenship is the teacher." To foster active, democratic citizenship, teachers must shift from transmission pedagogy to classroom strategies that require students to work with and for each other in collaborative and reflective ways.
