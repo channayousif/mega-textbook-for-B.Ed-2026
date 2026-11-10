@@ -181,6 +181,14 @@ const config: Config = {
     },
   ],
 
+  scripts: [
+    {
+      src: 'https://analytics.ahrefs.com/analytics.js',
+      'data-key': 'ij+YRkZRrZobEWUujGJjDQ',
+      async: true,
+    },
+  ],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'ur'],
