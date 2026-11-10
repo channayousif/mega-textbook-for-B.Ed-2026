@@ -1,6 +1,6 @@
 ---
 id: crew-gsos-301-u02-repair_en-r1
-title: crew repair_en GSOS-301 unit 2 (round 1)
+title: crew repair_en GSOS-301 unit 2
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -13,14 +13,14 @@ labels: ["crew", "opencode", "repair_en"]
 links:
   spec: specs/content/gsos-301/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
- - specs/content/gsos-301/tasks.md
  - history/prompts/general/20261190-gsos-301-unit-02-g3-desk-repair.general.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u02-repair_en-r1.misc.prompt.md
+ - specs/content/gsos-301/tasks.md
 tests:
- - npm run build:content-status
- - npm run check:content (14/14 gates pass)
+ - npm run check:content
 ---
 
 ## Prompt
@@ -69,23 +69,32 @@ From `specs/content/gsos-301/reviews/unit-02/G3/20261108T203238Z-g3-desk-a2c0932
 - (gsos-301-u02-translate-r1, translate, codex) Translation remains draft; English review findings and rendered Urdu inspection remain pending before independent G5 review.
 - (gsos-301-u02-translate, translate, agy) translation_status remains draft pending independent G5 review; G4 tracker row recorded with auto:gates.
 
+
 ## Response snapshot
 
-Verified the 20261108 desk report restates the 20261102 findings verbatim against the post-repair bytes, confirmed every editable finding is already resolved in the current EN/UR content, figure and mappings by repair commit df2d55fd2, and appended the required unticked advisory G3 tracker row naming the report. No new content edits were required.
+Verified the 20261108 G3 desk report restates already-repaired findings, appended the unticked advisory Unit 2 G3 tracker row naming it, and committed the row plus PHRs with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: repair_en verification for GSOS-301 Unit 2 by opencode (round 1).
-- Tests: npm run check:content passed 14/14 after regenerating static/content-status.json.
-- Files: 2 file(s), listed above.
+- Impact: repair_en for GSOS-301 Unit 2 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended the Unit 2 G3 advisory repair row naming specs/content/gsos-301/reviews/unit-02/G3/20261108T203238Z-g3-desk-a2c0932a.json; F1-F5 and F8 verified already resolved in current bytes.
-- Decisions the team must respect: G3 stays open and unticked; no certification, no publication change, draft translation retained; no human initials or self-signing.
-- Pending / next owner: owner/review host owns F7 original author provenance and complete frozen source evidence; authorised rendering host owns F6 desktop/narrow/A4 inspection.
+- Shipped / changed: Verified the 20261108 G3 desk report restates already-repaired findings, appended the unticked advisory Unit 2 G3 tracker row naming it, and committed the row plus PHRs with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains unticked; render inspection and original provenance/complete source evidence remain pending.
+  - G3 stays unticked; F6 desktop/narrow/A4 render inspection and F7 original author run identity/model revision/complete frozen source evidence remain open for the owner/review host.
+  - Urdu translation remains draft pending independent G5; the 20261108 desk report's criteria/findings are stale copies, so a fresh independent review is needed after the missing evidence arrives.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
