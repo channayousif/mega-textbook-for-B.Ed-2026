@@ -1,8 +1,8 @@
 # EFPG-401 Teaching of English - Task tracker
 
-## Status: content spec approved (G0/G1); Unit 1 authoring in progress
+## Status: content spec approved (G0/G1); Unit 1 and Unit 6 English drafts complete
 
-English-only authoring from the approved Unit 1 content-spec. No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved Unit 1 and Unit 6 content-specs. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
 ## Units
 
@@ -13,7 +13,7 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 | 3 | Methods of Teaching English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 4 | Teaching of Grammar | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 5 | Lesson Planning | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
-| 6 | A.V. Aids in Teaching of English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 6 | A.V. Aids in Teaching of English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; ten schematic SVGs placed with dark variants; Urdu mirror is a separate job; G3 and G5 remain open |
 | 7 | Assessment | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
@@ -32,3 +32,5 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 
 Reading estimates use final visible text at 180-200 words per minute: index 3, Topic 1.1 15, Topic 1.2 15, Topic 1.3 14, Topic 1.4 15, assessment 14, total 76 minutes within the approved 55-80 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
+
+Unit 6 reading estimates use the same 180-200 words per minute: index 3, Topic 6.1 7, Topic 6.2 8, Topic 6.3 7, Topic 6.4 7, Topic 6.5 7, assessment 15, total 54 minutes within the approved 35-55 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
