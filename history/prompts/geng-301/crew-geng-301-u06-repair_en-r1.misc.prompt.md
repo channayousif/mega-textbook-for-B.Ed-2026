@@ -1,14 +1,14 @@
 ---
 id: crew-geng-301-u06-repair_en-r1
-title: crew repair_en-r1 GENG-301 unit 6
+title: crew repair_en GENG-301 unit 6
 stage: misc
 date: 2026-11-10
 surface: agent
-model: gemini-3.8-flash
+model: agy
 feature: geng-301
 branch: crew/geng-301-u06-repair_en-r1
 user: crew
-command: crew repair_en-r1
+command: crew repair_en
 labels: ["crew", "agy", "repair_en"]
 links:
   spec: specs/content/geng-301/content-spec.md
@@ -16,12 +16,11 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/geng-301/crew-geng-301-u06-repair_en-r1.misc.prompt.md
  - specs/content/geng-301/reviews/unit-06/repair-en-r1.md
  - specs/content/geng-301/tasks.md
 tests:
  - npm run check:content
- - scripts/heavy.sh npm test
- - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/geng-301/unit-06/*.svg
 ---
 
 ## Prompt
@@ -72,32 +71,32 @@ From `specs/content/geng-301/reviews/unit-06/G3/20261108T203238Z-g3-desk-80672f3
 - (geng-301-u06-fix, fix, codex) G3 remains incomplete and explicitly stale; fresh independent review and outstanding author/provenance repairs remain pending.
 - (geng-301-u06-review_en-conflict1, fix, codex) Unit 6 author repairs and fresh provenance/render review remain pending; G3 stays incomplete.
 
+
 ## Response snapshot
 
-Verified all F1-F8 author repairs against latest G3 report 20261108T203238Z-g3-desk-80672f33.json, measured all 16 Unit 6 SVGs clean with measure-figure-text.mjs, added repair-en-r1.md handoff documentation, and appended the advisory unticked G3 tracker row in tasks.md with all 14 content gates passing.
+Verified resolution of G3 desk findings F1-F8 for GENG-301 Unit 6, documented repairs in repair-en-r1.md, and recorded the advisory unticked G3 tracker row in tasks.md.
 
 ## Outcome
 
-- ✅ Impact: repair_en-r1 for GENG-301 Unit 6 by agy.
-- 🧪 Tests: npm run check:content (all 14 gates pass), vitest (39 files, 448 tests pass), measure-figure-text.mjs (16 SVGs pass).
-- 📁 Files: specs/content/geng-301/reviews/unit-06/repair-en-r1.md, specs/content/geng-301/tasks.md, history/prompts/geng-301/crew-geng-301-u06-repair_en-r1.misc.prompt.md.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: Desk review findings were verified against all scope files; figure geometry was independently validated using headless Playwright.
+- Impact: repair_en for GENG-301 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 3 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified F1-F8 repair resolutions in GENG-301 Unit 6, created repair-en-r1.md, and appended advisory unticked G3 tracker row in tasks.md.
-- Decisions the team must respect: G3 stays open (unticked, advisory); this author pass does not self-certify or mark G3 complete.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Shipped / changed: Verified resolution of G3 desk findings F1-F8 for GENG-301 Unit 6, documented repairs in repair-en-r1.md, and recorded the advisory unticked G3 tracker row in tasks.md.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 6 author repairs are verified against report 20261108T203238Z-g3-desk-80672f33.json.
-  - All 16 unit-06 SVG assets are verified clean by measure-figure-text.mjs.
-  - G3 remains unticked pending fresh independent review, host provenance, and browser/narrow/A4 render inspection.
+  - G3 remains open and unsigned pending fresh independent review and host-bound desktop/narrow/A4 render inspection.
+  - All 16 unit-06 SVG assets pass measure-figure-text.mjs cleanly and G2 gate evidence remains valid at committed inputs.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (all 14 content gates pass); vitest PASS (448 tests); figure text geometry PASS (16 SVGs).
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
