@@ -1,6 +1,6 @@
 ---
 id: crew-giss-401-u05-translate-r1
-title: crew translate GISS-401 unit 5 retry 1
+title: crew translate GISS-401 unit 5
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,22 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-05/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-05/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-05/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-05/unit-assessment.mdx
-  - specs/content/giss-401/reviews/unit-05/G4/translation-handoff.md
-  - specs/content/giss-401/tasks.md
-  - static/img/figures/giss-401/unit-05/fig-U5-1.ur.dark.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-1.ur.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-2.ur.dark.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-2.ur.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-3.ur.dark.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-3.ur.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-4.ur.dark.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-4.ur.svg
+ - history/prompts/giss-401/crew-giss-401-u05-translate-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-05/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-05/unit-assessment.mdx
+ - specs/content/giss-401/reviews/unit-05/G4/translation-handoff.md
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-05/fig-U5-1.ur.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-1.ur.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.ur.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.ur.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.ur.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.ur.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.ur.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -72,28 +73,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Translated GISS-401 Unit 5 into full Urdu mirror across 4 MDX files and 4 RTL SVG figures with dark variants, verified content gates, and recorded G4 handoff.
+Translated GISS-401 Unit 5 into its complete Urdu mirror at G4 with 4 MDX files, 4 RTL `.ur.svg` figures and derived dark variants, verified clean content gates, and recorded the G4 tracker row and handoff.
 
 ## Outcome
 
-- Impact: G4 Urdu mirror drafted for GISS-401 Unit 5 by agy (attempt 2).
-- Tests: `npm run check:content` 14/14 PASS; `measure-figure-text.mjs` PASS; `figures:variants:check` PASS; `check-svg-style` PASS; temporary `reviewed` flip parity checks clean.
-- Files: 14 file(s), listed above.
-- Next prompts: independent G5 review for Unit 5.
-- Reflection: none.
+- Impact: translate for GISS-401 Unit 5 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: G4 Urdu mirror for GISS-401 Unit 5: 4 MDX files (`index.mdx`, `topic-01.mdx`, `topic-02.mdx`, `unit-assessment.mdx`), 4 RTL `.ur.svg` figure schematics with derived `.ur.dark.svg` variants, translation handoff notes, and tasks.md tracker record.
-- Decisions the team must respect: G3 and G5 stay open/unsigned; `translation_status` remains `draft` pending independent G5 review.
-- Pending / next owner: independent G5 reviewer (g5-reviewer skill).
+- Shipped / changed: Translated GISS-401 Unit 5 into its complete Urdu mirror at G4 with 4 MDX files, 4 RTL `.ur.svg` figures and derived dark variants, verified clean content gates, and recorded the G4 tracker row and handoff.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G4 Urdu mirror drafted for Unit 5 across all 4 files with 4 RTL `.ur.svg` schematics and derived `.ur.dark.svg` twins; translation_status stays draft pending independent G5.
+  - Qur'an, hadith, and historical report passages were translated to academic-plain Urdu matching English citations; a qualified Islamic Studies scholar review is required at G5.
+  - Browser geometry and narrow-width/A4 print render inspections remain pending under host resource restrictions.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
