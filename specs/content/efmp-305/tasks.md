@@ -192,3 +192,4 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80fc.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261108T203238Z-g3-desk-79043796.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261108T203238Z-g3-desk-2a3b76c3.json |
+| Unit 5 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-05/G3/20261108T203238Z-g3-desk-79043796.json; F2–F8 repairs verified present in EN and UR on main (landed in 12b3c13a5, crew efmp-305-u05-repair_en, 2026-11-03); F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work; G3 remains unticked |
