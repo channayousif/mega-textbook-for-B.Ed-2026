@@ -14,7 +14,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 6 and Unit 7 conte
 | 4 | Teaching of Grammar | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 5 | Lesson Planning | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 6 | A.V. Aids in Teaching of English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; ten schematic SVGs placed with dark variants; Urdu mirror is a separate job; G3 and G5 remain open |
-| 7 | Assessment | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; four schematic SVGs placed with dark variants; Urdu mirror is a separate job; G3 and G5 remain open |
+| 7 | Assessment | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-10; four schematic SVGs placed with dark variants; Urdu mirror drafted at G4 with 4 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -41,7 +41,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 6 and Unit 7 conte
 | Unit 6 | G6 assets | ▣ | | Ten English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-07/G2/20261110T141529122Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
-| Unit 7 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notices |
+| Unit 7 | G4 ur-translation | ▣ | agent:agy | Four-file Urdu mirror and four localized SVG schematics with derived dark variants prepared from English 0c79bb31d; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-07/G4/translation-handoff.md). |
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 7 | G6 assets | ▣ | | Four English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
