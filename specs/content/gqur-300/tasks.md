@@ -89,3 +89,5 @@ on every unit).
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-02/G3/20261108T203238Z-g3-desk-9e1e2df2.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-04/G3/20261108T203238Z-g3-desk-dfd6f1c3.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-06/G3/20261108T203238Z-g3-desk-1181e965.json |
+
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied for report reviews/unit-04/G3/20261108T203238Z-g3-desk-dfd6f1c3.json; verified the existing repair at d2ce30b33 already resolves C2-01 (conditional 108/100/118 m courtyard skirting with translation-invariance note), C2-03 (rice-order comparison and scored Analyze criterion in topic-01 and ERQ-01) and the advisory items (P05 frontmatter exception, P06 RRQ-08 classification, P07 MCQ-06/RRQ-06 mappings, RRQ-02/RRQ-07/ERQ-03 scaffolding, topic-02 cylinder derivation, fig-U4-6 shelf-length method) in EN and UR; no further content edit required; P04 shared glossary entries and C2-02 source authorisation, C2-04 renders, C2-05 blind solve and C2-06 provenance remain owner follow-ups; no certification |
