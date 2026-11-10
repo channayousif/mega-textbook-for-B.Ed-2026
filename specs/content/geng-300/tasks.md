@@ -58,3 +58,4 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-02/G3/20261108T203238Z-g3-desk-ba75e8a7.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-03/G3/20261108T203238Z-g3-desk-8a32ad91.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-04/G3/20261108T203238Z-g3-desk-d45ca89b.json |
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-04/G3/20261108T203238Z-g3-desk-d45ca89b.json (fig-U4-1 geometry already repaired in 69e32dca7 and ab85b5815 and verified: measure-figure-text.mjs exits 0 for all unit-04 SVGs; source limitations already disclosed in topics 4.1-4.3 and the sources ledger; render-review not author-repairable under this job's build/server prohibition, needs a browser-capable host); G3 remains open and unsigned |
