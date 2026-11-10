@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-305-u05-repair_en-r1
-title: crew repair_en EFMP-305 unit 5 (round 1)
+title: crew repair_en EFMP-305 unit 5
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,10 +16,9 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-305/tasks.md
  - history/prompts/efmp-305/crew-efmp-305-u05-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-305/tasks.md
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -69,28 +68,32 @@ From `specs/content/efmp-305/reviews/unit-05/G3/20261108T203238Z-g3-desk-7904379
 - (efmp-305-u05-repair_en-conflict2, fix, opencode) The stated tasks.md conflict was already resolved by conflict1's merge `cda326287`; this run only synced main's later EFMP-301 Unit 4 repair.
 - (efmp-305-u05-repair_en-conflict2, fix, opencode) F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work; G3 stays unticked.
 
+
 ## Response snapshot
 
-Verified that the 20261108 G3 findings are byte-identical to the 20261102 findings already repaired on main in 12b3c13a5 (F2-F8 present in EN and UR), then appended the Unit 5 G3 tracker row naming the 20261108 report; F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work.
+Appended the Unit 5 G3 tracker row naming the 20261108 report after verifying its F2-F8 repairs were already landed on main, with all 14 content gates passing.
 
 ## Outcome
 
-- ✅ Impact: Unit 5 G3 tracker now records the 20261108 report as repaired; no prose edit was needed because the repairs already landed on main.
-- 🧪 Tests: `npm run build:content-status` then `npm run check:content` - all 14 content gates PASS.
-- 📁 Files: `specs/content/efmp-305/tasks.md` plus this PHR.
-- 🔁 Next prompts: owner/host supplies F1 provenance and rendering evidence, then a fresh independent G3 with MCQ re-solve.
-- 🧠 Reflection: the 20261108 report re-issued the 20261102 findings on a stale bundle; the current main already carries the repairs, so the smallest correct edit was the tracker row alone.
+- Impact: repair_en for EFMP-305 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: appended the Unit 5 G3 advisory row for `20261108T203238Z-g3-desk-79043796.json`; verified F2-F8 repairs present in EN and UR on main.
-- Decisions the team must respect: G3 stays unticked; the 20261108 findings duplicate the already-repaired 20261102 findings; do not re-apply the same prose edits.
-- Pending / next owner: owner/host for F1 provenance/rendering and a fresh independent G3 with MCQ re-solve.
-- Paperclip issues affected: crew job efmp-305-u05-repair_en-r1; no ticket supplied.
+- Shipped / changed: Appended the Unit 5 G3 tracker row naming the 20261108 report after verifying its F2-F8 repairs were already landed on main, with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The 20261108 G3 findings are byte-identical to the 20261102 set already repaired on main in 12b3c13a5, so no prose edit was needed; F2-F8 are present in EN and UR.
+  - F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work; G3 stays unticked.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a review desk can re-issue identical findings against a stale bundle after repairs have already merged; always diff the report findings and input manifest against current main before editing.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS (14/14).
-- Prompt variant (if applicable): crew brief v1, round 1.
-- Next experiment (smallest change to try): have the review desk record the bundle commit SHA in the report so staleness is detectable before a repair job starts.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
