@@ -32,3 +32,14 @@ Follow `.claude/skills/review-unit/SKILL.md`, its G3 accessibility rubric and
   the limit needs recorded owner authorisation. Do not self-sign or mark G3/G5 done.
 
 This handoff is an author repair record, not a new review or certification.
+
+## Addendum, 2026-11-10 (crew gqur-301-u10-repair_en-r1)
+
+The blocking render-review finding from
+`G3/20261108T203238Z-g3-desk-29dbcc60.json` is now addressed with actual
+rendered evidence. `scripts/render-inspect.mjs GQUR-301 10 --base
+https://textbook.com.pk` ran against the live production host and exited 0 with
+zero defects, producing 12 PNG/PDF artifacts and logs under
+`renders-20261110T-prod/`. Desktop, 360px table scrolling and A4 print clipping
+are verified for the published unit; no content repair was required. G3 remains
+open and unticked pending a fresh independent review (ADR-0019).
