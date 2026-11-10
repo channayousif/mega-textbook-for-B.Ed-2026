@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-300-u04-repair_en-r1
-title: crew repair_en GQUR-300 unit 4 r1
+title: crew repair_en GQUR-300 unit 4
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,14 +16,13 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/gqur-300/tasks.md
+ - history/prompts/gqur-300/crew-gqur-300-u04-repair_en-r1.misc.prompt.md
+ - specs/content/gqur-300/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
 
 # Crew job gqur-300-u04-repair_en-r1
 
@@ -77,31 +76,32 @@ From `specs/content/gqur-300/reviews/unit-04/G3/20261108T203238Z-g3-desk-dfd6f1c
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Verified every finding in the 2026-11-08 G3 report against the current tree and found the d2ce30b33 repair already resolves the blocking and advisory items in English and Urdu; appended the Unit 4 G3 tracker row naming the report and recorded the owner follow-ups.
+Verified the 2026-11-08 G3 findings are already resolved on origin/main by d2ce30b33, appended the Unit 4 G3 tracker row naming the report, and committed it with the PHR.
 
 ## Outcome
 
-- Impact: repair_en for GQUR-300 Unit 4 by opencode (attempt 2); no new content bytes required.
-- Tests: npm run check:content passed (14/14 gates) after regenerating the ignored content-status file.
-- Files: 1 file, listed above.
+- Impact: repair_en for GQUR-300 Unit 4 by opencode (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: the latest G3 report re-runs the 2026-11-02 findings; the 2026-11-05 repair on origin/main already resolved them, so this pass re-verified rather than re-edited.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended the Unit 4 G3 tracker row naming reviews/unit-04/G3/20261108T203238Z-g3-desk-dfd6f1c3.json and recording that the d2ce30b33 repair resolves the findings.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the commit touches a protected path).
+- Shipped / changed: Verified the 2026-11-08 G3 findings are already resolved on origin/main by d2ce30b33, appended the Unit 4 G3 tracker row naming the report, and committed it with the PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Owner follow-ups remain for source support, shared glossary entries (Length / Mass / Capacity in glossary.json), current renders, fresh blind assessment verification and review provenance.
-  - The 2026-11-08 G3 report's input manifest hashes for the unit files do not match origin/main; a fresh G3 run against the committed bytes is needed before acceptance.
+  - The Nov 8 G3 report's input-manifest hashes for the unit files do not match origin/main, so its findings were carried forward from the pre-repair state; a fresh G3 run against the committed bytes is needed before acceptance.
+  - `glossary.json` (repo root) is outside this brief's scope, so Length/Mass/Capacity remain unbanked; the pipeline gate would fail if `<Glossary>` wrappers were added before the entries exist.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
