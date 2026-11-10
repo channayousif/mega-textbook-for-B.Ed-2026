@@ -77,25 +77,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored English EFPG-401 Unit 4 (Teaching of Grammar) with an index, one nine-part topic cycle, a 10/10/5 assessment bank, three placed schematic SVGs with dark variants, governance files, and validated G2 gate evidence.
+Authored English EFPG-401 Unit 4 (Teaching of Grammar) with a nine-part topic cycle, a 10/10/5 assessment bank, three placed schematic SVGs, governance files, and validated G2 gate evidence.
 
 ## Outcome
 
 - Impact: author for EFPG-401 Unit 4 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 27 file(s), listed above.
+- Files: 26 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English EFPG-401 Unit 4 (Teaching of Grammar) with an index, one nine-part topic cycle, a 10/10/5 assessment bank, three placed schematic SVGs with dark variants, governance files, and validated G2 gate evidence.
+- Shipped / changed: Authored English EFPG-401 Unit 4 (Teaching of Grammar) with a nine-part topic cycle, a 10/10/5 assessment bank, three placed schematic SVGs, governance files, and validated G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Three EN schematics are placed; the G4 Urdu mirror still needs `.ur.svg` translations and UR `<Figure>` wiring.
-  - G3 independent review remains open; the unit is G2 gate-checked only, not certified.
-  - The guide-required print monograph Celce-Murcia (1991) is cited at title level under `D-2026-0001`; Koca et al. (2024) and Kiran (2021) are the open-access sources.
+  - Three EN schematics are placed; the G4 Urdu mirror still needs `.ur.svg` variants and UR `<Figure>` wiring.
+  - G3 independent review is open; the unit is G2 gate-checked only, not certified.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
