@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-406-u02-repair_en-r1
-title: crew repair_en EFMP-406 unit 2 (r1)
+title: crew repair_en EFMP-406 unit 2
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -8,7 +8,7 @@ model: opencode
 feature: efmp-406
 branch: crew/efmp-406-u02-repair_en-r1
 user: crew
-command: Read .crew/brief.md and carry it out
+command: crew repair_en
 labels: ["crew", "opencode", "repair_en"]
 links:
   spec: specs/content/efmp-406/content-spec.md
@@ -16,13 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-406/crew-efmp-406-u02-repair_en-r1.misc.prompt.md
-  - specs/content/efmp-406/tasks.md
+ - history/prompts/efmp-406/crew-efmp-406-u02-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-406/tasks.md
 tests:
-  - npm run build:content-status
-  - npm run check:content
-  - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efmp-406/unit-02/fig-U2-1.svg static/img/figures/efmp-406/unit-02/fig-U2-1.dark.svg static/img/figures/efmp-406/unit-02/fig-U2-2.svg static/img/figures/efmp-406/unit-02/fig-U2-2.dark.svg static/img/figures/efmp-406/unit-02/fig-U2-3.svg static/img/figures/efmp-406/unit-02/fig-U2-3.dark.svg static/img/figures/efmp-406/unit-02/fig-U2-4.svg static/img/figures/efmp-406/unit-02/fig-U2-4.dark.svg
-  - git diff --check
+ - npm run check:content
 ---
 
 ## Prompt
@@ -68,28 +65,33 @@ From `specs/content/efmp-406/reviews/unit-02/G3/20261108T203238Z-g3-desk-d76ac5c
 - (efmp-406-u02-repair_en, repair_en, claude) The questions and model answers changed in RRQ 2/3/9, MCQ 4/8 and Topic 2.2 check item 2, so the Urdu translation job should start from the repaired English, and a fresh independent G3 review must look at these new versions.
 - (efmp-406-u02-translate, translate, codex) English author must repair RRQ 2/3/9 before translation resumes; draft status and G3/G5 remain unchanged.
 
+
 ## Response snapshot
 
-Verified that the current Unit 2 bytes already carry the bb9cdada5 repairs for the 20261108 desk report's stale findings, measured all 8 EN SVG variants with measure-figure-text (exit 0), and appended the advisory G3 tracker row naming 20261108T203238Z-g3-desk-d76ac5cd.json. G3 left unticked.
+Verified the current Unit 2 bytes already resolve the 20261108 desk report's stale RRQ 2/3/9 and Bloom findings, measured all 8 EN SVG variants (exit 0), and appended the advisory G3 tracker row naming the report in commit 35628f7a3.
 
 ## Outcome
 
-- Impact: resolved the EFMP-406 Unit 2 G3 repair findings for report 20261108T203238Z-g3-desk-d76ac5cd.json without invalidating accepted evidence.
-- Tests: all 14 content gates pass after an ignored content-status cache refresh; all 8 EN SVG variants pass measure-figure-text geometry.
+- Impact: repair_en for EFMP-406 Unit 2 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
-- Next prompts: fresh independent G3; existing draft Urdu still needs independent G5 and rendered inspection.
-- Reflection: the desk report's findings are stale against its own input manifest, which already carries the repairs.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: advisory Unit 2 G3 tracker row naming 20261108T203238Z-g3-desk-d76ac5cd.json, and this PHR.
-- Decisions the team must respect: keep G3 unticked; no certification, publication change or reviewer identity substitution; the report's findings were already resolved by bb9cdada5, so a fresh independent review must check the current bytes.
-- Pending / next owner: independent reviewer owns fresh G3; the source passage bundle, author run provenance and narrow-screen/A4 print inspection remain with the coordinator and an authorised browser host.
-- Paperclip issues affected: no ticket supplied in the crew brief.
+- Shipped / changed: Verified the current Unit 2 bytes already resolve the 20261108 desk report's stale RRQ 2/3/9 and Bloom findings, measured all 8 EN SVG variants (exit 0), and appended the advisory G3 tracker row naming the report in commit 35628f7a3.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Source passage bundle, author run provenance and narrow-screen/A4 print inspection remain open; they need the coordinator and an authorised browser host.
+  - The desk report's findings describe pre-repair bytes while its input manifest binds the repaired bytes; a fresh independent G3 review must check the current bytes.
+  - Urdu translation is still draft and must start from the repaired English (RRQ 2/3/9, MCQ 4/8 and Topic 2.2 changed).
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the desk report's findings describe the pre-repair bytes while its input manifest binds the repaired bytes; verify current bytes before editing content.
-- Graders run and results (PASS/FAIL): all 14 content gates PASS; measure-figure-text PASS on 8 EN SVGs; git diff --check PASS.
-- Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): fresh independent review of current inputs.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
