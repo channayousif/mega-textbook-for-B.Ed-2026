@@ -1,15 +1,15 @@
 # EFPG-401 Teaching of English - Task tracker
 
-## Status: content spec approved (G0/G1); Unit 1 authoring in progress
+## Status: content spec approved (G0/G1); Units 1 and 2 authored
 
-English-only authoring from the approved Unit 1 content-spec. No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved Unit 1 and Unit 2 content-specs. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
 ## Units
 
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
 | 1 | Four Skills of Language Learning | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-10; eight schematic SVGs placed with dark variants; Urdu mirror drafted at G4 with 8 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
-| 2 | Teaching of English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 2 | Teaching of English | ▣ | ☐ | ☐ | ☐ | ☐ | English authored; gate evidence preparation pending commit |
 | 3 | Methods of Teaching English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; twelve schematic SVGs placed with dark variants; G3 and G5 remain open |
 | 4 | Teaching of Grammar | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 5 | Lesson Planning | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
@@ -30,6 +30,12 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 1 | G6 assets | ▣ | | Eight English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-02/G2/20261110T115742025Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 2 | G4 ur-translation | ☐ | | Separate job; English-only draft with untranslated notices |
+| Unit 2 | G5 ur-review | ☐ | | Awaiting translation and independent review |
+| Unit 2 | G6 assets | ☐ | | Ten figures planned at prompt-only; rendering is a separate generate-figures job |
+| Unit 2 | G7 publish | ☐ | | No publication or deployment performed by this job |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-03/G2/20261110T130955081Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 3 | G4 ur-translation | ▢ | | Awaiting Urdu translation |
