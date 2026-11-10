@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-301-u13-repair_en-r1
-title: crew repair_en GQUR-301 unit 13 (r1)
+title: crew repair_en GQUR-301 unit 13
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -16,11 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/gqur-301/tasks.md
-  - history/prompts/gqur-301/crew-gqur-301-u13-repair_en-r1.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u13-repair_en-r1.misc.prompt.md
+ - specs/content/gqur-301/tasks.md
 tests:
-  - npm run build:content-status
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -71,32 +70,33 @@ From `specs/content/gqur-301/reviews/unit-13/G3/20261108T203238Z-g3-desk-09998f4
 - (gqur-301-u13-repair_en, repair_en, codex) G3 remains open; G1 authority, provenance, rendered inspection and Urdu translation require separate owners.
 - (gqur-301-u13-fix, fix, codex) Final gate remains blocked by the content-status digest; fresh G3 review remains required.
 
+
 ## Response snapshot
 
-Verified that the latest G3 report's findings are already resolved in the current bytes by repair commit 1662881a5, regenerated the gitignored content-status digest, appended the unticked Unit 13 G3 repairs-applied advisory tracker row, and confirmed all 14 content gates pass. No further content edit was needed; G3 stays open.
+Verified the latest G3 findings are already resolved in the current bytes by repair commit 1662881a5, appended the unticked Unit 13 G3 repairs-applied tracker row naming specs/content/gqur-301/reviews/unit-13/G3/20261108T203238Z-g3-desk-09998f44.json, and committed it with its PHR after all 14 content gates passed.
 
 ## Outcome
 
-- Impact: repair_en for GQUR-301 Unit 13 by opencode (attempt r1).
-- Tests: npm run check:content passed on the clean baseline and after the tracker edit (14/14).
+- Impact: repair_en for GQUR-301 Unit 13 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended the Unit 13 G3 repairs-applied advisory tracker row naming specs/content/gqur-301/reviews/unit-13/G3/20261108T203238Z-g3-desk-09998f44.json; regenerated static/content-status.json; no content edit was needed because commit 1662881a5 already resolved the findings.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Verified the latest G3 findings are already resolved in the current bytes by repair commit 1662881a5, appended the unticked Unit 13 G3 repairs-applied tracker row naming specs/content/gqur-301/reviews/unit-13/G3/20261108T203238Z-g3-desk-09998f44.json, and committed it with its PHR after all 14 content gates passed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open; G1 authority, author/run provenance, bound source capture and actual rendered inspection still need separate owners.
-  - The Urdu mirror does not exist yet; the translation/G5 owner must mirror the repaired English and recover the U+FFFD concept label flagged in concepts/unit-13.md.
-  - `static/content-status.json` is gitignored and must be regenerated locally (`npm run build:content-status`) after content edits or `check:content-status` fails.
+  - G3 stays unticked; G1 authority, author/run provenance, bound source capture and actual rendered inspection need separate owners.
+  - No Urdu mirror exists yet; the translation/G5 owner must mirror the repaired English and recover the U+FFFD label flagged in concepts/unit-13.md.
+  - static/content-status.json is gitignored; regenerate it with `npm run build:content-status` after any content edit or `check:content-status` fails.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
