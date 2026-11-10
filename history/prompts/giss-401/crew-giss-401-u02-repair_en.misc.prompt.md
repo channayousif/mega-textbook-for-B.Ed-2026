@@ -83,37 +83,33 @@ From `specs/content/giss-401/reviews/unit-02/G3/20261108T203238Z-g3-desk-82690fc
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Resolved GISS-401 Unit 2 G3 report findings by adding classical non-direct-ruling Ijma and Qiyas worked cases to Topic 2.1 prose, updating summative task rubrics and unit assessment ERQ 1 to test this blueprint requirement, binding Qur'an 62:9, refreshing G2 draft evidence, and appending the advisory repair tracker row.
+Repaired GISS-401 Unit 2 by adding classical non-direct-ruling Ijma and Qiyas worked cases to Topic 2.1, updating summative task rubrics and ERQ 1 to fulfill the assessment blueprint, binding Qur'an 62:9, refreshing G2 gate evidence, and appending the advisory revise repairs tracker row.
 
 ## Outcome
 
-- Impact: repair_en for GISS-401 Unit 2 by agy.
-- Tests: `npm run check:content` passed all 14 content gates.
+- Impact: repair_en for GISS-401 Unit 2 by agy (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 16 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed:
-  - In `docs/semester-3/giss-401/unit-02/topic-01.mdx`: added worked classical examples of Ijma (Sahaba consensus on compiling the Qur'an mushaf) and Qiyas (extending the 62:9 Friday prayer commercial trade prohibition to leasing contracts via the shared cause of prayer distraction) where revelation does not state a direct ruling, while preserving the intoxicant analogy and its general-text caveat.
-  - In `docs/semester-3/giss-401/unit-02/unit-assessment.mdx`: updated ERQ 1 prompt and rubric criterion 3 to evaluate non-direct-ruling Ijma or Qiyas analysis as mandated by the blueprint (`content-spec.md:125`).
-  - In `specs/content/giss-401/sources/`: bound Qur'an 62:9 in `sources/unit-02.md` and `sources/texts/quran-translation.md`.
-  - In `specs/content/giss-401/authoring/unit-02.md`: updated reading time table (topic-01 to 15 min, unit-assessment to 17 min, unit total 63 min) and evidence notes.
-  - In `specs/content/giss-401/reviews/unit-02/G2/`: refreshed G2 gate evidence `20261110T051749123Z-gates.json` and logs.
-  - In `specs/content/giss-401/tasks.md`: repointed G2 gate row and appended unticked G3 row recording advisory revise repairs applied for report `specs/content/giss-401/reviews/unit-02/G3/20261108T203238Z-g3-desk-82690fcb.json`.
-- Decisions the team must respect: G3 remains unticked and advisory until qualified scholar review, browser/print inspection, and independent solve are completed.
-- Pending / next owner: crew lead (auto-merge when CI is green); subsequent translation and independent review jobs.
+- Shipped / changed: Repaired GISS-401 Unit 2 by adding classical non-direct-ruling Ijma and Qiyas worked cases to Topic 2.1, updating summative task rubrics and ERQ 1 to fulfill the assessment blueprint, binding Qur'an 62:9, refreshing G2 gate evidence, and appending the advisory revise repairs tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains unticked pending independent Islamic Studies scholar review, browser/print inspection, and fresh solve-before-key evaluation.
-  - Urdu mirror is not yet authored (held at draft); translation job may now resume with the repaired English baseline.
-- Paperclip issues affected: none.
+  - Resolved the non-direct-ruling Ijma/Qiyas blueprint gap in English Topic 2.1 and unit assessment so translation may resume.
+  - G3 remains unticked pending independent Islamic Studies scholar review, mobile/print inspection, and fresh solve-before-key evaluation.
+  - Six Unit 2 SVGs await CI figure-geometry verification and subsequent Urdu `.ur.svg` authoring during translation.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: previous worker exited without committing.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14 gates).
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: 2 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
