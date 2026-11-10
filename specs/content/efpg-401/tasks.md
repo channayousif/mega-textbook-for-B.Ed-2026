@@ -30,5 +30,11 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 1 | G6 assets | ▣ | | Eight English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-03/G2/20261110T130955081Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 3 | G4 ur-translation | ▢ | | Awaiting Urdu translation |
+| Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review |
+| Unit 3 | G6 assets | ▣ | | Twelve English schematic SVGs placed with derived dark variants; measure-figure-text verified |
+| Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 
-Reading estimates use final visible text at 180-200 words per minute: index 3, Topic 1.1 15, Topic 1.2 15, Topic 1.3 14, Topic 1.4 15, assessment 14, total 76 minutes within the approved 55-80 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
+Reading estimates use final visible text at 180-200 words per minute: index 3, Topic 1.1 15, Topic 1.2 15, Topic 1.3 14, Topic 1.4 15, assessment 14, total 76 minutes within the approved 55-80 depth budget band. Unit 3 reading estimates: index 3, Topic 3.1 8, Topic 3.2 8, Topic 3.3 8, Topic 3.4 8, Topic 3.5 9, Topic 3.6 8, assessment 14, total 66 minutes within the approved 45-70 depth budget band. Assessments contain 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in their final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
