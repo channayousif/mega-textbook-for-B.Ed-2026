@@ -1,6 +1,6 @@
 ---
 id: crew-efpg-401-u03-author-conflict1
-title: crew merge origin/main into efpg-401-u03-author and pass content gates
+title: crew fix EFPG-401 unit 3
 stage: misc
 date: 2026-11-10
 surface: agent
@@ -8,19 +8,66 @@ model: opencode
 feature: efpg-401
 branch: crew/efpg-401-u03-author
 user: crew
-command: crew merge
-labels: ["crew", "opencode", "merge"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/efpg-401/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - specs/content/efpg-401/tasks.md
-  - history/prompts/efpg-401/crew-efpg-401-u03-author-conflict1.misc.prompt.md
+ - docs/semester-3/efpg-401/unit-03/index.mdx
+ - docs/semester-3/efpg-401/unit-03/topic-01.mdx
+ - docs/semester-3/efpg-401/unit-03/topic-02.mdx
+ - docs/semester-3/efpg-401/unit-03/topic-03.mdx
+ - docs/semester-3/efpg-401/unit-03/topic-04.mdx
+ - docs/semester-3/efpg-401/unit-03/topic-05.mdx
+ - docs/semester-3/efpg-401/unit-03/topic-06.mdx
+ - docs/semester-3/efpg-401/unit-03/unit-assessment.mdx
+ - history/prompts/efpg-401/crew-efpg-401-u03-author-conflict1.misc.prompt.md
+ - history/prompts/efpg-401/crew-efpg-401-u03-author.green.prompt.md
+ - specs/content/efpg-401/concepts/unit-03.md
+ - specs/content/efpg-401/coverage/unit-03.md
+ - specs/content/efpg-401/figures/unit-03.md
+ - specs/content/efpg-401/reviews/unit-03/G2/20261110T130955081Z-gates.json
+ - specs/content/efpg-401/reviews/unit-03/G2/logs-20261110T130955081Z/check-bloom-bands.txt
+ - specs/content/efpg-401/reviews/unit-03/G2/logs-20261110T130955081Z/check-concept-graph.txt
+ - specs/content/efpg-401/reviews/unit-03/G2/logs-20261110T130955081Z/check-depth-gate.txt
+ - specs/content/efpg-401/reviews/unit-03/G2/logs-20261110T130955081Z/check-docs-sync.txt
+ - specs/content/efpg-401/reviews/unit-03/G2/logs-20261110T130955081Z/check-figures.txt
+ - specs/content/efpg-401/reviews/unit-03/G2/logs-20261110T130955081Z/check-no-answer-keys.txt
+ - specs/content/efpg-401/reviews/unit-03/G2/logs-20261110T130955081Z/check-no-em-dash.txt
+ - specs/content/efpg-401/reviews/unit-03/G2/logs-20261110T130955081Z/validate-content.txt
+ - specs/content/efpg-401/sources/texts/ahmad-2013-clt.md
+ - specs/content/efpg-401/sources/texts/kiran-2021-gtm-clt.md
+ - specs/content/efpg-401/sources/unit-03.md
+ - specs/content/efpg-401/tasks.md
+ - static/img/figures/efpg-401/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-1.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-10.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-10.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-11.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-11.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-12.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-12.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-2.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-3.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-4.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-5.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-6.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-7.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-7.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-8.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-8.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-9.dark.svg
+ - static/img/figures/efpg-401/unit-03/fig-U3-9.svg
 tests:
-  - npm run build:content-status
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -53,28 +100,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u03-author, author, agy) Print monographs by Cook (1991), Mohammad (1998), and Celce-Murcia (1991) are registered under unretrievable sources with owner ruling D-2026-0001 per depth-gate standards.
 - (efpg-401-u03-author, author, agy) Twelve schematic SVGs with derived dark twins are placed and text-geometry verified; Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
 
+
 ## Response snapshot
 
-Fetched origin/main (724812439, PR #533) and merged it into `crew/efpg-401-u03-author`. The merge was textually clean: the branch (49 files) and main (48 files) touched disjoint paths, so no conflict markers appeared. Verified the merge result preserves every main-only file byte-for-byte and every branch-only file byte-for-byte. `specs/content/efpg-401/tasks.md` keeps main's Unit 1 rows and reading estimates plus this branch's Unit 3 row, stage rows and reading estimates. The four shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) were unchanged on both sides since the merge base, so no append or ID renumbering was needed; the only D- ID this branch references is the pre-existing corpus-wide `D-2026-0001`. Ran `npm run build:content-status` then `npm run check:content`: all 14 content gates pass with zero findings.
+Merged origin/main into crew/efpg-401-u03-author (clean, disjoint paths, both sides preserved), recorded the PHR, and confirmed all 14 content gates pass.
 
 ## Outcome
 
-- ✅ Impact: `crew/efpg-401-u03-author` now contains origin/main and still passes every content gate, so the branch is ready for its next stage.
-- 🧪 Tests: `npm run build:content-status` wrote static/content-status.json; `npm run check:content` 14/14 gates PASS (validate:content, check:pipeline-gate, check:depth-gate, check:figures, check:svg-style, check:no-em-dash, check:no-answer-keys, check:concept-graph, check:bloom-bands, check:source-floor, check:licence, licence:map:check, check:content-status, check:docs-sync).
-- 📁 Files: merge commit `687f77972` plus this PHR; no content files required edits.
-- 🔁 Next prompts: downstream EFPG-401 Unit 3 jobs (Urdu G4 mirror, independent G3/G5 review) can branch from this merged tip.
-- 🧠 Reflection: the brief predicted a conflict in tasks.md, but main had not changed that file since the merge base, so the three-way merge was a fast-forward-like clean combine. The disjoint-paths property is worth checking in future merge jobs before assuming manual resolution is needed.
+- Impact: fix for EFPG-401 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 50 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of origin/main into `crew/efpg-401-u03-author` (commit `687f77972`), verified clean and content-gate green; PHR recorded.
-- Decisions the team must respect: no shared-registry entry was added, removed or renumbered; main's entries are intact and this branch's Unit 3 rows are intact.
-- Pending / next owner: crew lead (merge/PR when CI is green); downstream jobs own Urdu G4 and independent G3/G5 for Unit 3.
+- Shipped / changed: Merged origin/main into crew/efpg-401-u03-author (clean, disjoint paths, both sides preserved), recorded the PHR, and confirmed all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The brief predicted a conflict in specs/content/efpg-401/tasks.md, but main had not modified that file since the merge base, so the three-way merge was clean; the branch's Unit 3 rows and main's Unit 1 rows coexist in the merged tracker.
+  - Branch is 5 commits ahead of origin/main and 0 behind; Urdu G4 mirror and independent G3/G5 for Unit 3 remain the downstream jobs.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none. The anticipated tasks.md conflict did not materialise because main had not modified the file since the merge base.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS (14/14).
-- Prompt variant (if applicable): crew brief v1, merge/conflict job.
-- Next experiment (smallest change to try): have the merge job assert the disjoint-paths property (or report the intersection) before merging, so a real conflict cannot be silently auto-resolved.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
