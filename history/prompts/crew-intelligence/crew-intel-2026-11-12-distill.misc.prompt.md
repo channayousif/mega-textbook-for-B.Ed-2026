@@ -2,7 +2,7 @@
 id: crew-intel-2026-11-12-distill
 title: crew intel_distill INTEL unit 0
 stage: misc
-date: 2026-11-12
+date: 2026-11-11
 surface: agent
 model: agy
 feature: crew-intelligence
@@ -16,10 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - specs/intelligence/daily/2026-11-12.md
+ - history/prompts/crew-intelligence/crew-intel-2026-11-12-distill.misc.prompt.md
+ - specs/intelligence/daily/2026-11-12.md
 tests:
-  - npm run check:content
-  - node --test tests/crew/*.test.mjs
+ - npm run check:content
 ---
 
 ## Prompt
@@ -176,23 +176,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-8 candidates; 5-fix ceiling aborting authoring jobs from course tasks.md batch exclusions, local Playwright font mismatch with CI on Urdu SVGs, desk review carry-forwards causing zero-edit repair loops, and tasks.md scope and status merge clarity.
+Distilled 8 reusable intelligence candidates for 2026-11-12 covering tasks.md 5-fix ceilings, Playwright-CI font geometry mismatches, and desk review carry-forwards into specs/intelligence/daily/2026-11-12.md with a PHR.
 
 ## Outcome
 
 - Impact: intel_distill for INTEL Unit 0 by agy (attempt 1).
-- Tests: npm run check:content (14/14 PASS) and node --test tests/crew/*.test.mjs (119/119 PASS) in the job worktree before commit.
-- Files: 1 file(s), specs/intelligence/daily/2026-11-12.md.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: 8 candidates; 5-fix ceiling aborting authoring jobs from course tasks.md batch exclusions, local Playwright font mismatch with CI on Urdu SVGs, desk review carry-forwards causing zero-edit repair loops, and tasks.md scope and status merge clarity.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this change does not certify anything.
+- Shipped / changed: Distilled 8 reusable intelligence candidates for 2026-11-12 covering tasks.md 5-fix ceilings, Playwright-CI font geometry mismatches, and desk review carry-forwards into specs/intelligence/daily/2026-11-12.md with a PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - C1 documents 2 authoring jobs (EFPG-401 U3, U5) permanently aborted at 5 merge fixes due to unkeyed ## Units summary table conflicts in course tasks.md.
+  - C1 documents 2 authoring jobs (EFPG-401 U3, U5) permanently aborted at 5 merge fixes due to unkeyed `## Units` summary table conflicts in course `tasks.md`.
   - C2 highlights local Playwright font advances resolving narrower than CI fallback fonts, causing false-positive local geometry passes on Urdu SVGs.
   - C3 details 7 desk review carry-forwards repeating stale findings against post-repair file hashes, producing zero-edit repair loops.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
@@ -200,6 +200,6 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS, crew unit tests PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
