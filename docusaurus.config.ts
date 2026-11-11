@@ -155,7 +155,7 @@ function courseStatus() {
 
 const config: Config = {
   title: SITE_TITLE,
-  tagline: 'A bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
+  tagline: 'Platform for current & future teachers and teacher educators',
   favicon: 'img/kit/favicon.svg',
   url: 'https://textbook.com.pk',
   baseUrl: '/',
