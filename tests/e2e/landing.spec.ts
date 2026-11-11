@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 /** Owner brief, 2026-11-04: a SaaS-style landing page with a prominent returning path. */
 test('a first-time visitor sees the audiences, features and no welcome strip', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('textbooks');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Platform for current & future teachers and teacher educators');
   await expect(page.getByRole('link', { name: 'Resume' })).toHaveCount(0);
   await page.getByRole('button', { name: 'Teachers' }).click();
   await expect(page.getByText('Run your class from one place')).toBeVisible();
