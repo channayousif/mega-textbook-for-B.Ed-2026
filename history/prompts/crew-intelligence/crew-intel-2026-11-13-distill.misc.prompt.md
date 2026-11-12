@@ -2,7 +2,7 @@
 id: crew-intel-2026-11-13-distill
 title: crew intel_distill INTEL unit 0
 stage: misc
-date: 2026-11-13
+date: 2026-11-12
 surface: agent
 model: agy
 feature: crew-intelligence
@@ -77,7 +77,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Distilled 6 reusable intelligence candidates for 2026-11-13 covering CLI stream truncation signature fragmentation, distill handoff feedback loops into the harvester, multi-day worker quota cooldowns, tasks.md summary table merge ceilings, Playwright font metric discrepancies, and desk review carry-forward loops into specs/intelligence/daily/2026-11-13.md with a PHR.
+Distilled 6 reusable intelligence candidates for 2026-11-13; strongest addresses CLI truncation annotations fracturing identical quota errors into duplicate clusters.
 
 ## Outcome
 
@@ -89,13 +89,13 @@ Distilled 6 reusable intelligence candidates for 2026-11-13 covering CLI stream 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Distilled 6 reusable intelligence candidates for 2026-11-13 covering CLI stream truncation signature fragmentation, distill handoff feedback loops into the harvester, multi-day worker quota cooldowns, tasks.md summary table merge ceilings, Playwright font metric discrepancies, and desk review carry-forward loops into specs/intelligence/daily/2026-11-13.md with a PHR.
+- Shipped / changed: Distilled 6 reusable intelligence candidates for 2026-11-13; strongest addresses CLI truncation annotations fracturing identical quota errors into duplicate clusters.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - C1 identifies CLI stream truncation annotations `(response may be truncated)` causing duplicate cluster fragmentation in the harvester.
-  - C2 documents daily distill CREW-HANDOFF notes echoing back into the 12-hour harvest as operational handoffs.
-  - C3 details a 9,688-minute (6.7-day) worker cooldown under I-0013, confirming attempt preservation but emphasizing stage fallback redundancy.
+  - C1 documents CLI stream truncation annotations `(response may be truncated)` fracturing identical quota exhaustion errors into duplicate clusters in `scripts/crew/intel.mjs`.
+  - C2 highlights daily distill job CREW-HANDOFF notes echoing back into the 12-hour harvest as operational handoffs, creating a self-referential feedback loop.
+  - C3 details a 9,688-minute (6.7-day) worker cooldown under I-0013, confirming attempt preservation while underscoring multi-model stage redundancy.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
