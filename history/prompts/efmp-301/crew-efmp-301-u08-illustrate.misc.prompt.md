@@ -16,33 +16,33 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/efmp-301/unit-08/index.mdx
-  - docs/semester-1/efmp-301/unit-08/topic-01.mdx
-  - docs/semester-1/efmp-301/unit-08/topic-02.mdx
-  - docs/semester-1/efmp-301/unit-08/topic-03.mdx
-  - history/prompts/efmp-301/crew-efmp-301-u08-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/topic-03.mdx
-  - specs/content/efmp-301/figures/unit-08.banner.md
-  - specs/content/efmp-301/figures/unit-08.md
-  - specs/content/efmp-301/reviews/unit-08/G2/20261113T053607656Z-gates.json
-  - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-bloom-bands.txt
-  - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-concept-graph.txt
-  - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-depth-gate.txt
-  - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-docs-sync.txt
-  - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-figures.txt
-  - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-no-answer-keys.txt
-  - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-no-em-dash.txt
-  - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/validate-content.txt
-  - specs/content/efmp-301/tasks.md
-  - static/img/figures/efmp-301/unit-08/fig-U8-7.webp
-  - static/img/figures/efmp-301/unit-08/fig-U8-8.webp
-  - static/img/figures/efmp-301/unit-08/fig-U8-9.webp
-  - static/img/figures/efmp-301/unit-08/fig-U8-10.webp
+ - docs/semester-1/efmp-301/unit-08/index.mdx
+ - docs/semester-1/efmp-301/unit-08/topic-01.mdx
+ - docs/semester-1/efmp-301/unit-08/topic-02.mdx
+ - docs/semester-1/efmp-301/unit-08/topic-03.mdx
+ - history/prompts/efmp-301/crew-efmp-301-u08-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/topic-03.mdx
+ - specs/content/efmp-301/figures/unit-08.banner.md
+ - specs/content/efmp-301/figures/unit-08.md
+ - specs/content/efmp-301/reviews/unit-08/G2/20261113T053607656Z-gates.json
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-bloom-bands.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-concept-graph.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-depth-gate.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-docs-sync.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-figures.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-no-answer-keys.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/check-no-em-dash.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261113T053607656Z/validate-content.txt
+ - specs/content/efmp-301/tasks.md
+ - static/img/figures/efmp-301/unit-08/fig-U8-10.webp
+ - static/img/figures/efmp-301/unit-08/fig-U8-7.webp
+ - static/img/figures/efmp-301/unit-08/fig-U8-8.webp
+ - static/img/figures/efmp-301/unit-08/fig-U8-9.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -80,27 +80,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u08-repair_en-r1, repair_en, opencode) Owner still owes narrow-screen/A4 render evidence and a parent-prepared frozen handoff (ADR-0019 cycles exhausted); the Urdu "کاؤنٹرائزنگ" mistranslation for "management" needs a G5/translation job.
 - (efmp-301-u08-repair_en-conflict3, fix, opencode) `check:content-status` fails on both branches because the gitignored `static/content-status.json` is stale/missing; CI regenerates it before checking, so it is a separate fix job.
 
+
 ## Response snapshot
 
-Generated with agy, inspected, and placed all 4 EFMP-301 Unit 8 raster illustrations (banner fig-U8-7, topic scenes fig-U8-8, fig-U8-9 and fig-U8-10) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
+Generated with agy, inspected, and placed all 4 raster illustrations (fig-U8-7 banner, fig-U8-8..fig-U8-10 topic scenes) across English and Urdu files for EFMP-301 Unit 8, updated manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-301 Unit 8 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with agy, inspected, and placed all 4 EFMP-301 Unit 8 raster illustrations (banner fig-U8-7, topic scenes fig-U8-8, fig-U8-9, and fig-U8-10) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Generated with agy, inspected, and placed all 4 raster illustrations (fig-U8-7 banner, fig-U8-8..fig-U8-10 topic scenes) across English and Urdu files for EFMP-301 Unit 8, updated manifests to placed, and refreshed G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G2 gate evidence refreshed and committed at [20261113T053607656Z-gates.json](file:///home/a2ahs/crew-wt/efmp-301-u08-illustrate/specs/content/efmp-301/reviews/unit-08/G2/20261113T053607656Z-gates.json).
-  - Unit 8 G3 review remains open pending an authorised fresh independent review cycle and owner resolution of render evidence.
-  - Urdu translation has a known terminology item: "کاؤنٹرائزنگ" for "management" awaiting G5 / translation repair pass.
+  - G2 gate evidence refreshed and committed at 20261113T053607656Z-gates.json.
+  - Unit 8 G3 review remains open pending an authorised fresh independent cycle and owner render evidence.
+  - Urdu mirror contains the known "کاؤنٹرائزنگ" mistranslation for "management" awaiting a G5/translation job.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
