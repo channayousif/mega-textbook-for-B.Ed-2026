@@ -43,7 +43,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-06/G2/20261105T095511606Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-06/G2/20261113T224902577Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 6 | G4 ur-translation | ▢ | | |
 | Unit 6 | G5 ur-review | ▢ | | |
