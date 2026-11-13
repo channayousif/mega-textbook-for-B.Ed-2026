@@ -8,7 +8,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▣ | | intake in progress; spec drafted, repairs pending |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261103T183724789Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261113T183231067Z-gates.json |
 | Unit 1 | G3 en-review | ▣ | | Advisory revise only: see reviews/unit-01/G3/20261019T000000000Z-g3.json and continuation-summary.md; RRQ 5 repair pending; render evidence unavailable; no certification. |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
