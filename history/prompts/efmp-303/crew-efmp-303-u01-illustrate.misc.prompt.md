@@ -16,36 +16,36 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/efmp-303/unit-01/index.mdx
-  - docs/semester-2/efmp-303/unit-01/topic-01.mdx
-  - docs/semester-2/efmp-303/unit-01/topic-02.mdx
-  - docs/semester-2/efmp-303/unit-01/topic-03.mdx
-  - docs/semester-2/efmp-303/unit-01/topic-04.mdx
-  - history/prompts/efmp-303/crew-efmp-303-u01-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/topic-04.mdx
-  - specs/content/efmp-303/figures/unit-01.banner.md
-  - specs/content/efmp-303/figures/unit-01.md
-  - specs/content/efmp-303/reviews/unit-01/G2/20261113T160351206Z-gates.json
-  - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-bloom-bands.txt
-  - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-concept-graph.txt
-  - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-depth-gate.txt
-  - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-docs-sync.txt
-  - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-figures.txt
-  - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-no-answer-keys.txt
-  - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-no-em-dash.txt
-  - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/validate-content.txt
-  - specs/content/efmp-303/tasks.md
-  - static/img/figures/efmp-303/unit-01/fig-U1-10.webp
-  - static/img/figures/efmp-303/unit-01/fig-U1-11.webp
-  - static/img/figures/efmp-303/unit-01/fig-U1-12.webp
-  - static/img/figures/efmp-303/unit-01/fig-U1-13.webp
-  - static/img/figures/efmp-303/unit-01/fig-U1-9.webp
+ - docs/semester-2/efmp-303/unit-01/index.mdx
+ - docs/semester-2/efmp-303/unit-01/topic-01.mdx
+ - docs/semester-2/efmp-303/unit-01/topic-02.mdx
+ - docs/semester-2/efmp-303/unit-01/topic-03.mdx
+ - docs/semester-2/efmp-303/unit-01/topic-04.mdx
+ - history/prompts/efmp-303/crew-efmp-303-u01-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-01/topic-04.mdx
+ - specs/content/efmp-303/figures/unit-01.banner.md
+ - specs/content/efmp-303/figures/unit-01.md
+ - specs/content/efmp-303/reviews/unit-01/G2/20261113T160351206Z-gates.json
+ - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-bloom-bands.txt
+ - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-concept-graph.txt
+ - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-depth-gate.txt
+ - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-docs-sync.txt
+ - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-figures.txt
+ - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-no-answer-keys.txt
+ - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/check-no-em-dash.txt
+ - specs/content/efmp-303/reviews/unit-01/G2/logs-20261113T160351206Z/validate-content.txt
+ - specs/content/efmp-303/tasks.md
+ - static/img/figures/efmp-303/unit-01/fig-U1-10.webp
+ - static/img/figures/efmp-303/unit-01/fig-U1-11.webp
+ - static/img/figures/efmp-303/unit-01/fig-U1-12.webp
+ - static/img/figures/efmp-303/unit-01/fig-U1-13.webp
+ - static/img/figures/efmp-303/unit-01/fig-U1-9.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -83,26 +83,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-303-u01-repair_en-r1, repair_en, opencode) Narrow 360px and A4 print render inspection remains undone; it needs a host allowed to build and run a browser.
 - (efmp-303-u01-repair_en-r1, repair_en, opencode) G1 row stays unticked until the CurriculumOwner formally signs off on D-2026-0063.
 
+
 ## Response snapshot
 
-Generated, visually inspected, and placed all five raster illustrations (banner fig-U1-9 and topic illustrations fig-U1-10 to fig-U1-13) for EFMP-303 Unit 1 across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated, visually inspected, and placed all five raster illustrations (banner fig-U1-9 and topic figures fig-U1-10 to fig-U1-13) for EFMP-303 Unit 1 across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-303 Unit 1 by agy (attempt 1).
-- Tests: npm run check:content passed with 14/14 content gates green.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all five raster illustrations (banner fig-U1-9 and topic figures fig-U1-10 to fig-U1-13) for EFMP-303 Unit 1 across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Shipped / changed: Generated, visually inspected, and placed all five raster illustrations (banner fig-U1-9 and topic figures fig-U1-10 to fig-U1-13) for EFMP-303 Unit 1 across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Topic 1.3's prose sets the classroom in Lahore (and has a pupil call the female teacher "Sir"), so fig-U1-12 names no city instead of Sindh. Check whether the prose should change in a revision pass.
-  - Narrow 360px and A4 print render inspection remains undone (requires browser environment).
+  - Topic 1.3's prose sets the classroom in Lahore (and has a pupil call the female teacher "Sir"), so fig-U1-12 names no city instead of Sindh; check whether the prose should change in a future revision pass.
+  - Narrow 360px and A4 print render inspection remains undone (requires a host permitted to run a browser/build).
+  - G1 row remains unticked awaiting formal CurriculumOwner sign-off on D-2026-0063.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
