@@ -1,0 +1,10 @@
+# Unit banner - GENG-301 Unit 1 (Introduction to Expository Writing)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs geng-301 1 --banner`) by the illustrate job; inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U1-7 | index | illustration | unit banner, wide 16:9 landscape scene, painted in a warm documentary style: a classroom in a government college of education in Sindh, whitewashed walls, a ceiling fan, a green chalkboard, tall barred windows letting in warm morning light; student-teachers, young men and women in shalwar kameez, the women with dupattas, one in an ajrak-print dupatta, sit at wooden desks writing in notebooks; at the front a woman tutor in shalwar kameez and dupatta has drawn on the chalkboard four plain empty boxes joined by arrows in a row, the shape of a planned paragraph, and is pointing to the first box while several students copy the shape; at one desk a student-teacher holds up two of her own pages side by side, one a long unbroken block of handwriting and the other a short page set out in clear separate blocks, and her desk-mate points to the blocked page approvingly; at another desk a young man draws small linking arrows between the lines of his draft while a classmate leans over to read it; the scene shows writers learning to explain clearly, choosing the explaining mode over storytelling, connecting their sentences and planning a paragraph; no readable text on any page, screen, board, notice or paper, no map, flag or emblem in frame | In a Sindh college of education classroom, a tutor points to four boxes joined by arrows on the chalkboard to show a planned paragraph, one student-teacher compares a long unbroken page with a clearly blocked one, and another draws arrows linking the sentences of his draft. |  | prompt-only |
