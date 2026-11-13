@@ -85,7 +85,7 @@ Generated, inspected, and placed all three raster illustrations for EFMP-301 Uni
 ## Outcome
 
 - Impact: illustrate for EFMP-301 Unit 11 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
@@ -96,7 +96,9 @@ Generated, inspected, and placed all three raster illustrations for EFMP-301 Uni
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 11 G3 stays unticked; owner must arrange current mobile/A4 rendering and authenticated independent review provenance.
+  - Qualified subject review of WHO-bound clinical interpretation, urgency, and local referral procedure remains an owner escalation item prior to certification.
+  - Visual render (360px/print) and author session provenance evidence remain unverified under host resource controls.
+  - Unit 11 G3 remains open and unticked pending owner authorisation for a subsequent review cycle under ADR-0019.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
