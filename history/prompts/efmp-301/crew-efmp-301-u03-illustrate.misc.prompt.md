@@ -83,9 +83,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u03-repair_en-r1, repair_en, agy) Unit 3 G3 remains open and unticked pending a fresh independent review cycle.
 - (efmp-301-u03-repair_en-conflict1, fix, agy) Owner must resolve render/glyph and provenance evidence before acceptance.
 
+
 ## Response snapshot
 
-Generated and placed the banner and four topic raster illustrations for EFMP-301 Unit 3 in English and Urdu, updated figure manifests to placed, and refreshed G2 gate evidence.
+Generated with agy, inspected, and placed all 5 Unit 3 raster illustrations (banner fig-U3-10, topic scenes fig-U3-11 through fig-U3-14) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
@@ -97,11 +98,11 @@ Generated and placed the banner and four topic raster illustrations for EFMP-301
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed the banner and four topic raster illustrations for EFMP-301 Unit 3 in English and Urdu, updated figure manifests to placed, and refreshed G2 gate evidence.
+- Shipped / changed: Generated with agy, inspected, and placed all 5 Unit 3 raster illustrations (banner fig-U3-10, topic scenes fig-U3-11 through fig-U3-14) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G2 gate evidence points to `20261113T015843872Z-gates.json` with logs committed.
+  - G2 gate evidence refreshed and committed at `specs/content/efmp-301/reviews/unit-03/G2/20261113T015843872Z-gates.json`.
   - Unit 3 G3 remains open and unticked pending a fresh independent review cycle.
   - Owner must resolve render/glyph accessibility and model provenance evidence before final acceptance.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
