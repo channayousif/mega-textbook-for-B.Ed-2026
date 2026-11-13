@@ -4,7 +4,7 @@ title: crew illustrate EFMP-301 unit 2
 stage: misc
 date: 2026-11-13
 surface: agent
-model: gemini
+model: agy
 feature: efmp-301
 branch: crew/efmp-301-u02-illustrate
 user: crew
@@ -13,7 +13,7 @@ labels: ["crew", "agy", "illustrate"]
 links:
   spec: specs/content/efmp-301/content-spec.md
   ticket: null
-  adr: history/adr/0029-gemini-raster-illustrations.md
+  adr: null
   pr: null
 files:
  - docs/semester-1/efmp-301/unit-02/index.mdx
@@ -21,6 +21,7 @@ files:
  - docs/semester-1/efmp-301/unit-02/topic-02.mdx
  - docs/semester-1/efmp-301/unit-02/topic-03.mdx
  - docs/semester-1/efmp-301/unit-02/topic-04.mdx
+ - history/prompts/efmp-301/crew-efmp-301-u02-illustrate.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-02.mdx
@@ -82,26 +83,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u02-repair_en-r1, repair_en, claude) Unit 2 has used both of its ADR-0019 review cycles, so a fresh G3 review needs the owner's authorisation.
 - (efmp-301-u02-repair_en-r1, repair_en, claude) `seifert-hk` is listed only as a supporting source and is not cited in the unit text; any later edit to `sources/unit-02.md` makes the G2 evidence out of date again.
 
+
 ## Response snapshot
 
-Generated the 4 topic raster illustrations and 1 unit banner illustration for EFMP-301 Unit 2 using Gemini via agy per ADR-0029, inspected and accepted all 5 images for cultural and pedagogical accuracy, placed them as Figure components in English and Urdu topic/index files, moved manifest rows to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated and placed the banner and four topic raster illustrations for EFMP-301 Unit 2 in English and Urdu, updated figure manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
-- Impact: illustrate for EFMP-301 Unit 2 by agy.
-- Tests: npm run check:content passed (14/14 gates).
-- Files: 27 file(s), listed above.
+- Impact: illustrate for EFMP-301 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced and placed raster illustrations fig-U2-9 (banner), fig-U2-10, fig-U2-11, fig-U2-12, and fig-U2-13 for EFMP-301 Unit 2 across English and Urdu files; updated manifests to placed; refreshed G2 gate evidence.
+- Shipped / changed: Generated and placed the banner and four topic raster illustrations for EFMP-301 Unit 2 in English and Urdu, updated figure manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The G2 evidence points to `20261112T234531569Z-gates.json` and its logs are committed.
-  - Checking the unit at 360px and print is still open and needs a browser run.
+  - G2 gate evidence points to `20261112T234531569Z-gates.json` with logs committed.
+  - Checking the unit at a 360px-wide screen and in A4 print remains open and requires a browser run.
   - Unit 2 has used both ADR-0019 review cycles, so a fresh G3 review requires owner authorisation.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
