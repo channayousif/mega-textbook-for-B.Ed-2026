@@ -16,30 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/efmp-301/unit-05/index.mdx
-  - docs/semester-1/efmp-301/unit-05/topic-01.mdx
-  - docs/semester-1/efmp-301/unit-05/topic-02.mdx
-  - history/prompts/efmp-301/crew-efmp-301-u05-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-02.mdx
-  - specs/content/efmp-301/figures/unit-05.banner.md
-  - specs/content/efmp-301/figures/unit-05.md
-  - specs/content/efmp-301/reviews/unit-05/G2/20261113T040454961Z-gates.json
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-bloom-bands.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-concept-graph.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-depth-gate.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-docs-sync.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-figures.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-no-answer-keys.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-no-em-dash.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/validate-content.txt
-  - specs/content/efmp-301/tasks.md
-  - static/img/figures/efmp-301/unit-05/fig-U5-5.webp
-  - static/img/figures/efmp-301/unit-05/fig-U5-6.webp
-  - static/img/figures/efmp-301/unit-05/fig-U5-7.webp
+ - docs/semester-1/efmp-301/unit-05/index.mdx
+ - docs/semester-1/efmp-301/unit-05/topic-01.mdx
+ - docs/semester-1/efmp-301/unit-05/topic-02.mdx
+ - history/prompts/efmp-301/crew-efmp-301-u05-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-02.mdx
+ - specs/content/efmp-301/figures/unit-05.banner.md
+ - specs/content/efmp-301/figures/unit-05.md
+ - specs/content/efmp-301/reviews/unit-05/G2/20261113T040454961Z-gates.json
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-bloom-bands.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-concept-graph.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-depth-gate.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-docs-sync.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-figures.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-no-answer-keys.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/check-no-em-dash.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261113T040454961Z/validate-content.txt
+ - specs/content/efmp-301/tasks.md
+ - static/img/figures/efmp-301/unit-05/fig-U5-5.webp
+ - static/img/figures/efmp-301/unit-05/fig-U5-6.webp
+ - static/img/figures/efmp-301/unit-05/fig-U5-7.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -77,9 +77,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u05-repair_en-conflict3, fix, opencode) Shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) were byte-identical on both sides at the merge base, so no ID rewrites were needed.
 - (efmp-301-u05-repair_en-conflict3, fix, opencode) The merge touched no Unit 5 content or figures, so the G2 evidence at 20261103T044540225Z-gates.json stays fresh; any further Unit 5 edit invalidates it.
 
+
 ## Response snapshot
 
-Generated with agy, inspected, and placed all 3 Unit 5 raster illustrations (banner fig-U5-5, topic scenes fig-U5-6 and fig-U5-7) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
+Generated with agy, inspected, and placed all 3 EFMP-301 Unit 5 raster illustrations (banner fig-U5-5, topic scenes fig-U5-6 and fig-U5-7) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
@@ -91,18 +92,17 @@ Generated with agy, inspected, and placed all 3 Unit 5 raster illustrations (ban
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with agy, inspected, and placed all 3 Unit 5 raster illustrations (banner fig-U5-5, topic scenes fig-U5-6 and fig-U5-7) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
+- Shipped / changed: Generated with agy, inspected, and placed all 3 EFMP-301 Unit 5 raster illustrations (banner fig-U5-5, topic scenes fig-U5-6 and fig-U5-7) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G2 gate evidence refreshed and committed at `specs/content/efmp-301/reviews/unit-05/G2/20261113T040454961Z-gates.json`.
-  - Unit 5 G3 remains open and unticked pending an authorised fresh independent review cycle.
-  - Seifert2009 citations and bindings are in sync.
+  - G2 gate evidence refreshed and committed at [20261113T040454961Z-gates.json](file:///home/a2ahs/crew-wt/efmp-301-u05-illustrate/specs/content/efmp-301/reviews/unit-05/G2/20261113T040454961Z-gates.json).
+  - Unit 5 G3 review remains open pending an authorised fresh independent review cycle.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Initial banner generation attempt was briefly delayed by a transient model quota reset timestamp; waited out and succeeded on reset.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
