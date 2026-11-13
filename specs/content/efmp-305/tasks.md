@@ -65,7 +65,7 @@ the 4 expected prompt-only findings until G6 renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261110T010218845Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261113T053423484Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
