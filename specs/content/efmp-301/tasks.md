@@ -93,7 +93,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 10 | G6 assets | ▢ | | |
 | Unit 10 | G7 publish | ▢ | | |
 | Unit 11 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-11/G2/20261109T215211663Z-gates.json |
+| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-11/G2/20261113T010332576Z-gates.json |
 | Unit 11 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 3a31f523; report reviews/unit-11/G3/agent-g3-efmp301-u11-20260925T165209548Z.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 11 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle 2: escalate; prior blocking repairs verified; clinical source support, current renders and handoff provenance unverified; owner escalation required; report reviews/unit-11/G3/codex-cycle2-20261028.json |
 | Unit 11 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
@@ -101,7 +101,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 11 | G6 assets | ▢ | | |
 | Unit 11 | G7 publish | ▢ | | |
 | Unit 12 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-12/G2/20261109T215211832Z-gates.json |
+| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-12/G2/20261113T012006117Z-gates.json |
 | Unit 12 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 678a6f2d; report reviews/unit-12/G3/agent-g3-efmp301-u12-run001.json |
 | Unit 12 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory run002: escalate (final cycle); prior repairs checked, current render unavailable, modelling claim and unstated ERQ word limits require owner action; report reviews/unit-12/G3/agent-codex-g3-u12-run002.json |
 | Unit 12 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
