@@ -1,5 +1,7 @@
 # EFMP-303 Unit 3 Figure Manifest (v2)
 
+Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
+
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
 | fig-U3-1 | 3.1 | concept-map | Clean flat vector concept map. "Development plan" at centre. Five branches: education chapter, health chapter, infrastructure chapter, resource allocation, education outcomes. Arrows showing how resource allocation feeds into education outcomes. High contrast, no colour-only meaning, textbook.com.pk wordmark. | A concept map showing 'Development plan' at the centre with branches for education chapter, health chapter, infrastructure chapter, resource allocation, and education outcomes, with arrows showing how resource allocation feeds into education outcomes. | /img/figures/efmp-303/unit-03/fig-U3-1.svg | placed |
@@ -19,3 +21,34 @@ Figure U3-2 was redesigned because the earlier allocation column had no verifiab
 ## Repair record (2026-11-10)
 
 U3-3 and U3-5 were redrawn so the boxes read 1-2-3 on the top row and 4-5-6 on the bottom row, with an explicit wrap arrow from stage 3 to stage 4. U3-3 keeps a dashed outer feedback loop from stage 6 back to stage 1. The previous snake layout let a reader scan the lower row as 6-5-4. EN, UR and dark variants updated; `measure-figure-text.mjs` clean.
+
+## Raster inspection continuation (2026-11-14)
+
+Codex inspected all four existing WebP scenes, including the banner. Figures U3-7, U3-8
+and U3-9 show the planned teaching contrasts, Pakistani dress and Sindh settings, without
+readable text, sacred people, scripture, calligraphy, maps, flags or emblems. Lines on the
+blank paperwork are abstract strokes rather than lettering.
+
+U3-10 was rejected because the report was closed, so the image did not show the diagram
+being copied as the approved prompt and alt require. Its row was deliberately returned to
+prompt-only for regeneration; the approved prompt and English alt were preserved. Gemini
+via agy returned RESOURCE_EXHAUSTED (429). Codex's built-in image tool is the approved
+ADR-0029 fallback.
+
+U3-9's Urdu alt had described the officer as standing; it now says seated, matching the
+approved prompt. The Sindh scenes in Topics 3.2 and 3.3 illustrate planning concepts across
+provincial settings, rather than documenting the named Swabi/Khyber Pakhtunkhwa scenarios.
+The images and their English alt text make no claim to depict those named locations; the
+brief explicitly requires Sindh. Prose, approved prompts and English alt text are unchanged.
+G3/G5 remain open for independent pedagogical and Urdu review.
+
+U3-10 replacement provenance: Codex built-in image generation, 2026-11-14, using the
+approved scene plus an explicit open-report/copying constraint. The source shows three
+sorted local-evidence piles on the left and the same unlabelled boxes-and-arrows diagram
+in an open glossy report and on the copied sheet on the right. It was visually inspected
+before placement; no readable text, sacred people, scripture, calligraphy, maps, flags
+or emblems are present. The original three accepted rasters remain unchanged from the
+earlier production commit 500424dfe; their exact generation model was not recorded there.
+
+Final U3-10 WebP: 1000 x 563 pixels, 131.5 KB. The compressed asset was inspected
+again: the open source diagram and its copy remain clear.
