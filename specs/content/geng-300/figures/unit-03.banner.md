@@ -1,0 +1,10 @@
+# Unit banner - GENG-300 Unit 3 (Effective Communication)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs geng-300 3 --banner`) by the illustrate job; inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U3-8 | index | illustration | unit banner, wide 16:9 landscape scene, painted in a warm documentary style: a B.Ed English communication class in a government college of education in Sindh, whitewashed walls, a blackboard, ceiling fans and tall barred windows letting in warm morning light; about twelve student teachers, young men and women in shalwar kameez, the women with dupattas; at the front one young woman student teacher gives a short practice presentation beside a chart-paper sheet showing only a simple picture, standing upright, making eye contact and gesturing openly while a small group listens and one young man raises his hand to ask a question; at a side desk a pair of student teachers revise a short letter together, one crossing out a long paragraph and the other pointing at a neat, short version; near the window two or three others talk informally, smiling and taking turns to speak; a man teacher educator in shalwar kameez stands to one side watching the presenter with an approving nod; the scene shows speaking, presenting and writing as clear, audience-aware communication; no readable text on any page, chart, board or paper, no map, flag or emblem in frame | Student teachers in a Sindh college of education practise communication: one gives a confident short presentation beside a picture chart while a classmate raises a question, a pair revises a long letter into a short, clear one, and others chat informally near the window as their teacher educator looks on approvingly. |  | prompt-only |
