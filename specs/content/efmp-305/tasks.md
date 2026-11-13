@@ -159,7 +159,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-06/G2/20261103T112242573Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-06/G2/20261113T063338173Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | independent review pending; CurriculumOwner handoff on TEX-78 |
 | Unit 6 | G4 ur-translation | ▣ | | complete 6-file UR mirror verified against EN baseline (2026-10-18): 6 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted); translation_status stays draft pending fresh independent G5 |
 | Unit 6 | G5 ur-review | ▢ | | |
@@ -188,7 +188,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 |---|---|---|---|---|
 | Unit 5 | G3 en-review | ▣ | agent:codex | advisory: revise; repairs applied for 20261102T212207Z-g3-desk-6054cf1d.json (F2–F8); see reviews/unit-05/repair-en-20261103/repair-notes.md. F1 provenance and browser/print evidence remain owner/host work; fresh independent review and MCQ re-solve required. G3 remains unticked. |
 
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261103T180403253Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261113T061728710Z-gates.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80fc.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261108T203238Z-g3-desk-79043796.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261108T203238Z-g3-desk-2a3b76c3.json |
