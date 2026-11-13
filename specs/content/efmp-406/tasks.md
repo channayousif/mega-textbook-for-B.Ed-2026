@@ -21,11 +21,11 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261103T141632171Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261113T073344601Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-01/G3/5be15169-67ce-493e-9ccd-e4c8e6b64a2d.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261103T180513037Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261113T074839182Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 2 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notices |
 | Unit 2 | G5 ur-review | ▢ | | |
