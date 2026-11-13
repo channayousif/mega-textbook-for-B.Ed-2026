@@ -1,0 +1,10 @@
+# Unit banner - EFPG-401 Unit 4 (Teaching of Grammar)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs efpg-401 4 --banner`) by the illustrate job; inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U4-5 | index | illustration | unit banner, wide 16:9 landscape scene, painted in a warm documentary style: a lively Grade 5 English grammar lesson in a government primary school in a small town in Sindh, whitewashed walls, a blackboard, a ceiling fan and a barred window with warm morning light; at the front a woman teacher in shalwar kameez and dupatta mimes walking and points to a boy who is walking across the front of the room while the class watch and call out what he is doing; on one side two girls look at a large picture of a busy village scene with a man riding a donkey cart, children playing and a woman drawing water, and take turns telling each other what the people are doing; on the other side a small group of boys play a guessing game, one acting out eating while the others raise their hands to guess; at the back a few pupils write short sentences in their notebooks about the picture; pupils of about ten in school uniform shalwar kameez, girls with white dupattas; the whole room shows grammar being used to say real things about what people are doing, not recited as a rule; every book, notebook, picture and the blackboard show only blurred shapes, no readable letters or words, no map, flag or emblem in frame; warm natural light, documentary feel | A Grade 5 English class in Sindh uses grammar to talk about what people are doing: the teacher points to a boy walking across the room, two girls describe a village picture to each other, boys guess a classmate's mimed action and others write sentences about the picture. |  | prompt-only |
