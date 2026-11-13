@@ -1,0 +1,10 @@
+# Unit banner - GENG-301 Unit 3 (Essay Organization and Structure)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs geng-301 3 --banner`) by the illustrate job; inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U3-9 | index | illustration | unit banner, wide 16:9 landscape scene, painted in a warm documentary style: a classroom in a government college of education in Sindh, whitewashed walls, a ceiling fan, a green chalkboard, tall barred windows letting in warm morning light; student-teachers, young men and women in shalwar kameez, the women with dupattas, one in an ajrak-print dupatta, are building an essay together on a long table pushed against the wall: at the top of the table a wide sheet tapering into a funnel shape is the introduction, below it three separate sheets sit side by side for the body, each with its own small wordless picture, and at the bottom a closing sheet; a woman pins the funnel-shaped sheet in place, a young man lays the middle sheets in order, another woman ties a red thread from the top sheet through each middle sheet to the closing sheet, and a young man holds the closing sheet and looks back at the top sheet to match them; at the side a woman tutor in shalwar kameez and dupatta watches and gestures approvingly; the scene shows an essay as a planned structure, introduction, body paragraphs and conclusion, held together by connections; no readable text on any page, screen, board, notice or paper, no map, flag or emblem in frame | In a Sindh college of education classroom, student-teachers assemble an essay on a long table, a funnel-shaped introduction sheet at the top, three body sheets in the middle and a closing sheet at the bottom, joined by a red thread while a tutor looks on. |  | prompt-only |
