@@ -1,0 +1,10 @@
+# Unit banner - EFPG-401 Unit 6 (A.V. Aids in Teaching of English)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs efpg-401 6 --banner`) by the illustrate job; inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U6-11 | index | illustration | unit banner, wide 16:9 landscape scene, painted in a warm documentary style: a lively Grade 5 English lesson in a government primary school in a small town in Sindh, whitewashed walls, a blackboard, a barred window with warm morning light and a ceiling fan; the room is full of simple audio-visual aids in use at once; at the front a woman teacher in shalwar kameez and dupatta holds up a picture flash card of a mango while pupils call out the word; beside her a hand-drawn brown-paper chart of a village market is pinned to the wall and two boys point at the stall-keeper and the fruit as they talk; on a side table a real clay pot, a lantern and a basket of vegetables sit ready for a lesson, and a small group of girls handle them and name them to each other; in one corner three pupils lean toward a small battery radio and a mobile phone speaker, listening carefully; pupils of about ten in school uniform shalwar kameez, girls with white dupattas; the whole room shows English becoming something pupils can see, hear and touch, made from cheap, everyday things; every book, card, chart and the blackboard show only blurred shapes, no readable letters or words, no map, flag or emblem in frame; warm natural light, documentary feel | A Grade 5 English class in Sindh full of simple teaching aids: the teacher holds up a mango flash card, two boys talk about a hand-drawn market chart, girls name a real clay pot, lantern and vegetables, and three pupils listen closely to a small radio. |  | prompt-only |
