@@ -80,9 +80,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u09-repair_en-conflict1, fix, opencode) Unit 9 G3 stays unticked; owner must arrange current mobile/A4 rendering and authenticated independent review provenance.
 - (efmp-301-u09-repair_en-conflict1, fix, opencode) The shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, terminology.csv) were untouched by both sides, so no union or ID renumbering was needed.
 
+
 ## Response snapshot
 
-Generated with agy, inspected, and placed all 4 raster illustrations (fig-U9-7 banner, fig-U9-8..fig-U9-10 topic scenes) across English and Urdu files for EFMP-301 Unit 9, updated manifests to placed, and refreshed G2 gate evidence.
+Generated, inspected, and placed all four raster illustrations for EFMP-301 Unit 9 across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
@@ -94,6 +95,16 @@ Generated with agy, inspected, and placed all 4 raster illustrations (fig-U9-7 b
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with agy, inspected, and placed all 4 raster illustrations (fig-U9-7 banner, fig-U9-8..fig-U9-10 topic scenes) across English and Urdu files for EFMP-301 Unit 9, updated manifests to placed, and refreshed G2 gate evidence.
+- Shipped / changed: Generated, inspected, and placed all four raster illustrations for EFMP-301 Unit 9 across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 9 G3 stays unticked; owner must arrange current mobile/A4 rendering and authenticated independent review provenance.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
