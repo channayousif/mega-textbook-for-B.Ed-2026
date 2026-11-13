@@ -32,7 +32,7 @@
 | Unit 2 | G6 assets | ▣ | | four original English schematics placed with dark variants; `measure-figure-text` geometry check runs in CI |
 | Unit 2 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261103T112248471Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261113T083223188Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting independent reviewer |
 | Unit 3 | G4 ur-translation | ▢ | | Draft mirror delivered: four MDX files and four Urdu light/dark SVG pairs; terminology and parity checks recorded in translations/unit-03/handoff.md. Stage remains open per translate-unit Step 7; independent G5 and authorised browser/print inspection pending. |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -45,7 +45,7 @@
 | Unit 4 | G6 assets | ▣ | | Four EN light/dark schematic pairs placed; Urdu assets deferred with the Urdu job |
 | Unit 4 | G7 publish | ▢ | | No publication authorised or performed by this job |
 | Unit 3 | G3 en-review | ▢ | | advisory: escalate by agent:codex-g3-reviewer; report at specs/content/efmp-406/reviews/unit-03/G3/01a19c22-e969-7f80-81b7-f2e304f416df.json; source support, assessment demand/rubrics, readability and civic-example repairs required; actual author run identity and browser/print evidence unavailable; all 13 content gates pass; G3 remains open and unsigned |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-05/G2/20261103T182100457Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-05/G2/20261113T084849097Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-05/G3/4df544c3-c825-473c-8c69-940a86171cf5.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
 | Unit 5 | G5 ur-review | ▢ | | |
@@ -73,7 +73,7 @@
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-03/G3/20261102T212207Z-g3-desk-41db593c.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-01/G3/20261102T212036Z-g3-desk-45e9b45b.json; teaching cases explicitly labeled as illustrative instructional examples in index, topics, teacher notes, and sources; Shakir et al. (2012) citations qualified as strictly limited to published abstract scope; headless review tooling constraints and pending catalog entry noted per ADR-0019; G3 remains open and unsigned |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-02/G3/20261102T212207Z-g3-desk-e7c99b68.json; RRQ 2, 3 and 9 prompts now request the fairer wording, the example and the barrier explanation their schemes reward (RRQ 2/3 scheme wording aligned, RRQ 9 model answer adds the explanation); MCQ 4 and 8 stems reframed as routine application of a taught rule within the approved Apply band; Topic 2.2 check item 2 trimmed to recall to match its Remember tag; source passage bundle, author run provenance and narrow-screen/A4/SVG geometry evidence remain unavailable to this job and need the coordinator and an authorised browser host; G3 remains open and unsigned |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261110T013623738Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261113T083223188Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-03/G3/20261102T212207Z-g3-desk-41db593c.json; Papen and Ashraf excerpts replaced with verbatim passages from fresh retrievals (non-verbatim blocks removed), unsupported claims qualified or removed, Article 25-A text separated from interpretation, fictional notices labelled, formative and MCQ 10 Bloom demand fixed, rubric performance anchors added, prose simplified and glossary/unit-03.json added; no source bound for event/practice or dominant/vernacular terms; author run identity and browser/print evidence still unavailable; G3 remains open and unsigned |
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-05/G3/20261102T212135Z-g3-desk-466a27a9.json; fictional teaching examples labeled in EN/UR; Minott abstract-only scope and Indonesian higher education context clarified; tooling and catalog limits recorded in reviews/unit-05/G3/repair-handoff.md; G3 remains open and unsigned |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-01/G3/20261108T203238Z-g3-desk-5985010a.json |
