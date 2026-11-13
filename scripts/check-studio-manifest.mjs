@@ -9,7 +9,8 @@
 //   - no placed Markdown asset still carries an answer-key / rubric / quiz section
 //     (answer keys are forbidden outside the bounded assessment section);
 //   - no asset anywhere under static/studio/ carries a quiz answer field;
-//   - every studio-media ledger (media-unit-NN.json) validates, and no audio/video file sits in the repo.
+//   - every studio-media ledger (media-unit-NN.json) validates, and no audio/video file sits in the repo;
+//   - every teaser script (specs/studio/teasers/<id>.json) passes QG0 and the teaser ledger is consistent.
 // Exit 1 on any finding. Fast (no network, no browser), so it runs in CONTENT_GATES.
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, resolve, dirname, relative } from 'node:path';
@@ -17,6 +18,7 @@ import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { hasForbiddenSection } from './notebook-studio/postprocess-report.mjs';
+import { checkScript, TEASER_STATES } from './notebook-studio/teaser.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LONG_DASH = /[\u2014\u2015\u2E3A\u2E3B]/;
@@ -101,6 +103,27 @@ export function checkStudio(root = ROOT) {
     if (l.course !== course || l.unit !== unit) findings.push(`${rel(file)}: course/unit (${l.course}/${l.unit}) do not match the path`);
     const POST_UPLOAD = ['uploaded-private', 'qa3-pass', 'approved', 'public', 'placed'];
     for (const i of l.items) if (POST_UPLOAD.includes(i.state) && !i.youtube_id) findings.push(`${rel(file)}: ${i.key} is ${i.state} without a youtube_id`);
+  }
+  // studio-teaser (D-2026-0082): every teaser script passes QG0; the ledger has a known state and a
+  // YouTube id once uploaded.
+  const tdir = join(root, 'specs', 'studio', 'teasers');
+  if (existsSync(tdir)) {
+    for (const f of readdirSync(tdir).filter((n) => n.endsWith('.json') && n !== 'media-teasers.json')) {
+      let s;
+      try { s = JSON.parse(readFileSync(join(tdir, f), 'utf8')); } catch (e) { findings.push(`specs/studio/teasers/${f}: not valid JSON (${e.message})`); continue; }
+      if (`${s.id}.json` !== f) findings.push(`specs/studio/teasers/${f}: id ${s.id} does not match the file name`);
+      for (const m of checkScript(s, root)) findings.push(`specs/studio/teasers/${f}: ${m}`);
+    }
+    const lp = join(tdir, 'media-teasers.json');
+    if (existsSync(lp)) {
+      const l = JSON.parse(readFileSync(lp, 'utf8'));
+      const POST = TEASER_STATES.slice(TEASER_STATES.indexOf('uploaded-private'));
+      for (const i of l.items ?? []) {
+        if (!TEASER_STATES.includes(i.state)) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} has unknown state ${i.state}`);
+        if (POST.includes(i.state) && !i.youtube_id) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} is ${i.state} without a youtube_id`);
+        if (!existsSync(join(tdir, `${i.id}.json`))) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} has no script ${i.id}.json`);
+      }
+    }
   }
   for (const p of walk(join(root, 'specs', 'studio'))) if (MEDIA_EXT.test(p)) findings.push(`${rel(p)}: media file in the repo`);
   return findings;

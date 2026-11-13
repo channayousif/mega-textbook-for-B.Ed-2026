@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Feature 029 studio-media QG1: technical checks on one audio/video file with ffprobe/ffmpeg.
 //
-//   node scripts/notebook-studio/media-qa.mjs <file> --kind audio|video [--part N] [--stage source|encoded]
+//   node scripts/notebook-studio/media-qa.mjs <file> --kind audio|video|clip|short [--part N] [--stage source|encoded]
 //
 // stage=source (the NotebookLM download): streams, duration bounds, long silences, black runs.
 // stage=encoded (what goes to YouTube): all of the above plus loudness and A/V duration match,
@@ -20,7 +20,12 @@ export const BOUNDS = {
   // audio.md v2 asks for a two-minute brief and short go-deeper parts (owner: long audio is ignored).
   audio: { brief: [75, 420], deeper: [60, 900] },
   video: { any: [90, 900] },
+  // studio-teaser (D-2026-0082): one Veo take is 4, 6 or 8 s; an assembled Short stays under 60 s.
+  clip: { any: [3.5, 8.6] },
+  short: { any: [20, 60] },
 };
+const VISUAL = new Set(['video', 'clip', 'short']);
+const VERTICAL = new Set(['clip', 'short']);
 export const LOUDNESS = { min: -20, max: -12, truePeakMax: -1 };
 export const MAX_SILENCE_S = 4;
 export const MAX_BLACK_S = 2;
@@ -57,16 +62,19 @@ export function parseBlack(stderr) {
 export function evaluate({ kind, part = 1, stage = 'source', probe, loudness, silences = [], blacks = [] }) {
   const f = [];
   if (!probe.audio) f.push('no audio stream');
-  if (kind === 'video') {
+  if (VISUAL.has(kind)) {
     if (!probe.video) f.push('no video stream');
     else if (probe.video.height < MIN_VIDEO_HEIGHT) f.push(`video height ${probe.video.height}p < ${MIN_VIDEO_HEIGHT}p`);
+    else if (VERTICAL.has(kind) && probe.video.width >= probe.video.height) f.push(`not vertical (${probe.video.width}x${probe.video.height}); Shorts need 9:16`);
   }
-  const [lo, hi] = kind === 'audio' ? BOUNDS.audio[part > 1 ? 'deeper' : 'brief'] : BOUNDS.video.any;
+  const [lo, hi] = kind === 'audio' ? BOUNDS.audio[part > 1 ? 'deeper' : 'brief'] : BOUNDS[kind].any;
   if (probe.duration_s < lo || probe.duration_s > hi) f.push(`duration ${Math.round(probe.duration_s)} s outside ${lo}-${hi} s`);
-  const longSilence = silences.filter((s) => s > MAX_SILENCE_S);
-  if (longSilence.length) f.push(`${longSilence.length} silence(s) longer than ${MAX_SILENCE_S} s (max ${Math.max(...longSilence).toFixed(1)} s)`);
+  // A teaser Short ends on a 5 s silent brand card (assemble-teaser.mjs), so allow that one gap.
+  const maxSilence = kind === 'short' ? 5.5 : MAX_SILENCE_S;
+  const longSilence = silences.filter((s) => s > maxSilence);
+  if (longSilence.length) f.push(`${longSilence.length} silence(s) longer than ${maxSilence} s (max ${Math.max(...longSilence).toFixed(1)} s)`);
   // Black frames matter only for real video; an audio card is a still image by design.
-  if (kind === 'video') {
+  if (VISUAL.has(kind)) {
     const longBlack = blacks.filter((b) => b > MAX_BLACK_S);
     if (longBlack.length) f.push(`${longBlack.length} black run(s) longer than ${MAX_BLACK_S} s`);
   }
@@ -86,7 +94,7 @@ export function measure(file, { kind, stage }) {
   const probe = parseProbe(execFileSync(bin('ffprobe'), ['-v', 'error', '-print_format', 'json', '-show_streams', '-show_format', file], { encoding: 'utf8' }));
   const af = ['silencedetect=noise=-50dB:d=2', ...(stage === 'encoded' ? ['ebur128=peak=true'] : [])].join(',');
   const args = ['-nostdin', '-hide_banner', '-nostats', '-i', file, '-af', af];
-  if (kind === 'video' && probe.video) args.push('-vf', 'blackdetect=d=1:pix_th=0.10');
+  if (VISUAL.has(kind) && probe.video) args.push('-vf', 'blackdetect=d=1:pix_th=0.10');
   else args.push('-vn');
   args.push('-f', 'null', '-');
   const r = spawnSync(bin('ffmpeg'), args, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
@@ -101,7 +109,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const kind = opt('kind');
   const stage = opt('stage', 'source');
   const part = Number(opt('part', 1));
-  if (!file || !['audio', 'video'].includes(kind)) { console.error('usage: media-qa.mjs <file> --kind audio|video [--part N] [--stage source|encoded]'); process.exit(2); }
+  if (!file || !['audio', 'video', 'clip', 'short'].includes(kind)) { console.error('usage: media-qa.mjs <file> --kind audio|video|clip|short [--part N] [--stage source|encoded]'); process.exit(2); }
   const m = measure(file, { kind, stage });
   const result = { ...evaluate({ kind, part, stage, ...m }), stage, metrics: { duration_s: m.probe.duration_s, video: m.probe.video, loudness: m.loudness, silences: m.silences.length, longest_silence_s: Math.max(0, ...m.silences), black_runs: m.blacks.length } };
   console.log(JSON.stringify(result, null, 1));
