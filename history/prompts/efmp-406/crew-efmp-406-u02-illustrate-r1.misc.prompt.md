@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-406-u02-illustrate-r1
-title: crew illustrate EFMP-406 unit 2 retry 1
+title: crew illustrate EFMP-406 unit 2
 stage: misc
 date: 2026-11-14
 surface: agent
@@ -59,19 +59,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Retried EFMP-406 Unit 2 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
+Retried EFMP-406 Unit 2 illustration generation, verified upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: illustrate retry 1 for EFMP-406 Unit 2 by agy.
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: illustrate for EFMP-406 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Retried EFMP-406 Unit 2 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
+- Shipped / changed: Retried EFMP-406 Unit 2 illustration generation, verified upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
