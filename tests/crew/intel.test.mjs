@@ -60,6 +60,36 @@ test('reviewSignals keeps the defect clause behind a rubric or carry-forward lab
   assert.deepEqual(sigs('Bare-URL link text: Further Reading uses raw URLs'), ['Bare-URL link text']);
 });
 
+test('reviewSignals strips unnumbered rubric areas and status carry-forwards, in any case (2026-11-10 C2)', () => {
+  const sigs = (...messages) => reviewSignals({ findings: messages.map((message) => ({ message })) }, 'g3:x', 't').map((s) => s.text);
+  assert.deepEqual(sigs(
+    'Assessment: The MCQ key names option B for every item. Rebalance it.',
+    'Prior finding 2 partly unresolved: Topic 3 still cites the 2012 PDF. Replace it.',
+    'Carry-forward prior finding 1: Further Reading uses raw URLs. See topic 4.',
+  ), ['The MCQ key names option B for every item', 'Topic 3 still cites the 2012 PDF', 'Further Reading uses raw URLs']);
+  assert.deepEqual(sigs(
+    'Prior finding 4 unresolved: The quotation has no page number. Add it.',
+    'sources/citations: Two sources are undated. Date them.',
+    'PEDAGOGY: The activity has no success criteria. Add them.',
+    'f02 sources: Topic 3 cites a superseded PDF. Replace it.',
+  ), ['The quotation has no page number', 'Two sources are undated', 'The activity has no success criteria', 'Topic 3 cites a superseded PDF']);
+  // A message that is only a label keeps the old behaviour; only one leading label is stripped.
+  assert.equal(findingClause('Assessment: '), 'Assessment');
+  assert.equal(findingClause('Carry-forward prior finding 1:'), 'Carry-forward prior finding 1:');
+  assert.equal(findingClause('Assessment: Pedagogy: the bank is short'), 'Pedagogy');
+});
+
+test('boardSignals drops the handoff notes of intel_distill jobs but keeps their failures (2026-11-13 C2)', () => {
+  const jobs = [
+    { id: 'intel-2026-11-14', stage: 'intel_distill', feedback: 'the worker exited without committing any change',
+      history: ['2026-11-14T03:00:00.000Z attempt 1 failed; retrying with feedback'],
+      handoffAt: '2026-11-14T04:00:00Z', handoff: ['C2 harvester echo: digest handoffs come back as new signals'] },
+    { id: 'u1-author', stage: 'author', history: [], handoffAt: '2026-11-14T04:00:00Z', handoff: ['parallel authors conflict on the tracker status line'] },
+  ];
+  assert.deepEqual(boardSignals(jobs, '2026-11-14T00:00:00Z').map((s) => [s.kind, s.source]),
+    [['failure', 'job:intel-2026-11-14'], ['handoff', 'job:u1-author']]);
+});
+
 test('foldSignals keeps the five newest distinct sources, dropping the oldest', () => {
   const s = (n) => ({ kind: 'review', sig: 'same defect clause', text: 'x', source: `g3:${n}`, at: `2026-11-0${n}T00:00:00Z` });
   const clusters = foldSignals({}, [1, 2, 3, 4, 5, 6, 7].map(s), 'slot');
