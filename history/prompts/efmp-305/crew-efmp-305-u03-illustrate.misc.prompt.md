@@ -80,26 +80,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-305-u03-repair_en-r1, repair_en, agy) Do not edit sources/texts/cast2024.md as it binds G2 evidence for both Unit 3 and Unit 4.
 - (efmp-305-u03-repair_en-r1, repair_en, agy) Unit 3 G3 remains unticked and open pending fresh independent review under ADR-0019.
 
+
 ## Response snapshot
 
-Produced, inspected, and placed all three EFMP-305 Unit 3 raster illustrations across English and Urdu topics and index pages, moved manifest rows to placed, and refreshed G2 gate evidence.
+Generated, inspected, and placed EFMP-305 Unit 3 raster illustrations (fig-U3-7, fig-U3-8, fig-U3-9) in English and Urdu pages, updated manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-305 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced, inspected, and placed all three EFMP-305 Unit 3 raster illustrations across English and Urdu topics and index pages, moved manifest rows to placed, and refreshed G2 gate evidence.
+- Shipped / changed: Generated, inspected, and placed EFMP-305 Unit 3 raster illustrations (fig-U3-7, fig-U3-8, fig-U3-9) in English and Urdu pages, updated manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All three raster illustrations (unit banner fig-U3-7 and classroom scenes fig-U3-8, fig-U3-9) are placed in both English and Urdu files and verified clean.
-  - G2 gate evidence was refreshed at `20261114T065842199Z-gates.json` and tasks.md line 68 repointed to maintain green pipeline gates.
+  - All three raster illustrations (banner fig-U3-7 and classroom scenes fig-U3-8, fig-U3-9) are placed and verified across English and Urdu files.
+  - G2 gate evidence is refreshed at 20261114T065842199Z-gates.json and all 14 content gates pass with zero findings.
+  - Unit 3 G3 remains unticked and open pending fresh independent review under ADR-0019.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
