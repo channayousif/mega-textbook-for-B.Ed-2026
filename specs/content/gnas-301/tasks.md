@@ -22,7 +22,7 @@ units may be authored.
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | gate-checked tier pre-authorised by D-2026-0014 |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261102T072752849Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261114T111011700Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory rounds 1-2: revise then PASS; round-2 report reviews/unit-02/G3/round-02/agent-g3-gnas301-u2-run002.json (disposition pass, advisory); round-2 advisories applied post-report; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/agent-g3-gnas301-u2-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ✅ | auto:g4 | all 6 Urdu mirror files at i18n/ur/.../gnas-301/unit-02/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
@@ -79,7 +79,6 @@ units may be authored.
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T211054Z-g3-desk-c9e52a96.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-bc87d518.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9b.json |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261103T112237933Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/20261102T212207Z-g3-desk-bc87d518.json; CONTENT-01 boiling vs chemical safety fixed, NEQS S.R.O. 549(I)/2000 and further WHO health-care waste passages bound, handling detail deferred to provincial law, risk ranking removed, bin-audit safety aligned, fig-U2-6 cells completed, concept links remapped, MCQ 3 relabelled Remember; GOV-01/EVID-01/RENDER-01/ASSESS-01 need owner/orchestrator action; needs a fresh G3 run |
 | Unit 6 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9b.json; corrected CON:GNAS-301-6-4/6-5 mappings (RRQ-04 and ERQ-02 to effect classes, RRQ-05 stays with routes); topic-03 ladder activity and ERQ-03 rubric now carry masses, concentrations and retention; ERQ-02 relabelled Apply, ERQ-05 Create criterion raised to 0-2, MCQ-05 relabelled Understand; RRQ-04/RRQ-05 premises reworded with marking guidance matched; topic-04 pane activity and teacher notes state the model limit; uncertain findings (accessibility, provenance, source binding, blind assessment evidence) remain owner-owned; G3 unticked, fresh review owner-gated by G-2026-33 |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-01/G3/20261102T213114Z-g3-desk-00b73da1.json |
