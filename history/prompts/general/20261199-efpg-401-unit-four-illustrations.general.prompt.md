@@ -28,7 +28,7 @@ files:
   - static/img/figures/efpg-401/unit-04/fig-U4-5.webp
 tests:
   - Baseline npm run build:content-status followed by npm run check:content passed all 14 gates.
-  - Final content gates and G2 evidence results recorded below.
+  - Final npm run build:content-status followed immediately by npm run check:content passed all 14 gates; refreshed G2 evidence passed all eight draft commands.
 ---
 
 ## Prompt
@@ -78,7 +78,7 @@ Produced and visually inspected the approved topic scene and unit banner, optimi
 ## Outcome
 
 - ✅ Impact: Adds contextual grammar-teaching illustrations in both locale flows.
-- 🧪 Tests: Baseline all 14 content gates passed; final results pending below.
+- 🧪 Tests: Baseline and final all 14 content gates PASS. Refreshed Unit 4 G2 evidence: all eight draft commands PASS. git diff --check PASS.
 - 📁 Files: Two raster assets, four MDX carriers, two manifests, Unit 4 tracker and G2 evidence.
 - 🔁 Next prompts: Independent G3 and G5 review remain outstanding.
 - 🧠 Reflection: Image generation success alone is insufficient; inspect teaching contrast, dress, text absence and alt fidelity before placement.
@@ -93,6 +93,10 @@ Produced and visually inspected the approved topic scene and unit banner, optimi
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Both required agy generation commands returned QUOTA_EXHAUSTED for gemini-3.1-flash-image, without producing files. Codex image_gen used as permitted by ADR-0029. Banner optimizer admission was interrupted with exit 143 once and retried from staging.
-- Graders run and results (PASS/FAIL): Baseline PASS. Final results pending below.
+- Graders run and results (PASS/FAIL): Baseline PASS; final 14 content gates PASS; eight G2 draft checks PASS; approved prompt/alt preservation PASS; git diff --check PASS.
 - Prompt variant (if applicable): Approved manifest prompts verbatim plus shared house style and explicit no-scripture/no-sacred-person constraints. Full approved prompts remain in unit-04.md and unit-04.banner.md. Producer: Codex built-in image_gen, 2026-11-15.
 - Next experiment (smallest change to try): No new experiment required.
+
+## Final asset validation
+
+Both optimized WebPs were read visually after compression. Topic scene: 1200 x 675, 148.8 KB. Banner: 1200 x 675, 138.4 KB. Assets saved at `static/img/figures/efpg-401/unit-04/fig-U4-4.webp` and `static/img/figures/efpg-401/unit-04/fig-U4-5.webp`. Both passed the optimizer budget. G2 evidence refreshed at `specs/content/efpg-401/reviews/unit-04/G2/20261114T232941025Z-gates.json` and the Unit 4 tracker repointed. No build, dev server, browser or SVG edit performed.
