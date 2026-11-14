@@ -19,6 +19,7 @@ files:
  - docs/semester-2/efmp-303/unit-05/index.mdx
  - docs/semester-2/efmp-303/unit-05/topic-01.mdx
  - docs/semester-2/efmp-303/unit-05/topic-02.mdx
+ - history/prompts/efmp-303/crew-efmp-303-u05-illustrate.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-02.mdx
@@ -79,23 +80,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected and placed EFMP-303 Unit 5 banner and two topic illustrations in both English and Urdu, refreshed G2 gate evidence and updated the tracker row.
+Generated, inspected and placed EFMP-303 Unit 5 unit banner and two topic raster illustrations in English and Urdu, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-303 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed with 14/14 content gates.
-- Files: 21 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected and placed EFMP-303 Unit 5 banner (`fig-U5-5`) and two topic illustrations (`fig-U5-6`, `fig-U5-7`) in both English and Urdu, with fresh passing gate evidence.
+- Shipped / changed: Generated, inspected and placed EFMP-303 Unit 5 unit banner and two topic raster illustrations in English and Urdu, refreshed G2 gate evidence, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Independent G3/G5 review and narrow-screen/A4 page inspection remain pending.
+  - Independent G3/G5 review and narrow-screen (360px) / A4 print render inspection remain pending for EFMP-303 Unit 5.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
