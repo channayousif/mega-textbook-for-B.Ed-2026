@@ -29,9 +29,9 @@
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T112249231Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261114T043221075Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-03/G3/01a19f68-d755-7131-a30e-d230853e3b7a.json; author-run provenance and parent-prepared handoff absent; required browser/print inspection barred by crew brief; qualified Islamic Studies scholar review pending; G3 remains open and unsigned |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T141632847Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261114T043221075Z-gates.json |
 | Unit 3 | G4 ur-translation | ▢ | | separate job |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
