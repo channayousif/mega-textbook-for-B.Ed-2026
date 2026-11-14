@@ -77,6 +77,7 @@ Attempted EFMP-406 Unit 5 illustration generation, confirmed upstream image quot
 - Notes for the next job on this unit:
   - Upstream image model gemini-3.1-flash-image quota remains exhausted (HTTP 429 RESOURCE_EXHAUSTED) resetting at 2026-11-17T11:00:06Z.
   - Figures fig-U5-5 through fig-U5-7 remain preserved at prompt-only across unit-05.banner.md and unit-05.md with all 14 content gates passing.
+  - When quota resets, generate fig-U5-5, fig-U5-6 and fig-U5-7, replace EN/UR markers with Figure elements, and rerun G2 evidence.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
