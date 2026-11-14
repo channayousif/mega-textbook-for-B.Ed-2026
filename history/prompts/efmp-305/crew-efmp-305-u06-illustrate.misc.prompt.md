@@ -56,9 +56,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-305-u06-repair_en-r1, repair_en, opencode) The 20261108 report's `input_manifest` predates commit `24d5f43d7`, so its 193-minute depth finding does not reproduce against current bytes (total 149).
 - (efmp-305-u06-repair_en-r1, repair_en, opencode) G3 stays unticked; fresh independent review, G5, and rendered Urdu inspection remain pending from earlier jobs.
 
+
 ## Response snapshot
 
-Attempted EFMP-305 Unit 6 illustration generation, detected upstream image model quota exhaustion resetting on 2026-11-17, preserved prompt-only rows across unit-06.banner.md and unit-06.md, verified all 14 content gates pass, and committed prompt history record.
+Attempted EFMP-305 Unit 6 illustration generation, confirmed upstream image model quota exhaustion resetting on 2026-11-17, preserved prompt-only rows across unit-06.banner.md and unit-06.md, verified 14 content gates pass, and committed prompt history record.
 
 ## Outcome
 
@@ -70,12 +71,12 @@ Attempted EFMP-305 Unit 6 illustration generation, detected upstream image model
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Attempted EFMP-305 Unit 6 illustration generation, detected upstream image model quota exhaustion resetting on 2026-11-17, preserved prompt-only rows across unit-06.banner.md and unit-06.md, verified all 14 content gates pass, and committed prompt history record.
+- Shipped / changed: Attempted EFMP-305 Unit 6 illustration generation, confirmed upstream image model quota exhaustion resetting on 2026-11-17, preserved prompt-only rows across unit-06.banner.md and unit-06.md, verified 14 content gates pass, and committed prompt history record.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image model gemini-3.1-flash-image quota is exhausted (HTTP 429 RESOURCE_EXHAUSTED) with quota reset timestamp 2026-11-17T11:00:06Z.
-  - Figures fig-U6-7, fig-U6-8, fig-U6-9, and fig-U6-10 remain safely at prompt-only in unit-06.banner.md and unit-06.md with all 14 content gates passing.
+  - Figures fig-U6-7 through fig-U6-10 remain safely at prompt-only in unit-06.banner.md and unit-06.md with all 14 content gates passing.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
