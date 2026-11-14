@@ -12,7 +12,7 @@ G2 en-draft cleared by deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261113T041813007Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261114T023932167Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied for `specs/content/efmp-304/reviews/unit-01/G3/agent-g3-efmp-304-u1-run5e4cc29c.json`: SVG syntax and wordmark geometry, RRQ 9 rebalanced to Topic 1.1 with Urdu model answer and concept mapping, placed manifest preamble, and descriptive article links in both locales. Fresh independent G3 and dependent G5 remain pending; no sign-off claimed. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | | Advisory **escalate**: `specs/content/efmp-304/reviews/unit-01/G3/agent-g3-efmp-304-u1-rune5024f5f.json`; second cycle re-review verified author repairs resolved all 5 previous findings (SVG syntax, wordmark viewBox overflow, RRQ topic balance, manifest preamble, descriptive links); all deterministic gates pass; visual render uninspected (brief prohibits build/server/browser); no certification |
