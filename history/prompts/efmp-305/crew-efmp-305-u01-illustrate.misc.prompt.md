@@ -13,32 +13,34 @@ labels: ["crew", "agy", "illustrate"]
 links:
   spec: specs/content/efmp-305/content-spec.md
   ticket: null
-  adr: history/adr/0029-gemini-agy-raster-illustration-producer.md
+  adr: null
   pr: null
 files:
-  - docs/semester-2/efmp-305/unit-01/index.mdx
-  - docs/semester-2/efmp-305/unit-01/topic-01.mdx
-  - docs/semester-2/efmp-305/unit-01/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-01/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-01/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-01/topic-02.mdx
-  - specs/content/efmp-305/figures/unit-01.banner.md
-  - specs/content/efmp-305/figures/unit-01.md
-  - specs/content/efmp-305/reviews/unit-01/G2/20261114T052100718Z-gates.json
-  - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-bloom-bands.txt
-  - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-concept-graph.txt
-  - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-depth-gate.txt
-  - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-docs-sync.txt
-  - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-figures.txt
-  - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-no-answer-keys.txt
-  - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-no-em-dash.txt
-  - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/validate-content.txt
-  - specs/content/efmp-305/tasks.md
-  - static/img/figures/efmp-305/unit-01/fig-U1-5.webp
-  - static/img/figures/efmp-305/unit-01/fig-U1-6.webp
-  - static/img/figures/efmp-305/unit-01/fig-U1-7.webp
+ - docs/semester-2/efmp-305/unit-01/index.mdx
+ - docs/semester-2/efmp-305/unit-01/topic-01.mdx
+ - docs/semester-2/efmp-305/unit-01/topic-02.mdx
+ - history/prompts/efmp-305/crew-efmp-305-u01-illustrate.misc.prompt.md
+ - history/prompts/general/20261195-generate-inclusive-classroom-banner.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-01/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-01/topic-02.mdx
+ - specs/content/efmp-305/figures/unit-01.banner.md
+ - specs/content/efmp-305/figures/unit-01.md
+ - specs/content/efmp-305/reviews/unit-01/G2/20261114T052100718Z-gates.json
+ - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-bloom-bands.txt
+ - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-concept-graph.txt
+ - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-depth-gate.txt
+ - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-docs-sync.txt
+ - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-figures.txt
+ - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-no-answer-keys.txt
+ - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/check-no-em-dash.txt
+ - specs/content/efmp-305/reviews/unit-01/G2/logs-20261114T052100718Z/validate-content.txt
+ - specs/content/efmp-305/tasks.md
+ - static/img/figures/efmp-305/unit-01/fig-U1-5.webp
+ - static/img/figures/efmp-305/unit-01/fig-U1-6.webp
+ - static/img/figures/efmp-305/unit-01/fig-U1-7.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -76,31 +78,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-305-u01-repair_en-r1, repair_en, opencode) Render evidence (narrow-screen, keyboard, A4) and author provenance remain unavailable under the brief prohibition; no third review cycle is authorised.
 - (efmp-305-u01-repair_en-r1, repair_en, opencode) `static/content-status.json` is git-ignored; run `npm run build:content-status` before `check:content` on a fresh checkout.
 
+
 ## Response snapshot
 
-Generated and placed all three raster illustrations for EFMP-305 Unit 1 (topic scenes fig-U1-6 and fig-U1-7, unit banner fig-U1-5), visually inspected all assets for cultural authenticity, absence of text and pedagogical accuracy, placed Figure components in both English and Urdu mirrors, updated manifest rows to placed, refreshed passing G2 gate evidence, and repointed tasks.md.
+Produced, inspected, and placed all three EFMP-305 Unit 1 raster illustrations across English and Urdu topics and index pages, moved manifest rows to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
-- Impact: All three planned raster illustrations for EFMP-305 Unit 1 produced, verified, and placed across English and Urdu files.
-- Tests: All 14 content gates passed with zero findings (`npm run check:content`).
-- Files: 21 files touched or created (3 WebP images, 3 English docs files, 3 Urdu i18n files, 2 figure manifests, G2 evidence json + logs, tasks.md, PHR).
-- Next prompts: Independent review / translation verification.
-- Reflection: Handled temporary image quota exhaustion cleanly using scheduler wake-up and the approved alternative generator route for the unit banner.
+- Impact: illustrate for EFMP-305 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 23 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected and placed `fig-U1-5.webp` (unit banner), `fig-U1-6.webp` (topic 1.1 scene), and `fig-U1-7.webp` (topic 1.2 scene) in both English and Urdu documents; moved rows in `unit-01.banner.md` and `unit-01.md` to `placed`; refreshed G2 gate evidence and repointed `tasks.md` line 30.
-- Decisions the team must respect: Approved prompts and English alt text remained verbatim; Urdu alt text accurately describes the scenes without em dashes; no review certification claimed.
-- Pending / next owner: Next review or translation check.
+- Shipped / changed: Produced, inspected, and placed all three EFMP-305 Unit 1 raster illustrations across English and Urdu topics and index pages, moved manifest rows to placed, and refreshed G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All three raster illustrations are placed and passing all content gates.
-  - G2 evidence has been updated to `20261114T052100718Z-gates.json` and referenced in `tasks.md`.
-- Paperclip issues affected: None supplied; crew job efmp-305-u01-illustrate.
+  - All three raster illustrations (unit banner fig-U1-5 and classroom scenes fig-U1-6, fig-U1-7) are placed in both English and Urdu files and verified clean.
+  - G2 gate evidence was refreshed at `20261114T052100718Z-gates.json` and tasks.md line 30 repointed to maintain green pipeline gates.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Initial topic generation waited for quota reset; banner generation utilized the approved Codex fallback to stage PNG, followed by WebP optimization and manifest progression.
-- Graders run and results (PASS/FAIL): `check:content` PASS (all 14 gates pass).
-- Prompt variant (if applicable): crew brief efmp-305-u01-illustrate.
-- Next experiment (smallest change to try): None.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
