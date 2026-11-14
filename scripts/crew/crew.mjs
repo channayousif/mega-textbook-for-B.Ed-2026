@@ -848,9 +848,11 @@ function queueCiFixes(board, red, events) {
  * older branches, static/content-status.json. When a batch merge conflicts in these alone,
  * resolve it here instead of spending a merge-fix job: glossary by mergeGlossary, content-status
  * by regenerating it, and a tracker by mergeTrackerRows, which keys table rows by Unit, Stage and
- * occurrence number: a row changed or removed on one side takes that side, new rows from both
- * sides are kept (ours first) after their table's last row, and prose merges only when both
- * sides purely insert. A row changed differently on both sides, or any other prose change, still
+ * occurrence number (summary rows use Unit and occurrence): a row changed or removed on one
+ * side takes that side, new rows from both sides are kept (ours first) after their table's last
+ * row, and prose merges only when both
+ * sides purely insert, except the Status section takes the only changed side or ours if both
+ * change it differently. A row changed differently on both sides, or any other prose change, still
  * falls back to a merge fix. The batch's registry and content gates still run on the result.
  * Returns false (caller aborts) for any other conflict.
  */
