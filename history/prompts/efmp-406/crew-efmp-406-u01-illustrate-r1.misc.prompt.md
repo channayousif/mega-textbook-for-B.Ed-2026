@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-406-u01-illustrate-r1
-title: crew illustrate EFMP-406 unit 1 retry 1
+title: crew illustrate EFMP-406 unit 1
 stage: misc
 date: 2026-11-14
 surface: agent
@@ -56,22 +56,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u01-plan_illustrations, plan_illustrations, claude) fig-U1-7 deliberately leaves out the prose's Quran-memorisation detail (no religious book or calligraphy); check the generated image has none either.
 - (efmp-406-u01-repair_en-r1, repair_en, agy) Urdu pages remain uninspected on Playwright Chromium, narrow width (360px), and A4 print per crew host constraints; the G5 review must verify these.
 
+
 ## Response snapshot
 
-Attempted EFMP-406 Unit 1 illustration generation retry, confirmed upstream image quota exhaustion remains active until 2026-11-17T11:00:06Z, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
+Retried EFMP-406 Unit 1 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: illustrate retry 1 for EFMP-406 Unit 1 by agy.
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: illustrate for EFMP-406 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
-- Next prompts: crew planner schedules retry after quota reset at 2026-11-17T11:00:06Z.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Attempted EFMP-406 Unit 1 illustration generation retry, confirmed upstream image quota exhaustion remains active until 2026-11-17T11:00:06Z, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Retried EFMP-406 Unit 1 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image model gemini-3.1-flash-image quota remains exhausted (HTTP 429 RESOURCE_EXHAUSTED) resetting at 2026-11-17T11:00:06Z.
