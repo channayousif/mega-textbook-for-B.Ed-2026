@@ -2,7 +2,7 @@
 id: crew-efpg-401-u02-review_en
 title: crew review_en EFPG-401 unit 2
 stage: misc
-date: 2026-11-15
+date: 2026-11-14
 surface: agent
 model: agy
 feature: efpg-401
@@ -16,22 +16,21 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efpg-401/crew-efpg-401-u02-review_en.misc.prompt.md
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654.json
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-content.txt
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-depth-gate.txt
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-docs-sync.txt
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-figures.txt
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-no-answer-keys.txt
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-no-em-dash.txt
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/render-review.txt
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/validate-content.txt
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/manifest.json
-  - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/summary.md
-  - specs/content/efpg-401/tasks.md
+ - history/prompts/efpg-401/crew-efpg-401-u02-review_en.misc.prompt.md
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654.json
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-content.txt
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-depth-gate.txt
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-docs-sync.txt
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-figures.txt
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-no-answer-keys.txt
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/check-no-em-dash.txt
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/render-review.txt
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/logs/validate-content.txt
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/manifest.json
+ - specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654/summary.md
+ - specs/content/efpg-401/tasks.md
 tests:
-  - npm run check:content
-  - node scripts/review-evidence.mjs validate specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654.json
+ - npm run check:content
 ---
 
 ## Prompt
@@ -62,31 +61,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Conducted independent G3 English review of EFPG-401 Unit 2, recorded validated advisory escalation report with evidence bundle, and updated tasks.md tracker row while keeping G3 open.
+Conducted independent G3 English review of EFPG-401 Unit 2, recorded validated advisory escalation report with evidence bundle and PHR, and updated tasks.md tracker row while keeping G3 open.
 
 ## Outcome
 
 - Impact: review_en for EFPG-401 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed and review-evidence validate passed.
-- Files: 13 files listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 13 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: None recorded.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G3 English review of EFPG-401 Unit 2, recorded validated advisory escalation report with evidence bundle, and updated tasks.md tracker row while keeping G3 open.
-- Decisions the team must respect: G3 stays advisory until a qualified sign-off; this PR does not certify anything.
+- Shipped / changed: Conducted independent G3 English review of EFPG-401 Unit 2, recorded validated advisory escalation report with evidence bundle and PHR, and updated tasks.md tracker row while keeping G3 open.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live site deployed SHA (33d5feca) differed from HEAD (925047c67) because of recent raster illustration additions; render-review was recorded as unavailable.
-  - Candidate English content in docs/semester-3/efpg-401/unit-02/ is completely clean and passed all 14 content gates.
+  - Live site deployed SHA (33d5feca) differed from HEAD (925047c67) because of recent raster illustration additions; render-review was recorded as unavailable and visual inspection remains unverified.
+  - English prose, coverage, and all 25 assessment items in docs/semester-3/efpg-401/unit-02/ are completely clean and pass all 14 content gates.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS, validateReport PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
