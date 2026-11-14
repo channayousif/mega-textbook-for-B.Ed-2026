@@ -83,7 +83,7 @@ host (and the live site) on 2026-09-20 and 2026-09-24. Therefore:
 
 ## Content work
 
-Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring, translation, review and revision skills live in `.claude/skills/` (`author-unit`, `translate-unit`, `generate-figures`, `review-unit`, `revise-topic`, `evaluate-intake`); Study Studio audio and video go through `studio-media` (NotebookLM to YouTube with quality gates).
+Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring, translation, review and revision skills live in `.claude/skills/` (`author-unit`, `translate-unit`, `generate-figures`, `review-unit`, `revise-topic`, `evaluate-intake`); Study Studio audio and video go through `studio-media` (NotebookLM to YouTube with quality gates), and course teaser Shorts through `studio-teaser` (Google Flow to YouTube Shorts).
 
 Unit structure (Spec 008 per-topic standard): `unit-NN/index.mdx`, `topic-NN.mdx`, `unit-assessment.mdx` (+ optional `unit-teacher-notes.mdx`); optional course-level `course-review.mdx`. Legacy five-file units are exempt from per-topic rules.
 

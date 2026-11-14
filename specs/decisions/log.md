@@ -4633,3 +4633,29 @@ content-improvement loop with no further cycle.
 - **Limits:** Certifies no content, qualifies no reviewer and authorises no publication
   (Art. VII.8). Changes no approved content-spec; the backfilled images are additions the spec's
   schematic figure plan does not forbid.
+
+---
+
+## D-2026-0082 - Automate Google Flow from the owner's PC for course teaser Shorts
+
+- **Status:** confirmed
+- **Gate:** none (Feature 029 Study Studio media; not video-studio)
+- **Scope:** course and licence-track teaser Shorts on the textbook.com.pk YouTube channel; later per-unit teasers
+- **Decided by:** curriculum owner, 2026-11-10 (board-direct, relayed through Claude Code), when planning teaser Shorts
+- **Decision:**
+  1. **Flow is automated, on the owner's Windows PC only.** The community `gflow-cli` MCP server
+     (MIT) drives the owner's own Google Flow Pro session in real Chrome. Its daemon is reached
+     from the server over an SSH reverse tunnel bound to localhost. Nothing runs in CI or the crew.
+     The video-studio rule against automating subscription sites still binds video-studio; this
+     ruling covers only the Feature 029 teaser pipeline.
+  2. **Narration is spoken by Veo, generated separately per language** (EN and UR), about 45 s
+     from five 8-second clips plus an end card.
+  3. **First batch:** one promotional teaser per course (17) and one for the teacher licence
+     track, in EN and UR (36 Shorts). Per-unit teasers follow on the same pipeline.
+  4. **Spending guard:** owner approves every script batch before credits are spent; at most two
+     retakes per shot; uploads go private first and turn public only after the owner's spot-check.
+- **Basis:** owner answers 2026-11-10 ("My Windows PC", "Veo narration per language", "~45 s",
+  "one promotional teaser for each course and one for Teacher license track in the beginning").
+- **Limits:** Certifies no content, qualifies no reviewer and authorises no publication beyond the
+  owner's own spot-check (Art. VII.8). Account risk from automating Flow is the owner's, per the
+  gflow-cli disclaimer. An ADR is suggested, not adopted.

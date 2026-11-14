@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://textbook.com.pk/specs/studio/teaser-script.schema.json",
+  "title": "Study Studio teaser Short script (Feature 029, studio-teaser skill, D-2026-0082)",
+  "description": "One file per course (or the licence track) at specs/studio/teasers/<id>.json. Five 8-second Veo shots share one visual plan; each locale has its own spoken narration, because Veo speaks the line inside the clip. Facts come only from the listed source pages. The owner approves the script (in the teaser ledger) before any Flow credits are spent.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "kind", "title", "sources", "visual_style", "shots", "locales"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^([a-z]{2,6}-[0-9]{3}|licence)$" },
+    "kind": { "enum": ["course", "licence"] },
+    "course_code": { "type": "string", "pattern": "^[A-Z]{2,6}-[0-9]{3}$" },
+    "semester": { "type": "integer", "minimum": 1, "maximum": 8 },
+    "title": { "type": "object", "additionalProperties": false, "required": ["en", "ur"], "properties": { "en": { "type": "string", "minLength": 3 }, "ur": { "type": "string", "minLength": 3 } } },
+    "sources": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^(docs|licence|catalog)/.+\\.(mdx|md|json)$" } },
+    "visual_style": { "type": "string", "minLength": 20, "description": "Shared style line appended to every shot prompt (brand palette, 2D/3D look, Pakistani school setting)." },
+    "narrator": {
+      "type": "object", "additionalProperties": false,
+      "properties": { "entity_id": { "type": "string" }, "name": { "type": "string" }, "description": { "type": "string" } }
+    },
+    "shots": {
+      "type": "array", "minItems": 5, "maxItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["n", "beat", "visual"],
+        "properties": {
+          "n": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "beat": { "enum": ["hook", "learn", "why", "cta"] },
+          "visual": { "type": "string", "minLength": 20 }
+        }
+      }
+    },
+    "locales": {
+      "type": "object", "additionalProperties": false, "required": ["en", "ur"],
+      "properties": {
+        "en": { "$ref": "#/$defs/locale" },
+        "ur": { "$ref": "#/$defs/locale" }
+      }
+    }
+  },
+  "allOf": [
+    { "if": { "properties": { "kind": { "const": "course" } } }, "then": { "required": ["course_code", "semester"] } }
+  ],
+  "$defs": {
+    "locale": {
+      "type": "object", "additionalProperties": false, "required": ["narration", "end_card", "youtube_title"],
+      "properties": {
+        "narration": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "type": "string", "minLength": 5 } },
+        "end_card": {
+          "type": "object", "additionalProperties": false, "required": ["headline", "cta"],
+          "properties": { "headline": { "type": "string", "minLength": 3 }, "cta": { "type": "string", "minLength": 3 } }
+        },
+        "youtube_title": { "type": "string", "minLength": 10, "maxLength": 90 }
+      }
+    }
+  }
+}
