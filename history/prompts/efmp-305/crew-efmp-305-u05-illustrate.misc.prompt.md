@@ -16,9 +16,9 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-305/crew-efmp-305-u05-illustrate.misc.prompt.md
+ - history/prompts/efmp-305/crew-efmp-305-u05-illustrate.misc.prompt.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -56,32 +56,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-305-u05-repair_en-r1, repair_en, opencode) F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work; G3 stays unticked.
 - (efmp-305-u05-repair_en-conflict3, fix, opencode) tasks.md conflict resolved by keeping main's Unit 6 G3 advisory row then this branch's Unit 5 G3/G2 rows; no other paths conflicted.
 
+
 ## Response snapshot
 
-Attempted raster illustration generation for EFMP-305 Unit 5 (banner fig-U5-7 and classroom scenes fig-U5-8, fig-U5-9, fig-U5-10) using `scripts/heavy.sh node scripts/generate-illustration.mjs EFMP-305 5`. Generation aborted with exit code 3 due to upstream image model quota exhaustion on `gemini-3.1-flash-image` (HTTP 429 RESOURCE_EXHAUSTED; quotaResetTimeStamp: 2026-11-17T11:00:06Z). Manifest rows and topic markers remain unchanged at `prompt-only`. Verified that all 14 content gates pass cleanly.
+Attempted EFMP-305 Unit 5 illustration generation, detected upstream image model quota exhaustion resetting on 2026-11-17, preserved prompt-only rows, and committed prompt history record.
 
 ## Outcome
 
-- Impact: illustrate attempt for EFMP-305 Unit 5 by agy; stopped cleanly on image quota exhaustion without corrupting state.
-- Tests: npm run check:content passed (14/14 content gates clean).
+- Impact: illustrate for EFMP-305 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
-- Next prompts: rerun illustration batch after image quota resets on 2026-11-17T11:00:06Z.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded illustration job attempt in PHR; preserved prompt-only status across manifest and topic files.
-- Decisions the team must respect: No mock or placeholder images permitted; illustration rows remain prompt-only until quota resets or alternate producer generates them.
-- Pending / next owner: crew planner / dispatcher to reschedule efmp-305-u05-illustrate after quota reset on 2026-11-17T11:00:06Z.
+- Shipped / changed: Attempted EFMP-305 Unit 5 illustration generation, detected upstream image model quota exhaustion resetting on 2026-11-17, preserved prompt-only rows, and committed prompt history record.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Upstream image model `gemini-3.1-flash-image` quota exhausted with reset timestamp `2026-11-17T11:00:06Z`.
-  - Figures fig-U5-7, fig-U5-8, fig-U5-9, fig-U5-10 remain at `prompt-only` in `specs/content/efmp-305/figures/unit-05.md` and `unit-05.banner.md`.
-  - All 14 content gates pass with zero findings.
+  - Upstream image model gemini-3.1-flash-image quota is exhausted (HTTP 429 RESOURCE_EXHAUSTED) with quota reset timestamp 2026-11-17T11:00:06Z.
+  - Figures fig-U5-7, fig-U5-8, fig-U5-9, and fig-U5-10 remain safely at prompt-only in unit-05.banner.md and unit-05.md with all 14 content gates passing.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: upstream image model quota exhaustion (429 RESOURCE_EXHAUSTED)
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): rerun illustration batch after 2026-11-17T11:00:06Z
+- Next experiment (smallest change to try): none
