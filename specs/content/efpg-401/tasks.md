@@ -31,7 +31,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 4, Unit 6 and Unit
 | Unit 1 | G6 assets | ▣ | | Eight English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-02/G2/20261114T223818407Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 2 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654.json; static checks clean, 25 assessments independently solved; render unperformed (deployed SHA 33d5feca != HEAD 925047c67); no certification |
 | Unit 2 | G4 ur-translation | ▣ | agent:opencode | Six-file Urdu mirror and ten localized SVG schematics with derived dark variants prepared from English 07090c9d5; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-02/G4/translation-handoff.md). |
 | Unit 2 | G5 ur-review | ☐ | | Awaiting translation and independent review |
 | Unit 2 | G6 assets | ☐ | | Ten figures planned at prompt-only; rendering is a separate generate-figures job |
