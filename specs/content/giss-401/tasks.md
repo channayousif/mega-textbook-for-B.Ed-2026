@@ -36,7 +36,7 @@
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
 | Unit 3 | G7 publish | ▢ | | no publication requested by this authoring job |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-04/G2/20261103T141633054Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-04/G2/20261114T053342024Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/giss-401/reviews/unit-04/G3/a5031c12-2079-4b0e-b718-bb161d2381bc.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 4 | G4 ur-translation | ▢ | | Separate Urdu job; English pages retain translation_status: draft. |
 | Unit 4 | G5 ur-review | ▢ | | Pending accepted English baseline and translated mirror. |
