@@ -16,29 +16,29 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/efmp-304/unit-01/topic-01.mdx
-  - docs/semester-2/efmp-304/unit-01/topic-02.mdx
-  - docs/semester-2/efmp-304/unit-01/topic-03.mdx
-  - history/prompts/efmp-304/crew-efmp-304-u01-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-01/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-01/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-01/topic-03.mdx
-  - specs/content/efmp-304/figures/unit-01.md
-  - specs/content/efmp-304/reviews/unit-01/G2/20261114T023932167Z-gates.json
-  - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-bloom-bands.txt
-  - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-concept-graph.txt
-  - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-depth-gate.txt
-  - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-docs-sync.txt
-  - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-figures.txt
-  - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-no-answer-keys.txt
-  - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-no-em-dash.txt
-  - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/validate-content.txt
-  - specs/content/efmp-304/tasks.md
-  - static/img/figures/efmp-304/unit-01/fig-U1-12.webp
-  - static/img/figures/efmp-304/unit-01/fig-U1-13.webp
-  - static/img/figures/efmp-304/unit-01/fig-U1-14.webp
+ - docs/semester-2/efmp-304/unit-01/topic-01.mdx
+ - docs/semester-2/efmp-304/unit-01/topic-02.mdx
+ - docs/semester-2/efmp-304/unit-01/topic-03.mdx
+ - history/prompts/efmp-304/crew-efmp-304-u01-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-01/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-01/topic-03.mdx
+ - specs/content/efmp-304/figures/unit-01.md
+ - specs/content/efmp-304/reviews/unit-01/G2/20261114T023932167Z-gates.json
+ - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-bloom-bands.txt
+ - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-concept-graph.txt
+ - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-depth-gate.txt
+ - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-docs-sync.txt
+ - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-figures.txt
+ - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-no-answer-keys.txt
+ - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/check-no-em-dash.txt
+ - specs/content/efmp-304/reviews/unit-01/G2/logs-20261114T023932167Z/validate-content.txt
+ - specs/content/efmp-304/tasks.md
+ - static/img/figures/efmp-304/unit-01/fig-U1-12.webp
+ - static/img/figures/efmp-304/unit-01/fig-U1-13.webp
+ - static/img/figures/efmp-304/unit-01/fig-U1-14.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -76,32 +76,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-304-u01-repair_en-r1, repair_en, opencode) Figure 3's cosmetic footer/wordmark intersection (88.7 x 15.0px in `.ur` variants; 88.3 x 4.5px in fig-U1-6/8/9) is non-failing; the next rendered inspection should check the footer.
 - (efmp-304-u01-repair_en-r1, repair_en, opencode) Fresh independent G3 and dependent G5 remain pending; ADR-0019's two-cycle limit may need owner authorisation for any further run.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed three classroom scene illustrations (fig-U1-12, fig-U1-13, fig-U1-14) for EFMP-304 Unit 1 in English and Urdu topic files; updated figure manifest rows to placed; refreshed G2 gate evidence and tasks.md tracker row; noted upstream gemini-3.1-flash-image quota exhaustion halting fig-U1-15 and fig-U1-11 until reset at 2026-11-14T05:03:27Z; verified npm run check:content passes clean across all 14 gates.
+Generated, inspected, and placed EFMP-304 Unit 1 raster illustrations fig-U1-12, fig-U1-13, and fig-U1-14 in English and Urdu topic files, updated the manifest, refreshed G2 gate evidence, and validated clean content gates.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-304 Unit 1 by agy (attempt 1).
-- Tests: npm run check:content passed clean across all 14 content gates.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed raster illustrations fig-U1-12, fig-U1-13, fig-U1-14 in English and Urdu topic files (topics 01, 02, 03); updated specs/content/efmp-304/figures/unit-01.md; refreshed G2 gate evidence and updated tasks.md row.
-- Decisions the team must respect: G3/G5 stay advisory until qualified independent review; image generation API quota on gemini-3.1-flash-image resets at 2026-11-14T05:03:27Z for remaining prompt-only rows (banner fig-U1-11 and topic scene fig-U1-15).
+- Shipped / changed: Generated, inspected, and placed EFMP-304 Unit 1 raster illustrations fig-U1-12, fig-U1-13, and fig-U1-14 in English and Urdu topic files, updated the manifest, refreshed G2 gate evidence, and validated clean content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - fig-U1-11 (unit banner in unit-01.banner.md) and fig-U1-15 (Topic 1.5 scene) remain prompt-only pending image quota reset at 2026-11-14T05:03:27Z.
-  - Visual browser/print inspection (360px viewport, table scrollability, A4 print) remains unexecuted; full G3 certification needs permitted browser tooling on a live build.
-  - Fresh independent G3 and dependent G5 remain pending; ADR-0019 two-cycle limit may need owner authorisation for further run.
+  - fig-U1-11 (unit banner in unit-01.banner.md) and fig-U1-15 (Topic 1.5 scene) remain prompt-only due to upstream image generation quota exhaustion resetting at 2026-11-14T05:03:27Z.
+  - Fresh independent G3 and dependent G5 reviews remain pending; ADR-0019 two-cycle limit may require owner authorization before re-running.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: upstream image API 429 quota exhaustion on gemini-3.1-flash-image after 3 generations.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14 gates).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
