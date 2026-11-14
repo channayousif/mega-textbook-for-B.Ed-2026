@@ -38,9 +38,12 @@ files:
   - static/img/figures/efpg-401/unit-02/fig-U2-14.webp
   - static/img/figures/efpg-401/unit-02/fig-U2-15.webp
   - static/img/figures/efpg-401/unit-02/fig-U2-16.webp
+  - specs/content/efpg-401/tasks.md
+  - specs/content/efpg-401/reviews/unit-02/G2/20261114T223818407Z-gates.json
+  - specs/content/efpg-401/reviews/unit-02/G2/logs-20261114T223818407Z/
 tests:
   - Baseline npm run build:content-status and npm run check:content passed all 14 gates.
-  - Final content gates and refreshed G2 evidence recorded after placement.
+  - Final npm run build:content-status and npm run check:content passed all 14 gates after G2 refresh.
   - Visual inspection of all generated sources and final WebPs.
   - git diff --check.
 ---
@@ -56,7 +59,7 @@ Produced, inspected, optimised and placed five topic scenes and a unit banner in
 ## Outcome
 
 - ✅ Impact: Six planned raster figures now appear in both locales.
-- 🧪 Tests: All 14 baseline gates passed. Final gate results are recorded with the committed evidence refresh.
+- 🧪 Tests: All 14 baseline and final content gates passed. Eight draft checks passed in refreshed G2 evidence.
 - 📁 Files: Six WebPs, twelve MDX placements, two manifests, production notes and G2 evidence.
 - 🔁 Next prompts: Independent G3/G5 review; review job should inspect rendered Urdu and pronunciation mouth detail.
 - 🧠 Reflection: A successful image render does not establish pedagogical accuracy. The pronunciation image needed three targeted edits after rejection.
@@ -71,6 +74,6 @@ Produced, inspected, optimised and placed five topic scenes and a unit banner in
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Gemini quota exhaustion; composition exceeded 150 KB at 1200 px; pronunciation initially duplicated the trainee and rendered an unclear mouth position. Reused staging, reduced three sources to 1100 px and inspected revised pronunciation output.
-- Graders run and results (PASS/FAIL): Baseline content gates PASS; final content gates and G2 refresh recorded in follow-up evidence commit.
+- Graders run and results (PASS/FAIL): Baseline and final content gates PASS (14/14); refreshed G2 draft checks PASS (8/8); git diff --check PASS.
 - Prompt variant (if applicable): Approved manifest prompts plus repository house-style constraints; targeted pronunciation edits documented in unit-02.production.md.
 - Next experiment (smallest change to try): Independent review of classroom meaning and Urdu alt wording at rendered widths.
