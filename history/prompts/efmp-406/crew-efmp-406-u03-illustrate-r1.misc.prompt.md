@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-406-u03-illustrate-r1
-title: crew illustrate EFMP-406 unit 3 retry 1
+title: crew illustrate EFMP-406 unit 3
 stage: misc
 date: 2026-11-14
 surface: agent
@@ -63,8 +63,8 @@ Retried EFMP-406 Unit 3 illustration generation, confirmed upstream image quota 
 
 ## Outcome
 
-- Impact: illustrate for EFMP-406 Unit 3 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before the commit.
+- Impact: illustrate for EFMP-406 Unit 3 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
@@ -72,7 +72,7 @@ Retried EFMP-406 Unit 3 illustration generation, confirmed upstream image quota 
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: Retried EFMP-406 Unit 3 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image model gemini-3.1-flash-image quota remains exhausted (HTTP 429 RESOURCE_EXHAUSTED) resetting at 2026-11-17T11:00:06Z.
