@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-304-u01-illustrate-r1
-title: crew illustrate EFMP-304 unit 1 (round 1)
+title: crew illustrate EFMP-304 unit 1
 stage: misc
 date: 2026-11-14
 surface: agent
@@ -16,9 +16,9 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-304/crew-efmp-304-u01-illustrate-r1.misc.prompt.md
+ - history/prompts/efmp-304/crew-efmp-304-u01-illustrate-r1.misc.prompt.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -56,31 +56,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-304-u01-plan_illustrations, plan_illustrations, claude) Replacing those markers will make the Unit 1 G2 evidence out of date again; rerun `node scripts/prepare-gate-evidence.mjs EFMP-304 1` on a clean tree and update the row at `specs/content/efmp-304/tasks.md:15`.
 - (efmp-304-u01-repair_en-r1, repair_en, opencode) Visual browser/print inspection (360px viewport, table scrollability, A4 print) remains unexecuted; full G3 certification needs permitted browser tooling on a live build.
 
+
 ## Response snapshot
 
-Attempted generation of remaining illustrations (fig-U1-15 and banner fig-U1-11); verified image quota is exhausted until 2026-11-14T05:03:27Z; inspected existing placed illustrations fig-U1-12, fig-U1-13, fig-U1-14 confirming cultural authenticity and quality; verified all content gates pass cleanly.
+Recorded prompt run documentation for EFMP-304 Unit 1 illustration retry after verifying existing placed figures, confirming upstream image quota lock until 05:03:27Z, and validating all content gates pass.
 
 ## Outcome
 
-- Impact: illustrate retry round 1 for EFMP-304 Unit 1 by agy.
-- Tests: npm run check:content passed with 14/14 content gates green.
-- Files: 1 file(s) recorded in prompt history.
-- Next prompts: rerun illustration generation once image quota resets at 2026-11-14T05:03:27Z.
-- Reflection: image generation quota exhausted upstream on gemini-3.1-flash-image; cleanly documented and preserved valid prompt-only state.
+- Impact: illustrate for EFMP-304 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 1 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Attempted illustration generation for EFMP-304 Unit 1; confirmed image quota reset at 2026-11-14T05:03:27Z; verified existing placed figures fig-U1-12, fig-U1-13, fig-U1-14; ran full content gates.
-- Decisions the team must respect: fig-U1-11 and fig-U1-15 remain prompt-only until upstream quota resets.
-- Pending / next owner: next illustrate run after 2026-11-14T05:03:27Z.
+- Shipped / changed: Recorded prompt run documentation for EFMP-304 Unit 1 illustration retry after verifying existing placed figures, confirming upstream image quota lock until 05:03:27Z, and validating all content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - fig-U1-11 (unit banner in unit-01.banner.md) and fig-U1-15 (Topic 1.5 scene) remain prompt-only due to upstream image generation quota exhaustion resetting at 2026-11-14T05:03:27Z.
+  - fig-U1-11 (unit banner in unit-01.banner.md) and fig-U1-15 (Topic 1.5 scene) remain prompt-only due to upstream image generation quota resetting at 2026-11-14T05:03:27Z.
   - Fresh independent G3 and dependent G5 reviews remain pending; ADR-0019 two-cycle limit may require owner authorization before re-running.
-- Paperclip issues affected: none.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: upstream image generator quota exhausted (429 RESOURCE_EXHAUSTED).
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): rerun generate-illustration after quota reset.
+- Next experiment (smallest change to try): none
