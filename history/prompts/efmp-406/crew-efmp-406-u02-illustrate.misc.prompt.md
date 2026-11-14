@@ -56,9 +56,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u02-repair_en-r1, repair_en, opencode) The desk report's findings describe pre-repair bytes while its input manifest binds the repaired bytes; a fresh independent G3 review must check the current bytes.
 - (efmp-406-u02-repair_en-r1, repair_en, opencode) Urdu translation is still draft and must start from the repaired English (RRQ 2/3/9, MCQ 4/8 and Topic 2.2 changed).
 
+
 ## Response snapshot
 
-Attempted EFMP-406 Unit 2 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
+Attempted EFMP-406 Unit 2 illustration generation, confirmed upstream image model quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
 
 ## Outcome
 
@@ -70,7 +71,7 @@ Attempted EFMP-406 Unit 2 illustration generation, confirmed upstream image quot
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Attempted EFMP-406 Unit 2 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
+- Shipped / changed: Attempted EFMP-406 Unit 2 illustration generation, confirmed upstream image model quota exhaustion until 2026-11-17, preserved prompt-only rows, and committed prompt history record with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
