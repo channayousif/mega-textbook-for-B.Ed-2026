@@ -62,7 +62,7 @@
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261110T051317873Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261114T090336079Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-07/G3/01a1b093-4435-7a02-a21d-e78212bba060.json; ERQ 2 question/rubric mismatch, MCQ 10 Bloom tag and private family circumstances need author repair; parent provenance, source bundle, qualified Islamic Studies scholar and browser/print evidence pending; G3 remains open and unsigned |
 | Unit 7 | G4 ur-translation | ▢ | | separate job |
 | Unit 7 | G5 ur-review | ▢ | | |
