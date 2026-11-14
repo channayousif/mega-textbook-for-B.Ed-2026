@@ -37,6 +37,7 @@ import { boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldS
 import { noteStall, clearStall, stallAlertDue, heldFor, stallLine } from './stall.mjs';
 import { resumeHere } from './resume.mjs';
 import { briefRules } from './brief.mjs';
+import { closePrDecisions, closeLandedDecisions } from './decisions.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -999,8 +1000,12 @@ function managePrs(board, decisions, events) {
     if (!v.ok) continue;
     const pr = JSON.parse(v.out);
     if (DRY && pr.state !== 'OPEN') { console.log(`[dry-run] PR #${j.prNumber} is ${pr.state.toLowerCase()}`); continue; }
-    if (pr.state === 'MERGED') { landed(board, j, 'merged'); continue; }
+    if (pr.state === 'MERGED') {
+      noteClosedDecisions(closePrDecisions(decisions, j.prNumber, 'merged', now()), events);
+      landed(board, j, 'merged'); continue;
+    }
     if (pr.state === 'CLOSED') {
+      noteClosedDecisions(closePrDecisions(decisions, j.prNumber, 'closed', now()), events);
       j.status = 'closed'; log(board, j, 'closed'); cleanup(j);
       // Closing a batch PR by hand is an owner signal: hold its jobs rather than re-batch them.
       for (const id of j.members || []) { const m = board.jobs.find((x) => x.id === id); if (m) { m.status = 'blocked'; log(board, m, `held: batch PR #${j.prNumber} was closed`); } }
@@ -1055,6 +1060,7 @@ function managePrs(board, decisions, events) {
     if (pr.isDraft) sh('gh', ['pr', 'ready', String(j.prNumber)], ROOT, { allowFail: true });
     const m = sh('gh', ['pr', 'merge', String(j.prNumber), '--merge', '--admin'], ROOT, { allowFail: true });
     if (m.ok) {
+      noteClosedDecisions(closePrDecisions(decisions, j.prNumber, 'auto-merged (CI green)', now()), events);
       landed(board, j, 'auto-merged (CI green)');
       events.push(`🚀 merged PR #${j.prNumber} (${j.id}${j.members ? `, ${j.members.length} jobs` : ''})`);
       sh('git', ['push', '-q', 'origin', '--delete', j.branch], ROOT, { allowFail: true });
@@ -1099,6 +1105,10 @@ function retireSuperseded(board, events) {
 }
 
 // ---------------------------------------------------------------- decisions and owner commands
+
+function noteClosedDecisions(ids, events) {
+  if (ids.length) events.push(`Closed owner decisions: ${ids.join(', ')}`);
+}
 
 function ask(decisions, question, options = ['yes', 'no'], extra = {}) {
   const n = decisions.items.length + 1;
@@ -1167,6 +1177,7 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
   if (!d) return null; // ordinary chat is openclaw's business, not the crew's
   const item = decisions.items.find((x) => x.id.toUpperCase() === d[1].toUpperCase());
   if (!item) return `no decision ${d[1].toUpperCase()}.`;
+  if (item.status === 'closed') return `${item.id} was closed: ${item.note}`;
   if (item.status !== 'open') return `${item.id} was already answered: ${item.answer}.`;
   const answer = (d[2] || '').toLowerCase();
   if (!item.options.includes(answer)) return `${item.id} options are: ${item.options.join(' / ')}. Reply e.g. "${item.id} ${item.options[0]}".`;
@@ -1465,6 +1476,7 @@ function tick() {
   // the whole tick, so finished jobs were never reaped and launches were repeated every tick.
   const phase = (name, fn) => { try { fn(); } catch (e) { console.error(`${name}: ${e.stack || e.message}`); } };
   try {
+    phase('decisions', () => noteClosedDecisions(closeLandedDecisions(decisions, board, now()), events));
     phase('inbox', () => handleInbox(board, decisions, control, health));
     phase('reap', () => reap(board, health, events));
     phase('batch', () => batchPhase(board, events));
