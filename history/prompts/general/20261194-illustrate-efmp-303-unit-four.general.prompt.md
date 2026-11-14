@@ -40,12 +40,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Generated, visually inspected, optimised and placed three Unit 4 raster illustrations in English and Urdu. Preserved approved prompts and English alt text. Refresh deterministic G2 evidence after committing the changed inputs.
+Generated, visually inspected, optimised and placed three Unit 4 raster illustrations in English and Urdu. Preserved approved prompts and English alt text. Refreshed deterministic G2 evidence after committing the changed inputs; all 14 content gates pass.
 
 ## Outcome
 
 - ✅ Impact: Two topic scenes and one unit banner now render in both locales.
-- 🧪 Tests: Baseline all 14 content gates pass; final validation and fresh G2 evidence recorded in follow-up commit.
+- 🧪 Tests: Baseline and final check:content PASS (14/14). Fresh G2 evidence PASS (8/8), 20261114T001534785Z-gates.json. git diff --check PASS.
 - 📁 Files: Three WebP assets, six MDX carriers, two manifests, Unit 4 tracker and G2 evidence.
 - 🔁 Next prompts: Independent G3 and G5 reviews remain open.
 - 🧠 Reflection: Reject images that omit concrete objects required by the approved alt text.
@@ -60,6 +60,6 @@ Generated, visually inspected, optimised and placed three Unit 4 raster illustra
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Rejected first two fig-U4-6 generations for missing bound report; second also had an empty carton. Reset status to prompt-only before each targeted rerun. Accepted third attempt after visual inspection.
-- Graders run and results (PASS/FAIL): Baseline check:content PASS (14/14); final check and G2 results recorded in subsequent evidence commit.
+- Graders run and results (PASS/FAIL): Baseline and final check:content PASS (14/14); fresh G2 PASS (8/8). Placement initially triggered only the expected stale G2 manifest failure, resolved by fresh evidence.
 - Prompt variant (if applicable): Approved manifest prompts plus unmodified repository house style via agy. 2026-11-14: accepted fig-U4-5 and fig-U4-7 reported Imagen; accepted fig-U4-6 reported gemini-3.1-flash-image. Outputs 1376x768, 142.0 KB, 105.6 KB and 112.5 KB respectively.
 - Next experiment (smallest change to try): Review actual page layout and print appearance independently without changing approved scene meaning.
