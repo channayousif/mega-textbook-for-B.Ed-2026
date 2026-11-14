@@ -81,7 +81,7 @@ a `flowchart` and a `concept-map` as the Art. III.10 schematics. G1 unit-spec at
 | Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/efmp-303/reviews/unit-05/G3/crew-20261018.json; source support, assessment mappings/scoring, provenance and current renders unresolved. Unsigned; G3 remains open. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 5 | G4 ur-translation | ▣ | | Five-file Urdu mirror verified complete against English baseline (409ea262): all 5 files match structure, heading level vectors, components (<PrintHandout>, <Figure>, <Glossary>), and 10/10/5 assessment banks; 4 .ur.svg/.ur.dark.svg figure variants wired; 3 key_terms bank-accepted in terminology.csv; check:content 13/13 pass and parity/figures/key_terms clean under temporary reviewed flip (reverted). Handoff: specs/content/efmp-303/reviews/unit-05/G4/translation-handoff.md. translation_status stays draft pending independent G5; no certification claimed |
 | Unit 5 | G5 ur-review | ▢ | | |
-| Unit 5 | G6 assets | ✅ | auto:gates | 4 schematics placed |
+| Unit 5 | G6 assets | ✅ | auto:gates | 4 schematics and 3 inspected raster illustrations placed in EN and draft UR |
 | Unit 5 | G7 publish | ▢ | | |
 
 **Unit 6 - International Perspectives and Future Directions (2026-10-10):** authored to the Spec
