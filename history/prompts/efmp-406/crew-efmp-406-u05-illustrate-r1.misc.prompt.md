@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-406-u05-illustrate-r1
-title: crew illustrate EFMP-406 unit 5 retry 1
+title: crew illustrate EFMP-406 unit 5
 stage: misc
 date: 2026-11-14
 surface: agent
@@ -63,8 +63,8 @@ Retried EFMP-406 Unit 5 illustration generation, confirmed upstream image quota 
 
 ## Outcome
 
-- Impact: illustrate retry 1 for EFMP-406 Unit 5 by agy.
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: illustrate for EFMP-406 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
