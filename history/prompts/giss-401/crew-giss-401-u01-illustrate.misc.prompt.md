@@ -2,7 +2,7 @@
 id: crew-giss-401-u01-illustrate
 title: crew illustrate GISS-401 unit 1
 stage: misc
-date: 2026-11-16
+date: 2026-11-15
 surface: agent
 model: agy
 feature: giss-401
@@ -59,7 +59,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Attempted raster generation for GISS-401 Unit 1 with upstream image quota exhausted until 2026-11-17T11:00:06Z, keeping prompt-only manifests preserved and all 14 content gates green.
+Preserved GISS-401 Unit 1 prompt-only illustration manifests and passed all 14 content gates after upstream image generation quota was exhausted.
 
 ## Outcome
 
@@ -71,7 +71,7 @@ Attempted raster generation for GISS-401 Unit 1 with upstream image quota exhaus
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Attempted raster generation for GISS-401 Unit 1 with upstream image quota exhausted until 2026-11-17T11:00:06Z, keeping prompt-only manifests preserved and all 14 content gates green.
+- Shipped / changed: Preserved GISS-401 Unit 1 prompt-only illustration manifests and passed all 14 content gates after upstream image generation quota was exhausted.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
