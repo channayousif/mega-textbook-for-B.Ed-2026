@@ -2,7 +2,7 @@
 id: crew-gict-300-u04-illustrate-r1
 title: crew illustrate GICT-300 unit 4
 stage: misc
-date: 2026-11-16
+date: 2026-11-15
 surface: agent
 model: agy
 feature: gict-300
@@ -63,7 +63,7 @@ Verified upstream image generation quota remains exhausted on gemini-3.1-flash-i
 
 ## Outcome
 
-- Impact: illustrate for GICT-300 Unit 4 by agy (attempt 2).
+- Impact: illustrate for GICT-300 Unit 4 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
