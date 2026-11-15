@@ -80,7 +80,7 @@ Conducted independent G3 English review of EFPG-401 Unit 7, generated validated 
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live site deployed SHA (1793d493) differed from HEAD (4afd7143) due to recent raster illustration placements, so render-review was recorded as unavailable and browser inspection remains unverified.
+  - Live site deployed SHA (1793d493) differed from HEAD (4afd7143) due to recent raster illustration placements, so render-review was recorded as unavailable and live browser inspection remains unverified.
   - All English content files, coverage mappings, and all 25 assessment items in docs/semester-3/efpg-401/unit-07/ are completely clean and pass all 14 content gates.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
