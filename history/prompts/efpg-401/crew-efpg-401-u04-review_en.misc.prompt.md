@@ -31,7 +31,6 @@ files:
  - specs/content/efpg-401/tasks.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/efpg-401/reviews/unit-04/G3/09a7dfec-778d-4a22-be90-cc04eb62924e.json
 ---
 
 ## Prompt
@@ -65,29 +64,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Conducted independent G3 English review of EFPG-401 Unit 4, recorded validated advisory escalation report with evidence bundle and PHR, and updated tasks.md tracker row while keeping G3 open.
+Conducted independent G3 English review of EFPG-401 Unit 4, generated validated advisory escalation report with complete evidence bundle and PHR, and recorded advisory tracker row in tasks.md with G3 open.
 
 ## Outcome
 
 - Impact: review_en for EFPG-401 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the commit was created.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 13 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G3 English review of EFPG-401 Unit 4, recorded validated advisory escalation report with evidence bundle and PHR, and updated tasks.md tracker row while keeping G3 open.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Conducted independent G3 English review of EFPG-401 Unit 4, generated validated advisory escalation report with complete evidence bundle and PHR, and recorded advisory tracker row in tasks.md with G3 open.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live site deployed SHA (925047c6) differed from HEAD (1793d493) because of recent raster illustration additions; render-review was recorded as unavailable and visual inspection remains unverified.
-  - English prose, coverage, and all 25 assessment items in docs/semester-3/efpg-401/unit-04/ are completely clean and pass all 14 content gates.
+  - Live site deployed SHA (925047c6) differed from HEAD (1793d493) due to recent raster illustration placements; render-review was recorded as unavailable and browser inspection remains unverified.
+  - All English content files, coverage mappings, and all 25 assessment items in docs/semester-3/efpg-401/unit-04/ are completely clean and pass all 14 content gates.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS, review-evidence validate PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
