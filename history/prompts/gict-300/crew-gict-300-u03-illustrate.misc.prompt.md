@@ -56,9 +56,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gict-300-u03-repair_en-r1, repair_en, agy) ADR-0019 two-cycle G3 budget is exhausted; any fresh G3 run requires owner authorisation in specs/decisions/log.md.
 - (gict-300-u03-repair_en-r1, repair_en, agy) G3 remains open and unticked pending owner review; translation stays draft.
 
+
 ## Response snapshot
 
-Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing.
+Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping GICT-300 Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing.
 
 ## Outcome
 
@@ -70,13 +71,12 @@ Verified upstream image generation quota remains exhausted on gemini-3.1-flash-i
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing.
+- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping GICT-300 Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z.
-  - Figures fig-U3-9 (banner) and fig-U3-10..13 remain preserved at prompt-only with all 14 content gates passing.
-  - Generating and placing fig-U3-9..13 after quota reset will require running prepare-gate-evidence and updating tasks.md.
+  - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z; Unit 3 illustration manifests remain preserved at prompt-only.
+  - When quota resets, rerun scripts/generate-illustration.mjs for GICT-300 3 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
