@@ -37,13 +37,13 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 4, Unit 6 and Unit
 | Unit 2 | G6 assets | ☐ | | Ten figures planned at prompt-only; rendering is a separate generate-figures job |
 | Unit 2 | G7 publish | ☐ | | No publication or deployment performed by this job |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-06/G2/20261115T003029788Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 6 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/efpg-401/reviews/unit-06/G3/adf16229-bf24-4d11-8b38-608ae9868dab.json; static checks clean, 25 assessments independently solved; render unperformed (deployed SHA 1793d493 != HEAD 3f513718); no certification |
 | Unit 6 | G6 assets | ▣ | | Ten English schematic SVGs placed with derived dark variants; measure-figure-text verified. Five topic scenes and one unit banner inspected and placed in both locales as shared optimized WebP assets, with Urdu alt text; Codex built-in generation used after Gemini quota exhaustion (ADR-0029). |
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-07/G2/20261113T140222214Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-07/G2/20261115T014555852Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 7 | G4 ur-translation | ▣ | agent:agy | Four-file Urdu mirror and four localized SVG schematics with derived dark variants prepared from English 0c79bb31d; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-07/G4/translation-handoff.md). |
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review |
-| Unit 7 | G6 assets | ▣ | | Four English schematic SVGs placed with derived dark variants; measure-figure-text verified |
+| Unit 7 | G6 assets | ▣ | | Four English schematic SVGs placed with derived dark variants; measure-figure-text verified. Two topic scenes and one unit banner inspected and placed in English and Urdu as shared optimized WebP assets; Codex built-in image generation used after Gemini quota exhaustion (ADR-0029). |
 | Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-04/G2/20261114T232941025Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/efpg-401/reviews/unit-04/G3/09a7dfec-778d-4a22-be90-cc04eb62924e.json; static checks clean, 25 assessments independently solved; render unperformed (deployed SHA 925047c6 != HEAD 1793d493); no certification |
