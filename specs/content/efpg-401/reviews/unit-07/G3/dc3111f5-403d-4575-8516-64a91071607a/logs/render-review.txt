@@ -1,0 +1,35 @@
+render-review: EFPG-401 Unit 7 (G3 English review)
+Reviewer: agent:agy
+Run ID: dc3111f5-403d-4575-8516-64a91071607a
+Timestamp: 2026-11-15T07:40:00+05:00
+
+Status: UNAVAILABLE
+
+Inspection target analysis:
+1. Deployed SHA: 1793d49325c9148bea848c4f85d16e11420a881e
+2. HEAD commit: 4afd7143719c2666f85bff10fd51deb7b705aee2
+3. Git diff check:
+   `git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-3/efpg-401/unit-07/ static/img/figures/efpg-401/unit-07/`
+   Result: Non-zero exit (1). Diff is not empty.
+   Summary of differences between deployed-sha and HEAD:
+   - docs/semester-3/efpg-401/unit-07/index.mdx (placed fig-U7-5 banner illustration)
+   - docs/semester-3/efpg-401/unit-07/topic-01.mdx (placed fig-U7-6 classroom illustration)
+   - docs/semester-3/efpg-401/unit-07/topic-02.mdx (placed fig-U7-7 classroom illustration)
+   - static/img/figures/efpg-401/unit-07/fig-U7-5.webp (new asset)
+   - static/img/figures/efpg-401/unit-07/fig-U7-6.webp (new asset)
+   - static/img/figures/efpg-401/unit-07/fig-U7-7.webp (new asset)
+
+Per job brief instructions:
+"If the diff is not empty, the live site is not your input: record render-review as unavailable and name the deployed SHA and HEAD. Changed images can be served stale for up to 30 days, so treat a missing or mismatched asset as unverified, not as a content defect."
+
+Host and environment constraints:
+- Local `npm run build`, dev server and Playwright e2e runs are strictly prohibited by AGENTS.md host resource rules.
+- Live site does not serve HEAD's Unit 7 bytes.
+- Therefore, visual rendering inspection (360px mobile viewport, table scrolling, and A4 print view) could not be conducted against live production and is recorded as unavailable.
+
+Static accessibility audit (from source):
+- Heading hierarchy: monotonic H1 -> H2 -> H3 -> H4 with no skipped heading levels across index.mdx, topic-01.mdx, topic-02.mdx, and unit-assessment.mdx.
+- Navigation and links: all links use descriptive text rather than bare URLs.
+- Print support: `<PrintHandout />` component is present at top of topic-01.mdx, topic-02.mdx, and unit-assessment.mdx.
+- Figure components: all 7 figures (4 schematic SVGs with 4 dark variants, 2 classroom WebP illustrations, 1 banner WebP illustration) have non-empty, descriptive alt text and valid IDs matching manifests.
+- Figure text geometry: all schematic SVGs (including dark and Urdu variants) measured with scripts/measure-figure-text.mjs and pass with exit 0.
