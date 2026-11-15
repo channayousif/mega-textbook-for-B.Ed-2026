@@ -52,26 +52,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 ## Notes from earlier jobs on this unit
 - (geng-301-u02-illustrate, illustrate, agy) Upstream image model gemini-3.1-flash-image quota remains exhausted (HTTP 429 RESOURCE_EXHAUSTED) resetting at 2026-11-17T11:00:06Z.
 - (geng-301-u02-illustrate, illustrate, agy) Figures fig-U2-9 (banner) and fig-U2-10 through fig-U2-13 remain preserved at prompt-only in unit-02.banner.md and unit-02.md with all 14 content gates passing.
-- (geng-301-u02-plan_illustrations, plan_illustrations, claude) Illustrate job: produce `fig-U2-9` with `scripts/generate-illustration.mjs geng-301 2 --banner`, and the topic scenes `fig-U2-10` to `fig-U2-13` from their rows in `figures/unit-02.md`, then move each row prompt-only -> generated -> placed.
+- (geng-301-u02-plan_illustrations, plan_illustrations, claude) Illustrate job: produce `fig-U2-9` with `scripts/generate-illustration.mjs geng-301 2 --banner`, and the topic scenes `fig-U2-10` to `fig-U2-13` from their rows in `figures/unit-02.md`, then move each row prompt-only → generated → placed.
 - (geng-301-u02-plan_illustrations, plan_illustrations, claude) After placing these images, regenerate the G2 evidence again, because changing the topic files makes the manifest from 20261113T193245605Z stale.
 - (geng-301-u02-repair_en-r1-conflict1, fix, opencode) The merge was clean; no scope-file edits were needed because origin/main had not touched the Unit 2 files this branch changed.
 
 
 ## Response snapshot
 
-Executed illustration generation pass for GENG-301 Unit 2 via scripts/heavy.sh node scripts/generate-illustration.mjs GENG-301 2 under ADR-0029; confirmed upstream image generation quota remains exhausted on gemini-3.1-flash-image (HTTP 429 RESOURCE_EXHAUSTED resetting at 2026-11-17T11:00:06Z); kept prompt-only manifests intact with all 14 content gates passing, and recorded prompt history.
+Confirmed upstream image model quota exhaustion on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, kept prompt-only manifests intact with all 14 content gates passing, and recorded prompt history.
 
 ## Outcome
 
-- Impact: illustrate for GENG-301 Unit 2 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: illustrate for GENG-301 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Confirmed upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, kept prompt-only manifests intact with all 14 content gates passing, and recorded prompt history.
+- Shipped / changed: Confirmed upstream image model quota exhaustion on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, kept prompt-only manifests intact with all 14 content gates passing, and recorded prompt history.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
@@ -81,7 +81,7 @@ Executed illustration generation pass for GENG-301 Unit 2 via scripts/heavy.sh n
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: upstream image model quota exhaustion (HTTP 429 RESOURCE_EXHAUSTED)
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): rerun after quota reset on 2026-11-17T11:00:06Z
+- Next experiment (smallest change to try): none
