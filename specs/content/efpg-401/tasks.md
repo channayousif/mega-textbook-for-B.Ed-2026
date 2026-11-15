@@ -31,7 +31,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 4, Unit 6 and Unit
 | Unit 1 | G6 assets | ▣ | | Eight English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-02/G2/20261114T223818407Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 2 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654.json; static checks clean, 25 assessments independently solved; render unperformed (deployed SHA 33d5feca != HEAD 925047c67); no certification |
 | Unit 2 | G4 ur-translation | ▣ | agent:opencode | Six-file Urdu mirror and ten localized SVG schematics with derived dark variants prepared from English 07090c9d5; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-02/G4/translation-handoff.md). |
 | Unit 2 | G5 ur-review | ☐ | | Awaiting translation and independent review |
 | Unit 2 | G6 assets | ☐ | | Ten figures planned at prompt-only; rendering is a separate generate-figures job |
@@ -45,11 +45,11 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 4, Unit 6 and Unit
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 7 | G6 assets | ▣ | | Four English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-04/G2/20261113T114841708Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-04/G2/20261114T232941025Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 4 | G4 ur-translation | ▣ | agent:agy | Three-file Urdu mirror and three localized SVG schematics with derived dark variants prepared from English b43a52ced; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-04/G4/translation-handoff.md). |
 | Unit 4 | G5 ur-review | ☐ | | Awaiting translation and independent review |
-| Unit 4 | G6 assets | ✓ | | Three English schematic SVGs placed with derived dark variants; measure-figure-text verified |
+| Unit 4 | G6 assets | ✓ | | Three schematic SVG pairs with derived dark variants; topic scene fig-U4-4 and banner fig-U4-5 inspected and placed in both locales as shared optimized WebP assets. Codex built-in image generation used after Gemini quota exhaustion (ADR-0029). |
 | Unit 4 | G7 publish | ☐ | | No publication or deployment performed by this job |
 
 Reading estimates use final visible text at 180-200 words per minute: index 3, Topic 1.1 15, Topic 1.2 15, Topic 1.3 14, Topic 1.4 15, assessment 14, total 76 minutes within the approved 55-80 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
