@@ -1,8 +1,8 @@
 ---
 id: crew-giss-401-u01-illustrate-r1
-title: crew illustrate GISS-401 unit 1 (r1)
+title: crew illustrate GISS-401 unit 1
 stage: misc
-date: 2026-11-16
+date: 2026-11-15
 surface: agent
 model: agy
 feature: giss-401
@@ -59,30 +59,30 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 1 prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation quota on gemini-3.1-flash-image was confirmed exhausted until 2026-11-17T11:00:06Z.
+Preserved prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation capacity on gemini-3.1-flash-image returned 429 quota exhaustion resetting 2026-11-17T11:00:06Z.
 
 ## Outcome
 
-- Impact: illustrate retry for GISS-401 Unit 1 by agy (attempt 2).
-- Tests: npm run check:content passed (14/14 content gates clean).
+- Impact: illustrate for GISS-401 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
-- Next prompts: the crew planner dispatches the next job or pauses until quota resets.
-- Reflection: upstream image generation capacity on gemini-3.1-flash-image returned 429 QUOTA_EXHAUSTED resetting 2026-11-17T11:00:06Z. Manifests remain clean and intact at prompt-only.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 1 prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation quota on gemini-3.1-flash-image was confirmed exhausted until 2026-11-17T11:00:06Z.
+- Shipped / changed: Preserved prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation capacity on gemini-3.1-flash-image returned 429 quota exhaustion resetting 2026-11-17T11:00:06Z.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z; Unit 1 illustration manifests remain preserved at prompt-only.
+  - Upstream image generation quota on gemini-3.1-flash-image remains exhausted until 2026-11-17T11:00:06Z; Unit 1 illustration manifests remain preserved at prompt-only.
   - When quota resets, rerun scripts/generate-illustration.mjs for GISS-401 1 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
   - The Urdu topic files carry English FIGURE markers for fig-U1-6/7; when placing, mirror the <Figure> into the Urdu files and translate the alt text.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: upstream image generation quota exhausted on gemini-3.1-flash-image (HTTP 429)
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): rerun after quota reset on 2026-11-17T11:00:06Z
+- Next experiment (smallest change to try): none
