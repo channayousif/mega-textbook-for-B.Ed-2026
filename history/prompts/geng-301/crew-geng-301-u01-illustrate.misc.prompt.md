@@ -59,7 +59,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Attempted GENG-301 Unit 1 illustration generation under ADR-0029, confirmed upstream image model quota exhaustion resetting on 2026-11-17T11:00:06Z, preserved prompt-only rows across unit-01.banner.md and unit-01.md, verified all 14 content gates pass, and committed prompt history record.
+Attempted GENG-301 Unit 1 illustration generation under ADR-0029, documented upstream image quota exhaustion resetting 2026-11-17, preserved prompt-only figure manifests, verified all 14 content gates, and committed prompt history record.
 
 ## Outcome
 
@@ -71,12 +71,12 @@ Attempted GENG-301 Unit 1 illustration generation under ADR-0029, confirmed upst
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Attempted GENG-301 Unit 1 illustration generation under ADR-0029, confirmed upstream image model quota exhaustion resetting on 2026-11-17T11:00:06Z, preserved prompt-only rows across unit-01.banner.md and unit-01.md, verified all 14 content gates pass, and committed prompt history record.
+- Shipped / changed: Attempted GENG-301 Unit 1 illustration generation under ADR-0029, documented upstream image quota exhaustion resetting 2026-11-17, preserved prompt-only figure manifests, verified all 14 content gates, and committed prompt history record.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image model gemini-3.1-flash-image quota remains exhausted (HTTP 429 RESOURCE_EXHAUSTED) resetting at 2026-11-17T11:00:06Z.
-  - Figures fig-U1-7, fig-U1-8, fig-U1-9, and fig-U1-10 remain preserved at prompt-only across unit-01.banner.md and unit-01.md with all 14 content gates passing.
+  - Figures fig-U1-7, fig-U1-8, fig-U1-9, and fig-U1-10 remain preserved at prompt-only in unit-01.banner.md and unit-01.md with all 14 content gates passing.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
