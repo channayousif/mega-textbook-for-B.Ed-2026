@@ -1,6 +1,6 @@
 ---
 id: crew-geng-301-u05-illustrate-r1
-title: crew illustrate GENG-301 unit 5 retry 1
+title: crew illustrate GENG-301 unit 5
 stage: misc
 date: 2026-11-15
 surface: agent
@@ -59,20 +59,20 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Confirmed upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z across both topic illustrations and unit banner, preserved Unit 5 illustration manifests at prompt-only with all 14 content gates passing, and recorded prompt history.
+Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 5 illustration manifests preserved at prompt-only with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: illustrate retry 1 for GENG-301 Unit 5 by agy.
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: illustrate for GENG-301 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Confirmed upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z across both topic illustrations and unit banner, preserved Unit 5 illustration manifests at prompt-only with all 14 content gates passing, and recorded prompt history.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 5 illustration manifests preserved at prompt-only with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image model gemini-3.1-flash-image quota remains exhausted (HTTP 429 RESOURCE_EXHAUSTED) resetting at 2026-11-17T11:00:06Z.
