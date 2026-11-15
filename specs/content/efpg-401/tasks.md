@@ -37,7 +37,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 4, Unit 6 and Unit
 | Unit 2 | G6 assets | ☐ | | Ten figures planned at prompt-only; rendering is a separate generate-figures job |
 | Unit 2 | G7 publish | ☐ | | No publication or deployment performed by this job |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-06/G2/20261115T003029788Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 6 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/efpg-401/reviews/unit-06/G3/adf16229-bf24-4d11-8b38-608ae9868dab.json; static checks clean, 25 assessments independently solved; render unperformed (deployed SHA 1793d493 != HEAD 3f513718); no certification |
 | Unit 6 | G6 assets | ▣ | | Ten English schematic SVGs placed with derived dark variants; measure-figure-text verified. Five topic scenes and one unit banner inspected and placed in both locales as shared optimized WebP assets, with Urdu alt text; Codex built-in generation used after Gemini quota exhaustion (ADR-0029). |
 | Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-07/G2/20261113T140222214Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
