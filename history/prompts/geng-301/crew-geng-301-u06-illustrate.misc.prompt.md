@@ -59,25 +59,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Attempted generation of GENG-301 Unit 6 raster illustrations via `scripts/heavy.sh node scripts/generate-illustration.mjs GENG-301 6`. Upstream image model capacity on `gemini-3.1-flash-image` is exhausted (HTTP 429 RESOURCE_EXHAUSTED: QUOTA_EXHAUSTED) resetting at 2026-11-17T11:00:06Z. Preserved manifest rows fig-U6-9 (banner) and fig-U6-10 through fig-U6-13 at prompt-only, confirmed all 14 content gates pass, and recorded prompt history.
+Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 6 illustration manifests preserved at prompt-only with all 14 content gates passing.
 
 ## Outcome
 
 - Impact: illustrate for GENG-301 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Attempted generation of GENG-301 Unit 6 raster illustrations; verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 6 illustration manifests preserved at prompt-only with all 14 content gates passing.
+- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 6 illustration manifests preserved at prompt-only with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Upstream image model gemini-3.1-flash-image quota remains exhausted (HTTP 429 RESOURCE_EXHAUSTED) resetting at 2026-11-17T11:00:06Z.
-  - Figures fig-U6-9 (banner) and fig-U6-10 through fig-U6-13 remain preserved at prompt-only in unit-06.banner.md and unit-06.md with all 14 content gates passing.
-  - Placing fig-U6-9..13 once quota resets will require regenerating G2 evidence (`node scripts/prepare-gate-evidence.mjs GENG-301 6`) and repointing tasks.md.
+  - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z.
+  - Figures fig-U6-9 (banner) and fig-U6-10..13 remain preserved at prompt-only with all 14 content gates passing.
+  - Generating and placing fig-U6-9..13 after quota reset will require running prepare-gate-evidence and updating tasks.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
