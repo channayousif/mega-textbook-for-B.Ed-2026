@@ -4,7 +4,7 @@ title: crew illustrate GENG-300 unit 3
 stage: misc
 date: 2026-11-15
 surface: agent
-model: Gemini 3.8 Flash (agy)
+model: agy
 feature: geng-300
 branch: crew/geng-300-u03-illustrate
 user: crew
@@ -16,29 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/geng-300/unit-03/index.mdx
-  - docs/semester-1/geng-300/unit-03/topic-01.mdx
-  - docs/semester-1/geng-300/unit-03/topic-02.mdx
-  - docs/semester-1/geng-300/unit-03/topic-03.mdx
-  - history/prompts/009-figure-rendering/0009-produce-geng-unit-three-illustrations.green.prompt.md
-  - specs/content/geng-300/figures/unit-03.banner.md
-  - specs/content/geng-300/figures/unit-03.md
-  - specs/content/geng-300/reviews/unit-03/G2/20261115T035802322Z-gates.json
-  - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-bloom-bands.txt
-  - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-concept-graph.txt
-  - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-depth-gate.txt
-  - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-docs-sync.txt
-  - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-figures.txt
-  - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-no-answer-keys.txt
-  - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-no-em-dash.txt
-  - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/validate-content.txt
-  - specs/content/geng-300/tasks.md
-  - static/img/figures/geng-300/unit-03/fig-U3-8.webp
-  - static/img/figures/geng-300/unit-03/fig-U3-9.webp
-  - static/img/figures/geng-300/unit-03/fig-U3-10.webp
-  - static/img/figures/geng-300/unit-03/fig-U3-11.webp
+ - docs/semester-1/geng-300/unit-03/index.mdx
+ - docs/semester-1/geng-300/unit-03/topic-01.mdx
+ - docs/semester-1/geng-300/unit-03/topic-02.mdx
+ - docs/semester-1/geng-300/unit-03/topic-03.mdx
+ - history/prompts/009-figure-rendering/0009-produce-geng-unit-three-illustrations.green.prompt.md
+ - history/prompts/geng-300/crew-geng-300-u03-illustrate.misc.prompt.md
+ - specs/content/geng-300/figures/unit-03.banner.md
+ - specs/content/geng-300/figures/unit-03.md
+ - specs/content/geng-300/reviews/unit-03/G2/20261115T035802322Z-gates.json
+ - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-bloom-bands.txt
+ - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-concept-graph.txt
+ - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-depth-gate.txt
+ - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-docs-sync.txt
+ - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-figures.txt
+ - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-no-answer-keys.txt
+ - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/check-no-em-dash.txt
+ - specs/content/geng-300/reviews/unit-03/G2/logs-20261115T035802322Z/validate-content.txt
+ - specs/content/geng-300/tasks.md
+ - static/img/figures/geng-300/unit-03/fig-U3-10.webp
+ - static/img/figures/geng-300/unit-03/fig-U3-11.webp
+ - static/img/figures/geng-300/unit-03/fig-U3-8.webp
+ - static/img/figures/geng-300/unit-03/fig-U3-9.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -79,29 +80,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Added three classroom scenes and a unit banner for GENG-300 Unit 3 with validated placements and fresh draft evidence.
+Produced, visually inspected, optimized, and placed the unit banner and three topic raster illustrations for GENG-300 Unit 3, refreshed G2 draft evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for GENG-300 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
-- Files: 21 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: Gemini quota exhaustion required the approved fallback producer; visual acceptance preceded placement.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added three classroom scenes and a unit banner for GENG-300 Unit 3 with validated placements and fresh draft evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Produced, visually inspected, optimized, and placed the unit banner and three topic raster illustrations for GENG-300 Unit 3, refreshed G2 draft evidence, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Existing review escalations remain open; fresh G3 requires owner authorisation.
-  - Three-vs-four-unit authority conflict and intake Partition placeholder remain open for the owner.
+  - Existing review escalations remain open; fresh G3 review requires owner authorisation.
+  - The three-vs-four-unit authority conflict and intake Partition placeholder remain open for the owner.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Gemini quota exhausted for required generation commands; Codex built-in fallback succeeded.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
