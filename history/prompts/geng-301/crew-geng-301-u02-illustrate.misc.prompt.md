@@ -59,7 +59,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Attempted GENG-301 Unit 2 illustration generation via scripts/heavy.sh node scripts/generate-illustration.mjs GENG-301 2 and --banner under ADR-0029; confirmed upstream image quota exhaustion (HTTP 429 RESOURCE_EXHAUSTED) on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z; verified all 14 content gates pass with prompt-only rows intact.
+Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, kept prompt-only manifests intact with all 14 content gates passing, and recorded prompt history.
 
 ## Outcome
 
@@ -76,12 +76,12 @@ Attempted GENG-301 Unit 2 illustration generation via scripts/heavy.sh node scri
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image model gemini-3.1-flash-image quota remains exhausted (HTTP 429 RESOURCE_EXHAUSTED) resetting at 2026-11-17T11:00:06Z.
-  - Figures fig-U2-9, fig-U2-10, fig-U2-11, fig-U2-12, and fig-U2-13 remain preserved at prompt-only in unit-02.banner.md and unit-02.md with all 14 content gates passing.
+  - Figures fig-U2-9 (banner) and fig-U2-10 through fig-U2-13 remain preserved at prompt-only in unit-02.banner.md and unit-02.md with all 14 content gates passing.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: upstream image model quota exhaustion (HTTP 429 RESOURCE_EXHAUSTED)
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): rerun after quota reset
+- Next experiment (smallest change to try): none
