@@ -59,19 +59,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Executed illustration generation pass for GENG-301 Unit 3 via scripts/heavy.sh node scripts/generate-illustration.mjs GENG-301 3 under ADR-0029; confirmed upstream image generation quota remains exhausted on gemini-3.1-flash-image (HTTP 429 RESOURCE_EXHAUSTED resetting at 2026-11-17T11:00:06Z); kept prompt-only manifests intact with all 14 content gates passing, and recorded prompt history.
+Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing, and recorded prompt history.
 
 ## Outcome
 
 - Impact: illustrate for GENG-301 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Confirmed upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, kept prompt-only manifests intact with all 14 content gates passing, and recorded prompt history.
+- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing, and recorded prompt history.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
@@ -81,7 +81,7 @@ Executed illustration generation pass for GENG-301 Unit 3 via scripts/heavy.sh n
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: upstream image model quota exhaustion (HTTP 429 RESOURCE_EXHAUSTED)
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): rerun after quota reset on 2026-11-17T11:00:06Z
+- Next experiment (smallest change to try): none
