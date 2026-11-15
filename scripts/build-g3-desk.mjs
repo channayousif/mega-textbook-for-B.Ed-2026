@@ -12,7 +12,7 @@
  * in prestart/prebuild. Public like every static file: it holds repository
  * data only, never ledger rows or user data.
  */
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -21,7 +21,7 @@ import { walkUnits } from './lib/content-roots.mjs';
 import { loadTracker } from './lib/tracker-rows.mjs';
 import { inputManifest, dirtyInputs } from './lib/review-evidence.mjs';
 import { deskUnit, manifestDigest, pickLatestReport } from './lib/g3-desk.mjs';
-import { illustrationFacts, g3UnitChanges } from './crew/review-facts.mjs';
+import { illustrationFacts, g3UnitChanges, gateJsonEntries } from './crew/review-facts.mjs';
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const pad = (n) => String(n).padStart(2, '0');
@@ -29,12 +29,8 @@ const readJson = (path) => JSON.parse(readFileSync(join(ROOT, path), 'utf8'));
 
 function latestG3(course, unit) {
   const rel = `specs/content/${course.toLowerCase()}/reviews/unit-${pad(unit)}/G3`;
-  const dir = join(ROOT, rel);
-  if (!existsSync(dir)) return { report: null, path: null };
-  const entries = readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => {
-    try { return { file: `${rel}/${f}`, json: JSON.parse(readFileSync(join(dir, f), 'utf8')) }; } catch { return { file: `${rel}/${f}`, json: null }; }
-  });
-  const latest = pickLatestReport(entries);
+  // Same listing as the crew planner: reports in G3/ and one folder down (2026-W46 M5).
+  const latest = pickLatestReport(gateJsonEntries(join(ROOT, rel), { prefix: rel }));
   return latest ? { report: latest, path: latest.file } : { report: null, path: null };
 }
 
