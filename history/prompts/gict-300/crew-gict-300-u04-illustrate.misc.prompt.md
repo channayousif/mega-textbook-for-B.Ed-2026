@@ -59,24 +59,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping GICT-300 Unit 4 illustration manifests preserved at prompt-only with all 14 content gates passing.
+Attempted raster generation for GICT-300 Unit 4 with upstream image quota exhausted until 2026-11-17T11:00:06Z, keeping prompt-only manifests preserved and all 14 content gates green.
 
 ## Outcome
 
 - Impact: illustrate for GICT-300 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping GICT-300 Unit 4 illustration manifests preserved at prompt-only with all 14 content gates passing.
+- Shipped / changed: Attempted raster generation for GICT-300 Unit 4 with upstream image quota exhausted until 2026-11-17T11:00:06Z, keeping prompt-only manifests preserved and all 14 content gates green.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z; Unit 4 illustration manifests remain preserved at prompt-only.
   - When quota resets, rerun scripts/generate-illustration.mjs for GICT-300 4 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
+  - GICT-300 Unit 4 still has A3 curriculum-owner reconciliation and A6 review-tooling repair pending per earlier notes; G3 independent review remains unticked.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
