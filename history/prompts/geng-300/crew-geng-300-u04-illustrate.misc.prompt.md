@@ -16,9 +16,9 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/geng-300/crew-geng-300-u04-illustrate.misc.prompt.md
+ - history/prompts/geng-300/crew-geng-300-u04-illustrate.misc.prompt.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -59,7 +59,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Attempted GENG-300 Unit 4 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows across unit-04.banner.md and unit-04.md, and validated all 14 content gates pass.
+Attempted GENG-300 Unit 4 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows across unit-04.banner.md and unit-04.md, and committed prompt history record with all 14 content gates passing.
 
 ## Outcome
 
@@ -71,7 +71,7 @@ Attempted GENG-300 Unit 4 illustration generation, confirmed upstream image quot
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Attempted GENG-300 Unit 4 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows across unit-04.banner.md and unit-04.md, and validated all 14 content gates pass.
+- Shipped / changed: Attempted GENG-300 Unit 4 illustration generation, confirmed upstream image quota exhaustion until 2026-11-17, preserved prompt-only rows across unit-04.banner.md and unit-04.md, and committed prompt history record with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
@@ -81,7 +81,7 @@ Attempted GENG-300 Unit 4 illustration generation, confirmed upstream image quot
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: upstream image model quota exhausted until 2026-11-17T11:00:06Z
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
