@@ -69,7 +69,7 @@ Conducted independent G3 English review of EFPG-401 Unit 6, generated validated 
 ## Outcome
 
 - Impact: review_en for EFPG-401 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 13 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
@@ -80,7 +80,7 @@ Conducted independent G3 English review of EFPG-401 Unit 6, generated validated 
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live site deployed SHA (1793d493) differed from HEAD (3f513718) due to recent raster illustration placements; render-review was recorded as unavailable and browser inspection remains unverified.
+  - Live site deployed SHA (1793d493) differed from HEAD (3f513718) due to recent raster illustration placements, so render-review was recorded as unavailable and browser inspection remains unverified.
   - All English content files, coverage mappings, and all 25 assessment items in docs/semester-3/efpg-401/unit-06/ are completely clean and pass all 14 content gates.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
