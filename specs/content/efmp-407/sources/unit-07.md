@@ -16,8 +16,6 @@ The UNESCO canonical record is https://unesdoc.unesco.org/ark:/48223/pf000014337
 
 ## Unverifiable sources
 
-| Key | Retrieval attempts | Date | Decision | Use in this unit |
-|---|---|---|---|---|
-| gop-national-sdg-framework | The former home `sdgpakistan.pk` now serves an unrelated commercial site; `pc.gov.pk` returned HTTP 404; the course guide gives no working URL ("URL may vary by ministry portal"). | 2026-10-31 (recorded in the approved content-spec) | D-2026-0001 | Contextual prior learning from Unit 3 only; no claim, quotation, date or target in Unit 7 depends on its text. |
+- gop-national-sdg-framework: Real Government of Pakistan document mapped by the approved content-spec, with no working locator. The former home `sdgpakistan.pk` now serves an unrelated commercial site, `pc.gov.pk` returned HTTP 404, and the course guide gives no URL ("URL may vary by ministry portal"). Could not be retrieved on 2026-10-31 (recorded in the approved content-spec). Owner ruling D-2026-0001: flag and proceed. Unit 7 uses it only as contextual prior learning from Unit 3; no claim, quotation, date or target here depends on its text.
 
 The mapped Government of Pakistan National SDG Framework is a real document that remains unavailable as recorded in the approved content-spec and D-2026-0001. It is not an invented policy source. The verified 2009 education policy supplies the historical national-policy entry point. No new source gap is introduced.
