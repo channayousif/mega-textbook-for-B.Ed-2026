@@ -1,0 +1,44 @@
+{
+ "id": "efmp-301",
+ "kind": "course",
+ "course_code": "EFMP-301",
+ "semester": 1,
+ "title": { "en": "Educational Psychology (EFMP-301)", "ur": "تعلیمی نفسیات (EFMP-301)" },
+ "sources": ["docs/semester-1/efmp-301/course-overview.mdx", "catalog/courses.json"],
+ "visual_style": "Vertical 9:16, warm natural daylight, gentle realistic cinematic look. A Pakistani government school: whitewashed walls, a green blackboard, wooden desks, pupils in school uniform. Modest dress. No on-screen text, captions, logos or watermarks in the frame.",
+ "narrator": {
+  "name": "the narrator",
+  "description": "A Pakistani woman teacher in her thirties in a plain shalwar kameez with a dupatta, warm and confident, speaking directly to the camera."
+ },
+ "shots": [
+  { "n": 1, "beat": "hook", "visual": "Inside a crowded Class 5 room of about fifty pupils, some leaning forward eagerly, some distracted; the narrator stands at the front, turns to the camera and speaks." },
+  { "n": 2, "beat": "learn", "visual": "The narrator at the blackboard with a simple chalk sketch of a child growing from toddler to teenager; she turns to the camera as she speaks." },
+  { "n": 3, "beat": "learn", "visual": "Pupils working in small groups at their desks; the narrator kneels beside a quiet pupil and encourages her, then looks up at the camera." },
+  { "n": 4, "beat": "why", "visual": "The narrator walks between the rows checking exercise books, nods at a pupil's work, then speaks to the camera from the middle of the room." },
+  { "n": 5, "beat": "cta", "visual": "The narrator in the school corridor holding a phone showing a textbook page, smiling and speaking to the camera; pupils pass softly in the background." }
+ ],
+ "locales": {
+  "en": {
+   "narration": [
+    "Same class, same lesson. Why do some pupils learn fast while others fall behind?",
+    "Educational Psychology shows how children grow, think and learn, from development to memory and problem-solving.",
+    "You will study motivation, intelligence, individual differences and special needs, and how to manage a real classroom.",
+    "Twelve units, from assessment to well-being and guidance, with Pakistani classroom examples throughout.",
+    "Study the full course free at textbook dot com dot pk. The link is below."
+   ],
+   "end_card": { "headline": "Educational Psychology (EFMP-301)", "cta": "Study the full course free" },
+   "youtube_title": "Why do some pupils learn faster? Educational Psychology for B.Ed | EFMP-301"
+  },
+  "ur": {
+   "narration": [
+    "ایک ہی کلاس، ایک ہی سبق۔ کچھ بچے جلدی سیکھتے ہیں اور کچھ پیچھے رہ جاتے ہیں۔ کیوں؟",
+    "Educational Psychology بتاتی ہے کہ بچے کیسے بڑھتے، سوچتے اور سیکھتے ہیں، development سے memory تک۔",
+    "آپ motivation، intelligence، individual differences اور special needs پڑھیں گے، اور کلاس سنبھالنا بھی سیکھیں گے۔",
+    "بارہ units، assessment سے well-being اور guidance تک، اور ہر جگہ پاکستانی کلاس روم کی مثالیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": { "headline": "تعلیمی نفسیات (EFMP-301)", "cta": "پورا کورس مفت پڑھیں" },
+   "youtube_title": "کچھ بچے جلدی کیوں سیکھتے ہیں؟ تعلیمی نفسیات | EFMP-301"
+  }
+ }
+}
