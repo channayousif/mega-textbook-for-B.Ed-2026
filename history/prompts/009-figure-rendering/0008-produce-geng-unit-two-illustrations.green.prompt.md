@@ -22,13 +22,20 @@ files:
   - docs/semester-1/geng-300/unit-02/topic-03.mdx
   - specs/content/geng-300/figures/unit-02.md
   - specs/content/geng-300/figures/unit-02.banner.md
+  - specs/content/geng-300/tasks.md
+  - specs/content/geng-300/reviews/unit-02/G2/20261115T024417317Z-gates.json
+  - specs/content/geng-300/reviews/unit-02/G2/logs-20261115T024417317Z/
   - static/img/figures/geng-300/unit-02/fig-U2-7.webp
   - static/img/figures/geng-300/unit-02/fig-U2-8.webp
   - static/img/figures/geng-300/unit-02/fig-U2-9.webp
   - static/img/figures/geng-300/unit-02/fig-U2-10.webp
 tests:
   - Baseline build:content-status and check:content passed all 14 gates at origin/main 4afd7143719c2666f85bff10fd51deb7b705aee2
-  - Visual inspection of all four generated images passed
+  - Visual inspection of all four generated and optimized images passed
+  - Prompt and alt preservation against origin/main, placement and lifecycle checks passed
+  - G2 refresh passed eight draft gates; acceptGateEvidence freshness passed
+  - Final build:content-status followed immediately by check:content passed all 14 gates
+  - git diff --check passed
 ---
 
 ## Prompt
@@ -51,14 +58,14 @@ Produced and inspected the three topic scenes and unit banner using Codex built-
 ## Outcome
 
 - ✅ Impact: Four optimized raster illustrations support the Unit 2 classroom examples.
-- 🧪 Tests: Baseline 14/14 content gates passed; final evidence and gate outcomes recorded below after validation.
-- 📁 Files: Four WebPs, four English MDX carriers, two manifests and this PHR; G2 tracker and evidence refresh follows the content commit.
+- 🧪 Tests: Baseline and final 14/14 content gates passed; G2 eight-gate evidence and freshness validation passed; prompt preservation and placement checks passed.
+- 📁 Files: Four WebPs, four English MDX carriers, two manifests, G2 tracker, evidence JSON and eight gate logs, and this PHR. WebPs are 1200 by 675 pixels and 120.9-141.9 KB, optimized through the unchanged repository optimizer.
 - 🔁 Next prompts: Owner escalation and independent review remain open as recorded in the existing tracker.
 - 🧠 Reflection: Quota failure required the explicitly permitted alternate producer; visual acceptance preceded placement.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Three topic scenes and unit banner produced, inspected and placed with original IDs and English alt text.
+- Shipped / changed: Three topic scenes and unit banner produced, inspected and placed with original IDs and English alt text; fresh G2 evidence at specs/content/geng-300/reviews/unit-02/G2/20261115T024417317Z-gates.json.
 - Decisions the team must respect: Approved prompts and alt text are unchanged. Course is English-only; no Urdu mirror exists. G3/G5 and translation status unchanged.
 - Pending / next owner: Existing E1, E2 and U1 escalations remain owner/render-host work; fresh G3 requires owner authorisation. No build, server, deployment or publication run.
 - Paperclip issues affected: GENG-300 Unit 2 illustration crew job; no ticket supplied.
@@ -66,6 +73,6 @@ Produced and inspected the three topic scenes and unit banner using Codex built-
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Gemini quota exhausted for both required generation commands; Codex built-in fallback succeeded.
-- Graders run and results (PASS/FAIL): Baseline check:content PASS, visual inspection PASS; final checks appended after evidence refresh.
+- Graders run and results (PASS/FAIL): Baseline and final check:content PASS (14/14), visual inspection PASS, G2 evidence PASS (8/8), freshness validation PASS, prompt/alt preservation and placements PASS, git diff --check PASS.
 - Prompt variant (if applicable): Approved manifest prompts with shared house style and explicit exclusion of lettering, sacred imagery and decorative titles.
 - Next experiment (smallest change to try): None required; qualified independent reviewers retain pedagogical certification authority.
