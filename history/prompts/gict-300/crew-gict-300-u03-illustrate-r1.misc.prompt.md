@@ -1,8 +1,8 @@
 ---
 id: crew-gict-300-u03-illustrate-r1
-title: crew illustrate GICT-300 unit 3 (attempt 2)
+title: crew illustrate GICT-300 unit 3
 stage: misc
-date: 2026-11-16
+date: 2026-11-15
 surface: agent
 model: agy
 feature: gict-300
@@ -59,23 +59,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Executed `scripts/heavy.sh node scripts/generate-illustration.mjs GICT-300 3` and confirmed upstream image model `gemini-3.1-flash-image` quota remains exhausted with error 429 RESOURCE_EXHAUSTED / QUOTA_EXHAUSTED resetting at 2026-11-17T11:00:06Z (exit code 3); Unit 3 illustration manifests remain preserved at prompt-only with all 14 content gates passing.
+Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping GICT-300 Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: illustrate for GICT-300 Unit 3 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: illustrate for GICT-300 Unit 3 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed `scripts/heavy.sh node scripts/generate-illustration.mjs GICT-300 3` and confirmed upstream image model `gemini-3.1-flash-image` quota remains exhausted with error 429 RESOURCE_EXHAUSTED / QUOTA_EXHAUSTED resetting at 2026-11-17T11:00:06Z (exit code 3); Unit 3 illustration manifests remain preserved at prompt-only with all 14 content gates passing.
+- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping GICT-300 Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z; Unit 3 illustration manifests remain preserved at prompt-only.
+  - Upstream image generation quota on gemini-3.1-flash-image remains exhausted until 2026-11-17T11:00:06Z; Unit 3 illustration manifests remain preserved at prompt-only.
   - When quota resets, rerun scripts/generate-illustration.mjs for GICT-300 3 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
