@@ -59,11 +59,11 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing, and recorded prompt history.
+Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: illustrate for GENG-301 Unit 3 by agy (attempt 2).
+- Impact: illustrate for GENG-301 Unit 3 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -71,7 +71,7 @@ Verified upstream image generation quota remains exhausted on gemini-3.1-flash-i
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing, and recorded prompt history.
+- Shipped / changed: Verified upstream image generation quota remains exhausted on gemini-3.1-flash-image resetting at 2026-11-17T11:00:06Z, keeping Unit 3 illustration manifests preserved at prompt-only with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
