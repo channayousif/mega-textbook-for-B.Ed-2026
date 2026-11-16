@@ -59,7 +59,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 7 prompt-only illustration manifests and recorded the session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z with all 14 content gates passing.
+Preserved GISS-401 Unit 7 prompt-only illustration manifests and committed the session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z and confirming all 14 content gates pass.
 
 ## Outcome
 
@@ -71,13 +71,13 @@ Preserved GISS-401 Unit 7 prompt-only illustration manifests and recorded the se
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 7 prompt-only illustration manifests and recorded session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z with all 14 content gates passing.
+- Shipped / changed: Preserved GISS-401 Unit 7 prompt-only illustration manifests and committed the session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z and confirming all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z; GISS-401 Unit 7 illustration manifests remain preserved at prompt-only.
+  - Upstream image generation quota on gemini-3.1-flash-image remains exhausted until 2026-11-17T11:00:06Z; GISS-401 Unit 7 illustration manifests remain preserved at prompt-only.
   - When quota resets, rerun scripts/heavy.sh node scripts/generate-illustration.mjs GISS-401 7 (topic scenes and --banner), inspect and place images, then run node scripts/prepare-gate-evidence.mjs GISS-401 7 and repoint tasks.md.
-  - Verify fig-U7-4 has a blank roster sheet with no readable text, and fig-U7-5 has no readable text on the envelope, sweets box, notebook or blackboard and no visible money.
+  - Inspect fig-U7-4 for blank roster sheet with no text, and fig-U7-5 for no text on envelope, sweets box, notebook or blackboard and no visible money.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
