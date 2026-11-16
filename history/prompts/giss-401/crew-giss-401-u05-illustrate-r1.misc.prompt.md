@@ -1,6 +1,6 @@
 ---
 id: crew-giss-401-u05-illustrate-r1
-title: crew illustrate GISS-401 unit 5 retry 1
+title: crew illustrate GISS-401 unit 5
 stage: misc
 date: 2026-11-16
 surface: agent
@@ -59,11 +59,11 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 5 prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation quota on gemini-3.1-flash-image returned 429 quota exhaustion resetting at 2026-11-17T11:00:06Z.
+Preserved GISS-401 Unit 5 prompt-only illustration manifests and committed the session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z and confirming all 14 content gates pass.
 
 ## Outcome
 
-- Impact: illustrate for GISS-401 Unit 5 by agy (attempt 2).
+- Impact: illustrate for GISS-401 Unit 5 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -71,7 +71,7 @@ Preserved GISS-401 Unit 5 prompt-only illustration manifests and verified all 14
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 5 prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation quota on gemini-3.1-flash-image returned 429 quota exhaustion resetting at 2026-11-17T11:00:06Z.
+- Shipped / changed: Preserved GISS-401 Unit 5 prompt-only illustration manifests and committed the session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z and confirming all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
