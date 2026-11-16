@@ -59,7 +59,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 3 prompt-only illustration manifests, committed session PHR, and verified all 14 content gates pass after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
+Preserved GISS-401 Unit 3 prompt-only illustration manifests and committed the session PHR after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
 
 ## Outcome
 
@@ -71,15 +71,13 @@ Preserved GISS-401 Unit 3 prompt-only illustration manifests, committed session 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 3 prompt-only illustration manifests, committed session PHR, and verified all 14 content gates pass after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
+- Shipped / changed: Preserved GISS-401 Unit 3 prompt-only illustration manifests and committed the session PHR after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z; Unit 3 illustration manifests remain preserved at prompt-only.
   - When quota resets, rerun scripts/heavy.sh node scripts/generate-illustration.mjs GISS-401 3 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
-  - Note from plan_illustrations: fig-U3-6 shows a prayer hall; check the generated image for any Qur'anic script, calligraphy or patterned mats before marking placed.
-  - Note from plan_illustrations: fig-U3-6 draws the trainee as a woman, following the 3.1 narration; if a later fix settles the open "Sir"/"she" issue the other way, update the prompt and alt text in both topic files and the manifest.
-  - Note from translate: The Urdu Qur'an and hadith quotations need an Islamic Studies check; six English issues remain listed in the G4 handoff.
+  - Note from plan_illustrations: fig-U3-6 shows a prayer hall; check generated image for Qur'anic script, calligraphy or patterned mats before marking placed.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
