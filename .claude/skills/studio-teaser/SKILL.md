@@ -16,8 +16,12 @@ Owner ruling D-2026-0082 (2026-11-10, `specs/decisions/log.md`):
 - **Flow automation.** Flow is automated only from the owner's Windows PC.
 - **Narration.** Veo speaks the narration, generated separately for EN and UR.
 - **Length.** About 45 s: five 8-second shots plus a 5 s end card.
-- **First batch.** One teaser per course (17) plus the licence track, in EN and UR, which makes
-  36 Shorts.
+- **First batch.** One teaser per course (17) plus the licence track.
+
+Owner ruling D-2026-0083 (2026-11-17): **Urdu teasers only for now.** Plan, generate and upload
+only the `ur` locale, so the first batch is 18 Shorts. A script's `en` locale is optional; keep it
+if it is already written (it still passes QG0), but do not write new English narration until the
+owner reopens English.
 
 The video-studio rule against automating subscription sites still binds video-studio; this
 skill is the Feature 029 exception.
@@ -57,14 +61,14 @@ States: `planned → scripted → script-approved → clips-generated → clips-
    - **Shots.** There are five, with beats hook → learn → learn → why → cta. Each `visual` is one
      concrete classroom scene with the narrator.
    - **Style.** A shared `visual_style` and `narrator` description.
-   - **Narration.** EN ≤ 18 words and UR ≤ 22 words per shot. UR uses the v2 simple spoken
+   - **Narration.** UR ≤ 22 words per shot (EN ≤ 18 if an `en` locale is present). UR uses the v2 simple spoken
      register, with technical terms in English. Every fact must be on the source pages.
    - **Per locale.** Each locale also gets an `end_card` (headline, cta) and a `youtube_title`
      (≤ 90 chars; `#Shorts` is added).
 
-   Run `T check <id>` until it passes. Then run `T plan <id> en`, `T plan <id> ur`, and
+   Run `T check <id>` until it passes. Then run `T plan <id> ur` (Urdu only, D-2026-0083) and
    `T advance <id>-<loc> scripted --json '{"script_sha256":"<sha256sum of the file>"}'`.
-2. **Owner approval.** Show the owner both locales' narration lines (a batch of scripts is fine).
+2. **Owner approval.** Show the owner the Urdu narration lines (a batch of scripts is fine).
    When approved:
    `T advance <key> script-approved --json '{"gates":{"script":{"verdict":"approve","by":"owner","date":"<today>"}}}'`.
    If the script changes after approval, the sha256 no longer matches: re-plan and re-approve.
@@ -102,8 +106,8 @@ States: `planned → scripted → script-approved → clips-generated → clips-
    exact address. Then `T advance <key> qa-pass` with `gates.qa1`.
 9. **Upload private.** Get the metadata with `T meta <key>`.
    - Call `upload_video` (YouTube MCP) with its `upload_video` fields.
-   - Call `update_video` with the teaser playlist: "Course teasers (English)" / "Course teasers
-     (اردو)". The owner creates these; record their IDs below.
+   - Call `update_video` with the teaser playlist "Course teasers (اردو)". The owner creates it;
+     record its ID below.
    - Then run `T advance <key> uploaded-private --json '{"youtube_id":"…","uploaded_at":"<ISO>"}'`.
    - Confirm the video plays as a Short at `https://youtube.com/shorts/<id>`.
 10. **QG3 + owner.** Check with `list_videos` (private, on the channel), then `T advance <key>
@@ -170,10 +174,10 @@ chrome` again on Windows.
 |---|---|
 | One take (veo_fast, 8 s) | 20 (Pro plan; veo_lite 10, veo_quality 100) |
 | One Short (5 shots, no retakes) | 100 |
-| First batch (36 Shorts) | 3,600 plus retakes |
+| First batch (18 Urdu Shorts) | 1,800 plus retakes |
 | Google AI Pro allowance | 1,000 a month plus 50 a day |
 
 ## Channel facts
 
 - Channel `UC7cQfkGkdNABCiyjmV5ZaFQ` (see the studio-media skill for authentication).
-- Teaser playlists: _(owner to create "Course teasers (English)" and "Course teasers (اردو)" and send the IDs)_.
+- Teaser playlist: _(owner to create "Course teasers (اردو)" and send the ID)_.

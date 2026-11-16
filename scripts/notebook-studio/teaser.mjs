@@ -83,7 +83,7 @@ export function checkScript(script, root = ROOT) {
   if (script.shots[4].beat !== 'cta') f.push('shot 5 must be the call to action');
   const text = JSON.stringify(script);
   if (LONG_DASH.test(text)) f.push('contains a long dash (use a spaced hyphen)');
-  for (const loc of ['en', 'ur']) {
+  for (const loc of ['en', 'ur'].filter((l) => script.locales[l])) {
     script.locales[loc].narration.forEach((line, i) => {
       const n = words(line);
       if (n > WORD_BUDGET[loc]) f.push(`${loc} shot ${i + 1}: ${n} words, over the ${WORD_BUDGET[loc]}-word budget for 8 seconds`);
@@ -175,6 +175,7 @@ const clean = (s) => String(s).replace(/[\u2014\u2015\u2E3A\u2E3B]/g, ' - ').rep
 export function shortMeta(script, locale, root = ROOT) {
   const ur = locale === 'ur';
   const L = script.locales[locale];
+  if (!L) throw new Error(`${script.id} has no ${locale} locale`);
   const url = teaserUrl(script, locale, root);
   let title = clean(`${L.youtube_title} #Shorts`);
   if (title.length > 100) title = `${title.slice(0, 92).replace(/\s+\S*$/, '')} #Shorts`;

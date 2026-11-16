@@ -30,7 +30,8 @@
       }
     },
     "locales": {
-      "type": "object", "additionalProperties": false, "required": ["en", "ur"],
+      "type": "object", "additionalProperties": false, "required": ["ur"],
+      "description": "ur is required. en is optional while teasers are Urdu-only (D-2026-0083).",
       "properties": {
         "en": { "$ref": "#/$defs/locale" },
         "ur": { "$ref": "#/$defs/locale" }

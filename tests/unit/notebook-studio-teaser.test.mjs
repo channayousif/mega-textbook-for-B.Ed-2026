@@ -29,6 +29,14 @@ describe('QG0 teaser script check', () => {
     expect(f).toMatch(/shot 5 must be the call to action/);
     expect(f).toMatch(/source missing/);
   });
+  it('accepts an Urdu-only script and still requires the Urdu locale (D-2026-0083)', () => {
+    const s = base();
+    delete s.locales.en;
+    expect(checkScript(s, ROOT)).toEqual([]);
+    expect(() => shortMeta(s, 'en', ROOT)).toThrow(/no en locale/);
+    delete s.locales.ur;
+    expect(checkScript(s, ROOT)[0]).toMatch(/^schema: /);
+  });
   it('fails the schema when a locale has four lines', () => {
     const s = base();
     s.locales.en.narration.pop();

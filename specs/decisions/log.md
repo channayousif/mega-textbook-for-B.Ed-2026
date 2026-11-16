@@ -4659,3 +4659,15 @@ content-improvement loop with no further cycle.
 - **Limits:** Certifies no content, qualifies no reviewer and authorises no publication beyond the
   owner's own spot-check (Art. VII.8). Account risk from automating Flow is the owner's, per the
   gflow-cli disclaimer. An ADR is suggested, not adopted.
+
+## D-2026-0083 - Course teaser Shorts are Urdu-only for now
+
+- **Status:** confirmed
+- **Gate:** none (Feature 029 Study Studio media; amends D-2026-0082)
+- **Ruling:** Plan, generate and upload only the Urdu (`ur`) teaser for each course and the
+  licence track. The first batch is 18 Shorts, not 36, about 1,800 Flow credits plus retakes. A
+  teaser script's `en` locale becomes optional; existing English lines may stay but no new English
+  narration is written, and no English teaser playlist is needed. English can be reopened later
+  with the same pipeline.
+- **Basis:** owner, 2026-11-17: "i have decided to make urdu teasers only for now".
+- **Limits:** Certifies no content and authorises no publication beyond the owner's spot-check.

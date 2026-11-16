@@ -103,6 +103,7 @@ export async function assemble({ id, locale, out, shots }) {
   if (shots.length !== 5) throw new Error('a teaser has exactly five shots');
   const script = loadScript(id);
   const L = script.locales[locale];
+  if (!L) throw new Error(`${id} has no ${locale} locale`);
   const url = `https://textbook.com.pk${locale === 'ur' ? '/ur' : ''}${teaserRoute(script)}`;
   const caps = [];
   for (let i = 0; i < 5; i++) {
