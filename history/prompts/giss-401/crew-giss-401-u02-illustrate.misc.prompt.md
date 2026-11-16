@@ -59,25 +59,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 2 prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation capacity on gemini-3.1-flash-image returned 429 quota exhaustion resetting 2026-11-17T11:00:06Z.
+Preserved GISS-401 Unit 2 prompt-only illustration manifests, committed session PHR, and verified all 14 content gates pass after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
 
 ## Outcome
 
 - Impact: illustrate for GISS-401 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 2 prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation capacity on gemini-3.1-flash-image returned 429 quota exhaustion resetting 2026-11-17T11:00:06Z.
+- Shipped / changed: Preserved GISS-401 Unit 2 prompt-only illustration manifests, committed session PHR, and verified all 14 content gates pass after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Upstream image generation quota on gemini-3.1-flash-image remains exhausted until 2026-11-17T11:00:06Z; Unit 2 illustration manifests remain preserved at prompt-only.
-  - When quota resets, rerun scripts/generate-illustration.mjs for GISS-401 2 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
-  - Note from plan_illustrations: The fig-U2-8 prompt mentions an "Islamiat textbook" held open; check the generated image for any calligraphy or Qur'anic script on its pages before marking it placed.
+  - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z; Unit 2 illustration manifests remain preserved at prompt-only.
+  - When quota resets, rerun scripts/heavy.sh node scripts/generate-illustration.mjs GISS-401 2 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
+  - Note from plan_illustrations: fig-U2-8 prompt mentions an "Islamiat textbook" held open; check the generated image for any calligraphy or Qur'anic script on pages before marking placed.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
