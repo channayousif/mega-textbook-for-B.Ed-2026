@@ -1,6 +1,6 @@
 ---
 id: crew-giss-401-u06-illustrate-r1
-title: crew illustrate GISS-401 unit 6 (retry 1)
+title: crew illustrate GISS-401 unit 6
 stage: misc
 date: 2026-11-16
 surface: agent
@@ -59,19 +59,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 6 prompt-only illustration manifests and committed the retry session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z and confirming all 14 content gates pass.
+Preserved GISS-401 Unit 6 prompt-only illustration manifests and recorded retry session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: illustrate for GISS-401 Unit 6 by agy (attempt 2 / retry 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: illustrate for GISS-401 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 6 prompt-only illustration manifests and committed the retry session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z and confirming all 14 content gates pass.
+- Shipped / changed: Preserved GISS-401 Unit 6 prompt-only illustration manifests and recorded retry session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
