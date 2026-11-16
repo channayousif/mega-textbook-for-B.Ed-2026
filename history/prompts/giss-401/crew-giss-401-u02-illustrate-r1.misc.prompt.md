@@ -59,19 +59,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 2 prompt-only illustration manifests, recorded upstream quota exhaustion status (HTTP 429 resetting at 2026-11-17T11:00:06Z), and verified all 14 content gates pass.
+Preserved GISS-401 Unit 2 prompt-only illustration manifests and recorded upstream quota exhaustion status after gemini-3.1-flash-image returned 429 resetting at 2026-11-17T11:00:06Z.
 
 ## Outcome
 
-- Impact: illustrate retry 1 for GISS-401 Unit 2 by agy.
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: illustrate for GISS-401 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 2 prompt-only illustration manifests, recorded upstream quota exhaustion status (HTTP 429 resetting at 2026-11-17T11:00:06Z), and verified all 14 content gates pass.
+- Shipped / changed: Preserved GISS-401 Unit 2 prompt-only illustration manifests and recorded upstream quota exhaustion status after gemini-3.1-flash-image returned 429 resetting at 2026-11-17T11:00:06Z.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
