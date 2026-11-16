@@ -16,9 +16,9 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/giss-401/crew-giss-401-u04-illustrate.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u04-illustrate.misc.prompt.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -59,7 +59,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 4 prompt-only illustration manifests, committed session PHR, and verified all 14 content gates pass after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
+Preserved prompt-only illustration manifests and recorded upstream image generation quota exhaustion in prompt history after gemini-3.1-flash-image returned 429 resetting at 2026-11-17T11:00:06Z.
 
 ## Outcome
 
@@ -71,13 +71,13 @@ Preserved GISS-401 Unit 4 prompt-only illustration manifests, committed session 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 4 prompt-only illustration manifests, committed session PHR, and verified all 14 content gates pass after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
+- Shipped / changed: Preserved prompt-only illustration manifests and recorded upstream image generation quota exhaustion in prompt history after gemini-3.1-flash-image returned 429 resetting at 2026-11-17T11:00:06Z.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image generation quota on gemini-3.1-flash-image remains exhausted until 2026-11-17T11:00:06Z; Unit 4 illustration manifests remain preserved at prompt-only.
   - When quota resets, rerun scripts/heavy.sh node scripts/generate-illustration.mjs GISS-401 4 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
-  - Check that no readable text appears on the folded notices, book parcels or picture books in fig-U4-6 and fig-U4-7, and that no calligraphy appears anywhere.
+  - Check that no readable text appears on folded notices, book parcels or picture books in fig-U4-6 and fig-U4-7, and that no calligraphy appears anywhere.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
