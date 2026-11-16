@@ -21,7 +21,8 @@
 import { spawn, spawnSync } from 'node:child_process';
 import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
-import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker } from './workers.mjs';
+import { WORKERS, STAGES, QUOTA_RE, IMAGE_QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker, imageQuotaReset, workFiles } from './workers.mjs';
+import { activeImageQuota, recordImageQuota } from '../lib/image-quota.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
@@ -215,7 +216,7 @@ const STAGE_TASK = {
   repair_en: (j) => `Apply the findings of the latest G3 report under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit ${j.unit} G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.`,
   figures: (j) => `Render every prompt-only schematic figure for ${j.course} Unit ${j.unit} (generate-figures skill): diagrams, tables, concept maps, flowcharts and timelines as SVG with their .ur.svg variants. Leave raster illustrations at prompt-only for the illustrate job. Every SVG must pass npm run check:svg-style; render each one to PNG and look at it (light and dark) before placing it.`,
   plan_illustrations: (j) => `Plan the raster images for ${j.course} Unit ${j.unit} (ADR-0029 point 5; owner ruling 2026-11-09: units authored before the author-unit skill planned them are backfilled). Read \`.claude/skills/author-unit/references/figure-prompts.md\` and model the banner on \`specs/content/efmp-304/figures/unit-02.banner.md\`. Write \`specs/content/${j.course.toLowerCase()}/figures/unit-${pad(j.unit)}.banner.md\` with one 16:9 banner row for the unit index (next free figure ID, Kind illustration, Status prompt-only). Then add one illustration scene per topic for its "A real classroom situation", unless the scene would only decorate: a \`FIGURE[...]\` marker in the English topic file and a matching prompt-only row in \`figures/unit-${pad(j.unit)}.md\`. Every prompt is a complete brief for a scene that teaches the unit's point: a Sindh school or classroom, Pakistani dress, no text, maps, flags or emblems, and never a prophet, companion, angel or other sacred person, nor scripture or calligraphy (this matters most for Islamic studies and Qur'an courses: show teachers and pupils learning, not sacred figures). Alt text describes what the image will show. Do not generate, place or draw any image and do not touch other figures: the illustrate job produces and places these rows.`,
-  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it generates with agy, optimises to WebP and moves each row to generated. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, any depiction of a prophet, companion, angel or other sacred person, any scripture or calligraphy, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job.`,
+  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it generates with agy, optimises to WebP and moves each row to generated. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, any depiction of a prophet, companion, angel or other sacred person, any scripture or calligraphy, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job. If generate-illustration.mjs exits 3 (image quota exhausted), stop at once: commit nothing, not even a PHR, print one CREW-HANDOFF line with the reset time, and exit; the crew holds this job until the quota resets.`,
   review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row; write the report JSON directly under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/ (supporting evidence may sit in a subfolder). Never tick G3, never add reviewer initials, never self-sign.${renderStep(j, false)}${latestReport(j.course, j.unit, 'G3') ? ' This is the second and last review cycle (ADR-0019): repairs were applied for the latest report under the unit\'s reviews/.../G3/ folder. Verify each of its findings against the current files, carry any that remain unresolved, and give a new name to your report.' : ''}`,
   translate: (j) => `Translate ${j.course} Unit ${j.unit} into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft. Topic titles read "موضوع N.M - ...", matching the English numbering.`,
   review_ur: (j) => `Act as the INDEPENDENT G5 Urdu reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row; write the report JSON directly under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G5/ (supporting evidence may sit in a subfolder). Never tick G5, never self-sign.${renderStep(j, true)}`,
@@ -435,8 +436,11 @@ function launchQueued(board, health, control, events) {
   const queue = queueOrder(board, control);
   if (resourceHold(control, events, queue.length)) return 0;
   let launched = 0;
+  // Every illustrate job would fail on an exhausted image quota; hold them until it resets.
+  const imageQuota = activeImageQuota();
   for (const j of queue) {
     if (running.length >= MAX_PARALLEL) break;
+    if (j.stage === 'illustrate' && imageQuota) continue;
     // Each launch uses memory and disk, so the floors are checked again before the next one.
     if (memAvailableMb() < MIN_FREE_MB) { console.log(`memory below ${MIN_FREE_MB} MB; not launching`); break; }
     if (diskFreeMb() < MIN_FREE_DISK_MB) { console.log(`disk below ${MIN_FREE_DISK_MB} MB; not launching`); break; }
@@ -634,6 +638,8 @@ function finishSuccess(board, j, logText) {
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], wt).out || 0);
   const made = j.startHead ? Number(sh('git', ['rev-list', '--count', `${j.startHead}..HEAD`], wt, { allowFail: true }).out || 0) : ahead;
   if (!ahead || !made) return { ok: false, why: 'the worker exited without committing any change' };
+  const produced = sh('git', ['diff', '--name-only', `${j.startHead || 'origin/main'}..HEAD`], wt, { allowFail: true }).out.split('\n');
+  if (!workFiles(produced).length) return { ok: false, why: 'the worker committed only a PHR (history/prompts/); a job must produce its stage\'s work, and the crew writes the PHR itself' };
   if (selfJob(board, j)) {
     const changed = sh('git', ['diff', '--name-only', 'origin/main...HEAD'], wt, { allowFail: true }).out.split('\n').filter(Boolean);
     const content = contentFiles(changed);
@@ -689,6 +695,34 @@ function reap(board, health, events) {
   }
 }
 
+/**
+ * An illustrate job that hit the image quota and produced nothing but its PHR goes back to the
+ * queue: its worktree is reset to where it started (dropping the PHR), the attempt is not counted,
+ * the worker is not cooled (its text quota is fine), and launchQueued holds the job until the
+ * recorded reset. Returns true when it requeued the job.
+ */
+function imageQuotaRequeue(board, events, j, tail) {
+  let rec = activeImageQuota();
+  if (!rec && !IMAGE_QUOTA_RE.test(tail)) return false;
+  const base = j.startHead || 'origin/main';
+  const changed = [
+    ...sh('git', ['diff', '--name-only', base], j.worktree, { allowFail: true }).out.split('\n'),
+    ...sh('git', ['ls-files', '--others', '--exclude-standard'], j.worktree, { allowFail: true }).out.split('\n'),
+  ];
+  if (workFiles(changed).length) return false; // some images were made before the quota ran out
+  if (!rec) {
+    rec = recordImageQuota(imageQuotaReset(tail));
+    events.push(`⏸ image quota exhausted until ${rec.resetAt}; illustrate jobs held until then`);
+  }
+  sh('git', ['reset', '-q', '--hard', base], j.worktree, { allowFail: true });
+  sh('git', ['clean', '-fdq', '--', 'history/prompts'], j.worktree, { allowFail: true });
+  j.status = 'queued';
+  j.attempts = Math.max(0, (j.attempts || 1) - 1);
+  delete j.feedback;
+  log(board, j, `image quota exhausted until ${rec.resetAt}; nothing made, PHR dropped; held in queue`);
+  return true;
+}
+
 function reapOne(board, health, events, j) {
   const exitFile = `${j.log}.exit`;
   if (alive(j.pid) && !existsSync(exitFile)) return;
@@ -699,6 +733,7 @@ function reapOne(board, health, events, j) {
   const tail = logText.slice(-4000);
   pruneScratch(j.worktree);
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
+  if (j.stage === 'illustrate' && imageQuotaRequeue(board, events, j, tail)) return;
   const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
   if (quota || (code === 124 && !tail.trim())) {
     const mins = cool(health, j.worker, tail || `exit ${code}`);
@@ -1261,6 +1296,7 @@ ${resumeHere({ board, decisions, control, nextUp: queueOrder(board, control) })}
 | Worker | Family | State | Until | Last error |
 |---|---|---|---|---|
 ${Object.keys(WORKERS).map((w) => { const h = health[w] || { state: 'ok' }; return `| ${w} | ${WORKERS[w].family} | ${h.state} | ${h.until || ''} | ${(h.last_error || '').replace(/[|\n]/g, ' ').slice(0, 80)} |`; }).join('\n')}
+${(() => { const q = activeImageQuota(); return q ? `\nImage quota exhausted until ${q.resetAt}: illustrate jobs wait in the queue.\n` : ''; })()}
 
 ## Open owner decisions
 ${decisions.items.filter((d) => d.status === 'open').map((d) => `- **${d.id}** ${d.question} (${d.options.join(' / ')})`).join('\n') || 'none'}
