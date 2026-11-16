@@ -59,25 +59,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Preserved GISS-401 Unit 6 prompt-only illustration manifests and recorded upstream image generation quota exhaustion in prompt history after gemini-3.1-flash-image returned 429 resetting at 2026-11-17T11:00:06Z.
+Preserved GISS-401 Unit 6 prompt-only illustration manifests and committed the session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z and confirming all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for GISS-401 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the commit was made.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 6 prompt-only illustration manifests and recorded upstream image generation quota exhaustion in prompt history after gemini-3.1-flash-image returned 429 resetting at 2026-11-17T11:00:06Z.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Preserved GISS-401 Unit 6 prompt-only illustration manifests and committed the session PHR after verifying upstream image generation quota remains exhausted until 2026-11-17T11:00:06Z and confirming all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image generation quota on gemini-3.1-flash-image is exhausted until 2026-11-17T11:00:06Z; GISS-401 Unit 6 illustration manifests remain preserved at prompt-only.
-  - When quota resets, rerun scripts/heavy.sh node scripts/generate-illustration.mjs GISS-401 6 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
-  - Check that the generated fig-U6-9 has no readable text, script or historical portrait on cards/instrument model, and fig-U6-10 has no readable phone screen or religious symbol on the minority family.
+  - When quota resets, rerun scripts/heavy.sh node scripts/generate-illustration.mjs GISS-401 6 (topic scenes and --banner), inspect and place images, then run node scripts/prepare-gate-evidence.mjs GISS-401 6 and repoint tasks.md.
+  - Verify fig-U6-9 has no readable text or historical portrait on cards/instrument model, and fig-U6-10 has no readable phone screen or religious symbol on the minority family.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
