@@ -74,13 +74,14 @@ States: `planned → scripted → script-approved → clips-generated → clips-
 4. **Generate.** For each shot, call `gflow_generate_video`:
    - `mode` `r2v` with `reference_entities=[entity_id]` and `reference_entity_names=[name]`
    - `aspect` `9:16`, `model` `veo_fast`, `duration` `8`
-   - `output` set to `%USERPROFILE%\gflow-out\<id>\<loc>\shot-N-tT.mp4`
+   - always pass `profile` (the account profile, e.g. `a2ahs-alpha`) and `project_name` `textbook-teasers`
    - prompt: `<visual> <visual_style> The narrator looks at the camera and says in <English|Urdu>: "<narration line>"`
 
    Record each take with `T clip <key> <N> --json '{"artifact_id":"…","model":"veo_fast","credits":20,"file":"…"}'`.
    When all five shots have a take, run `T advance <key> clips-generated`.
 5. **Fetch + QG1 per take.**
-   - Fetch: `curl -fsS http://127.0.0.1:18801/<id>/<loc>/shot-N-tT.mp4 -o ~/studio-media/teasers/<id>/<loc>/shot-N-tT.mp4`.
+   - Fetch: the result's `files[0]` is `...\Downloads\gflow-cli\<flow_media_id>.mp4`; run
+     `curl -fsS http://127.0.0.1:18801/<flow_media_id>.mp4 -o ~/studio-media/teasers/<id>/<loc>/shot-N-tT.mp4`.
    - Check: `scripts/heavy.sh node scripts/notebook-studio/media-qa.mjs <file> --kind clip`
      (vertical, 3.5–8.6 s, audio present, no black runs).
 6. **QG2 speech per take.** Add the take's audio to the QA notebook (`source_add` file), read
@@ -119,19 +120,26 @@ The gflow-cli MCP must drive **real Google Chrome**, which has no Linux arm64 bu
 the owner's Windows PC. This server reaches it over the owner's own SSH connection. Server ports
 8000/8001 are taken (8000 is Kong, the Supabase gateway), so the tunnel uses 18800/18801.
 
-On Windows, in PowerShell:
-1. Install Google Chrome, then `winget install astral-sh.uv`.
-2. Run `uv tool install gflow-cli`, then `uv tool run --from gflow-cli playwright install chromium`.
-3. Run `gflow auth login --browser chrome` and sign in with the Flow Pro account. Check with
-   `gflow credits user`.
-4. Keep two windows running:
-   - `gflow serve --host 127.0.0.1 --port 8000 --profile default`
-   - `mkdir $env:USERPROFILE\gflow-out; python -m http.server 8001 --bind 127.0.0.1 -d $env:USERPROFILE\gflow-out`
+On Windows, in Command Prompt (verified 2026-11-17 with gflow-cli 0.98.0). The owner's PC runs
+Smart App Control, which blocks uv's unsigned `python.exe` (os error 4551), so the route uses the
+signed python.org Python through `py -3.12 -m`, never uv launchers or `gflow.exe`. Python 3.15 is
+not supported (no pyyaml/lz4 wheels); 3.11-3.13 are.
+1. Install Google Chrome and `winget install Python.Python.3.12`.
+2. `py -3.12 -m pip install --user gflow-cli`, then `py -3.12 -m playwright install chromium`.
+3. `py -3.12 -m gflow_cli auth login --browser chrome`, sign in with the Flow Pro account, then
+   `py -3.12 -m gflow_cli credits user`. Login renames the profile after the Google account
+   (here `a2ahs-alpha`); use that name below. Optional: `py -3.12 -m gflow_cli telemetry off`.
+4. Keep two windows running. Windows port 8000 was already in use on the owner's PC, so both ends
+   use 18800/18801:
+   - `py -3.12 -m gflow_cli serve --host 127.0.0.1 --port 18800 --profile a2ahs-alpha`
+   - `py -3.12 -m http.server 18801 --bind 127.0.0.1 -d "%USERPROFILE%\Downloads\gflow-cli"`
+     (gflow saves every clip there as `<flow_media_id>.mp4`; fetch it as
+     `http://127.0.0.1:18801/<flow_media_id>.mp4`)
 5. In `%USERPROFILE%\.ssh\config`, under the Host entry used for this server, add the two lines
    below, then reconnect:
    ```
-   RemoteForward 18800 127.0.0.1:8000
-   RemoteForward 18801 127.0.0.1:8001
+   RemoteForward 18800 127.0.0.1:18800
+   RemoteForward 18801 127.0.0.1:18801
    ```
 
 On the server (Claude):
@@ -141,8 +149,20 @@ On the server (Claude):
 - Smoke test: `gflow_get_credits`; one `veo_lite` 4 s 9:16 clip (10 credits); fetch it over 18801;
   `media-qa.mjs --kind clip`.
 
-If generation fails with an auth error, the owner runs `gflow auth login --browser chrome` again
-on Windows.
+Until the session restarts, the MCP can be called directly: `initialize` over
+`POST http://127.0.0.1:18800/mcp` returns an `mcp-session-id` header, then `tools/call`. Always pass
+`profile` explicitly (the tool default is `default`, which no longer exists after the rename).
+
+The owner's account is on the migrated flow.google.com, where gflow drives Flow's **agent chat**
+and auto-approves only the credit gate. If Flow's agent asks any other question, gflow waits
+600 s and fails with `TransportTimeoutError ... (approvals=0)` and no credits are spent (in 0.98.0
+a logging bug then masks this as a bare "Error executing tool"). Seen 2026-11-17: a 4 s request on
+Veo 3.1 Lite made the agent ask "switch to Omni or use 8 s?", because Lite only supports 8 s there
+even though `gflow_list_models` lists 4/6/8. So every shot request uses `duration: 8`, and after a
+timeout the owner reads the agent's reply in the Flow project before any retry.
+
+If generation fails with an auth error, the owner runs `py -3.12 -m gflow_cli auth login --browser
+chrome` again on Windows.
 
 ## Budget
 
