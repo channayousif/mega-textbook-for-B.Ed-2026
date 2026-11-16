@@ -1,6 +1,6 @@
 ---
 id: crew-giss-401-u03-illustrate-r1
-title: crew illustrate GISS-401 unit 3 retry 1
+title: crew illustrate GISS-401 unit 3
 stage: misc
 date: 2026-11-16
 surface: agent
@@ -56,27 +56,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (giss-401-u03-plan_illustrations, plan_illustrations, claude) Placing fig-U3-5..7 changes files the G2 evidence is bound to, so the illustrate job must rerun `node scripts/prepare-gate-evidence.mjs GISS-401 3` and update both duplicate Unit 3 G2 rows in `specs/content/giss-401/tasks.md`.
 - (giss-401-u03-plan_illustrations, plan_illustrations, claude) fig-U3-6 shows a prayer hall; check the generated image for any Qur'anic script, calligraphy or patterned mats before marking it placed.
 
+
 ## Response snapshot
 
-Preserved GISS-401 Unit 3 prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation quota on gemini-3.1-flash-image returned 429 quota exhaustion resetting 2026-11-17T11:00:06Z.
+Preserved GISS-401 Unit 3 prompt-only illustration manifests, committed session PHR, and verified all 14 content gates pass after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
 
 ## Outcome
 
-- Impact: illustrate retry 1 for GISS-401 Unit 3 by agy.
-- Tests: npm run check:content passed in the job worktree.
+- Impact: illustrate for GISS-401 Unit 3 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 1 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Preserved GISS-401 Unit 3 prompt-only illustration manifests and verified all 14 content gates pass after upstream image generation quota on gemini-3.1-flash-image returned 429 quota exhaustion resetting 2026-11-17T11:00:06Z.
+- Shipped / changed: Preserved GISS-401 Unit 3 prompt-only illustration manifests, committed session PHR, and verified all 14 content gates pass after upstream image generation quota returned 429 exhaustion resetting 2026-11-17T11:00:06Z.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Upstream image generation quota on gemini-3.1-flash-image remains exhausted until 2026-11-17T11:00:06Z; Unit 3 illustration manifests remain preserved at prompt-only.
   - When quota resets, rerun scripts/heavy.sh node scripts/generate-illustration.mjs GISS-401 3 (scenes and --banner), inspect and place images, then run prepare-gate-evidence and repoint tasks.md.
-  - Note from plan_illustrations: fig-U3-6 shows a prayer hall; check generated image for Qur'anic script, calligraphy or patterned mats before marking placed.
+  - fig-U3-6 shows a prayer hall; check generated image for Qur'anic script, calligraphy or patterned mats before marking placed.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
