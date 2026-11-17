@@ -25,19 +25,22 @@ const SCOPES = {
   meta: ['pages_show_list', 'pages_read_engagement', 'pages_manage_posts', 'instagram_basic', 'instagram_content_publish', 'business_management'],
   tiktok: ['user.info.basic', 'video.upload'],
   linkedin: ['openid', 'profile', 'w_member_social'],
+  // With the Community Management API product: post as the textbook.com.pk Page.
+  linkedin_page: ['openid', 'profile', 'w_member_social', 'w_organization_social', 'r_organization_admin'],
 };
 const DIR = process.env.TEXTBOOK_SOCIAL_DIR ?? join(homedir(), '.config', 'textbook-social');
 
 // ---------- pure request builders (unit-tested) ----------
 
 export function authUrl(provider, app, state = randomBytes(8).toString('hex')) {
+  const liScopes = app.page ? SCOPES.linkedin_page : SCOPES.linkedin;
   const q = (o) => new URLSearchParams(o).toString();
   // Facebook Login for Business takes a saved configuration (permissions + assets) as config_id;
   // a plain scope list fails there with "Invalid Scope". Classic Facebook Login uses scope.
   if (provider === 'meta') return `https://www.facebook.com/${GRAPH}/dialog/oauth?${q({ client_id: app.client_id, redirect_uri: REDIRECT_URI, ...(app.config_id ? { config_id: app.config_id, override_default_response_type: 'true' } : { scope: SCOPES.meta.join(',') }), response_type: 'code', state })}`;
   if (provider === 'tiktok') return `https://www.tiktok.com/v2/auth/authorize/?${q({ client_key: app.client_id, scope: SCOPES.tiktok.join(','), response_type: 'code', redirect_uri: REDIRECT_URI, state })}`;
   // LinkedIn misreads '+' between scopes; send them space-separated as %20.
-  if (provider === 'linkedin') return `https://www.linkedin.com/oauth/v2/authorization?${q({ response_type: 'code', client_id: app.client_id, redirect_uri: REDIRECT_URI, state })}&scope=${SCOPES.linkedin.map(encodeURIComponent).join('%20')}`;
+  if (provider === 'linkedin') return `https://www.linkedin.com/oauth/v2/authorization?${q({ response_type: 'code', client_id: app.client_id, redirect_uri: REDIRECT_URI, state })}&scope=${liScopes.map(encodeURIComponent).join('%20')}`;
   throw new Error(`unknown provider ${provider}`);
 }
 
@@ -134,8 +137,15 @@ async function exchange(provider, input) {
   if (provider === 'linkedin') {
     const t = (await call('https://www.linkedin.com/oauth/v2/accessToken', form({ grant_type: 'authorization_code', code, redirect_uri: REDIRECT_URI, client_id: a.client_id, client_secret: a.client_secret }))).body;
     const me = (await call('https://api.linkedin.com/v2/userinfo', { headers: { Authorization: `Bearer ${t.access_token}` } })).body;
-    writeSecret('linkedin.json', { ...t, author: `urn:li:person:${me.sub}`, name: me.name, saved_at: new Date().toISOString() });
-    return { provider, author: me.name };
+    let org = null;
+    if (String(t.scope ?? '').includes('w_organization_social')) {
+      // The Page this member administers (Community Management API, organizationAcls).
+      const h = { Authorization: `Bearer ${t.access_token}`, 'LinkedIn-Version': LINKEDIN_VERSION, 'X-Restli-Protocol-Version': '2.0.0' };
+      const acl = (await call('https://api.linkedin.com/rest/organizationAcls?q=roleAssignee&role=ADMINISTRATOR&state=APPROVED', { headers: h })).body.elements ?? [];
+      org = acl.map((e) => e.organization).find(Boolean) ?? null;
+    }
+    writeSecret('linkedin.json', { ...t, author: org ?? `urn:li:person:${me.sub}`, member: `urn:li:person:${me.sub}`, name: me.name, saved_at: new Date().toISOString() });
+    return { provider, member: me.name, posts_as: org ?? 'member profile', scope: t.scope };
   }
   throw new Error(`unknown provider ${provider}`);
 }
