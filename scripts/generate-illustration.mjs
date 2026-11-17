@@ -74,7 +74,7 @@ if (todo.length === 0) {
   process.exit(0);
 }
 
-const aspectOf = (prompt) => (/portrait/i.test(prompt) ? '3:4 portrait' : '16:9 landscape');
+const aspectOf = (prompt) => (/\bportrait\b/i.test(prompt) && !/\blandscape\b/i.test(prompt) ? '3:4 portrait' : '16:9 landscape');
 
 function generate(row) {
   const png = join(stagingDir, `${row.id}.png`);
