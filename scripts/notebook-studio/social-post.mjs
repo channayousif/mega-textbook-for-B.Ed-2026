@@ -4,6 +4,7 @@
 //
 //   node scripts/notebook-studio/social-post.mjs auth-url <meta|tiktok|linkedin>
 //   node scripts/notebook-studio/social-post.mjs exchange <meta|tiktok|linkedin> '<redirected URL or code>'
+//        (meta also accepts a Graph API Explorer user token, which starts with EAA)
 //   node scripts/notebook-studio/social-post.mjs post <instagram|facebook|tiktok|linkedin> <ledger key> <video.mp4>
 //
 // App credentials (client id/secret) live in ~/.config/textbook-social/apps.json and tokens in
@@ -111,8 +112,10 @@ async function exchange(provider, input) {
   const a = app(provider);
   const code = codeFrom(input);
   if (provider === 'meta') {
-    const q = new URLSearchParams({ client_id: a.client_id, client_secret: a.client_secret, redirect_uri: REDIRECT_URI, code });
-    const short = (await call(`https://graph.facebook.com/${GRAPH}/oauth/access_token?${q}`)).body.access_token;
+    // A user token from Meta's Graph API Explorer (starts "EAA") skips the login dialog; otherwise
+    // the input is the dialog's redirect code.
+    const short = /^EAA/.test(code) ? code
+      : (await call(`https://graph.facebook.com/${GRAPH}/oauth/access_token?${new URLSearchParams({ client_id: a.client_id, client_secret: a.client_secret, redirect_uri: REDIRECT_URI, code })}`)).body.access_token;
     const lq = new URLSearchParams({ grant_type: 'fb_exchange_token', client_id: a.client_id, client_secret: a.client_secret, fb_exchange_token: short });
     const user = (await call(`https://graph.facebook.com/${GRAPH}/oauth/access_token?${lq}`)).body.access_token;
     // Page tokens fetched with a long-lived user token do not expire.
