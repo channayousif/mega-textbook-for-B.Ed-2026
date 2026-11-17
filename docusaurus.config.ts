@@ -387,7 +387,7 @@ const config: Config = {
         { title: 'Programmes', items: [{ label: 'B.Ed', to: '/intro' }, { label: 'Teaching licence', to: '/licence/' }] },
         { title: 'For you', items: [{ label: 'Create an account', to: '/app/signup' }, { label: 'Become a reviewer', to: '/app/reviewer/apply' }] },
         { title: 'Guides', items: [{ label: 'Student guide', to: '/guides/student-guide/' }, { label: 'Teacher guide', to: '/guides/teacher-guide/' }] },
-        { title: 'About', items: [{ label: 'About', to: '/about' }, { label: 'Contact', to: '/contact' }, { label: 'Privacy & Cookies', to: '/privacy' }] },
+        { title: 'About', items: [{ label: 'About', to: '/about' }, { label: 'Contact', to: '/contact' }, { label: 'Privacy & Cookies', to: '/privacy' }, { label: 'Terms of Use', to: '/terms' }] },
       ],
       copyright: 'textbook.com.pk - a bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
     },
