@@ -30,7 +30,8 @@
       }
     },
     "locales": {
-      "type": "object", "additionalProperties": false, "required": ["en", "ur"],
+      "type": "object", "additionalProperties": false, "required": ["ur"],
+      "description": "ur is required. en is optional while teasers are Urdu-only (D-2026-0083).",
       "properties": {
         "en": { "$ref": "#/$defs/locale" },
         "ur": { "$ref": "#/$defs/locale" }
@@ -49,7 +50,8 @@
           "type": "object", "additionalProperties": false, "required": ["headline", "cta"],
           "properties": { "headline": { "type": "string", "minLength": 3 }, "cta": { "type": "string", "minLength": 3 } }
         },
-        "youtube_title": { "type": "string", "minLength": 10, "maxLength": 90 }
+        "youtube_title": { "type": "string", "minLength": 10, "maxLength": 90 },
+        "keywords": { "type": "array", "maxItems": 15, "items": { "type": "string", "minLength": 2, "maxLength": 40 }, "description": "Optional search phrases (English, Urdu, Roman Urdu) for descriptions and tags. Metadata only: editing them does not reopen the script approval." }
       }
     }
   }

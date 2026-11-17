@@ -83,7 +83,7 @@ export function checkScript(script, root = ROOT) {
   if (script.shots[4].beat !== 'cta') f.push('shot 5 must be the call to action');
   const text = JSON.stringify(script);
   if (LONG_DASH.test(text)) f.push('contains a long dash (use a spaced hyphen)');
-  for (const loc of ['en', 'ur']) {
+  for (const loc of ['en', 'ur'].filter((l) => script.locales[l])) {
     script.locales[loc].narration.forEach((line, i) => {
       const n = words(line);
       if (n > WORD_BUDGET[loc]) f.push(`${loc} shot ${i + 1}: ${n} words, over the ${WORD_BUDGET[loc]}-word budget for 8 seconds`);
@@ -172,29 +172,107 @@ export function advanceTeaser(ledger, key, to, fields = {}, { now = new Date(), 
 // ---------- YouTube ----------
 const clean = (s) => String(s).replace(/[\u2014\u2015\u2E3A\u2E3B]/g, ' - ').replace(/[<>]/g, '').replace(/\s+/g, ' ').trim();
 
-export function shortMeta(script, locale, root = ROOT) {
+export const CHANNEL_URL = 'https://www.youtube.com/@textbookdotcomdotpk';
+export const SUBSCRIBE_URL = `${CHANNEL_URL}?sub_confirmation=1`;
+const hashTag = (s) => `#${String(s).replace(/\(.*?\)/g, '').replace(/[^\p{L}\p{N}]+/gu, '')}`;
+const englishTitle = (script) => clean(script.title.en.replace(/\s*\([^)]*\)\s*/g, ' '));
+const urduTitle = (script) => clean(script.title.ur.replace(/\s*\([^)]*\)\s*/g, ' '));
+
+/**
+ * Search- and AI-ready description pieces for one teaser locale, built only from the script (the
+ * narration the owner approved, the titles, the code, optional keywords). Shared by YouTube and the
+ * other platforms.
+ */
+export function seoParts(script, locale, root = ROOT) {
   const ur = locale === 'ur';
   const L = script.locales[locale];
+  if (!L) throw new Error(`${script.id} has no ${locale} locale`);
   const url = teaserUrl(script, locale, root);
+  const code = script.course_code ?? (ur ? 'ٹیچنگ لائسنس' : 'Teaching licence');
+  const en = englishTitle(script);
+  const urt = urduTitle(script);
+  const n = L.narration.map(clean);
+  const beats = script.shots.map((x) => x.beat);
+  const learn = n.filter((_, i) => beats[i] === 'learn' || beats[i] === 'why');
+  const keywordLine = ur ? `${urt} | ${en} (${code}) | B.Ed مفت کورس اردو میں` : `${en} (${code}) | ${urt} | Free B.Ed course`;
+  const summary = n.filter((_, i) => beats[i] === 'hook').concat(learn.slice(0, 1)).join(' ');
+  const keywords = [...new Set([en, urt, code, 'B.Ed', ...(L.keywords ?? [])].map(clean).filter(Boolean))];
+  const hashtags = [...new Set(['#BEd', hashTag(en), '#TeacherEducation', '#textbookcompk', ur ? '#اردو' : '#Pakistan', '#Shorts'])];
+  return { ur, L, url, code, en, urt, keywordLine, summary, learn, keywords, hashtags };
+}
+
+export function shortMeta(script, locale, root = ROOT) {
+  const P = seoParts(script, locale, root);
+  const { ur, L, url } = P;
   let title = clean(`${L.youtube_title} #Shorts`);
   if (title.length > 100) title = `${title.slice(0, 92).replace(/\s+\S*$/, '')} #Shorts`;
   const description = [
-    clean(ur ? `${script.title.ur}: مکمل کورس مفت پڑھیں۔` : `${script.title.en}: study the full course free.`),
-    `${ur ? 'لنک' : 'Link'}: ${url}`,
+    P.keywordLine,
+    P.summary,
+    `${ur ? 'اس کورس میں' : 'In this course'}:\n${P.learn.slice(1).map((l) => `- ${l}`).join('\n')}`,
+    `${ur ? 'پورا کورس مفت پڑھیں' : 'Study the full course free'}: ${url}`,
+    `${ur ? 'چینل سبسکرائب کریں، ہر کورس کی مختصر ویڈیو یہاں آئے گی' : 'Subscribe for a short on every course'}: ${SUBSCRIBE_URL}`,
+    ur ? 'textbook.com.pk بی ایڈ اور ٹیچنگ لائسنس کی مفت آن لائن درسی کتاب ہے، انگریزی اور اردو میں، سرکاری اسکیم آف اسٹڈیز کے مطابق۔'
+      : 'textbook.com.pk is a free online textbook for B.Ed and the teaching licence, in English and Urdu, following the official scheme of studies.',
+    `${ur ? 'تلاش' : 'Search terms'}: ${P.keywords.join(', ')}`,
     ur ? 'یہ مختصر ویڈیو Google Flow (Veo) سے بنائی گئی ہے؛ مناظر اور آواز AI کے ہیں۔ متن textbook.com.pk کے کورس صفحات سے لیا گیا۔'
       : 'Made with Google Flow (Veo); visuals and voice are AI-generated. Script taken from the textbook.com.pk course pages.',
-    '#BEd #TeacherEducation #textbookcompk #Shorts',
-  ].join('\n\n');
-  const pinned = ur ? `مکمل کورس یہاں پڑھیں: ${url}` : `Study the full course here: ${url}`;
+    P.hashtags.join(' '),
+  ].map((x) => x.split('\n').map(clean).join('\n')).join('\n\n');
+  const tags = [];
+  for (const t of [...P.keywords, 'teacher education', 'textbook.com.pk', 'Shorts', ur ? 'Urdu' : 'English']) {
+    if ([...tags, t].join(',').length > 480) break;
+    if (!tags.includes(t)) tags.push(t);
+  }
+  const pinned = ur ? `مکمل کورس یہاں پڑھیں: ${url}\nچینل سبسکرائب کریں: ${SUBSCRIBE_URL}`
+    : `Study the full course here: ${url}\nSubscribe: ${SUBSCRIBE_URL}`;
   return {
     upload_video: {
-      title, description,
-      tags: ['B.Ed', 'teacher education', script.course_code ?? 'teacher licence', 'textbook.com.pk', 'Shorts', ur ? 'Urdu' : 'English'].join(','),
+      title, description, tags: tags.join(','),
       category_id: '27', video_language: locale, status: 'private', made_for_kids: false, contains_synthetic_media: true,
     },
     pinned_comment: pinned,
     url,
   };
+}
+
+export const PLATFORMS = ['youtube', 'tiktok', 'instagram', 'facebook', 'linkedin'];
+export const CAPTION_LIMIT = { tiktok: 2200, instagram: 2200, facebook: 5000, linkedin: 3000 };
+
+/**
+ * Caption for a cross-post. TikTok and Instagram captions cannot carry a clickable link, so they
+ * point to the bio; Facebook and LinkedIn carry the course link.
+ */
+export function socialMeta(script, locale, platform, root = ROOT) {
+  if (!CAPTION_LIMIT[platform]) throw new Error(`unknown cross-post platform ${platform}`);
+  const P = seoParts(script, locale, root);
+  const { ur, url } = P;
+  const tags = P.hashtags.filter((h) => h !== '#Shorts');
+  const follow = ur ? 'مزید کورسز کے لیے فالو کریں۔' : 'Follow for a short on every course.';
+  const lines = {};
+  const bio = ur ? 'پورا کورس مفت: لنک بائیو میں (textbook.com.pk)' : 'Full course free: link in bio (textbook.com.pk)';
+  lines.tiktok = [P.summary, bio, follow, [...tags, '#fyp', '#LearnOnTikTok'].join(' ')];
+  lines.instagram = [P.keywordLine, P.summary, bio, follow, [...tags, '#Reels', '#Education'].join(' ')];
+  lines.facebook = [P.keywordLine, P.summary, `${ur ? 'پورا کورس مفت پڑھیں' : 'Study the full course free'}: ${url}`, ur ? 'پیج فالو کریں، ہر کورس کی مختصر ویڈیو یہاں آئے گی۔' : 'Follow the page for a short on every course.', tags.join(' ')];
+  lines.linkedin = [
+    ur ? `${P.urt} (${P.code}): بی ایڈ کا مکمل کورس، مفت اور اردو میں۔` : `${P.en} (${P.code}): the full B.Ed course, free, in English and Urdu.`,
+    P.summary, `${ur ? 'کورس' : 'Course'}: ${url}`, ['#TeacherEducation', '#BEd', '#Pakistan'].join(' '),
+  ];
+  let caption = lines[platform].map((x) => clean(x)).join('\n\n');
+  if (caption.length > CAPTION_LIMIT[platform]) caption = caption.slice(0, CAPTION_LIMIT[platform]);
+  return { platform, caption, url, title: clean(script.locales[locale].youtube_title) };
+}
+
+/** Record a cross-post of a published teaser (only after the YouTube item is public, which carries owner approval). */
+export function recordCrosspost(ledger, key, platform, fields, { now = new Date() } = {}) {
+  const item = ledger.items.find((i) => i.key === key);
+  if (!item) throw new Error(`no item ${key}`);
+  if (!CAPTION_LIMIT[platform]) throw new Error(`unknown cross-post platform ${platform}`);
+  if (item.state !== 'public') throw new Error(`${key}: cross-post only after the YouTube Short is public (state ${item.state})`);
+  if (!['draft', 'posted'].includes(fields.state)) throw new Error(`${key} ${platform}: state must be draft or posted`);
+  if (!fields.post_id) throw new Error(`${key} ${platform}: post_id is required`);
+  item.crossposts = { ...(item.crossposts ?? {}), [platform]: { ...fields, at: fields.at ?? now.toISOString() } };
+  return item;
 }
 
 export function teaserSheet(ledger) {
@@ -227,6 +305,10 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       const L = loadLedger(); const item = L.items.find((i) => i.key === x);
       if (!item) throw new Error(`no item ${x}`);
       out(shortMeta(loadScript(item.id), item.locale));
+    } else if (cmd === 'social') {
+      const L = loadLedger(); const item = L.items.find((i) => i.key === x);
+      if (!item) throw new Error(`no item ${x}`);
+      out(socialMeta(loadScript(item.id), item.locale, y));
     } else {
       const L = loadLedger();
       if (cmd === 'status') out(L.items.map((i) => ({ key: i.key, state: i.state, takes: i.clips.length, blocked: i.blocked ?? null, youtube: i.youtube_id ?? null })));
@@ -237,7 +319,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       else if (cmd === 'block') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); i.blocked = y; saveLedger(L); out(i); }
       else if (cmd === 'unblock') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); delete i.blocked; saveLedger(L); out(i); }
       else if (cmd === 'sheet') out(teaserSheet(L));
-      else { console.error('commands: check | status | plan | advance | clip | block | unblock | meta | sheet'); process.exit(2); }
+      else if (cmd === 'crosspost') { out(recordCrosspost(L, x, y, json)); saveLedger(L); }
+      else { console.error('commands: check | status | plan | advance | clip | block | unblock | meta | social | crosspost | sheet'); process.exit(2); }
     }
   } catch (e) { console.error(`teaser: ${e.message}`); process.exit(1); }
 }

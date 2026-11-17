@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { hasForbiddenSection } from './notebook-studio/postprocess-report.mjs';
-import { checkScript, TEASER_STATES } from './notebook-studio/teaser.mjs';
+import { checkScript, TEASER_STATES, CAPTION_LIMIT } from './notebook-studio/teaser.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LONG_DASH = /[\u2014\u2015\u2E3A\u2E3B]/;
@@ -122,6 +122,11 @@ export function checkStudio(root = ROOT) {
         if (!TEASER_STATES.includes(i.state)) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} has unknown state ${i.state}`);
         if (POST.includes(i.state) && !i.youtube_id) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} is ${i.state} without a youtube_id`);
         if (!existsSync(join(tdir, `${i.id}.json`))) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} has no script ${i.id}.json`);
+        for (const [p, c] of Object.entries(i.crossposts ?? {})) {
+          if (!CAPTION_LIMIT[p]) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} cross-post to unknown platform ${p}`);
+          if (i.state !== 'public') findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} has a ${p} cross-post but is ${i.state}, not public`);
+          if (!['draft', 'posted'].includes(c.state) || !c.post_id) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} ${p} cross-post needs state draft|posted and a post_id`);
+        }
       }
     }
   }

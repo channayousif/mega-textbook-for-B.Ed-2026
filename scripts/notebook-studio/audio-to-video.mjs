@@ -27,11 +27,14 @@ const THUMB_MAX_BYTES = 2 * 1024 * 1024;
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' })[c]);
 
 /** Greedy word wrap by character budget; returns at most maxLines lines (last one ellipsised). */
+// Visible length: bidi isolates and marks take no space on screen.
+const vis = (s) => s.replace(/[\u200e\u200f\u2066-\u2069]/g, '').length;
+
 export function wrap(text, budget, maxLines = 3) {
   const lines = [];
   let cur = '';
-  for (const w of String(text).split(/\s+/).filter(Boolean)) {
-    if (cur && (cur + ' ' + w).length > budget) { lines.push(cur); cur = w; } else cur = cur ? `${cur} ${w}` : w;
+  for (const w of String(text).split(/[ \t\r\n]+/).filter(Boolean)) { // not \s: NBSP must not split
+    if (cur && vis(cur + ' ' + w) > budget) { lines.push(cur); cur = w; } else cur = cur ? `${cur} ${w}` : w;
   }
   if (cur) lines.push(cur);
   if (lines.length > maxLines) { lines.length = maxLines; lines[maxLines - 1] = `${lines[maxLines - 1].replace(/\s+\S*$/, '')} …`; }
