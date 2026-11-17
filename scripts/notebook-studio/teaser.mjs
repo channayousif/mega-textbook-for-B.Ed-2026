@@ -228,7 +228,8 @@ export function shortMeta(script, locale, root = ROOT) {
   const tail = [
     ...(facts ? [] : [ur ? 'textbook.com.pk بی ایڈ اور ٹیچنگ لائسنس کی مفت آن لائن درسی کتاب ہے، انگریزی اور اردو میں، سرکاری اسکیم آف اسٹڈیز کے مطابق۔'
       : 'textbook.com.pk is a free online textbook for B.Ed and the teaching licence, in English and Urdu, following the official scheme of studies.']), // the why-study block says it when present
-    `${ur ? 'تلاش' : 'Search terms'}: ${P.keywords.join(', ')}`,
+    // The keywords already go in the tags; the visible search line only when there is no course block.
+    ...(facts ? [] : [`${ur ? 'تلاش' : 'Search terms'}: ${P.keywords.join(', ')}`]),
     ur ? 'یہ مختصر ویڈیو Google Flow (Veo) سے بنائی گئی ہے؛ مناظر اور آواز AI کے ہیں۔ متن textbook.com.pk کے کورس صفحات سے لیا گیا۔'
       : 'Made with Google Flow (Veo); visuals and voice are AI-generated. Script taken from the textbook.com.pk course pages.',
     P.hashtags.join(' '),

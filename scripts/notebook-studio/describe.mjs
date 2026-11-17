@@ -15,6 +15,14 @@ import { allLedgers } from './media-ledger.mjs';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const SITE = 'https://textbook.com.pk';
 export const DESCRIPTION_BYTES = 4900;
+/** textbook.com.pk profiles (owner, 2026-11-18); every description ends its More-about block with them. */
+export const SOCIAL = [
+  ['YouTube', 'https://www.youtube.com/@textbookdotcomdotpk'],
+  ['TikTok', 'https://www.tiktok.com/@textbook.com.pk'],
+  ['Instagram', 'https://www.instagram.com/textbook.com.pk/'],
+  ['Facebook', 'https://www.facebook.com/profile.php?id=61596368444198'],
+  ['LinkedIn', 'https://www.linkedin.com/company/textbook-com-pk'],
+];
 const clean = (s) => String(s ?? '').replace(/[\u2014\u2015\u2E3A\u2E3B]/g, ' - ').replace(/[<>]/g, '').replace(/[ \t]+/g, ' ').trim();
 const pad = (n) => String(n).padStart(2, '0');
 
@@ -113,14 +121,14 @@ const T = {
     objectives: '🎯 یہ کورس پڑھ کر آپ:', units: (n) => `📚 ${n} یونٹ، ہر ایک مفت:`, unit: (n) => `یونٹ ${n}`,
     why: '✅ یہ کورس کیوں پڑھیں؟',
     whyLines: ['پورا کورس مفت، اردو اور انگریزی دونوں میں', 'ہر یونٹ میں 25 سوالات اور جوابات کی رہنمائی: امتحان کی تیاری آسان', 'پاکستانی کلاس روم کی مثالیں، تاکہ پڑھا ہوا کلاس میں کام آئے', 'موبائل پر پڑھیں، جب اور جہاں چاہیں'],
-    videos: '▶️ مزید ویڈیوز:', playlist: 'کورس ٹیزرز کی پلے لسٹ',
+    videos: '▶️ مزید ویڈیوز:', playlist: 'کورس ٹیزرز کی پلے لسٹ', follow: '📲 ہمیں فالو کریں:',
   },
   en: {
     more: '📘 More about the course', lessonMore: '📘 About this unit',
     objectives: '🎯 After this course you will:', units: (n) => `📚 ${n} units, each free:`, unit: (n) => `Unit ${n}`,
     why: '✅ Why study it here?',
     whyLines: ['The whole course is free, in English and Urdu', 'Every unit has 25 questions with marking guidance: exam preparation made easy', 'Pakistani classroom examples, so what you read works in class', 'Read on your phone, whenever and wherever you like'],
-    videos: '▶️ More videos:', playlist: 'Course teasers playlist',
+    videos: '▶️ More videos:', playlist: 'Course teasers playlist', follow: '📲 Follow textbook.com.pk:',
   },
 };
 
@@ -145,6 +153,7 @@ export function moreAbout(facts, { videos = [], playlistUrl = null, lesson = nul
   out.push(`${t.why}\n${t.whyLines.map((l) => `- ${l}`).join('\n')}`);
   const vids = level >= 2 ? videos.slice(0, 3) : videos;
   if (vids.length || playlistUrl) out.push(`${t.videos}\n${[...vids.map((v) => `${v.title} | ${v.url}`), ...(playlistUrl ? [`${t.playlist} | ${playlistUrl}`] : [])].join('\n')}`);
+  out.push(`${t.follow}\n${SOCIAL.map(([n, u]) => `${n} | ${u}`).join('\n')}`);
   return out.join('\n\n');
 }
 
