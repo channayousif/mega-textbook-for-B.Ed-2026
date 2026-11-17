@@ -344,8 +344,17 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       else if (cmd === 'unblock') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); delete i.blocked; saveLedger(L); out(i); }
       else if (cmd === 'sheet') out(teaserSheet(L));
       else if (cmd === 'crosspost') { out(recordCrosspost(L, x, y, json)); saveLedger(L); }
+      else if (cmd === 'replace') {
+        // A public teaser replaced by a new upload (e.g. a re-render): keep the old IDs on record.
+        const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`);
+        if (i.state !== 'public' || !json.youtube_id || !json.reason) throw new Error('replace <key> --json {"youtube_id","reason"} on a public item');
+        i.superseded_youtube_ids = [...new Set([...(i.superseded_youtube_ids ?? []), i.youtube_id])];
+        i.youtube_id = json.youtube_id; i.replaced_at = new Date().toISOString(); i.replace_reason = json.reason;
+        if (json.encoded_file) i.encoded_file = json.encoded_file;
+        saveLedger(L); out({ key: i.key, youtube_id: i.youtube_id, superseded_youtube_ids: i.superseded_youtube_ids });
+      }
       else if (cmd === 'thumb') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); if (!y || !/\.jpe?g$/.test(y)) throw new Error('thumb <key> <file.jpg>'); i.thumbnail_file = y; saveLedger(L); out({ key: i.key, thumbnail_file: y }); }
-      else { console.error('commands: check | status | plan | advance | clip | block | unblock | meta | social | crosspost | thumb | sheet'); process.exit(2); }
+      else { console.error('commands: check | status | plan | advance | clip | block | unblock | meta | social | crosspost | thumb | replace | sheet'); process.exit(2); }
     }
   } catch (e) { console.error(`teaser: ${e.message}`); process.exit(1); }
 }
