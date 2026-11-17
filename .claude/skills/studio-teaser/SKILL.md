@@ -15,7 +15,9 @@ description: >-
 Owner ruling D-2026-0082 (2026-11-10, `specs/decisions/log.md`):
 - **Flow automation.** Flow is automated only from the owner's Windows PC.
 - **Narration.** Veo speaks the narration, generated separately for EN and UR.
-- **Length.** About 45 s: five 8-second shots plus a 5 s end card.
+- **Length.** About 45 s: five 8-second shots plus a 5 s end card. Superseded on pace (owner,
+  2026-11-17, "slow and lame"): the assembler now cuts dead air, speeds the voice 12% and ends
+  on a 3 s card, so a teaser runs about 35 s (step 7).
 - **First batch.** One teaser per course (17) plus the licence track.
 
 Owner ruling D-2026-0083 (2026-11-17): **Urdu teasers only for now.** Plan, generate and upload
@@ -59,8 +61,9 @@ States: `planned → scripted → script-approved → clips-generated → clips-
 1. **Script (Claude).** Read the course's `docs/semester-N/<code>/course-overview.mdx` (or
    `licence/index.mdx`) and `catalog/courses.json`. Write `specs/studio/teasers/<id>.json`:
    - **Shots.** There are five, with beats hook → learn → learn → why → cta. Each `visual` is one
-     concrete classroom scene with the narrator.
-   - **Style.** A shared `visual_style` and `narrator` description.
+     concrete classroom scene. The narrator is **off-screen** (EFMP-301 pilot, owner choice): write
+     scenes without a speaking face, so Veo voices the line over the picture.
+   - **Style.** A shared `visual_style` and `narrator` description (`off-screen`, a woman's voice).
    - **Narration.** UR ≤ 22 words per shot (EN ≤ 18 if an `en` locale is present). UR uses the v2 simple spoken
      register, with technical terms in English. Every fact must be on the source pages.
    - **Per locale.** Each locale also gets an `end_card` (headline, cta) and a `youtube_title`
@@ -72,14 +75,15 @@ States: `planned → scripted → script-approved → clips-generated → clips-
    When approved:
    `T advance <key> script-approved --json '{"gates":{"script":{"verdict":"approve","by":"owner","date":"<today>"}}}'`.
    If the script changes after approval, the sha256 no longer matches: re-plan and re-approve.
-3. **Narrator (once per batch).** Make one Flow character, a teacher narrator matching
-   `narrator.description` (`gflow_generate_image` plus a character save; images cost no credits).
-   The owner picks it. Record its `entity_id` and name in every script's `narrator`.
+3. **Narrator.** No on-screen character. The account is on the migrated flow.google.com agent
+   composer, where gflow 0.101 refuses `r2v` and `i2v` (`FlowHostMigratedError`, upstream #799), so
+   a reference image cannot hold one face across shots. Revisit an on-camera narrator only when
+   gflow ports r2v.
 4. **Generate.** For each shot, call `gflow_generate_video`:
-   - `mode` `r2v` with `reference_entities=[entity_id]` and `reference_entity_names=[name]`
-   - `aspect` `9:16`, `model` `veo_fast`, `duration` `8`
+   - `mode` `t2v`, `aspect` `9:16`, `model` `veo_fast`, `duration` `8` (8 s only; other lengths
+     make the Flow agent ask a question and gflow times out at 600 s with no spend)
    - always pass `profile` (the account profile, e.g. `a2ahs-alpha`) and `project_name` `textbook-teasers`
-   - prompt: `<visual> <visual_style> The narrator looks at the camera and says in <English|Urdu>: "<narration line>"`
+   - prompt: `Vertical 9:16 video, 8 seconds, full-frame edge to edge, no letterbox or black bars. <visual> <visual_style> An unseen woman narrator says in Urdu, voice-over only: "<narration line>" No on-screen text, captions or logos.`
 
    Record each take with `T clip <key> <N> --json '{"artifact_id":"…","model":"veo_fast","credits":20,"file":"…"}'`.
    When all five shots have a take, run `T advance <key> clips-generated`.
@@ -98,11 +102,15 @@ States: `planned → scripted → script-approved → clips-generated → clips-
    - Then run `T advance <key> clips-qa --json '{"gates":{"clips":{"verdict":"…","by":"Claude QG2","date":"…","notes":"…","urdu_flag":"…"}}}'`.
 7. **Assemble.**
    `scripts/heavy.sh node scripts/notebook-studio/assemble-teaser.mjs <id> <loc> <out.mp4> <chosen shot1..5>`
-   (use `chosenTakes`, the latest passing take per shot). Then run
+   (use `chosenTakes`, the latest passing take per shot). The assembler crops any letterbox bars
+   Veo burned in (cropdetect), cuts pauses of 0.45 s or more and the dead head/tail of each shot,
+   speeds the voice 12%, joins segments with hard cuts plus a whoosh, punches in alternate segments,
+   pushes in slowly, ducks a generated beat under the voice and ends on a 3 s zooming end card
+   (`PACE` in the script). Urdu captions keep the spaces beside English terms through `bidiUr`
+   (LTR isolates with NBSP padding); libass is not used (the static ffmpeg has no HarfBuzz). Then run
    `T advance <key> assembled --json '{"encoded_file":"…"}'`.
 8. **QG1 encoded.** Run `media-qa.mjs <out.mp4> --kind short --stage encoded`: ≤ 60 s, vertical,
-   −16 LUFS, peak ≤ −1 dBTP; the 5 s silent end card is allowed. Extract frames at 3 s, 20 s and
-   41 s and look at them: the caption is fully visible, Urdu reads RTL, and the end card shows the
+   −16 LUFS, peak ≤ −1 dBTP. Extract about nine frames across the cut and look at them: the caption is fully visible, Urdu reads RTL, and the end card shows the
    exact address. Then `T advance <key> qa-pass` with `gates.qa1`.
 9. **Upload private.** Get the metadata with `T meta <key>`.
    - Call `upload_video` (YouTube MCP) with its `upload_video` fields.
@@ -179,5 +187,7 @@ chrome` again on Windows.
 
 ## Channel facts
 
-- Channel `UC7cQfkGkdNABCiyjmV5ZaFQ` (see the studio-media skill for authentication).
+- Channel `UC7cQfkGkdNABCiyjmV5ZaFQ` (see the studio-media skill for authentication). The OAuth
+  app was moved from Testing to In production on 2026-11-17 (unverified), so the refresh token no
+  longer expires after 7 days; sign-in shows an "unverified app" warning (Advanced, then continue).
 - Teaser playlist: _(owner to create "Course teasers (اردو)" and send the ID)_.

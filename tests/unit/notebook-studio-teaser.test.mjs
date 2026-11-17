@@ -5,7 +5,7 @@ import {
   checkScript, loadScript, teaserRoute, shortMeta, planTeaser, recordClip, setClipQa, advanceTeaser,
   chosenTakes, teaserSheet, WORD_BUDGET, MAX_RETAKES, TEASER_STATES,
 } from '../../scripts/notebook-studio/teaser.mjs';
-import { buildFilter, captionSvg, endCardSvg, XFADE, END_SECONDS } from '../../scripts/notebook-studio/assemble-teaser.mjs';
+import { buildFilter, speechSegments, captionSvg, endCardSvg, parseCropdetect, bidiUr, END_SECONDS, PACE } from '../../scripts/notebook-studio/assemble-teaser.mjs';
 import { evaluate } from '../../scripts/notebook-studio/media-qa.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -124,12 +124,33 @@ describe('teaser ledger', () => {
 
 describe('assembler graph and captions', () => {
   it('chains five shots and the end card with cross-fades and predicts the length', () => {
-    const { graph, duration } = buildFilter([8, 8, 8, 8, 8]);
-    expect(duration).toBeCloseTo(5 * 8 + END_SECONDS - 5 * XFADE, 3);
-    expect(graph).toContain('xfade=transition=fade:duration=0.2:offset=7.8[x1]');
-    expect(graph).toContain('offset=39[vout]');
-    expect(graph).toMatch(/\[y5\]loudnorm=I=-16.*alimiter/);
+    const segs = [0, 1, 2, 3, 4].map((shot) => ({ shot, a: 0, b: 7.84 }));
+    const { graph, duration, cuts } = buildFilter(segs);
+    const seg = Math.ceil((7.84 / PACE.speed) * 30) / 30;
+    expect(duration).toBeCloseTo(5 * seg + END_SECONDS, 3);
+    expect(cuts).toHaveLength(6);
+    expect(graph).toContain(`atempo=${PACE.speed}`);
+    expect(graph).toContain('concat=n=6:v=1:a=0[vout]');
+    expect(graph).toMatch(/sidechaincompress.*\[duck\]/);
+    expect(graph).toMatch(/loudnorm=I=-15\.5.*alimiter.*\[aout\]$/);
     expect(graph.match(/overlay=0:0:shortest=1/g)).toHaveLength(5);
+    expect(graph.match(/anoisesrc/g)).toHaveLength(5);
+    expect(graph).toContain("zoompan=z='1.1+"); // alternate segments punch in
+  });
+  it('crops Veo letterbox bars before filling the frame, and ignores a full frame', () => {
+    const log = 'x crop=720:1074:0:98 y\n'.repeat(5) + 'crop=720:1280:0:0\n';
+    const c = parseCropdetect(log, 720, 1280);
+    expect(c).toEqual({ w: 720, h: 1074, x: 0, y: 98 });
+    expect(parseCropdetect('crop=720:1280:0:0\n', 720, 1280)).toBeNull();
+    const { graph } = buildFilter([{ shot: 0, a: 0, b: 8 }, { shot: 1, a: 0, b: 8 }], { shots: 2, crops: [c, null] });
+    expect(graph).toMatch(/\[0:v\]trim=0:8,setpts=[^;]*,crop=720:1074:0:98,scale=1080:1920/);
+    expect(graph).toMatch(/\[1:v\]trim=0:8,setpts=\(PTS-STARTPTS\)\/[\d.]+,scale=1080:1920/);
+  });
+  it('cuts dead air: keeps short pauses, splits on long ones and trims the head and tail', () => {
+    // shot 1 of the EFMP-301 pilot: a 0.9 s pause mid-line and a 0.5 s tail
+    const log = ['silence_start: 1.11', 'silence_end: 1.36', 'silence_start: 2.18', 'silence_end: 3.07', 'silence_start: 7.46'].join('\n');
+    expect(speechSegments(log, 7.93)).toEqual([{ a: 0, b: 2.3 }, { a: 2.95, b: 7.58 }]);
+    expect(speechSegments('', 8)).toEqual([{ a: 0, b: 8 }]);
   });
   it('never truncates a caption and lays Urdu out right to left', () => {
     const long = 'You will study motivation, intelligence, individual differences and special needs, and how to manage a real classroom.';
@@ -140,6 +161,13 @@ describe('assembler graph and captions', () => {
     expect(ur).toContain('direction="rtl"');
     expect(ur).toContain('کیوں؟');
     expect(ur).not.toContain('…');
+  });
+  it('keeps English runs in Urdu captions whole and padded so their spaces survive RTL layout', () => {
+    expect(bidiUr('تعلیمی نفسیات (EFMP-301)')).toBe('تعلیمی نفسیات (\u2066EFMP-301\u2069)');
+    expect(bidiUr('Educational Psychology بتاتی ہے')).toBe('\u2066\u00a0Educational\u00a0Psychology\u00a0\u2069 بتاتی ہے');
+    const svg = captionSvg('آپ motivation، intelligence، individual differences اور special needs پڑھیں گے، اور کلاس سنبھالنا بھی سیکھیں گے۔', 'ur');
+    expect(svg).toContain('special\u00a0needs');
+    expect(svg).not.toMatch(/individual<\/text>/);
   });
   it('puts the host and the escaped path on the end card', () => {
     const svg = endCardSvg({ title: 'Educational Psychology (EFMP-301)', cta: 'Study the full course free', url: 'https://textbook.com.pk/semester-1/efmp-301/course-overview/', locale: 'en' });

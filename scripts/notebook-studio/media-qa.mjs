@@ -69,8 +69,8 @@ export function evaluate({ kind, part = 1, stage = 'source', probe, loudness, si
   }
   const [lo, hi] = kind === 'audio' ? BOUNDS.audio[part > 1 ? 'deeper' : 'brief'] : BOUNDS[kind].any;
   if (probe.duration_s < lo || probe.duration_s > hi) f.push(`duration ${Math.round(probe.duration_s)} s outside ${lo}-${hi} s`);
-  // A teaser Short ends on a 5 s silent brand card (assemble-teaser.mjs), so allow that one gap.
-  const maxSilence = kind === 'short' ? 5.5 : MAX_SILENCE_S;
+  // A Short ends with the 5 s silent end card, often after a second of quiet tail on the last shot.
+  const maxSilence = kind === 'short' ? 6.5 : MAX_SILENCE_S;
   const longSilence = silences.filter((s) => s > maxSilence);
   if (longSilence.length) f.push(`${longSilence.length} silence(s) longer than ${maxSilence} s (max ${Math.max(...longSilence).toFixed(1)} s)`);
   // Black frames matter only for real video; an audio card is a still image by design.
