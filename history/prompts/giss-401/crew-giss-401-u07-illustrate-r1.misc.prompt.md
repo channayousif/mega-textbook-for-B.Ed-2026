@@ -16,20 +16,28 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/giss-401/unit-07/index.mdx
-  - docs/semester-3/giss-401/unit-07/topic-01.mdx
-  - history/prompts/giss-401/crew-giss-401-u07-illustrate-r1.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-07/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-07/topic-01.mdx
-  - scripts/generate-illustration.mjs
-  - specs/content/giss-401/figures/unit-07.banner.md
-  - specs/content/giss-401/figures/unit-07.md
-  - specs/content/giss-401/reviews/unit-07/G2/20261117T122043434Z-gates.json
-  - specs/content/giss-401/tasks.md
-  - static/img/figures/giss-401/unit-07/fig-U7-4.webp
-  - static/img/figures/giss-401/unit-07/fig-U7-5.webp
+ - docs/semester-3/giss-401/unit-07/index.mdx
+ - docs/semester-3/giss-401/unit-07/topic-01.mdx
+ - history/prompts/giss-401/crew-giss-401-u07-illustrate-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-07/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-07/topic-01.mdx
+ - scripts/generate-illustration.mjs
+ - specs/content/giss-401/figures/unit-07.banner.md
+ - specs/content/giss-401/figures/unit-07.md
+ - specs/content/giss-401/reviews/unit-07/G2/20261117T122043434Z-gates.json
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261117T122043434Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261117T122043434Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261117T122043434Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261117T122043434Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261117T122043434Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261117T122043434Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261117T122043434Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261117T122043434Z/validate-content.txt
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-07/fig-U7-4.webp
+ - static/img/figures/giss-401/unit-07/fig-U7-5.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -67,27 +75,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (giss-401-u07-plan_illustrations, plan_illustrations, claude) After placing fig-U7-4 and fig-U7-5, rerun `node scripts/prepare-gate-evidence.mjs GISS-401 7` and repoint the Unit 7 G2 row in `specs/content/giss-401/tasks.md`.
 - (giss-401-u07-plan_illustrations, plan_illustrations, claude) Check that the generated fig-U7-5 shows no readable text on the envelope, sweets box, notebook or blackboard and no visible money, and that the fig-U7-4 roster sheet is blank.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed GISS-401 Unit 7 raster illustrations fig-U7-4 (unit banner) and fig-U7-5 (Topic 7.1 scene) in English and Urdu, updated manifests to placed, refreshed G2 gate evidence, and repointed tasks.md with all 14 content gates passing.
+Generated, inspected, and placed GISS-401 Unit 7 raster illustrations fig-U7-4 and fig-U7-5 across English and Urdu topics, updated figure manifests, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate for GISS-401 Unit 7 by agy (attempt 2).
+- Impact: illustrate for GISS-401 Unit 7 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 12 file(s), listed above.
+- Files: 20 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GISS-401 Unit 7 raster illustrations fig-U7-4 (unit banner) and fig-U7-5 (Topic 7.1 scene) in English and Urdu, updated manifests to placed, refreshed G2 gate evidence, and repointed tasks.md with all 14 content gates passing.
+- Shipped / changed: Generated, inspected, and placed GISS-401 Unit 7 raster illustrations fig-U7-4 and fig-U7-5 across English and Urdu topics, updated figure manifests, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Both raster illustrations (fig-U7-4 banner and fig-U7-5 topic scene) are placed and verified text-free with authentic Pakistani dress and setting.
-  - Unit 7 G2 en-draft gate evidence is updated and points to specs/content/giss-401/reviews/unit-07/G2/20261117T122043434Z-gates.json.
-  - Unit 7 G3 en-review remains open/unsigned pending independent review and qualified Islamic Studies scholar review.
+  - Both raster illustrations (fig-U7-4 unit banner and fig-U7-5 Topic 7.1 scene) are generated, inspected for absence of text and authentic Pakistani setting, and placed in English and Urdu.
+  - GISS-401 Unit 7 G2 gate evidence refreshed and repointed in tasks.md with all 14 content gates passing.
+  - Unit 7 G3 en-review remains open and unsigned pending independent academic review and qualified Islamic Studies scholar review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
