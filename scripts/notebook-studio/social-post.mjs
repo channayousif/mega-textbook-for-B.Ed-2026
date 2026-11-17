@@ -36,7 +36,8 @@ export function authUrl(provider, app, state = randomBytes(8).toString('hex')) {
   // a plain scope list fails there with "Invalid Scope". Classic Facebook Login uses scope.
   if (provider === 'meta') return `https://www.facebook.com/${GRAPH}/dialog/oauth?${q({ client_id: app.client_id, redirect_uri: REDIRECT_URI, ...(app.config_id ? { config_id: app.config_id, override_default_response_type: 'true' } : { scope: SCOPES.meta.join(',') }), response_type: 'code', state })}`;
   if (provider === 'tiktok') return `https://www.tiktok.com/v2/auth/authorize/?${q({ client_key: app.client_id, scope: SCOPES.tiktok.join(','), response_type: 'code', redirect_uri: REDIRECT_URI, state })}`;
-  if (provider === 'linkedin') return `https://www.linkedin.com/oauth/v2/authorization?${q({ response_type: 'code', client_id: app.client_id, redirect_uri: REDIRECT_URI, scope: SCOPES.linkedin.join(' '), state })}`;
+  // LinkedIn misreads '+' between scopes; send them space-separated as %20.
+  if (provider === 'linkedin') return `https://www.linkedin.com/oauth/v2/authorization?${q({ response_type: 'code', client_id: app.client_id, redirect_uri: REDIRECT_URI, state })}&scope=${SCOPES.linkedin.map(encodeURIComponent).join('%20')}`;
   throw new Error(`unknown provider ${provider}`);
 }
 
