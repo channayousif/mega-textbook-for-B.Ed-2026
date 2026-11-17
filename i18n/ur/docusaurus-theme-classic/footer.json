@@ -3,6 +3,10 @@
     "message": "پرائیویسی اور کوکیز",
     "description": "The label of footer link with label=Privacy & Cookies linking to /privacy"
   },
+  "link.item.label.Terms of Use": {
+    "message": "استعمال کی شرائط",
+    "description": "The label of footer link with label=Terms of Use linking to /terms"
+  },
   "copyright": {
     "message": "textbook.com.pk - دو لسانی نصابی کتابوں کا مجموعہ اور سیکھنے کا پلیٹ فارم۔",
     "description": "The footer copyright"
