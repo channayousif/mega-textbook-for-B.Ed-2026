@@ -175,7 +175,21 @@
    "published_at": "2026-11-17T09:35:24Z",
    "thumbnail_file": "~/studio-media/teasers/efmp-301/ur/teaser.youtube.thumb.jpg",
    "replaced_at": "2026-11-17T19:50:29.517Z",
-   "replace_reason": "owner 2026-11-18: re-upload the overlay version and make it public"
+   "replace_reason": "owner 2026-11-18: re-upload the overlay version and make it public",
+   "crossposts": {
+    "instagram": {
+     "state": "posted",
+     "post_id": "18147801727591866",
+     "url": "https://www.instagram.com/reel/Df24tRyAhoY/",
+     "at": "2026-11-17T21:23:06.382Z"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_id": "1726027242488382",
+     "url": "https://www.facebook.com/reel/1726027242488382",
+     "at": "2026-11-17T21:23:42.983Z"
+    }
+   }
   }
  ]
 }

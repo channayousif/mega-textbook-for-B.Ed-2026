@@ -20,7 +20,7 @@ export const SOCIAL = [
   ['YouTube', 'https://www.youtube.com/@textbookdotcomdotpk'],
   ['TikTok', 'https://www.tiktok.com/@textbook.com.pk'],
   ['Instagram', 'https://www.instagram.com/textbook.com.pk/'],
-  ['Facebook', 'https://www.facebook.com/profile.php?id=61596368444198'],
+  ['Facebook', 'https://www.facebook.com/1404300426106517'],
   ['LinkedIn', 'https://www.linkedin.com/company/textbook-com-pk'],
 ];
 const clean = (s) => String(s ?? '').replace(/[\u2014\u2015\u2E3A\u2E3B]/g, ' - ').replace(/[<>]/g, '').replace(/[ \t]+/g, ' ').trim();

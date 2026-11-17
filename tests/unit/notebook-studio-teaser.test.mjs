@@ -78,7 +78,7 @@ describe('teaser links and YouTube metadata', () => {
     for (let n = 1; n <= 12; n++) expect(d).toContain(`/ur/semester-1/efmp-301/unit-${String(n).padStart(2, '0')}/`);
     expect(d).toContain('📘 کورس کے بارے میں مزید');
     expect(d).toContain('✅ یہ کورس کیوں پڑھیں؟');
-    for (const u of ['tiktok.com/@textbook.com.pk', 'instagram.com/textbook.com.pk', 'linkedin.com/company/textbook-com-pk', 'facebook.com/profile.php?id=61596368444198']) expect(d).toContain(u);
+    for (const u of ['tiktok.com/@textbook.com.pk', 'instagram.com/textbook.com.pk', 'linkedin.com/company/textbook-com-pk', 'facebook.com/1404300426106517']) expect(d).toContain(u);
     expect(Buffer.byteLength(d)).toBeLessThanOrEqual(4900);
   });
   it('QG0 rejects objectives that do not match the overview outcome count', () => {
