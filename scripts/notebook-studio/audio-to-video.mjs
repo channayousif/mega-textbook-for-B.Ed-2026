@@ -7,14 +7,17 @@
 // audio: a 1920x1080 brand card (topic title, course, unit/topic, part) + the audio, loudness
 //        normalised to -16 LUFS / -1.5 dBTP, H.264 still-image at 6 fps, AAC 192k.
 // video: the NotebookLM picture is copied untouched; only the audio is loudness-normalised.
-// Always writes <out>.thumb.jpg (1280x720, < 2 MB, the YouTube custom-thumbnail limit).
+// Always writes <out>.thumb.jpg (1280x720, < 2 MB): best frame + big hook + badge + action pill
+// (thumbnail.mjs). --hook sets its text (use the ledger item's title); it defaults to the title.
 // The title defaults to static/studio/<course>/unit-NN/topic-NN/poster.<locale>.json.
 // CPU-heavy for long files: run through scripts/heavy.sh.
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
+import { wrap } from './text-layout.mjs';
+import { buildThumbnail } from './thumbnail.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const bin = (t) => (process.env.FFMPEG_DIR ? join(process.env.FFMPEG_DIR, t) : t);
@@ -26,20 +29,8 @@ const THUMB_MAX_BYTES = 2 * 1024 * 1024;
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' })[c]);
 
-/** Greedy word wrap by character budget; returns at most maxLines lines (last one ellipsised). */
-// Visible length: bidi isolates and marks take no space on screen.
-const vis = (s) => s.replace(/[\u200e\u200f\u2066-\u2069]/g, '').length;
-
-export function wrap(text, budget, maxLines = 3) {
-  const lines = [];
-  let cur = '';
-  for (const w of String(text).split(/[ \t\r\n]+/).filter(Boolean)) { // not \s: NBSP must not split
-    if (cur && vis(cur + ' ' + w) > budget) { lines.push(cur); cur = w; } else cur = cur ? `${cur} ${w}` : w;
-  }
-  if (cur) lines.push(cur);
-  if (lines.length > maxLines) { lines.length = maxLines; lines[maxLines - 1] = `${lines[maxLines - 1].replace(/\s+\S*$/, '')} …`; }
-  return lines;
-}
+// wrap lives in text-layout.mjs (shared with the teaser assembler and thumbnails); re-exported here.
+export { wrap };
 
 export function cardSvg({ title, course, unit, topic, locale, kind, part }) {
   const ur = locale === 'ur';
@@ -76,13 +67,22 @@ export function posterTitle(course, unit, topic, locale, root = ROOT) {
 
 const run = (args) => execFileSync(bin('ffmpeg'), ['-nostdin', '-hide_banner', '-loglevel', 'error', '-y', ...args], { stdio: ['ignore', 'inherit', 'inherit'] });
 
-export async function encode({ input, output, course, unit, topic, locale, kind, part = 1, title }) {
+export async function encode({ input, output, course, unit, topic, locale, kind, part = 1, title, hook, mediaRoot = join(process.env.HOME ?? '', 'studio-media') }) {
   const t = title ?? posterTitle(course, unit, topic, locale) ?? `${course.toUpperCase()} ${unit}.${topic}`;
   const svg = Buffer.from(cardSvg({ title: t, course, unit, topic, locale, kind, part }));
   const card = `${output}.card.png`;
   const thumb = `${output}.thumb.jpg`;
   await sharp(svg).png().toFile(card);
-  await sharp(svg).resize(1280, 720).jpeg({ quality: 86 }).toFile(thumb);
+  // Eye-catching thumbnail (thumbnail.mjs): the best frame of this video; for audio, of the same
+  // topic's video overview, else of the course teaser shots; else the brand gradient.
+  const dir = dirname(resolve(output));
+  const sib = existsSync(dir) ? readdirSync(dir).filter((f) => new RegExp(`^t${topic}-${locale}-video.*\\.mp4$`).test(f) && !f.endsWith('.thumb.jpg')).map((f) => ({ file: join(dir, f), skipEnd: 4 })) : [];
+  const shots = [1, 2, 3, 4, 5].map((n) => ({ file: join(mediaRoot, 'teasers', course, locale, `shot-${n}-t1.mp4`), samples: 4 }));
+  await buildThumbnail({
+    out: thumb, hook: hook ?? t, badge: `${course.toUpperCase()} · ${locale === 'ur' ? 'یونٹ' : 'Unit'} ${unit}`,
+    kind: kind === 'video' ? 'video' : 'audio', locale, aspect: 'landscape',
+    frameFrom: [...(kind === 'video' ? [{ file: input, skipEnd: 4 }] : []), ...sib, shots],
+  });
   if (statSync(thumb).size >= THUMB_MAX_BYTES) throw new Error(`thumbnail ${thumb} is over 2 MB`);
   if (kind === 'audio') {
     // -shortest overshoots by up to a second with a looped still, so cut to the probed audio length.
@@ -102,9 +102,9 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const a = process.argv.slice(2);
   const opt = (n, d) => (a.includes(`--${n}`) ? a[a.indexOf(`--${n}`) + 1] : d);
   const [input, output] = a;
-  const args = { input, output, course: opt('course'), unit: Number(opt('unit')), topic: Number(opt('topic')), locale: opt('locale'), kind: opt('kind'), part: Number(opt('part', 1)), title: opt('title') };
+  const args = { input, output, course: opt('course'), unit: Number(opt('unit')), topic: Number(opt('topic')), locale: opt('locale'), kind: opt('kind'), part: Number(opt('part', 1)), title: opt('title'), hook: opt('hook') };
   if (!input || !output || !args.course || !args.unit || !args.topic || !['en', 'ur'].includes(args.locale) || !['audio', 'video'].includes(args.kind)) {
-    console.error('usage: audio-to-video.mjs <in> <out.mp4> --course c --unit N --topic N --locale en|ur --kind audio|video [--part N] [--title t]');
+    console.error('usage: audio-to-video.mjs <in> <out.mp4> --course c --unit N --topic N --locale en|ur --kind audio|video [--part N] [--title t] [--hook "thumbnail hook"]');
     process.exit(2);
   }
   encode(args).then((r) => console.log(JSON.stringify(r, null, 1))).catch((e) => { console.error(`audio-to-video: ${e.message}`); process.exit(1); });

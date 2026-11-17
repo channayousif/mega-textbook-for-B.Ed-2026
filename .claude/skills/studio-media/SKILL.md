@@ -80,15 +80,23 @@ Notation: `L = node scripts/notebook-studio/media-ledger.mjs`, `M = ~/studio-med
    `scripts/heavy.sh node scripts/notebook-studio/audio-to-video.mjs M/<file> M/<key>.mp4 --course … --unit … --topic … --locale … --kind … --part N`.
    - Audio becomes a 1920×1080 brand card (Urdu laid out RTL) with the audio track.
    - Video keeps its picture; only the audio is loudness-normalised to -16 LUFS.
-   - A 1280×720 thumbnail under 2 MB is written beside the output.
+   - A 1280×720 thumbnail under 2 MB is written beside the output (`thumbnail.mjs`, owner
+     2026-11-17: eye-catching, informative, action-oriented). It uses the best frame of the
+     video; for audio, of the same topic's video overview, else of the course teaser shots. Over
+     it go the hook (pass `--hook "<ledger item title>"`), the course and unit badge, the
+     "مفت کورس" ribbon and an "ابھی سنیں"/"ابھی دیکھیں" pill.
 
    Then re-check the output:
    `media-qa.mjs M/<key>.mp4 --kind … --stage encoded` (adds loudness -20 to -12 LUFS, true
    peak ≤ -1 dBTP, and A/V durations equal within 0.5 s). Record its result as
    `gates.qa1_encoded` with
    `L advance … encoded --json '{"encoded_file":"…","thumbnail_file":"…","gates":{"qa1_encoded":{…}}}'`.
-   **Look at the thumbnail** (Read the .jpg) before moving on: is the title right and readable,
-   and does Urdu run right to left?
+   **Look at the thumbnail** (Read the .jpg) before moving on: is the hook right and readable,
+   and does Urdu run right to left? Also Read the phone-size check from
+   `node scripts/notebook-studio/thumbnail.mjs preview <jpg>`: the hook must read at feed size.
+   For items published before this thumbnail existed,
+   `node scripts/notebook-studio/thumbnail.mjs backfill <course> <unit>` rebuilds them and prints
+   each `youtube_id` with its new `thumbnail_path` for `update_video`.
 6. **QG2 content (Claude).** Get a transcript:
    - Add the source file (for a video, the m4a extracted with
      `ffmpeg -i in.mp4 -vn -c:a copy out.m4a`) to the course QA notebook with `source_add`
@@ -110,6 +118,10 @@ Notation: `L = node scripts/notebook-studio/media-ledger.mjs`, `M = ~/studio-med
 7. **Upload private** (`youtube-uploader` MCP).
    - Run `L quota` first.
    - Build the metadata with `node scripts/notebook-studio/youtube-meta.mjs <course> <unit> <key> --playlist <id>`.
+     The description carries "About this unit" and "More about the course" (`describe.mjs`, shared
+     with the teasers): the course summary, objectives, every unit link, why study, and the
+     channel's other published videos, fitted to YouTube's 5,000-byte limit. It needs a built
+     `static/content-index.json`.
      The playlist is the language's podcast playlist for audio, or the course video playlist
      for video; IDs are under "Channel facts" below.
    - Call `upload_video` with `file_path` = the encoded mp4 and the `upload_video` fields.

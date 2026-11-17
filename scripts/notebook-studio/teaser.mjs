@@ -25,6 +25,7 @@ import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { allLedgers, uploadsOn, DAILY_UPLOAD_LIMIT } from './media-ledger.mjs';
+import { courseFacts, videoLinks, moreAbout, fitDescription, parseOverview } from './describe.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const SITE = 'https://textbook.com.pk';
@@ -39,7 +40,7 @@ const REQUIRES = {
   'script-approved': ['gates.script'],
   'clips-generated': [],
   'clips-qa': ['gates.clips'],
-  assembled: ['encoded_file'],
+  assembled: ['encoded_file', 'thumbnail_file'],
   'qa-pass': ['gates.qa1'],
   'uploaded-private': ['youtube_id', 'uploaded_at'],
   'qa3-pass': ['gates.qa3'],
@@ -90,6 +91,14 @@ export function checkScript(script, root = ROOT) {
     });
   }
   try { teaserRoute(script, root); } catch (e) { f.push(e.message); }
+  if (script.kind === 'course') {
+    const ov = join(root, 'docs', `semester-${script.semester}`, script.course_code.toLowerCase(), 'course-overview.mdx');
+    const want = existsSync(ov) ? parseOverview(readFileSync(ov, 'utf8')).outcomes.length : null;
+    for (const loc of ['en', 'ur'].filter((l) => script.locales[l]?.objectives)) {
+      const got = script.locales[loc].objectives.length;
+      if (want !== null && got !== want) f.push(`${loc} objectives: ${got}, but the course overview has ${want} learning outcomes`);
+    }
+  }
   return f;
 }
 
@@ -174,6 +183,8 @@ const clean = (s) => String(s).replace(/[\u2014\u2015\u2E3A\u2E3B]/g, ' - ').rep
 
 export const CHANNEL_URL = 'https://www.youtube.com/@textbookdotcomdotpk';
 export const SUBSCRIBE_URL = `${CHANNEL_URL}?sub_confirmation=1`;
+/** "Course teasers (اردو)" playlist; set when the owner sends its full ID. */
+export const TEASER_PLAYLIST = null;
 const hashTag = (s) => `#${String(s).replace(/\(.*?\)/g, '').replace(/[^\p{L}\p{N}]+/gu, '')}`;
 const englishTitle = (script) => clean(script.title.en.replace(/\s*\([^)]*\)\s*/g, ' '));
 const urduTitle = (script) => clean(script.title.ur.replace(/\s*\([^)]*\)\s*/g, ' '));
@@ -206,19 +217,25 @@ export function shortMeta(script, locale, root = ROOT) {
   const { ur, L, url } = P;
   let title = clean(`${L.youtube_title} #Shorts`);
   if (title.length > 100) title = `${title.slice(0, 92).replace(/\s+\S*$/, '')} #Shorts`;
-  const description = [
+  const facts = script.kind === 'course' ? courseFacts(script.course_code.toLowerCase(), locale, { overrides: L, root }) : null;
+  const videos = facts ? videoLinks(facts.course, locale, { root, skipTeaserOf: script.id }) : [];
+  const head = [
     P.keywordLine,
     P.summary,
-    `${ur ? 'اس کورس میں' : 'In this course'}:\n${P.learn.slice(1).map((l) => `- ${l}`).join('\n')}`,
     `${ur ? 'پورا کورس مفت پڑھیں' : 'Study the full course free'}: ${url}`,
     `${ur ? 'چینل سبسکرائب کریں، ہر کورس کی مختصر ویڈیو یہاں آئے گی' : 'Subscribe for a short on every course'}: ${SUBSCRIBE_URL}`,
-    ur ? 'textbook.com.pk بی ایڈ اور ٹیچنگ لائسنس کی مفت آن لائن درسی کتاب ہے، انگریزی اور اردو میں، سرکاری اسکیم آف اسٹڈیز کے مطابق۔'
-      : 'textbook.com.pk is a free online textbook for B.Ed and the teaching licence, in English and Urdu, following the official scheme of studies.',
+  ];
+  const tail = [
+    ...(facts ? [] : [ur ? 'textbook.com.pk بی ایڈ اور ٹیچنگ لائسنس کی مفت آن لائن درسی کتاب ہے، انگریزی اور اردو میں، سرکاری اسکیم آف اسٹڈیز کے مطابق۔'
+      : 'textbook.com.pk is a free online textbook for B.Ed and the teaching licence, in English and Urdu, following the official scheme of studies.']), // the why-study block says it when present
     `${ur ? 'تلاش' : 'Search terms'}: ${P.keywords.join(', ')}`,
     ur ? 'یہ مختصر ویڈیو Google Flow (Veo) سے بنائی گئی ہے؛ مناظر اور آواز AI کے ہیں۔ متن textbook.com.pk کے کورس صفحات سے لیا گیا۔'
       : 'Made with Google Flow (Veo); visuals and voice are AI-generated. Script taken from the textbook.com.pk course pages.',
     P.hashtags.join(' '),
-  ].map((x) => x.split('\n').map(clean).join('\n')).join('\n\n');
+  ];
+  const tidy = (x) => x.split('\n').map(clean).join('\n');
+  const make = (level) => [...head, ...(facts ? [moreAbout(facts, { videos, playlistUrl: TEASER_PLAYLIST ? `https://www.youtube.com/playlist?list=${TEASER_PLAYLIST}` : null, level })] : []), ...tail].map(tidy).join('\n\n');
+  const { description } = fitDescription(make);
   const tags = [];
   for (const t of [...P.keywords, 'teacher education', 'textbook.com.pk', 'Shorts', ur ? 'Urdu' : 'English']) {
     if ([...tags, t].join(',').length > 480) break;
@@ -249,16 +266,20 @@ export function socialMeta(script, locale, platform, root = ROOT) {
   const { ur, url } = P;
   const tags = P.hashtags.filter((h) => h !== '#Shorts');
   const follow = ur ? 'مزید کورسز کے لیے فالو کریں۔' : 'Follow for a short on every course.';
+  const facts = script.kind === 'course' ? courseFacts(script.course_code.toLowerCase(), locale, { overrides: script.locales[locale], root }) : null;
+  const objectives = facts?.objectives?.length ? `${ur ? '🎯 یہ کورس پڑھ کر آپ:' : '🎯 After this course you will:'}\n${facts.objectives.map((o) => `- ${o}`).join('\n')}` : null;
+  const why = ur ? '✅ مفت، اردو اور انگریزی میں، ہر یونٹ میں 25 سوالات اور جوابات کی رہنمائی، پاکستانی کلاس روم کی مثالیں۔'
+    : '✅ Free, in English and Urdu, 25 questions with marking guidance in every unit, Pakistani classroom examples.';
   const lines = {};
   const bio = ur ? 'پورا کورس مفت: لنک بائیو میں (textbook.com.pk)' : 'Full course free: link in bio (textbook.com.pk)';
   lines.tiktok = [P.summary, bio, follow, [...tags, '#fyp', '#LearnOnTikTok'].join(' ')];
   lines.instagram = [P.keywordLine, P.summary, bio, follow, [...tags, '#Reels', '#Education'].join(' ')];
-  lines.facebook = [P.keywordLine, P.summary, `${ur ? 'پورا کورس مفت پڑھیں' : 'Study the full course free'}: ${url}`, ur ? 'پیج فالو کریں، ہر کورس کی مختصر ویڈیو یہاں آئے گی۔' : 'Follow the page for a short on every course.', tags.join(' ')];
+  lines.facebook = [P.keywordLine, P.summary, ...(objectives ? [objectives] : []), why, `${ur ? 'پورا کورس مفت پڑھیں' : 'Study the full course free'}: ${url}`, ur ? 'پیج فالو کریں، ہر کورس کی مختصر ویڈیو یہاں آئے گی۔' : 'Follow the page for a short on every course.', tags.join(' ')];
   lines.linkedin = [
     ur ? `${P.urt} (${P.code}): بی ایڈ کا مکمل کورس، مفت اور اردو میں۔` : `${P.en} (${P.code}): the full B.Ed course, free, in English and Urdu.`,
-    P.summary, `${ur ? 'کورس' : 'Course'}: ${url}`, ['#TeacherEducation', '#BEd', '#Pakistan'].join(' '),
+    P.summary, ...(objectives ? [objectives] : []), `${ur ? 'کورس' : 'Course'}: ${url}`, ['#TeacherEducation', '#BEd', '#Pakistan'].join(' '),
   ];
-  let caption = lines[platform].map((x) => clean(x)).join('\n\n');
+  let caption = lines[platform].map((x) => x.split('\n').map(clean).join('\n')).join('\n\n');
   if (caption.length > CAPTION_LIMIT[platform]) caption = caption.slice(0, CAPTION_LIMIT[platform]);
   return { platform, caption, url, title: clean(script.locales[locale].youtube_title) };
 }
@@ -304,7 +325,9 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     } else if (cmd === 'meta') {
       const L = loadLedger(); const item = L.items.find((i) => i.key === x);
       if (!item) throw new Error(`no item ${x}`);
-      out(shortMeta(loadScript(item.id), item.locale));
+      const m = shortMeta(loadScript(item.id), item.locale);
+      // The upload step passes the assembled thumbnail to update_video (thumbnail_path).
+      out({ ...m, update_video: { thumbnail_path: item.thumbnail_file ?? null, ...(TEASER_PLAYLIST ? { playlist_id: TEASER_PLAYLIST } : {}) } });
     } else if (cmd === 'social') {
       const L = loadLedger(); const item = L.items.find((i) => i.key === x);
       if (!item) throw new Error(`no item ${x}`);
@@ -320,7 +343,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       else if (cmd === 'unblock') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); delete i.blocked; saveLedger(L); out(i); }
       else if (cmd === 'sheet') out(teaserSheet(L));
       else if (cmd === 'crosspost') { out(recordCrosspost(L, x, y, json)); saveLedger(L); }
-      else { console.error('commands: check | status | plan | advance | clip | block | unblock | meta | social | crosspost | sheet'); process.exit(2); }
+      else if (cmd === 'thumb') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); if (!y || !/\.jpe?g$/.test(y)) throw new Error('thumb <key> <file.jpg>'); i.thumbnail_file = y; saveLedger(L); out({ key: i.key, thumbnail_file: y }); }
+      else { console.error('commands: check | status | plan | advance | clip | block | unblock | meta | social | crosspost | thumb | sheet'); process.exit(2); }
     }
   } catch (e) { console.error(`teaser: ${e.message}`); process.exit(1); }
 }

@@ -133,16 +133,33 @@ States: `planned → scripted → script-approved → clips-generated → clips-
     TikTok arrives as an inbox draft: tell the owner to open TikTok, add the caption from
     `T social <key> tiktok` and tap Post. Platforms: `instagram`, `facebook`, `tiktok`, `linkedin`.
 
-## Descriptions and the follow reminder (D-2026-0084)
+## Descriptions, thumbnails and the follow reminder (D-2026-0084)
 
-- `T meta` builds the YouTube description from the script only: a keyword line (Urdu title,
-  English title, code), the hook and first learn line as a summary, the remaining lines as
-  bullets, the course link, the subscribe link (`?sub_confirmation=1`), one line about the site,
-  search phrases (title, code and the optional `keywords` in the script locale), the AI
-  disclosure and hashtags. Never add a claim that is not on the course pages. `keywords` are
-  metadata: editing them does not reopen the script approval.
-- `T social <key> <platform>` gives the cross-post caption.
-- Every render has a follow reminder (`PLATFORM_CTA`, `ctaSvg`): a pill with a drawn bell
+- **Description (`T meta`).** Built from the script and the repository only:
+  - the top: keyword line, the hook and first learn line, the course link and the subscribe link;
+  - "More about the course", from `scripts/notebook-studio/describe.mjs`, shared with unit videos.
+    It holds the course summary, the objectives, every unit with its live link, a fixed "why
+    study" list, and the channel's other published videos in the same locale (never the teaser
+    itself);
+  - then search phrases, the AI disclosure and hashtags.
+- **Urdu facts.** The Urdu overview is not translated, so an Urdu script carries `course_summary`
+  and `objectives`, faithful renderings of the overview. QG0 checks that the objectives count
+  matches the overview. They, like `keywords`, are metadata: editing them does not reopen the
+  script approval. Never add a claim that is not on the course pages.
+- **Byte limit.** YouTube allows 5,000 bytes, and Urdu letters take 2. `fitDescription` drops unit
+  descriptions, then videos beyond 3, then unit links, until it fits.
+- **Captions.** `T social <key> <platform>` gives the cross-post caption. Facebook and LinkedIn
+  also carry the objectives.
+- **Thumbnail.** `assemble-teaser.mjs` writes `teaser.<platform>.thumb.jpg` (1080×1920) through
+  `thumbnail.mjs`:
+  - the best frame across the raw shots (no captions, letterbox trimmed);
+  - the title's question as a huge hook;
+  - the course badge, the "مفت کورس" ribbon and a "ابھی دیکھیں" pill.
+- **Thumbnail in the pipeline.** `assembled` requires `thumbnail_file`. `T meta` prints it as
+  `update_video.thumbnail_path`; pass it after `upload_video`. Before QG1 passes, Read the JPEG and
+  its phone-size check (`node scripts/notebook-studio/thumbnail.mjs preview <jpg>`): the hook must
+  read at feed size. `T thumb <key> <file>` records a rebuilt thumbnail.
+- **Follow reminder.** Every render has one (`PLATFORM_CTA`, `ctaSvg`): a pill with a drawn bell
   (YouTube) or person-plus icon, shown three times over the shots in the top safe band, never on
   the end card. No platform logos.
 
