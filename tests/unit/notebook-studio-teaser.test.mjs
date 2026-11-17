@@ -2,10 +2,10 @@ import { describe, it, expect } from 'vitest';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  checkScript, loadScript, teaserRoute, shortMeta, planTeaser, recordClip, setClipQa, advanceTeaser,
+  checkScript, loadScript, teaserRoute, shortMeta, socialMeta, recordCrosspost, SUBSCRIBE_URL, CAPTION_LIMIT, planTeaser, recordClip, setClipQa, advanceTeaser,
   chosenTakes, teaserSheet, WORD_BUDGET, MAX_RETAKES, TEASER_STATES,
 } from '../../scripts/notebook-studio/teaser.mjs';
-import { buildFilter, speechSegments, captionSvg, endCardSvg, parseCropdetect, bidiUr, END_SECONDS, PACE } from '../../scripts/notebook-studio/assemble-teaser.mjs';
+import { buildFilter, speechSegments, captionSvg, endCardSvg, parseCropdetect, bidiUr, ctaSvg, ctaWindows, PLATFORM_CTA, END_SECONDS, PACE } from '../../scripts/notebook-studio/assemble-teaser.mjs';
 import { evaluate } from '../../scripts/notebook-studio/media-qa.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -58,6 +58,28 @@ describe('teaser links and YouTube metadata', () => {
     expect(m.url).toBe('https://textbook.com.pk/ur/semester-1/efmp-301/course-overview/');
     expect(m.upload_video.description).toContain(m.url);
     expect(m.pinned_comment).toContain(m.url);
+  });
+  it('writes a search-ready description: keyword line first, subscribe link, no long dash, tags under the cap', () => {
+    const m = shortMeta(base(), 'ur', ROOT);
+    const d = m.upload_video.description;
+    expect(d.split('\n')[0]).toMatch(/^تعلیمی نفسیات \| Educational Psychology \(EFMP-301\)/);
+    expect(d).toContain(SUBSCRIBE_URL);
+    expect(m.pinned_comment).toContain(SUBSCRIBE_URL);
+    expect(d).not.toMatch(/[\u2014\u2015]/);
+    expect(d.length).toBeLessThan(5000);
+    expect(d.trim().split('\n').at(-1)).toMatch(/^#BEd #EducationalPsychology #TeacherEducation/);
+    expect(m.upload_video.tags.length).toBeLessThanOrEqual(500);
+    // every narration line the owner approved appears; nothing else is claimed about the course
+    for (const l of base().locales.ur.narration.slice(0, 4)) expect(d).toContain(l);
+  });
+  it('captions cross-posts per platform: link in bio where links are dead, the link where they work', () => {
+    const tt = socialMeta(base(), 'ur', 'tiktok', ROOT);
+    expect(tt.caption).toContain('لنک بائیو میں');
+    expect(tt.caption).not.toContain('https://');
+    const fb = socialMeta(base(), 'ur', 'facebook', ROOT);
+    expect(fb.caption).toContain('https://textbook.com.pk/ur/semester-1/efmp-301/course-overview/');
+    for (const p of Object.keys(CAPTION_LIMIT)) expect(socialMeta(base(), 'ur', p, ROOT).caption.length).toBeLessThanOrEqual(CAPTION_LIMIT[p]);
+    expect(() => socialMeta(base(), 'ur', 'myspace', ROOT)).toThrow(/unknown/);
   });
 });
 
@@ -120,10 +142,22 @@ describe('teaser ledger', () => {
     expect(sheet.must_watch[0].url).toBe('https://youtube.com/shorts/dQw4w9WgXcQ');
     expect(sheet.others).toBe(1);
   });
+  it('records cross-posts only once the YouTube Short is public', () => {
+    const L = { items: [] };
+    planTeaser(L, 'efmp-301', 'ur');
+    walkTo(L, 'efmp-301-ur', 'qa3-pass');
+    expect(() => recordCrosspost(L, 'efmp-301-ur', 'tiktok', { state: 'draft', post_id: 'p1' })).toThrow(/only after the YouTube Short is public/);
+    advanceTeaser(L, 'efmp-301-ur', 'approved', { gates: { owner: { ...gate(), by: 'owner' } } }, { ledgers: [] });
+    advanceTeaser(L, 'efmp-301-ur', 'public', { published_at: '2026-11-17T10:00:00Z' }, { ledgers: [] });
+    expect(() => recordCrosspost(L, 'efmp-301-ur', 'tiktok', { state: 'live', post_id: 'p1' })).toThrow(/draft or posted/);
+    expect(() => recordCrosspost(L, 'efmp-301-ur', 'myspace', { state: 'draft', post_id: 'p1' })).toThrow(/unknown/);
+    const item = recordCrosspost(L, 'efmp-301-ur', 'tiktok', { state: 'draft', post_id: 'p1' }, { now: new Date('2026-11-17T11:00:00Z') });
+    expect(item.crossposts.tiktok).toEqual({ state: 'draft', post_id: 'p1', at: '2026-11-17T11:00:00.000Z' });
+  });
 });
 
 describe('assembler graph and captions', () => {
-  it('chains five shots and the end card with cross-fades and predicts the length', () => {
+  it('chains the cut segments and the end card with hard cuts, whooshes and a ducked beat, and predicts the length', () => {
     const segs = [0, 1, 2, 3, 4].map((shot) => ({ shot, a: 0, b: 7.84 }));
     const { graph, duration, cuts } = buildFilter(segs);
     const seg = Math.ceil((7.84 / PACE.speed) * 30) / 30;
@@ -151,6 +185,22 @@ describe('assembler graph and captions', () => {
     const log = ['silence_start: 1.11', 'silence_end: 1.36', 'silence_start: 2.18', 'silence_end: 3.07', 'silence_start: 7.46'].join('\n');
     expect(speechSegments(log, 7.93)).toEqual([{ a: 0, b: 2.3 }, { a: 2.95, b: 7.58 }]);
     expect(speechSegments('', 8)).toEqual([{ a: 0, b: 8 }]);
+  });
+  it('shows the platform-aware follow reminder three times over the shots, never on the end card', () => {
+    expect(ctaSvg('youtube', 'ur')).toContain('چینل سبسکرائب کریں');
+    expect(ctaSvg('tiktok', 'ur')).toContain('فالو کریں');
+    expect(() => ctaSvg('myspace', 'ur')).toThrow(/unknown platform/);
+    const w = ctaWindows(31.4);
+    expect(w).toHaveLength(3);
+    for (const [a, b] of w) { expect(a).toBeGreaterThan(0); expect(b).toBeLessThanOrEqual(31.4 - 0.3); }
+    const segs = [0, 1].map((shot) => ({ shot, a: 0, b: 8 }));
+    const { graph, windows } = buildFilter(segs, { shots: 2, cta: true });
+    expect(windows).toHaveLength(3);
+    expect(graph.match(/enable='between\(t,/g)).toHaveLength(3);
+    expect(graph).toContain('[5:v]format=rgba,split=3'); // 2N+1 with N=2
+    expect(buildFilter(segs, { shots: 2 }).graph).not.toContain('enable=');
+    expect(PLATFORM_CTA.tiktok.bio && PLATFORM_CTA.instagram.bio && !PLATFORM_CTA.youtube.bio).toBe(true);
+    expect(endCardSvg({ title: 't', cta: 'c', url: 'https://textbook.com.pk/ur/x/', locale: 'ur', bio: true })).toContain('لنک بائیو میں');
   });
   it('never truncates a caption and lays Urdu out right to left', () => {
     const long = 'You will study motivation, intelligence, individual differences and special needs, and how to manage a real classroom.';

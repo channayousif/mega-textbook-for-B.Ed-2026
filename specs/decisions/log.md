@@ -4671,3 +4671,21 @@ content-improvement loop with no further cycle.
   with the same pipeline.
 - **Basis:** owner, 2026-11-17: "i have decided to make urdu teasers only for now".
 - **Limits:** Certifies no content and authorises no publication beyond the owner's spot-check.
+
+## D-2026-0084 - Teaser pace, follow overlay and cross-posting
+
+- **Status:** confirmed
+- **Gate:** none (Feature 029 Study Studio media; amends D-2026-0082)
+- **Ruling:** Teasers use the fast cut by default (dead air cut, voice 12% faster, hard cuts, a
+  ducked beat, a 3 s end card; about 35 s). Every render carries a periodic, platform-aware
+  subscribe/follow reminder made of text and generic drawn icons only (no platform logos), shown
+  three times over the shots. Descriptions are search- and AI-ready and built only from the
+  approved script, titles and keywords, with a subscribe link. After the YouTube Short is public,
+  the same teaser is cross-posted to TikTok (inbox draft until TikTok audits the app), Instagram
+  Reels, Facebook Page Reels and LinkedIn through each platform's free official API; tokens stay
+  in `~/.config/textbook-social/`, never in git.
+- **Basis:** owner, 2026-11-17: "it feels slow and lame, add some energy and speed", "use fast",
+  and "add proper Description optimized for SEO and AI, CTA to subscribe the channel ... upload
+  shorts to other platforms like tiktok, instagram"; overlay answer: "CTA layer on top of video,
+  periodically appearing reminding to take action, Text+icons only. should be platform aware".
+- **Limits:** Certifies no content. Cross-posting only follows the owner's YouTube approval.

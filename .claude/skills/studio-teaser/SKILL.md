@@ -125,6 +125,44 @@ States: `planned → scripted → script-approved → clips-generated → clips-
     `T advance <key> public --json '{"published_at":"<ISO>"}'`. Give the owner the
     `pinned_comment` line from `T meta` to pin in YouTube Studio; the MCP has no comment tool. The
     owner can also set the Short's "Related video" there.
+12. **Cross-post (D-2026-0084).** Only after step 11. Render one variant per platform (the follow
+    reminder and end card differ: TikTok and Instagram say "link in bio"):
+    `scripts/heavy.sh node scripts/notebook-studio/assemble-teaser.mjs <id> ur <dir>/teaser.<platform>.mp4 <shots> --platform <platform>`,
+    run QG1 on it, then `node scripts/notebook-studio/social-post.mjs post <platform> <key> <file>`
+    and record the printed fields with `T crosspost <key> <platform> --json '{"state":"…","post_id":"…","url":"…"}'`.
+    TikTok arrives as an inbox draft: tell the owner to open TikTok, add the caption from
+    `T social <key> tiktok` and tap Post. Platforms: `instagram`, `facebook`, `tiktok`, `linkedin`.
+
+## Descriptions and the follow reminder (D-2026-0084)
+
+- `T meta` builds the YouTube description from the script only: a keyword line (Urdu title,
+  English title, code), the hook and first learn line as a summary, the remaining lines as
+  bullets, the course link, the subscribe link (`?sub_confirmation=1`), one line about the site,
+  search phrases (title, code and the optional `keywords` in the script locale), the AI
+  disclosure and hashtags. Never add a claim that is not on the course pages. `keywords` are
+  metadata: editing them does not reopen the script approval.
+- `T social <key> <platform>` gives the cross-post caption.
+- Every render has a follow reminder (`PLATFORM_CTA`, `ctaSvg`): a pill with a drawn bell
+  (YouTube) or person-plus icon, shown three times over the shots in the top safe band, never on
+  the end card. No platform logos.
+
+## Cross-post setup (one-time, owner)
+
+Credentials go in `~/.config/textbook-social/apps.json` as
+`{"meta":{"client_id":"…","client_secret":"…"},"tiktok":{…},"linkedin":{…}}` (mode 600). For
+each provider, set the redirect URI to `https://textbook.com.pk/`, then run
+`social-post.mjs auth-url <provider>`, have the owner open it and paste back the address it lands
+on, and run `social-post.mjs exchange <provider> '<address>'`.
+- **Meta (Instagram and Facebook).** At developers.facebook.com, create a Business app and add
+  Facebook Login for Business. The owner keeps an app role, so the app works on the owner's own
+  Page and Instagram without App Review. Instagram must be a Professional account linked to the
+  textbook.com.pk Facebook Page. The Page token saved by `exchange` does not expire.
+- **TikTok.** At developers.tiktok.com, create an app with Login Kit and the Content Posting API,
+  and submit it for review. Until it is audited, uploads go to the owner's inbox as drafts.
+- **LinkedIn.** At linkedin.com/developers, create an app linked to the textbook.com.pk Page with
+  "Share on LinkedIn" and "Sign In with OpenID Connect". This posts as the owner's profile.
+  Posting as the Page needs the Community Management API (LinkedIn vets the organisation).
+- **Bios.** Set textbook.com.pk as the bio link on TikTok and Instagram.
 
 ## Windows setup and tunnel (one-time)
 

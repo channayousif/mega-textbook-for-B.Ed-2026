@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Feature 029 studio-teaser stage 6: five Veo shots + per-shot captions + an end card -> one Short.
 //
-//   node scripts/notebook-studio/assemble-teaser.mjs <id> <locale> <out.mp4> <shot1.mp4> ... <shot5.mp4>
+//   node scripts/notebook-studio/assemble-teaser.mjs <id> <locale> <out.mp4> <shot1.mp4> ... <shot5.mp4> [--platform youtube|tiktok|instagram|facebook|linkedin]
 //
 // Each shot is scaled/cropped to 1080x1920 at 30 fps and gets its narration line as a burned-in
 // caption (Veo speaks the line; the caption makes it readable with sound off, and keeps Urdu
@@ -61,7 +61,7 @@ export function captionSvg(text, locale) {
 }
 
 /** Brand end card: course title, call to action, and the address (split so it never overflows). */
-export function endCardSvg({ title, cta, url, locale }) {
+export function endCardSvg({ title, cta, url, locale, bio = false }) {
   const ur = locale === 'ur';
   const titleLines = wrap(ur ? bidiUr(title) : title, ur ? 18 : 20, 3);
   const tSize = ur ? 76 : 84;
@@ -78,8 +78,52 @@ ${tt}
 <text x="${W / 2}" y="${ctaY}" font-size="${ur ? 60 : 56}" fill="${BRAND.amber}" font-weight="700" text-anchor="middle"${dirAttr(locale)} font-family="${fontFor(locale)}">${lineText(ur ? bidiUr(cta) : cta, locale)}</text>
 <rect x="110" y="1380" width="${W - 220}" height="250" rx="36" fill="${BRAND.paper}"/>
 <text x="${W / 2}" y="1480" font-size="72" font-weight="800" fill="${BRAND.teal}" text-anchor="middle" font-family="'Nunito', 'DejaVu Sans', sans-serif">${host}</text>
-<text x="${W / 2}" y="1570" font-size="${path.length > 34 ? 34 : 40}" fill="${BRAND.teal}" text-anchor="middle" font-family="'DejaVu Sans Mono', monospace">${esc(path)}</text>
+${bio ? `<text x="${W / 2}" y="1578" font-size="${ur ? 46 : 44}" font-weight="700" fill="${BRAND.teal}" text-anchor="middle"${dirAttr(locale)} font-family="${fontFor(locale)}">${lineText(ur ? 'لنک بائیو میں' : 'Link in bio', locale)}</text>`
+    : `<text x="${W / 2}" y="1570" font-size="${path.length > 34 ? 34 : 40}" fill="${BRAND.teal}" text-anchor="middle" font-family="'DejaVu Sans Mono', monospace">${esc(path)}</text>`}
 </svg>`;
+}
+
+/**
+ * Platform-aware follow reminder (owner, 2026-11-17: a periodic layer, text and icons only). Generic
+ * drawn icons, never platform logos. `bio` platforms cannot show a clickable link, so their end card
+ * points to the profile bio instead of printing the page path.
+ */
+export const PLATFORM_CTA = {
+  youtube: { icon: 'bell', bio: false, ur: 'چینل سبسکرائب کریں', en: 'Subscribe to the channel' },
+  tiktok: { icon: 'follow', bio: true, ur: 'مزید کورسز کے لیے فالو کریں', en: 'Follow for more courses' },
+  instagram: { icon: 'follow', bio: true, ur: 'مزید کورسز کے لیے فالو کریں', en: 'Follow for more courses' },
+  facebook: { icon: 'follow', bio: false, ur: 'پیج فالو کریں', en: 'Follow the page' },
+  linkedin: { icon: 'follow', bio: false, ur: 'مزید کورسز کے لیے فالو کریں', en: 'Follow for more courses' },
+};
+export const CTA_BOX = { w: 860, h: 150, y: 300 };
+const ICONS = {
+  bell: (c) => `<path d="M50 12c-15 0-26 12-26 27v18l-8 12v4h68v-4l-8-12V39c0-15-11-27-26-27z" fill="${c}"/><circle cx="50" cy="84" r="8" fill="${c}"/>`,
+  follow: (c) => `<circle cx="40" cy="34" r="15" fill="${c}"/><path d="M12 84c0-17 12-28 28-28s28 11 28 28z" fill="${c}"/><rect x="70" y="42" width="26" height="9" rx="3" fill="${c}"/><rect x="78.5" y="33.5" width="9" height="26" rx="3" fill="${c}"/>`,
+};
+
+export function ctaSvg(platform, locale) {
+  const P = PLATFORM_CTA[platform];
+  if (!P) throw new Error(`unknown platform ${platform}`);
+  const ur = locale === 'ur';
+  const { w, h } = CTA_BOX;
+  const r = h / 2;
+  // Icon disc on the reading-start side: right for Urdu, left for English.
+  const cx = ur ? w - r : r;
+  const textX = ur ? (w - h) / 2 + 6 : h + (w - h) / 2 - 6; // centre of the space beside the icon
+  const icon = `<g transform="translate(${cx - 44} ${r - 44}) scale(0.88)">${ICONS[P.icon](BRAND.amber)}</g>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+<rect x="3" y="3" width="${w - 6}" height="${h - 6}" rx="${r - 3}" fill="${BRAND.amber}" stroke="${BRAND.paper}" stroke-width="6"/>
+<circle cx="${cx}" cy="${r}" r="${r - 14}" fill="${BRAND.teal}"/>${icon}
+<text x="${textX}" y="${ur ? r + 22 : r + 18}" font-size="${ur ? 50 : 40}" font-weight="800" fill="${BRAND.teal}" text-anchor="middle"${dirAttr(locale)} font-family="${fontFor(locale)}">${lineText(P[locale] ?? P.en, locale)}</text>
+</svg>`;
+}
+
+/** Three reminder windows across the shots (not the end card), as [start, end] seconds. */
+export function ctaWindows(contentSeconds, { at = [0.15, 0.5, 0.8], show = 2.2 } = {}) {
+  return at.map((f) => {
+    const a = +Math.max(0.5, Math.min(f * contentSeconds, contentSeconds - show - 0.3)).toFixed(2);
+    return [a, +(a + show).toFixed(2)];
+  });
 }
 
 /**
@@ -112,7 +156,7 @@ export function speechSegments(stderr, duration, { gap = PACE.gap, keep = PACE.k
  * the end-card PNG 2N. `segments` are {shot (0-based), a, b} in play order. Returns the graph, the
  * output labels and the duration.
  */
-export function buildFilter(segments, { shots = 5, crops = [], endSeconds = END_SECONDS, pace = PACE } = {}) {
+export function buildFilter(segments, { shots = 5, crops = [], endSeconds = END_SECONDS, pace = PACE, cta = false } = {}) {
   if (segments.length < 2) throw new Error('need at least two segments');
   const p = [];
   const cuts = [];
@@ -138,7 +182,20 @@ export function buildFilter(segments, { shots = 5, crops = [], endSeconds = END_
   cuts.push(total);
   total += endSeconds;
   const all = [...Array(n + 1).keys()];
-  p.push(`${all.map((k) => `[v${k}]`).join('')}concat=n=${n + 1}:v=1:a=0[vout]`);
+  const content = total - endSeconds;
+  const windows = cta ? ctaWindows(content) : [];
+  p.push(`${all.map((k) => `[v${k}]`).join('')}concat=n=${n + 1}:v=1:a=0${windows.length ? '[vcat]' : '[vout]'}`);
+  if (windows.length) {
+    // Input 2N+1 is the reminder PNG: each window fades in while sliding down 40 px, then fades out.
+    p.push(`[${2 * shots + 1}:v]format=rgba,split=${windows.length}${windows.map((_, i) => `[c${i}]`).join('')}`);
+    let prev = 'vcat';
+    windows.forEach(([a, b], i) => {
+      p.push(`[c${i}]fade=t=in:st=${a}:d=0.25:alpha=1,fade=t=out:st=${(b - 0.25).toFixed(2)}:d=0.25:alpha=1[cf${i}]`);
+      const outL = i === windows.length - 1 ? 'vout' : `vc${i}`;
+      p.push(`[${prev}][cf${i}]overlay=x=(W-w)/2:y='${CTA_BOX.y}-40*max(0,1-(t-${a})/0.25)':enable='between(t,${a},${b})'[${outL}]`);
+      prev = outL;
+    });
+  }
   p.push(`${all.map((k) => `[a${k}]`).join('')}concat=n=${n + 1}:v=0:a=1,asplit=2[voice][sc]`);
   // Beat bed: kick on the beat, hat on the off-beat, a plucked bass on eighths over four chords.
   const B = +(60 / pace.bpm).toFixed(5);
@@ -151,7 +208,7 @@ export function buildFilter(segments, { shots = 5, crops = [], endSeconds = END_
   p.push(...wh);
   p.push('[bed][sc]sidechaincompress=threshold=0.03:ratio=8:attack=15:release=250[duck]');
   p.push(`[voice][duck]${wh.map((_, i) => `[w${i}]`).join('')}amix=inputs=${2 + wh.length}:normalize=0:duration=first,${AUDIO_OUT}[aout]`);
-  return { graph: p.join(';'), video: '[vout]', audio: '[aout]', duration: +total.toFixed(3), cuts };
+  return { graph: p.join(';'), video: '[vout]', audio: '[aout]', duration: +total.toFixed(3), cuts, windows };
 }
 
 /**
@@ -178,7 +235,8 @@ const detectSilence = (f) => spawnSync(bin('ffmpeg'), ['-hide_banner', '-nostats
 
 const probeDuration = (f) => Number(execFileSync(bin('ffprobe'), ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f], { encoding: 'utf8' }).trim());
 
-export async function assemble({ id, locale, out, shots }) {
+export async function assemble({ id, locale, out, shots, platform = 'youtube' }) {
+  if (!PLATFORM_CTA[platform]) throw new Error(`unknown platform ${platform}`);
   if (shots.length !== 5) throw new Error('a teaser has exactly five shots');
   const script = loadScript(id);
   const L = script.locales[locale];
@@ -191,28 +249,34 @@ export async function assemble({ id, locale, out, shots }) {
     caps.push(p);
   }
   const end = `${out}.end.png`;
-  await sharp(Buffer.from(endCardSvg({ title: L.end_card.headline, cta: L.end_card.cta, url, locale }))).png().toFile(end);
+  await sharp(Buffer.from(endCardSvg({ title: L.end_card.headline, cta: L.end_card.cta, url, locale, bio: PLATFORM_CTA[platform].bio }))).png().toFile(end);
+  const ctaPng = `${out}.cta.png`;
+  await sharp(Buffer.from(ctaSvg(platform, locale))).png().toFile(ctaPng);
   const crops = shots.map(detectCrop);
   const segments = shots.flatMap((f, shot) => speechSegments(detectSilence(f), probeDuration(f)).map((s) => ({ shot, ...s })));
-  const { graph, video, audio, duration } = buildFilter(segments, { crops });
+  const { graph, video, audio, duration, windows } = buildFilter(segments, { crops, cta: true });
   const args = ['-nostdin', '-hide_banner', '-loglevel', 'error', '-y'];
   for (const s of shots) args.push('-i', s);
   for (const c of caps) args.push('-loop', '1', '-i', c);
   args.push('-loop', '1', '-t', String(END_SECONDS), '-i', end);
+  args.push('-loop', '1', '-t', String(duration), '-i', ctaPng);
   args.push('-filter_complex', graph, '-map', video, '-map', audio,
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-r', '30',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-t', String(duration), '-movflags', '+faststart', out);
   execFileSync(bin('ffmpeg'), args, { stdio: ['ignore', 'inherit', 'inherit'] });
-  return { encoded_file: out, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments };
+  return { encoded_file: out, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: windows };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const [id, locale, out, ...shots] = process.argv.slice(2);
-  if (!id || !['en', 'ur'].includes(locale) || !out || shots.length !== 5) {
-    console.error('usage: assemble-teaser.mjs <id> <en|ur> <out.mp4> <shot1> <shot2> <shot3> <shot4> <shot5>');
+  const argv = process.argv.slice(2);
+  const pi = argv.indexOf('--platform');
+  const platform = pi >= 0 ? argv.splice(pi, 2)[1] : 'youtube';
+  const [id, locale, out, ...shots] = argv;
+  if (!id || !['en', 'ur'].includes(locale) || !out || shots.length !== 5 || !PLATFORM_CTA[platform]) {
+    console.error(`usage: assemble-teaser.mjs <id> <en|ur> <out.mp4> <shot1> ... <shot5> [--platform ${Object.keys(PLATFORM_CTA).join('|')}]`);
     process.exit(2);
   }
-  assemble({ id, locale, out: resolve(out), shots: shots.map((s) => resolve(s)) })
+  assemble({ id, locale, out: resolve(out), shots: shots.map((s) => resolve(s)), platform })
     .then((r) => console.log(JSON.stringify(r, null, 1)))
     .catch((e) => { console.error(`assemble-teaser: ${e.message}`); process.exit(1); });
 }
