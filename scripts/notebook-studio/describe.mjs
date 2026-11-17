@@ -40,7 +40,7 @@ export function frontmatter(text) {
 /** Summary paragraph and numbered learning outcomes of a course-overview.mdx. */
 export function parseOverview(text) {
   const body = text.replace(/^---[\s\S]*?\n---\n/, '');
-  const afterH1 = body.split(/\n# [^\n]*\n/)[1] ?? body;
+  const afterH1 = body.split(/(?:^|\n)# [^\n]*\n/)[1] ?? body;
   const summary = clean((afterH1.trim().split(/\n\s*\n/)[0] ?? '').replace(/\n/g, ' '));
   const sec = /## Course learning outcomes\n([\s\S]*?)(?:\n## |$)/.exec(body);
   const outcomes = sec ? [...sec[1].matchAll(/^\d+\.\s+(.+)$/gm)].map((x) => clean(x[1])) : [];
