@@ -47,3 +47,12 @@ describe('shared description blocks', () => {
     expect(() => fitDescription(make, 50)).toThrow(/over 50 bytes/);
   });
 });
+
+import { mergedSnippet } from '../../scripts/notebook-studio/yt-describe.mjs';
+describe('in-place description update', () => {
+  it('keeps title, category, tags and languages, replacing only the description (videos.update sends the whole snippet)', () => {
+    const cur = { title: 'T', categoryId: '27', tags: ['a'], defaultLanguage: 'ur', description: 'old', channelTitle: 'x' };
+    expect(mergedSnippet(cur, { description: 'new' })).toEqual({ title: 'T', categoryId: '27', description: 'new', tags: ['a'], defaultLanguage: 'ur' });
+    expect(mergedSnippet(cur, { description: 'new', tags: ['b'] }).tags).toEqual(['b']);
+  });
+});

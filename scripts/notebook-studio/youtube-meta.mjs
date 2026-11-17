@@ -13,6 +13,7 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadLedger } from './media-ledger.mjs';
 import { courseFacts, videoLinks, moreAbout, fitDescription } from './describe.mjs';
+import { TEASER_PLAYLIST } from './teaser.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const SITE = 'https://textbook.com.pk';
@@ -32,7 +33,7 @@ export function lessonRoute(course, unit, topic, root = ROOT) {
 
 const clean = (s) => String(s).replace(LONG_DASH, ' - ').replace(/[<>]/g, '').replace(/\s+/g, ' ').trim();
 
-export function buildMeta(item, { course, unit, route, topicTitle, playlistId, facts = null, videos = [], lesson = null }) {
+export function buildMeta(item, { course, unit, route, topicTitle, playlistId, facts = null, videos = [], lesson = null, playlistUrl = null }) {
   const ur = item.locale === 'ur';
   const code = course.toUpperCase();
   const what = item.kind === 'video' ? (ur ? 'ویڈیو جائزہ' : 'Video overview') : item.part > 1 ? (ur ? `مزید تفصیل، حصہ ${item.part}` : `Go deeper, part ${item.part}`) : (ur ? 'آڈیو بریف' : 'Audio brief');
@@ -54,7 +55,7 @@ export function buildMeta(item, { course, unit, route, topicTitle, playlistId, f
   // Shared "More about" block (describe.mjs): lesson summary, course summary and objectives, units,
   // why study, more videos; detail drops until the description fits YouTube's byte limit.
   const tidy = (x) => x.split('\n').map(clean).join('\n');
-  const make = (level) => [...head, ...(facts ? [moreAbout(facts, { videos, lesson, level })] : []), ...tail].map(tidy).join('\n\n');
+  const make = (level) => [...head, ...(facts ? [moreAbout(facts, { videos, lesson, playlistUrl, level })] : []), ...tail].map(tidy).join('\n\n');
   const { description } = fitDescription(make);
   if (Buffer.byteLength(description) > 5000) throw new Error('description over 5000 bytes');
   return {
@@ -86,7 +87,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     const overrides = existsSync(ts) ? JSON.parse(readFileSync(ts, 'utf8')).locales?.[item.locale] ?? {} : {};
     const facts = courseFacts(course, item.locale, { overrides });
     const lesson = facts.units.find((u) => u.n === unit)?.description ?? null;
-    const videos = videoLinks(course, item.locale, { exclude: [item.youtube_id].filter(Boolean) });
-    console.log(JSON.stringify(buildMeta(item, { course, unit, route, topicTitle: item.locale === 'en' ? topicTitle : undefined, playlistId, facts, videos, lesson }), null, 1));
+    const videos = videoLinks(course, item.locale, { exclude: [item.youtube_id].filter(Boolean), teasers: false });
+    const playlistUrl = item.locale === 'ur' && TEASER_PLAYLIST ? `https://www.youtube.com/playlist?list=${TEASER_PLAYLIST}` : null;
+    console.log(JSON.stringify(buildMeta(item, { course, unit, route, topicTitle: item.locale === 'en' ? topicTitle : undefined, playlistId, facts, videos, lesson, playlistUrl }), null, 1));
   } catch (e) { console.error(`youtube-meta: ${e.message}`); process.exit(1); }
 }

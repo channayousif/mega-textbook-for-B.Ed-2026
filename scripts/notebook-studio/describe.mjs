@@ -89,7 +89,7 @@ function teaserTitle(i, root) {
   return clean(t ?? `${String(i.id).toUpperCase()} #Shorts`);
 }
 /** Published videos to link: same course and locale first (video before audio), then other teasers. */
-export function videoLinks(course, locale, { exclude = [], skipTeaserOf = null, max = 6, root = ROOT, ledgers } = {}) {
+export function videoLinks(course, locale, { exclude = [], skipTeaserOf = null, teasers = true, max = 6, root = ROOT, ledgers } = {}) {
   const all = ledgers ?? allLedgers(root);
   const rows = [];
   for (const L of all) {
@@ -97,6 +97,7 @@ export function videoLinks(course, locale, { exclude = [], skipTeaserOf = null, 
       if (!i.youtube_id || !PUBLISHED.has(i.state) || i.locale !== locale || exclude.includes(i.youtube_id)) continue;
       const isTeaser = !L.course;
       if (isTeaser && skipTeaserOf && i.id === skipTeaserOf) continue; // a teaser never links to itself
+      if (isTeaser && !teasers) continue; // unit videos link the teaser playlist instead (stable when a teaser is replaced)
       const sameCourse = isTeaser ? i.id === course : L.course === course;
       const rank = (sameCourse ? 0 : 10) + (isTeaser ? 2 : i.kind === 'video' ? 0 : 1);
       const title = isTeaser ? teaserTitle(i, root) : clean(i.title);
@@ -112,14 +113,14 @@ const T = {
     objectives: '🎯 یہ کورس پڑھ کر آپ:', units: (n) => `📚 ${n} یونٹ، ہر ایک مفت:`, unit: (n) => `یونٹ ${n}`,
     why: '✅ یہ کورس کیوں پڑھیں؟',
     whyLines: ['پورا کورس مفت، اردو اور انگریزی دونوں میں', 'ہر یونٹ میں 25 سوالات اور جوابات کی رہنمائی: امتحان کی تیاری آسان', 'پاکستانی کلاس روم کی مثالیں، تاکہ پڑھا ہوا کلاس میں کام آئے', 'موبائل پر پڑھیں، جب اور جہاں چاہیں'],
-    videos: '▶️ مزید ویڈیوز:', playlist: 'پوری پلے لسٹ',
+    videos: '▶️ مزید ویڈیوز:', playlist: 'کورس ٹیزرز کی پلے لسٹ',
   },
   en: {
     more: '📘 More about the course', lessonMore: '📘 About this unit',
     objectives: '🎯 After this course you will:', units: (n) => `📚 ${n} units, each free:`, unit: (n) => `Unit ${n}`,
     why: '✅ Why study it here?',
     whyLines: ['The whole course is free, in English and Urdu', 'Every unit has 25 questions with marking guidance: exam preparation made easy', 'Pakistani classroom examples, so what you read works in class', 'Read on your phone, whenever and wherever you like'],
-    videos: '▶️ More videos:', playlist: 'Full playlist',
+    videos: '▶️ More videos:', playlist: 'Course teasers playlist',
   },
 };
 

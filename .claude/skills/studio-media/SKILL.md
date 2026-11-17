@@ -96,7 +96,10 @@ Notation: `L = node scripts/notebook-studio/media-ledger.mjs`, `M = ~/studio-med
    `node scripts/notebook-studio/thumbnail.mjs preview <jpg>`: the hook must read at feed size.
    For items published before this thumbnail existed,
    `node scripts/notebook-studio/thumbnail.mjs backfill <course> <unit>` rebuilds them and prints
-   each `youtube_id` with its new `thumbnail_path` for `update_video`.
+   each `youtube_id` with its new `thumbnail_path` for `update_video`. To refresh the description
+   of a published video in place (same ID, 50 quota units, no re-upload), run
+   `node scripts/notebook-studio/yt-describe.mjs unit <course> <unit> <key>` (add `--dry-run` first).
+   It reuses the youtube-uploader MCP's saved sign-in and prints no secret.
 6. **QG2 content (Claude).** Get a transcript:
    - Add the source file (for a video, the m4a extracted with
      `ffmpeg -i in.mp4 -vn -c:a copy out.m4a`) to the course QA notebook with `source_add`

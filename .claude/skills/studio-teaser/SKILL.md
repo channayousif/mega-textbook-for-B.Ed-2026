@@ -159,6 +159,10 @@ States: `planned → scripted → script-approved → clips-generated → clips-
   `update_video.thumbnail_path`; pass it after `upload_video`. Before QG1 passes, Read the JPEG and
   its phone-size check (`node scripts/notebook-studio/thumbnail.mjs preview <jpg>`): the hook must
   read at feed size. `T thumb <key> <file>` records a rebuilt thumbnail.
+- **Editing a published description.** Never re-upload for text: run
+  `node scripts/notebook-studio/yt-describe.mjs teaser <key>` (in place, same ID, 50 units).
+  Unit videos link the teaser playlist rather than a teaser ID, so a replaced teaser never leaves
+  a dead link.
 - **Follow reminder.** Every render has one (`PLATFORM_CTA`, `ctaSvg`): a pill with a drawn bell
   (YouTube) or person-plus icon, shown three times over the shots in the top safe band, never on
   the end card. No platform logos.
@@ -245,4 +249,4 @@ chrome` again on Windows.
 - Channel `UC7cQfkGkdNABCiyjmV5ZaFQ` (see the studio-media skill for authentication). The OAuth
   app was moved from Testing to In production on 2026-11-17 (unverified), so the refresh token no
   longer expires after 7 days; sign-in shows an "unverified app" warning (Advanced, then continue).
-- Teaser playlist: _(owner to create "Course teasers (اردو)" and send the ID)_.
+- Teaser playlist: "Urdu Course teasers" `PLCJn7gAoYIJs` (verified 2026-11-17; `TEASER_PLAYLIST` in `teaser.mjs`).

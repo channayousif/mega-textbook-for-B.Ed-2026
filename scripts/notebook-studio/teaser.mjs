@@ -184,7 +184,7 @@ const clean = (s) => String(s).replace(/[\u2014\u2015\u2E3A\u2E3B]/g, ' - ').rep
 export const CHANNEL_URL = 'https://www.youtube.com/@textbookdotcomdotpk';
 export const SUBSCRIBE_URL = `${CHANNEL_URL}?sub_confirmation=1`;
 /** "Course teasers (اردو)" playlist; set when the owner sends its full ID. */
-export const TEASER_PLAYLIST = null;
+export const TEASER_PLAYLIST = 'PLCJn7gAoYIJs';
 const hashTag = (s) => `#${String(s).replace(/\(.*?\)/g, '').replace(/[^\p{L}\p{N}]+/gu, '')}`;
 const englishTitle = (script) => clean(script.title.en.replace(/\s*\([^)]*\)\s*/g, ' '));
 const urduTitle = (script) => clean(script.title.ur.replace(/\s*\([^)]*\)\s*/g, ' '));
