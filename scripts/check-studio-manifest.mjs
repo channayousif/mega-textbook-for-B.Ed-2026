@@ -122,6 +122,9 @@ export function checkStudio(root = ROOT) {
         if (!TEASER_STATES.includes(i.state)) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} has unknown state ${i.state}`);
         if (POST.includes(i.state) && !i.youtube_id) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} is ${i.state} without a youtube_id`);
         if (!existsSync(join(tdir, `${i.id}.json`))) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} has no script ${i.id}.json`);
+        const AFTER = TEASER_STATES.slice(TEASER_STATES.indexOf('assembled'));
+        // Items assembled before thumbnails existed (EFMP-301 pilot) carry thumbnail_file from the backfill.
+        if (AFTER.includes(i.state) && !i.thumbnail_file) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} is ${i.state} without a thumbnail_file`);
         for (const [p, c] of Object.entries(i.crossposts ?? {})) {
           if (!CAPTION_LIMIT[p]) findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} cross-post to unknown platform ${p}`);
           if (i.state !== 'public') findings.push(`specs/studio/teasers/media-teasers.json: ${i.key} has a ${p} cross-post but is ${i.state}, not public`);

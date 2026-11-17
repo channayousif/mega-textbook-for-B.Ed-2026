@@ -51,7 +51,9 @@
           "properties": { "headline": { "type": "string", "minLength": 3 }, "cta": { "type": "string", "minLength": 3 } }
         },
         "youtube_title": { "type": "string", "minLength": 10, "maxLength": 90 },
-        "keywords": { "type": "array", "maxItems": 15, "items": { "type": "string", "minLength": 2, "maxLength": 40 }, "description": "Optional search phrases (English, Urdu, Roman Urdu) for descriptions and tags. Metadata only: editing them does not reopen the script approval." }
+        "keywords": { "type": "array", "maxItems": 15, "items": { "type": "string", "minLength": 2, "maxLength": 40 }, "description": "Optional search phrases (English, Urdu, Roman Urdu) for descriptions and tags. Metadata only: editing them does not reopen the script approval." },
+        "course_summary": { "type": "string", "minLength": 40, "maxLength": 900, "description": "Optional faithful rendering of the course overview's summary paragraph, for a locale whose overview is not translated. Metadata only." },
+        "objectives": { "type": "array", "maxItems": 12, "items": { "type": "string", "minLength": 8, "maxLength": 200 }, "description": "Optional faithful rendering of the overview's learning outcomes, one per outcome (QG0 checks the count). Metadata only." }
       }
     }
   }

@@ -69,8 +69,21 @@ describe('teaser links and YouTube metadata', () => {
     expect(d.length).toBeLessThan(5000);
     expect(d.trim().split('\n').at(-1)).toMatch(/^#BEd #EducationalPsychology #TeacherEducation/);
     expect(m.upload_video.tags.length).toBeLessThanOrEqual(500);
-    // every narration line the owner approved appears; nothing else is claimed about the course
-    for (const l of base().locales.ur.narration.slice(0, 4)) expect(d).toContain(l);
+    // the hook and first learn line the owner approved lead the description
+    for (const l of base().locales.ur.narration.slice(0, 2)) expect(d).toContain(l);
+  });
+  it('adds "More about the course": every objective, every unit link, published videos, and stays under the byte limit', () => {
+    const d = shortMeta(base(), 'ur', ROOT).upload_video.description;
+    for (const o of base().locales.ur.objectives) expect(d).toContain(o);
+    for (let n = 1; n <= 12; n++) expect(d).toContain(`/ur/semester-1/efmp-301/unit-${String(n).padStart(2, '0')}/`);
+    expect(d).toContain('📘 کورس کے بارے میں مزید');
+    expect(d).toContain('✅ یہ کورس کیوں پڑھیں؟');
+    expect(Buffer.byteLength(d)).toBeLessThanOrEqual(4900);
+  });
+  it('QG0 rejects objectives that do not match the overview outcome count', () => {
+    const s = base();
+    s.locales.ur.objectives = s.locales.ur.objectives.slice(0, 4);
+    expect(checkScript(s, ROOT).join('\n')).toMatch(/ur objectives: 4, but the course overview has 6 learning outcomes/);
   });
   it('captions cross-posts per platform: link in bio where links are dead, the link where they work', () => {
     const tt = socialMeta(base(), 'ur', 'tiktok', ROOT);
@@ -88,7 +101,7 @@ describe('teaser ledger', () => {
     const steps = {
       scripted: { script_sha256: 'f'.repeat(64) },
       'script-approved': { gates: { script: { ...gate('approve'), by: 'owner' } } },
-      assembled: { encoded_file: '~/studio-media/teasers/efmp-301/en/teaser.mp4' },
+      assembled: { encoded_file: '~/studio-media/teasers/efmp-301/en/teaser.mp4', thumbnail_file: '~/studio-media/teasers/efmp-301/en/teaser.thumb.jpg' },
       'qa-pass': { gates: { qa1: gate() } },
       'uploaded-private': { youtube_id: 'dQw4w9WgXcQ', uploaded_at: now.toISOString() },
       'qa3-pass': { gates: { qa3: gate() } },
@@ -147,6 +160,7 @@ describe('teaser ledger', () => {
     planTeaser(L, 'efmp-301', 'ur');
     walkTo(L, 'efmp-301-ur', 'qa3-pass');
     expect(() => recordCrosspost(L, 'efmp-301-ur', 'tiktok', { state: 'draft', post_id: 'p1' })).toThrow(/only after the YouTube Short is public/);
+    expect(L.items[0].thumbnail_file).toMatch(/thumb\.jpg$/); // assembled requires a thumbnail
     advanceTeaser(L, 'efmp-301-ur', 'approved', { gates: { owner: { ...gate(), by: 'owner' } } }, { ledgers: [] });
     advanceTeaser(L, 'efmp-301-ur', 'public', { published_at: '2026-11-17T10:00:00Z' }, { ledgers: [] });
     expect(() => recordCrosspost(L, 'efmp-301-ur', 'tiktok', { state: 'live', post_id: 'p1' })).toThrow(/draft or posted/);

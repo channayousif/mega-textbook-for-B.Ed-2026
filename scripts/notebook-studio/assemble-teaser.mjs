@@ -14,7 +14,8 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
-import { wrap } from './audio-to-video.mjs';
+import { wrap, bidiUr } from './text-layout.mjs';
+import { buildThumbnail } from './thumbnail.mjs';
 import { loadScript, teaserRoute } from './teaser.mjs';
 
 const bin = (t) => (process.env.FFMPEG_DIR ? join(process.env.FFMPEG_DIR, t) : t);
@@ -30,18 +31,7 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&
 const fontFor = (locale) => (locale === 'ur' ? "'Noto Nastaliq Urdu', 'Noto Naskh Arabic', serif" : "'Nunito', 'DejaVu Sans', sans-serif");
 // librsvg: under direction="rtl" the anchor still centres on x with "middle", which is what captions use.
 const dirAttr = (locale) => (locale === 'ur' ? ' direction="rtl" unicode-bidi="embed"' : '');
-// librsvg/Pango lose the space on the far (left) side of an English run inside an Urdu line, so
-// "Educational Psychology بتاتی" rendered as "بتاتیEducational", and a run split by wrapping lost it
-// too. Fix: keep each English run on one line (NBSP between its words) and wrap it in an LTR
-// isolate that starts with an NBSP, which Pango draws on the run's left edge.
-export function bidiUr(text) {
-  // Pad only a side that meets a space or an Urdu letter, not brackets: "(EFMP-301)" stays tight.
-  const t = String(text);
-  return t.replace(/[A-Za-z][A-Za-z0-9\-.]*(?: [A-Za-z][A-Za-z0-9\-.]*)*/g, (m, at) => {
-    const pad = (c) => (c === undefined || /[\s\u0600-\u06FF]/.test(c) ? '\u00a0' : '');
-    return `\u2066${pad(t[at - 1])}${m.replace(/ /g, '\u00a0')}${pad(t[at + m.length])}\u2069`;
-  });
-}
+export { bidiUr }; // moved to text-layout.mjs; re-exported for existing callers
 const lineText = (l, locale) => (locale === 'ur' ? `\u200F${esc(l)}` : esc(l));
 
 /** Transparent 1080x1920 overlay with the caption in a dark box in the lower third. */
@@ -264,7 +254,15 @@ export async function assemble({ id, locale, out, shots, platform = 'youtube' })
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-r', '30',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-t', String(duration), '-movflags', '+faststart', out);
   execFileSync(bin('ffmpeg'), args, { stdio: ['ignore', 'inherit', 'inherit'] });
-  return { encoded_file: out, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: windows };
+  // Thumbnail (thumbnail.mjs): best frame across the raw shots (no captions), the title's question
+  // as the hook, the course badge, the "free course" ribbon and a watch pill.
+  const hook = L.youtube_title.split(' | ')[0];
+  const thumb = out.replace(/\.mp4$/, '') + '.thumb.jpg';
+  await buildThumbnail({
+    out: thumb, hook, badge: `${script.course_code ?? 'Licence'} · ${script.title[locale].replace(/\s*\([^)]*\)\s*/g, ' ').trim()}`,
+    kind: 'short', locale, aspect: 'portrait', frameFrom: [shots.map((f) => ({ file: f, samples: 5 }))],
+  });
+  return { encoded_file: out, thumbnail_file: thumb, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: windows };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
