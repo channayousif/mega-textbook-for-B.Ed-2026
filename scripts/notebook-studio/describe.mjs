@@ -15,7 +15,7 @@ import { allLedgers } from './media-ledger.mjs';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const SITE = 'https://textbook.com.pk';
 export const DESCRIPTION_BYTES = 4900;
-const clean = (s) => String(s ?? '').replace(/[—―⸺⸻]/g, ' - ').replace(/[<>]/g, '').replace(/[ \t]+/g, ' ').trim();
+const clean = (s) => String(s ?? '').replace(/[\u2014\u2015\u2E3A\u2E3B]/g, ' - ').replace(/[<>]/g, '').replace(/[ \t]+/g, ' ').trim();
 const pad = (n) => String(n).padStart(2, '0');
 
 export function courseSemester(course, root = ROOT) {
