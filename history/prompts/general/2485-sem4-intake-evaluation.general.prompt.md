@@ -14,7 +14,7 @@ links:
   spec: specs/content/gcce-400/content-spec.md (and the six other Semester 4 content-specs from PR #646)
   ticket: null
   adr: null
-  pr: PR_URL_PENDING
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/648
 files:
   - specs/decisions/log.md
   - specs/gaps.md
