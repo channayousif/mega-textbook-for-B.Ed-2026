@@ -59,6 +59,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 6 
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-05/G2/20261118T200124659Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 5 | G3 en-review | ▢ | agent:claude | Advisory revise: specs/content/efpg-401/reviews/unit-05/G3/crew-job-efpg-401-u05-review_en.json; Topic 5.2 missing-step activity has no missing step; Celce-Murcia and Sheikh claims exceed their title-level declaration; render evidence unavailable (production 331c3fc1 differs); no certification |
 | Unit 5 | G4 ur-translation | ▣ | agent:claude | Nine-file Urdu mirror and fourteen localized SVG schematics with derived dark variants prepared from English 8d3144411; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-05/G4/translation-handoff.md). |
 | Unit 5 | G5 ur-review | ☐ | | Awaiting translation and independent review |
 | Unit 5 | G6 assets | ▣ | | Fourteen English schematic SVGs placed with derived dark variants; measure-figure-text verified |

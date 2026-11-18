@@ -1,0 +1,26 @@
+render-review: EFPG-401 Unit 5 (G3 English review, attempt crew-job:efpg-401-u05-review_en, reviewer agent:claude)
+date: 2026-11-18T21:48:05Z
+reviewed HEAD: 0763fd82f89122bb83f1e488a22a0de21016a154
+production deployed SHA (~/deploy/deployed-sha): 331c3fc1720593a1b53c129fc71ec144d44f4f35
+
+Eligibility check required by the crew brief:
+$ git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-3/efpg-401/unit-05/ static/img/figures/efpg-401/unit-05/
+exit code: 1
+
+$ git diff --stat 331c3fc1720593a1b53c129fc71ec144d44f4f35 HEAD -- docs/semester-3/efpg-401/unit-05/ static/img/figures/efpg-401/unit-05/
+ docs/semester-3/efpg-401/unit-05/index.mdx         |   2 ++
+ docs/semester-3/efpg-401/unit-05/topic-01.mdx      |   2 +-
+ docs/semester-3/efpg-401/unit-05/topic-03.mdx      |   2 +-
+ docs/semester-3/efpg-401/unit-05/topic-04.mdx      |   2 +-
+ docs/semester-3/efpg-401/unit-05/topic-06.mdx      |   2 +-
+ static/img/figures/efpg-401/unit-05/fig-U5-15.webp | Bin 0 -> 81560 bytes
+ static/img/figures/efpg-401/unit-05/fig-U5-16.webp | Bin 0 -> 101842 bytes
+ static/img/figures/efpg-401/unit-05/fig-U5-17.webp | Bin 0 -> 129324 bytes
+ static/img/figures/efpg-401/unit-05/fig-U5-18.webp | Bin 0 -> 121682 bytes
+ static/img/figures/efpg-401/unit-05/fig-U5-19.webp | Bin 0 -> 69104 bytes
+ 10 files changed, 6 insertions(+), 4 deletions(-)
+
+Result: UNAVAILABLE. The live site at https://textbook.com.pk was built from 331c3fc1720593a1b53c129fc71ec144d44f4f35, which is not the
+reviewed input. Per the crew brief, scripts/render-inspect.mjs was NOT run and no local build or
+server was started. No browser, 360px narrow-view, keyboard or A4 print inspection was performed,
+so no PNG render evidence exists for this attempt. Accessibility remains unverified.

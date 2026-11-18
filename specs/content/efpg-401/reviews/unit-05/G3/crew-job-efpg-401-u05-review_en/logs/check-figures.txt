@@ -1,0 +1,9 @@
+$ npm run check:figures
+HEAD: 0763fd82f89122bb83f1e488a22a0de21016a154
+date: 2026-11-18T21:47:54Z
+
+> bed-mega-textbook@0.1.0 check:figures
+> node scripts/check-figures.mjs
+
+✓ Figure gate passed (≥ 2 RENDERED figures per topic, a placed schematic per unit, well-formed, unique; manifest consistent; placed assets exist).
+exit code: 0
