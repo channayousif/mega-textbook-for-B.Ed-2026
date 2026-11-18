@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">پرائمری انگریزی کے لیے ترسیلی سرگرمیوں کا جدول</title>
+  <desc id="d">جدول جس میں چار ترسیلی زبانی سرگرمیوں کی تفصیل دی گئی ہے: معلوماتی خلا، کردار نگاری، جماعتی سروے، اور مسئلہ حل کرنے والی پٹی کہانی، ہدفی جماعتوں اور ہدفی ساختوں سمیت۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">‫پرائمری انگریزی کے لیے ترسیلی سرگرمیوں کا جدول‬</text>
+  <text class="muted" x="390" y="61" text-anchor="middle">‫حقیقی معلومات کے تبادلے اور سماجی تعامل کو فروغ دینے والے عملی کام‬</text>
+
+  <!-- Row 1: Information Gap -->
+  <rect class="panel-a" x="515" y="75" width="225" height="66" rx="6"/>
+  <text class="sh" x="728" y="102" text-anchor="end">‫معلوماتی خلا والا نقشہ‬</text>
+  <text class="small" x="728" y="122" text-anchor="end">‫جماعت 4 • حروفِ جار‬</text>
+  <rect class="panel" x="40" y="75" width="465" height="66" rx="6"/>
+  <text class="body" x="490" y="100" text-anchor="end">‫• ساتھی الف اور ب کے پاس غائب دکانوں والے تکمیلی نقشے‬</text>
+  <text class="body" x="490" y="124" text-anchor="end">‫• زبان: ‪"Where is the post office?" / "It is opposite the school."‬‬</text>
+
+  <!-- Row 2: Role Play -->
+  <rect class="panel-b" x="515" y="150" width="225" height="66" rx="6"/>
+  <text class="sh" x="728" y="177" text-anchor="end">‫بازار کی کردار نگاری‬</text>
+  <text class="small" x="728" y="197" text-anchor="end">‫جماعت 5 • امدادی افعال اور درخواستیں‬</text>
+  <rect class="panel" x="40" y="150" width="465" height="66" rx="6"/>
+  <text class="body" x="490" y="175" text-anchor="end">‫• گاؤں کے مصروف بازار میں خریدار اور پھل فروش کی سودے بازی‬</text>
+  <text class="body" x="490" y="199" text-anchor="end">‫• زبان: ‪"How much are these apples?" / "One kilo, please."‬‬</text>
+
+  <!-- Row 3: Class Survey -->
+  <rect class="panel-a" x="515" y="225" width="225" height="66" rx="6"/>
+  <text class="sh" x="728" y="252" text-anchor="end">‫جماعتی سروے‬</text>
+  <text class="small" x="728" y="272" text-anchor="end">‫جماعت 5 • حال کے سوالات‬</text>
+  <rect class="panel" x="40" y="225" width="465" height="66" rx="6"/>
+  <text class="body" x="490" y="250" text-anchor="end">‫• طلبہ پسندیدہ کھیلوں کی معلومات کے لیے ہم جماعتوں کا انٹرویو کرتے ہیں‬</text>
+  <text class="body" x="490" y="274" text-anchor="end">‫• زبان: ‪"Do you play cricket?" / "Yes, I play every Friday."‬‬</text>
+
+  <!-- Row 4: Strip Story -->
+  <rect class="panel-c" x="515" y="300" width="225" height="66" rx="6"/>
+  <text class="sh" x="728" y="327" text-anchor="end">‫بے ترتیب پٹی کہانی‬</text>
+  <text class="small" x="728" y="347" text-anchor="end">‫جماعت 6 • کلام کی ترتیب‬</text>
+  <rect class="panel" x="40" y="300" width="465" height="66" rx="6"/>
+  <text class="body" x="490" y="325" text-anchor="end">‫• گروہ دوسروں کو کارڈ دکھائے بغیر کہانی کی پٹیاں بیان کرتے ہیں‬</text>
+  <text class="body" x="490" y="349" text-anchor="end">‫• زبان: ‪"First the boy fell," / "Then his friend helped him up."‬‬</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

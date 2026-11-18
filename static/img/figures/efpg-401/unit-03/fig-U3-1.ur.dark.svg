@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">قواعد و ترجمہ کا طریقہ: اصول، مراحل اور جائزہ</title>
+  <desc id="d">جدول جس میں پاکستانی کلاس رومز کے تناظر میں قواعد و ترجمہ کے طریقے کا تجزیہ بنیادی اصولوں، کلاس روم کے عام طریقۂ کار، تدریسی خوبیوں اور تدریسی کمزوریوں کے لحاظ سے کیا گیا ہے۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">‫قواعد و ترجمہ کا طریقہ: جائزہ اور تجزیہ‬</text>
+  <text class="muted" x="390" y="61" text-anchor="middle">‫بنیادیں، کلاس روم کا طریقۂ کار اور تدریسی فوائد و نقصانات‬</text>
+
+  <!-- Row 1: Core Principles -->
+  <rect class="panel-a" x="515" y="75" width="225" height="66" rx="6"/>
+  <text class="sh" x="728" y="102" text-anchor="end">‫بنیادی اصول‬</text>
+  <text class="small" x="728" y="122" text-anchor="end">‫نظریاتی ڈھانچہ‬</text>
+  <rect class="panel" x="40" y="75" width="465" height="66" rx="6"/>
+  <text class="body" x="490" y="100" text-anchor="end">‫• زبان استنباطی قواعدی تجزیے کے ذریعے سیکھی جاتی ہے‬</text>
+  <text class="body" x="490" y="124" text-anchor="end">‫• مادری زبان ‪(L1)‬ تمام معانی کے لیے حوالے کا نظام ہے‬</text>
+
+  <!-- Row 2: Typical Step -->
+  <rect class="panel-b" x="515" y="150" width="225" height="66" rx="6"/>
+  <text class="sh" x="728" y="177" text-anchor="end">‫کلاس روم کا عام مرحلہ‬</text>
+  <text class="small" x="728" y="197" text-anchor="end">‫سبق کا طریقۂ کار‬</text>
+  <rect class="panel" x="40" y="150" width="465" height="66" rx="6"/>
+  <text class="body" x="490" y="175" text-anchor="end">‫• استاد تختۂ سیاہ پر رسمی قواعدی اصول بیان کرتا ہے‬</text>
+  <text class="body" x="490" y="199" text-anchor="end">‫• طلبہ تحریری جملوں کا اردو یا سندھی میں ترجمہ کرتے ہیں‬</text>
+
+  <!-- Row 3: Strengths -->
+  <rect class="panel-a" x="515" y="225" width="225" height="66" rx="6"/>
+  <text class="sh" x="728" y="252" text-anchor="end">‫تدریسی خوبیاں‬</text>
+  <text class="small" x="728" y="272" text-anchor="end">‫کلاس روم کے فوائد‬</text>
+  <rect class="panel" x="40" y="225" width="465" height="66" rx="6"/>
+  <text class="body" x="490" y="250" text-anchor="end">‫• کم سمعی معاونات والی بڑی جماعتوں میں مؤثر‬</text>
+  <text class="body" x="490" y="274" text-anchor="end">‫• واضح قواعدی آگاہی اور پڑھنے میں درستی پیدا کرتا ہے‬</text>
+
+  <!-- Row 4: Weaknesses -->
+  <rect class="panel-c" x="515" y="300" width="225" height="66" rx="6"/>
+  <text class="sh" x="728" y="327" text-anchor="end">‫تدریسی حدود‬</text>
+  <text class="small" x="728" y="347" text-anchor="end">‫ترسیلی کمزوریاں‬</text>
+  <rect class="panel" x="40" y="300" width="465" height="66" rx="6"/>
+  <text class="body" x="490" y="325" text-anchor="end">‫• سن کر سمجھنے اور فی البدیہہ گفتگو کو نظر انداز کرتا ہے‬</text>
+  <text class="body" x="490" y="349" text-anchor="end">‫• لفظ بہ لفظ غیر فطری ترجمے کی عادت ڈالتا ہے‬</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
