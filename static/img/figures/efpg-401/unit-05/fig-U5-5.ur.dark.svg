@@ -14,7 +14,7 @@
     .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
     text { font-size: 15px; fill: var(--ink); }
     .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
-    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
     .body { font-size: 14px; fill: var(--ink); }
     .small { font-size: 13px; fill: var(--muted); }
     .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
