@@ -83,32 +83,45 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u03-translate, translate, claude) English topic-04.mdx shows raw LaTeX (`$4 \times 4 \times 4 \times 4$`) because the site has no maths plugin; the Urdu uses plain text.
 - (efpg-401-u03-translate, translate, claude) Rendered Urdu pages were not inspected (no build allowed); G5 must check the deployed /ur/ pages, especially the bidi in fig-U3-6 and fig-U3-10.
 
+## Feedback from the previous attempt
+worker exited 124 (timeout):
+root agent idle; waiting for 1 background task(s) to finish
+I have launched `scripts/heavy.sh node scripts/generate-illustration.mjs EFPG-401 3` in the background to generate the topic illustrations (fig-U3-14 through fig-U3-17) and will await its completion.
+I have launched `scripts/heavy.sh node scripts/generate-illustration.mjs EFPG-401 3 --id fig-U3-15 --reuse-staging` to process the staged `fig-U3-15.png` and am awaiting its completion.
+I have launched `scripts/heavy.sh node scripts/generate-illustration.mjs EFPG-401 3 --producer codex --id fig-U3-14` to test image generation via Codex, and am awaiting its completion.
+I have launched `scripts/heavy.sh node scripts/generate-illustration.mjs EFPG-401 3 --producer codex --id fig-U3-14` in the background and am awaiting its completion.
+I have launched `scripts/heavy.sh node scripts/generate-illustration.mjs EFPG-401 3 --id fig-U3-14` in the background and am awaiting its completion.
+I have launched `scripts/heavy.sh node scripts/generate-illustration.mjs EFPG-401 3` to generate the remaining topic illustrations (fig-U3-16 and fig-U3-17) and am awaiting its completion.
+I have launched `scripts/heavy.sh node scripts/generate-illustration.mjs EFPG-401 3 --banner` in the background to generate the unit banner illustration (fig-U3-13) and am awaiting its completion.
+error: interrupted
+
+
 
 ## Response snapshot
 
-Inspected and placed all five EFPG-401 Unit 3 raster illustrations (fig-U3-13 banner, fig-U3-14 through fig-U3-17 topic scenes) into English and Urdu topic files, updated figure manifests to placed, refreshed passing G2 evidence, and passed all 14 content gates.
+Inspected and placed all five EFPG-401 Unit 3 raster illustrations (fig-U3-13 banner, fig-U3-14 through fig-U3-17) in English and Urdu topics, updated figure manifests, refreshed passing G2 evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate for EFPG-401 Unit 3 by agy (attempt 1 continuation).
-- Tests: npm run check:content passed with all 14 gates green in the job worktree.
+- Impact: illustrate for EFPG-401 Unit 3 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Inspected and placed all five EFPG-401 Unit 3 raster illustrations (fig-U3-13 banner, fig-U3-14 through fig-U3-17 topic scenes) into English and Urdu topic files, updated figure manifests to placed, refreshed passing G2 evidence, and passed all 14 content gates.
+- Shipped / changed: Inspected and placed all five EFPG-401 Unit 3 raster illustrations (fig-U3-13 banner, fig-U3-14 through fig-U3-17) in English and Urdu topics, updated figure manifests, refreshed passing G2 evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Topics 3.4 and 3.6 intentionally have no illustrations because their concepts turn on written words.
-  - Urdu terminology notes from translation: method names in Unit 3 use قواعد و ترجمہ and ترسیلی.
+  - Topics 3.4 and 3.6 have no illustration on purpose, as their concepts turn on written words.
+  - Rendered Urdu pages were not inspected locally due to host limits; G5 must check deployed /ur/ pages.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
