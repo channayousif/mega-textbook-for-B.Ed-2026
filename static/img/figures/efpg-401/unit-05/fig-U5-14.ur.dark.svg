@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 280" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
   <title id="t">گرائمر کا نکتہ سیاق، کام اور جانچ میں</title>
-  <desc id="d">گرائمر کے ایک نکتے کا خاکہ جسے پہلے سیاق میں رکھا جاتا ہے، پھر کام میں استعمال کیا جاتا ہے اور پھر جانچا جاتا ہے، اور ہر مرحلے پر صورت، معنی اور استعمال کی نشاندہی کی گئی ہے۔</desc>
+  <desc id="d">گرائمر کے ایک نکتے کا خاکہ جسے پہلے سیاق میں رکھا جاتا ہے، پھر کام میں استعمال کیا جاتا ہے اور پھر جانچا جاتا ہے، اور پہلے مرحلے پر معنی جبکہ کام اور جانچ کے مراحل پر استعمال کی نشاندہی کی گئی ہے۔</desc>
   <style>
     :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
     .bg { fill: var(--bg); }
