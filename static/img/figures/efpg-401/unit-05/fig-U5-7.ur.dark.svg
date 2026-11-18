@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 450" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">ایک جملہ ساخت کے لیے ساختاری سبق کا مکمل منصوبہ</title>
+  <desc id="d">"There is a / There are" کی ساخت کے لیے ساختاری سبق کے مکمل منصوبے کا جدول، جس میں ہر مرحلہ، استاد کا عمل، شاگردوں کا عمل اور اس کا مقصد دکھایا گیا ہے۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="450"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">ساختاری سبق کا مکمل منصوبہ: "There is a / There are"</text>
+
+  <rect class="panel" x="30" y="50" width="720" height="32" rx="4"/>
+  <text class="sh" x="740" y="71" text-anchor="end">مرحلہ</text>
+  <text class="sh" x="630" y="71" text-anchor="end">وقت</text>
+  <text class="sh" x="568" y="71" text-anchor="end">استاد کا عمل</text>
+  <text class="sh" x="380" y="71" text-anchor="end">شاگردوں کا عمل</text>
+  <text class="sh" x="200" y="71" text-anchor="end">مقصد</text>
+
+  <rect class="panel-a" x="30" y="90" width="720" height="62" rx="4"/>
+  <text class="sh" x="740" y="120" text-anchor="end">آغاز</text>
+  <text class="body" x="630" y="120" text-anchor="end">4 منٹ</text>
+  <text class="body" x="568" y="112" text-anchor="end">بازار کی تصویر دکھائیں؛</text>
+  <text class="body" x="568" y="130" text-anchor="end">پوچھیں کیا نظر آتا ہے</text>
+  <text class="body" x="380" y="120" text-anchor="end">انگریزی میں چیزوں کے نام</text>
+  <text class="body" x="200" y="112" text-anchor="end">الفاظ کو</text>
+  <text class="body" x="200" y="130" text-anchor="end">تازہ کرنا</text>
+
+  <rect class="panel-b" x="30" y="158" width="720" height="62" rx="4"/>
+  <text class="sh" x="740" y="188" text-anchor="end">پیشکش</text>
+  <text class="body" x="630" y="188" text-anchor="end">8 منٹ</text>
+  <text class="body" x="568" y="180" text-anchor="end">کمرہ بنا کر نمونہ دیں</text>
+  <text class="body" x="568" y="198" text-anchor="end">"There is a table"</text>
+  <text class="body" x="380" y="188" text-anchor="end">دہرائیں اور اشارہ کریں</text>
+  <text class="body" x="200" y="180" text-anchor="end">ساخت کو</text>
+  <text class="body" x="200" y="198" text-anchor="end">متعارف کرانا</text>
+
+  <rect class="panel-c" x="30" y="226" width="720" height="62" rx="4"/>
+  <text class="sh" x="740" y="248" text-anchor="end">محدود</text>
+  <text class="sh" x="740" y="266" text-anchor="end">مشق</text>
+  <text class="body" x="630" y="256" text-anchor="end">10 منٹ</text>
+  <text class="body" x="568" y="248" text-anchor="end">فلیش کارڈ دکھائیں؛</text>
+  <text class="body" x="568" y="266" text-anchor="end">پوچھیں "What is there?"</text>
+  <text class="body" x="380" y="248" text-anchor="end">جواب دیں</text>
+  <text class="body" x="380" y="266" text-anchor="end">"There is/are"</text>
+  <text class="body" x="200" y="256" text-anchor="end">درستگی پیدا کرنا</text>
+
+  <rect class="panel-d" x="30" y="294" width="720" height="62" rx="4"/>
+  <text class="sh" x="740" y="324" text-anchor="end">آزادانہ مشق</text>
+  <text class="body" x="630" y="324" text-anchor="end">10 منٹ</text>
+  <text class="body" x="568" y="316" text-anchor="end">جوڑیوں سے کلاس کا</text>
+  <text class="body" x="568" y="334" text-anchor="end">بیان کروائیں</text>
+  <text class="body" x="380" y="324" text-anchor="end">ساتھی کو بیان کریں</text>
+  <text class="body" x="200" y="316" text-anchor="end">ساخت کا آزادانہ</text>
+  <text class="body" x="200" y="334" text-anchor="end">استعمال</text>
+
+  <rect class="panel-a" x="30" y="362" width="720" height="62" rx="4"/>
+  <text class="sh" x="740" y="392" text-anchor="end">تشخیص</text>
+  <text class="body" x="630" y="392" text-anchor="end">4 منٹ</text>
+  <text class="body" x="568" y="384" text-anchor="end">ہر شاگرد سے دو جملے</text>
+  <text class="body" x="568" y="402" text-anchor="end">لکھوائیں</text>
+  <text class="body" x="380" y="392" text-anchor="end">دو جملے لکھیں</text>
+  <text class="body" x="200" y="392" text-anchor="end">ساخت کی جانچ</text>
+
+  <text class="wm" x="768" y="440" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
