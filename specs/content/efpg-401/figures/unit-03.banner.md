@@ -1,0 +1,10 @@
+# Unit banner - EFPG-401 Unit 3 (Methods of Teaching English)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs efpg-401 3 --banner`) by the illustrate job; inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U3-13 | index | illustration | unit banner, wide 16:9 landscape scene, painted in a warm documentary style: one long English lesson in a government elementary school in a small town in Sindh, whitewashed walls, a chalkboard, a ceiling fan and a barred window with warm morning light, the room loosely divided into zones that each show a different way of teaching English; on the left a senior man teacher in shalwar kameez stands at the chalkboard while rows of boys copy silently into notebooks; in the centre a young woman teacher in shalwar kameez and dupatta holds up a yellow mango while small pupils point at it and answer eagerly; on the right a man teacher with both palms raised leads a row of boys chanting in unison; in the foreground two pairs of pupils face each other on a wooden bench, one holding a small card and the other asking a question with a curious expression, clearly talking to find something out; a woman trainee teacher with a notebook watches from the back, comparing the methods; pupils of about ten in school uniform shalwar kameez, girls with white dupattas; every book, notebook, card and the chalkboard show only blurred shapes, no readable letters or words, no map, flag or emblem in frame; warm natural light, documentary feel | One Sindh elementary classroom shows several ways of teaching English at once: boys copying silently at the chalkboard, small pupils naming a mango their teacher holds up, a row of boys chanting a drill, and two pairs of pupils questioning each other with cards while a trainee teacher watches and compares. |  | prompt-only |
