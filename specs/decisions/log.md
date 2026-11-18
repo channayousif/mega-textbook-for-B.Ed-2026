@@ -4712,3 +4712,331 @@ content-improvement loop with no further cycle.
 - **Limits:** Certifies no content and changes no review rule. Account risk from automating Flow
   stays the owner's, per the gflow-cli disclaimer. opencode is not a producer (its models cannot
   output images). Documented as ADR-0036, which amends ADR-0029 points 1 and 4.
+
+---
+
+## D-2026-0086 - GCCE-400 intake: identity values, unit partition, coverage, outcomes, structure and most of the blueprint approved; topic partition, calendar, weighting, U4-07, Unit 7 formative count, readings and catalog entry escalated
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GCCE-400 Civics and Community Engagement, `specs/content/gcce-400/content-spec.md` as
+  bound below. Settles only items 1-6. Settles nothing under `G-2026-211` to `G-2026-218`.
+- **Decided by:** agent:evaluator, 2026-11-18
+- **Decision:**
+  1. **identity: values approved; the catalog entry is escalated.** Guide (`4TH SEMESTER.txt:104-106`)
+     and Scheme (Semester IV row 1, `B.Ed 4 Year 2026 revised after board.txt:309-319`) agree:
+     GCCE-400, "Civics and Community Engagement", 2 (1-1), General Education, Semester 4. The
+     spec's proposed entry (`content-spec.md:14`) matches. No catalog entry exists (`G-2026-211`).
+  2. **partition (unit level): approved.** Seven units, one per guide unit, in the guide's order
+     and weeks (1-3, 4-5, 6-7, 8-9, 10, 11, 12). The topic partition (`G-2026-215`) and Weeks
+     13-16 (`G-2026-216`) are not approved.
+  3. **coverage: approved for the 34 guide rows.** Every schedule item (`:118-169`) appears once;
+     the optional practical activities (`:170-176`) are routed to `## Practical work plan`. The
+     derived row U4-07 is not approved (`G-2026-213`).
+  4. **outcomes: approved,** except the school-community clause of SLO 4-2, which follows U4-07.
+     The three guide outcomes (`:112-114`) are quoted verbatim and every SLO traces to them.
+  5. **blueprint: approved** for Bloom bands, 10/10/5 banks, per-topic minimums, ERQ sums,
+     Analyze-or-higher summatives, figure density and the formative lines of Units 1-6 (Units 1,
+     5, 6 apply `D-2026-0072`). Not approved: the Unit 7 formative line (`G-2026-214`) and the
+     "Weighting: 60/40 default" clause in every unit (`G-2026-217`).
+  6. **structure: approved.** Front matter validates against
+     `contracts/content-spec-frontmatter.schema.json`; all per-unit blocks are present; topic
+     lists partition the checklists; depth-budget counts match; figure IDs are unique and
+     contiguous; all 14 `CONTENT_GATES` exit 0 (`check:content-status` after regenerating its
+     gitignored input).
+  7. **readings and decision-residue are not approved** (`G-2026-212` to `G-2026-215`,
+     `G-2026-218`). The five DOI-bearing author-selected rows resolve on Crossref as cited.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:101-192` (identity
+  `:104-106`, outcomes `:110-114`, schedule `:115-169`, practical `:170-176`, readings `:177-185`,
+  assessment `:187-192`); Scheme `:309-319`; `specs/content/style-guide.md:226-250`, `:303-305`,
+  `:513-514`. Each approved item rests on the guide's own units and schedule lines, or on the
+  agreement of guide and Scheme. No item depends on a judgement between two documents.
+- **Bound to:** `specs/content/gcce-400/intake/manifest.json`, manifest digest
+  `73a59c967d0d61c11eaecd1c6877ef6c4dc81fe38081d73f03fe81cd2c362aa0` (56 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input
+  voids this entry. Record: `specs/content/gcce-400/intake/evaluation.md`.
+- **Limits:**
+  - **Still blocked:** the catalog entry (`G-2026-211`); the Author-selected table and the
+    open-access floor (`G-2026-212`); U4-07 (`G-2026-213`); the Unit 7 formative line
+    (`G-2026-214`); every `### Topic list` and the `## Week schedule` topic column (`G-2026-215`);
+    Weeks 13-16 (`G-2026-216`); the weighting clause and the assessment-criteria line
+    (`G-2026-217`); the Guide-listed table (`G-2026-218`).
+  - **Author repairs outstanding:** `content-spec.md:12` and drafting note 1 wrongly say the guide
+    has no title, code or credit line (it has, `:104-106`); `:26` wrongly says the guide gives no
+    weighting (it gives 10/10/30/50 marks).
+  - The spec may not move to `status: approved` until these are ruled and repaired and a fresh
+    intake runs on a newly prepared manifest. Certifies no content, qualifies no reviewer and
+    authorises no publication.
+
+---
+
+## D-2026-0087 - GENT-401 intake: code, title, coverage, outcomes, guide-listed readings, blueprint and structure approved; credit hours, partition, U2-03, author-selected readings and catalog entry escalated
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GENT-401 Entrepreneurship, `specs/content/gent-401/content-spec.md` as bound below.
+  Settles only items 1-6. Settles nothing under `G-2026-211` to `G-2026-213`, `G-2026-219` or
+  `G-2026-220`.
+- **Decided by:** agent:evaluator, 2026-11-18
+- **Decision:**
+  1. **identity: code and title approved.** Guide (`4TH SEMESTER.txt:311-312`) and Scheme
+     (Semester IV row 2, `B.Ed 4 Year 2026 revised after board.txt:321-331`) agree on GENT-401,
+     "Entrepreneurship", General Education, Semester 4. Credit hours conflict (guide 03, Scheme
+     2 (2-0)) and are escalated (`G-2026-219`); the catalog entry is escalated (`G-2026-211`).
+  2. **partition: not approved** (`G-2026-220`), because the guide is a bare week table. Within
+     it, the exclusion of Week 8 (mid-term) and Week 16 (final project, routed to
+     `## Course project`) from the checklist is approved.
+  3. **coverage: approved for the 41 guide rows** (`:327-387`), each once. U2-03 is not approved
+     (`G-2026-213`).
+  4. **outcomes: approved.** The eight guide outcomes (`:318-325`) are quoted verbatim; every SLO
+     traces to them and all eight are reached.
+  5. **readings (guide-listed): approved.** The three guide links (`:406-408`) were downloaded and
+     identified as Mellor et al. 2009, Scott 2017 (EFMD) and Butler (IEA; AELSO 2023 reprint,
+     ISBN 978-0-255-36794-3), matching the spec's rows. The author-selected basis is escalated
+     (`G-2026-212`).
+  6. **blueprint and structure: approved** for the partition as drafted. Two-topic units keep
+     "5-8"; every summative has an Analyze-or-higher item; banks 10/10/5; figure density met; the
+     60/40 default applies because the guide gives no weighting. Front matter validates, all
+     per-unit blocks are present, partitions and counts replay clean, and all 14 `CONTENT_GATES`
+     exit 0.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:304-408` (identity
+  `:311-312`, outcomes `:316-325`, schedule `:326-391`, strategies `:392-404`, books `:405-408`);
+  Scheme `:321-331`; `specs/content/style-guide.md:226-250`. Each approved item rests on the
+  guide's own lines or on guide/Scheme agreement.
+- **Bound to:** `specs/content/gent-401/intake/manifest.json`, manifest digest
+  `1bf77bceb60eb22bc988c301011979981ba406240a96dd24871f4396115ac287` (56 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input
+  voids this entry. Record: `specs/content/gent-401/intake/evaluation.md`.
+- **Limits:** still blocked: the catalog entry (`G-2026-211`); the Author-selected table and
+  open-access floor (`G-2026-212`); U2-03 (`G-2026-213`); the credit value and depth budgets
+  (`G-2026-219`); the unit grouping and topic lists (`G-2026-220`). Criteria 3, 4 and 6 are
+  approved for the partition as drafted and re-open if `G-2026-220` changes it. The spec may not
+  move to `status: approved` until these are ruled and a fresh intake runs on a newly prepared
+  manifest. Certifies no content, qualifies no reviewer and authorises no publication.
+
+---
+
+## D-2026-0088 - EFMP-408 intake: identity, guide coverage, outcomes, structure and most of the blueprint approved; partition, Topic 6.4, four-topic formative counts and readings escalated
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFMP-408 Educational Assessment and Evaluation, `specs/content/efmp-408/content-spec.md`
+  as bound below. Settles only items 1-5. Settles nothing under `G-2026-212`, `G-2026-214`,
+  `G-2026-221`, `G-2026-222` or `G-2026-223`.
+- **Decided by:** agent:evaluator, 2026-11-18
+- **Decision:**
+  1. **identity: approved.** Guide (`4TH SEMESTER.txt:200-202`), Scheme (Semester IV row 3,
+     `B.Ed 4 Year 2026 revised after board.txt:333-343`) and the existing `catalog/courses.json`
+     entry agree: EFMP-408, "Educational Assessment and Evaluation", 3 (3-0), Major: Professional,
+     Semester 4.
+  2. **partition: not approved** (`G-2026-222`); the guide is a bare week table. Within it, Weeks
+     8 and 16 (review and examination) carrying no row is approved.
+  3. **coverage: approved for the guide's items** (`:217-277`), with pair-splits that add no
+     sub-topic. Topic 6.4 (U6-10..12) is not approved (`G-2026-221`). One guide item (`:241`)
+     needs its own row (author repair).
+  4. **outcomes: approved,** except SLO 6-4 (Topic 6.4). The six guide outcomes (`:208-213`)
+     are reproduced and every other SLO traces to them.
+  5. **blueprint and structure: approved,** except the four-topic formative lines of Units 3 and
+     6 (`G-2026-214`) and the Unit 1/2 ERQ distribution, which sums to 4 (author repair). Front
+     matter validates, partitions and counts replay clean, all per-unit blocks are present, and
+     all 14 `CONTENT_GATES` exit 0.
+  6. **readings and decision-residue are not approved** (`G-2026-212`, `G-2026-221` to
+     `G-2026-223`). Of the guide's four links (`:299-302`), only `:299` identifies a work
+     (Scheerens, Glas and Thomas, verified from the file's title page).
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:194-302`; Scheme
+  `:333-343`; `catalog/courses.json` Semester 4; `specs/content/style-guide.md:226-250`,
+  `:508-515`. Each approved item rests on the guide's own lines or on guide/Scheme/catalog
+  agreement.
+- **Bound to:** `specs/content/efmp-408/intake/manifest.json`, manifest digest
+  `b7cedb683c20f7cc11df7ffce8c585092dce5d008c7d0e7565fda66c3052b1be` (56 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input
+  voids this entry. Record: `specs/content/efmp-408/intake/evaluation.md`.
+- **Limits:** still blocked: the open-access floor and author-selected rows (`G-2026-212`); the
+  Unit 3 and 6 formative lines (`G-2026-214`); Topic 6.4 and SLO 6-4 (`G-2026-221`); the unit
+  grouping and topic lists (`G-2026-222`); the Guide-listed table (`G-2026-223`). Author repairs
+  outstanding: a row for `:241`; five ERQs in Units 1 and 2. Criteria 3, 4 and 5 are approved for
+  the partition as drafted. The spec may not move to `status: approved` until these are ruled
+  and repaired and a fresh intake runs on a newly prepared manifest. Certifies no content,
+  qualifies no reviewer and authorises no publication.
+
+---
+
+## D-2026-0089 - EFMP-409 intake: identity values, unit partition, guide coverage, outcomes, structure and most of the blueprint approved; topic partition, three derived rows, two rewordings, Unit 3 formative count, readings and catalog entry escalated; Unit 4 summative fails
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFMP-409 Foundations of Education, `specs/content/efmp-409/content-spec.md` as bound
+  below. Settles only items 1-5. Settles nothing under `G-2026-211` to `G-2026-214` or
+  `G-2026-224` to `G-2026-226`.
+- **Decided by:** agent:evaluator, 2026-11-18
+- **Decision:**
+  1. **identity: values approved; catalog entry escalated.** Guide (`4TH SEMESTER.txt:412-420`)
+     and Scheme (Semester IV row 4, `B.Ed 4 Year 2026 revised after board.txt:345-355`) agree:
+     EFMP-409, "Foundations of Education", 3 (3-0), Major: Professional, Semester 4. No catalog
+     entry exists (`G-2026-211`).
+  2. **partition (unit level): approved.** Five units, one per guide unit (`:434-510`), in order.
+     The topic partition and week reading are not approved (`G-2026-224`).
+  3. **coverage: approved for the 48 guide items,** each once. Not approved: derived rows U2-04,
+     U3-11, U3-19 (`G-2026-213`) and the reworded rows U4-06 and U5-06 (`G-2026-225`).
+  4. **outcomes: approved,** except the SLO 3-2 and 3-3 clauses that name the derived rows. The
+     five guide outcomes (`:426-430`) are quoted verbatim.
+  5. **blueprint and structure: approved,** except Unit 3's 18-item formative line
+     (`G-2026-214`) and **Unit 4's summative, which names an Apply item against
+     `style-guide.md:228` (author repair)**. Front matter validates, partitions and counts replay
+     clean, all per-unit blocks are present, all 14 `CONTENT_GATES` exit 0, and the Unit 2-4
+     figure plans respect `D-2026-0081` item 3.
+  6. **readings and decision-residue are not approved** (`G-2026-212` to `G-2026-214`,
+     `G-2026-224` to `G-2026-226`).
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:410-538` and the
+  source `4TH SEMESTER.docx` (list grouping read directly); Scheme `:345-355`;
+  `specs/content/style-guide.md:226-250`. Each approved item rests on the guide's own units and
+  items or on guide/Scheme agreement.
+- **Bound to:** `specs/content/efmp-409/intake/manifest.json`, manifest digest
+  `105abe48bc08dc9cc0567fd93e2672c74e2427ee08acd98d0392c8339f994038` (56 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input
+  voids this entry. Record: `specs/content/efmp-409/intake/evaluation.md`.
+- **Limits:** still blocked: the catalog entry (`G-2026-211`); open-access floor and
+  author-selected rows (`G-2026-212`); U2-04, U3-11, U3-19 (`G-2026-213`); the Unit 3 formative
+  line (`G-2026-214`); topic lists and week column (`G-2026-224`); U4-06 and U5-06
+  (`G-2026-225`); the Guide-listed table (`G-2026-226`). Author repairs outstanding: Unit 4
+  summative to Analyze-or-higher; Scheme department "CD&I" (`:10`). The spec may not move to
+  `status: approved` until these are ruled and repaired and a fresh intake runs on a newly
+  prepared manifest. Certifies no content, qualifies no reviewer (including the scholar review
+  drafting note 8 asks for) and authorises no publication.
+
+---
+
+## D-2026-0090 - EFPC-411 intake: title and credit hours, coverage, outcomes, guide weighting, structure and most of the blueprint approved; course code, partition, four-topic formative counts, readings and catalog entry escalated
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFPC-411 School Observation, `specs/content/efpc-411/content-spec.md` as bound below.
+  Settles only items 1-5. Settles nothing under `G-2026-211`, `G-2026-212`, `G-2026-214` or
+  `G-2026-227` to `G-2026-229`.
+- **Decided by:** agent:evaluator, 2026-11-18
+- **Decision:**
+  1. **identity: title, credit hours and semester approved.** Guide (`4TH SEMESTER.txt:544-546`)
+     and Scheme (`B.Ed 4 Year 2026 revised after board.txt:357-367`) agree on "School
+     Observation", 2 (0-2), Major: Practical Course-I, Semester 4. The Scheme prints the code as
+     "EFPC-4--"; the code is escalated (`G-2026-227`), as is the catalog entry (`G-2026-211`).
+  2. **partition: not approved** (`G-2026-228`). Units 1 and 2 follow the guide's "Task - 01"
+     (`:558`) and "UNIT # 02" (`:587`); the third unit (Weeks 9-12, unheaded) and Weeks 13-16 are
+     not guide-determined.
+  3. **coverage and outcomes: approved.** Every schedule line (`:561-691`) is reached; the six
+     guide outcomes (`:551-556`) are reproduced verbatim and every SLO traces to them. Week 12's
+     line references need correcting (author repair).
+  4. **blueprint: approved,** including the guide's 20/40/20/20 weighting (`:707-712`), which the
+     spec applies in place of the 60/40 default; except the "formative 12 items" line of each
+     four-topic unit (`G-2026-214`).
+  5. **structure: approved.** Front matter validates, partitions and counts replay clean, all
+     per-unit blocks are present, all 14 `CONTENT_GATES` exit 0.
+  6. **readings and decision-residue are not approved** (`G-2026-212`, `G-2026-214`,
+     `G-2026-228`, `G-2026-229`). The guide's five linked HEC PDFs return HTTP 200.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:540-712`; Scheme
+  `:357-367`; `specs/content/style-guide.md:226-250`. Each approved item rests on the guide's own
+  lines or on guide/Scheme agreement.
+- **Bound to:** `specs/content/efpc-411/intake/manifest.json`, manifest digest
+  `f815db8e07144082c635576fb9230265aeb1051e6f85e4836de61d74e171d11e` (56 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input
+  voids this entry. Record: `specs/content/efpc-411/intake/evaluation.md`.
+- **Limits:** still blocked: the catalog entry (`G-2026-211`); open-access floor and
+  author-selected row (`G-2026-212`); the formative lines (`G-2026-214`); the course code
+  (`G-2026-227`); Unit 3, topic lists and Weeks 13-16 (`G-2026-228`); the Guide-listed table
+  (`G-2026-229`). Author repair outstanding: Week 12 references (`:678` cited twice; `:679` and
+  `:688-691` unnamed). The spec may not move to `status: approved` until these are ruled and
+  repaired and a fresh intake runs on a newly prepared manifest. Certifies no content, qualifies
+  no reviewer and authorises no publication; it does not assess the placement itself.
+
+---
+
+## D-2026-0091 - MFPG-402 intake: title and credit hours, unit and topic partition, coverage, outcomes, structure and most of the blueprint approved; course code, formative counts, readings, the "secondary level" question and catalog entry escalated
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** Teaching of Science (spec code MFPG-402), `specs/content/mfpg-402/content-spec.md` as
+  bound below. Settles only items 1-5. Settles nothing under `G-2026-211`, `G-2026-212`,
+  `G-2026-214` or `G-2026-230` to `G-2026-232`.
+- **Decided by:** agent:evaluator, 2026-11-18
+- **Decision:**
+  1. **identity: title, credit hours and category approved.** Guide (`4TH SEMESTER.txt:719-722`)
+     and Scheme (Semester IV row 7, `B.Ed 4 Year 2026 revised after board.txt:369-380`) agree on
+     "Teaching of Science", 3 (3-0), pedagogy course. The code conflicts (guide EFPG-402, Scheme
+     MFPG-402) and is escalated (`G-2026-230`), as is the catalog entry (`G-2026-211`).
+  2. **partition: approved at unit and topic level.** Eight units in the guide's order and weeks
+     (`:738-803`), each topic teaching guide section N.k, exactly as `D-2026-0070` item 1 requires.
+  3. **coverage: approved.** All 43 numbered sections (`:740-803`) are reached; multi-item
+     sections are split into rows without addition; practicum tasks (`:805-810`) are routed to
+     `## Practicum plan`. U6-01's change of "secondary" to "school" is not approved
+     (`G-2026-232`).
+  4. **outcomes: approved.** The six guide objectives (`:729-735`) are quoted verbatim and every
+     SLO traces to them.
+  5. **blueprint and structure: approved,** except the formative line of every unit
+     (`G-2026-214`). Summatives are Analyze-or-higher, banks 10/10/5 with consistent per-topic
+     floors, figure density met; front matter validates, partitions and counts replay clean, all
+     14 `CONTENT_GATES` exit 0.
+  6. **readings and decision-residue are not approved** (`G-2026-212`, `G-2026-214`,
+     `G-2026-231`). Das (`OL13678681W`), Yadav (`OL10226886W`) and the DOI-bearing rows resolve.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:714-833`; Scheme
+  `:369-380`; `specs/decisions/log.md` `D-2026-0070` item 1; `specs/content/style-guide.md:226-250`.
+  Each approved item rests on the guide's own numbered units and sections or on guide/Scheme
+  agreement.
+- **Bound to:** `specs/content/mfpg-402/intake/manifest.json`, manifest digest
+  `3d274dd25268935425c2b73db77e856d4ad91d8080b56791994e9c7c07fe897b` (56 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input
+  voids this entry. Record: `specs/content/mfpg-402/intake/evaluation.md`.
+- **Limits:** still blocked: the catalog entry (`G-2026-211`); open-access floor and
+  author-selected rows (`G-2026-212`); every formative line (`G-2026-214`); the course code
+  (`G-2026-230`); the Guide-listed table (`G-2026-231`); the teaching level and U6-01
+  (`G-2026-232`). The spec may not move to `status: approved` until these are ruled and a fresh
+  intake runs on a newly prepared manifest. Certifies no content, qualifies no reviewer and
+  authorises no publication.
+
+---
+
+## D-2026-0092 - GUHQ-400 intake: identity values (per G-2026-04), unit partition, coverage with the Week 9-10 duplicate resolved, outcomes, structure and most of the blueprint approved; topic partition, formative counts, readings and catalog entry escalated
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GUHQ-400 Fehm-e-Quran - II, `specs/content/guhq-400/content-spec.md` as bound below.
+  Settles only items 1-5. Settles nothing under `G-2026-211`, `G-2026-212`, `G-2026-214`,
+  `G-2026-233` or `G-2026-234`.
+- **Decided by:** agent:evaluator, 2026-11-18
+- **Decision:**
+  1. **identity: values approved; catalog entry escalated.** `G-2026-04` (resolved) rules GUHQ-400
+     Fehm-e-Quran II, Semester IV, 1 (0-1); the Scheme row (`B.Ed 4 Year 2026 revised after
+     board.txt:382-392`) agrees and so does the proposed entry (`content-spec.md:14`). The guide's
+     `GUHQ- 402` and `03 (0-1)` (`4TH SEMESTER.txt:7`) are not re-opened. No catalog entry exists
+     (`G-2026-211`).
+  2. **partition (unit level): approved.** Four units, one per numbered guide unit, in the guide's
+     order and weeks (1-6, 7-10, 11-14, 15-16). The topic partition is not approved
+     (`G-2026-233`).
+     - **Within-guide slip, resolved:** guide Weeks 9 and 10 are identical (`:53-54`, `:56-57`);
+       no second document conflicts. Their two items are listed once (U2-05, U2-06). The owner may
+       supply different Week 10 content.
+  3. **coverage: approved.** Every guide item (`:20-83`) appears once; Week 16's review and final
+     assessment (`:81-82`) carry no row, consistent with `D-2026-0059`, `D-2026-0063` and
+     `D-2026-0080`.
+  4. **outcomes: approved.** The three guide outcomes (`:13-15`) are quoted verbatim and every SLO
+     traces to them.
+  5. **blueprint and structure: approved,** except the Unit 1 (18) and Unit 3 (12) formative lines
+     (`G-2026-214`). Summatives are Analyze-or-higher; banks 10/10/5 with fitting floors; figure
+     density met; front matter validates, partitions and counts replay clean, all 14
+     `CONTENT_GATES` exit 0.
+  6. **readings and decision-residue are not approved** (`G-2026-212`, `G-2026-214`, `G-2026-233`,
+     `G-2026-234`). The three new guide works (Badawi & Abdel Haleem `OL16977011W`, Ibn Kathir
+     `OL10746660W`, Maududi `OL21232467W`) and both DOI-bearing rows resolve.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:1-99`; Scheme
+  `:382-392`; `specs/gaps.md` `G-2026-04`; `specs/content/style-guide.md:226-250`. Each approved
+  item rests on the guide's own units and schedule lines, a within-guide duplicate, or an
+  already-resolved ruling.
+- **Bound to:** `specs/content/guhq-400/intake/manifest.json`, manifest digest
+  `d7f84adff4621978d33119d7cff3da6fe4fbe882a5f1ff191c0afe37d79be54c` (56 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input
+  voids this entry. Record: `specs/content/guhq-400/intake/evaluation.md`.
+- **Limits:** still blocked: the catalog entry (`G-2026-211`); open-access floor and
+  author-selected rows (`G-2026-212`); the Unit 1 and 3 formative lines (`G-2026-214`); topic lists
+  and week column (`G-2026-233`); the Guide-listed table (`G-2026-234`). Author repair
+  outstanding: cite `G-2026-04` instead of presenting identity as open (`:12`, drafting note 1).
+  The spec may not move to `status: approved` until these are ruled and repaired and a fresh
+  intake runs on a newly prepared manifest. Certifies no content, qualifies no reviewer (including
+  the scholar review drafting note 8 asks for) and authorises no publication.

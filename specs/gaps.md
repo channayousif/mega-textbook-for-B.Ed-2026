@@ -3208,3 +3208,372 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   (`static/guides/semester-7/efpg-607.pdf`). The guide's own code and semester are not used.
 - **Still open:** confirmation from the university of which code and semester are current; the
   course still needs G0 intake (content-spec) before any unit is authored.
+
+---
+
+## G-2026-211 - Semester 4: six courses have no `catalog/courses.json` entry; adding them re-opens bound evidence
+- **Status:** open
+- **Raised by:** `D-2026-0086`, `D-2026-0087`, `D-2026-0089`, `D-2026-0090`, `D-2026-0091`,
+  `D-2026-0092` (agent:evaluator, 2026-11-18), Semester 4 intakes
+- **Detail:**
+  - `catalog/courses.json` Semester 4 lists only `EFMP-408` (whose entry agrees with guide and
+    Scheme). The intake `identity` criterion reads the catalog, so it cannot pass in full for the
+    other six.
+  - Proposed entries, each from its spec's line 14 (all `title_ur` values are drafter proposals,
+    given by neither guide nor Scheme):
+    - GCCE-400 "Civics and Community Engagement", 2 (1-1), General Education, "شہریات اور سماجی شمولیت";
+    - GENT-401 "Entrepreneurship", 2 (2-0), General Education, "کاروباری صلاحیت" (credit value
+      subject to `G-2026-219`);
+    - EFMP-409 "Foundations of Education", 3 (3-0), Major: Professional, "تعلیم کی بنیادیں";
+    - EFPC-411 "School Observation", 2 (0-2), Major: Practical, "اسکول کا مشاہدہ" (code subject to
+      `G-2026-227`);
+    - MFPG-402 "Teaching of Science", 3 (3-0), Major: Pedagogy, "سائنس کی تدریس" (code subject to
+      `G-2026-230`);
+    - GUHQ-400 "Fehm-e-Quran - II", 1 (0-1), General Education, "فہمِ قرآن - II".
+  - For Semester 3 the owner approved each proposed entry and deferred insertion "until review
+    evidence binds each course's own catalog entry" (`D-2026-0075` to `D-2026-0080`, owner ruling
+    2026-11-02). That ruling names those six courses only.
+- **Needed from the owner:** approval of the six entries (and their Urdu titles and `bilingual`
+  flags), and whether the Semester 3 insertion rule applies.
+- **Blocks:** the catalog entries, and with them authoring under `docs/semester-4/` for those six
+  courses.
+
+## G-2026-212 - Semester 4: author-selected readings and the open-access floor rely on `D-2026-0053` item 2, scoped to Semester 2
+- **Status:** open
+- **Raised by:** `D-2026-0086` to `D-2026-0092` (agent:evaluator, 2026-11-18), all seven Semester 4
+  intakes
+- **Detail:**
+  - Every Semester 4 spec binds author-selected open-access sources and declares
+    `open_access_floor: {default: 1}` "under `D-2026-0053` item 2" (GCCE-400 `:48`, GENT-401 `:38`,
+    EFMP-408 `:391`, EFMP-409 `:56`, EFPC-411 `:39`, MFPG-402 `:38`, GUHQ-400 `:35`).
+  - That ruling's scope is six Semester 2 courses (`specs/decisions/log.md:2541`). The owner
+    accepted the same reliance for six Semester 3 courses by approving each spec as drafted
+    (owner ruling 2026-11-02 under `D-2026-0075` to `D-2026-0080`, "for Semester 3"). No ruling
+    reaches Semester 4.
+  - The DOI-bearing rows checked resolve on Crossref as cited; each evaluation record lists them.
+  - In GUHQ-400 Unit 2 the floor is met only by Quran.com and the Leeds Quranic Arabic Corpus,
+    primary-text and reference tools (the question `G-2026-209` raised for GUHQ-301).
+- **Needed from the owner:** whether `D-2026-0053` item 2 extends to Semester 4 (or corpus-wide),
+  and whether primary-text and reference tools satisfy the floor.
+- **Blocks:** the Author-selected tables and `open_access_floor` as a binding floor in all seven
+  specs.
+
+## G-2026-213 - Semester 4: derived sub-topics rely on `D-2026-0053` item 4, scoped to Semester 2
+- **Status:** open
+- **Raised by:** `D-2026-0086`, `D-2026-0087`, `D-2026-0089` (agent:evaluator, 2026-11-18)
+- **Detail:** checklist rows with no guide line, each derived "under `D-2026-0053` item 4" and
+  naming an outcome:
+  - GCCE-400 U4-07 "The school as a community institution: school-community relationship and
+    parental involvement" (outcome 2; licence rows E-1, E-3, CRQ 10);
+  - GENT-401 U2-03 "intrapreneurship and women's entrepreneurship", filling the truncated guide
+    line "Entrepreneurship" (`4TH SEMESTER.txt:337`; outcome 1);
+  - EFMP-409 U2-04 "The historical foundations of education" (outcome 4; licence objective 5),
+    U3-11 "Dewey and the active-learning principle" (outcome 3; CRQ 2), U3-19 "Writing a personal
+    teaching philosophy statement" (outcome 2; CRQ 8).
+  `D-2026-0053` is scoped to Semester 2 (`specs/decisions/log.md:2541`); the owner accepted the
+  same reliance for EFPG-401 (`G-2026-177`) only by approving that spec as drafted. The licence
+  blueprint maps these objectives at "course-level", which does not of itself require a row.
+- **Needed from the owner:** whether item 4 extends to Semester 4 (or whether licence-driven rows
+  are wanted), row by row if preferred.
+- **Blocks:** the five rows and the SLO clauses that name them.
+
+## G-2026-214 - Semester 4: formative item counts for units of four to seven topics
+- **Status:** open
+- **Raised by:** `D-2026-0086`, `D-2026-0088` to `D-2026-0092` (agent:evaluator, 2026-11-18)
+- **Detail:**
+  - `D-2026-0072` (corpus-wide) gives 9 formative items to three-topic units and "does not rule on
+    units with four or more topics" (`specs/decisions/log.md:3922`); `style-guide.md:227` says
+    "5-8"; the per-topic floor (`style-guide.md:237`) forces 3 per topic.
+  - `G-2026-176` was marked resolved only by approving EFPG-401's spec as drafted; GUHQ-301's
+    `G-2026-207` likewise.
+  - Semester 4 lines that state "3 per topic" for four or more topics: GCCE-400 Unit 7 (12);
+    EFMP-408 Units 3 and 6 (12); EFMP-409 Unit 3 (18); EFPC-411 Units 1-3 (12 each); MFPG-402
+    Units 1-8 (15, 15, 21, 15, 15, 18, 15, 15); GUHQ-400 Unit 1 (18) and Unit 3 (12).
+  - The figures are internally consistent; no ruling authorises them. Several depend on open
+    topic-partition gaps (`G-2026-215`, `G-2026-221`, `G-2026-222`, `G-2026-224`, `G-2026-228`,
+    `G-2026-233`); MFPG-402's do not, because its topics are guide-determined.
+- **Needed from the owner:** a corpus-wide rule for the formative count of units with four or more
+  topics (for example, extend `D-2026-0072`'s 3 per topic), ideally recorded as a decision so it
+  stops recurring at every intake.
+- **Blocks:** the formative line of each unit listed.
+
+## G-2026-215 - GCCE-400 topic partition: a week/section hybrid, where `D-2026-0070` item 1's "Topic N.k teaches guide section N.k" cannot apply literally
+- **Status:** open
+- **Raised by:** `D-2026-0086` (agent:evaluator, 2026-11-18), GCCE-400 intake
+- **Detail:**
+  - The guide's seven units are approved. Its numbered sections are numbered by week, not by unit
+    (2.1-2.3 in Week 2 of Unit 1; 10.1-10.3 in Week 10 of Unit 5), and Weeks 1, 8 and 9 are
+    unnumbered (`4TH SEMESTER.txt:118-120`, `:147-153`).
+  - The spec makes each week a topic in Units 1-4 and each numbered section a topic in Units 5-7
+    (`specs/content/gcce-400/content-spec.md:80`, drafting note 4). Topic counts 3, 2, 2, 2, 3, 3, 4.
+  - One topic per section everywhere would give 8, 6, 4, 6, 3, 3, 4; one topic per week
+    everywhere would give 3, 2, 2, 2, 1, 1, 1.
+  - Weeks-as-topics was accepted for GUHQ-301 only, by approving that spec as drafted
+    (`G-2026-206`, `D-2026-0080`). No ruling covers a hybrid.
+- **Needed from the owner:** confirm the hybrid for GCCE-400, or name the rule (per section, or
+  per week) the topic partition must follow.
+- **Blocks:** every `### Topic list`, the `## Week schedule` topic column, per-topic figure plans,
+  reading-minute bands and bank distributions, Units 1-7; with them `G-2026-214`'s Unit 7 count.
+
+## G-2026-216 - GCCE-400: the guide schedules Weeks 1-12 only
+- **Status:** open
+- **Raised by:** `D-2026-0086` (agent:evaluator, 2026-11-18), GCCE-400 intake
+- **Detail:** the guide's schedule ends at Week 12 (`4TH SEMESTER.txt:165-169`). The spec invents
+  nothing for Weeks 13-16 (drafting note 2) and suggests they may be practical weeks for this
+  2 (1-1) course. The guide does not say.
+- **Needed from the owner:** whether Weeks 13-16 carry content (and if so, what), practical work,
+  or nothing.
+- **Blocks:** nothing in the spec as drafted; only the completeness of the course calendar.
+
+## G-2026-217 - GCCE-400 assessment: the guide gives marks the spec says it does not, and its essay wording names philosophy
+- **Status:** open
+- **Raised by:** `D-2026-0086` (agent:evaluator, 2026-11-18), GCCE-400 intake
+- **Detail:**
+  - The guide allots participation 10, reflection papers 10, a mid-term essay "on a selected
+    philosophical topic" 30 and a final paper "applying philosophical concepts" 50 marks
+    (`4TH SEMESTER.txt:187-192`).
+  - The spec says "No weighting is given" and applies the 60/40 default (`content-spec.md:26`);
+    every unit's blueprint repeats "Weighting: 60/40 default".
+  - Which components are formative and which summative is not guide-determined, and the
+    "philosophical" wording looks carried over from another outline (drafting note 3).
+- **Needed from the owner:** the formative/summative weighting for GCCE-400 (the guide's 10/10/30/50
+  read as 20/80, the 40/60 default, or other), and whether the essays are read as essays on civic
+  topics.
+- **Blocks:** the "Weighting" clause of every unit's `**Assessment blueprint**` and `:26`.
+
+## G-2026-218 - GCCE-400 reading list: three of seven guide entries cannot be shown to exist
+- **Status:** open
+- **Raised by:** `D-2026-0086` (agent:evaluator, 2026-11-18), GCCE-400 intake
+- **Detail:**
+  - Pike and Selby, "Globalization and Citizenship: In the Pursuit of a Cosmopolitan Education"
+    (`4TH SEMESTER.txt:183`); Feldpausch and Omilian, "Community Engagement: Principles, Strategies,
+    and Practices" (`:184`); Clarke and Steckel, "Creating Social Change: A Blueprint for a Better
+    World" (`:185`): Open Library search returns 0 results for each (2026-11-18). The spec leaves
+    them unbound (`content-spec.md:60-62`).
+  - Of the four real entries: "Civics Today" (`:179`) names no edition and is a United States
+    school text; Youniss and Levine (`:181`) resolve only under the title "Engaging young people in
+    civic life" (Open Library `OL18582528W`). All four are print-only (title-level under
+    `D-2026-0001`).
+- **Needed from the owner:** the intended works for `:183-185` (or confirmation they may stay
+  unbound), the edition of "Civics Today", and confirmation that `:181` is the Vanderbilt 2009 book.
+- **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
+
+## G-2026-219 - GENT-401 credit hours: guide 03, Scheme 2 (2-0)
+- **Status:** open
+- **Raised by:** `D-2026-0087` (agent:evaluator, 2026-11-18), GENT-401 intake
+- **Detail:** the guide gives "Credit Hours 03" (`4TH SEMESTER.txt:311`); the revised Scheme gives
+  `2 (2-0)` for GENT-401, Semester IV row 2 (`B.Ed 4 Year 2026 revised after board.txt:321-331`).
+  Code and title agree. The spec adopts the Scheme value, citing `D-2026-0053` item 3, which
+  ruled EFMP-305 only (`specs/content/gent-401/content-spec.md:12`). Article II.3: which document
+  governs is the owner's ruling. The Scheme's Semester IV total of 16 assumes 2.
+- **Needed from the owner:** the credit hours for GENT-401.
+- **Blocks:** the catalog `credit_hours` value and the spec's depth budgets.
+
+## G-2026-220 - GENT-401 intake: the seven-unit partition is the spec's construction over a bare week table
+- **Status:** open
+- **Raised by:** `D-2026-0087` (agent:evaluator, 2026-11-18), GENT-401 intake
+- **Detail:** the guide gives sixteen titled weeks and no unit headings (`4TH SEMESTER.txt:326-391`).
+  The spec groups the fourteen content weeks into seven units of two weeks (1-2, 3-4, 5-6, 7+9,
+  10-11, 12-13, 14-15), one topic per week, joining Weeks 7 and 9 across the mid-term because the
+  guide splits "Business Plan Development" there (`content-spec.md:62-72`, drafting note 2).
+  `D-2026-0070` item 1 allows grouping for such guides but confirmed only the Semester 2 groupings.
+- **Needed from the owner:** confirm the grouping or give another.
+- **Blocks:** every unit's composition and topic list; the coverage, outcome and blueprint
+  approvals in `D-2026-0087` hold for the partition as drafted.
+
+## G-2026-221 - EFMP-408 Topic 6.4 rests on an "owner decision 2026-09-13" that no register records
+- **Status:** open
+- **Raised by:** `D-2026-0088` (agent:evaluator, 2026-11-18), EFMP-408 intake
+- **Detail:**
+  - Topic 6.4 "Assessment policy and practice in Pakistan" (U6-10 policy and practice in government and private schools,
+    U6-11 NPSTP Standard 5, U6-12 test-based versus assessment-based cultures) and SLO 6-4 are not
+    in the 2026 guide (`4TH SEMESTER.txt:216-280`); the spec says so and marks them enrichment for
+    licence objective 5 (`specs/content/efmp-408/content-spec.md:67-85`, `:357-359`, drafting
+    note 4).
+  - The spec cites an "owner decision, 2026-09-13". No such entry exists in
+    `specs/decisions/log.md` or in any bound input; the 2026-09-13 notes in
+    `specs/content/licence-blueprint.md` concern supplying and storing the 2025 guides.
+  - The named sources exist (`course-guides-2025/ClassroomAssess_Sept13.txt:264-296`, `:345`),
+    and the blueprint maps objective 5 to `EFMP-408; EFMP-303` (`licence-blueprint.md:254`).
+- **Needed from the owner:** confirm (and record) that Topic 6.4 is carried in EFMP-408 as
+  enrichment, or move objective 5 to `EFMP-303`.
+- **Blocks:** Topic 6.4, its three rows, SLO 6-4 and figures fig-U6-7/8; with them Unit 6's
+  four-topic formative count (`G-2026-214`).
+
+## G-2026-222 - EFMP-408 intake: the six-unit partition is the spec's construction over a bare week table
+- **Status:** open
+- **Raised by:** `D-2026-0088` (agent:evaluator, 2026-11-18), EFMP-408 intake
+- **Detail:** the guide gives sixteen titled weeks and no unit headings (`4TH SEMESTER.txt:216-280`).
+  The spec groups the fourteen content weeks into six units (Weeks 1-2, 3-4, 5-7, 9-10, 11-12,
+  13-15) and splits Weeks 2, 4, 7, 9 and 12 into two topics each (drafting note 2), giving 3, 3,
+  4, 3, 3 and 4 topics (Unit 6 including Topic 6.4). The grouping dates from the 2026-09-14 draft
+  and has never been ruled.
+- **Needed from the owner:** confirm the grouping and topic split, or give another.
+- **Blocks:** every unit's composition and topic list; the coverage, outcome and blueprint
+  approvals in `D-2026-0088` hold for the partition as drafted.
+
+## G-2026-223 - EFMP-408 reading list: one of the guide's four links identifies a work
+- **Status:** open
+- **Raised by:** `D-2026-0088` (agent:evaluator, 2026-11-18), EFMP-408 intake
+- **Detail:** the guide prints four bare links (`4TH SEMESTER.txt:299-302`). `:299` is a copy of
+  Scheerens, Glas and Thomas, *Educational Evaluation, Assessment, and Monitoring* (verified from
+  the PDF), on an unrelated repository and very likely unauthorised; `:300` (Utkal DDCE "CORE_5")
+  refuses scripted access and is unidentified; `:301` is an anonymous Scribd upload and `:302` a
+  SlideShare deck, neither citable. The spec's substance rests on author-selected sources,
+  chiefly the two 2013 HEC course guides (`content-spec.md:391-412`).
+- **Needed from the owner:** whether the course may be authored against the author-selected list
+  with Scheerens as the one guide-listed work; what `:300` is (a hand check); and whether the
+  guide's list should be corrected at source.
+- **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
+
+## G-2026-224 - EFMP-409 topic partition: unlabelled list groups read as weeks and as topics
+- **Status:** open
+- **Raised by:** `D-2026-0089` (agent:evaluator, 2026-11-18), EFMP-409 intake
+- **Detail:**
+  - The guide's five units are approved. In `Scheme-and-Course-guides/4TH SEMESTER.docx` each
+    unit's numbered items are divided by empty numbered paragraphs into groups of three, 16 groups
+    in all (2, 2, 6, 3, 3), verified by the evaluator. The guide prints no week labels and no
+    N.k section numbers (`4TH SEMESTER.txt:434-510`).
+  - The spec reads each group as a week and makes each group a topic
+    (`specs/content/efmp-409/content-spec.md:90-100`, drafting note 2), leaving no review or
+    examination week and giving Unit 3 six topics.
+  - Under `D-2026-0070` item 1 a topic is a numbered section; here the alternative is one topic
+    per item (6, 6, 18, 9, 9 topics).
+- **Needed from the owner:** confirm groups as weeks and as topics, or give another rule.
+- **Blocks:** every unit's topic list and the week column; Unit 3's topic count and with it
+  `G-2026-214`.
+
+## G-2026-225 - EFMP-409: two guide items reworded or identified by the drafter
+- **Status:** open
+- **Raised by:** `D-2026-0089` (agent:evaluator, 2026-11-18), EFMP-409 intake
+- **Detail:**
+  - U4-06 renders the guide's "A critical analysis of the Last Sermon" (`4TH SEMESTER.txt:492`)
+    as "An analysis of the Last Sermon's educational principles" (drafting note 8).
+  - U5-06 reads the guide's "A critical review of the 1978-80 policy" (`:506`) as the National
+    Education Policy 1979; PIE also lists a "National Education Policy 1972-1980" (drafting
+    note 6).
+- **Needed from the owner:** confirm or correct both readings.
+- **Blocks:** rows U4-06 and U5-06 and the SLOs and figures that use them.
+
+## G-2026-226 - EFMP-409 reading list: two guide books do not resolve as printed, one is left unbound, and none covers Units 4-5
+- **Status:** open
+- **Raised by:** `D-2026-0089` (agent:evaluator, 2026-11-18), EFMP-409 intake
+- **Detail:**
+  - `4TH SEMESTER.txt:514` "Canestrari & Marlowe (2009) Foundations of education: An anthology of
+    critical readings": Open Library holds "Educational foundations" (2003, 2010), no 2009 record
+    under the printed title.
+  - `:517` "Murphy (2005) Foundations: Introduction to Teaching": the only match is a video-workshop
+    companion (`OL24163943W`).
+  - `:516` Holt & Kysilka is real but left unbound by the drafter as fitting no topic.
+  - `:518` Provenzo is printed 2005; the record is 2006. `:522` is a broken URL.
+  - No guide entry treats Unit 4 (Islamic perspectives) or Unit 5 (Pakistani reports and
+    policies).
+- **Needed from the owner:** the intended Canestrari/Marlowe edition and Murphy work; whether a
+  guide-listed book may stay unbound; confirmation that Units 4-5 rest on author-selected sources.
+- **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
+
+## G-2026-227 - School Observation: the Scheme prints "EFPC-4--", the guide "EFPC-411"
+- **Status:** open
+- **Raised by:** `D-2026-0090` (agent:evaluator, 2026-11-18), EFPC-411 intake
+- **Detail:** the final-authority Scheme lists "EFPC-4--, School Observation, 2 (0-2), Major:
+  Practical Course-I, All departments" in Semester IV (`B.Ed 4 Year 2026 revised after
+  board.txt:357-367`); the guide gives "EFPC- 411", 02 (0-2), 4th semester
+  (`4TH SEMESTER.txt:544-546`). Title, credits and semester agree; the Scheme gives no number. The
+  spec and the licence blueprint use EFPC-411. Later semesters' practicums are also blank in the
+  Scheme ("EFPC-", "EFPC-6--", `:584`, `:667`, `:775`), so the ruling may recur.
+- **Needed from the owner:** the course code for School Observation (and, if convenient, a rule for
+  the other blank EFPC codes).
+- **Blocks:** the catalog entry, the `docs/semester-4/<code>/` path and the spec's `course_code`.
+
+## G-2026-228 - EFPC-411 partition: a third unit from unheaded portfolio weeks, and Weeks 13-16
+- **Status:** open
+- **Raised by:** `D-2026-0090` (agent:evaluator, 2026-11-18), EFPC-411 intake
+- **Detail:** the guide heads "Task - 01" (Weeks 1-4, `4TH SEMESTER.txt:558`) and "UNIT # 02"
+  (Weeks 5-8, `:587`); Weeks 9-12 (portfolio, `:618-691`) carry no heading, so read literally they
+  belong to UNIT # 02. The spec makes them a third unit (drafting note 2) and makes each week a
+  topic (four topics per unit). Weeks 13-16 are not in the guide; the viva (`:711`) may fall
+  there.
+- **Needed from the owner:** two or three units; topics per week or otherwise; and whether Weeks
+  13-16 carry anything.
+- **Blocks:** Unit 3's existence, every topic list, and with them the four-topic formative
+  question (`G-2026-214`) for this course.
+
+## G-2026-229 - EFPC-411 reading list: three guide entries left unbound, ELT texts used in part, one imprint unverified
+- **Status:** open
+- **Raised by:** `D-2026-0090` (agent:evaluator, 2026-11-18), EFPC-411 intake
+- **Detail:** the guide's list (`4TH SEMESTER.txt:693-705`) resolves for the HEC 2013 guides (PDFs
+  HTTP 200), Richards & Lockhart (`OL15053472W`) and the ELT texts. The spec leaves HEC
+  Foundations (`:702`), HEC Teaching Literacy Skills (`:701`) and the unlinked HEC 2016 practicum
+  guides (`:694-695`) unbound as matching no topic, and uses Harmer, Brown and Scrivener only for
+  general chapters. McBurney-Fry (`:696`, "Thomson Social Science Press", 2002) returns no Open
+  Library record; the spec reports a 2005 Social Science Press edition.
+- **Needed from the owner:** whether guide-listed entries may stay unbound; the McBurney-Fry
+  edition.
+- **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
+
+## G-2026-230 - Teaching of Science code: guide EFPG-402, Scheme MFPG-402
+- **Status:** open
+- **Raised by:** `D-2026-0091` (agent:evaluator, 2026-11-18), MFPG-402 intake
+- **Detail:** the guide gives "Course code: EFPG-402", 3 (3+0), "Pedagogy Course"
+  (`4TH SEMESTER.txt:719-722`); the final-authority Scheme gives "MFPG-402, Teaching of Science,
+  3 (3-0), Major: Pedagogy Course - II, STE" (`B.Ed 4 Year 2026 revised after board.txt:369-380`).
+  Title, credits and category agree. The spec follows the Scheme (`specs/content/mfpg-402/content-spec.md:12`);
+  the guide's prefix matches the EFPG pedagogy series (EFPG-401, EFPG-505, EFPG-506). Article II.3:
+  the owner rules guide-vs-scheme code conflicts case by case (cf. `G-2026-02`).
+- **Needed from the owner:** the course code.
+- **Blocks:** the catalog entry, the `docs/semester-4/<code>/` path, the spec's `course_code` and
+  every SLO identifier.
+
+## G-2026-231 - Teaching of Science reading list: Indian sources, three books bound title-level with no registry record, NCERT replaced by Pakistan's curriculum
+- **Status:** open
+- **Raised by:** `D-2026-0091` (agent:evaluator, 2026-11-18), MFPG-402 intake
+- **Detail:**
+  - The guide's books, journals and websites are Indian, apart from Khan Academy
+    (`4TH SEMESTER.txt:814-833`).
+  - Das (`OL13678681W`) and Yadav (`OL10226886W`) resolve. Kochhar (`:818`) and Aggarwal (`:820`)
+    return no matching Open Library record (re-checked 2026-11-18), nor, per the spec, does Vaidya
+    (`:819`); the spec binds all three "title-level only (`D-2026-0001`)". `D-2026-0001` covers an
+    unretrievable source, not one that cannot be shown to exist.
+  - The spec leaves the NCERT position paper, NCERT textbooks and Indian journals unbound and
+    binds Pakistan's National Curriculum 2022-23 and the Sindh DCAR curriculum instead (drafting
+    note 4).
+- **Needed from the owner:** whether unverified guide books may be bound title-level; whether
+  Pakistan's curriculum may stand in for the guide's NCERT material.
+- **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
+
+## G-2026-232 - Teaching of Science: the guide says "secondary level" in an elementary programme
+- **Status:** open
+- **Raised by:** `D-2026-0091` (agent:evaluator, 2026-11-18), MFPG-402 intake
+- **Detail:** objective 2 (`4TH SEMESTER.txt:731`), section 1.3 (`:742`), 2.2 (`:749`) and 6.1
+  (`:782`) name "secondary" level; the programme is B.Ed (Elementary). The spec keeps "secondary"
+  in U1-05 and U2-02 with a note, rewrites 6.1 as "in school education" (U6-01), and sets examples
+  in Grade 4-8 General Science (drafting note 3).
+- **Needed from the owner:** the level the course teaches to, and whether guide wording may be
+  changed to match it.
+- **Blocks:** U6-01's wording and the framing of U1-05, U2-02 and objective 2.
+
+## G-2026-233 - GUHQ-400 topic partition: weeks as topics over partially numbered items
+- **Status:** open
+- **Raised by:** `D-2026-0092` (agent:evaluator, 2026-11-18), GUHQ-400 intake
+- **Detail:** the guide's four units are approved. Its items are numbered only in places (1.5,
+  1.12-1.13, 2.1-2.2, 2.7-2.8; `4TH SEMESTER.txt:25`, `:41-42`, `:46-47`, `:56-57`), so
+  `D-2026-0070` item 1 cannot apply literally. The spec makes each week a topic, with identical
+  Weeks 9-10 as one topic (2.3), giving 6, 3, 4 and 2 topics (`specs/content/guhq-400/content-spec.md:65-72`,
+  drafting notes 2 and 6). The same design was accepted for GUHQ-301 only, by approving that spec
+  as drafted (`G-2026-206`).
+- **Needed from the owner:** confirm weeks as topics for GUHQ-400 (and Topic 2.3 spanning Weeks
+  9-10), or give another rule; or say whether `G-2026-206`'s acceptance extends to Fehm-e-Quran II.
+- **Blocks:** every unit's topic list and the week column; the Unit 1 and Unit 3 formative counts
+  (`G-2026-214`) for this course.
+
+## G-2026-234 - GUHQ-400 reading list: six guide entries shared with GUHQ-301 still identify no single work
+- **Status:** open
+- **Raised by:** `D-2026-0092` (agent:evaluator, 2026-11-18), GUHQ-400 intake
+- **Detail:** the guide's list (`4TH SEMESTER.txt:86-99`) repeats GUHQ-301's six entries
+  (Muallim-ul-Quran in five forms, two categories, Tafseer Talim-ul-Quran, Mafhoom-al-Quran) and
+  adds three real works (Badawi & Abdel Haleem, Ibn Kathir, Maududi). `G-2026-208` was resolved by
+  approving GUHQ-301's spec as drafted; the GUHQ-400 spec carries that treatment over
+  (`content-spec.md:39-47`), including leaving Mafhoom-al-Quran unbound.
+- **Needed from the owner:** whether the GUHQ-301 acceptance extends to the same entries in
+  GUHQ-400, or the intended works and editions.
+- **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
