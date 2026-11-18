@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Lesson stages with a pupil activity at each stage</title>
+  <desc id="d">Table of five lesson stages showing the pupil activity at each stage and what it achieves, from a warm-up game to a review quiz.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="480"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">A 35-Minute Lesson with an Activity at Every Stage</text>
+  <text class="small" x="390" y="54" text-anchor="middle">Grade 5 topic: My Village</text>
+
+  <rect class="panel" x="30" y="70" width="720" height="32" rx="4"/>
+  <text class="sh" x="45" y="91">Stage</text>
+  <text class="sh" x="175" y="91">Pupil activity</text>
+  <text class="sh" x="475" y="91">What it achieves</text>
+
+  <rect class="panel-a" x="30" y="110" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="134">Warm-up</text>
+  <text class="small" x="45" y="152">4 min</text>
+  <text class="body" x="175" y="134">Name five things they can see</text>
+  <text class="body" x="175" y="152">from the classroom window</text>
+  <text class="body" x="475" y="134">Settles the class and activates</text>
+  <text class="body" x="475" y="152">words they already know</text>
+
+  <rect class="panel-b" x="30" y="180" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="204">Presentation</text>
+  <text class="small" x="45" y="222">7 min</text>
+  <text class="body" x="175" y="204">Look at three pictures of a village</text>
+  <text class="body" x="175" y="222">and guess two new words</text>
+  <text class="body" x="475" y="204">Introduces new vocabulary</text>
+  <text class="body" x="475" y="222">through context, not translation</text>
+
+  <rect class="panel-c" x="30" y="250" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="274">Practice</text>
+  <text class="small" x="45" y="292">10 min</text>
+  <text class="body" x="175" y="274">In pairs, ask and answer</text>
+  <text class="body" x="175" y="292">"Is there a ... in your village?"</text>
+  <text class="body" x="475" y="274">Controls the new structure so</text>
+  <text class="body" x="475" y="292">every pupil says it several times</text>
+
+  <rect class="panel-d" x="30" y="320" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="344">Production</text>
+  <text class="small" x="45" y="362">10 min</text>
+  <text class="body" x="175" y="344">In groups of four, describe</text>
+  <text class="body" x="175" y="362">their own village to the group</text>
+  <text class="body" x="475" y="344">Uses the language freely for a</text>
+  <text class="body" x="475" y="362">real communicative purpose</text>
+
+  <rect class="panel-a" x="30" y="390" width="720" height="62" rx="4"/>
+  <text class="sh" x="45" y="414">Review</text>
+  <text class="small" x="45" y="432">4 min</text>
+  <text class="body" x="175" y="414">Write three true sentences and</text>
+  <text class="body" x="175" y="432">read one aloud</text>
+  <text class="body" x="475" y="414">Checks learning and gives the</text>
+  <text class="body" x="475" y="432">teacher evidence to act on</text>
+
+  <text class="wm" x="768" y="470" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
