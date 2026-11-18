@@ -1,6 +1,6 @@
 ---
 course_code: EFPC-411
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---
@@ -206,8 +206,8 @@ Guide Weeks 9-12 "Organizing portfolio" to "Reflective practice and portfolio co
 | U3-05 | Week 10 (`:648-654`) | 3.2 | Reflective entry: analysing the strategies observed, what worked and why; evidence to include |
 | U3-06 | Week 11 (`:657-665`) | 3.3 | Compiling classroom-management and assessment records, including feedback given to pupils |
 | U3-07 | Week 11 (`:667-673`) | 3.3 | Reflective entry: comparing management styles and personal learning; evidence to include |
-| U3-08 | Week 12 (`:676-683`) | 3.4 | Completing the portfolio: sequence, final documentation of professionalism, interaction and inclusion |
-| U3-09 | Week 12 (`:678, 684-687`) | 3.4 | The final reflective report: overall learning, strengths, areas for improvement, action plan |
+| U3-08 | Week 12 (`:676-677, 680-683`) | 3.4 | Completing the portfolio: organising documents in sequence; final documentation of professionalism, interaction and inclusion |
+| U3-09 | Week 12 (`:678-679, 684-691`) | 3.4 | The final reflective report and learning summary (overall learning, strengths, areas for improvement, action plan); evidence to include: final report, weekly reflections, attendance verification |
 
 ### Topic list
 

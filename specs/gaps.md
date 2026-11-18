@@ -2564,7 +2564,7 @@ Recorded by `agent:evaluator` under `D-2026-0071`, bound to
 
 ## G-2026-156 - EFMP-406 has no `catalog/courses.json` entry; adding one re-opens every bound G2/G3 manifest
 
-- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0075`; insertion waits for per-course evidence binding)
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`: the entry was inserted by `5beb6f285` on 2026-11-02)
 - **Gate:** G0 intake, `identity` criterion
 - **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
 - **Detail:** `catalog/courses.json` Semester 3 is empty. The `_note` calls Semesters 3-8
@@ -2662,7 +2662,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-165 - EFMP-407 is not in `catalog/courses.json`, and adding it re-opens every bound G2/G3 manifest
 
-- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0076`; insertion waits for per-course evidence binding)
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`: the entry was inserted by `5beb6f285` on 2026-11-02)
 - **Gate:** G0 intake (identity criterion)
 - **Source:** `D-2026-0076`
 - **Detail:** The identity criterion compares `catalog/courses.json` with the guide and the
@@ -2801,7 +2801,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-175 - EFPG-401 is not in `catalog/courses.json`; its entry and `bilingual` flag need an owner ruling
 
-- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0077`; insertion waits for per-course evidence binding)
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`: the entry was inserted by `5beb6f285` on 2026-11-02)
 - **Gate:** G0 intake (identity criterion)
 - **Source:** `D-2026-0077`
 - **Detail:** The guide (`3rd 2026.txt:6-15`) and the revised Scheme (`B.Ed 4 Year 2026 revised
@@ -2900,7 +2900,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-185 - GICP-400 has no `catalog/courses.json` entry; adding one re-opens every bound G2/G3 manifest
 
-- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0078`; insertion waits for per-course evidence binding)
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`: the entry was inserted by `5beb6f285` on 2026-11-02)
 - **Gate:** G0 intake (identity criterion)
 - **Source:** `D-2026-0078`
 - **Detail:** The `catalog/courses.json` Semester 3 group is empty. The spec states a "Proposed
@@ -3044,7 +3044,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-196 - GISS-401 has no `catalog/courses.json` entry; adding one re-opens bound evidence corpus-wide
 
-- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0079`; insertion waits for per-course evidence binding)
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`: the entry was inserted by `5beb6f285` on 2026-11-02)
 - **Gate:** G0 intake (identity criterion)
 - **Source:** `D-2026-0079`
 - **Detail:** `catalog/courses.json:109-113` lists Semester 3 with `"courses": []`. The spec
@@ -3087,7 +3087,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 ---
 
 ## G-2026-205 - GUHQ-301 has no `catalog/courses.json` entry; adding one re-opens bound G2/G3 manifests
-- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0080`; insertion waits for per-course evidence binding)
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`: the entry was inserted by `5beb6f285` on 2026-11-02)
 - **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
 - **Detail:**
   - The identity values are settled: `G-2026-04` rules GUHQ-301, Fehm-e-Quran I, Semester III,
@@ -3212,7 +3212,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 ---
 
 ## G-2026-211 - Semester 4: six courses have no `catalog/courses.json` entry; adding them re-opens bound evidence
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0086`, `D-2026-0087`, `D-2026-0089`, `D-2026-0090`, `D-2026-0091`,
   `D-2026-0092` (agent:evaluator, 2026-11-18), Semester 4 intakes
 - **Detail:**
@@ -3239,7 +3239,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   courses.
 
 ## G-2026-212 - Semester 4: author-selected readings and the open-access floor rely on `D-2026-0053` item 2, scoped to Semester 2
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0086` to `D-2026-0092` (agent:evaluator, 2026-11-18), all seven Semester 4
   intakes
 - **Detail:**
@@ -3259,7 +3259,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   specs.
 
 ## G-2026-213 - Semester 4: derived sub-topics rely on `D-2026-0053` item 4, scoped to Semester 2
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0086`, `D-2026-0087`, `D-2026-0089` (agent:evaluator, 2026-11-18)
 - **Detail:** checklist rows with no guide line, each derived "under `D-2026-0053` item 4" and
   naming an outcome:
@@ -3278,7 +3278,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the five rows and the SLO clauses that name them.
 
 ## G-2026-214 - Semester 4: formative item counts for units of four to seven topics
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0086`, `D-2026-0088` to `D-2026-0092` (agent:evaluator, 2026-11-18)
 - **Detail:**
   - `D-2026-0072` (corpus-wide) gives 9 formative items to three-topic units and "does not rule on
@@ -3298,7 +3298,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the formative line of each unit listed.
 
 ## G-2026-215 - GCCE-400 topic partition: a week/section hybrid, where `D-2026-0070` item 1's "Topic N.k teaches guide section N.k" cannot apply literally
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0086` (agent:evaluator, 2026-11-18), GCCE-400 intake
 - **Detail:**
   - The guide's seven units are approved. Its numbered sections are numbered by week, not by unit
@@ -3316,7 +3316,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   reading-minute bands and bank distributions, Units 1-7; with them `G-2026-214`'s Unit 7 count.
 
 ## G-2026-216 - GCCE-400: the guide schedules Weeks 1-12 only
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0086` (agent:evaluator, 2026-11-18), GCCE-400 intake
 - **Detail:** the guide's schedule ends at Week 12 (`4TH SEMESTER.txt:165-169`). The spec invents
   nothing for Weeks 13-16 (drafting note 2) and suggests they may be practical weeks for this
@@ -3326,7 +3326,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** nothing in the spec as drafted; only the completeness of the course calendar.
 
 ## G-2026-217 - GCCE-400 assessment: the guide gives marks the spec says it does not, and its essay wording names philosophy
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0086` (agent:evaluator, 2026-11-18), GCCE-400 intake
 - **Detail:**
   - The guide allots participation 10, reflection papers 10, a mid-term essay "on a selected
@@ -3342,7 +3342,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the "Weighting" clause of every unit's `**Assessment blueprint**` and `:26`.
 
 ## G-2026-218 - GCCE-400 reading list: three of seven guide entries cannot be shown to exist
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0086` (agent:evaluator, 2026-11-18), GCCE-400 intake
 - **Detail:**
   - Pike and Selby, "Globalization and Citizenship: In the Pursuit of a Cosmopolitan Education"
@@ -3359,7 +3359,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
 
 ## G-2026-219 - GENT-401 credit hours: guide 03, Scheme 2 (2-0)
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0087` (agent:evaluator, 2026-11-18), GENT-401 intake
 - **Detail:** the guide gives "Credit Hours 03" (`4TH SEMESTER.txt:311`); the revised Scheme gives
   `2 (2-0)` for GENT-401, Semester IV row 2 (`B.Ed 4 Year 2026 revised after board.txt:321-331`).
@@ -3370,7 +3370,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the catalog `credit_hours` value and the spec's depth budgets.
 
 ## G-2026-220 - GENT-401 intake: the seven-unit partition is the spec's construction over a bare week table
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0087` (agent:evaluator, 2026-11-18), GENT-401 intake
 - **Detail:** the guide gives sixteen titled weeks and no unit headings (`4TH SEMESTER.txt:326-391`).
   The spec groups the fourteen content weeks into seven units of two weeks (1-2, 3-4, 5-6, 7+9,
@@ -3382,7 +3382,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   approvals in `D-2026-0087` hold for the partition as drafted.
 
 ## G-2026-221 - EFMP-408 Topic 6.4 rests on an "owner decision 2026-09-13" that no register records
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0088` (agent:evaluator, 2026-11-18), EFMP-408 intake
 - **Detail:**
   - Topic 6.4 "Assessment policy and practice in Pakistan" (U6-10 policy and practice in government and private schools,
@@ -3401,7 +3401,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   four-topic formative count (`G-2026-214`).
 
 ## G-2026-222 - EFMP-408 intake: the six-unit partition is the spec's construction over a bare week table
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0088` (agent:evaluator, 2026-11-18), EFMP-408 intake
 - **Detail:** the guide gives sixteen titled weeks and no unit headings (`4TH SEMESTER.txt:216-280`).
   The spec groups the fourteen content weeks into six units (Weeks 1-2, 3-4, 5-7, 9-10, 11-12,
@@ -3413,7 +3413,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   approvals in `D-2026-0088` hold for the partition as drafted.
 
 ## G-2026-223 - EFMP-408 reading list: one of the guide's four links identifies a work
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0088` (agent:evaluator, 2026-11-18), EFMP-408 intake
 - **Detail:** the guide prints four bare links (`4TH SEMESTER.txt:299-302`). `:299` is a copy of
   Scheerens, Glas and Thomas, *Educational Evaluation, Assessment, and Monitoring* (verified from
@@ -3427,7 +3427,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
 
 ## G-2026-224 - EFMP-409 topic partition: unlabelled list groups read as weeks and as topics
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0089` (agent:evaluator, 2026-11-18), EFMP-409 intake
 - **Detail:**
   - The guide's five units are approved. In `Scheme-and-Course-guides/4TH SEMESTER.docx` each
@@ -3444,7 +3444,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   `G-2026-214`.
 
 ## G-2026-225 - EFMP-409: two guide items reworded or identified by the drafter
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0089` (agent:evaluator, 2026-11-18), EFMP-409 intake
 - **Detail:**
   - U4-06 renders the guide's "A critical analysis of the Last Sermon" (`4TH SEMESTER.txt:492`)
@@ -3456,7 +3456,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** rows U4-06 and U5-06 and the SLOs and figures that use them.
 
 ## G-2026-226 - EFMP-409 reading list: two guide books do not resolve as printed, one is left unbound, and none covers Units 4-5
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0089` (agent:evaluator, 2026-11-18), EFMP-409 intake
 - **Detail:**
   - `4TH SEMESTER.txt:514` "Canestrari & Marlowe (2009) Foundations of education: An anthology of
@@ -3473,7 +3473,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
 
 ## G-2026-227 - School Observation: the Scheme prints "EFPC-4--", the guide "EFPC-411"
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0090` (agent:evaluator, 2026-11-18), EFPC-411 intake
 - **Detail:** the final-authority Scheme lists "EFPC-4--, School Observation, 2 (0-2), Major:
   Practical Course-I, All departments" in Semester IV (`B.Ed 4 Year 2026 revised after
@@ -3486,7 +3486,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the catalog entry, the `docs/semester-4/<code>/` path and the spec's `course_code`.
 
 ## G-2026-228 - EFPC-411 partition: a third unit from unheaded portfolio weeks, and Weeks 13-16
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0090` (agent:evaluator, 2026-11-18), EFPC-411 intake
 - **Detail:** the guide heads "Task - 01" (Weeks 1-4, `4TH SEMESTER.txt:558`) and "UNIT # 02"
   (Weeks 5-8, `:587`); Weeks 9-12 (portfolio, `:618-691`) carry no heading, so read literally they
@@ -3499,7 +3499,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   question (`G-2026-214`) for this course.
 
 ## G-2026-229 - EFPC-411 reading list: three guide entries left unbound, ELT texts used in part, one imprint unverified
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0090` (agent:evaluator, 2026-11-18), EFPC-411 intake
 - **Detail:** the guide's list (`4TH SEMESTER.txt:693-705`) resolves for the HEC 2013 guides (PDFs
   HTTP 200), Richards & Lockhart (`OL15053472W`) and the ELT texts. The spec leaves HEC
@@ -3512,7 +3512,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
 
 ## G-2026-230 - Teaching of Science code: guide EFPG-402, Scheme MFPG-402
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0091` (agent:evaluator, 2026-11-18), MFPG-402 intake
 - **Detail:** the guide gives "Course code: EFPG-402", 3 (3+0), "Pedagogy Course"
   (`4TH SEMESTER.txt:719-722`); the final-authority Scheme gives "MFPG-402, Teaching of Science,
@@ -3525,7 +3525,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   every SLO identifier.
 
 ## G-2026-231 - Teaching of Science reading list: Indian sources, three books bound title-level with no registry record, NCERT replaced by Pakistan's curriculum
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0091` (agent:evaluator, 2026-11-18), MFPG-402 intake
 - **Detail:**
   - The guide's books, journals and websites are Indian, apart from Khan Academy
@@ -3542,7 +3542,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
 
 ## G-2026-232 - Teaching of Science: the guide says "secondary level" in an elementary programme
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0091` (agent:evaluator, 2026-11-18), MFPG-402 intake
 - **Detail:** objective 2 (`4TH SEMESTER.txt:731`), section 1.3 (`:742`), 2.2 (`:749`) and 6.1
   (`:782`) name "secondary" level; the programme is B.Ed (Elementary). The spec keeps "secondary"
@@ -3553,7 +3553,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** U6-01's wording and the framing of U1-05, U2-02 and objective 2.
 
 ## G-2026-233 - GUHQ-400 topic partition: weeks as topics over partially numbered items
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0092` (agent:evaluator, 2026-11-18), GUHQ-400 intake
 - **Detail:** the guide's four units are approved. Its items are numbered only in places (1.5,
   1.12-1.13, 2.1-2.2, 2.7-2.8; `4TH SEMESTER.txt:25`, `:41-42`, `:46-47`, `:56-57`), so
@@ -3567,7 +3567,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   (`G-2026-214`) for this course.
 
 ## G-2026-234 - GUHQ-400 reading list: six guide entries shared with GUHQ-301 still identify no single work
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-18, `D-2026-0093`)
 - **Raised by:** `D-2026-0092` (agent:evaluator, 2026-11-18), GUHQ-400 intake
 - **Detail:** the guide's list (`4TH SEMESTER.txt:86-99`) repeats GUHQ-301's six entries
   (Muallim-ul-Quran in five forms, two categories, Tafseer Talim-ul-Quran, Mafhoom-al-Quran) and

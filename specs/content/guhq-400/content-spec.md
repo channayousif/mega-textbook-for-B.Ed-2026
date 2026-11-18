@@ -1,6 +1,6 @@
 ---
 course_code: GUHQ-400
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---
@@ -9,7 +9,7 @@ open_access_floor:
 
 Semester 4, General Education, 1 (0-1) credit hour (Scheme). Source: `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt` lines 1-99; Scheme of Studies `Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt` Semester IV row 8 ("GUHQ- 400, Fehm-e-Quran - II, 1 (0-1), General Education, EC&EE").
 
-**Identity conflicts** (for intake; Article II.3 questions the drafter does not settle): the guide block gives code **GUHQ-402** and credit hours **03 (0-1)** (`:6-8`); the Scheme gives **GUHQ-400** and **1 (0-1)**. Title and semester (4th) agree. This spec uses the Scheme's code and credits, as `GUHQ-301` did for the matching conflicts in Fehm-e-Quran I (`G-2026-04`, `D-2026-0080`), and the guide for content only. `specs/gaps.md:16-20` already records GUHQ-400 as the Semester IV course after the 2026 revision.
+**Identity** (settled): the guide block prints code **GUHQ-402** and credit hours **03 (0-1)** (`:6-8`); the Scheme gives **GUHQ-400** and **1 (0-1)**. These values were adjudicated with Fehm-e-Quran I under `G-2026-04` (resolved), which treats the guide's codes and credit values as guide-side slips; this spec follows that ruling. `specs/gaps.md:16-20` records GUHQ-400 as the Semester IV course after the 2026 revision.
 
 **Proposed catalog entry** (not yet in `catalog/courses.json`: every G2 and G3 evidence manifest binds that file whole, so adding a course re-opens all reviewed units; the GUHQ-301 entry approved under `D-2026-0080` is likewise waiting for per-course evidence binding, `G-2026-205`): `{"code": "GUHQ-400", "title_en": "Fehm-e-Quran - II", "title_ur": "فہمِ قرآن - II", "credit_hours": "1 (0-1)", "category": "General Education"}` in Semester 4.
 
@@ -286,7 +286,7 @@ Guide UNIT #04, Weeks 15-16 (`:73-83`). Unit Spec (G1) for `docs/semester-4/guhq
 
 Recorded by the drafter so the intake evaluator can test them; none is settled here.
 
-1. **Identity.** Code (GUHQ-402 vs GUHQ-400) and credit hours (03 vs 1) differ between the guide and the Scheme; the spec follows the Scheme, as GUHQ-301 did for the same pattern.
+1. **Identity.** Settled by `G-2026-04` (resolved): GUHQ-400, 1 (0-1), Semester IV, as for GUHQ-301.
 2. **Weeks 9 and 10 are identical.** Both read "Past tense: first & second person forms" and "Translation practice & comprehension assessment" (`:53-57`); Week 10's items carry the numbers 2.7-2.8. The spec makes them one two-week topic (2.3) rather than repeat it. If the guide meant different content for Week 10, the owner should say what.
 3. **Week 16.** "Review of all major grammatical categories" and "Final comprehension exercises and assessment" (`:81-82`) are not content and have no checklist row; "Discussion on real-life application & practical lessons" (`:83`) is content and forms Topic 4.2.
 4. **Grammar labels in Week 11.** The guide gives "Passive voice in past tense ('maf'ul bih / maf'ul lahu')" (`:61`). In Arabic grammar *maf'ul bihi* is the direct object and *maf'ul lahu* the object of purpose; the passive verb is *fi'l majhul* and its subject the *na'ib al-fa'il*. The spec teaches the passive in the past tense and treats the guide's labels as a slip, noting that the direct object of an active verb becomes the deputy subject of the passive. A qualified reviewer should confirm.

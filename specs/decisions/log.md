@@ -4717,7 +4717,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0086 - GCCE-400 intake: identity values, unit partition, coverage, outcomes, structure and most of the blueprint approved; topic partition, calendar, weighting, U4-07, Unit 7 formative count, readings and catalog entry escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-18, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-18):** the owner approves the spec and rules every escalated item under `D-2026-0093`; the determined author repairs listed in the evaluation record were applied before the status change.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GCCE-400 Civics and Community Engagement, `specs/content/gcce-400/content-spec.md` as
   bound below. Settles only items 1-6. Settles nothing under `G-2026-211` to `G-2026-218`.
@@ -4772,7 +4773,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0087 - GENT-401 intake: code, title, coverage, outcomes, guide-listed readings, blueprint and structure approved; credit hours, partition, U2-03, author-selected readings and catalog entry escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-18, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-18):** the owner approves the spec and rules every escalated item under `D-2026-0093`; the determined author repairs listed in the evaluation record were applied before the status change.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GENT-401 Entrepreneurship, `specs/content/gent-401/content-spec.md` as bound below.
   Settles only items 1-6. Settles nothing under `G-2026-211` to `G-2026-213`, `G-2026-219` or
@@ -4818,7 +4820,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0088 - EFMP-408 intake: identity, guide coverage, outcomes, structure and most of the blueprint approved; partition, Topic 6.4, four-topic formative counts and readings escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-18, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-18):** the owner approves the spec and rules every escalated item under `D-2026-0093`; the determined author repairs listed in the evaluation record were applied before the status change. Topic 6.4 rests on the owner decision of 2026-09-13, now recorded as `D-2026-0093` item 6.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFMP-408 Educational Assessment and Evaluation, `specs/content/efmp-408/content-spec.md`
   as bound below. Settles only items 1-5. Settles nothing under `G-2026-212`, `G-2026-214`,
@@ -4863,7 +4866,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0089 - EFMP-409 intake: identity values, unit partition, guide coverage, outcomes, structure and most of the blueprint approved; topic partition, three derived rows, two rewordings, Unit 3 formative count, readings and catalog entry escalated; Unit 4 summative fails
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-18, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-18):** the owner approves the spec and rules every escalated item under `D-2026-0093`; the determined author repairs listed in the evaluation record were applied before the status change.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFMP-409 Foundations of Education, `specs/content/efmp-409/content-spec.md` as bound
   below. Settles only items 1-5. Settles nothing under `G-2026-211` to `G-2026-214` or
@@ -4908,7 +4912,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0090 - EFPC-411 intake: title and credit hours, coverage, outcomes, guide weighting, structure and most of the blueprint approved; course code, partition, four-topic formative counts, readings and catalog entry escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-18, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-18):** the owner approves the spec and rules every escalated item under `D-2026-0093`; the determined author repairs listed in the evaluation record were applied before the status change.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFPC-411 School Observation, `specs/content/efpc-411/content-spec.md` as bound below.
   Settles only items 1-5. Settles nothing under `G-2026-211`, `G-2026-212`, `G-2026-214` or
@@ -4951,7 +4956,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0091 - MFPG-402 intake: title and credit hours, unit and topic partition, coverage, outcomes, structure and most of the blueprint approved; course code, formative counts, readings, the "secondary level" question and catalog entry escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-18, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-18):** the owner approves the spec and rules every escalated item under `D-2026-0093`; the determined author repairs listed in the evaluation record were applied before the status change. The course code is ruled EFPG-402 (`D-2026-0093` item 5); the spec moved to `specs/content/efpg-402/`.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** Teaching of Science (spec code MFPG-402), `specs/content/mfpg-402/content-spec.md` as
   bound below. Settles only items 1-5. Settles nothing under `G-2026-211`, `G-2026-212`,
@@ -4995,7 +5001,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0092 - GUHQ-400 intake: identity values (per G-2026-04), unit partition, coverage with the Week 9-10 duplicate resolved, outcomes, structure and most of the blueprint approved; topic partition, formative counts, readings and catalog entry escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-18, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-18):** the owner approves the spec and rules every escalated item under `D-2026-0093`; the determined author repairs listed in the evaluation record were applied before the status change.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GUHQ-400 Fehm-e-Quran - II, `specs/content/guhq-400/content-spec.md` as bound below.
   Settles only items 1-5. Settles nothing under `G-2026-211`, `G-2026-212`, `G-2026-214`,
@@ -5040,3 +5047,21 @@ content-improvement loop with no further cycle.
   The spec may not move to `status: approved` until these are ruled and repaired and a fresh
   intake runs on a newly prepared manifest. Certifies no content, qualifies no reviewer (including
   the scholar review drafting note 8 asks for) and authorises no publication.
+
+## D-2026-0093 - Semester 4 intake: owner rulings on the G0/G1 escalations; standing rules for later semesters
+
+- **Status:** confirmed
+- **Gate:** G0 (course intake) and G1 (unit-spec)
+- **Scope:** Semester 4 courses GCCE-400, GENT-401, EFMP-408, EFMP-409, EFPC-411, EFPG-402 (Scheme MFPG-402) and GUHQ-400; gaps `G-2026-211` to `G-2026-234` raised by `D-2026-0086` to `D-2026-0092`; items 2-4 and 8 are standing rules for every later intake
+- **Decided by:** curriculum owner, 2026-11-18 (board-direct, relayed through Claude Code, answering structured questions with context and options)
+- **Decision:**
+  1. **Catalog entries (`G-2026-211`).** The six proposed entries are approved and inserted now in Scheme row order (GCCE-400, GENT-401, EFMP-409, EFPC-411, EFPG-402, GUHQ-400 beside EFMP-408). Since `5beb6f285` (2026-11-02) a unit's evidence binds only its own course's catalog entry, so the insertion stales no reviewed unit. The Semester 3 entries inserted by `5beb6f285` close `G-2026-156`, `-165`, `-175`, `-185`, `-196` and `-205`.
+  2. **Author-selected readings, standing (`G-2026-212`).** `D-2026-0053` item 2 (verified author-selected works, labelled as such, where a guide list is missing, unusable or ambiguous; at least one open-access source per unit via `open_access_floor: default: 1`) applies to Semester 4 and every later semester.
+  3. **Derived sub-topics (`G-2026-213`).** `D-2026-0053` item 4 applies to Semester 4 and later; the five derived rows are approved: GCCE-400 U4-07, GENT-401 U2-03, EFMP-409 U2-04, U3-11 and U3-19.
+  4. **Formative counts, standing (`G-2026-214`).** A unit carries 3 formative items per topic whatever its topic count, extending `D-2026-0072` to units of four or more topics. The style guide is not edited here.
+  5. **Codes and credits.** Teaching of Science is **EFPG-402**, the guide's code; the Scheme's "MFPG-402" is treated as a slip (`G-2026-230`). School Observation is **EFPC-411** (`G-2026-227`). Entrepreneurship carries **2 (2-0)**, the Scheme's value, as for EFMP-305 under `D-2026-0053` item 3 (`G-2026-219`).
+  6. **EFMP-408 Topic 6.4 (`G-2026-221`).** The owner decision of 2026-09-13 to carry licence objective 5 ("Assessment policies and practices in Pakistani schools") in EFMP-408 Topic 6.4, sourced from the 2025 `EED-411` guide and NPSTP Standard 5, is recorded here and confirmed.
+  7. **Partitions and course-specific readings.** The unit groupings of GENT-401, EFMP-408, EFMP-409 (16 list groups read as weeks) and EFPC-411 (Weeks 9-12 as Unit 3) are approved as drafted (`G-2026-220`, `-222`, `-224`, `-228`). GCCE-400 keeps the guide's twelve weeks, Weeks 13-16 being practical-activity weeks, and its 10/10/30/50 marks with "philosophical" read as civic topics (`G-2026-216`, `-217`). EFMP-409's readings of "critical analysis of the Last Sermon" (its educational principles) and "1978-80 policy" (National Education Policy 1979) are approved (`G-2026-225`). EFPG-402 keeps "secondary level" in guide-traced rows and teaches with Grade 4-8 examples (`G-2026-232`). The reading-list treatment in all seven specs is approved as drafted: unusable guide entries stay unbound, unregistered print books are title-level under `D-2026-0001`, the two unauthorised guide links are never linked, and GUHQ-301's treatment of the shared Fehm-e-Quran entries carries to GUHQ-400 (`G-2026-218`, `-223`, `-226`, `-229`, `-231`, `-234`).
+  8. **Topic rule, standing (`G-2026-215`, `G-2026-233`).** Where a guide's numbered sections are one-line items under weeks, a topic is one guide week in a multi-week unit and one numbered section in a one-week unit. `D-2026-0070` item 1 (topic N.k = section N.k) still governs guides whose sections are substantive.
+- **Basis:** owner answers of 2026-11-18 to the Semester 4 intake questions (catalog: "Approve and insert now", confirmed after the staleness consequence was stated; readings: "Extend to all semesters"; derived rows: "Allow all five"; formative: "3 per topic, any size"; codes: EFPG-402, EFPC-411, GENT 2 (2-0); Topic 6.4: "Keep, record decision"; groupings, topic rule, GCCE schedule, secondary level, readings and EFMP-409 wording as recommended).
+- **Limits:** certifies no content, qualifies no reviewer and authorises no publication. The style guide and constitution are not edited.

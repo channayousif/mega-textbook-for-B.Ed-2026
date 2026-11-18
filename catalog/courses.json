@@ -159,11 +159,53 @@
       "priority": 4,
       "courses": [
         {
+          "code": "GCCE-400",
+          "title_en": "Civics and Community Engagement",
+          "title_ur": "شہریات اور سماجی شمولیت",
+          "credit_hours": "2 (1-1)",
+          "category": "General Education"
+        },
+        {
+          "code": "GENT-401",
+          "title_en": "Entrepreneurship",
+          "title_ur": "کاروباری صلاحیت",
+          "credit_hours": "2 (2-0)",
+          "category": "General Education"
+        },
+        {
           "code": "EFMP-408",
           "title_en": "Educational Assessment and Evaluation",
           "title_ur": "تعلیمی جانچ اور تشخیص",
           "credit_hours": "3 (3-0)",
           "category": "Major: Professional"
+        },
+        {
+          "code": "EFMP-409",
+          "title_en": "Foundations of Education",
+          "title_ur": "تعلیم کی بنیادیں",
+          "credit_hours": "3 (3-0)",
+          "category": "Major: Professional"
+        },
+        {
+          "code": "EFPC-411",
+          "title_en": "School Observation",
+          "title_ur": "اسکول کا مشاہدہ",
+          "credit_hours": "2 (0-2)",
+          "category": "Major: Practical"
+        },
+        {
+          "code": "EFPG-402",
+          "title_en": "Teaching of Science",
+          "title_ur": "سائنس کی تدریس",
+          "credit_hours": "3 (3-0)",
+          "category": "Major: Pedagogy"
+        },
+        {
+          "code": "GUHQ-400",
+          "title_en": "Fehm-e-Quran - II",
+          "title_ur": "فہمِ قرآن - II",
+          "credit_hours": "1 (0-1)",
+          "category": "General Education"
         }
       ]
     },

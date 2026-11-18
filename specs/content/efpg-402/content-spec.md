@@ -1,19 +1,19 @@
 ---
-course_code: MFPG-402
-status: draft
+course_code: EFPG-402
+status: approved
 open_access_floor:
   default: 1
 ---
 
-# MFPG-402 - Teaching of Science - Content Spec
+# EFPG-402 - Teaching of Science - Content Spec
 
 Semester 4, Major: Pedagogy Course II, 3 (3-0) credit hours. Source: `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt` lines 716-833; Scheme of Studies `Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt` Semester IV row 7 ("MFPG-402, Teaching of Science, 3 (3-0), Major: Pedagogy Course - II, STE").
 
-**Identity conflict** (for intake; an Article II.3 question the drafter does not settle): the guide gives code **EFPG-402** (`:722`); the Scheme gives **MFPG-402**. Title ("Teaching of Science") and credit hours (3, "3 (3+0)" in the guide at `:720`) agree. This spec uses the Scheme's code, which the catalog note treats as the final authority, and the course directory follows it (`docs/semester-4/mfpg-402/`). The guide's EFPG-402 fits the series better (`EFPG-401` Teaching of English in Semester 3; `EFPG-505`, `EFPG-506` later), so "MFPG" may be a Scheme-side slip; see drafting note 1. If the owner rules EFPG-402, the spec moves to `specs/content/efpg-402/` and `course_code` changes before any unit is written.
+**Identity** (owner ruling, `D-2026-0093` item 5): the guide gives code **EFPG-402** (`:722`); the Scheme prints **MFPG-402**. The owner rules EFPG-402, treating "MFPG" as a Scheme-side slip: the guide's code fits the pedagogy series (`EFPG-401` Teaching of English in Semester 3; `EFPG-505`, `EFPG-506` later). Title ("Teaching of Science") and credit hours (3, "3 (3+0)" in the guide at `:720`) agree. The course directory is `docs/semester-4/efpg-402/`.
 
-**Proposed catalog entry** (not yet in `catalog/courses.json`: every G2 and G3 evidence manifest binds that file whole, so adding a course re-opens all reviewed units; awaiting an owner ruling): `{"code": "MFPG-402", "title_en": "Teaching of Science", "title_ur": "سائنس کی تدریس", "credit_hours": "3 (3-0)", "category": "Major: Pedagogy"}` in Semester 4. The Urdu title is the drafter's proposal.
+**Proposed catalog entry** (not yet in `catalog/courses.json`: every G2 and G3 evidence manifest binds that file whole, so adding a course re-opens all reviewed units; awaiting an owner ruling): `{"code": "EFPG-402", "title_en": "Teaching of Science", "title_ur": "سائنس کی تدریس", "credit_hours": "3 (3-0)", "category": "Major: Pedagogy"}` in Semester 4. The Urdu title is the drafter's proposal.
 
-**Licence axis.** `specs/content/licence-blueprint.md` (section A) maps "Instructional approaches and strategies" to `EFPG-401`, `MFPG-402`, `EFPG-505` and `EFPG-506` at course level. Units 3 and 5 carry it; no sub-topic is added for it.
+**Licence axis.** `specs/content/licence-blueprint.md` (section A) maps "Instructional approaches and strategies" to `EFPG-401`, `EFPG-402`, `EFPG-505` and `EFPG-506` at course level. Units 3 and 5 carry it; no sub-topic is added for it.
 
 ## Course-wide items
 
@@ -82,9 +82,9 @@ The guide names eight units, each with its weeks (`:738-803`), two weeks per uni
 
 ## Unit 1: Nature and Importance of Science
 
-Guide Unit 1 (Weeks 1-2, `:738-744`). Unit Spec (G1) for `docs/semester-4/mfpg-402/unit-01/`.
+Guide Unit 1 (Weeks 1-2, `:738-744`). Unit Spec (G1) for `docs/semester-4/efpg-402/unit-01/`.
 
-- **CLO/SLO refs**: `SLO:MFPG-402-1-1` (explain the meaning and characteristics of science, and science as process, product and attitude), `SLO:MFPG-402-1-2` (state the aims and values of teaching science and the role of science in society) - traces to guide objective 1.
+- **CLO/SLO refs**: `SLO:EFPG-402-1-1` (explain the meaning and characteristics of science, and science as process, product and attitude), `SLO:EFPG-402-1-2` (state the aims and values of teaching science and the role of science in society) - traces to guide objective 1.
 - **Key terms**: Science, Scientific attitude, Process skills, Values of science education.
 - **Topics**: one per guide section, Topic 1.k teaching guide section 1.k (1.1-1.5).
 - **Assessment blueprint**: formative 15 items, 3 per topic (`D-2026-0072`, extended to 5-topic units as for EFPG-401 under `D-2026-0077`) (Remember/Understand/Apply); summative includes one Analyze item asking the learner to classify ten statements about a Grade 6 lesson as science-as-process, product or attitude and justify three. Weighting: 60/40 default.
@@ -138,9 +138,9 @@ Guide Unit 1 (Weeks 1-2, `:738-744`). Unit Spec (G1) for `docs/semester-4/mfpg-4
 
 ## Unit 2: Science Curriculum and Textbook
 
-Guide Unit 2 (Weeks 3-4, `:746-752`). Unit Spec (G1) for `docs/semester-4/mfpg-402/unit-02/`.
+Guide Unit 2 (Weeks 3-4, `:746-752`). Unit Spec (G1) for `docs/semester-4/efpg-402/unit-02/`.
 
-- **CLO/SLO refs**: `SLO:MFPG-402-2-1` (explain the principles of science curriculum construction and the aims of the national science curriculum), `SLO:MFPG-402-2-2` (analyse the organisation and sequencing of content; evaluate a science textbook; relate science to other subjects) - traces to guide objectives 1 and 2.
+- **CLO/SLO refs**: `SLO:EFPG-402-2-1` (explain the principles of science curriculum construction and the aims of the national science curriculum), `SLO:EFPG-402-2-2` (analyse the organisation and sequencing of content; evaluate a science textbook; relate science to other subjects) - traces to guide objectives 1 and 2.
 - **Key terms**: Curriculum, Spiral curriculum, Sequencing, Textbook evaluation, Correlation.
 - **Topics**: one per guide section, Topic 2.k teaching guide section 2.k (2.1-2.5).
 - **Assessment blueprint**: formative 15 items, 3 per topic (`D-2026-0072`, extended to 5-topic units as for EFPG-401 under `D-2026-0077`) (Remember/Understand/Apply); summative includes one Evaluate item asking the learner to evaluate one chapter of a Sindh Grade 6 science textbook against the checklist in fig-U2-3 and the matching NCP standard. Weighting: 60/40 default.
@@ -192,9 +192,9 @@ Guide Unit 2 (Weeks 3-4, `:746-752`). Unit Spec (G1) for `docs/semester-4/mfpg-4
 
 ## Unit 3: Methods and Approaches of Teaching Science
 
-Guide Unit 3 (Weeks 5-6, `:754-762`). Unit Spec (G1) for `docs/semester-4/mfpg-402/unit-03/`.
+Guide Unit 3 (Weeks 5-6, `:754-762`). Unit Spec (G1) for `docs/semester-4/efpg-402/unit-03/`.
 
-- **CLO/SLO refs**: `SLO:MFPG-402-3-1` (describe teacher-centred and laboratory-based methods and their uses), `SLO:MFPG-402-3-2` (plan inquiry-based, discovery, experiential and project learning; choose a method for a given topic and class) - traces to guide objective 3.
+- **CLO/SLO refs**: `SLO:EFPG-402-3-1` (describe teacher-centred and laboratory-based methods and their uses), `SLO:EFPG-402-3-2` (plan inquiry-based, discovery, experiential and project learning; choose a method for a given topic and class) - traces to guide objective 3.
 - **Key terms**: Demonstration, Laboratory method, Inductive, Deductive, Inquiry, Discovery learning.
 - **Topics**: one per guide section, Topic 3.k teaching guide section 3.k (3.1-3.7).
 - **Assessment blueprint**: formative 21 items, 3 per topic (`D-2026-0072`, extended to 7-topic units as for EFPG-401 under `D-2026-0077`) (Remember/Understand/Apply); summative includes one Evaluate item asking the learner to choose and defend the best method for three given topics and class conditions (large class, no laboratory). Weighting: 60/40 default.
@@ -260,9 +260,9 @@ Guide Unit 3 (Weeks 5-6, `:754-762`). Unit Spec (G1) for `docs/semester-4/mfpg-4
 
 ## Unit 4: Teaching-Learning Resources
 
-Guide Unit 4 (Weeks 7-8, `:764-770`). Unit Spec (G1) for `docs/semester-4/mfpg-402/unit-04/`.
+Guide Unit 4 (Weeks 7-8, `:764-770`). Unit Spec (G1) for `docs/semester-4/efpg-402/unit-04/`.
 
-- **CLO/SLO refs**: `SLO:MFPG-402-4-1` (explain the importance of teaching aids; use laboratory equipment correctly), `SLO:MFPG-402-4-2` (prepare low-cost aids; use ICT, exhibitions, field trips and community resources in science teaching) - traces to guide objective 4.
+- **CLO/SLO refs**: `SLO:EFPG-402-4-1` (explain the importance of teaching aids; use laboratory equipment correctly), `SLO:EFPG-402-4-2` (prepare low-cost aids; use ICT, exhibitions, field trips and community resources in science teaching) - traces to guide objective 4.
 - **Key terms**: Teaching aid, Low-cost material, ICT, Science exhibition, Community resource.
 - **Topics**: one per guide section, Topic 4.k teaching guide section 4.k (4.1-4.5).
 - **Assessment blueprint**: formative 15 items, 3 per topic (`D-2026-0072`, extended to 5-topic units as for EFPG-401 under `D-2026-0077`) (Remember/Understand/Apply); summative includes one Create item asking the learner to design a low-cost aid for a named Grade 5 concept and explain how it will be used and checked. Weighting: 60/40 default.
@@ -314,9 +314,9 @@ Guide Unit 4 (Weeks 7-8, `:764-770`). Unit Spec (G1) for `docs/semester-4/mfpg-4
 
 ## Unit 5: Lesson Planning and Teaching Skills
 
-Guide Unit 5 (Weeks 9-10, `:772-778`). Unit Spec (G1) for `docs/semester-4/mfpg-402/unit-05/`.
+Guide Unit 5 (Weeks 9-10, `:772-778`). Unit Spec (G1) for `docs/semester-4/efpg-402/unit-05/`.
 
-- **CLO/SLO refs**: `SLO:MFPG-402-5-1` (explain the importance and types of lesson plans; write instructional objectives), `SLO:MFPG-402-5-2` (use questioning, explanation and classroom-management skills in a science lesson) - traces to guide objective 5.
+- **CLO/SLO refs**: `SLO:EFPG-402-5-1` (explain the importance and types of lesson plans; write instructional objectives), `SLO:EFPG-402-5-2` (use questioning, explanation and classroom-management skills in a science lesson) - traces to guide objective 5.
 - **Key terms**: Lesson plan, Herbartian steps, 5E model, Instructional objective, Questioning.
 - **Topics**: one per guide section, Topic 5.k teaching guide section 5.k (5.1-5.5).
 - **Assessment blueprint**: formative 15 items, 3 per topic (`D-2026-0072`, extended to 5-topic units as for EFPG-401 under `D-2026-0077`) (Remember/Understand/Apply); summative includes one Create item asking the learner to write a 5E lesson plan for a named Grade 7 topic with three measurable objectives. Weighting: 60/40 default.
@@ -371,9 +371,9 @@ Guide Unit 5 (Weeks 9-10, `:772-778`). Unit Spec (G1) for `docs/semester-4/mfpg-
 
 ## Unit 6: Maintenance and Organization of Science Laboratory
 
-Guide Unit 6 (Weeks 11-12, `:780-787`). Unit Spec (G1) for `docs/semester-4/mfpg-402/unit-06/`.
+Guide Unit 6 (Weeks 11-12, `:780-787`). Unit Spec (G1) for `docs/semester-4/efpg-402/unit-06/`.
 
-- **CLO/SLO refs**: `SLO:MFPG-402-6-1` (explain the laboratory's role; plan its layout and storage; dispose of chemicals safely; keep labels, inventory and stock registers), `SLO:MFPG-402-6-2` (apply laboratory safety rules and first aid; describe the science teacher's responsibilities in the laboratory) - traces to guide objectives 4 and 5.
+- **CLO/SLO refs**: `SLO:EFPG-402-6-1` (explain the laboratory's role; plan its layout and storage; dispose of chemicals safely; keep labels, inventory and stock registers), `SLO:EFPG-402-6-2` (apply laboratory safety rules and first aid; describe the science teacher's responsibilities in the laboratory) - traces to guide objectives 4 and 5.
 - **Key terms**: Laboratory layout, Inventory, Stock register, Hazard symbol, First aid.
 - **Topics**: one per guide section, Topic 6.k teaching guide section 6.k (6.1-6.6).
 - **Assessment blueprint**: formative 18 items, 3 per topic (`D-2026-0072`, extended to 6-topic units as for EFPG-401 under `D-2026-0077`) (Remember/Understand/Apply); summative includes one Analyze item asking the learner to identify the hazards in a described school laboratory and rank the corrective actions. Weighting: 60/40 default.
@@ -432,9 +432,9 @@ Guide Unit 6 (Weeks 11-12, `:780-787`). Unit Spec (G1) for `docs/semester-4/mfpg
 
 ## Unit 7: Assessment and Evaluation in Science
 
-Guide Unit 7 (Weeks 13-14, `:789-795`). Unit Spec (G1) for `docs/semester-4/mfpg-402/unit-07/`.
+Guide Unit 7 (Weeks 13-14, `:789-795`). Unit Spec (G1) for `docs/semester-4/efpg-402/unit-07/`.
 
-- **CLO/SLO refs**: `SLO:MFPG-402-7-1` (explain the purpose of evaluation; distinguish formative and summative assessment; choose tools and techniques), `SLO:MFPG-402-7-2` (construct an achievement test; plan diagnostic and remedial teaching) - traces to guide objective 6.
+- **CLO/SLO refs**: `SLO:EFPG-402-7-1` (explain the purpose of evaluation; distinguish formative and summative assessment; choose tools and techniques), `SLO:EFPG-402-7-2` (construct an achievement test; plan diagnostic and remedial teaching) - traces to guide objective 6.
 - **Key terms**: Evaluation, Formative assessment, Summative assessment, Achievement test, Diagnostic test, Remedial teaching.
 - **Topics**: one per guide section, Topic 7.k teaching guide section 7.k (7.1-7.5).
 - **Assessment blueprint**: formative 15 items, 3 per topic (`D-2026-0072`, extended to 5-topic units as for EFPG-401 under `D-2026-0077`) (Remember/Understand/Apply); summative includes one Create item asking the learner to build a table of specification and five items for a short Grade 6 science unit. Weighting: 60/40 default.
@@ -487,9 +487,9 @@ Guide Unit 7 (Weeks 13-14, `:789-795`). Unit Spec (G1) for `docs/semester-4/mfpg
 
 ## Unit 8: Professional Growth and Contemporary Issues
 
-Guide Unit 8 (Weeks 15-16, `:797-803`). Unit Spec (G1) for `docs/semester-4/mfpg-402/unit-08/`.
+Guide Unit 8 (Weeks 15-16, `:797-803`). Unit Spec (G1) for `docs/semester-4/efpg-402/unit-08/`.
 
-- **CLO/SLO refs**: `SLO:MFPG-402-8-1` (describe the science teacher's role in society and the qualities of a good science teacher), `SLO:MFPG-402-8-2` (plan a small action-research cycle; explain environmental education, sustainable development and recent trends in science teaching) - traces to guide objectives 2 and 3.
+- **CLO/SLO refs**: `SLO:EFPG-402-8-1` (describe the science teacher's role in society and the qualities of a good science teacher), `SLO:EFPG-402-8-2` (plan a small action-research cycle; explain environmental education, sustainable development and recent trends in science teaching) - traces to guide objectives 2 and 3.
 - **Key terms**: Professional growth, Action research, Environmental education, Sustainable development, STEM.
 - **Topics**: one per guide section, Topic 8.k teaching guide section 8.k (8.1-8.5).
 - **Assessment blueprint**: formative 15 items, 3 per topic (`D-2026-0072`, extended to 5-topic units as for EFPG-401 under `D-2026-0077`) (Remember/Understand/Apply); summative includes one Create item asking the learner to plan one action-research cycle on a science-classroom problem they observed in school placement. Weighting: 60/40 default.
@@ -547,7 +547,7 @@ The guide's practicum tasks (`:805-810`) are course-level work done alongside th
 
 Recorded by the drafter so the intake evaluator can test them; none is settled here.
 
-1. **Code.** Guide EFPG-402, Scheme MFPG-402. The spec follows the Scheme as the stated final authority, but the guide's code matches the EFPG pedagogy series and the "MF" prefix appears nowhere else in the Scheme's Semester I-IV rows read for this intake. The licence blueprint already uses MFPG-402. An owner ruling is needed before units are written, because the code fixes the docs path and every SLO ID.
+1. **Code.** Guide EFPG-402, Scheme MFPG-402; ruled EFPG-402 by the owner (`D-2026-0093` item 5). The spec moved from `specs/content/mfpg-402/` to `specs/content/efpg-402/`; the licence blueprint and roadmap rows were updated. The intake record in `intake/` predates the ruling and keeps the old code.
 2. **One topic per numbered section.** As for `EFPG-401` (`D-2026-0077`), each guide section is a topic, so units have 5-7 short topics and 15-21 formative items (3 per topic). The unit-end bank floors drop to ">= 1 per topic" because 10 MCQs cannot give two to each of seven topics.
 3. **"Secondary level".** Objective 2 and section 1.3 say "secondary level", but the programme is B.Ed (Elementary) and its graduates teach Grades 1-8. The spec keeps the guide's wording in the checklist and uses Grade 4-8 General Science (the National Curriculum's science band) for examples. The owner may prefer otherwise.
 4. **Indian sources.** Every guide book, journal and website except Khan Academy is Indian; NCERT documents describe India's curriculum. The spec binds Pakistan's National Curriculum 2022-23 and the Sindh DCAR curriculum for curriculum content and leaves the NCERT items unbound. Four of the six books could not be found in Open Library and are title-level only.
