@@ -87,6 +87,18 @@ export function imageQuotaReset(text) {
 }
 
 /**
+ * Which image producer an image-quota message is about (scripts/lib/image-quota.mjs PRODUCERS).
+ * generate-illustration.mjs names the producer first ("gflow image quota reached", "codex image
+ * limit reached"); a worker retelling agy's limit names the Gemini image model, so agy is the default.
+ */
+export function imageQuotaProducer(text) {
+  const t = String(text);
+  if (/\bgflow\b|nano.?banana|RateLimitError|model quota reached/i.test(t)) return 'gflow';
+  if (/\bcodex\b[^\n]{0,40}(image|limit)|image_gen/i.test(t)) return 'codex';
+  return 'agy';
+}
+
+/**
  * Files a job produced that count as work. Its own PHR and crew scratch do not: an illustrate
  * job blocked by the image quota used to commit only its PHR, which passed as success and
  * shipped ~25 PHR-only batch PRs on 2026-11-15/16.

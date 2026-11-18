@@ -1,17 +1,22 @@
 #!/usr/bin/env node
 /**
- * Raster illustration producer (ADR-0029). Gemini via `agy generate_image`.
+ * Raster illustration producer (ADR-0029): agy (Gemini), then gflow (Nano Banana via Google Flow,
+ * while the tunnel to the owner's PC is up), then Codex (built-in image_gen). Owner ruling 2026-11-18.
  *
- *   node scripts/generate-illustration.mjs <course> <unit> [--id fig-U1-9] [--dry-run] [--reuse-staging] [--banner]
+ *   node scripts/generate-illustration.mjs <course> <unit> [--id fig-U1-9] [--producer auto|agy|gflow|codex]
+ *        [--dry-run] [--reuse-staging] [--banner] [--force]
  *
+ * `--producer auto` (default) takes the first producer whose quota is not recorded as exhausted
+ * (scripts/lib/image-quota.mjs) and, for gflow, whose tunnel answers. When a producer runs out mid-batch
+ * it is recorded and the same row is retried on the next one. Exit 3 means every producer is out.
  * `--banner` reads the unit's sidecar banner manifest (unit-NN.banner.md) instead.
- * `--force` calls agy even while a recorded image quota (scripts/lib/image-quota.mjs) has not reset.
- * `--reuse-staging` skips the agy call when `.staging/<figId>.png` already exists (for example
+ * `--force` ignores recorded quotas.
+ * `--reuse-staging` skips generation when `.staging/<figId>.png` already exists (for example
  * after an optimiser failure), so a retry does not spend another generation.
  *
  * For every manifest row with `Kind: illustration` and `Status: prompt-only` in
  * specs/content/<course>/figures/unit-NN.md (or only `--id`):
- *   1. asks `agy` headlessly to generate the image into the git-ignored `.staging/` dir,
+ *   1. asks a producer (scripts/lib/image-producers.mjs) to generate the image into the git-ignored `.staging/` dir,
  *      using the shared house-style block below plus the row's own Prompt cell;
  *   2. runs scripts/optimize-figure.mjs (WebP, <= 1600 px, <= 150 KB) into
  *      static/img/figures/<course>/unit-NN/<figId>.webp;
@@ -24,13 +29,12 @@
  * operator-run on the owner's host, serial (guarded by a lock file), and never part of CI or the
  * site build.
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync, openSync, closeSync, unlinkSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, openSync, closeSync, unlinkSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
-import { homedir } from 'node:os';
-import { readdirSync } from 'node:fs';
 import { parseManifest } from './lib/figure-manifest.mjs';
-import { activeImageQuota, recordImageQuota, clearImageQuota, IMAGE_QUOTA_FILE } from './lib/image-quota.mjs';
+import { PRODUCERS, activeImageQuota, recordImageQuota, clearImageQuota, availableProducers, producerStatus, gflowReachable } from './lib/image-quota.mjs';
+import { PRODUCER_FNS, QuotaError, UnavailableError, sceneBrief, clearStaged } from './lib/image-producers.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const LOCK = '/tmp/mega-book-imagegen.lock';
@@ -56,8 +60,10 @@ function die(msg) {
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(name);
 const opt = (name) => (args.indexOf(name) >= 0 ? args[args.indexOf(name) + 1] : null);
-const [course, unitArg] = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--id');
-if (!course || !unitArg) die('usage: <course> <unit> [--id fig-UN-M] [--dry-run]');
+const [course, unitArg] = args.filter((a, i) => !a.startsWith('--') && !['--id', '--producer'].includes(args[i - 1]));
+if (!course || !unitArg) die('usage: <course> <unit> [--id fig-UN-M] [--producer auto|agy|gflow|codex] [--dry-run]');
+const producerArg = opt('--producer') || 'auto';
+if (producerArg !== 'auto' && !PRODUCERS.includes(producerArg)) die(`unknown --producer ${producerArg}; use auto, ${PRODUCERS.join(', ')}`);
 
 const pad = String(Number(unitArg)).padStart(2, '0');
 const courseDir = course.toLowerCase();
@@ -76,36 +82,6 @@ if (todo.length === 0) {
 
 const aspectOf = (prompt) => (/\bportrait\b/i.test(prompt) && !/\blandscape\b/i.test(prompt) ? '3:4 portrait' : '16:9 landscape');
 
-function generate(row) {
-  const png = join(stagingDir, `${row.id}.png`);
-  if (existsSync(png)) unlinkSync(png);
-  const instruction = [
-    'Use your generate_image tool exactly once to create this image.',
-    `Style: ${HOUSE_STYLE}`,
-    `Scene: ${row.prompt}`,
-    `Aspect ratio: ${aspectOf(row.prompt)}.`,
-    `Save the image as a PNG file at exactly this path: ${png}`,
-    'Then reply with only the file path and the name of the image model you used.',
-  ].join('\n');
-  const started = Date.now();
-  const res = spawnSync('agy', ['-p', instruction, '--add-dir', stagingDir, '--output-format', 'json', '--print-timeout', '10m'], {
-    encoding: 'utf8',
-    timeout: 11 * 60 * 1000,
-  });
-  const seconds = Math.round((Date.now() - started) / 1000);
-  let reply = '';
-  try {
-    reply = JSON.parse(res.stdout).response || '';
-  } catch {
-    reply = (res.stdout || '').slice(0, 400);
-  }
-  if (res.status !== 0 || !existsSync(png) || statSync(png).size === 0) {
-    throw new Error(`agy did not produce ${png} (exit ${res.status}, ${seconds}s): ${reply || res.stderr}`);
-  }
-  const model = (reply.match(/(imagen[\w.-]*|gemini[\w.-]*image[\w.-]*)/i) || [])[0] || 'unreported';
-  return { png, seconds, model };
-}
-
 function runOptimizer(png, webp) {
   const res = spawnSync(process.execPath, [join(ROOT, 'scripts/optimize-figure.mjs'), png, webp], { encoding: 'utf8' });
   process.stdout.write(res.stdout || '');
@@ -113,24 +89,6 @@ function runOptimizer(png, webp) {
 }
 
 /** Optimise to the shared budget; a detailed scene over 150 KB is retried once at 1200 px. */
-/**
- * agy reports an exhausted image quota only in its own log, not in its JSON reply. After a
- * failed generation, read the newest run log; if the quota is gone, the rest of the batch
- * would fail the same way, so stop and report when it resets.
- */
-function quotaResetAfterFailure() {
-  try {
-    const dir = join(homedir(), '.gemini/antigravity-cli/log');
-    const newest = readdirSync(dir).filter((n) => n.startsWith('cli-')).sort().pop();
-    const text = readFileSync(join(dir, newest), 'utf8');
-    if (!/QUOTA_EXHAUSTED/.test(text)) return null;
-    const stamps = [...text.matchAll(/"quotaResetTimeStamp":\s*"([^"]+)"/g)].map((m) => m[1]).sort();
-    return stamps.pop() || 'unknown';
-  } catch {
-    return null;
-  }
-}
-
 async function optimise(png, webp) {
   let res = runOptimizer(png, webp);
   if (res.status === 0) return;
@@ -159,9 +117,26 @@ function updateRow(id, src, status) {
   writeFileSync(manifestFile, lines.join('\n'));
 }
 
+// Producers that may take the next row: not out of quota (unless --force), not found unavailable in
+// this run, and, in auto mode, gflow only while its tunnel answers (probed once per run).
+const skipped = new Set();
+let gflowUp;
+const reachable = (p) => {
+  if (p !== 'gflow') return true;
+  if (gflowUp === undefined) gflowUp = gflowReachable();
+  return gflowUp;
+};
+function candidates() {
+  const pool = producerArg === 'auto' ? PRODUCERS : [producerArg];
+  return pool.filter((p) => !skipped.has(p) && (flag('--force') || !activeImageQuota(p)) && (producerArg !== 'auto' || reachable(p)));
+}
+const allOut = () => `✗ image quota exhausted on every producer (QUOTA_EXHAUSTED): ${producerStatus({ reachable })}. Nothing more generated; the crew holds illustrate jobs until a producer is back.`;
+
 if (flag('--dry-run')) {
-  for (const r of todo) console.log(`would generate ${r.id} (${aspectOf(r.prompt)}) -> static/img/figures/${courseDir}/unit-${pad}/${r.id}.webp`);
-  process.exit(0);
+  const first = candidates()[0];
+  console.log(`producers: ${producerStatus({ reachable })}; next: ${first || 'none'}`);
+  for (const r of todo) console.log(`would generate ${r.id} (${aspectOf(r.prompt)}) with ${first || 'no producer'} -> static/img/figures/${courseDir}/unit-${pad}/${r.id}.webp`);
+  process.exit(first ? 0 : 3);
 }
 
 /** The lock records its owner's pid, so a run killed mid-batch does not block the next one. */
@@ -183,14 +158,40 @@ function takeLock() {
     return takeLock();
   }
 }
-// A known exhausted quota would only fail again; exit 3 (the quota code) without spending an agy call.
-const known = !flag('--force') && !flag('--reuse-staging') && activeImageQuota();
-if (known) {
-  console.error(`✗ image quota exhausted (QUOTA_EXHAUSTED); resets at ${known.resetAt} (recorded in ${IMAGE_QUOTA_FILE}). Nothing generated; rerun after then.`);
+// A batch with no producer left would only fail; exit 3 (the quota code) without calling anything.
+if (!flag('--reuse-staging') && !candidates().length) {
+  console.error(allOut());
   process.exit(3);
 }
 
 const lockFd = takeLock();
+
+/** Generate one row on the first producer that can, moving past quotas and unreachable producers. */
+async function produce(row, png) {
+  const brief = sceneBrief(HOUSE_STYLE, row, aspectOf(row.prompt));
+  for (;;) {
+    const producer = candidates()[0];
+    if (!producer) return null;
+    console.log(`… ${row.id}: generating with ${producer}`);
+    clearStaged(png);
+    const started = Date.now();
+    try {
+      const { model } = await PRODUCER_FNS[producer]({ brief, png, stagingDir, aspect: aspectOf(row.prompt) });
+      clearImageQuota(producer); // it produced an image: its quota is back
+      return { producer, model, seconds: Math.round((Date.now() - started) / 1000) };
+    } catch (e) {
+      if (e instanceof QuotaError) {
+        const rec = recordImageQuota(producer, e.resetAt, e.producer);
+        console.error(`✗ ${row.id}: ${e.message}; ${producer} skipped until ${rec.resetAt}`);
+      } else if (e instanceof UnavailableError) {
+        skipped.add(producer);
+        console.error(`✗ ${row.id}: ${e.message}; ${producer} skipped for this run`);
+      } else {
+        throw e;
+      }
+    }
+  }
+}
 
 mkdirSync(stagingDir, { recursive: true });
 mkdirSync(outDir, { recursive: true });
@@ -198,32 +199,27 @@ let failures = 0;
 try {
   for (const row of todo) {
     try {
-      const staged = join(stagingDir, `${row.id}.png`);
-      let png = staged;
-      let seconds = 0;
-      let model = 'reused staging file';
-      if (flag('--reuse-staging') && existsSync(staged)) {
-        console.log(`… ${row.id}: reusing ${staged}`);
+      const png = join(stagingDir, `${row.id}.png`);
+      let made = { producer: 'staging', model: 'reused staging file', seconds: 0 };
+      if (flag('--reuse-staging') && existsSync(png)) {
+        console.log(`… ${row.id}: reusing ${png}`);
       } else {
-        console.log(`… ${row.id}: generating with agy`);
-        ({ png, seconds, model } = generate(row));
+        made = await produce(row, png);
+        if (!made) {
+          console.error(allOut());
+          process.exitCode = 3;
+          break;
+        }
       }
       const webp = join(outDir, `${row.id}.webp`);
       await optimise(png, webp);
       const src = `/img/figures/${courseDir}/unit-${pad}/${row.id}.webp`;
       updateRow(row.id, src, 'generated');
-      if (model !== 'reused staging file') clearImageQuota(); // agy produced an image: quota is back
-      console.log(`✓ ${row.id}: generated in ${seconds}s by ${model}; manifest -> generated. Inspect before placing.`);
+      // Provenance per image (ADR-0029): the producer and model reach the job log and its PHR.
+      console.log(`✓ ${row.id}: generated in ${made.seconds}s by ${made.producer} (${made.model}); manifest -> generated. Inspect before placing.`);
     } catch (e) {
       failures += 1;
       console.error(`✗ ${row.id}: ${e.message}`);
-      const reset = quotaResetAfterFailure();
-      if (reset) {
-        recordImageQuota(reset);
-        console.error(`✗ image quota exhausted (QUOTA_EXHAUSTED); resets at ${reset}. Stopping this batch; rerun after then.`);
-        process.exitCode = 3;
-        break;
-      }
     }
   }
 } finally {

@@ -2,7 +2,7 @@
 
 > **Scope**: Document decision clusters, not individual technology choices. Group related decisions that work together (e.g., "Frontend Stack" not separate ADRs for framework, styling, deployment).
 
-- **Status:** Accepted by owner instruction on 2026-10-04; amended by ADR-0033 (2026-10-29) for sourced maps of real territory and reuse of real-world images
+- **Status:** Accepted by owner instruction on 2026-10-04; amended by ADR-0033 (2026-10-29) for sourced maps of real territory and reuse of real-world images; amended by ADR-0036 (2026-11-18) for points 1 and 4 (agy, gflow and Codex producers with per-producer quotas)
 - **Date:** 2026-10-04
 - **Feature:** Cross-cutting reading-experience refresh and figure rendering
 - **Context:** Every one of the 292 placed figures is an SVG schematic; there are zero raster

@@ -3,8 +3,10 @@ import assert from 'node:assert/strict';
 import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { IMAGE_QUOTA_RE, QUOTA_RE, imageQuotaReset, workFiles } from '../../scripts/crew/workers.mjs';
-import { activeImageQuota, recordImageQuota, clearImageQuota, UNKNOWN_RESET_HOURS } from '../../scripts/lib/image-quota.mjs';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { dirname } from 'node:path';
+import { IMAGE_QUOTA_RE, QUOTA_RE, imageQuotaReset, imageQuotaProducer, workFiles } from '../../scripts/crew/workers.mjs';
+import { activeImageQuota, recordImageQuota, clearImageQuota, availableProducers, producerStatus, FALLBACK_HOURS, PRODUCERS } from '../../scripts/lib/image-quota.mjs';
 
 // The handoff giss-401-u06-illustrate-r1 left on 2026-11-16 after a PHR-only run.
 const HANDOFF = 'CREW-HANDOFF: Upstream image generation quota on gemini-3.1-flash-image remains exhausted until 2026-11-17T11:00:06Z; GISS-401 Unit 6 illustration manifests remain preserved at prompt-only.';
@@ -25,22 +27,59 @@ test('a PHR alone is not work', () => {
   assert.deepEqual(workFiles(['history/prompts/x.md', 'static/img/figures/giss-401/unit-06/fig-U6-9.webp']), ['static/img/figures/giss-401/unit-06/fig-U6-9.webp']);
 });
 
-test('the quota record holds until its reset, then lapses', () => {
-  const file = join(mkdtempSync(join(tmpdir(), 'iq-')), 'sub', 'image-quota.json');
-  const t0 = Date.parse('2026-11-16T12:00:00Z');
-  assert.equal(activeImageQuota(file, t0), null);
-  recordImageQuota('2026-11-17T11:00:06Z', 'gemini-3.1-flash-image', file, t0);
-  assert.equal(activeImageQuota(file, t0).resetAt, '2026-11-17T11:00:06.000Z');
-  assert.equal(activeImageQuota(file, Date.parse('2026-11-17T11:00:07Z')), null);
-  clearImageQuota(file);
-  assert.equal(activeImageQuota(file, t0), null);
+const tmpFile = () => join(mkdtempSync(join(tmpdir(), 'iq-')), 'sub', 'image-quota.json');
+const T0 = Date.parse('2026-11-16T12:00:00Z');
+const up = () => true;
+const down = (p) => p !== 'gflow';
+
+test('each producer keeps its own record, which holds until its reset and then lapses', () => {
+  const file = tmpFile();
+  assert.equal(activeImageQuota('agy', file, T0), null);
+  recordImageQuota('agy', '2026-11-17T11:00:06Z', 'gemini-3.1-flash-image', file, T0);
+  assert.equal(activeImageQuota('agy', file, T0).resetAt, '2026-11-17T11:00:06.000Z');
+  assert.equal(activeImageQuota('codex', file, T0), null, 'agy running out says nothing about codex');
+  assert.equal(activeImageQuota('agy', file, Date.parse('2026-11-17T11:00:07Z')), null);
+  recordImageQuota('codex', null, undefined, file, T0);
+  clearImageQuota('agy', file);
+  assert.equal(activeImageQuota('agy', file, T0), null);
+  assert.ok(activeImageQuota('codex', file, T0), 'clearing one producer keeps the others');
 });
 
-test('an unknown or past reset time falls back to a fixed hold', () => {
-  const file = join(mkdtempSync(join(tmpdir(), 'iq-')), 'image-quota.json');
-  const t0 = Date.parse('2026-11-16T12:00:00Z');
-  for (const bad of [null, 'unknown', '2026-11-15T00:00:00Z']) {
-    const rec = recordImageQuota(bad, undefined, file, t0);
-    assert.equal(Date.parse(rec.resetAt), t0 + UNKNOWN_RESET_HOURS * 3600e3);
+test('the single-record file written by PR #629 reads as agy', () => {
+  const file = tmpFile();
+  mkdirSync(dirname(file), { recursive: true });
+  writeFileSync(file, JSON.stringify({ resetAt: '2026-11-17T11:00:06.000Z', model: 'gemini-3.1-flash-image' }));
+  assert.equal(activeImageQuota('agy', file, T0).model, 'gemini-3.1-flash-image');
+  assert.equal(activeImageQuota('gflow', file, T0), null);
+});
+
+test('an unknown or past reset time falls back to the producer hold (gflow quotas are daily)', () => {
+  const file = tmpFile();
+  for (const p of PRODUCERS) {
+    for (const bad of [null, 'unknown', '2026-11-15T00:00:00Z']) {
+      const rec = recordImageQuota(p, bad, undefined, file, T0);
+      assert.equal(Date.parse(rec.resetAt), T0 + FALLBACK_HOURS[p] * 3600e3);
+    }
   }
+  assert.equal(FALLBACK_HOURS.gflow, 24);
+});
+
+test('producers are offered agy, gflow, codex; out of quota or offline ones drop out', () => {
+  const file = tmpFile();
+  assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: up }), ['agy', 'gflow', 'codex']);
+  assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: down }), ['agy', 'codex']);
+  recordImageQuota('agy', '2026-11-17T11:00:06Z', undefined, file, T0);
+  assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: up }), ['gflow', 'codex']);
+  recordImageQuota('codex', null, undefined, file, T0);
+  assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: down }), []);
+  assert.equal(producerStatus({ file, nowMs: T0, reachable: down }),
+    `agy out until 2026-11-17T11:00:06.000Z · gflow offline · codex out until ${new Date(T0 + 6 * 3600e3).toISOString()}`);
+});
+
+test('an image-quota message is pinned on the producer it names', () => {
+  assert.equal(imageQuotaProducer(HANDOFF), 'agy');
+  assert.equal(imageQuotaProducer('✗ fig-U7-5: agy image quota exhausted (QUOTA_EXHAUSTED); resets at 2026-11-17T11:00:06Z'), 'agy');
+  assert.equal(imageQuotaProducer('✗ fig-U7-5: gflow image quota reached: {"title":"RateLimitError"}'), 'gflow');
+  assert.equal(imageQuotaProducer('Daily or per-minute model quota reached for nano2'), 'gflow');
+  assert.equal(imageQuotaProducer('✗ fig-U7-5: codex image limit reached: usage limit'), 'codex');
 });
