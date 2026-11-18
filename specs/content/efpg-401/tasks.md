@@ -1,8 +1,8 @@
 # EFPG-401 Teaching of English - Task tracker
 
-## Status: content spec approved (G0/G1); Units 1, 2, 4 and 7 authored; Unit 6 English draft complete
+## Status: content spec approved (G0/G1); Units 1, 2, 3, 4 and 7 authored; Unit 6 English draft complete
 
-English-only authoring from the approved Unit 1, Unit 2, Unit 4, Unit 6 and Unit 7 content-specs. No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 6 and Unit 7 content-specs. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
 ## Units
 
@@ -10,7 +10,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 4, Unit 6 and Unit
 |---|---|---|---|---|---|---|---|
 | 1 | Four Skills of Language Learning | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-10; eight schematic SVGs placed with dark variants; Urdu mirror drafted at G4 with 8 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
 | 2 | Teaching of English | ▣ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored; gate evidence preparation pending commit; Urdu mirror drafted at G4 with 10 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
-| 3 | Methods of Teaching English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 3 | Methods of Teaching English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; twelve schematic SVGs placed with dark variants; G3 and G5 remain open |
 | 4 | Teaching of Grammar | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; three schematic SVGs placed with dark variants; G3 and G5 remain open |
 | 5 | Lesson Planning | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 6 | A.V. Aids in Teaching of English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; ten schematic SVGs placed with dark variants; Urdu mirror is a separate job; G3 and G5 remain open |
@@ -51,6 +51,12 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 4, Unit 6 and Unit
 | Unit 4 | G5 ur-review | ☐ | | Awaiting translation and independent review |
 | Unit 4 | G6 assets | ✓ | | Three schematic SVG pairs with derived dark variants; topic scene fig-U4-4 and banner fig-U4-5 inspected and placed in both locales as shared optimized WebP assets. Codex built-in image generation used after Gemini quota exhaustion (ADR-0029). |
 | Unit 4 | G7 publish | ☐ | | No publication or deployment performed by this job |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-03/G2/20261118T032407482Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 3 | G4 ur-translation | ▢ | | Awaiting Urdu translation |
+| Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review |
+| Unit 3 | G6 assets | ▣ | | Twelve English schematic SVGs placed with derived dark variants; measure-figure-text verified |
+| Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 
 Reading estimates use final visible text at 180-200 words per minute: index 3, Topic 1.1 15, Topic 1.2 15, Topic 1.3 14, Topic 1.4 15, assessment 14, total 76 minutes within the approved 55-80 depth budget band. Assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. Default weighting remains 60% summative and 40% formative. The guide supplies course-level teaching strategies and practical work, and no separate unit teacher-notes page was required.
 

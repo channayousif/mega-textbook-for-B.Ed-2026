@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Direct Method: Principles, Procedures, and Evaluation</title>
+  <desc id="d">Table analyzing the Direct Method across core immersion principles, demonstration procedures, oral fluency strengths, and practical classroom constraints in Pakistani primary schools.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Direct Method: Overview and Analysis</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Immersion, inductive grammar, and communicative demonstration</text>
+
+  <!-- Row 1: Core Principles -->
+  <rect class="panel-a" x="40" y="75" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="102">Core Principles</text>
+  <text class="small" x="52" y="122">Direct association</text>
+  <rect class="panel" x="275" y="75" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="100">• English used exclusively; mother tongue (L1) is prohibited</text>
+  <text class="body" x="290" y="124">• Meaning connected directly to objects, pictures, and actions</text>
+
+  <!-- Row 2: Typical Step -->
+  <rect class="panel-b" x="40" y="150" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="177">Classroom Step</text>
+  <text class="small" x="52" y="197">Demonstration method</text>
+  <rect class="panel" x="275" y="150" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="175">• Teacher demonstrates real object and asks questions orally</text>
+  <text class="body" x="290" y="199">• Pupils answer in complete English sentences without translating</text>
+
+  <!-- Row 3: Strengths -->
+  <rect class="panel-a" x="40" y="225" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="252">Instructional Strengths</text>
+  <text class="small" x="52" y="272">Oral communication</text>
+  <rect class="panel" x="275" y="225" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="250">• Fosters accurate pronunciation and spontaneous oral speech</text>
+  <text class="body" x="290" y="274">• Establishes thinking in English directly from primary years</text>
+
+  <!-- Row 4: Weaknesses -->
+  <rect class="panel-c" x="40" y="300" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="327">Pedagogical Limits</text>
+  <text class="small" x="52" y="347">Classroom constraints</text>
+  <rect class="panel" x="275" y="300" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="325">• Difficult to explain abstract vocabulary without brief L1 glosses</text>
+  <text class="body" x="290" y="349">• Demands high teacher oral fluency and smaller class sizes</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Primary Affixes: Prefixes and Suffixes</title>
+  <desc id="d">Table detailing high-frequency English prefixes and suffixes for primary classes, including semantic meanings and concrete classroom examples.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Common Prefixes and Suffixes for Elementary Grades</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Foundational English affixes: meanings and primary classroom word models</text>
+
+  <!-- Row 1: Prefix un- -->
+  <rect class="panel-a" x="40" y="75" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="102">Prefix: un-</text>
+  <text class="small" x="52" y="122">Negative / Reversal</text>
+  <rect class="panel" x="275" y="75" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="100">• Meaning: not, opposite of, reverse of action</text>
+  <text class="body" x="290" y="124">• Examples: unhappy, unkind, unfair, untie, unlock</text>
+
+  <!-- Row 2: Prefix re- -->
+  <rect class="panel-b" x="40" y="150" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="177">Prefix: re-</text>
+  <text class="small" x="52" y="197">Iterative / Return</text>
+  <rect class="panel" x="275" y="150" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="175">• Meaning: again, back, redo</text>
+  <text class="body" x="290" y="199">• Examples: rewrite, retell, replay, rebuild, reread</text>
+
+  <!-- Row 3: Suffix -ful -->
+  <rect class="panel-a" x="40" y="225" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="252">Suffix: -ful</text>
+  <text class="small" x="52" y="272">Adjective marker</text>
+  <rect class="panel" x="275" y="225" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="250">• Meaning: full of, having qualities of</text>
+  <text class="body" x="290" y="274">• Examples: helpful, playful, careful, colourful, joyful</text>
+
+  <!-- Row 4: Suffix -er / -or -->
+  <rect class="panel-c" x="40" y="300" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="327">Suffix: -er / -or</text>
+  <text class="small" x="52" y="347">Agentive noun marker</text>
+  <rect class="panel" x="275" y="300" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="325">• Meaning: one who performs the specified action</text>
+  <text class="body" x="290" y="349">• Examples: teacher, farmer, player, writer, visitor</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

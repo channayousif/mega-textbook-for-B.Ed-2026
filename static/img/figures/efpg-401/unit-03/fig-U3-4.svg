@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Direct Association Triad in Language Teaching</title>
+  <desc id="d">Diagram illustrating how the Direct Method connects English words directly to real objects, visual pictures, and physical actions, bypassing mother tongue translation.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="380"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Direct Meaning Association Without Translation</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Connecting English vocabulary directly to sensory experience and action</text>
+
+  <!-- Top Three Modalities -->
+  <!-- Box 1: Objects (Realia) -->
+  <rect class="panel-a" x="45" y="80" width="205" height="135" rx="8"/>
+  <text class="sh" x="147" y="108" text-anchor="middle">1. Real Objects</text>
+  <text class="small" x="147" y="128" text-anchor="middle">Concrete classroom realia</text>
+  <line class="grid" x1="55" y1="138" x2="240" y2="138"/>
+  <text class="small" x="55" y="162">• Pencils, books, leaves</text>
+  <text class="small" x="55" y="186">• Pupils touch real objects</text>
+  <text class="small" x="147" y="206" text-anchor="middle">Physical sensory anchor</text>
+
+  <!-- Box 2: Visual Representation -->
+  <rect class="panel-b" x="287" y="80" width="205" height="135" rx="8"/>
+  <text class="sh" x="390" y="108" text-anchor="middle">2. Visual Pictures</text>
+  <text class="small" x="390" y="128" text-anchor="middle">Depictions and sketches</text>
+  <line class="grid" x1="297" y1="138" x2="482" y2="138"/>
+  <text class="small" x="297" y="162">• Charts, cards, sketches</text>
+  <text class="small" x="297" y="186">• Animal and street scenes</text>
+  <text class="small" x="390" y="206" text-anchor="middle">Visual contextual clue</text>
+
+  <!-- Box 3: Physical Actions -->
+  <rect class="panel-c" x="530" y="80" width="205" height="135" rx="8"/>
+  <text class="sh" x="632" y="108" text-anchor="middle">3. Physical Actions</text>
+  <text class="small" x="632" y="128" text-anchor="middle">Mime, gesture, and movement</text>
+  <line class="grid" x1="540" y1="138" x2="725" y2="138"/>
+  <text class="small" x="540" y="162">• Running, jumping, walking</text>
+  <text class="small" x="540" y="186">• Teacher demonstrates actions</text>
+  <text class="small" x="632" y="206" text-anchor="middle">Kinesthetic reinforcement</text>
+
+  <!-- Arrows converging to Center Box -->
+  <path class="stroke-a" d="M 147 215 L 290 270"/>
+  <polygon class="ah-a" points="287,265 298,272 291,275"/>
+
+  <path class="stroke-b" d="M 390 215 L 390 255"/>
+  <polygon class="ah-b" points="385,255 390,265 395,255"/>
+
+  <path class="stroke-c" d="M 632 215 L 490 270"/>
+  <polygon class="ah-c" points="489,275 482,272 493,265"/>
+
+  <!-- Center Box: Direct Association Target -->
+  <rect class="panel" x="220" y="265" width="340" height="75" rx="8"/>
+  <text class="sh" x="390" y="292" text-anchor="middle">Direct Cognitive Association</text>
+  <text class="body" x="390" y="312" text-anchor="middle">English Word and Structure Established</text>
+  <text class="small" x="390" y="330" text-anchor="middle">Bypasses Mother Tongue (L1) Translation Detour</text>
+
+  <text class="wm" x="768" y="370" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
