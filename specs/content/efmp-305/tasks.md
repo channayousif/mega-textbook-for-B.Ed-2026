@@ -27,7 +27,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261103T112514677Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261114T052100718Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▣ | | Complete 5-file UR mirror reconciled with EN baseline 9e6da648 on 2026-10-18 (crew efmp-305-u01-translate-r1); semantic, register, and terminology polish; 4 .ur.svg/.ur.dark.svg figure variants wired; structural parity, figure parity, and bank-conformant key_terms (Inclusive Education) verified under temporary reviewed flip (reverted); 8 unbanked concept labels proposed separately; handoff: reviews/unit-01/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5; no certification claimed. |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -65,7 +65,7 @@ the 4 expected prompt-only findings until G6 renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261103T141631810Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261114T065842199Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -159,7 +159,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-06/G2/20261103T112242573Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-06/G2/20261113T063338173Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | independent review pending; CurriculumOwner handoff on TEX-78 |
 | Unit 6 | G4 ur-translation | ▣ | | complete 6-file UR mirror verified against EN baseline (2026-10-18): 6 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted); translation_status stays draft pending fresh independent G5 |
 | Unit 6 | G5 ur-review | ▢ | | |
@@ -188,4 +188,10 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 |---|---|---|---|---|
 | Unit 5 | G3 en-review | ▣ | agent:codex | advisory: revise; repairs applied for 20261102T212207Z-g3-desk-6054cf1d.json (F2–F8); see reviews/unit-05/repair-en-20261103/repair-notes.md. F1 provenance and browser/print evidence remain owner/host work; fresh independent review and MCQ re-solve required. G3 remains unticked. |
 
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261103T180403253Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261113T061728710Z-gates.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80fc.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261108T203238Z-g3-desk-79043796.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261108T203238Z-g3-desk-2a3b76c3.json |
+| Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-03/G3/20261108T203238Z-g3-desk-d15c80fc.json; serman2026 author initials (Serman, S., & Ningrum, E. S. C.) and peer tutoring mechanism nuance corrected in topic-02.mdx (EN+UR) and sources/unit-03.md; sources/unit-03.md retrieval notes clarified between retrieved excerpts and metadata-only subscription works; concepts/unit-03.md terminology note explicitly reaffirms G4 translator adherence to TEX-80 banked labels and unit phrases; repo gate findings (EFMP-305 U6, EFMP-304) verified outside U3 scope; G3 left unticked |
+| Unit 5 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-05/G3/20261108T203238Z-g3-desk-79043796.json; F2–F8 repairs verified present in EN and UR on main (landed in 12b3c13a5, crew efmp-305-u05-repair_en, 2026-11-03); F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work; G3 remains unticked |
+| Unit 6 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-06/G3/20261108T203238Z-g3-desk-2a3b76c3.json; depth finding is stale (report input hashes predate commit 24d5f43d7; current EN estimates total 149 minutes, within the approved 140-170 band, and check:depth-gate exits 0); research-context advisory needs no edit (caveats preserved); UNICEF full-text retrieval reconfirmed 2026-11-10 with matching SHA-256 and corrected page locators, recorded in reviews/unit-06/G3/20261110-repair-notes.md (source record left unchanged to preserve Unit 1 and Unit 6 G2 evidence bindings); G3 left unticked, no certification |

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">بول چال کی انگریزی کے فروغ کے جماعتی عوامل</title>
+  <desc id="d">تصوراتی نقشہ جو کلاس روم میں بولنے کی مہارت کو فروغ دینے والے عوامل کو ظاہر کرتا ہے: نفسیاتی تحفظ، جوڑوں میں باہمی تعاون، انٹرایکٹو لسانی کھیل، استاد کا عملی نمونہ اور ذخیرۂ الفاظ کی باقاعدہ فراہمی۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 12px; fill: var(--ink); }
+    .muted { font-size: 12px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="440"/>
+
+  <text class="h" x="390" y="32" text-anchor="middle">انگریزی بول چال کی صلاحیت کی بنیادیں</text>
+  <text class="muted" x="390" y="50" text-anchor="middle">پرائمری طلبہ میں زبانی روانی پیدا کرنے والے پانچ بنیادی جماعتی ستون</text>
+
+  <!-- Connecting Lines -->
+  <line class="stroke-a" x1="230" y1="170" x2="310" y2="215"/>
+  <polygon class="ah-a" points="305,210 315,218 310,225"/>
+
+  <line class="stroke" x1="390" y1="145" x2="390" y2="200"/>
+  <polygon class="ah" points="385,195 390,205 395,195"/>
+
+  <line class="stroke-b" x1="550" y1="170" x2="470" y2="215"/>
+  <polygon class="ah-b" points="470,225 465,218 475,210"/>
+
+  <line class="stroke-c" x1="230" y1="310" x2="310" y2="265"/>
+  <polygon class="ah-c" points="310,255 315,262 305,270"/>
+
+  <line class="stroke-d" x1="550" y1="310" x2="470" y2="265"/>
+  <polygon class="ah-d" points="475,270 465,262 470,255"/>
+
+  <!-- Center Hub -->
+  <rect class="panel" x="300" y="200" width="180" height="80" rx="40"/>
+  <text class="sh" x="390" y="236" text-anchor="middle">زبانی روانی</text>
+  <text class="sh" x="390" y="256" text-anchor="middle">اور خود اعتمادی</text>
+
+  <!-- Pillar 1: Low-Anxiety Climate -->
+  <rect class="panel-a" x="40" y="90" width="200" height="90" rx="8"/>
+  <text class="sh" x="140" y="115" text-anchor="middle">1. محفوظ ماحول</text>
+  <text class="body" x="225" y="140" text-anchor="end">• باطنی خوف میں کمی</text>
+  <text class="body" x="225" y="162" text-anchor="end">• تاخیری اصلاحِ اغلاط</text>
+
+  <!-- Pillar 2: Modelling & Intonation -->
+  <rect class="panel" x="290" y="65" width="200" height="80" rx="8"/>
+  <text class="sh" x="390" y="90" text-anchor="middle">2. بول چال کے نمونے</text>
+  <text class="body" x="475" y="115" text-anchor="end">• اتار چڑھاؤ کا رِدم</text>
+  <text class="body" x="475" y="135" text-anchor="end">• فہم پذیر تلفظ</text>
+
+  <!-- Pillar 3: Collaborative Pair Work -->
+  <rect class="panel-b" x="540" y="90" width="200" height="90" rx="8"/>
+  <text class="sh" x="640" y="115" text-anchor="middle">3. جوڑوں میں اشتراک</text>
+  <text class="body" x="725" y="140" text-anchor="end">• بولنے کے وقت میں اضافہ</text>
+  <text class="body" x="725" y="162" text-anchor="end">• جھجھک اور دباؤ کا خاتمہ</text>
+
+  <!-- Pillar 4: Language Games -->
+  <rect class="panel-c" x="40" y="280" width="200" height="90" rx="8"/>
+  <text class="sh" x="140" y="305" text-anchor="middle">4. لسانی کھیل</text>
+  <text class="body" x="225" y="330" text-anchor="end">• معلوماتی خلا کی ضرورت</text>
+  <text class="body" x="225" y="352" text-anchor="end">• بامقصد فطری تکرار</text>
+
+  <!-- Pillar 5: Vocabulary Building -->
+  <rect class="panel-d" x="540" y="280" width="200" height="90" rx="8"/>
+  <text class="sh" x="640" y="305" text-anchor="middle">5. ذخیرۂ الفاظ میں اضافہ</text>
+  <text class="body" x="725" y="330" text-anchor="end">• تیار جملے اور ٹکڑے</text>
+  <text class="body" x="725" y="352" text-anchor="end">• ٹھوس اشیاء اور وال چارٹس</text>
+
+  <text class="muted" x="390" y="410" text-anchor="middle">پانچوں اجزا مل کر فعال ابلاغی صلاحیت کو پروان چڑھاتے ہیں</text>
+  <text class="wm" x="768" y="430" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

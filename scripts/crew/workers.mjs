@@ -49,6 +49,8 @@ export const STAGES = {
   author:     { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'author-unit' },
   repair_en:  { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'revise-topic' },
   figures:    { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'generate-figures' },
+  // Claude owns raster prompts and alt text (ADR-0024); the skill reference is named in the task.
+  plan_illustrations: { chain: ['claude', 'agy_claude'], skill: null },
   illustrate: { chain: ['agy', 'codex'], skill: 'generate-figures' },
   review_en:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
   translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'translate-unit' },
@@ -56,7 +58,7 @@ export const STAGES = {
   fix:        { chain: ['opencode', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.
-  intel_distill:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'intel-distill' },
+  intel_distill:  { chain: ['agy', 'codex', 'claude', 'agy_claude'], skill: 'intel-distill' },
   maint_survey:   { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'weekly-maintenance' },
   maint_refactor: { chain: ['codex', 'claude', 'agy_claude', 'opencode', 'agy'], skill: 'weekly-maintenance' },
   maint_docs:     { chain: ['claude', 'agy_claude', 'agy', 'codex', 'opencode'], skill: 'weekly-maintenance' },
@@ -70,6 +72,28 @@ export const STAGES = {
 // "hit your weekly limit" (claude) and "model is at capacity" (codex) slipped past this on
 // 2026-10-22, so eight jobs spent all three attempts on quota errors and went gate_red.
 export const QUOTA_RE = /rate.?limit|quota|usage limit|session limit|weekly limit|too many requests|\b429\b|resource.?exhausted|insufficient (credits|balance)|hit your ([\w-]+ )?limit|limit reached|credit balance|at capacity/i;
+
+/**
+ * An exhausted IMAGE quota (agy's Gemini image model), reported by scripts/generate-illustration.mjs
+ * or retold by the worker. It is not the worker's text quota: the worker stays healthy for other
+ * stages and only `illustrate` waits (scripts/lib/image-quota.mjs).
+ */
+export const IMAGE_QUOTA_RE = /QUOTA_EXHAUSTED|image[- ](generation )?quota[^\n]{0,80}(exhausted|reached|used up)/i;
+
+/** The reset time an image-quota message names ("until 2026-11-17T11:00:06Z"), or null. */
+export function imageQuotaReset(text) {
+  const m = /(?:until|resets? at)\s+(\d{4}-\d\d-\d\dT\d\d:\d\d(?::\d\d(?:\.\d+)?)?Z)/i.exec(text);
+  return m ? m[1] : null;
+}
+
+/**
+ * Files a job produced that count as work. Its own PHR and crew scratch do not: an illustrate
+ * job blocked by the image quota used to commit only its PHR, which passed as success and
+ * shipped ~25 PHR-only batch PRs on 2026-11-15/16.
+ */
+export function workFiles(files) {
+  return files.filter((f) => f && !f.startsWith('history/prompts/') && !f.startsWith('.crew/') && !f.startsWith('node_modules'));
+}
 
 /** Backoff ladder for a worker that keeps hitting its limit, in minutes. */
 export const COOLDOWN_MIN = [30, 120, 360];

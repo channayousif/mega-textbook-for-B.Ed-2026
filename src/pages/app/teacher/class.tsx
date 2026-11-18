@@ -8,6 +8,8 @@ import { listRoster } from '@site/src/lib/classes';
 import { listForTeacher } from '@site/src/lib/assignments';
 import { fetchClassAnalytics, type AtRiskStudent } from '@site/src/lib/teacherAnalytics';
 import type { Assignment } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Per-class command centre (Spec 011, US7 / FR-015): one place for a single class - roster
@@ -77,11 +79,11 @@ function ClassContent({ classId }: { classId: string }): React.ReactElement {
   }, [load]);
 
   if (error) return <div className="alert alert--danger" role="alert">{error}</div>;
-  if (rosterCount === null || !atRisk || !upcoming) return <p>{MESSAGES.loading[locale]}</p>;
+  if (rosterCount === null || !atRisk || !upcoming) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
-      <h1>{MESSAGES.title[locale]}</h1>
+      <PageHeader title={MESSAGES.title[locale]} icon="classes" />
       <p>
         <Link to={`/app/teacher/analytics?classId=${classId}`}>{MESSAGES.openAnalytics[locale]}</Link>
         {' · '}

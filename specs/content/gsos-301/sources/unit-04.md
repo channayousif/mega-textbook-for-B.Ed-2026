@@ -10,7 +10,7 @@
 
 ## Unverifiable sources
 
-- `conerly2021`: Open-access textbook; the authoring host cannot download the full text for excerpt binding. URL verified to resolve.
-- `hammondnd`: Open-access LibreTexts text; chapter pages read for scope on 2026-10-10, but no excerpt is bound, so support for each claim is unverified until a reviewer checks it. Bound for the open-access floor (D-2026-0064).
-- `lindsey2001`: Print monograph; the authoring host cannot open the full text for excerpt binding.
-- `finance2025`: Official government publication; Table 10.2 literacy figures reproduced in Topic 4.2 with the source, population and year stated. The underlying Census 2023 data are not separately verified.
+- `conerly2021`: Open-access textbook; the authoring host cannot download the full text for excerpt binding. URL verified to resolve. Could not be retrieved on 2026-10-22. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- `hammondnd`: Open-access LibreTexts text; chapter pages read for scope on 2026-10-10, but no excerpt is bound, so support for each claim is unverified until a reviewer checks it. Bound for the open-access floor (D-2026-0064). Full text could not be retrieved on 2026-10-22. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- `lindsey2001`: Print monograph; the authoring host cannot open the full text for excerpt binding. Could not be retrieved on 2026-10-22. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- `finance2025`: Official government publication; Table 10.2 literacy figures reproduced in Topic 4.2 with the source, population and year stated. Retrieved 2026-10-22; the underlying Census 2023 data are not separately verified. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.

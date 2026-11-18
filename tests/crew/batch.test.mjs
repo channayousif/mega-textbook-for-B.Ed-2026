@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeAppendOnly } from '../../scripts/crew/batch.mjs';
+import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeTrackerRows } from '../../scripts/crew/batch.mjs';
 
 const at = (iso) => Date.parse(iso);
 
@@ -77,64 +77,148 @@ const rowA = '| 2 | G2 | done | crew | unit 2 authored |';
 const rowB = '| 3 | G2 | done | crew | unit 3 authored |';
 const insertAfter = (text, anchor, line) => text.replace(`${anchor}\n`, `${anchor}\n${line}\n`);
 
-test('mergeAppendOnly: both sides append rows at the end, ours first', () => {
-  const merged = mergeAppendOnly(tracker, `${tracker}${rowA}\n`, `${tracker}${rowB}\n`);
-  assert.equal(merged, `${tracker}${rowA}\n${rowB}\n`);
+const rowTracker = [
+  '# GICP-400 tracker',
+  '',
+  'Intro prose.',
+  '',
+  '| Unit | Stage | Status | Initials | Notes |',
+  '|---|---|---|---|---|',
+  '| Unit 1 | G2 en-draft | ▢ | | pending |',
+  '| Unit 1 | G3 en-review | ▢ | | pending |',
+  '| Unit 2 | G2 en-draft | ▢ | | pending |',
+  '| Unit 2 | G3 en-review | ▢ | | pending |',
+  '',
+  'Closing prose.',
+  '',
+].join('\n');
+const u1g2 = '| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:unit-01.json |';
+const u2g2 = '| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:unit-02.json |';
+const rewrite = (text, unit, stage, line) => text.replace(new RegExp(`^\\| ${unit} \\| ${stage} \\|.*$`, 'm'), line);
+
+test('mergeTrackerRows: two units each rewriting their own G2 row are merged', () => {
+  const ours = rewrite(rowTracker, 'Unit 1', 'G2 en-draft', u1g2);
+  const theirs = rewrite(rowTracker, 'Unit 2', 'G2 en-draft', u2g2);
+  const want = rewrite(ours, 'Unit 2', 'G2 en-draft', u2g2);
+  assert.equal(mergeTrackerRows(rowTracker, ours, theirs), want);
+  assert.equal(mergeTrackerRows(rowTracker, theirs, ours), want);
 });
 
-test('mergeAppendOnly: both sides append at the same table row point', () => {
-  const last = '| 1 | G2 | done | crew | authored |';
-  const merged = mergeAppendOnly(tracker, insertAfter(tracker, last, rowA), insertAfter(tracker, last, rowB));
-  assert.equal(merged, insertAfter(tracker, last, `${rowA}\n${rowB}`));
+test('mergeTrackerRows: both sides rewriting one row differently returns null', () => {
+  const ours = rewrite(rowTracker, 'Unit 1', 'G2 en-draft', u1g2);
+  const theirs = rewrite(rowTracker, 'Unit 1', 'G2 en-draft', '| Unit 1 | G2 en-draft | ▢ | | gates red |');
+  assert.equal(mergeTrackerRows(rowTracker, ours, theirs), null);
+  assert.equal(mergeTrackerRows(rowTracker, ours, ours), ours);
 });
 
-test('mergeAppendOnly: appends at different points keep each in place', () => {
+test('mergeTrackerRows: a revision row appended for an existing key is kept as a new occurrence', () => {
+  const last = '| Unit 2 | G3 en-review | ▢ | | pending |';
+  const revision = '| Unit 1 | G3 en-review | ▢ | agent:g3 | advisory escalation |';
+  const ours = insertAfter(rowTracker, last, revision);
+  const theirs = rewrite(rowTracker, 'Unit 1', 'G3 en-review', '| Unit 1 | G3 en-review | ▢ | | first review queued |');
+  const merged = mergeTrackerRows(rowTracker, ours, theirs);
+  assert.equal(merged, insertAfter(theirs, last, revision));
+  // New rows from both sides go after the table's last row, ours first.
+  const u3 = '| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:unit-03.json |';
+  assert.equal(mergeTrackerRows(rowTracker, ours, insertAfter(rowTracker, '| Unit 1 | G3 en-review | ▢ | | pending |', u3)), insertAfter(rowTracker, last, `${revision}\n${u3}`));
+});
+
+test('mergeTrackerRows: a row deleted on one side and unchanged on the other is deleted', () => {
+  const ours = rowTracker.replace('| Unit 2 | G3 en-review | ▢ | | pending |\n', '');
+  const theirs = rewrite(rowTracker, 'Unit 1', 'G2 en-draft', u1g2);
+  assert.equal(mergeTrackerRows(rowTracker, ours, theirs), rewrite(ours, 'Unit 1', 'G2 en-draft', u1g2));
+  // Deleted on one side but changed on the other is a real conflict.
+  assert.equal(mergeTrackerRows(rowTracker, ours, rewrite(rowTracker, 'Unit 2', 'G3 en-review', '| Unit 2 | G3 en-review | ✅ | | x |')), null);
+});
+
+test('mergeTrackerRows: a prose line edited on one side returns null', () => {
+  const ours = rowTracker.replace('Closing prose.', 'Closing prose, edited.');
+  const theirs = rewrite(rowTracker, 'Unit 2', 'G2 en-draft', u2g2);
+  assert.equal(mergeTrackerRows(rowTracker, ours, theirs), null);
+  // Pure insertions of prose still merge.
+  const added = rowTracker.replace('Closing prose.\n', 'Closing prose.\nAdded line.\n');
+  assert.equal(mergeTrackerRows(rowTracker, added, theirs), rewrite(added, 'Unit 2', 'G2 en-draft', u2g2));
+});
+
+test('mergeTrackerRows: a missing stage returns null', () => {
+  assert.equal(mergeTrackerRows(null, rowTracker, rowTracker), null);
+  assert.equal(mergeTrackerRows(rowTracker, null, rowTracker), null);
+  assert.equal(mergeTrackerRows(rowTracker, rowTracker, null), null);
+});
+
+test('mergeTrackerRows: merges pure row appends', () => {
   const last = '| 1 | G2 | done | crew | authored |';
   const ours = insertAfter(tracker, last, rowA);
-  const theirs = `${tracker}## Unit 3\n\n${rowB}\n`;
-  const merged = mergeAppendOnly(tracker, ours, theirs);
-  assert.equal(merged, `${insertAfter(tracker, last, rowA)}## Unit 3\n\n${rowB}\n`);
-  assert.equal(mergeAppendOnly(tracker, theirs, ours), merged);
+  const theirs = insertAfter(tracker, last, rowB);
+  assert.equal(mergeTrackerRows(tracker, ours, theirs), insertAfter(tracker, last, `${rowA}\n${rowB}`));
+  assert.equal(mergeTrackerRows(tracker, `${tracker}${rowA}\n`, `${tracker}${rowB}\n`), `${tracker}${rowA}\n${rowB}\n`);
 });
 
-test('mergeAppendOnly: the same insertion on both sides is kept once', () => {
-  assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, `${tracker}${rowA}\n`), `${tracker}${rowA}\n`);
+// EFPG-401 has a course status section, a Units summary, then a separate stage table.
+const courseTracker = [
+  '# EFPG-401 Teaching of English - Task tracker',
+  '',
+  '## Status: content spec approved (G0/G1)',
+  '',
+  'English-only authoring from approved content-specs.',
+  'No publication or review certification is claimed.',
+  '',
+  '## Units',
+  '',
+  '| Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |',
+  '|---|---|---|---|---|---|---|---|',
+  '| 1 | Four Skills of Language Learning | ☐ | ☐ | ☐ | ☐ | ☐ | not started |',
+  '| 2 | Teaching of English | ☐ | ☐ | ☐ | ☐ | ☐ | not started |',
+  '',
+  '**Key:** ☐ = not started, ✓ = done',
+  '',
+  '## Stage rows',
+  '',
+  '| Unit | Stage | Status | Initials | Notes |',
+  '|---|---|---|---|---|',
+  '| Unit 1 | G2 en-draft | ▢ | | pending |',
+  '| Unit 2 | G2 en-draft | ▢ | | pending |',
+  '',
+].join('\n');
+const statusBlock = (text, unit) => text.replace(
+  /## Status:[\s\S]*?(?=## Units)/,
+  `## Status: Unit ${unit} authored\n\nEnglish-only Unit ${unit} draft complete.\n\n`,
+);
+const summaryDone = (text, unit) => text.replace(
+  new RegExp(`^\\| ${unit} \\|.*$`, 'm'),
+  (line) => line.replace('☐', '✓').replace('not started', 'authored'),
+);
+const authorUnit = (text, unit) => rewrite(summaryDone(statusBlock(text, unit), unit), `Unit ${unit}`, 'G2 en-draft', unit === 1 ? u1g2 : u2g2);
+
+test('mergeTrackerRows: parallel EFPG-401 authors keep ours status and both summary and stage changes', () => {
+  const ours = authorUnit(courseTracker, 1);
+  const theirs = authorUnit(courseTracker, 2);
+  assert.equal(mergeTrackerRows(courseTracker, ours, theirs), rewrite(summaryDone(ours, 2), 'Unit 2', 'G2 en-draft', u2g2));
+  assert.equal(mergeTrackerRows(courseTracker, theirs, ours), rewrite(summaryDone(theirs, 1), 'Unit 1', 'G2 en-draft', u1g2));
 });
 
-test('mergeAppendOnly: preserves a blank line inserted on one side at a shared point', () => {
-  const base = 'line1\nline2\nline3';
-  const ours = 'line1\n\nline2\nline3';
-  const theirs = 'line1\nline2\nline3';
-  assert.equal(mergeAppendOnly(base, ours, ours), ours);
-  assert.equal(mergeAppendOnly(base, base, ours), ours);
-  assert.equal(mergeAppendOnly(base, theirs, theirs), theirs);
-  assert.equal(mergeAppendOnly(base, base, theirs), theirs);
+test('mergeTrackerRows: competing EFPG-401 summary edits still conflict', () => {
+  const ours = authorUnit(courseTracker, 1);
+  const theirs = authorUnit(courseTracker, 1).replace('| authored |', '| needs repair |');
+  assert.equal(mergeTrackerRows(courseTracker, ours, theirs), null);
+  assert.equal(mergeTrackerRows(courseTracker, ours, ours), ours);
 });
 
-test('mergeAppendOnly: preserves blank lines inserted on both sides at different points', () => {
-  const base = 'line1\nline2\nline3';
-  const ours = 'line1\n\nline2\nline3';
-  const theirs = 'line1\nline2\n\nline3';
-  assert.equal(mergeAppendOnly(base, ours, theirs), 'line1\n\nline2\n\nline3');
+test('mergeTrackerRows: a one-sided status block change is taken in either direction', () => {
+  const changed = statusBlock(courseTracker, 1);
+  assert.equal(mergeTrackerRows(courseTracker, courseTracker, changed), changed);
+  assert.equal(mergeTrackerRows(courseTracker, changed, courseTracker), changed);
+  // The entire block, including subordinate headings and table-like text, is atomic.
+  const extended = changed.replace('English-only Unit 1 draft complete.', '### Draft details\n\n| draft | pending |\n\nEnglish-only Unit 1 draft complete.');
+  assert.equal(mergeTrackerRows(courseTracker, courseTracker, extended), extended);
+  const eof = '# Tracker\n\n## Status: pending\n\nDetails.\n';
+  const updated = eof.replace('pending', 'drafted').replace('Details.', 'Updated details.');
+  assert.equal(mergeTrackerRows(eof, eof, updated), updated);
 });
 
-test('mergeAppendOnly: identical blank line insertion on both sides is kept once', () => {
-  const base = 'line1\nline2\nline3';
-  const both = 'line1\n\nline2\nline3';
-  assert.equal(mergeAppendOnly(base, both, both), both);
-});
-
-test('mergeAppendOnly: a side that edits or deletes a base row returns null', () => {
-  const edited = tracker.replace('| 1 | G2 | done | crew | authored |', '| 1 | G2 | done | crew | re-authored |');
-  assert.equal(mergeAppendOnly(tracker, edited, `${tracker}${rowB}\n`), null);
-  assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, edited), null);
-  const deleted = tracker.replace('Last row for a unit and stage wins.\n', '');
-  assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, deleted), null);
-});
-
-test('mergeAppendOnly: a missing stage returns null', () => {
-  assert.equal(mergeAppendOnly(null, `${tracker}${rowA}\n`, `${tracker}${rowB}\n`), null);
-  assert.equal(mergeAppendOnly(undefined, rowA, rowB), null);
-  assert.equal(mergeAppendOnly(tracker, null, `${tracker}${rowB}\n`), null);
-  assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, null), null);
+test('mergeTrackerRows: summary occurrences stay separate from each other and empty stage keys', () => {
+  const base = '| Unit | Title |\n|---|---|\n| 1 | first |\n| 1 | second |\n\n| Unit | Stage | Notes |\n|---|---|---|\n| 1 | | pending |\n';
+  const ours = base.replace('first', 'updated first').replace('pending', 'stage updated');
+  const theirs = base.replace('second', 'updated second');
+  assert.equal(mergeTrackerRows(base, ours, theirs), ours.replace('second', 'updated second'));
 });

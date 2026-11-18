@@ -4,6 +4,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { fetchStudentDrilldown, type StudentDrilldown } from '@site/src/lib/teacherAnalytics';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { AppPageTitle } from '@site/src/components/ui';
 
 /**
  * Student drill-down (Spec 005, T041, FR-011) - one student's submissions,
@@ -53,9 +55,9 @@ function StudentDrilldownContent(): React.ReactElement {
     if (classRole === 'teacher') load();
   }, [classRole, load]);
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (classRole !== 'teacher') return <p>{MESSAGES.noAccess[locale]}</p>;
-  if (!drilldown) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!drilldown) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
@@ -112,6 +114,7 @@ export default function StudentDrilldownPage(): React.ReactElement {
   return (
     <Layout title="Student record">
       <AppDashboardShell role="teacher">
+          <AppPageTitle en="Student record" ur="طالب علم کا ریکارڈ" icon="student" />
           <StudentDrilldownContent />
       </AppDashboardShell>
     </Layout>

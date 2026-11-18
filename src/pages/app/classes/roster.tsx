@@ -8,6 +8,9 @@ import {
   removeStudent, restoreStudent, updateClass,
 } from '@site/src/lib/classes';
 import type { RosterRow } from '@site/src/lib/classes';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Roster management - join-code reissue/revoke, archive/reactivate,
@@ -137,7 +140,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
     await reload();
   }
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   if (!classRow || role !== 'teacher') {
     return (
@@ -147,7 +150,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
     );
   }
 
-  if (!roster) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!roster) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   const activeStudents = roster.filter((r) => r.status === 'active');
   const removedStudents = roster.filter((r) => r.status === 'removed');
@@ -171,7 +174,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
 
   return (
     <div>
-      <h2>{classRow.name}</h2>
+      <PageHeader title={classRow.name} icon="roster" />
       <p>
         {classRow.course_code} - {classRow.term_label}
         {' · '}
@@ -254,6 +257,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
       </div>
 
       <h3>Roster ({activeStudents.length})</h3>
+      <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
       <table>
         <thead>
           <tr>
@@ -289,10 +293,12 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
           )}
         </tbody>
       </table>
+        </div>
 
       {removedStudents.length > 0 && (
         <>
           <h3>Removed students ({removedStudents.length})</h3>
+          <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
           <table>
             <thead>
               <tr>
@@ -323,6 +329,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
               })}
             </tbody>
           </table>
+        </div>
         </>
       )}
     </div>
@@ -333,11 +340,13 @@ export default function RosterPage(): React.ReactElement {
   const classId = useQueryParam('classId');
   return (
     <Layout title="Class roster">
+      <AppDashboardShell>
       <AuthGuard requireRole="teacher">
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId ? <RosterContent classId={classId} /> : <p>No class selected.</p>}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

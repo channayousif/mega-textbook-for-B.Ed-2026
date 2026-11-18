@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from '@docusaurus/router';
 import { useAuth, type UserRole } from '@site/src/contexts/AuthContext';
 import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
 
 /**
  * Client-side gate for `/app/admin/*` pages (Spec 002, T042).
@@ -25,7 +26,7 @@ export default function AuthGuard({
   const location = useLocation();
   const { loading, session, role, verifiedTeacher } = useAuth();
 
-  if (loading) return <p>Loading…</p>;
+  if (loading) return <LoadingMark label="Loading…" />;
 
   if (!session) {
     if (typeof window !== 'undefined') {

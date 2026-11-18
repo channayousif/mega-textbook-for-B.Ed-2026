@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">زبانی انگریزی کے پانچ لسانی کھیل</title>
+  <desc id="d">زبانی اظہار کے پانچ لسانی کھیلوں کا جدول: کھیل کا عنوان، مطلوبہ جماعت، مختص وقت، اور مشق کی جانے والی مخصوص زبان کی ساختیں۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 12px; fill: var(--ink); }
+    .muted { font-size: 11px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">پرائمری زبانی اظہار کے لیے پانچ لسانی کھیل</text>
+  <text class="muted" x="390" y="52" text-anchor="middle">برجستہ بول چال کو فروغ دینے والی منظم ابلاغی سرگرمیاں</text>
+
+  <!-- Table Header -->
+  <rect class="panel" x="30" y="66" width="720" height="32" rx="4"/>
+  <text class="sh" x="735" y="88" text-anchor="end">لسانی کھیل</text>
+  <text class="sh" x="540" y="88" text-anchor="end">ہدف اور وقت</text>
+  <text class="sh" x="420" y="88" text-anchor="end">مشق کی جانے والی زبانی ساختیں</text>
+
+  <!-- Row 1 -->
+  <rect class="panel-a" x="30" y="104" width="720" height="50" rx="4"/>
+  <text class="sh" x="735" y="125" text-anchor="end">1. بیس سوالات</text>
+  <text class="muted" x="735" y="143" text-anchor="end">قیاسی اندازہ لگانا</text>
+  <text class="body" x="540" y="125" text-anchor="end">جماعت 4 تا 5</text>
+  <text class="muted" x="540" y="143" text-anchor="end">10-15 منٹ</text>
+  <text class="body" x="420" y="125" text-anchor="end">ہاں/ناں سوالات: "Is it...?", "Can it...?", "Does it have...?"</text>
+  <text class="muted" x="420" y="143" text-anchor="end">جسامت، شکل، رنگ اور رہائش کی صفات</text>
+
+  <!-- Row 2 -->
+  <rect class="panel-b" x="30" y="160" width="720" height="50" rx="4"/>
+  <text class="sh" x="735" y="181" text-anchor="end">2. بیان کریں اور بنائیں</text>
+  <text class="muted" x="735" y="199" text-anchor="end">مکانی گفتگو</text>
+  <text class="body" x="540" y="181" text-anchor="end">جماعت 3 تا 5</text>
+  <text class="muted" x="540" y="199" text-anchor="end">15 منٹ</text>
+  <text class="body" x="420" y="181" text-anchor="end">حروفِ ربط: "in the middle", "above", "to the left of"</text>
+  <text class="muted" x="420" y="199" text-anchor="end">ہندسی اشکال، گھریلو اشیاء اور جسامت کے الفاظ</text>
+
+  <!-- Row 3 -->
+  <rect class="panel-c" x="30" y="216" width="720" height="50" rx="4"/>
+  <text class="sh" x="735" y="237" text-anchor="end">3. زنجیر نما کہانی</text>
+  <text class="muted" x="735" y="255" text-anchor="end">بیانیہ تسلسل</text>
+  <text class="body" x="540" y="237" text-anchor="end">جماعت 4 تا 5</text>
+  <text class="muted" x="540" y="255" text-anchor="end">10 منٹ</text>
+  <text class="body" x="420" y="237" text-anchor="end">ماضی کے سادہ افعال اور وقتی ربط: then, next, after that</text>
+  <text class="muted" x="420" y="255" text-anchor="end">تخیلاتی بیانیہ اور برجستہ جملوں کا باہمی ربط</text>
+
+  <!-- Row 4 -->
+  <rect class="panel-d" x="30" y="272" width="720" height="50" rx="4"/>
+  <text class="sh" x="735" y="293" text-anchor="end">4. ایسا ساتھی تلاش کریں</text>
+  <text class="muted" x="735" y="311" text-anchor="end">جماعتی انٹرویو</text>
+  <text class="body" x="540" y="293" text-anchor="end">جماعت 3 تا 5</text>
+  <text class="muted" x="540" y="311" text-anchor="end">15 منٹ</text>
+  <text class="body" x="420" y="293" text-anchor="end">حال سادہ سوالات: "Do you have...?", "Can you...?"</text>
+  <text class="muted" x="420" y="311" text-anchor="end">مختصر زبانی جوابات: "Yes, I do", "No, I cannot"</text>
+
+  <!-- Row 5 -->
+  <rect class="panel-a" x="30" y="328" width="720" height="50" rx="4"/>
+  <text class="sh" x="735" y="349" text-anchor="end">5. فرق تلاش کریں</text>
+  <text class="muted" x="735" y="367" text-anchor="end">معلومات کا تبادلہ</text>
+  <text class="body" x="540" y="349" text-anchor="end">جماعت 3 تا 5</text>
+  <text class="muted" x="540" y="367" text-anchor="end">15 منٹ</text>
+  <text class="body" x="420" y="349" text-anchor="end">تصاویر کا موازنہ: "In my picture...", "What about yours?"</text>
+  <text class="muted" x="420" y="367" text-anchor="end">کرداروں کے اعمال کو بیان کرنے والے حال جاری کے جملے</text>
+
+  <text class="wm" x="768" y="410" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

@@ -21,21 +21,24 @@
 import { spawn, spawnSync } from 'node:child_process';
 import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
-import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker } from './workers.mjs';
+import { WORKERS, STAGES, QUOTA_RE, IMAGE_QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker, imageQuotaReset, workFiles } from './workers.mjs';
+import { activeImageQuota, recordImageQuota } from '../lib/image-quota.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
-import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeAppendOnly } from './batch.mjs';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse, IN_FLIGHT, isCorpusStage, figureBacklog, limitIllustrate } from './planner.mjs';
-import { readManifest } from '../lib/figure-manifest.mjs';
-import { walkUnits } from '../lib/content-roots.mjs';
+import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeTrackerRows } from './batch.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, IN_FLIGHT, isCorpusStage, limitIllustrate, limitPlanIllustrations } from './planner.mjs';
+import { illustrationFacts, g3UnitChanges, gateJsonEntries } from './review-facts.mjs';
+import { walkUnits, walkCourses } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
 import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
 import { OWN_PR, queueReview, recordReview, fanOutJobs } from './maintjobs.mjs';
 import { boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from './intel.mjs';
 import { noteStall, clearStall, stallAlertDue, heldFor, stallLine } from './stall.mjs';
 import { resumeHere } from './resume.mjs';
+import { briefRules } from './brief.mjs';
+import { closePrDecisions, closeLandedDecisions } from './decisions.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -49,7 +52,7 @@ const JOB_TIMEOUT = process.env.CREW_JOB_TIMEOUT || '3h';
 const PUSH_SETTLE_MS = 3 * 60e3;
 // Self-maintenance stages sit just after fixes: a handful a week, so the corpus queue cannot starve them.
 const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
-  'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'illustrate', 'author'];
+  'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author'];
 /** Self-maintenance (scripts/crew/maintenance.mjs) and intelligence (scripts/crew/intel.mjs) stages. */
 const isSelf = (stage) => /^(maint|intel)_/.test(stage);
 const INTEL_DIR = join(STATE_DIR, 'intel');
@@ -84,11 +87,8 @@ function contentStatus() {
 
 function latestReport(course, unit, gate) {
   const dir = join(ROOT, 'specs', 'content', course.toLowerCase(), 'reviews', `unit-${pad(unit)}`, gate);
-  if (!existsSync(dir)) return null;
-  const entries = readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => {
-    try { return { file: join(dir, f), json: JSON.parse(readFileSync(join(dir, f), 'utf8')) }; } catch { return { file: join(dir, f), json: null }; }
-  });
-  return pickLatestReport(entries);
+  // Reports directly in the gate folder and one level down (2026-W46 M5, review-facts.mjs).
+  return pickLatestReport(gateJsonEntries(dir));
 }
 
 function trackerSuggestion(course, unit, stagePrefix) {
@@ -134,14 +134,9 @@ function unitFacts(course, u, bilingual, dirs) {
     g3Repaired: /repairs applied/i.test(trackerSuggestion(course, u.unit_no, 'G3')),
     g5Report: latestReport(course, u.unit_no, 'G5'),
     mirrorComplete: d ? mirrorComplete(listDir(d.unitDir), listDir(d.urUnitDir)) : false,
-    figureBacklog: figureBacklog(manifestRows(course, u.unit_no)),
+    ...illustrationFacts(ROOT, course, u.unit_no),
+    g3UnitChanges: u.gates.G3 === 'done' ? [] : g3UnitChanges(ROOT, course, u.unit_no, g3Report),
   };
-}
-
-/** A unit's figure manifest rows, including the ADR-0029 banner sidecar (unit-NN.banner.md). */
-function manifestRows(course, unit) {
-  const dir = join(ROOT, 'specs', 'content', course.toLowerCase(), 'figures');
-  return ['', '.banner'].flatMap((s) => readManifest(join(dir, `unit-${pad(unit)}${s}.md`)) ?? []);
 }
 
 function plan() {
@@ -151,14 +146,14 @@ function plan() {
   const dirs = unitDirs();
   const added = [];
   const awaiting = [];
-  const queue = (course, unit, stage) => {
+  const queue = (course, unit, stage, extra = {}) => {
     const base = jobId(course, unit, stage);
     const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
     if (prior.some((j) => ACTIVE.includes(j.status) || j.status === 'blocked')) return;
     // A merged job whose need persists means its output did not change main's state; do not loop on it.
     if (prior.filter((j) => j.status === 'merged').length >= 2) return;
     const id = prior.length ? `${base}-r${prior.length}` : base;
-    added.push({ id, course, unit, stage, status: 'queued', attempts: 0, tried: [], createdAt: now() });
+    added.push({ id, course, unit, stage, status: 'queued', attempts: 0, tried: [], createdAt: now(), ...extra });
   };
   for (const c of status.courses) {
     for (const u of c.units) {
@@ -170,9 +165,18 @@ function plan() {
     }
   }
   // Units an approved spec defines but nobody has written yet are not in the content status at all.
+  // A course with no course-overview.mdx and no unit on disk queues only its lowest missing unit:
+  // review-evidence binds the overview as a required G2/G3 input, so that job writes it first
+  // (2026-W45 M5; GICP-400 and EFMP-406 evidence).
+  const courseDirs = new Map(walkCourses(ROOT).map((c) => [c.courseCode, c.courseDir]));
+  const waitingOverview = [];
   for (const [course, units] of specUnits()) {
     const onDisk = new Set((status.courses.find((c) => c.course_code === course)?.units || []).map((u) => u.unit_no));
-    for (const n of units) if (!onDisk.has(n)) queue(course, n, 'author');
+    const courseDir = courseDirs.get(course);
+    const hasOverview = courseDir ? existsSync(join(courseDir, 'course-overview.mdx')) : false;
+    const needsOverview = !hasOverview && onDisk.size === 0;
+    if (needsOverview && units.length) waitingOverview.push(course);
+    for (const n of authorQueue(units, onDisk, hasOverview)) queue(course, n, 'author', needsOverview ? { overview: false } : {});
   }
   // One course at a time (owner ruling 2026-10-28): finish what was started; only the focus
   // course may start, so author jobs for every other unstarted course are withheld.
@@ -185,26 +189,37 @@ function plan() {
   board.focus = { course: focus?.course ?? null, reason: focus?.reason ?? 'no crew work', at: now() };
   const held = added.filter((j) => !started.has(j.course) && j.course !== board.focus.course);
   if (held.length) added.splice(0, added.length, ...added.filter((j) => !held.includes(j)));
-  added.splice(0, added.length, ...limitIllustrate(added, board.jobs.filter((j) => IN_FLIGHT.includes(j.status))));
+  const inFlight = board.jobs.filter((j) => IN_FLIGHT.includes(j.status));
+  added.splice(0, added.length, ...limitPlanIllustrations(limitIllustrate(added, inFlight), inFlight));
   // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
   board.awaitingG3 = { at: now(), units: awaiting };
   if (!DRY) { board.jobs.push(...added); save('board', board); }
-  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off; focus: ${board.focus.course ?? 'none'} (${board.focus.reason})${held.length ? `; held ${held.length} author job(s) for ${[...new Set(held.map((j) => j.course))].join(', ')}` : ''}`);
+  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off; focus: ${board.focus.course ?? 'none'} (${board.focus.reason})${held.length ? `; held ${held.length} author job(s) for ${[...new Set(held.map((j) => j.course))].join(', ')}` : ''}${waitingOverview.length ? `; waiting for course overview: ${waitingOverview.join(', ')}` : ''}`);
   for (const j of added) console.log(`  + ${j.id}`);
   return added;
 }
 
 // ---------------------------------------------------------------- briefs
 
+/**
+ * The render step for a G3/G5 review job. The review contract (review-criteria COMMANDS,
+ * review-unit skill) needs a real `render-review` with PNGs, and the brief forbids building or
+ * serving the site, so reviews inspect the CI-built production deploy instead. Before this
+ * (2026-11-09) 90 review files recorded "render-review unperformed" and every agent escalate
+ * carried it. Output stays under the sparse-excluded `renders-*` folder, hence `git add --sparse`.
+ */
+const renderStep = (j, ur) => ` For the rendered-page and print evidence, inspect the production build (CI-built from main) and never build or serve the site: if \`git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- <this unit's English dir>${ur ? ' <its Urdu mirror dir>' : ''} static/img/figures/${j.course.toLowerCase()}/unit-${pad(j.unit)}/\` exits 0, run \`scripts/heavy.sh node scripts/render-inspect.mjs ${j.course} ${j.unit}${ur ? ' --locale ur' : ''} --base https://textbook.com.pk --no-pdf\`, record its log and PNGs (stage the folder with \`git add --sparse\`) as the \`render-review\` command evidence, and cite the deployed SHA as the rendered input identity. If the diff is not empty, the live site is not your input: record \`render-review\` as unavailable and name the deployed SHA and HEAD. Changed images can be served stale for up to 30 days, so treat a missing or mismatched asset as unverified, not as a content defect.`;
+
 const STAGE_TASK = {
   salvage: (j) => `This branch carries earlier, unfinished work from ${j.pr ? `PR #${j.pr}` : 'an earlier branch'} (${j.base}). Run \`git fetch origin && git rebase origin/main\`, resolve every conflict (keep this unit's content; take main's version of shared files such as the style guide, gates and catalog), then make every content gate pass.${j.task ? ` Extra instructions: ${j.task}` : ''}`,
-  author: (j) => `Author ${j.course} Unit ${j.unit} from its approved content-spec, following the author-unit skill end to end (English only; the Urdu mirror is a separate job). Topic titles read "Topic N.M - Title" (validate:content checks it).`,
+  author: (j) => `Author ${j.course} Unit ${j.unit} from its approved content-spec, following the author-unit skill end to end (English only; the Urdu mirror is a separate job). Topic titles read "Topic N.M - Title" (validate:content checks it).${j.overview === false ? ` This course has no course-overview.mdx yet: write it as part of this commit, modelled on docs/semester-3/gicp-400/course-overview.mdx, so later author jobs and the course's G2 evidence can bind it.` : ''}`,
   repair_en: (j) => `Apply the findings of the latest G3 report under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit ${j.unit} G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.`,
   figures: (j) => `Render every prompt-only schematic figure for ${j.course} Unit ${j.unit} (generate-figures skill): diagrams, tables, concept maps, flowcharts and timelines as SVG with their .ur.svg variants. Leave raster illustrations at prompt-only for the illustrate job. Every SVG must pass npm run check:svg-style; render each one to PNG and look at it (light and dark) before placing it.`,
-  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it generates with agy, optimises to WebP and moves each row to generated. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job.`,
-  review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.${latestReport(j.course, j.unit, 'G3') ? ' This is the second and last review cycle (ADR-0019): repairs were applied for the latest report under the unit\'s reviews/.../G3/ folder. Verify each of its findings against the current files, carry any that remain unresolved, and give a new name to your report.' : ''}`,
+  plan_illustrations: (j) => `Plan the raster images for ${j.course} Unit ${j.unit} (ADR-0029 point 5; owner ruling 2026-11-09: units authored before the author-unit skill planned them are backfilled). Read \`.claude/skills/author-unit/references/figure-prompts.md\` and model the banner on \`specs/content/efmp-304/figures/unit-02.banner.md\`. Write \`specs/content/${j.course.toLowerCase()}/figures/unit-${pad(j.unit)}.banner.md\` with one 16:9 banner row for the unit index (next free figure ID, Kind illustration, Status prompt-only). Then add one illustration scene per topic for its "A real classroom situation", unless the scene would only decorate: a \`FIGURE[...]\` marker in the English topic file and a matching prompt-only row in \`figures/unit-${pad(j.unit)}.md\`. Every prompt is a complete brief for a scene that teaches the unit's point: a Sindh school or classroom, Pakistani dress, no text, maps, flags or emblems, and never a prophet, companion, angel or other sacred person, nor scripture or calligraphy (this matters most for Islamic studies and Qur'an courses: show teachers and pupils learning, not sacred figures). Alt text describes what the image will show. Do not generate, place or draw any image and do not touch other figures: the illustrate job produces and places these rows.`,
+  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it generates with agy, optimises to WebP and moves each row to generated. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, any depiction of a prophet, companion, angel or other sacred person, any scripture or calligraphy, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job. If generate-illustration.mjs exits 3 (image quota exhausted), stop at once: commit nothing, not even a PHR, print one CREW-HANDOFF line with the reset time, and exit; the crew holds this job until the quota resets.`,
+  review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row; write the report JSON directly under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/ (supporting evidence may sit in a subfolder). Never tick G3, never add reviewer initials, never self-sign.${renderStep(j, false)}${latestReport(j.course, j.unit, 'G3') ? ' This is the second and last review cycle (ADR-0019): repairs were applied for the latest report under the unit\'s reviews/.../G3/ folder. Verify each of its findings against the current files, carry any that remain unresolved, and give a new name to your report.' : ''}`,
   translate: (j) => `Translate ${j.course} Unit ${j.unit} into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft. Topic titles read "موضوع N.M - ...", matching the English numbering.`,
-  review_ur: (j) => `Act as the INDEPENDENT G5 Urdu reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row. Never tick G5, never self-sign.`,
+  review_ur: (j) => `Act as the INDEPENDENT G5 Urdu reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row; write the report JSON directly under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G5/ (supporting evidence may sit in a subfolder). Never tick G5, never self-sign.${renderStep(j, true)}`,
   fix: (j) => j.task || `Make every content gate pass for ${j.course} Unit ${j.unit} with the smallest edits.`,
   intel_distill: (j) => `Distil today's reusable intelligence (intel-distill skill) into \`specs/intelligence/daily/${j.day}.md\`. These clusters grew in the last 24 hours (kind, recent count, total, signature, an example, evidence):\n\n${j.task}`,
   maint_survey: (j) => `Run the ${j.week} maintenance survey (weekly-maintenance skill, "Survey"). Look at what changed since ${j.since.slice(0, 10)} and at this week's intelligence (\`specs/intelligence/daily/\`, \`specs/intelligence/registry.md\`), and write \`specs/maintenance/${j.week}/spec.md\`, \`plan.md\`, \`tasks.md\` and \`intelligence.md\`.`,
@@ -216,15 +231,6 @@ const STAGE_TASK = {
 };
 
 /** The rules line every brief opens with; self-maintenance may touch what content jobs must not. */
-function briefRules(j, self) {
-  const common = 'no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`';
-  if (!self) return `${common}, never mark G3/G5 done, never self-sign or use\nhuman initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.`;
-  return `${common}, and never touch course content (\`docs/\`, \`licence/\`, the Urdu docs trees,
-\`specs/content/\`, \`static/img/figures/\`, \`glossary.json\`): the dispatcher rejects any such change. Never change
-what an ADR decided, never self-sign, never mark G3/G5 done. Protected paths (scripts, ADRs, skills, CLAUDE.md,
-AGENTS.md, catalog, CI) may change only inside your task; those PRs go to the owner.`;
-}
-
 /** How a job proves it is finished. */
 function doneWhen(j, self) {
   if (j.stage === 'maint_review') return `1. You changed nothing and committed nothing.
@@ -430,8 +436,11 @@ function launchQueued(board, health, control, events) {
   const queue = queueOrder(board, control);
   if (resourceHold(control, events, queue.length)) return 0;
   let launched = 0;
+  // Every illustrate job would fail on an exhausted image quota; hold them until it resets.
+  const imageQuota = activeImageQuota();
   for (const j of queue) {
     if (running.length >= MAX_PARALLEL) break;
+    if (j.stage === 'illustrate' && imageQuota) continue;
     // Each launch uses memory and disk, so the floors are checked again before the next one.
     if (memAvailableMb() < MIN_FREE_MB) { console.log(`memory below ${MIN_FREE_MB} MB; not launching`); break; }
     if (diskFreeMb() < MIN_FREE_DISK_MB) { console.log(`disk below ${MIN_FREE_DISK_MB} MB; not launching`); break; }
@@ -629,6 +638,8 @@ function finishSuccess(board, j, logText) {
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], wt).out || 0);
   const made = j.startHead ? Number(sh('git', ['rev-list', '--count', `${j.startHead}..HEAD`], wt, { allowFail: true }).out || 0) : ahead;
   if (!ahead || !made) return { ok: false, why: 'the worker exited without committing any change' };
+  const produced = sh('git', ['diff', '--name-only', `${j.startHead || 'origin/main'}..HEAD`], wt, { allowFail: true }).out.split('\n');
+  if (!workFiles(produced).length) return { ok: false, why: 'the worker committed only a PHR (history/prompts/); a job must produce its stage\'s work, and the crew writes the PHR itself' };
   if (selfJob(board, j)) {
     const changed = sh('git', ['diff', '--name-only', 'origin/main...HEAD'], wt, { allowFail: true }).out.split('\n').filter(Boolean);
     const content = contentFiles(changed);
@@ -684,6 +695,34 @@ function reap(board, health, events) {
   }
 }
 
+/**
+ * An illustrate job that hit the image quota and produced nothing but its PHR goes back to the
+ * queue: its worktree is reset to where it started (dropping the PHR), the attempt is not counted,
+ * the worker is not cooled (its text quota is fine), and launchQueued holds the job until the
+ * recorded reset. Returns true when it requeued the job.
+ */
+function imageQuotaRequeue(board, events, j, tail) {
+  let rec = activeImageQuota();
+  if (!rec && !IMAGE_QUOTA_RE.test(tail)) return false;
+  const base = j.startHead || 'origin/main';
+  const changed = [
+    ...sh('git', ['diff', '--name-only', base], j.worktree, { allowFail: true }).out.split('\n'),
+    ...sh('git', ['ls-files', '--others', '--exclude-standard'], j.worktree, { allowFail: true }).out.split('\n'),
+  ];
+  if (workFiles(changed).length) return false; // some images were made before the quota ran out
+  if (!rec) {
+    rec = recordImageQuota(imageQuotaReset(tail));
+    events.push(`⏸ image quota exhausted until ${rec.resetAt}; illustrate jobs held until then`);
+  }
+  sh('git', ['reset', '-q', '--hard', base], j.worktree, { allowFail: true });
+  sh('git', ['clean', '-fdq', '--', 'history/prompts'], j.worktree, { allowFail: true });
+  j.status = 'queued';
+  j.attempts = Math.max(0, (j.attempts || 1) - 1);
+  delete j.feedback;
+  log(board, j, `image quota exhausted until ${rec.resetAt}; nothing made, PHR dropped; held in queue`);
+  return true;
+}
+
 function reapOne(board, health, events, j) {
   const exitFile = `${j.log}.exit`;
   if (alive(j.pid) && !existsSync(exitFile)) return;
@@ -694,6 +733,7 @@ function reapOne(board, health, events, j) {
   const tail = logText.slice(-4000);
   pruneScratch(j.worktree);
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
+  if (j.stage === 'illustrate' && imageQuotaRequeue(board, events, j, tail)) return;
   const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
   if (quota || (code === 124 && !tail.trim())) {
     const mins = cool(health, j.worker, tail || `exit ${code}`);
@@ -837,12 +877,17 @@ function queueCiFixes(board, red, events) {
 /**
  * Files every unit touches, so concurrent branches conflict in them on almost every batch:
  * glossary.json (terms appended at the end), the course tracker specs/content/<course>/tasks.md
- * (each unit job appends its own rows; 45 of 85 exclusions in W44 F2) and, on older branches,
- * static/content-status.json. When a batch merge conflicts in these alone, resolve it here
- * instead of spending a merge-fix job: glossary by mergeGlossary, a tracker by mergeAppendOnly
- * (only when both sides purely insert lines), content-status by regenerating it. The batch's
- * registry and content gates still run on the result. Returns false (caller aborts) for any
- * other conflict.
+ * (each unit job appends and rewrites its own rows; 125 of 129 exclusions in W45 F2) and, on
+ * older branches, static/content-status.json. When a batch merge conflicts in these alone,
+ * resolve it here instead of spending a merge-fix job: glossary by mergeGlossary, content-status
+ * by regenerating it, and a tracker by mergeTrackerRows, which keys table rows by Unit, Stage and
+ * occurrence number (summary rows use Unit and occurrence): a row changed or removed on one
+ * side takes that side, new rows from both sides are kept (ours first) after their table's last
+ * row, and prose merges only when both
+ * sides purely insert, except the Status section takes the only changed side or ours if both
+ * change it differently. A row changed differently on both sides, or any other prose change, still
+ * falls back to a merge fix. The batch's registry and content gates still run on the result.
+ * Returns false (caller aborts) for any other conflict.
  */
 function resolveSharedConflicts(wt) {
   const files = sh('git', ['diff', '--name-only', '--diff-filter=U'], wt, { allowFail: true }).out.split('\n').filter(Boolean);
@@ -851,7 +896,7 @@ function resolveSharedConflicts(wt) {
   for (const f of trackers) {
     // Read stages untrimmed: sh() trims, which would drop the tracker's final newline.
     const stage = (n) => { const r = spawnSync('git', ['show', `:${n}:${f}`], { cwd: wt, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }); return r.status === 0 ? r.stdout : null; };
-    const merged = mergeAppendOnly(stage(1), stage(2), stage(3));
+    const merged = mergeTrackerRows(stage(1), stage(2), stage(3));
     if (merged === null) return false;
     writeFileSync(join(wt, f), merged);
     sh('git', ['add', '--', f], wt);
@@ -989,8 +1034,12 @@ function managePrs(board, decisions, events) {
     if (!v.ok) continue;
     const pr = JSON.parse(v.out);
     if (DRY && pr.state !== 'OPEN') { console.log(`[dry-run] PR #${j.prNumber} is ${pr.state.toLowerCase()}`); continue; }
-    if (pr.state === 'MERGED') { landed(board, j, 'merged'); continue; }
+    if (pr.state === 'MERGED') {
+      noteClosedDecisions(closePrDecisions(decisions, j.prNumber, 'merged', now()), events);
+      landed(board, j, 'merged'); continue;
+    }
     if (pr.state === 'CLOSED') {
+      noteClosedDecisions(closePrDecisions(decisions, j.prNumber, 'closed', now()), events);
       j.status = 'closed'; log(board, j, 'closed'); cleanup(j);
       // Closing a batch PR by hand is an owner signal: hold its jobs rather than re-batch them.
       for (const id of j.members || []) { const m = board.jobs.find((x) => x.id === id); if (m) { m.status = 'blocked'; log(board, m, `held: batch PR #${j.prNumber} was closed`); } }
@@ -1045,6 +1094,7 @@ function managePrs(board, decisions, events) {
     if (pr.isDraft) sh('gh', ['pr', 'ready', String(j.prNumber)], ROOT, { allowFail: true });
     const m = sh('gh', ['pr', 'merge', String(j.prNumber), '--merge', '--admin'], ROOT, { allowFail: true });
     if (m.ok) {
+      noteClosedDecisions(closePrDecisions(decisions, j.prNumber, 'auto-merged (CI green)', now()), events);
       landed(board, j, 'auto-merged (CI green)');
       events.push(`🚀 merged PR #${j.prNumber} (${j.id}${j.members ? `, ${j.members.length} jobs` : ''})`);
       sh('git', ['push', '-q', 'origin', '--delete', j.branch], ROOT, { allowFail: true });
@@ -1089,6 +1139,10 @@ function retireSuperseded(board, events) {
 }
 
 // ---------------------------------------------------------------- decisions and owner commands
+
+function noteClosedDecisions(ids, events) {
+  if (ids.length) events.push(`Closed owner decisions: ${ids.join(', ')}`);
+}
 
 function ask(decisions, question, options = ['yes', 'no'], extra = {}) {
   const n = decisions.items.length + 1;
@@ -1157,6 +1211,7 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
   if (!d) return null; // ordinary chat is openclaw's business, not the crew's
   const item = decisions.items.find((x) => x.id.toUpperCase() === d[1].toUpperCase());
   if (!item) return `no decision ${d[1].toUpperCase()}.`;
+  if (item.status === 'closed') return `${item.id} was closed: ${item.note}`;
   if (item.status !== 'open') return `${item.id} was already answered: ${item.answer}.`;
   const answer = (d[2] || '').toLowerCase();
   if (!item.options.includes(answer)) return `${item.id} options are: ${item.options.join(' / ')}. Reply e.g. "${item.id} ${item.options[0]}".`;
@@ -1241,6 +1296,7 @@ ${resumeHere({ board, decisions, control, nextUp: queueOrder(board, control) })}
 | Worker | Family | State | Until | Last error |
 |---|---|---|---|---|
 ${Object.keys(WORKERS).map((w) => { const h = health[w] || { state: 'ok' }; return `| ${w} | ${WORKERS[w].family} | ${h.state} | ${h.until || ''} | ${(h.last_error || '').replace(/[|\n]/g, ' ').slice(0, 80)} |`; }).join('\n')}
+${(() => { const q = activeImageQuota(); return q ? `\nImage quota exhausted until ${q.resetAt}: illustrate jobs wait in the queue.\n` : ''; })()}
 
 ## Open owner decisions
 ${decisions.items.filter((d) => d.status === 'open').map((d) => `- **${d.id}** ${d.question} (${d.options.join(' / ')})`).join('\n') || 'none'}
@@ -1455,6 +1511,7 @@ function tick() {
   // the whole tick, so finished jobs were never reaped and launches were repeated every tick.
   const phase = (name, fn) => { try { fn(); } catch (e) { console.error(`${name}: ${e.stack || e.message}`); } };
   try {
+    phase('decisions', () => noteClosedDecisions(closeLandedDecisions(decisions, board, now()), events));
     phase('inbox', () => handleInbox(board, decisions, control, health));
     phase('reap', () => reap(board, health, events));
     phase('batch', () => batchPhase(board, events));

@@ -1,0 +1,5 @@
+2026-11-07 web tool open attempts:
+https://doi.org/10.1007/s11625-018-0627-5 -> 500 redirected to inaccessible link.springer.com.
+https://doi.org/10.3390/su17062387 -> URL not accessible via tool.
+Existing local excerpts inspected, not independently authenticated full text.
+Purvis, Ilyas and World Bank excerpt files are present but absent from prepared input_manifest. New source binding required before an accepted decision relies on them.

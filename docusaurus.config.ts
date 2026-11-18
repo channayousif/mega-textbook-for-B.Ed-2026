@@ -122,6 +122,21 @@ function siteStats() {
   };
 }
 
+/**
+ * Feature 028: the newest automatic news events for the ticker, from the feed that
+ * prebuild derives from git history (scripts/build-news-feed.mjs). Embedding them
+ * here prerenders the ticker, so it shows without JavaScript and never shifts the
+ * layout. A missing feed (a bare `docusaurus start`) is simply an empty ticker.
+ */
+function newsFeed() {
+  try {
+    const feed = JSON.parse(readFileSync('./static/news-feed.json', 'utf8'));
+    return (feed.events ?? []).slice(0, 12);
+  } catch {
+    return [];
+  }
+}
+
 /** Per-course counts for the catalogue, from the same sources as siteStats(). */
 function courseStatus() {
   const report = JSON.parse(readFileSync('./static/content-status.json', 'utf8'));
@@ -140,25 +155,37 @@ function courseStatus() {
 
 const config: Config = {
   title: SITE_TITLE,
-  tagline: 'A bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
-  favicon: 'img/favicon.svg',
+  tagline: 'Platform for current & future teachers and teacher educators',
+  favicon: 'img/kit/favicon.svg',
   url: 'https://textbook.com.pk',
   baseUrl: '/',
   trailingSlash: true, // emit /path/index.html so plain static file servers (nginx/Apache) serve directory URLs
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // The declared favicon had no file behind it, so every page requested a 404.
-  // An SVG icon plus a PNG fallback covers everything current.
+  // Logo kit v2 icons (2026-11-07), served from img/kit/: the v1 files had the same
+  // names under img/brand/, and a 30-day cache kept showing them. SVG favicon above,
+  // PNG fallback, touch icon and
+  // the install manifest. The video studio's brand-bible uses the same v2 mark.
   headTags: [
-    { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/favicon.png' } },
-    { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' } },
+    { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/kit/icon-48.png' } },
+    { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/kit/icon-180.png' } },
+    { tagName: 'link', attributes: { rel: 'manifest', href: '/site.webmanifest' } },
+    { tagName: 'meta', attributes: { name: 'theme-color', content: '#123E43' } },
     // Marks a returning visitor before paint, the reason `data-theme` works without a
     // flash (ADR-0018), so the landing page can reserve the welcome strip's height.
     {
       tagName: 'script',
       attributes: {},
       innerHTML: "try{var k=Object.keys(localStorage);if(localStorage.getItem('last-read')||k.some(function(x){return x.indexOf('sb-')===0&&x.slice(-11)==='-auth-token'}))document.documentElement.setAttribute('data-returning','1')}catch(e){}",
+    },
+  ],
+
+  scripts: [
+    {
+      src: 'https://analytics.ahrefs.com/analytics.js',
+      'data-key': 'ij+YRkZRrZobEWUujGJjDQ',
+      async: true,
     },
   ],
 
@@ -187,6 +214,7 @@ const config: Config = {
     reviewNotices: reviewNotices(),
     siteStats: siteStats(),
     courseStatus: courseStatus(),
+    newsFeed: newsFeed(),
   },
 
   presets: [
@@ -204,7 +232,7 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: ['./src/css/tokens.css', './src/css/custom.css'],
+          customCss: ['./src/css/tokens.css', './src/css/custom.css', './src/css/app.css'],
         },
         gtag: {
           trackingID: 'G-2DCL2X01DL',
@@ -305,7 +333,7 @@ const config: Config = {
     // Without this there is no og:image at all, while twitter:card is
     // summary_large_image - so every WhatsApp/social share rendered a blank
     // card. WhatsApp matters a great deal for this audience.
-    image: 'img/social-card.png',
+    image: 'img/kit/social-card.png',
     metadata: [
       { name: 'keywords', content: 'textbooks, Grades 9-12, teacher education, ADE, B.Ed Hons, STEDA, teaching licence, Sindh, learning platform, LMS, Pakistan, bilingual textbook, Urdu, EFMP, GECE' },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -336,7 +364,9 @@ const config: Config = {
         // desktop widths, a compact locale-switch + sign-in-status pair at
         // <=996px, placed first so it sits left of the mobile search icon.
         { type: 'custom-mobileTopBar', position: 'right' },
-        { type: 'localeDropdown', position: 'right' },
+        // EN | اردو segmented toggle (owner choice 2026-11-08), replacing the stock
+        // localeDropdown: src/components/LanguageToggleNavbarItem.tsx.
+        { type: 'custom-languageToggle', position: 'right' },
         { type: 'search', position: 'right' },
         // Spec 004, T007 - registers src/components/DashboardNavLink.tsx;
         // renders nothing unless signed in as a student.
@@ -352,12 +382,12 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      logo: { alt: 'textbook.com.pk', src: 'img/brand/bilingual-reverse.svg', height: 64 },
+      logo: { alt: 'textbook.com.pk', src: 'img/kit/bilingual-reverse.svg', height: 96 }, // 384px wide, above the kit's 360px minimum
       links: [
         { title: 'Programmes', items: [{ label: 'B.Ed', to: '/intro' }, { label: 'Teaching licence', to: '/licence/' }] },
         { title: 'For you', items: [{ label: 'Create an account', to: '/app/signup' }, { label: 'Become a reviewer', to: '/app/reviewer/apply' }] },
         { title: 'Guides', items: [{ label: 'Student guide', to: '/guides/student-guide/' }, { label: 'Teacher guide', to: '/guides/teacher-guide/' }] },
-        { title: 'About', items: [{ label: 'About', to: '/about' }, { label: 'Contact', to: '/contact' }, { label: 'Privacy & Cookies', to: '/privacy' }] },
+        { title: 'About', items: [{ label: 'About', to: '/about' }, { label: 'Contact', to: '/contact' }, { label: 'Privacy & Cookies', to: '/privacy' }, { label: 'Terms of Use', to: '/terms' }] },
       ],
       copyright: 'textbook.com.pk - a bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
     },

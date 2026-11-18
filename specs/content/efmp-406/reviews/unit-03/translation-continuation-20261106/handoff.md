@@ -1,0 +1,13 @@
+# Unit 3 draft Urdu continuation
+
+Codex continuation of committed translation `2a19c0a7d`, 2026-11-06. This is a translator handoff, not independent review evidence. The four-page mirror and four light/dark Urdu figure pairs from that commit are retained. English prose and English figures are unchanged.
+
+Corrected obvious mistranslations in all four Urdu MDX files: language versus oral terminology, the Khairpur classroom and receipt example, physical text and gathering, gender roles, silent reading, Mast Tawkali's name, photosynthesis, maintenance records and institutional terminology. Restored the possibility qualifier in Topic 3.2's policy-analysis prompt and the distinction between decoding and questioning a text. Clarified that the unit has no bound study measuring MTB-MLE outcomes; it does not claim guaranteed benefits.
+
+The existing G4 row now records delivery while retaining its open status. No row was appended and no G3/G5 certification was issued. English and Urdu indexes remain `translation_status: draft` pending independent G5. The English baseline and proposed terminology list remain as recorded in `specs/content/efmp-406/translations/unit-03/handoff.md`. That earlier record describes the initial translation; this note records the subsequent corrections.
+
+The initial content run reproduced exactly one finding: Unit 3 stale G2 input manifest. The seven translation handoff/log files committed in the earlier translation are bound English G2 inputs. Regenerated G2 evidence with `node scripts/prepare-gate-evidence.mjs EFMP-406 3` against committed HEAD `2a19c0a7d`; all eight draft commands passed. The authoritative G2 tracker reference now points to that new evidence. Translation MDX changes do not enter this English G2 input set. Older evidence was preserved.
+
+Both indexes were temporarily flipped to `reviewed` to activate parity gates, then restored. The repaired temporary run passed validation, figures and terminology; only open G4/G5 rows and derived content-status staleness were reported. All four repaired Urdu pages compile through `@mdx-js/mdx`; their heading vectors and required front-matter metadata match English. Final content results are in `check-final.txt` alongside this handoff.
+
+Builds, servers, Playwright, render inspection and browser-based SVG measurement were prohibited by this job. They were not run. A permitted browser host must inspect Nastaliq shaping, desktop and narrow layouts, A4 print, and SVG text geometry. Independent G5 must compare all bilingual passages and independently solve the assessment; green deterministic checks do not certify meaning or rendering. Existing proposed terms and the open English G3 dependency remain for the owner and qualified reviewers.

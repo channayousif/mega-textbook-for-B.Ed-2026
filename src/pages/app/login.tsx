@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
+import AuthFrame from '@site/src/components/AuthFrame';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useLocation } from '@docusaurus/router';
 import { useAuth } from '@site/src/contexts/AuthContext';
@@ -75,7 +76,7 @@ export default function LoginPage(): React.ReactElement {
 
   return (
     <Layout title="Sign in" description="Sign in to your account">
-      <main className="container auth-page margin-vert--lg" style={{ maxWidth: 420 }}>
+      <AuthFrame>
         <h1>Sign in</h1>
 
         {!isConfigured && (
@@ -139,7 +140,7 @@ export default function LoginPage(): React.ReactElement {
         <p>
           <a href={loginUrlWithReturnTo(returnTo, 'signup')}>Create an account</a>
         </p>
-      </main>
+      </AuthFrame>
     </Layout>
   );
 }

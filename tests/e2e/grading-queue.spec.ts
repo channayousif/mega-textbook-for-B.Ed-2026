@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { deleteUsers } from './_cleanup';
+import { TEST_PASSWORD } from './_password';
 
 /**
  * T041 [US3] — a teacher grades and returns a submission and the student
@@ -18,7 +19,7 @@ const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const configured = Boolean(SUPABASE_URL && ANON_KEY && SERVICE_KEY);
 test.skip(!configured, 'requires DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY');
 
-const PASSWORD = 'Test-Passw0rd!';
+const PASSWORD = TEST_PASSWORD;
 
 test('teacher grades and returns a submission; student sees it, then sees a correction', async ({ browser }) => {
   const svc = createClient(SUPABASE_URL!, SERVICE_KEY!, { auth: { persistSession: false } });

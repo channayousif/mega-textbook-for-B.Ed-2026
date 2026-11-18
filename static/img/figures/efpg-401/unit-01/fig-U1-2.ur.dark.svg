@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">سماعت کی ذیلی مہارتوں کا تقابل</title>
+  <desc id="d">جدول جس میں سماعت کی چار ذیلی مہارتوں کا موازنہ کیا گیا ہے: اجمالی فہم، مخصوص تفصیل، استنباط، اور ہدایات پر عمل، مع جماعتی مقصد اور پرائمری سطح کے ٹھوس کام۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 12px; fill: var(--ink); }
+    .muted { font-size: 11px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="38" text-anchor="middle">پرائمری انگریزی میں سماعت کی بنیادی ذیلی مہارتیں</text>
+  <text class="muted" x="390" y="58" text-anchor="middle">جماعتی تدریسی کاموں کو مخصوص ادراکی مقاصد سے ہم آہنگ کرنا</text>
+
+  <!-- Table Header -->
+  <rect class="panel" x="30" y="75" width="720" height="35" rx="4"/>
+  <text class="sh" x="735" y="98" text-anchor="end">سماعت کی ذیلی مہارت</text>
+  <text class="sh" x="525" y="98" text-anchor="end">ادراکی مقصد</text>
+  <text class="sh" x="265" y="98" text-anchor="end">جماعتی مشق کا کام</text>
+
+  <!-- Row 1: Gist -->
+  <rect class="panel-a" x="30" y="118" width="720" height="58" rx="4"/>
+  <text class="sh" x="735" y="142" text-anchor="end">1. اجمالی سماعت</text>
+  <text class="muted" x="735" y="160" text-anchor="end">عمومی تفہیم</text>
+  <text class="body" x="525" y="142" text-anchor="end">ہر ایک لفظ کو سمجھے بغیر</text>
+  <text class="body" x="525" y="160" text-anchor="end">عمومی مرکزی پیغام اخذ کرنا</text>
+  <text class="body" x="265" y="142" text-anchor="end">کہانی کو تصویری خلاصے سے ملانا؛</text>
+  <text class="body" x="265" y="160" text-anchor="end">بولنے والے کا بنیادی مقصد پہچاننا</text>
+
+  <!-- Row 2: Specific Detail -->
+  <rect class="panel-b" x="30" y="184" width="720" height="58" rx="4"/>
+  <text class="sh" x="735" y="208" text-anchor="end">2. مخصوص تفصیل</text>
+  <text class="muted" x="735" y="226" text-anchor="end">توجہ سے معلومات کا اخراج</text>
+  <text class="body" x="525" y="208" text-anchor="end">مخصوص حقائق کی درست نشاندہی</text>
+  <text class="body" x="525" y="226" text-anchor="end">(نام، نمبر، تاریخیں، مقامات)</text>
+  <text class="body" x="265" y="208" text-anchor="end">ٹائم ٹیبل میں اوقات لکھنا؛</text>
+  <text class="body" x="265" y="226" text-anchor="end">فہرست پر قیمتوں کی تصدیق کرنا</text>
+
+  <!-- Row 3: Inference -->
+  <rect class="panel-c" x="30" y="250" width="720" height="58" rx="4"/>
+  <text class="sh" x="735" y="274" text-anchor="end">3. استنباطی سماعت</text>
+  <text class="muted" x="735" y="292" text-anchor="end">پس پردہ معانی کا فہم</text>
+  <text class="body" x="525" y="274" text-anchor="end">کہے بغیر جذبات، رویوں،</text>
+  <text class="body" x="525" y="292" text-anchor="end">تعلقات یا سیاق کا اندازہ لگانا</text>
+  <text class="body" x="265" y="274" text-anchor="end">لہجے سے بولنے والے کے جذبات سمجھنا؛</text>
+  <text class="body" x="265" y="292" text-anchor="end">صوتی اشاروں سے جگہ کا اندازہ لگانا</text>
+
+  <!-- Row 4: Instructions -->
+  <rect class="panel-d" x="30" y="316" width="720" height="58" rx="4"/>
+  <text class="sh" x="735" y="340" text-anchor="end">4. زبانی ہدایات</text>
+  <text class="muted" x="735" y="358" text-anchor="end">طریقہ کار پر عمل درآمد</text>
+  <text class="body" x="525" y="340" text-anchor="end">زبانی احکامات پر درست</text>
+  <text class="body" x="525" y="358" text-anchor="end">اور مطلوبہ ترتیب میں عمل کرنا</text>
+  <text class="body" x="265" y="340" text-anchor="end">مکمل جسمانی ردِ عمل کے احکامات؛</text>
+  <text class="body" x="265" y="358" text-anchor="end">سن کر نقشے پر راستہ بنانا</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

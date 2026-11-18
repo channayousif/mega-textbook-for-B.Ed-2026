@@ -1,0 +1,10 @@
+Manifest verification:
+Prepared manifest: specs/content/gicp-400/reviews/unit-01/G3/7b8da038-290a-4b3b-9ba4-c275e02839bf/bundle/manifest.json
+Indexed paths: 93
+Working tree status: clean
+Recomputed manifest matches prepared bundle exactly across all 93 files.
+Author run identity: crew/gicp-400-u01-author (commit de8b4171d / PR #459 / cba09fa92)
+Reviewer run identity: 7b8da038-290a-4b3b-9ba4-c275e02839bf
+Reviewer agent: agent:agy
+Model: Gemini 3.8 Flash (High)
+All 93 input files verified.

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">خاموش اور بلند خوانی کا تقابلی جائزہ</title>
+  <desc id="d">جدول جس میں بنیادی مقصد، ادراکی توجہ، بہترین جماعتی استعمال، اور پاکستانی اسکولوں میں عام تدریسی غلطیوں کے لحاظ سے خاموش اور بلند خوانی کا موازنہ کیا گیا ہے۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 12px; fill: var(--ink); }
+    .muted { font-size: 12px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">پرائمری درجات میں بلند بمقابلہ خاموش خوانی</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">تدریسی انداز کو مناسب تعلیمی اہداف کے ساتھ ہم آہنگ کرنا</text>
+
+  <!-- Table Header -->
+  <rect class="panel" x="25" y="72" width="730" height="35" rx="4"/>
+  <text class="sh" x="740" y="95" text-anchor="end">پہلو</text>
+  <text class="sh" x="600" y="95" text-anchor="end">بلند خوانی (آواز سے پڑھنا)</text>
+  <text class="sh" x="300" y="95" text-anchor="end">خاموش مطالعہ (اندرونی فہم)</text>
+
+  <!-- Row 1: Purpose -->
+  <rect class="panel-a" x="25" y="113" width="730" height="60" rx="4"/>
+  <text class="sh" x="740" y="138" text-anchor="end">1. مقصد</text>
+  <text class="body" x="600" y="138" text-anchor="end">تلفظ کی زبانی مشق،</text>
+  <text class="body" x="600" y="156" text-anchor="end">کلام کا رِدم اور استاد کی نمائش</text>
+  <text class="body" x="300" y="138" text-anchor="end">گہری تفہیم اور فہمِ معنی،</text>
+  <text class="body" x="300" y="156" text-anchor="end">الفاظ میں اضافہ اور رفتار</text>
+
+  <!-- Row 2: Cognitive Focus -->
+  <rect class="panel-b" x="25" y="179" width="730" height="60" rx="4"/>
+  <text class="sh" x="740" y="204" text-anchor="end">2. ادراک</text>
+  <text class="body" x="600" y="204" text-anchor="end">آواز نکالنے کی جسمانی مشقت؛</text>
+  <text class="body" x="600" y="222" text-anchor="end">تفہیم کے لیے کم گنجائش</text>
+  <text class="body" x="300" y="204" text-anchor="end">یادداشت کا معنی، تخیل</text>
+  <text class="body" x="300" y="222" text-anchor="end">اور منطقی استنباط پر ارتکاز</text>
+
+  <!-- Row 3: Classroom Use -->
+  <rect class="panel-a" x="25" y="245" width="730" height="60" rx="4"/>
+  <text class="sh" x="740" y="270" text-anchor="end">3. جماعتی عمل</text>
+  <text class="body" x="600" y="270" text-anchor="end">استاد کا تاثراتی انداز میں پڑھنا؛</text>
+  <text class="body" x="600" y="288" text-anchor="end">انفرادی تشخیصی جانچ</text>
+  <text class="body" x="300" y="270" text-anchor="end">رہنمائی والے سوالات سے مطالعہ؛</text>
+  <text class="body" x="300" y="288" text-anchor="end">سرسری مطالعہ اور تلاش</text>
+
+  <!-- Row 4: Common Pitfalls -->
+  <rect class="panel-b" x="25" y="311" width="730" height="60" rx="4"/>
+  <text class="sh" x="740" y="336" text-anchor="end">4. عام غلطیاں</text>
+  <text class="body" x="600" y="336" text-anchor="end">باری باری پڑھنا خوف لاتا ہے؛</text>
+  <text class="body" x="600" y="354" text-anchor="end">باجماعت تکرار کمزوروں کو چھپاتی ہے</text>
+  <text class="body" x="300" y="336" text-anchor="end">بغیر سوالات کے پڑھوانا؛</text>
+  <text class="body" x="300" y="354" text-anchor="end">بعد میں معنی کی جانچ نہ کرنا</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

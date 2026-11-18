@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">لفظی زور اور جملے کا لب و لہجہ</title>
+  <desc id="d">ڈایاگرام تین روزمرہ جملوں پر لفظی زور اور جملے کا لب و لہجہ دکھاتا ہے، گرتے اور چڑھتے تیروں کے ساتھ۔</desc>
+  <style> :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg { fill: var(--bg); } .stroke { stroke: var(--ink); stroke-width: 2; fill: none; } .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; } .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; } .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; } .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; } .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; } .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; } .h { font-size: 16px; font-weight: 700; fill: var(--ink); } .sh { font-size: 14px; font-weight: 600; fill: var(--ink); } .body { font-size: 16px; fill: var(--ink); } .muted { font-size: 13px; fill: var(--muted); } .wm { fill: var(--wm); font-size: 11px; } .ah-a { fill: var(--a1); } .ah-b { fill: var(--a2); } </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+  <text class="h" x="390" y="34" text-anchor="middle">لفظی زور اور جملے کا لب و لہجہ</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">تین روزمرہ جملے، تین آواز کے نمونے</text>
+  <rect class="panel-a" x="60" y="72" width="660" height="86" rx="8"/>
+  <text class="sh" x="700" y="98" text-anchor="end">بیان: گرتی آواز</text>
+  <text class="body" x="700" y="132" text-anchor="end">I want a <tspan font-weight="700">cup</tspan> of tea.</text>
+  <path class="stroke-a" d="M 300 128 L 240 140"/>
+  <polygon class="ah-a" points="240,135 232,140 240,145"/>
+  <text class="muted" x="220" y="140" text-anchor="end">گرتا ہے آخر میں</text>
+  <rect class="panel-b" x="60" y="172" width="660" height="86" rx="8"/>
+  <text class="sh" x="700" y="198" text-anchor="end">سوال: چڑھتی آواز</text>
+  <text class="body" x="700" y="232" text-anchor="end">I want a <tspan font-weight="700">cup</tspan> of tea?</text>
+  <path class="stroke-b" d="M 300 236 L 240 224"/>
+  <polygon class="ah-b" points="240,219 232,224 240,229"/>
+  <text class="muted" x="220" y="224" text-anchor="end">چڑھتا ہے آخر میں</text>
+  <rect class="panel-c" x="60" y="272" width="660" height="86" rx="8"/>
+  <text class="sh" x="700" y="298" text-anchor="end">تضاد: اہم لفظ پر زور</text>
+  <text class="body" x="700" y="332" text-anchor="end">I want a <tspan font-weight="700">CUP</tspan> of tea, not a bottle.</text>
+  <path class="stroke" d="M 570 322 L 570 312"/>
+  <polygon class="ah-a" points="565,312 570,304 575,312"/>
+  <text class="muted" x="558" y="312" text-anchor="end">تضادی زور</text>
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

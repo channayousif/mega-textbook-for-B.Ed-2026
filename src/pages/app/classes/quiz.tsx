@@ -10,6 +10,9 @@ import {
 } from '@site/src/lib/quiz';
 import type { QuizAttemptResult, ClassBestScoreRow } from '@site/src/lib/quiz';
 import type { Assignment, QuizItem } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Auto-graded practice quiz - student take/retake UI, teacher best-score
@@ -95,7 +98,7 @@ function StudentQuiz({ assignment, studentId }: { assignment: Assignment; studen
   }
 
   if (error) return <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>;
-  if (!items) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!items) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (items.length === 0) return <p>{MESSAGES.noQuestions[locale]}</p>;
 
   return (
@@ -165,9 +168,10 @@ function TeacherResults({ classId, assignmentId, maxMark }: { classId: string; a
   }, [classId, assignmentId, locale]);
 
   if (error) return <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>;
-  if (!rows) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!rows) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
+    <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
     <table>
       <thead>
         <tr>
@@ -184,6 +188,7 @@ function TeacherResults({ classId, assignmentId, maxMark }: { classId: string; a
         ))}
       </tbody>
     </table>
+        </div>
   );
 }
 
@@ -201,7 +206,7 @@ function QuizContent({ classId, assignmentId }: { classId: string; assignmentId:
     });
   }, [assignmentId, locale]);
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow) {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -210,11 +215,11 @@ function QuizContent({ classId, assignmentId }: { classId: string; assignmentId:
     );
   }
   if (error) return <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>;
-  if (!assignment) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!assignment) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
-      <h2>{assignment.title}</h2>
+      <PageHeader title={assignment.title} icon="quiz" />
       <p>Due {new Date(assignment.due_at).toLocaleString()} · Max mark {assignment.max_mark}</p>
       {role === 'teacher' ? (
         <TeacherResults classId={classId} assignmentId={assignmentId} maxMark={assignment.max_mark} />
@@ -232,15 +237,17 @@ export default function QuizPage(): React.ReactElement {
   const assignmentId = useQueryParam('assignmentId');
   return (
     <Layout title="Quiz">
+      <AppDashboardShell>
       <AuthGuard requireRole={['teacher', 'student']}>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId && assignmentId ? (
             <QuizContent classId={classId} assignmentId={assignmentId} />
           ) : (
             <p>No quiz selected.</p>
           )}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

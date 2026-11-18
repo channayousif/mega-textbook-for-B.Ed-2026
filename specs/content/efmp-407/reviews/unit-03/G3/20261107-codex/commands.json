@@ -1,0 +1,37 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-407/reviews/unit-03/G3/20261107-codex/logs/validate-content.txt"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-407/reviews/unit-03/G3/20261107-codex/logs/check-depth-gate.txt"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-407/reviews/unit-03/G3/20261107-codex/logs/check-figures.txt"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-407/reviews/unit-03/G3/20261107-codex/logs/check-no-em-dash.txt"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-407/reviews/unit-03/G3/20261107-codex/logs/check-no-answer-keys.txt"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-407/reviews/unit-03/G3/20261107-codex/logs/check-docs-sync.txt"
+  },
+  {
+    "name": "check:content",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-407/reviews/unit-03/G3/20261107-codex/logs/check-content.txt"
+  }
+]

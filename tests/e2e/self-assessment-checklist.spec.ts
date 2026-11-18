@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { deleteUsers } from './_cleanup';
+import { TEST_PASSWORD } from './_password';
 
 /**
  * T010 [US1] — ticks two items on a topic-NN.mdx page, reloads, confirms both
@@ -37,7 +38,7 @@ const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const configured = Boolean(SUPABASE_URL && ANON_KEY && SERVICE_KEY);
 test.skip(!configured, 'requires DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY');
 
-const PASSWORD = 'Test-Passw0rd!';
+const PASSWORD = TEST_PASSWORD;
 const TOPIC_PATH = '/semester-1/efmp-302/unit-01/topic-01/';
 const TOPIC_PATH_UR = '/ur/semester-1/efmp-302/unit-01/topic-01/';
 

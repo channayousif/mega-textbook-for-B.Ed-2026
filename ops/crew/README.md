@@ -8,7 +8,7 @@ definition of done. Paperclip is paused (its data is kept); nothing here depends
 
 | Worker | CLI | Family | Rank-1 stages |
 |---|---|---|---|
-| claude | `claude -p` | anthropic | author, repair_en, review_ur, salvage |
+| claude | `claude -p` | anthropic | author, repair_en, review_ur, salvage, plan_illustrations (ADR-0029 backfill, D-2026-0081) |
 | codex | `codex exec` | openai | figures (SVG), translate (G4) |
 | agy | `agy -p` | google | review_en (G3), illustrate (ADR-0029) |
 | agy_claude | `agy -p --model claude-opus-4-6-thinking` | anthropic | none: next after claude in every chain that has claude (agy's separate Claude/GPT quota) |
@@ -29,9 +29,15 @@ is healthy, the review waits while every other kind of job keeps flowing.
 1. **sync**: the control checkout fast-forwards to `origin/main`, and so does `main` in the owner's
    working checkout (`scripts/crew/sync-owner-checkout.sh`, `CREW_OWNER_CHECKOUT`, default
    `~/mega_book_for_B.Ed`). That step is fast-forward only: when local commits, a tracked edit or an
-   untracked file is in the way, it logs `owner-sync: ... blocked` to `cron.log` and changes nothing.
+   untracked file is in the way, a blocked owner fast-forward is logged when its reason changes or
+   after 24 hours and notifies the owner once, with its state in `owner-sync.state`, as
+   `scripts/crew/sync-owner-checkout.sh` does, and changes nothing.
 2. **plan**: `crew.mjs plan` derives each unit's next stage from main (`report-content-status.mjs`,
    the course tracker, the review reports) and queues missing jobs. Nothing is hand-typed.
+   **Images before sign-off** (D-2026-0081): a unit whose G3 is not done and that has no
+   `unit-NN.banner.md` gets `plan_illustrations` (at most two in flight), then `illustrate`; until
+   its images are placed it is neither reviewed nor listed as awaiting G3. A `pass` whose own unit
+   files changed after the review is reviewed again before it reaches the desk.
    **One course at a time** (owner ruling 2026-10-28, `focusCourse` in `scripts/crew/planner.mjs`):
    a course is started once it has an authored unit or crew work in flight on the board. The focus
    is the started course with crew work left and the fewest jobs remaining (ties in catalog order);
@@ -55,8 +61,14 @@ is healthy, the review waits while every other kind of job keeps flowing.
 5. **batch** (`scripts/crew/batch.mjs`, owner ruling 2026-10-19): at most once an hour, and only
    when no batch PR is open, the dispatcher merges every `ready` job onto main's head in a fresh
    `crew/batch-<UTC time>` worktree, runs `npm run check:content` on the result and opens ONE PR for
-   all of them (its jobs become `batched`). A job that conflicts, or fails the gate only in
-   combination, is left out and gets a merge fix on its own branch; the rest go on. Why: one PR per
+   all of them (its jobs become `batched`). The batch attempts to resolve conflicts confined to
+   `glossary.json`, `static/content-status.json` and course `specs/content/<course>/tasks.md`
+   files itself (`resolveSharedConflicts` in `scripts/crew/crew.mjs`, with the merge helpers in
+   `scripts/crew/batch.mjs`): it merges the glossary and the trackers when it can and regenerates
+   content-status, then the same registry and content gates run on the result. A job whose
+   conflict stays unresolved (any other file, or a shared file the helpers cannot merge), or that
+   fails the gate only in combination, is left out and gets a merge fix on its own branch, five
+   at most; the rest go on. Why: one PR per
    job pushed to main every few minutes, each push queued a full CI run (rls and e2e share one
    database and run one at a time), and `scripts/deploy-prod.sh` deploys only main's head once its
    own run passes, so main moved on before any run finished and production stopped deploying.

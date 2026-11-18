@@ -4,6 +4,9 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { exportGradebook } from '@site/src/lib/gradebookExport';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Gradebook export (Spec 003, T052/T062). Teacher-only export button
@@ -36,7 +39,7 @@ function GradebookContent({ classId }: { classId: string }): React.ReactElement 
     if (exportError) setError(MESSAGES.exportError[locale]);
   }
 
-  if (loading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (loading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow || role !== 'teacher') {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -47,7 +50,7 @@ function GradebookContent({ classId }: { classId: string }): React.ReactElement 
 
   return (
     <div>
-      <h2>Gradebook - {classRow.name}</h2>
+      <PageHeader title={`Gradebook - ${classRow.name}`} icon="gradebook" />
       <p>{classRow.course_code} - {classRow.term_label}</p>
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
@@ -63,11 +66,13 @@ export default function GradebookPage(): React.ReactElement {
   const classId = useQueryParam('classId');
   return (
     <Layout title="Gradebook">
+      <AppDashboardShell>
       <AuthGuard requireRole="teacher">
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId ? <GradebookContent classId={classId} /> : <p>No class selected.</p>}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

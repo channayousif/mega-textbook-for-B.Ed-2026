@@ -1,0 +1,5 @@
+Compared inputManifest(current checkout, EFMP-407, 5, G3) with prior report and locally prepared manifest.
+Bound inputs: 100
+Changed since prior: []
+Local manifest matches current: true
+Parent-prepared handoff and runtime author session identity were not supplied. Authoring record names crew-job:efmp-407-u05-author; that is a job label, not verified runtime provenance.

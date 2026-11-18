@@ -1,0 +1,29 @@
+render-review: EFMP-407 Unit 7 (G3 English)
+Date: 2026-11-07
+Reviewer: agent:opencode-g3-reviewer
+
+Attempt
+-------
+The review contract requires an actual browser inspection of the rendered unit pages, including a
+narrow viewport and an A4 print view, with the rendered input identity recorded.
+
+1. Live site check. https://textbook.com.pk/sitemap.xml was fetched. It publishes
+   /semester-3/efmp-407/unit-01/ and /semester-3/efmp-407/unit-02/ only. The Unit 7 routes
+   (/semester-3/efmp-407/unit-07/ and its topic, assessment and teacher-notes children) return the
+   site's 404 page. The reviewed bytes are not published, so the live site cannot render them.
+
+2. Local render. The crew brief prohibits `npm run build`, a dev server and Playwright. No build
+   directory exists in the checkout. A simple static server is also a dev server. Therefore no
+   local render of the reviewed MDX could be produced.
+
+3. Static substitution. Static inspection of the MDX, the SVG assets and the site components was
+   performed instead (headings, alt text, captions, glossary resolution, figure geometry). That is
+   not a rendered-page inspection and does not satisfy the accessibility criterion's render
+   requirement.
+
+Result
+------
+No rendered PNG/WebP/JPG of the reviewed Unit 7 pages exists. The accessibility criterion remains
+unverified. The review escalates rather than passing.
+
+exit code: 1

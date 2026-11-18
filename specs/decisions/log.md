@@ -4607,3 +4607,85 @@ content-improvement loop with no further cycle.
     intake runs on a newly prepared manifest.
   - Certifies no content, qualifies no reviewer (including the scholar review drafting note 7
     asks for), and authorises no publication.
+
+---
+
+## D-2026-0081 - Backfill raster illustrations, hold G3 until placed, and keep sacred figures out of every image
+
+- **Status:** confirmed
+- **Gate:** G3 (English review and owner sign-off desk); figure planning (ADR-0029 point 5)
+- **Scope:** every unit whose G3 is not done; first seen on GISS-401 Unit 1
+- **Decided by:** curriculum owner, 2026-11-09 (board-direct, relayed through Claude Code), after
+  the G3 desk offered GISS-401 Unit 1 as "Suggested: Certify" with no raster images
+- **Decision:**
+  1. **Backfill.** A unit authored before the author-unit skill planned raster images
+     (`c74f8afb3`, 2026-11-03) gets them now: a `unit-NN.banner.md` banner row and, where a
+     picture teaches, one classroom scene per topic, planned by Claude and produced by the
+     crew's `illustrate` job. Certified units are left alone.
+  2. **Hold, do not certify.** A unit with no banner sidecar, or with an illustration row not yet
+     placed, is neither reviewed by the crew nor offered on the desk. Once its images are placed,
+     a `pass` whose unit files changed after the review gets a fresh review before sign-off.
+  3. **Religious courses get illustrations, with limits, and the limits apply to every course.**
+     Classroom and school scenes only; no prophet, companion, angel or other sacred person, and no
+     scripture or calligraphy. Each image is inspected for cultural accuracy before `placed`.
+- **Basis:** owner answers 2026-11-09 ("Yes, with limits"; "Hold until illustrated"); ADR-0029
+  point 5 (one banner per unit index).
+- **Limits:** Certifies no content, qualifies no reviewer and authorises no publication
+  (Art. VII.8). Changes no approved content-spec; the backfilled images are additions the spec's
+  schematic figure plan does not forbid.
+
+---
+
+## D-2026-0082 - Automate Google Flow from the owner's PC for course teaser Shorts
+
+- **Status:** confirmed
+- **Gate:** none (Feature 029 Study Studio media; not video-studio)
+- **Scope:** course and licence-track teaser Shorts on the textbook.com.pk YouTube channel; later per-unit teasers
+- **Decided by:** curriculum owner, 2026-11-10 (board-direct, relayed through Claude Code), when planning teaser Shorts
+- **Decision:**
+  1. **Flow is automated, on the owner's Windows PC only.** The community `gflow-cli` MCP server
+     (MIT) drives the owner's own Google Flow Pro session in real Chrome. Its daemon is reached
+     from the server over an SSH reverse tunnel bound to localhost. Nothing runs in CI or the crew.
+     The video-studio rule against automating subscription sites still binds video-studio; this
+     ruling covers only the Feature 029 teaser pipeline.
+  2. **Narration is spoken by Veo, generated separately per language** (EN and UR), about 45 s
+     from five 8-second clips plus an end card.
+  3. **First batch:** one promotional teaser per course (17) and one for the teacher licence
+     track, in EN and UR (36 Shorts). Per-unit teasers follow on the same pipeline.
+  4. **Spending guard:** owner approves every script batch before credits are spent; at most two
+     retakes per shot; uploads go private first and turn public only after the owner's spot-check.
+- **Basis:** owner answers 2026-11-10 ("My Windows PC", "Veo narration per language", "~45 s",
+  "one promotional teaser for each course and one for Teacher license track in the beginning").
+- **Limits:** Certifies no content, qualifies no reviewer and authorises no publication beyond the
+  owner's own spot-check (Art. VII.8). Account risk from automating Flow is the owner's, per the
+  gflow-cli disclaimer. An ADR is suggested, not adopted.
+
+## D-2026-0083 - Course teaser Shorts are Urdu-only for now
+
+- **Status:** confirmed
+- **Gate:** none (Feature 029 Study Studio media; amends D-2026-0082)
+- **Ruling:** Plan, generate and upload only the Urdu (`ur`) teaser for each course and the
+  licence track. The first batch is 18 Shorts, not 36, about 1,800 Flow credits plus retakes. A
+  teaser script's `en` locale becomes optional; existing English lines may stay but no new English
+  narration is written, and no English teaser playlist is needed. English can be reopened later
+  with the same pipeline.
+- **Basis:** owner, 2026-11-17: "i have decided to make urdu teasers only for now".
+- **Limits:** Certifies no content and authorises no publication beyond the owner's spot-check.
+
+## D-2026-0084 - Teaser pace, follow overlay and cross-posting
+
+- **Status:** confirmed
+- **Gate:** none (Feature 029 Study Studio media; amends D-2026-0082)
+- **Ruling:** Teasers use the fast cut by default (dead air cut, voice 12% faster, hard cuts, a
+  ducked beat, a 3 s end card; about 35 s). Every render carries a periodic, platform-aware
+  subscribe/follow reminder made of text and generic drawn icons only (no platform logos), shown
+  three times over the shots. Descriptions are search- and AI-ready and built only from the
+  approved script, titles and keywords, with a subscribe link. After the YouTube Short is public,
+  the same teaser is cross-posted to TikTok (inbox draft until TikTok audits the app), Instagram
+  Reels, Facebook Page Reels and LinkedIn through each platform's free official API; tokens stay
+  in `~/.config/textbook-social/`, never in git.
+- **Basis:** owner, 2026-11-17: "it feels slow and lame, add some energy and speed", "use fast",
+  and "add proper Description optimized for SEO and AI, CTA to subscribe the channel ... upload
+  shorts to other platforms like tiktok, instagram"; overlay answer: "CTA layer on top of video,
+  periodically appearing reminding to take action, Text+icons only. should be platform aware".
+- **Limits:** Certifies no content. Cross-posting only follows the owner's YouTube approval.

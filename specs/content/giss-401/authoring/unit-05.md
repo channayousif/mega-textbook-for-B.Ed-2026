@@ -45,3 +45,21 @@ Statements of Islamic economics and political jurisprudence represent mainstream
 - No `glossary.json` entries were added (file is outside Unit 5 scope); key terms (Halal, Haram, Zakat, Nisab, Riba, Shura, Hakimiyyah, Adl, Muhasabah, Dhimmah) are defined in bold on first use.
 - `terminology.csv` has no entries for the spec's key terms; concept graph Urdu labels are authored and flagged for G5 review.
 - The Urdu mirror (G4 translation and G5 review) is a separate downstream job.
+
+## G3 repair record, 2026-11-10
+
+Applied the findings of `reviews/unit-05/G3/20261108T203238Z-g3-desk-922808a1.json` (advisory: revise) in the English files and the unit's spec records. Content-side repairs:
+
+- F04: `sources/unit-05.md` now carries an Unverifiable sources declaration (named hadith, historical reports, Article 38(f) scope) and names the Saheeh International translation. The three source-text files remain tracked in git but were absent from the prepared review manifest; binding them is a host action.
+- F05: scriptural, hadith and legal block quotations in both topics are now under 15 words or paraphrased, with citations and the translation named.
+- F06: `Mudarabah` and `Musharakah` loss rules are taught and assessed distinctly, including the manager misconduct exception; the `ihtikar` retrieval item now states withholding and artificial scarcity.
+- F07: contractual repayment, operational risk and default risk are distinguished; poverty and growth claims are qualified.
+- F08: Articles 20, 22, 25, 36 and 38(f) are stated with their qualifications; Article 36 and 38(f) are identified as Principles of Policy, and scheduling is distinguished from the legal text.
+- F09: the Ali, Umar and Charter of Madinah accounts are labelled reported traditional accounts; MCQ-08, RRQ-09 and ERQ-03 test the principles rather than the reports as fact.
+- F10: secular property and democracy are no longer presented as unconstrained caricatures; RRQ-02 marking allows supported alternatives.
+- F11: compressed expressions (utility maximization, macroeconomic circulation, statutory levy, executive despotism, maslahah mursalah) are rewritten in plain language with concrete examples.
+- F12: every concept-to-item link in `concepts/unit-05.md` was audited against the numbered bank; stable concept IDs retained.
+- F13: the Larkana and Jacobabad activities are labelled hypothetical; both practical policy tasks now state funding/authority limits and confidentiality safeguards.
+- F14: the formative set is the ten "Check your understanding" retrieval items (five per topic). The spec's 5-8 formative band is exceeded because the unit teaches two topics; the MCQ/RRQ/ERQ bank is summative. Two retrieval labels were corrected after review against the blueprint (Topic 5.1 check 1 and Topic 5.2 check 1, Remember to Understand; Topic 5.2 check 5 reframed from Analyze to Apply).
+
+Host-side findings remain open: genuine author-run provenance and a frozen source bundle (F01), a permitted narrow-screen and A4 print inspection with SVG glyph geometry (F02), and the qualified Islamic Studies scholar review required by content-spec drafting note 2 (F03). G3 remains open and unsigned.

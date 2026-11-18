@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
+import AuthFrame from '@site/src/components/AuthFrame';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useLocation } from '@docusaurus/router';
 import { useAuth } from '@site/src/contexts/AuthContext';
@@ -65,20 +66,20 @@ export default function SignupPage(): React.ReactElement {
   if (awaitingConfirmation) {
     return (
       <Layout title="Check your email">
-        <main className="container auth-page margin-vert--lg" style={{ maxWidth: 420 }}>
+        <AuthFrame>
           <h1>Check your email</h1>
           <p>
             We sent a confirmation link to <strong>{email}</strong>. Open it, then{' '}
             <a href={loginUrlWithReturnTo(returnTo, 'login')}>sign in</a>.
           </p>
-        </main>
+        </AuthFrame>
       </Layout>
     );
   }
 
   return (
     <Layout title="Create an account" description="Create an account">
-      <main className="container auth-page margin-vert--lg" style={{ maxWidth: 420 }}>
+      <AuthFrame>
         <h1>Create an account</h1>
 
         {!isConfigured && (
@@ -165,7 +166,7 @@ export default function SignupPage(): React.ReactElement {
         <p className="margin-top--md">
           <a href={loginUrlWithReturnTo(returnTo, 'login')}>Already have an account? Sign in</a>
         </p>
-      </main>
+      </AuthFrame>
     </Layout>
   );
 }

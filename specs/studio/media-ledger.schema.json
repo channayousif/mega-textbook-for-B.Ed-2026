@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://textbook.com.pk/specs/studio/media-ledger.schema.json",
+  "title": "Study Studio media ledger (Feature 029, studio-media skill)",
+  "description": "One file per unit at specs/studio/<course>/media-unit-NN.json, written only by scripts/notebook-studio/media-ledger.mjs. Paths point outside the repo (~/studio-media); media never enters git.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["course", "unit", "items"],
+  "properties": {
+    "course": { "type": "string", "pattern": "^[a-z]{2,6}-[0-9]{3}$" },
+    "unit": { "type": "integer", "minimum": 1 },
+    "channel_id": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["key", "topic", "locale", "kind", "title", "prompt_ref", "state", "gates", "history"],
+        "properties": {
+          "key": { "type": "string", "pattern": "^t[0-9]+-(en|ur)-(audio|video)(-p[0-9]+)?$" },
+          "topic": { "type": "integer", "minimum": 1 },
+          "locale": { "enum": ["en", "ur"] },
+          "kind": { "enum": ["audio", "video"] },
+          "part": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string", "minLength": 3 },
+          "alt": { "type": "string" },
+          "prompt_ref": { "type": "string", "pattern": "^specs/studio/prompts/.+\\.md( v[0-9]+[a-z-]*)?$" },
+          "notebook_id": { "type": "string" },
+          "artifact_id": { "type": "string" },
+          "state": { "enum": ["planned", "generated", "downloaded", "qa1-pass", "encoded", "qa2-pass", "uploaded-private", "qa3-pass", "approved", "public", "placed"] },
+          "blocked": { "type": "string" },
+          "file": { "type": "string", "pattern": "^(~|/home/)[^\\s]*studio-media/" },
+          "encoded_file": { "type": "string", "pattern": "^(~|/home/)[^\\s]*studio-media/" },
+          "thumbnail_file": { "type": "string", "pattern": "^(~|/home/)[^\\s]*studio-media/" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "youtube_id": { "type": "string", "pattern": "^[A-Za-z0-9_-]{11}$" },
+          "uploaded_at": { "type": "string", "format": "date-time" },
+          "published_at": { "type": "string", "format": "date-time" },
+          "gates": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "qa1": { "$ref": "#/$defs/gate" },
+              "qa1_encoded": { "$ref": "#/$defs/gate" },
+              "qa2": { "$ref": "#/$defs/gate" },
+              "qa3": { "$ref": "#/$defs/gate" },
+              "owner": { "$ref": "#/$defs/gate" }
+            }
+          },
+          "history": {
+            "type": "array",
+            "items": { "type": "object", "additionalProperties": false, "required": ["state", "at"], "properties": { "state": { "type": "string" }, "at": { "type": "string", "format": "date-time" } } }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "gate": {
+      "type": "object",
+      "required": ["verdict", "by", "date"],
+      "properties": {
+        "verdict": { "enum": ["pass", "pass-with-notes", "revise", "fail", "approve"] },
+        "by": { "type": "string", "description": "Role or tool, never human initials for an agent result (ADR-0019)." },
+        "date": { "type": "string" },
+        "notes": { "type": "string" },
+        "urdu_flag": { "type": "string" },
+        "findings": { "type": "array", "items": { "type": "string" } },
+        "metrics": { "type": "object" }
+      }
+    }
+  }
+}

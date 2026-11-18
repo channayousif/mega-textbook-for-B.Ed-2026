@@ -1,0 +1,5 @@
+# Required presentation inspection unavailable
+
+The active crew brief explicitly prohibits builds, dev servers and Playwright. None was run. No screenshot, desktop/narrow-page inspection, A4 print inspection or SVG browser geometry measurement is claimed. This is a limitation record, not a successful render-review command.
+
+Static inspection: all four Figure markers have meaningful alternative descriptions and original-schematic attribution. SVGs have title/description labels, text labels in addition to colour, and distinct light/dark assets. Topic headings follow explanation/activity/retrieval/summary/self-check/practicum/summative progression. Answer guidance is the final assessment section. These source checks cannot establish clipping, scrolling, keyboard reachability, dark-mode readability or print pagination. In particular, the 780px-wide leader comparison requires actual narrow-screen inspection before accessibility can pass. Its source dimensions alone are not evidence of an overflow defect.

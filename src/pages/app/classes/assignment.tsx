@@ -11,6 +11,9 @@ import {
 } from '@site/src/lib/submissions';
 import { fetchGradeForSubmission } from '@site/src/lib/grading';
 import type { Assignment, Grade, Submission } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Assignment detail - student submit/resubmit view (Spec 003, T036/T062).
@@ -220,7 +223,7 @@ function AssignmentContent({
     });
   }, [assignmentId, locale]);
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow) {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -233,11 +236,11 @@ function AssignmentContent({
       <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
     );
   }
-  if (!assignment) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!assignment) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
-      <h2>{assignment.title}</h2>
+      <PageHeader title={assignment.title} icon="assignment" />
       <p>Due {new Date(assignment.due_at).toLocaleString()} · Max mark {assignment.max_mark}</p>
       {assignment.instructions && <p>{assignment.instructions}</p>}
 
@@ -261,15 +264,17 @@ export default function AssignmentPage(): React.ReactElement {
   const assignmentId = useQueryParam('assignmentId');
   return (
     <Layout title="Assignment">
+      <AppDashboardShell>
       <AuthGuard requireRole={['teacher', 'student']}>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId && assignmentId ? (
             <AssignmentContent classId={classId} assignmentId={assignmentId} />
           ) : (
             <p>No assignment selected.</p>
           )}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

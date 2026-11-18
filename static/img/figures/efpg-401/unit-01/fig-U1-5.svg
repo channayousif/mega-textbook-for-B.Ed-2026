@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Comparison of Silent and Loud Reading</title>
+  <desc id="d">Table comparing silent and loud reading across primary purpose, cognitive focus, optimal classroom use, and common instructional errors in Pakistani schools.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 12px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Loud Reading versus Silent Reading in Primary Grades</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">Aligning instructional reading modes with appropriate pedagogical objectives</text>
+
+  <!-- Table Header -->
+  <rect class="panel" x="25" y="72" width="730" height="35" rx="4"/>
+  <text class="sh" x="40" y="95">Dimension</text>
+  <text class="sh" x="175" y="95">Loud Reading (Oral)</text>
+  <text class="sh" x="465" y="95">Silent Reading (Internal)</text>
+
+  <!-- Row 1: Purpose -->
+  <rect class="panel-a" x="25" y="113" width="730" height="60" rx="4"/>
+  <text class="sh" x="40" y="138">1. Purpose</text>
+  <text class="body" x="175" y="138">Oral pronunciation practice,</text>
+  <text class="body" x="175" y="156">speech rhythm, &amp; teacher modelling</text>
+  <text class="body" x="465" y="138">Deep comprehension &amp; meaning,</text>
+  <text class="body" x="465" y="156">vocabulary growth, &amp; reading speed</text>
+
+  <!-- Row 2: Cognitive Focus -->
+  <rect class="panel-b" x="25" y="179" width="730" height="60" rx="4"/>
+  <text class="sh" x="40" y="204">2. Cognition</text>
+  <text class="body" x="175" y="204">Vocal tract motor articulation;</text>
+  <text class="body" x="175" y="222">low capacity left for comprehension</text>
+  <text class="body" x="465" y="204">Working memory focused on semantics,</text>
+  <text class="body" x="465" y="222">mental imagery, &amp; logical inference</text>
+
+  <!-- Row 3: Classroom Use -->
+  <rect class="panel-a" x="25" y="245" width="730" height="60" rx="4"/>
+  <text class="sh" x="40" y="270">3. Class Use</text>
+  <text class="body" x="175" y="270">Teacher reading aloud expressively;</text>
+  <text class="body" x="175" y="288">individual diagnostic checks</text>
+  <text class="body" x="465" y="270">Guided reading with signposts;</text>
+  <text class="body" x="465" y="288">skimming &amp; scanning for facts</text>
+
+  <!-- Row 4: Common Pitfalls -->
+  <rect class="panel-b" x="25" y="311" width="730" height="60" rx="4"/>
+  <text class="sh" x="40" y="336">4. Pitfalls</text>
+  <text class="body" x="175" y="336">Round-robin causes anxiety;</text>
+  <text class="body" x="175" y="354">chorus chanting hides non-readers</text>
+  <text class="body" x="465" y="336">Reading without focus questions;</text>
+  <text class="body" x="465" y="354">failing to check meaning afterwards</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

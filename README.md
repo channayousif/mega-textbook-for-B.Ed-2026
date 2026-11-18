@@ -228,3 +228,11 @@ committed, accessible, lazy-loaded images that render in both locales.
    `.github/workflows/ci.yml`).
 4. Reference the relevant `specs/NNN-*/` directory and, for architecturally significant
    decisions, the matching `history/adr/` entry.
+
+### Remote development on the production host
+
+Use the dedicated contained VS Code SSH alias and persistent agent tmux sessions.
+See [setup, validation and rollback](ops/development/README.md). All windows share
+one editor budget; start Claude with `~/.local/bin/agent-terminal <name>` to survive
+editor disconnections. Heavy jobs must use `scripts/heavy.sh`, which holds one of
+two slots and waits for 30 seconds of memory and PSI headroom before starting.

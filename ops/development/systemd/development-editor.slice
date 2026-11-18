@@ -1,0 +1,11 @@
+[Unit]
+Description=development-editor resource budget
+
+[Slice]
+MemoryAccounting=yes
+CPUAccounting=yes
+IOAccounting=yes
+MemoryHigh=2560M
+MemoryMax=3G
+MemorySwapMax=256M
+CPUQuota=100%

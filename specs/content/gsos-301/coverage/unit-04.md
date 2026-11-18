@@ -21,11 +21,11 @@
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
-| U4-01 | unit-assessment.mdx | MCQ items 1, 5, 8 | no-external-source |
-| U4-02 | unit-assessment.mdx | MCQ items 3, 6; RRQ-6 | no-external-source |
-| U4-03 | unit-assessment.mdx | MCQ item 10; ERQ-5 | no-external-source |
+| U4-01 | unit-assessment.mdx | MCQ items 1, 10 | no-external-source |
+| U4-02 | unit-assessment.mdx | MCQ item 3; RRQ-6 | no-external-source |
+| U4-03 | unit-assessment.mdx | MCQ items 5, 8; ERQ-5 | no-external-source |
 | U4-04 | unit-assessment.mdx | MCQ items 4, 6; RRQ-8 | no-external-source |
 | U4-05 | unit-assessment.mdx | MCQ item 2; RRQ-3 | no-external-source |
-| U4-06 | unit-assessment.mdx | MCQ item 7; RRQ-7 | no-external-source |
+| U4-06 | unit-assessment.mdx | MCQ items 7, 9; RRQ-7 | no-external-source |
 | U4-01 | unit-assessment.mdx | ERQ-1 | no-external-source |
 | U4-04 | unit-assessment.mdx | ERQ-2 | no-external-source |

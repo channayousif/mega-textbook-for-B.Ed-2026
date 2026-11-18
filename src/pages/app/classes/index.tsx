@@ -9,6 +9,9 @@ import {
 } from '@site/src/lib/classes';
 import type { Class, Enrollment } from '@site/src/lib/types';
 import { fetchCourseOptions, type CourseOptionGroup } from '@site/src/lib/courseOptions';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Class list + create (teacher) / join-by-code + joined list (student) -
@@ -99,7 +102,7 @@ function TeacherClassesView(): React.ReactElement {
 
   return (
     <div>
-      <h2>Your classes</h2>
+      <PageHeader title="Your classes" icon="classes" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
@@ -155,10 +158,11 @@ function TeacherClassesView(): React.ReactElement {
       </form>
 
       {!classes ? (
-        <p>{MESSAGES.loading[locale]}</p>
+        <LoadingMark label={MESSAGES.loading[locale]} />
       ) : classes.length === 0 ? (
         <p>You haven&apos;t created any classes yet.</p>
       ) : (
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
         <table>
           <thead>
             <tr>
@@ -185,6 +189,7 @@ function TeacherClassesView(): React.ReactElement {
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );
@@ -235,7 +240,7 @@ function StudentClassesView(): React.ReactElement {
 
   return (
     <div>
-      <h2>Your classes</h2>
+      <PageHeader title="Your classes" icon="classes" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
@@ -260,7 +265,7 @@ function StudentClassesView(): React.ReactElement {
       </form>
 
       {!enrollments ? (
-        <p>{MESSAGES.loading[locale]}</p>
+        <LoadingMark label={MESSAGES.loading[locale]} />
       ) : enrollments.length === 0 ? (
         <p>You haven&apos;t joined any classes yet.</p>
       ) : (
@@ -286,11 +291,13 @@ function ClassesContent(): React.ReactElement {
 export default function ClassesIndexPage(): React.ReactElement {
   return (
     <Layout title="Classes">
+      <AppDashboardShell>
       <AuthGuard requireRole={['teacher', 'student']}>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           <ClassesContent />
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

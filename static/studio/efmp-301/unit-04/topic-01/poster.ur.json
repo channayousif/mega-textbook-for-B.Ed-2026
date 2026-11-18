@@ -1,0 +1,68 @@
+{
+ "title": "Learning میں Attention (توجہ) اور Perception (ادراک)",
+ "tagline": "Attention کو ایک spotlight gateway اور Perception کو دماغی interpretation کے طور پر سمجھنا",
+ "key_terms": [
+  {
+   "term": "Attention (توجہ)",
+   "meaning": "ایک selective gateway جو sensory information کو memory encoding کے لیے آگے جانے دیتا ہے۔"
+  },
+  {
+   "term": "Sensation (حس)",
+   "meaning": "آنکھوں جیسے sensory organs کے ذریعے معلومات کی بنیادی physical detection۔"
+  },
+  {
+   "term": "Perception (ادراک)",
+   "meaning": "موصول ہونے والی sensory inputs کی دماغی تنظیم اور سوچ سمجھ کر interpretation۔"
+  },
+  {
+   "term": "Inattentional Blindness",
+   "meaning": "سامنے موجود چیزوں کو نہ دیکھ پانا کیونکہ Attention کہیں اور مصروف ہوتی ہے۔"
+  }
+ ],
+ "properties": [
+  {
+   "name": "Captured, Not Commanded",
+   "line": "توجہ حکم دینے سے نہیں بلکہ Novelty، Contrast، Meaning اور Emotion سے حاصل ہوتی ہے۔"
+  },
+  {
+   "name": "Divides Only at Price",
+   "line": "Attention کو ایک سے زیادہ کاموں میں بانٹنے سے سمجھنے کی صلاحیت کم ہو جاتی ہے۔"
+  },
+  {
+   "name": "Tires with Use",
+   "line": "وقت کے ساتھ focus کم ہو جاتا ہے، خاص طور پر گرم کمروں میں یا آخری پیریڈز میں۔"
+  }
+ ],
+ "mnemonics": [
+  {
+   "phrase": "Can't Divide Time",
+   "expands": "Captured, Divides, Tires"
+  },
+  {
+   "phrase": "Nice Colours Mean Excitement",
+   "expands": "Novelty, Contrast, Meaning, Emotion"
+  },
+  {
+   "phrase": "Big City Streets",
+   "expands": "Beam, Competitors, Split"
+  }
+ ],
+ "teacher_moves": [
+  {
+   "name": "زیادہ Attention والے کام پہلے کروائیں",
+   "line": "زیادہ Attention والے کام خاموش اوقات میں رکھیں، باہر کا شور بڑھنے سے پہلے۔"
+  },
+  {
+   "name": "لکھنے اور سمجھانے کو الگ رکھیں",
+   "line": "بچوں کو ایک ساتھ لکھنے اور سننے پر مجبور نہ کریں تاکہ وہ سمجھنے پر focus کر سکیں۔"
+  },
+  {
+   "name": "Perception کی مشق کروائیں",
+   "line": "بچوں کو نامزد حصوں کے ساتھ مشق کروائیں تاکہ interpretation خودکار ہو جائے۔"
+  }
+ ],
+ "misconception": {
+  "myth": "Attention ایک fixed trait ہے جو بچے میں ہوتی ہے یا نہیں ہوتی۔",
+  "reality": "Attention ایک dynamic system ہے جو ماحول اور سبق کے ڈیزائن پر منحصر ہوتا ہے۔"
+ }
+}

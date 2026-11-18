@@ -1,0 +1,11 @@
+[Unit]
+Description=development resource budget
+
+[Slice]
+MemoryAccounting=yes
+CPUAccounting=yes
+IOAccounting=yes
+MemoryHigh=7G
+MemoryMax=8G
+MemorySwapMax=512M
+CPUQuota=150%

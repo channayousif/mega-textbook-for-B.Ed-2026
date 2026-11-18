@@ -33,6 +33,13 @@
  * allows two repair/review cycles per stage, so a repaired `revise` from the first cycle now gets a
  * fresh `review_en`, as does an `escalate` the owner sent back for repair. Only a unit whose
  * cycles are used up waits for the owner.
+ *
+ * On 2026-11-08 (maintenance M5 of 2026-W45, GICP-400 and EFMP-406 evidence): a course with no
+ * course-overview.mdx and no unit on disk queues only its lowest missing unit's `author` job.
+ * review-evidence binds `<course>/course-overview.mdx` as a required G2/G3 input, so sibling
+ * author jobs stopped on "missing required input" and then collided on that file (GICP-400 Units
+ * 1, 2 and 4, 2026-11-07 C6; EFMP-406 Units 2 to 5, 2026-11-03 C6). The first job writes the
+ * overview, modelled on an existing course's, before its siblings are queued.
  */
 
 /** ADR-0019: at most two repair/review cycles per stage per submission. */
@@ -51,12 +58,14 @@ export function stagesFor(u, f) {
   const backlog = f.figureBacklog ?? { schematic: u.figures?.prompt_only || 0, illustration: 0 };
   if (backlog.schematic > 0) need.push('figures');
   if (backlog.illustration > 0) need.push('illustrate');
+  if (needsIllustrationPlan(u, f)) need.push('plan_illustrations');
+  const hold = illustrationsPending(u, f);
   const unrepairedRevise = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'revise' && !f.g3Repaired;
   const unrepairedEscalate = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'escalate' && !f.g3Repaired;
   if (u.gates.G3 !== 'done') {
-    if (!f.g3Report) need.push('review_en');
+    if (!f.g3Report) { if (!hold) need.push('review_en'); }
     else if (unrepairedRevise) need.push('repair_en');
-    else if (reReviewDue(f)) need.push('review_en');
+    else if (!hold && (reReviewDue(f) || passStale(f))) need.push('review_en');
   }
   if (f.bilingual) {
     if (!f.mirrorComplete) {
@@ -93,9 +102,62 @@ export function limitIllustrate(added, inFlight) {
   });
 }
 
+/**
+ * ADR-0029 backfill (owner ruling 2026-11-09). A unit authored before the author-unit skill
+ * planned raster images (c74f8afb3, 2026-11-03) has no `unit-NN.banner.md`, and nothing queued
+ * one: `illustrate` runs only for illustration rows that exist. GISS-401 Unit 1 reached the desk
+ * as "Suggested: Certify" with no banner or scene; 98 of 120 units had no banner. A certified
+ * unit is left alone, since placing images would change its certified inputs.
+ * `hasBanner` is absent in callers that do not gather it, which keeps their old behaviour.
+ */
+export function needsIllustrationPlan(u, f) {
+  return u.authored && u.gates.G3 !== 'done' && f.hasBanner === false;
+}
+
+/**
+ * Owner ruling 2026-11-09: hold, do not certify, until a unit's raster images are planned and
+ * placed. While this is true the crew does not review the unit and the desk does not offer it.
+ */
+export function illustrationsPending(u, f) {
+  return needsIllustrationPlan(u, f) || (f.figureBacklog?.illustration ?? 0) > 0;
+}
+
+/**
+ * Paths whose hash differs between a report's `input_manifest` and the current one, kept only
+ * when they belong to this unit (`unit-NN` as a path segment or a `unit-NN.` file stem). Shared
+ * inputs (gate scripts, the style guide, course guides) change every unit's manifest at once;
+ * re-reviewing the corpus for those would be a wave, so only the unit's own changes count.
+ */
+export function unitScopedChanges(before, after, unit) {
+  const nn = String(unit).padStart(2, '0');
+  const mine = new RegExp(`(^|/)unit-${nn}(/|\\.|$)`);
+  const keys = new Set([...Object.keys(before ?? {}), ...Object.keys(after ?? {})]);
+  return [...keys].filter((k) => mine.test(k) && (before ?? {})[k] !== (after ?? {})[k]).sort();
+}
+
+/**
+ * A `pass` whose unit files changed after the review (images placed, a later fix) describes
+ * content the reviewer never saw. It gets a fresh review; a pass used no repair cycle, so the
+ * ADR-0019 limit is untouched. `g3UnitChanges` is the unitScopedChanges list for the report.
+ */
+function passStale(f) {
+  return f.g3Report?.disposition === 'pass' && (f.g3UnitChanges?.length ?? 0) > 0;
+}
+
+/**
+ * Backfilling ~100 units at once would edit as many bound inputs in one tick and invalidate their
+ * evidence in a burst (sibling jobs also collide on tasks.md). Keep at most two plan jobs in flight.
+ */
+export const MAX_PLAN_ILLUSTRATIONS = 2;
+export function limitPlanIllustrations(added, inFlight) {
+  let slots = MAX_PLAN_ILLUSTRATIONS - inFlight.filter((j) => j.stage === 'plan_illustrations').length;
+  return added.filter((j) => j.stage !== 'plan_illustrations' || slots-- > 0);
+}
+
 /** A unit the crew has finished reviewing that waits only for a person's G3 sign-off. */
 export function awaitingG3(u, f) {
   if (!u.authored || u.gates.G3 === 'done' || !f.g3Report || reReviewDue(f)) return false;
+  if (illustrationsPending(u, f) || passStale(f)) return false;
   return f.g3Report.disposition !== 'revise' || f.g3Repaired;
 }
 
@@ -143,6 +205,25 @@ export function specUnitNumbers(specText) {
   const fm = /^---\n([\s\S]*?)\n---/.exec(specText);
   if (!fm || !/^status:\s*approved\s*$/m.test(fm[1])) return [];
   return [...new Set([...specText.matchAll(/^## Unit (\d+)\b/gm)].map((m) => Number(m[1])))].sort((a, b) => a - b);
+}
+
+/**
+ * Unit numbers to queue `author` for from an approved spec: every spec unit not on disk, except
+ * that a course with no course-overview.mdx and no unit on disk gets only its lowest missing
+ * unit. review-evidence binds `<course>/course-overview.mdx` as a required G2/G3 input, so the
+ * first author job writes the overview before its siblings are queued (2026-W45 M5; GICP-400
+ * Units 1, 2 and 4 stopped on the missing input, EFMP-406 Units 2 to 5 collided on the file).
+ *
+ * @param {number[]} unitsInSpec  sorted unit numbers the approved spec defines
+ * @param {Set<number>|number[]} onDisk  unit numbers already written
+ * @param {boolean} hasOverview  the course content root already has course-overview.mdx
+ * @returns {number[]}
+ */
+export function authorQueue(unitsInSpec, onDisk, hasOverview) {
+  const written = onDisk instanceof Set ? onDisk : new Set(onDisk);
+  const missing = unitsInSpec.filter((n) => !written.has(n));
+  if (!hasOverview && written.size === 0) return missing.slice(0, 1);
+  return missing;
 }
 
 /** Job states that are crew work in flight. `gate_red` and `blocked` wait on a person, so they never hold the crew. */

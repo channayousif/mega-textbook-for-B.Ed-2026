@@ -1,0 +1,24 @@
+# EFPG-401 Unit 1 - Sources consulted
+
+Checked on 2026-10-31 and 2026-11-10. All prose is original. Classroom scenes, named teachers and pupils (Tariq and Sir Ayaz in Mirpurkhas, Hina and Madam Najma in Larkana, Rasheed and Master Ghulam in Sukkur, Zubaida and Madam Shaheen in Dadu, Bilal, Kamran, Farzana, and Jameel), and lesson activities are original pedagogical illustrations. Open-access research works were verified through Crossref and OpenAlex on 2026-10-31. Guide-required print monographs are cited by reference only under owner ruling `D-2026-0001`.
+
+| Key | Citation | URL/DOI | Supports | Kind |
+|---|---|---|---|---|
+| daulay-2025-listening | Daulay, E. (2025). A case study in the use of audio-visual media for teaching listening skills in junior high school EFL classrooms: Perceived effectiveness and challenges. *Journal on English as a Foreign Language*, 15(1), 135-159. | https://doi.org/10.23971/jefl.v15i1.9432 | U1-02, U1-04, U1-06: careful listening habits, video contextual scaffolding, and listening sub-skills; gold open access; Crossref and OpenAlex verified 2026-10-31 | open-access-substitute |
+| hartati-2024-reading | Hartati, W. O., Tohamba, C. P. P., & Faridawati, F. (2024). Reading strategies used by teachers in teaching reading in EFL class. *DEIKTIS: Jurnal Pendidikan Bahasa dan Sastra*, 4(4), 709-719. | https://doi.org/10.53769/deiktis.v4i4.1019 | U1-13, U1-14: methods of teaching reading, phonics, sight-words, and reading sub-skills (skimming, scanning, intensive, inferring); diamond open access; Crossref and OpenAlex verified 2026-10-31 | open-access-substitute |
+| yunus-2013-writing | Md Yunus, M., Nordin, N., Salehi, H., Amin Embi, M., & Salehi, Z. (2013). The use of information and communication technology (ICT) in teaching ESL writing skills. *English Language Teaching*, 6(7), 1-8. | https://doi.org/10.5539/elt.v6n7p1 | U1-16, U1-17: spelling importance, mechanics support, and the process writing approach for creative essays and paragraphs; open access; Crossref and OpenAlex verified 2026-10-31 | open-access-substitute |
+| cook-1991-sll | Cook, V. (1991). *Second Language Learning and Language Teaching.* London: Edward Arnold. | (print; ISBN 9780340545195) | U1-01, U1-05: techniques of developing listening ability, comprehensible input, TPR, and the three-stage listening framework; Open Library OL2943629W; title-level support (`D-2026-0001`) | guide-required |
+| nolasco-1987-conversation | Nolasco, R., & Arthur, L. (1987). *Conversation.* Oxford University Press. | (print; ISBN 9780194370967) | U1-09, U1-10: conversation and dialogue structure, turn-taking, and language games for oral expression; Open Library OL4682039W; title-level support (`D-2026-0001`) | guide-required |
+| celce-murcia-1991 | Celce-Murcia, M. (Ed.). (1991). *Teaching English as a Second or Foreign Language* (2nd ed.). Newbury House. | (print; ISBN 9780838428450) | U1-03, U1-07, U1-08, U1-11, U1-12, U1-15, U1-18, U1-19: audio recordings, speaking climate, pronunciation and intonation, oral vocabulary, silent vs loud reading, handwriting techniques, letters, and applications; Open Library OL16476622W; title-level support (`D-2026-0001`) | guide-required |
+
+## Mapped-reading limits
+
+All six mapped readings from the approved content-spec are cited. The three open-access journal articles (`daulay-2025-listening`, `hartati-2024-reading`, `yunus-2013-writing`) are read in full and have bound excerpts in `specs/content/efpg-401/sources/texts/`. The three guide-required print monographs (`cook-1991-sll`, `nolasco-1987-conversation`, `celce-murcia-1991`) provide title-level conceptual support and are declared below under `## Unverifiable sources` per owner ruling `D-2026-0001`.
+
+## Unverifiable sources
+
+Bound excerpts could not be committed for these print-only monographs. Recorded here so `check:depth-gate` and reviewers see the limitation explicitly rather than inferring it from silence:
+
+- cook-1991-sll: Print monograph (Edward Arnold, 1991, ISBN 9780340545195). Open Library OL2943629W checked 2026-10-31. Not retrievable in full text on this host (`D-2026-0001`). Used for title-level support of comprehensible input and listening techniques.
+- nolasco-1987-conversation: Print monograph (Oxford University Press, 1987, Resource Books for Teachers, ISBN 9780194370967). Open Library OL4682039W checked 2026-10-31. Guide misprints author as "Rob Nohand (1993)". Not retrievable in full text on this host (`D-2026-0001`). Used for conversational frameworks and oral expression games.
+- celce-murcia-1991: Print monograph (Newbury House / Harper Collins, 2nd ed., 1991, ISBN 9780838428450). Open Library OL16476622W checked 2026-10-31. Not retrievable in full text on this host (`D-2026-0001`). Used for foundational TESL methodology across pronunciation, vocabulary, reading modes, penmanship, and correspondence formats.

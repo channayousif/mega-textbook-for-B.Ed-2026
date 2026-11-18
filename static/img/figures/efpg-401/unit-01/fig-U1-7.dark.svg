@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">The Five-Stage Process Approach to Writing</title>
+  <desc id="d">Flowchart showing the five stages of the writing process: planning ideas, drafting sentences, checking spelling and mechanics, revising for clarity, and publishing the final clean copy.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 12px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 11px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">The Process Writing Approach in Primary English</text>
+  <text class="muted" x="390" y="52" text-anchor="middle">Transforming writing from mechanical copying into recursive composition</text>
+
+  <!-- Step 1: Pre-writing -->
+  <rect class="panel-a" x="25" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="90" y="112" text-anchor="middle">1. Pre-Writing</text>
+  <text class="small" x="90" y="128" text-anchor="middle">Idea Planning</text>
+  <line class="grid" x1="35" y1="138" x2="145" y2="138"/>
+  <text class="body" x="35" y="162">• Brainstorming</text>
+  <text class="body" x="35" y="187">• Spider grams</text>
+  <text class="body" x="35" y="212">• Select thoughts</text>
+  <text class="body" x="35" y="237">• Outline points</text>
+  <text class="body" x="35" y="262">• Picture cues</text>
+  <text class="small" x="90" y="295" text-anchor="middle">Gather ideas</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path class="stroke" d="M 155 197 L 172 197"/>
+  <polygon class="ah" points="168,193 175,197 168,201"/>
+
+  <!-- Step 2: Drafting -->
+  <rect class="panel-b" x="175" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="240" y="112" text-anchor="middle">2. Drafting</text>
+  <text class="small" x="240" y="128" text-anchor="middle">Composing Flow</text>
+  <line class="grid" x1="185" y1="138" x2="295" y2="138"/>
+  <text class="body" x="185" y="162">• Write sentences</text>
+  <text class="body" x="185" y="187">• Focus on ideas</text>
+  <text class="body" x="185" y="212">• No halting</text>
+  <text class="body" x="185" y="237">• Rough version</text>
+  <text class="body" x="185" y="262">• Express voice</text>
+  <text class="small" x="240" y="295" text-anchor="middle">Capture thoughts</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path class="stroke" d="M 305 197 L 322 197"/>
+  <polygon class="ah" points="318,193 325,197 318,201"/>
+
+  <!-- Step 3: Revising -->
+  <rect class="panel-c" x="325" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="390" y="112" text-anchor="middle">3. Revising</text>
+  <text class="small" x="390" y="128" text-anchor="middle">Clarifying Content</text>
+  <line class="grid" x1="335" y1="138" x2="445" y2="138"/>
+  <text class="body" x="335" y="162">• Reorganize ideas</text>
+  <text class="body" x="335" y="187">• Topic sentence</text>
+  <text class="body" x="335" y="212">• Add details</text>
+  <text class="body" x="335" y="237">• Connectors</text>
+  <text class="body" x="335" y="262">• Peer review</text>
+  <text class="small" x="390" y="295" text-anchor="middle">Shape meaning</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path class="stroke" d="M 455 197 L 472 197"/>
+  <polygon class="ah" points="468,193 475,197 468,201"/>
+
+  <!-- Step 4: Editing -->
+  <rect class="panel-d" x="475" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="540" y="112" text-anchor="middle">4. Editing</text>
+  <text class="small" x="540" y="128" text-anchor="middle">Surface Accuracy</text>
+  <line class="grid" x1="485" y1="138" x2="595" y2="138"/>
+  <text class="body" x="485" y="162">• Spelling checks</text>
+  <text class="body" x="485" y="187">• Capital letters</text>
+  <text class="body" x="485" y="212">• Full stops</text>
+  <text class="body" x="485" y="237">• Verb agreement</text>
+  <text class="body" x="485" y="262">• Word spaces</text>
+  <text class="small" x="540" y="295" text-anchor="middle">Polish form</text>
+
+  <!-- Arrow 4 to 5 -->
+  <path class="stroke" d="M 605 197 L 622 197"/>
+  <polygon class="ah" points="618,193 625,197 618,201"/>
+
+  <!-- Step 5: Publishing -->
+  <rect class="panel" x="625" y="85" width="130" height="225" rx="6"/>
+  <text class="sh" x="690" y="112" text-anchor="middle">5. Publishing</text>
+  <text class="small" x="690" y="128" text-anchor="middle">Sharing Output</text>
+  <line class="grid" x1="635" y1="138" x2="745" y2="138"/>
+  <text class="body" x="635" y="162">• Neat final copy</text>
+  <text class="body" x="635" y="187">• Clean handwriting</text>
+  <text class="body" x="635" y="212">• Class display</text>
+  <text class="body" x="635" y="237">• Share with peers</text>
+  <text class="body" x="635" y="262">• Read aloud</text>
+  <text class="small" x="690" y="295" text-anchor="middle">Celebrated output</text>
+
+  <!-- Recursive loop from Revising to Drafting -->
+  <path class="stroke-a" stroke-dasharray="3 3" d="M 390 310 L 390 340 L 240 340 L 240 315"/>
+  <polygon class="ah-a" points="236,317 240,311 244,317"/>
+  <text class="small" x="315" y="355" text-anchor="middle">Recursive cycle: revision often triggers re-drafting</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

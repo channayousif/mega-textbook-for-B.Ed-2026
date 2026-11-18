@@ -35,7 +35,7 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-03/G2/20261103T112237093Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-03/G2/20261114T000301536Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: revise; blocking F1 sources-chain, F2 render unverified under capacity directive) at reviews/unit-03/G3/agent-g3-gict300-u3-run001.json; F1 repair in progress; agent reviews advisory under ADR-0019 |
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied for report reviews/unit-03/G3/agent-g3-gict300-u3-run002.json (crew gict-300-u03-repair_en, 2026-10-19): F5 verbatim ch 39 sentence and F6 metadata excerpt confirmed present (b3b0eabc), F6 deletion account now disclosed title-level under shellyVermaat; F3 MCQ keys rebalanced to a3/b2/c2/d3 (EN+UR); F4 ERQ-01..04 given new scenarios distinct from the topic Summative tasks (EN+UR); F7/F8 confirmed fixed (b3b0eabc); F10 descriptive link text on all four topics (EN+UR); F9 (year-less ostep key outside the ADR-0027 digest binding) left as an owner decision, since renaming the key touches the approved content-spec. ADR-0019 two-cycle G3 budget is exhausted: a run 003 needs owner authorisation in specs/decisions/log.md; agent reviews advisory under ADR-0019 |
 | Unit 3 | G4 ur-translation | ▣ | | Complete 7-file UR mirror reconciled with unchanged EN baseline 7cdacb45 on 2026-10-18 (crew gict-300-u03-translate-r1); continuation repairs disk-reading, payroll, double-click and rubric clarity wording; structural/component/assessment parity and bank-conformant key_terms checked; handoff: reviews/unit-03/G4/translation-handoff.md. translation_status stays draft pending accepted G3 and fresh independent G5 with rendered inspection; no certification claimed. |
@@ -67,7 +67,7 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 
 | Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied for reviews/unit-04/G3/agent-g3-gict300-u4-run002.json; B1/B2/A1/A2 verified already repaired; A4 descriptive reading links in EN/UR, A5 integrative school data-protection plan and rubric in EN/UR, A7 source-support claim corrected; A3 approved-spec reading-list mismatch and A6 review tooling deferred to owners; see reviews/unit-04/G3/repair-run002.md; fresh independent review required. |
 
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-04/G2/20261103T112237329Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-04/G2/20261114T010243684Z-gates.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-03/G3/20261102T142352Z-g3-desk-6350f4d2.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-04/G3/20261102T142352Z-g3-desk-746598e3.json |
 | Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/gict-300/reviews/unit-01/G3/20261102T140729Z-g3-desk-a27dc6a2.json |
@@ -80,4 +80,5 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-3326366e.json |
 
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied for report specs/content/gict-300/reviews/unit-03/G3/20261102T212207Z-g3-desk-319cad35.json (crew gict-300-u03-repair_en-r1, 2026-11-05): F5 verbatim ch 39 file definition ('linear array of bytes, each of which you can read or write') and F6 metadata excerpt verified in ostep.md; buffer, spooling and deletion semantics disclosed title-level under shellyVermaat in sources/unit-03.md; F3 MCQ keys rebalanced across a3/b2/c2/d3 in EN and UR; F4 ERQ-01..04 given distinct scenarios from topic Summative tasks in EN and UR; F7/F8 topic-02 Further reading and bourgeois2019 ch 3 annotations verified; F10 descriptive reading links across all four topics in EN and UR; F9 (year-less ostep key outside ADR-0027 digest binding) left as owner decision touching approved spec; ADR-0019 two-cycle G3 budget exhausted: run 003 needs owner authorisation in specs/decisions/log.md; G3 remains open, unticked |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-03/G3/20261108T203238Z-g3-desk-4a1e4039.json |
 

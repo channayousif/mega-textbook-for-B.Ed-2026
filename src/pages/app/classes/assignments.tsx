@@ -12,6 +12,9 @@ import {
 import { fetchOwnSubmission, computeStudentStatus, statusLabel } from '@site/src/lib/submissions';
 import { fetchOwnBestScore } from '@site/src/lib/quiz';
 import type { Assignment, AssignmentStudentStatus } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /** A quiz-sourced assignment has no `submissions` row at all (it's scored via `quiz_attempts`) - routes to quiz.tsx, not assignment.tsx/queue.tsx. */
 function detailHref(classId: string, a: Assignment): string {
@@ -168,7 +171,7 @@ function TeacherAssignmentsList({ classId }: { classId: string }): React.ReactEl
     await load();
   }
 
-  if (!assignments) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!assignments) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
@@ -197,6 +200,7 @@ function TeacherAssignmentsList({ classId }: { classId: string }): React.ReactEl
       {assignments.length === 0 ? (
         <p>No assignments yet.</p>
       ) : (
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
         <table>
           <thead>
             <tr>
@@ -280,6 +284,7 @@ function TeacherAssignmentsList({ classId }: { classId: string }): React.ReactEl
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );
@@ -326,7 +331,7 @@ function StudentAssignmentsList({ classId }: { classId: string }): React.ReactEl
     load();
   }, [load]);
 
-  if (!rows) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!rows) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
@@ -336,6 +341,7 @@ function StudentAssignmentsList({ classId }: { classId: string }): React.ReactEl
       {rows.length === 0 ? (
         <p>No assignments yet.</p>
       ) : (
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
         <table>
           <thead>
             <tr>
@@ -356,6 +362,7 @@ function StudentAssignmentsList({ classId }: { classId: string }): React.ReactEl
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );
@@ -364,7 +371,7 @@ function StudentAssignmentsList({ classId }: { classId: string }): React.ReactEl
 function AssignmentsContent({ classId }: { classId: string }): React.ReactElement {
   const locale = useLocale();
   const { loading, classRow, role } = useClassRole(classId);
-  if (loading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (loading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow) {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -374,7 +381,7 @@ function AssignmentsContent({ classId }: { classId: string }): React.ReactElemen
   }
   return (
     <div>
-      <h2>Assignments - {classRow.name}</h2>
+      <PageHeader title={`Assignments - ${classRow.name}`} icon="assignment" />
       {role === 'teacher' ? <TeacherAssignmentsList classId={classId} /> : <StudentAssignmentsList classId={classId} />}
     </div>
   );
@@ -384,11 +391,13 @@ export default function AssignmentsPage(): React.ReactElement {
   const classId = useQueryParam('classId');
   return (
     <Layout title="Assignments">
+      <AppDashboardShell>
       <AuthGuard requireRole={['teacher', 'student']}>
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId ? <AssignmentsContent classId={classId} /> : <p>No class selected.</p>}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

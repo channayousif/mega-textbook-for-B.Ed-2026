@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "course_code": "GICP-400",
+  "unit_no": 6,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:agy",
+  "author_run_id": "crew/gicp-400-u06-author",
+  "reviewer_run_id": "fcfc9788-9bcf-40ed-8d5e-73e82260e6d1",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-11-06T22:00:51.000Z",
+  "completed_at": "2026-11-06T22:33:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/3rd 2026.pdf": "f0de34d0a166d0306afbb87aaca2caa58a077ca6024b26e192b6aa02e09eb028",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "37ef2085bd3cfce1d47db8ee24ef8a0d1859ed7670eb6a689d4221f6bcd6c264",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-3/gicp-400/course-overview.mdx": "a50b5ea88cd222d473cdc9570c2155d33a85856b7987da5cbfa487df69892cbe",
+    "docs/semester-3/gicp-400/unit-06/index.mdx": "341c6cc4754565fa534bc0e3e30e2b29297b1ec62e29870383d6f928a417dd25",
+    "docs/semester-3/gicp-400/unit-06/topic-01.mdx": "ca133ec9ae02b0de82686b371fa01d83a86c7684b1c8642480e1fa6556324399",
+    "docs/semester-3/gicp-400/unit-06/topic-02.mdx": "5422f29ddfbddcf3865b7af39c94982b52c1c364a604af872601552681079d5f",
+    "docs/semester-3/gicp-400/unit-06/unit-assessment.mdx": "c6e2c82c9c8ad68766cc8f2e4471cf31e1c59e8f0499c1b23b86c412c59cd3f3",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "33e46f435128a99f53a38c597b289d730c85b398a7f27b068392552540128622",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "22eaaee128cd13f1756a1c1d4037a8ed7143cfc9f0428c12f49a8b4752fb7f93",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gicp-400/concepts/unit-06.md": "3d230e08e55510d54955c15d9c664354960879000c6688cf80dcc5648cdacda8",
+    "specs/content/gicp-400/content-spec.md": "7f9d385f1d0efa77b33ce84a7adc5f43d1a034643c439d5476905587068327dd",
+    "specs/content/gicp-400/coverage/unit-06.md": "5c4a514f9d4f67665245f9fafeea644cccdc1eb77fe14c793f853177c10e5331",
+    "specs/content/gicp-400/figures/unit-06.banner.md": "2fd9d91cf6f83cbb181202f22f13887bf444c51af211979cf72a2b64b03de657",
+    "specs/content/gicp-400/figures/unit-06.md": "dec5edae35b3e75c755a8fef2677fd530adaf7cd9210a82713093993dbc34a36",
+    "specs/content/gicp-400/sources/texts/pak-18th-amendment-2010.md": "a831d383dbad659f4b9e5006ee361354145af612662510d1695a9a2d780c44dc",
+    "specs/content/gicp-400/sources/texts/pak-19th-amendment-2010.md": "8a45f6eaf94655ab63f4891dc72d41261d607587a56986605324baa19a6d52e7",
+    "specs/content/gicp-400/sources/texts/pak-25th-amendment-2018.md": "e2e0aa65c34630ac073a07463d8a3c464a07964ee5686d33bfabece3fb8f8181",
+    "specs/content/gicp-400/sources/texts/pak-constitution-1973.md": "173c30b9d848f115316010aea7adbd52df6e79e1e77962e619f17715a6fff2b9",
+    "specs/content/gicp-400/sources/texts/pak-constitution-amended-2025.md": "ef54afeee32ce2edd024ac574dc0c0d155fec5199cf1a954778a33e22b3a909a",
+    "specs/content/gicp-400/sources/unit-06.md": "c8cb5db0adba8aff6d037f9ffd310f3da3a04aabf2881a799b6cfd1282e1b98a",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/gicp-400/unit-06/fig-U6-1.dark.svg": "3e504491cccb8f76e2d0145ec9e5c6a968f30c1567811316f15746eb5bbd97ff",
+    "static/img/figures/gicp-400/unit-06/fig-U6-1.svg": "4bd53dcd7c9eb0b86c345eb6e0876b8b973cdc580d2e5487bee62fc576531bcb",
+    "static/img/figures/gicp-400/unit-06/fig-U6-2.dark.svg": "f86d4b78910dac4927d2340b36511b110ac2d762b625fe547701fa511320ab9f",
+    "static/img/figures/gicp-400/unit-06/fig-U6-2.svg": "f740fb357fde350aa7aa28a69ab1e5ccef34db8bb69d25250aa65469771f832b",
+    "static/img/figures/gicp-400/unit-06/fig-U6-3.dark.svg": "1125b552642ac47e8136239f9809352e068069419d85d447a7d7969959efcc64",
+    "static/img/figures/gicp-400/unit-06/fig-U6-3.svg": "d1ddaa1fcdebac1204e7e4a8181bfcf9cfa8cb3c0f146ec0e18f99e260cca279",
+    "static/img/figures/gicp-400/unit-06/fig-U6-4.dark.svg": "f3da554828b89d915a40c13b573d0f2c0793e14881311c1cbca9a34c3e99aea9",
+    "static/img/figures/gicp-400/unit-06/fig-U6-4.svg": "ece65a896f7eaf17c7f3bac6a035415c9c31f93360f121ff836b9be5afd5484b"
+  },
+  "required_criteria": [
+    "authority",
+    "sources",
+    "coverage",
+    "assessment",
+    "accessibility",
+    "readability",
+    "pedagogy"
+  ],
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/summary.md: Authority and coverage",
+        "specs/content/gicp-400/content-spec.md: Unit 6 (Weeks 13-14, U6-01 to U6-06)",
+        "specs/content/gicp-400/coverage/unit-06.md: all six leaves mapped to exact headings and verified sources",
+        "Scheme-and-Course-guides/extracted-text/3rd 2026.txt:632-639: guide week titles and sub-topics match"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "unverified",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/sources.md: full source audit table",
+        "specs/content/gicp-400/sources/unit-06.md: sources consulted and consultation limits",
+        "specs/content/gicp-400/sources/texts/pak-constitution-amended-2025.md: Articles 41-100, 101, 106, 142, 143, 153-154, 160, 172, 175-209, 232, 238-239, 246, Fourth Schedule",
+        "specs/content/gicp-400/sources/texts/pak-18th-amendment-2010.md, pak-19th-amendment-2010.md, pak-25th-amendment-2018.md, sahsol-nadeem-ahmed.md, fafen-2018-kp-fata.md",
+        "hamid-khan-const declared unverifiable under D-2026-0001; official gazette Act PDF for 25th Amendment relies on Senate bill version"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/summary.md: Authority and coverage",
+        "topic-01.mdx: U6-01 (Legislature), U6-02 (Executive), U6-03 (Judiciary)",
+        "topic-02.mdx: U6-04 (Procedure of amendments), U6-05 (Major amendments: 18th, 19th and 25th), U6-06 (Impact on federalism)",
+        "unit-assessment.mdx: 10 MCQ, 10 RRQ, 5 ERQ with ERQ 5 as the required integrative mock Parliament plan on curriculum control"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/assessment.md: independent solutions for all 10 MCQ, 10 RRQ and 5 ERQ",
+        "unit-assessment.mdx: all keys match derived solutions; no ambiguous distractor; rubrics distinguish performance levels",
+        "check:bloom-bands exit 0; check:no-answer-keys exit 0"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/summary.md: Accessibility",
+        "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/render-review.txt: render not run under .crew/brief.md prohibition",
+        "static/img/figures/gicp-400/unit-06/fig-U6-1.svg to fig-U6-4.svg: static inspection and measure-figure-text exit 0; dynamic browser viewport and print inspection unavailable"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/summary.md: Readability and pedagogy",
+        "topic-01.mdx and topic-02.mdx: plain definitions before use, worked examples, Sindhi classroom situations",
+        "check:no-em-dash exit 0"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/summary.md: Readability and pedagogy",
+        "topic-01.mdx and topic-02.mdx: feasible card-sorting and amendment tribunal activities, practicum school tasks, analytic mini-rubrics",
+        "topic-01.mdx and topic-02.mdx: corrects common misconceptions regarding presidential rule, judicial finality after 2025, ordinary law amending the constitution, and 18th amendment scope"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "uncertain",
+      "message": "Actual narrow-screen (360px) and A4 print inspection plus live browser table scroll verification unavailable because .crew/brief.md prohibits builds, a dev server, and Playwright. Accessibility remains unverified.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "Hamid Khan (2017) print monograph is declared unverifiable under D-2026-0001; official Act PDF for the 25th Amendment relies on Senate bill text. Secondary and official gazette claims remain unverified from the bundle.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "Actual author run identity (crew/gicp-400-u06-author / commit c1ab4c6ab) was reconstructed from commit history; independent coordinator run attestation was not supplied in a parent handoff bundle.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Bind complete offline texts for secondary sources or record authorized unavailable-source declarations, and have an authorized host with Chromium access execute visual rendering and print checks.",
+      "resolved": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-docs-sync.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-content.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/render-review.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/bundle/manifest.json": "7a7378b6e5a176626ffcbd5bbb870e7a2c4ec535cd97216f77f0b3a2b0492f75",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/assessment.md": "bf3fa223ec8440b524453b58c39b85e1f16d52e1a0cc0fdc70b8bd1eb7b77eda",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-bloom-bands.txt": "fe0c0e2237664f543c3d24fba00f4b7d5773891469e7739345b705b179663592",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-concept-graph.txt": "489b5f2c09d24d15206c56f4f092cee19b9f6c4fa91d61bae33abf82b46fba8a",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-content.txt": "56764203c84c78793de975ebfcba61a34ab18e29bc445c37e33f04d9774ad18e",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/input-verification.txt": "6f899fbccd22e8075dfc209230124bbd1a15bd1fb3ef7cabd1968e48267da356",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/render-review.txt": "828bc3400e81895d79ef84d7206fabed8b1d8d15099b53defe6574777321159f",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/sources.md": "4bcf5ac523ae75acf7677256773854be5e0d472d8cd1a40ae5f6579912910769",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/evidence/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gicp-400/reviews/unit-06/G3/fcfc9788-9bcf-40ed-8d5e-73e82260e6d1/summary.md": "13765e85770e18a9c4d013133c322dafa7daf5d215a06ab0aee478da2ca602d7"
+  },
+  "reviewed_commit": "c1ab4c6ab235990e4a44e21251e261d96234b161",
+  "limitations": [
+    "No parent-prepared manifest or coordinator author run identity was supplied; manifest was prepared locally over clean committed inputs.",
+    "No rendered PNG/WebP/JPG artifact exists because the crew brief prohibits builds, dev servers, and Playwright.",
+    "Hamid Khan (2017) print monograph is declared unverifiable under D-2026-0001; official Act PDF for the 25th Amendment relies on Senate bill version."
+  ]
+}

@@ -18,11 +18,11 @@
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U6-01 | unit-assessment.mdx | MCQ items 1, 2, 5; RRQ items 1, 2 | no-external-source |
-| U6-02 | unit-assessment.mdx | MCQ item 5; RRQ items 1, 2; ERQ item 3 | no-external-source |
+| U6-02 | unit-assessment.mdx | MCQ item 5; RRQ items 1, 2; ERQ items 2, 3 | no-external-source |
 | U6-03 | unit-assessment.mdx | MCQ item 7; RRQ items 1, 6; ERQ item 3 | no-external-source |
 | U6-04 | unit-assessment.mdx | MCQ item 10; RRQ items 4, 10; ERQ items 1, 4 | no-external-source |
 | U6-05 | unit-assessment.mdx | MCQ items 3, 4; RRQ items 3, 9; ERQ item 1 | no-external-source |
 | U6-06 | unit-assessment.mdx | MCQ item 9; RRQ items 5, 10 | no-external-source |
-| U6-07 | unit-assessment.mdx | MCQ item 6; RRQ items 7, 8 | no-external-source |
+| U6-07 | unit-assessment.mdx | MCQ item 6; RRQ item 8 | no-external-source |
 | U6-08 | unit-assessment.mdx | RRQ item 10 | no-external-source |
 | U6-09 | unit-assessment.mdx | MCQ item 8; RRQ items 7, 10 | no-external-source |

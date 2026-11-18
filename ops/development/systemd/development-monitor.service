@@ -1,0 +1,12 @@
+[Unit]
+Description=Development resource metadata sampler
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/development-monitor
+Restart=on-failure
+RestartSec=30
+UMask=0077
+
+[Install]
+WantedBy=default.target

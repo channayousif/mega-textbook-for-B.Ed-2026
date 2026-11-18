@@ -5,6 +5,8 @@ import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { fetchOwnSuggestions } from '@site/src/lib/suggestions';
 import { fetchOwnFeedbackHistory } from '@site/src/lib/activityFeedback';
 import type { ImprovementSuggestion, ActivityFeedback } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import { AppPageTitle } from '@site/src/components/ui';
 
 /**
  * Feedback & Suggestions area (Spec 005, T015/T031) - "My Suggestions" list
@@ -71,7 +73,7 @@ function FeedbackSuggestionsContent(): React.ReactElement {
     load();
   }, [load]);
 
-  if (!suggestions || !feedbackHistory) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!suggestions || !feedbackHistory) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
@@ -115,6 +117,7 @@ export default function FeedbackSuggestionsPage(): React.ReactElement {
   return (
     <Layout title="Feedback & Suggestions">
       <AppDashboardShell role="teacher">
+          <AppPageTitle en="Feedback and suggestions" ur="رائے اور تجاویز" icon="feedback" />
           <FeedbackSuggestionsContent />
       </AppDashboardShell>
     </Layout>

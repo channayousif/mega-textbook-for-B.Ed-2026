@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { deleteUsers } from './_cleanup';
+import { TEST_PASSWORD } from './_password';
 
 /**
  * T050 [Polish] — measures Overview's and Analytics' load time against Spec
@@ -22,7 +23,7 @@ const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const configured = Boolean(SUPABASE_URL && ANON_KEY && SERVICE_KEY);
 test.skip(!configured, 'requires DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY');
 
-const PASSWORD = 'Test-Passw0rd!';
+const PASSWORD = TEST_PASSWORD;
 // CI measures against a Supabase backend on a shared, loaded host, so the
 // single-run smoke check gets 2x leeway there; local runs keep the spec budget.
 const SC005_BUDGET_MS = 5000 * (process.env.CI ? 2 : 1);
@@ -83,7 +84,9 @@ test('overview and analytics load within the SC-005 budget at representative sca
     expect(analyticsElapsedMs, `Analytics took ${analyticsElapsedMs}ms, budget is ${SC005_BUDGET_MS}ms`).toBeLessThan(SC005_BUDGET_MS);
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await deleteUsers(svc, teacher.user!.id);
-    for (const id of studentAuthIds) await deleteUsers(svc, id);
+    // One batched call. Thirty-one sequential deleteUsers calls (about 15
+    // round-trips each) outran the test timeout, abandoning this finally and
+    // leaking 526 students on the live project by 2026-11-08.
+    await deleteUsers(svc, teacher.user!.id, ...studentAuthIds);
   }
 });

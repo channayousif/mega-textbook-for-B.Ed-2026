@@ -1,0 +1,22 @@
+# Acceptance checklist
+
+- [x] Back up machine settings and inventory extension versions.
+- [x] Install parent/editor/agent budgets and check kernel values.
+- [x] Preserve outer limits, ordinary SSH and existing services.
+- [x] Apply exclusions to standard and dedicated server machine settings.
+- [x] Start independent persistent tmux server and metadata monitor.
+- [x] Implement named agent-terminal sessions with caller working directory.
+- [x] Implement two-slot pressure admission and focused tests.
+- [x] Verify wrapper stdin, literal arguments and exit status locally.
+- [x] Verify agent cgroup ancestry and heartbeat across editor slice stop.
+- [x] Confirm kernel OOM enforcement in disposable 32 MiB cgroup.
+- [x] Owner supplies client public key; authorize it using the supplied helper.
+- [ ] Owner saves buffers, migrates existing Claude sessions explicitly and closes old editors.
+- [x] Verify dedicated alias SSH command lands in development-editor.slice (owner supplied client output).
+- [x] Verify actual installed VS Code Remote SSH server, extension host, watcher and terminal ancestry.
+- [ ] Verify explicit application port forwarding through the dedicated alias.
+- [ ] Confirm multiple windows share budget, reconnect and server update ancestry.
+- [ ] Verify editing, search, Git, refresh and attachment from Windows VS Code and SSH.
+- [ ] Run extensions-disabled baseline, Extension Bisect and extension-host profile.
+- [ ] Identify offender from evidence before disabling it on this host.
+- [ ] Observe one normal workday, review metadata and production responsiveness.

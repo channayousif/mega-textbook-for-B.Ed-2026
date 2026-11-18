@@ -15,6 +15,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { PROFILE_DEPENDENTS } from '../profile-dependents.mjs';
 import { randomUUID } from 'node:crypto';
+import { TEST_PASSWORD } from './_password.mjs';
 
 function _isTransportError(err) {
   const msg = (err?.message || '').toLowerCase();
@@ -92,7 +93,7 @@ export function anonClient() {
 }
 
 export const testEmail = (tag) => `rls-${tag}-${randomUUID()}@example.test`;
-const PASSWORD = 'Test-Passw0rd!';
+const PASSWORD = TEST_PASSWORD;
 
 /**
  * Create a confirmed user and return a client authenticated AS THAT USER, so

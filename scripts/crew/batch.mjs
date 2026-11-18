@@ -69,37 +69,146 @@ export function exclusionReason(branch, paths) {
 }
 
 /**
- * Three-way merge for an append-only file such as a course tracker
- * (specs/content/<course>/tasks.md, W44 M1). Concurrent unit jobs each add their own rows at
- * the same place, which git reports as a conflict although neither side removed anything.
- * When both `ours` and `theirs` only insert whole lines relative to `base`, the result is base
- * with both sides' insertions, ours before theirs at a shared point (an identical insertion on
- * both sides is kept once). Returns null when a stage is missing or either side changes or
- * deletes a base line, so the caller falls back to a merge fix. Base lines are matched in
- * order, first occurrence first.
+ * Split one tracker into lines and tag each table row that belongs to a table whose header has
+ * a "Unit" column with a key: row kind, Unit, optional Stage and occurrence number. Summary
+ * keys cannot collide with stage keys. A revision row is occurrence 2. Jobs often append rows after a
+ * blank line below the table; such headerless rows use the columns of the last header above them.
+ * A ## Status: section is one keyed block through the next level-two heading.
+ * Every other line, including a table's header and separator rows, is a plain line.
  */
-export function mergeAppendOnly(base, ours, theirs) {
-  if (typeof base !== 'string' || typeof ours !== 'string' || typeof theirs !== 'string') return null;
-  const b = base.split('\n');
-  const inserts = (side) => {
-    const s = side.split('\n');
-    const gaps = b.map(() => []).concat([[]]);
-    let i = 0;
-    for (const line of s) {
-      if (i < b.length && line === b[i]) i += 1;
-      else gaps[i].push(line);
-    }
-    return i === b.length ? gaps : null;
-  };
-  const o = inserts(ours);
-  const t = inserts(theirs);
-  if (!o || !t) return null;
-  const sameInsert = (a, b) => a.length === b.length && a.every((line, k) => line === b[k]);
+function trackerLines(text) {
+  const lines = text.split('\n');
+  const cells = (line) => line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
+  const isRow = (line) => line.trim().startsWith('|');
+  const isSeparator = (line) => isRow(line) && cells(line).every((c) => /^:?-+:?$/.test(c));
+  const seen = new Map();
   const out = [];
-  for (let i = 0; i <= b.length; i += 1) {
-    out.push(...o[i]);
-    if (!sameInsert(o[i], t[i])) out.push(...t[i]);
-    if (i < b.length) out.push(b[i]);
+  let cols = null;
+  let statusCount = 0;
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i];
+    if (line.startsWith('## Status:')) {
+      const block = [line];
+      while (i + 1 < lines.length && !/^##\s/.test(lines[i + 1])) block.push(lines[++i]);
+      out.push({ line: block.join('\n'), key: JSON.stringify(['status', ++statusCount]), status: true });
+      continue;
+    }
+    if (!isRow(line)) { out.push({ line }); continue; }
+    if (i + 1 < lines.length && isSeparator(lines[i + 1]) && !isSeparator(line) && (i === 0 || !isRow(lines[i - 1]))) {
+      const head = cells(line).map((c) => c.toLowerCase());
+      cols = { unit: head.indexOf('unit'), stage: head.indexOf('stage') };
+      out.push({ line });
+      continue;
+    }
+    if (!cols || cols.unit < 0 || isSeparator(line)) { out.push({ line }); continue; }
+    const c = cells(line);
+    const pair = cols.stage < 0 ? ['summary', c[cols.unit] ?? ''] : ['stage', c[cols.unit] ?? '', c[cols.stage] ?? ''];
+    const identity = JSON.stringify(pair);
+    const n = (seen.get(identity) || 0) + 1;
+    seen.set(identity, n);
+    out.push({ line, key: JSON.stringify([...pair, n]) });
   }
+  return out;
+}
+
+/**
+ * Three-way merge for a course tracker (specs/content/<course>/tasks.md, W45 M2) that keys table
+ * rows by Unit, Stage and occurrence number, because unit jobs rewrite their own rows in place
+ * (G2 evidence, G3 notes). Summary tables key by Unit and occurrence number.
+ * 2026-W46 M1: the 2026-11-10 EFPG-401 exclusions also require summary rows and status blocks.
+ * - Status blocks take the only changed side, or ours if both sides changed differently.
+ * - A keyed table row changed or removed on one side only takes that side; changed the same way on
+ *   both sides is kept once; changed differently on both sides returns null.
+ * - New keyed rows (a key not in base) from both sides are kept, ours first, after the last row
+ *   of their table; an identical new row on both sides is kept once.
+ * - Every other line (prose, headings, table headers) merges only when both sides purely insert
+ *   lines (an insertion that starts the other side's is kept once); any other change returns null.
+ * Returns null when a stage is missing, so the caller falls back to a merge fix.
+ */
+export function mergeTrackerRows(base, ours, theirs) {
+  if (typeof base !== 'string' || typeof ours !== 'string' || typeof theirs !== 'string') return null;
+  const docs = [base, ours, theirs].map(trackerLines);
+  // Plain lines of each side, and for every keyed row the index of the plain line before it.
+  const split = (doc) => {
+    const plain = [];
+    const rows = [];
+    for (const item of doc) {
+      if (item.key) rows.push({ ...item, anchor: plain.length - 1 });
+      else plain.push(item.line);
+    }
+    return { plain, rows };
+  };
+  const [b, o, t] = docs.map(split);
+  // Match each side's plain lines to base in order; anything unmatched is an insertion.
+  const inserts = (side) => {
+    const gaps = b.plain.map(() => []).concat([[]]);
+    const at = [];
+    let i = 0;
+    for (const line of side.plain) {
+      if (i < b.plain.length && line === b.plain[i]) { at.push({ base: i }); i += 1; }
+      else { at.push({ gap: i, k: gaps[i].length }); gaps[i].push(line); }
+    }
+    return i === b.plain.length ? { gaps, at } : null;
+  };
+  const oi = inserts(o);
+  const ti = inserts(t);
+  if (!oi || !ti) return null;
+  const isPrefix = (x, y) => x.length <= y.length && x.every((line, k) => line === y[k]);
+  // Merged plain lines, with the merged index of every base, ours and theirs plain line. When one
+  // side's insertion at a point starts the other's (both carry the same earlier append), the
+  // longer one is kept once instead of repeating the shared lines.
+  const plain = [];
+  const baseAt = [];
+  const oursGap = [];
+  const theirsGap = [];
+  for (let i = 0; i <= b.plain.length; i += 1) {
+    const [og, tg] = [oi.gaps[i], ti.gaps[i]];
+    if (isPrefix(tg, og)) {
+      oursGap[i] = og.map((line) => plain.push(line) - 1);
+      theirsGap[i] = oursGap[i].slice(0, tg.length);
+    } else if (isPrefix(og, tg)) {
+      theirsGap[i] = tg.map((line) => plain.push(line) - 1);
+      oursGap[i] = theirsGap[i].slice(0, og.length);
+    } else {
+      oursGap[i] = og.map((line) => plain.push(line) - 1);
+      theirsGap[i] = tg.map((line) => plain.push(line) - 1);
+    }
+    if (i < b.plain.length) baseAt[i] = plain.push(b.plain[i]) - 1;
+  }
+  const mapAnchor = (side, gaps, anchor) => {
+    if (anchor < 0) return -1;
+    const a = side.at[anchor];
+    return 'base' in a ? baseAt[a.base] : gaps[a.gap][a.k];
+  };
+  // Resolve base rows, then collect each side's new rows; group rows by merged anchor.
+  const oRows = new Map(o.rows.map((r) => [r.key, r]));
+  const tRows = new Map(t.rows.map((r) => [r.key, r]));
+  const after = new Map();
+  const put = (anchor, line) => { if (!after.has(anchor)) after.set(anchor, []); after.get(anchor).push(line); };
+  const baseKeys = new Set();
+  for (const r of b.rows) {
+    baseKeys.add(r.key);
+    const ol = oRows.get(r.key)?.line ?? null;
+    const tl = tRows.get(r.key)?.line ?? null;
+    let line;
+    if (ol === tl) line = ol;
+    else if (ol === r.line) line = tl;
+    else if (tl === r.line) line = ol;
+    else if (r.status) line = ol;
+    else return null;
+    if (line !== null) put(baseAt[r.anchor] ?? -1, line);
+  }
+  const oursNew = new Map();
+  for (const r of o.rows) {
+    if (baseKeys.has(r.key)) continue;
+    oursNew.set(r.key, r.line);
+    put(mapAnchor(oi, oursGap, r.anchor), r.line);
+  }
+  for (const r of t.rows) {
+    if (baseKeys.has(r.key) || oursNew.get(r.key) === r.line || (r.status && oursNew.has(r.key))) continue;
+    put(mapAnchor(ti, theirsGap, r.anchor), r.line);
+  }
+  const out = [...(after.get(-1) || [])];
+  plain.forEach((line, i) => out.push(line, ...(after.get(i) || [])));
   return out.join('\n');
 }

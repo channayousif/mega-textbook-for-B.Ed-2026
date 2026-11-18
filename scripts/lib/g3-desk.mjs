@@ -59,11 +59,14 @@ export function summarizeReport(report, path) {
  * One desk row. `u` is the content-status unit; `rows` the unit's G3 tracker
  * rows in file order; `report` the latest parsed G3 report or null.
  */
-export function deskUnit({ course, u, report, reportPath, rows, digest, dirty, index }) {
+export function deskUnit({ course, u, report, reportPath, rows, digest, dirty, index, facts = {} }) {
   const repaired = g3Repaired(rows.at(-1));
   const certified = u.gates?.G3 === 'done';
-  // Same facts crew.mjs unitFacts passes, so a repaired revise with a cycle left stays in agent review.
-  const awaiting = awaitingG3(u, { g3Report: report, g3Repaired: repaired, g3Cycles: report?.cycles ?? 0 });
+  // Same facts crew.mjs unitFacts passes, so a repaired revise with a cycle left stays in agent
+  // review, and a unit still missing its raster images (or a pass whose unit files changed since)
+  // stays with the agents instead of reaching the owner. `facts` carries hasBanner,
+  // figureBacklog and g3UnitChanges (scripts/crew/review-facts.mjs).
+  const awaiting = awaitingG3(u, { g3Report: report, g3Repaired: repaired, g3Cycles: report?.cycles ?? 0, ...facts });
   return {
     course_code: course,
     unit_no: u.unit_no,

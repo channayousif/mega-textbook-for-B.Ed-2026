@@ -1,0 +1,175 @@
+{
+ "label": "Attention and Perception",
+ "children": [
+  {
+   "label": "Attention: The Gateway to Learning",
+   "children": [
+    {
+     "label": "Spotlight Model",
+     "children": [
+      {
+       "label": "Selection of sensory information",
+       "children": []
+      },
+      {
+       "label": "Narrow beam for encoding memory",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "Three Key Properties",
+     "children": [
+      {
+       "label": "Captured, Not Commanded",
+       "children": [
+        {
+         "label": "Pulled by novelty, contrast, meaning, emotion",
+         "children": []
+        },
+        {
+         "label": "Shaped by task demand and expectation",
+         "children": []
+        },
+        {
+         "label": "Won by structure, not loudness",
+         "children": []
+        }
+       ]
+      },
+      {
+       "label": "Divides at a Price",
+       "children": [
+        {
+         "label": "Split beam reduces capacity per target",
+         "children": []
+        },
+        {
+         "label": "Harder tasks lose out (e.g., copying vs. listening)",
+         "children": []
+        }
+       ]
+      },
+      {
+       "label": "Tires over Time",
+       "children": [
+        {
+         "label": "Flags with sustained use",
+         "children": []
+        },
+        {
+         "label": "Exacerbated by heat, lunch, late periods",
+         "children": []
+        },
+        {
+         "label": "An occupied mind misses things (inattentional blindness)",
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Misconception",
+     "children": [
+      {
+       "label": "Not a fixed trait of the pupil",
+       "children": []
+      },
+      {
+       "label": "System designed by teacher context",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Perception: Active Interpretation",
+   "children": [
+    {
+     "label": "Sensation vs. Perception",
+     "children": [
+      {
+       "label": "Sensation: Receptor detection of stimuli",
+       "children": []
+      },
+      {
+       "label": "Perception: Mind's organization and interpretation",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "Classroom Dynamics",
+     "children": [
+      {
+       "label": "Depends on prior knowledge (experts vs. novices)",
+       "children": []
+      },
+      {
+       "label": "Ambiguous materials filtered by expectation",
+       "children": []
+      },
+      {
+       "label": "Teacher's perception hides difficulty",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "Teaching Perception",
+     "children": [
+      {
+       "label": "Can be learned through practice",
+       "children": []
+      },
+      {
+       "label": "Requires named encounters to become automatic",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Practical Applications",
+   "children": [
+    {
+     "label": "Classroom Adjustments",
+     "children": [
+      {
+       "label": "Timetabling high-demand tasks early",
+       "children": []
+      },
+      {
+       "label": "Separating copying from explaining",
+       "children": []
+      },
+      {
+       "label": "Using structure over competing noise",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "Attention Audit",
+     "children": [
+      {
+       "label": "Identify the main beam demand",
+       "children": []
+      },
+      {
+       "label": "List external and internal competitors",
+       "children": []
+      },
+      {
+       "label": "Eliminate split-attention moments",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

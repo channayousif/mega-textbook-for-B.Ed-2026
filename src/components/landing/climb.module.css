@@ -1,0 +1,39 @@
+/* Student climb (owner ruling 2026-11-06): she climbs once when the panel scrolls
+   into view, then stays on the top step. Server HTML, no JavaScript and reduced motion
+   all show the end pose; only a "pending" panel shows the start pose. Generated from
+   the board's 12 s loop by a one-off script; timings are the first 78% of that loop.
+   The RTL build must not touch this file: the SVG is mirrored as a whole on Urdu
+   pages, and flipping the translate() values too sent her off the canvas. */
+/*rtl:begin:ignore*/
+.svg { display: block; width: 100%; height: auto; }
+.rtl { transform: scaleX(-1); }
+.walker { transform: translate(510px, 80px); }
+.legA, .legB { transform-origin: 0 -30px; }
+.arm { transform-origin: 5px -50px; transform: rotate(-105deg); }
+.trace { stroke-dasharray: 636; stroke-dashoffset: 0; }
+.star { transform-origin: 510px 24px; }
+
+.pending .walker { transform: translate(80px, 216px); opacity: 0; }
+.pending .arm { transform: none; }
+.pending .trace { stroke-dashoffset: 636; }
+.pending .star { transform: scale(0); }
+
+.shown .walker { animation: climb 9.4s linear both; }
+.shown .legA { animation: strA 9.4s linear both; }
+.shown .legB { animation: strB 9.4s linear both; }
+.shown .arm { animation: lift 10.4s ease-out both; }
+.shown .trace { animation: trace 9.4s linear both; }
+.shown .star { animation: star 10.4s ease-out both; }
+
+@keyframes climb{0%{transform:translate(80px,216px);opacity:0}3.8%{transform:translate(84px,216px);opacity:1}17.9%{transform:translate(140px,216px)}23.1%{transform:translate(162px,172px)}25.6%{transform:translate(176px,182px)}39.7%{transform:translate(240px,182px)}44.9%{transform:translate(262px,138px)}47.4%{transform:translate(276px,148px)}61.5%{transform:translate(340px,148px)}66.7%{transform:translate(362px,104px)}69.2%{transform:translate(376px,114px)}83.3%{transform:translate(440px,114px)}88.5%{transform:translate(462px,70px)}91%{transform:translate(476px,80px)}100%{transform:translate(510px,80px)}}
+@keyframes strA{0%{transform:none}3.8%{transform:rotate(24deg)}6.7%{transform:rotate(-24deg)}9.5%{transform:rotate(24deg)}12.3%{transform:rotate(-24deg)}15.1%{transform:rotate(24deg)}17.9%{transform:rotate(-24deg)}20.8%{transform:rotate(24deg)}23.6%{transform:rotate(-24deg)}26.4%{transform:rotate(24deg)}29.2%{transform:rotate(-24deg)}32.1%{transform:rotate(24deg)}34.9%{transform:rotate(-24deg)}37.7%{transform:rotate(24deg)}40.5%{transform:rotate(-24deg)}43.3%{transform:rotate(24deg)}46.2%{transform:rotate(-24deg)}49%{transform:rotate(24deg)}51.8%{transform:rotate(-24deg)}54.6%{transform:rotate(24deg)}57.4%{transform:rotate(-24deg)}60.3%{transform:rotate(24deg)}63.1%{transform:rotate(-24deg)}65.9%{transform:rotate(24deg)}68.7%{transform:rotate(-24deg)}71.5%{transform:rotate(24deg)}74.4%{transform:rotate(-24deg)}77.2%{transform:rotate(24deg)}80%{transform:rotate(-24deg)}82.8%{transform:rotate(24deg)}85.6%{transform:rotate(-24deg)}88.5%{transform:rotate(24deg)}91.3%{transform:rotate(-24deg)}94.1%{transform:rotate(24deg)}96.9%{transform:rotate(-24deg)}100%{transform:none}}
+@keyframes strB{0%{transform:none}3.8%{transform:rotate(-24deg)}6.7%{transform:rotate(24deg)}9.5%{transform:rotate(-24deg)}12.3%{transform:rotate(24deg)}15.1%{transform:rotate(-24deg)}17.9%{transform:rotate(24deg)}20.8%{transform:rotate(-24deg)}23.6%{transform:rotate(24deg)}26.4%{transform:rotate(-24deg)}29.2%{transform:rotate(24deg)}32.1%{transform:rotate(-24deg)}34.9%{transform:rotate(24deg)}37.7%{transform:rotate(-24deg)}40.5%{transform:rotate(24deg)}43.3%{transform:rotate(-24deg)}46.2%{transform:rotate(24deg)}49%{transform:rotate(-24deg)}51.8%{transform:rotate(24deg)}54.6%{transform:rotate(-24deg)}57.4%{transform:rotate(24deg)}60.3%{transform:rotate(-24deg)}63.1%{transform:rotate(24deg)}65.9%{transform:rotate(-24deg)}68.7%{transform:rotate(24deg)}71.5%{transform:rotate(-24deg)}74.4%{transform:rotate(24deg)}77.2%{transform:rotate(-24deg)}80%{transform:rotate(24deg)}82.8%{transform:rotate(-24deg)}85.6%{transform:rotate(24deg)}88.5%{transform:rotate(-24deg)}91.3%{transform:rotate(24deg)}94.1%{transform:rotate(-24deg)}96.9%{transform:rotate(24deg)}100%{transform:none}}
+@keyframes lift { 0%, 90% { transform: none; } 100% { transform: rotate(-105deg); } }
+@keyframes trace { 0% { stroke-dashoffset: 636; } 91% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
+@keyframes star { 0%, 90% { transform: scale(0); } 96% { transform: scale(1.25); } 100% { transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .shown .walker, .shown .legA, .shown .legB, .shown .arm, .shown .trace, .shown .star { animation: none; }
+}
+@media print { .pending .walker { opacity: 1; } }
+/*rtl:end:ignore*/

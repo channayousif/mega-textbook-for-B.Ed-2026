@@ -277,3 +277,10 @@ html[dir='rtl'] .optionCurrent {
   .crumb:nth-last-child(n + 4) { display: none; }
   .crumb:nth-last-child(3)::before { content: none; }
 }
+
+/* Unit progress strip (redesign v2): along the bar's bottom edge, one segment per topic. */
+.steps { position: absolute; inset-inline: 0; bottom: 0; display: flex; gap: 3px; height: 5px; pointer-events: none; }
+.step { flex: 1; background: var(--ifm-color-emphasis-200); }
+.stepDone { background: var(--ifm-color-primary-lighter); }
+.stepHere { background: var(--brand-amber, #e5a333); }
+@media print { .steps { display: none; } }

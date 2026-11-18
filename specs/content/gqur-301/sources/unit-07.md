@@ -9,7 +9,9 @@ locators used in this unit: Lane Chapter 5 ("Permutations and Combinations"); Op
 section pages were fetched on 2026-10-21 and their content matched the claims they support (Lane:
 counting orders by listing and multiplying staged menu choices, 3 x 6 x 4 = 72; Illowsky and Dean:
 a tree diagram as a graph for finding the outcomes of an experiment; Abramson: the Addition
-Principle and the Multiplication Principle, with menu and outfit examples).
+Principle, with a dinner-entree example, and the Multiplication Principle, introduced with a
+fixed-price dinner menu, 2 x 3 x 2 = 12, and then worked with an outfit example, 2 x 4 x 2 = 16;
+this description was rechecked against the section page on 2026-11-06).
 
 Guide-required print texts named in this unit's Further reading (Chaudhry and Kamal (2008)) are
 cited at bibliographic level only and carry no content claims, so they are not listed as consulted

@@ -1,0 +1,15 @@
+[Unit]
+Description=Persistent agent tmux server
+
+[Service]
+Type=simple
+Slice=development-agents.slice
+RuntimeDirectory=agent-tmux
+RuntimeDirectoryMode=0700
+WorkingDirectory=%h
+ExecStart=/usr/bin/tmux -D -S %t/agent-tmux/socket
+Restart=no
+KillMode=control-group
+
+[Install]
+WantedBy=default.target

@@ -14,7 +14,9 @@ worked example counts dinner entrees: 2 vegetarian and 5 meat entrees give 7
 options. The Multiplication Principle (also called the Fundamental Counting
 Principle): if one event can occur in m ways and a second event in n ways
 after the first has occurred, then the two events can occur in m x n ways.
-Its worked example counts outfits: 2 skirts, 4 blouses and 2 sweaters give
+It introduces the principle with a fixed-price dinner menu: 2 appetizers,
+3 entrees and 2 desserts give 12 choices (rechecked 2026-11-06). Its worked
+example counts outfits: 2 skirts, 4 blouses and 2 sweaters give
 2 x 4 x 2 = 16 outfits.
 
 ## What this supports in GQUR-301 Unit 7

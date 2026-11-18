@@ -1,0 +1,121 @@
+# EFMP-407 Unit 7 - G3 English review summary (attempt r1)
+
+Reviewer: agent:opencode-g3-reviewer. Stage: G3. Date: 2026-11-07.
+Disposition: **revise**. G3 remains open and unsigned. This report is advisory.
+
+The unit is well structured, plain-language and carefully qualified. Its three used sources are real
+and support the claims, the assessment bank matches its keys, and the deterministic gates all pass.
+One blocking content defect remains: the National Education Policy 2009 is cited to the wrong
+section. The unit bytes are identical to the merged attempt `crew-efmp-407-u07-review_en`, so the
+defect was not repaired between attempts.
+
+## Criterion evidence
+
+### authority - pass
+
+- `specs/content/efmp-407/content-spec.md` Unit 7 (weeks 13-14, SLO:EFMP-407-7-1 and -7-2, tracing
+  to guide objective 6) is the approved authority (`D-2026-0076`).
+- `Scheme-and-Course-guides/extracted-text/3rd 2026.txt:366-368` names the two guide sections:
+  national education policy and ESD integration; curriculum reforms and teacher education
+  initiatives. The content spec splits the second into U7-02 and U7-03, which the spec's own
+  sub-topic-split rule sanctions (`content-spec.md:468`).
+- `docs/semester-3/efmp-407/unit-07/index.mdx` carries both SLO refs and four learning outcomes at
+  Understand, Analyze, Apply and Evaluate.
+- Both topic files carry the matching `clo_refs` and the named sections exist.
+
+### sources - fail
+
+- `docs/semester-3/efmp-407/unit-07/topic-01.mdx:33` and `:107`,
+  `specs/content/efmp-407/sources/unit-07.md:7` and `sources/texts/nep-2009.md:7` cite the National
+  Education Policy 2009 to "section 6.1, policy actions". The cited sentence is in section 6.2
+  (Curriculum Reform), policy action 5. See `source-verification.md`.
+- The other two used sources (jumani-abbasi-2015, hopkins-mckeown-2005) are verified against their
+  bound passages and the live publisher or mirror text; the unit's qualifications match.
+- The mapped National SDG Framework is disclosed as unavailable but not under the rubric's
+  `## Unverifiable sources` heading (advisory F4).
+
+### coverage - pass
+
+- `specs/content/efmp-407/coverage/unit-07.md` maps U7-01 to topic-01 "National education policy and
+  ESD integration", U7-02 to topic-02 "Curriculum reforms", U7-03 to topic-02 "Teacher education
+  initiatives". All three sections exist and cover their sub-topic.
+- `docs/semester-3/efmp-407/unit-07/index.mdx` `## In this unit` lists both topics.
+- The unit-end bank covers both topics and both SLOs: MCQ 1-5 and RRQ 1-5 on topic 7.1, MCQ 6-10
+  and RRQ 6-10 on topic 7.2; ERQ 1-2 policy, ERQ 3-4 curriculum and teacher education, ERQ 5
+  integrative.
+- `specs/content/efmp-407/concepts/unit-07.md` links every concept to assessment item IDs; the
+  graph is acyclic and resolvable (`check:concept-graph` exit 0).
+
+### assessment - pass
+
+- `assessment-independent.md` records an independent solve of all 10 MCQ, 10 RRQ and 5 ERQ, then a
+  comparison with the supplied keys. Every key matches; no distractor is ambiguous; no rubric
+  rewards unrequested work.
+- MCQ tags stay Remember to Apply; RRQ tags stay Understand to Analyze; ERQ tags span Analyze to
+  Create. Every ERQ rubric demands Analyze or higher (`check:bloom-bands` exit 0).
+- The per-topic `## Summative task` mini-rubrics demand Analyze or Evaluate, satisfying the
+  per-topic Analyze-or-higher rule.
+- The `## Answers and marking guidance` section is the final section and is the only place answer
+  prose appears (`check:no-answer-keys` exit 0).
+
+### accessibility - pass
+
+- Static inspection: the nine-part headings are present and ordered; every figure has a meaningful
+  `alt` and a caption with attribution; each SVG has `<title>` and a `<desc>` equal to the page
+  `alt`; links are descriptive apart from one bare-URL DOI (advisory F6); the glossary terms
+  resolve to bilingual entries; `PrintHandout` is present on every topic, the assessment and the
+  teacher notes.
+- `node scripts/measure-figure-text.mjs` exits 0 on all four SVGs: no text overflows the viewBox and
+  no glyph overprints the wordmark.
+- All four SVGs and their dark variants were rasterised to PNG (sharp, under `scripts/heavy.sh`);
+  the artifacts are registered in the evidence manifest.
+- The unit's two tables are inline SVG schematics, so there is no HTML table scroll container;
+  `custom.css` gives the schematic figures `overflow-x: auto` below 768px and a 760px cap above it,
+  and the print stylesheet keeps them inside the A4 page box.
+- No live browser render of the reviewed pages was possible under the brief (F2, advisory).
+
+### readability - pass
+
+- Definitions precede use: national education policy and policy implementation (topic-01), ESD
+  integration and the three dimensions (topic-01), curriculum and curriculum reform (topic-02),
+  teacher education, pre-service, in-service, initiative, alignment and trade-off (topic-02).
+- Sentences are short and active; the register is accessible to an HSC/intermediate graduate. The
+  three `<Glossary>` terms resolve to bilingual entries in `glossary.json`.
+- The unit keeps the plain-English ceiling while raising conceptual depth, as the style guide
+  requires.
+
+### pedagogy - pass
+
+- Each topic opens with a fictional Pakistani classroom situation (Hyderabad, Sukkur), explains the
+  concept, gives a worked example, runs a group activity, checks understanding, summarises, and
+  closes with retrieval, reflection and a summative task.
+- The three approved misconceptions are named and corrected: policy is not automatically taught;
+  ESD is not only environmental studies; teacher education must change for ESD.
+- Activities are feasible with low-cost materials (posters, exercise books, picture cards, supplied
+  drawings). Safety is explicit: no child handles plumbing, tools or real refuse. Inclusion is
+  explicit: oral routes, meaningful roles, no shaming over family purchasing, anonymous examples.
+
+## Findings
+
+| ID | Severity | Criterion | Finding |
+|---|---|---|---|
+| F1 | blocking | sources | NEP 2009 cited to section 6.1; the passage is in section 6.2 (Curriculum Reform), policy action 5. Repair the locator in topic-01.mdx (prose and Further reading), sources/unit-07.md and sources/texts/nep-2009.md. |
+| F2 | advisory | accessibility | No live browser render of the reviewed pages was possible: the brief prohibits build, dev server and Playwright, and no Chrome is available to the browser MCP. Figure rasters and static layout checks stand in for it. |
+| F3 | advisory | provenance | No parent-prepared manifest or host author session id was supplied. The manifest was prepared locally over committed inputs; independence holds and the author identity is the crew job id from the PHR. |
+| F4 | advisory | sources | The National SDG Framework unavailable-source declaration is under `## Access and interpretation notes`, not `## Unverifiable sources`, and the unit file does not restate the retrieval attempts and date. Add the heading for machine readability. |
+| F5 | advisory | assessment | The bundle supplies the answers in the same file, so a blinded independent solve was not possible. The recorded solve was performed from the question prose and compared afterwards. |
+| F6 | advisory | accessibility | topic-02 Further reading carries one bare-URL DOI as its link text. The course convention tolerates it, but a descriptive label would be better. |
+
+## Commands
+
+All deterministic gates were run and logged under `logs/`. `validate:content`, `check:depth-gate`,
+`check:figures`, `check:no-em-dash`, `check:no-answer-keys`, `check:docs-sync`,
+`check:concept-graph`, `check:bloom-bands`, `check:svg-style`, `check:source-floor`,
+`measure-figure-text` and `npm run check:content` all exited 0. `render-review` exited 0 on the
+figure rasters and static layout checks.
+
+## Verdict
+
+Repair the NEP 2009 locator (F1). The unit is otherwise sound and the assessment bank is correct.
+The advisory items (F2-F6) should be folded into the same repair where cheap, but none blocks a
+pass once F1 is fixed.

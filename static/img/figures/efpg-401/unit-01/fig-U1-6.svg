@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Reading Sub-Skills Lenses Applied to Text</title>
+  <desc id="d">Diagram showing how reading sub-skills, including skimming, scanning, intensive reading, and inferring, extract different layers of meaning from one text.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">Extracting Meaning Through Reading Sub-Skills</text>
+  <text class="muted" x="390" y="52" text-anchor="middle">Four purposeful reading lenses applied to a single printed passage</text>
+
+  <!-- Connecting Lines from Lenses to Text -->
+  <line class="stroke-a" x1="240" y1="150" x2="280" y2="180"/>
+  <polygon class="ah-a" points="275,172 285,183 270,185"/>
+
+  <line class="stroke-b" x1="540" y1="150" x2="500" y2="180"/>
+  <polygon class="ah-b" points="510,185 495,183 505,172"/>
+
+  <line class="stroke-c" x1="240" y1="290" x2="280" y2="250"/>
+  <polygon class="ah-c" points="270,245 285,247 275,258"/>
+
+  <line class="stroke-d" x1="540" y1="290" x2="500" y2="250"/>
+  <polygon class="ah-d" points="505,258 495,247 510,245"/>
+
+  <!-- Center Text Card -->
+  <rect class="panel" x="280" y="150" width="220" height="120" rx="6"/>
+  <text class="sh" x="390" y="185" text-anchor="middle">Target Reading Passage</text>
+  <text class="body" x="390" y="210" text-anchor="middle">Printed paragraph</text>
+  <text class="body" x="390" y="230" text-anchor="middle">(e.g. Kotri Barrage, 80 words)</text>
+  <text class="muted" x="390" y="250" text-anchor="middle">Rich textual source</text>
+
+  <!-- Lens 1: Skimming (Top Left) -->
+  <rect class="panel-a" x="40" y="80" width="200" height="110" rx="8"/>
+  <text class="sh" x="140" y="105" text-anchor="middle">1. Skimming (Gist)</text>
+  <text class="body" x="55" y="130">• Fast 30-sec sweep</text>
+  <text class="body" x="55" y="150">• Title, first/last lines</text>
+  <text class="body" x="55" y="170">• "What is it about?"</text>
+
+  <!-- Lens 2: Scanning (Top Right) -->
+  <rect class="panel-b" x="540" y="80" width="200" height="110" rx="8"/>
+  <text class="sh" x="640" y="105" text-anchor="middle">2. Scanning (Details)</text>
+  <text class="body" x="555" y="130">• Fast visual search</text>
+  <text class="body" x="555" y="150">• Hunt for dates/numbers</text>
+  <text class="body" x="555" y="170">• "Find the year 1955"</text>
+
+  <!-- Lens 3: Intensive (Bottom Left) -->
+  <rect class="panel-c" x="40" y="240" width="200" height="110" rx="8"/>
+  <text class="sh" x="140" y="265" text-anchor="middle">3. Intensive Reading</text>
+  <text class="body" x="55" y="290">• Close detailed study</text>
+  <text class="body" x="55" y="310">• Vocabulary in context</text>
+  <text class="body" x="55" y="330">• "How is water stored?"</text>
+
+  <!-- Lens 4: Inferential (Bottom Right) -->
+  <rect class="panel-d" x="540" y="240" width="200" height="110" rx="8"/>
+  <text class="sh" x="640" y="265" text-anchor="middle">4. Inferential Reading</text>
+  <text class="body" x="555" y="290">• Read between lines</text>
+  <text class="body" x="555" y="310">• Deduce unstated ideas</text>
+  <text class="body" x="555" y="330">• "Why were they worried?"</text>
+
+  <text class="muted" x="390" y="390" text-anchor="middle">Different reading goals determine which sub-skill lens is deployed</text>
+  <text class="wm" x="768" y="410" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

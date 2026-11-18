@@ -62,6 +62,13 @@ host (and the live site) on 2026-09-20 and 2026-09-24. Therefore:
   stacking, e.g. `scripts/heavy.sh npm run build`. The script holds one of two slots
   (`/tmp/mega-book-heavy.lock`, `/tmp/mega-book-heavy.2.lock`); a bare
   `flock /tmp/mega-book-heavy.lock` still counts as slot 1.
+- After a slot is acquired, `scripts/heavy.sh` waits for 30 healthy seconds with
+  MemAvailable >= 3 GiB and memory/I/O PSI `some avg10` <= 10%. Admission times out
+  after 30 minutes with exit 75. Do not bypass admission when pressure is high.
+- Use the dedicated contained VS Code SSH alias; open project folders rather than home.
+  Start persistent Claude sessions using `~/.local/bin/agent-terminal <name>`. Existing
+  sessions must finish or be explicitly resumed, never silently terminated for migration.
+  Setup, diagnostics and rollback: `ops/development/README.md`.
 - Never run heavy jobs in parallel subagents. Subagents may read, grep and edit; builds,
   dev servers and browser runs happen from the main session.
 - Stop any dev/preview server you start (`kill` it) as soon as the check is done; never leave
@@ -76,7 +83,7 @@ host (and the live site) on 2026-09-20 and 2026-09-24. Therefore:
 
 ## Content work
 
-Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring, translation, review and revision skills live in `.claude/skills/` (`author-unit`, `translate-unit`, `generate-figures`, `review-unit`, `revise-topic`, `evaluate-intake`).
+Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring, translation, review and revision skills live in `.claude/skills/` (`author-unit`, `translate-unit`, `generate-figures`, `review-unit`, `revise-topic`, `evaluate-intake`); Study Studio audio and video go through `studio-media` (NotebookLM to YouTube with quality gates), and course teaser Shorts through `studio-teaser` (Google Flow to YouTube Shorts).
 
 Unit structure (Spec 008 per-topic standard): `unit-NN/index.mdx`, `topic-NN.mdx`, `unit-assessment.mdx` (+ optional `unit-teacher-notes.mdx`); optional course-level `course-review.mdx`. Legacy five-file units are exempt from per-topic rules.
 
@@ -119,6 +126,17 @@ ADR-0024 defines the cross-agent boundary for course visuals; ADR-0029 adds Gemi
   successfully. G3/G5 independence and human escalation rules remain unchanged.
 - The figure marker and `specs/content/<course>/figures/unit-NN.md` row are the handoff contract.
   Both agents preserve the figure ID, prompt and alt text unless a content correction is recorded.
+
+## Gemini Notebook Studio (Feature 029)
+
+Study Studio extras (poster, mind map, audio brief, practicum brief, study guide, teaching deck) are
+generated with Gemini Notebook through the community `nlm` CLI/MCP on the owner's account: local,
+serial, owner-run, never in CI or the crew (the tool uses browser cookies and Google's internal APIs).
+Every artifact is checked against the topic text before its manifest row in
+`specs/studio/<course>/unit-NN.json` reaches `placed`; assets live in `static/studio/`. Keep all
+Studio files out of `specs/content/`, `contracts/` and `scripts/lib/gates.mjs` so no review evidence
+goes stale. Quiz items never go in a Studio asset, only into `quiz_items` as teacher-review drafts.
+Spec: `specs/029-notebook-studio/spec.md`.
 
 ## Work records
 

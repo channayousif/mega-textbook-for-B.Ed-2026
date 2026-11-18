@@ -1,0 +1,9 @@
+Command: npm run check:no-answer-keys
+Started: 2026-11-07T17:03:09.142Z
+
+> bed-mega-textbook@0.1.0 check:no-answer-keys
+> node scripts/check-no-answer-keys.mjs
+
+✓ No answer keys / private marking material found (scanned: docs, licence, i18n, specs/content).
+
+Exit code: 0

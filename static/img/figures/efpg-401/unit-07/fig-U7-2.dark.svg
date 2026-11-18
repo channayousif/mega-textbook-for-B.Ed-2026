@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Writing a Multiple-Choice Item</title>
+  <desc id="d">Flowchart for writing a multiple-choice item with five steps: choose the outcome, write the stem, choose the key, write three plausible distractors, and check the item.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="560"/>
+
+  <text class="h" x="390" y="38" text-anchor="middle">Writing a Multiple-Choice Item</text>
+  <text class="muted" x="390" y="58" text-anchor="middle">Five steps from the lesson outcome to a checked item</text>
+
+  <!-- Step 1 -->
+  <rect class="panel-a" x="30" y="80" width="720" height="80" rx="8"/>
+  <text class="sh" x="50" y="110">1. Choose the outcome</text>
+  <text class="body" x="50" y="134">Start from what the pupil should be able to do.</text>
+  <text class="small" x="730" y="110" text-anchor="end">Outcome first</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path class="stroke-a" d="M 390 160 L 390 172"/>
+  <polygon class="ah-a" points="385,167 390,177 395,167"/>
+
+  <!-- Step 2 -->
+  <rect class="panel-b" x="30" y="175" width="720" height="80" rx="8"/>
+  <text class="sh" x="50" y="205">2. Write the stem</text>
+  <text class="body" x="50" y="229">Write the question or statement that carries the problem.</text>
+  <text class="small" x="730" y="205" text-anchor="end">Stem carries the question</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path class="stroke-b" d="M 390 255 L 390 267"/>
+  <polygon class="ah-b" points="385,262 390,272 395,262"/>
+
+  <!-- Step 3 -->
+  <rect class="panel-c" x="30" y="270" width="720" height="80" rx="8"/>
+  <text class="sh" x="50" y="300">3. Choose the key</text>
+  <text class="body" x="50" y="324">Decide the one fixed right answer that matches the outcome.</text>
+  <text class="small" x="730" y="300" text-anchor="end">One fixed key</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path class="stroke-c" d="M 390 350 L 390 362"/>
+  <polygon class="ah-c" points="385,357 390,367 395,357"/>
+
+  <!-- Step 4 -->
+  <rect class="panel-d" x="30" y="365" width="720" height="80" rx="8"/>
+  <text class="sh" x="50" y="395">4. Write three distractors</text>
+  <text class="body" x="50" y="419">Write three wrong options that are plausible but clearly wrong.</text>
+  <text class="small" x="730" y="395" text-anchor="end">Plausible but clearly wrong</text>
+
+  <!-- Arrow 4 to 5 -->
+  <path class="stroke-d" d="M 390 445 L 390 457"/>
+  <polygon class="ah-d" points="385,452 390,462 395,452"/>
+
+  <!-- Step 5 -->
+  <rect class="panel" x="30" y="460" width="720" height="80" rx="8"/>
+  <text class="sh" x="50" y="490">5. Check the item</text>
+  <text class="body" x="50" y="514">Check one key, parallel options and a stem that matches the outcome.</text>
+  <text class="small" x="730" y="490" text-anchor="end">Checked item</text>
+
+  <!-- Return loop -->
+  <path class="stroke" stroke-dasharray="4 4" d="M 30 500 L 16 500 L 16 120 L 26 120"/>
+  <polygon class="ah" points="21,115 30,120 21,125"/>
+
+  <text class="wm" x="768" y="552" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

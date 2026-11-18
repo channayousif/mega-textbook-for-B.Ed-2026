@@ -1,0 +1,10 @@
+# Unit banner - EFMP-406 Unit 3 (Literacy, Language, and Society)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs efmp-406 3 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U3-5 | index | illustration | unit banner, wide 16:9 landscape scene, painted in a warm documentary style: a bright Class 7 classroom in a government school in a small town in Sindh, where pupils have brought reading and writing from home and community to share; pupils in school uniform shalwar kameez, girls with white dupattas, sit in small groups at desks; one boy shows his group a handwritten cloth-bound shop ledger, one girl holds up a seed packet and a printed electricity bill, two pupils compare a family phone message with a page in their textbook, and another group looks at a folded wedding invitation card; a woman teacher in shalwar kameez and dupatta kneels beside one group and listens with interest as a pupil explains, treating the home text as real reading; a blackboard and a barred window with afternoon light behind them; the scene shows literacy as a social practice that pupils carry across home, market and school, in more than one language, and a teacher who values every pupil's literacies; every ledger, packet, bill, card, phone screen and book shows only blurred marks, no readable text or script, no logo, map, flag or emblem in frame; warm natural light, documentary feel | In a Sindh classroom, pupils share texts from home and community in small groups, a shop ledger, a seed packet, an electricity bill, a phone message and an invitation card, while their teacher kneels beside one group and listens as a pupil explains. |  | prompt-only |

@@ -1,0 +1,7 @@
+Source-only inspection, no browser or print rendering.
+fig-U1-3: page alt equals SVG desc: True
+fig-U1-4: page alt equals SVG desc: True
+fig-U1-1: page alt equals SVG desc: True
+fig-U1-2: page alt equals SVG desc: True
+fig-U1-5: page alt equals SVG desc: True
+fig-U1-6: page alt equals SVG desc: True

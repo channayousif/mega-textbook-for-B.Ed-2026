@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+[[ $# == 1 && $1 =~ ^[a-zA-Z0-9_-]+$ ]] || { echo 'usage: agent-terminal <session-name> (letters, digits, _ and -)' >&2; exit 2; }
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
+systemctl --user start agent-tmux.service
+# The server, rather than this attaching client, creates all pane processes.
+exec tmux -S "$XDG_RUNTIME_DIR/agent-tmux/socket" new-session -A -s "$1" -c "$PWD"

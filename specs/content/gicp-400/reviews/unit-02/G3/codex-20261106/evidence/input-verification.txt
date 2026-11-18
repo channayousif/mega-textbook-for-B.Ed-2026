@@ -1,0 +1,5 @@
+Prepared manifest: 92 indexed input paths
+Current manifest recomputed without refresh: exact match
+Reviewed commit: f4bf69fd3cd72f2ac83da70f67c914a7cea6f7b2
+Earlier branch commits and worktree changes: none at start
+Parent-prepared handoff/run provenance: not supplied

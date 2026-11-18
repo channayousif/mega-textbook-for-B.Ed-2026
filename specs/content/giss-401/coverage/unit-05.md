@@ -10,6 +10,7 @@ Coverage matrix per Spec 008 / `contracts/coverage-matrix-v2.md`. Every sub-topi
 | U5-02 | topic-01.mdx | ### Zakat and charity | quran-translation |
 | U5-03 | topic-01.mdx | ### Prohibition of interest (riba) | rahman-2020-zakat |
 | U5-03 | topic-01.mdx | ### Prohibition of interest (riba) | quran-translation |
+| U5-03 | topic-01.mdx | ### Prohibition of interest (riba) | pak-constitution-1973 |
 | U5-04 | topic-02.mdx | ### Concept of Shura | abdel-salam-2015-democracy |
 | U5-04 | topic-02.mdx | ### Concept of Shura | quran-translation |
 | U5-05 | topic-02.mdx | ### Justice and governance | abdel-salam-2015-democracy |

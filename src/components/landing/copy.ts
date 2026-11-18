@@ -1,8 +1,12 @@
-/** Landing page wording, approved by the owner on the design canvas (2026-11-04). */
+/**
+ * Landing page wording, approved by the owner on the design canvas (2026-11-04), with
+ * the v2 board additions and owner canvas edits read 2026-11-08 (HEC scheme, expert
+ * designed structure, final review, "One ladder"). New Urdu strings await review.
+ */
 export const COPY = {
   "en": {
     "pill": "Free to read · English and Urdu · Built for phones",
-    "h1a": "Your teacher education textbooks, in ",
+    "h1a": "Platform for current & future teachers and teacher educators, in ",
     "h1b": "English and ",
     "h1c": "اردو",
     "h1d": ".",
@@ -180,15 +184,22 @@ export const COPY = {
         "Apply to review units and help them reach final sign-off."
       ]
     ],
+    "tagline_en": "From knowledge to practice",
+    "e_climb": "From knowledge to practice",
+    "h_climb": "One ladder, from the page to your classroom",
+    "climb": ["Read", "Practise", "Check", "Apply in your school"],
+    "e_gal": "Learning aids",
+    "h_gal": "Illustrations that help you learn",
+    "gal_inspired": "Inspired by",
     "e_trust": "How content is made",
     "h_trust": "Clear about what has been checked",
     "tr": [
       [
-        "Follows the official scheme",
+        "Follows the HEC official scheme",
         "Units trace to the approved scheme of study and HEC course guides."
       ],
       [
-        "Expert structure",
+        "Expert designed structure",
         "A curriculum expert designed the structure every unit follows."
       ],
       [
@@ -197,7 +208,7 @@ export const COPY = {
       ],
       [
         "Review status on the page",
-        "Units pass independent automated review. A page tells you when final human review is still outstanding."
+        "Units pass independent automated review. A page tells you when final review is still outstanding."
       ]
     ],
     "e_acc": "Access",
@@ -215,7 +226,7 @@ export const COPY = {
       ],
       [
         "Student or teacher account",
-        "Free today",
+        "Free",
         "Sign up to use classes, assignments and progress.",
         [
           "Classes and grades",
@@ -287,14 +298,14 @@ export const COPY = {
     "card_t_en": "What makes teaching a profession",
     "welcome": "Welcome back, {name}",
     "welcome_plain": "Welcome back",
-    "meta_title": "Free teacher education textbooks in English and Urdu",
+    "meta_title": "Platform for current & future teachers and teacher educators",
     "meta_desc": "B.Ed and teaching-licence study material, organised by semester and course, with activities, self-checks and figures. Teachers can run classes and grade work here too.",
     "rs_topic_prefix": "Continue reading",
     "admin": "Open admin console"
   },
   "ur": {
     "pill": "پڑھنا مفت · اردو اور انگریزی · موبائل کے لیے تیار",
-    "h1a": "اساتذہ کی تعلیم کی نصابی کتب، ",
+    "h1a": "موجودہ اور مستقبل کے اساتذہ اور اساتذہ کے تربیت کاروں کے لیے پلیٹ فارم، ",
     "h1b": "",
     "h1c": "اردو اور انگریزی میں",
     "h1d": "۔",
@@ -472,15 +483,22 @@ export const COPY = {
         "یونٹوں کے جائزے کے لیے درخواست دیں اور حتمی منظوری میں مدد کریں۔"
       ]
     ],
+    "tagline_en": "",
+    "e_climb": "علم سے عمل تک",
+    "h_climb": "ایک ہی سفر، صفحے سے آپ کی جماعت تک",
+    "climb": ["پڑھیں", "مشق کریں", "جانچیں", "اپنے اسکول میں لاگو کریں"],
+    "e_gal": "تدریسی معاونات",
+    "h_gal": "ایسی تصویریں جو سیکھنے میں مدد دیں",
+    "gal_inspired": "سے ماخوذ",
     "e_trust": "مواد کیسے بنتا ہے",
     "h_trust": "جو جانچا گیا، وہ صاف بتایا جاتا ہے",
     "tr": [
       [
-        "سرکاری اسکیم کے مطابق",
+        "HEC کی سرکاری اسکیم کے مطابق",
         "یونٹ منظور شدہ اسکیم آف اسٹڈی اور HEC کورس گائیڈز سے جڑے ہیں۔"
       ],
       [
-        "ماہرانہ ساخت",
+        "ماہر کی ترتیب دی ہوئی ساخت",
         "ہر یونٹ کی ساخت ایک ماہرِ نصاب نے بنائی ہے۔"
       ],
       [
@@ -489,7 +507,7 @@ export const COPY = {
       ],
       [
         "صفحے پر جائزے کی حالت",
-        "یونٹ آزاد خودکار جائزے سے گزرتے ہیں۔ حتمی انسانی جائزہ باقی ہو تو صفحہ بتاتا ہے۔"
+        "یونٹ آزاد خودکار جائزے سے گزرتے ہیں۔ حتمی جائزہ باقی ہو تو صفحہ بتاتا ہے۔"
       ]
     ],
     "e_acc": "رسائی",
@@ -507,7 +525,7 @@ export const COPY = {
       ],
       [
         "طالب علم یا استاد کا اکاؤنٹ",
-        "فی الحال مفت",
+        "مفت",
         "جماعتوں، اسائنمنٹ اور پیش رفت کے لیے سائن اپ کریں۔",
         [
           "جماعتیں اور نمبر",
@@ -579,7 +597,7 @@ export const COPY = {
     "card_t_en": "What makes teaching a profession",
     "welcome": "خوش آمدید، {name}",
     "welcome_plain": "خوش آمدید",
-    "meta_title": "اساتذہ کی تعلیم کی مفت نصابی کتب، اردو اور انگریزی میں",
+    "meta_title": "موجودہ اور مستقبل کے اساتذہ اور اساتذہ کے تربیت کاروں کے لیے پلیٹ فارم",
     "meta_desc": "بی ایڈ اور تدریسی لائسنس کا مطالعاتی مواد، سمسٹر اور کورس کی ترتیب سے، سرگرمیوں، خود جانچ اور اشکال کے ساتھ۔ اساتذہ یہیں جماعتیں چلا سکتے ہیں اور کام جانچ سکتے ہیں۔",
     "rs_topic_prefix": "مطالعہ جاری رکھیں",
     "admin": "ایڈمن کنسول کھولیں"

@@ -1,0 +1,10 @@
+render-review for GICP-400 Unit 7, session ddc654f7-48bb-4e03-a89f-fea2dde7b9d0, commit 864814f473d418241aae7d897d01d4c579b7599e
+Result: NOT PERFORMED. Exit code recorded as 1 because no inspection took place.
+Reason: the crew brief prohibits npm run build, a dev server and Playwright. No page was rendered at any viewport or in print.
+Not run: scripts/measure-figure-text.mjs, because it launches Chromium.
+Unverified: rendered page structure, reading order, 360px layout, table scroll, A4 print, figure clipping on the page, dark variants.
+
+Partial substitute (not a page render): figure previews with sharp through scripts/heavy.sh.
+1. Committed SVGs rasterised as solid black under librsvg; these first outputs were discarded. figure-var-audit.txt shows all CSS variables resolve and no class is undefined.
+2. Scratch copies with var() colours substituted were rasterised at density 144: fig-U7-1, fig-U7-2, fig-U7-3 .sharp.png in this folder. Fallback font, not the site font.
+Observed: fig-U7-1 label 'practice feeds the value' is struck through by the dashed return path (text centred x=698; path at x=690). fig-U7-2 legible with no overflow. fig-U7-3 legible; label 'provincial languages protected by Article 251' repeats the legal overstatement; arrowheads land on the centre box corners.

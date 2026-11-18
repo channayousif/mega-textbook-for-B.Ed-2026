@@ -1,0 +1,18 @@
+Running 14 content gates
+
+  validate:content        PASS
+  check:pipeline-gate     PASS
+  check:depth-gate        PASS
+  check:figures           PASS
+  check:svg-style         PASS
+  check:no-em-dash        PASS
+  check:no-answer-keys    PASS
+  check:concept-graph     PASS
+  check:bloom-bands       PASS
+  check:source-floor      PASS
+  check:licence           PASS
+  licence:map:check       PASS
+  check:content-status    PASS
+  check:docs-sync         PASS
+
+All content gates passed.

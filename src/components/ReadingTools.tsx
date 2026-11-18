@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PrintHandout from '@site/src/components/PrintHandout';
 import styles from './ReadingTools.module.css';
+import Icon from '@site/src/components/icons/Icon';
 
 /**
  * Reading tools for doc pages (UX refresh, 2026-10-04), modelled on the TU Delft
@@ -23,6 +24,7 @@ const DEFAULT_PREFS: Prefs = { size: 0, dyslexic: false, contrast: false };
 const T = {
   minutes: { en: (n: number) => `${n} min read`, ur: (n: number) => `${n} منٹ کا مطالعہ` },
   toolbar: { en: 'Reading options', ur: 'مطالعے کے اختیارات' },
+  display: { en: 'Text & display', ur: 'متن اور ڈسپلے' },
   size: { en: 'Text size', ur: 'متن کا سائز' },
   sizes: { en: ['Normal', 'Large', 'Larger'], ur: ['عام', 'بڑا', 'مزید بڑا'] },
   font: { en: 'Font', ur: 'فونٹ' },
@@ -115,7 +117,19 @@ export function ReadingMenu({ minutes, locale, up = false }: { minutes: number |
 
   return (
     <div className={`${styles.menu} reading-menu print-hidden`} ref={rootRef}>
-      <button type="button" className={styles.aa} aria-expanded={open} aria-label={`Aa, ${T.toolbar[locale]}`} onClick={() => setOpen((v) => !v)}>Aa</button>
+      {/* Visible words first in the accessible name (label in name); "Reading options"
+          stays for the e2e specs and screen-reader users who know it. */}
+      <button
+        type="button"
+        className={up ? `${styles.aa} ${styles.aaStacked}` : styles.aa}
+        aria-expanded={open}
+        aria-label={`${T.display[locale]}, ${T.toolbar[locale]}`}
+        onClick={() => setOpen((v) => !v)}
+      >
+        <Icon name="textsize" size={up ? 22 : 20} accent={false} />
+        <span className={styles.aaLabel}>{T.display[locale]}</span>
+        {!up && <Icon name="chevron" size={16} accent={false} className={open ? styles.chevOpen : styles.chev} />}
+      </button>
       {open && (
         <div className={up ? `${styles.panel} ${styles.panelUp}` : styles.panel}>
           {minutes ? <p className={styles.time}>{T.minutes[locale](minutes)}</p> : null}

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { stubAuthEmail } from './_authEmail';
+import { TEST_PASSWORD } from './_password';
 
 /**
  * T025 [US1] — sign-up returns the user to the originating page, and the
@@ -37,7 +38,7 @@ test('sign-up returns to the originating page and the navbar shows the account',
 
   const email = `e2e-${Date.now()}@example.test`;
   await page.getByLabel(/email/i).fill(email);
-  await page.getByLabel(/^password/i).fill('Test-Passw0rd!');
+  await page.getByLabel(/^password/i).fill(TEST_PASSWORD);
   await page.getByRole('button', { name: /create account/i }).click();
 
   // Email confirmation is required (FR-002) — no session yet, but the flow

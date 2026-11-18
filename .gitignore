@@ -16,6 +16,9 @@ static/content-index.json
 # Generated content-status report (Spec 010, T027) — same convention as
 # content-index.json above: rebuilt by prestart/prebuild, not source of truth.
 static/content-status.json
+# Feature 028: automatic news feed, derived from git history by prebuild.
+static/news-feed.json
+static/studio-index.json
 # G3 sign-off desk data (ADR-0032), rebuilt by prestart/prebuild.
 static/g3-desk.json
 static/catalog-courses.json
@@ -135,3 +138,12 @@ base-voice-samples/
 *.ogg
 # The package archive the sub-project was installed from
 video-studio-sdd-ri*.zip
+
+# Course covers, generated before build and start (scripts/design/course-covers.mjs)
+static/img/covers/
+
+# Python bytecode (scripts/development, tests/ops)
+__pycache__/
+
+# Feature 029: Gemini Notebook source packs and downloads (local only)
+.studio/

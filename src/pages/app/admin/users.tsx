@@ -4,6 +4,9 @@ import AuthGuard from '@site/src/components/AuthGuard';
 import Link from '@docusaurus/Link';
 import { getSupabase } from '@site/src/lib/supabase';
 import type { UserRole, AccountStatus } from '@site/src/contexts/AuthContext';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 type AdminUserRow = {
   id: string;
@@ -113,13 +116,13 @@ function AdminUsersContent(): React.ReactElement {
   }
 
   return (
-    <main className="container auth-page margin-vert--lg">
-      <h1>Users</h1>
+    <div className="app-page-body">
+      <PageHeader title="Users" icon="users" />
 
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 
       {!rows ? (
-        <p>Loading…</p>
+        <LoadingMark label="Loading…" />
       ) : (
         <table>
           <thead>
@@ -136,7 +139,7 @@ function AdminUsersContent(): React.ReactElement {
           <tbody>
             {rows.map((row) => (
               <tr key={row.id}>
-                <td>{row.deleted_at ? '(deleted account)' : row.email ?? '-'}</td>
+                <td>{row.email ?? '-'}</td>
                 <td>{row.full_name ?? '-'}</td>
                 <td>
                   <select
@@ -185,16 +188,18 @@ function AdminUsersContent(): React.ReactElement {
       <p className="margin-top--md">
         <a href="/app/admin/audit">View the privilege-change audit history</a>
       </p>
-    </main>
+    </div>
   );
 }
 
 export default function AdminUsersPage(): React.ReactElement {
   return (
     <Layout title="Admin: users">
+      <AppDashboardShell>
       <AuthGuard requireRole="admin">
         <AdminUsersContent />
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

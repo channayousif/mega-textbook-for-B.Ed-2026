@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { getSupabase } from '@site/src/lib/supabase';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 type AuditRow = {
   id: number;
@@ -70,20 +73,20 @@ function AuditHistoryContent(): React.ReactElement {
   }
 
   return (
-    <main className="container auth-page margin-vert--lg">
-      <h1>Privilege audit history</h1>
+    <div className="app-page-body">
+      <PageHeader title="Privilege audit history" icon="audit" />
 
       <h2>Admin workflow actions</h2>
-      {actions.length === 0 ? <p>No workflow actions recorded yet.</p> : <div className="table-scroll"><table><thead><tr><th>When</th><th>Actor</th><th>Action</th><th>Target</th><th>Detail</th></tr></thead><tbody>{actions.map(a => <tr key={a.id}><td>{new Date(a.occurred_at).toLocaleString()}</td><td>{a.actor_id ? label(a.actor_id) : 'Service'}</td><td>{a.action}</td><td>{a.target_type} {a.target_id}</td><td><code>{JSON.stringify(a.detail)}</code></td></tr>)}</tbody></table></div>}
+      {actions.length === 0 ? <p>No workflow actions recorded yet.</p> : <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}><table><thead><tr><th>When</th><th>Actor</th><th>Action</th><th>Target</th><th>Detail</th></tr></thead><tbody>{actions.map(a => <tr key={a.id}><td>{new Date(a.occurred_at).toLocaleString()}</td><td>{a.actor_id ? label(a.actor_id) : 'Service'}</td><td>{a.action}</td><td>{a.target_type} {a.target_id}</td><td><code>{JSON.stringify(a.detail)}</code></td></tr>)}</tbody></table></div>}
 
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 
       {!rows ? (
-        <p>Loading…</p>
+        <LoadingMark label="Loading…" />
       ) : rows.length === 0 ? (
         <p>No privilege changes recorded yet.</p>
       ) : (
-        <table>
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}><table>
           <thead>
             <tr>
               <th>When</th>
@@ -106,18 +109,20 @@ function AuditHistoryContent(): React.ReactElement {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
       )}
-    </main>
+    </div>
   );
 }
 
 export default function AdminAuditPage(): React.ReactElement {
   return (
     <Layout title="Admin: audit history">
+      <AppDashboardShell>
       <AuthGuard requireRole="admin">
         <AuditHistoryContent />
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

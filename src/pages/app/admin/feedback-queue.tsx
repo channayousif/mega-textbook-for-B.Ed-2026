@@ -6,6 +6,9 @@ import {
   type FeedbackQueueFilters,
 } from '@site/src/lib/contentFeedback';
 import type { ContentFeedback, ContentFeedbackScope, ContentFeedbackStatus } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Owner triage queue (Spec 010, T022, FR-018-021) - every content-feedback item
@@ -175,8 +178,8 @@ function AdminFeedbackQueueContent(): React.ReactElement {
   }
 
   return (
-    <main className="container auth-page margin-vert--lg">
-      <h1>Content feedback queue</h1>
+    <div className="app-page-body">
+      <PageHeader title="Content feedback queue" icon="feedback" />
 
       <ExportUnitFeedbackControl />
 
@@ -250,7 +253,7 @@ function AdminFeedbackQueueContent(): React.ReactElement {
       </div>
 
       {!rows ? (
-        <p>Loading…</p>
+        <LoadingMark label="Loading…" />
       ) : rows.length === 0 ? (
         <p>No feedback items match these filters.</p>
       ) : (
@@ -319,16 +322,18 @@ function AdminFeedbackQueueContent(): React.ReactElement {
           </tbody>
         </table>
       )}
-    </main>
+    </div>
   );
 }
 
 export default function AdminFeedbackQueuePage(): React.ReactElement {
   return (
     <Layout title="Admin: content feedback queue">
+      <AppDashboardShell>
       <OwnerConsoleGuard>
         <AdminFeedbackQueueContent />
       </OwnerConsoleGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

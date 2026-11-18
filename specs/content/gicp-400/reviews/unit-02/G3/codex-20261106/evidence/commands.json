@@ -1,0 +1,37 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/validate-content.txt"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-depth-gate.txt"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-figures.txt"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-no-em-dash.txt"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-no-answer-keys.txt"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-docs-sync.txt"
+  },
+  {
+    "name": "check:content",
+    "exit_code": 0,
+    "log_path": "specs/content/gicp-400/reviews/unit-02/G3/codex-20261106/evidence/check-content.txt"
+  }
+]

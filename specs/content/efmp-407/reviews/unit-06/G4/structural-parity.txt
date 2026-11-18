@@ -1,0 +1,7 @@
+index.mdx: front matter, heading vectors, component counts, numbered items and figure descriptions match
+topic-01.mdx: front matter, heading vectors, component counts, numbered items and figure descriptions match
+topic-02.mdx: front matter, heading vectors, component counts, numbered items and figure descriptions match
+topic-03.mdx: front matter, heading vectors, component counts, numbered items and figure descriptions match
+unit-assessment.mdx: front matter, heading vectors, component counts, numbered items and figure descriptions match
+unit-teacher-notes.mdx: front matter, heading vectors, component counts, numbered items and figure descriptions match
+key_terms: frozen-bank match

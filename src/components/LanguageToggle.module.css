@@ -1,0 +1,39 @@
+/* Segmented EN | اردو toggle. White on teal 11.69:1; teal on the tinted track 9.86:1.
+   Each segment is at least 44px wide and tall (36px tall in the compact phone bar,
+   which sits inside a 44px tap row). */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: #e3eeec;
+}
+.seg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 800;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: #123e43;
+  text-decoration: none;
+  transition: background-color var(--motion-fast);
+}
+.seg[lang='ur'] { font-family: 'Noto Naskh Arabic', 'Noto Nastaliq Urdu', serif; font-weight: 700; font-size: 0.95rem; }
+a.seg:hover { background: #cfe0dd; color: #123e43; text-decoration: none; }
+a.seg:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
+.on { background: #123e43; color: #fff; }
+.compact { padding: 2px; }
+.compact .seg { min-width: 40px; min-height: 32px; padding: 0 9px; font-size: 0.78rem; }
+.compact .seg[lang='ur'] { font-size: 0.88rem; }
+
+:global(html[data-theme='dark']) .toggle { background: #1f4a50; }
+:global(html[data-theme='dark']) .seg { color: #e9f1ef; }
+:global(html[data-theme='dark']) a.seg:hover { background: #2a5a60; color: #fff; }
+:global(html[data-theme='dark']) .on { background: #a6dfdc; color: #123e43; }

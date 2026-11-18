@@ -12,6 +12,9 @@ import { fetchQuizUnitsForCourse } from '@site/src/lib/quiz';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { listOwnTemplates, createTemplate } from '@site/src/lib/assignmentTemplates';
 import type { AssignmentSourceKind, AssignmentTemplate } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Assignment creation - unit-item picker, quiz picker, or custom (Spec 003,
@@ -179,7 +182,7 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
     setDone(true);
   }
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow || role !== 'teacher') {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -197,7 +200,7 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
 
   return (
     <div>
-      <h2>New assignment - {classRow.name}</h2>
+      <PageHeader title={`New assignment - ${classRow.name}`} icon="assignment" />
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
@@ -333,11 +336,13 @@ export default function AssignmentNewPage(): React.ReactElement {
   const classId = useQueryParam('classId');
   return (
     <Layout title="New assignment">
+      <AppDashboardShell>
       <AuthGuard requireRole="teacher">
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId ? <AssignmentNewContent classId={classId} /> : <p>No class selected.</p>}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

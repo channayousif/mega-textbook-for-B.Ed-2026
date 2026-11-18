@@ -1,6 +1,6 @@
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0.75rem; margin-block: 1rem; }
-.tile { border: 1px solid var(--ifm-color-emphasis-300); border-radius: 0.6rem; padding: 0.75rem; background: var(--ifm-background-surface-color); }
-.tile strong { display: block; font-size: 1.6rem; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.tile { border: 0; border-radius: 14px; padding: 0.85rem; background: var(--ifm-background-surface-color); box-shadow: 0 8px 22px rgba(18, 62, 67, 0.07); }
+.tile strong { display: block; font-family: var(--ifm-heading-font-family); font-size: 1.75rem; line-height: 1.2; font-variant-numeric: tabular-nums; color: var(--ifm-heading-color); }
 .tile span { font-size: 0.85rem; color: var(--ifm-color-emphasis-700); }
 .bar { display: flex; height: 0.75rem; border-radius: 999px; overflow: hidden; background: var(--ifm-color-emphasis-200); }
 .bar > span { display: block; height: 100%; }
@@ -33,7 +33,7 @@
 .pre { white-space: pre-wrap; font-size: 0.85rem; }
 .sticky { position: sticky; bottom: 0; z-index: 2; background: var(--ifm-background-color); border-top: 1px solid var(--ifm-color-emphasis-300); padding-block: 0.6rem; }
 @media (max-width: 768px) { .criterion { grid-template-columns: 1fr; } }
-.lane { border: 1px solid var(--ifm-color-emphasis-300); border-inline-start-width: 5px; border-radius: 0.6rem; padding: 0.75rem 1rem; margin-block: 1rem; }
+.lane { border: 0; border-inline-start: 5px solid var(--ifm-color-emphasis-300); border-radius: 14px; padding: 0.85rem 1.1rem; margin-block: 1rem; background: var(--ifm-background-surface-color); box-shadow: 0 8px 22px rgba(18, 62, 67, 0.07); }
 .lane-ready { border-inline-start-color: var(--ifm-color-success); }
 .lane-ruling { border-inline-start-color: var(--ifm-color-warning); }
 .lane-send_back { border-inline-start-color: var(--ifm-color-danger); }

@@ -1,0 +1,342 @@
+{
+ "course": "efmp-301",
+ "unit": 4,
+ "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
+ "artifacts": [
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "poster",
+   "status": "placed",
+   "audience": "all",
+   "title": "Topic 4.1 revision poster",
+   "prompt_ref": "specs/studio/prompts/poster.md v1",
+   "asset_path": "/studio/efmp-301/unit-04/topic-01/poster.en.json",
+   "alt": "Revision poster: four key terms, the three properties of attention, three memory hooks, three teacher moves, and the fixed-trait myth against the designed-system reality.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass"
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "ur",
+   "kind": "poster",
+   "status": "placed",
+   "audience": "all",
+   "title": "موضوع 4.1 ریویژن پوسٹر",
+   "prompt_ref": "specs/studio/prompts/poster.md v1",
+   "asset_path": "/studio/efmp-301/unit-04/topic-01/poster.ur.json",
+   "alt": "Revision poster in Urdu: key terms, the three properties of attention, memory hooks, teacher moves, and myth against reality.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Urdu in owner register v2 (2026-11-09); Urdu-reader check recommended before wider rollout."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "mindmap",
+   "status": "placed",
+   "audience": "all",
+   "title": "Topic 4.1 mind map",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "asset_path": "/studio/efmp-301/unit-04/topic-01/mindmap.en.json",
+   "alt": "Mind map of attention, perception and their classroom applications.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "One node corrected: inattentional blindness moved from \"tires\" to \"an occupied mind\"."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "ur",
+   "kind": "mindmap",
+   "status": "placed",
+   "audience": "all",
+   "title": "موضوع 4.1 mind map",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "asset_path": "/studio/efmp-301/unit-04/topic-01/mindmap.ur.json",
+   "alt": "Mind map in Urdu of attention, perception and their classroom applications.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Labels translated by Claude. Urdu in owner register v2 (2026-11-09); Urdu-reader check recommended before wider rollout."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "brief",
+   "status": "placed",
+   "audience": "all",
+   "title": "Practicum brief",
+   "prompt_ref": "specs/studio/prompts/report.md v1",
+   "artifact_id": "c4bdb056-bfe9-4389-ae41-4305ab93b35a",
+   "asset_path": "/studio/efmp-301/unit-04/topic-01/brief.en.md",
+   "alt": "One-page practicum brief: what to look for, three things to try, one thing to record.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass"
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "ur",
+   "kind": "brief",
+   "status": "placed",
+   "audience": "all",
+   "title": "پریکٹیکم بریف",
+   "prompt_ref": "specs/studio/prompts/report.md v1",
+   "artifact_id": "d3a6665e-7c9a-43c0-a8ed-6823e9ea4c92",
+   "asset_path": "/studio/efmp-301/unit-04/topic-01/brief.ur.md",
+   "alt": "Practicum brief in Urdu.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Urdu in owner register v2 (2026-11-09); Urdu-reader check recommended before wider rollout."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "studyguide",
+   "status": "placed",
+   "audience": "all",
+   "title": "Study guide",
+   "prompt_ref": "specs/studio/prompts/study-guide.md v1",
+   "artifact_id": "eaf7a434-2c3d-4d21-88ec-455580477ddb",
+   "asset_path": "/studio/efmp-301/unit-04/topic-01/studyguide.en.md",
+   "alt": "Study guide: key concepts, the Miss Hina case, factors and teacher moves, the audit protocol and a glossary.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Generated answer key and essay rubric sections removed by postprocess-report.mjs."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "ur",
+   "kind": "studyguide",
+   "status": "placed",
+   "audience": "all",
+   "title": "اسٹڈی گائیڈ",
+   "prompt_ref": "specs/studio/prompts/study-guide.md v1",
+   "artifact_id": "a2de3440-a753-4754-bee3-5ab658c6d691",
+   "asset_path": "/studio/efmp-301/unit-04/topic-01/studyguide.ur.md",
+   "alt": "Study guide in Urdu with memory hooks and classroom examples.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Says \"half\" where the source says \"nearly half\". Urdu in owner register v2 (2026-11-09); Urdu-reader check recommended before wider rollout."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "status": "placed",
+   "audience": "all",
+   "title": "Winning Student Attention Through Lesson Structure",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "artifact_id": "85dfd5a1-64b3-4f08-bb81-356938a623de",
+   "alt": "Audio brief, about 3 minutes, with the three memory hooks.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Matches the topic and teaches all three hooks exactly. Transcript renders Miss Hina / Nawabshah as Hannah / Nabcha: check the pronunciation."
+   },
+   "host_url": "https://www.youtube.com/watch?v=k07MXsbcpWg"
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 2,
+   "status": "placed",
+   "audience": "all",
+   "title": "Attention Is a System, Not a Trait",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "artifact_id": "0dbcf67a-f806-4321-85b5-af1c2991ccd7",
+   "alt": "Go deeper, part 2: the spotlight and its three properties.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Overstates the gorilla study: says viewers completely missed the gorilla; the text says nearly half failed to notice. Owner decides keep or regenerate."
+   },
+   "host_url": "https://www.youtube.com/watch?v=dYYufpu1LfQ"
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 3,
+   "status": "placed",
+   "audience": "all",
+   "title": "Teaching Perception and Auditing Classroom Attention",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "artifact_id": "2302a82b-3e18-4398-a68c-258d0d3e94c9",
+   "alt": "Go deeper, part 3: perception, expertise and the attention audit.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass"
+   },
+   "host_url": "https://www.youtube.com/watch?v=fajgUCy82Hs"
+  },
+  {
+   "topic": 1,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "status": "placed",
+   "audience": "all",
+   "title": "Attention کا مختصر بریف",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "artifact_id": "e2d116b3-88dc-46f9-8914-63e238f9f20f",
+   "alt": "اردو آڈیو بریف، تقریباً دو منٹ کا؛ یاد رکھنے کے تین فارمولے انگریزی میں ہی رکھے گئے ہیں۔",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Meaning matches the topic; hooks kept in English as ruled."
+   },
+   "host_url": "https://www.youtube.com/watch?v=v9uS6DY1N0c"
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "slides",
+   "status": "reviewed",
+   "audience": "teacher",
+   "title": "Teaching deck (10 slides)",
+   "prompt_ref": "specs/studio/prompts/slides-brand.md v4-brand",
+   "artifact_id": "e340e7c5-001d-484d-8d8d-c241829c7337",
+   "alt": "Ten-slide teaching deck for teacher educators following the topic in teaching order.",
+   "generated_at": "2026-11-09",
+   "review": {
+    "by": "Claude (agent review against topic source)",
+    "date": "2026-11-09",
+    "verdict": "pass",
+    "notes": "Proofread: 0 typos, no long dashes. Slide 6 dropped the قل example. Awaiting host URL."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "video",
+   "status": "placed",
+   "audience": "all",
+   "title": "Attention and Perception in the Classroom",
+   "artifact_id": "ea36e498-bda9-43da-8b11-a187b9d6ee65",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "host_url": "https://www.youtube.com/watch?v=N1budjAfItU",
+   "alt": "Video overview of attention as a spotlight and perception as interpretation, set in a Pakistani classroom.",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Faithful to the text (60 pupils, eleven o clock, timetable move, head-teacher example). Names drift: Hina/Henna, Nawabshah/Nabshaw/Noab. Corrected: an earlier note wrongly said the head-teacher example was not in the text."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "ur",
+   "kind": "video",
+   "status": "placed",
+   "audience": "all",
+   "title": "کلاس روم میں توجہ و ادراک",
+   "artifact_id": "2dec27c8-db23-44b8-9ad0-85bcb9388b10",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "host_url": "https://www.youtube.com/watch?v=X4DeqVQE_Jo",
+   "alt": "کلاس روم میں attention اور perception پر اردو ویڈیو جائزہ؛ تکنیکی اصطلاحات انگریزی میں۔",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Faithful to the text, including nearly half missing the gorilla and the timetable move."
+   }
+  },
+  {
+   "topic": 2,
+   "locale": "en",
+   "kind": "video",
+   "status": "placed",
+   "audience": "all",
+   "title": "The Memory Myth",
+   "artifact_id": "9981e5c7-c152-4134-ae31-09cb73fd652a",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "host_url": "https://www.youtube.com/watch?v=4i63wB-aj74",
+   "alt": "Video overview of the three memory systems, encoding, storage and retrieval, and why forgetting happens.",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Faithful to the text (three systems, four-item workbench, encoding/storage/retrieval, three faces of forgetting, evidence-based strategies). Small added details: test on Tuesday, mid-year exam."
+   }
+  },
+  {
+   "topic": 2,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "status": "placed",
+   "audience": "all",
+   "title": "Why Active Retrieval Beats Passive Re-Reading",
+   "artifact_id": "0ccdb31a-59c1-4253-95f3-46129cf00525",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "host_url": "https://www.youtube.com/watch?v=-gxwXU5V0Q0",
+   "alt": "Audio brief, about 2 minutes, with the three memory hooks for memory systems, processes and forgetting.",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass",
+    "notes": "All three hooks exact; Pakistan Studies cramming vignette and the five-question exit quiz are from the text."
+   }
+  },
+  {
+   "topic": 2,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "status": "placed",
+   "audience": "all",
+   "title": "کمزور یادداشت یا غلط طرز مطالعہ",
+   "artifact_id": "0d94436d-05b8-48aa-9bc0-ba9fcb5e3c08",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "host_url": "https://www.youtube.com/watch?v=R9L76P04LfM",
+   "alt": "memory systems، processes اور forgetting پر اردو آڈیو بریف؛ یاد رکھنے کے فارمولے انگریزی میں۔",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-09",
+    "verdict": "pass-with-notes",
+    "notes": "Meaning matches the topic; hooks in English as ruled."
+   }
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 14 content gates
+
+  validate:content        PASS  2.9s
+  check:pipeline-gate     FAIL  65.1s
+  check:depth-gate        PASS  1.6s
+  check:figures           PASS  2.6s
+  check:svg-style         PASS  1.0s
+  check:no-em-dash        PASS  0.8s
+  check:no-answer-keys    PASS  1.4s
+  check:concept-graph     PASS  0.9s
+  check:bloom-bands       PASS  0.5s
+  check:source-floor      PASS  0.7s
+  check:licence           PASS  1.0s
+  licence:map:check       PASS  0.7s
+  check:content-status    PASS  1.6s
+  check:docs-sync         PASS  0.7s
+
+============================================================
+check:pipeline-gate
+============================================================
+
+✗ Pipeline gate failed with 1 finding(s):
+
+  - EFMP-406 Unit 3 (docs/semester-3/efmp-406/unit-03): G2 en-draft: stale or incomplete input manifest
+
+
+1 of 14 content gates failed: check:pipeline-gate.

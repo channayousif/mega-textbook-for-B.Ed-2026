@@ -1,0 +1,9 @@
+fig-U7-1-light.png: 2167x1306 160002 bytes entropy=1.463
+fig-U7-1.dark.png: 2167x1306 180655 bytes entropy=1.462
+fig-U7-2-light.png: 2167x1625 251939 bytes entropy=1.795
+fig-U7-2.dark.png: 2167x1625 269265 bytes entropy=1.794
+fig-U7-3-light.png: 2167x1639 126557 bytes entropy=0.985
+fig-U7-3.dark.png: 2167x1639 171684 bytes entropy=0.984
+fig-U7-4-light.png: 2167x1625 252561 bytes entropy=1.817
+fig-U7-4.dark.png: 2167x1625 273374 bytes entropy=1.817
+done

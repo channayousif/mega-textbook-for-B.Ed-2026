@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">اسلامی تعلیمات اور آئینِ پاکستان میں اقلیتوں کے حقوق</title>
+  <desc id="d">جدول: اسلامی فقہ اور 1973 کے آئینِ پاکستان میں مذہبی اقلیتوں کے حقوق کا تقابلی جائزہ۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .panel { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .cell { fill: var(--panel); stroke: var(--line); stroke-width: 1; }
+    text { fill: var(--ink); }
+    .h { font-size: 16px; font-weight: 700; }
+    .th { font-size: 14px; font-weight: 700; fill: var(--ink); }
+    .label { font-size: 12px; font-weight: 600; }
+    .support { font-size: 11px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="780" height="470" />
+
+  <!-- Title -->
+  <text class="h" x="760" y="32" text-anchor="end">اسلامی تعلیمات اور آئینِ پاکستان میں اقلیتوں کے حقوق</text>
+
+  <!-- Table Header -->
+  <rect class="panel" x="600" y="50" width="160" height="45" rx="8" />
+  <text class="th" x="750" y="78" text-anchor="end">حقوق کا پہلو</text>
+
+  <rect class="panel" x="310" y="50" width="280" height="45" rx="8" />
+  <text class="th" x="580" y="78" text-anchor="end">اسلامی فقہی بنیاد</text>
+
+  <rect class="panel" x="20" y="50" width="280" height="45" rx="8" />
+  <text class="th" x="290" y="78" text-anchor="end">پاکستان کا 1973 کا آئین</text>
+
+  <!-- Row 1: Freedom of Conscience -->
+  <rect class="cell" x="600" y="105" width="160" height="65" rx="6" />
+  <text class="label" x="750" y="132" text-anchor="end">مذہبی آزادی</text>
+  <text class="support" x="750" y="152" text-anchor="end">عقیدے کی آزادی</text>
+
+  <rect class="cell" x="310" y="105" width="280" height="65" rx="6" />
+  <text class="support" x="580" y="132" text-anchor="end">دین میں کوئی جبر نہیں (2:256)؛</text>
+  <text class="support" x="580" y="152" text-anchor="end">غیر مسلم اپنے عقیدے اور رسوم میں آزاد ہیں</text>
+
+  <rect class="cell" x="20" y="105" width="280" height="65" rx="6" />
+  <text class="support" x="290" y="132" text-anchor="end">آرٹیکل 20: ہر شہری کو اپنے مذہب پر عمل</text>
+  <text class="support" x="290" y="152" text-anchor="end">کرنے اور اس کی اشاعت کا بنیادی حق حاصل ہے</text>
+
+  <!-- Row 2: Educational Safeguards -->
+  <rect class="cell" x="600" y="175" width="160" height="65" rx="6" />
+  <text class="label" x="750" y="202" text-anchor="end">تعلیمی تحفظات</text>
+  <text class="support" x="750" y="222" text-anchor="end">اسکول کے حقوق</text>
+
+  <rect class="cell" x="310" y="175" width="280" height="65" rx="6" />
+  <text class="support" x="580" y="202" text-anchor="end">غیر مسلموں کو اسلامی عبادات پر مجبور کرنے</text>
+  <text class="support" x="580" y="222" text-anchor="end">کی ممانعت؛ مذہبی و داخلی خودمختاری کا تحفظ</text>
+
+  <rect class="cell" x="20" y="175" width="280" height="65" rx="6" />
+  <text class="support" x="290" y="202" text-anchor="end">آرٹیکل 22: کسی طالب علم کو اپنے مذہب کے</text>
+  <text class="support" x="290" y="222" text-anchor="end">علاوہ کسی تعلیم یا عبادت پر مجبور نہیں کیا جا سکتا</text>
+
+  <!-- Row 3: Places of Worship -->
+  <rect class="cell" x="600" y="245" width="160" height="65" rx="6" />
+  <text class="label" x="750" y="272" text-anchor="end">عبادت گاہوں کا تحفظ</text>
+  <text class="support" x="750" y="292" text-anchor="end">مقدس مقامات</text>
+
+  <rect class="cell" x="310" y="245" width="280" height="65" rx="6" />
+  <text class="support" x="580" y="272" text-anchor="end">گرجا گھروں، معبدوں اور عبادت گاہوں کا</text>
+  <text class="support" x="580" y="292" text-anchor="end">تحفظ ریاست پر الٰہی فریضہ ہے (22:40)</text>
+
+  <rect class="cell" x="20" y="245" width="280" height="65" rx="6" />
+  <text class="support" x="290" y="272" text-anchor="end">آرٹیکل 20(بی): ہر مذہبی گروہ کو اپنی</text>
+  <text class="support" x="290" y="292" text-anchor="end">عبادت گاہیں قائم کرنے اور سنبھالنے کا حق ہے</text>
+
+  <!-- Row 4: Equal Protection of Law -->
+  <rect class="cell" x="600" y="315" width="160" height="65" rx="6" />
+  <text class="label" x="750" y="342" text-anchor="end">مساوی عدل و انصاف</text>
+  <text class="support" x="750" y="362" text-anchor="end">قانونی حیثیت</text>
+
+  <rect class="cell" x="310" y="315" width="280" height="65" rx="6" />
+  <text class="support" x="580" y="342" text-anchor="end">جان، مال اور عزت کا تحفظ مقدس؛ معاہدۂ</text>
+  <text class="support" x="580" y="362" text-anchor="end">تحفظ (ذمہ) مکمل شہری سلامتی دیتا ہے</text>
+
+  <rect class="cell" x="20" y="315" width="280" height="65" rx="6" />
+  <text class="support" x="290" y="342" text-anchor="end">آرٹیکل 25: تمام شہری قانون کی نظر میں برابر</text>
+  <text class="support" x="290" y="362" text-anchor="end">ہیں اور قانون کے مساوی تحفظ کے حق دار ہیں</text>
+
+  <!-- Row 5: Civic Representation -->
+  <rect class="cell" x="600" y="385" width="160" height="65" rx="6" />
+  <text class="label" x="750" y="412" text-anchor="end">عوامی نمائندگی</text>
+  <text class="support" x="750" y="432" text-anchor="end">شہری شراکت داری</text>
+
+  <rect class="cell" x="310" y="385" width="280" height="65" rx="6" />
+  <text class="support" x="580" y="412" text-anchor="end">میثاقِ مدینہ نے مشترکہ شہریت قائم کی؛</text>
+  <text class="support" x="580" y="432" text-anchor="end">تمام غیر مسلم گروہ دفاعی و شہری شراکت دار تھے</text>
+
+  <rect class="cell" x="20" y="385" width="280" height="65" rx="6" />
+  <text class="support" x="290" y="412" text-anchor="end">آرٹیکل 36: ریاست اقلیتوں کے جائز حقوق</text>
+  <text class="support" x="290" y="432" text-anchor="end">اور ملازمتوں میں مناسب نمائندگی کا تحفظ کرے گی</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="12" y="462" text-anchor="start" aria-hidden="true">textbook.com.pk</text>
+</svg>

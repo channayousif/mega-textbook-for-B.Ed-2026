@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">تدریسِ سماعت کا سہ مرحلہ جاتی خاکہ</title>
+  <desc id="d">فلو چارٹ جو تدریسِ سماعت کے تین مراحل دکھاتا ہے: قبل از سماعت نئے الفاظ اور مقصد کے ساتھ ذہن تیار کرتی ہے، دورانِ سماعت رہنمائی والے کاموں سے توجہ مرکوز رکھتی ہے، اور بعد از سماعت تفہیم جانچتی ہے اور بولنے یا لکھنے میں توسیع کرتی ہے۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 12px; fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 11px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">تدریسِ سماعت کا سہ مرحلہ جاتی خاکہ</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">تیاری سے لے کر ابلاغ تک دوسری زبان کی تفہیم کی تدریجی رہنمائی</text>
+
+  <!-- Stage 1: Pre-Listening (Right Panel) -->
+  <rect class="panel-a" x="530" y="80" width="210" height="260" rx="8"/>
+  <text class="sh" x="635" y="110" text-anchor="middle">1. قبل از سماعت</text>
+  <text class="small" x="635" y="128" text-anchor="middle">تیاری اور مقصد کا تعین</text>
+  <line class="grid" x1="545" y1="140" x2="725" y2="140"/>
+
+  <text class="body" x="725" y="168" text-anchor="end">• سابقہ علم بیدار کرنا</text>
+  <text class="body" x="725" y="196" text-anchor="end">• تصویر یا اشیاء دکھانا</text>
+  <text class="body" x="725" y="224" text-anchor="end">• مشکل الفاظ سکھانا</text>
+  <text class="body" x="725" y="252" text-anchor="end">• واضح مقصد طے کرنا</text>
+  <text class="body" x="725" y="280" text-anchor="end">• رہنمائی سوال دینا</text>
+  <text class="small" x="635" y="322" text-anchor="middle">ذہنی خاکہ تیار ہو جاتا ہے</text>
+
+  <!-- Arrow 1 to 2 (Points Left) -->
+  <path class="stroke-a" d="M 530 210 L 503 210"/>
+  <polygon class="ah-a" points="505,205 497,210 505,215"/>
+
+  <!-- Stage 2: While-Listening (Middle Panel) -->
+  <rect class="panel-b" x="285" y="80" width="210" height="260" rx="8"/>
+  <text class="sh" x="390" y="110" text-anchor="middle">2. دورانِ سماعت</text>
+  <text class="small" x="390" y="128" text-anchor="middle">رہنمائی کے ساتھ تفہیم</text>
+  <line class="grid" x1="300" y1="140" x2="480" y2="140"/>
+
+  <text class="body" x="480" y="168" text-anchor="end">• پہلی بار: اجمالی فہم</text>
+  <text class="body" x="480" y="196" text-anchor="end">• عمومی موضوع کا جائزہ</text>
+  <text class="body" x="480" y="224" text-anchor="end">• دوسری بار: تفصیلات</text>
+  <text class="body" x="480" y="252" text-anchor="end">• فہرست پر نشان لگانا</text>
+  <text class="body" x="480" y="280" text-anchor="end">• کم تحریری بوجھ</text>
+  <text class="small" x="390" y="322" text-anchor="middle">فعال معنی کی تخلیق</text>
+
+  <!-- Arrow 2 to 3 (Points Left) -->
+  <path class="stroke-b" d="M 285 210 L 258 210"/>
+  <polygon class="ah-b" points="260,205 252,210 260,215"/>
+
+  <!-- Stage 3: Post-Listening (Left Panel) -->
+  <rect class="panel-c" x="40" y="80" width="210" height="260" rx="8"/>
+  <text class="sh" x="145" y="110" text-anchor="middle">3. بعد از سماعت</text>
+  <text class="small" x="145" y="128" text-anchor="middle">توسیع اور منتقلی</text>
+  <line class="grid" x1="55" y1="140" x2="235" y2="140"/>
+
+  <text class="body" x="235" y="168" text-anchor="end">• جوڑوں میں موازنہ</text>
+  <text class="body" x="235" y="196" text-anchor="end">• جماعت سے توثیق</text>
+  <text class="body" x="235" y="224" text-anchor="end">• خیالات پر بات چیت</text>
+  <text class="body" x="235" y="252" text-anchor="end">• جوڑوں میں مکالمہ</text>
+  <text class="body" x="235" y="280" text-anchor="end">• لکھنے سے ربط</text>
+  <text class="small" x="145" y="322" text-anchor="middle">پیداواری صلاحیت میں منتقلی</text>
+
+  <!-- Return loop (from Left to Right) -->
+  <path class="stroke" stroke-dasharray="4 4" d="M 145 340 L 145 365 L 635 365 L 635 348"/>
+  <polygon class="ah" points="630,348 635,340 640,348"/>
+  <text class="small" x="390" y="380" text-anchor="middle">تعلمی چکر اگلے سبق کی منصوبہ بندی کی رہنمائی کرتا ہے</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

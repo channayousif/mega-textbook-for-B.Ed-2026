@@ -10,6 +10,9 @@ import { fetchQueue, gradeAndReturn, editGrade, isMaxMarkError } from '@site/src
 import type { QueueRow } from '@site/src/lib/grading';
 import { fetchAnswerKey } from '@site/src/lib/answerKeys';
 import type { Assignment, AnswerKey } from '@site/src/lib/types';
+import LoadingMark from '@site/src/components/ui/LoadingMark';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
+import { PageHeader } from '@site/src/components/ui';
 
 /**
  * Teacher's grading queue (Spec 003, T044/T049/T062). List view, one row per
@@ -260,7 +263,7 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
     load();
   }, [load]);
 
-  if (classLoading) return <p>{MESSAGES.loading[locale]}</p>;
+  if (classLoading) return <LoadingMark label={MESSAGES.loading[locale]} />;
   if (!classRow || role !== 'teacher') {
     return (
       <div className="alert alert--danger" role="alert" aria-live="assertive">
@@ -271,16 +274,17 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
   if (error) {
     return <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>;
   }
-  if (!assignment || !rows || !profile) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!assignment || !rows || !profile) return <LoadingMark label={MESSAGES.loading[locale]} />;
 
   return (
     <div>
-      <h2>Grading queue - {assignment.title}</h2>
+      <PageHeader title={`Grading queue - ${assignment.title}`} icon="queue" />
       <p>Due {new Date(assignment.due_at).toLocaleString()} · Max mark {assignment.max_mark}</p>
       {verifiedTeacher && <AnswerKeyPanel assignment={assignment} />}
       {rows.length === 0 ? (
         <p>No students enrolled yet.</p>
       ) : (
+        <div className="table-scroll" role="region" aria-label="Scrollable table" tabIndex={0}>
         <table>
           <thead>
             <tr>
@@ -302,6 +306,7 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );
@@ -312,15 +317,17 @@ export default function QueuePage(): React.ReactElement {
   const assignmentId = useQueryParam('assignmentId');
   return (
     <Layout title="Grading queue">
+      <AppDashboardShell>
       <AuthGuard requireRole="teacher">
-        <main className="container auth-page margin-vert--lg">
+        <div className="app-page-body">
           {classId && assignmentId ? (
             <QueueContent classId={classId} assignmentId={assignmentId} />
           ) : (
             <p>No assignment selected.</p>
           )}
-        </main>
+        </div>
       </AuthGuard>
+    </AppDashboardShell>
     </Layout>
   );
 }

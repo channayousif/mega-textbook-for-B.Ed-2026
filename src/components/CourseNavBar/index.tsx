@@ -31,7 +31,30 @@ const MESSAGES = {
   treeShow: { en: 'Show the full topic list', ur: 'موضوعات کی مکمل فہرست دکھائیں' },
   treeHide: { en: 'Hide the full topic list', ur: 'موضوعات کی مکمل فہرست چھپائیں' },
   choose: { en: 'Choose', ur: 'منتخب کریں' },
+  progress: {
+    en: (n: number, m: number) => `Topic ${n} of ${m} in this unit`,
+    ur: (n: number, m: number) => `اس یونٹ کا موضوع ${n} از ${m}`,
+  },
 };
+
+/**
+ * Unit progress strip from the v2 boards: one segment per topic in the unit, earlier
+ * topics teal, the current one amber. Position only, not completion: it shows where
+ * the reader is, so it needs no account. Shown on topic pages only.
+ */
+function UnitSteps({ level, locale }: { level: NavLevel; locale: Locale }): React.ReactElement | null {
+  const topics = level.options.filter((o) => /\/topic-\d+/.test(o.href));
+  const here = level.options[level.current];
+  const at = here ? topics.indexOf(here) : -1;
+  if (topics.length < 2 || at < 0) return null;
+  return (
+    <div className={styles.steps} role="img" aria-label={MESSAGES.progress[locale](at + 1, topics.length)}>
+      {topics.map((t, i) => (
+        <span key={t.href} className={clsx(styles.step, i < at && styles.stepDone, i === at && styles.stepHere)} />
+      ))}
+    </div>
+  );
+}
 
 const PROGRAMME_PLUGINS: Record<string, 'bed' | 'licence'> = { default: 'bed', licence: 'licence' };
 
@@ -205,6 +228,7 @@ export default function CourseNavBar(): React.ReactElement | null {
         </button>
       )}
       <span className={styles.barMenu}><ReadingMenu minutes={minutes} locale={locale} /></span>
+      {levels.length > 0 && <UnitSteps level={levels[levels.length - 1]} locale={locale} />}
     </nav>
   );
 }

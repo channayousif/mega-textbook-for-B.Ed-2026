@@ -1,0 +1,3 @@
+Command: scripts/heavy.sh npm run check:content
+
+Exit code: -15

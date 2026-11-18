@@ -61,6 +61,9 @@ export function boardSignals(jobs, since) {
       const head = feedbackHead(j.feedback);
       out.push(signal('failure', head || h.slice(25), `job:${j.id}`, at));
     }
+    // A distill job's handoff notes restate the clusters it was given, so harvesting them echoed
+    // the previous day's digest back as new signals (2026-11-13 C2, 11-14 C3; 2026-W46 M3).
+    if (j.stage === 'intel_distill') continue;
     if (j.handoffAt && j.handoffAt > since) for (const n of j.handoff || []) out.push(signal('handoff', n, `job:${j.id}`, j.handoffAt));
   }
   return out.filter(Boolean);
@@ -109,11 +112,27 @@ export function phrSignals(text, source, at) {
   return out.filter(Boolean);
 }
 
+// A rubric or carry-forward label in front of a finding (`F02 sources: `, `R3, blocking, accuracy: `,
+// `Previous finding 1: `, `Prior finding 2 remains: `, `P4 carried: `). Left in place, the first
+// clause is the label alone, so every finding of that rubric area collapsed into one cluster such
+// as `fn sources` (2026-11-04 digest C5: 12 such clusters; maintenance M4 of 2026-W45). Desk
+// reviews also write an unnumbered rubric area (`Assessment: `, `Sources/citations: `) or a status
+// carry-forward (`Prior finding 2 partly unresolved: `, `Carry-forward prior finding 1: `), in any
+// case (2026-11-10 digest C2: 21 signals in 7 clusters; maintenance M3 of 2026-W46).
+const FINDING_LABEL = /^(?:(?:[FPR]|A-)\d+(?:,?\s+(?:blocking|uncertain|advisory))?(?:,?\s+[a-z][\w-]*)?|(?:sources|pedagogy|assessment|accessibility|authority|readability|structure|language)(?:\/\w+)?|Previous finding \d+|Prior finding \d+ (?:remains|(?:partly )?unresolved)|Carry-forward prior finding \d+|P\d+ carried):\s+/i;
+
+/** The clause of a finding's message that names the defect, after one leading label. */
+export function findingClause(message) {
+  const text = String(message);
+  const rest = text.replace(FINDING_LABEL, '');
+  return (rest.trim() ? rest : text).split(/[:.]\s/)[0];
+}
+
 /** Open findings of a G3/G5 report, by the clause that names the defect. */
 export function reviewSignals(report, source, at) {
   return (report?.findings || [])
     .filter((f) => f && f.resolved !== true && f.message)
-    .map((f) => signal('review', String(f.message).split(/[:.]\s/)[0], source, at))
+    .map((f) => signal('review', findingClause(f.message), source, at))
     .filter(Boolean);
 }
 
@@ -131,7 +150,10 @@ export function foldSignals(clusters, signals, slot) {
     if (s.at < c.first) c.first = s.at;
     if (s.at > c.last) c.last = s.at;
     c.slots[at] = (c.slots[at] || 0) + 1;
-    if (!c.evidence.includes(s.source) && c.evidence.length < MAX_EVIDENCE) c.evidence.push(s.source);
+    // The newest distinct sources: a source seen again moves to the end, the oldest drops when full.
+    c.evidence = c.evidence.filter((e) => e !== s.source);
+    c.evidence.push(s.source);
+    if (c.evidence.length > MAX_EVIDENCE) c.evidence.splice(0, c.evidence.length - MAX_EVIDENCE);
   }
   return clusters;
 }
@@ -149,7 +171,7 @@ export function distillDigest(clusters, slots, max = 40) {
     .sort((a, b) => b.recent - a.recent || b.c.count - a.c.count)
     .slice(0, max);
   if (!grew.length) return '';
-  return grew.map(({ c, recent }) => `- [${c.kind}] x${recent} recent, ${c.count} total, since ${c.first.slice(0, 10)}: ${c.sig}\n  example: ${c.example.replace(/\n/g, ' ').slice(0, 200)}\n  evidence: ${c.evidence.slice(0, 3).join(', ')}`).join('\n');
+  return grew.map(({ c, recent }) => `- [${c.kind}] x${recent} recent, ${c.count} total, since ${c.first.slice(0, 10)}: ${c.sig}\n  example: ${c.example.replace(/\n/g, ' ').slice(0, 200)}\n  evidence: ${c.evidence.slice(-3).join(', ')}`).join('\n');
 }
 
 /**

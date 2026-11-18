@@ -1,0 +1,175 @@
+{
+ "label": "Attention اور Perception",
+ "children": [
+  {
+   "label": "Attention: learning کا gateway",
+   "children": [
+    {
+     "label": "Spotlight model",
+     "children": [
+      {
+       "label": "sensory information میں سے انتخاب",
+       "children": []
+      },
+      {
+       "label": "تنگ beam، جو memory میں encoding کے لیے چنتی ہے",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "تین اہم خصوصیات",
+     "children": [
+      {
+       "label": "Captured، حکم سے نہیں",
+       "children": [
+        {
+         "label": "novelty، contrast، meaning اور emotion اسے کھینچتے ہیں",
+         "children": []
+        },
+        {
+         "label": "task demand اور expectation طے کرتے ہیں کہ beam کہاں رکے",
+         "children": []
+        },
+        {
+         "label": "اونچی آواز سے نہیں، structure سے جیتی جاتی ہے",
+         "children": []
+        }
+       ]
+      },
+      {
+       "label": "بٹنے کی قیمت ہے",
+       "children": [
+        {
+         "label": "split beam ہر کام کو کم capacity دیتی ہے",
+         "children": []
+        },
+        {
+         "label": "مشکل کام کا نقصان ہوتا ہے (جیسے copying کے ساتھ listening)",
+         "children": []
+        }
+       ]
+      },
+      {
+       "label": "وقت کے ساتھ تھکتی ہے",
+       "children": [
+        {
+         "label": "مسلسل استعمال سے کم ہوتی ہے",
+         "children": []
+        },
+        {
+         "label": "گرمی، lunch کے بعد اور آخری periods میں زیادہ",
+         "children": []
+        },
+        {
+         "label": "مصروف ذہن سامنے کی چیز نہیں دیکھتا (inattentional blindness)",
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "غلط فہمی",
+     "children": [
+      {
+       "label": "یہ بچے کا fixed trait نہیں",
+       "children": []
+      },
+      {
+       "label": "ایک system ہے جسے استاد design کرتا ہے",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Perception: active interpretation",
+   "children": [
+    {
+     "label": "Sensation اور Perception کا فرق",
+     "children": [
+      {
+       "label": "Sensation: receptor کا stimulus کو محسوس کرنا",
+       "children": []
+      },
+      {
+       "label": "Perception: ذہن کا اسے ترتیب دینا اور سمجھنا",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "کلاس روم میں اس کا اثر",
+     "children": [
+      {
+       "label": "پہلے کے علم پر منحصر (expert اور novice)",
+       "children": []
+      },
+      {
+       "label": "مبہم مواد expectation کے مطابق سمجھا جاتا ہے",
+       "children": []
+      },
+      {
+       "label": "استاد کی perception مشکل کو چھپا دیتی ہے",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "Perception سکھانا",
+     "children": [
+      {
+       "label": "practice سے سیکھی جا سکتی ہے",
+       "children": []
+      },
+      {
+       "label": "حصوں کے نام لے کر بار بار دکھائیں تو automatic ہو جاتی ہے",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "عملی استعمال",
+   "children": [
+    {
+     "label": "کلاس روم میں تبدیلیاں",
+     "children": [
+      {
+       "label": "زیادہ attention والے کام صبح کے periods میں",
+       "children": []
+      },
+      {
+       "label": "copying اور explaining کو الگ رکھنا",
+       "children": []
+      },
+      {
+       "label": "شور کا مقابلہ structure سے",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "Attention audit",
+     "children": [
+      {
+       "label": "beam کا سب سے اہم کام پہچانیں",
+       "children": []
+      },
+      {
+       "label": "اندر اور باہر کے competitors کی فہرست بنائیں",
+       "children": []
+      },
+      {
+       "label": "split attention والے لمحات ختم کریں",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

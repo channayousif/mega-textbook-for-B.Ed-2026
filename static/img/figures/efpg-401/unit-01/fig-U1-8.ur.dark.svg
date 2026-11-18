@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">عملی تحریری اصناف کا تقابلی جائزہ</title>
+  <desc id="d">جدول جس میں غیر رسمی خط، دعوتی رقعے، اور ہیڈ ماسٹر کے نام درخواست کا خاکہ، افتتاحی القاب، لہجہ، بنیادی مقصد اور اختتامی دستخط کے لحاظ سے موازنہ کیا گیا ہے۔</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 11px; fill: var(--ink); }
+    .muted { font-size: 11px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="430"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">عملی تحریری اصناف کا تقابلی تجزیہ</text>
+  <text class="muted" x="390" y="52" text-anchor="middle">غیر رسمی خطوط، دعوتی رقعوں اور اسکول کی باضابطہ درخواستوں کا فرق</text>
+
+  <!-- Table Header -->
+  <rect class="panel" x="25" y="68" width="730" height="34" rx="4"/>
+  <text class="sh" x="740" y="90" text-anchor="end">خصوصیت</text>
+  <text class="sh" x="590" y="90" text-anchor="end">غیر رسمی خط</text>
+  <text class="sh" x="380" y="90" text-anchor="end">دعوتی رقعہ</text>
+  <text class="sh" x="180" y="90" text-anchor="end">باضابطہ درخواست</text>
+
+  <!-- Row 1: Layout -->
+  <rect class="panel-a" x="25" y="108" width="730" height="54" rx="4"/>
+  <text class="sh" x="740" y="128" text-anchor="end">1. خاکہ</text>
+  <text class="muted" x="740" y="146" text-anchor="end">صفحے کا ڈیزائن</text>
+  <text class="body" x="590" y="128" text-anchor="end">بھیجنے والے کا پتہ اوپر دائیں؛</text>
+  <text class="body" x="590" y="146" text-anchor="end">نیچے تاریخ؛ بائیں حاشیہ</text>
+  <text class="body" x="380" y="128" text-anchor="end">کارڈ فارمیٹ یا بند خاکہ؛</text>
+  <text class="body" x="380" y="146" text-anchor="end">مرکز میں درج تفصیلات</text>
+  <text class="body" x="180" y="128" text-anchor="end">عہدہ اوپر بائیں جانب؛</text>
+  <text class="body" x="180" y="146" text-anchor="end">نفسِ مضمون سے قبل عنوان</text>
+
+  <!-- Row 2: Salutation -->
+  <rect class="panel-b" x="25" y="168" width="730" height="54" rx="4"/>
+  <text class="sh" x="740" y="188" text-anchor="end">2. القاب</text>
+  <text class="muted" x="740" y="206" text-anchor="end">سلام کا انداز</text>
+  <text class="body" x="590" y="188" text-anchor="end">"Dear Bilal," یا</text>
+  <text class="body" x="590" y="206" text-anchor="end">"Dear Uncle,"</text>
+  <text class="body" x="380" y="188" text-anchor="end">"You are cordially invited..."</text>
+  <text class="body" x="380" y="206" text-anchor="end">یا "Dear Friend,"</text>
+  <text class="body" x="180" y="188" text-anchor="end">"Respected Sir / Madam,"</text>
+  <text class="body" x="180" y="206" text-anchor="end">(مکمل دفتری احترام)</text>
+
+  <!-- Row 3: Tone -->
+  <rect class="panel-a" x="25" y="228" width="730" height="54" rx="4"/>
+  <text class="sh" x="740" y="248" text-anchor="end">3. لہجہ</text>
+  <text class="muted" x="740" y="266" text-anchor="end">گفتگو کا اسلوب</text>
+  <text class="body" x="590" y="248" text-anchor="end">پُرجوش، دوستانہ، جذباتی</text>
+  <text class="body" x="590" y="266" text-anchor="end">اور گفتگو کے انداز میں</text>
+  <text class="body" x="380" y="248" text-anchor="end">خیر مقدمی، پُرجوش،</text>
+  <text class="body" x="380" y="266" text-anchor="end">واضح اور مسرت آمیز</text>
+  <text class="body" x="180" y="248" text-anchor="end">باضابطہ، مؤدب، مختصر،</text>
+  <text class="body" x="180" y="266" text-anchor="end">غیر جانبدار اور سنجیدہ</text>
+
+  <!-- Row 4: Body Focus -->
+  <rect class="panel-b" x="25" y="288" width="730" height="54" rx="4"/>
+  <text class="sh" x="740" y="308" text-anchor="end">4. نفسِ مضمون</text>
+  <text class="muted" x="740" y="326" text-anchor="end">مواد کا مقصد</text>
+  <text class="body" x="590" y="308" text-anchor="end">ذاتی احوال، روزمرہ تجربات</text>
+  <text class="body" x="590" y="326" text-anchor="end">اور خیریت دریافت کرنا</text>
+  <text class="body" x="380" y="308" text-anchor="end">تقریب کا مقصد، تاریخ،</text>
+  <text class="body" x="380" y="326" text-anchor="end">وقت، مقام اور رابطہ نمبر</text>
+  <text class="body" x="180" y="308" text-anchor="end">رخصت کی باقاعدہ وجہ،</text>
+  <text class="body" x="180" y="326" text-anchor="end">مطلوبہ تاریخیں اور التجا</text>
+
+  <!-- Row 5: Closing -->
+  <rect class="panel-a" x="25" y="348" width="730" height="54" rx="4"/>
+  <text class="sh" x="740" y="368" text-anchor="end">5. اختتام</text>
+  <text class="muted" x="740" y="386" text-anchor="end">دستخط و القاب</text>
+  <text class="body" x="590" y="368" text-anchor="end">"Your loving friend,"</text>
+  <text class="body" x="590" y="386" text-anchor="end">اس کے بعد صرف پہلا نام</text>
+  <text class="body" x="380" y="368" text-anchor="end">"Warm regards,"</text>
+  <text class="body" x="380" y="386" text-anchor="end">اس کے بعد میزبان کا نام</text>
+  <text class="body" x="180" y="368" text-anchor="end">"Yours obediently," بعد میں</text>
+  <text class="body" x="180" y="386" text-anchor="end">نام، جماعت، سیکشن و رول نمبر</text>
+
+  <text class="wm" x="768" y="422" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

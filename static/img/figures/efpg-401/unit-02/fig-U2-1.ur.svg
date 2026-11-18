@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">نثری درس کے چھ مراحل</title>
+  <desc id="d">فلو چارٹ جو نثری درس کے چھ مراحل دکھاتا ہے: گرم جوشی، نئے الفاظ، ماڈل خوانی، خاموش خوانی، تفہیمی سوالات، اور بعد کا کام۔</desc>
+  <style> :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg { fill: var(--bg); } .stroke { stroke: var(--ink); stroke-width: 2; fill: none; } .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; } .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; } .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; } .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; } .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; } .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; } .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; } .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; } .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; } .h { font-size: 16px; font-weight: 700; fill: var(--ink); } .sh { font-size: 14px; font-weight: 600; fill: var(--ink); } .body { font-size: 13px; fill: var(--ink); } .muted { font-size: 13px; fill: var(--muted); } .small { font-size: 12px; fill: var(--muted); } .wm { fill: var(--wm); font-size: 11px; } .ah { fill: var(--ink); } .ah-a { fill: var(--a1); } .ah-b { fill: var(--a2); } .ah-c { fill: var(--a3); } .ah-d { fill: var(--a4); } .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; } </style>
+  <rect class="bg" x="0" y="0" width="780" height="420"/>
+  <text class="h" x="390" y="34" text-anchor="middle">نثری درس کے چھ مراحل</text>
+  <text class="muted" x="390" y="54" text-anchor="middle">چوتھی سے آٹھویں جماعت کے لیے قابلِ اعتماد ترتیب</text>
+  <rect class="panel-a" x="520" y="72" width="220" height="130" rx="8"/>
+  <text class="sh" x="630" y="98" text-anchor="middle">1. گرم جوشی</text>
+  <line class="grid" x1="535" y1="108" x2="725" y2="108"/>
+  <text class="body" x="720" y="130" text-anchor="end">بچوں کی زندگی سے جوڑیں</text>
+  <text class="body" x="720" y="152" text-anchor="end">تصویر دکھائیں یا دو سے</text>
+  <text class="body" x="720" y="174" text-anchor="end">تین سادہ سوالات پوچھیں</text>
+  <rect class="panel-b" x="280" y="72" width="220" height="130" rx="8"/>
+  <text class="sh" x="390" y="98" text-anchor="middle">2. نئے الفاظ</text>
+  <line class="grid" x1="295" y1="108" x2="485" y2="108"/>
+  <text class="body" x="480" y="130" text-anchor="end">چار سے چھ اہم الفاظ</text>
+  <text class="body" x="480" y="152" text-anchor="end">سیاق میں پہلے سکھائیں</text>
+  <text class="body" x="480" y="174" text-anchor="end">تصویر یا اشارہ استعمال کریں</text>
+  <rect class="panel-c" x="40" y="72" width="220" height="130" rx="8"/>
+  <text class="sh" x="150" y="98" text-anchor="middle">3. ماڈل خوانی</text>
+  <line class="grid" x1="55" y1="108" x2="245" y2="108"/>
+  <text class="body" x="240" y="130" text-anchor="end">استاد بلند آواز سے پڑھتا ہے</text>
+  <text class="body" x="240" y="152" text-anchor="end">قدرتی تاثرات کے ساتھ؛</text>
+  <text class="body" x="240" y="174" text-anchor="end">بچے کتابوں میں پیروی کرتے ہیں</text>
+  <path class="stroke-a" d="M 520 137 L 505 137"/>
+  <polygon class="ah-a" points="505,132 497,137 505,142"/>
+  <path class="stroke-b" d="M 280 137 L 265 137"/>
+  <polygon class="ah-b" points="265,132 257,137 265,142"/>
+  <rect class="panel-d" x="520" y="222" width="220" height="130" rx="8"/>
+  <text class="sh" x="630" y="248" text-anchor="middle">4. خاموش خوانی</text>
+  <line class="grid" x1="535" y1="258" x2="725" y2="258"/>
+  <text class="body" x="720" y="280" text-anchor="end">بچے خاموشی سے پڑھتے ہیں</text>
+  <text class="body" x="720" y="302" text-anchor="end">اپنی رفتار سے؛</text>
+  <text class="body" x="720" y="324" text-anchor="end">استاد مدد کرتا ہے</text>
+  <rect class="panel-a" x="280" y="222" width="220" height="130" rx="8"/>
+  <text class="sh" x="390" y="248" text-anchor="middle">5. تفہیمی سوالات</text>
+  <line class="grid" x1="295" y1="258" x2="485" y2="258"/>
+  <text class="body" x="480" y="280" text-anchor="end">صریح، استنباطی اور</text>
+  <text class="body" x="480" y="302" text-anchor="end">ذاتی جواب</text>
+  <text class="body" x="480" y="324" text-anchor="end">سوالات</text>
+  <rect class="panel-b" x="40" y="222" width="220" height="130" rx="8"/>
+  <text class="sh" x="150" y="248" text-anchor="middle">6. بعد کا کام</text>
+  <line class="grid" x1="55" y1="258" x2="245" y2="258"/>
+  <text class="body" x="240" y="280" text-anchor="end">مختصر بولنے یا</text>
+  <text class="body" x="240" y="302" text-anchor="end">لکھنے کا کام</text>
+  <text class="body" x="240" y="324" text-anchor="end">عبارت استعمال کر کے</text>
+  <path class="stroke-c" d="M 150 202 L 150 212 L 630 212 L 630 218"/>
+  <polygon class="ah-c" points="625,218 630,226 635,218"/>
+  <path class="stroke-d" d="M 520 287 L 505 287"/>
+  <polygon class="ah-d" points="505,282 497,287 505,292"/>
+  <path class="stroke-a" d="M 280 287 L 265 287"/>
+  <polygon class="ah-a" points="265,282 257,287 265,292"/>
+  <text class="wm" x="768" y="410" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
