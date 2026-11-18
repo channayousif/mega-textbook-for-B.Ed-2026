@@ -80,26 +80,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gnas-301-u02-repair_en-r1, repair_en, claude) GOV-01/EVID-01/RENDER-01/ASSESS-01 still need the owner (review-cycle authorisation under ADR-0019, author provenance, fresh render evidence, blind assessment solve) before any further G3 run.
 - (gnas-301-u02-repair_en-r1, repair_en, claude) the NEQS binding is the federal 2000 schedule; whether Sindh's provincial standards should also be cited for the Hyderabad example is an open author question.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed GNAS-301 Unit 2 banner (fig-U2-7) and classroom/community illustrations (fig-U2-8 through fig-U2-10) in English and Urdu topic/index pages, updated figure manifests to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed GNAS-301 Unit 2 banner and classroom raster illustrations (fig-U2-7 through fig-U2-10) in English and Urdu topics, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate for GNAS-301 Unit 2 by agy.
-- Tests: npm run check:content passed with all 14 gates clean.
+- Impact: illustrate for GNAS-301 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated raster illustrations fig-U2-7 (unit banner) and fig-U2-8 through fig-U2-10 for GNAS-301 Unit 2 with agy (Imagen), inspected and accepted all four images, placed Figure tags in English and Urdu topic and index pages, moved manifest rows to placed, refreshed Unit 2 G2 evidence, and passed all content gates.
-- Decisions the team must respect: Clinic box in fig-U2-10 carries only a plain red stripe (no red cross or text); fig-U2-9 hand pump, workshop, and drain have no text; all images comply with ADR-0029, ADR-0036 and cultural dress rules.
-- Pending / next owner: Unit 2 G3 review remains open/stale since figure geometry repair; GOV-01/EVID-01/RENDER-01/ASSESS-01 still need owner authorisation before next G3 run.
+- Shipped / changed: Generated, inspected, and placed GNAS-301 Unit 2 banner and classroom raster illustrations (fig-U2-7 through fig-U2-10) in English and Urdu topics, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - fig-U2-6 (all 4 variants) was re-flowed but not measured by measure-figure-text.mjs (Chromium barred); CI figure-geometry job or browser host must confirm it.
-  - GOV-01/EVID-01/RENDER-01/ASSESS-01 require owner input before next G3 review cycle.
+  - fig-U2-6 (all 4 variants) was re-flowed earlier but not measured by measure-figure-text.mjs due to host restrictions; CI figure-geometry job or browser host must confirm it.
+  - GOV-01/EVID-01/RENDER-01/ASSESS-01 still require owner authorisation before the next G3 review cycle.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
