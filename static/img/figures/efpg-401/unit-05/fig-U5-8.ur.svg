@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 280" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">ساختاری سبق کے تین مراحل</title>
+  <desc id="d">ساختاری سبق کا بہاؤ نقشہ جس میں پیشکش سے محدود مشق اور پھر آزادانہ مشق کی طرف حرکت، اور ہر مرحلے پر استاد کا مقصد دکھایا گیا ہے۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+    .ah { fill: var(--ink); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="ah"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="780" height="280"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">ساختاری سبق کے تین مراحل</text>
+
+  <rect class="panel-a" x="540" y="70" width="180" height="90" rx="4"/>
+  <text class="sh" x="630" y="100" text-anchor="middle">پیشکش</text>
+  <text class="small" x="630" y="124" text-anchor="middle">ساخت کو سیاق کے</text>
+  <text class="small" x="630" y="142" text-anchor="middle">اندر دکھائیں</text>
+
+  <rect class="panel-b" x="300" y="70" width="180" height="90" rx="4"/>
+  <text class="sh" x="390" y="100" text-anchor="middle">محدود مشق</text>
+  <text class="small" x="390" y="124" text-anchor="middle">مدد کے ساتھ</text>
+  <text class="small" x="390" y="142" text-anchor="middle">درستگی پیدا کریں</text>
+
+  <rect class="panel-c" x="60" y="70" width="180" height="90" rx="4"/>
+  <text class="sh" x="150" y="100" text-anchor="middle">آزادانہ مشق</text>
+  <text class="small" x="150" y="124" text-anchor="middle">روانی اور</text>
+  <text class="small" x="150" y="142" text-anchor="middle">اپنائیت پیدا کریں</text>
+
+  <line class="stroke" x1="540" y1="115" x2="480" y2="115" marker-end="url(#arrow)"/>
+  <line class="stroke" x1="300" y1="115" x2="240" y2="115" marker-end="url(#arrow)"/>
+
+  <text class="small" x="630" y="196" text-anchor="middle">یہاں استاد سب سے زیادہ بولتا ہے</text>
+  <text class="small" x="390" y="196" text-anchor="middle">استاد غلطیوں کی اصلاح کرتا ہے</text>
+  <text class="small" x="150" y="196" text-anchor="middle">شاگرد ذمہ داری سنبھالتے ہیں</text>
+
+  <text class="small" x="390" y="232" text-anchor="middle">دائیں سے بائیں مدد گھٹتی جاتی ہے</text>
+
+  <text class="wm" x="768" y="268" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

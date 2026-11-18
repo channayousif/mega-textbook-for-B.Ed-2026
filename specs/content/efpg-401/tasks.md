@@ -12,7 +12,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 6 
 | 2 | Teaching of English | ▣ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored; gate evidence preparation pending commit; Urdu mirror drafted at G4 with 10 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
 | 3 | Methods of Teaching English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; twelve schematic SVGs placed with dark variants; G3 and G5 remain open |
 | 4 | Teaching of Grammar | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; three schematic SVGs placed with dark variants; G3 and G5 remain open |
-| 5 | Lesson Planning | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; fourteen schematic SVGs placed with dark variants; Urdu mirror and G3/G5 remain open |
+| 5 | Lesson Planning | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-10; fourteen schematic SVGs placed with dark variants; Urdu mirror drafted at G4 with 14 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
 | 6 | A.V. Aids in Teaching of English | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-10; ten schematic SVGs placed with dark variants; Urdu mirror is a separate job; G3 and G5 remain open |
 | 7 | Assessment | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-10; four schematic SVGs placed with dark variants; Urdu mirror drafted at G4 with 4 .ur.svg/.ur.dark.svg schematics; G3 and G5 remain open |
 
@@ -59,7 +59,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 6 
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-05/G2/20261110T132807524Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
-| Unit 5 | G4 ur-translation | ☐ | | Not started; the Urdu mirror is a separate job |
+| Unit 5 | G4 ur-translation | ▣ | agent:claude | Nine-file Urdu mirror and fourteen localized SVG schematics with derived dark variants prepared from English 8d3144411; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-05/G4/translation-handoff.md). |
 | Unit 5 | G5 ur-review | ☐ | | Awaiting translation and independent review |
 | Unit 5 | G6 assets | ▣ | | Fourteen English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
