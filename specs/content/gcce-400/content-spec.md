@@ -377,7 +377,7 @@ Guide Unit #7, Week 12 (`:164-169`). Unit Spec (G1) for `docs/semester-4/gcce-40
 - **CLO/SLO refs**: `SLO:GCCE-400-7-1` (describe ethnic, cultural, economic and political diversity in Pakistani society), `SLO:GCCE-400-7-2` (explain the engagement of youth, women and minorities in social development), `SLO:GCCE-400-7-3` (analyse social inequalities and injustices in Pakistan and ways of addressing them), `SLO:GCCE-400-7-4` (propose ways to promote inclusive citizenship and equal rights) - traces to guide outcome 3.
 - **Key terms**: Diversity, Inclusion, Minority, Social justice, Equal rights.
 - **Topics**: one per guide section: 7.1 = 12.1; 7.2 = 12.2; 7.3 = 12.3; 7.4 = 12.4.
-- **Assessment blueprint**: formative 12 items, 3 per topic (extends `D-2026-0072` to a four-topic unit; see drafting note 4) (Remember/Understand/Apply); summative includes one Create item asking the learner to design one classroom routine that makes every pupil, whatever their background, feel included, with a justification from the unit. Weighting: 60/40 default.
+- **Assessment blueprint**: formative 12 items, 3 per topic (extends `D-2026-0072` to a four-topic unit, as accepted for EFPG-401 under `D-2026-0077` and GUHQ-301 under `D-2026-0080`; see drafting note 4) (Remember/Understand/Apply); summative includes one Create item asking the learner to design one classroom routine that makes every pupil, whatever their background, feel included, with a justification from the unit. Weighting: 60/40 default.
 
 ### Sub-topic checklist
 
@@ -436,3 +436,4 @@ Recorded by the drafter so the intake evaluator can test them; none is settled h
 6. **Reading list.** Three of seven guide entries (Pike and Selby; Feldpausch and Omilian; Clarke and Steckel) could not be found outside copies of the HEC model outline and are not bound. Of the four that exist, `glencoe-civics-today` is a United States school text; units use it only for general concepts, and Pakistan's own institutions are taught from the Constitution.
 7. **Constitution currency.** The bound National Assembly PDF runs to the Twentieth Amendment (2012). Any article quoted must be checked against the current text; fig-U3-2 and fig-U7-4 require that check.
 8. **Sensitive content.** Units 5 and 7 touch on protest, minorities and injustice in Pakistan. Content stays descriptive and sourced, presents more than one perspective where views differ, and names no living private individual.
+9. **`D-2026-0053` item 2 in Semester 4.** That ruling (author-selected readings and the open-access floor) was made for Semester 2 and accepted for Semester 3 under `D-2026-0080`; whether it extends to Semester 4 is the same question again.
