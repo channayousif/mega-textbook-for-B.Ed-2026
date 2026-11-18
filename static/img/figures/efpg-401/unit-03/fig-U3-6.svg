@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Audio-Lingual Drill Archetypes</title>
+  <desc id="d">Table detailing four primary Audio-Lingual drill types: repetition, substitution, transformation, and chain drills, including teacher cues and pupil responses.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Audio-Lingual Drill Types in Primary English</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Structured oral habituation drills for grammatical pattern mastery</text>
+
+  <!-- Row 1: Repetition Drill -->
+  <rect class="panel-a" x="40" y="75" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="102">Repetition Drill</text>
+  <text class="small" x="52" y="122">Acoustic mimicry</text>
+  <rect class="panel" x="275" y="75" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="100">• Teacher: "She bought fresh fruit at the bazaar."</text>
+  <text class="body" x="290" y="124">• Pupils repeat choral and individually with matching intonation</text>
+
+  <!-- Row 2: Substitution Drill -->
+  <rect class="panel-b" x="40" y="150" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="177">Substitution Drill</text>
+  <text class="small" x="52" y="197">Slot-and-filler practice</text>
+  <rect class="panel" x="275" y="150" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="175">• Teacher: "I like sweet mangoes." Cue: "apples"</text>
+  <text class="body" x="290" y="199">• Pupils: "I like sweet apples." (Reinforces syntactic slots)</text>
+
+  <!-- Row 3: Transformation Drill -->
+  <rect class="panel-a" x="40" y="225" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="252">Transformation Drill</text>
+  <text class="small" x="52" y="272">Syntactic restructuring</text>
+  <rect class="panel" x="275" y="225" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="250">• Teacher: "Bilal is writing a letter." Cue: "Negative"</text>
+  <text class="body" x="290" y="274">• Pupils: "Bilal is not writing a letter." (Automates negative form)</text>
+
+  <!-- Row 4: Chain Drill -->
+  <rect class="panel-c" x="40" y="300" width="225" height="66" rx="6"/>
+  <text class="sh" x="52" y="327">Chain Drill</text>
+  <text class="small" x="52" y="347">Interactive oral flow</text>
+  <rect class="panel" x="275" y="300" width="465" height="66" rx="6"/>
+  <text class="body" x="290" y="325">• Pupil 1 to Pupil 2: "Where do you live?"</text>
+  <text class="body" x="290" y="349">• Pupil 2: "I live in Sukkur. Where do you live?" (Moves on)</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Teacher talk and pupil activity across a 35-minute lesson</title>
+  <desc id="d">Diagram of a 35-minute lesson showing teacher talk shrinking and pupil activity growing from the opening to the closing stage.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="400"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">The Balance of Talk and Activity</text>
+  <text class="small" x="390" y="54" text-anchor="middle">Teacher talk shrinks as pupil activity grows</text>
+
+  <rect class="panel-a" x="40" y="100" width="140" height="180"/>
+  <rect class="panel-b" x="40" y="280" width="140" height="40"/>
+  <rect class="panel-a" x="180" y="100" width="140" height="145"/>
+  <rect class="panel-b" x="180" y="245" width="140" height="75"/>
+  <rect class="panel-a" x="320" y="100" width="140" height="110"/>
+  <rect class="panel-b" x="320" y="210" width="140" height="110"/>
+  <rect class="panel-a" x="460" y="100" width="140" height="75"/>
+  <rect class="panel-b" x="460" y="175" width="140" height="145"/>
+  <rect class="panel-a" x="600" y="100" width="140" height="40"/>
+  <rect class="panel-b" x="600" y="140" width="140" height="180"/>
+
+  <text class="sh" x="110" y="180" text-anchor="middle">Teacher talk</text>
+  <text class="small" x="110" y="200" text-anchor="middle">180 units</text>
+  <text class="sh" x="670" y="240" text-anchor="middle">Pupil activity</text>
+  <text class="small" x="670" y="260" text-anchor="middle">180 units</text>
+
+  <text class="small" x="110" y="340" text-anchor="middle">Warm-up</text>
+  <text class="small" x="110" y="358" text-anchor="middle">4 min</text>
+  <text class="small" x="250" y="340" text-anchor="middle">Presentation</text>
+  <text class="small" x="250" y="358" text-anchor="middle">7 min</text>
+  <text class="small" x="390" y="340" text-anchor="middle">Practice</text>
+  <text class="small" x="390" y="358" text-anchor="middle">10 min</text>
+  <text class="small" x="530" y="340" text-anchor="middle">Production</text>
+  <text class="small" x="530" y="358" text-anchor="middle">10 min</text>
+  <text class="small" x="670" y="340" text-anchor="middle">Review</text>
+  <text class="small" x="670" y="358" text-anchor="middle">4 min</text>
+
+  <text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

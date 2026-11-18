@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Structural Substitution Table</title>
+  <desc id="d">Substitution table demonstrating how primary pupils generate multiple grammatically valid English present continuous sentences by selecting items across four aligned columns.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="370"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Substitution Table: Present Continuous Pattern</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Structural approach: generating error-free sentences through combinatorial slots</text>
+
+  <!-- Table Container -->
+  <rect class="panel" x="40" y="75" width="700" height="230" rx="8"/>
+
+  <!-- Column Headers -->
+  <rect class="panel-a" x="40" y="75" width="180" height="42" rx="8"/>
+  <text class="sh" x="130" y="102" text-anchor="middle">Subject (Noun)</text>
+
+  <rect class="panel-b" x="220" y="75" width="100" height="42" rx="0"/>
+  <text class="sh" x="270" y="102" text-anchor="middle">Auxiliary</text>
+
+  <rect class="panel-a" x="320" y="75" width="140" height="42" rx="0"/>
+  <text class="sh" x="390" y="102" text-anchor="middle">Main Verb (-ing)</text>
+
+  <rect class="panel-c" x="460" y="75" width="280" height="42" rx="8"/>
+  <text class="sh" x="600" y="102" text-anchor="middle">Adverbial / Prepositional Phrase</text>
+
+  <!-- Horizontal Rows / Dividers -->
+  <line class="grid" x1="40" y1="162" x2="740" y2="162"/>
+  <line class="grid" x1="40" y1="207" x2="740" y2="207"/>
+  <line class="grid" x1="40" y1="252" x2="740" y2="252"/>
+
+  <!-- Vertical Column Dividers -->
+  <line class="grid" x1="220" y1="75" x2="220" y2="305"/>
+  <line class="grid" x1="320" y1="75" x2="320" y2="305"/>
+  <line class="grid" x1="460" y1="75" x2="460" y2="305"/>
+
+  <!-- Row 1 Text -->
+  <text class="body" x="60" y="144">The children</text>
+  <text class="body" x="260" y="144">are</text>
+  <text class="body" x="350" y="144">playing</text>
+  <text class="body" x="480" y="144">in the school courtyard.</text>
+
+  <!-- Row 2 Text -->
+  <text class="body" x="60" y="189">Asma</text>
+  <text class="body" x="260" y="189">is</text>
+  <text class="body" x="350" y="189">reading</text>
+  <text class="body" x="480" y="189">under the green tree.</text>
+
+  <!-- Row 3 Text -->
+  <text class="body" x="60" y="234">The boys</text>
+  <text class="body" x="260" y="234">are</text>
+  <text class="body" x="350" y="234">drawing</text>
+  <text class="body" x="480" y="234">colourful pictures on paper.</text>
+
+  <!-- Row 4 Text -->
+  <text class="body" x="60" y="279">The teacher</text>
+  <text class="body" x="260" y="279">is</text>
+  <text class="body" x="350" y="279">writing</text>
+  <text class="body" x="480" y="279">notes on the chalkboard.</text>
+
+  <text class="small" x="390" y="330" text-anchor="middle">Combinatorial rule: Learners can assemble 16 distinct correct sentences while internalising the S-Aux-V-O pattern</text>
+
+  <text class="wm" x="768" y="355" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

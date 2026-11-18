@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Communicative Language Teaching Core Concept Map</title>
+  <desc id="d">Concept map illustrating the four foundational pillars of Communicative Language Teaching: real communicative purpose, information gap, interactive pair work, and prioritizing fluency before accuracy.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="380"/>
+
+  <text class="h" x="390" y="36" text-anchor="middle">Communicative Language Teaching (CLT): Core Pillars</text>
+  <text class="muted" x="390" y="56" text-anchor="middle">Interconnected pedagogical principles that develop communicative competence</text>
+
+  <!-- Central Hub: CLT -->
+  <rect class="panel" x="290" y="150" width="200" height="80" rx="10"/>
+  <text class="sh" x="390" y="182" text-anchor="middle">Communicative</text>
+  <text class="sh" x="390" y="202" text-anchor="middle">Competence</text>
+  <text class="small" x="390" y="222" text-anchor="middle">Meaning in social context</text>
+
+  <!-- Top Pillar: Real Purpose -->
+  <rect class="panel-a" x="260" y="70" width="260" height="58" rx="8"/>
+  <text class="sh" x="390" y="94" text-anchor="middle">1. Real Communicative Purpose</text>
+  <text class="small" x="390" y="114" text-anchor="middle">Tasks convey actual information, not rule displays</text>
+
+  <!-- Connecting line Top -->
+  <path class="stroke-a" d="M 390 128 L 390 150"/>
+  <polygon class="ah-a" points="385,145 390,150 395,145"/>
+
+  <!-- Right Pillar: Information Gap -->
+  <rect class="panel-b" x="520" y="160" width="220" height="60" rx="8"/>
+  <text class="sh" x="630" y="185" text-anchor="middle">2. Information Gap</text>
+  <text class="small" x="630" y="205" text-anchor="middle">A speaker shares missing data</text>
+
+  <!-- Connecting line Right -->
+  <path class="stroke-b" d="M 490 190 L 520 190"/>
+  <polygon class="ah-b" points="515,185 520,190 515,195"/>
+
+  <!-- Bottom Pillar: Pair and Group Work -->
+  <rect class="panel-c" x="260" y="260" width="260" height="58" rx="8"/>
+  <text class="sh" x="390" y="284" text-anchor="middle">3. Collaborative Pair Work</text>
+  <text class="small" x="390" y="304" text-anchor="middle">Maximises student talk time in large classes</text>
+
+  <!-- Connecting line Bottom -->
+  <path class="stroke-c" d="M 390 230 L 390 260"/>
+  <polygon class="ah-c" points="385,255 390,260 395,255"/>
+
+  <!-- Left Pillar: Fluency Before Accuracy -->
+  <rect class="panel-d" x="40" y="160" width="220" height="60" rx="8"/>
+  <text class="sh" x="150" y="185" text-anchor="middle">4. Fluency Before Accuracy</text>
+  <text class="small" x="150" y="205" text-anchor="middle">Message delivery before error policing</text>
+
+  <!-- Connecting line Left -->
+  <path class="stroke-d" d="M 290 190 L 260 190"/>
+  <polygon class="ah-d" points="265,185 260,190 265,195"/>
+
+  <text class="small" x="390" y="348" text-anchor="middle">Interactionist synthesis: language is acquired through authentic negotiation of meaning</text>
+
+  <text class="wm" x="768" y="370" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
