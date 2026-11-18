@@ -10,7 +10,7 @@ Checked on 2026-11-10. All prose is original. Classroom scenes, named teachers a
 
 ## Mapped-reading limits
 
-All three mapped readings from the approved content-spec are cited. The open-access article (`paulsrud-2024-lesson-planning`) is read in full and has a bound excerpt in `specs/content/efpg-401/sources/texts/`. The two guide-required print monographs (`celce-murcia-1991`, `sheikh-1998-tesl`) provide title-level conceptual support and are declared below under `## Unverifiable sources` per owner ruling `D-2026-0001`.
+All three mapped readings from the approved content-spec are cited. The open-access article (`paulsrud-2024-lesson-planning`) is read in full and has a bound excerpt in `specs/content/efpg-401/sources/texts/`. The two guide-required print monographs (`celce-murcia-1991`, `sheikh-1998-tesl`) provide title-level conceptual support and are declared below under `## Unverifiable sources` per owner ruling `D-2026-0001`. Because only the titles could be checked, the unit prose attributes no specific claim to either monograph: they are listed under each topic's Further reading, and the guidance on the concepts mapped to them (U5-04 to U5-10) is stated as this unit's own. The open-access article is cited only for what its bound notes support: a generally language-as-resource planning stance, and materials shaping plans more directly than national policy.
 
 ## Unverifiable sources
 

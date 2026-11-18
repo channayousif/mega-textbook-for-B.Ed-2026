@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
   <title id="t">Lesson stages with a pupil activity at each stage</title>
-  <desc id="d">Table of five lesson stages showing the pupil activity at each stage and what it achieves, from a warm-up game to a review quiz.</desc>
+  <desc id="d">Table of five lesson stages showing the pupil activity at each stage and what it achieves, from naming things seen from the classroom window to writing three true sentences.</desc>
   <style>
     :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
     .bg { fill: var(--bg); }
