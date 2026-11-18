@@ -14,7 +14,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 |---|---|---|---|---|
 | Unit 1 | G0 course-intake | ▣ | | content-spec status: draft, pending G0/G1 intake |
 | Unit 1 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-01/G2/20261103T112247248Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-01/G2/20261118T123217889Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; figure text overflows and citation mismatches; report specs/content/gsos-301/reviews/unit-01/G3/7725a4f0-f3eb-4a48-aed1-23a2605c30d8.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-01/G3/7725a4f0-f3eb-4a48-aed1-23a2605c30d8.json; X1 geometry verified across 24 variants; S1 EN/UR citations aligned; A1 G0/G1 closure remains CurriculumOwner action; X2 mobile/print inspection pending permitted browser review; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | agent:agy | Advisory escalate (cycle 2/2, final): report specs/content/gsos-301/reviews/unit-01/G3/18895ffc-9133-4016-98ea-4feb32e69b98.json; prior X1 figure geometry and S1 citation/Further reading verified repaired; A1 G0/G1 intake closure remains CurriculumOwner action; visual 360px/print inspection unperformed under host constraints; G3 remains open, no certification; further cycles require recorded owner authorization |
