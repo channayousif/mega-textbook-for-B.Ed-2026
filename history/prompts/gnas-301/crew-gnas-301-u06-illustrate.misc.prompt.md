@@ -2,7 +2,7 @@
 id: crew-gnas-301-u06-illustrate
 title: crew illustrate GNAS-301 unit 6
 stage: misc
-date: 2026-11-19
+date: 2026-11-18
 surface: agent
 model: agy
 feature: gnas-301
@@ -89,9 +89,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gnas-301-u06-repair_en-r1-conflict1, fix, opencode) The next job should re-check the corrected concept mappings and the new Bloom labels (ERQ-02 Apply, ERQ-05 Create 0-2, MCQ-05 Understand) against the content-spec blueprint.
 - (gnas-301-u06-repair_en-r1, repair_en, opencode) G3 stays unticked; the four uncertain findings (accessibility, author provenance, source binding, blind assessment derivation) remain owner-owned and G-2026-33's cycle-count conflict is unresolved.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed GNAS-301 Unit 6 banner and classroom raster illustrations (fig-U6-13 through fig-U6-19) in English and Urdu topics, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed GNAS-301 Unit 6 raster banner and topic illustrations (fig-U6-13 through fig-U6-19) in English and Urdu, updated manifests to placed, refreshed G2 evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
@@ -103,6 +104,16 @@ Generated, inspected, and placed GNAS-301 Unit 6 banner and classroom raster ill
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GNAS-301 Unit 6 banner and classroom raster illustrations (fig-U6-13 through fig-U6-19) in English and Urdu topics, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed GNAS-301 Unit 6 raster banner and topic illustrations (fig-U6-13 through fig-U6-19) in English and Urdu, updated manifests to placed, refreshed G2 evidence, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G3 en-review remains unticked and owner-gated by G-2026-33; all Unit 6 figure rows are now placed with committed WebP illustrations.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
