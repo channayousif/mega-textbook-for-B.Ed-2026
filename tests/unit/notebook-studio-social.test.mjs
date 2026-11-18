@@ -14,6 +14,9 @@ describe('cross-post auth', () => {
     expect(authUrl('tiktok', app, 's')).toContain('client_key=cid');
     expect(authUrl('tiktok', app, 's')).toContain('video.upload');
     expect(authUrl('meta', app, 's')).toContain('instagram_content_publish');
+    const biz = authUrl('meta', { ...app, config_id: '123' }, 's');
+    expect(biz).toContain('config_id=123');
+    expect(biz).not.toContain('scope=');
     expect(authUrl('linkedin', app, 's')).toContain('w_member_social');
     expect(() => authUrl('myspace', app)).toThrow(/unknown provider/);
   });

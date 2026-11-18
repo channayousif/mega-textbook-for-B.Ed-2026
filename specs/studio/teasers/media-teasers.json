@@ -164,15 +164,39 @@
     }
    ],
    "script_sha256": "d45d932f3b6f3c5e1263027f256055402fa5206f417052e95ef4e8b3f8204c3d",
-   "encoded_file": "~/studio-media/teasers/efmp-301/ur/teaser-fast.mp4",
-   "youtube_id": "Yi1FwWZbEg4",
+   "encoded_file": "~/studio-media/teasers/efmp-301/ur/teaser.youtube.mp4",
+   "youtube_id": "aLlBszfFEFQ",
    "uploaded_at": "2026-11-17T09:10:22Z",
    "encoded_sha256": "f0f6f2c70b449d772a325878b7d6866e7a966f3372b642a12f2717ed7013c4f3",
    "superseded_youtube_ids": [
-    "1w-JHlvo7kg"
+    "1w-JHlvo7kg",
+    "Yi1FwWZbEg4"
    ],
    "published_at": "2026-11-17T09:35:24Z",
-   "thumbnail_file": "~/studio-media/teasers/efmp-301/ur/teaser.youtube.thumb.jpg"
+   "thumbnail_file": "~/studio-media/teasers/efmp-301/ur/teaser.youtube.thumb.jpg",
+   "replaced_at": "2026-11-17T19:50:29.517Z",
+   "replace_reason": "owner 2026-11-18: re-upload the overlay version and make it public",
+   "crossposts": {
+    "instagram": {
+     "state": "posted",
+     "post_id": "18147801727591866",
+     "url": "https://www.instagram.com/reel/Df24tRyAhoY/",
+     "at": "2026-11-17T21:23:06.382Z"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_id": "1726027242488382",
+     "url": "https://www.facebook.com/reel/1726027242488382",
+     "at": "2026-11-17T21:23:42.983Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:ugcPost:7528575781745381376",
+     "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528575781745381376/",
+     "as": "member profile",
+     "at": "2026-11-17T21:52:28.952Z"
+    }
+   }
   }
  ]
 }

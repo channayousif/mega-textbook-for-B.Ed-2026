@@ -4,6 +4,7 @@
 //
 //   node scripts/notebook-studio/social-post.mjs auth-url <meta|tiktok|linkedin>
 //   node scripts/notebook-studio/social-post.mjs exchange <meta|tiktok|linkedin> '<redirected URL or code>'
+//        (meta also accepts a Graph API Explorer user token, which starts with EAA)
 //   node scripts/notebook-studio/social-post.mjs post <instagram|facebook|tiktok|linkedin> <ledger key> <video.mp4>
 //
 // App credentials (client id/secret) live in ~/.config/textbook-social/apps.json and tokens in
@@ -24,16 +25,22 @@ const SCOPES = {
   meta: ['pages_show_list', 'pages_read_engagement', 'pages_manage_posts', 'instagram_basic', 'instagram_content_publish', 'business_management'],
   tiktok: ['user.info.basic', 'video.upload'],
   linkedin: ['openid', 'profile', 'w_member_social'],
+  // With the Community Management API product: post as the textbook.com.pk Page.
+  linkedin_page: ['openid', 'profile', 'w_member_social', 'w_organization_social', 'r_organization_admin'],
 };
 const DIR = process.env.TEXTBOOK_SOCIAL_DIR ?? join(homedir(), '.config', 'textbook-social');
 
 // ---------- pure request builders (unit-tested) ----------
 
 export function authUrl(provider, app, state = randomBytes(8).toString('hex')) {
+  const liScopes = app.page ? SCOPES.linkedin_page : SCOPES.linkedin;
   const q = (o) => new URLSearchParams(o).toString();
-  if (provider === 'meta') return `https://www.facebook.com/${GRAPH}/dialog/oauth?${q({ client_id: app.client_id, redirect_uri: REDIRECT_URI, scope: SCOPES.meta.join(','), response_type: 'code', state })}`;
+  // Facebook Login for Business takes a saved configuration (permissions + assets) as config_id;
+  // a plain scope list fails there with "Invalid Scope". Classic Facebook Login uses scope.
+  if (provider === 'meta') return `https://www.facebook.com/${GRAPH}/dialog/oauth?${q({ client_id: app.client_id, redirect_uri: REDIRECT_URI, ...(app.config_id ? { config_id: app.config_id, override_default_response_type: 'true' } : { scope: SCOPES.meta.join(',') }), response_type: 'code', state })}`;
   if (provider === 'tiktok') return `https://www.tiktok.com/v2/auth/authorize/?${q({ client_key: app.client_id, scope: SCOPES.tiktok.join(','), response_type: 'code', redirect_uri: REDIRECT_URI, state })}`;
-  if (provider === 'linkedin') return `https://www.linkedin.com/oauth/v2/authorization?${q({ response_type: 'code', client_id: app.client_id, redirect_uri: REDIRECT_URI, scope: SCOPES.linkedin.join(' '), state })}`;
+  // LinkedIn misreads '+' between scopes; send them space-separated as %20.
+  if (provider === 'linkedin') return `https://www.linkedin.com/oauth/v2/authorization?${q({ response_type: 'code', client_id: app.client_id, redirect_uri: REDIRECT_URI, state })}&scope=${liScopes.map(encodeURIComponent).join('%20')}`;
   throw new Error(`unknown provider ${provider}`);
 }
 
@@ -109,8 +116,10 @@ async function exchange(provider, input) {
   const a = app(provider);
   const code = codeFrom(input);
   if (provider === 'meta') {
-    const q = new URLSearchParams({ client_id: a.client_id, client_secret: a.client_secret, redirect_uri: REDIRECT_URI, code });
-    const short = (await call(`https://graph.facebook.com/${GRAPH}/oauth/access_token?${q}`)).body.access_token;
+    // A user token from Meta's Graph API Explorer (starts "EAA") skips the login dialog; otherwise
+    // the input is the dialog's redirect code.
+    const short = /^EAA/.test(code) ? code
+      : (await call(`https://graph.facebook.com/${GRAPH}/oauth/access_token?${new URLSearchParams({ client_id: a.client_id, client_secret: a.client_secret, redirect_uri: REDIRECT_URI, code })}`)).body.access_token;
     const lq = new URLSearchParams({ grant_type: 'fb_exchange_token', client_id: a.client_id, client_secret: a.client_secret, fb_exchange_token: short });
     const user = (await call(`https://graph.facebook.com/${GRAPH}/oauth/access_token?${lq}`)).body.access_token;
     // Page tokens fetched with a long-lived user token do not expire.
@@ -128,8 +137,15 @@ async function exchange(provider, input) {
   if (provider === 'linkedin') {
     const t = (await call('https://www.linkedin.com/oauth/v2/accessToken', form({ grant_type: 'authorization_code', code, redirect_uri: REDIRECT_URI, client_id: a.client_id, client_secret: a.client_secret }))).body;
     const me = (await call('https://api.linkedin.com/v2/userinfo', { headers: { Authorization: `Bearer ${t.access_token}` } })).body;
-    writeSecret('linkedin.json', { ...t, author: `urn:li:person:${me.sub}`, name: me.name, saved_at: new Date().toISOString() });
-    return { provider, author: me.name };
+    let org = null;
+    if (String(t.scope ?? '').includes('w_organization_social')) {
+      // The Page this member administers (Community Management API, organizationAcls).
+      const h = { Authorization: `Bearer ${t.access_token}`, 'LinkedIn-Version': LINKEDIN_VERSION, 'X-Restli-Protocol-Version': '2.0.0' };
+      const acl = (await call('https://api.linkedin.com/rest/organizationAcls?q=roleAssignee&role=ADMINISTRATOR&state=APPROVED', { headers: h })).body.elements ?? [];
+      org = acl.map((e) => e.organization).find(Boolean) ?? null;
+    }
+    writeSecret('linkedin.json', { ...t, author: org ?? `urn:li:person:${me.sub}`, member: `urn:li:person:${me.sub}`, name: me.name, saved_at: new Date().toISOString() });
+    return { provider, member: me.name, posts_as: org ?? 'member profile', scope: t.scope };
   }
   throw new Error(`unknown provider ${provider}`);
 }
