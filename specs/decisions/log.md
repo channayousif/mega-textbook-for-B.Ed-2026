@@ -4711,4 +4711,4 @@ content-improvement loop with no further cycle.
 - **Basis:** owner answers 2026-11-18: "Fallback", "Crew, when tunnel up", "agy, gflow, Codex".
 - **Limits:** Certifies no content and changes no review rule. Account risk from automating Flow
   stays the owner's, per the gflow-cli disclaimer. opencode is not a producer (its models cannot
-  output images). An ADR amendment to ADR-0029 is suggested, not adopted.
+  output images). Documented as ADR-0036, which amends ADR-0029 points 1 and 4.
