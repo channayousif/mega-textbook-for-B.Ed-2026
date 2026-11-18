@@ -52,9 +52,12 @@ export function saveLedger(ledger, root = ROOT) {
 export function allLedgers(root = ROOT) {
   const base = join(root, 'specs', 'studio');
   if (!existsSync(base)) return [];
-  return readdirSync(base).filter((c) => statSync(join(base, c)).isDirectory()).flatMap((c) =>
+  const unit = readdirSync(base).filter((c) => statSync(join(base, c)).isDirectory()).flatMap((c) =>
     readdirSync(join(base, c)).filter((f) => /^media-unit-\d{2}\.json$/.test(f))
       .map((f) => JSON.parse(readFileSync(join(base, c, f), 'utf8'))));
+  // Teaser Shorts (studio-teaser skill) share the same channel and daily upload quota.
+  const teasers = join(base, 'teasers', 'media-teasers.json');
+  return existsSync(teasers) ? [...unit, JSON.parse(readFileSync(teasers, 'utf8'))] : unit;
 }
 
 const get = (o, path) => path.split('.').reduce((v, k) => (v == null ? v : v[k]), o);

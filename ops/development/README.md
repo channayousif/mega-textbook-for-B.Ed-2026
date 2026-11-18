@@ -154,3 +154,16 @@ backup's manifest. Run `systemctl --user daemon-reload`. Do not remove limits wh
 contained workloads are live. Restore previous enablement where units existed before
 installation. Existing outer user limits, gateways, DB, production and normal SSH need no
 changes. No OCI resources or deployment architecture are changed by this work.
+
+## Remote builds
+
+`scripts/heavy.sh` first calls `~/.config/mega-book/heavy-remote` when that executable exists.
+Exit code 99 means "not handled", and the job then takes a local slot as usual. On the
+production host this is a symlink to `~/bin/crew-remote-build.sh` (host-level, not in this
+repository). It offloads only `npm run build` started from a crew worktree under `~/crew-wt/`
+to the davinci host: it pushes the worktree's HEAD to `refs/crew/build` in davinci's
+`~/crew-build/repo`, rsyncs uncommitted files over it, builds there in a capped scope
+(5 GiB, 1.5 CPUs), streams the output back, copies `build/` into the worktree and returns the
+build's exit code. If davinci is unreachable or the transfer fails, it falls back to the local
+slot. Builds from the owner's checkout, the deploy clone and every other heavy job still run
+locally. To disable offload, remove the symlink.

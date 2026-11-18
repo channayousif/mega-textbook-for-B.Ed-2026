@@ -61,6 +61,9 @@ export function boardSignals(jobs, since) {
       const head = feedbackHead(j.feedback);
       out.push(signal('failure', head || h.slice(25), `job:${j.id}`, at));
     }
+    // A distill job's handoff notes restate the clusters it was given, so harvesting them echoed
+    // the previous day's digest back as new signals (2026-11-13 C2, 11-14 C3; 2026-W46 M3).
+    if (j.stage === 'intel_distill') continue;
     if (j.handoffAt && j.handoffAt > since) for (const n of j.handoff || []) out.push(signal('handoff', n, `job:${j.id}`, j.handoffAt));
   }
   return out.filter(Boolean);
@@ -112,8 +115,11 @@ export function phrSignals(text, source, at) {
 // A rubric or carry-forward label in front of a finding (`F02 sources: `, `R3, blocking, accuracy: `,
 // `Previous finding 1: `, `Prior finding 2 remains: `, `P4 carried: `). Left in place, the first
 // clause is the label alone, so every finding of that rubric area collapsed into one cluster such
-// as `fn sources` (2026-11-04 digest C5: 12 such clusters; maintenance M4 of 2026-W45).
-const FINDING_LABEL = /^(?:(?:[FPR]|A-)\d+(?:,?\s+(?:blocking|uncertain|advisory))?(?:,?\s+[a-z][\w-]*)?|Previous finding \d+|Prior finding \d+ remains|P\d+ carried):\s+/;
+// as `fn sources` (2026-11-04 digest C5: 12 such clusters; maintenance M4 of 2026-W45). Desk
+// reviews also write an unnumbered rubric area (`Assessment: `, `Sources/citations: `) or a status
+// carry-forward (`Prior finding 2 partly unresolved: `, `Carry-forward prior finding 1: `), in any
+// case (2026-11-10 digest C2: 21 signals in 7 clusters; maintenance M3 of 2026-W46).
+const FINDING_LABEL = /^(?:(?:[FPR]|A-)\d+(?:,?\s+(?:blocking|uncertain|advisory))?(?:,?\s+[a-z][\w-]*)?|(?:sources|pedagogy|assessment|accessibility|authority|readability|structure|language)(?:\/\w+)?|Previous finding \d+|Prior finding \d+ (?:remains|(?:partly )?unresolved)|Carry-forward prior finding \d+|P\d+ carried):\s+/i;
 
 /** The clause of a finding's message that names the defect, after one leading label. */
 export function findingClause(message) {

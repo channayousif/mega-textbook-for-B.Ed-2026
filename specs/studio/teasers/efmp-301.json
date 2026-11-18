@@ -1,0 +1,96 @@
+{
+ "id": "efmp-301",
+ "kind": "course",
+ "course_code": "EFMP-301",
+ "semester": 1,
+ "title": {
+  "en": "Educational Psychology (EFMP-301)",
+  "ur": "تعلیمی نفسیات (EFMP-301)"
+ },
+ "sources": [
+  "docs/semester-1/efmp-301/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, warm natural daylight, gentle realistic cinematic look. A Pakistani government school: whitewashed walls, a plain green blackboard with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame. Nobody speaks to the camera; the narration is a voice-over.",
+ "narrator": {
+  "name": "off-screen narrator",
+  "description": "An unseen Pakistani woman teacher in her thirties, warm, clear and confident; voice-over only, never shown on camera."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "Slow push-in over a crowded Class 5 room of about fifty pupils at wooden desks: a few lean forward eagerly with raised hands, others gaze out of the window or whisper to a neighbour."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Close-up of a teacher's hand drawing a simple chalk sketch on the plain green blackboard: a small child, a taller child and a teenager standing in a row, no words; then the camera pulls back to pupils watching."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Pupils working in small groups at their desks; a woman teacher, seen from behind, kneels beside a quiet girl and points at her notebook while the girl smiles."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Slow tracking shot along a row of open exercise books on desks, neat handwriting blurred and unreadable, a teacher's hand placing a red tick; pupils' faces softly out of focus."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a young woman trainee teacher holds a phone and scrolls a textbook page (screen blurred, unreadable), then looks up with a confident smile as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "en": {
+   "narration": [
+    "Same class, same lesson. Why do some pupils learn fast while others fall behind?",
+    "Educational Psychology shows how children grow, think and learn, from development to memory and problem-solving.",
+    "You will study motivation, intelligence, individual differences and special needs, and how to manage a real classroom.",
+    "Twelve units, from assessment to well-being and guidance, with Pakistani classroom examples throughout.",
+    "Study the full course free at textbook dot com dot pk. The link is below."
+   ],
+   "end_card": {
+    "headline": "Educational Psychology (EFMP-301)",
+    "cta": "Study the full course free"
+   },
+   "youtube_title": "Why do some pupils learn faster? Educational Psychology for B.Ed | EFMP-301"
+  },
+  "ur": {
+   "narration": [
+    "ایک ہی کلاس، ایک ہی سبق۔ کچھ بچے جلدی سیکھتے ہیں اور کچھ پیچھے رہ جاتے ہیں۔ کیوں؟",
+    "Educational Psychology بتاتی ہے کہ بچے کیسے بڑھتے، سوچتے اور سیکھتے ہیں، development سے memory تک۔",
+    "آپ motivation، intelligence، individual differences اور special needs پڑھیں گے، اور کلاس سنبھالنا بھی سیکھیں گے۔",
+    "بارہ units، assessment سے well-being اور guidance تک، اور ہر جگہ پاکستانی کلاس روم کی مثالیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "تعلیمی نفسیات (EFMP-301)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "کچھ بچے جلدی کیوں سیکھتے ہیں؟ تعلیمی نفسیات | EFMP-301",
+   "keywords": [
+    "taleemi nafsiyat",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "تعلیمی نفسیات نوٹس",
+    "child development",
+    "motivation",
+    "individual differences",
+    "special needs",
+    "classroom management"
+   ],
+   "course_summary": "یہ کورس بی ایڈ کے ہونے والے اساتذہ کو بتاتا ہے کہ بچے کیسے بڑھتے، سوچتے اور سیکھتے ہیں، اور کون سے نفسیاتی اصول پاکستانی کلاس روم میں اچھی تدریس کی بنیاد ہیں۔ یہ تعلیمی نفسیات کیا ہے اور شواہد کیسے جمع کرتی ہے، وہاں سے شروع ہو کر development، learning theories، ذہنی عمل، intelligence، motivation، انفرادی اختلافات، جماعتی انتظام اور assessment سے گزرتا ہوا well-being، guidance، counseling اور پیشہ ورانہ اخلاقیات تک جاتا ہے: بارہ یونٹوں میں سیکھنے والے اور استاد کا پورا سفر۔",
+   "objectives": [
+    "تعلیم سے جڑے learning اور development کے بڑے نظریات سمجھ سکیں گے۔",
+    "طلبہ کے انفرادی اختلافات اور تدریس پر ان کے اثرات بیان کر سکیں گے۔",
+    "کلاس میں تدریس اور جماعتی انتظام میں نفسیاتی اصول لاگو کر سکیں گے۔",
+    "سیکھنے کے ماحول میں motivation، intelligence اور تخلیقیت کا تجزیہ کر سکیں گے۔",
+    "طلبہ کی سیکھ میں مدد کے لیے assessment کے طریقے استعمال کر سکیں گے۔",
+    "شمولیتی، اخلاقی اور معاون تعلیمی ماحول کو فروغ دے سکیں گے۔"
+   ]
+  }
+ }
+}

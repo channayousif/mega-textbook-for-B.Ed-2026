@@ -6,7 +6,7 @@
 export const COPY = {
   "en": {
     "pill": "Free to read · English and Urdu · Built for phones",
-    "h1a": "Your teacher education textbooks, in ",
+    "h1a": "Platform for current & future teachers and teacher educators, in ",
     "h1b": "English and ",
     "h1c": "اردو",
     "h1d": ".",
@@ -298,14 +298,14 @@ export const COPY = {
     "card_t_en": "What makes teaching a profession",
     "welcome": "Welcome back, {name}",
     "welcome_plain": "Welcome back",
-    "meta_title": "Free teacher education textbooks in English and Urdu",
+    "meta_title": "Platform for current & future teachers and teacher educators",
     "meta_desc": "B.Ed and teaching-licence study material, organised by semester and course, with activities, self-checks and figures. Teachers can run classes and grade work here too.",
     "rs_topic_prefix": "Continue reading",
     "admin": "Open admin console"
   },
   "ur": {
     "pill": "پڑھنا مفت · اردو اور انگریزی · موبائل کے لیے تیار",
-    "h1a": "اساتذہ کی تعلیم کی نصابی کتب، ",
+    "h1a": "موجودہ اور مستقبل کے اساتذہ اور اساتذہ کے تربیت کاروں کے لیے پلیٹ فارم، ",
     "h1b": "",
     "h1c": "اردو اور انگریزی میں",
     "h1d": "۔",
@@ -597,7 +597,7 @@ export const COPY = {
     "card_t_en": "What makes teaching a profession",
     "welcome": "خوش آمدید، {name}",
     "welcome_plain": "خوش آمدید",
-    "meta_title": "اساتذہ کی تعلیم کی مفت نصابی کتب، اردو اور انگریزی میں",
+    "meta_title": "موجودہ اور مستقبل کے اساتذہ اور اساتذہ کے تربیت کاروں کے لیے پلیٹ فارم",
     "meta_desc": "بی ایڈ اور تدریسی لائسنس کا مطالعاتی مواد، سمسٹر اور کورس کی ترتیب سے، سرگرمیوں، خود جانچ اور اشکال کے ساتھ۔ اساتذہ یہیں جماعتیں چلا سکتے ہیں اور کام جانچ سکتے ہیں۔",
     "rs_topic_prefix": "مطالعہ جاری رکھیں",
     "admin": "ایڈمن کنسول کھولیں"

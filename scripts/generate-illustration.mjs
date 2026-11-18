@@ -5,6 +5,7 @@
  *   node scripts/generate-illustration.mjs <course> <unit> [--id fig-U1-9] [--dry-run] [--reuse-staging] [--banner]
  *
  * `--banner` reads the unit's sidecar banner manifest (unit-NN.banner.md) instead.
+ * `--force` calls agy even while a recorded image quota (scripts/lib/image-quota.mjs) has not reset.
  * `--reuse-staging` skips the agy call when `.staging/<figId>.png` already exists (for example
  * after an optimiser failure), so a retry does not spend another generation.
  *
@@ -29,6 +30,7 @@ import { join, resolve } from 'node:path';
 import { homedir } from 'node:os';
 import { readdirSync } from 'node:fs';
 import { parseManifest } from './lib/figure-manifest.mjs';
+import { activeImageQuota, recordImageQuota, clearImageQuota, IMAGE_QUOTA_FILE } from './lib/image-quota.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const LOCK = '/tmp/mega-book-imagegen.lock';
@@ -72,7 +74,7 @@ if (todo.length === 0) {
   process.exit(0);
 }
 
-const aspectOf = (prompt) => (/portrait/i.test(prompt) ? '3:4 portrait' : '16:9 landscape');
+const aspectOf = (prompt) => (/\bportrait\b/i.test(prompt) && !/\blandscape\b/i.test(prompt) ? '3:4 portrait' : '16:9 landscape');
 
 function generate(row) {
   const png = join(stagingDir, `${row.id}.png`);
@@ -181,6 +183,13 @@ function takeLock() {
     return takeLock();
   }
 }
+// A known exhausted quota would only fail again; exit 3 (the quota code) without spending an agy call.
+const known = !flag('--force') && !flag('--reuse-staging') && activeImageQuota();
+if (known) {
+  console.error(`✗ image quota exhausted (QUOTA_EXHAUSTED); resets at ${known.resetAt} (recorded in ${IMAGE_QUOTA_FILE}). Nothing generated; rerun after then.`);
+  process.exit(3);
+}
+
 const lockFd = takeLock();
 
 mkdirSync(stagingDir, { recursive: true });
@@ -203,12 +212,14 @@ try {
       await optimise(png, webp);
       const src = `/img/figures/${courseDir}/unit-${pad}/${row.id}.webp`;
       updateRow(row.id, src, 'generated');
+      if (model !== 'reused staging file') clearImageQuota(); // agy produced an image: quota is back
       console.log(`✓ ${row.id}: generated in ${seconds}s by ${model}; manifest -> generated. Inspect before placing.`);
     } catch (e) {
       failures += 1;
       console.error(`✗ ${row.id}: ${e.message}`);
       const reset = quotaResetAfterFailure();
       if (reset) {
+        recordImageQuota(reset);
         console.error(`✗ image quota exhausted (QUOTA_EXHAUSTED); resets at ${reset}. Stopping this batch; rerun after then.`);
         process.exitCode = 3;
         break;

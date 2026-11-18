@@ -69,46 +69,11 @@ export function exclusionReason(branch, paths) {
 }
 
 /**
- * Three-way merge for an append-only file such as a course tracker
- * (specs/content/<course>/tasks.md, W44 M1). Concurrent unit jobs each add their own rows at
- * the same place, which git reports as a conflict although neither side removed anything.
- * When both `ours` and `theirs` only insert whole lines relative to `base`, the result is base
- * with both sides' insertions, ours before theirs at a shared point (an identical insertion on
- * both sides is kept once). Returns null when a stage is missing or either side changes or
- * deletes a base line, so the caller falls back to a merge fix. Base lines are matched in
- * order, first occurrence first.
- */
-export function mergeAppendOnly(base, ours, theirs) {
-  if (typeof base !== 'string' || typeof ours !== 'string' || typeof theirs !== 'string') return null;
-  const b = base.split('\n');
-  const inserts = (side) => {
-    const s = side.split('\n');
-    const gaps = b.map(() => []).concat([[]]);
-    let i = 0;
-    for (const line of s) {
-      if (i < b.length && line === b[i]) i += 1;
-      else gaps[i].push(line);
-    }
-    return i === b.length ? gaps : null;
-  };
-  const o = inserts(ours);
-  const t = inserts(theirs);
-  if (!o || !t) return null;
-  const sameInsert = (a, b) => a.length === b.length && a.every((line, k) => line === b[k]);
-  const out = [];
-  for (let i = 0; i <= b.length; i += 1) {
-    out.push(...o[i]);
-    if (!sameInsert(o[i], t[i])) out.push(...t[i]);
-    if (i < b.length) out.push(b[i]);
-  }
-  return out.join('\n');
-}
-
-/**
  * Split one tracker into lines and tag each table row that belongs to a table whose header has
- * "Unit" and "Stage" columns with a key: Unit, Stage and the occurrence number of that pair in
- * the file (a revision row for an existing pair is occurrence 2). Jobs often append rows after a
+ * a "Unit" column with a key: row kind, Unit, optional Stage and occurrence number. Summary
+ * keys cannot collide with stage keys. A revision row is occurrence 2. Jobs often append rows after a
  * blank line below the table; such headerless rows use the columns of the last header above them.
+ * A ## Status: section is one keyed block through the next level-two heading.
  * Every other line, including a table's header and separator rows, is a plain line.
  */
 function trackerLines(text) {
@@ -119,8 +84,15 @@ function trackerLines(text) {
   const seen = new Map();
   const out = [];
   let cols = null;
+  let statusCount = 0;
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
+    if (line.startsWith('## Status:')) {
+      const block = [line];
+      while (i + 1 < lines.length && !/^##\s/.test(lines[i + 1])) block.push(lines[++i]);
+      out.push({ line: block.join('\n'), key: JSON.stringify(['status', ++statusCount]), status: true });
+      continue;
+    }
     if (!isRow(line)) { out.push({ line }); continue; }
     if (i + 1 < lines.length && isSeparator(lines[i + 1]) && !isSeparator(line) && (i === 0 || !isRow(lines[i - 1]))) {
       const head = cells(line).map((c) => c.toLowerCase());
@@ -128,12 +100,13 @@ function trackerLines(text) {
       out.push({ line });
       continue;
     }
-    if (!cols || cols.unit < 0 || cols.stage < 0 || isSeparator(line)) { out.push({ line }); continue; }
+    if (!cols || cols.unit < 0 || isSeparator(line)) { out.push({ line }); continue; }
     const c = cells(line);
-    const pair = `${c[cols.unit] ?? ''}\u0000${c[cols.stage] ?? ''}`;
-    const n = (seen.get(pair) || 0) + 1;
-    seen.set(pair, n);
-    out.push({ line, key: `${pair}\u0000${n}` });
+    const pair = cols.stage < 0 ? ['summary', c[cols.unit] ?? ''] : ['stage', c[cols.unit] ?? '', c[cols.stage] ?? ''];
+    const identity = JSON.stringify(pair);
+    const n = (seen.get(identity) || 0) + 1;
+    seen.set(identity, n);
+    out.push({ line, key: JSON.stringify([...pair, n]) });
   }
   return out;
 }
@@ -141,14 +114,15 @@ function trackerLines(text) {
 /**
  * Three-way merge for a course tracker (specs/content/<course>/tasks.md, W45 M2) that keys table
  * rows by Unit, Stage and occurrence number, because unit jobs rewrite their own rows in place
- * (G2 evidence, G3 notes) and mergeAppendOnly rejects any change to a base line.
- * - A keyed row changed or removed on one side only takes that side; changed the same way on
+ * (G2 evidence, G3 notes). Summary tables key by Unit and occurrence number.
+ * 2026-W46 M1: the 2026-11-10 EFPG-401 exclusions also require summary rows and status blocks.
+ * - Status blocks take the only changed side, or ours if both sides changed differently.
+ * - A keyed table row changed or removed on one side only takes that side; changed the same way on
  *   both sides is kept once; changed differently on both sides returns null.
  * - New keyed rows (a key not in base) from both sides are kept, ours first, after the last row
  *   of their table; an identical new row on both sides is kept once.
  * - Every other line (prose, headings, table headers) merges only when both sides purely insert
- *   lines, as in mergeAppendOnly (an insertion that starts the other side's is kept once); any
- *   other change returns null.
+ *   lines (an insertion that starts the other side's is kept once); any other change returns null.
  * Returns null when a stage is missing, so the caller falls back to a merge fix.
  */
 export function mergeTrackerRows(base, ours, theirs) {
@@ -220,6 +194,7 @@ export function mergeTrackerRows(base, ours, theirs) {
     if (ol === tl) line = ol;
     else if (ol === r.line) line = tl;
     else if (tl === r.line) line = ol;
+    else if (r.status) line = ol;
     else return null;
     if (line !== null) put(baseAt[r.anchor] ?? -1, line);
   }
@@ -230,7 +205,7 @@ export function mergeTrackerRows(base, ours, theirs) {
     put(mapAnchor(oi, oursGap, r.anchor), r.line);
   }
   for (const r of t.rows) {
-    if (baseKeys.has(r.key) || oursNew.get(r.key) === r.line) continue;
+    if (baseKeys.has(r.key) || oursNew.get(r.key) === r.line || (r.status && oursNew.has(r.key))) continue;
     put(mapAnchor(ti, theirsGap, r.anchor), r.line);
   }
   const out = [...(after.get(-1) || [])];
