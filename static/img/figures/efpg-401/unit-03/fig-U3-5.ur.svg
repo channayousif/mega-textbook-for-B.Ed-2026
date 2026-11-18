@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">سمعی و زبانی مکالماتی مشق کا چکر</title>
+  <desc id="d">بہاؤ چارٹ جو سمعی و زبانی مکالماتی مشق کے پانچ مراحل دکھاتا ہے: سننا، دہرانا، متبادل لانا، تبدیل کرنا، اور ترسیلی استعمال۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .small { font-size: 12px; fill: var(--muted); }
+    .body { font-size: 13px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .stroke-a { stroke: var(--a1); stroke-width: 2; fill: none; }
+    .stroke-b { stroke: var(--a2); stroke-width: 2; fill: none; }
+    .stroke-c { stroke: var(--a3); stroke-width: 2; fill: none; }
+    .stroke-d { stroke: var(--a4); stroke-width: 2; fill: none; }
+    .grid { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.25; }
+    .ah { fill: var(--ink); }
+    .ah-a { fill: var(--a1); }
+    .ah-b { fill: var(--a2); }
+    .ah-c { fill: var(--a3); }
+    .ah-d { fill: var(--a4); }
+    .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="370"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">‫سمعی و زبانی مکالماتی مشق کا چکر‬</text>
+  <text class="muted" x="390" y="61" text-anchor="middle">‫زبانی نمونے سے نیم آزادانہ استعمال تک پانچ بتدریج مراحل‬</text>
+
+  <!-- Step 1: Listen -->
+  <rect class="panel-a" x="625" y="80" width="125" height="210" rx="8"/>
+  <text class="sh" x="688" y="108" text-anchor="middle">‫1. سننا‬</text>
+  <text class="small" x="688" y="128" text-anchor="middle">‫زبانی نمونہ‬</text>
+  <line class="grid" x1="740" y1="138" x2="635" y2="138"/>
+  <text class="body" x="740" y="165" text-anchor="end">‫• استاد پڑھتا ہے‬</text>
+  <text class="body" x="740" y="190" text-anchor="end">‫• فطری رفتار‬</text>
+  <text class="body" x="740" y="215" text-anchor="end">‫• واضح لہجہ‬</text>
+  <text class="body" x="740" y="240" text-anchor="end">‫• کتابیں بند‬</text>
+  <text class="small" x="688" y="275" text-anchor="middle">‫سماعی مواد‬</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path class="stroke-a" d="M 625 185 L 605 185"/>
+  <polygon class="ah-a" points="605,180 597,185 605,190"/>
+
+  <!-- Step 2: Repeat -->
+  <rect class="panel-b" x="472" y="80" width="125" height="210" rx="8"/>
+  <text class="sh" x="535" y="108" text-anchor="middle">‫2. دہرانا‬</text>
+  <text class="small" x="535" y="128" text-anchor="middle">‫اجتماعی نقل‬</text>
+  <line class="grid" x1="587" y1="138" x2="482" y2="138"/>
+  <text class="body" x="587" y="165" text-anchor="end">‫• پوری جماعت‬</text>
+  <text class="body" x="587" y="190" text-anchor="end">‫• بنچ کے گروہ‬</text>
+  <text class="body" x="587" y="215" text-anchor="end">‫• انفرادی طلبہ‬</text>
+  <text class="body" x="587" y="240" text-anchor="end">‫• درست ردھم‬</text>
+  <text class="small" x="535" y="275" text-anchor="middle">‫حرکی عادت‬</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path class="stroke-b" d="M 472 185 L 452 185"/>
+  <polygon class="ah-b" points="452,180 444,185 452,190"/>
+
+  <!-- Step 3: Substitute -->
+  <rect class="panel-a" x="319" y="80" width="125" height="210" rx="8"/>
+  <text class="sh" x="382" y="108" text-anchor="middle">‫3. متبادل‬</text>
+  <text class="small" x="382" y="128" text-anchor="middle">‫خانے کی تبدیلی‬</text>
+  <line class="grid" x1="434" y1="138" x2="329" y2="138"/>
+  <text class="body" x="434" y="165" text-anchor="end">‫• استاد کا اشارہ‬</text>
+  <text class="body" x="434" y="190" text-anchor="end">‫• اسم بدلیں‬</text>
+  <text class="body" x="434" y="215" text-anchor="end">‫• فعل بدلیں‬</text>
+  <text class="body" x="434" y="240" text-anchor="end">‫• ڈھانچہ برقرار‬</text>
+  <text class="small" x="382" y="275" text-anchor="middle">‫نمونے پر قابو‬</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path class="stroke-a" d="M 319 185 L 299 185"/>
+  <polygon class="ah-a" points="299,180 291,185 299,190"/>
+
+  <!-- Step 4: Transform -->
+  <rect class="panel-b" x="166" y="80" width="125" height="210" rx="8"/>
+  <text class="sh" x="229" y="108" text-anchor="middle">‫4. تبدیلی‬</text>
+  <text class="small" x="229" y="128" text-anchor="middle">‫صورت کی تبدیلی‬</text>
+  <line class="grid" x1="281" y1="138" x2="176" y2="138"/>
+  <text class="body" x="281" y="165" text-anchor="end">‫• مثبت سے منفی‬</text>
+  <text class="body" x="281" y="190" text-anchor="end">‫• بیان سے سوال‬</text>
+  <text class="body" x="281" y="215" text-anchor="end">‫• فوری جوابات‬</text>
+  <text class="body" x="281" y="240" text-anchor="end">‫• تیز اشارہ‬</text>
+  <text class="small" x="229" y="275" text-anchor="middle">‫نحو پر قابو‬</text>
+
+  <!-- Arrow 4 to 5 -->
+  <path class="stroke-b" d="M 166 185 L 146 185"/>
+  <polygon class="ah-b" points="146,180 138,185 146,190"/>
+
+  <!-- Step 5: Use -->
+  <rect class="panel-c" x="18" y="80" width="120" height="210" rx="8"/>
+  <text class="sh" x="78" y="108" text-anchor="middle">‫5. استعمال‬</text>
+  <text class="small" x="78" y="128" text-anchor="middle">‫جوڑی میں مکالمہ‬</text>
+  <line class="grid" x1="128" y1="138" x2="28" y2="138"/>
+  <text class="body" x="128" y="165" text-anchor="end">‫• جوڑی میں مکالمہ‬</text>
+  <text class="body" x="128" y="190" text-anchor="end">‫• ذاتی معلومات‬</text>
+  <text class="body" x="128" y="215" text-anchor="end">‫• معنی پر توجہ‬</text>
+  <text class="body" x="128" y="240" text-anchor="end">‫• کردار نگاری‬</text>
+  <text class="small" x="78" y="275" text-anchor="middle">‫زبانی منتقلی‬</text>
+
+  <!-- Return loop -->
+  <path class="stroke" stroke-dasharray="4 4" d="M 78 290 L 78 320 L 688 320 L 688 295"/>
+  <polygon class="ah" points="693,295 688,287 683,295"/>
+  <text class="small" x="390" y="338" text-anchor="middle">‫عادت کی تشکیل: تکرار دوسری زبان کے خودکار اعصابی راستے بناتی ہے‬</text>
+
+  <text class="wm" x="768" y="360" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
