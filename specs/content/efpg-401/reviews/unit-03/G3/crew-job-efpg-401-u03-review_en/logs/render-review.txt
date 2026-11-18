@@ -1,0 +1,21 @@
+render-review: unavailable
+reason: The production deployment is not the reviewed input.
+course: EFPG-401
+unit: 3
+deployed_sha: d1d77592a755b16e7c6fd13ef96dabe1263d74b4
+head: 331c3fc1720593a1b53c129fc71ec144d44f4f35
+changed_paths:
+- docs/semester-3/efpg-401/unit-03/index.mdx
+- docs/semester-3/efpg-401/unit-03/topic-01.mdx
+- docs/semester-3/efpg-401/unit-03/topic-02.mdx
+- docs/semester-3/efpg-401/unit-03/topic-03.mdx
+- docs/semester-3/efpg-401/unit-03/topic-05.mdx
+- static/img/figures/efpg-401/unit-03/fig-U3-13.webp
+- static/img/figures/efpg-401/unit-03/fig-U3-14.webp
+- static/img/figures/efpg-401/unit-03/fig-U3-15.webp
+- static/img/figures/efpg-401/unit-03/fig-U3-16.webp
+- static/img/figures/efpg-401/unit-03/fig-U3-17.webp
+
+The crew brief requires render-inspect to be skipped when this diff is non-empty. No browser,
+360px viewport, keyboard, or A4 print inspection was performed. A missing or mismatched live
+asset is unverified, not a content defect, because image deployment may remain stale for 30 days.
