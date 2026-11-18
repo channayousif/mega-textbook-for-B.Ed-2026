@@ -36,9 +36,9 @@
   <rect class="panel-b" x="40" y="140" width="140" height="180"/>
 
   <text class="sh" x="670" y="180" text-anchor="middle">استاد کی گفتگو</text>
-  <text class="small" x="670" y="200" text-anchor="middle">180 اکائیاں</text>
+  <text class="small" x="670" y="200" text-anchor="middle">آغاز میں سب سے زیادہ</text>
   <text class="sh" x="110" y="240" text-anchor="middle">شاگردوں کی سرگرمی</text>
-  <text class="small" x="110" y="260" text-anchor="middle">180 اکائیاں</text>
+  <text class="small" x="110" y="260" text-anchor="middle">آخر میں سب سے زیادہ</text>
 
   <text class="small" x="670" y="340" text-anchor="middle">آغاز</text>
   <text class="small" x="670" y="358" text-anchor="middle">4 منٹ</text>

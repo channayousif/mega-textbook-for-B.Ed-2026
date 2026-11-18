@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 280" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
   <title id="t">A grammar point placed in a context, a task and a check</title>
-  <desc id="d">Diagram of a grammar point placed in a context, then used in a task, then checked, with the form, meaning and use labelled at each step.</desc>
+  <desc id="d">Diagram of a grammar point placed in a context, then used in a task, then checked, with the first step labelled meaning and the task and check steps labelled use.</desc>
   <style>
     :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
     .bg { fill: var(--bg); }
