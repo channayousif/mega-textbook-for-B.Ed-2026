@@ -4689,3 +4689,26 @@ content-improvement loop with no further cycle.
   shorts to other platforms like tiktok, instagram"; overlay answer: "CTA layer on top of video,
   periodically appearing reminding to take action, Text+icons only. should be platform aware".
 - **Limits:** Certifies no content. Cross-posting only follows the owner's YouTube approval.
+
+## D-2026-0085 - gflow and Codex join agy as raster illustration producers
+
+- **Status:** confirmed
+- **Gate:** none (ADR-0029 raster illustrations; amends D-2026-0082 point 1 for illustrations only)
+- **Scope:** `Kind: illustration` rows produced by `scripts/generate-illustration.mjs`, in crew `illustrate` jobs and manual runs
+- **Decided by:** curriculum owner, 2026-11-18 (board-direct, relayed through Claude Code), after agy's image quota left about 158 rows waiting
+- **Decision:**
+  1. **Three producers, tried in order:** agy (Gemini, `gemini-3.1-flash-image`), then gflow
+     (Nano Banana 2.1 through Google Flow on the owner's Windows PC), then Codex (its built-in
+     `image_gen`). The script records a producer whose quota runs out and moves the same row to
+     the next one; the crew holds `illustrate` jobs only when every producer is out.
+  2. **The crew may call gflow for illustrations, while the tunnel is up.** This amends
+     D-2026-0082 point 1 ("Nothing runs in CI or the crew") for illustrations only. gflow is
+     reached only through `generate-illustration.mjs` over the existing SSH tunnel (18800 MCP,
+     18801 file server); when the owner's PC is off, gflow is skipped. Teaser rules are unchanged.
+  3. **One illustrate job at a time,** with automatic fallback (no parallel producers for now).
+  4. Every image keeps the shared house-style brief and is inspected before it is placed
+     (ADR-0029 point 3). Each image's producer and model are printed on its log line for provenance.
+- **Basis:** owner answers 2026-11-18: "Fallback", "Crew, when tunnel up", "agy, gflow, Codex".
+- **Limits:** Certifies no content and changes no review rule. Account risk from automating Flow
+  stays the owner's, per the gflow-cli disclaimer. opencode is not a producer (its models cannot
+  output images). An ADR amendment to ADR-0029 is suggested, not adopted.

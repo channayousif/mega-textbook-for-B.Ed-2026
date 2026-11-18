@@ -190,6 +190,8 @@ on, and run `social-post.mjs exchange <provider> '<address>'`.
 The gflow-cli MCP must drive **real Google Chrome**, which has no Linux arm64 build, so it runs on
 the owner's Windows PC. This server reaches it over the owner's own SSH connection. Server ports
 8000/8001 are taken (8000 is Kong, the Supabase gateway), so the tunnel uses 18800/18801.
+While the tunnel is up, the crew's illustrate jobs also use it for textbook illustrations (Nano Banana,
+`scripts/generate-illustration.mjs`, D-2026-0085); with the PC off they skip gflow.
 
 On Windows, in Command Prompt (verified 2026-11-17 with gflow-cli 0.98.0). The owner's PC runs
 Smart App Control, which blocks uv's unsigned `python.exe` (os error 4551), so the route uses the

@@ -171,8 +171,10 @@ In a schematic (`figures`) run, for each `Kind: illustration` figure:
 3. Leave the marker in the topic file and keep `Status: prompt-only`.
 
 In an `illustrate` run: run `scripts/heavy.sh node scripts/generate-illustration.mjs <course> <unit>`
-(and `--banner` for the banner sidecar). It generates, optimises to WebP and moves each row to
-`generated`. Then read every image yourself and regenerate (`--id <fig>`) any that shows text,
+(and `--banner` for the banner sidecar). It picks the producer itself (D-2026-0085): agy, then gflow
+while the owner's PC is reachable, then Codex, recording any producer whose quota runs out
+(`~/.cache/mega-book/image-quota.json`) and exiting 3 only when none is left. Never call an image
+tool directly. It generates, optimises to WebP and moves each row to `generated`. Then read every image yourself and regenerate (`--id <fig>`) any that shows text,
 wrong dress or setting, or does not teach the row's point. Place each accepted image with Step 4's
 `<Figure>` pattern in the English topic file and its Urdu mirror, and set the row to `placed`.
 
