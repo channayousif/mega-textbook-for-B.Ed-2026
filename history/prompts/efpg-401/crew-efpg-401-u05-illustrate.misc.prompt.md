@@ -2,7 +2,7 @@
 id: crew-efpg-401-u05-illustrate
 title: crew illustrate EFPG-401 unit 5
 stage: misc
-date: 2026-11-19
+date: 2026-11-18
 surface: agent
 model: agy
 feature: efpg-401
@@ -83,26 +83,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u05-translate, translate, claude) The rendered Urdu (Nastaliq at 360px and A4 print) has not been checked; run `scripts/render-inspect.mjs EFPG-401 5 --locale ur --base https://textbook.com.pk` once the unit is deployed, before G5.
 - (efpg-401-u05-translate, translate, claude) The English doesn't give a gender for several unnamed colleagues, but Urdu verbs need one, so I chose feminine in Topics 5.1, 5.5 and 5.6 and masculine in 5.2 and 5.7. The owner or the G5 reviewer may want to change these.
 
+
 ## Response snapshot
 
-Inspected and placed all five EFPG-401 Unit 5 raster illustrations (fig-U5-15 banner, fig-U5-16, fig-U5-17, fig-U5-18, and fig-U5-19) in English and Urdu unit and topic files, updated figure manifests to placed, refreshed passing G2 evidence, and confirmed clean pass across all 14 content gates.
+Generated, inspected, and placed all five EFPG-401 Unit 5 raster illustrations (banner and four topic scenes) in English and Urdu pages, updated figure manifests, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate for EFPG-401 Unit 5 by agy.
-- Tests: npm run check:content passed in the job worktree.
+- Impact: illustrate for EFPG-401 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Inspected and placed all five EFPG-401 Unit 5 raster illustrations (fig-U5-15 banner, fig-U5-16, fig-U5-17, fig-U5-18, and fig-U5-19) in English and Urdu unit and topic files, updated figure manifests to placed, refreshed passing G2 evidence, and passed all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed all five EFPG-401 Unit 5 raster illustrations (banner and four topic scenes) in English and Urdu pages, updated figure manifests, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Topics 5.2, 5.5 and 5.7 have no illustration on purpose, as their situations turn on a written plan, text emotions, or tense choices where text-free images would only decorate.
-  - Rendered Urdu pages were not inspected locally due to host limits; G5 must check deployed /ur/ pages.
+  - Topics 5.2, 5.5 and 5.7 intentionally omit raster illustrations because their pedagogy turns on a written plan, text emotions, or tense choices where text-free images would only decorate.
+  - Rendered Urdu pages (Nastaliq at 360px and A4 print) were not inspected locally due to host limits; G5 review must verify deployed /ur/ pages.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
