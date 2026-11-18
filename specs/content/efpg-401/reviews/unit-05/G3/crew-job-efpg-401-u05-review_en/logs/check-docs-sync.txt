@@ -1,0 +1,9 @@
+$ npm run check:docs-sync
+HEAD: 0763fd82f89122bb83f1e488a22a0de21016a154
+date: 2026-11-18T21:47:56Z
+
+> bed-mega-textbook@0.1.0 check:docs-sync
+> node scripts/check-docs-sync.mjs
+
+✓ docs are in sync with the code constants
+exit code: 0
