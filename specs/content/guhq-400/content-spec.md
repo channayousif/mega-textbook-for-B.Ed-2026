@@ -109,7 +109,7 @@ Guide UNIT #01, Weeks 1-6 (`:17-42`). Unit Spec (G1) for `docs/semester-4/guhq-4
 | 1.5 | Two kinds of lam | U1-10, U1-11 | 6-9 | fig-U1-9: table, fig-U1-10: diagram |
 | 1.6 | Objects, pronouns and the passive in the present | U1-12, U1-13 | 6-9 | fig-U1-11: table, fig-U1-12: flowchart |
 
-**Depth budget**: 13 sub-topics; 6 topics; 36-54 reading-min.
+**Depth budget**: 13 sub-topics; 6 topics; 48-70 reading-min.
 
 **Prerequisite knowledge**: `GUHQ-301` Fehm-e-Quran I (Semester 3), Units 1-3.
 
@@ -164,7 +164,7 @@ Guide UNIT #02, Weeks 7-10 (`:43-57`). Unit Spec (G1) for `docs/semester-4/guhq-
 | 2.2 | Third person plural and dual | U2-03, U2-04 | 8-12 | fig-U2-3: table, fig-U2-4: flowchart |
 | 2.3 | First and second person, and putting it together | U2-05, U2-06 | 10-14 | fig-U2-5: table, fig-U2-6: diagram |
 
-**Depth budget**: 6 sub-topics; 3 topics; 26-38 reading-min.
+**Depth budget**: 6 sub-topics; 3 topics; 38-54 reading-min.
 
 **Prerequisite knowledge**: Unit 1; GUHQ-301 Topic 2.3 (the three verb forms).
 
@@ -216,7 +216,7 @@ Guide UNIT #03, Weeks 11-14 (`:58-71`). Unit Spec (G1) for `docs/semester-4/guhq
 | 3.3 | Conditions, vocatives, particles and themed vocabulary | U3-05, U3-06 | 6-9 | fig-U3-5: table, fig-U3-6: concept-map |
 | 3.4 | Reading passages for their themes | U3-07, U3-08 | 8-12 | fig-U3-7: concept-map, fig-U3-8: table |
 
-**Depth budget**: 8 sub-topics; 4 topics; 26-39 reading-min.
+**Depth budget**: 8 sub-topics; 4 topics; 38-55 reading-min.
 
 **Prerequisite knowledge**: Units 1-2.
 
@@ -263,7 +263,7 @@ Guide UNIT #04, Weeks 15-16 (`:73-83`). Unit Spec (G1) for `docs/semester-4/guhq
 | 4.1 | Theme-based tafsir of longer passages | U4-01, U4-02 | 10-14 | fig-U4-1: flowchart, fig-U4-2: table |
 | 4.2 | From understanding to conduct | U4-03 | 8-12 | fig-U4-3: concept-map, fig-U4-4: table |
 
-**Depth budget**: 3 sub-topics; 2 topics; 20-30 reading-min.
+**Depth budget**: 3 sub-topics; 2 topics; 30-42 reading-min.
 
 **Prerequisite knowledge**: Units 1-3; `GISS-401` Islamic Studies (Semester 3).
 

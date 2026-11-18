@@ -107,7 +107,7 @@ Guide Task 01, Weeks 1-4 seminars (`:558-586`). Unit Spec (G1) for `docs/semeste
 | 1.3 | Conducting an observation | U1-07, U1-08, U1-09, U1-10 | 10-14 | fig-U1-5: flowchart, fig-U1-6: table |
 | 1.4 | From findings to feedback and growth | U1-11, U1-12, U1-13 | 8-12 | fig-U1-7: flowchart, fig-U1-8: table |
 
-**Depth budget**: 13 sub-topics; 4 topics; 38-54 reading-min.
+**Depth budget**: 13 sub-topics; 4 topics; 50-70 reading-min.
 
 **Prerequisite knowledge**: `EFMP-302` Teaching Profession (Semester 1); `EFPG-401` Teaching of English (Semester 3) for lesson structure. This is the opening unit of the course.
 
@@ -163,7 +163,7 @@ Guide UNIT # 02 "School Placement Observation Plan (15 days internship)", Weeks 
 | 2.3 | Observing management and assessment | U2-06, U2-07 | 8-12 | fig-U2-5: table, fig-U2-6: diagram |
 | 2.4 | Professionalism, inclusion and the whole lesson | U2-08, U2-09, U2-10 | 8-12 | fig-U2-7: timeline, fig-U2-8: table |
 
-**Depth budget**: 10 sub-topics; 4 topics; 32-48 reading-min.
+**Depth budget**: 10 sub-topics; 4 topics; 44-64 reading-min.
 
 **Prerequisite knowledge**: Unit 1; `EFMP-305` Inclusive Education (Semester 2).
 
@@ -218,7 +218,7 @@ Guide Weeks 9-12 "Organizing portfolio" to "Reflective practice and portfolio co
 | 3.3 | Recording management and assessment | U3-06, U3-07 | 8-12 | fig-U3-5: table, fig-U3-6: table |
 | 3.4 | Completing the portfolio and reflecting | U3-08, U3-09 | 8-12 | fig-U3-7: flowchart, fig-U3-8: table |
 
-**Depth budget**: 9 sub-topics; 4 topics; 32-48 reading-min.
+**Depth budget**: 9 sub-topics; 4 topics; 44-64 reading-min.
 
 **Prerequisite knowledge**: Units 1-2.
 

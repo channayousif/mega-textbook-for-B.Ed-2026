@@ -111,7 +111,7 @@ Guide Unit 1 (Weeks 1-2, `:738-744`). Unit Spec (G1) for `docs/semester-4/mfpg-4
 | 1.4 | Values of science education | U1-06 | 6-9 | fig-U1-7: table, fig-U1-8: concept-map |
 | 1.5 | Role of science in modern society | U1-07 | 6-9 | fig-U1-9: table, fig-U1-10: timeline |
 
-**Depth budget**: 7 sub-topics; 5 topics; 30-45 reading-min.
+**Depth budget**: 7 sub-topics; 5 topics; 42-61 reading-min.
 
 **Prerequisite knowledge**: secondary-school science (Matric) as studied by every student-teacher. This is the opening unit of the course.
 
@@ -165,7 +165,7 @@ Guide Unit 2 (Weeks 3-4, `:746-752`). Unit Spec (G1) for `docs/semester-4/mfpg-4
 | 2.4 | Textbook analysis and evaluation | U2-04 | 6-9 | fig-U2-7: table, fig-U2-8: flowchart |
 | 2.5 | Correlation of science with other subjects | U2-05 | 6-9 | fig-U2-9: concept-map, fig-U2-10: table |
 
-**Depth budget**: 5 sub-topics; 5 topics; 30-45 reading-min.
+**Depth budget**: 5 sub-topics; 5 topics; 42-61 reading-min.
 
 **Prerequisite knowledge**: Unit 1; `EFMP-303` Educational Policies and Plans of Pakistan (Semester 2) for the national curriculum framework.
 
@@ -229,7 +229,7 @@ Guide Unit 3 (Weeks 5-6, `:754-762`). Unit Spec (G1) for `docs/semester-4/mfpg-4
 | 3.6 | Inquiry-based and discovery learning | U3-11, U3-12 | 6-9 | fig-U3-11: diagram, fig-U3-12: table |
 | 3.7 | Experiential and activity-based learning | U3-13 | 6-9 | fig-U3-13: flowchart, fig-U3-14: table |
 
-**Depth budget**: 13 sub-topics; 7 topics; 42-63 reading-min.
+**Depth budget**: 13 sub-topics; 7 topics; 54-79 reading-min.
 
 **Prerequisite knowledge**: Units 1-2; `EFPG-401` Teaching of English (Semester 3) for general methods vocabulary.
 
@@ -287,7 +287,7 @@ Guide Unit 4 (Weeks 7-8, `:764-770`). Unit Spec (G1) for `docs/semester-4/mfpg-4
 | 4.4 | Use of ICT in science teaching | U4-04 | 6-9 | fig-U4-7: table, fig-U4-8: diagram |
 | 4.5 | Exhibitions, field trips and community resources | U4-05 | 6-9 | fig-U4-9: concept-map, fig-U4-10: table |
 
-**Depth budget**: 5 sub-topics; 5 topics; 30-45 reading-min.
+**Depth budget**: 5 sub-topics; 5 topics; 42-61 reading-min.
 
 **Prerequisite knowledge**: Unit 3; `GICT-300` Applications of ICT (Semester 1).
 
@@ -344,7 +344,7 @@ Guide Unit 5 (Weeks 9-10, `:772-778`). Unit Spec (G1) for `docs/semester-4/mfpg-
 | 5.4 | Questioning and explanation skills | U5-06, U5-07 | 6-9 | fig-U5-7: table, fig-U5-8: flowchart |
 | 5.5 | Classroom management in science teaching | U5-08 | 6-9 | fig-U5-9: table, fig-U5-10: diagram |
 
-**Depth budget**: 8 sub-topics; 5 topics; 30-45 reading-min.
+**Depth budget**: 8 sub-topics; 5 topics; 42-61 reading-min.
 
 **Prerequisite knowledge**: Units 3-4; `EFMP-408` Educational Assessment and Evaluation (this semester) for objectives and Bloom's taxonomy.
 
@@ -403,7 +403,7 @@ Guide Unit 6 (Weeks 11-12, `:780-787`). Unit Spec (G1) for `docs/semester-4/mfpg
 | 6.5 | Laboratory safety rules and first aid | U6-07, U6-08 | 6-9 | fig-U6-9: table, fig-U6-10: diagram |
 | 6.6 | The science teacher's role in laboratory management | U6-09 | 6-9 | fig-U6-11: concept-map, fig-U6-12: table |
 
-**Depth budget**: 9 sub-topics; 6 topics; 36-54 reading-min.
+**Depth budget**: 9 sub-topics; 6 topics; 48-70 reading-min.
 
 **Prerequisite knowledge**: Units 3-4.
 
@@ -460,7 +460,7 @@ Guide Unit 7 (Weeks 13-14, `:789-795`). Unit Spec (G1) for `docs/semester-4/mfpg
 | 7.4 | Achievement tests in science | U7-04 | 6-9 | fig-U7-7: flowchart, fig-U7-8: table |
 | 7.5 | Diagnostic and remedial teaching | U7-05, U7-06 | 6-9 | fig-U7-9: flowchart, fig-U7-10: table |
 
-**Depth budget**: 6 sub-topics; 5 topics; 30-45 reading-min.
+**Depth budget**: 6 sub-topics; 5 topics; 42-61 reading-min.
 
 **Prerequisite knowledge**: Unit 5; `EFMP-408` Educational Assessment and Evaluation (this semester), which this unit applies to science rather than repeats.
 
@@ -514,7 +514,7 @@ Guide Unit 8 (Weeks 15-16, `:797-803`). Unit Spec (G1) for `docs/semester-4/mfpg
 | 8.4 | Environmental education and sustainable development | U8-04 | 6-9 | fig-U8-7: concept-map, fig-U8-8: table |
 | 8.5 | Recent trends and innovations in science teaching | U8-05 | 6-9 | fig-U8-9: table, fig-U8-10: timeline |
 
-**Depth budget**: 5 sub-topics; 5 topics; 30-45 reading-min.
+**Depth budget**: 5 sub-topics; 5 topics; 42-61 reading-min.
 
 **Prerequisite knowledge**: Units 1-7.
 

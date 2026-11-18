@@ -126,7 +126,7 @@ Guide UNIT 1 (`:434-442`). Unit Spec (G1) for `docs/semester-4/efmp-409/unit-01/
 | 1.1 | What we mean by education and by philosophy | U1-01, U1-02, U1-03 | 12-16 | fig-U1-1: table, fig-U1-2: concept-map |
 | 1.2 | How philosophy shapes education and its aims | U1-04, U1-05, U1-06 | 12-16 | fig-U1-3: flowchart, fig-U1-4: table |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 36-48 reading-min.
 
 **Prerequisite knowledge**: `EFMP-302` Teaching Profession (Semester 1). This is the opening unit of the course.
 
@@ -173,7 +173,7 @@ Guide UNIT 2 (`:444-452`). Unit Spec (G1) for `docs/semester-4/efmp-409/unit-02/
 | 2.1 | Philosophical, sociological, psychological and historical foundations | U2-01, U2-02, U2-03, U2-04 | 16-20 | fig-U2-1: concept-map, fig-U2-2: table |
 | 2.2 | Ideology, religion and the Islamic foundations | U2-05, U2-06, U2-07 | 12-16 | fig-U2-3: table, fig-U2-4: diagram |
 
-**Depth budget**: 7 sub-topics; 2 topics; 30-40 reading-min.
+**Depth budget**: 7 sub-topics; 2 topics; 40-52 reading-min.
 
 **Prerequisite knowledge**: Unit 1; `EFMP-301` Educational Psychology (Semester 1) and `GSOS-301` Social Science (Semester 2).
 
@@ -236,7 +236,7 @@ Guide UNIT 3 "The history of education" (`:454-482`): six groups covering school
 | 3.5 | Iqbal as an educationist | U3-14, U3-15, U3-16 | 10-14 | fig-U3-9: concept-map, fig-U3-10: table |
 | 3.6 | Western and Muslim thinkers compared | U3-17, U3-18, U3-19 | 10-14 | fig-U3-11: table, fig-U3-12: timeline |
 
-**Depth budget**: 19 sub-topics; 6 topics; 65-85 reading-min.
+**Depth budget**: 19 sub-topics; 6 topics; 74-102 reading-min.
 
 **Prerequisite knowledge**: Units 1 and 2.
 
@@ -294,7 +294,7 @@ Guide UNIT 4 (`:484-496`). Unit Spec (G1) for `docs/semester-4/efmp-409/unit-04/
 | 4.2 | The Charter of Medina and the Last Sermon | U4-04, U4-05, U4-06 | 10-14 | fig-U4-3: timeline, fig-U4-4: table |
 | 4.3 | As-Suffa, the first institution of learning | U4-07, U4-08, U4-09 | 10-14 | fig-U4-5: diagram, fig-U4-6: table |
 
-**Depth budget**: 9 sub-topics; 3 topics; 30-40 reading-min.
+**Depth budget**: 9 sub-topics; 3 topics; 42-58 reading-min.
 
 **Prerequisite knowledge**: Unit 2 (Topic 2.2); `GISS-401` Islamic Studies (Semester 3).
 
@@ -346,7 +346,7 @@ Guide UNIT 5 (`:498-510`). Unit Spec (G1) for `docs/semester-4/efmp-409/unit-05/
 | 5.2 | Why policies falter; the Sharif Commission and the 1979 policy | U5-04, U5-05, U5-06 | 12-16 | fig-U5-3: timeline, fig-U5-4: table |
 | 5.3 | The 1998-2010 policy and the case for a new one | U5-07, U5-08, U5-09 | 12-16 | fig-U5-5: table, fig-U5-6: concept-map |
 
-**Depth budget**: 9 sub-topics; 3 topics; 30-45 reading-min.
+**Depth budget**: 9 sub-topics; 3 topics; 46-62 reading-min.
 
 **Prerequisite knowledge**: `EFMP-303` Educational Policies and Plans of Pakistan (Semester 2), which this unit must reference rather than repeat (drafting note 9).
 

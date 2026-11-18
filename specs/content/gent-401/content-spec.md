@@ -98,7 +98,7 @@ Guide Weeks 1-2 (`:326-333`). Unit Spec (G1) for `docs/semester-4/gent-401/unit-
 | 1.1 | What entrepreneurship is and why it matters | U1-01, U1-02, U1-03 | 10-14 | fig-U1-1: concept-map, fig-U1-2: table |
 | 1.2 | Thinking like an entrepreneur | U1-04, U1-05, U1-06 | 10-14 | fig-U1-3: flowchart, fig-U1-4: table |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 32-44 reading-min.
 
 **Prerequisite knowledge**: none beyond general schooling. This is the opening unit of the course.
 
@@ -144,7 +144,7 @@ Guide Weeks 3-4 (`:334-341`). Unit Spec (G1) for `docs/semester-4/gent-401/unit-
 | 2.1 | Kinds of entrepreneurship | U2-01, U2-02, U2-03 | 10-14 | fig-U2-1: table, fig-U2-2: concept-map |
 | 2.2 | Finding and judging business opportunities | U2-04, U2-05, U2-06 | 10-14 | fig-U2-3: flowchart, fig-U2-4: table |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 32-44 reading-min.
 
 **Prerequisite knowledge**: Unit 1.
 
@@ -190,7 +190,7 @@ Guide Weeks 5-6 (`:343-351`). Unit Spec (G1) for `docs/semester-4/gent-401/unit-
 | 3.1 | Researching customers, markets and competitors | U3-01, U3-02, U3-03 | 10-14 | fig-U3-1: flowchart, fig-U3-2: table |
 | 3.2 | Business models, value and revenue | U3-04, U3-05, U3-06 | 10-14 | fig-U3-3: diagram, fig-U3-4: table |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 32-44 reading-min.
 
 **Prerequisite knowledge**: Unit 2.
 
@@ -236,7 +236,7 @@ Guide Weeks 7 and 9, "Business Plan Development (Part 1)" and "(Part 2)" (`:352-
 | 4.1 | The plan's frame: components, summary, vision and mission | U4-01, U4-02, U4-03 | 10-14 | fig-U4-1: diagram, fig-U4-2: table |
 | 4.2 | Marketing, operations and organisation | U4-04, U4-05, U4-06 | 10-14 | fig-U4-3: flowchart, fig-U4-4: diagram |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 32-44 reading-min.
 
 **Prerequisite knowledge**: Unit 3.
 
@@ -282,7 +282,7 @@ Guide Weeks 10-11 (`:364-371`). Unit Spec (G1) for `docs/semester-4/gent-401/uni
 | 5.1 | Costs, budgets, break-even and statements | U5-01, U5-02, U5-03 | 12-16 | fig-U5-1: diagram, fig-U5-2: table |
 | 5.2 | Where the money comes from | U5-04, U5-05, U5-06 | 10-14 | fig-U5-3: flowchart, fig-U5-4: table |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 34-46 reading-min.
 
 **Prerequisite knowledge**: Unit 4; `GQUR-300` Quantitative Reasoning I (Semester 1) for the arithmetic of break-even.
 
@@ -328,7 +328,7 @@ Guide Weeks 12-13 (`:372-379`). Unit Spec (G1) for `docs/semester-4/gent-401/uni
 | 6.1 | Marketing a new venture | U6-01, U6-02, U6-03 | 10-14 | fig-U6-1: diagram, fig-U6-2: table |
 | 6.2 | Registering, protecting and acting ethically | U6-04, U6-05, U6-06 | 10-14 | fig-U6-3: flowchart, fig-U6-4: table |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 32-44 reading-min.
 
 **Prerequisite knowledge**: Units 3 and 4.
 
@@ -374,7 +374,7 @@ Guide Weeks 14-15 (`:380-387`). Unit Spec (G1) for `docs/semester-4/gent-401/uni
 | 7.1 | Leading, scaling and managing risk | U7-01, U7-02, U7-03 | 10-14 | fig-U7-1: table, fig-U7-2: diagram |
 | 7.2 | Pitching the idea | U7-04, U7-05, U7-06 | 10-14 | fig-U7-3: flowchart, fig-U7-4: table |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 32-44 reading-min.
 
 **Prerequisite knowledge**: Units 4-6.
 

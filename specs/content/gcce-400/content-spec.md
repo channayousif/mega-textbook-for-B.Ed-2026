@@ -119,7 +119,7 @@ Guide Unit #1, Weeks 1-3 (`:116-127`). Unit Spec (G1) for `docs/semester-4/gcce-
 | 1.2 | Citizenship and the changing role of citizens | U1-04, U1-05, U1-06 | 8-12 | fig-U1-3: diagram, fig-U1-4: table |
 | 1.3 | Kinds of citizenship in a modern society | U1-07, U1-08 | 8-12 | fig-U1-5: table, fig-U1-6: diagram |
 
-**Depth budget**: 8 sub-topics; 3 topics; 30-45 reading-min.
+**Depth budget**: 8 sub-topics; 3 topics; 36-52 reading-min.
 
 **Prerequisite knowledge**: `GSOS-301` Social Science (Semester 2) and `GPKS-402` Pakistan Studies (Semester 2) for society, state and Pakistan's political history. This is the opening unit of the course.
 
@@ -167,7 +167,7 @@ Guide Unit #2, Weeks 4-5 (`:128-136`). Unit Spec (G1) for `docs/semester-4/gcce-
 | 2.1 | The state and the government of Pakistan | U2-01, U2-02, U2-03 | 10-14 | fig-U2-1: diagram, fig-U2-2: flowchart |
 | 2.2 | Civil society, democracy and participation | U2-04, U2-05, U2-06 | 10-14 | fig-U2-3: concept-map, fig-U2-4: table |
 
-**Depth budget**: 6 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 32-44 reading-min.
 
 **Prerequisite knowledge**: Unit 1.
 
@@ -211,7 +211,7 @@ Guide Unit #3 "Right and Responsibilities", Weeks 6-7 (`:138-144`). Unit Spec (G
 | 3.1 | Fundamental rights in the Constitution of 1973 | U3-01, U3-02 | 12-16 | fig-U3-1: table, fig-U3-2: timeline |
 | 3.2 | The citizen's duties and responsibilities | U3-03, U3-04 | 10-14 | fig-U3-3: concept-map, fig-U3-4: diagram |
 
-**Depth budget**: 4 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 4 sub-topics; 2 topics; 34-46 reading-min.
 
 **Prerequisite knowledge**: Unit 2.
 
@@ -258,7 +258,7 @@ Guide Unit #4, Weeks 8-9 (`:145-153`). Unit Spec (G1) for `docs/semester-4/gcce-
 | 4.1 | Ethics in civic engagement | U4-01, U4-02, U4-03 | 10-14 | fig-U4-1: concept-map, fig-U4-2: table |
 | 4.2 | Communities, engagement and the school | U4-04, U4-05, U4-06, U4-07 | 14-18 | fig-U4-3: flowchart, fig-U4-4: diagram, fig-U4-5: timeline |
 
-**Depth budget**: 7 sub-topics; 2 topics; 25-40 reading-min.
+**Depth budget**: 7 sub-topics; 2 topics; 36-48 reading-min.
 
 **Prerequisite knowledge**: Units 1-3.
 
@@ -303,7 +303,7 @@ Guide Unit #5, Week 10 (`:154-158`). Unit Spec (G1) for `docs/semester-4/gcce-40
 | 5.2 | Advocacy for social issues | U5-02 | 8-12 | fig-U5-3: flowchart, fig-U5-4: table |
 | 5.3 | Social action movements | U5-03 | 8-12 | fig-U5-5: diagram, fig-U5-6: timeline |
 
-**Depth budget**: 3 sub-topics; 3 topics; 25-40 reading-min.
+**Depth budget**: 3 sub-topics; 3 topics; 36-52 reading-min.
 
 **Prerequisite knowledge**: Units 2 and 4.
 
@@ -349,7 +349,7 @@ Guide Unit #6, Week 11 (`:159-163`). Unit Spec (G1) for `docs/semester-4/gcce-40
 | 6.2 | Cyber ethics and responsible social media | U6-02 | 8-12 | fig-U6-3: flowchart, fig-U6-4: table |
 | 6.3 | Digital divides and citizenship in Pakistan | U6-03 | 8-12 | fig-U6-5: diagram, fig-U6-6: table |
 
-**Depth budget**: 3 sub-topics; 3 topics; 25-40 reading-min.
+**Depth budget**: 3 sub-topics; 3 topics; 36-52 reading-min.
 
 **Prerequisite knowledge**: `GICT-300` Applications of ICT (Semester 1); Units 1 and 5.
 
@@ -397,7 +397,7 @@ Guide Unit #7, Week 12 (`:164-169`). Unit Spec (G1) for `docs/semester-4/gcce-40
 | 7.3 | Inequality and injustice, and responses to them | U7-03 | 8-12 | fig-U7-5: table, fig-U7-6: flowchart |
 | 7.4 | Inclusive citizenship and equal rights | U7-04 | 8-12 | fig-U7-7: diagram, fig-U7-8: table |
 
-**Depth budget**: 4 sub-topics; 4 topics; 35-50 reading-min.
+**Depth budget**: 4 sub-topics; 4 topics; 44-64 reading-min.
 
 **Prerequisite knowledge**: `EFMP-305` Inclusive Education (Semester 2); Units 3 and 4.
 
@@ -431,7 +431,7 @@ Recorded by the drafter so the intake evaluator can test them; none is settled h
 1. **Identity.** The extracted guide block has no title, code or credit line; the Scheme row supplies GCCE-400, 2 (1-1), General Education. The source `.docx` should be checked for a header the extraction lost.
 2. **Twelve weeks, not sixteen.** The guide schedules Weeks 1-12 only. The spec does not invent Weeks 13-16; for a 1-1 course they may be practical weeks. Whether the remaining weeks need content is the owner's call.
 3. **Assessment criteria from another course.** "Mid-term essay on a selected philosophical topic" and "extended essay applying philosophical concepts" (`:190-192`) do not fit this course; they look copied from a philosophy outline. The spec reads them as essays on civic topics. The evaluator should confirm or escalate.
-4. **Topics are weeks in multi-week units, sections in one-week units.** `D-2026-0070` makes each topic one numbered section. Units 1-4 span two or three weeks whose sections are one-line items, so (as in `GUHQ-301`) each topic is a week. Units 5-7 are single weeks; there each numbered section is a topic, which keeps those units within the 25-40 minute budget. Unit 7 then has four topics and 12 formative items, beyond `D-2026-0072`, which rules only on three-topic units.
+4. **Topics are weeks in multi-week units, sections in one-week units.** `D-2026-0070` makes each topic one numbered section. Units 1-4 span two or three weeks whose sections are one-line items, so (as in `GUHQ-301`) each topic is a week. Units 5-7 are single weeks; there each numbered section is a topic, which gives those one-week units enough topics to carry a full unit. Unit 7 then has four topics and 12 formative items, beyond `D-2026-0072`, which rules only on three-topic units.
 5. **Derived licence sub-topic.** U4-07 (school and community, parental involvement) is not in the guide. It is added under `D-2026-0053` item 4 because the licence blueprint maps "relationship between school and community" and CRQ 10 to this course and no other course carries them. If the owner does not want licence-driven additions here, U4-07 is removed and the blueprint's row E-3 becomes uncovered.
 6. **Reading list.** Three of seven guide entries (Pike and Selby; Feldpausch and Omilian; Clarke and Steckel) could not be found outside copies of the HEC model outline and are not bound. Of the four that exist, `glencoe-civics-today` is a United States school text; units use it only for general concepts, and Pakistan's own institutions are taught from the Constitution.
 7. **Constitution currency.** The bound National Assembly PDF runs to the Twentieth Amendment (2012). Any article quoted must be checked against the current text; fig-U3-2 and fig-U7-4 require that check.
