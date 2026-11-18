@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
   <title id="t">استاد کی گفتگو اور شاگردوں کی سرگرمی کا توازن</title>
-  <desc id="d">35 منٹ کے سبق کا خاکہ جس میں آغاز سے اختتام تک استاد کی گفتگو گھٹتی اور شاگردوں کی سرگرمی بڑھتی دکھائی گئی ہے۔</desc>
+  <desc id="d">35 منٹ کے سبق کا خاکہ جس میں آغاز سے اختتام کے مرحلے تک استاد کی گفتگو گھٹتی اور شاگردوں کی سرگرمی بڑھتی دکھائی گئی ہے۔</desc>
   <style>
     :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
     .bg { fill: var(--bg); }

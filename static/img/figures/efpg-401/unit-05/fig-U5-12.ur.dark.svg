@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 240" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
   <title id="t">رہنمائی شدہ تحریر کے سبق کے پانچ مراحل</title>
-  <desc id="d">رہنمائی شدہ تحریر کے سبق کا بہاؤ نقشہ: استاد نمونہ دکھاتا ہے، کلاس اس کا تجزیہ کرتی ہے، شاگرد مل کر منصوبہ بناتے ہیں، شاگرد لکھتے ہیں، اور کلاس تحریر ایک دوسرے کو سناتی ہے۔</desc>
+  <desc id="d">رہنمائی شدہ تحریر کے سبق کا بہاؤ نقشہ: استاد نمونہ دکھاتا ہے، جماعت اس کا تجزیہ کرتی ہے، شاگرد مل کر منصوبہ بناتے ہیں، شاگرد لکھتے ہیں، اور جماعت تحریر ایک دوسرے کو سناتی ہے۔</desc>
   <style>
     :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
     .bg { fill: var(--bg); }

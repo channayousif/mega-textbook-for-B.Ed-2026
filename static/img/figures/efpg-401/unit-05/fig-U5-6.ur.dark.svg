@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
   <title id="t">گروہی کام کے دوران استاد کے چار اقدامات</title>
-  <desc id="d">گروہی کام کے دوران استاد کے چار اقدامات کا خاکہ: کام ترتیب دینا، گروہوں کی نگرانی کرنا، مشکل میں پھنسے شاگردوں کی مدد کرنا، اور رپورٹ کے لیے کلاس کو واپس اکٹھا کرنا۔</desc>
+  <desc id="d">گروہی کام کے دوران استاد کے چار اقدامات کا خاکہ: کام ترتیب دینا، گروہوں کی نگرانی کرنا، مشکل میں پھنسے شاگردوں کی مدد کرنا، اور رپورٹ کے لیے جماعت کو واپس اکٹھا کرنا۔</desc>
   <style>
     :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
     .bg { fill: var(--bg); }
@@ -43,7 +43,7 @@
 
   <rect class="panel-d" x="440" y="230" width="260" height="80" rx="4"/>
   <text class="sh" x="570" y="260" text-anchor="middle">4. رپورٹ پیش کرنا</text>
-  <text class="small" x="570" y="284" text-anchor="middle">کلاس کو اکٹھا کر کے اصلاح کریں</text>
+  <text class="small" x="570" y="284" text-anchor="middle">جماعت کو اکٹھا کر کے اصلاح کریں</text>
 
   <ellipse class="panel" cx="390" cy="185" rx="90" ry="40"/>
   <text class="sh" x="390" y="190" text-anchor="middle">گروہی کام</text>

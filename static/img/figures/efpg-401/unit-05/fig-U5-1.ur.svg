@@ -22,7 +22,7 @@
   <rect class="bg" x="0" y="0" width="780" height="480"/>
 
   <text class="h" x="390" y="34" text-anchor="middle">35 منٹ کا سبق جس کے ہر مرحلے میں سرگرمی ہے</text>
-  <text class="small" x="390" y="54" text-anchor="middle">جماعت پنجم کا موضوع: میرا گاؤں</text>
+  <text class="small" x="390" y="54" text-anchor="middle">پانچویں جماعت کا موضوع: میرا گاؤں</text>
 
   <rect class="panel" x="30" y="70" width="720" height="32" rx="4"/>
   <text class="sh" x="735" y="91" text-anchor="end">مرحلہ</text>
@@ -34,7 +34,7 @@
   <text class="small" x="735" y="152" text-anchor="end">4 منٹ</text>
   <text class="body" x="605" y="134" text-anchor="end">کلاس کی کھڑکی سے نظر آنے والی</text>
   <text class="body" x="605" y="152" text-anchor="end">پانچ چیزوں کے نام بتانا</text>
-  <text class="body" x="305" y="134" text-anchor="end">کلاس کو پرسکون کرتی ہے اور پہلے سے</text>
+  <text class="body" x="305" y="134" text-anchor="end">جماعت کو پرسکون کرتی ہے اور پہلے سے</text>
   <text class="body" x="305" y="152" text-anchor="end">معلوم الفاظ کو تازہ کرتی ہے</text>
 
   <rect class="panel-b" x="30" y="180" width="720" height="62" rx="4"/>

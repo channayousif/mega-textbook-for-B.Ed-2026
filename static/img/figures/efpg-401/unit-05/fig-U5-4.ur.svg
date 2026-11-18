@@ -29,13 +29,13 @@
   <text class="sh" x="330" y="75" text-anchor="end">عام غلطی</text>
 
   <rect class="panel-a" x="30" y="94" width="720" height="52" rx="4"/>
-  <text class="sh" x="735" y="124" text-anchor="end">نتائجِ تعلم</text>
+  <text class="sh" x="735" y="124" text-anchor="end">نتیجہ ہائے تعلم</text>
   <text class="body" x="625" y="124" text-anchor="end">بتاتا ہے کہ شاگرد کیا کر سکیں گے</text>
   <text class="body" x="330" y="124" text-anchor="end">مبہم مقصد، جیسے "گرائمر پڑھانا"</text>
 
   <rect class="panel-b" x="30" y="150" width="720" height="52" rx="4"/>
   <text class="sh" x="735" y="180" text-anchor="end">آغاز کی سرگرمی</text>
-  <text class="body" x="625" y="172" text-anchor="end">کلاس کو پرسکون کرتی ہے اور</text>
+  <text class="body" x="625" y="172" text-anchor="end">جماعت کو پرسکون کرتی ہے اور</text>
   <text class="body" x="625" y="190" text-anchor="end">انگریزی کو متحرک کرتی ہے</text>
   <text class="body" x="330" y="180" text-anchor="end">وقت بچانے کے لیے چھوڑ دینا</text>
 
