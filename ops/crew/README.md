@@ -29,7 +29,9 @@ is healthy, the review waits while every other kind of job keeps flowing.
 1. **sync**: the control checkout fast-forwards to `origin/main`, and so does `main` in the owner's
    working checkout (`scripts/crew/sync-owner-checkout.sh`, `CREW_OWNER_CHECKOUT`, default
    `~/mega_book_for_B.Ed`). That step is fast-forward only: when local commits, a tracked edit or an
-   untracked file is in the way, it logs `owner-sync: ... blocked` to `cron.log` and changes nothing.
+   untracked file is in the way, a blocked owner fast-forward is logged when its reason changes or
+   after 24 hours and notifies the owner once, with its state in `owner-sync.state`, as
+   `scripts/crew/sync-owner-checkout.sh` does, and changes nothing.
 2. **plan**: `crew.mjs plan` derives each unit's next stage from main (`report-content-status.mjs`,
    the course tracker, the review reports) and queues missing jobs. Nothing is hand-typed.
    **Images before sign-off** (D-2026-0081): a unit whose G3 is not done and that has no

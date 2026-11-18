@@ -1,0 +1,10 @@
+# Unit banner - EFMP-406 Unit 5 (Pedagogical Approaches to Contemporary Literacy)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs efmp-406 5 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U5-5 | index | illustration | unit banner, wide 16:9 landscape scene, painted in a warm documentary style: a busy, purposeful Class 5 classroom in a government school in a small town in Sindh during a literacy project; pupils of about ten in school uniform shalwar kameez, girls with white dupattas, work in small groups at pushed-together desks: one group reads a textbook and a folded leaflet side by side and points out a passage, one group paints a large hand-drawn wall poster of a water tank and a hand pump, and at a corner desk one girl reads a storybook aloud while a classmate records her on a single smartphone held between them; a woman teacher in shalwar kameez and dupatta sits beside a group with a small notebook open on her knee, listening closely and noting what a pupil reads, and a stack of cardboard pupil folders rests on her table; a blackboard and a barred window with warm afternoon light behind them; the scene shows pupils reading, talking and making things for real readers, low-cost technology used for a literacy purpose, and a teacher watching to see what each pupil can do; every book, leaflet, poster, notebook and phone screen shows only blurred shapes, no readable text, no logo, map, flag or emblem in frame; warm natural light, documentary feel | Pupils in a Sindh classroom work on a literacy project in small groups, comparing a textbook with a leaflet, painting a wall poster about water and recording a girl reading aloud on one smartphone, while their teacher listens to a group and notes what a pupil reads. |  | prompt-only |

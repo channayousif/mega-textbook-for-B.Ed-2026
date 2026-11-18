@@ -1,0 +1,10 @@
+# Unit banner - GISS-401 Unit 5 (The Economic and Political Systems of Islam)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the
+unit figure manifest, kept in this sidecar file so `check:figures`, whose source is bound into
+every unit's review evidence, does not need to change. To be produced with Gemini via `agy`
+(`scripts/generate-illustration.mjs giss-401 5 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U5-5 | index | illustration | unit banner, wide 16:9 landscape scene: the shaded courtyard and verandah of a government secondary school in Sindh at break time; in the foreground under a neem tree, a clean, pupil-run tuck shop table where an older girl hands fresh fruit and a glass of lassi to a younger pupil at a fair price while her classmate weighs lentil snacks honestly on a simple balance scale, and beside it a teacher quietly passes a bundle of new school bags and shoes to a grateful family for the pupils who need help; in the background on the verandah, a staff council of men and women teachers, including a senior woman teacher in a cotton sari, sits in a circle on plain chairs with a parent, the head teacher leaning in to listen while one member speaks; the scene joins honest earning, care for those in need and consultative, inclusive decision-making in one school community; light school uniforms, shalwar kameez, dupattas for the women and girls, no readable text on any board, card, notebook, packet, price tag or paper, no Qur'an, scripture or calligraphy in frame, no map, flag or emblem, no prophet, companion, angel or other sacred figure; warm natural light, documentary feel | In a Sindh school courtyard, pupils run an honest tuck shop and weigh snacks fairly while a teacher gives school bags to a family in need, and on the verandah behind them a staff council of men and women, including a teacher in a sari, sits in a circle listening before deciding. |  | prompt-only |
