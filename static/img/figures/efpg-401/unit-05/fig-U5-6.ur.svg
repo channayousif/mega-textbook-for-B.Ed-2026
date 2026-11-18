@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif">
+  <title id="t">گروہی کام کے دوران استاد کے چار اقدامات</title>
+  <desc id="d">گروہی کام کے دوران استاد کے چار اقدامات کا خاکہ: کام ترتیب دینا، گروہوں کی نگرانی کرنا، مشکل میں پھنسے شاگردوں کی مدد کرنا، اور رپورٹ کے لیے جماعت کو واپس اکٹھا کرنا۔</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .ink { fill: var(--ink); }
+    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+    .muted { font-size: 13px; fill: var(--muted); }
+    .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 1.5; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 1.5; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 1.5; }
+    text { font-size: 15px; fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; fill: var(--ink); }
+    .sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body { font-size: 14px; fill: var(--ink); }
+    .small { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+    .ah { fill: var(--ink); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="ah"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <text class="h" x="390" y="34" text-anchor="middle">گروہی کام کے دوران استاد کے چار اقدامات</text>
+
+  <rect class="panel-a" x="440" y="70" width="260" height="80" rx="4"/>
+  <text class="sh" x="570" y="100" text-anchor="middle">1. ترتیب دینا</text>
+  <text class="small" x="570" y="124" text-anchor="middle">کام، وقت اور کردار بتائیں</text>
+
+  <rect class="panel-b" x="80" y="70" width="260" height="80" rx="4"/>
+  <text class="sh" x="210" y="100" text-anchor="middle">2. نگرانی</text>
+  <text class="small" x="210" y="124" text-anchor="middle">گھوم پھر کر سنیں</text>
+
+  <rect class="panel-c" x="80" y="230" width="260" height="80" rx="4"/>
+  <text class="sh" x="210" y="260" text-anchor="middle">3. مدد</text>
+  <text class="small" x="210" y="284" text-anchor="middle">جواب کے بجائے سوال سے مدد کریں</text>
+
+  <rect class="panel-d" x="440" y="230" width="260" height="80" rx="4"/>
+  <text class="sh" x="570" y="260" text-anchor="middle">4. رپورٹ پیش کرنا</text>
+  <text class="small" x="570" y="284" text-anchor="middle">جماعت کو اکٹھا کر کے اصلاح کریں</text>
+
+  <ellipse class="panel" cx="390" cy="185" rx="90" ry="40"/>
+  <text class="sh" x="390" y="190" text-anchor="middle">گروہی کام</text>
+
+  <line class="stroke" x1="440" y1="110" x2="340" y2="110" marker-end="url(#arrow)"/>
+  <line class="stroke" x1="210" y1="150" x2="210" y2="230" marker-end="url(#arrow)"/>
+  <line class="stroke" x1="340" y1="270" x2="440" y2="270" marker-end="url(#arrow)"/>
+  <line class="stroke" x1="570" y1="230" x2="570" y2="150" marker-end="url(#arrow)"/>
+
+  <text class="wm" x="768" y="408" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
