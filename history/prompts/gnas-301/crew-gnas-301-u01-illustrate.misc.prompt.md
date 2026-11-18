@@ -13,7 +13,7 @@ labels: ["crew", "agy", "illustrate"]
 links:
   spec: specs/content/gnas-301/content-spec.md
   ticket: null
-  adr: history/adr/0029-gemini-agy-raster-illustration-producer.md
+  adr: null
   pr: null
 files:
  - docs/semester-1/gnas-301/unit-01/index.mdx
@@ -21,6 +21,7 @@ files:
  - docs/semester-1/gnas-301/unit-01/topic-02.mdx
  - docs/semester-1/gnas-301/unit-01/topic-03.mdx
  - docs/semester-1/gnas-301/unit-01/topic-04.mdx
+ - history/prompts/gnas-301/crew-gnas-301-u01-illustrate.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-01/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-01/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-01/topic-02.mdx
@@ -38,11 +39,11 @@ files:
  - specs/content/gnas-301/reviews/unit-01/G2/logs-20261118T055231122Z/check-no-em-dash.txt
  - specs/content/gnas-301/reviews/unit-01/G2/logs-20261118T055231122Z/validate-content.txt
  - specs/content/gnas-301/tasks.md
- - static/img/figures/gnas-301/unit-01/fig-U1-9.webp
  - static/img/figures/gnas-301/unit-01/fig-U1-10.webp
  - static/img/figures/gnas-301/unit-01/fig-U1-11.webp
  - static/img/figures/gnas-301/unit-01/fig-U1-12.webp
  - static/img/figures/gnas-301/unit-01/fig-U1-13.webp
+ - static/img/figures/gnas-301/unit-01/fig-U1-9.webp
 tests:
  - npm run check:content
 ---
@@ -82,31 +83,55 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gnas-301-u01-repair_en-r1, repair_en, codex) Browser/print inspection remains pending; defer the shared WHO heading until Unit 2 evidence refresh.
 - (gnas-301-u01-review_en-conflict1, fix, claude) Unit 1 G3 is still open and escalated (report `12ce2621-...json`): 10 figure text geometry defects in fig-U1-2, fig-U1-3.ur, fig-U1-6 and fig-U1-8 still need fixing.
 
+## Feedback from the previous attempt
+worker exited 1:
+Reading additional input from stdin...
+OpenAI Codex v0.166.0
+--------
+workdir: /home/a2ahs/crew-wt/gnas-301-u01-illustrate
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 01a1ecb4-a001-71d0-890a-e5f817ea48ab
+--------
+user
+Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+warning: Model metadata for `gpt-6.1-sol` not found. Defaulting to fallback metadata; this can degrade performance and cause issues.
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+ERROR: The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account.
+ERROR: The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account.
+
+
+
 ## Response snapshot
 
-Generated raster illustrations fig-U1-9 (unit banner) and fig-U1-10 through fig-U1-13 (topic classroom scenes) with agy (Imagen), visually inspected and accepted all 5 images, placed Figure tags in English and Urdu topic/index pages, marked manifest rows placed, refreshed Unit 1 G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed GNAS-301 Unit 1 banner and classroom illustrations (fig-U1-9 through fig-U1-13) in English and Urdu pages, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
-- Impact: illustrate for GNAS-301 Unit 1 by agy.
-- Tests: npm run check:content passed with all 14 gates clean.
-- Files: 27 file(s), listed above.
+- Impact: illustrate for GNAS-301 Unit 1 by agy (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed raster illustrations fig-U1-9 through fig-U1-13 for GNAS-301 Unit 1 in EN and UR MDX files, moved manifests to placed, and refreshed Unit 1 G2 evidence.
-- Decisions the team must respect: Bins in fig-U1-9 are plain and unmarked; phone screen in fig-U1-10 is unreadable; all images comply with ADR-0029, ADR-0036 and cultural dress rules.
-- Pending / next owner: Unit 1 G3 review is still open and escalated; 10 SVG figure text geometry defects in fig-U1-2, fig-U1-3.ur, fig-U1-6 and fig-U1-8 remain for review repair.
+- Shipped / changed: Generated, inspected, and placed GNAS-301 Unit 1 banner and classroom illustrations (fig-U1-9 through fig-U1-13) in English and Urdu pages, refreshed G2 gate evidence, and passed all content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 1 G3 review is still open and escalated: 10 figure text geometry defects in fig-U1-2, fig-U1-3.ur, fig-U1-6, and fig-U1-8 remain to be addressed in the next review repair job.
-  - Browser/print inspection remains pending for GNAS-301 Unit 1.
+  - Unit 1 G3 review remains open and escalated; 10 SVG figure text geometry defects in fig-U1-2, fig-U1-3.ur, fig-U1-6, and fig-U1-8 still need fixing.
+  - Live browser/print inspection remains pending for GNAS-301 Unit 1.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 2 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
