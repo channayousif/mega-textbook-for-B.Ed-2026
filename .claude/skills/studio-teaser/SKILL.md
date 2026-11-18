@@ -82,7 +82,10 @@ States: `planned → scripted → script-approved → clips-generated → clips-
 4. **Generate.** For each shot, call `gflow_generate_video`:
    - `mode` `t2v`, `aspect` `9:16`, `model` `veo_fast`, `duration` `8` (8 s only; other lengths
      make the Flow agent ask a question and gflow times out at 600 s with no spend)
-   - always pass `profile` (the account profile, e.g. `a2ahs-alpha`) and `project_name` `textbook-teasers`
+   - always pass `profile` (the account profile, e.g. `a2ahs-alpha`). Keep one Flow project per teaser:
+     shot 1 passes `project_name` `teaser <id> <loc>`, which only titles a new project; every later
+     shot passes `project` set to shot 1's returned `flow_project_id`. Without `project`, gflow makes a
+     fresh Flow project on every call.
    - prompt: `Vertical 9:16 video, 8 seconds, full-frame edge to edge, no letterbox or black bars. <visual> <visual_style> An unseen woman narrator says in Urdu, voice-over only: "<narration line>" No on-screen text, captions or logos.`
 
    Record each take with `T clip <key> <N> --json '{"artifact_id":"…","model":"veo_fast","credits":20,"file":"…"}'`.

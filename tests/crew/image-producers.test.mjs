@@ -7,6 +7,7 @@ import { join } from 'node:path';
 import sharp from 'sharp';
 import {
   parseRpcBody, gflowPayload, gflowRelativePath, gflowProducer, newestCodexImage,
+  gflowProjectArgs, recordGflowProject, GFLOW_PROJECT_ROTATE,
   QuotaError, UnavailableError, GFLOW_QUOTA_RE,
 } from '../../scripts/lib/image-producers.mjs';
 
@@ -57,10 +58,11 @@ async function stubGflow(reply) {
 const brief = 'Style: flat\nScene: a Sindh classroom\nAspect ratio: 16:9 landscape.';
 
 test('gflow: one Nano Banana image is requested, fetched from the file server and staged as PNG', async () => {
-  const stub = await stubGflow({ content: [{ type: 'text', text: JSON.stringify({ status: 'completed', files: ['C:\\Users\\Admin\\Downloads\\gflow-cli\\images\\2026-11-18\\abc_1.jpg'] }) }] });
+  const stub = await stubGflow({ content: [{ type: 'text', text: JSON.stringify({ status: 'completed', flow_project_id: 'p-1', files: ['C:\\Users\\Admin\\Downloads\\gflow-cli\\images\\2026-11-18\\abc_1.jpg'] }) }] });
   const png = join(mkdtempSync(join(tmpdir(), 'gf-')), 'fig.png');
   try {
-    const out = await gflowProducer({ brief, png, aspect: '3:4 portrait', mcpUrl: stub.mcpUrl, filesUrl: stub.filesUrl });
+    const projectFile = join(mkdtempSync(join(tmpdir(), 'gfp-')), 'gflow-project.json');
+    const out = await gflowProducer({ brief, png, aspect: '3:4 portrait', mcpUrl: stub.mcpUrl, filesUrl: stub.filesUrl, projectFile });
     assert.match(out.model, /Nano Banana via gflow/);
     assert.equal((await sharp(png).metadata()).format, 'png');
     const call = stub.calls.find((c) => c.method === 'tools/call');
@@ -70,7 +72,23 @@ test('gflow: one Nano Banana image is requested, fetched from the file server an
     assert.equal(call.args.wait, true);
     assert.match(call.args.prompt, /Do not ask any question/);
     assert.ok(stub.calls.some((c) => c.method === 'notifications/initialized'));
+    assert.match(call.args.project_name, /^textbook-illustrations /, 'the first image creates a titled project');
+    assert.equal(call.args.project, undefined);
+    assert.deepEqual(gflowProjectArgs(projectFile), { project: 'p-1' }, 'the next image reuses it');
   } finally { await stub.close(); }
+});
+
+test('gflow project: reused until the rotation limit, then a new one; GFLOW_PROJECT pins one', () => {
+  const file = join(mkdtempSync(join(tmpdir(), 'gfp-')), 'gflow-project.json');
+  assert.ok(gflowProjectArgs(file).project_name);
+  for (let i = 0; i < GFLOW_PROJECT_ROTATE - 1; i++) recordGflowProject('p-1', file);
+  assert.deepEqual(gflowProjectArgs(file), { project: 'p-1' });
+  recordGflowProject('p-1', file);
+  assert.ok(gflowProjectArgs(file).project_name, `after ${GFLOW_PROJECT_ROTATE} images a fresh project is started`);
+  recordGflowProject('p-2', file);
+  assert.deepEqual(gflowProjectArgs(file), { project: 'p-2' }, 'a new project id restarts the count');
+  process.env.GFLOW_PROJECT = 'pinned';
+  try { assert.deepEqual(gflowProjectArgs(file), { project: 'pinned' }); } finally { delete process.env.GFLOW_PROJECT; }
 });
 
 test('gflow: a rate-limit envelope is a QuotaError, not a failed image', async () => {

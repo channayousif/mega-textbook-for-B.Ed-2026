@@ -10,9 +10,9 @@
  * Producers: agy (Gemini via Antigravity), gflow (Nano Banana via Google Flow on the owner's PC,
  * over the SSH tunnel; owner ruling 2026-11-18 amending D-2026-0082), codex (built-in image_gen).
  */
-import { existsSync, readFileSync, readdirSync, statSync, unlinkSync, copyFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync, unlinkSync, copyFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { join } from 'node:path';
+import { join, dirname } from 'node:path';
 import { homedir } from 'node:os';
 import http from 'node:http';
 import https from 'node:https';
@@ -169,7 +169,35 @@ function download(url, ms = 120000) {
   });
 }
 
-export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL }) {
+/**
+ * One Flow project for many illustrations. Without a `project` id gflow creates a fresh Flow project
+ * per call (`project_name` only titles a new one). Flow's agent chat keeps a project's history, so a
+ * project is rotated after GFLOW_PROJECT_ROTATE images. GFLOW_PROJECT pins one project id instead.
+ */
+export const GFLOW_PROJECT_ROTATE = 50;
+export const gflowProjectFile = () => process.env.MEGA_BOOK_GFLOW_PROJECT_FILE
+  || join(homedir(), '.cache', 'mega-book', 'gflow-project.json');
+
+export function gflowProjectArgs(file = gflowProjectFile(), now = new Date()) {
+  if (process.env.GFLOW_PROJECT) return { project: process.env.GFLOW_PROJECT };
+  let state = null;
+  try { state = JSON.parse(readFileSync(file, 'utf8')); } catch { /* none yet */ }
+  if (state?.project_id && (state.images ?? 0) < GFLOW_PROJECT_ROTATE) return { project: state.project_id };
+  return { project_name: `textbook-illustrations ${now.toISOString().slice(0, 10)}` };
+}
+
+/** Remember the project an image landed in and count it towards rotation. */
+export function recordGflowProject(projectId, file = gflowProjectFile(), now = new Date()) {
+  if (!projectId || process.env.GFLOW_PROJECT) return;
+  let state = null;
+  try { state = JSON.parse(readFileSync(file, 'utf8')); } catch { /* none yet */ }
+  const same = state?.project_id === projectId;
+  const next = { project_id: projectId, images: same ? (state.images ?? 0) + 1 : 1, since: same ? state.since : now.toISOString() };
+  mkdirSync(dirname(file), { recursive: true });
+  writeFileSync(file, `${JSON.stringify(next, null, 1)}\n`);
+}
+
+export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL, projectFile = gflowProjectFile() }) {
   let mcp;
   try {
     mcp = await mcpSession(mcpUrl);
@@ -188,6 +216,7 @@ export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL
       profile: process.env.GFLOW_PROFILE || 'a2ahs-alpha',
       ui_mode: 'classic',
       wait: true,
+      ...gflowProjectArgs(projectFile),
     }, 11 * 60 * 1000);
   } catch (e) {
     if (GFLOW_QUOTA_RE.test(e.message)) throw new QuotaError('gflow', `gflow image quota reached: ${e.message}`);
@@ -210,6 +239,7 @@ export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL
   // Flow saves JPEG; the pipeline stages PNG.
   const sharp = (await import('sharp')).default;
   await sharp(bytes).png().toFile(png);
+  recordGflowProject(payload.flow_project_id, projectFile);
   return { model: `${process.env.GFLOW_IMAGE_MODEL || 'nano2'} (Nano Banana via gflow)` };
 }
 
