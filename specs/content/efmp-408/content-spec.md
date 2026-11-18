@@ -1,6 +1,6 @@
 ---
 course_code: EFMP-408
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---
@@ -64,7 +64,7 @@ The reason this course is sequenced first. Every objective below is from the lic
 | 15 | Validity, reliability and characteristics of tests | EED-624 | 2 |
 | 16 | Test development and review | EED-624 | 3, 5 |
 
-### Objective 5 is carried in Unit 6 as enrichment *(owner decision, 2026-09-13)*
+### Objective 5 is carried in Unit 6 as enrichment *(owner decision, 2026-09-13; recorded as `D-2026-0093` item 6)*
 
 "Assessment policies and practices in Pakistani schools" is in the licence syllabus and the
 `EED-411` guide but **not** in the 2026 `EFMP-408` outline. It is carried here as topic 6.4 rather
@@ -132,7 +132,7 @@ fig-U1-3 `diagram` the same score read against a norm group and against a criter
 fig-U1-7 `table` when each reference frame is the right choice.
 
 **Unit-end assessment blueprint**: 10 MCQ / 10 RRQ / 5 ERQ; >= 2 MCQ and >= 2 RRQ per topic; one
-ERQ per topic plus an integrative item asking the reader to classify a described assessment
+ERQ per topic plus two integrative items (total 5), one asking the reader to classify a described assessment
 practice on all three axes and justify it.
 
 ## Unit 2: Objectives, Alignment and the Principles of Good Assessment
@@ -202,25 +202,26 @@ Weeks 5-7. Unit Spec (G1) for `docs/semester-4/efmp-408/unit-03/`.
 | U3-01 | Week 5 (`:235-238`) | 3.1 | Planning a test: the table of specifications |
 | U3-02 | Week 5 (`:235-238`) | 3.1 | Blueprints and weightage |
 | U3-03 | Week 5 (`:235-238`) | 3.1 | Linking objectives with questions |
-| U3-04 | Week 6 (`:239-242`) | 3.2 | Essay items: what they assess well |
-| U3-05 | Week 6 (`:239-242`) | 3.2 | Short-answer items |
-| U3-06 | Week 6 (`:239-242`) | 3.2 | Scoring challenges in subjective items |
-| U3-07 | Week 7 (`:243-246`) | 3.3 | Multiple-choice items: stem and distractors |
-| U3-08 | Week 7 (`:243-246`) | 3.3 | True/false items |
-| U3-09 | Week 7 (`:243-246`) | 3.3 | Matching items |
-| U3-10 | Week 7 (`:243-246`) | 3.4 | Guidelines for writing good objective items |
-| U3-11 | Week 7 (`:243-246`) | 3.4 | Common item-writing errors and how to avoid them |
+| U3-04 | Week 6 (`:240`) | 3.2 | Essay items: what they assess well |
+| U3-05 | Week 6 (`:241`) | 3.2 | Advantages and limitations of subjective items |
+| U3-06 | Week 6 (`:239-242`) | 3.2 | Short-answer items |
+| U3-07 | Week 6 (`:239-242`) | 3.2 | Scoring challenges in subjective items |
+| U3-08 | Week 7 (`:243-246`) | 3.3 | Multiple-choice items: stem and distractors |
+| U3-09 | Week 7 (`:243-246`) | 3.3 | True/false items |
+| U3-10 | Week 7 (`:243-246`) | 3.3 | Matching items |
+| U3-11 | Week 7 (`:243-246`) | 3.4 | Guidelines for writing good objective items |
+| U3-12 | Week 7 (`:243-246`) | 3.4 | Common item-writing errors and how to avoid them |
 
 ### Topic list
 
 | Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
 |---|---|---|---|---|
 | 3.1 | Planning a test before writing it | U3-01, U3-02, U3-03 | 15-20 | fig-U3-1: table, fig-U3-5: flowchart |
-| 3.2 | Subjective items | U3-04, U3-05, U3-06 | 14-19 | fig-U3-2: table, fig-U3-6: diagram |
-| 3.3 | Objective items | U3-07, U3-08, U3-09 | 15-20 | fig-U3-3: diagram, fig-U3-7: table |
-| 3.4 | Writing items that work | U3-10, U3-11 | 13-18 | fig-U3-4: table, fig-U3-8: diagram |
+| 3.2 | Subjective items | U3-04, U3-05, U3-06, U3-07 | 14-19 | fig-U3-2: table, fig-U3-6: diagram |
+| 3.3 | Objective items | U3-08, U3-09, U3-10 | 15-20 | fig-U3-3: diagram, fig-U3-7: table |
+| 3.4 | Writing items that work | U3-11, U3-12 | 13-18 | fig-U3-4: table, fig-U3-8: diagram |
 
-**Depth budget**: 11 sub-topics; 4 topics; 80-105 reading-min.
+**Depth budget**: 12 sub-topics; 4 topics; 80-105 reading-min.
 
 **Figure plan**: fig-U3-1 `table` a worked table of specifications for a Grade 6 science unit;
 fig-U3-5 `flowchart` from syllabus to blueprint to paper (3.1; required schematic); fig-U3-2
@@ -354,9 +355,9 @@ Weeks 13-15. Unit Spec (G1) for `docs/semester-4/efmp-408/unit-06/`.
 | U6-07 | Week 15 (`:274-277`) | 6.3 | Digital assessment tools |
 | U6-08 | Week 15 (`:274-277`) | 6.3 | Online testing platforms |
 | U6-09 | Week 15 (`:274-277`) | 6.3 | Continuous and competency-based assessment |
-| U6-10 | derived: licence objective 5, `ClassroomAssess_Sept13.txt` (owner decision 2026-09-13) | 6.4 | Assessment policy and practice in Pakistani government and private schools |
-| U6-11 | derived: licence objective 5, `ClassroomAssess_Sept13.txt` (owner decision 2026-09-13) | 6.4 | NPSTP Standard 5: the national assessment standard for teachers |
-| U6-12 | derived: licence objective 5, `ClassroomAssess_Sept13.txt` (owner decision 2026-09-13) | 6.4 | Test-based versus assessment-based evaluation cultures |
+| U6-10 | derived: licence objective 5, `ClassroomAssess_Sept13.txt` (owner decision 2026-09-13, recorded as `D-2026-0093` item 6) | 6.4 | Assessment policy and practice in Pakistani government and private schools |
+| U6-11 | derived: licence objective 5, `ClassroomAssess_Sept13.txt` (owner decision 2026-09-13, recorded as `D-2026-0093` item 6) | 6.4 | NPSTP Standard 5: the national assessment standard for teachers |
+| U6-12 | derived: licence objective 5, `ClassroomAssess_Sept13.txt` (owner decision 2026-09-13, recorded as `D-2026-0093` item 6) | 6.4 | Test-based versus assessment-based evaluation cultures |
 
 ### Topic list
 

@@ -650,7 +650,7 @@ Grand total: **132 credit hours across 8 semesters**. Content priority: **Semest
 | EFMP-408 | Educational Assessment and Evaluation | 3 (3-0) | Major: Professional |
 | EFMP-409 | Foundations of Education | 3 (3-0) | Major: Professional |
 | EFPC-4-- | School Observation | 2 (0-2) | Major: Practical |
-| MFPG-402 | Teaching of Science | 3 (3-0) | Major: Pedagogy |
+| EFPG-402 | Teaching of Science | 3 (3-0) | Major: Pedagogy |
 | GUHQ-400 | Fehm-e-Quran – II | 1 (0-1) | General Education |
 
 ### Semester V - Third Year (18 CH)

@@ -192,7 +192,7 @@ S1 names five B.Ed course areas and their sub-topics. Mapping to the 2026 scheme
 
 | Objective (S1) | Mapped to | Confidence |
 |---|---|---|
-| Instructional approaches and strategies | `EFPG-401`, `MFPG-402`, `EFPG-505`, `EFPG-506` | course-level |
+| Instructional approaches and strategies | `EFPG-401`, `EFPG-402`, `EFPG-505`, `EFPG-506` | course-level |
 | Effective questioning strategy | `EFPG-*` pedagogy courses | course-level |
 | Cooperative learning strategy | `EFPG-*` pedagogy courses | course-level |
 | Teacher and student-centred instructional approaches | `EFPG-*` pedagogy courses | course-level |

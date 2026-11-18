@@ -1,6 +1,6 @@
 ---
 course_code: GCCE-400
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---
@@ -9,7 +9,7 @@ open_access_floor:
 
 Semester 4, General Education, 2 (1-1) credit hours. Source: `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt` lines 101-192; Scheme of Studies `Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt` Semester IV row 1 ("GCCE- 400, Civics and Community Engagement, 2 (1-1), General Education, EC&EE").
 
-**Identity**: the guide block gives no code, credit or title line of its own in the extracted text (`:101-109` open straight into the description); the Scheme row supplies all three. No conflict is visible, but the guide block's header could not be checked against the source `.docx` here.
+**Identity**: the guide block gives title "Civics and Community Engagement", code GCCE-400, credit hours 2 (1-1) and semester 4th (`:104-106`), in agreement with the Scheme row. No conflict.
 
 **Proposed catalog entry** (not yet in `catalog/courses.json`: every G2 and G3 evidence manifest binds that file whole, so adding a course re-opens all reviewed units; awaiting an owner ruling): `{"code": "GCCE-400", "title_en": "Civics and Community Engagement", "title_ur": "شہریات اور سماجی شمولیت", "credit_hours": "2 (1-1)", "category": "General Education"}` in Semester 4. The Urdu title is the drafter's proposal.
 
@@ -23,7 +23,7 @@ Semester 4, General Education, 2 (1-1) credit hours. Source: `Scheme-and-Course-
   3. Recognize the importance of diversity and inclusivity for societal harmony and peaceful coexistence.
 - **Teaching strategies**: none listed.
 - **Practical work (the 1 practical credit)**: the guide lists four "suggested practical activities (optional)" (`:170-176`): community storytelling, community event planning, service-learning with a local organisation, and cultural exchange activities. They are course-level practical work, not unit content; each unit's teacher notes may point to the one that fits it (see `## Practical work plan`).
-- **Assessment criteria (guide, `:187-192`)**: participation in discussions; short reflection papers on readings; a mid-term essay; a final paper of three to four extended essays. The guide's wording "a selected philosophical topic" and "philosophical concepts" appears to be carried over from another course's outline (drafting note 3). No weighting is given, so the Constitution Art. III.7 default (60% summative / 40% formative) applies.
+- **Assessment criteria (guide, `:187-192`)**: participation in discussions 10; short reflection papers on readings 10; a mid-term essay 30; a final paper of three to four extended essays 50. The guide's wording "a selected philosophical topic" and "philosophical concepts" is read as civic topics under the owner's ruling (`D-2026-0093` item 7). Participation and reflection papers (20) are formative; the mid-term and final papers (80) are summative.
 - **Recommended resources**: see `## Reading list`.
 
 ## Licence coverage
@@ -428,7 +428,7 @@ The practical credit (1-1) is met by the guide's four optional activities (`:170
 
 Recorded by the drafter so the intake evaluator can test them; none is settled here.
 
-1. **Identity.** The extracted guide block has no title, code or credit line; the Scheme row supplies GCCE-400, 2 (1-1), General Education. The source `.docx` should be checked for a header the extraction lost.
+1. **Identity.** The guide (`:104-106`) and the Scheme agree: GCCE-400, Civics and Community Engagement, 2 (1-1), Semester 4.
 2. **Twelve weeks, not sixteen.** The guide schedules Weeks 1-12 only. The spec does not invent Weeks 13-16; for a 1-1 course they may be practical weeks. Whether the remaining weeks need content is the owner's call.
 3. **Assessment criteria from another course.** "Mid-term essay on a selected philosophical topic" and "extended essay applying philosophical concepts" (`:190-192`) do not fit this course; they look copied from a philosophy outline. The spec reads them as essays on civic topics. The evaluator should confirm or escalate.
 4. **Topics are weeks in multi-week units, sections in one-week units.** `D-2026-0070` makes each topic one numbered section. Units 1-4 span two or three weeks whose sections are one-line items, so (as in `GUHQ-301`) each topic is a week. Units 5-7 are single weeks; there each numbered section is a topic, which gives those one-week units enough topics to carry a full unit. Unit 7 then has four topics and 12 formative items, beyond `D-2026-0072`, which rules only on three-topic units.

@@ -1,13 +1,13 @@
 ---
 course_code: EFMP-409
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---
 
 # EFMP-409 - Foundations of Education - Content Spec
 
-Semester 4, Major: Professional Course IX, 3 (3-0) credit hours. Source: `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt` lines 410-538 (structure confirmed against `Scheme-and-Course-guides/4TH SEMESTER.docx`, see `## Week schedule`); Scheme of Studies `Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt` Semester IV row 4 ("EFMP-409, Foundations of Education, 3 (3-0), Major: Professional Course - IX, PTGR").
+Semester 4, Major: Professional Course IX, 3 (3-0) credit hours. Source: `Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt` lines 410-538 (structure confirmed against `Scheme-and-Course-guides/4TH SEMESTER.docx`, see `## Week schedule`); Scheme of Studies `Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt` Semester IV row 4 ("EFMP-409, Foundations of Education, 3 (3-0), Major: Professional Course - IX, CD&I").
 
 **Identity**: guide and Scheme agree on code, title and semester; the guide gives credit hours "3" (`:415-416`), the Scheme 3 (3-0). No conflict.
 
@@ -270,7 +270,7 @@ Guide UNIT 4 (`:484-496`). Unit Spec (G1) for `docs/semester-4/efmp-409/unit-04/
 - **CLO/SLO refs**: `SLO:EFMP-409-4-1` (explain Surah Al-Alaq's emphasis on reading and knowledge; describe the place of education in the Qur'an and Hadith), `SLO:EFMP-409-4-2` (explain the educational relevance of the Charter of Medina and the Last Sermon), `SLO:EFMP-409-4-3` (describe As-Suffa, its method of teaching and its curriculum) - traces to guide outcomes 1 and 3.
 - **Key terms**: Ilm (knowledge), Iqra, Charter of Medina (Meesaq-e-Madina), Khutbat-ul-Wida (Last Sermon), As-Suffa.
 - **Topics**: 4.1 group 11: Qur'an and Hadith; 4.2 group 12: the Charter of Medina and the Last Sermon; 4.3 group 13: As-Suffa.
-- **Assessment blueprint**: formative 9 items, 3 per topic (`D-2026-0072`) (Remember/Understand/Apply); summative includes one Apply item asking the learner to plan how a primary teacher could use one principle from the As-Suffa model (for example, small study circles) in a present-day classroom. Weighting: 60/40 default.
+- **Assessment blueprint**: formative 9 items, 3 per topic (`D-2026-0072`) (Remember/Understand/Apply); summative includes one Analyze item asking the learner to compare the As-Suffa model with a present-day Pakistani primary classroom on method, curriculum and the teacher's role, and explain which principle (for example, small study circles) would transfer and why. Weighting: 60/40 default.
 
 ### Sub-topic checklist
 
