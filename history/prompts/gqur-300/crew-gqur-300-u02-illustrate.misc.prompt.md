@@ -80,26 +80,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-300-u02-repair_en-r1, repair_en, agy) Full explanatory passages and review bundle binding for NCC, OpenStax, and shared glossary remain owner follow-ups.
 - (gqur-300-u02-repair_en, repair_en, codex) G3/G5 remain open; owner must resolve render, provenance, source-bundle and editorial evidence needs recorded in the repair handoff.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed GQUR-300 Unit 2 banner and topic raster illustrations in English and Urdu index and topic files, updated manifests to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated and placed GQUR-300 Unit 2 raster banner and classroom illustrations in English and Urdu files, updated figure manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
-All four raster illustrations for GQUR-300 Unit 2 (unit banner fig-U2-7 and classroom scenes fig-U2-8, fig-U2-9, fig-U2-10) were generated via `scripts/generate-illustration.mjs`, verified against pedagogical and cultural requirements, placed in English and Urdu files, and verified via `npm run check:content`.
+- Impact: illustrate for GQUR-300 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 25 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GQUR-300 Unit 2 banner and topic raster illustrations in English and Urdu, updated manifests to placed, refreshed G2 gate evidence (20261119T042049432Z-gates.json), and verified all 14 content gates pass.
+- Shipped / changed: Generated and placed GQUR-300 Unit 2 raster banner and classroom illustrations in English and Urdu files, updated figure manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All GQUR-300 Unit 2 figures are placed with committed WebP illustrations (banner fig-U2-7 and classroom scenes fig-U2-8, fig-U2-9, fig-U2-10).
-  - Urdu mirrors are updated with corresponding localized alt text and Figure tags.
-  - G2 gate evidence refreshed at 20261119T042049432Z; G3 en-review and G5 ur-review remain open for independent reviewers.
+  - All four Unit 2 raster illustrations (banner fig-U2-7 and classroom scenes fig-U2-8, fig-U2-9, fig-U2-10) are placed in English and Urdu files with matching manifests.
+  - G2 gate evidence refreshed at [20261119T042049432Z-gates.json](file:///home/a2ahs/crew-wt/gqur-300-u02-illustrate/specs/content/gqur-300/reviews/unit-02/G2/20261119T042049432Z-gates.json); G3 en-review and G5 ur-review remain open for independent reviewers.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- The automated generation pipeline executed cleanly with agy producing all four illustrations.
-- All generated images respected the house style: authentic Sindh attire, no text/labels/calligraphy, no sacred persons or symbols.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
