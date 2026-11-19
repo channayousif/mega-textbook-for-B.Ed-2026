@@ -76,9 +76,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gpks-402-u06-repair_en-r1, repair_en, agy) A fresh independent G3 review of Unit 6 is needed before the unit can be ticked; refreshed G2 gate evidence is at [20261110T062724508Z-gates.json](file:///home/a2ahs/crew-wt/gpks-402-u06-repair_en-r1/specs/content/gpks-402/reviews/unit-06/G2/20261110T062724508Z-gates.json).
 - (gpks-402-u06-repair_en-r1, repair_en, agy) No Urdu mirror exists yet for Unit 6, so Urdu translation remains a separate job.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed GPKS-402 Unit 6 banner and topic raster illustrations (fig-U6-7, fig-U6-8, fig-U6-9, fig-U6-10) in English topic and index files, updated manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated, inspected, and placed GPKS-402 Unit 6 banner and topic raster illustrations, updated manifests to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -90,13 +91,13 @@ Generated, inspected, and placed GPKS-402 Unit 6 banner and topic raster illustr
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GPKS-402 Unit 6 banner and topic raster illustrations in English index and topic files, updated manifests to placed, refreshed G2 gate evidence (20261119T031856430Z-gates.json), and verified all 14 content gates pass.
+- Shipped / changed: Generated, inspected, and placed GPKS-402 Unit 6 banner and topic raster illustrations, updated manifests to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All GPKS-402 Unit 6 figures are placed with committed WebP illustrations (banner fig-U6-7, classroom scenes fig-U6-8, fig-U6-9, fig-U6-10) alongside hand-authored SVGs (fig-U6-1 to fig-U6-6).
-  - No Urdu mirror exists yet for Unit 6, so Urdu translation remains a separate job that will carry over figure markers.
-  - G2 gate evidence was refreshed at 20261119T031856430Z; G3 en-review remains open for an independent reviewer.
+  - All GPKS-402 Unit 6 figures are placed with committed WebP illustrations (banner fig-U6-7 and classroom scenes fig-U6-8, fig-U6-9, fig-U6-10).
+  - No Urdu mirror exists yet for Unit 6; the Urdu translation job will need to copy over the placed figure markers into the translated topics.
+  - G2 gate evidence refreshed at 20261119T031856430Z; G3 en-review remains open for an independent reviewer.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
