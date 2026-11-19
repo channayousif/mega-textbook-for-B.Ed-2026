@@ -1,6 +1,6 @@
 ---
 id: crew-efpg-401-u05-review_en-r1
-title: crew review_en EFPG-401 unit 5 round 1
+title: crew review_en EFPG-401 unit 5
 stage: misc
 date: 2026-11-19
 surface: agent
@@ -16,6 +16,7 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efpg-401/crew-efpg-401-u05-review_en-r1.misc.prompt.md
  - specs/content/efpg-401/reviews/unit-05/G3/crew-job-efpg-401-u05-review_en-r1.json
  - specs/content/efpg-401/reviews/unit-05/G3/crew-job-efpg-401-u05-review_en-r1/logs/check-content.txt
  - specs/content/efpg-401/reviews/unit-05/G3/crew-job-efpg-401-u05-review_en-r1/logs/check-depth-gate.txt
@@ -80,30 +81,31 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Executed independent G3 English review (Cycle 2, final cycle under ADR-0019) for EFPG-401 Unit 5. Verified that all previous content findings (Topic 5.2 missing-step activity, title-level source claims, Paulsrud notes alignment, leaked SVG labels, alt texts, MCQ key rebalancing, and RRQ 7 terminology) have been resolved. Performed live production render inspection against textbook.com.pk (deployed SHA matching HEAD); captured desktop, 360px narrow and A4 print evidence. Generated and validated advisory review report (disposition: escalate), added advisory tracker row, and documented review evidence.
+Completed independent G3 English review (cycle 2, escalate) for EFPG-401 Unit 5 with live render evidence and advisory tracker row.
 
 ## Outcome
 
-- Impact: review_en for EFPG-401 Unit 5 by agy (cycle 2).
-- Tests: validateReport clean, check:content clean.
+- Impact: review_en for EFPG-401 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 33 file(s), listed above.
-- Next prompts: crew planner / human editor review.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added independent advisory G3 English review report (disposition: escalate) for EFPG-401 Unit 5 (Lesson Planning), supporting evidence logs and live render screenshots, and appended unticked advisory tracker row.
-- Decisions the team must respect: G3 stays advisory; no certification or provisional publication without protected signing host credentials; cycle 2 completes automated review allowance under ADR-0019.
-- Pending / next owner: Human reviewer / editor for qualification.
+- Shipped / changed: Completed independent G3 English review (cycle 2, escalate) for EFPG-401 Unit 5 with live render evidence and advisory tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live production inspection passed visually across all 9 unit pages at 1280px desktop, 360px mobile, and A4 print.
-  - render-inspect.mjs exited 1 due to trying to query .svg URLs for WebP illustrations (fig-U5-16 to fig-U5-19); this is a script quirk, not a content defect.
-- Paperclip issues affected: none.
+  - All Unit 5 English content defects from cycle 1 are resolved and verified on live deployment. A human reviewer or qualified signing authority may inspect the evidence package to certify G3, and G4 Urdu mirror remains intact.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): validateReport PASS, check:content PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
