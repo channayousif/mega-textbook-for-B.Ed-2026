@@ -77,9 +77,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gpks-402-u02-repair_en-r1, repair_en, opencode) G3 stays open; provenance, rendered accessibility and solve-before-key still need a fresh reviewer (ADR-0019).
 - (gpks-402-u02-repair_en-r1, repair_en, opencode) G2 gate evidence refreshed at 20261110T051752668Z after the English edits; all 14 content gates pass.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed GPKS-402 Unit 2 raster banner and topic illustrations (fig-U2-5, fig-U2-6, and fig-U2-7) in English and Urdu topic and index files, updated manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated, inspected, and placed GPKS-402 Unit 2 banner and topic raster illustrations in English and Urdu, updated manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
@@ -91,12 +92,12 @@ Generated, inspected, and placed GPKS-402 Unit 2 raster banner and topic illustr
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GPKS-402 Unit 2 raster banner and classroom illustrations (fig-U2-5, fig-U2-6, fig-U2-7) in English and Urdu index and topic files, updated manifests to placed, refreshed G2 evidence (20261119T021459360Z-gates.json), and passed all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed GPKS-402 Unit 2 banner and topic raster illustrations in English and Urdu, updated manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All Unit 2 figure rows are placed with committed WebP illustrations.
-  - G3 en-review and G5 ur-review remain open for independent review.
+  - All GPKS-402 Unit 2 figures are placed with committed WebP illustrations (banner fig-U2-5 and classroom scenes fig-U2-6 and fig-U2-7).
+  - G2 gate evidence was refreshed at 20261119T021459360Z; G3 en-review and G5 ur-review remain open for independent reviewers.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
