@@ -80,9 +80,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-300-u04-repair_en-r1, repair_en, opencode) `glossary.json` (repo root) is outside this brief's scope, so Length/Mass/Capacity remain unbanked; the pipeline gate would fail if `<Glossary>` wrappers were added before the entries exist.
 - (gqur-300-u04-repair_en, repair_en, codex) Owner follow-ups remain for source support, shared glossary entries, current renders, fresh blind assessment verification and review provenance.
 
+
 ## Response snapshot
 
-Generated and placed GQUR-300 Unit 4 raster banner and classroom illustrations in English and Urdu files, updated figure manifests to placed, and refreshed G2 gate evidence.
+Generated and placed GQUR-300 Unit 4 raster banner and classroom illustrations in English and Urdu topic files, updated figure manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
@@ -94,6 +95,17 @@ Generated and placed GQUR-300 Unit 4 raster banner and classroom illustrations i
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed GQUR-300 Unit 4 raster banner and classroom illustrations in English and Urdu files, updated figure manifests to placed, and refreshed G2 gate evidence.
+- Shipped / changed: Generated and placed GQUR-300 Unit 4 raster banner and classroom illustrations in English and Urdu topic files, updated figure manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Nov 8 G3 report input-manifest hashes for Unit 4 files do not match current committed bytes, so a fresh G3 run is needed before acceptance.
+  - Shared glossary terms Length, Mass, and Capacity remain unbanked in root glossary.json pending owner follow-up.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
