@@ -1,0 +1,71 @@
+{
+ "id": "gqur-300",
+ "kind": "course",
+ "course_code": "GQUR-300",
+ "semester": 1,
+ "title": {
+  "en": "Quantitative Reasoning-I (GQUR-300)",
+  "ur": "مقداری استدلال-1 (GQUR-300)"
+ },
+ "sources": [
+  "docs/semester-1/gqur-300/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government schools with whitewashed walls, plain green blackboards with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; papers and screens are blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident young Pakistani male teacher in a white shalwar kameez and a dark waistcoat, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "At a busy Pakistani bazaar fruit stall, a confident young Pakistani male teacher in a white shalwar kameez and a dark waistcoat holds up a shopping receipt, frowns at it, then turns to the camera with a grin; quick push-in from medium shot to close-up."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Fast crane move from overhead down to desk level in a bright classroom: pupils in uniform arrange coloured counters and fraction tiles on their desks while a teacher guides them."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Energetic tracking shot along a corridor wall where pupils pin up hand-drawn bar charts, then a whip-pan to a pupil pointing proudly at one."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Handheld dolly in a staff room: young trainee teachers solve a problem together on a small whiteboard, and one punches the air when they get it right."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a confident young Pakistani male teacher in a white shalwar kameez and a dark waistcoat walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "بازار میں discount، بجلی کا بل، کلاس کا result۔ کیا آپ numbers پر بھروسہ کرتے ہیں؟",
+    "اس کورس میں آپ numerical اور algebraic reasoning، proportions اور logical thinking سیکھیں گے۔",
+    "tables، graphs اور data کو پڑھنا، اور اصل زندگی کے مسائل حل کرنا۔",
+    "چھ units، تاکہ آپ اپنے طلبہ کو بھی سوچ سمجھ کر حساب لگانا سکھا سکیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "مقداری استدلال-1 (GQUR-300)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "کیا آپ numbers پر بھروسہ کرتے ہیں؟ مقداری استدلال | GQUR-300",
+   "keywords": [
+    "quantitative reasoning",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "numerical reasoning",
+    "data interpretation",
+    "logical reasoning",
+    "maths for teachers"
+   ]
+  }
+ }
+}

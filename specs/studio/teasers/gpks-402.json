@@ -1,0 +1,71 @@
+{
+ "id": "gpks-402",
+ "kind": "course",
+ "course_code": "GPKS-402",
+ "semester": 2,
+ "title": {
+  "en": "Pakistan Studies (GPKS-402)",
+  "ur": "مطالعہ پاکستان (GPKS-402)"
+ },
+ "sources": [
+  "docs/semester-2/gpks-402/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government schools with whitewashed walls, plain green blackboards with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; papers and screens are blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident Pakistani woman teacher in a green shalwar kameez and a white dupatta, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "On a school rooftop in the morning, a confident Pakistani woman teacher in a green shalwar kameez and a white dupatta stands as the green and white national flag of Pakistan waves behind her, then turns to the camera; quick push-in to a close-up."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Fast push through a museum hall lined with old black-and-white photographs of crowds and a vintage map, all details soft and unreadable, as students gaze at them."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Sweeping aerial shot from snowy northern mountains down along the Indus river to green farmland and a busy modern city."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a school morning assembly, pupils in neat rows in a sunlit yard."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a confident Pakistani woman teacher in a green shalwar kameez and a white dupatta walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "ہم پاکستانی ہیں، مگر کیا ہم اپنے ملک کی کہانی واقعی جانتے ہیں؟",
+    "اس کورس میں آپ تحریکِ پاکستان، دو قومی نظریہ اور آئینی ترقی پڑھیں گے۔",
+    "پاکستان کا جغرافیہ، معیشت، حکمرانی اور آج کے قومی مسائل۔",
+    "چھ units، اور قوم کی تعمیر میں ایک استاد کا کردار۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "مطالعہ پاکستان (GPKS-402)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "کیا ہم اپنے ملک کی کہانی جانتے ہیں؟ مطالعہ پاکستان | GPKS-402",
+   "keywords": [
+    "Pakistan Studies",
+    "مطالعہ پاکستان",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "Pakistan Movement",
+    "constitution of Pakistan",
+    "two-nation theory"
+   ]
+  }
+ }
+}
