@@ -366,9 +366,14 @@
    "script_sha256": "4cd122719bcaa42e440f1b5911623376d4094c280a12fed29048277aec98f8eb",
    "encoded_file": "~/studio-media/teasers/efmp-302/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/efmp-302/ur/teaser.youtube.thumb.jpg",
-   "youtube_id": "L031_W_u5WE",
+   "youtube_id": "F_anSjHwKss",
    "uploaded_at": "2026-11-20T04:00:34Z",
-   "published_at": "2026-11-20T05:31:44Z"
+   "published_at": "2026-11-20T05:31:44Z",
+   "superseded_youtube_ids": [
+    "L031_W_u5WE"
+   ],
+   "replaced_at": "2026-11-20T08:06:42.100Z",
+   "replace_reason": "recipe v2 pilot (on-screen presenter shots 1 and 5, voice-over action 2-4, voice 1.25x, 32.8 s); owner 2026-11-20: \"replace the old teaser, publish the pilot\"; old upload set private; review copy N95VcU228Nk private"
   },
   {
    "key": "geng-300-ur",

@@ -27,7 +27,8 @@ tests:
 check
 
 (then, 2026-11-20: "yes, run the lite test shot"; the serve-window tracebacks; "check option 1";
-"use Fast for the remaining shots"; "check, placed the forth"; the tunnel warning; "check")
+"use Fast for the remaining shots"; "check, placed the forth"; the tunnel warning; "check";
+"replace the old teaser, publish the pilot, with proper description")
 
 ## Response snapshot
 
@@ -42,7 +43,9 @@ Shots 2-5 ran on veo_fast in one project; shot 4 was billed but not returned (th
 shot 5 was regenerated after a stale tunnel was cleared. All five transcripts match the approved
 narration. Added `--speed` to the assembler (default 1.12 unchanged) and assembled the pilot at
 1.25x: 32.8 s, 1080x1920, -15.4 LUFS, QG1 pass. Uploaded private for the owner's review:
-N95VcU228Nk (not in the playlist).
+N95VcU228Nk (not in the playlist). On the owner's word it replaced the old teaser: re-uploaded with the
+full generated description, thumbnail and playlist as F_anSjHwKss (public); L031_W_u5WE and the review
+copy set private; ledger `replace` keeps the old id.
 
 ## Outcome
 
@@ -54,11 +57,11 @@ N95VcU228Nk (not in the playlist).
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: `assemble-teaser.mjs --speed`; EFMP-302 v2 pilot private (N95VcU228Nk).
+- Shipped / changed: `assemble-teaser.mjs --speed`; EFMP-302 v2 teaser public as F_anSjHwKss (old L031_W_u5WE private).
 - Decisions the team must respect: keep the Flow account on the classic composer (sidebar closed,
   Agent off); minimum gflow 0.102.1; omit `duration` for veo_lite and veo_fast on the classic pane;
   both models return 720x1280 on this account.
-- Pending / next owner: owner watches the pilot and decides whether it replaces L031_W_u5WE; merge
+- Pending / next owner: recipe v2 into Feature 030 and the remaining teasers; merge
   #668, #669, #656; optional upstream report of the sidebar drift and the structlog TypeError.
 - Paperclip issues affected: none (crew era).
 
