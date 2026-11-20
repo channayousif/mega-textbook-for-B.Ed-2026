@@ -1,0 +1,71 @@
+{
+ "id": "efmp-304",
+ "kind": "course",
+ "course_code": "EFMP-304",
+ "semester": 2,
+ "title": {
+  "en": "Critical Thinking and Reflective Practices (EFMP-304)",
+  "ur": "تنقیدی سوچ اور غور و فکر کی عملی مہارتیں (EFMP-304)"
+ },
+ "sources": [
+  "docs/semester-2/efmp-304/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, warm natural daylight, gentle realistic cinematic look. A Pakistani government school: whitewashed walls, a plain green blackboard with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame. Nobody speaks to the camera; the narration is a voice-over.",
+ "narrator": {
+  "name": "off-screen narrator",
+  "description": "An unseen Pakistani woman teacher in her thirties, warm, clear and confident; voice-over only, never shown on camera."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "A pupil in a Pakistani classroom raises her hand with a puzzled expression; the woman teacher, seen from behind, pauses mid-lesson while the class turns to look."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Close-up of a teacher's hand drawing a simple chalk diagram of three connected boxes and arrows on a plain green blackboard, no words; pupils watching."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Two student teachers debate politely across a desk, one counting points on her fingers, the other listening and nodding."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "In the evening, a woman teacher at home writes in a reflective journal by lamplight, the handwriting blurred and unreadable, then pauses to think."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a young woman trainee teacher holds a phone and scrolls a textbook page (screen blurred, unreadable), then looks up with a confident smile as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "ایک بچہ پوچھتا ہے: یہ سچ کیسے ہے؟ کیا آپ کے پاس جواب ہے؟",
+    "اس کورس میں آپ critical thinking سمجھیں گے، arguments پہچانیں گے اور basic logic سے ان کا تجزیہ کریں گے۔",
+    "آپ reflective teacher بننا سیکھیں گے، اپنی کلاس پر غور کریں گے اور reflective practice اپنائیں گے۔",
+    "چھ units، reflective journal بنانے اور جاری رکھنے تک، تاکہ ہر سبق سے آپ بہتر استاد بنیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "تنقیدی سوچ اور غور و فکر کی عملی مہارتیں (EFMP-304)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "یہ سچ کیسے ہے؟ تنقیدی سوچ اور غور و فکر | EFMP-304",
+   "keywords": [
+    "critical thinking",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "reflective practice",
+    "reflective journal",
+    "logic",
+    "arguments"
+   ]
+  }
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "id": "efmp-302",
+ "kind": "course",
+ "course_code": "EFMP-302",
+ "semester": 1,
+ "title": {
+  "en": "Teaching Profession (EFMP-302)",
+  "ur": "تدریس کا پیشہ (EFMP-302)"
+ },
+ "sources": [
+  "docs/semester-1/efmp-302/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, warm natural daylight, gentle realistic cinematic look. A Pakistani government school: whitewashed walls, a plain green blackboard with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame. Nobody speaks to the camera; the narration is a voice-over.",
+ "narrator": {
+  "name": "off-screen narrator",
+  "description": "An unseen Pakistani woman teacher in her thirties, warm, clear and confident; voice-over only, never shown on camera."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "Early morning at a Pakistani government school: a woman teacher, seen from behind, unlocks a classroom door and opens the wooden shutters as golden light fills the empty room of desks."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "A small staff room: three teachers sit around a table with open folders, one listens thoughtfully while another speaks quietly; papers blurred and unreadable."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "After class, a woman teacher seen from the side sits at her desk writing in a small notebook, pauses to think, then looks across the empty desks with a calm smile."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "A teacher training workshop in a school hall: rows of teachers taking notes while a trainer stands beside a plain chart stand with nothing written on it."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a young woman trainee teacher holds a phone and scrolls a textbook page (screen blurred, unreadable), then looks up with a confident smile as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "پڑھانا صرف نوکری ہے یا ایک پیشہ؟ ایک اچھا استاد اصل میں کیا کرتا ہے؟",
+    "اس کورس میں آپ professional ethics، code of conduct اور اساتذہ کے national اور global standards پڑھیں گے۔",
+    "ایک effective اور reflective teacher کیسے بنتے ہیں، اور اس پیشے کے issues اور challenges کا سامنا کیسے کرتے ہیں۔",
+    "چھ units، پہلے دن سے continuous professional development تک، تاکہ آپ ساری زندگی سیکھتے رہیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "تدریس کا پیشہ (EFMP-302)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "پڑھانا نوکری ہے یا پیشہ؟ تدریس کا پیشہ | EFMP-302",
+   "keywords": [
+    "teaching profession",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "professional ethics",
+    "code of conduct",
+    "reflective teacher",
+    "professional development"
+   ]
+  }
+ }
+}

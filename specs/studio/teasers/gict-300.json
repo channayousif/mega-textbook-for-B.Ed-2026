@@ -1,0 +1,71 @@
+{
+ "id": "gict-300",
+ "kind": "course",
+ "course_code": "GICT-300",
+ "semester": 1,
+ "title": {
+  "en": "Application of ICT (GICT-300)",
+  "ur": "آئی سی ٹی کا استعمال (GICT-300)"
+ },
+ "sources": [
+  "docs/semester-1/gict-300/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, warm natural daylight, gentle realistic cinematic look. A Pakistani government school: whitewashed walls, a plain green blackboard with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame. Nobody speaks to the camera; the narration is a voice-over.",
+ "narrator": {
+  "name": "off-screen narrator",
+  "description": "An unseen Pakistani woman teacher in her thirties, warm, clear and confident; voice-over only, never shown on camera."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "A teacher in a Pakistani school computer lab looks puzzled at a frozen desktop computer while pupils at nearby machines turn to watch; all screens softly blurred."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Close-up of hands opening a desktop computer case on a table, showing the motherboard, memory sticks and cables, then the camera pulls back to curious student teachers."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "A student teacher at a laptop thoughtfully covers a password field with her hand while a classmate looks away politely; screen blurred and unreadable."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "A small group of student teachers around one laptop in a school library, pointing and discussing; screen softly blurred."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a young woman trainee teacher holds a phone and scrolls a textbook page (screen blurred, unreadable), then looks up with a confident smile as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "کمپیوٹر ہر جگہ ہے، مگر کیا آپ واقعی اسے سمجھتے ہیں؟ ایک استاد کے لیے یہ ضروری کیوں ہے؟",
+    "آپ computer literacy، hardware اور software، اور operating system کے بنیادی تصورات سیکھیں گے۔",
+    "آپ cyber security، passwords، digital footprint اور ICT کا ethical استعمال سیکھیں گے، plagiarism سے بچنا بھی۔",
+    "چھ units، internet tools سے artificial intelligence تک، تاکہ آپ کی تدریس آج کی ٹیکنالوجی کے ساتھ چلے۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "آئی سی ٹی کا استعمال (GICT-300)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "کمپیوٹر واقعی سمجھتے ہیں؟ آئی سی ٹی کا استعمال | GICT-300",
+   "keywords": [
+    "ICT for teachers",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "computer literacy",
+    "cyber security",
+    "digital citizenship",
+    "emerging technologies"
+   ]
+  }
+ }
+}

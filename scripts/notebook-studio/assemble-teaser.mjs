@@ -254,13 +254,14 @@ export async function assemble({ id, locale, out, shots, platform = 'youtube' })
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-r', '30',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-t', String(duration), '-movflags', '+faststart', out);
   execFileSync(bin('ffmpeg'), args, { stdio: ['ignore', 'inherit', 'inherit'] });
-  // Thumbnail (thumbnail.mjs): best frame across the raw shots (no captions), the title's question
-  // as the hook, the course badge, the "free course" ribbon and a watch pill.
+  // Thumbnail (thumbnail.mjs): best frame across the raw shots 1-4 (no captions), the title's question
+  // as the hook, the course badge, the "free course" ribbon and a watch pill. Shot 5 is the shared
+  // closing shot, the same in every teaser, so it is left out to keep each thumbnail distinct.
   const hook = L.youtube_title.split(' | ')[0];
   const thumb = out.replace(/\.mp4$/, '') + '.thumb.jpg';
   await buildThumbnail({
     out: thumb, hook, badge: `${script.course_code ?? 'Licence'} · ${script.title[locale].replace(/\s*\([^)]*\)\s*/g, ' ').trim()}`,
-    kind: 'short', locale, aspect: 'portrait', frameFrom: [shots.map((f) => ({ file: f, samples: 5 }))],
+    kind: 'short', locale, aspect: 'portrait', frameFrom: [shots.slice(0, 4).map((f) => ({ file: f, samples: 5 }))],
   });
   return { encoded_file: out, thumbnail_file: thumb, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: windows };
 }
