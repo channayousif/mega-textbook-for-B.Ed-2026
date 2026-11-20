@@ -49,11 +49,11 @@ behaviour change for existing tools.
 
 **Independent test**: after this phase the existing suites pass unchanged, existing ledgers load unchanged, and `tests/unit/media-isolation.test.mjs` passes.
 
-- [ ] T011 [US6] Make `scripts/notebook-studio/teaser.mjs` re-export `BRAND`, `SITE`, `CHANNEL`, `LONG_DASH`, `clean` from `scripts/media/brand.mjs` and route `saveLedger` through `scripts/media/ledger.mjs` `save()` (locking) while keeping `advanceTeaser` and the CLI output identical
-- [ ] T012 [US6] Make `scripts/notebook-studio/media-ledger.mjs` re-export the brand constants and use `scripts/media/ledger.mjs` for load/save and the upload cap, keeping its CLI and `allLedgers` output identical
-- [ ] T013 [US6] Move `scripts/lib/image-producers.mjs` and `scripts/lib/image-quota.mjs` to `scripts/media/producers/image.mjs` and `scripts/media/producers/quota.mjs`; leave the old paths as one-line re-exports so `scripts/generate-illustration.mjs` (the single image entry point, ADR-0029 point 4) and `tests/crew/image-producers.test.mjs` work unchanged
-- [ ] T014 [US6] Run `scripts/heavy.sh npx vitest run tests/unit/notebook-studio*.test.mjs`, `npm run test:crew`, `npm run test:media`, `node scripts/check-docs-sync.mjs` and `node scripts/check-studio-manifest.mjs` (if present) and record the results in the phase PHR; fix only regressions this feature caused
-- [ ] T015 [US6] Confirm no accepted review became stale: run the review-evidence binding check used by CI (see `scripts/lib/review-evidence.mjs` bound-file list) against `origin/main` and this branch and record that the bound set is unchanged
+- [x] T011 [US6] Make `scripts/notebook-studio/teaser.mjs` re-export `BRAND`, `SITE`, `CHANNEL`, `LONG_DASH`, `clean` from `scripts/media/brand.mjs` and route `saveLedger` through `scripts/media/ledger.mjs` `save()` (locking) while keeping `advanceTeaser` and the CLI output identical
+- [x] T012 [US6] Make `scripts/notebook-studio/media-ledger.mjs` re-export the brand constants and use `scripts/media/ledger.mjs` for load/save and the upload cap, keeping its CLI and `allLedgers` output identical
+- [x] T013 [US6] Move `scripts/lib/image-producers.mjs` and `scripts/lib/image-quota.mjs` to `scripts/media/producers/image.mjs` and `scripts/media/producers/quota.mjs`; leave the old paths as one-line re-exports so `scripts/generate-illustration.mjs` (the single image entry point, ADR-0029 point 4) and `tests/crew/image-producers.test.mjs` work unchanged
+- [x] T014 [US6] Run `scripts/heavy.sh npx vitest run tests/unit/notebook-studio*.test.mjs`, `npm run test:crew`, `npm run test:media`, `node scripts/check-docs-sync.mjs` and `node scripts/check-studio-manifest.mjs` (if present) and record the results in the phase PHR; fix only regressions this feature caused
+- [x] T015 [US6] Confirm no accepted review became stale: run the review-evidence binding check used by CI (see `scripts/lib/review-evidence.mjs` bound-file list) against `origin/main` and this branch and record that the bound set is unchanged
 
 **Checkpoint**: Phase 2 of the plan is complete; the move can stop here (FR-019).
 

@@ -25,11 +25,12 @@ import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { allLedgers, uploadsOn, DAILY_UPLOAD_LIMIT } from './media-ledger.mjs';
+// Feature 030 (T011): brand constants and atomic, locked ledger writes come from the shared media core.
+import { SITE, LONG_DASH, clean, CHANNEL_URL, SUBSCRIBE_URL, TEASER_PLAYLIST } from '../media/brand.mjs';
+import { save as saveJson, withLock } from '../media/ledger.mjs';
 import { courseFacts, videoLinks, moreAbout, fitDescription, parseOverview } from './describe.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-const SITE = 'https://textbook.com.pk';
-const LONG_DASH = /[\u2014\u2015\u2E3A\u2E3B]/;
 /** Spoken words that fit an 8-second Veo shot at a natural pace (Urdu runs a little longer). */
 export const WORD_BUDGET = { en: 18, ur: 22 };
 export const MAX_RETAKES = 2;
@@ -108,8 +109,7 @@ export function loadLedger(root = ROOT) {
   return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : { items: [] };
 }
 export function saveLedger(ledger, root = ROOT) {
-  mkdirSync(dirname(ledgerPath(root)), { recursive: true });
-  writeFileSync(ledgerPath(root), `${JSON.stringify(ledger, null, 1)}\n`);
+  saveJson(ledgerPath(root), ledger);
 }
 const get = (o, path) => path.split('.').reduce((v, k) => (v == null ? v : v[k]), o);
 export const teaserKey = (id, locale) => `${id}-${locale}`;
@@ -179,12 +179,8 @@ export function advanceTeaser(ledger, key, to, fields = {}, { now = new Date(), 
 }
 
 // ---------- YouTube ----------
-const clean = (s) => String(s).replace(/[\u2014\u2015\u2E3A\u2E3B]/g, ' - ').replace(/[<>]/g, '').replace(/\s+/g, ' ').trim();
 
-export const CHANNEL_URL = 'https://www.youtube.com/@textbookdotcomdotpk';
-export const SUBSCRIBE_URL = `${CHANNEL_URL}?sub_confirmation=1`;
-/** "Course teasers (اردو)" playlist; set when the owner sends its full ID. */
-export const TEASER_PLAYLIST = 'PLCJn7gAoYIJs';
+export { CHANNEL_URL, SUBSCRIBE_URL, TEASER_PLAYLIST };
 const hashTag = (s) => `#${String(s).replace(/\(.*?\)/g, '').replace(/[^\p{L}\p{N}]+/gu, '')}`;
 const englishTitle = (script) => clean(script.title.en.replace(/\s*\([^)]*\)\s*/g, ' '));
 const urduTitle = (script) => clean(script.title.ur.replace(/\s*\([^)]*\)\s*/g, ' '));
@@ -334,6 +330,9 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       if (!item) throw new Error(`no item ${x}`);
       out(socialMeta(loadScript(item.id), item.locale, y));
     } else {
+      // Writes hold the ledger lock across load -> change -> save, so parallel runs cannot lose updates.
+      const WRITES = new Set(['plan', 'advance', 'clip', 'clipqa', 'block', 'unblock', 'crosspost', 'replace', 'thumb']);
+      const run = () => {
       const L = loadLedger();
       if (cmd === 'status') out(L.items.map((i) => ({ key: i.key, state: i.state, takes: i.clips.length, blocked: i.blocked ?? null, youtube: i.youtube_id ?? null })));
       else if (cmd === 'plan') { out(planTeaser(L, x, y)); saveLedger(L); }
@@ -355,6 +354,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       }
       else if (cmd === 'thumb') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); if (!y || !/\.jpe?g$/.test(y)) throw new Error('thumb <key> <file.jpg>'); i.thumbnail_file = y; saveLedger(L); out({ key: i.key, thumbnail_file: y }); }
       else { console.error('commands: check | status | plan | advance | clip | block | unblock | meta | social | crosspost | thumb | replace | sheet'); process.exit(2); }
+      };
+      if (WRITES.has(cmd)) withLock(ledgerPath(), run); else run();
     }
   } catch (e) { console.error(`teaser: ${e.message}`); process.exit(1); }
 }

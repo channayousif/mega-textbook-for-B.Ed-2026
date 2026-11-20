@@ -19,7 +19,7 @@ import { buildThumbnail } from './thumbnail.mjs';
 import { loadScript, teaserRoute } from './teaser.mjs';
 
 const bin = (t) => (process.env.FFMPEG_DIR ? join(process.env.FFMPEG_DIR, t) : t);
-const BRAND = { teal: '#123e43', amber: '#e5a333', paper: '#f8f5ef', pale: '#a6dfdc' };
+import { BRAND } from '../media/brand.mjs'; // Feature 030: one source of truth for house colours
 export const END_SECONDS = 3;
 export const PACE = { speed: 1.12, gap: 0.45, keep: 0.12, punch: 1.1, push: 0.0025, bpm: 124 };
 const FPS = 30;
