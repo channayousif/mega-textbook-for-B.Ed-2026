@@ -20,9 +20,9 @@ requires a guard that no content gate depends on the new shared core.
 
 **Purpose**: create the shared-core skeleton and its isolation guard before any code moves.
 
-- [ ] T001 Create the folders `scripts/media/`, `scripts/media/producers/`, `specs/studio/recipes/` and `tests/media/` (each with a one-line README.md stating its purpose and the FR-018 rule that no content gate may import `scripts/media/`)
-- [ ] T002 [P] Write the isolation guard `tests/media/isolation.test.mjs` (node:test): walk the static import closure of `scripts/lib/gates.mjs` and of every script it lists in `CONTENT_GATES` and `FULL_GATES`, plus `scripts/review-evidence.mjs` and `scripts/lib/review-evidence.mjs`, and fail if any resolved path is under `scripts/media/`
-- [ ] T003 [P] Add `"test:media": "node --test tests/media/*.test.mjs"` to `package.json` scripts, and add `tests/media/*.test.mjs` to the crew/media test step of `.github/workflows/` only if `scripts/check-docs-sync.mjs` does not require a matching `FULL_GATES` entry (check first; do not add a content gate)
+- [x] T001 Create the folders `scripts/media/`, `scripts/media/producers/`, `specs/studio/recipes/` (each with a one-line README.md stating its purpose and the FR-018 rule that no content gate may import `scripts/media/`)
+- [x] T002 [P] Write the isolation guard `tests/unit/media-isolation.test.mjs` (vitest, so CI runs it through `npm test` without a new gate): walk the static import closure of `scripts/lib/gates.mjs` and of every script it lists in `CONTENT_GATES` and `FULL_GATES`, plus `scripts/review-evidence.mjs` and `scripts/lib/review-evidence.mjs`, and fail if any resolved path is under `scripts/media/`
+- [x] T003 [P] Add `"test:media": "vitest run tests/unit/media-"` to `package.json`. Media tests live in `tests/unit/media-*.test.mjs` so CI runs them through `npm test`; adding a CI step would need a `gates.mjs` edit, and `gates.mjs` is a review-evidence input
 
 ---
 
@@ -36,8 +36,8 @@ behaviour change for existing tools.
 - [ ] T006 Implement `scripts/media/ledger.mjs`: `load(path)`, `save(path, ledger)` (atomic write via temp file + rename, and an advisory `flock`-style lock file so two writers cannot lose updates), `advance(ledger, key, to, fields)` enforcing `states.mjs`, `recordTake(...)` with a sha256 duplicate check, and `uploadsOn(ledgers, day)` with the daily upload cap moved from `scripts/notebook-studio/media-ledger.mjs`
 - [ ] T007 [P] Implement `scripts/media/brand.mjs` with `BRAND`, `SITE`, `CHANNEL`, `LONG_DASH` and `clean()` copied verbatim from `scripts/notebook-studio/teaser.mjs` and `scripts/notebook-studio/media-ledger.mjs` (one source of truth; both files re-export from it in US6)
 - [ ] T008 Implement `scripts/media/legacy.mjs`: read-only mappers from the teaser ledger states (`planned … public`) and the Notebook Studio ledger and manifest states to the shared vocabulary, without rewriting the source files (FR-003)
-- [ ] T009 [P] Write `tests/media/states.test.mjs` and `tests/media/ledger.test.mjs`: legal and illegal transitions per kind, evidence enforcement, duplicate sha256 refusal, concurrent `save` from two processes keeps both updates, upload cap
-- [ ] T010 [P] Write `tests/media/legacy.test.mjs`: load the real `specs/studio/teasers/media-teasers.json` and one real `specs/studio/<course>/unit-NN.json` from the repo and assert every item maps to a shared state with no data loss
+- [ ] T009 [P] Write `tests/unit/media-states.test.mjs` and `tests/unit/media-ledger.test.mjs`: legal and illegal transitions per kind, evidence enforcement, duplicate sha256 refusal, concurrent `save` from two processes keeps both updates, upload cap
+- [ ] T010 [P] Write `tests/unit/media-legacy.test.mjs`: load the real `specs/studio/teasers/media-teasers.json` and one real `specs/studio/<course>/unit-NN.json` from the repo and assert every item maps to a shared state with no data loss
 
 **Checkpoint**: shared core exists, nothing imports it yet, `npm run test:media` and `npm run test:crew` pass.
 
@@ -47,7 +47,7 @@ behaviour change for existing tools.
 
 **Goal**: the existing teaser, Notebook Studio and figure tools run on the shared core with no change in behaviour.
 
-**Independent test**: after this phase the existing suites pass unchanged, existing ledgers load unchanged, and `tests/media/isolation.test.mjs` passes.
+**Independent test**: after this phase the existing suites pass unchanged, existing ledgers load unchanged, and `tests/unit/media-isolation.test.mjs` passes.
 
 - [ ] T011 [US6] Make `scripts/notebook-studio/teaser.mjs` re-export `BRAND`, `SITE`, `CHANNEL`, `LONG_DASH`, `clean` from `scripts/media/brand.mjs` and route `saveLedger` through `scripts/media/ledger.mjs` `save()` (locking) while keeping `advanceTeaser` and the CLI output identical
 - [ ] T012 [US6] Make `scripts/notebook-studio/media-ledger.mjs` re-export the brand constants and use `scripts/media/ledger.mjs` for load/save and the upload cap, keeping its CLI and `allLedgers` output identical
@@ -88,7 +88,7 @@ behaviour change for existing tools.
 - [ ] T025 [P] [US4] Implement `scripts/media/producers/manual-flow.mjs`: emit the copy-button prompt page (`scripts/media/prompt-page.mjs`, ported from the batch-2 scratchpad builder) and ingest files from the download folder; split joined clips at speech pauses with ffmpeg `silencedetect` (nearest pause to each 8 s boundary, within about 1 s) and record each segment with `source: 'manual'`
 - [ ] T026 [P] [US4] Implement `scripts/media/producers/nlm.mjs` wrapping the existing studio-media generate and download steps; expired cookies return `unavailable`, not `failed`
 - [ ] T027 [P] [US4] Implement `scripts/media/qg2.mjs`: local whisper turbo (`~/.local/bin/whisper --model turbo --language ur`) transcript, a normalised word-match score against the approved line (Latin-script English words compared by transliteration-insensitive matching), a 3-frame strip per take for the reviewer, and verdict suggestion pass / pass-with-notes / fail
-- [ ] T028 [P] [US4] Tests in `tests/media/producers.test.mjs` with stub MCP and file servers: quota hold and fallback order, offline skip without spending an attempt, finished-unreported recovery with no second generate call, socket reset and timeout mapped to `unavailable`
+- [ ] T028 [P] [US4] Tests in `tests/unit/media-producers.test.mjs` with stub MCP and file servers: quota hold and fallback order, offline skip without spending an attempt, finished-unreported recovery with no second generate call, socket reset and timeout mapped to `unavailable`
 
 **Checkpoint**: one live gflow shot returns its clip with no owner download; one manual round trip works.
 
@@ -119,7 +119,7 @@ behaviour change for existing tools.
 
 - [ ] T035 [US3] Implement `scripts/media/status.mjs`: gather the teaser ledger, Notebook Studio ledgers and manifests, and figure manifests through `scripts/media/legacy.mjs`; print every job with kind, scope, shared state, producer and next owner action; print producer availability and reset times from the quota file; `--json` for machines
 - [ ] T036 [US3] Add an owner-action section to the crew `BOARD.md` writer in `scripts/crew/crew.mjs` from `scripts/media/status.mjs` (scripts to approve, Shorts to spot-check with QG2 notes, items to publish)
-- [ ] T037 [P] [US3] Tests in `tests/media/status.test.mjs` using fixture ledgers of four kinds
+- [ ] T037 [P] [US3] Tests in `tests/unit/media-status.test.mjs` using fixture ledgers of four kinds
 
 ---
 

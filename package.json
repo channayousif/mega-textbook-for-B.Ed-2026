@@ -40,6 +40,7 @@
     "test:watch": "vitest",
     "test:review": "node --test tests/review/*.test.mjs",
     "test:crew": "node --test tests/crew/*.test.mjs",
+    "test:media": "vitest run tests/unit/media-",
     "review:evidence": "node scripts/review-evidence.mjs",
     "test:e2e": "playwright test",
     "test:rls": "vitest run --config vitest.rls.config.ts",
