@@ -2,7 +2,7 @@
 
 > **Scope**: Document decision clusters, not individual technology choices. Group related decisions that work together (e.g., "Frontend Stack" not separate ADRs for framework, styling, deployment).
 
-- **Status:** Accepted by owner instruction on 2026-11-18 (decision D-2026-0085)
+- **Status:** Accepted by owner instruction on 2026-11-18 (decision D-2026-0085); amended by [ADR-0037](0037-unified-media-studio.md) (2026-11-20), whose producer contract covers every medium
 - **Date:** 2026-11-18
 - **Feature:** Cross-cutting figure production (ADR-0029 raster illustrations, crew `illustrate` stage)
 - **Amends:** [ADR-0029](0029-gemini-agy-raster-illustration-producer.md) points 1 and 4, only as
