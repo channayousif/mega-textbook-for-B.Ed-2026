@@ -5065,3 +5065,35 @@ content-improvement loop with no further cycle.
   8. **Topic rule, standing (`G-2026-215`, `G-2026-233`).** Where a guide's numbered sections are one-line items under weeks, a topic is one guide week in a multi-week unit and one numbered section in a one-week unit. `D-2026-0070` item 1 (topic N.k = section N.k) still governs guides whose sections are substantive.
 - **Basis:** owner answers of 2026-11-18 to the Semester 4 intake questions (catalog: "Approve and insert now", confirmed after the staleness consequence was stated; readings: "Extend to all semesters"; derived rows: "Allow all five"; formative: "3 per topic, any size"; codes: EFPG-402, EFPC-411, GENT 2 (2-0); Topic 6.4: "Keep, record decision"; groupings, topic rule, GCCE schedule, secondary level, readings and EFMP-409 wording as recommended).
 - **Limits:** certifies no content, qualifies no reviewer and authorises no publication. The style guide and constitution are not edited.
+
+---
+
+## D-2026-0094 - One Media Studio for image, audio and video: crew drafts, owner gates
+
+- **Status:** confirmed
+- **Gate:** none (Feature 030 Media Studio; amends D-2026-0082 point 1, D-2026-0085 and Feature 029's "never in the crew" rule)
+- **Scope:** course teasers, Notebook Studio audio, video and documents, and figure images
+- **Decided by:** curriculum owner, 2026-11-20 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **One Media Studio.** The three pipelines (teasers, Notebook Studio, figure images) share one
+     job model, one ledger engine, one producer registry and shared quality gates (ADR-0037).
+     Existing tools keep working through every phase.
+  2. **Crew drafts, owner gates.** The crew may draft scripts, generate, check, assemble and upload
+     as private for every media kind while a producer answers. Nothing runs in CI. The owner alone
+     approves a script before any credit is spent, spot-checks each private upload and makes a
+     video public.
+  3. **Teaser recipe v2.** On-screen presenter (a Flow Character ingredient with a preset Flow
+     voice) in shots 1 and 5, off-screen voice over action in shots 2-4, voice sped up 1.25x,
+     energetic camera-move prompts, at most 18 Urdu words a shot.
+  4. **gflow stays.** Its finished-clip detection is fixed or worked around; a clip that was made
+     but not reported is recovered without paying again.
+  5. **Site.** Public teasers embed on course overview pages and on home and catalogue course cards.
+  6. **Batch 2** (six Urdu teasers) was uploaded private as made, before the new recipe.
+- **Basis:** owner answers 2026-11-20: "upload as they are"; "apart from speeding up here upto
+  1.25x, there must be improved prompt for veo"; "i would like to mix onscreen presenter and
+  off-screen voice"; "Course overview page, Home or catalogue cards"; "i want to consolidate the
+  systems to cater audio, video and image creation needs"; "Crew drafts, owner gates";
+  "Spec + ADR, then phases"; "done, run adr".
+- **Limits:** Certifies no content, qualifies no reviewer and authorises no publication beyond the
+  owner's own spot-check (Art. VII.8). Account risk from automating Flow and NotebookLM stays the
+  owner's. Documented as ADR-0037.
