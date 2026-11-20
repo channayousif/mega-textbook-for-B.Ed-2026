@@ -1,0 +1,71 @@
+{
+ "id": "efmp-303",
+ "kind": "course",
+ "course_code": "EFMP-303",
+ "semester": 2,
+ "title": {
+  "en": "Educational Policies and Plans of Pakistan (EFMP-303)",
+  "ur": "پاکستان کی تعلیمی پالیسیاں اور منصوبے (EFMP-303)"
+ },
+ "sources": [
+  "docs/semester-2/efmp-303/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, warm natural daylight, gentle realistic cinematic look. A Pakistani government school: whitewashed walls, a plain green blackboard with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame. Nobody speaks to the camera; the narration is a voice-over.",
+ "narrator": {
+  "name": "off-screen narrator",
+  "description": "An unseen Pakistani woman teacher in her thirties, warm, clear and confident; voice-over only, never shown on camera."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "Slow push-in on an overcrowded Pakistani government classroom with a few broken desks, pupils sharing benches, light from a single window."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "A long wooden table in a modest education office: officials with closed folders and tea cups listen as one speaks; papers blurred and unreadable."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "A head teacher walks through a school courtyard with a clipboard, observing classes through open doorways; writing on the clipboard unreadable."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "A newly repaired classroom with fresh paint and new desks; pupils enter and sit down smiling as a teacher welcomes them."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a young woman trainee teacher holds a phone and scrolls a textbook page (screen blurred, unreadable), then looks up with a confident smile as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "ہر حکومت نئی تعلیمی پالیسی لاتی ہے۔ پھر بھی ہمارے اسکول ویسے کیوں ہیں؟",
+    "اس کورس میں آپ پاکستان کی تعلیمی پالیسیوں کی تاریخ اور national development plans پڑھیں گے۔",
+    "آپ national اور provincial سطح پر educational planning، monitoring اور evaluation، اور implementation کے challenges سمجھیں گے۔",
+    "چھ units، quality assurance سے international perspectives تک، تاکہ آپ بہتر منصوبہ بندی کی تجاویز دے سکیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "پاکستان کی تعلیمی پالیسیاں اور منصوبے (EFMP-303)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "پالیسیاں بدلتی ہیں، اسکول کیوں نہیں؟ پاکستان کی تعلیمی پالیسیاں | EFMP-303",
+   "keywords": [
+    "education policy Pakistan",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "educational planning",
+    "national education policy",
+    "quality assurance",
+    "five year plans"
+   ]
+  }
+ }
+}

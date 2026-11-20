@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Feature 029 studio-teaser stage 6: five Veo shots + per-shot captions + an end card -> one Short.
 //
-//   node scripts/notebook-studio/assemble-teaser.mjs <id> <locale> <out.mp4> <shot1.mp4> ... <shot5.mp4> [--platform youtube|tiktok|instagram|facebook|linkedin]
+//   node scripts/notebook-studio/assemble-teaser.mjs <id> <locale> <out.mp4> <shot1.mp4> ... <shot5.mp4> [--platform youtube|tiktok|instagram|facebook|linkedin] [--speed 1.25]
 //
 // Each shot is scaled/cropped to 1080x1920 at 30 fps and gets its narration line as a burned-in
 // caption (Veo speaks the line; the caption makes it readable with sound off, and keeps Urdu
@@ -225,7 +225,7 @@ const detectSilence = (f) => spawnSync(bin('ffmpeg'), ['-hide_banner', '-nostats
 
 const probeDuration = (f) => Number(execFileSync(bin('ffprobe'), ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f], { encoding: 'utf8' }).trim());
 
-export async function assemble({ id, locale, out, shots, platform = 'youtube' }) {
+export async function assemble({ id, locale, out, shots, platform = 'youtube', speed = PACE.speed }) {
   if (!PLATFORM_CTA[platform]) throw new Error(`unknown platform ${platform}`);
   if (shots.length !== 5) throw new Error('a teaser has exactly five shots');
   const script = loadScript(id);
@@ -244,7 +244,7 @@ export async function assemble({ id, locale, out, shots, platform = 'youtube' })
   await sharp(Buffer.from(ctaSvg(platform, locale))).png().toFile(ctaPng);
   const crops = shots.map(detectCrop);
   const segments = shots.flatMap((f, shot) => speechSegments(detectSilence(f), probeDuration(f)).map((s) => ({ shot, ...s })));
-  const { graph, video, audio, duration, windows } = buildFilter(segments, { crops, cta: true });
+  const { graph, video, audio, duration, windows } = buildFilter(segments, { crops, cta: true, pace: { ...PACE, speed } });
   const args = ['-nostdin', '-hide_banner', '-loglevel', 'error', '-y'];
   for (const s of shots) args.push('-i', s);
   for (const c of caps) args.push('-loop', '1', '-i', c);
@@ -254,13 +254,14 @@ export async function assemble({ id, locale, out, shots, platform = 'youtube' })
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-r', '30',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-t', String(duration), '-movflags', '+faststart', out);
   execFileSync(bin('ffmpeg'), args, { stdio: ['ignore', 'inherit', 'inherit'] });
-  // Thumbnail (thumbnail.mjs): best frame across the raw shots (no captions), the title's question
-  // as the hook, the course badge, the "free course" ribbon and a watch pill.
+  // Thumbnail (thumbnail.mjs): best frame across the raw shots 1-4 (no captions), the title's question
+  // as the hook, the course badge, the "free course" ribbon and a watch pill. Shot 5 is the shared
+  // closing shot, the same in every teaser, so it is left out to keep each thumbnail distinct.
   const hook = L.youtube_title.split(' | ')[0];
   const thumb = out.replace(/\.mp4$/, '') + '.thumb.jpg';
   await buildThumbnail({
     out: thumb, hook, badge: `${script.course_code ?? 'Licence'} · ${script.title[locale].replace(/\s*\([^)]*\)\s*/g, ' ').trim()}`,
-    kind: 'short', locale, aspect: 'portrait', frameFrom: [shots.map((f) => ({ file: f, samples: 5 }))],
+    kind: 'short', locale, aspect: 'portrait', frameFrom: [shots.slice(0, 4).map((f) => ({ file: f, samples: 5 }))],
   });
   return { encoded_file: out, thumbnail_file: thumb, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: windows };
 }
@@ -269,12 +270,15 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const argv = process.argv.slice(2);
   const pi = argv.indexOf('--platform');
   const platform = pi >= 0 ? argv.splice(pi, 2)[1] : 'youtube';
+  // Recipe v2 (D-2026-0094) speeds the voice 1.25x; the default stays 1.12 for existing teasers.
+  const si = argv.indexOf('--speed');
+  const speed = si >= 0 ? Number(argv.splice(si, 2)[1]) : PACE.speed;
   const [id, locale, out, ...shots] = argv;
-  if (!id || !['en', 'ur'].includes(locale) || !out || shots.length !== 5 || !PLATFORM_CTA[platform]) {
-    console.error(`usage: assemble-teaser.mjs <id> <en|ur> <out.mp4> <shot1> ... <shot5> [--platform ${Object.keys(PLATFORM_CTA).join('|')}]`);
+  if (!id || !['en', 'ur'].includes(locale) || !out || shots.length !== 5 || !PLATFORM_CTA[platform] || !(speed >= 1 && speed <= 1.5)) {
+    console.error(`usage: assemble-teaser.mjs <id> <en|ur> <out.mp4> <shot1> ... <shot5> [--platform ${Object.keys(PLATFORM_CTA).join('|')}] [--speed 1-1.5]`);
     process.exit(2);
   }
-  assemble({ id, locale, out: resolve(out), shots: shots.map((s) => resolve(s)), platform })
+  assemble({ id, locale, out: resolve(out), shots: shots.map((s) => resolve(s)), platform, speed })
     .then((r) => console.log(JSON.stringify(r, null, 1)))
     .catch((e) => { console.error(`assemble-teaser: ${e.message}`); process.exit(1); });
 }

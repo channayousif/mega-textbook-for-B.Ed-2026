@@ -1,0 +1,71 @@
+{
+ "id": "geng-300",
+ "kind": "course",
+ "course_code": "GENG-300",
+ "semester": 1,
+ "title": {
+  "en": "Functional English (GENG-300)",
+  "ur": "فنکشنل انگلش (GENG-300)"
+ },
+ "sources": [
+  "docs/semester-1/geng-300/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, warm natural daylight, gentle realistic cinematic look. A Pakistani government school: whitewashed walls, a plain green blackboard with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame. Nobody speaks to the camera; the narration is a voice-over.",
+ "narrator": {
+  "name": "off-screen narrator",
+  "description": "An unseen Pakistani woman teacher in her thirties, warm, clear and confident; voice-over only, never shown on camera."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "A young woman trainee teacher stands at the front of a quiet classroom, hands slightly nervous, about to speak while pupils at wooden desks look up at her."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Close-up of a student teacher reading a short English passage in a book at her desk, finger tracing the lines; the printed text is blurred and unreadable."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Two student teachers practise a conversation face to face in a sunlit classroom, gesturing naturally and smiling; others watch from their desks."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "A student teacher types a formal letter on a laptop in a school computer room; the screen is softly blurred and unreadable."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a young woman trainee teacher holds a phone and scrolls a textbook page (screen blurred, unreadable), then looks up with a confident smile as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "انگریزی سمجھ تو آتی ہے، مگر بولتے اور لکھتے وقت جھجک کیوں ہوتی ہے؟",
+    "Functional English میں آپ word choice، grammar اور sentence structure کو روزمرہ استعمال کے لیے مضبوط کریں گے۔",
+    "آپ comprehension اور analysis، public speaking اور مؤثر communication کی مشق کریں گے۔",
+    "چار units، professional writing اور intercultural communication تک، تاکہ کلاس اور نوکری دونوں میں اعتماد سے بات کریں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "فنکشنل انگلش (GENG-300)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "انگریزی بولتے وقت جھجک کیوں؟ فنکشنل انگلش | GENG-300",
+   "keywords": [
+    "functional English",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "English grammar",
+    "public speaking",
+    "professional writing",
+    "communication skills"
+   ]
+  }
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "id": "gnas-301",
+ "kind": "course",
+ "course_code": "GNAS-301",
+ "semester": 1,
+ "title": {
+  "en": "Environmental Science (GNAS-301)",
+  "ur": "ماحولیاتی سائنس (GNAS-301)"
+ },
+ "sources": [
+  "docs/semester-1/gnas-301/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, warm natural daylight, gentle realistic cinematic look. A Pakistani government school: whitewashed walls, a plain green blackboard with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame. Nobody speaks to the camera; the narration is a voice-over.",
+ "narrator": {
+  "name": "off-screen narrator",
+  "description": "An unseen Pakistani woman teacher in her thirties, warm, clear and confident; voice-over only, never shown on camera."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "Wide shot of a Pakistani city street on a hazy winter morning, thick grey smog softening buildings and traffic, schoolchildren in uniform walking with scarves over their mouths."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "A teacher and pupils in a green school garden examine leaves and a small pond, a girl pointing at a dragonfly; bright natural daylight."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Pupils in uniform collect plastic bottles and wrappers from a school yard into separate coloured bins while a teacher guides them."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Close-up of a student teacher filling a clear glass with water from a school tap and holding it up to the light, pupils watching closely."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a young woman trainee teacher holds a phone and scrolls a textbook page (screen blurred, unreadable), then looks up with a confident smile as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "سردیوں کی smog، گندا پانی، بڑھتی گرمی۔ یہ سب ہمارے بچوں کو کیسے متاثر کرتا ہے؟",
+    "Environmental Science میں آپ ecosystems، natural resources، اور پانی اور waste management پڑھیں گے۔",
+    "آپ air اور noise pollution، occupational safety اور health، اور toxicology کی بنیادی باتیں سیکھیں گے۔",
+    "چھ units، environmental law سے climate change اور smog تک، اور ہر جگہ پاکستان کے اپنے ماحول کی مثالیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "ماحولیاتی سائنس (GNAS-301)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "smog اور گندا پانی بچوں پر کیا اثر کرتے ہیں؟ ماحولیاتی سائنس | GNAS-301",
+   "keywords": [
+    "environmental science",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "smog Pakistan",
+    "climate change",
+    "pollution",
+    "waste management"
+   ]
+  }
+ }
+}
