@@ -203,7 +203,7 @@
    "id": "efmp-302",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -227,6 +227,12 @@
      "verdict": "pass",
      "at": "2026-11-20T04:00:35Z",
      "notes": "list_videos: private on the channel, custom thumbnail and teaser playlist set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"make them public\" after spot-check; known notes accepted as is"
     }
    },
    "clips": [
@@ -347,20 +353,29 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-20T04:00:35.602Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-20T05:32:20.561Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-20T05:32:20.666Z"
     }
    ],
    "script_sha256": "4cd122719bcaa42e440f1b5911623376d4094c280a12fed29048277aec98f8eb",
    "encoded_file": "~/studio-media/teasers/efmp-302/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/efmp-302/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "L031_W_u5WE",
-   "uploaded_at": "2026-11-20T04:00:34Z"
+   "uploaded_at": "2026-11-20T04:00:34Z",
+   "published_at": "2026-11-20T05:31:44Z"
   },
   {
    "key": "geng-300-ur",
    "id": "geng-300",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -384,6 +399,12 @@
      "verdict": "pass",
      "at": "2026-11-20T04:00:35Z",
      "notes": "list_videos: private on the channel, custom thumbnail and teaser playlist set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"make them public\" after spot-check; known notes accepted as is"
     }
    },
    "clips": [
@@ -504,20 +525,29 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-20T04:00:36.152Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-20T05:32:20.767Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-20T05:32:20.867Z"
     }
    ],
    "script_sha256": "c994aaaff9a0228d74b6119fbf520349722ca5170c544b08749127487de71885",
    "encoded_file": "~/studio-media/teasers/geng-300/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/geng-300/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "CeawyLtdtQc",
-   "uploaded_at": "2026-11-20T04:00:35Z"
+   "uploaded_at": "2026-11-20T04:00:35Z",
+   "published_at": "2026-11-20T05:31:46Z"
   },
   {
    "key": "gict-300-ur",
    "id": "gict-300",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -541,6 +571,12 @@
      "verdict": "pass",
      "at": "2026-11-20T04:00:36Z",
      "notes": "list_videos: private on the channel, custom thumbnail and teaser playlist set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"make them public\" after spot-check; known notes accepted as is"
     }
    },
    "clips": [
@@ -661,20 +697,29 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-20T04:00:36.726Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-20T05:32:20.996Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-20T05:32:21.123Z"
     }
    ],
    "script_sha256": "cb20157b482fec0bba202512eec550fa7a8117af1db4190e0e6948bd04dc1102",
    "encoded_file": "~/studio-media/teasers/gict-300/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/gict-300/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "4wpqhahqZr8",
-   "uploaded_at": "2026-11-20T04:00:36Z"
+   "uploaded_at": "2026-11-20T04:00:36Z",
+   "published_at": "2026-11-20T05:31:47Z"
   },
   {
    "key": "gnas-301-ur",
    "id": "gnas-301",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -698,6 +743,12 @@
      "verdict": "pass",
      "at": "2026-11-20T04:00:37Z",
      "notes": "list_videos: private on the channel, custom thumbnail and teaser playlist set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"make them public\" after spot-check; known notes accepted as is"
     }
    },
    "clips": [
@@ -818,20 +869,29 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-20T04:00:37.232Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-20T05:32:21.237Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-20T05:32:21.354Z"
     }
    ],
    "script_sha256": "fce8fa8338667019e63d8c3ecd0511bcb6a89e514f4e5900b83239fb0909f21b",
    "encoded_file": "~/studio-media/teasers/gnas-301/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/gnas-301/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "pENNFf-WHNw",
-   "uploaded_at": "2026-11-20T04:00:36Z"
+   "uploaded_at": "2026-11-20T04:00:36Z",
+   "published_at": "2026-11-20T05:31:48Z"
   },
   {
    "key": "efmp-303-ur",
    "id": "efmp-303",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -855,6 +915,12 @@
      "verdict": "pass",
      "at": "2026-11-20T04:00:37Z",
      "notes": "list_videos: private on the channel, custom thumbnail and teaser playlist set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"make them public\" after spot-check; known notes accepted as is"
     }
    },
    "clips": [
@@ -1039,20 +1105,29 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-20T04:00:37.890Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-20T05:32:21.466Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-20T05:32:21.567Z"
     }
    ],
    "script_sha256": "b0e33a5df4ac49fc877b55ef1ab776f68e0155403bf710f39b4d783f965a1e38",
    "encoded_file": "~/studio-media/teasers/efmp-303/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/efmp-303/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "1bNmtFdmNEE",
-   "uploaded_at": "2026-11-20T04:00:37Z"
+   "uploaded_at": "2026-11-20T04:00:37Z",
+   "published_at": "2026-11-20T05:31:50Z"
   },
   {
    "key": "efmp-304-ur",
    "id": "efmp-304",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -1076,6 +1151,12 @@
      "verdict": "pass",
      "at": "2026-11-20T04:00:38Z",
      "notes": "list_videos: private on the channel, custom thumbnail and teaser playlist set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"make them public\" after spot-check; known notes accepted as is"
     }
    },
    "clips": [
@@ -1212,13 +1293,22 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-20T04:00:38.479Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-20T05:32:21.669Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-20T05:32:21.772Z"
     }
    ],
    "script_sha256": "b3c25001aef242583cd7db90a6efbd2622b028216f0bd6f711e0955decfe3d65",
    "encoded_file": "~/studio-media/teasers/efmp-304/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/efmp-304/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "LwAvxLfGyQw",
-   "uploaded_at": "2026-11-20T04:00:37Z"
+   "uploaded_at": "2026-11-20T04:00:37Z",
+   "published_at": "2026-11-20T05:31:51Z"
   }
  ]
 }
