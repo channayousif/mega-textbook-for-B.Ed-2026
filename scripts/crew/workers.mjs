@@ -56,6 +56,13 @@ export const STAGES = {
   translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'translate-unit' },
   review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'opencode', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
   fix:        { chain: ['opencode', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
+  // Media Studio (Feature 030, scripts/crew/media.mjs). Clips, uploads and NotebookLM need the gflow
+  // and youtube-uploader MCP servers, which only the claude worker has; a script draft needs neither.
+  teaser_script:  { chain: ['claude', 'agy_claude'], skill: 'studio-teaser' },
+  teaser_clips:   { chain: ['claude'], skill: 'studio-teaser' },
+  media_assemble: { chain: ['claude'], skill: 'studio-teaser' },
+  media_publish:  { chain: ['claude'], skill: 'studio-teaser' },
+  audio_overview: { chain: ['claude'], skill: 'studio-media' },
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.
   intel_distill:  { chain: ['agy', 'codex', 'claude', 'agy_claude'], skill: 'intel-distill' },

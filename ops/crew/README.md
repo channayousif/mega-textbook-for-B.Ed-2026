@@ -162,6 +162,22 @@ one failure recurred 25 times before a person found it.
 - `crew maintenance now` (an extra survey now; Sunday's still runs), `crew maintenance skip`
   (skip this week), `crew maintenance status`; `crew intel now` (harvest and queue a distill now),
   `crew intel status` (the week's top clusters).
+- Media Studio (Feature 030, ADR-0037; crew drafts, owner gates): `crew media on|off|status`
+  (off by default), `crew approve-script <key>` (e.g. `gqur-300-ur`; approves the script file as it
+  is now, so a later edit voids it), `crew reject <key> <note>` (a script is redrafted with the
+  note; a private Short stays private), `crew publish <key>` (after watching the private Short).
+
+### Media stages (`scripts/crew/media.mjs`)
+
+`teaser_script` drafts a recipe-v2 script and stops at `scripted`; `teaser_clips` runs only after
+`crew approve-script` on the current script hash and spends Flow credits through
+`scripts/media/teaser-clips.mjs` (lost-clip recovery, never a second payment); `media_assemble`
+assembles and uploads **private**, then stops at `qa3-pass`; `media_publish` is queued only by
+`crew publish`, and is the one job allowed to set a video public; `audio_overview` makes planned
+NotebookLM audio. One media job is in flight at a time (they all write a shared ledger), at most six
+scripts wait for the owner, and `teaser_clips` is held without spending an attempt while gflow is
+offline or out of quota. Clip, upload and NotebookLM stages run only on the claude worker (it has
+the gflow and youtube-uploader MCP servers). Approvals live in `~/.crew/mega-book/media.json`.
 
 Two paths deliver them, and each command is applied once:
 

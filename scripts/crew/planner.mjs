@@ -228,7 +228,8 @@ export function authorQueue(unitsInSpec, onDisk, hasOverview) {
 
 /** Job states that are crew work in flight. `gate_red` and `blocked` wait on a person, so they never hold the crew. */
 export const IN_FLIGHT = ['queued', 'running', 'pr_open', 'ready', 'batched'];
-export const isCorpusStage = (stage) => !/^(maint|intel)_/.test(stage);
+/** Media stages (scripts/crew/media.mjs) are course-level side work: they never start or focus a course. */
+export const isCorpusStage = (stage) => !/^(maint|intel|teaser|media|audio)_/.test(stage);
 
 /**
  * The one course the crew works on first (owner ruling 2026-10-28: finish what was started
