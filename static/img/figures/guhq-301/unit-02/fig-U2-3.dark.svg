@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 310" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of the noun abd in singular, dual and plural</title><desc id="d">Table showing the noun abd (servant) in singular, dual and plural, masculine and feminine, with Arabic forms and meanings</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.thin { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight:700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 14px; fill: var(--ink); }
+.ar { font-size: 18px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="310"/><text class="h" x="24" y="34">One noun in singular, dual and plural</text><text class="sh" x="24" y="64">Number</text><text class="sh" x="120" y="64">Masculine</text><text class="sh" x="436" y="64">Feminine</text><line class="thin" x1="24" y1="74" x2="756" y2="74"/><text class="sh" x="24" y="112">singular</text><text class="ar" x="120" y="112">عَبْد</text><text class="cell" x="120" y="136">ʿabd</text><text class="cell" x="120" y="156">one servant</text><text class="ar" x="436" y="112">أَمَة</text><text class="cell" x="436" y="136">amah</text><text class="cell" x="436" y="156">one female servant</text><text class="sh" x="24" y="182">dual</text><text class="ar" x="120" y="182">عَبْدَانِ</text><text class="cell" x="120" y="206">ʿabdāni</text><text class="cell" x="120" y="226">two servants</text><text class="ar" x="436" y="182">أَمَتَانِ</text><text class="cell" x="436" y="206">amatāni</text><text class="cell" x="436" y="226">two female servants</text><text class="sh" x="24" y="252">plural</text><text class="ar" x="120" y="252">عِبَاد</text><text class="cell" x="120" y="276">ʿibād</text><text class="cell" x="120" y="296">servants</text><text class="ar" x="436" y="252">إِمَاء</text><text class="cell" x="436" y="276">imāʾ</text><text class="cell" x="436" y="296">female servants</text><text class="wm" x="768" y="306" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
