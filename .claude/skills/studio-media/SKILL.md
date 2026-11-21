@@ -13,6 +13,10 @@ description: >-
 
 # Study Studio media pipeline
 
+Read the **media-studio** skill first for the shared rules (owner gates, producers including `nlm`,
+checks, crew stages, the status view). This skill keeps the NotebookLM audio/video steps and the
+YouTube authentication guide.
+
 Owner rulings (2026-11-09): audio and video live on **YouTube / YouTube Music**, slides on
 Google Drive. Final visibility is **public**. Uploads go to the **textbook.com.pk brand
 channel**. The last gate is an **owner spot-check sample**, after Claude has checked every

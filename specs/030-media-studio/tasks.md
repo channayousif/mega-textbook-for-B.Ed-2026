@@ -144,10 +144,11 @@ behaviour change for existing tools.
 
 ## Phase 9: Polish & cross-cutting
 
-- [ ] T044 Write the merged skill `.claude/skills/media-studio/SKILL.md` (recipes, producers, checks, owner gates, social cross-posting, gflow route and its known failure modes) and reduce `.claude/skills/studio-teaser/SKILL.md`, `.claude/skills/studio-media/SKILL.md` and `.claude/skills/generate-figures/SKILL.md` to their kind-specific steps plus a pointer; fix the stale "Codex handoff" text in `generate-figures`
-- [ ] T045 [P] Update `ops/crew/README.md` and the AGENTS.md "Visuals" and "Gemini Notebook Studio" sections to point to Media Studio and ADR-0037, in one place each
-- [ ] T046 [P] Make `scripts/notebook-studio/social-post.mjs` record cross-posts through `scripts/media/ledger.mjs` and add `--draft` documentation (Facebook draft reels; TikTok inbox; Instagram has no draft API) to the merged skill
-- [ ] T047 Run the full verification set from plan.md (test:media, test:crew, notebook-studio vitest, check-docs-sync, isolation guard, review-evidence bound-set comparison) and record results in the closing PHR
+- [x] T044 Write the merged skill `.claude/skills/media-studio/SKILL.md` (recipes, producers, checks, owner gates, social cross-posting, gflow route and its known failure modes) and reduce `.claude/skills/studio-teaser/SKILL.md`, `.claude/skills/studio-media/SKILL.md` and `.claude/skills/generate-figures/SKILL.md` to their kind-specific steps plus a pointer; fix the stale "Codex handoff" text in `generate-figures`
+- [x] T045 [P] Update `ops/crew/README.md` and the AGENTS.md "Visuals" and "Gemini Notebook Studio" sections to point to Media Studio and ADR-0037, in one place each
+- [x] T046 [P] Make `scripts/notebook-studio/social-post.mjs` record cross-posts through `scripts/media/ledger.mjs` and add `--draft` documentation (Facebook draft reels; TikTok inbox; Instagram has no draft API) to the merged skill
+- [x] T047 Run the full verification set from plan.md (test:media, test:crew, notebook-studio vitest, check-docs-sync, isolation guard, review-evidence bound-set comparison) and record results in the closing PHR
+  - 2026-11-21 results: test:media 40/40; test:crew 147/147; vitest 49 files / 533 tests; check-docs-sync, check-studio-manifest and check:no-em-dash pass; no file under scripts/lib, scripts/review-evidence.mjs, scripts/check-*.mjs, contracts, specs/content, .claude/skills/review-unit or .claude/agents differs from origin/main. The only skill review evidence binds is review-unit, which Feature 030 never touched.
 
 ---
 
