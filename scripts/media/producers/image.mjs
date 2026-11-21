@@ -170,6 +170,45 @@ function download(url, ms = 120000) {
 }
 
 /**
+ * Other names the same image may have on the PC: gflow plans `images/<date>/<job>_<n>.png` but saves
+ * Flow's JPEG bytes as `.jpg` (gflow #96), and a reply can name either. 2026-11-21: six Nano Banana
+ * images reached Downloads\gflow-cli\images as .jpg while the crew's fetch got HTTP 404, so every
+ * illustrate job reported gflow as unavailable and none was placed.
+ */
+export function gflowImageCandidates(rel) {
+  const alts = /\.png$/i.test(rel) ? ['.jpg', '.jpeg', '.webp'] : /\.jpe?g$/i.test(rel) ? ['.png', '.webp'] : [];
+  return [rel, ...alts.map((x) => rel.replace(/\.[^./]+$/, x))];
+}
+
+/**
+ * Fetch a generated image from the 18801 file server: the reported path, its other suffixes, then any
+ * file with the same stem in the same folder. A refused connection is UnavailableError (tunnel down);
+ * an image that cannot be found is a failed image, not a missing producer.
+ */
+export async function fetchGflowImage(rel, filesUrl = GFLOW_FILES_URL) {
+  const url = (p) => new URL(p.split('/').map(encodeURIComponent).join('/'), filesUrl).href;
+  const tried = [];
+  const attempt = async (p) => {
+    tried.push(p);
+    try { return await download(url(p)); } catch (e) {
+      if (/HTTP 404/.test(e.message)) return null;
+      throw new UnavailableError('gflow', `gflow file server: ${e.message}`);
+    }
+  };
+  for (const p of gflowImageCandidates(rel)) {
+    const b = await attempt(p);
+    if (b) return b;
+  }
+  const dir = rel.includes('/') ? rel.slice(0, rel.lastIndexOf('/') + 1) : '';
+  const stem = rel.slice(dir.length).replace(/\.[^.]+$/, '');
+  const listing = await attempt(dir || '.').catch(() => null);
+  const name = listing && [...listing.toString('utf8').matchAll(/href="([^"?#]+)"/g)].map((m) => decodeURIComponent(m[1]))
+    .find((n) => n.startsWith(`${stem}.`) && /\.(jpe?g|png|webp)$/i.test(n));
+  if (name) { const b = await attempt(`${dir}${name}`); if (b) return b; }
+  throw new Error(`gflow made the image but the file server has none of: ${tried.join(', ')}`);
+}
+
+/**
  * One Flow project for many illustrations. Without a `project` id gflow creates a fresh Flow project
  * per call (`project_name` only titles a new one). Flow's agent chat keeps a project's history, so a
  * project is rotated after GFLOW_PROJECT_ROTATE images. GFLOW_PROJECT pins one project id instead.
@@ -229,13 +268,7 @@ export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL
     if (GFLOW_QUOTA_RE.test(why)) throw new QuotaError('gflow', `gflow image quota reached: ${why}`);
     throw new Error(`gflow produced no image: ${why}`);
   }
-  const url = new URL(gflowRelativePath(files[0]).split('/').map(encodeURIComponent).join('/'), filesUrl).href;
-  let bytes;
-  try {
-    bytes = await download(url);
-  } catch (e) {
-    throw new UnavailableError('gflow', `gflow file server: ${e.message}`);
-  }
+  const bytes = await fetchGflowImage(gflowRelativePath(files[0]), filesUrl);
   // Flow saves JPEG; the pipeline stages PNG.
   const sharp = (await import('sharp')).default;
   await sharp(bytes).png().toFile(png);

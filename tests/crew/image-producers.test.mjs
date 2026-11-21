@@ -6,7 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import sharp from 'sharp';
 import {
-  parseRpcBody, gflowPayload, gflowRelativePath, gflowProducer, newestCodexImage,
+  parseRpcBody, gflowPayload, gflowRelativePath, gflowProducer, newestCodexImage, gflowImageCandidates,
   gflowProjectArgs, recordGflowProject, GFLOW_PROJECT_ROTATE,
   QuotaError, UnavailableError, GFLOW_QUOTA_RE,
 } from '../../scripts/lib/image-producers.mjs';
@@ -33,6 +33,8 @@ async function stubGflow(reply) {
   const calls = [];
   const server = http.createServer((req, res) => {
     if (req.method === 'GET' && req.url === '/files/images/2026-11-18/abc_1.jpg') { res.end(jpeg); return; }
+    if (req.method === 'GET' && req.url === '/files/images/2026-11-19/') { res.end('<a href="zz_1.jpg">zz_1.jpg</a><a href="odd_1.jpe">odd_1.jpe</a>'); return; }
+    if (req.method === 'GET' && req.url === '/files/images/2026-11-19/odd_1.jpe') { res.statusCode = 404; res.end(); return; }
     if (req.method !== 'POST' || req.url !== '/mcp') { res.statusCode = 404; res.end(); return; }
     let body = '';
     req.on('data', (c) => { body += c; });
@@ -75,6 +77,25 @@ test('gflow: one Nano Banana image is requested, fetched from the file server an
     assert.match(call.args.project_name, /^textbook-illustrations /, 'the first image creates a titled project');
     assert.equal(call.args.project, undefined);
     assert.deepEqual(gflowProjectArgs(projectFile), { project: 'p-1' }, 'the next image reuses it');
+  } finally { await stub.close(); }
+});
+
+test('gflow: an image reported as .png but saved as .jpg is still fetched (2026-11-21 HTTP 404)', async () => {
+  assert.deepEqual(gflowImageCandidates('images/d/a_1.png'), ['images/d/a_1.png', 'images/d/a_1.jpg', 'images/d/a_1.jpeg', 'images/d/a_1.webp']);
+  const stub = await stubGflow({ content: [{ type: 'text', text: JSON.stringify({ status: 'completed', files: ['C:\\Users\\Admin\\Downloads\\gflow-cli\\images\\2026-11-18\\abc_1.png'] }) }] });
+  const png = join(mkdtempSync(join(tmpdir(), 'gf-')), 'fig.png');
+  try {
+    await gflowProducer({ brief, png, aspect: '16:9 landscape', mcpUrl: stub.mcpUrl, filesUrl: stub.filesUrl, projectFile: join(mkdtempSync(join(tmpdir(), 'gfp-')), 'p.json') });
+    assert.equal((await sharp(png).metadata()).format, 'png');
+  } finally { await stub.close(); }
+});
+
+test('gflow: an image the file server does not have is a failed image, not an unavailable producer', async () => {
+  const stub = await stubGflow({ content: [{ type: 'text', text: JSON.stringify({ status: 'completed', files: ['C:\\x\\gflow-cli\\images\\2026-11-19\\missing_1.png'] }) }] });
+  const png = join(mkdtempSync(join(tmpdir(), 'gf-')), 'fig.png');
+  try {
+    await assert.rejects(gflowProducer({ brief, png, aspect: '16:9 landscape', mcpUrl: stub.mcpUrl, filesUrl: stub.filesUrl, projectFile: join(mkdtempSync(join(tmpdir(), 'gfp-')), 'p.json') }),
+      (e) => !(e instanceof UnavailableError) && /none of: images\/2026-11-19\/missing_1\.png/.test(e.message));
   } finally { await stub.close(); }
 });
 
