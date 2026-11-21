@@ -30,7 +30,7 @@ English-only authoring from the approved content-spec. No publication or review 
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 1 | G6 assets | ▣ | | Four English schematic SVGs placed with derived dark variants; measure-figure-text verified; banner fig-U1-5 prompt-only for the illustrate job |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 2 | G2 en-draft | ▣ | | English draft authored 2026-11-22; awaiting gate evidence run |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/guhq-301/reviews/unit-02/G2/20261121T204849878Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review, including the religious-content check in content-spec drafting note 7; author self-check is not G3 |
 | Unit 2 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notices |
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
