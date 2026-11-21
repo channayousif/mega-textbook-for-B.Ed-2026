@@ -232,10 +232,20 @@ export const IN_FLIGHT = ['queued', 'running', 'pr_open', 'ready', 'batched'];
 export const isCorpusStage = (stage) => !/^(maint|intel|teaser|media|audio)_/.test(stage);
 
 /**
+ * Figure and image work (SVG schematics, raster illustrations and their planning) is media
+ * creation. Owner ruling 2026-11-21: media creation and content authoring are mutually exclusive
+ * tracks, so media jobs still run but never hold the course focus. Before this, one raster job
+ * waiting days for image quota held every new course's author jobs.
+ */
+export const MEDIA_STAGES = ['figures', 'illustrate', 'plan_illustrations'];
+export const holdsFocus = (stage) => isCorpusStage(stage) && !MEDIA_STAGES.includes(stage);
+
+/**
  * The one course the crew works on first (owner ruling 2026-10-28: finish what was started
  * before starting a new course). A course is started once it has an authored unit or crew work
  * on the board (its first author jobs are in flight before any unit lands), and it is finished
- * *for the crew* when no crew work is left on it; whatever remains waits on a person.
+ * *for the crew* when no authoring-track work is left on it; whatever remains waits on a person
+ * or is media work (`MEDIA_STAGES`, owner ruling 2026-11-21), which runs alongside.
  *
  *  - Focus: the started course with crew work left and the fewest jobs remaining (the one
  *    nearest done), ties in catalog order.
@@ -254,7 +264,7 @@ export function focusCourse({ started, jobs, newCourses, catalogOrder }) {
   const rank = (code) => { const i = catalogOrder.indexOf(code); return i < 0 ? catalogOrder.length : i; };
   const left = new Map();
   for (const j of jobs) {
-    if (!isCorpusStage(j.stage) || !IN_FLIGHT.includes(j.status ?? 'queued')) continue;
+    if (!holdsFocus(j.stage) || !IN_FLIGHT.includes(j.status ?? 'queued')) continue;
     left.set(j.course, (left.get(j.course) || 0) + 1);
   }
   const open = [...left.keys()].filter((c) => started.get(c))
