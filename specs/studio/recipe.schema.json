@@ -1,0 +1,45 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://textbook.com.pk/specs/studio/recipe.schema.json",
+ "title": "Media Studio recipe (Feature 030, FR-009)",
+ "description": "A versioned prompt and pacing recipe at specs/studio/recipes/<name>@<version>.json. A published recipe is never edited; a change is a new version.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["name", "version", "description", "shots", "model", "word_budget", "speed", "max_seconds", "presenter_shots", "camera_move_shots", "prompt"],
+ "properties": {
+  "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+  "version": { "type": "integer", "minimum": 1 },
+  "description": { "type": "string", "minLength": 20 },
+  "shots": { "type": "integer", "minimum": 1, "maximum": 10 },
+  "model": { "type": "string" },
+  "mode": { "enum": ["t2v", "i2v", "r2v"] },
+  "aspect": { "enum": ["9:16", "16:9", "1:1"], "description": "Passed as the generator's aspect argument, never written into the prompt (the words '9:16' made Veo draw viewfinder marks)." },
+  "word_budget": {
+   "type": "object", "additionalProperties": false,
+   "properties": { "en": { "type": "integer", "minimum": 1 }, "ur": { "type": "integer", "minimum": 1 } }
+  },
+  "speed": { "type": "number", "minimum": 1, "maximum": 1.5 },
+  "max_seconds": { "type": "number", "minimum": 5 },
+  "enforce_max_seconds": { "type": "boolean", "description": "true: an encoded Short over max_seconds fails QG1; false: it only warns." },
+  "presenter_shots": { "type": "array", "items": { "type": "integer", "minimum": 1 }, "uniqueItems": true },
+  "camera_move_shots": { "type": "array", "items": { "type": "integer", "minimum": 1 }, "uniqueItems": true },
+  "presenter": {
+   "type": "object", "additionalProperties": false,
+   "properties": {
+    "description": { "type": "string" },
+    "entity_id": { "type": ["string", "null"], "description": "Optional Flow character for r2v presenter shots." },
+    "voice": { "type": ["string", "null"], "description": "Optional Flow voice preset." }
+   }
+  },
+  "prompt": {
+   "type": "object", "additionalProperties": false,
+   "required": ["head", "presenter", "voice_over", "tail"],
+   "properties": {
+    "head": { "type": "string", "not": { "pattern": "9:16" } },
+    "presenter": { "type": "string", "pattern": "\\{line\\}" },
+    "voice_over": { "type": "string", "pattern": "\\{line\\}" },
+    "tail": { "type": "string", "not": { "pattern": "9:16" } }
+   }
+  }
+ }
+}

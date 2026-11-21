@@ -5,8 +5,9 @@ import {
   checkScript, loadScript, teaserRoute, shortMeta, socialMeta, recordCrosspost, SUBSCRIBE_URL, CAPTION_LIMIT, planTeaser, recordClip, setClipQa, advanceTeaser,
   chosenTakes, teaserSheet, WORD_BUDGET, MAX_RETAKES, TEASER_STATES,
 } from '../../scripts/notebook-studio/teaser.mjs';
-import { buildFilter, speechSegments, captionSvg, endCardSvg, parseCropdetect, bidiUr, ctaSvg, ctaWindows, PLATFORM_CTA, END_SECONDS, PACE } from '../../scripts/notebook-studio/assemble-teaser.mjs';
+import { lengthCheck, buildFilter, speechSegments, captionSvg, endCardSvg, parseCropdetect, bidiUr, ctaSvg, ctaWindows, PLATFORM_CTA, END_SECONDS, PACE } from '../../scripts/notebook-studio/assemble-teaser.mjs';
 import { evaluate } from '../../scripts/notebook-studio/media-qa.mjs';
+import { loadRecipe, recipeFor, buildPrompt, CAMERA_MOVE_RE } from '../../scripts/media/recipes.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const base = () => structuredClone(loadScript('efmp-301', ROOT));
@@ -41,6 +42,60 @@ describe('QG0 teaser script check', () => {
     const s = base();
     s.locales.en.narration.pop();
     expect(checkScript(s, ROOT)[0]).toMatch(/^schema: /);
+  });
+});
+
+describe('teaser recipes (Feature 030, US2)', () => {
+  const v2 = () => {
+    const s = base();
+    s.recipe = { name: 'teaser', version: 2 };
+    s.shots[1].visual = 'Fast crane move from overhead down to desk level as pupils arrange counters on their desks.';
+    s.shots[2].visual = 'Energetic tracking shot along a corridor wall where pupils pin up bar charts.';
+    s.shots[3].visual = 'Handheld dolly through a staff room where trainee teachers solve a problem together.';
+    s.locales.ur.narration = s.locales.ur.narration.map((l) => l.split(/\s+/).slice(0, 18).join(' '));
+    return s;
+  };
+  it('treats a script without a recipe as teaser@1 and loads both versions', () => {
+    expect(recipeFor(base(), ROOT)).toMatchObject({ name: 'teaser', version: 1, speed: PACE.speed, word_budget: WORD_BUDGET });
+    const r2 = loadRecipe('teaser', 2, ROOT);
+    expect(r2).toMatchObject({ speed: 1.25, max_seconds: 30, model: 'veo_lite', presenter_shots: [1, 5] });
+    expect(r2.duration).toBeUndefined();
+    expect(() => loadRecipe('teaser', 9, ROOT)).toThrow(/no recipe/);
+  });
+  it('applies the recipe word budget: 19 Urdu words pass teaser@1 but fail teaser@2', () => {
+    const s = v2();
+    expect(checkScript(s, ROOT)).toEqual([]);
+    s.locales.ur.narration[2] = Array.from({ length: 19 }, () => 'لفظ').join(' ');
+    expect(checkScript(s, ROOT).join()).toMatch(/ur shot 3: 19 words, over the 18-word budget of teaser@2/);
+    delete s.recipe;
+    expect(checkScript(s, ROOT).join()).not.toMatch(/ur shot 3/);
+  });
+  it('requires a named camera move in teaser@2 action shots only', () => {
+    const s = v2();
+    s.shots[2].visual = 'Pupils pin up hand-drawn bar charts on a corridor wall and smile.';
+    expect(checkScript(s, ROOT).join()).toMatch(/shot 3: name a camera move/);
+    delete s.recipe;
+    expect(checkScript(s, ROOT).join()).not.toMatch(/camera move/);
+    expect(CAMERA_MOVE_RE.test('quick push-in from medium shot to close-up')).toBe(true);
+    expect(CAMERA_MOVE_RE.test('a teacher smiles at the class')).toBe(false);
+  });
+  it('builds presenter and voice-over prompts with no aspect wording and no viewfinder marks', () => {
+    const s = v2();
+    const r = loadRecipe('teaser', 2, ROOT);
+    const p1 = buildPrompt(r, s, s.shots[0]);
+    const p3 = buildPrompt(r, s, s.shots[2]);
+    expect(p1).toMatch(/presenter looks straight into the camera/);
+    expect(p3).toMatch(/unseen woman narrator/);
+    expect(p3).toContain(s.locales.ur.narration[2]);
+    for (const p of [p1, p3]) {
+      expect(p).not.toMatch(/9:16/);
+      expect(p).toMatch(/No camera interface, viewfinder marks/);
+    }
+  });
+  it('fails an over-length teaser@2 Short and only warns for teaser@1', () => {
+    expect(() => lengthCheck(loadRecipe('teaser', 2, ROOT), 31.2)).toThrow(/QG1: 31.2 s is over the 30 s limit of teaser@2/);
+    expect(lengthCheck(loadRecipe('teaser', 2, ROOT), 28)).toBeNull();
+    expect(lengthCheck(loadRecipe('teaser', 1, ROOT), 47)).toMatch(/over the 45 s limit of teaser@1/);
   });
 });
 

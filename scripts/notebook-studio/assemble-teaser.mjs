@@ -17,6 +17,7 @@ import sharp from 'sharp';
 import { wrap, bidiUr } from './text-layout.mjs';
 import { buildThumbnail } from './thumbnail.mjs';
 import { loadScript, teaserRoute } from './teaser.mjs';
+import { recipeFor } from '../media/recipes.mjs';
 
 const bin = (t) => (process.env.FFMPEG_DIR ? join(process.env.FFMPEG_DIR, t) : t);
 import { BRAND } from '../media/brand.mjs'; // Feature 030: one source of truth for house colours
@@ -225,10 +226,23 @@ const detectSilence = (f) => spawnSync(bin('ffmpeg'), ['-hide_banner', '-nostats
 
 const probeDuration = (f) => Number(execFileSync(bin('ffprobe'), ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f], { encoding: 'utf8' }).trim());
 
-export async function assemble({ id, locale, out, shots, platform = 'youtube', speed = PACE.speed }) {
+/**
+ * QG1 length rule of the script's recipe (Feature 030, T019): over `max_seconds` fails when the recipe
+ * enforces it (teaser@2), and only warns for teaser@1. Returns the warning, or null.
+ */
+export function lengthCheck(recipe, seconds) {
+  if (!(seconds > recipe.max_seconds)) return null;
+  const msg = `${seconds.toFixed(1)} s is over the ${recipe.max_seconds} s limit of ${recipe.name}@${recipe.version}`;
+  if (recipe.enforce_max_seconds) throw new Error(`QG1: ${msg}; shorten the lines or raise the pace in a new recipe version`);
+  return msg;
+}
+
+export async function assemble({ id, locale, out, shots, platform = 'youtube', speed }) {
   if (!PLATFORM_CTA[platform]) throw new Error(`unknown platform ${platform}`);
   if (shots.length !== 5) throw new Error('a teaser has exactly five shots');
   const script = loadScript(id);
+  const recipe = recipeFor(script);
+  speed ??= recipe.speed;
   const L = script.locales[locale];
   if (!L) throw new Error(`${id} has no ${locale} locale`);
   const url = `https://textbook.com.pk${locale === 'ur' ? '/ur' : ''}${teaserRoute(script)}`;
@@ -254,6 +268,8 @@ export async function assemble({ id, locale, out, shots, platform = 'youtube', s
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-r', '30',
     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-t', String(duration), '-movflags', '+faststart', out);
   execFileSync(bin('ffmpeg'), args, { stdio: ['ignore', 'inherit', 'inherit'] });
+  const warning = lengthCheck(recipe, probeDuration(out));
+  if (warning) console.warn(`warning: ${warning}`);
   // Thumbnail (thumbnail.mjs): best frame across the raw shots 1-4 (no captions), the title's question
   // as the hook, the course badge, the "free course" ribbon and a watch pill. Shot 5 is the shared
   // closing shot, the same in every teaser, so it is left out to keep each thumbnail distinct.
@@ -263,18 +279,18 @@ export async function assemble({ id, locale, out, shots, platform = 'youtube', s
     out: thumb, hook, badge: `${script.course_code ?? 'Licence'} · ${script.title[locale].replace(/\s*\([^)]*\)\s*/g, ' ').trim()}`,
     kind: 'short', locale, aspect: 'portrait', frameFrom: [shots.slice(0, 4).map((f) => ({ file: f, samples: 5 }))],
   });
-  return { encoded_file: out, thumbnail_file: thumb, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: windows };
+  return { encoded_file: out, thumbnail_file: thumb, recipe: { name: recipe.name, version: recipe.version }, speed, length_warning: warning, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: windows };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const argv = process.argv.slice(2);
   const pi = argv.indexOf('--platform');
   const platform = pi >= 0 ? argv.splice(pi, 2)[1] : 'youtube';
-  // Recipe v2 (D-2026-0094) speeds the voice 1.25x; the default stays 1.12 for existing teasers.
+  // The script's recipe sets the voice speed (teaser@1 1.12x, teaser@2 1.25x); --speed overrides it.
   const si = argv.indexOf('--speed');
-  const speed = si >= 0 ? Number(argv.splice(si, 2)[1]) : PACE.speed;
+  const speed = si >= 0 ? Number(argv.splice(si, 2)[1]) : undefined;
   const [id, locale, out, ...shots] = argv;
-  if (!id || !['en', 'ur'].includes(locale) || !out || shots.length !== 5 || !PLATFORM_CTA[platform] || !(speed >= 1 && speed <= 1.5)) {
+  if (!id || !['en', 'ur'].includes(locale) || !out || shots.length !== 5 || !PLATFORM_CTA[platform] || (speed !== undefined && !(speed >= 1 && speed <= 1.5))) {
     console.error(`usage: assemble-teaser.mjs <id> <en|ur> <out.mp4> <shot1> ... <shot5> [--platform ${Object.keys(PLATFORM_CTA).join('|')}] [--speed 1-1.5]`);
     process.exit(2);
   }
