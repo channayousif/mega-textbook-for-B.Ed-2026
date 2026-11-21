@@ -24,7 +24,7 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/guhq-301/reviews/unit-01/G2/20261121T192217702Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review, including the religious-content check in content-spec drafting note 7; author self-check is not G3 |
 | Unit 1 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notices |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
