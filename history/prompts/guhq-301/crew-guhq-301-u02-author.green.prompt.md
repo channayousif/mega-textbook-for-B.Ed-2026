@@ -2,7 +2,7 @@
 id: crew-guhq-301-u02-author
 title: crew author GUHQ-301 unit 2
 stage: misc
-date: 2026-11-22
+date: 2026-11-21
 surface: agent
 model: opencode
 feature: guhq-301
@@ -22,6 +22,7 @@ files:
  - docs/semester-3/guhq-301/unit-02/topic-03.mdx
  - docs/semester-3/guhq-301/unit-02/topic-04.mdx
  - docs/semester-3/guhq-301/unit-02/unit-assessment.mdx
+ - history/prompts/guhq-301/crew-guhq-301-u02-author.green.prompt.md
  - specs/content/guhq-301/concepts/unit-02.md
  - specs/content/guhq-301/coverage/unit-02.md
  - specs/content/guhq-301/figures/unit-02.md
@@ -55,7 +56,6 @@ files:
  - static/img/figures/guhq-301/unit-02/fig-U2-8.svg
 tests:
  - npm run check:content
- - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/guhq-301/unit-02/fig-U2-*.svg
 ---
 
 ## Prompt
@@ -86,31 +86,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Continued the earlier English draft of GUHQ-301 Unit 2 (Quranic Vocabulary and Grammar), placed all eight schematic figures with derived dark variants, added the bound excerpt for the LREC treebank source, repaired the concept-graph and answer-key findings, recorded G2 gate evidence, and left all 14 content gates passing.
+Completed and committed GUHQ-301 Unit 2 (English) with eight placed schematic figures, a bound treebank excerpt, repaired concept-graph and answer-key findings, and G2 gate evidence, leaving all 14 content gates green.
 
 ## Outcome
 
-- Impact: author for GUHQ-301 Unit 2 by opencode (attempt 1 on this branch).
-- Tests: npm run check:content passed (14/14); measure-figure-text exited 0 on all eight EN SVGs.
-- Files: 37 file(s), listed above.
+- Impact: author for GUHQ-301 Unit 2 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 38 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: GUHQ-301 Unit 2 English draft completed, eight schematic SVGs placed (EN, with dark variants), dukes-2010-treebank bound excerpt added, concept-graph cross-topic mappings repaired, answer-key phrase removed, G2 gate evidence recorded and the tracker row pointed at it.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch certifies nothing. The eight figures are English only; no `.ur.svg` mirror exists yet.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Completed and committed GUHQ-301 Unit 2 (English) with eight placed schematic figures, a bound treebank excerpt, repaired concept-graph and answer-key findings, and G2 gate evidence, leaving all 14 content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The Urdu job needs `.ur.svg` versions of all eight figures (several contain Arabic words) and must have the twelve authored Urdu concept labels reviewed at G5.
-  - The conjugation, pronoun, negation and preposition tables are standard Arabic grammar stated from general knowledge; the sources file flags them for the G3 reviewer, who must also make the religious-content check in content-spec drafting note 7.
+  - Urdu job needs `.ur.svg` mirrors for all eight figures (several contain Arabic) and G5 review of the twelve authored Urdu concept labels.
+  - Conjugation/pronoun/negation/preposition tables are general-knowledge grammar flagged in sources/unit-02.md for the G3 reviewer, who must also make the religious-content check in content-spec drafting note 7.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
