@@ -47,3 +47,18 @@ describe('upload requests', () => {
     expect(p.visibility).toBe('PUBLIC');
   });
 });
+
+describe('cross-post records (Feature 030, T046)', () => {
+  it('records a post in the teaser ledger under the shared lock, drafts included, and only once the Short is public', async () => {
+    const { mkdtempSync, writeFileSync, readFileSync, existsSync } = await import('node:fs');
+    const { join } = await import('node:path');
+    const { tmpdir } = await import('node:os');
+    const { recordPost } = await import('../../scripts/notebook-studio/social-post.mjs');
+    const p = join(mkdtempSync(join(tmpdir(), 'xpost-')), 'media-teasers.json');
+    writeFileSync(p, JSON.stringify({ items: [{ key: 'efmp-301-ur', state: 'public' }, { key: 'gqur-300-ur', state: 'qa3-pass' }] }));
+    expect(recordPost('efmp-301-ur', 'facebook', { state: 'draft', post_id: 'v1', url: 'https://www.facebook.com/reel/v1' }, p)).toMatchObject({ state: 'draft', post_id: 'v1' });
+    expect(JSON.parse(readFileSync(p, 'utf8')).items[0].crossposts.facebook.post_id).toBe('v1');
+    expect(() => recordPost('gqur-300-ur', 'tiktok', { state: 'draft', post_id: 't1' }, p)).toThrow(/only after the YouTube Short is public/);
+    expect(existsSync(`${p}.lock`)).toBe(false);
+  });
+});

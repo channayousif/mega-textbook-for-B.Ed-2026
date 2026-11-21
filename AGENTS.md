@@ -108,6 +108,8 @@ Follow ADR-0019 and the Feature 014 evidence contract. Existing human sign-off r
 ## Visuals: Claude, Codex and Gemini roles
 
 ADR-0024 defines the cross-agent boundary for course visuals; ADR-0029 adds Gemini via `agy` as a raster producer.
+Producers, quotas and the gflow route are shared with audio and video under Media Studio (ADR-0037,
+`.claude/skills/media-studio/SKILL.md`).
 
 - **Claude owns meaning and deterministic schematics:** course research and prose, pedagogy,
   citations, figure planning, generation prompts, alt text, figure manifests at `prompt-only`,
@@ -136,7 +138,10 @@ Every artifact is checked against the topic text before its manifest row in
 `specs/studio/<course>/unit-NN.json` reaches `placed`; assets live in `static/studio/`. Keep all
 Studio files out of `specs/content/`, `contracts/` and `scripts/lib/gates.mjs` so no review evidence
 goes stale. Quiz items never go in a Studio asset, only into `quiz_items` as teacher-review drafts.
-Spec: `specs/029-notebook-studio/spec.md`.
+Spec: `specs/029-notebook-studio/spec.md`. Since ADR-0037 (Media Studio, Feature 030) the crew may
+draft and upload private, while script approval before credits and making a video public stay with
+the owner; shared rules, producers and checks are in `.claude/skills/media-studio/SKILL.md`, course
+teaser Shorts in `studio-teaser`, and every media job is listed by `node scripts/media/status.mjs`.
 
 ## Work records
 
