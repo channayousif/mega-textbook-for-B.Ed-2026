@@ -1,0 +1,21 @@
+{
+ "name": "teaser",
+ "version": 1,
+ "description": "Batch 1 and 2 course teasers (2026-11-17 to 2026-11-19): every shot voice-over only, no presenter, voice 1.12x. Kept so earlier teasers stay reproducible; new teasers use teaser@2.",
+ "shots": 5,
+ "model": "veo_lite",
+ "mode": "t2v",
+ "aspect": "9:16",
+ "word_budget": { "en": 18, "ur": 22 },
+ "speed": 1.12,
+ "max_seconds": 45,
+ "enforce_max_seconds": false,
+ "presenter_shots": [],
+ "camera_move_shots": [],
+ "prompt": {
+  "head": "Vertical video, 8 seconds, full frame edge to edge, no letterbox or black bars. ",
+  "voice_over": " An unseen narrator speaks in Urdu as a voice-over only; nobody on screen speaks: \"{line}\"",
+  "presenter": " An unseen narrator speaks in Urdu as a voice-over only; nobody on screen speaks: \"{line}\"",
+  "tail": " Crisp warm daylight, realistic cinematic look. Modest dress. No on-screen text, captions, letters, logos or watermarks; any papers or screens are blurred and unreadable."
+ }
+}

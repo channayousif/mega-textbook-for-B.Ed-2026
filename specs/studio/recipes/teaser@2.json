@@ -1,0 +1,26 @@
+{
+ "name": "teaser",
+ "version": 2,
+ "description": "Recipe v2 (D-2026-0094, EFMP-302 pilot F_anSjHwKss, owner 2026-11-20): an on-screen presenter speaks to the camera in shots 1 and 5; in shots 2-4 an unseen woman narrator speaks over action shot with a named camera move. Voice 1.25x, at most 18 Urdu words a line, under 30 s. Veo Lite, no duration argument (the classic Flow composer offers none; clips are 8 s).",
+ "shots": 5,
+ "model": "veo_lite",
+ "mode": "t2v",
+ "aspect": "9:16",
+ "word_budget": { "en": 18, "ur": 18 },
+ "speed": 1.25,
+ "max_seconds": 30,
+ "enforce_max_seconds": true,
+ "presenter_shots": [1, 5],
+ "camera_move_shots": [2, 3, 4],
+ "presenter": {
+  "description": "a confident young Pakistani teacher in modest dress",
+  "entity_id": null,
+  "voice": null
+ },
+ "prompt": {
+  "head": "Vertical portrait video, 8 seconds, full frame edge to edge, no letterbox or black bars. ",
+  "presenter": " The presenter looks straight into the camera and speaks in Urdu with a lively, quick, enthusiastic delivery: \"{line}\"",
+  "voice_over": " An unseen woman narrator speaks in Urdu as a voice-over only, with a lively, quick, enthusiastic delivery; nobody on screen speaks: \"{line}\"",
+  "tail": " Upbeat pace, crisp warm daylight, realistic cinematic look. Modest dress. No camera interface, viewfinder marks, frame guides or recording indicators. No on-screen text, captions, letters, logos or watermarks; any papers or screens are blurred and unreadable."
+ }
+}

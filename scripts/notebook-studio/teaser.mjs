@@ -28,10 +28,12 @@ import { allLedgers, uploadsOn, DAILY_UPLOAD_LIMIT } from './media-ledger.mjs';
 // Feature 030 (T011): brand constants and atomic, locked ledger writes come from the shared media core.
 import { SITE, LONG_DASH, clean, CHANNEL_URL, SUBSCRIBE_URL, TEASER_PLAYLIST } from '../media/brand.mjs';
 import { save as saveJson, withLock } from '../media/ledger.mjs';
+import { recipeFor, recipeFindings } from '../media/recipes.mjs';
 import { courseFacts, videoLinks, moreAbout, fitDescription, parseOverview } from './describe.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-/** Spoken words that fit an 8-second Veo shot at a natural pace (Urdu runs a little longer). */
+/** Spoken words that fit an 8-second Veo shot at a natural pace (Urdu runs a little longer). Mirrors
+ *  specs/studio/recipes/teaser@1.json; teaser@2 allows 18 Urdu words at 1.25x. */
 export const WORD_BUDGET = { en: 18, ur: 22 };
 export const MAX_RETAKES = 2;
 export const TEASER_STATES = ['planned', 'scripted', 'script-approved', 'clips-generated', 'clips-qa',
@@ -69,8 +71,6 @@ export function teaserRoute(script, root = ROOT) {
 }
 export const teaserUrl = (script, locale, root = ROOT) => `${SITE}${locale === 'ur' ? '/ur' : ''}${teaserRoute(script, root)}`;
 
-const words = (s) => s.trim().split(/\s+/).filter(Boolean).length;
-
 /** QG0: schema, sources exist, five shots in beat order, word budgets, no long dash, route resolves. */
 export function checkScript(script, root = ROOT) {
   const f = [];
@@ -85,12 +85,11 @@ export function checkScript(script, root = ROOT) {
   if (script.shots[4].beat !== 'cta') f.push('shot 5 must be the call to action');
   const text = JSON.stringify(script);
   if (LONG_DASH.test(text)) f.push('contains a long dash (use a spaced hyphen)');
-  for (const loc of ['en', 'ur'].filter((l) => script.locales[l])) {
-    script.locales[loc].narration.forEach((line, i) => {
-      const n = words(line);
-      if (n > WORD_BUDGET[loc]) f.push(`${loc} shot ${i + 1}: ${n} words, over the ${WORD_BUDGET[loc]}-word budget for 8 seconds`);
-    });
-  }
+  // Feature 030 (T018): the script's recipe sets the word budget and, from teaser@2, requires a named
+  // camera move in the action shots. A script without `recipe` is teaser@1 (WORD_BUDGET).
+  let recipe;
+  try { recipe = recipeFor(script, root); } catch (e) { f.push(e.message); }
+  if (recipe) f.push(...recipeFindings(recipe, script));
   try { teaserRoute(script, root); } catch (e) { f.push(e.message); }
   if (script.kind === 'course') {
     const ov = join(root, 'docs', `semester-${script.semester}`, script.course_code.toLowerCase(), 'course-overview.mdx');

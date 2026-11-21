@@ -9,6 +9,11 @@
   "properties": {
     "id": { "type": "string", "pattern": "^([a-z]{2,6}-[0-9]{3}|licence)$" },
     "kind": { "enum": ["course", "licence"] },
+    "recipe": {
+      "type": "object", "additionalProperties": false, "required": ["name", "version"],
+      "description": "Feature 030 (FR-009): the versioned recipe in specs/studio/recipes/<name>@<version>.json that sets the prompts, word budget, pace and length. A script without it is teaser@1.",
+      "properties": { "name": { "const": "teaser" }, "version": { "type": "integer", "minimum": 1 } }
+    },
     "course_code": { "type": "string", "pattern": "^[A-Z]{2,6}-[0-9]{3}$" },
     "semester": { "type": "integer", "minimum": 1, "maximum": 8 },
     "title": { "type": "object", "additionalProperties": false, "required": ["en", "ur"], "properties": { "en": { "type": "string", "minLength": 3 }, "ur": { "type": "string", "minLength": 3 } } },
