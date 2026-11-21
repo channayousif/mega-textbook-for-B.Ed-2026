@@ -13,7 +13,7 @@ labels: [board-direct, crew, illustrations]
 links:
   spec: null
   ticket: null
-  adr: history/adr/0036-multi-producer-illustrations.md
+  adr: history/adr/0036-multi-producer-raster-illustrations-with-per-producer-quotas.md
   pr: null
 files:
   - scripts/media/producers/image.mjs
