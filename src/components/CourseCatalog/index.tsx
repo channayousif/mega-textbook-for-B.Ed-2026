@@ -4,6 +4,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import catalog from '@site/catalog/courses.json';
 import styles from './styles.module.css';
+import { TeaserButton } from '@site/src/components/Studio/TeaserPlayer';
 
 type Status = Record<string, { units: number; urdu: number }>;
 type Course = { code: string; title_en: string; title_ur?: string; bilingual?: boolean };
@@ -64,7 +65,8 @@ export default function CourseCatalog(): React.ReactElement {
                 </span>
               );
               return (
-                <li key={course.code}>
+                <li key={course.code} className={styles.item}>
+                  {stat && <TeaserButton courseCode={course.code} courseTitle={title} locale={locale} />}
                   {stat ? (
                     <Link className={`${styles.card} ${styles.live}`} to={`/semester-${s.number}/${course.code.toLowerCase()}/course-overview`} aria-label={`${course.code}: ${title}. ${t.open}`}>{cover}{body}</Link>
                   ) : <div className={styles.card}>{cover}{body}</div>}

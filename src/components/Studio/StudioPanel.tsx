@@ -21,6 +21,7 @@ import styles from './studio.module.css';
 
 type Locale = 'en' | 'ur';
 export type StudioItem = { kind: string; part?: number; title: string; audience: 'all' | 'teacher'; alt: string; src?: string; url?: string };
+// `teasers` (Feature 030) sits beside the topic keys; topic keys always contain a slash.
 type StudioIndex = Record<string, Record<Locale, StudioItem[]>>;
 
 const T = {

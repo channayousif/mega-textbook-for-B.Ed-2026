@@ -7,6 +7,7 @@
 .panel[hidden] { display: none; }
 .grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; margin: 18px 0 0; padding: 0; }
 .catalogue .grid li, .catalogue .grid li + li { margin: 0; }
+.item { position: relative; }
 .card { display: flex; flex-direction: column; height: 100%; overflow: hidden; border: 1px solid var(--ifm-color-emphasis-200); border-radius: 16px; background: var(--ifm-background-surface-color); color: inherit; }
 .live { transition: transform var(--motion-base) var(--motion-ease-out), box-shadow var(--motion-base); }
 .live:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(18, 62, 67, 0.12); color: inherit; }

@@ -132,12 +132,13 @@ behaviour change for existing tools.
 
 **Independent test**: after a build, a course with a public teaser shows a player on its overview page and a play button on its card; a course with a private teaser shows neither.
 
-- [ ] T038 [US5] Extend `scripts/build-studio-index.mjs` to add `teasers: { <COURSE-CODE>: { youtube_id, title, locale } }` to `static/studio-index.json`, only for ledger items in state `public` (never `uploaded-private` or later private states)
-- [ ] T039 [P] [US5] Create `src/components/Studio/TeaserPlayer.tsx` (+ `TeaserPlayer.module.css`): a 9:16 frame that loads `youtubeEmbed()` from `src/lib/studioMedia.ts` (youtube-nocookie) only after a tap, with a poster image from `i.ytimg.com`, accessible button label in both locales, and no layout shift
-- [ ] T040 [US5] Render `TeaserPlayer` on course overview pages in `src/theme/DocItem/Content.tsx` where `isCourseOverview` is true, reading the course's teaser from the studio index; serve the Urdu teaser on both locales (D-2026-0083)
-- [ ] T041 [US5] Add a "▶ Teaser" button to course cards in `src/components/CourseCatalog/index.tsx` that opens `TeaserPlayer` in a dialog (focus trap, Escape closes) only for courses with a public teaser
-- [ ] T042 [P] [US5] Tests: `tests/unit/studio-index-teasers.test.mjs` (private items excluded) and a Playwright check in `tests/browser/` that the overview player and card button appear for a public teaser and the iframe is absent until tapped
-- [ ] T043 [US5] Run `scripts/heavy.sh npm run build`, check one overview page and one card in a browser, then stop any server started
+- [x] T038 [US5] Extend `scripts/build-studio-index.mjs` to add `teasers: { <COURSE-CODE>: { youtube_id, title, locale } }` to `static/studio-index.json`, only for ledger items in state `public` (never `uploaded-private` or later private states)
+- [x] T039 [P] [US5] Create `src/components/Studio/TeaserPlayer.tsx` (+ `TeaserPlayer.module.css`): a 9:16 frame that loads `youtubeEmbed()` from `src/lib/studioMedia.ts` (youtube-nocookie) only after a tap, with a poster image from `i.ytimg.com`, accessible button label in both locales, and no layout shift
+- [x] T040 [US5] Render `TeaserPlayer` on course overview pages in `src/theme/DocItem/Content.tsx` where `isCourseOverview` is true, reading the course's teaser from the studio index; serve the Urdu teaser on both locales (D-2026-0083)
+- [x] T041 [US5] Add a "▶ Teaser" button to course cards in `src/components/CourseCatalog/index.tsx` that opens `TeaserPlayer` in a dialog (focus trap, Escape closes) only for courses with a public teaser
+- [x] T042 [P] [US5] Tests: `tests/unit/studio-index-teasers.test.mjs` (private items excluded) and a Playwright check in `tests/browser/` that the overview player and card button appear for a public teaser and the iframe is absent until tapped
+- [x] T043 [US5] Run `scripts/heavy.sh npm run build`, check one overview page and one card in a browser, then stop any server started
+  - 2026-11-21: the browser check is `tests/e2e/course-teaser.spec.ts` (Playwright's testDir is `tests/e2e`, not `tests/browser`); 4/4 pass against the served build. Teasers reach the page at build time through `customFields.courseTeasers` (no runtime fetch). The local build needed `NODE_OPTIONS=--max-old-space-size=4096`: the default heap (about 2 GB here) ran out; CI is unaffected.
 
 ---
 

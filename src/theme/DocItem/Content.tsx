@@ -6,6 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import ReviewStatusBanner from '@site/src/components/ReviewStatusBanner';
 import CourseGuideNotice from '@site/src/components/CourseGuideNotice';
+import { CourseTeaser } from '@site/src/components/Studio/TeaserPlayer';
 import FeedbackWidget from '@site/src/components/FeedbackWidget';
 import { trackEvent } from '@site/src/lib/analytics';
 import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/selfAssessment';
@@ -452,6 +453,8 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
       {/* With a course bar, the menu sits in the bar (CourseNavBar); otherwise it sits here. */}
       {!hasNavBar && <div className="reader-menu-fallback"><ReadingMenu minutes={minutes} locale={locale} /></div>}
       {isCourseOverview && <CourseGuideNotice courseCode={courseCode} locale={locale} />}
+      {/* Feature 030: the course's public teaser Short (build-time studio index), Urdu on both locales. */}
+      {isCourseOverview && <CourseTeaser courseCode={courseCode} locale={locale} />}
       <ContentOriginal {...props} />
       {/* Feature 029: reviewed Gemini Notebook extras, data-driven from static/studio-index.json (no MDX edits). */}
       {courseCode !== null && unitNo !== null && topicNo !== null && (
