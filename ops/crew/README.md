@@ -169,6 +169,8 @@ one failure recurred 25 times before a person found it.
 
 ### Media stages (`scripts/crew/media.mjs`)
 
+Rules, producers and checks: `.claude/skills/media-studio/SKILL.md` (ADR-0037, D-2026-0094).
+
 `teaser_script` drafts a recipe-v2 script and stops at `scripted`; `teaser_clips` runs only after
 `crew approve-script` on the current script hash and spends Flow credits through
 `scripts/media/teaser-clips.mjs` (lost-clip recovery, never a second payment); `media_assemble`
