@@ -26,7 +26,7 @@ import { activeImageQuota, recordImageQuota, availableProducers, producerStatus 
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
-import { freshChecks } from './checks.mjs';
+import { freshChecks, workMade } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeTrackerRows } from './batch.mjs';
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, IN_FLIGHT, isCorpusStage, limitIllustrate, limitPlanIllustrations } from './planner.mjs';
 import { illustrationFacts, g3UnitChanges, gateJsonEntries } from './review-facts.mjs';
@@ -768,8 +768,9 @@ function finishSuccess(board, j, logText) {
   }
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], wt).out || 0);
   const made = j.startHead ? Number(sh('git', ['rev-list', '--count', `${j.startHead}..HEAD`], wt, { allowFail: true }).out || 0) : ahead;
-  if (!ahead || !made) return { ok: false, why: 'the worker exited without committing any change' };
-  const produced = sh('git', ['diff', '--name-only', `${j.startHead || 'origin/main'}..HEAD`], wt, { allowFail: true }).out.split('\n');
+  const since = workMade({ ahead, made, startHead: j.startHead, parent: j.parent, base: j.base });
+  if (!since) return { ok: false, why: 'the worker exited without committing any change' };
+  const produced = sh('git', ['diff', '--name-only', since], wt, { allowFail: true }).out.split('\n');
   if (!workFiles(produced).length) return { ok: false, why: 'the worker committed only a PHR (history/prompts/); a job must produce its stage\'s work, and the crew writes the PHR itself' };
   if (selfJob(board, j)) {
     const changed = sh('git', ['diff', '--name-only', 'origin/main...HEAD'], wt, { allowFail: true }).out.split('\n').filter(Boolean);

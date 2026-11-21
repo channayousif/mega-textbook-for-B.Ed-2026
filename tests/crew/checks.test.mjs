@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { freshChecks } from '../../scripts/crew/checks.mjs';
+import { freshChecks, workMade } from '../../scripts/crew/checks.mjs';
 
 const check = (name, startedAt, conclusion = 'FAILURE') => ({ name, startedAt, status: 'COMPLETED', conclusion });
 
@@ -21,4 +21,16 @@ test('freshChecks tolerates a minute of clock skew and falls back to createdAt',
   const skewed = check('build', '2026-10-18T18:59:30Z');
   const status = { context: 'legacy', state: 'FAILURE', createdAt: '2026-10-18T19:01:00Z' };
   assert.deepEqual(freshChecks([skewed, status], '2026-10-18T19:00:00Z'), [skewed, status]);
+});
+
+test('workMade: an attempt that commits is judged from its start', () => {
+  assert.equal(workMade({ ahead: 2, made: 1, startHead: 'abc' }), 'abc..HEAD');
+  assert.equal(workMade({ ahead: 0, made: 0, startHead: 'abc' }), null);
+});
+
+test('workMade: a retry accepts commits an earlier attempt of the same job left on its branch', () => {
+  assert.equal(workMade({ ahead: 2, made: 0, startHead: 'abc' }), 'origin/main...HEAD');
+  // A CI-fix job (parent) or a salvage job (base) starts ahead of main, so it must add commits.
+  assert.equal(workMade({ ahead: 2, made: 0, startHead: 'abc', parent: 'x-author' }), null);
+  assert.equal(workMade({ ahead: 2, made: 0, startHead: 'abc', base: 'old-branch' }), null);
 });
