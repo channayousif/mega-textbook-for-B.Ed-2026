@@ -12,6 +12,8 @@
 // with the course title, the call to action and the exact page address.
 import { execFileSync, spawnSync } from 'node:child_process';
 import { resolve, join } from 'node:path';
+import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { wrap, bidiUr } from './text-layout.mjs';
@@ -143,51 +145,60 @@ export function speechSegments(stderr, duration, { gap = PACE.gap, keep = PACE.k
 }
 
 /**
- * filter_complex for the fast cut. Inputs: shots 0..N-1 (with audio), their caption PNGs N..2N-1,
- * the end-card PNG 2N. `segments` are {shot (0-based), a, b} in play order. Returns the graph, the
- * output labels and the duration.
+ * Filter graphs for the fast cut, in two passes so ffmpeg never holds more than one segment
+ * (one graph over every segment queued the decoded frames of all later inputs: 9-15 segments of
+ * a Veo Lite teaser ran past 3.5 GB, 2026-11-22).
+ * - `parts[k]`: one segment. Inputs: [0] its shot, seeked to the segment (so its trim starts at 0),
+ *   [1] its caption PNG. Outputs [v] and [a].
+ * - `endPart`: the end card. Input [0] the end-card PNG (one frame; zoompan makes the frames).
+ * - `graph`: the final pass. Inputs: [0] the parts and the end card joined by the concat demuxer,
+ *   [1] the reminder PNG. Outputs [vout] and [aout].
+ * `segments` are {shot (0-based), a, b} in play order.
  */
-export function buildFilter(segments, { shots = 5, crops = [], endSeconds = END_SECONDS, pace = PACE, cta = false } = {}) {
+export function buildFilter(segments, { crops = [], endSeconds = END_SECONDS, pace = PACE, cta = false } = {}) {
   if (segments.length < 2) throw new Error('need at least two segments');
-  const p = [];
+  const parts = [];
   const cuts = [];
   let total = 0;
-  const zoom = (z) => `scale=${W * 1.2}:${H * 1.2},zoompan=z='${z}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s=${W}x${H}:fps=${FPS}`;
+  const zoom = (z, d = 1) => `scale=${W * 1.2}:${H * 1.2},zoompan=z='${z}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=${d}:s=${W}x${H}:fps=${FPS}`;
   segments.forEach((s, k) => {
     const c = crops[s.shot];
     const pre = c ? `crop=${c.w}:${c.h}:${c.x}:${c.y},` : '';
     const frames = Math.ceil(((s.b - s.a) / pace.speed) * FPS);
     const secs = frames / FPS;
+    const len = +(s.b - s.a).toFixed(3);
     const z0 = k % 2 ? pace.punch : 1;
-    p.push(`[${s.shot}:v]trim=${s.a}:${s.b},setpts=(PTS-STARTPTS)/${pace.speed},${pre}scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},fps=${FPS},` +
-      `${zoom(`${z0}+${pace.push}*on`)},setsar=1,format=yuv420p[z${k}]`);
-    p.push(`[z${k}][${shots + s.shot}:v]overlay=0:0:shortest=1,tpad=stop_mode=clone:stop_duration=1,trim=end_frame=${frames},setpts=PTS-STARTPTS[v${k}]`);
-    p.push(`[${s.shot}:a]atrim=${s.a}:${s.b},asetpts=PTS-STARTPTS,atempo=${pace.speed},aresample=48000,aformat=channel_layouts=stereo,` +
-      `afade=t=in:d=0.02,afade=t=out:st=${Math.max(0, secs - 0.05).toFixed(3)}:d=0.03,apad,atrim=end=${secs.toFixed(4)}[a${k}]`);
+    parts.push([
+      `[0:v]trim=0:${len},setpts=(PTS-STARTPTS)/${pace.speed},${pre}scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},fps=${FPS},` +
+        `${zoom(`${z0}+${pace.push}*on`)},setsar=1,format=yuv420p[z]`,
+      `[z][1:v]overlay=0:0:shortest=1,tpad=stop_mode=clone:stop_duration=1,trim=end_frame=${frames},setpts=PTS-STARTPTS[v]`,
+      `[0:a]atrim=0:${len},asetpts=PTS-STARTPTS,atempo=${pace.speed},aresample=48000,aformat=channel_layouts=stereo,` +
+        `afade=t=in:d=0.02,afade=t=out:st=${Math.max(0, secs - 0.05).toFixed(3)}:d=0.03,apad,atrim=end=${secs.toFixed(4)}[a]`,
+    ].join(';'));
     cuts.push(total);
     total += secs;
   });
-  const n = segments.length;
-  p.push(`[${2 * shots}:v]${zoom('max(1,1.15-0.01*on)')},setsar=1,format=yuv420p,tpad=stop_mode=clone:stop_duration=1,trim=end_frame=${endSeconds * FPS}[v${n}]`);
-  p.push(`anullsrc=r=48000:cl=stereo,atrim=end=${endSeconds}[a${n}]`);
+  const endPart = [
+    `[0:v]${zoom('max(1,1.15-0.01*on)', endSeconds * FPS)},setsar=1,format=yuv420p,tpad=stop_mode=clone:stop_duration=1,trim=end_frame=${endSeconds * FPS}[v]`,
+    `anullsrc=r=48000:cl=stereo,atrim=end=${endSeconds}[a]`,
+  ].join(';');
   cuts.push(total);
   total += endSeconds;
-  const all = [...Array(n + 1).keys()];
   const content = total - endSeconds;
   const windows = cta ? ctaWindows(content) : [];
-  p.push(`${all.map((k) => `[v${k}]`).join('')}concat=n=${n + 1}:v=1:a=0${windows.length ? '[vcat]' : '[vout]'}`);
+  const p = [];
   if (windows.length) {
-    // Input 2N+1 is the reminder PNG: each window fades in while sliding down 40 px, then fades out.
-    p.push(`[${2 * shots + 1}:v]format=rgba,split=${windows.length}${windows.map((_, i) => `[c${i}]`).join('')}`);
-    let prev = 'vcat';
+    // Input 1 is the reminder PNG: each window fades in while sliding down 40 px, then fades out.
+    p.push(`[1:v]format=rgba,split=${windows.length}${windows.map((_, i) => `[c${i}]`).join('')}`);
+    let prev = '0:v';
     windows.forEach(([a, b], i) => {
       p.push(`[c${i}]fade=t=in:st=${a}:d=0.25:alpha=1,fade=t=out:st=${(b - 0.25).toFixed(2)}:d=0.25:alpha=1[cf${i}]`);
       const outL = i === windows.length - 1 ? 'vout' : `vc${i}`;
       p.push(`[${prev}][cf${i}]overlay=x=(W-w)/2:y='${CTA_BOX.y}-40*max(0,1-(t-${a})/0.25)':enable='between(t,${a},${b})'[${outL}]`);
       prev = outL;
     });
-  }
-  p.push(`${all.map((k) => `[a${k}]`).join('')}concat=n=${n + 1}:v=0:a=1,asplit=2[voice][sc]`);
+  } else p.push('[0:v]null[vout]');
+  p.push('[0:a]asplit=2[voice][sc]');
   // Beat bed: kick on the beat, hat on the off-beat, a plucked bass on eighths over four chords.
   const B = +(60 / pace.bpm).toFixed(5);
   const bass = `if(lt(mod(t,${8 * B}),${2 * B}),55,if(lt(mod(t,${8 * B}),${4 * B}),65.41,if(lt(mod(t,${8 * B}),${6 * B}),49,58.27)))`;
@@ -199,7 +210,7 @@ export function buildFilter(segments, { shots = 5, crops = [], endSeconds = END_
   p.push(...wh);
   p.push('[bed][sc]sidechaincompress=threshold=0.03:ratio=8:attack=15:release=250[duck]');
   p.push(`[voice][duck]${wh.map((_, i) => `[w${i}]`).join('')}amix=inputs=${2 + wh.length}:normalize=0:duration=first,${AUDIO_OUT}[aout]`);
-  return { graph: p.join(';'), video: '[vout]', audio: '[aout]', duration: +total.toFixed(3), cuts, windows };
+  return { parts, endPart, graph: p.join(';'), video: '[vout]', audio: '[aout]', duration: +total.toFixed(3), cuts, windows };
 }
 
 /**
@@ -222,7 +233,21 @@ const detectCrop = (f) => {
   return parseCropdetect(r.stderr ?? '', dim[0], dim[1]);
 };
 
-const detectSilence = (f) => spawnSync(bin('ffmpeg'), ['-hide_banner', '-nostats', '-i', f, '-af', 'silencedetect=n=-35dB:d=0.25', '-f', 'null', '-'], { encoding: 'utf8' }).stderr ?? '';
+/**
+ * Silence threshold for one shot: its mean loudness minus 8 dB, kept within -35..-22 dB. A fixed
+ * -35 dB found no pause at all in Veo Lite shots, which carry an ambience bed under the voice
+ * (batch 3, 2026-11-21: every Short came out at the uncut 34.8 s).
+ */
+export function silenceThreshold(volumedetectStderr) {
+  const m = /mean_volume: (-?[\d.]+) dB/.exec(volumedetectStderr ?? '');
+  if (!m) return -35;
+  return Math.round(Math.max(-35, Math.min(-22, Number(m[1]) - 8)));
+}
+
+const detectSilence = (f) => {
+  const vol = spawnSync(bin('ffmpeg'), ['-hide_banner', '-nostats', '-i', f, '-af', 'volumedetect', '-f', 'null', '-'], { encoding: 'utf8' }).stderr;
+  return spawnSync(bin('ffmpeg'), ['-hide_banner', '-nostats', '-i', f, '-af', `silencedetect=n=${silenceThreshold(vol)}dB:d=0.25`, '-f', 'null', '-'], { encoding: 'utf8' }).stderr ?? '';
+};
 
 const probeDuration = (f) => Number(execFileSync(bin('ffprobe'), ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f], { encoding: 'utf8' }).trim());
 
@@ -258,16 +283,34 @@ export async function assemble({ id, locale, out, shots, platform = 'youtube', s
   await sharp(Buffer.from(ctaSvg(platform, locale))).png().toFile(ctaPng);
   const crops = shots.map(detectCrop);
   const segments = shots.flatMap((f, shot) => speechSegments(detectSilence(f), probeDuration(f)).map((s) => ({ shot, ...s })));
-  const { graph, video, audio, duration, windows } = buildFilter(segments, { crops, cta: true, pace: { ...PACE, speed } });
-  const args = ['-nostdin', '-hide_banner', '-loglevel', 'error', '-y'];
-  for (const s of shots) args.push('-i', s);
-  for (const c of caps) args.push('-loop', '1', '-i', c);
-  args.push('-loop', '1', '-t', String(END_SECONDS), '-i', end);
-  args.push('-loop', '1', '-t', String(duration), '-i', ctaPng);
-  args.push('-filter_complex', graph, '-map', video, '-map', audio,
-    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-r', '30',
-    '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-t', String(duration), '-movflags', '+faststart', out);
-  execFileSync(bin('ffmpeg'), args, { stdio: ['ignore', 'inherit', 'inherit'] });
+  const built = buildFilter(segments, { crops, cta: true, pace: { ...PACE, speed } });
+  const { parts, endPart, graph, video, audio, duration } = built;
+  // Pass 1: each segment and the end card to a near-lossless intermediate, one ffmpeg at a time.
+  const work = mkdtempSync(join(tmpdir(), 'teaser-'));
+  const ff = (args) => execFileSync(bin('ffmpeg'), ['-nostdin', '-hide_banner', '-loglevel', 'error', '-y', ...args], { stdio: ['ignore', 'inherit', 'inherit'] });
+  const MID = ['-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '10', '-pix_fmt', 'yuv420p', '-r', String(FPS), '-c:a', 'pcm_s16le', '-ar', '48000'];
+  const files = [];
+  try {
+    segments.forEach((s, k) => {
+      const f = join(work, `part-${String(k).padStart(2, '0')}.mkv`);
+      const secs = Math.ceil(((s.b - s.a) / speed) * FPS) / FPS;
+      ff(['-ss', String(s.a), '-t', (s.b - s.a).toFixed(3), '-i', shots[s.shot], '-framerate', '1', '-loop', '1', '-t', (secs + 1).toFixed(3), '-i', caps[s.shot],
+        '-filter_complex', parts[k], '-map', '[v]', '-map', '[a]', ...MID, f]);
+      files.push(f);
+    });
+    const endFile = join(work, 'part-end.mkv');
+    ff(['-framerate', '1', '-loop', '1', '-t', '1', '-i', end, '-filter_complex', endPart, '-map', '[v]', '-map', '[a]', ...MID, endFile]);
+    files.push(endFile);
+    const list = join(work, 'parts.txt');
+    writeFileSync(list, files.map((f) => `file '${f}'`).join('\n') + '\n');
+    // Pass 2: the joined parts, the follow reminder, the beat bed and the whooshes.
+    ff(['-f', 'concat', '-safe', '0', '-i', list, '-loop', '1', '-t', String(duration), '-i', ctaPng,
+      '-filter_complex', graph, '-map', video, '-map', audio,
+      '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-r', String(FPS),
+      '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-t', String(duration), '-movflags', '+faststart', out]);
+  } finally {
+    rmSync(work, { recursive: true, force: true });
+  }
   const warning = lengthCheck(recipe, probeDuration(out));
   if (warning) console.warn(`warning: ${warning}`);
   // Thumbnail (thumbnail.mjs): best frame across the raw shots 1-4 (no captions), the title's question
@@ -279,14 +322,14 @@ export async function assemble({ id, locale, out, shots, platform = 'youtube', s
     out: thumb, hook, badge: `${script.course_code ?? 'Licence'} · ${script.title[locale].replace(/\s*\([^)]*\)\s*/g, ' ').trim()}`,
     kind: 'short', locale, aspect: 'portrait', frameFrom: [shots.slice(0, 4).map((f) => ({ file: f, samples: 5 }))],
   });
-  return { encoded_file: out, thumbnail_file: thumb, recipe: { name: recipe.name, version: recipe.version }, speed, length_warning: warning, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: windows };
+  return { encoded_file: out, thumbnail_file: thumb, recipe: { name: recipe.name, version: recipe.version }, speed, length_warning: warning, platform, end_card: end, captions: caps, expected_duration_s: duration, url, crops, segments, cta_windows: built.windows };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const argv = process.argv.slice(2);
   const pi = argv.indexOf('--platform');
   const platform = pi >= 0 ? argv.splice(pi, 2)[1] : 'youtube';
-  // The script's recipe sets the voice speed (teaser@1 1.12x, teaser@2 1.25x); --speed overrides it.
+  // The script's recipe sets the voice speed (teaser@1 1.12x, teaser@2 1.25x, teaser@3 1.4x); --speed overrides it.
   const si = argv.indexOf('--speed');
   const speed = si >= 0 ? Number(argv.splice(si, 2)[1]) : undefined;
   const [id, locale, out, ...shots] = argv;

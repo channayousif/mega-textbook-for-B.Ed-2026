@@ -5097,3 +5097,16 @@ content-improvement loop with no further cycle.
 - **Limits:** Certifies no content, qualifies no reviewer and authorises no publication beyond the
   owner's own spot-check (Art. VII.8). Account risk from automating Flow and NotebookLM stays the
   owner's. Documented as ADR-0037.
+
+## D-2026-0095 - Teaser recipe v3: voice 1.4x to keep Shorts within 30 s
+- **Scope:** course teaser Shorts (amends D-2026-0094 point 3)
+- **Decided by:** curriculum owner, 2026-11-22 (board-direct, relayed through Claude Code)
+- **Decision:** Teaser recipe `teaser@3` is `teaser@2` with the voice sped up 1.4x instead of 1.25x;
+  the 30 s limit stays enforced. Batch 3 (GQUR-300, EFMP-305, GENG-301, GPKS-402, GQUR-301,
+  GSOS-301) is assembled with it. Allowing 35 s at 1.25x and rewriting shorter lines (new credits
+  and a new script approval) were the alternatives offered.
+- **Basis:** batch-3 Veo Lite shots carry speech for about 7 of their 8 seconds, so at 1.25x the
+  Shorts ran 30.4-33.1 s; at 1.4x they run 27.5-29.9 s. Owner answer 2026-11-22: "Faster voice to
+  fit 30 s".
+- **Limits:** Certifies no content and publishes nothing; every Short still waits for the owner's
+  spot-check before it goes public.

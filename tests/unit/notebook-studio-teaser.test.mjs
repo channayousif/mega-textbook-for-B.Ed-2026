@@ -5,7 +5,7 @@ import {
   checkScript, loadScript, teaserRoute, shortMeta, socialMeta, recordCrosspost, SUBSCRIBE_URL, CAPTION_LIMIT, planTeaser, recordClip, setClipQa, advanceTeaser,
   chosenTakes, teaserSheet, WORD_BUDGET, MAX_RETAKES, TEASER_STATES,
 } from '../../scripts/notebook-studio/teaser.mjs';
-import { lengthCheck, buildFilter, speechSegments, captionSvg, endCardSvg, parseCropdetect, bidiUr, ctaSvg, ctaWindows, PLATFORM_CTA, END_SECONDS, PACE } from '../../scripts/notebook-studio/assemble-teaser.mjs';
+import { lengthCheck, buildFilter, speechSegments, silenceThreshold, captionSvg, endCardSvg, parseCropdetect, bidiUr, ctaSvg, ctaWindows, PLATFORM_CTA, END_SECONDS, PACE } from '../../scripts/notebook-studio/assemble-teaser.mjs';
 import { evaluate } from '../../scripts/notebook-studio/media-qa.mjs';
 import { loadRecipe, recipeFor, buildPrompt, CAMERA_MOVE_RE } from '../../scripts/media/recipes.mjs';
 
@@ -91,6 +91,12 @@ describe('teaser recipes (Feature 030, US2)', () => {
       expect(p).not.toMatch(/9:16/);
       expect(p).toMatch(/No camera interface, viewfinder marks/);
     }
+  });
+  it('teaser@3 is teaser@2 with a 1.4x voice and the same enforced 30 s limit', () => {
+    const v2 = loadRecipe('teaser', 2, ROOT), v3 = loadRecipe('teaser', 3, ROOT);
+    expect(v3.speed).toBe(1.4);
+    expect({ ...v3, version: 2, speed: 1.25, description: '' }).toEqual({ ...v2, description: '' });
+    expect(() => lengthCheck(v3, 30.4)).toThrow(/30 s limit of teaser@3/);
   });
   it('fails an over-length teaser@2 Short and only warns for teaser@1', () => {
     expect(() => lengthCheck(loadRecipe('teaser', 2, ROOT), 31.2)).toThrow(/QG1: 31.2 s is over the 30 s limit of teaser@2/);
@@ -229,32 +235,53 @@ describe('teaser ledger', () => {
 describe('assembler graph and captions', () => {
   it('chains the cut segments and the end card with hard cuts, whooshes and a ducked beat, and predicts the length', () => {
     const segs = [0, 1, 2, 3, 4].map((shot) => ({ shot, a: 0, b: 7.84 }));
-    const { graph, duration, cuts } = buildFilter(segs);
+    const { parts, endPart, graph, duration, cuts } = buildFilter(segs);
     const seg = Math.ceil((7.84 / PACE.speed) * 30) / 30;
     expect(duration).toBeCloseTo(5 * seg + END_SECONDS, 3);
     expect(cuts).toHaveLength(6);
-    expect(graph).toContain(`atempo=${PACE.speed}`);
-    expect(graph).toContain('concat=n=6:v=1:a=0[vout]');
+    expect(parts).toHaveLength(5);
+    for (const part of parts) {
+      expect(part).toContain(`atempo=${PACE.speed}`);
+      expect(part).toContain('overlay=0:0:shortest=1');
+    }
+    expect(endPart).toContain("zoompan=z='max(1,1.15-0.01*on)'");
+    expect(graph).toContain('[0:v]null[vout]'); // no reminder windows without cta
     expect(graph).toMatch(/sidechaincompress.*\[duck\]/);
     expect(graph).toMatch(/loudnorm=I=-15\.5.*alimiter.*\[aout\]$/);
-    expect(graph.match(/overlay=0:0:shortest=1/g)).toHaveLength(5);
     expect(graph.match(/anoisesrc/g)).toHaveLength(5);
-    expect(graph).toContain("zoompan=z='1.1+"); // alternate segments punch in
+    expect(parts[1]).toContain("zoompan=z='1.1+"); // alternate segments punch in
+    expect(parts[0]).toContain("zoompan=z='1+");
   });
   it('crops Veo letterbox bars before filling the frame, and ignores a full frame', () => {
     const log = 'x crop=720:1074:0:98 y\n'.repeat(5) + 'crop=720:1280:0:0\n';
     const c = parseCropdetect(log, 720, 1280);
     expect(c).toEqual({ w: 720, h: 1074, x: 0, y: 98 });
     expect(parseCropdetect('crop=720:1280:0:0\n', 720, 1280)).toBeNull();
-    const { graph } = buildFilter([{ shot: 0, a: 0, b: 8 }, { shot: 1, a: 0, b: 8 }], { shots: 2, crops: [c, null] });
-    expect(graph).toMatch(/\[0:v\]trim=0:8,setpts=[^;]*,crop=720:1074:0:98,scale=1080:1920/);
-    expect(graph).toMatch(/\[1:v\]trim=0:8,setpts=\(PTS-STARTPTS\)\/[\d.]+,scale=1080:1920/);
+    const { parts } = buildFilter([{ shot: 0, a: 0, b: 8 }, { shot: 1, a: 0, b: 8 }], { crops: [c, null] });
+    expect(parts[0]).toMatch(/\[0:v\]trim=0:8,setpts=[^;]*,crop=720:1074:0:98,scale=1080:1920/);
+    expect(parts[1]).toMatch(/\[0:v\]trim=0:8,setpts=\(PTS-STARTPTS\)\/[\d.]+,scale=1080:1920/);
   });
   it('cuts dead air: keeps short pauses, splits on long ones and trims the head and tail', () => {
     // shot 1 of the EFMP-301 pilot: a 0.9 s pause mid-line and a 0.5 s tail
     const log = ['silence_start: 1.11', 'silence_end: 1.36', 'silence_start: 2.18', 'silence_end: 3.07', 'silence_start: 7.46'].join('\n');
     expect(speechSegments(log, 7.93)).toEqual([{ a: 0, b: 2.3 }, { a: 2.95, b: 7.58 }]);
     expect(speechSegments('', 8)).toEqual([{ a: 0, b: 8 }]);
+  });
+
+  it('renders each segment on its own pass from a seeked input, so ffmpeg never queues later segments', () => {
+    const segs = [{ shot: 0, a: 0, b: 3 }, { shot: 0, a: 4, b: 8 }, { shot: 1, a: 0, b: 8 }];
+    const { parts, graph, cuts } = buildFilter(segs);
+    expect(parts).toHaveLength(3);
+    expect(parts[1]).toMatch(/^\[0:v\]trim=0:4,/); // the input is seeked to 4 s, so its trim starts at 0
+    for (const part of parts) expect(part).toMatch(/\[z\]\[1:v\]overlay.*\[v\];\[0:a\]atrim=0:[\d.]+,.*\[a\]$/);
+    expect(graph).toContain('[0:a]asplit=2[voice][sc]');
+    expect(cuts).toHaveLength(4);
+  });
+  it('sets the silence threshold 8 dB under the shot mean, within -35..-22 dB', () => {
+    expect(silenceThreshold('[Parsed_volumedetect_0 @ 0x1] mean_volume: -19.7 dB')).toBe(-28);
+    expect(silenceThreshold('mean_volume: -40.0 dB')).toBe(-35);
+    expect(silenceThreshold('mean_volume: -9.0 dB')).toBe(-22);
+    expect(silenceThreshold('')).toBe(-35);
   });
   it('shows the platform-aware follow reminder three times over the shots, never on the end card', () => {
     expect(ctaSvg('youtube', 'ur')).toContain('چینل سبسکرائب کریں');
@@ -267,7 +294,7 @@ describe('assembler graph and captions', () => {
     const { graph, windows } = buildFilter(segs, { shots: 2, cta: true });
     expect(windows).toHaveLength(3);
     expect(graph.match(/enable='between\(t,/g)).toHaveLength(3);
-    expect(graph).toContain('[5:v]format=rgba,split=3'); // 2N+1 with N=2
+    expect(graph).toContain('[1:v]format=rgba,split=3'); // input 1 of the final pass
     expect(buildFilter(segs, { shots: 2 }).graph).not.toContain('enable=');
     expect(PLATFORM_CTA.tiktok.bio && PLATFORM_CTA.instagram.bio && !PLATFORM_CTA.youtube.bio).toBe(true);
     expect(endCardSvg({ title: 't', cta: 'c', url: 'https://textbook.com.pk/ur/x/', locale: 'ur', bio: true })).toContain('لنک بائیو میں');

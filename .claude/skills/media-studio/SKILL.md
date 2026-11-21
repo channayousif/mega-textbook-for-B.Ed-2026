@@ -71,11 +71,13 @@ A used recipe is never edited; a change is a new version. A teaser script names 
 `recipe: { name, version }`; none means `teaser@1`.
 
 - `teaser@1`: batches 1-2, voice-over only, 22 Urdu words a line, voice 1.12x.
-- `teaser@2` (current, D-2026-0094): an on-screen presenter speaks to the camera in shots 1 and 5;
+- `teaser@2` (D-2026-0094, the EFMP-302 pilot): an on-screen presenter speaks to the camera in shots 1 and 5;
   an unseen woman narrator speaks over action in shots 2-4, each naming a camera move (QG0 checks);
   at most 18 Urdu words a line; voice 1.25x; a Short over 30 s fails QG1; `veo_lite` with no
   `duration` argument. The aspect ratio is a generator argument: never write "9:16" into a prompt
   (Veo then draws viewfinder marks).
+- `teaser@3` (current, owner 2026-11-22): teaser@2 with the voice at 1.4x. Veo Lite shots carry speech for
+  about 7 of their 8 seconds, so batch 3 ran 30.4-33.1 s at 1.25x; at 1.4x it fits 30 s.
 
 ## Producers
 

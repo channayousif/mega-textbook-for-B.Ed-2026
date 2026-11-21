@@ -1,6 +1,10 @@
 {
  "id": "geng-301",
  "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
  "course_code": "GENG-301",
  "semester": 2,
  "title": {

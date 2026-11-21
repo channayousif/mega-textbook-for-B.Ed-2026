@@ -12,7 +12,7 @@ import Ajv2020 from 'ajv/dist/2020.js';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const DEFAULT_TEASER_RECIPE = { name: 'teaser', version: 1 };
 /** The recipe new teasers get (owner, 2026-11-20). */
-export const CURRENT_TEASER_RECIPE = { name: 'teaser', version: 2 };
+export const CURRENT_TEASER_RECIPE = { name: 'teaser', version: 3 };
 
 /** A named camera move, as recipe v2 requires in its action shots. */
 export const CAMERA_MOVE_RE = /\b(push(ing|es)?[- ]?(in|through|forward|past)|pull[- ]?(back|out)|crane|dolly|tracking|track(s|ing)? (along|past|with)|whip[- ]?pan|pans?\b|panning|tilts?\b|tilting|handheld|orbit(s|ing)?|zoom(s|ing)?( in| out)?|aerial|drone|steadicam|truck(s|ing)?\b|arc shot|rack focus|fly[- ]?(over|through))/i;

@@ -1,6 +1,10 @@
 {
  "id": "gsos-301",
  "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
  "course_code": "GSOS-301",
  "semester": 2,
  "title": {

@@ -1,6 +1,10 @@
 {
  "id": "efmp-305",
  "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
  "course_code": "EFMP-305",
  "semester": 2,
  "title": {

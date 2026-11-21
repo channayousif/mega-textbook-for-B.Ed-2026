@@ -1,6 +1,10 @@
 {
  "id": "gqur-300",
  "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
  "course_code": "GQUR-300",
  "semester": 1,
  "title": {

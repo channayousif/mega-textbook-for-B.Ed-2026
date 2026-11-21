@@ -1,6 +1,10 @@
 {
  "id": "gpks-402",
  "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
  "course_code": "GPKS-402",
  "semester": 2,
  "title": {
