@@ -1,0 +1,85 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://textbook.com.pk/schemas/media-job.schema.json",
+ "title": "Media Studio job (Feature 030, ADR-0037)",
+ "type": "object",
+ "required": ["key", "kind", "scope", "state"],
+ "properties": {
+  "key": { "type": "string", "minLength": 3 },
+  "kind": { "enum": ["video.teaser", "audio.brief", "audio.deeper", "video.overview", "doc.poster", "doc.mindmap",
+   "doc.brief", "doc.studyguide", "doc.slides", "image.schematic", "image.illustration"] },
+  "scope": {
+   "type": "object",
+   "required": ["course"],
+   "properties": {
+    "course": { "type": "string", "pattern": "^[A-Z]{2,4}-\\d{3}$|^LICENCE$" },
+    "unit": { "type": "integer", "minimum": 1 },
+    "topic": { "type": "integer", "minimum": 1 },
+    "locale": { "enum": ["en", "ur"] }
+   },
+   "additionalProperties": false
+  },
+  "recipe": {
+   "type": "object",
+   "required": ["name", "version"],
+   "properties": { "name": { "type": "string" }, "version": { "type": "integer", "minimum": 1 } },
+   "additionalProperties": false
+  },
+  "producers": { "type": "array", "items": { "type": "string" } },
+  "state": { "enum": ["planned", "scripted", "approved", "generating", "generated", "checked", "assembled",
+   "uploaded-private", "owner-approved", "public", "placed"] },
+  "script_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+  "gates": {
+   "type": "object",
+   "propertyNames": { "enum": ["qg0", "qg1", "qg2", "qg3", "script", "owner"] },
+   "additionalProperties": { "$ref": "#/$defs/gate" }
+  },
+  "takes": { "type": "array", "items": { "$ref": "#/$defs/take" } },
+  "outputs": {
+   "type": "object",
+   "properties": {
+    "encoded_file": { "type": "string" },
+    "thumbnail_file": { "type": "string" },
+    "youtube_id": { "type": "string" },
+    "uploaded_at": { "type": "string", "format": "date-time" },
+    "published_at": { "type": "string", "format": "date-time" },
+    "placed_at": { "type": "string", "format": "date-time" },
+    "asset_path": { "type": "string" }
+   }
+  },
+  "blocked": { "type": ["string", "null"] },
+  "notes": { "type": "array", "items": { "type": "string" } },
+  "history": {
+   "type": "array",
+   "items": { "type": "object", "required": ["state", "at"], "properties": { "state": { "type": "string" }, "at": { "type": "string" } } }
+  }
+ },
+ "$defs": {
+  "gate": {
+   "type": "object",
+   "required": ["verdict", "by"],
+   "properties": {
+    "verdict": { "enum": ["pass", "pass-with-notes", "fail", "approve", "reject"] },
+    "by": { "type": "string" },
+    "date": { "type": "string" },
+    "note": { "type": "string" }
+   }
+  },
+  "take": {
+   "type": "object",
+   "required": ["part", "take", "producer", "source"],
+   "properties": {
+    "part": { "type": ["integer", "string"] },
+    "take": { "type": "integer", "minimum": 1 },
+    "producer": { "type": "string" },
+    "model": { "type": "string" },
+    "credits": { "type": "number", "minimum": 0 },
+    "source": { "enum": ["generated", "recovered", "manual", "shared", "derived"] },
+    "file": { "type": "string" },
+    "sha256": { "type": "string" },
+    "media_id": { "type": "string" },
+    "qa": { "$ref": "#/$defs/gate" }
+   }
+  }
+ }
+}

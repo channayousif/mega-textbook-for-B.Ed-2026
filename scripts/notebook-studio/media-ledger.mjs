@@ -17,13 +17,14 @@ import { existsSync, readFileSync, writeFileSync, readdirSync, statSync, createR
 import { createHash } from 'node:crypto';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// Feature 030 (T012): the upload cap and atomic, locked writes come from the shared media core.
+import { DAILY_UPLOAD_LIMIT, uploadsOn, pacificDay, save as saveJson, withLock } from '../media/ledger.mjs';
+export { DAILY_UPLOAD_LIMIT, uploadsOn };
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
 export const STATES = ['planned', 'generated', 'downloaded', 'qa1-pass', 'encoded', 'qa2-pass',
   'uploaded-private', 'qa3-pass', 'approved', 'public', 'placed'];
-/** Uploads per project per day are capped at 100 (YouTube Data API, 2026-06-01); keep headroom. */
-export const DAILY_UPLOAD_LIMIT = 95;
 /** Fields a transition into a state must carry (on the item after the merge). */
 const REQUIRES = {
   generated: ['artifact_id'],
@@ -47,7 +48,7 @@ export function loadLedger(course, unit, root = ROOT) {
   return JSON.parse(readFileSync(p, 'utf8'));
 }
 export function saveLedger(ledger, root = ROOT) {
-  writeFileSync(ledgerPath(ledger.course, ledger.unit, root), `${JSON.stringify(ledger, null, 1)}\n`);
+  saveJson(ledgerPath(ledger.course, ledger.unit, root), ledger);
 }
 export function allLedgers(root = ROOT) {
   const base = join(root, 'specs', 'studio');
@@ -107,12 +108,6 @@ export function block(ledger, key, reason) {
   return item;
 }
 
-/** Uploads counted per Pacific calendar day, because the YouTube quota resets at Pacific midnight. */
-const pacificDay = (d) => new Date(d).toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
-export function uploadsOn(ledgers, when = new Date()) {
-  const day = pacificDay(when);
-  return ledgers.flatMap((l) => l.items).filter((i) => i.uploaded_at && pacificDay(i.uploaded_at) === day).length;
-}
 
 export function sha256File(path) {
   return new Promise((ok, fail) => {
@@ -147,6 +142,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const out = (v) => console.log(JSON.stringify(v, null, 1));
   try {
     if (cmd === 'quota') { out({ pacific_day: pacificDay(date), uploads: uploadsOn(allLedgers(), date), limit: DAILY_UPLOAD_LIMIT }); process.exit(0); }
+    const WRITES = new Set(['plan', 'advance', 'block', 'unblock']);
+    const run = () => {
     const ledger = loadLedger(course, unit);
     if (cmd === 'status') {
       out(ledger.items.map((i) => ({ key: i.key, state: i.state, blocked: i.blocked ?? null, youtube: i.youtube_id ?? null })));
@@ -156,5 +153,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     else if (cmd === 'unblock') { const i = block(ledger, key, null); delete i.blocked; out(i); saveLedger(ledger); }
     else if (cmd === 'sheet') out(spotCheckSheet(ledger));
     else { console.error('commands: status | plan | advance | block | unblock | quota | sheet'); process.exit(2); }
+    };
+    if (WRITES.has(cmd)) withLock(ledgerPath(course, unit), run); else run();
   } catch (e) { console.error(`media-ledger: ${e.message}`); process.exit(1); }
 }
