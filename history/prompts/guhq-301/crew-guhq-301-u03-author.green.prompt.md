@@ -2,7 +2,7 @@
 id: crew-guhq-301-u03-author
 title: crew author GUHQ-301 unit 3
 stage: misc
-date: 2026-11-22
+date: 2026-11-21
 surface: agent
 model: opencode
 feature: guhq-301
@@ -20,6 +20,7 @@ files:
  - docs/semester-3/guhq-301/unit-03/topic-01.mdx
  - docs/semester-3/guhq-301/unit-03/topic-02.mdx
  - docs/semester-3/guhq-301/unit-03/unit-assessment.mdx
+ - history/prompts/guhq-301/crew-guhq-301-u03-author.green.prompt.md
  - specs/content/guhq-301/concepts/unit-03.md
  - specs/content/guhq-301/coverage/unit-03.md
  - specs/content/guhq-301/figures/unit-03.banner.md
@@ -46,7 +47,6 @@ files:
  - static/img/figures/guhq-301/unit-03/fig-U3-4.svg
 tests:
  - npm run check:content
- - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/guhq-301/unit-03/*.svg
 ---
 
 ## Prompt
@@ -77,31 +77,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored GUHQ-301 Unit 3 (Quranic Syntax and Sentence Structure) in English: index, two nine-part topic cycles, the 10/10/5 unit assessment with bounded answers, four placed schematic SVGs with derived dark variants, and the coverage, sources, concepts, figure manifest and banner sidecar. Added the Unit 3 tracker rows and G2 gate evidence; all 14 content gates pass.
+Authored GUHQ-301 Unit 3 (Quranic Syntax and Sentence Structure) in English with two topic cycles, a 10/10/5 assessment, four placed schematic SVGs, full governance artefacts, tracker rows and G2 gate evidence.
 
 ## Outcome
 
 - Impact: author for GUHQ-301 Unit 3 by opencode (attempt 1).
-- Tests: `npm run check:content` passed (14/14) and `scripts/heavy.sh node scripts/measure-figure-text.mjs` exited 0 on all four SVGs.
-- Files: 28 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 29 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored GUHQ-301 Unit 3 (Quranic Syntax and Sentence Structure) in English with four placed schematic SVGs, coverage/sources/excerpts/concepts/figure manifests, the Unit 3 tracker rows and G2 gate evidence; all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. The unit is English-only; the Urdu mirror is a separate job.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored GUHQ-301 Unit 3 (Quranic Syntax and Sentence Structure) in English with two topic cycles, a 10/10/5 assessment, four placed schematic SVGs, full governance artefacts, tracker rows and G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The claim that the Qur'an uses the passive "often" is supported by four counted examples (99:1, 2:91, 2:183, 2:25) but not by a corpus frequency count; the sources file flags it for the G3 reviewer, who must also make the religious-content check in content-spec drafting note 7.
-  - The Urdu job needs `.ur.svg` versions of all four figures (three contain Arabic words) and must have the eight authored Urdu concept labels reviewed at G5; banner fig-U3-5 is still prompt-only for the illustrate job.
+  - G3 and the Urdu mirror remain open; the Urdu job needs `.ur.svg` mirrors for fig-U3-1/2/3/4 and a G5 check of the eight authored concept labels. Banner fig-U3-5 is still `prompt-only` for the illustrate job.
+  - The "passive is common" claim rests on four counted examples, not a corpus frequency count, and is flagged in `sources/unit-03.md` for the G3 religious-content reviewer.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
