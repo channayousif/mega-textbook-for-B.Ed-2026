@@ -2,7 +2,7 @@
 id: crew-guhq-301-u05-author
 title: crew author GUHQ-301 unit 5
 stage: misc
-date: 2026-11-22
+date: 2026-11-21
 surface: agent
 model: opencode
 feature: guhq-301
@@ -16,36 +16,36 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/guhq-301/unit-05/index.mdx
-  - docs/semester-3/guhq-301/unit-05/topic-01.mdx
-  - docs/semester-3/guhq-301/unit-05/topic-02.mdx
-  - docs/semester-3/guhq-301/unit-05/unit-assessment.mdx
-  - history/prompts/guhq-301/crew-guhq-301-u05-author.green.prompt.md
-  - specs/content/guhq-301/concepts/unit-05.md
-  - specs/content/guhq-301/coverage/unit-05.md
-  - specs/content/guhq-301/figures/unit-05.md
-  - specs/content/guhq-301/reviews/unit-05/G2/20261121T225651907Z-gates.json
-  - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-bloom-bands.txt
-  - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-concept-graph.txt
-  - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-depth-gate.txt
-  - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-docs-sync.txt
-  - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-figures.txt
-  - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-no-answer-keys.txt
-  - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-no-em-dash.txt
-  - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/validate-content.txt
-  - specs/content/guhq-301/sources/texts/kadir-2022-asbab.md
-  - specs/content/guhq-301/sources/unit-05.md
-  - specs/content/guhq-301/tasks.md
-  - static/img/figures/guhq-301/unit-05/fig-U5-1.dark.svg
-  - static/img/figures/guhq-301/unit-05/fig-U5-1.svg
-  - static/img/figures/guhq-301/unit-05/fig-U5-2.dark.svg
-  - static/img/figures/guhq-301/unit-05/fig-U5-2.svg
-  - static/img/figures/guhq-301/unit-05/fig-U5-3.dark.svg
-  - static/img/figures/guhq-301/unit-05/fig-U5-3.svg
-  - static/img/figures/guhq-301/unit-05/fig-U5-4.dark.svg
-  - static/img/figures/guhq-301/unit-05/fig-U5-4.svg
+ - docs/semester-3/guhq-301/unit-05/index.mdx
+ - docs/semester-3/guhq-301/unit-05/topic-01.mdx
+ - docs/semester-3/guhq-301/unit-05/topic-02.mdx
+ - docs/semester-3/guhq-301/unit-05/unit-assessment.mdx
+ - history/prompts/guhq-301/crew-guhq-301-u05-author.green.prompt.md
+ - specs/content/guhq-301/concepts/unit-05.md
+ - specs/content/guhq-301/coverage/unit-05.md
+ - specs/content/guhq-301/figures/unit-05.md
+ - specs/content/guhq-301/reviews/unit-05/G2/20261121T225651907Z-gates.json
+ - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-bloom-bands.txt
+ - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-concept-graph.txt
+ - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-depth-gate.txt
+ - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-docs-sync.txt
+ - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-figures.txt
+ - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-no-answer-keys.txt
+ - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/check-no-em-dash.txt
+ - specs/content/guhq-301/reviews/unit-05/G2/logs-20261121T225651907Z/validate-content.txt
+ - specs/content/guhq-301/sources/texts/kadir-2022-asbab.md
+ - specs/content/guhq-301/sources/unit-05.md
+ - specs/content/guhq-301/tasks.md
+ - static/img/figures/guhq-301/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/guhq-301/unit-05/fig-U5-1.svg
+ - static/img/figures/guhq-301/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/guhq-301/unit-05/fig-U5-2.svg
+ - static/img/figures/guhq-301/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/guhq-301/unit-05/fig-U5-3.svg
+ - static/img/figures/guhq-301/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/guhq-301/unit-05/fig-U5-4.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -76,27 +76,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored GUHQ-301 Unit 5 (Interpretation of Quranic Verses and Surahs) in English with two per-topic cycles, a 10/10/5 assessment, four placed schematic SVGs with dark variants, coverage/sources/figures/concepts artefacts, G2 gate evidence and the tracker row.
+Authored GUHQ-301 Unit 5 (Interpretation of Quranic Verses and Surahs) in English with two per-topic cycles, a 10/10/5 assessment, four placed schematic SVGs with dark variants, coverage/sources/figures/concepts artefacts, G2 gate evidence and the tracker row; all 14 content gates pass.
 
 ## Outcome
 
 - Impact: author for GUHQ-301 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed (all 14 content gates).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored GUHQ-301 Unit 5 (Interpretation of Quranic Verses and Surahs) in English with two per-topic cycles, a 10/10/5 assessment, four placed schematic SVGs with dark variants, coverage/sources/figures/concepts artefacts, G2 gate evidence and the tracker row.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. The unit is English-only with the untranslated banner.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored GUHQ-301 Unit 5 (Interpretation of Quranic Verses and Surahs) in English with two per-topic cycles, a 10/10/5 assessment, four placed schematic SVGs with dark variants, coverage/sources/figures/concepts artefacts, G2 gate evidence and the tracker row; all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Urdu job needs `.ur.svg` for all four figures and G5 review of the seven authored Urdu concept labels.
-  - G3 must make the religious-content check (content-spec drafting note 7); the classroom routines and the ordering of the sources of tafsir have no bound source and are flagged in `sources/unit-05.md`.
-  - `tafseer-talim-ul-quran` is a mapped reading that could not be identified, so it is not cited; `kadir-2022-asbab` carries the rules-of-interpretation claims.
+  - G3 must make the religious-content check (content-spec drafting note 7); the classroom routines and the ordering of the sources of tafsir are flagged in `sources/unit-05.md` as having no bound source.
+  - `tafseer-talim-ul-quran` (mapped reading) could not be identified and is not cited; `kadir-2022-asbab` carries the rules-of-interpretation claims.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
