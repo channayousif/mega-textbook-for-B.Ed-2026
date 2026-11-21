@@ -3,12 +3,12 @@ name: generate-figures
 description: >-
   Render a unit's Spec 008 figure prompt-markers into committed, accessible, lazy-loaded images
   that show on the page in both locales (Spec 009). For each `{/* FIGURE[...] */}` marker:
-  classify it as a schematic (self-contained SVG) or an illustration (a complete prompt-only
-  handoff to Codex under ADR-0024). For schematics, Codex is the PRIMARY SVG author and Claude is
+  classify it as a schematic (self-contained SVG) or an illustration (a complete prompt-only row
+  for the crew's `illustrate` job, ADR-0029/ADR-0036). For schematics, Codex is the PRIMARY SVG author and Claude is
   the secondary fallback (invoked only when Codex is unavailable). Optimise and place each SVG
   figure, replace its marker with a `<Figure>` element, mirror it into the Urdu topic file with a
   translated-label `.ur.svg`, and move its manifest row through `prompt-only → generated →
-  placed`. Leave each raster marker and row ready for Codex, and run the gate set. Use when asked
+  placed`. Leave each raster marker and row ready for the `illustrate` job, and run the gate set. Use when asked
   to "generate figures", "render the figure markers", "create the images for <course> unit N",
   "turn the figure prompts into images", or to bring a unit's figures up to the Spec 009 rendered
   state.
@@ -16,20 +16,24 @@ description: >-
 
 # generate-figures
 
+Raster producers, quotas and the gflow route are shared with the other media kinds: see the
+**media-studio** skill. This skill keeps the figure steps.
+
 Process one unit's `{/* FIGURE[fig-U<n>-<seq>]: <prompt>; alt: <alt> */}` comment markers - planned
 by `author-unit` (Spec 008) and tracked in `specs/content/<course>/figures/unit-NN.md` at
-`Status: prompt-only` - into rendered SVG schematics or complete Codex raster handoffs:
+`Status: prompt-only` - into rendered SVG schematics or complete raster briefs for the `illustrate` job:
 
 - For a schematic: a committed SVG under `static/img/figures/<course-lowercase>/unit-NN/`, the
   marker replaced by `<Figure>`, the translated Urdu SVG and a `Status: placed` manifest row.
   **Codex authors the SVG first; Claude falls back to direct authoring only when Codex is
   unavailable** (see `references/svg-codex-handoff.md`).
-- For an illustration: a complete brief for Codex while the marker and `Status: prompt-only` row
-  remain unchanged.
+- For an illustration: a complete brief (prompt, alt, aspect, target path) while the marker and
+  `Status: prompt-only` row remain unchanged; `scripts/generate-illustration.mjs` produces it in the
+  `illustrate` job (agy, then gflow, then Codex; see Step 3 and the media-studio skill).
 
 **One skill, no sub-agent for authoring.** The classify → prepare handoff → invoke Codex
 (fallback: Claude authors directly) → place SVG → mirror SVG → flip SVG status → run-gates loop
-stays in the main session. Raster generation is a separate Codex responsibility under ADR-0024,
+stays in the main session. Raster generation is the separate `illustrate` job (ADR-0029/ADR-0036),
 not a Claude sub-agent task.
 
 **Boundary.** `author-unit` writes the markers + a `prompt-only` manifest and stops there. This
@@ -44,7 +48,7 @@ skill renders them. This is the "later, out-of-scope image pass" the Spec 008
   or a mix if rendering incrementally).
 - References: `references/svg-authoring.md` (the diagram archetypes + the SVG boilerplate),
   `references/svg-codex-handoff.md` (Codex-primary schematic authoring + Claude fallback),
-  `references/raster-codex-handoff.md` (the required Codex raster handoff),
+  `references/raster-codex-handoff.md` (Codex as one raster producer, used through generate-illustration.mjs),
   `references/placement.md` (marker → `<Figure>` + the manifest v2 row + the Status lifecycle),
   `references/bilingual-figures.md` (`.ur.svg` + the UR mirror + draft-vs-reviewed gate posture).
 - Contracts: `specs/009-figure-rendering/contracts/figure-manifest-v2.md` and
@@ -206,8 +210,8 @@ Per `references/bilingual-figures.md`:
   `text-anchor` / `direction: rtl` for the Urdu text; use the Nastaliq-first font stack.
   Optimise it (`--svg`, ≤ 20 KB). In the UR `topic-NN.mdx`, replace the marker with
   `<Figure id="<id>" src="/img/figures/<course>/unit-NN/<figId>.ur.svg" alt="<Urdu alt>" />`.
-- `Kind: illustration` - Codex reuses the one `<figId>.webp` and places the Urdu `<Figure>` with
-  translated alt text as part of the raster handoff. Claude leaves its marker untouched.
+- `Kind: illustration` - the `illustrate` job reuses the one `<figId>.webp` and places the Urdu
+  `<Figure>` with translated alt text. A schematic run leaves its marker untouched.
 - **Gate posture**: if the EN `index.mdx` is `translation_status: reviewed`, the `.ur.svg` and the
   UR `<Figure>` are gate-enforced. If it is `draft` (a skeleton-stub UR mirror), author and wire
   them anyway - it is not gate-blocked, matching Spec 008's UR marker-ID parity posture.

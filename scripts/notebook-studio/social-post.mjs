@@ -5,17 +5,21 @@
 //   node scripts/notebook-studio/social-post.mjs auth-url <meta|tiktok|linkedin>
 //   node scripts/notebook-studio/social-post.mjs exchange <meta|tiktok|linkedin> '<redirected URL or code>'
 //        (meta also accepts a Graph API Explorer user token, which starts with EAA)
-//   node scripts/notebook-studio/social-post.mjs post <instagram|facebook|tiktok|linkedin> <ledger key> <video.mp4>
+//   node scripts/notebook-studio/social-post.mjs post <instagram|facebook|tiktok|linkedin> <ledger key> <video.mp4> [--draft] [--no-record]
+//        (--draft saves a Facebook reel as a draft; TikTok always lands as an inbox draft; Instagram has no draft API)
 //
 // App credentials (client id/secret) live in ~/.config/textbook-social/apps.json and tokens in
-// ~/.config/textbook-social/<provider>.json, both mode 600 and never in git. Each post is recorded
-// in the teaser ledger with `teaser.mjs crosspost`; this script prints the fields to record.
+// ~/.config/textbook-social/<provider>.json, both mode 600 and never in git. Each successful post is
+// recorded in the teaser ledger (`crossposts.<platform>`) under the shared ledger lock (Feature 030,
+// T046), so a cross-post run and a clip run can write the ledger at the same time; `--no-record`
+// only prints the fields (record them later with `teaser.mjs crosspost`).
 import { readFileSync, writeFileSync, mkdirSync, statSync, existsSync, chmodSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomBytes } from 'node:crypto';
-import { loadScript, socialMeta } from './teaser.mjs';
+import { loadScript, socialMeta, recordCrosspost, ledgerPath } from './teaser.mjs';
+import { update } from '../media/ledger.mjs';
 
 export const GRAPH = 'v27.0';
 export const LINKEDIN_VERSION = '202610';
@@ -178,14 +182,15 @@ async function postInstagram(file, caption) {
   return { state: 'posted', post_id: media, url: link };
 }
 
-async function postFacebook(file, caption) {
+async function postFacebook(file, caption, { draft = false } = {}) {
   const m = token('meta');
   const size = statSync(file).size;
   const base = `https://graph.facebook.com/${GRAPH}/${m.page_id}/video_reels`;
   const { video_id } = (await call(`${base}?${new URLSearchParams({ upload_phase: 'start', access_token: m.page_token })}`, { method: 'POST' })).body;
   await call(`https://rupload.facebook.com/video-upload/${GRAPH}/${video_id}`, { method: 'POST', headers: { Authorization: `OAuth ${m.page_token}`, offset: '0', file_size: String(size) }, body: readFileSync(file) });
-  await call(`${base}?${new URLSearchParams({ upload_phase: 'finish', video_id, video_state: 'PUBLISHED', description: caption, access_token: m.page_token })}`, { method: 'POST' });
-  return { state: 'posted', post_id: video_id, url: `https://www.facebook.com/reel/${video_id}` };
+  await call(`${base}?${new URLSearchParams({ upload_phase: 'finish', video_id, video_state: draft ? 'DRAFT' : 'PUBLISHED', description: caption, access_token: m.page_token })}`, { method: 'POST' });
+  // A DRAFT reel waits in Meta Business Suite (Content > Drafts) for the owner to publish.
+  return { state: draft ? 'draft' : 'posted', post_id: video_id, url: `https://www.facebook.com/reel/${video_id}` };
 }
 
 async function postTiktok(file) {
@@ -222,7 +227,7 @@ async function postLinkedin(file, caption, title) {
   return { state: 'posted', post_id: urn, url: urn ? `https://www.linkedin.com/feed/update/${urn}/` : null };
 }
 
-export async function post(platform, key, file) {
+export async function post(platform, key, file, { draft = false } = {}) {
   if (!PROVIDER_OF[platform]) throw new Error(`unknown platform ${platform}`);
   const ledger = readJson(fileURLToPath(new URL('../../specs/studio/teasers/media-teasers.json', import.meta.url)));
   const item = ledger.items.find((i) => i.key === key);
@@ -231,18 +236,29 @@ export async function post(platform, key, file) {
   if (item.crossposts?.[platform]) throw new Error(`${key} is already on ${platform} (${item.crossposts[platform].post_id})`);
   const meta = socialMeta(loadScript(item.id), item.locale, platform);
   if (platform === 'instagram') return { ...(await postInstagram(file, meta.caption)), caption: meta.caption };
-  if (platform === 'facebook') return { ...(await postFacebook(file, meta.caption)), caption: meta.caption };
+  if (platform === 'facebook') return { ...(await postFacebook(file, meta.caption, { draft })), caption: meta.caption };
   if (platform === 'tiktok') return { ...(await postTiktok(file)), caption: meta.caption };
   return { ...(await postLinkedin(file, meta.caption, meta.title)), caption: meta.caption };
 }
 
+/** Record a post in the teaser ledger under its lock (Feature 030, T046). */
+export function recordPost(key, platform, r, path = ledgerPath()) {
+  return update(path, (L) => recordCrosspost(L, key, platform, { state: r.state, post_id: r.post_id, url: r.url ?? null }).crossposts[platform]);
+}
+
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const [cmd, x, y, z] = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  const draft = args.includes('--draft');
+  const noRecord = args.includes('--no-record');
+  const [cmd, x, y, z] = args.filter((a) => a !== '--draft' && a !== '--no-record');
   const run = async () => {
     if (cmd === 'auth-url') return authUrl(x, app(x));
     if (cmd === 'exchange') return exchange(x, y);
-    if (cmd === 'post') return post(x, y, resolve(z));
-    throw new Error('commands: auth-url <provider> | exchange <provider> <url|code> | post <platform> <key> <file>');
+    if (cmd === 'post') {
+      const r = await post(x, y, resolve(z), { draft });
+      return noRecord ? r : { ...r, recorded: recordPost(y, x, r) };
+    }
+    throw new Error('commands: auth-url <provider> | exchange <provider> <url|code> | post <platform> <key> <file> [--draft (facebook)] [--no-record]');
   };
   run().then((r) => console.log(typeof r === 'string' ? r : JSON.stringify(r, null, 1)))
     .catch((e) => { console.error(`social-post: ${e.message}`); process.exit(1); });
