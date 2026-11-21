@@ -137,6 +137,19 @@ function newsFeed() {
   }
 }
 
+/**
+ * Feature 030 (T040/T041): public course teasers by course code, from the `teasers` key that
+ * scripts/build-studio-index.mjs writes (prebuild/prestart). Read at build time so the overview
+ * player and the catalogue's teaser button are in the static HTML: no fetch, no layout shift.
+ */
+function courseTeasers(): Record<string, { youtube_id: string; title: string; locale: string }> {
+  try {
+    return JSON.parse(readFileSync('./static/studio-index.json', 'utf8')).teasers ?? {};
+  } catch {
+    return {};
+  }
+}
+
 /** Per-course counts for the catalogue, from the same sources as siteStats(). */
 function courseStatus() {
   const report = JSON.parse(readFileSync('./static/content-status.json', 'utf8'));
@@ -215,6 +228,7 @@ const config: Config = {
     siteStats: siteStats(),
     courseStatus: courseStatus(),
     newsFeed: newsFeed(),
+    courseTeasers: courseTeasers(),
   },
 
   presets: [
