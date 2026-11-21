@@ -120,9 +120,9 @@ behaviour change for existing tools.
 
 **Independent test**: with jobs of at least four kinds in progress, one report lists them all with a shared state name and groups pending owner actions.
 
-- [ ] T035 [US3] Implement `scripts/media/status.mjs`: gather the teaser ledger, Notebook Studio ledgers and manifests, and figure manifests through `scripts/media/legacy.mjs`; print every job with kind, scope, shared state, producer and next owner action; print producer availability and reset times from the quota file; `--json` for machines
-- [ ] T036 [US3] Add an owner-action section to the crew `BOARD.md` writer in `scripts/crew/crew.mjs` from `scripts/media/status.mjs` (scripts to approve, Shorts to spot-check with QG2 notes, items to publish)
-- [ ] T037 [P] [US3] Tests in `tests/unit/media-status.test.mjs` using fixture ledgers of four kinds
+- [x] T035 [US3] Implement `scripts/media/status.mjs`: gather the teaser ledger, Notebook Studio ledgers and manifests, and figure manifests through `scripts/media/legacy.mjs`; print every job with kind, scope, shared state, producer and next owner action; print producer availability and reset times from the quota file; `--json` for machines
+- [x] T036 [US3] Add an owner-action section to the crew `BOARD.md` writer in `scripts/crew/crew.mjs` from `scripts/media/status.mjs` (scripts to approve, Shorts to spot-check with QG2 notes, items to publish)
+- [x] T037 [P] [US3] Tests in `tests/unit/media-status.test.mjs` using fixture ledgers of four kinds
 
 ---
 

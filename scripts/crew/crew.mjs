@@ -40,6 +40,7 @@ import { resumeHere } from './resume.mjs';
 import { isMediaStage, teaserNeeds, audioNeeds, limitMedia, mediaLaunchProblem, approveScript, rejectMedia, approvePublish, ownerLine, mediaTask, mediaScope, mediaHold, teaserKey } from './media.mjs';
 import { scriptSha, scriptPath, loadLedger as loadTeaserLedger } from '../notebook-studio/teaser.mjs';
 import { gflowReachable } from '../media/producers/quota.mjs';
+import { mediaStatus, ownerSection } from '../media/status.mjs';
 import { activeQuota as activeMediaQuota, recordQuota as recordMediaQuota } from '../media/producers/index.mjs';
 import { briefRules } from './brief.mjs';
 import { closePrDecisions, closeLandedDecisions } from './decisions.mjs';
@@ -242,6 +243,11 @@ function planMedia(board, queue, added, inFlight) {
   const awaitingScripts = Object.values(items).filter((i) => i.state === 'scripted').length;
   const media = added.splice(before);
   added.push(...limitMedia(media, inFlight, { awaitingScripts }));
+}
+
+/** Owner actions across every media kind (scripts/media/status.mjs), for BOARD.md. Never breaks the board. */
+function mediaOwnerSection() {
+  try { return ownerSection(mediaStatus({ root: ROOT })).join('\n'); } catch (e) { return `(media status unavailable: ${e.message})`; }
 }
 
 /** Launch-time guard for media jobs: FR-012/FR-013 checked against the current ledger and script. */
@@ -1437,8 +1443,8 @@ Agent review is done; only a person's G3 sign-off (ADR-0019) lets these units mo
 ${(board.awaitingG3?.units || []).map((x) => `- ${x.course} Unit ${x.unit}: advisory ${x.disposition}, \`${x.report}\``).join('\n') || 'none'}
 
 ## Media Studio (Feature 030)
-Stages ${board.media?.on ? 'on' : 'off (\`crew media on\`)'}. Waiting on you: ${board.media ? ownerLine(board.media.owner) : 'not planned yet'}.
-Reply \`crew approve-script <key>\`, \`crew reject <key> <note>\` or \`crew publish <key>\`. Clip producer: ${activeMediaQuota('gflow.video') ? 'gflow out until ' + activeMediaQuota('gflow.video').resetAt : 'gflow (probed at launch)'}.
+Crew media stages ${board.media?.on ? 'on' : 'off (\`crew media on\`)'}.
+${mediaOwnerSection()}
 
 ## Weekly maintenance and intelligence
 - Maintenance: ${maintenanceLine(board)}
