@@ -9,6 +9,7 @@
  *   inbox.json      last-read message ids per channel
  *   control.json    paused flag, course priorities, owner notes
  *   handled.json    owner commands already answered by `crew.mjs cmd` (so the tick skips them)
+ *   media.json      owner approvals for Media Studio (crew approve-script / publish / reject)
  *   logs/<job>.log  worker output; logs/<job>.exit its exit code
  */
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
@@ -27,6 +28,8 @@ const DEFAULTS = {
   inbox: {},
   handled: { items: [] },
   control: { paused: false, priority: [] },
+  // Media Studio owner approvals by teaser key: { script: {sha256, at, via}, publish: {...}, reject: {...} }.
+  media: { approvals: {} },
 };
 
 export function load(name) {

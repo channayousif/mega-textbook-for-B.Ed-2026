@@ -15,11 +15,13 @@
 //   node scripts/notebook-studio/teaser.mjs plan   <id> <locale>   add the ledger item (state planned)
 //   node scripts/notebook-studio/teaser.mjs advance <key> <state> [--json '<fields>']
 //   node scripts/notebook-studio/teaser.mjs clip   <key> <shot> --json '<clip record>'   (record a take)
+//   node scripts/notebook-studio/teaser.mjs rehash <key>                   (new script hash while still scripted, after a revision)
 //   node scripts/notebook-studio/teaser.mjs clipqa <key> <shot> <take> --json '<qa>'      (QG1/QG2 on a take)
 //   node scripts/notebook-studio/teaser.mjs block  <key> "<reason>" | unblock <key>
 //   node scripts/notebook-studio/teaser.mjs meta   <key>           metadata for upload_video
 //   node scripts/notebook-studio/teaser.mjs sheet                  owner spot-check sheet
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
@@ -52,10 +54,14 @@ const REQUIRES = {
 };
 const GATE_FOR = { 'script-approved': 'script', 'clips-qa': 'clips', 'qa-pass': 'qa1', 'qa3-pass': 'qa3', approved: 'owner' };
 const OK = ['pass', 'pass-with-notes', 'approve'];
+/** Gates only the owner may pass (FR-012/FR-013, Feature 030): the script before credits, the Short before public. */
+const OWNER_GATES = { 'script-approved': 'script', approved: 'owner' };
 
 export const scriptPath = (id, root = ROOT) => join(root, 'specs', 'studio', 'teasers', `${id}.json`);
 export const ledgerPath = (root = ROOT) => join(root, 'specs', 'studio', 'teasers', 'media-teasers.json');
 export const loadScript = (id, root = ROOT) => JSON.parse(readFileSync(scriptPath(id, root), 'utf8'));
+/** sha256 of the script file as committed (what `sha256sum` prints): the identity the owner approves. */
+export const scriptSha = (id, root = ROOT) => createHash('sha256').update(readFileSync(scriptPath(id, root))).digest('hex');
 
 /** Course teasers link to the course overview; the licence teaser links to /licence/. Trailing slash
  *  included: the live site 301-redirects the bare path, and a video link should land directly. */
@@ -122,10 +128,11 @@ export function planTeaser(ledger, id, locale, now = new Date()) {
 }
 
 /** Record one Veo take for a shot; refuses a third retake (MAX_RETAKES after the first take). */
-export function recordClip(ledger, key, shot, clip, now = new Date()) {
+export function recordClip(ledger, key, shot, clip, now = new Date(), { currentSha } = {}) {
   const item = ledger.items.find((i) => i.key === key);
   if (!item) throw new Error(`no item ${key}`);
   if (!['script-approved', 'clips-generated'].includes(item.state)) throw new Error(`${key}: clips are recorded only after script approval (state ${item.state})`);
+  if (currentSha && item.script_sha256 !== currentSha) throw new Error(`${key}: the script changed after the owner approved it (sha ${item.script_sha256?.slice(0, 12)} approved, ${currentSha.slice(0, 12)} now); it needs a new approval`);
   const takes = item.clips.filter((c) => c.shot === shot).length;
   if (takes > MAX_RETAKES) throw new Error(`${key} shot ${shot}: already ${takes} takes; the limit is ${MAX_RETAKES + 1} (first take + ${MAX_RETAKES} retakes)`);
   for (const f of ['artifact_id', 'model', 'credits']) if (clip[f] == null) throw new Error(`clip record needs ${f}`);
@@ -150,7 +157,7 @@ export function chosenTakes(item) {
   return [1, 2, 3, 4, 5].map((n) => item.clips.filter((c) => c.shot === n && OK.includes(c.qa?.verdict)).at(-1) ?? null);
 }
 
-export function advanceTeaser(ledger, key, to, fields = {}, { now = new Date(), ledgers } = {}) {
+export function advanceTeaser(ledger, key, to, fields = {}, { now = new Date(), ledgers, currentSha } = {}) {
   const item = ledger.items.find((i) => i.key === key);
   if (!item) throw new Error(`no item ${key}`);
   if (item.blocked) throw new Error(`${key} is blocked: ${item.blocked}`);
@@ -160,6 +167,8 @@ export function advanceTeaser(ledger, key, to, fields = {}, { now = new Date(), 
   for (const f of REQUIRES[to] ?? []) if (get(next, f) == null) throw new Error(`${key}: entering ${to} needs ${f}`);
   const gate = GATE_FOR[to];
   if (gate && !OK.includes(get(next, `gates.${gate}.verdict`))) throw new Error(`${key}: gate ${gate} verdict is ${get(next, `gates.${gate}.verdict`) ?? 'missing'}, cannot enter ${to}`);
+  if (OWNER_GATES[to] && get(next, `gates.${OWNER_GATES[to]}.by`) !== 'owner') throw new Error(`${key}: only the owner may pass gate ${OWNER_GATES[to]} (by is ${get(next, `gates.${OWNER_GATES[to]}.by`) ?? 'missing'})`);
+  if (to === 'script-approved' && currentSha && next.script_sha256 !== currentSha) throw new Error(`${key}: the script file no longer matches the recorded hash; rehash and ask the owner again`);
   if (to === 'clips-generated') {
     const missing = [1, 2, 3, 4, 5].filter((n) => !next.clips.some((c) => c.shot === n));
     if (missing.length) throw new Error(`${key}: no take yet for shot(s) ${missing.join(', ')}`);
@@ -306,6 +315,22 @@ export function teaserSheet(ledger) {
   return { must_watch: rows, total_ready: ready.length, others: ready.length - rows.length };
 }
 
+/**
+ * A revised script (after an owner rejection) gets its new hash while it still waits for approval.
+ * Only in `scripted`: after approval a changed script must go back through the owner.
+ */
+export function rehashScript(ledger, key, sha, root = ROOT, now = new Date()) {
+  const item = ledger.items.find((i) => i.key === key);
+  if (!item) throw new Error(`no item ${key}`);
+  if (item.state !== 'scripted') throw new Error(`${key}: rehash only while scripted (state ${item.state})`);
+  const f = checkScript(loadScript(item.id, root), root);
+  if (f.length) throw new Error(`${key}: QG0 fails: ${f.join('; ')}`);
+  item.script_sha256 = sha;
+  item.history.push({ state: 'scripted', at: now.toISOString(), note: 'script revised and rehashed' });
+  return { key, script_sha256: sha };
+}
+const shaFor = (L, key) => { const i = L.items.find((k) => k.key === key); return i && existsSync(scriptPath(i.id)) ? scriptSha(i.id) : undefined; };
+
 // ---------- CLI ----------
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const a = process.argv.slice(2);
@@ -330,13 +355,14 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       out(socialMeta(loadScript(item.id), item.locale, y));
     } else {
       // Writes hold the ledger lock across load -> change -> save, so parallel runs cannot lose updates.
-      const WRITES = new Set(['plan', 'advance', 'clip', 'clipqa', 'block', 'unblock', 'crosspost', 'replace', 'thumb']);
+      const WRITES = new Set(['plan', 'advance', 'clip', 'clipqa', 'block', 'unblock', 'crosspost', 'replace', 'thumb', 'rehash']);
       const run = () => {
       const L = loadLedger();
       if (cmd === 'status') out(L.items.map((i) => ({ key: i.key, state: i.state, takes: i.clips.length, blocked: i.blocked ?? null, youtube: i.youtube_id ?? null })));
       else if (cmd === 'plan') { out(planTeaser(L, x, y)); saveLedger(L); }
-      else if (cmd === 'advance') { out(advanceTeaser(L, x, y, json)); saveLedger(L); }
-      else if (cmd === 'clip') { out(recordClip(L, x, Number(y), json)); saveLedger(L); }
+      else if (cmd === 'advance') { out(advanceTeaser(L, x, y, json, { currentSha: shaFor(L, x) })); saveLedger(L); }
+      else if (cmd === 'clip') { out(recordClip(L, x, Number(y), json, new Date(), { currentSha: shaFor(L, x) })); saveLedger(L); }
+      else if (cmd === 'rehash') { out(rehashScript(L, x, scriptSha(L.items.find((k) => k.key === x)?.id ?? x))); saveLedger(L); }
       else if (cmd === 'clipqa') { out(setClipQa(L, x, Number(y), Number(a[3]), json)); saveLedger(L); }
       else if (cmd === 'block') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); i.blocked = y; saveLedger(L); out(i); }
       else if (cmd === 'unblock') { const i = L.items.find((k) => k.key === x); if (!i) throw new Error(`no item ${x}`); delete i.blocked; saveLedger(L); out(i); }

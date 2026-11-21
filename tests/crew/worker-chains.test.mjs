@@ -30,6 +30,12 @@ test('2026-W45 M1 removes only opencode from intel_distill', () => {
     'review_ur': ['claude', 'agy_claude', 'agy', 'opencode', 'codex'],
     'fix': ['opencode', 'codex', 'agy', 'claude', 'agy_claude'],
     'intel_distill': ['agy', 'codex', 'claude', 'agy_claude'],
+    // Feature 030 media stages: MCP-bound steps run only on claude.
+    'teaser_script': ['claude', 'agy_claude'],
+    'teaser_clips': ['claude'],
+    'media_assemble': ['claude'],
+    'media_publish': ['claude'],
+    'audio_overview': ['claude'],
     'maint_survey': ['claude', 'agy_claude', 'codex', 'agy', 'opencode'],
     'maint_refactor': ['codex', 'claude', 'agy_claude', 'opencode', 'agy'],
     'maint_docs': ['claude', 'agy_claude', 'agy', 'codex', 'opencode'],

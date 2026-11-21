@@ -37,6 +37,10 @@ import { OWN_PR, queueReview, recordReview, fanOutJobs } from './maintjobs.mjs';
 import { boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from './intel.mjs';
 import { noteStall, clearStall, stallAlertDue, heldFor, stallLine } from './stall.mjs';
 import { resumeHere } from './resume.mjs';
+import { isMediaStage, teaserNeeds, audioNeeds, limitMedia, mediaLaunchProblem, approveScript, rejectMedia, approvePublish, ownerLine, mediaTask, mediaScope, mediaHold, teaserKey } from './media.mjs';
+import { scriptSha, scriptPath, loadLedger as loadTeaserLedger } from '../notebook-studio/teaser.mjs';
+import { gflowReachable } from '../media/producers/quota.mjs';
+import { activeQuota as activeMediaQuota, recordQuota as recordMediaQuota } from '../media/producers/index.mjs';
 import { briefRules } from './brief.mjs';
 import { closePrDecisions, closeLandedDecisions } from './decisions.mjs';
 
@@ -52,7 +56,8 @@ const JOB_TIMEOUT = process.env.CREW_JOB_TIMEOUT || '3h';
 const PUSH_SETTLE_MS = 3 * 60e3;
 // Self-maintenance stages sit just after fixes: a handful a week, so the corpus queue cannot starve them.
 const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
-  'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author'];
+  'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author',
+  'media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script'];
 /** Self-maintenance (scripts/crew/maintenance.mjs) and intelligence (scripts/crew/intel.mjs) stages. */
 const isSelf = (stage) => /^(maint|intel)_/.test(stage);
 const INTEL_DIR = join(STATE_DIR, 'intel');
@@ -191,12 +196,120 @@ function plan() {
   if (held.length) added.splice(0, added.length, ...added.filter((j) => !held.includes(j)));
   const inFlight = board.jobs.filter((j) => IN_FLIGHT.includes(j.status));
   added.splice(0, added.length, ...limitPlanIllustrations(limitIllustrate(added, inFlight), inFlight));
+  planMedia(board, queue, added, inFlight);
   // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
   board.awaitingG3 = { at: now(), units: awaiting };
   if (!DRY) { board.jobs.push(...added); save('board', board); }
   console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off; focus: ${board.focus.course ?? 'none'} (${board.focus.reason})${held.length ? `; held ${held.length} author job(s) for ${[...new Set(held.map((j) => j.course))].join(', ')}` : ''}${waitingOverview.length ? `; waiting for course overview: ${waitingOverview.join(', ')}` : ''}`);
   for (const j of added) console.log(`  + ${j.id}`);
   return added;
+}
+
+// ---------------------------------------------------------------- media (Feature 030)
+
+/** The teaser ledger item and current script hash for a course, read from this (main) checkout. */
+function teaserFacts(course) {
+  const key = teaserKey(course);
+  const item = loadTeaserLedger(ROOT).items.find((i) => i.key === key);
+  const id = course.toLowerCase();
+  return { key, item, sha: existsSync(scriptPath(id, ROOT)) ? scriptSha(id, ROOT) : undefined };
+}
+
+/**
+ * Media Studio stages (scripts/crew/media.mjs), only while the owner has them on (`crew media on`).
+ * Teasers for every B.Ed course with an overview page; audio for planned Notebook Studio items.
+ */
+function planMedia(board, queue, added, inFlight) {
+  const control = load('control');
+  const { approvals } = load('media');
+  const courses = walkCourses(ROOT).filter((c) => relative(ROOT, c.courseDir).startsWith('docs/') && existsSync(join(c.courseDir, 'course-overview.mdx'))).map((c) => ({ code: c.courseCode }));
+  const items = Object.fromEntries(loadTeaserLedger(ROOT).items.map((i) => [i.key, i]));
+  const { jobs, owner } = teaserNeeds({ courses, items, approvals, shaOf: (id) => (existsSync(scriptPath(id, ROOT)) ? scriptSha(id, ROOT) : undefined) });
+  board.media = { on: control.media === 'on', owner, at: now() };
+  if (control.media !== 'on') return;
+  const units = [];
+  for (const d of existsSync(join(ROOT, 'specs/studio')) ? readdirSync(join(ROOT, 'specs/studio')) : []) {
+    const dir = join(ROOT, 'specs/studio', d);
+    if (!/^[a-z]{2,6}-\d{3}$/.test(d) || !statSync(dir).isDirectory()) continue;
+    for (const f of readdirSync(dir)) {
+      const m = /^media-unit-(\d{2})\.json$/.exec(f);
+      if (m) units.push({ course: d.toUpperCase(), unit: Number(m[1]), items: JSON.parse(readFileSync(join(dir, f), 'utf8')).items ?? [] });
+    }
+  }
+  const before = added.length;
+  for (const j of jobs) queue(j.course, 0, j.stage, { key: j.key, ...(j.note ? { note: j.note } : {}) });
+  for (const j of audioNeeds(units)) queue(j.course, j.unit, j.stage);
+  const awaitingScripts = Object.values(items).filter((i) => i.state === 'scripted').length;
+  const media = added.splice(before);
+  added.push(...limitMedia(media, inFlight, { awaitingScripts }));
+}
+
+/** Launch-time guard for media jobs: FR-012/FR-013 checked against the current ledger and script. */
+function mediaHoldReason(j) {
+  if (!isMediaStage(j.stage)) return null;
+  if (load('control').media !== 'on') return 'media stages are off (crew media on)';
+  if (j.stage === 'teaser_clips' && (!gflowReachable() || activeMediaQuota('gflow.video'))) return 'hold: no clip producer (gflow offline or out of quota)';
+  if (!['teaser_clips', 'media_publish'].includes(j.stage)) return null;
+  const { item, sha } = teaserFacts(j.course);
+  const approval = load('media').approvals[j.key ?? teaserKey(j.course)];
+  const why = mediaLaunchProblem(j, { item, approval, currentSha: sha });
+  if (!why) { if (j.stage === 'teaser_clips') j.approval = approval?.script; if (j.stage === 'media_publish') j.publish = approval?.publish; }
+  return why;
+}
+
+/**
+ * A teaser_clips job that stopped on a MEDIA-HOLD line. Quota is recorded against gflow.video; with
+ * no take recorded the job goes back to the queue without using an attempt. A `held` stop (an
+ * unexplained Flow charge) blocks the job and tells the owner. Returns true when it handled the job.
+ */
+function mediaHoldRequeue(board, events, j, tail) {
+  const hold = mediaHold(tail);
+  if (!hold) return false;
+  if (hold.kind === 'quota') recordMediaQuota('gflow.video', hold.resetAt, hold.reason);
+  const base = j.startHead || 'origin/main';
+  const changed = [
+    ...sh('git', ['diff', '--name-only', base], j.worktree, { allowFail: true }).out.split('\n'),
+    ...sh('git', ['ls-files', '--others', '--exclude-standard'], j.worktree, { allowFail: true }).out.split('\n'),
+  ];
+  if (hold.kind === 'held') {
+    j.status = 'blocked';
+    log(board, j, `held for the owner: ${hold.reason}`);
+    events.push(`✋ ${j.id} needs you: ${hold.reason}`);
+    return !workFiles(changed).length;
+  }
+  if (workFiles(changed).length) return false; // takes were recorded: let it land, the planner queues the rest
+  sh('git', ['reset', '-q', '--hard', base], j.worktree, { allowFail: true });
+  sh('git', ['clean', '-fdq', '--', 'history/prompts'], j.worktree, { allowFail: true });
+  j.status = 'queued';
+  j.attempts = Math.max(0, (j.attempts || 1) - 1);
+  delete j.feedback;
+  log(board, j, `clip producer ${hold.kind}${hold.resetAt ? ` until ${hold.resetAt}` : ''}; nothing made; requeued`);
+  return true;
+}
+
+/** Owner commands for Media Studio: approve-script, reject, publish, media on|off|status. */
+function mediaCommand(v, arg, control, via) {
+  if (v === 'media') {
+    const sub = (arg.split(/\s+/)[0] || 'status').toLowerCase();
+    if (sub === 'on' || sub === 'off') { control.media = sub; return `media stages ${sub}${sub === 'on' ? ': the next plan queues teaser scripts (one media job at a time; nothing spends credits before you approve a script)' : ''}`; }
+    const b = load('board');
+    return `Media stages ${control.media === 'on' ? 'on' : 'off'}. Waiting on you: ${b.media ? ownerLine(b.media.owner) : 'not planned yet'}`;
+  }
+  const [rawKey, ...rest] = arg.split(/\s+/);
+  if (!rawKey) return `usage: crew ${v} <teaser key, e.g. gqur-300-ur>`;
+  const key = /-(ur|en)$/.test(rawKey.toLowerCase()) ? rawKey.toLowerCase() : `${rawKey.toLowerCase()}-ur`;
+  const course = key.replace(/-(ur|en)$/, '').toUpperCase();
+  const { item, sha } = teaserFacts(course);
+  const media = load('media');
+  const ctx = { item, sha, via, at: now() };
+  let msg;
+  try {
+    msg = v === 'approve-script' ? approveScript(media.approvals, key, ctx)
+      : v === 'publish' ? approvePublish(media.approvals, key, ctx)
+        : rejectMedia(media.approvals, key, rest.join(' ').trim(), ctx);
+  } catch (e) { return e.message; }
+  save('media', media);
+  return msg;
 }
 
 // ---------------------------------------------------------------- briefs
@@ -227,6 +340,11 @@ const STAGE_TASK = {
   maint_docs: (j) => j.task,
   maint_adr: (j) => j.task,
   maint_skill: (j) => j.task,
+  teaser_script: mediaTask,
+  teaser_clips: mediaTask,
+  media_assemble: mediaTask,
+  media_publish: mediaTask,
+  audio_overview: mediaTask,
   maint_review: (j) => `Act as the INDEPENDENT reviewer of maintenance PR #${j.pr} (weekly-maintenance skill, "Review"). Another model family wrote it. Read the task it answers and \`git diff origin/main...HEAD\`, check every acceptance item and the rules, and change nothing.\n\n${j.task}`,
 };
 
@@ -254,7 +372,7 @@ function brief(j, board) {
   const skill = STAGES[j.stage].skill;
   const findings = j.stage === 'repair_en' ? reviewFindingsSection(latestReport(j.course, j.unit, 'G3'), { root: ROOT }) : '';
   const notes = priorHandoffsSection(board.jobs, j);
-  const scope = j.scope || (j.unit === 0
+  const scope = j.scope || (isMediaStage(j.stage) ? mediaScope(j) : j.unit === 0
     ? `The whole ${j.course} course: its docs and i18n trees, \`specs/content/${j.course.toLowerCase()}/\`, its figures, and the shared files its PR already touches.`
     : `${j.course} Unit ${j.unit} only: its docs/licence and i18n files, its rows and folders under
 \`specs/content/${j.course.toLowerCase()}/\`, and \`static/img/figures/${j.course.toLowerCase()}/unit-${pad(j.unit)}/\`.`);
@@ -442,6 +560,12 @@ function launchQueued(board, health, control, events) {
   for (const j of queue) {
     if (running.length >= MAX_PARALLEL) break;
     if (j.stage === 'illustrate' && noImageProducer) continue;
+    // Media jobs: the owner's gates are checked again against main right before launch (FR-012/013).
+    const mediaWhy = mediaHoldReason(j);
+    if (mediaWhy) {
+      if (!mediaWhy.startsWith('hold') && !mediaWhy.startsWith('media stages')) { j.status = 'closed'; log(board, j, `not launched: ${mediaWhy}`); events.push(`⏹ ${j.id} not launched: ${mediaWhy}`); }
+      continue;
+    }
     // Each launch uses memory and disk, so the floors are checked again before the next one.
     if (memAvailableMb() < MIN_FREE_MB) { console.log(`memory below ${MIN_FREE_MB} MB; not launching`); break; }
     if (diskFreeMb() < MIN_FREE_DISK_MB) { console.log(`disk below ${MIN_FREE_DISK_MB} MB; not launching`); break; }
@@ -736,6 +860,7 @@ function reapOne(board, health, events, j) {
   pruneScratch(j.worktree);
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
   if (j.stage === 'illustrate' && imageQuotaRequeue(board, events, j, tail)) return;
+  if (j.stage === 'teaser_clips' && mediaHoldRequeue(board, events, j, tail)) return;
   const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
   if (quota || (code === 124 && !tail.trim())) {
     const mins = cool(health, j.worker, tail || `exit ${code}`);
@@ -1154,7 +1279,7 @@ function ask(decisions, question, options = ['yes', 'no'], extra = {}) {
   return id;
 }
 
-const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | crew maintenance now|skip|status | crew intel now|status | C-### <option> [note]';
+const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | crew maintenance now|skip|status | crew intel now|status | crew media on|off|status | crew approve-script <key> | crew reject <key> <note> | crew publish <key> | C-### <option> [note]';
 
 /**
  * One owner message -> one reply (or null when it is not for the crew). Shared by the tick's
@@ -1163,7 +1288,7 @@ const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise
  */
 function handleCommand(text, { board, decisions, control, health }, via = 'cli') {
   text = text.trim();
-  const c = text.match(/^\/?crew\b[\s:,.-]*(\w+)?\s*([\s\S]*)$/i);
+  const c = text.match(/^\/?crew\b[\s:,.]*([\w-]+)?\s*([\s\S]*)$/i);
   if (c) {
     const v = (c[1] || 'status').toLowerCase();
     const arg = c[2].trim();
@@ -1201,6 +1326,7 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
       }
       return intelStatus(board);
     }
+    if (['media', 'approve-script', 'publish', 'reject'].includes(v)) return mediaCommand(v, arg, control, via);
     if (v === 'note') {
       if (!arg) return 'usage: crew note <directions>';
       control.notes = [...(control.notes || []), { at: now(), via, text: arg }].slice(-50);
@@ -1276,6 +1402,7 @@ function statusText(board, health, decisions, control = load('control')) {
     `Awaiting your G3 sign-off: ${g3Line(board)}`,
     `Weekly maintenance: ${maintenanceLine(board)}`,
     `Intelligence: ${intelLine(board)}`,
+    `Media: ${board.media?.on ? 'on' : 'off'}; waiting on you: ${board.media ? ownerLine(board.media.owner) : 'not planned yet'}`,
     ...(red.length ? [`Needs a fix: ${red.join(', ')}`] : []),
     `Needs you: ${open.join(' | ') || 'nothing'}`,
     ...(control.priority?.length ? [`Priority: ${control.priority.join(' > ')}`] : [])].join('\n');
@@ -1308,6 +1435,10 @@ ${decisions.items.filter((d) => d.status === 'open').map((d) => `- **${d.id}** $
 ## Awaiting your G3 sign-off
 Agent review is done; only a person's G3 sign-off (ADR-0019) lets these units move on to the Urdu review.
 ${(board.awaitingG3?.units || []).map((x) => `- ${x.course} Unit ${x.unit}: advisory ${x.disposition}, \`${x.report}\``).join('\n') || 'none'}
+
+## Media Studio (Feature 030)
+Stages ${board.media?.on ? 'on' : 'off (\`crew media on\`)'}. Waiting on you: ${board.media ? ownerLine(board.media.owner) : 'not planned yet'}.
+Reply \`crew approve-script <key>\`, \`crew reject <key> <note>\` or \`crew publish <key>\`. Clip producer: ${activeMediaQuota('gflow.video') ? 'gflow out until ' + activeMediaQuota('gflow.video').resetAt : 'gflow (probed at launch)'}.
 
 ## Weekly maintenance and intelligence
 - Maintenance: ${maintenanceLine(board)}
