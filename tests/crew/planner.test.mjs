@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, figureBacklog, limitIllustrate,
-  needsIllustrationPlan, illustrationsPending, unitScopedChanges, limitPlanIllustrations } from '../../scripts/crew/planner.mjs';
+  needsIllustrationPlan, illustrationsPending, unitScopedChanges, limitPlanIllustrations, holdsFocus } from '../../scripts/crew/planner.mjs';
 
 const unit = (G3 = 'open', G5 = 'open', over = {}) => ({ authored: true, gates: { G3, G5 }, figures: { prompt_only: 0 }, ...over });
 const facts = (over = {}) => ({ bilingual: true, g3Report: null, g3Repaired: false, g5Report: null, mirrorComplete: true, ...over });
@@ -139,6 +139,22 @@ test('focusCourse: finish a started course before a new one starts (owner ruling
   assert.equal(focusCourse({ started: begun, jobs: [job('GPKS-402', 'author', 'running')], newCourses: ['EFMP-408'], catalogOrder }).course, 'GPKS-402');
   // Nothing to do anywhere.
   assert.equal(focusCourse({ started, jobs: [], newCourses: [], catalogOrder }), null);
+});
+
+test('focusCourse: media work never holds the focus (owner ruling 2026-11-21)', () => {
+  const catalogOrder = ['GQUR-300', 'GUHQ-301', 'EFMP-408'];
+  const started = new Map([['GQUR-300', true]]);
+  const job = (course, stage, status = 'queued') => ({ course, stage, status });
+  // A queued raster job waiting on image quota no longer blocks the next course.
+  const media = [job('GQUR-300', 'illustrate'), job('GQUR-300', 'plan_illustrations', 'running'), job('GQUR-300', 'figures')];
+  const next = focusCourse({ started, jobs: media, newCourses: ['EFMP-408', 'GUHQ-301'], catalogOrder });
+  assert.equal(next.course, 'GUHQ-301');
+  assert.match(next.reason, /new course/);
+  // Authoring-track work still holds it.
+  assert.equal(focusCourse({ started, jobs: [...media, job('GQUR-300', 'review_en')], newCourses: ['GUHQ-301'], catalogOrder }).course, 'GQUR-300');
+  assert.equal(holdsFocus('illustrate'), false);
+  assert.equal(holdsFocus('teaser_clips'), false);
+  assert.equal(holdsFocus('translate'), true);
 });
 
 test('illustrations go to illustrate, schematics to figures (2026-11-03: illustrate never ran)', () => {
