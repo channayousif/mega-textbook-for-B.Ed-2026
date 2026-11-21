@@ -32,7 +32,7 @@ English-only authoring from the approved Unit 1 and Unit 3 content-specs. No pub
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/guhq-301/reviews/unit-03/G2/20261121T203610749Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review, including the religious-content check in content-spec drafting note 7; author self-check is not G3 |
-| Unit 3 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notices |
+| Unit 3 | G4 ur-translation | ▢ | | Complete four-page draft Urdu mirror and four localized SVG pairs (with derived dark twins) prepared from English a653d2b03; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-03/handoff.md. |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 3 | G6 assets | ▣ | | Four English schematic SVGs placed with derived dark variants; measure-figure-text verified; banner fig-U3-5 prompt-only for the illustrate job |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
