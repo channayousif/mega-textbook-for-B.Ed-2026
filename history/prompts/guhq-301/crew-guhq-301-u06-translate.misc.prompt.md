@@ -4,7 +4,7 @@ title: crew translate GUHQ-301 unit 6
 stage: misc
 date: 2026-11-22
 surface: agent
-model: gemini
+model: agy
 feature: guhq-301
 branch: crew/guhq-301-u06-translate
 user: crew
@@ -16,30 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/guhq-301/crew-guhq-301-u06-translate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/unit-assessment.mdx
-  - specs/content/guhq-301/reviews/unit-06/G2/20261122T024306853Z-gates.json
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-bloom-bands.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-concept-graph.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-depth-gate.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-docs-sync.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-figures.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-no-answer-keys.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-no-em-dash.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/validate-content.txt
-  - specs/content/guhq-301/tasks.md
-  - specs/content/guhq-301/translations/unit-06/check-content-parity.txt
-  - specs/content/guhq-301/translations/unit-06/handoff.md
-  - static/img/figures/guhq-301/unit-06/fig-U6-1.ur.dark.svg
-  - static/img/figures/guhq-301/unit-06/fig-U6-1.ur.svg
-  - static/img/figures/guhq-301/unit-06/fig-U6-2.ur.dark.svg
-  - static/img/figures/guhq-301/unit-06/fig-U6-2.ur.svg
-  - static/img/figures/guhq-301/unit-06/fig-U6-3.ur.dark.svg
-  - static/img/figures/guhq-301/unit-06/fig-U6-3.ur.svg
+ - history/prompts/guhq-301/crew-guhq-301-u06-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/unit-assessment.mdx
+ - specs/content/guhq-301/reviews/unit-06/G2/20261122T024306853Z-gates.json
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-bloom-bands.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-concept-graph.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-depth-gate.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-docs-sync.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-figures.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-no-answer-keys.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-no-em-dash.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/validate-content.txt
+ - specs/content/guhq-301/tasks.md
+ - specs/content/guhq-301/translations/unit-06/check-content-parity.txt
+ - specs/content/guhq-301/translations/unit-06/handoff.md
+ - static/img/figures/guhq-301/unit-06/fig-U6-1.ur.dark.svg
+ - static/img/figures/guhq-301/unit-06/fig-U6-1.ur.svg
+ - static/img/figures/guhq-301/unit-06/fig-U6-2.ur.dark.svg
+ - static/img/figures/guhq-301/unit-06/fig-U6-2.ur.svg
+ - static/img/figures/guhq-301/unit-06/fig-U6-3.ur.dark.svg
+ - static/img/figures/guhq-301/unit-06/fig-U6-3.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -74,31 +74,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (guhq-301-u06-author, author, agy) Urdu job needs `.ur.svg` for all three placed schematic figures and independent G5 review for the six authored Urdu concept labels.
 - (guhq-301-u06-author, author, agy) G3 review must make the religious-content check (content-spec drafting note 7); classroom scenarios and pedagogical applications are flagged as instructional models.
 
+
 ## Response snapshot
 
-Translated GUHQ-301 Unit 6 into its complete Urdu mirror at G4 across three pages (index, topic-01, unit-assessment) with three RTL .ur.svg figures and their derived .ur.dark.svg variants, recorded the G4 tracker note, and verified all 14 content gates pass cleanly.
+Translated GUHQ-301 Unit 6 into its complete three-page Urdu mirror at G4 with three localized RTL figures, derived dark variants, and verified gate evidence.
 
 ## Outcome
 
-- Impact: translate for GUHQ-301 Unit 6 by agy.
-- Tests: `npm run check:content` passed (14 of 14 content gates green) after parity verification via temporary reviewed flip.
-- Files: 13 files (Urdu pages, RTL figures, derived dark variants, tasks.md, handoff and parity evidence).
+- Impact: translate for GUHQ-301 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Drafted the complete three-page Urdu mirror of GUHQ-301 Unit 6, authored three localized RTL .ur.svg figures with derived dark variants, updated G4 tracker status note, and documented translation handoff and parity test output.
-- Decisions the team must respect: G3/G5 remain advisory until qualified independent review; translation_status stays draft.
-- Pending / next owner: crew lead / G3 and G5 reviewers.
+- Shipped / changed: Translated GUHQ-301 Unit 6 into its complete three-page Urdu mirror at G4 with three localized RTL figures, derived dark variants, and verified gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G5 review needs to check verse meanings, honorifics, and the six authored Urdu concept labels.
-  - G3 review must perform the religious-content check per content-spec drafting note 7.
-- Paperclip issues affected: none.
+  - G5 independent review must verify the six authored Urdu concept labels in `specs/content/guhq-301/concepts/unit-06.md` and check every rendered verse meaning against trusted translations.
+  - G3 review must make the religious-content check per content-spec drafting note 7.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14 gates).
-- Prompt variant: crew brief v1.
-- Next experiment: none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
