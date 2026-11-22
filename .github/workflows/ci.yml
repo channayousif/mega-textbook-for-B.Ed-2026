@@ -193,6 +193,8 @@ jobs:
       # cross-link resolution, depth by coverage, practice shape, Urdu parity.
       - name: Licence track gate
         run: npm run check:licence
+        env:
+          LICENCE_REQUIRE_UR: '1'
 
       - name: Licence reverse-link map freshness
         run: npm run licence:map:check

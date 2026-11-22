@@ -301,17 +301,28 @@ guide to item-bank priorities.
 
 ## Coverage status
 
-| | Count |
-|---|---|
-| Part II objectives mapped to an authored unit | 5 |
-| Part II objectives mapped at course level only | 32 |
-| Part II objectives uncovered | 9 |
-| Part I objectives uncovered (out of scope) | 5 |
+**Refreshed 2026-11-22 (Feature 024 T032).** The licence track (`licence/pedagogy/`, Feature 024)
+now has one page per Part II objective, in English and Urdu, plus a practice page per heading.
+`check:licence` runs strict (no `--allow-missing`) and CI requires every Urdu mirror
+(`LICENCE_REQUIRE_UR=1`).
 
-**Authored coverage today.** Of 11 sampled items worth 300 marks, the two authored courses touch
-`EFMP-302` U1, U2, U3, U5 and `EFMP-301` U1 - reachable on the ERQ and CRQ 6 and CRQ 8, roughly
-130 of 300 marks, though only partially since each item also demands material from unauthored
-courses.
+| Heading | Objectives | Pages (EN = UR) | covered | partial | authored |
+|---|---|---|---|---|---|
+| A. Methods of Teaching and Foundations of Education | 11 | 11 + practice | 1 | 3 | 7 |
+| B. Child Development and Education Psychology | 12 | 12 + practice | 1 | 11 | 0 |
+| C. Classroom Management | 10 | 10 + practice | 0 | 10 | 0 |
+| D. Classroom Assessment and Test Development and Evaluation | 16 | 16 + practice | 1 | 8 | 7 |
+| E. School Community and Teacher | 8 | 8 + practice | 0 | 2 | 6 |
+| **Total** | **57** | **57 + 5** | **3** | **34** | **20** |
+
+`covered`: a degree topic teaches the objective, and the page gives an exam-focused summary and a
+link (depth capped). `partial`: a degree topic covers part of it, and the page writes the rest.
+`authored`: the page is written in full. Part I (5 objectives, the Class 1-8 school curriculum)
+stays out of scope (open item 3).
+
+*Before the licence track (2026-09-13):* 5 Part II objectives mapped to an authored unit, 32 at
+course level only, 9 uncovered. Of 11 sampled items worth 300 marks, the two authored courses
+(`EFMP-302` U1, U2, U3, U5 and `EFMP-301` U1) reached about 130 marks, only partially.
 
 ## Course priority on the licence axis
 

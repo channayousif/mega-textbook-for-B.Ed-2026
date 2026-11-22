@@ -36,4 +36,4 @@
 - [x] T023 Admin page: Pin/Unpin with an optional end date on each automatic post.
 - [x] T024 Weekly email: "Updated units" (revisions and final review pending) and "New illustrations" (with counts).
 - [x] T025 Tests: `news-feed`, `news-merge`, `digest-email`, `icon-pack`; `tests/rls/news-items.test.mjs` news_pins case. 0054 verified on stubs in a disposable `supabase/postgres:17.6.1.136` container (roles, grants, policies, RPC, audit, set-null).
-- [ ] T026 Rollout (owner approval): apply 0054 to the shared Supabase (CI's RLS job needs it) and `notify pgrst`; after merge copy `_shared/digestEmail.ts` to the edge volume; curl anonymous `news_pins`.
+- [x] T026 Rollout (owner approval): apply 0054 to the shared Supabase (CI's RLS job needs it) and `notify pgrst`; after merge copy `_shared/digestEmail.ts` to the edge volume; curl anonymous `news_pins`.
