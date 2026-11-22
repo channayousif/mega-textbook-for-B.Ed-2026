@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 310" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" lang="ur"><title id="t">اسم عبد کا واحد، تثنیہ اور جمع میں جدول</title><desc id="d">جدول جو اسم عبد کو واحد، تثنیہ اور جمع، مذکر اور مؤنث میں عربی اشکال اور معانی کے ساتھ ظاہر کرتا ہے</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.thin { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.dash { stroke: var(--muted); stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.ar { font-size: 18px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, -apple-system, sans-serif; }
+.ah { fill: var(--ink); }
+.ahm { fill: var(--muted); }
+</style><rect class="bg" x="0" y="0" width="780" height="310"/><text class="h" x="756" y="34" text-anchor="end">‏ایک اسم واحد، تثنیہ اور جمع میں‏</text><text class="sh" x="756" y="64" text-anchor="end">‏عدد‏</text><text class="sh" x="620" y="64" text-anchor="end">‏مذکر‏</text><text class="sh" x="300" y="64" text-anchor="end">‏مؤنث‏</text><line class="thin" x1="24" y1="74" x2="756" y2="74"/><text class="sh" x="756" y="112" text-anchor="end">‏واحد‏</text><text class="ar" x="620" y="112" text-anchor="end">عَبْد</text><text class="cell" x="620" y="136" text-anchor="end">ʿabd</text><text class="cell" x="620" y="156" text-anchor="end">‏ایک بندہ (غلام)‏</text><text class="ar" x="300" y="112" text-anchor="end">أَمَة</text><text class="cell" x="300" y="136" text-anchor="end">amah</text><text class="cell" x="300" y="156" text-anchor="end">‏ایک بندی (لونڈی)‏</text><text class="sh" x="756" y="182" text-anchor="end">‏تثنیہ‏</text><text class="ar" x="620" y="182" text-anchor="end">عَبْدَانِ</text><text class="cell" x="620" y="206" text-anchor="end">ʿabdāni</text><text class="cell" x="620" y="226" text-anchor="end">‏دو بندے (دو غلام)‏</text><text class="ar" x="300" y="182" text-anchor="end">أَمَتَانِ</text><text class="cell" x="300" y="206" text-anchor="end">amatāni</text><text class="cell" x="300" y="226" text-anchor="end">‏دو بندیاں (دو لونڈیاں)‏</text><text class="sh" x="756" y="252" text-anchor="end">‏جمع‏</text><text class="ar" x="620" y="252" text-anchor="end">عِبَاد</text><text class="cell" x="620" y="276" text-anchor="end">ʿibād</text><text class="cell" x="620" y="296" text-anchor="end">‏سب بندے (غلام)‏</text><text class="ar" x="300" y="252" text-anchor="end">إِمَاء</text><text class="cell" x="300" y="276" text-anchor="end">imāʾ</text><text class="cell" x="300" y="296" text-anchor="end">‏سب بندیاں (لونڈیاں)‏</text><text class="wm" x="24" y="298" text-anchor="start" aria-hidden="true">textbook.com.pk</text></svg>

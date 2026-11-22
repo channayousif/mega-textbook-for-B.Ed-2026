@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 468" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" lang="ur"><title id="t">تفسیر کے مآخذ، ترتیب سے</title><desc id="d">خاکہ جو تفسیر کے مآخذ ترتیب سے دکھاتا ہے: پہلے خود قرآن، پھر سنت، پھر صحابہ کرام، پھر زبان اور سیاق، جو نیچے کی طرف تیروں سے جڑے ہیں۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.thin { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="468"/><text class="h" x="756" y="38" text-anchor="end">‏تفسیر کے مآخذ، ترتیب سے‏</text><rect class="panel-a" x="40" y="60" width="700" height="80" rx="8"/><text class="h" x="724" y="92" text-anchor="end">‏1۔ خود قرآن‏</text><text class="body" x="724" y="122" text-anchor="end">‏متن خود متن کی وضاحت کرتا ہے‏</text><line class="thin" x1="390" y1="140" x2="390" y2="156" marker-end="url(#arrow)"/><rect class="panel" x="40" y="156" width="700" height="80" rx="8"/><text class="h" x="724" y="188" text-anchor="end">‏2۔ سنت‏</text><text class="body" x="724" y="218" text-anchor="end">‏نبی کریم ﷺ کا عمل متن کی وضاحت کرتا ہے‏</text><line class="thin" x1="390" y1="236" x2="390" y2="252" marker-end="url(#arrow)"/><rect class="panel" x="40" y="252" width="700" height="80" rx="8"/><text class="h" x="724" y="284" text-anchor="end">‏3۔ صحابہ کرام‏</text><text class="body" x="724" y="314" text-anchor="end">‏ان کا استعمال اور روایات‏</text><line class="thin" x1="390" y1="332" x2="390" y2="348" marker-end="url(#arrow)"/><rect class="panel" x="40" y="348" width="700" height="80" rx="8"/><text class="h" x="724" y="380" text-anchor="end">‏4۔ زبان اور سیاق‏</text><text class="body" x="724" y="410" text-anchor="end">‏قواعد، سیاق اور اسبابِ نزول‏</text><text class="wm" x="12" y="456" text-anchor="start" aria-hidden="true">textbook.com.pk</text></svg>
