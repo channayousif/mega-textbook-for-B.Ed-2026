@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Flowchart of a five-step cycle of community engagement</title><desc id="d">Flowchart of a five-step cycle of community engagement: identify a need, mobilise everyone affected, plan together, act, and review by reporting back openly, with an arrow from review back to identifying the next need. A note in the centre says inclusion and accountability apply at every step.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg{fill:var(--bg)}
+.stroke{stroke:var(--ink);stroke-width:2.5;fill:none}
+.dash{stroke:var(--muted);stroke-width:2;fill:none;stroke-dasharray:8 6}
+.panel{fill:var(--panel);stroke:var(--ink);stroke-width:2}
+.panel-a{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2}
+.panel-b{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2}
+.panel-c{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2}
+.yes{stroke:var(--ink);stroke-width:3;fill:none}
+.no{stroke:var(--muted);stroke-width:3;fill:none}
+text{font-size:15px;fill:var(--ink)}
+.h{font-size:16px;font-weight:700;fill:var(--ink)}
+.sh{font-size:14px;font-weight:600;fill:var(--ink)}
+.body{font-size:14px;fill:var(--ink)}
+.small{font-size:13px;fill:var(--ink)}
+.cap{font-size:13px;fill:var(--muted)}
+.wm{fill:var(--wm);font-size:11px}
+.ah{fill:var(--ink)}
+.grid{stroke:var(--ink);stroke-width:1.5;fill:none;opacity:0.25}
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="520"/><rect class="panel" x="285" y="26" width="210" height="96" rx="10"/><text class="sh" x="295" y="48">1. Identify a need</text><text class="small" x="295" y="68">Listen to residents and</text><text class="small" x="295" y="84">collect facts: why girls</text><text class="small" x="295" y="100">miss school at harvest</text><rect class="panel" x="545" y="156" width="210" height="96" rx="10"/><text class="sh" x="555" y="178">2. Mobilise</text><text class="small" x="555" y="198">Invite every group</text><text class="small" x="555" y="214">affected, at a suitable</text><text class="small" x="555" y="230">time, place and language</text><rect class="panel" x="455" y="386" width="210" height="96" rx="10"/><text class="sh" x="465" y="408">3. Plan together</text><text class="small" x="465" y="428">Agree on aims, roles,</text><text class="small" x="465" y="444">money and a timetable</text><rect class="panel" x="115" y="386" width="210" height="96" rx="10"/><text class="sh" x="125" y="408">4. Act</text><text class="small" x="125" y="428">Carry out the plan</text><text class="small" x="125" y="444">and keep records</text><rect class="panel" x="25" y="156" width="210" height="96" rx="10"/><text class="sh" x="35" y="178">5. Review</text><text class="small" x="35" y="198">Meet again, report back</text><text class="small" x="35" y="214">openly, learn and adjust</text><line class="stroke" x1="497" y1="84" x2="600" y2="152" marker-end="url(#arrow)"/><line class="stroke" x1="645" y1="254" x2="590" y2="382" marker-end="url(#arrow)"/><line class="stroke" x1="453" y1="434" x2="327" y2="434" marker-end="url(#arrow)"/><line class="stroke" x1="180" y1="384" x2="140" y2="254" marker-end="url(#arrow)"/><line class="stroke" x1="160" y1="154" x2="283" y2="80" marker-end="url(#arrow)"/><text class="cap" x="200" y="104" text-anchor="middle">the next need</text><ellipse class="dash" cx="390" cy="262" rx="140" ry="44"/><text class="small" x="390" y="258" text-anchor="middle">Inclusion and accountability</text><text class="small" x="390" y="276" text-anchor="middle">at every step</text><text class="wm" x="768" y="510" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
