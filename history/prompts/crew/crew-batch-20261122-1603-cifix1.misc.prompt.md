@@ -1,6 +1,6 @@
 ---
 id: crew-batch-20261122-1603-cifix1
-title: crew fix GCCE-400 unit 5
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-22
 surface: agent
@@ -11,16 +11,63 @@ user: crew
 command: crew fix
 labels: ["crew", "claude_crew", "fix"]
 links:
-  spec: specs/content/gcce-400/content-spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: 713
+  pr: null
 files:
  - history/prompts/crew/crew-batch-20261122-1603-cifix1.misc.prompt.md
+ - history/prompts/gcce-400/crew-gcce-400-u05-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/unit-teacher-notes.mdx
+ - specs/content/gcce-400/figures/unit-05.md
+ - specs/content/gcce-400/reviews/unit-05/G2/20261122T152925023Z-gates.json
+ - specs/content/gcce-400/reviews/unit-05/G2/20261122T154535059Z-gates.json
+ - specs/content/gcce-400/reviews/unit-05/G2/20261122T154837329Z-gates.json
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/validate-content.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/validate-content.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/validate-content.txt
+ - specs/content/gcce-400/tasks.md
+ - specs/content/gcce-400/translations/unit-05/check-content-parity.txt
+ - specs/content/gcce-400/translations/unit-05/handoff.md
+ - static/img/figures/gcce-400/unit-05/fig-U5-1.ur.dark.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-1.ur.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-2.ur.dark.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-2.ur.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-3.ur.dark.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-3.ur.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-4.ur.dark.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-4.ur.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-5.ur.dark.svg
+ - static/img/figures/gcce-400/unit-05/fig-U5-5.ur.svg
  - static/img/figures/gcce-400/unit-05/fig-U5-6.ur.dark.svg
  - static/img/figures/gcce-400/unit-05/fig-U5-6.ur.svg
 tests:
- - node scripts/measure-figure-text.mjs --ci-fonts static/img/figures/gcce-400/unit-05/fig-U5-6.ur.svg static/img/figures/gcce-400/unit-05/fig-U5-6.ur.dark.svg
  - npm run check:content
 ---
 
@@ -56,32 +103,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261122-0130-cifix1, fix, agy) Unit 7 G2 evidence has been refreshed and re-pointed in tasks.md; all 14 content gates pass cleanly.
 - (batch-20261118-0430-cifix1, fix, opencode) CI figure-geometry uses a DejaVu Sans fallback (local Playwright resolves narrower Noto Nastaliq), so validate future Urdu SVG edits with a DejaVu-forced copy; fig-U5-4's purpose column anchor moved from x=625 to x=615 and `.sh`/`.body` are now 13px in the three repaired figures.
 
+
 ## Response snapshot
 
-Fixed PR #713 figure-geometry failure by moving the last caption line in the GCCE-400 Unit 5 Urdu timeline figures (fig-U5-6.ur.svg and fig-U5-6.ur.dark.svg) up 3px (y=505 to y=502) so it clears the bottom edge of its .panel-a under CI fallback font metrics.
+Moved the last caption line in GCCE-400 Unit 5 Urdu timeline figures `fig-U5-6.ur.svg`/`fig-U5-6.ur.dark.svg` from y=505 to y=502 to clear the CI figure-geometry panel spill, and committed the fix plus its PHR.
 
 ## Outcome
 
-- Impact: fix for GCCE-400 Unit 5 by claude_crew (attempt 1).
-- Tests: `measure-figure-text.mjs --ci-fonts` exited 0 on both edited SVGs; `npm run check:content` passed 14/14.
-- Files: 3 file(s), listed above.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 51 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: moved the final line "بنیادی مقصد پورا ہوا۔" in fig-U5-6.ur.svg and fig-U5-6.ur.dark.svg from y=505 to y=502, clearing the 1.2px spill below .panel-a [172,425,692,505].
-- Decisions the team must respect: no gate status, evidence, tracker row or publication state was touched; only the two Urdu SVGs and this PHR changed.
+- Shipped / changed: Moved the last caption line in GCCE-400 Unit 5 Urdu timeline figures `fig-U5-6.ur.svg`/`fig-U5-6.ur.dark.svg` from y=505 to y=502 to clear the CI figure-geometry panel spill, and committed the fix plus its PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The Urdu timeline wraps to four lines where the English original uses three, which is why the last baseline sat exactly on the panel bottom; CI's DejaVu Sans fallback descent then poked 1.2px out.
-  - Verified with `--ci-fonts` (CI has no Noto Nastaliq); a local default run resolves a narrower face and can pass the same file.
-  - No English unit file, manifest, sources, coverage or concepts changed, so Unit 5's G2 evidence remains valid and did not need a refresh.
+  - CI measures changed SVGs with a DejaVu Sans fallback (no Noto Nastaliq on runners); local default-font runs can pass the same file, so always re-check with `--ci-fonts`.
+  - The Urdu timeline's fourth line is the reason the last baseline was on the panel edge; any future text edit there should re-run `measure-figure-text.mjs --ci-fonts`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Urdu text wrapping to an extra line pushed the final baseline onto the panel bottom, and CI's fallback font descent spilled 1.2px past it; local Nastaliq metrics hid the defect.
-- Graders run and results (PASS/FAIL): measure-figure-text.mjs --ci-fonts PASS; check:content PASS (14/14)
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
