@@ -1,6 +1,8 @@
 # Tasks: Author GQUR-300 · Quantitative Reasoning-I
 
 **Feature**: 021-author-gqur-300 | **Branch**: `021-author-gqur-300`
+
+> **Status (2026-11-22): superseded by the crew.** GQUR-300 was authored unit by unit by the crew (`scripts/crew`, since 2026-10-17) and is live; the unticked boxes below are the original plan, not open work. The course tracker `specs/content/gqur-300/tasks.md` is the record.
 **Input**: [spec.md](./spec.md) · [plan.md](./plan.md)
 
 ## Format: `[ID] [P?] [Story] Description`

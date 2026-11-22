@@ -1,6 +1,8 @@
 # Tasks: Complete EFMP-301 · Educational Psychology
 
 **Feature**: 022-author-efmp-301 | **Branch**: `022-author-efmp-301`
+
+> **Status (2026-11-22): superseded by the crew.** EFMP-301 was authored unit by unit by the crew (`scripts/crew`, since 2026-10-17) and is live; the unticked boxes below are the original plan, not open work. The course tracker `specs/content/efmp-301/tasks.md` is the record.
 **Input**: [spec.md](./spec.md) · [plan.md](./plan.md)
 
 ## Format: `[ID] [P?] [Story] Description`
