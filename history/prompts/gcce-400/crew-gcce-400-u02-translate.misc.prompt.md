@@ -79,32 +79,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u02-author, author, claude) G3 should check the Sindh Local Government Act claim (street lighting as local-council work) against the Act's schedule; Batool 2019 was used from its abstract only.
 - (gcce-400-u02-author, author, claude) course-overview.mdx still mentions only Unit 1 (left alone because editing it would make every unit's G2 evidence out of date); no .ur.svg yet; banner fig-U2-5 is prompt-only.
 
+
 ## Response snapshot
 
-Translated GCCE-400 Unit 2 into a complete five-file Urdu mirror, authored four RTL `.ur.svg` figures with derived dark twins, bound the Urdu `key_terms` to the frozen bank, recorded the G4 tracker note and a translation handoff, refreshed the G2 evidence the mirror commit had invalidated, and verified all 14 content gates green with `translation_status` still `draft`.
+Translated GCCE-400 Unit 2 into a complete five-file Urdu mirror with four localized RTL `.ur.svg` figures, bank-bound `key_terms`, a G4 tracker note and handoff, and refreshed G2 gate evidence, all committed with `translation_status` left at `draft`.
 
 ## Outcome
 
-- ✅ Impact: translate for GCCE-400 Unit 2 by claude_crew (attempt 1).
-- 🧪 Tests: `npm run check:content` passed in the job worktree at `draft`, and with both index files temporarily flipped to `reviewed` it reported only the two expected G4/G5 tracker findings.
-- 📁 Files: 28 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: translate for GCCE-400 Unit 2 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 26 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: complete draft Urdu mirror of GCCE-400 Unit 2 (index, Topics 2.1-2.2, assessment, teacher notes), four localized `.ur.svg` figures with dark twins, bank-bound `key_terms`, the G4 tracker note, a translation handoff with proposed terms, and refreshed Unit 2 G2 gate evidence.
-- Decisions the team must respect: `translation_status` stays `draft`; G4/G5 tracker rows keep ▢; G3/G5 stay advisory until a qualified sign-off; this PR certifies nothing.
+- Shipped / changed: Translated GCCE-400 Unit 2 into a complete five-file Urdu mirror with four localized RTL `.ur.svg` figures, bank-bound `key_terms`, a G4 tracker note and handoff, and refreshed G2 gate evidence, all committed with `translation_status` left at `draft`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `scripts/render-inspect.mjs --locale ur` was not run (this brief forbids build/dev server); G5 owns the 360px and A4 print inspection and the RTL table reading order in `fig-U2-4`.
-  - The proposed Urdu civic terms in `specs/content/gcce-400/translations/unit-02/handoff.md` need an owner decision; the bank was not edited.
-  - G3 en-review of the English draft stays open (Sindh Local Government Act street-lighting example, Batool 2019 abstract-only use, constitutional currency).
+  - `scripts/render-inspect.mjs --locale ur` was not run (the brief forbids build/dev server); G5 owns the 360px and A4 print inspection and the RTL table reading order in `fig-U2-4`.
+  - the proposed Urdu civic terms in `specs/content/gcce-400/translations/unit-02/handoff.md` need an owner decision; `terminology.csv` and `glossary.json` were deliberately left unchanged.
+  - G3 en-review stays open (Sindh Local Government Act street-lighting example, Batool 2019 abstract-only use, constitutional currency).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none on this attempt; the sibling Unit 1 job's stale-G2 failure mode was anticipated and handled in the same run.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS at draft; flipped run FAIL only on the expected G4/G5 tracker rows.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
