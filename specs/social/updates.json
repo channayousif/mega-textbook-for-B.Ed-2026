@@ -1,0 +1,176 @@
+{
+ "config": {
+  "pilot": true
+ },
+ "posts": [
+  {
+   "id": "2026-11-23-content",
+   "kind": "content",
+   "date": "2026-11-23",
+   "state": "drafted",
+   "headline": {
+    "en": "New on textbook.com.pk",
+    "ur": "نیا مواد"
+   },
+   "highlights": [
+    {
+     "type": "course",
+     "ids": [
+      "course:GCCE-400"
+     ],
+     "en": "New course: Civics and Community Engagement",
+     "ur": "نیا کورس: شہریات اور سماجی شمولیت",
+     "link": "/semester-4/gcce-400/",
+     "date": "2026-11-22T11:10:20+05:00"
+    },
+    {
+     "type": "course",
+     "ids": [
+      "course:GUHQ-301"
+     ],
+     "en": "New course: Fehm-e-Quran - I",
+     "ur": "نیا کورس: فہمِ قرآن - I",
+     "link": "/semester-3/guhq-301/",
+     "date": "2026-11-22T00:21:51+05:00"
+    },
+    {
+     "type": "unit",
+     "ids": [
+      "unit:GCCE-400:5",
+      "unit:GCCE-400:6",
+      "unit:GCCE-400:4",
+      "unit:GCCE-400:3",
+      "unit:GCCE-400:2",
+      "unit:GCCE-400:1"
+     ],
+     "en": "GCCE-400: 6 new units",
+     "ur": "GCCE-400: 6 نئے یونٹ",
+     "link": "/semester-4/gcce-400/",
+     "date": "2026-11-22T17:35:28+05:00"
+    },
+    {
+     "type": "unit",
+     "ids": [
+      "unit:GUHQ-301:7",
+      "unit:GUHQ-301:6",
+      "unit:GUHQ-301:5",
+      "unit:GUHQ-301:4",
+      "unit:GUHQ-301:2",
+      "unit:GUHQ-301:3",
+      "unit:GUHQ-301:1"
+     ],
+     "en": "GUHQ-301: 7 new units",
+     "ur": "GUHQ-301: 7 نئے یونٹ",
+     "link": "/semester-3/guhq-301/",
+     "date": "2026-11-22T06:09:15+05:00"
+    },
+    {
+     "type": "urdu",
+     "ids": [
+      "urdu:GCCE-400:3",
+      "urdu:GCCE-400:6",
+      "urdu:GCCE-400:5",
+      "urdu:GCCE-400:4",
+      "urdu:GCCE-400:2",
+      "urdu:GCCE-400:1"
+     ],
+     "en": "GCCE-400: 6 units now in Urdu",
+     "ur": "GCCE-400: 6 یونٹ اب اردو میں",
+     "link": "/semester-4/gcce-400/",
+     "date": "2026-11-23T00:00:12+05:00"
+    }
+   ],
+   "more": 6,
+   "items": [
+    "course:GCCE-400",
+    "course:GUHQ-301",
+    "unit:GCCE-400:5",
+    "unit:GCCE-400:6",
+    "unit:GCCE-400:4",
+    "unit:GCCE-400:3",
+    "unit:GCCE-400:2",
+    "unit:GCCE-400:1",
+    "unit:GUHQ-301:7",
+    "unit:GUHQ-301:6",
+    "unit:GUHQ-301:5",
+    "unit:GUHQ-301:4",
+    "unit:GUHQ-301:2",
+    "unit:GUHQ-301:3",
+    "unit:GUHQ-301:1",
+    "urdu:GCCE-400:3",
+    "urdu:GCCE-400:6",
+    "urdu:GCCE-400:5",
+    "urdu:GCCE-400:4",
+    "urdu:GCCE-400:2",
+    "urdu:GCCE-400:1",
+    "urdu:GUHQ-301:7",
+    "urdu:GUHQ-301:6",
+    "urdu:GUHQ-301:5",
+    "urdu:GUHQ-301:4",
+    "urdu:GUHQ-301:2",
+    "urdu:GUHQ-301:3",
+    "urdu:GUHQ-301:1",
+    "teaser:gsos-301-ur",
+    "teaser:gqur-301-ur",
+    "teaser:gpks-402-ur",
+    "teaser:geng-301-ur",
+    "teaser:efmp-305-ur",
+    "teaser:gqur-300-ur",
+    "figures:GQUR-301:5",
+    "figures:GQUR-301:2",
+    "figures:EFPG-401:1",
+    "figures:GQUR-300:6",
+    "figures:GNAS-301:4"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-22T21:17:03.766Z",
+   "since": "2026-11-21T21:16:58.462Z",
+   "card": "~/studio-media/social/2026-11-23-content.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-content.jpg"
+  },
+  {
+   "id": "2026-11-23-feature",
+   "kind": "feature",
+   "date": "2026-11-23",
+   "state": "drafted",
+   "headline": {
+    "en": "Platform update",
+    "ur": "پلیٹ فارم اپ ڈیٹ"
+   },
+   "highlights": [
+    {
+     "type": "feature",
+     "ids": [
+      "pr:712"
+     ],
+     "en": "Home page: a three-row news ticker with pinned news",
+     "ur": "ہوم پیج: تین قطاروں والا نیوز ٹکر، اہم خبریں سب سے آگے",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 712
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:701"
+     ],
+     "en": "Home page: four course teasers, most watched and newest",
+     "ur": "ہوم پیج: چار کورس ٹیزر، سب سے زیادہ دیکھے گئے اور نئے",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 701
+    }
+   ],
+   "more": 0,
+   "items": [
+    "pr:712",
+    "pr:701"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-22T21:17:03.766Z",
+   "since": "2026-11-21T21:16:58.462Z",
+   "card": "~/studio-media/social/2026-11-23-feature.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-feature.jpg"
+  }
+ ]
+}
