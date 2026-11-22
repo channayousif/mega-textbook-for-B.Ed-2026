@@ -20,6 +20,15 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/index.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/topic-01.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/unit-assessment.mdx
+  - specs/content/guhq-301/reviews/unit-06/G2/20261122T024306853Z-gates.json
+  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-bloom-bands.txt
+  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-concept-graph.txt
+  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-depth-gate.txt
+  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-docs-sync.txt
+  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-figures.txt
+  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-no-answer-keys.txt
+  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/check-no-em-dash.txt
+  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261122T024306853Z/validate-content.txt
   - specs/content/guhq-301/tasks.md
   - specs/content/guhq-301/translations/unit-06/check-content-parity.txt
   - specs/content/guhq-301/translations/unit-06/handoff.md
