@@ -1,6 +1,6 @@
 # GCCE-400 Unit 5 - Figure manifest
 
-Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`. One row per FIGURE marker in the topic files; ids, archetypes and topics follow the content-spec **Figure plan**. All six schematic figures are hand-authored SVGs, placed with derived dark variants; prompts are kept for regeneration. The unit banner is planned in `unit-05.banner.md`.
+Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`. One row per FIGURE marker in the topic files; ids, archetypes and topics follow the content-spec **Figure plan**. All six schematic figures are hand-authored SVGs, placed with derived dark variants; prompts are kept for regeneration. Each has an RTL-mirrored `<figId>.ur.svg` with a derived `.ur.dark.svg` twin for the Urdu mirror, wired into `i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/`. The unit banner is planned in `unit-05.banner.md`.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
