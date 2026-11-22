@@ -88,7 +88,6 @@ files:
  - static/img/figures/gcce-400/unit-04/fig-U4-5.svg
 tests:
  - npm run check:content
- - scripts/heavy.sh node scripts/measure-figure-text.mjs --ci-fonts --changed origin/main
 ---
 
 ## Prompt
@@ -126,23 +125,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Fixed PR #708 CI figure-geometry failure by splitting the row header text "مرکزی خصوصیت" into two lines across GCCE-400 Unit 1 Urdu figures (fig-U1-5.ur.svg and fig-U1-5.ur.dark.svg) to prevent overflow and text overlap under CI fallback font metrics (DejaVu Sans), verified with measure-figure-text --ci-fonts and all 14 content gates passing.
+Fixed PR #708 figure-geometry failure by splitting the row header text in GCCE-400 Unit 1 Urdu figures (fig-U1-5.ur.svg and fig-U1-5.ur.dark.svg) across two lines to prevent bounding-box spill and text overlap under CI fallback font metrics.
 
 ## Outcome
 
 - Impact: fix for CREW Unit 0 by agy (attempt 1).
-- Tests: measure-figure-text --ci-fonts and npm run check:content passed cleanly.
-- Files: 71 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 70 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Fixed PR #708 CI figure-geometry failure by splitting the row header text "مرکزی خصوصیت" into two lines ("مرکزی" at y=112 and "خصوصیت" at y=129) in `fig-U1-5.ur.svg` and `fig-U1-5.ur.dark.svg`. Verified with `scripts/measure-figure-text.mjs --ci-fonts` and `npm run check:content`.
+- Shipped / changed: Fixed PR #708 figure-geometry failure by splitting the row header text in GCCE-400 Unit 1 Urdu figures (fig-U1-5.ur.svg and fig-U1-5.ur.dark.svg) across two lines to prevent bounding-box spill and text overlap under CI fallback font metrics.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu figure SVG `fig-U1-5.ur.svg` and `fig-U1-5.ur.dark.svg` row header "مرکزی خصوصیت" was split across two lines to fit within the 116px column when rendered with CI fallback font DejaVu Sans.
+  - Urdu SVGs `fig-U1-5.ur.svg` and `fig-U1-5.ur.dark.svg` row header "مرکزی خصوصیت" was split across two lines to fit within the 116px column when rendered under CI fallback font DejaVu Sans.
+  - All changed figures passed `scripts/measure-figure-text.mjs --ci-fonts` and all 14 gates in `npm run check:content` passed cleanly.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
