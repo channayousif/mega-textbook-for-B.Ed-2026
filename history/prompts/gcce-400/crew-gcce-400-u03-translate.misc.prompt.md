@@ -22,8 +22,25 @@ files:
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-03/topic-02.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-03/unit-assessment.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-03/unit-teacher-notes.mdx
- - specs/content/gcce-400/tasks.md
+ - specs/content/gcce-400/reviews/unit-03/G2/20261122T190242489Z-gates.json
+ - specs/content/gcce-400/reviews/unit-03/G2/20261122T190504564Z-gates.json
  - specs/content/gcce-400/reviews/unit-03/G2/20261122T190623379Z-gates.json
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/validate-content.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190504564Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190504564Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190504564Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190504564Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190504564Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190504564Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190504564Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190504564Z/validate-content.txt
  - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190623379Z/check-bloom-bands.txt
  - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190623379Z/check-concept-graph.txt
  - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190623379Z/check-depth-gate.txt
@@ -32,6 +49,7 @@ files:
  - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190623379Z/check-no-answer-keys.txt
  - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190623379Z/check-no-em-dash.txt
  - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190623379Z/validate-content.txt
+ - specs/content/gcce-400/tasks.md
  - specs/content/gcce-400/translations/unit-03/check-content-parity.txt
  - specs/content/gcce-400/translations/unit-03/handoff.md
  - static/img/figures/gcce-400/unit-03/fig-U3-1.ur.dark.svg
@@ -81,27 +99,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u03-author-conflict3, fix, agy) Urdu G4/G5 is a separate downstream job; Unit 3 stays under the required untranslated notice.
 - (gcce-400-u03-author-conflict3, fix, agy) The tracker now carries Unit 1, 2, 3, 4, 5 and 6 rows; the next unit job should re-point its G2 row only if its evidence file changes.
 
+
 ## Response snapshot
 
-Translated GCCE-400 Unit 3 into a complete five-file Urdu mirror with four localized RTL `.ur.svg` figures, bank-bound `key_terms`, a G4 tracker note, refreshed G2 gate evidence and a handoff, all committed with `translation_status` left at `draft`.
+Translated GCCE-400 Unit 3 into its complete five-file Urdu mirror with four localized RTL `.ur.svg` figures, bank-bound `key_terms`, a G4 tracker note, refreshed G2 gate evidence and a handoff, all committed with `translation_status` left at `draft`.
 
 ## Outcome
 
 - Impact: translate for GCCE-400 Unit 3 by claude_crew (attempt 1).
-- Tests: npm run check:content passed in the job worktree; the reviewed flip was run, then both index files were restored byte-for-byte to `draft`.
-- Files: 26 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 44 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated GCCE-400 Unit 3 into a complete five-file Urdu mirror with four localized RTL `.ur.svg` figures (and their derived dark twins), bank-bound `key_terms`, a G4 tracker note and a handoff, all committed with `translation_status` left at `draft`.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything. `terminology.csv` and `glossary.json` were deliberately left unchanged.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the commit touches a protected path).
+- Shipped / changed: Translated GCCE-400 Unit 3 into its complete five-file Urdu mirror with four localized RTL `.ur.svg` figures, bank-bound `key_terms`, a G4 tracker note, refreshed G2 gate evidence and a handoff, all committed with `translation_status` left at `draft`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `scripts/render-inspect.mjs --locale ur` was not run (the brief forbids build/dev server); G5 owns the 360px and A4 print inspection and the RTL reading order in `fig-U3-1` and `fig-U3-2`.
-  - the proposed Urdu constitutional and civic terms in `specs/content/gcce-400/translations/unit-03/handoff.md` need an owner decision.
-  - G3 en-review stays open (constitutional currency of Articles 8-28 and Article 5).
+  - `scripts/render-inspect.mjs --locale ur` was not run; G5 owns the 360px and A4 print inspection and the RTL reading order of `fig-U3-1` and `fig-U3-2`.
+  - G3 en-review is still open (constitutional currency of Articles 8-28 and Article 5); any G3 correction to the English must be mirrored here before G5.
+  - this branch is based on `252004ace`; `origin/main` has since advanced to `3260222eb` (PR #716), so the crew lead should rebase or merge before CI.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
