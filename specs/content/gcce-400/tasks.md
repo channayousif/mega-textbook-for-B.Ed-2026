@@ -1,8 +1,8 @@
 # GCCE-400 Civics and Community Engagement - Task tracker
 
-## Status: content spec approved (G0/G1); Units 1-2 English drafts authored and G2 gate evidence recorded; G3 reviews open
+## Status: content spec approved (G0/G1); Units 1, 2 and 7 English drafts authored and G2 gate evidence recorded; G3 reviews open
 
-English-only authoring from the approved Unit 1 and Unit 2 content-spec subsections. No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved Unit 1, Unit 2 and Unit 7 content-spec subsections. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
 ## Units
 
@@ -14,7 +14,7 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | 4 | Ethics and Community Engagement | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 5 | Advocacy and Activism | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 6 | Digital Citizenship and Technology | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
-| 7 | Diversity, Inclusion and Social Justice | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 7 | Diversity, Inclusion and Social Justice | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; eight schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
