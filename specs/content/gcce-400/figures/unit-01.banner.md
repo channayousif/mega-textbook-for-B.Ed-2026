@@ -1,0 +1,7 @@
+# Unit banner - GCCE-400 Unit 1 (Introduction to Civics and Citizenship)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs gcce-400 1 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U1-7 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: an evening in a narrow lane of a small town in Sindh after rain, beside a government school with a whitewashed boundary wall; shopkeepers, parents and two young B.Ed trainee teachers stand together around a cleared drain, one man holds a shovel, a woman in shalwar kameez and dupatta holds a folded sheet of paper as a written complaint, others listen and nod; a few school pupils in uniform shalwar kameez watch from the school gate; men wear Pakistani shalwar kameez, some with caps; calm cooperative mood, soft evening light, puddles reflecting the sky; no readable text on any paper, sign or wall, no maps, flags, emblems, party symbols, logos or watermarks | Shopkeepers, parents and trainee teachers stand together beside a cleared drain in a rain-soaked Sindh lane next to a school, one holding a written complaint, while pupils watch from the school gate. |  | prompt-only |
