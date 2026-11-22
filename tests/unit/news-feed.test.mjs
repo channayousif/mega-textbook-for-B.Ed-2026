@@ -12,7 +12,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import {
-  parseAddDates, parseReviewDates, buildFeed, collectFeed,
+  parseAddDates, parseReviewDates, parseNumstat, parseFigureAdds, buildFeed, collectFeed, UPDATE_MIN_LINES,
 } from '../../scripts/build-news-feed.mjs';
 
 const NOW = new Date('2026-11-09T00:00:00Z');
@@ -53,6 +53,73 @@ describe('parseReviewDates', () => {
   it('ignores unattributed ticks and provisional rows', () => {
     expect(d.has('EFMP-301:3:G3')).toBe(false);
     expect(d.has('EFMP-301:4:G5')).toBe(false);
+  });
+});
+
+describe('parseNumstat, parseFigureAdds and the provisional glyph', () => {
+  it('sums changed lines per unit per day and ignores binary files and other paths', () => {
+    const out = [
+      '@@2026-11-05T15:00:00+05:00', '30\t15\tdocs/a/unit-01/topic-01.mdx', '-\t-\tdocs/a/unit-01/x.png',
+      '@@2026-11-05T09:00:00+05:00', '2\t3\tdocs/a/unit-01/unit-assessment.mdx', '9\t9\tdocs/a/unit-01/index.mdx',
+      '@@2026-10-01T09:00:00+05:00', '50\t0\tdocs/a/unit-01/topic-02.mdx',
+    ].join('\n');
+    const unitOf = (p) => (/\/(topic-\d+|unit-assessment)\.mdx$/.test(p) && p.startsWith('docs/a/unit-01/') ? 'A:1' : null);
+    const r = parseNumstat(out, unitOf).get('A:1');
+    expect(r.get('2026-11-05')).toEqual({ date: '2026-11-05T15:00:00+05:00', lines: 50 });
+    expect(r.get('2026-10-01').lines).toBe(50);
+  });
+
+  it('counts a figure once per unit per day, whatever its Urdu and dark variants', () => {
+    const out = [
+      '@@2026-11-20T10:00:00+05:00', '',
+      'static/img/figures/efpg-401/unit-01/fig-U1-10.webp',
+      'static/img/figures/efpg-401/unit-01/fig-U1-1.svg', 'static/img/figures/efpg-401/unit-01/fig-U1-1.dark.svg',
+      'static/img/figures/efpg-401/unit-01/fig-U1-1.ur.svg', 'static/img/figures/efpg-401/unit-01/fig-U1-1.ur.dark.svg',
+      'static/img/site/hero.webp',
+    ].join('\n');
+    expect(parseFigureAdds(out).get('EFPG-401:1').get('2026-11-20')).toEqual({ date: '2026-11-20T10:00:00+05:00', count: 2 });
+  });
+
+  it('reads provisional G3 rows only when asked for the 🟡 glyph', () => {
+    const patch = ['@@2026-11-06T09:00:00+05:00', '+++ b/specs/content/efmp-301/tasks.md',
+      '+| Unit 4 | G3 en-review | 🟡 | agent | |', '+| Unit 5 | G5 ur-review | 🟡 | agent | |'].join('\n');
+    expect(parseReviewDates(patch).size).toBe(0);
+    const p = parseReviewDates(patch, '🟡', ['G3']);
+    expect([...p.keys()]).toEqual(['EFMP-301:4:G3']);
+  });
+});
+
+describe('buildFeed: updated, figures and provisional events', () => {
+  const NOW2 = new Date('2026-11-22T00:00:00Z');
+  const u = (n) => ({ courseCode: 'GQUR-301', unitNo: n, titleEn: `Unit ${n}`, titleUr: null, permalink: `/semester-2/gqur-301/unit-0${n}/`,
+    enPaths: [`docs/g/u${n}/topic-01.mdx`], urPaths: [`ur/g/u${n}/topic-01.mdx`] });
+  const status = { courses: [{ course_code: 'GQUR-301', units: [1, 2, 3].map((n) => ({ unit_no: n, authored: true, gates: { G3: n === 3 ? 'provisional' : 'open', G5: 'open' } })) }] };
+  const addDates = new Map([['docs/g/u1/topic-01.mdx', '2026-10-01T00:00:00Z'], ['docs/g/u2/topic-01.mdx', '2026-11-18T00:00:00Z'], ['docs/g/u3/topic-01.mdx', '2026-09-01T00:00:00Z']]);
+  const day = (date, extra) => new Map([[date.slice(0, 10), { date, ...extra }]]);
+  const feed = buildFeed({
+    units: [u(1), u(2), u(3)], addDates, reviewDates: new Map(), status, courseTitles: new Map(), now: NOW2,
+    revisions: new Map([
+      ['GQUR-301:1', new Map([['2026-11-10', { date: '2026-11-10T00:00:00Z', lines: 120 }], ['2026-11-15', { date: '2026-11-15T00:00:00Z', lines: UPDATE_MIN_LINES - 1 }]])],
+      ['GQUR-301:2', day('2026-11-20T00:00:00Z', { lines: 300 })], // in its first week: part of the new unit
+    ]),
+    figureAdds: new Map([['GQUR-301:1', day('2026-11-21T00:00:00Z', { count: 4 })], ['GQUR-301:2', day('2026-11-19T00:00:00Z', { count: 6 })]]),
+    provisionalDates: new Map([['GQUR-301:3:G3', '2026-11-12T00:00:00Z'], ['GQUR-301:1:G3', '2026-11-12T00:00:00Z']]),
+  });
+  const byId = Object.fromEntries(feed.map((e) => [e.id, e]));
+
+  it('announces a substantive revision on its newest qualifying day, never a small one or one in the first week', () => {
+    expect(byId['updated:GQUR-301:1']).toMatchObject({ type: 'updated', date: '2026-11-10T00:00:00Z', lines: 120 });
+    expect(byId['updated:GQUR-301:2']).toBeUndefined();
+  });
+
+  it('announces new figures with their count, but not figures that came with a new unit', () => {
+    expect(byId['figures:GQUR-301:1']).toMatchObject({ type: 'figures', count: 4 });
+    expect(byId['figures:GQUR-301:2']).toBeUndefined();
+  });
+
+  it('announces Final Review Pending only while the gate state is provisional', () => {
+    expect(byId['provisional:GQUR-301:3']).toMatchObject({ type: 'provisional', date: '2026-11-12T00:00:00Z' });
+    expect(byId['provisional:GQUR-301:1']).toBeUndefined();
   });
 });
 

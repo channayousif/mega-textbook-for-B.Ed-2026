@@ -131,7 +131,10 @@ function siteStats() {
 function newsFeed() {
   try {
     const feed = JSON.parse(readFileSync('./static/news-feed.json', 'utf8'));
-    return (feed.events ?? []).slice(0, 12);
+    // The newest 40 events, trimmed to what the ticker shows; it groups bursts and splits them into
+    // rows (src/lib/newsMerge.ts). The full 60-day list is fetched by the "View all" panel.
+    return (feed.events ?? []).slice(0, 40).map(({ id, type, gate, date, course_code, unit_no, title_en, title_ur, course_title_en, course_title_ur, permalink, count }) => (
+      { id, type, gate, date, course_code, unit_no, title_en, title_ur, course_title_en, course_title_ur, permalink, count }));
   } catch {
     return [];
   }

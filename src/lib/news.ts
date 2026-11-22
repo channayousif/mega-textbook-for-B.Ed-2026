@@ -29,6 +29,18 @@ export async function fetchLiveNews(supabaseUrl: string, anonKey: string, signal
   return (await res.json()) as NewsItem[];
 }
 
+/**
+ * Ids of automatic events an admin pinned (public.news_pins, migration 0054). RLS returns only
+ * active pins to the public, so no date filter is needed here.
+ */
+export async function fetchLivePins(supabaseUrl: string, anonKey: string, signal?: AbortSignal): Promise<Set<string>> {
+  if (!supabaseUrl || !anonKey) return new Set();
+  const url = `${supabaseUrl.replace(/\/$/, '')}/rest/v1/news_pins?select=event_id`;
+  const res = await fetch(url, { headers: { apikey: anonKey, Authorization: `Bearer ${anonKey}` }, signal });
+  if (!res.ok) return new Set();
+  return new Set(((await res.json()) as { event_id: string }[]).map((r) => r.event_id));
+}
+
 async function client() {
   const supabase = await getSupabase();
   if (!supabase) throw new Error('not_configured');
@@ -92,5 +104,21 @@ export async function callDigest(mode: 'preview' | 'test'): Promise<Result<{ htm
 export async function setDigestOptOut(optOut: boolean): Promise<Result<null>> {
   const supabase = await client();
   const { error } = await supabase.rpc('set_digest_preference', { p_opt_out: optOut });
+  return { data: null, error };
+}
+
+export type NewsPin = { event_id: string; pinned_until: string | null; created_at: string };
+
+/** Admin: every pin, expired ones included (news_pins_admin_read). */
+export async function fetchAllPins(): Promise<Result<NewsPin[]>> {
+  const supabase = await client();
+  const { data, error } = await supabase.from('news_pins').select('event_id,pinned_until,created_at');
+  return { data: (data as NewsPin[]) ?? null, error };
+}
+
+/** Admin: pin (optionally until a date) or unpin an automatic event, through the audited RPC. */
+export async function setNewsPin(eventId: string, pinned: boolean, until: string | null = null): Promise<Result<null>> {
+  const supabase = await client();
+  const { error } = await supabase.rpc('set_news_pin', { p_event_id: eventId, p_pinned: pinned, p_until: until });
   return { data: null, error };
 }
