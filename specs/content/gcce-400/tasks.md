@@ -30,7 +30,7 @@ English-only authoring from the approved Unit 1 and Unit 3 content-specs. No pub
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
 | Unit 1 | G6 assets | ▣ | | Six English schematic SVGs (fig-U1-1 to fig-U1-6) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U1-7 prompt-only for the illustrate job |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 3 | G2 en-draft | ▣ | | Authoring English draft and schematic figures |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-03/G2/20261122T113420667Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review |
 | Unit 3 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
