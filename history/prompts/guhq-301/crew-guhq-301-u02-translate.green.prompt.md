@@ -24,8 +24,8 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-02/topic-04.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-02/unit-assessment.mdx
   - specs/content/guhq-301/tasks.md
-  - specs/content/guhq-301/translations/unit-02/check-content-parity.txt
-  - specs/content/guhq-301/translations/unit-02/handoff.md
+  - specs/content/guhq-301/reviews/unit-02/G4/check-content-parity.txt
+  - specs/content/guhq-301/reviews/unit-02/G4/translation-handoff.md
   - static/img/figures/guhq-301/unit-02/fig-U2-1.ur.dark.svg
   - static/img/figures/guhq-301/unit-02/fig-U2-1.ur.svg
   - static/img/figures/guhq-301/unit-02/fig-U2-2.ur.dark.svg
