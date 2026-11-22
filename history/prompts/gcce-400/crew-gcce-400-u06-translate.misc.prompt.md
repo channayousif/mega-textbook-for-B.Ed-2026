@@ -24,6 +24,15 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/unit-assessment.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/unit-teacher-notes.mdx
   - specs/content/gcce-400/tasks.md
+  - specs/content/gcce-400/reviews/unit-06/G2/20261122T161030644Z-gates.json
+  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-bloom-bands.txt
+  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-concept-graph.txt
+  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-depth-gate.txt
+  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-docs-sync.txt
+  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-figures.txt
+  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-no-answer-keys.txt
+  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-no-em-dash.txt
+  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/validate-content.txt
   - specs/content/gcce-400/translations/unit-06/check-content-parity.txt
   - specs/content/gcce-400/translations/unit-06/handoff.md
   - static/img/figures/gcce-400/unit-06/fig-U6-1.ur.dark.svg
@@ -79,19 +88,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Translated GCCE-400 Unit 6 into its complete Urdu mirror at G4, verified localized SVG schematics and variants, verified structural parity across all 6 files, and passed all 14 content gates cleanly.
+Translated GCCE-400 Unit 6 into its complete Urdu mirror at G4, verified localized SVG schematics and variants, refreshed stale G2 gate evidence after adding translation handoff files, verified structural parity across all 6 files, and passed all 14 content gates cleanly.
 
 ## Outcome
 
 - Impact: translate for GCCE-400 Unit 6 by agy.
 - Tests: npm run check:content passed in the job worktree before commit.
-- Files: 22 file(s), listed above.
+- Files: 31 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none recorded by the dispatcher.
+- Reflection: Adding translation handoff files binds to the unit's G2 input manifest, requiring prepare-gate-evidence refresh.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated GCCE-400 Unit 6 into its complete Urdu mirror at G4, verified localized SVG schematics and variants, and passed all 14 content gates cleanly.
+- Shipped / changed: Translated GCCE-400 Unit 6 into its complete Urdu mirror at G4, verified localized SVG schematics and variants, refreshed G2 gate evidence for Unit 6, and passed all 14 content gates cleanly.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:

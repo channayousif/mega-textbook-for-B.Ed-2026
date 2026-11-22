@@ -42,7 +42,7 @@ English-only authoring from the approved Unit 1, Unit 2 and Unit 6 content-spec 
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and the five new glossary Urdu definitions are authored and need checking |
 | Unit 4 | G6 assets | ▣ | | Five English schematic SVGs (fig-U4-1 to fig-U4-5) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U4-6 prompt-only for the illustrate job |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-06/G2/20261122T122147614Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-06/G2/20261122T161030644Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the CoE handbook attribution, the Shair et al. (2022) figures and the Pakistani examples (sources/unit-06.md) |
 | Unit 6 | G4 ur-translation | ▢ | | Complete six-file draft Urdu mirror and six localized SVG pairs (with derived dark twins) prepared from English 83395d029; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-06/handoff.md |
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
