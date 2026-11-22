@@ -4,12 +4,12 @@ title: crew author GCCE-400 unit 4
 stage: misc
 date: 2026-11-22
 surface: agent
-model: claude
+model: claude_crew
 feature: gcce-400
 branch: crew/gcce-400-u04-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/gcce-400/content-spec.md
   ticket: null
@@ -86,32 +86,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Completed GCCE-400 Unit 4 by rendering and placing its five schematic figures, recording the G2 gate evidence, and ticking the tracker row, so all 14 content gates pass.
+Authored GCCE-400 Unit 4 (English) end to end, placed its five schematic figures with dark variants, recorded G2 gate evidence and tracker rows, and left all 14 content gates green.
 
 ## Outcome
 
-- Impact: author for GCCE-400 Unit 4 by claude (attempt 2).
-- Tests: npm run check:content passed in the job worktree.
-- Files: 38 file(s) listed above.
+- Impact: author for GCCE-400 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 38 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed GCCE-400 Unit 4 (English) with the per-topic unit, five placed schematic SVGs and dark variants, G2 gate evidence, and the tracker rows.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored GCCE-400 Unit 4 (English) end to end, placed its five schematic figures with dark variants, recorded G2 gate evidence and tracker rows, and left all 14 content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The five SVGs were authored directly by Claude (Codex was not invoked for this run); each passed optimize:figure and measure-figure-text, and dark variants were derived with figures:variants.
-  - Banner fig-U4-6 remains prompt-only for the illustrate job, and no .ur.svg figures exist yet because the Urdu mirror is a separate job.
-  - G3 en-review stays open; the tracker note asks the reviewer to confirm the youniss-levine-2009 title-level use, the oecd-2011-social-cohesion definition, and constitutional currency of Articles 16, 19 and 25.
+  - Five SVGs were hand-authored by Claude (AGENTS.md/ADR-0024 assigns deterministic schematics to Claude), optimised and measured; banner fig-U4-6 stays prompt-only for the illustrate job, and no `.ur.svg` exists yet because the Urdu mirror is a separate G4 job.
+  - G3 en-review is open; the tracker note asks the reviewer to confirm the youniss-levine-2009 title-level use, the oecd-2011-social-cohesion definition against the report, and constitutional currency of Articles 16, 19 and 25.
+  - G2 evidence binds the committed English bytes at `specs/content/gcce-400/reviews/unit-04/G2/20261122T114158475Z-gates.json`; any further edit to the unit files or figure manifest will stale it.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 1 earlier attempt(s); see the board history
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
