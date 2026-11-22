@@ -53,11 +53,11 @@ export function clipsAllowed(item, approval, currentSha) {
  * @param {Record<string, object>} p.items       teaser ledger items by key
  * @param {Record<string, object>} p.approvals   crew approvals by key ({ script, publish, reject })
  * @param {(id: string) => string|undefined} p.shaOf   current script sha256, undefined when missing
- * @returns {{ jobs: {course, stage, key, note?}[], owner: { scripts: string[], spotCheck: string[], voided: string[], held: string[] } }}
+ * @returns {{ jobs: {course, stage, key, note?}[], owner: { scripts: string[], spotCheck: string[], voided: string[], held: string[], scheduled: string[] } }}
  */
 export function teaserNeeds({ courses, items, approvals = {}, shaOf }) {
   const jobs = [];
-  const owner = { scripts: [], spotCheck: [], voided: [], held: [] };
+  const owner = { scripts: [], spotCheck: [], voided: [], held: [], scheduled: [] };
   for (const { code } of courses) {
     const key = teaserKey(code);
     const id = code.toLowerCase();
@@ -90,7 +90,9 @@ export function teaserNeeds({ courses, items, approvals = {}, shaOf }) {
         else if (ap.publish) add('media_publish'); else owner.spotCheck.push(key);
         break;
       case 'approved':
-        add('media_publish');
+        // The owner scheduled it in YouTube (publish_at): YouTube makes it public, no job may.
+        if (item.scheduled_publish_at) owner.scheduled.push(`${key} ${item.scheduled_publish_at}`);
+        else add('media_publish');
         break;
       default: break;
     }
@@ -181,6 +183,7 @@ export function ownerLine(owner) {
   if (owner.scripts.length) parts.push(`scripts to approve: ${owner.scripts.join(', ')}`);
   if (owner.spotCheck.length) parts.push(`private Shorts to watch: ${owner.spotCheck.join(', ')}`);
   if (owner.held?.length) parts.push(`held private by you: ${owner.held.join(', ')}`);
+  if (owner.scheduled?.length) parts.push(`scheduled to go public: ${owner.scheduled.join(', ')}`);
   if (owner.voided.length) parts.push(`approval void (script changed): ${owner.voided.join(', ')}`);
   return parts.join(' · ') || 'nothing';
 }
