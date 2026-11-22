@@ -33,11 +33,23 @@ test('a catalogue card opens the teaser in a dialog that Escape closes', async (
   await expect(page.locator('dialog iframe')).toHaveCount(0);
 });
 
-test('a course without a public teaser shows neither player nor button', async ({ page }) => {
-  await page.goto('/semester-1/gqur-300/course-overview/');
+// Teasers keep going public (the crew drafts more), so a fixed course would go stale: take the first
+// of these overview pages whose course has no public teaser in the built studio index.
+const NO_TEASER_CANDIDATES = [
+  ['EFPG-401', '/semester-3/efpg-401/course-overview/'], ['GUHQ-301', '/semester-3/guhq-301/course-overview/'],
+  ['GISS-401', '/semester-3/giss-401/course-overview/'], ['GCCE-400', '/semester-4/gcce-400/course-overview/'],
+  ['EFMP-406', '/semester-3/efmp-406/course-overview/'],
+];
+
+test('a course without a public teaser shows neither player nor button', async ({ page, request }) => {
+  const teasers = ((await (await request.get('/studio-index.json')).json()).teasers ?? {}) as Record<string, unknown>;
+  const pick = NO_TEASER_CANDIDATES.find(([code]) => !teasers[code]);
+  test.skip(!pick, 'every candidate course has a public teaser now; add a newer course to the list');
+  const [code, path] = pick!;
+  await page.goto(path);
   await expect(page.getByTestId('course-teaser')).toHaveCount(0);
   await page.goto('/intro/');
-  await expect(page.getByTestId('teaser-button-GQUR-300')).toHaveCount(0);
+  await expect(page.getByTestId(`teaser-button-${code}`)).toHaveCount(0);
 });
 
 test('the home page shows the teaser picks under the hero and loads a player only on tap', async ({ page }) => {
