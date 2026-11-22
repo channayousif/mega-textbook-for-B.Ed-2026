@@ -1,0 +1,23 @@
+# GCCE-400 Unit 6 - Sources consulted
+
+Checked 2026-11-22. Prose is original; quotations are under 15 words and cited. Every external key has a bound note in `sources/texts/` or is declared under `## Unverifiable sources`. Constitutional provisions are cited from the National Assembly 2012 edition named in the content-spec and were read in the accessible transcription.
+
+| Key | Citation | URL/DOI | Supports | Kind |
+|---|---|---|---|---|
+| coe-2019-dce | Council of Europe. (2019). Digital citizenship education handbook. Council of Europe Publishing. ISBN 978-92-871-8734-5. | https://rm.coe.int/16809382f9 | U6-01, U6-02, U6-03: definition of a digital citizen; the ten domains; ethics and empathy; access and inclusion; active participation; rights and responsibilities; reliable information. OpenAlex W7215527632 and the Internet Archive snapshot of the Council of Europe PDF checked 2026-11-22 | open-access-substitute |
+| khalid-2026-social-media-civic | Khalid, A., & Ahmad, M. (2026). Social media usage, digital citizenship, and civic engagement among university students: A quantitative study from Pakistan. VFAST Transactions on Education and Social Sciences, 14(2), 47-68. | https://doi.org/10.21015/vtess.v14i2.2569 | U6-01: social media use predicted civic engagement; digital literacy partly mediated; the dual effect of connectivity and echo chambers. OpenAlex W7217726782 and publisher abstract checked 2026-11-22 | open-access-substitute |
+| constitution-pakistan | Government of Pakistan, National Assembly. (2012). The Constitution of the Islamic Republic of Pakistan (as modified up to 28 February 2012; adopted 1973). | https://na.gov.pk/uploads/documents/1333523681_951.pdf ; accessible transcription: https://www.pakistani.org/pakistan/constitution/ | U6-01: Articles 17 and 19 (association, and speech and expression, subject to reasonable limits). Transcription read 2026-11-22 | open-access-substitute |
+| mattson-2017 | Mattson, K. (2017). Digital citizenship in action: Empowering students to engage in online communities. International Society for Technology in Education. | https://openlibrary.org/works/OL20201564W | U6-01: the book's stated aim, as given in its subtitle, of preparing pupils to engage in online communities. Open Library record checked 2026-11-22 | guide-required |
+| ali-2023-misinformation | Ali, A., & Qazi, I. A. (2023). Countering misinformation on social media through educational interventions: Evidence from a randomized experiment in Pakistan. Journal of Development Economics, 163, 103108. | https://doi.org/10.1016/j.jdeveco.2023.103108 ; accessible preprint: https://arxiv.org/abs/2107.02775 | U6-02: general video messages had no significant effect; personalised feedback improved fake-news identification by 0.14 standard deviations. OpenAlex and arXiv abstract checked 2026-11-22 | open-access-substitute |
+| shair-2022-digital-divide | Shair, W., Waheed, A., Kamran, M. M., & Kubra, N. (2022). Digital divide in Pakistan: Barriers to ICT usage among the individuals of Pakistan. Journal of Economic Impact, 4(3), 196-204. | https://doi.org/10.52223/jei4032206 | U6-03: a sizeable digital divide; ICT infrastructure and access as leading determinants; socioeconomic, demographic, regional and supply-side factors. OpenAlex W4313326066 and publisher abstract checked 2026-11-22 | open-access-substitute |
+| iftikhar-2023-digital-divide | Iftikhar, A., Ahmed, N., & Shah, S. M. (2023). Analyzing digital divide among university students of Pakistan. Turkish Online Journal of Distance Education, 24(2), 261-271. | https://doi.org/10.17718/tojde.1105081 | U6-03: online education widened an existing divide; barriers of gadgets, internet access, family income, gender, field of study, age and location. OpenAlex W4361868080 and publisher PDF checked 2026-11-22 | open-access-substitute |
+
+## Unverifiable sources
+
+- mattson-2017: print only; only the Open Library record and the subtitle were checked, and the subtitle is the source of the single claim citing it (U6-01, the aim of preparing pupils to engage in online communities). No page or wording is quoted. A reviewer with the book should confirm the aim.
+
+## Notes
+
+- The three guide readings that are unbound in the approved content-spec (Pike and Selby; Feldpausch and Omilian; Clarke and Steckel) are not used.
+- The Council of Europe handbook's canonical URL returned HTTP 403 from this host; the bound note records the Internet Archive snapshot used instead.
+- The digital divide is framed as access, usage, socioeconomic and geographic from the guide and the bound Pakistani studies, not from the Council of Europe handbook.
