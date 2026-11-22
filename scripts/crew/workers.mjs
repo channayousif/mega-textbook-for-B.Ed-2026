@@ -32,10 +32,10 @@ export const WORKERS = {
     maxConcurrent: 1,
     cmd: (prompt) => ['agy', ['-p', prompt, '--model', process.env.CREW_AGY_CLAUDE_MODEL || 'claude-opus-4-6-thinking', '--dangerously-skip-permissions', '--print-timeout', '0s']],
   },
-  opencode: {
+  claude_crew: {
     family: 'longcat',
     maxConcurrent: 2,
-    cmd: (prompt) => ['opencode', ['run', '-m', process.env.CREW_LONGCAT_MODEL || 'longcat/LongCat-2.0', prompt]],
+    cmd: (prompt) => ['claude-crew', ['-p', prompt, '--dangerously-skip-permissions']],
   },
 };
 
@@ -45,19 +45,19 @@ export const WORKERS = {
  * `reviewOf` names the stage (or stages) whose producer family a review must exclude.
  */
 export const STAGES = {
-  salvage:    { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: null },
-  author:     { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'author-unit' },
-  repair_en:  { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'revise-topic' },
-  figures:    { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'generate-figures' },
+  salvage:    { chain: ['claude', 'agy_claude', 'codex', 'agy', 'claude_crew'], skill: null },
+  author:     { chain: ['claude', 'agy_claude', 'codex', 'agy', 'claude_crew'], skill: 'author-unit' },
+  repair_en:  { chain: ['claude', 'agy_claude', 'codex', 'agy', 'claude_crew'], skill: 'revise-topic' },
+  figures:    { chain: ['codex', 'claude', 'agy_claude', 'agy', 'claude_crew'], skill: 'generate-figures' },
   // Claude owns raster prompts and alt text (ADR-0024); the skill reference is named in the task.
   plan_illustrations: { chain: ['claude', 'agy_claude'], skill: null },
   illustrate: { chain: ['agy', 'codex'], skill: 'generate-figures' },
   // Feature 032 phase D: redraw a unit's placed schematics to the improved SVG standard (owner switch `crew refresh on`).
   refresh_figures: { chain: ['claude', 'agy_claude', 'codex'], skill: 'generate-figures' },
-  review_en:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
-  translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'translate-unit' },
-  review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'opencode', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
-  fix:        { chain: ['opencode', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
+  review_en:  { chain: ['agy', 'codex', 'claude_crew', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
+  translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'claude_crew'], skill: 'translate-unit' },
+  review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'claude_crew', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
+  fix:        { chain: ['claude_crew', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
   // Media Studio (Feature 030, scripts/crew/media.mjs). Clips, uploads and NotebookLM need the gflow
   // and youtube-uploader MCP servers, which only the claude worker has; a script draft needs neither.
   teaser_script:  { chain: ['claude', 'agy_claude'], skill: 'studio-teaser' },
@@ -69,13 +69,13 @@ export const STAGES = {
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.
   intel_distill:  { chain: ['agy', 'codex', 'claude', 'agy_claude'], skill: 'intel-distill' },
-  maint_survey:   { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'weekly-maintenance' },
-  maint_refactor: { chain: ['codex', 'claude', 'agy_claude', 'opencode', 'agy'], skill: 'weekly-maintenance' },
-  maint_docs:     { chain: ['claude', 'agy_claude', 'agy', 'codex', 'opencode'], skill: 'weekly-maintenance' },
+  maint_survey:   { chain: ['claude', 'agy_claude', 'codex', 'agy', 'claude_crew'], skill: 'weekly-maintenance' },
+  maint_refactor: { chain: ['codex', 'claude', 'agy_claude', 'claude_crew', 'agy'], skill: 'weekly-maintenance' },
+  maint_docs:     { chain: ['claude', 'agy_claude', 'agy', 'codex', 'claude_crew'], skill: 'weekly-maintenance' },
   maint_adr:      { chain: ['claude', 'agy_claude', 'codex', 'agy'], skill: 'weekly-maintenance' },
   maint_skill:    { chain: ['claude', 'agy_claude', 'codex'], skill: 'weekly-maintenance' },
   // `reviewOf: 'parent'`: never the family of the job whose PR is under review.
-  maint_review:   { chain: ['agy', 'codex', 'claude', 'agy_claude', 'opencode'], skill: 'weekly-maintenance', reviewOf: 'parent' },
+  maint_review:   { chain: ['agy', 'codex', 'claude', 'agy_claude', 'claude_crew'], skill: 'weekly-maintenance', reviewOf: 'parent' },
 };
 
 /** Text in a worker's log that means "out of quota", not "bad work". */
