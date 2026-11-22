@@ -37,7 +37,7 @@ units may be authored.
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20261114T120419100Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20261122T044002954Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json + round-02/agent-g3-gnas301-u4-run002.json; round-2 blocking findings (phantom abbasi2022 U4-08/U4-09, phantom who-mental-health-work U4-10) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-31); Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ✅ | auto:g4 | all 10 Urdu mirror files at i18n/ur/.../gnas-301/unit-04/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 4 | G5 ur-review | ▢ | | advisory round 1: escalate (6 blocking, 8 advisory); report reviews/unit-04/G5/agent-g5-gnas301-u4-run001.json; 5 content blockings repaired post-report, dependency escalation folded into G-2026-34's owner question |
