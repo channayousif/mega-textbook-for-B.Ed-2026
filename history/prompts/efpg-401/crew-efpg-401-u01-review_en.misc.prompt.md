@@ -4,12 +4,12 @@ title: crew review_en EFPG-401 unit 1
 stage: misc
 date: 2026-11-22
 surface: agent
-model: claude
+model: claude_crew
 feature: efpg-401
 branch: crew/efpg-401-u01-review_en
 user: crew
 command: crew review_en
-labels: ["crew", "claude", "review_en"]
+labels: ["crew", "claude_crew", "review_en"]
 links:
   spec: specs/content/efpg-401/content-spec.md
   ticket: null
@@ -17,9 +17,7 @@ links:
   pr: null
 files:
  - history/prompts/efpg-401/crew-efpg-401-u01-review_en.misc.prompt.md
- - specs/content/efpg-401/reviews/unit-01/G3/manifest.json
  - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8.json
- - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8/summary.md
  - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8/logs/build-content-status.txt
  - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8/logs/check-content.txt
  - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8/logs/check-figure-text-geometry.txt
@@ -31,6 +29,8 @@ files:
  - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8/logs/render-review.txt
  - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8/logs/static-accessibility.txt
  - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8/logs/validate:content.txt
+ - specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8/summary.md
+ - specs/content/efpg-401/reviews/unit-01/G3/manifest.json
  - specs/content/efpg-401/tasks.md
 tests:
  - npm run check:content
@@ -64,31 +64,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Completed an independent advisory G3 English review of EFPG-401 Unit 1 (disposition escalate) with the evidence report, logs, static accessibility evidence and an advisory tracker row.
+Added an advisory, structurally valid G3 English review of EFPG-401 Unit 1 (disposition escalate) with evidence logs, static accessibility checks and an unticked tracker row, all committed on the branch.
 
 ## Outcome
 
-- Impact: review_en for EFPG-401 Unit 1 by claude (attempt 1).
-- Tests: npm run check:content passed in the job worktree (all 14 content gates PASS).
+- Impact: review_en for EFPG-401 Unit 1 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 16 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: independent advisory G3 English review of EFPG-401 Unit 1. Report at specs/content/efpg-401/reviews/unit-01/G3/a0dffa23-4ae1-40fa-aef4-f60697bb4df8.json (disposition escalate), evidence under the same run folder, and an advisory G3 tracker row in specs/content/efpg-401/tasks.md.
-- Decisions the team must respect: G3 stays advisory and unticked; no certification, no self-sign, no human initials. Render evidence is unavailable because the production build (SHA f946ee78) predates the unit's placed illustrations and current English bytes (HEAD f17d30e9), and source support is unverified because all six bound reading records are paraphrase notes with title-only anchors.
-- Pending / next owner: a separate author repairs the advisory findings (MCQ key balance, four-versus-five reading sub-skills, title-level attribution wording), then a fresh manifest and a new independent reviewer recheck. The crew lead merges when CI is green.
+- Shipped / changed: Added an advisory, structurally valid G3 English review of EFPG-401 Unit 1 (disposition escalate) with evidence logs, static accessibility checks and an unticked tracker row, all committed on the branch.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - render-review must stay unavailable until a production deploy contains the current English bytes; do not build or serve locally.
-  - The MCQ key is 8/10 B; the reading sub-skill count contradicts fig-U1-6 and the coverage matrix.
+  - render-review stays unavailable until a production deploy contains the current English bytes; do not build or serve locally to obtain it.
+  - advisory repairs still open for a separate author: MCQ key is 8/10 B, and `topic-03.mdx:75` says four reading sub-skills while listing five (fig-U1-6 and the coverage matrix show four).
+  - a fresh manifest plus a new independent reviewer are required after any repair; this report is advisory and certifies nothing.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS (disposition escalate)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
