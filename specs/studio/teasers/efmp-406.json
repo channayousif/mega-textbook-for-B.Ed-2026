@@ -1,0 +1,77 @@
+{
+ "id": "efmp-406",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "EFMP-406",
+ "semester": 3,
+ "title": {
+  "en": "Contemporary Literacies (EFMP-406)",
+  "ur": "عصری خواندگیاں (EFMP-406)"
+ },
+ "sources": [
+  "docs/semester-3/efmp-406/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government schools with whitewashed walls, plain green blackboards with no writing, wooden desks, a simple school computer room, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; books, papers, posters and screens are blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident Pakistani man teacher in his thirties in a light grey shalwar kameez and a navy waistcoat, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "In a sunlit classroom, a confident Pakistani man teacher in his thirties in a light grey shalwar kameez and a navy waistcoat closes a book with blurred pages, holds it up beside a tablet with a blurred screen, then turns to the camera; quick push-in to a close-up as pupils in uniform watch from their desks."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Smooth dolly shot along a row of desks where pupils in uniform compare a folded newspaper, a picture card and a tablet, pointing and discussing; all pages and screens are blurred and unreadable."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Tracking shot through a simple school computer room as girls in uniform and dupattas work in pairs at desktop computers with blurred screens, one pupil raising her hand with a question while a woman teacher leans in to help."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a school courtyard where small groups of pupils sit on mats around a project, arranging photographs and drawings on chart paper with no writing, while a teacher moves between the groups."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a confident Pakistani man teacher in his thirties in a light grey shalwar kameez and a navy waistcoat walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "کیا صرف پڑھنا لکھنا آنا ہی خواندگی ہے؟ آج کی دنیا اس سے کہیں زیادہ مانگتی ہے۔",
+    "اس کورس میں آپ critical، digital، media، visual اور information literacy کو سمجھیں گے۔",
+    "online communication، social media، اور digital resources کا ذمہ دار اور اخلاقی استعمال بھی۔",
+    "چھ units، تاکہ آپ learner-centred اور project-based طریقوں سے آج کی literacy پڑھا سکیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "عصری خواندگیاں (EFMP-406)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "کیا پڑھنا لکھنا ہی خواندگی ہے؟ عصری خواندگیاں | EFMP-406",
+   "keywords": [
+    "contemporary literacies",
+    "عصری خواندگیاں",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "digital literacy",
+    "media literacy",
+    "critical literacy",
+    "information literacy"
+   ],
+   "course_summary": "یہ کورس تیز سماجی، ثقافتی اور تکنیکی تبدیلی کے دور میں خواندگی کو دیکھتا ہے۔ یہ خواندگی کو صرف پڑھنے لکھنے کی مہارت نہیں بلکہ ایسا عمل سمجھتا ہے جو لوگ حقیقی جگہوں پر حقیقی مقاصد کے لیے کرتے ہیں۔ پڑھنے لکھنے سے آگے یہ critical، digital، media، visual اور information literacy کا احاطہ کرتا ہے، اور آپ کو بطور مستقبل کے استاد مختلف ضروریات اور پس منظر والے بچوں کے لیے خواندگی کا کام منصوبہ بندی سے پڑھانے اور جانچنے کے لیے تیار کرتا ہے۔"
+  }
+ }
+}
