@@ -75,3 +75,45 @@ describe.skipIf(!rlsConfigured)('news_items', () => {
     expect((audit.data ?? []).map((a) => a.action).sort()).toEqual(['news_item_created', 'news_item_updated']);
   });
 });
+
+// Feature 028 follow-up (migration 0054): admins pin automatic ticker events by their feed id.
+describe.skipIf(!rlsConfigured)('news_pins', () => {
+  const created = [];
+  const ID = 'unit:ZZRLS-999:1';
+  const EXPIRED = 'figures:ZZRLS-999:2';
+  afterAll(async () => {
+    const svc = serviceClient();
+    await svc.from('news_pins').delete().in('event_id', [ID, EXPIRED]);
+    await svc.from('admin_action_history').delete().eq('target_type', 'news_event').contains('detail', { event_id: ID });
+    await cleanupUsers(created);
+  });
+
+  test('anyone reads active pins; only admins pin and unpin, audited', async () => {
+    const admin = await createSignedInUser({ role: 'student' }); created.push(admin.authUserId);
+    await adminSet(admin.authUserId, { role: 'admin' });
+    const teacher = await createSignedInUser({ role: 'teacher' }); created.push(teacher.authUserId);
+    const anon = anonClient();
+
+    expect((await teacher.client.rpc('set_news_pin', { p_event_id: ID, p_pinned: true })).error).toBeTruthy();
+    expect((await anon.rpc('set_news_pin', { p_event_id: ID, p_pinned: true })).error).toBeTruthy();
+    expect((await teacher.client.from('news_pins').insert({ event_id: ID })).error).toBeTruthy();
+    expect((await admin.client.rpc('set_news_pin', { p_event_id: 'not an id', p_pinned: true })).error).toBeTruthy();
+    expect((await admin.client.rpc('set_news_pin', { p_event_id: ID, p_pinned: true, p_until: new Date(Date.now() - 60_000).toISOString() })).error).toBeTruthy();
+
+    expect((await admin.client.rpc('set_news_pin', { p_event_id: ID, p_pinned: true })).error).toBeNull();
+    // An expired pin, written directly by the service role, is hidden from the public.
+    await serviceClient().from('news_pins').insert({ event_id: EXPIRED, pinned_until: new Date(Date.now() - 60_000).toISOString() });
+    for (const client of [anon, teacher.client]) {
+      const { data, error } = await client.from('news_pins').select('event_id').in('event_id', [ID, EXPIRED]);
+      expect(error).toBeNull();
+      expect((data ?? []).map((r) => r.event_id)).toEqual([ID]);
+    }
+    const all = await admin.client.from('news_pins').select('event_id').in('event_id', [ID, EXPIRED]);
+    expect((all.data ?? []).map((r) => r.event_id).sort()).toEqual([EXPIRED, ID].sort());
+
+    expect((await admin.client.rpc('set_news_pin', { p_event_id: ID, p_pinned: false })).error).toBeNull();
+    expect(((await anon.from('news_pins').select('event_id').eq('event_id', ID)).data ?? []).length).toBe(0);
+    const audit = await serviceClient().from('admin_action_history').select('action').eq('target_type', 'news_event').contains('detail', { event_id: ID });
+    expect((audit.data ?? []).map((a) => a.action).sort()).toEqual(['news_event_pinned', 'news_event_unpinned']);
+  });
+});

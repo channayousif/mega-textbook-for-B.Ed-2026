@@ -65,4 +65,5 @@ export const PROFILE_REFERENCES = [
   ['agent_configuration', 'updated_by'],
   ['g3_signoffs', 'decided_by'],
   ['news_items', 'created_by'],
+  ['news_pins', 'created_by'],
 ].filter(([t, c], i, all) => all.findIndex(([t2, c2]) => t2 === t && c2 === c) === i);

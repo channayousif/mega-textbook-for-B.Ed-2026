@@ -450,5 +450,38 @@
   },
   "news.badge.news": {
     "message": "خبر"
+  },
+  "news.badge.updated": {
+    "message": "اپ ڈیٹ ہوا"
+  },
+  "news.badge.figures": {
+    "message": "نئی تصاویر"
+  },
+  "news.badge.provisional": {
+    "message": "حتمی نظرثانی باقی"
+  },
+  "news.lane.announcements": {
+    "message": "اعلانات"
+  },
+  "news.lane.content": {
+    "message": "نیا مواد"
+  },
+  "news.lane.urdu": {
+    "message": "اردو اور جائزے"
+  },
+  "news.panel": {
+    "message": "تمام خبریں اور نیا مواد"
+  },
+  "news.panel.title": {
+    "message": "تمام خبریں، پچھلے 60 دن"
+  },
+  "news.close": {
+    "message": "بند کریں"
+  },
+  "news.pinned": {
+    "message": "نمایاں"
+  },
+  "news.viewAll": {
+    "message": "سب دیکھیں"
   }
 }

@@ -16,10 +16,20 @@
   padding: 6px 16px;
   min-height: 52px;
 }
+/* Up to three rows (announcements, new content, Urdu and reviews), each its own marquee. */
+.rows { flex: 1; min-width: 0; display: grid; gap: 2px; cursor: pointer; }
+.row { display: flex; align-items: center; gap: 10px; min-height: 44px; min-width: 0; }
+.row + .row { border-top: 1px solid rgba(255, 255, 255, .14); }
+.controls { flex: none; display: flex; flex-direction: column; gap: 6px; }
 .card .inner { max-width: none; }
 
 .label {
   flex: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  min-width: 11.5em;
+  justify-content: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -85,6 +95,26 @@ a.link:focus-visible { outline: 2px solid var(--brand-amber); outline-offset: 2p
 .k_review { background: #2e7d4f; }
 .k_event, .k_update { background: var(--brand-teal-mid); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35); }
 .k_alert { background: #b3261e; }
+.k_updated { background: #3d6f8f; }
+.k_figures { background: #8a5a0b; }
+.k_provisional { background: var(--brand-teal-mid); box-shadow: inset 0 0 0 1px var(--brand-amber); }
+
+/* Pinned items stand still at the front of their row. */
+.pinned { flex: none; max-width: 40%; border: 1.5px solid var(--brand-amber); border-radius: 999px; padding-inline: 10px 12px; }
+.pinned .title { overflow: hidden; text-overflow: ellipsis; }
+.pinMark { color: var(--brand-amber); display: inline-flex; }
+.label:focus-visible, .viewAll:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* "View all": the full list under the bar. */
+.panel { max-height: 70vh; overflow-y: auto; background: var(--brand-teal); border-top: 1px solid rgba(255, 255, 255, .2);
+  padding: 12px 16px 20px; max-width: 1180px; margin-inline: auto; outline: none; }
+.panelHead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.panelSection h3 { display: flex; align-items: center; gap: 6px; font-size: .95rem; color: var(--brand-amber-soft); margin: 14px 0 6px; }
+.panelSection ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.panelItem .link { white-space: normal; }
+.group summary { display: flex; align-items: center; gap: 8px; cursor: pointer; min-height: 40px; padding-inline: 4px; flex-wrap: wrap; }
+.group summary::marker { color: var(--brand-amber); }
+.children { padding-inline-start: 36px !important; }
 
 .badge {
   font-size: .72rem;
@@ -119,13 +149,16 @@ a.link:focus-visible { outline: 2px solid var(--brand-amber); outline-offset: 2p
 
 @media (max-width: 600px) {
   .label span { display: none; }
+  .label { min-width: 0; }
   .inner { gap: 8px; padding-inline: 10px; }
+  .pinned { max-width: 46%; }
+  .pinned .badge, .pinned .date, .pinned .context { display: none; }
 }
 
 /* Reduced motion: the bar stands still as one row the reader scrolls by hand, so it
    keeps its height instead of growing into a block of wrapped items. */
 @media (prefers-reduced-motion: reduce) {
   .track { animation: none; }
-  .set + .set, .pause, .item[aria-hidden='true'] { display: none; }
+  .set + .set, .pause:not(.viewAll), .item[aria-hidden='true'] { display: none; }
   .marquee { overflow-x: auto; scrollbar-width: thin; -webkit-mask-image: none; mask-image: none; }
 }

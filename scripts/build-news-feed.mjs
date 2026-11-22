@@ -8,6 +8,11 @@
  * event is derived from the repository itself, so the feed is reproducible from
  * any full clone and can never claim something the content does not show.
  *
+ * Three later event types (owner, 2026-11-17: "feels stale") announce work on existing units:
+ * `updated` (a substantive revision: 40+ changed lines in a unit's English topic or assessment
+ * files on one day), `figures` (new figure files for a unit on one day, with a count) and
+ * `provisional` (a unit published under "Final Review Pending"). They come from git too.
+ *
  * Sources:
  * - Dates a unit first appeared come from `git log --diff-filter=A`. A unit's
  *   first topic file (`topic-01.mdx`) marks when it was authored; a placeholder
@@ -32,10 +37,12 @@ import { walkUnits } from './lib/content-roots.mjs';
 const REPO = resolve(process.env.CONTENT_ROOT ?? fileURLToPath(new URL('..', import.meta.url)));
 
 export const LOOKBACK_DAYS = 60;
-export const MAX_EVENTS = 60;
+export const MAX_EVENTS = 120;
+/** Changed lines a unit needs on one day for an `updated` event (mechanical gate fixes stay below). */
+export const UPDATE_MIN_LINES = 40;
 
 /** Event types, in the order the email groups them. */
-export const EVENT_TYPES = Object.freeze(['course', 'unit', 'urdu', 'review']);
+export const EVENT_TYPES = Object.freeze(['course', 'unit', 'urdu', 'review', 'updated', 'figures', 'provisional']);
 
 const toPosix = (p) => p.split(sep).join('/');
 
@@ -62,7 +69,7 @@ export function parseAddDates(gitOutput) {
  * `COURSE:unit:G3|G5` -> date of the most recent commit that added a ticked,
  * attributed row for that stage. Output is newest first, so the first match wins.
  */
-export function parseReviewDates(patchOutput) {
+export function parseReviewDates(patchOutput, glyph = '✅', gates = ['G3', 'G5']) {
   const dates = new Map();
   let date = null;
   let course = null;
@@ -81,11 +88,61 @@ export function parseReviewDates(patchOutput) {
     const [unit, stage, status, reviewer] = cells;
     const u = /^Unit (\d+)$/.exec(unit ?? '');
     const s = /^(G3|G5)\b/.exec(stage ?? '');
-    if (!u || !s || status !== '✅' || !reviewer) continue;
+    if (!u || !s || !gates.includes(s[1]) || status !== glyph || !reviewer) continue;
     const key = `${course}:${Number(u[1])}:${s[1]}`;
     if (!dates.has(key)) dates.set(key, date);
   }
   return dates;
+}
+
+/**
+ * Parse `git log --numstat --format=@@<iso>` into unit key -> day (YYYY-MM-DD) -> { date, lines },
+ * summing added plus deleted lines. `unitOf(path)` maps a file to its unit key or null; binary
+ * files ("-") count nothing. The newest commit time of the day is kept as the event date.
+ */
+export function parseNumstat(gitOutput, unitOf) {
+  const out = new Map();
+  let date = null;
+  for (const line of gitOutput.split(/\r?\n/)) {
+    if (line.startsWith('@@')) { date = line.slice(2).trim(); continue; }
+    const m = /^(\d+|-)\t(\d+|-)\t(.+)$/.exec(line);
+    if (!m || !date) continue;
+    const key = unitOf(m[3]);
+    if (!key) continue;
+    const day = date.slice(0, 10);
+    const days = out.get(key) ?? new Map();
+    const cur = days.get(day) ?? { date, lines: 0 };
+    cur.lines += (m[1] === '-' ? 0 : Number(m[1])) + (m[2] === '-' ? 0 : Number(m[2]));
+    if (date > cur.date) cur.date = date;
+    days.set(day, cur);
+    out.set(key, days);
+  }
+  return out;
+}
+
+/**
+ * Parse `git log --diff-filter=A --name-only --format=@@<iso>` over static/img/figures into
+ * `COURSE:unit` -> day -> { date, count }. A figure counts once whatever its variants: the Urdu
+ * (`.ur.`) and dark (`.dark.`) files of the same figure are not new figures.
+ */
+export function parseFigureAdds(gitOutput) {
+  const out = new Map();
+  let date = null;
+  for (const line of gitOutput.split(/\r?\n/)) {
+    if (line.startsWith('@@')) { date = line.slice(2).trim(); continue; }
+    const m = /^static\/img\/figures\/([^/]+)\/unit-(\d+)\/([^/]+)\.(svg|webp)$/.exec(line.trim());
+    if (!m || !date || /\.(ur|dark)$|\.(ur|dark)\./.test(m[3])) continue;
+    const key = `${m[1].toUpperCase()}:${Number(m[2])}`;
+    const day = date.slice(0, 10);
+    const days = out.get(key) ?? new Map();
+    const cur = days.get(day) ?? { date, files: new Set() };
+    cur.files.add(m[3]);
+    if (date > cur.date) cur.date = date;
+    days.set(day, cur);
+    out.set(key, days);
+  }
+  for (const days of out.values()) for (const [d, v] of days) days.set(d, { date: v.date, count: v.files.size });
+  return out;
 }
 
 function readTitle(file) {
@@ -116,6 +173,7 @@ function catalogTitles(root) {
  * the content-status report.
  */
 export function buildFeed({ units, addDates, reviewDates, status, courseTitles, now = new Date(),
+  revisions = new Map(), figureAdds = new Map(), provisionalDates = new Map(),
   lookbackDays = LOOKBACK_DAYS, maxEvents = MAX_EVENTS }) {
   const since = now.getTime() - lookbackDays * 86_400_000;
   const statusOf = new Map();
@@ -155,6 +213,29 @@ export function buildFeed({ units, addDates, reviewDates, status, courseTitles, 
       const d = reviewDates.get(`${key}:${gate}`);
       if (d) events.push({ id: `review:${key}:${gate}`, type: 'review', gate, date: d, ...base });
     }
+
+    // Published under "Final Review Pending": only while the current gate state says so.
+    if (st.gates?.G3 === 'provisional') {
+      const d = provisionalDates.get(`${key}:G3`);
+      if (d) events.push({ id: `provisional:${key}`, type: 'provisional', date: d, ...base });
+    }
+
+    // A substantive revision: the newest day with enough changed lines, at least a week after
+    // the unit first appeared (edits in its first week are part of the "new unit" event).
+    const inWindow = (d) => Date.parse(d) >= since;
+    const revDays = [...(revisions.get(key)?.values() ?? [])]
+      .filter((r) => r.lines >= UPDATE_MIN_LINES && inWindow(r.date))
+      .filter((r) => !enDate || Date.parse(r.date) - Date.parse(enDate) >= 7 * 86_400_000)
+      .sort((a, b) => b.date.localeCompare(a.date));
+    if (revDays.length) events.push({ id: `updated:${key}`, type: 'updated', date: revDays[0].date, lines: revDays[0].lines, ...base });
+
+    // New figures for a unit that is not itself new (figures that arrive with a new unit are
+    // part of its "new unit" event): the newest such day, a week or more after the unit appeared.
+    const figDays = [...(figureAdds.get(key)?.values() ?? [])]
+      .filter((f) => inWindow(f.date))
+      .filter((f) => !enDate || Date.parse(f.date) - Date.parse(enDate) >= 7 * 86_400_000)
+      .sort((a, b) => b.date.localeCompare(a.date));
+    if (figDays.length) events.push({ id: `figures:${key}`, type: 'figures', date: figDays[0].date, count: figDays[0].count, ...base });
   }
 
   for (const [code, { date, base }] of firstUnitDate) {
@@ -217,7 +298,23 @@ export function collectFeed(root = REPO, now = new Date()) {
     '--', 'specs/content/*/tasks.md',
   ]));
 
-  const events = buildFeed({ units, addDates, reviewDates, status, courseTitles: catalogTitles(root), now });
+  const provisionalDates = parseReviewDates(git(root, [
+    'log', `--since=${LOOKBACK_DAYS}.days`, '-p', '--no-color', '-U0', '--format=@@%cI',
+    '--', 'specs/content/*/tasks.md',
+  ]), '🟡', ['G3']);
+
+  // Revisions: changed lines per unit per day in English topic and assessment files.
+  const unitByDir = new Map(walkUnits(root).map((u) => [toPosix(relative(root, u.unitDir)), `${u.courseCode}:${u.unitNo}`]));
+  const unitOf = (path) => (/\/(topic-\d+|unit-assessment)\.mdx$/.test(path) ? unitByDir.get(path.replace(/\/[^/]+$/, '')) ?? null : null);
+  const enRoots = [...new Set([...unitByDir.keys()].map((d) => d.split('/')[0]))].filter((p) => existsSync(join(root, p)));
+  const revisions = enRoots.length
+    ? parseNumstat(git(root, ['log', `--since=${LOOKBACK_DAYS}.days`, '--diff-filter=M', '--numstat', '--format=@@%cI', '--', ...enRoots]), unitOf)
+    : new Map();
+  const figureAdds = existsSync(join(root, 'static', 'img', 'figures'))
+    ? parseFigureAdds(git(root, ['log', `--since=${LOOKBACK_DAYS}.days`, '--diff-filter=A', '--name-only', '--format=@@%cI', '--', 'static/img/figures']))
+    : new Map();
+
+  const events = buildFeed({ units, addDates, reviewDates, status, courseTitles: catalogTitles(root), now, revisions, figureAdds, provisionalDates });
   return { generated_at: now.toISOString(), events };
 }
 
