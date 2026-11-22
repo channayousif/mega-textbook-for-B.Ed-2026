@@ -4,12 +4,12 @@ title: crew translate GCCE-400 unit 1
 stage: misc
 date: 2026-11-22
 surface: agent
-model: claude
+model: claude_crew
 feature: gcce-400
 branch: crew/gcce-400-u01-translate
 user: crew
 command: crew translate
-labels: ["crew", "claude", "translate"]
+labels: ["crew", "claude_crew", "translate"]
 links:
   spec: specs/content/gcce-400/content-spec.md
   ticket: null
@@ -17,12 +17,22 @@ links:
   pr: null
 files:
  - history/prompts/gcce-400/crew-gcce-400-u01-translate.misc.prompt.md
+ - history/prompts/general/20261241-gcce-400-unit-1-g2-refresh.general.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-01/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-01/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-01/topic-02.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-01/topic-03.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-01/unit-assessment.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-01/unit-teacher-notes.mdx
+ - specs/content/gcce-400/reviews/unit-01/G2/20261122T121830940Z-gates.json
+ - specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T121830940Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T121830940Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T121830940Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T121830940Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T121830940Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T121830940Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T121830940Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T121830940Z/validate-content.txt
  - specs/content/gcce-400/tasks.md
  - specs/content/gcce-400/translations/unit-01/check-content-parity.txt
  - specs/content/gcce-400/translations/unit-01/handoff.md
@@ -40,8 +50,6 @@ files:
  - static/img/figures/gcce-400/unit-01/fig-U1-6.ur.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/gcce-400/unit-01/*.ur.svg
- - npm run figures:variants:check
 ---
 
 ## Prompt
@@ -77,32 +85,38 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u01-author, author, claude) G3 en-review stays open; the tracker note asks the reviewer to confirm the kymlicka-norman-2000 attribution and constitutional currency in `sources/unit-01.md`.
 - (gcce-400-u01-author, author, claude) Banner `fig-U1-7` remains prompt-only for the illustrate job, and no `.ur.svg` figures exist yet because the Urdu mirror is a separate job.
 
+## Feedback from the previous attempt
+npm run check:content has 2 finding(s) that main does not have:
+✗ Pipeline gate failed with 1 finding(s):
+- GCCE-400 Unit 1 (docs/semester-4/gcce-400/unit-01): G2 en-draft: stale or incomplete input manifest
+
+
 ## Response snapshot
 
-Translated GCCE-400 Unit 1 into a six-file Urdu mirror at G4 with six localized RTL figure pairs, a bank-bound `key_terms` block, the G4 tracker note and the translation handoff. `translation_status` stays `draft` pending independent G5.
+Refreshed GCCE-400 Unit 1's stale G2 gate evidence and tracker row that the Urdu mirror commit had invalidated, verified all 14 content gates green with `translation_status` still `draft`, and committed the fix plus its continuation PHR.
 
 ## Outcome
 
-- Impact: translate for GCCE-400 Unit 1 by claude (attempt 1).
-- Tests: `npm run check:content` passed 14/14 at `draft`; the temporary `reviewed` flip passed parity, figure and `key_terms` checks with only the two expected G4/G5 tracker findings; `measure-figure-text.mjs` exited 0 on all six `.ur.svg`; `figures:variants:check` clean.
-- Files: 25 file(s), listed above.
+- Impact: translate for GCCE-400 Unit 1 by claude_crew (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 32 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated GCCE-400 Unit 1 into a six-file Urdu mirror at G4 with six localized RTL figure pairs (with derived dark twins), a bank-bound `key_terms` block, the G4 tracker note and `specs/content/gcce-400/translations/unit-01/handoff.md`.
-- Decisions the team must respect: `translation_status` stays `draft`; no G4/G5 row was appended and no completion is claimed. The frozen `terminology.csv` and `glossary.json` were not edited; the course's own civic terms are proposed in the handoff, not banked.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). Independent G5 review is the next content stage.
+- Shipped / changed: Refreshed GCCE-400 Unit 1's stale G2 gate evidence and tracker row that the Urdu mirror commit had invalidated, verified all 14 content gates green with `translation_status` still `draft`, and committed the fix plus its continuation PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `scripts/render-inspect.mjs --locale ur` was not run: this brief forbids a dev server, `npm run build` and any local render-inspect run. Rendered Urdu at 360px and A4 print, and the RTL table reading order in `fig-U1-4`/`fig-U1-5`, are unverified and belong to G5.
-  - The eight authored concept labels in `specs/content/gcce-400/concepts/unit-01.md` and the proposed terms table in the handoff need owner/G5 decisions.
-  - G3 en-review of the English draft remains open (kymlicka-norman-2000 attribution and constitutional currency).
+  - origin/main has advanced (GCCE-400 Unit 2 authored, PR #707); `git merge-tree` shows a clean merge and the merged tracker keeps the refreshed Unit 1 G2 row, so merge main before the next gate run.
+  - `scripts/render-inspect.mjs --locale ur` was not run (this brief forbids build/dev server); G5 owns the 360px and A4 print inspection and the RTL table reading order in `fig-U1-4`/`fig-U1-5`.
+  - G3 en-review of the English draft stays open (kymlicka-norman-2000 attribution, constitutional currency); the proposed Urdu civic terms in `specs/content/gcce-400/translations/unit-01/handoff.md` need an owner decision.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 0 earlier attempt(s); the branch started clean at origin/main.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14 at draft; reviewed flip shows only the two expected tracker findings).
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
