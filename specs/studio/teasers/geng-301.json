@@ -1,0 +1,75 @@
+{
+ "id": "geng-301",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "GENG-301",
+ "semester": 2,
+ "title": {
+  "en": "Expository Writing (GENG-301)",
+  "ur": "تشریحی تحریر (GENG-301)"
+ },
+ "sources": [
+  "docs/semester-2/geng-301/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government schools with whitewashed walls, plain green blackboards with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; papers and screens are blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident young Pakistani male teacher in a crisp light-blue shirt and a grey sweater, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "At a desk piled with crumpled paper, a confident young Pakistani male teacher in a crisp light-blue shirt and a grey sweater crumples another page, tosses it into an overflowing bin, then looks up at the camera; quick push-in to a close-up."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Fast dolly along a college library table where students draft, cross out and rewrite pages in notebooks."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Tracking shot through a classroom as a teacher holds up two drafts side by side and students lean forward, nodding."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a college lawn where students write in notebooks under shady trees."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a confident young Pakistani male teacher in a crisp light-blue shirt and a grey sweater walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "آپ کو بات معلوم ہے، مگر لکھتے وقت الفاظ کیوں نہیں ملتے؟",
+    "اس کورس میں آپ first draft سے final proofreading تک پورا writing process سیکھیں گے۔",
+    "مضبوط thesis statement، منظم paragraphs، اور ہر قاری کے لیے موزوں expository انداز۔",
+    "چھ units، originality اور درست citation کے ساتھ، تاکہ آپ کی تحریر پر بھروسہ ہو۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "تشریحی تحریر (GENG-301)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "لکھتے وقت الفاظ کیوں نہیں ملتے؟ تشریحی تحریر | GENG-301",
+   "keywords": [
+    "expository writing",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "essay writing",
+    "thesis statement",
+    "academic writing",
+    "citation"
+   ]
+  }
+ }
+}

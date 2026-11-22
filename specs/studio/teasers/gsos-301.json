@@ -1,0 +1,75 @@
+{
+ "id": "gsos-301",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "GSOS-301",
+ "semester": 2,
+ "title": {
+  "en": "Social Science (Sociology) (GSOS-301)",
+  "ur": "سماجی علوم (عمرانیات) (GSOS-301)"
+ },
+ "sources": [
+  "docs/semester-2/gsos-301/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government schools with whitewashed walls, plain green blackboards with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; papers and screens are blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident Pakistani woman teacher in a maroon shalwar kameez and a beige dupatta, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "At a busy town chowk with rickshaws and a tea stall, a confident Pakistani woman teacher in a maroon shalwar kameez and a beige dupatta looks around at the crowd, then turns to the camera; quick push-in to a close-up."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Handheld orbit around a three-generation family sharing a meal on a floor dastarkhwan at home, grandparents laughing with children."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Fast tracking shot through a busy market street, past a factory gate, to a school gate where pupils stream out."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a classroom where trainee teachers sit in a circle in lively discussion."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a confident Pakistani woman teacher in a maroon shalwar kameez and a beige dupatta walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "ہم جیسا سوچتے اور جیتے ہیں، اس کے پیچھے معاشرہ کیسے کام کرتا ہے؟",
+    "اس کورس میں آپ sociology کے بنیادی نظریات، culture اور socialization سمجھیں گے۔",
+    "social structure، طبقات، gender roles، اور خاندان، تعلیم اور معیشت جیسے ادارے۔",
+    "چھ units، تاکہ آپ sociological imagination سے اپنی کلاس اور معاشرے کو سمجھ سکیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "سماجی علوم (عمرانیات) (GSOS-301)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "معاشرہ ہمیں کیسے بناتا ہے؟ عمرانیات | GSOS-301",
+   "keywords": [
+    "sociology",
+    "عمرانیات",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "social science",
+    "socialization",
+    "culture"
+   ]
+  }
+ }
+}

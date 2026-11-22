@@ -1,0 +1,75 @@
+{
+ "id": "efmp-305",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "EFMP-305",
+ "semester": 2,
+ "title": {
+  "en": "Inclusive Education (EFMP-305)",
+  "ur": "شمولیتی تعلیم (EFMP-305)"
+ },
+ "sources": [
+  "docs/semester-2/efmp-305/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government schools with whitewashed walls, plain green blackboards with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; papers and screens are blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident Pakistani woman teacher in her thirties in a mustard shalwar kameez and a white dupatta, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "At a classroom door, a confident Pakistani woman teacher in her thirties in a mustard shalwar kameez and a white dupatta welcomes pupils as they come in happily, including a girl using a wheelchair, then turns to the camera; quick push-in to a close-up."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Fast handheld orbit around a group table where a boy wearing a hearing aid and his classmates build a cardboard model together, laughing."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Tracking shot as a teacher kneels with a small group using large picture cards, and a pupil with a white cane traces a raised tactile chart with her fingers."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a school courtyard where teachers and parents sit together at a parent-teacher meeting, nodding and smiling."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a confident Pakistani woman teacher in her thirties in a mustard shalwar kameez and a white dupatta walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "ہر بچہ مختلف ہے۔ کیا آپ کی کلاس میں ہر بچے کے لیے جگہ ہے؟",
+    "اس کورس میں آپ segregation سے inclusion تک کا سفر اور learners کی diversity سمجھیں گے۔",
+    "inclusive teaching strategies، classroom management اور Pakistan کے قوانین، تاکہ ہر بچہ پوری طرح شریک ہو۔",
+    "چھ units، والدین اور ساتھی اساتذہ کے ساتھ مل کر کام کرنے کی مہارت تک۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "شمولیتی تعلیم (EFMP-305)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "کیا آپ کی کلاس میں ہر بچے کے لیے جگہ ہے؟ شمولیتی تعلیم | EFMP-305",
+   "keywords": [
+    "inclusive education",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "special needs",
+    "learner diversity",
+    "inclusive classroom",
+    "شمولیتی تعلیم"
+   ]
+  }
+ }
+}

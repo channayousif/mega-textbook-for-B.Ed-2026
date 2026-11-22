@@ -1,0 +1,75 @@
+{
+ "id": "gqur-301",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "GQUR-301",
+ "semester": 2,
+ "title": {
+  "en": "Quantitative Reasoning-II (Statistics) (GQUR-301)",
+  "ur": "مقداری استدلال-2 (شماریات) (GQUR-301)"
+ },
+ "sources": [
+  "docs/semester-2/gqur-301/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government schools with whitewashed walls, plain green blackboards with no writing, wooden desks, pupils in school uniform. Modest dress. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; papers and screens are blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident Pakistani male teacher in his forties in a navy shalwar kameez and a grey waistcoat, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "In a school staff room, a confident Pakistani male teacher in his forties in a navy shalwar kameez and a grey waistcoat lowers a newspaper, raises an eyebrow, then turns to the camera; quick push-in to a close-up."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Handheld orbit around a classroom where pupils survey each other with clipboards and mark tallies on a large chart."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Energetic tracking shot across a schoolyard: pupils measure each other's heights against a wall, then a whip-pan to a group rolling dice at a table."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a computer lab where teachers work at laptops and one points excitedly at a chart on her screen."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor, a confident Pakistani male teacher in his forties in a navy shalwar kameez and a grey waistcoat walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "خبروں میں ہر روز اعداد و شمار، مگر کون سا number سچ بتا رہا ہے؟",
+    "اس کورس میں آپ data کو ترتیب دینا، tables اور graphs بنانا اور پڑھنا سیکھیں گے۔",
+    "sampling، mean اور variation، probability اور relationships، سب روزمرہ مثالوں سے۔",
+    "سولہ units، estimation اور hypothesis testing تک، تاکہ آپ شواہد کی بنیاد پر فیصلے کریں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "مقداری استدلال-2 (شماریات) (GQUR-301)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "کون سا number سچ بتا رہا ہے؟ شماریات | GQUR-301",
+   "keywords": [
+    "statistics",
+    "شماریات",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "data analysis",
+    "probability",
+    "hypothesis testing"
+   ]
+  }
+ }
+}

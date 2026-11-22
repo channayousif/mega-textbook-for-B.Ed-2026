@@ -1,7 +1,7 @@
 ---
 name: studio-teaser
 description: >-
-  Course and licence-track teaser YouTube Shorts (Feature 029, D-2026-0082; recipe teaser@2,
+  Course and licence-track teaser YouTube Shorts (Feature 029, D-2026-0082; recipe teaser@3,
   D-2026-0094): write a five-shot script, under 30 s once assembled, per course from its course overview, take the owner's script approval, generate
   each shot with Google Flow (Veo, narration spoken per language) through the gflow-cli MCP on the
   owner's Windows PC, check every take, assemble the Short with captions and a link end card, upload
@@ -63,7 +63,7 @@ States: `planned → scripted → script-approved → clips-generated → clips-
 
 1. **Script (Claude).** Read the course's `docs/semester-N/<code>/course-overview.mdx` (or
    `licence/index.mdx`) and `catalog/courses.json`. Write `specs/studio/teasers/<id>.json` with
-   `"recipe": { "name": "teaser", "version": 2 }` (`specs/studio/recipes/teaser@2.json`):
+   `"recipe": { "name": "teaser", "version": 3 }` (`specs/studio/recipes/teaser@3.json`, teaser@2 with a 1.4x voice):
    - **Shots.** Five, with beats hook → learn → learn → why → cta. Shots 1 and 5: the on-screen
      presenter speaks to the camera. Shots 2-4: action with a named camera move (push-in, crane,
      dolly, tracking, whip-pan...), voiced by an unseen woman narrator.
@@ -99,9 +99,9 @@ States: `planned → scripted → script-approved → clips-generated → clips-
 6. **Assemble.**
    `scripts/heavy.sh node scripts/notebook-studio/assemble-teaser.mjs <id> <loc> <out.mp4> <chosen shot1..5>`
    (use `chosenTakes`, the latest passing take per shot; speed and the 30 s limit come from the
-   script's recipe, `--speed` overrides). The assembler crops any letterbox bars
+   script's recipe, `--speed` overrides). Each segment is rendered on its own and the parts are joined with the concat demuxer, so ffmpeg stays under 1 GB (one graph over every segment ran past 3.5 GB and was killed by the session memory cap). Pauses are found 8 dB under each shot's mean loudness (Veo Lite shots carry an ambience bed that a fixed -35 dB never cut). The assembler crops any letterbox bars
    Veo burned in (cropdetect), cuts pauses of 0.45 s or more and the dead head/tail of each shot,
-   speeds the voice (1.25x for teaser@2), joins segments with hard cuts plus a whoosh, punches in alternate segments,
+   speeds the voice (1.4x for teaser@3), joins segments with hard cuts plus a whoosh, punches in alternate segments,
    pushes in slowly, ducks a generated beat under the voice and ends on a 3 s zooming end card
    (`PACE` in the script). Urdu captions keep the spaces beside English terms through `bidiUr`
    (LTR isolates with NBSP padding); libass is not used (the static ffmpeg has no HarfBuzz). Then run
