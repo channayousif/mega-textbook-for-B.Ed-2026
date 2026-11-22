@@ -1,0 +1,6 @@
+$ npm run validate:content   (repo HEAD 6c04d9e21, 2026-11-22T06:10:21.730Z)
+
+✗ Content validation failed with 1 error(s):
+
+  - docs/semester-4/gcce-400/course-overview.mdx: no entry for GCCE-400 in catalog/course-guides.json, so the overview shows no course guide link
+exit_code=1
