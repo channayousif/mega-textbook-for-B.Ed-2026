@@ -16,30 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/guhq-301/crew-guhq-301-u07-translate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/unit-assessment.mdx
-  - specs/content/guhq-301/reviews/unit-07/G2/20261122T040849203Z-gates.json
-  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-bloom-bands.txt
-  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-concept-graph.txt
-  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-depth-gate.txt
-  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-docs-sync.txt
-  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-figures.txt
-  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-no-answer-keys.txt
-  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-no-em-dash.txt
-  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/validate-content.txt
-  - specs/content/guhq-301/tasks.md
-  - specs/content/guhq-301/translations/unit-07/check-content-parity.txt
-  - specs/content/guhq-301/translations/unit-07/handoff.md
-  - static/img/figures/guhq-301/unit-07/fig-U7-1.ur.dark.svg
-  - static/img/figures/guhq-301/unit-07/fig-U7-1.ur.svg
-  - static/img/figures/guhq-301/unit-07/fig-U7-2.ur.dark.svg
-  - static/img/figures/guhq-301/unit-07/fig-U7-2.ur.svg
-  - static/img/figures/guhq-301/unit-07/fig-U7-3.ur.dark.svg
-  - static/img/figures/guhq-301/unit-07/fig-U7-3.ur.svg
+ - history/prompts/guhq-301/crew-guhq-301-u07-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/unit-assessment.mdx
+ - specs/content/guhq-301/reviews/unit-07/G2/20261122T040849203Z-gates.json
+ - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-bloom-bands.txt
+ - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-concept-graph.txt
+ - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-depth-gate.txt
+ - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-docs-sync.txt
+ - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-figures.txt
+ - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-no-answer-keys.txt
+ - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-no-em-dash.txt
+ - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/validate-content.txt
+ - specs/content/guhq-301/tasks.md
+ - specs/content/guhq-301/translations/unit-07/check-content-parity.txt
+ - specs/content/guhq-301/translations/unit-07/handoff.md
+ - static/img/figures/guhq-301/unit-07/fig-U7-1.ur.dark.svg
+ - static/img/figures/guhq-301/unit-07/fig-U7-1.ur.svg
+ - static/img/figures/guhq-301/unit-07/fig-U7-2.ur.dark.svg
+ - static/img/figures/guhq-301/unit-07/fig-U7-2.ur.svg
+ - static/img/figures/guhq-301/unit-07/fig-U7-3.ur.dark.svg
+ - static/img/figures/guhq-301/unit-07/fig-U7-3.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -75,26 +75,37 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (guhq-301-u07-author, author, agy) Independent qualified G3 review is required (including religious-content check per content-spec drafting note 7); original classroom study routines are noted in sources/unit-07.md as having no bound empirical source.
 - (guhq-301-u07-author, author, agy) Mapped reading muallim-ul-quran remains unidentifiable; open-access sources (quranic-arabic-corpus, al-hilali-2026-literal-interpretive, abdelfattah-2025-tajweed, kadir-2022-asbab) carry linguistic, translation, recitation, and interpretive claims.
 
+## Feedback from the previous attempt
+npm run check:content has 2 finding(s) that main does not have:
+✗ Pipeline gate failed with 1 finding(s):
+- GUHQ-301 Unit 7 (docs/semester-3/guhq-301/unit-07): G2 en-draft: stale or incomplete input manifest
+
+
 ## Response snapshot
 
-Translated GUHQ-301 Unit 7 into its complete three-page Urdu mirror at G4 with three localized RTL figures, derived dark variants, and verified gate evidence.
+Translated GUHQ-301 Unit 7 into a 3-page Urdu mirror at G4 with 3 localized RTL figure pairs and refreshed G2 gate evidence.
 
 ## Outcome
 
-- Impact: translate for GUHQ-301 Unit 7 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: translate for GUHQ-301 Unit 7 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated GUHQ-301 Unit 7 into its complete three-page Urdu mirror at G4 with three localized RTL figures, derived dark variants, and verified gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Translated GUHQ-301 Unit 7 into a 3-page Urdu mirror at G4 with 3 localized RTL figure pairs and refreshed G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G5 independent review must verify the five authored Urdu concept labels in `specs/content/guhq-301/concepts/unit-07.md` and check every rendered verse meaning against trusted translations.
-  - G3 review must make the religious-content check per content-spec drafting note 7.
+  - Independent qualified G5 review must verify the five authored Urdu concept labels in `specs/content/guhq-301/concepts/unit-07.md` and check every rendered verse meaning against trusted translations.
+  - Independent qualified G3 review remains required for the English draft, including the religious-content check per content-spec drafting note 7.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
+
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
