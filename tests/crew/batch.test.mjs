@@ -154,6 +154,35 @@ test('mergeTrackerRows: merges pure row appends', () => {
   assert.equal(mergeTrackerRows(tracker, `${tracker}${rowA}\n`, `${tracker}${rowB}\n`), `${tracker}${rowA}\n${rowB}\n`);
 });
 
+test('mergeTrackerRows: both sides adding the same unit-stage row differently returns null', () => {
+  const last = '| 1 | G2 | done | crew | authored |';
+  const ours = insertAfter(tracker, last, '| 2 | G2 | done | crew | unit 2 authored by A |');
+  const theirs = insertAfter(tracker, last, '| 2 | G2 | done | crew | unit 2 authored by B |');
+  assert.equal(mergeTrackerRows(tracker, ours, theirs), null);
+  assert.equal(mergeTrackerRows(tracker, theirs, ours), null);
+
+  const lastRow = '| Unit 2 | G3 en-review | ▢ | | pending |';
+  const oursRev = insertAfter(rowTracker, lastRow, '| Unit 1 | G3 en-review | ▢ | agent:g3 | advisory escalation |');
+  const theirsRev = insertAfter(rowTracker, lastRow, '| Unit 1 | G3 en-review | ✅ | agent:g3 | pass certified |');
+  assert.equal(mergeTrackerRows(rowTracker, oursRev, theirsRev), null);
+});
+
+test('mergeTrackerRows: identical new row added on both sides is kept once', () => {
+  const last = '| 1 | G2 | done | crew | authored |';
+  const ours = insertAfter(tracker, last, rowA);
+  const theirs = insertAfter(tracker, last, rowA);
+  assert.equal(mergeTrackerRows(tracker, ours, theirs), insertAfter(tracker, last, rowA));
+  assert.equal(mergeTrackerRows(tracker, theirs, ours), insertAfter(tracker, last, rowA));
+});
+
+test('mergeTrackerRows: new rows for different units both merge', () => {
+  const last = '| 1 | G2 | done | crew | authored |';
+  const ours = insertAfter(tracker, last, rowA);
+  const theirs = insertAfter(tracker, last, rowB);
+  assert.equal(mergeTrackerRows(tracker, ours, theirs), insertAfter(tracker, last, `${rowA}\n${rowB}`));
+  assert.equal(mergeTrackerRows(tracker, theirs, ours), insertAfter(tracker, last, `${rowB}\n${rowA}`));
+});
+
 // EFPG-401 has a course status section, a Units summary, then a separate stage table.
 const courseTracker = [
   '# EFPG-401 Teaching of English - Task tracker',

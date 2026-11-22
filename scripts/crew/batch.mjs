@@ -120,7 +120,8 @@ function trackerLines(text) {
  * - A keyed table row changed or removed on one side only takes that side; changed the same way on
  *   both sides is kept once; changed differently on both sides returns null.
  * - New keyed rows (a key not in base) from both sides are kept, ours first, after the last row
- *   of their table; an identical new row on both sides is kept once.
+ *   of their table; an identical new row on both sides is kept once; different new rows with the
+ *   same key return null (2026-W47 M4; digests 2026-11-15 C4, 2026-11-16 C4, 2026-11-17 C4).
  * - Every other line (prose, headings, table headers) merges only when both sides purely insert
  *   lines (an insertion that starts the other side's is kept once); any other change returns null.
  * Returns null when a stage is missing, so the caller falls back to a merge fix.
@@ -206,6 +207,9 @@ export function mergeTrackerRows(base, ours, theirs) {
   }
   for (const r of t.rows) {
     if (baseKeys.has(r.key) || oursNew.get(r.key) === r.line || (r.status && oursNew.has(r.key))) continue;
+    // 2026-W47 M4: digests 2026-11-15 C4, 2026-11-16 C4 and 2026-11-17 C4. Return a conflict
+    // when both sides add a new row with the same Unit and Stage key but different text.
+    if (oursNew.has(r.key)) return null;
     put(mapAnchor(ti, theirsGap, r.anchor), r.line);
   }
   const out = [...(after.get(-1) || [])];
