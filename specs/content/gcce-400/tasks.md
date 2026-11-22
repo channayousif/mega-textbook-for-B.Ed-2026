@@ -48,7 +48,7 @@ English-only authoring from the approved Unit 1, Unit 2 and Unit 6 content-spec 
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
 | Unit 6 | G6 assets | ▣ | | Six English schematic SVGs (fig-U6-1 to fig-U6-6) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U6-7 prompt-only for the illustrate job |
 | Unit 6 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-05/G2/20261122T124257339Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-05/G2/20261122T152925023Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the Lawyers' Movement timeline against Batool et al. (2019) and constitutional articles against the current text (sources/unit-05.md) |
 | Unit 5 | G4 ur-translation | ▢ | | Complete six-file draft Urdu mirror and six localized SVG pairs (with derived dark twins) prepared from English 74703ca65 (plus figure repair 2160fb24a); translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-05/handoff.md |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
