@@ -16,8 +16,38 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/gcce-400/tasks.md
+ - docs/semester-4/gcce-400/unit-03/index.mdx
+ - docs/semester-4/gcce-400/unit-03/topic-01.mdx
+ - docs/semester-4/gcce-400/unit-03/topic-02.mdx
+ - docs/semester-4/gcce-400/unit-03/unit-assessment.mdx
+ - docs/semester-4/gcce-400/unit-03/unit-teacher-notes.mdx
+ - history/prompts/gcce-400/crew-gcce-400-u03-author-conflict1.misc.prompt.md
+ - history/prompts/gcce-400/crew-gcce-400-u03-author-conflict2.misc.prompt.md
+ - history/prompts/gcce-400/crew-gcce-400-u03-author-conflict3.misc.prompt.md
  - history/prompts/gcce-400/crew-gcce-400-u03-author-conflict4.misc.prompt.md
+ - history/prompts/gcce-400/crew-gcce-400-u03-author.green.prompt.md
+ - specs/content/gcce-400/concepts/unit-03.md
+ - specs/content/gcce-400/coverage/unit-03.md
+ - specs/content/gcce-400/figures/unit-03.md
+ - specs/content/gcce-400/reviews/unit-03/G2/20261122T113420667Z-gates.json
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/validate-content.txt
+ - specs/content/gcce-400/sources/unit-03.md
+ - specs/content/gcce-400/tasks.md
+ - static/img/figures/gcce-400/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-1.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-2.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-3.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-4.svg
 tests:
  - npm run check:content
 ---
@@ -55,27 +85,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u03-author-conflict2, fix, claude_crew) G3 en-review is still open for Unit 3; the reviewer should confirm the currency of cited constitutional provisions under the 1973 Constitution (Articles 8-28 and Article 5).
 - (gcce-400-u03-author-conflict2, fix, claude_crew) Urdu G4/G5 is a separate downstream job; Unit 3 stays under the required untranslated notice.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gcce-400-u03-author, resolved both task tracker conflicts, and verified all 14 content gates pass.
+Merged origin/main, resolved the tasks.md tracker conflict preserving both sides' newer state, and verified `npm run check:content` passes.
 
 ## Outcome
 
-- Impact: fix for GCCE-400 Unit 3 by claude_crew (attempt 4).
-- Tests: npm run check:content passed after the merge (14 of 14 gates PASS).
-- Files: specs/content/gcce-400/tasks.md and this PHR.
+- Impact: fix for GCCE-400 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 32 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gcce-400-u03-author. The only conflict was specs/content/gcce-400/tasks.md. Kept this branch's authored Unit 3 row and stage rows, kept main's newer Unit 4 row (UR translation ▣) and main's newer Unit 4 G2 evidence pointer (20261122T144142079Z), and kept the merged status line covering Units 1 through 6. Shared registries were already identical on both sides, so no ID renumbering was needed. check:content passes.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main, resolved the tasks.md tracker conflict preserving both sides' newer state, and verified `npm run check:content` passes.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 en-review is still open for Unit 3; the reviewer should confirm the currency of cited constitutional provisions under the 1973 Constitution (Articles 8-28 and Article 5).
-  - Urdu G4/G5 is a separate downstream job; Unit 3 stays under the required untranslated notice.
-  - Unit 4 now has two G2 evidence directories (114158475Z and 144142079Z); the tracker row points at the newer 144142079Z file, and the older directory is still on disk.
+  - Unit 4 has two G2 evidence dirs (`114158475Z` and `144142079Z`); the tracker points at the newer one and the older dir remains on disk.
+  - Unit 3 G3 en-review is still open (constitutional currency, Articles 8-28 and Article 5); Urdu G4/G5 remains a separate downstream job under the untranslated notice.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
