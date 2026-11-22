@@ -62,3 +62,8 @@ test('no content gate or review-evidence input imports scripts/media/', () => {
   const offenders = closure(ENTRIES).filter((p) => p.startsWith('scripts/media/'));
   assert.deepEqual(offenders, [], `content gates must not depend on the media core: ${offenders.join(', ')}`);
 });
+
+test('no content gate or review-evidence input imports scripts/social/ (Feature 031)', () => {
+  const offenders = closure(ENTRIES).filter((p) => p.startsWith('scripts/social/'));
+  assert.deepEqual(offenders, [], `content gates must not depend on the social updates: ${offenders.join(', ')}`);
+});
