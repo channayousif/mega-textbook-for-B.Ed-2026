@@ -195,6 +195,13 @@
      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528575781745381376/",
      "as": "member profile",
      "at": "2026-11-17T21:52:28.952Z"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710175045980604437",
+     "url": null,
+     "at": "2026-11-20T08:58:05.645Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-20"
     }
    }
   },
@@ -366,9 +373,36 @@
    "script_sha256": "4cd122719bcaa42e440f1b5911623376d4094c280a12fed29048277aec98f8eb",
    "encoded_file": "~/studio-media/teasers/efmp-302/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/efmp-302/ur/teaser.youtube.thumb.jpg",
-   "youtube_id": "L031_W_u5WE",
+   "youtube_id": "F_anSjHwKss",
    "uploaded_at": "2026-11-20T04:00:34Z",
-   "published_at": "2026-11-20T05:31:44Z"
+   "published_at": "2026-11-20T05:31:44Z",
+   "superseded_youtube_ids": [
+    "L031_W_u5WE"
+   ],
+   "replaced_at": "2026-11-20T08:06:42.100Z",
+   "replace_reason": "recipe v2 pilot (on-screen presenter shots 1 and 5, voice-over action 2-4, voice 1.25x, 32.8 s); owner 2026-11-20: \"replace the old teaser, publish the pilot\"; old upload set private; review copy N95VcU228Nk private",
+   "crossposts": {
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710167586524203028",
+     "url": null,
+     "at": "2026-11-20T08:29:36.981Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-20"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_id": "1181046157789788",
+     "url": "https://www.facebook.com/reel/1181046157789788",
+     "at": "2026-11-20T10:45:55.220Z",
+     "posted_note": "owner published the Page reel draft, 2026-11-20"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18645490675053122",
+     "url": "https://www.instagram.com/reel/Df9eiXEAqmy/",
+     "at": "2026-11-20T10:49:00.531Z"
+    }
+   }
   },
   {
    "key": "geng-300-ur",
@@ -540,7 +574,29 @@
    "thumbnail_file": "~/studio-media/teasers/geng-300/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "CeawyLtdtQc",
    "uploaded_at": "2026-11-20T04:00:35Z",
-   "published_at": "2026-11-20T05:31:46Z"
+   "published_at": "2026-11-20T05:31:46Z",
+   "crossposts": {
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710176530294835221",
+     "url": null,
+     "at": "2026-11-20T09:03:09.715Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-20"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_id": "1115817244592332",
+     "url": "https://www.facebook.com/reel/1115817244592332",
+     "at": "2026-11-20T10:49:13.835Z",
+     "posted_note": "owner published the Page reel draft, 2026-11-20"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18046926158832183",
+     "url": "https://www.instagram.com/reel/Df9e54NAg6A/",
+     "at": "2026-11-20T10:52:12.848Z"
+    }
+   }
   },
   {
    "key": "gict-300-ur",
@@ -712,7 +768,29 @@
    "thumbnail_file": "~/studio-media/teasers/gict-300/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "4wpqhahqZr8",
    "uploaded_at": "2026-11-20T04:00:36Z",
-   "published_at": "2026-11-20T05:31:47Z"
+   "published_at": "2026-11-20T05:31:47Z",
+   "crossposts": {
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710177648034564116",
+     "url": null,
+     "at": "2026-11-20T09:07:52.324Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-20"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_id": "1470995004992637",
+     "url": "https://www.facebook.com/reel/1470995004992637",
+     "at": "2026-11-20T10:52:26.891Z",
+     "posted_note": "owner published the Page reel draft, 2026-11-20"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "17988686505110133",
+     "url": "https://www.instagram.com/reel/Df9giifAq0k/",
+     "at": "2026-11-20T11:06:30.515Z"
+    }
+   }
   },
   {
    "key": "gnas-301-ur",
@@ -884,7 +962,29 @@
    "thumbnail_file": "~/studio-media/teasers/gnas-301/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "pENNFf-WHNw",
    "uploaded_at": "2026-11-20T04:00:36Z",
-   "published_at": "2026-11-20T05:31:48Z"
+   "published_at": "2026-11-20T05:31:48Z",
+   "crossposts": {
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710178771764152341",
+     "url": null,
+     "at": "2026-11-20T09:12:40.136Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-20"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_id": "1847334136406855",
+     "url": "https://www.facebook.com/reel/1847334136406855",
+     "at": "2026-11-20T10:55:43.444Z",
+     "posted_note": "owner published the Page reel draft, 2026-11-20"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18109543361136609",
+     "url": "https://www.instagram.com/reel/Df9twC5Aueu/",
+     "at": "2026-11-20T13:02:00.175Z"
+    }
+   }
   },
   {
    "key": "efmp-303-ur",
@@ -1120,7 +1220,23 @@
    "thumbnail_file": "~/studio-media/teasers/efmp-303/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "1bNmtFdmNEE",
    "uploaded_at": "2026-11-20T04:00:37Z",
-   "published_at": "2026-11-20T05:31:50Z"
+   "published_at": "2026-11-20T05:31:50Z",
+   "crossposts": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "2229433091341593",
+     "url": "https://www.facebook.com/reel/2229433091341593",
+     "at": "2026-11-20T10:59:04.052Z",
+     "posted_note": "owner published the Page reel draft, 2026-11-20"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710227945310242822",
+     "url": null,
+     "at": "2026-11-20T12:23:28.606Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-20"
+    }
+   }
   },
   {
    "key": "efmp-304-ur",
@@ -1308,7 +1424,1073 @@
    "thumbnail_file": "~/studio-media/teasers/efmp-304/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "LwAvxLfGyQw",
    "uploaded_at": "2026-11-20T04:00:37Z",
-   "published_at": "2026-11-20T05:31:51Z"
+   "published_at": "2026-11-20T05:31:51Z",
+   "crossposts": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1656012849397942",
+     "url": "https://www.facebook.com/reel/1656012849397942",
+     "at": "2026-11-20T11:02:34.350Z",
+     "posted_note": "owner published the Page reel draft, 2026-11-20"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710227940168501268",
+     "url": null,
+     "at": "2026-11-20T12:23:32.045Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-20"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "17929547565440451",
+     "url": "https://www.instagram.com/reel/Df9uXrgAkBm/",
+     "at": "2026-11-20T13:07:24.380Z"
+    }
+   }
+  },
+  {
+   "key": "gqur-300-ur",
+   "id": "gqur-300",
+   "locale": "ur",
+   "kind": "short",
+   "state": "approved",
+   "gates": {
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"approve all\" (batch 3, recipe v2, Urdu lines and visuals as drafted)"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "Claude",
+     "date": "2026-11-20",
+     "note": "recipe v2 Lite takes; QG1 pass, whisper transcripts match, frames checked"
+    },
+    "qa1": {
+     "verdict": "pass",
+     "by": "Claude QG1",
+     "date": "2026-11-22",
+     "notes": "media-qa short/encoded pass; 29.8 s at teaser@3 1.4x; 9 frames, end card address and thumbnail checked"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-22",
+     "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-20T08:22:01.518Z",
+     "artifact_id": "6fc6a6f4-3eb6-43e0-9064-1b4577ee9cda",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-300/ur/shot-1-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-20T08:24:10.581Z",
+     "artifact_id": "0853a59e-28c9-4907-a1e2-9226c810f529",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-300/ur/shot-3-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-20T08:26:40.632Z",
+     "artifact_id": "417ece52-e9b6-42eb-9d38-36ad06c23e7c",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-300/ur/shot-5-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-20T10:38:40.558Z",
+     "artifact_id": "cdb81d85-8101-4150-a617-2b337ead1d12",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-300/ur/shot-2-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-20T10:41:08.047Z",
+     "artifact_id": "13bc44c1-1c33-46e1-a479-203be187d59e",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-300/ur/shot-4-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-20T08:15:19.479Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-20T08:15:25.689Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-20T08:19:33.069Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-20T14:06:47.808Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-20T14:06:48.094Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-21T20:26:41.264Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-21T20:26:41.410Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-21T20:27:30.174Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-21T20:30:13.676Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:27.601Z"
+    }
+   ],
+   "script_sha256": "4ddaac6c0bd0508f8eb56c7497f4e034f0f63e2848554ae302be4739a05865f2",
+   "encoded_file": "~/studio-media/teasers/gqur-300/ur/teaser.youtube.mp4",
+   "thumbnail_file": "~/studio-media/teasers/gqur-300/ur/teaser.youtube.thumb.jpg",
+   "youtube_id": "uqt3LR8XIW0",
+   "uploaded_at": "2026-11-21T20:27:29Z",
+   "scheduled_publish_at": "2026-11-22T10:00:00+05:00"
+  },
+  {
+   "key": "efmp-305-ur",
+   "id": "efmp-305",
+   "locale": "ur",
+   "kind": "short",
+   "state": "approved",
+   "gates": {
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"approve all\" (batch 3, recipe v2, Urdu lines and visuals as drafted)"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "Claude",
+     "date": "2026-11-20",
+     "note": "recipe v2 Lite takes; QG1 pass, whisper transcripts match, frames checked"
+    },
+    "qa1": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG1",
+     "date": "2026-11-22",
+     "notes": "media-qa short/encoded pass; 29.1 s at teaser@3 1.4x; 9 frames, end card address and thumbnail checked; a small blurred map-like puzzle on the table in shot 3"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-22",
+     "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-20T10:43:49.976Z",
+     "artifact_id": "140d3128-d3d5-47b0-84b0-886d3d12b7a0",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-305/ur/shot-1-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-20T10:46:18.173Z",
+     "artifact_id": "d61d3e19-a356-4534-b4ef-9229d68f4c11",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-305/ur/shot-2-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-20T10:48:41.041Z",
+     "artifact_id": "5f8a1815-3834-4411-b93b-6e792b96ded1",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-305/ur/shot-3-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-20T10:51:24.282Z",
+     "artifact_id": "ed9ce276-7932-4804-949e-827febcadb2e",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-305/ur/shot-4-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-20T10:53:41.569Z",
+     "artifact_id": "7848cd9e-0511-4b76-95f0-63ef60c9029b",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-305/ur/shot-5-t1.mp4",
+     "qa": {
+      "verdict": "fail",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "Veo drew camera viewfinder corner marks (and once 9:16 text) over the frame; replaced by take 2, an 82% crop of this take"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 2,
+     "at": "2026-11-20T13:03:43.679Z",
+     "artifact_id": "crop-of-t1",
+     "model": "veo_3_1_lite (t1 cropped 82% to remove a drawn viewfinder overlay)",
+     "credits": 0,
+     "file": "~/studio-media/teasers/efmp-305/ur/shot-5-t2.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "crop of take 1 removes the drawn viewfinder; QG1 pass; transcript of take 1 matches the approved line"
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-20T08:15:19.761Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-20T08:15:25.811Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-20T08:19:33.223Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-20T14:10:11.039Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-20T14:10:11.168Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-21T20:26:41.598Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-21T20:26:41.781Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-21T20:28:02.371Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-21T20:30:13.884Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:27.712Z"
+    }
+   ],
+   "script_sha256": "fe5a90111cf86e67c585a81489a042442d92341efc3737e02cd01726b375cffb",
+   "encoded_file": "~/studio-media/teasers/efmp-305/ur/teaser.youtube.mp4",
+   "thumbnail_file": "~/studio-media/teasers/efmp-305/ur/teaser.youtube.thumb.jpg",
+   "youtube_id": "o-qh7iMDPA4",
+   "uploaded_at": "2026-11-21T20:28:02Z",
+   "scheduled_publish_at": "2026-11-22T11:00:00+05:00"
+  },
+  {
+   "key": "geng-301-ur",
+   "id": "geng-301",
+   "locale": "ur",
+   "kind": "short",
+   "state": "approved",
+   "gates": {
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"approve all\" (batch 3, recipe v2, Urdu lines and visuals as drafted)"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "Claude QG2",
+     "date": "2026-11-21",
+     "notes": "every shot has a passing take (QG1 media-qa, QG2 whisper transcript match, frame strips checked; recipe v2)"
+    },
+    "qa1": {
+     "verdict": "pass",
+     "by": "Claude QG1",
+     "date": "2026-11-22",
+     "notes": "media-qa short/encoded pass; 29.5 s at teaser@3 1.4x; 9 frames, end card address and thumbnail checked"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-22",
+     "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-20T10:56:28.417Z",
+     "artifact_id": "e65b7c39-9264-4988-9e80-7507759a5f0a",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/geng-301/ur/shot-1-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-20T10:58:45.711Z",
+     "artifact_id": "7761c200-c31f-4a31-bec6-787702d7d1ad",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/geng-301/ur/shot-2-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-20T11:01:00.598Z",
+     "artifact_id": "634b3a18-e616-4b3f-bcba-411abe889653",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/geng-301/ur/shot-3-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-20T11:37:41.013Z",
+     "artifact_id": "3af4f69f-712f-4da6-95a3-421b58b8d307",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/geng-301/ur/shot-4-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-20T11:39:52.864Z",
+     "artifact_id": "239ee505-2b56-4b2e-9436-686152c796bf",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/geng-301/ur/shot-5-t1.mp4",
+     "qa": {
+      "verdict": "fail",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "Veo drew camera viewfinder corner marks (and once 9:16 text) over the frame; replaced by take 2, an 82% crop of this take"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 2,
+     "at": "2026-11-20T13:02:56.469Z",
+     "artifact_id": "crop-of-t1",
+     "model": "veo_3_1_lite (t1 cropped 82% to remove a drawn viewfinder overlay)",
+     "credits": 0,
+     "file": "~/studio-media/teasers/geng-301/ur/shot-5-t2.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "crop of take 1 removes the drawn viewfinder; QG1 pass; transcript of take 1 matches the approved line"
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-20T08:15:20.002Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-20T08:15:25.997Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-20T08:19:33.333Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-21T08:34:47.663Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-21T08:34:48.089Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-21T20:26:41.921Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-21T20:26:42.046Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-21T20:28:29.126Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-21T20:30:14.141Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:27.814Z"
+    }
+   ],
+   "script_sha256": "c2a741e4ac8a93fd40d1410507a8f5d08e018af18a3b2e881836c2e7d1aa4c3f",
+   "encoded_file": "~/studio-media/teasers/geng-301/ur/teaser.youtube.mp4",
+   "thumbnail_file": "~/studio-media/teasers/geng-301/ur/teaser.youtube.thumb.jpg",
+   "youtube_id": "M-9XdegQL-0",
+   "uploaded_at": "2026-11-21T20:28:28Z",
+   "scheduled_publish_at": "2026-11-22T12:00:00+05:00"
+  },
+  {
+   "key": "gpks-402-ur",
+   "id": "gpks-402",
+   "locale": "ur",
+   "kind": "short",
+   "state": "approved",
+   "gates": {
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"approve all\" (batch 3, recipe v2, Urdu lines and visuals as drafted)"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "Claude QG2",
+     "date": "2026-11-21",
+     "notes": "every shot has a passing take (QG1 media-qa, QG2 whisper transcript match, frame strips checked; recipe v2)"
+    },
+    "qa1": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG1",
+     "date": "2026-11-22",
+     "notes": "media-qa short/encoded pass; 29.9 s at teaser@3 1.4x; 9 frames, end card address and thumbnail checked; owner to judge: a large Pakistan flag behind the presenter in shot 1 (also on the thumbnail) and small flags in the assembly shot 4, against the no-flags imagery rule; AI-made portraits in shot 2"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-22",
+     "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-20T11:42:31.944Z",
+     "artifact_id": "98842090-a79a-481f-b451-d65921947137",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gpks-402/ur/shot-1-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-20T11:44:46.353Z",
+     "artifact_id": "58522435-2e4b-494e-925b-a62eaa05ee0f",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gpks-402/ur/shot-2-t1.mp4",
+     "qa": {
+      "verdict": "fail",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "museum scene shows an old map resembling undivided India; real-territory maps are not shown in teasers; retaken without maps"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-20T11:47:21.511Z",
+     "artifact_id": "63b35d7f-d7a7-451a-beaf-3d3fc472aeac",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gpks-402/ur/shot-3-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-20T11:49:55.696Z",
+     "artifact_id": "df32483c-9001-4c2f-85e7-342499c68cdb",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gpks-402/ur/shot-4-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-20T11:52:08.095Z",
+     "artifact_id": "7ca94022-db42-42d6-9578-6cb5032fec67",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gpks-402/ur/shot-5-t1.mp4",
+     "qa": {
+      "verdict": "fail",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "Veo drew camera viewfinder corner marks (and once 9:16 text) over the frame; replaced by take 2, an 82% crop of this take"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 2,
+     "at": "2026-11-20T13:05:01.940Z",
+     "artifact_id": "crop-of-t1",
+     "model": "veo_3_1_lite (t1 cropped 82% to remove a drawn viewfinder overlay)",
+     "credits": 0,
+     "file": "~/studio-media/teasers/gpks-402/ur/shot-5-t2.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "crop of take 1 removes the drawn viewfinder; QG1 pass; transcript of take 1 matches the approved line"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 2,
+     "at": "2026-11-20T13:07:37.192Z",
+     "artifact_id": "5a32e7fa-5230-46c4-9b1f-173746c0dc53",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gpks-402/ur/shot-2-t2.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-21",
+      "note": "QG1 pass; qg2.mjs score 1; retake without maps; frames: museum hall, AI-made portrait photographs, no maps or text; owner to note the large faces"
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-20T08:15:20.203Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-20T08:15:26.142Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-20T08:19:33.468Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-21T08:34:47.774Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-21T08:34:48.209Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-21T20:26:42.283Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-21T20:26:42.442Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-21T20:28:59.240Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-21T20:30:14.301Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:27.927Z"
+    }
+   ],
+   "script_sha256": "00ebd7d3956c1250812acb0d016aebf3a0d58212688f1a866d1c224c9658610a",
+   "encoded_file": "~/studio-media/teasers/gpks-402/ur/teaser.youtube.mp4",
+   "thumbnail_file": "~/studio-media/teasers/gpks-402/ur/teaser.youtube.thumb.jpg",
+   "youtube_id": "rn5h_utUprg",
+   "uploaded_at": "2026-11-21T20:28:59Z",
+   "scheduled_publish_at": "2026-11-22T13:00:00+05:00"
+  },
+  {
+   "key": "gqur-301-ur",
+   "id": "gqur-301",
+   "locale": "ur",
+   "kind": "short",
+   "state": "approved",
+   "gates": {
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"approve all\" (batch 3, recipe v2, Urdu lines and visuals as drafted)"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "Claude QG2",
+     "date": "2026-11-21",
+     "notes": "every shot has a passing take (QG1 media-qa, QG2 whisper transcript match, frame strips checked; recipe v2)"
+    },
+    "qa1": {
+     "verdict": "pass",
+     "by": "Claude QG1",
+     "date": "2026-11-22",
+     "notes": "media-qa short/encoded pass; 27.5 s at teaser@3 1.4x; 9 frames, end card address and thumbnail checked"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-22",
+     "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-20T11:54:33.952Z",
+     "artifact_id": "7a2ffffc-71b9-4ad9-8cc6-3e2ec915b024",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-301/ur/shot-1-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-21",
+      "note": "QG1 pass; qg2.mjs score 0.933; whisper spells اعداد as آداد; frames: presenter in waistcoat, newspaper text unreadable"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-20T11:56:47.306Z",
+     "artifact_id": "f557b800-f904-4828-b3e4-dff9a4e67eff",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-301/ur/shot-2-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-21",
+      "note": "QG1 pass; qg2.mjs score 1; frames: girls charting on a wall, no readable text"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-20T11:59:19.662Z",
+     "artifact_id": "22b62a9f-b169-41aa-84d2-7f4e9b5ab198",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-301/ur/shot-3-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-21",
+      "note": "QG1 pass; qg2.mjs score 0.909; روزمرہ heard as روز مرا; frames: dice and tally in schoolyard"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-20T12:15:08.356Z",
+     "artifact_id": "d7fe423d-138c-474c-b0c0-78cbbe3e808d",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-301/ur/shot-4-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-21",
+      "note": "QG1 pass; qg2.mjs score 0.933; 16 heard as digits; frames: office with pie charts, no readable text"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-20T12:17:48.316Z",
+     "artifact_id": "57372e6a-6ae9-4111-b0c3-2842fd1d27bf",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gqur-301/ur/shot-5-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-21",
+      "note": "QG1 pass; qg2.mjs score 1; spoken address matched; frames: presenter in school corridor holding blank phone"
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-20T08:15:20.403Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-20T08:15:26.256Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-20T08:19:33.579Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-21T08:34:47.891Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-21T08:34:48.355Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-21T20:26:42.668Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-21T20:26:42.882Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-21T20:29:28.340Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-21T20:30:14.483Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:28.187Z"
+    }
+   ],
+   "script_sha256": "5f7f83a7f8e869fdd3479e2ad9e9b33320f74320459c51443e98740827468a03",
+   "encoded_file": "~/studio-media/teasers/gqur-301/ur/teaser.youtube.mp4",
+   "thumbnail_file": "~/studio-media/teasers/gqur-301/ur/teaser.youtube.thumb.jpg",
+   "youtube_id": "kNFsqdPHyVU",
+   "uploaded_at": "2026-11-21T20:29:28Z",
+   "scheduled_publish_at": "2026-11-22T14:00:00+05:00"
+  },
+  {
+   "key": "gsos-301-ur",
+   "id": "gsos-301",
+   "locale": "ur",
+   "kind": "short",
+   "state": "approved",
+   "gates": {
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-20",
+     "note": "owner: \"approve all\" (batch 3, recipe v2, Urdu lines and visuals as drafted)"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "Claude QG2",
+     "date": "2026-11-21",
+     "notes": "every shot has a passing take (QG1 media-qa, QG2 whisper transcript match, frame strips checked; recipe v2)"
+    },
+    "qa1": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG1",
+     "date": "2026-11-22",
+     "notes": "media-qa short/encoded pass; 29.1 s at teaser@3 1.4x; 9 frames, end card address and thumbnail checked; semi-readable shop signs in the street of shot 1"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-22",
+     "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-20T12:03:31.427Z",
+     "artifact_id": "f7d0a33c-b30f-47df-a074-646e4cb73c00",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gsos-301/ur/shot-1-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-20T12:05:56.012Z",
+     "artifact_id": "0beb5ede-4f21-425c-b41f-4156f7c0a04c",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gsos-301/ur/shot-2-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-20T12:08:06.094Z",
+     "artifact_id": "4a6b72c8-81b2-4ef0-b2b6-35d52b09a754",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gsos-301/ur/shot-3-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-20T12:10:23.206Z",
+     "artifact_id": "46bf7f27-ddd3-46e5-85bb-17d134ee7822",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gsos-301/ur/shot-4-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-20T12:12:20.927Z",
+     "artifact_id": "7e1f9632-c0a7-4338-acea-6471d3489427",
+     "model": "veo_3_1_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gsos-301/ur/shot-5-t1.mp4",
+     "qa": {
+      "verdict": "pass",
+      "by": "Claude QG2",
+      "date": "2026-11-20",
+      "note": "QG1 pass; whisper turbo transcript matches the approved line; frames checked, recipe v2"
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-20T08:15:20.684Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-20T08:15:26.374Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-20T08:19:33.688Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-21T08:34:47.990Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-21T08:34:48.458Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-21T20:26:43.101Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-21T20:26:43.258Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-21T20:30:00.265Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-21T20:30:14.664Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:28.300Z"
+    }
+   ],
+   "script_sha256": "51e453131e881b86f69274c73bcdf5c4eaf9e3de4bba8dd6176faeffd4f314f2",
+   "encoded_file": "~/studio-media/teasers/gsos-301/ur/teaser.youtube.mp4",
+   "thumbnail_file": "~/studio-media/teasers/gsos-301/ur/teaser.youtube.thumb.jpg",
+   "youtube_id": "MYeopBflsA0",
+   "uploaded_at": "2026-11-21T20:30:00Z",
+   "scheduled_publish_at": "2026-11-22T15:00:00+05:00"
   }
  ]
 }

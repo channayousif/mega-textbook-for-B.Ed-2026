@@ -145,7 +145,11 @@ try {
     }
     console.log(`\nRefreshed ${stale.length} unit(s); tracker rows repointed.`);
   } else {
-    const [course, unitArg] = args;
+    // Briefs and paths spell the course in lowercase (efpg-401), but the shared
+    // validator wants the catalog's uppercase code, so uppercase it once here
+    // (2026-W47 M1; intelligence dailies 2026-11-19 C4 and 2026-11-20 C5).
+    const course = args[0]?.toUpperCase();
+    const unitArg = args[1];
     if (!course || !unitArg) throw new Error('usage: prepare-gate-evidence COURSE UNIT | --refresh-stale');
     const unit = Number(unitArg);
     if (!Number.isInteger(unit) || unit <= 0) throw new Error('UNIT must be a positive integer');

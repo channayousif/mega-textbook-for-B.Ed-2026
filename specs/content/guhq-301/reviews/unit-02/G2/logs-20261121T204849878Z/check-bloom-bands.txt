@@ -1,0 +1,3 @@
+$ npm run check:bloom-bands   (repo HEAD 89cd2b0e3, 2026-11-21T20:48:29.576Z)
+✓ Bloom tags honour their unit spec's blueprint bands (1975 items checked).
+exit_code=0

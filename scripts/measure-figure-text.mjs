@@ -22,6 +22,8 @@
  *     sit closer than MIN_GAP px apart (a column label running into the next);
  *   - text that starts inside a painted rect and spills past its edges.
  *
+ *   --ci-fonts        force the CI fallback face (DejaVu Sans) on every text
+ *                     node before measuring, so local checks match CI figure-geometry
  *   --changed <base>  measure only figure SVGs added or modified since <base>
  *                     (CI uses this, so existing figures never turn a PR red)
  *   --report          per-unit summary of every file; always exits 0
@@ -44,6 +46,7 @@ const SPILL_TOLERANCE = 1;
 
 const argv = process.argv.slice(2);
 const REPORT = argv.includes('--report');
+const CI_FONTS = argv.includes('--ci-fonts');
 const changedAt = argv.indexOf('--changed');
 let files = argv.filter((a, i) => !a.startsWith('--') && (changedAt === -1 || i !== changedAt + 1));
 if (changedAt !== -1) {
@@ -55,7 +58,7 @@ if (changedAt !== -1) {
   if (!files.length) { console.log(`no figure SVGs changed since ${base}`); process.exit(0); }
 }
 if (!files.length) {
-  console.error('usage: node scripts/measure-figure-text.mjs [--report] [--changed <base>] <svg> [svg...]');
+  console.error('usage: node scripts/measure-figure-text.mjs [--report] [--changed <base>] [--ci-fonts] <svg> [svg...]');
   process.exit(2);
 }
 
@@ -67,8 +70,19 @@ const report = [];
 
 for (const file of files) {
   await page.setContent(readFileSync(file, 'utf8'), { waitUntil: 'load' });
-  const { viewBox, texts, shapes } = await page.evaluate(() => {
+  const { viewBox, texts, shapes } = await page.evaluate((ciFonts) => {
     const svg = document.querySelector('svg');
+    if (ciFonts) {
+      // 2026-W47 M2: force the CI fallback face (DejaVu Sans) on every text node
+      // before measuring, matching GitHub Actions runners where Noto Nastaliq is
+      // absent (2026-11-13 C5 and 2026-11-19 C3 digests).
+      const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
+      style.textContent = 'text, tspan { font-family: "DejaVu Sans", sans-serif !important; }';
+      svg.appendChild(style);
+      for (const t of svg.querySelectorAll('text, tspan')) {
+        t.style.setProperty('font-family', '"DejaVu Sans", sans-serif', 'important');
+      }
+    }
     const vb = svg.viewBox.baseVal;
     return {
       viewBox: [vb.width, vb.height],
@@ -103,7 +117,7 @@ for (const file of files) {
         }];
       }),
     };
-  });
+  }, CI_FONTS);
 
   const problems = [];
   const warnings = [];

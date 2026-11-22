@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import {
   teaserNeeds, limitMedia, clipsAllowed, mediaLaunchProblem, approveScript, rejectMedia, approvePublish, mediaTask, mediaHold,
-  isMediaStage, MAX_AWAITING_SCRIPTS, MEDIA_STAGES,
+  isMediaStage, MAX_AWAITING_SCRIPTS, MEDIA_STAGES, ownerLine,
 } from '../../scripts/crew/media.mjs';
 import { isCorpusStage } from '../../scripts/crew/planner.mjs';
 import { STAGES } from '../../scripts/crew/workers.mjs';
@@ -136,4 +136,14 @@ test('the crew never publishes: only an owner-approved media_publish may, and no
 test('media stage names are recognised', () => {
   assert.equal(isMediaStage('teaser_clips'), true);
   assert.equal(isMediaStage('illustrate'), false);
+});
+
+test('an approved Short scheduled in YouTube gets no publish job and shows as scheduled', () => {
+  const at = '2026-11-22T10:00:00+05:00';
+  const r = teaserNeeds({ courses: [{ code: 'GQUR-300' }], items: { 'gqur-300-ur': item('approved', { gates: { owner: { verdict: 'approve', by: 'owner' } }, scheduled_publish_at: at }) }, shaOf: () => 'a'.repeat(64) });
+  assert.deepEqual(r.jobs, []);
+  assert.deepEqual(r.owner.scheduled, [`gqur-300-ur ${at}`]);
+  assert.match(ownerLine(r.owner), /scheduled to go public: gqur-300-ur/);
+  const unscheduled = teaserNeeds({ courses: [{ code: 'GQUR-300' }], items: { 'gqur-300-ur': item('approved') }, shaOf: () => 'a'.repeat(64) });
+  assert.deepEqual(unscheduled.jobs.map((j) => j.stage), ['media_publish']);
 });

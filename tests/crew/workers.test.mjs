@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
-import { QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker } from '../../scripts/crew/workers.mjs';
+import { QUOTA_RE, PROVIDER_RE, COOLDOWN_MIN, resetMinutes, pickWorker } from '../../scripts/crew/workers.mjs';
 
 test('every worker limit message seen in the logs counts as quota, not bad work', () => {
   // 2026-10-22: the first two slipped through and eight jobs went gate_red on quota alone.
@@ -15,6 +15,38 @@ test('every worker limit message seen in the logs counts as quota, not bad work'
     "You've hit your 5-hour limit · resets 7:10pm (Etc/GMT-5)",
   ]) assert.ok(QUOTA_RE.test(msg), msg);
   assert.ok(!QUOTA_RE.test('✗ Pipeline gate failed with 2 finding(s):'));
+});
+
+test('a provider config or auth failure matches PROVIDER_RE, not QUOTA_RE', () => {
+  // 2026-W47 M3: digests 2026-11-14 C1 and 2026-11-19 C1 (two-line logs that spent every attempt).
+  for (const msg of [
+    "ERROR: The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account.",
+    'Failed to authenticate. API Error: 403 Attention Required! | Cloudflare',
+    'UNAUTHENTICATED (code 401): Request had invalid authentication credentials.',
+  ]) {
+    assert.ok(PROVIDER_RE.test(msg), msg);
+    assert.ok(!QUOTA_RE.test(msg), `quota regex unchanged: ${msg}`);
+  }
+  for (const msg of [
+    '✗ Pipeline gate failed with 2 finding(s):',
+    'worker exited 1',
+    'Placed fig-U2-6; check:content passes.',
+    'RESOURCE_EXHAUSTED (code 429): Individual quota reached.',
+  ]) assert.ok(!PROVIDER_RE.test(msg), msg);
+});
+
+test('reapOne cools and refunds on a provider failure the same way as on a quota', () => {
+  const source = readFileSync(new URL('../../scripts/crew/crew.mjs', import.meta.url), 'utf8');
+  const body = source.match(/^function reapOne\(board, health, events, j\) \{[\s\S]*?^\}/m)?.[0];
+  assert.ok(body);
+  assert.match(body, /const provider = PROVIDER_RE\.test\(end\)[^\n]*\(code !== 0 \|\| !ahead\)/);
+  assert.match(body, /const quota = QUOTA_RE\.test\(end\) && \(code !== 0 \|\| !ahead\)/);
+  const branch = body.slice(body.indexOf('if (quota || provider ||'));
+  assert.ok(branch.length < body.length, 'provider joins the quota branch');
+  const head = branch.slice(0, branch.indexOf('return;'));
+  assert.match(head, /cool\(health, j\.worker/);
+  assert.match(head, /j\.attempts = Math\.max\(0, \(j\.attempts \|\| 1\) - 1\)/);
+  assert.match(head, /j\.status = 'queued'/);
 });
 
 test('a worker in avoid is skipped for the next in the chain', () => {
