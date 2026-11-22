@@ -19,8 +19,9 @@ WhatsApp as well for urgent items and decisions.
 
 Every stage has a ranked chain over the five workers (`scripts/crew/workers.mjs`; a few stages,
 such as `illustrate`, use only some of them). A worker that
-hits a quota, rate or session limit is put on cooldown (30 min, 2 h, 6 h) and its job moves to the
-next worker in the chain at once, continuing from the work already committed on the branch. A
+hits a quota, rate or session limit, or is refused by its provider (an unsupported model name or an
+authentication failure, `PROVIDER_RE`), is put on cooldown (30 min, 2 h, 6 h) without spending one of
+the job's attempts, and its job moves to the next worker in the chain at once, continuing from the work already committed on the branch. A
 review job never goes to the model family that produced what it reviews; if no eligible reviewer
 is healthy, the review waits while every other kind of job keeps flowing.
 

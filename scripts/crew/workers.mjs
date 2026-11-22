@@ -81,6 +81,16 @@ export const STAGES = {
 export const QUOTA_RE = /rate.?limit|quota|usage limit|session limit|weekly limit|too many requests|\b429\b|resource.?exhausted|insufficient (credits|balance)|hit your ([\w-]+ )?limit|limit reached|credit balance|at capacity/i;
 
 /**
+ * Text in a worker's log that means the provider refused the worker itself (a model name the
+ * account cannot use, or an authentication failure), not "bad work". reapOne treats it like
+ * QUOTA_RE: the worker cools and the attempt is refunded, so the job moves to the next worker.
+ * 2026-W47 M3, from digests 2026-11-14 C1 (Claude "Failed to authenticate. API Error: 403" behind
+ * Cloudflare) and 2026-11-19 C1 (Codex "model is not supported when using Codex with a ChatGPT
+ * account" and agy "UNAUTHENTICATED (code 401)" spent all attempts of 3 jobs).
+ */
+export const PROVIDER_RE = /model is not supported|failed to authenticate|UNAUTHENTICATED \(code 401\)/i;
+
+/**
  * An exhausted IMAGE quota (agy's Gemini image model), reported by scripts/generate-illustration.mjs
  * or retold by the worker. It is not the worker's text quota: the worker stays healthy for other
  * stages and only `illustrate` waits (scripts/lib/image-quota.mjs).
