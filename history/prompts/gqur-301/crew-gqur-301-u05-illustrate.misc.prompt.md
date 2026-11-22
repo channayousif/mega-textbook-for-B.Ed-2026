@@ -37,10 +37,10 @@ files:
  - specs/content/gqur-301/reviews/unit-05/G2/logs-20261122T100009756Z/check-no-em-dash.txt
  - specs/content/gqur-301/reviews/unit-05/G2/logs-20261122T100009756Z/validate-content.txt
  - specs/content/gqur-301/tasks.md
+ - static/img/figures/gqur-301/unit-05/fig-U5-10.webp
  - static/img/figures/gqur-301/unit-05/fig-U5-7.webp
  - static/img/figures/gqur-301/unit-05/fig-U5-8.webp
  - static/img/figures/gqur-301/unit-05/fig-U5-9.webp
- - static/img/figures/gqur-301/unit-05/fig-U5-10.webp
 tests:
  - npm run check:content
 ---
@@ -80,25 +80,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u05-repair_en-conflict5, fix, opencode) Unit 5 P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host; G3 stays open (ADR-0019).
 - (gqur-301-u05-repair_en-conflict5, fix, opencode) G5 should verify Nastaliq rendering and text-fit inside the inherited viewBox at narrow width and A4 print.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed all four GQUR-301 Unit 5 raster illustrations and banner (fig-U5-7, fig-U5-8, fig-U5-9, fig-U5-10) in English and Urdu topic and index files, transitioned figure manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated, inspected, and placed all four raster illustrations and unit banner for GQUR-301 Unit 5 in English and Urdu mirrors, transitioned manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
 - Impact: illustrate for GQUR-301 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree with all 14 content gates green.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all four GQUR-301 Unit 5 raster illustrations and banner (fig-U5-7, fig-U5-8, fig-U5-9, fig-U5-10), updated manifests to placed, and refreshed G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Generated, inspected, and placed all four raster illustrations and unit banner for GQUR-301 Unit 5 in English and Urdu mirrors, transitioned manifests to placed, and refreshed G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All four raster illustrations (unit banner fig-U5-7, topic scenes fig-U5-8, fig-U5-9, fig-U5-10) were generated via gflow, inspected, accepted, placed with zero em dashes in both English and Urdu files, and validated across all 14 content gates.
+  - All four raster illustrations (unit banner fig-U5-7, topic scenes fig-U5-8, fig-U5-9, fig-U5-10) were generated via gflow, inspected, accepted, placed with zero em dashes in English and Urdu files, and validated across all 14 content gates.
   - G3 English review remains open for independent review on committed bytes; G1, provenance and narrow/A4 inspection remain open for the evaluator/review host.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
