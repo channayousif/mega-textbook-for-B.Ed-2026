@@ -38,7 +38,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-03/G2/20261122T113420667Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; reviewer should confirm the currency of cited constitutional provisions under the 1973 Constitution (Articles 8-28 and Article 5) |
-| Unit 3 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
+| Unit 3 | G4 ur-translation | ▢ | | Complete five-file draft Urdu mirror and four localized SVG pairs (with derived dark twins) prepared from English cacf4aac0; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-03/handoff.md |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
 | Unit 3 | G6 assets | ▣ | | Four English schematic SVGs (fig-U3-1 to fig-U3-4) placed with derived dark variants; measure-figure-text verified |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
