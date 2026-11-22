@@ -24,11 +24,11 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 6 
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-01/G2/20261121T184702756Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-01/G2/20261122T074506099Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 1 | G4 ur-translation | ▣ | agent:agy | Six-file Urdu mirror and eight localized SVG schematics with derived dark variants prepared from English 73c0c4c73; key_terms bank-bound; check:content clean; translation_status stays draft pending independent G5. [Handoff](reviews/unit-01/G4/translation-handoff.md). |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
-| Unit 1 | G6 assets | ▣ | | Eight English schematic SVGs placed with derived dark variants; measure-figure-text verified |
+| Unit 1 | G6 assets | ✓ | | Eight schematic SVG pairs with derived dark variants; four topic scenes (fig-U1-10 to fig-U1-13) and one unit banner (fig-U1-9) inspected and placed in both locales as shared optimized WebP assets. |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-401/reviews/unit-02/G2/20261114T223818407Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/efpg-401/reviews/unit-02/G3/39596879-d636-4d89-8a00-e06f6d15a654.json; static checks clean, 25 assessments independently solved; render unperformed (deployed SHA 33d5feca != HEAD 925047c67); no certification |
