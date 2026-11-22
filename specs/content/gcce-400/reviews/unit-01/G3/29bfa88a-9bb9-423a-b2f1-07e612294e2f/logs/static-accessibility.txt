@@ -1,0 +1,49 @@
+static-accessibility evidence: GCCE-400 Unit 1 (G3 English)
+============================================================
+Date: 2026-11-23
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (Medium)
+Reviewer Run ID: 29bfa88a-9bb9-423a-b2f1-07e612294e2f
+Course: GCCE-400 Unit 1 (Introduction to Civics and Citizenship)
+
+Structural and Visual Accessibility Audit:
+------------------------------------------
+1. Heading Structure (Monotonicity):
+   - docs/semester-4/gcce-400/unit-01/index.mdx:
+     # h1 -> ## h2 (Unit learning outcomes, Prerequisite knowledge, In this unit, How to use this unit). Monotonic.
+   - docs/semester-4/gcce-400/unit-01/topic-01.mdx:
+     # h1 -> ## h2 (A real classroom situation, Explanation, Activity, Check your understanding, Summary, Self-assessment checklist, Try this at your practicum school, Summative task, Further reading) -> ### h3 (Definition and concept of civics, Historical evolution of civic participation, Civic engagements). Monotonic.
+   - docs/semester-4/gcce-400/unit-01/topic-02.mdx:
+     # h1 -> ## h2 (A real classroom situation, Explanation, Activity, Check your understanding, Summary, Self-assessment checklist, Try this at your practicum school, Summative task, Further reading) -> ### h3 (Definition and concept of citizenship, Changing role of citizens, Relationship between civics and citizenship). Monotonic.
+   - docs/semester-4/gcce-400/unit-01/topic-03.mdx:
+     # h1 -> ## h2 (A real classroom situation, Explanation, Activity, Check your understanding, Summary, Self-assessment checklist, Try this at your practicum school, Summative task, Further reading) -> ### h3 (Active, participatory and digital citizenship, Foundation of modern society and citizenship). Monotonic.
+   - docs/semester-4/gcce-400/unit-01/unit-assessment.mdx:
+     # h1 -> ## h2 (Unit summary, Summative assessment, Answers and marking guidance) -> ### h3 (MCQs, RRQs, ERQs, MCQ answer key, RRQ model answers and mark schemes, ERQ rubrics). Monotonic.
+   - docs/semester-4/gcce-400/unit-01/unit-teacher-notes.mdx:
+     # h1 -> ## h2 (Sequencing the three weeks, Likely misconceptions and how to handle them, Practical work: community storytelling). Monotonic.
+
+2. Figures and Imagery:
+   - fig-U1-1 (Topic 1.1, timeline, 780x610): Alt text present and descriptive. Passes measure-figure-text.mjs.
+   - fig-U1-2 (Topic 1.1, concept-map, 780x548): Alt text present and descriptive. Passes measure-figure-text.mjs.
+   - fig-U1-3 (Topic 1.2, diagram, 780x424): Alt text present and descriptive. Passes measure-figure-text.mjs.
+   - fig-U1-4 (Topic 1.2, table, 780x512): Alt text present and descriptive. Passes measure-figure-text.mjs.
+   - fig-U1-5 (Topic 1.3, table, 780x461): Alt text present and descriptive. Passes measure-figure-text.mjs.
+   - fig-U1-6 (Topic 1.3, diagram, 780x466): Alt text present and descriptive. Passes measure-figure-text.mjs.
+   - fig-U1-7 (index.mdx, banner illustration, webp): Alt text present and descriptive ("Shopkeepers, parents and trainee teachers stand together beside a cleared drain in a rain-soaked Sindh lane next to a school, one holding a written complaint, while pupils watch from the school gate.").
+   - Dark mode variants (.dark.svg) exist for all schematic SVGs.
+   - Palette complies with scripts/lib/figure-palette.mjs tokens; no color-only encoding.
+
+3. Tables and Layout:
+   - Markdown tables adhere to display: block; overflow-x: auto; width: fit-content per custom.css.
+   - Tables tested in worked examples and rubrics contain descriptive column headers.
+
+4. Page Components:
+   - `<PrintHandout />` present on all 3 topic files, unit-assessment, and index.
+   - `<TranslationStatusBadge status="untranslated" />` present on index.mdx.
+   - `<Glossary term="..." />` components resolve properly to bilingual definitions.
+
+5. Content Integrity & Em-Dashes:
+   - Zero em dashes (check-no-em-dash exits 0).
+   - Zero leaked answer keys outside bounded marking section (check-no-answer-keys exits 0).
+
+Result: Static accessibility fully passes.
