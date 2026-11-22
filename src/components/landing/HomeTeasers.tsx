@@ -31,7 +31,7 @@ export default function HomeTeasers({ c, locale, titles }: { c: Copy; locale: Lo
               <li key={t.code} className={s.teaserCard} onClickCapture={() => trackEvent('landing_click', { what: `teaser-${t.code}` })}>
                 <span className={s.teaserBadge}>{t.reason === 'top' ? c.teaser_top : c.teaser_new}</span>
                 <TeaserPlayer teaser={{ youtube_id: t.youtube_id, title: t.title, locale: t.locale }} locale={locale} />
-                <p className={s.teaserTitle}><strong>{t.code}</strong> {title}</p>
+                <p className={s.teaserTitle}><bdi className={s.teaserCode}>{t.code}</bdi>{title}</p>
                 <Link className={s.teaserLink} to={`/semester-${t.semester}/${t.code.toLowerCase()}/course-overview/`}>
                   {c.teaser_open}
                 </Link>

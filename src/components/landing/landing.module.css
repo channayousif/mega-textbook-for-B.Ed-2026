@@ -173,6 +173,7 @@
 .teaserCard { position: relative; display: flex; flex-direction: column; gap: 8px; margin: 0; background: var(--lp-surface); padding: 8px 8px 12px; border-radius: 18px; box-shadow: var(--lp-shadow); }
 .teaserBadge { position: absolute; z-index: 2; inset-block-start: 16px; inset-inline-start: 16px; background: var(--lp-amber); color: #123e43; font-family: var(--ifm-heading-font-family); font-weight: 800; font-size: .75rem; padding: 3px 10px; border-radius: 999px; pointer-events: none; }
 .teaserTitle { margin: 2px 4px 0; font-size: .92rem; line-height: 1.4; }
+.teaserCode { font-weight: 800; margin-inline-end: .4em; unicode-bidi: isolate; direction: ltr; display: inline-block; }
 .teaserLink { margin-inline: 4px; font-weight: 700; font-size: .9rem; }
 .teaserNote { margin-inline: 4px; font-size: .8rem; color: var(--ifm-color-emphasis-700); }
 :global(html[dir='rtl']) .teaserTitle { line-height: 2.2; }
