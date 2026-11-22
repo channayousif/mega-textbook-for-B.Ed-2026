@@ -2,7 +2,7 @@
 id: crew-gcce-400-u01-review_en
 title: crew review_en GCCE-400 unit 1
 stage: misc
-date: 2026-11-23
+date: 2026-11-22
 surface: agent
 model: agy
 feature: gcce-400
@@ -13,32 +13,33 @@ labels: ["crew", "agy", "review_en"]
 links:
   spec: specs/content/gcce-400/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f.json
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/assessment-independent.md
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/manifest.json
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/source-verification.md
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/summary.md
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-bloom-bands.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-concept-graph.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-content.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-depth-gate.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-docs-sync.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-figures.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-no-answer-keys.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-no-em-dash.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-source-floor.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-svg-style.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/input-verification.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/measure-figure-text.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/render-review.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/static-accessibility.txt
-  - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/validate-content.txt
-  - specs/content/gcce-400/tasks.md
+ - history/prompts/gcce-400/crew-gcce-400-u01-review_en.misc.prompt.md
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f.json
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/assessment-independent.md
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-content.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-source-floor.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/check-svg-style.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/input-verification.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/measure-figure-text.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/render-review.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/static-accessibility.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/logs/validate-content.txt
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/manifest.json
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/source-verification.md
+ - specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f/summary.md
+ - specs/content/gcce-400/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -69,23 +70,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Conducted independent G3 English review for GCCE-400 Unit 1. Evaluated all required rubrics (authority, sources, coverage, assessment, accessibility, readability, pedagogy). Independently solved and verified 10 MCQs, 10 RRQs, and 5 ERQs. Verified all 12 citations, confirming the Kymlicka & Norman (2000) attribution and current 1973 constitutional currency. Determined that git diff between deployed SHA fa037af and HEAD ae721439e is non-empty, so recorded render-review as unavailable per brief instructions. Prepared manifest, logged all deterministic gate checks, validated report JSON, and recorded the advisory tracker row in tasks.md without certification.
+Conducted independent G3 English review of GCCE-400 Unit 1, generated full evidence logs and validated escalation report, updated the tracker advisory row, and committed changes locally.
 
 ## Outcome
 
-- Impact: G3 English advisory review for GCCE-400 Unit 1 by agy.
-- Tests: `validateReport` passed (structurally valid: escalate); all 14 content gates passed via `npm run check:content`.
-- Files: 22 files created/updated under `specs/content/gcce-400/reviews/unit-01/G3/`, `specs/content/gcce-400/tasks.md`, and this prompt record.
-- Disposition: escalate (advisory only; G3 remains open and unsigned; no certification).
+- Impact: review_en for GCCE-400 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: G3 English evidence report JSON (`29bfa88a-9bb9-423a-b2f1-07e612294e2f.json`), prepared manifest, independent assessment solve, source verification, execution logs, and advisory tracker row in `specs/content/gcce-400/tasks.md`.
-- Decisions the team must respect: G3 remains open (`▢`) with status advisory escalation; no certification or reviewer initials claimed.
-- Pending / next owner: Production deployment to update live site so that `render-inspect.mjs` can run against deployed candidate bytes, or separate qualified reviewer / signing host when enabled.
+- Shipped / changed: Conducted independent G3 English review of GCCE-400 Unit 1, generated full evidence logs and validated escalation report, updated the tracker advisory row, and committed changes locally.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All content, sources, coverage, and assessment items passed review.
-  - Kymlicka & Norman (2000) attribution and 1973 constitutional currency confirmed.
-  - Live site diff against deployed-sha fa037af was non-empty (index.mdx and fig-U1-7.webp differ).
+  - Live site SHA fa037af differs from candidate HEAD ae721439e on index.mdx and fig-U1-7.webp.
+  - Render review recorded as unavailable, leading to advisory escalation without certifying G3.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
