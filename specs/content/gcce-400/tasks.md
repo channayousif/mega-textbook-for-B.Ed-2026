@@ -36,7 +36,7 @@ English-only authoring from the approved Unit 1, Unit 2 and Unit 5 content-spec 
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and five new glossary Urdu definitions are authored and need checking |
 | Unit 2 | G6 assets | ▣ | | Four English schematic SVGs (fig-U2-1 to fig-U2-4) placed with derived dark variants; no .ur.svg yet; banner fig-U2-5 prompt-only for the illustrate job |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-05/G2/20261122T123558274Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-05/G2/20261122T124257339Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the Lawyers' Movement timeline against Batool et al. (2019) and constitutional articles against the current text (sources/unit-05.md) |
 | Unit 5 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
