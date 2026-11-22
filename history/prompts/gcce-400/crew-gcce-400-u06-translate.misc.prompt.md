@@ -16,39 +16,39 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/gcce-400/crew-gcce-400-u06-translate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/unit-teacher-notes.mdx
-  - specs/content/gcce-400/tasks.md
-  - specs/content/gcce-400/reviews/unit-06/G2/20261122T161030644Z-gates.json
-  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-bloom-bands.txt
-  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-concept-graph.txt
-  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-depth-gate.txt
-  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-docs-sync.txt
-  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-figures.txt
-  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-no-answer-keys.txt
-  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-no-em-dash.txt
-  - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/validate-content.txt
-  - specs/content/gcce-400/translations/unit-06/check-content-parity.txt
-  - specs/content/gcce-400/translations/unit-06/handoff.md
-  - static/img/figures/gcce-400/unit-06/fig-U6-1.ur.dark.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-1.ur.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-2.ur.dark.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-2.ur.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-3.ur.dark.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-3.ur.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-4.ur.dark.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-4.ur.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-5.ur.dark.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-5.ur.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-6.ur.dark.svg
-  - static/img/figures/gcce-400/unit-06/fig-U6-6.ur.svg
+ - history/prompts/gcce-400/crew-gcce-400-u06-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-06/unit-teacher-notes.mdx
+ - specs/content/gcce-400/reviews/unit-06/G2/20261122T161030644Z-gates.json
+ - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-06/G2/logs-20261122T161030644Z/validate-content.txt
+ - specs/content/gcce-400/tasks.md
+ - specs/content/gcce-400/translations/unit-06/check-content-parity.txt
+ - specs/content/gcce-400/translations/unit-06/handoff.md
+ - static/img/figures/gcce-400/unit-06/fig-U6-1.ur.dark.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-1.ur.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-2.ur.dark.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-2.ur.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-3.ur.dark.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-3.ur.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-4.ur.dark.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-4.ur.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-5.ur.dark.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-5.ur.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-6.ur.dark.svg
+ - static/img/figures/gcce-400/unit-06/fig-U6-6.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -86,32 +86,38 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u06-author, author, claude_crew) Branch base is 4823107ca; origin/main advanced to 430e60570 (Unit 2 merged) while this job ran, so merge main before opening the PR (a plain `git diff origin/main..HEAD` shows Unit 2 as deleted).
 - (gcce-400-u06-author, author, claude_crew) G3 en-review stays open; the reviewer should confirm the CoE handbook attribution (read via an Internet Archive snapshot because rm.coe.int returns HTTP 403 here), the Shair et al. (2022) figures and the Pakistani examples in `specs/content/gcce-400/sources/unit-06.md`.
 
+## Feedback from the previous attempt
+npm run check:content has 2 finding(s) that main does not have:
+✗ Pipeline gate failed with 1 finding(s):
+- GCCE-400 Unit 6 (docs/semester-4/gcce-400/unit-06): G2 en-draft: stale or incomplete input manifest
+
+
 ## Response snapshot
 
-Translated GCCE-400 Unit 6 into its complete Urdu mirror at G4, verified localized SVG schematics and variants, refreshed stale G2 gate evidence after adding translation handoff files, verified structural parity across all 6 files, and passed all 14 content gates cleanly.
+Verified GCCE-400 Unit 6 Urdu mirror parity and figures, refreshed the stale G2 gate evidence caused by translation handoff files, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: translate for GCCE-400 Unit 6 by agy.
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: translate for GCCE-400 Unit 6 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 31 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: Adding translation handoff files binds to the unit's G2 input manifest, requiring prepare-gate-evidence refresh.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated GCCE-400 Unit 6 into its complete Urdu mirror at G4, verified localized SVG schematics and variants, refreshed G2 gate evidence for Unit 6, and passed all 14 content gates cleanly.
+- Shipped / changed: Verified GCCE-400 Unit 6 Urdu mirror parity and figures, refreshed the stale G2 gate evidence caused by translation handoff files, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - `translation_status` remains `draft` across English and Urdu indices pending independent G5 review.
-  - `render-inspect.mjs` was omitted per crew brief resource restrictions; G5 should verify Nastaliq shaping at 360px and A4 print layout.
-  - Eight authored concept labels and proposed technology terms are documented in `specs/content/gcce-400/translations/unit-06/handoff.md`.
+  - Rendered Urdu inspection (Nastaliq shaping, 360px and A4 print) was omitted per brief server restrictions and should be validated during G5.
+  - Proposed technology terms and glossary pairs are documented in `specs/content/gcce-400/translations/unit-06/handoff.md`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
