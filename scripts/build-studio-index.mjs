@@ -5,7 +5,9 @@
 //
 // Shape: { "<course>/<unit>/<topic>": { "en": [item...], "ur": [item...] }, "teasers": { "<COURSE-CODE>": teaser } }
 // item = { kind, part?, title, audience, alt, src?, url? }   (src = site path of a text asset)
-// teaser = { youtube_id, title, locale }: Feature 030 (T038), only teasers the owner made public.
+// teaser = { youtube_id, title, locale, semester, published_at, views }: Feature 030 (T038), only teasers
+// the owner made public; views from specs/studio/teasers/teaser-stats.json (teaser-stats.mjs).
+// homeTeasers = [{ code, ...teaser, reason: 'top' | 'latest' }]: the home page's "Courses in 30 seconds".
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -42,33 +44,57 @@ export function buildStudioIndex(manifests) {
  * Only state `public`: an uploaded-private, checked or owner-approved Short is still private on
  * YouTube and must never appear on the site. Urdu is preferred (teasers are Urdu-first, D-2026-0083).
  */
-export function buildTeaserIndex(ledger, loadScript) {
+export function buildTeaserIndex(ledger, loadScript, stats = {}) {
   const out = {};
   for (const i of ledger?.items ?? []) {
     if (i.state !== 'public' || !/^[A-Za-z0-9_-]{11}$/.test(i.youtube_id ?? '')) continue;
     const script = loadScript(i.id);
     if (!script?.course_code) continue; // the licence teaser has no course card or overview
     if (out[script.course_code] && out[script.course_code].locale === 'ur' && i.locale !== 'ur') continue;
-    out[script.course_code] = { youtube_id: i.youtube_id, title: script.locales?.[i.locale]?.youtube_title ?? script.title?.[i.locale] ?? script.course_code, locale: i.locale };
+    out[script.course_code] = {
+      youtube_id: i.youtube_id,
+      title: script.locales?.[i.locale]?.youtube_title ?? script.title?.[i.locale] ?? script.course_code,
+      locale: i.locale,
+      semester: script.semester ?? null,
+      published_at: i.published_at ?? null,
+      views: stats.videos?.[i.youtube_id]?.views ?? 0,
+    };
   }
   return out;
+}
+
+/**
+ * The home page's four teasers (owner, 2026-11-22): the `top` most watched, then the `latest`
+ * newest by published_at that are not already picked. Ties in views go to the newer one. Only
+ * teasers with an overview route (a semester) qualify.
+ */
+export function pickHomeTeasers(teasers, { top = 2, latest = 2 } = {}) {
+  const all = Object.entries(teasers).filter(([, t]) => t.semester).map(([code, t]) => ({ code, ...t }));
+  const newer = (a, b) => (b.published_at ?? '').localeCompare(a.published_at ?? '') || a.code.localeCompare(b.code);
+  const picked = [...all].filter((t) => t.views > 0).sort((a, b) => b.views - a.views || newer(a, b)).slice(0, top).map((t) => ({ ...t, reason: 'top' }));
+  const taken = new Set(picked.map((t) => t.code));
+  const fresh = [...all].filter((t) => !taken.has(t.code)).sort(newer).slice(0, latest + (top - picked.length)).map((t) => ({ ...t, reason: 'latest' }));
+  return [...picked, ...fresh];
 }
 
 function readTeasers(root) {
   const dir = join(root, 'specs', 'studio', 'teasers');
   const ledger = join(dir, 'media-teasers.json');
   if (!existsSync(ledger)) return {};
+  const statsFile = join(dir, 'teaser-stats.json');
+  const stats = existsSync(statsFile) ? JSON.parse(readFileSync(statsFile, 'utf8')) : {};
   return buildTeaserIndex(JSON.parse(readFileSync(ledger, 'utf8')), (id) => {
     const f = join(dir, `${id}.json`);
     return existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : null;
-  });
+  }, stats);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const manifests = findManifests(ROOT).map((f) => JSON.parse(readFileSync(f, 'utf8')));
   const index = buildStudioIndex(manifests);
   index.teasers = readTeasers(ROOT);
+  index.homeTeasers = pickHomeTeasers(index.teasers);
   mkdirSync(join(ROOT, 'static'), { recursive: true });
   writeFileSync(join(ROOT, 'static', 'studio-index.json'), `${JSON.stringify(index)}\n`);
-  console.log(`build-studio-index: ${Object.keys(index).length - 1} topic(s) with placed Studio items, ${Object.keys(index.teasers).length} public teaser(s)`);
+  console.log(`build-studio-index: ${Object.keys(index).length - 2} topic(s) with placed Studio items, ${Object.keys(index.teasers).length} public teaser(s), home: ${index.homeTeasers.map((t) => `${t.code} (${t.reason})`).join(', ') || 'none'}`);
 }

@@ -22,6 +22,7 @@ import StepsEdge from '@site/src/components/landing/StepsEdge';
 import ClimbArt from '@site/src/components/landing/ClimbArt';
 import s from '@site/src/components/landing/landing.module.css';
 import NewsTicker from '@site/src/components/NewsTicker';
+import HomeTeasers from '@site/src/components/landing/HomeTeasers';
 
 type Stats = { courses: number; units: number; urduUnits: number; figures: number };
 type Locale = 'en' | 'ur';
@@ -149,6 +150,8 @@ export default function Home(): React.ReactElement {
           </div>
           <StepsEdge rtl={rtl} height={rtl ? 308 : 180} />
         </section>
+
+        <HomeTeasers c={c} locale={locale} titles={TITLES} />
 
         <section className={clsx(s.wrap, s.sec)} id="climb">
           <p className={s.eye}>{c.e_climb}</p>

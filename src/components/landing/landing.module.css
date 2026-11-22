@@ -167,6 +167,17 @@
 .chev { transition: transform var(--motion-fast); flex: none; }
 .faq[open] .chev { transform: rotate(180deg); }
 
+/* Courses in 30 seconds: four teaser Shorts under the hero (owner, 2026-11-22) */
+.teasers { padding-block: 56px 64px; }
+.teaserRow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.teaserCard { position: relative; display: flex; flex-direction: column; gap: 8px; margin: 0; background: var(--lp-surface); padding: 8px 8px 12px; border-radius: 18px; box-shadow: var(--lp-shadow); }
+.teaserBadge { position: absolute; z-index: 2; inset-block-start: 16px; inset-inline-start: 16px; background: var(--lp-amber); color: #123e43; font-family: var(--ifm-heading-font-family); font-weight: 800; font-size: .75rem; padding: 3px 10px; border-radius: 999px; pointer-events: none; }
+.teaserTitle { margin: 2px 4px 0; font-size: .92rem; line-height: 1.4; }
+.teaserLink { margin-inline: 4px; font-weight: 700; font-size: .9rem; }
+.teaserNote { margin-inline: 4px; font-size: .8rem; color: var(--ifm-color-emphasis-700); }
+:global(html[dir='rtl']) .teaserTitle { line-height: 2.2; }
+:global(html[dir='rtl']) .teaserBadge { font-family: 'Noto Nastaliq Urdu', serif; font-weight: 700; line-height: 2; padding-block: 0; }
+
 /* Closing panel with the climb */
 .final { position: relative; overflow: hidden; min-height: 294px; background: var(--lp-teal); color: #fff; border-radius: 28px; padding: 44px; }
 .finalArt { position: absolute; inset-block-end: 0; inset-inline-end: 0; width: min(560px, 50%); }
@@ -180,6 +191,7 @@
   .climb, .g4, .counts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .g3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .riser { display: none; }
+  .teaserRow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .count0, .count1, .count2 { padding-block-start: 0; }
 }
 @media (max-width: 760px) {
@@ -191,6 +203,10 @@
   .heroCard { position: relative; inset: auto; margin-block-start: 12px; }
   .climb, .g3, .g4 { grid-template-columns: minmax(0, 1fr); }
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .teasers { padding-block: 40px 48px; }
+  /* Phones: one swipeable row; the row scrolls, never the page. */
+  .teaserRow { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-block-end: 8px; overscroll-behavior-x: contain; }
+  .teaserCard { flex: 0 0 62%; scroll-snap-align: start; }
   .final { padding: 28px 22px 200px; }
   .finalArt { width: 100%; }
   .countN { font-size: 2.5rem; }
