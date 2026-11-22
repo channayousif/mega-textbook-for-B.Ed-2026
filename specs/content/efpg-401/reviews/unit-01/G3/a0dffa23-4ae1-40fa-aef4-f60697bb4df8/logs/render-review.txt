@@ -1,0 +1,29 @@
+render-review: UNAVAILABLE (not run against the live site)
+Attempted at: 2026-11-22T08:38:43Z
+Host browser inspection command that would have run:
+  scripts/heavy.sh node scripts/render-inspect.mjs EFPG-401 1 --base https://textbook.com.pk --no-pdf
+
+Reason: the crew brief permits live inspection only when the deployed build's unit bytes match HEAD.
+deployed SHA: f946ee78998790458db839362579aa1288341ebb
+HEAD:         f17d30e9e8f0787b2e064ecceda85e788cdda6b7
+
+git diff --quiet $DEPLOYED HEAD -- docs/semester-3/efpg-401/unit-01/ static/img/figures/efpg-401/unit-01/ ; echo exit=$?
+exit=1
+
+Changed paths between deployed SHA and HEAD:
+M	docs/semester-3/efpg-401/unit-01/index.mdx
+M	docs/semester-3/efpg-401/unit-01/topic-01.mdx
+M	docs/semester-3/efpg-401/unit-01/topic-02.mdx
+M	docs/semester-3/efpg-401/unit-01/topic-03.mdx
+M	docs/semester-3/efpg-401/unit-01/topic-04.mdx
+A	static/img/figures/efpg-401/unit-01/fig-U1-10.webp
+A	static/img/figures/efpg-401/unit-01/fig-U1-11.webp
+A	static/img/figures/efpg-401/unit-01/fig-U1-12.webp
+A	static/img/figures/efpg-401/unit-01/fig-U1-13.webp
+A	static/img/figures/efpg-401/unit-01/fig-U1-9.webp
+
+Conclusion: the live site at https://textbook.com.pk does not render this unit's current English
+bytes or figure assets, so it is not a valid review input. render-review recorded as unavailable.
+Accessibility (rendered headings, alt text in place, small-screen layout, A4 print, figure clipping)
+remains unverified. Changed images may also be served stale for up to 30 days, so a missing or
+mismatched asset would be unverified, not a content defect.
