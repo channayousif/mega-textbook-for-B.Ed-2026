@@ -8,7 +8,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | Introduction to Civics and Citizenship | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; six schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
+| 1 | Introduction to Civics and Citizenship | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-22; six schematic SVGs placed with dark variants; banner fig-U1-7 placed; G3 and Urdu remain open |
 | 2 | State, Government and Civil Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 3 | Rights and Responsibilities | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; four schematic SVGs placed with dark variants; G3 and Urdu remain open |
 | 4 | Ethics and Community Engagement | ✓ | ☐ | ▣ | ☐ | placed (EN) | English authored 2026-11-22; five schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
@@ -24,11 +24,11 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-01/G2/20261122T121830940Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-01/G2/20261122T171412664Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the kymlicka-norman-2000 attribution and constitutional currency (sources/unit-01.md) |
 | Unit 1 | G4 ur-translation | ▢ | | Complete six-file draft Urdu mirror and six localized SVG pairs (with derived dark twins) prepared from English 6c04d9e21; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-01/handoff.md |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
-| Unit 1 | G6 assets | ▣ | | Six English schematic SVGs (fig-U1-1 to fig-U1-6) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U1-7 prompt-only for the illustrate job |
+| Unit 1 | G6 assets | ▣ | | Six schematic SVG pairs (fig-U1-1 to fig-U1-6) with derived dark variants placed; banner fig-U1-7 placed in English and Urdu index |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-02/G2/20261122T133248694Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the Sindh Local Government Act example (street lighting as a local function) against the Act's schedule, and the constitutional articles against the current text (sources/unit-02.md) |
