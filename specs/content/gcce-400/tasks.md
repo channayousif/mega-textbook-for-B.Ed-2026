@@ -24,7 +24,7 @@ English-only authoring from the approved Unit 1 content-spec. No publication or 
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ▣ | | English draft authored at 6c04d9e21. G2 evidence blocked: every draft gate passes except validate:content, which needs a GCCE-400 entry in catalog/course-guides.json and a Semester 4 guide PDF (only `4TH SEMESTER.docx` exists); catalog work is an owner or lead action. Failing run logs: specs/content/gcce-400/reviews/unit-01/G2/logs-20261122T061036582Z |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-01/G2/20261122T064410267Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the kymlicka-norman-2000 attribution and constitutional currency (sources/unit-01.md) |
 | Unit 1 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
