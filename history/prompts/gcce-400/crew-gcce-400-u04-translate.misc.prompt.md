@@ -22,6 +22,15 @@ files:
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-04/topic-02.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-04/unit-assessment.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-04/unit-teacher-notes.mdx
+ - specs/content/gcce-400/reviews/unit-04/G2/20261122T144142079Z-gates.json
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261122T144142079Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261122T144142079Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261122T144142079Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261122T144142079Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261122T144142079Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261122T144142079Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261122T144142079Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261122T144142079Z/validate-content.txt
  - specs/content/gcce-400/tasks.md
  - specs/content/gcce-400/translations/unit-04/check-content-parity.txt
  - specs/content/gcce-400/translations/unit-04/handoff.md
@@ -80,7 +89,7 @@ Translated GCCE-400 Unit 4 into its complete Urdu mirror at G4, authored 5 local
 
 - Impact: translate for GCCE-400 Unit 4 by antigravity.
 - Tests: npm run check:content passed in the job worktree before commit.
-- Files: 19 file(s), listed above.
+- Files: 28 file(s), listed above.
 - Next prompts: independent G5 Urdu review.
 - Reflection: none.
 
