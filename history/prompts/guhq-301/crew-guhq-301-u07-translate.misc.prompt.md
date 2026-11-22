@@ -20,6 +20,15 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/index.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/topic-01.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-07/unit-assessment.mdx
+  - specs/content/guhq-301/reviews/unit-07/G2/20261122T040849203Z-gates.json
+  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-bloom-bands.txt
+  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-concept-graph.txt
+  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-depth-gate.txt
+  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-docs-sync.txt
+  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-figures.txt
+  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-no-answer-keys.txt
+  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/check-no-em-dash.txt
+  - specs/content/guhq-301/reviews/unit-07/G2/logs-20261122T040849203Z/validate-content.txt
   - specs/content/guhq-301/tasks.md
   - specs/content/guhq-301/translations/unit-07/check-content-parity.txt
   - specs/content/guhq-301/translations/unit-07/handoff.md
@@ -74,7 +83,7 @@ Translated GUHQ-301 Unit 7 into its complete three-page Urdu mirror at G4 with t
 
 - Impact: translate for GUHQ-301 Unit 7 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before committing.
-- Files: 13 file(s), listed above.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
