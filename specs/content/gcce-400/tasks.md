@@ -11,7 +11,7 @@ English-only authoring from the approved Unit 1, Unit 2 and Unit 6 content-spec 
 | 1 | Introduction to Civics and Citizenship | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; six schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 2 | State, Government and Civil Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 3 | Rights and Responsibilities | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
-| 4 | Ethics and Community Engagement | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; five schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
+| 4 | Ethics and Community Engagement | ✓ | ☐ | ▣ | ☐ | placed (EN) | English authored 2026-11-22; five schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 5 | Advocacy and Activism | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; six schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 6 | Digital Citizenship and Technology | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; six schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 7 | Diversity, Inclusion and Social Justice | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
@@ -36,9 +36,9 @@ English-only authoring from the approved Unit 1, Unit 2 and Unit 6 content-spec 
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and five new glossary Urdu definitions are authored and need checking |
 | Unit 2 | G6 assets | ▣ | | Four English schematic SVGs (fig-U2-1 to fig-U2-4) placed with derived dark variants; no .ur.svg yet; banner fig-U2-5 prompt-only for the illustrate job |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-04/G2/20261122T114158475Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-04/G2/20261122T144142079Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the youniss-levine-2009 title-level use, the oecd-2011-social-cohesion definition against the report, and constitutional currency of Articles 16, 19 and 25 (sources/unit-04.md) |
-| Unit 4 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
+| Unit 4 | G4 ur-translation | ▢ | | Complete five-file draft Urdu mirror and five localized SVG pairs (with derived dark twins) prepared from English 7953d1221; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-04/handoff.md |
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and the five new glossary Urdu definitions are authored and need checking |
 | Unit 4 | G6 assets | ▣ | | Five English schematic SVGs (fig-U4-1 to fig-U4-5) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U4-6 prompt-only for the illustrate job |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
