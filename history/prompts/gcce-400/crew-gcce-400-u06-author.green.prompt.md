@@ -4,12 +4,12 @@ title: crew author GCCE-400 unit 6
 stage: misc
 date: 2026-11-22
 surface: agent
-model: claude
+model: claude_crew
 feature: gcce-400
 branch: crew/gcce-400-u06-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/gcce-400/content-spec.md
   ticket: null
@@ -23,6 +23,7 @@ files:
  - docs/semester-4/gcce-400/unit-06/unit-assessment.mdx
  - docs/semester-4/gcce-400/unit-06/unit-teacher-notes.mdx
  - glossary.json
+ - history/prompts/gcce-400/crew-gcce-400-u06-author.green.prompt.md
  - specs/content/gcce-400/concepts/unit-06.md
  - specs/content/gcce-400/coverage/unit-06.md
  - specs/content/gcce-400/figures/unit-06.banner.md
@@ -86,33 +87,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored GCCE-400 Unit 6 (Digital Citizenship and Technology) as three per-topic cycles, a 10/10/5 unit assessment, teacher notes, six placed schematic SVGs with derived dark variants and a banner prompt, plus coverage, sources, concepts, bound source notes and seven new glossary entries. Recorded the G2 gate evidence and ticked the tracker row; all 14 content gates pass.
+Authored GCCE-400 Unit 6 (Digital Citizenship and Technology) as three per-topic cycles with a 10/10/5 assessment, teacher notes, six placed schematic SVGs plus a banner prompt, coverage/sources/concepts, bound source notes, glossary entries and G2 gate evidence, with all 14 content gates passing.
 
 ## Outcome
 
-- ✅ Impact: author for GCCE-400 Unit 6 by claude (attempt 1).
-- 🧪 Tests: npm run check:content passed in the job worktree (all 14 content gates).
-- 📁 Files: 38 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: author for GCCE-400 Unit 6 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 39 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: GCCE-400 Unit 6 English draft at the per-topic standard, with six placed schematic figures (fig-U6-1 to fig-U6-6) and a prompt-only banner (fig-U6-7), coverage, sources, concepts, bound source notes and G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything. The CoE handbook was read through an Internet Archive snapshot because rm.coe.int returns HTTP 403 from this host; the bound note records this.
+- Shipped / changed: Authored GCCE-400 Unit 6 (Digital Citizenship and Technology) as three per-topic cycles with a 10/10/5 assessment, teacher notes, six placed schematic SVGs plus a banner prompt, coverage/sources/concepts, bound source notes, glossary entries and G2 gate evidence, with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The branch base is 4823107ca; origin/main advanced to 430e60570 (Unit 2 merged) while this job ran, so `git diff origin/main..HEAD` also shows Unit 2 as deleted. Merge main before opening the PR.
-  - G3 en-review stays open; the tracker note asks the reviewer to confirm the CoE attribution, the Shair et al. (2022) figures and the Pakistani examples in `sources/unit-06.md`.
-  - Banner `fig-U6-7` remains prompt-only for the illustrate job, and no `.ur.svg` figures exist yet because the Urdu mirror is a separate job.
-  - Seven glossary entries were added (digital platform, digital civic engagement, cyber ethics, misinformation, disinformation, digital divide, digital literacy); their Urdu definitions are authored and need G5 checking.
+  - Branch base is 4823107ca; origin/main advanced to 430e60570 (Unit 2 merged) while this job ran, so merge main before opening the PR (a plain `git diff origin/main..HEAD` shows Unit 2 as deleted).
+  - G3 en-review stays open; the reviewer should confirm the CoE handbook attribution (read via an Internet Archive snapshot because rm.coe.int returns HTTP 403 here), the Shair et al. (2022) figures and the Pakistani examples in `specs/content/gcce-400/sources/unit-06.md`.
+  - Banner `fig-U6-7` is prompt-only for the illustrate job and no `.ur.svg` exists yet (Urdu mirror is a separate job); the seven new glossary entries' Urdu definitions are authored and need G5 checking.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 0 earlier attempt(s); first attempt on this unit.
-- Graders run and results (PASS/FAIL): check:content PASS.
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
