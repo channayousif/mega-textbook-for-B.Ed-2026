@@ -1453,7 +1453,7 @@
    "id": "gqur-300",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "approved",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -1478,6 +1478,12 @@
      "by": "Claude QG3",
      "date": "2026-11-22",
      "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
     }
    },
    "clips": [
@@ -1593,20 +1599,25 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-21T20:30:13.676Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:27.601Z"
     }
    ],
    "script_sha256": "4ddaac6c0bd0508f8eb56c7497f4e034f0f63e2848554ae302be4739a05865f2",
    "encoded_file": "~/studio-media/teasers/gqur-300/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/gqur-300/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "uqt3LR8XIW0",
-   "uploaded_at": "2026-11-21T20:27:29Z"
+   "uploaded_at": "2026-11-21T20:27:29Z",
+   "scheduled_publish_at": "2026-11-22T10:00:00+05:00"
   },
   {
    "key": "efmp-305-ur",
    "id": "efmp-305",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "approved",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -1631,6 +1642,12 @@
      "by": "Claude QG3",
      "date": "2026-11-22",
      "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
     }
    },
    "clips": [
@@ -1761,20 +1778,25 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-21T20:30:13.884Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:27.712Z"
     }
    ],
    "script_sha256": "fe5a90111cf86e67c585a81489a042442d92341efc3737e02cd01726b375cffb",
    "encoded_file": "~/studio-media/teasers/efmp-305/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/efmp-305/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "o-qh7iMDPA4",
-   "uploaded_at": "2026-11-21T20:28:02Z"
+   "uploaded_at": "2026-11-21T20:28:02Z",
+   "scheduled_publish_at": "2026-11-22T11:00:00+05:00"
   },
   {
    "key": "geng-301-ur",
    "id": "geng-301",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "approved",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -1799,6 +1821,12 @@
      "by": "Claude QG3",
      "date": "2026-11-22",
      "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
     }
    },
    "clips": [
@@ -1929,20 +1957,25 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-21T20:30:14.141Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:27.814Z"
     }
    ],
    "script_sha256": "c2a741e4ac8a93fd40d1410507a8f5d08e018af18a3b2e881836c2e7d1aa4c3f",
    "encoded_file": "~/studio-media/teasers/geng-301/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/geng-301/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "M-9XdegQL-0",
-   "uploaded_at": "2026-11-21T20:28:28Z"
+   "uploaded_at": "2026-11-21T20:28:28Z",
+   "scheduled_publish_at": "2026-11-22T12:00:00+05:00"
   },
   {
    "key": "gpks-402-ur",
    "id": "gpks-402",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "approved",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -1967,6 +2000,12 @@
      "by": "Claude QG3",
      "date": "2026-11-22",
      "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
     }
    },
    "clips": [
@@ -2112,20 +2151,25 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-21T20:30:14.301Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:27.927Z"
     }
    ],
    "script_sha256": "00ebd7d3956c1250812acb0d016aebf3a0d58212688f1a866d1c224c9658610a",
    "encoded_file": "~/studio-media/teasers/gpks-402/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/gpks-402/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "rn5h_utUprg",
-   "uploaded_at": "2026-11-21T20:28:59Z"
+   "uploaded_at": "2026-11-21T20:28:59Z",
+   "scheduled_publish_at": "2026-11-22T13:00:00+05:00"
   },
   {
    "key": "gqur-301-ur",
    "id": "gqur-301",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "approved",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -2150,6 +2194,12 @@
      "by": "Claude QG3",
      "date": "2026-11-22",
      "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
     }
    },
    "clips": [
@@ -2265,20 +2315,25 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-21T20:30:14.483Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:28.187Z"
     }
    ],
    "script_sha256": "5f7f83a7f8e869fdd3479e2ad9e9b33320f74320459c51443e98740827468a03",
    "encoded_file": "~/studio-media/teasers/gqur-301/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/gqur-301/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "kNFsqdPHyVU",
-   "uploaded_at": "2026-11-21T20:29:28Z"
+   "uploaded_at": "2026-11-21T20:29:28Z",
+   "scheduled_publish_at": "2026-11-22T14:00:00+05:00"
   },
   {
    "key": "gsos-301-ur",
    "id": "gsos-301",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "approved",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -2303,6 +2358,12 @@
      "by": "Claude QG3",
      "date": "2026-11-22",
      "notes": "list_videos: private, processed, title and description intact; teaser playlist and thumbnail set"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "owner: \"approved, schedule them for publication at 1 hour intervals\""
     }
    },
    "clips": [
@@ -2418,13 +2479,18 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-21T20:30:14.664Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-22T04:32:28.300Z"
     }
    ],
    "script_sha256": "51e453131e881b86f69274c73bcdf5c4eaf9e3de4bba8dd6176faeffd4f314f2",
    "encoded_file": "~/studio-media/teasers/gsos-301/ur/teaser.youtube.mp4",
    "thumbnail_file": "~/studio-media/teasers/gsos-301/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "MYeopBflsA0",
-   "uploaded_at": "2026-11-21T20:30:00Z"
+   "uploaded_at": "2026-11-21T20:30:00Z",
+   "scheduled_publish_at": "2026-11-22T15:00:00+05:00"
   }
  ]
 }
