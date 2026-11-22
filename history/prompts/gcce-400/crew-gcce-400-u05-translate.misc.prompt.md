@@ -24,7 +24,25 @@ files:
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/unit-assessment.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/unit-teacher-notes.mdx
  - specs/content/gcce-400/figures/unit-05.md
+ - specs/content/gcce-400/reviews/unit-05/G2/20261122T152925023Z-gates.json
+ - specs/content/gcce-400/reviews/unit-05/G2/20261122T154535059Z-gates.json
  - specs/content/gcce-400/reviews/unit-05/G2/20261122T154837329Z-gates.json
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/validate-content.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154535059Z/validate-content.txt
  - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-bloom-bands.txt
  - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-concept-graph.txt
  - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-depth-gate.txt
@@ -50,10 +68,6 @@ files:
  - static/img/figures/gcce-400/unit-05/fig-U5-6.ur.svg
 tests:
  - npm run check:content
- - npm run figures:variants:check
- - scripts/heavy.sh node scripts/measure-figure-text.mjs <six .ur.svg> exits 0
- - Temporary reviewed flip of both index.mdx: all gates pass except the two expected G4/G5 tracker findings, then both files reverted to draft
- - Supplemental parity self-check: file set, heading vectors, component counts, numbered items, MCQ key and option order
 ---
 
 ## Prompt
@@ -88,31 +102,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u05-author, author, agy) G3 English review and G4 Urdu translation remain open as separate jobs; banner fig-U5-7 is prompt-only for the illustrate pass.
 - (gcce-400-u05-author, author, agy) Reviewers should confirm the Lawyers' Movement timeline against Batool et al. (2019) and the cited constitutional provisions against the latest text.
 
+
 ## Response snapshot
 
-Translated GCCE-400 Unit 5 into a complete six-file Urdu mirror with six RTL-mirrored `.ur.svg` figures and derived dark twins, bank-bound `key_terms`, a G4 tracker note and handoff, and refreshed G2 gate evidence, all committed with `translation_status` left at `draft`.
+Translated GCCE-400 Unit 5 (Advocacy and Activism) into a complete six-file academic-plain Urdu mirror with six RTL-mirrored `.ur.svg` figures and dark twins, bank-bound key_terms, refreshed G2 evidence, a G4 tracker note and translator handoff, all committed on `crew/gcce-400-u05-translate` with translation_status left at draft.
 
 ## Outcome
 
-- Impact: complete draft Urdu mirror of GCCE-400 Unit 5 (Advocacy and Activism) with six localized schematic figure pairs.
-- Tests: `npm run check:content` all 14 gates PASS at draft; the reviewed flip passed every gate except the two expected G4/G5 pipeline findings and both indexes were reverted; `figures:variants:check` PASS; `measure-figure-text` exit 0 on all six `.ur.svg`.
-- Files: 33 file(s), listed above.
-- Next prompts: independent G5 Urdu review; rendered Urdu inspection at 360px and A4 print.
-- Reflection: the unit's six key concepts are absent from `terminology.csv`, so `key_terms` binds only the six banked terms that occur and the concepts are recorded as owner proposals rather than silently banked. A caption in `fig-U5-2.ur.svg` and `fig-U5-6.ur.svg` needed its x pulled left to clear the wordmark. A self-review pass then replaced a set of mistranslations (sensationalism rendered as the word for "beautiful", resilience as "full", a non-word for "scattered", flood repairs as "comfort", brick kilns, the newly elected parliament) in the mirror and in fig-U5-2.
+- Impact: translate for GCCE-400 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 50 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: the six-file Urdu mirror under `i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/`, six `.ur.svg` plus six derived `.ur.dark.svg` under `static/img/figures/gcce-400/unit-05/`, the G4 and G6 tracker notes, the figure-manifest note, the translator handoff at `specs/content/gcce-400/translations/unit-05/handoff.md`, and refreshed G2 gate evidence.
-- Decisions the team must respect: `translation_status` is `draft` on both index files and G4/G5 tracker rows stay ▢; the frozen `terminology.csv` and `glossary.json` were not edited; no G3/G5 certification, reviewer identity or publication authority was fabricated; no em dash anywhere; no `npm run build`, dev server or Playwright run.
-- Pending / next owner: G5 belongs to a fresh independent session and must inspect actual rendered Urdu at narrow width and in A4 print, plus the RTL table reading order in `fig-U5-2` and `fig-U5-4`. `scripts/render-inspect.mjs --locale ur` and `scripts/measure-figure-text.mjs` under CI fonts were not run here. G3 en-review stays open (Lawyers' Movement timeline against Batool et al. (2019), constitutional currency). Banner `fig-U5-7` remains `prompt-only` for the illustrate job.
+- Shipped / changed: Translated GCCE-400 Unit 5 (Advocacy and Activism) into a complete six-file academic-plain Urdu mirror with six RTL-mirrored `.ur.svg` figures and dark twins, bank-bound key_terms, refreshed G2 evidence, a G4 tracker note and translator handoff, all committed on `crew/gcce-400-u05-translate` with translation_status left at draft.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Editing `specs/content/gcce-400/figures/unit-05.md` or `translations/unit-05/*` invalidates the unit's G2 evidence by construction, so any later job touching those files must re-run `prepare-gate-evidence.mjs` and repoint the G2 row.
-  - The English unit carries no `<Glossary>` components, so the Urdu mirror correctly carries none.
-  - The six authored concept labels in `concepts/unit-05.md` and the proposed terms in the handoff need an owner decision.
+  - G5 must inspect rendered Urdu at 360px and A4 print; `scripts/render-inspect.mjs --locale ur` was not run (brief forbids build/dev server) and the RTL table order in `fig-U5-2`/`fig-U5-4` is unverified visually.
+  - Editing `specs/content/gcce-400/figures/unit-05.md` or `translations/unit-05/*` invalidates this unit's G2 evidence by construction; the next job touching them must re-run `prepare-gate-evidence.mjs` and repoint the G2 row.
+  - `origin/main` advanced during this job (Unit 4 merged); `specs/content/gcce-400/tasks.md` was edited by both, so a merge conflict there is likely.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Nastaliq-first labels are narrower than the Latin at 13-14px, so a naive coordinate mirror left several table cells overflowing their panel; hand re-laying each table with end-anchored cells fixed it. A bottom caption overprinted the wordmark in two figures until its x was pulled left of the wordmark.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS at draft (14/14). Reviewed flip: PASS except the two expected G4/G5 findings. `figures:variants:check` PASS. `measure-figure-text` PASS on all six `.ur.svg` with zero clipping, collisions and wordmark collisions. Structural self-check PASS. Build, dev server and Playwright intentionally not run under the brief.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): run `scripts/render-inspect.mjs --locale ur` in an authorized review session to confirm Nastaliq shaping, bidi punctuation and A4 clipping, and run `measure-figure-text` with `--ci-fonts` so the CI fallback face is measured too.
+- Next experiment (smallest change to try): none
