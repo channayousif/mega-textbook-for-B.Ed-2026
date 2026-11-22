@@ -5110,3 +5110,20 @@ content-improvement loop with no further cycle.
   fit 30 s".
 - **Limits:** Certifies no content and publishes nothing; every Short still waits for the owner's
   spot-check before it goes public.
+
+## D-2026-0096 - Daily social update posts from deployed work, published by the crew
+- **Scope:** Facebook Page, Instagram and LinkedIn posts announcing platform updates (Feature 031)
+- **Decided by:** curriculum owner, 2026-11-22 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. One daily roundup; quiet days post nothing.
+  2. Each post is a branded image card with a bilingual English/Urdu caption.
+  3. **What counts:** new content, reviews and improvements to existing content, platform features
+     and media. Only work that is merged green and deployed counts.
+  4. **Approval:** content posts publish automatically after a one-time pilot approval; platform
+     feature posts wait for the owner's approval (`crew post <id>`).
+- **Basis:** owner answers 2026-11-22: "Auto for content, approve features"; "Daily roundup";
+  "Branded image card + caption"; "New content, Platform features, Media, Review and
+  improvements/updates to existing content".
+- **Limits:** This extends D-2026-0094's "owner gates" with automatic publishing for content
+  announcements only; teaser videos and Study Studio media still go public only on the owner's word.
+  It certifies no content and claims no review that the tracker does not show.
