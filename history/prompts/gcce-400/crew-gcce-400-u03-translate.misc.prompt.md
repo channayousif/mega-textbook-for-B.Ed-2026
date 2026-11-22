@@ -23,6 +23,15 @@ files:
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-03/unit-assessment.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-03/unit-teacher-notes.mdx
  - specs/content/gcce-400/tasks.md
+ - specs/content/gcce-400/reviews/unit-03/G2/20261122T190242489Z-gates.json
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T190242489Z/validate-content.txt
  - specs/content/gcce-400/translations/unit-03/check-content-parity.txt
  - specs/content/gcce-400/translations/unit-03/handoff.md
  - static/img/figures/gcce-400/unit-03/fig-U3-1.ur.dark.svg
@@ -74,13 +83,13 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Translated GCCE-400 Unit 3 into a complete five-file Urdu mirror with four localized RTL `.ur.svg` figures, bank-bound `key_terms`, a G4 tracker note and a handoff, all committed with `translation_status` left at `draft`.
+Translated GCCE-400 Unit 3 into a complete five-file Urdu mirror with four localized RTL `.ur.svg` figures, bank-bound `key_terms`, a G4 tracker note, refreshed G2 gate evidence and a handoff, all committed with `translation_status` left at `draft`.
 
 ## Outcome
 
 - Impact: translate for GCCE-400 Unit 3 by claude_crew (attempt 1).
 - Tests: npm run check:content passed in the job worktree; the reviewed flip was run, then both index files were restored byte-for-byte to `draft`.
-- Files: 17 file(s), listed above.
+- Files: 26 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 

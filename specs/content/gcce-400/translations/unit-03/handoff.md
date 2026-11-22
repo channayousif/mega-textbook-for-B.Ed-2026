@@ -172,7 +172,7 @@ Proposed terms for the curriculum owner and the G5 reviewer (none are banked):
 - `npm run check:content` at `draft` passes all 14 gates cleanly.
 - Structural self-check: identical heading-level vectors across all 5 files, matching component counts (4 Figure، 2 Glossary، 3 PrintHandout، 1 TranslationStatusBadge)، matching table row counts، 45 numbered items in the assessment (10 MCQ، 10 RRQ، 5 ERQ، 10 key entries، 10 model answers)، and all four Urdu MCQ blocks use الف ب ج د in the same order as the English A B C D.
 - `scripts/render-inspect.mjs --locale ur` was NOT run. This job's brief forbids `npm run build`, a dev server and any local render-inspect run, and permits render-inspect only for a review job against `https://textbook.com.pk`. The rendered Urdu (Nastaliq shaping، 360px and A4 print، RTL table reading order in `fig-U3-1`) is therefore unverified here and is a G5 task.
-- No English unit file, figure manifest, source list, coverage file or concept file was edited, so no `prepare-gate-evidence` run was required.
+- No English unit file, figure manifest, source list, coverage file or concept file was edited. The new `translations/unit-03/` folder sits inside Unit 3's bound input manifest, so its G2 evidence was refreshed with `node scripts/prepare-gate-evidence.mjs gcce-400 3` (new evidence `reviews/unit-03/G2/20261122T190242489Z-gates.json`, all eight draft gates PASS) and the G2 tracker row was repointed at it. The older evidence dir remains on disk, matching the Unit 4 precedent.
 
 ## Open points for G3، G5 and the owner
 
