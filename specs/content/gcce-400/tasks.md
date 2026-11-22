@@ -25,7 +25,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-01/G2/20261122T171412664Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the kymlicka-norman-2000 attribution and constitutional currency (sources/unit-01.md) |
+| Unit 1 | G3 en-review | ▢ | agent:agy | Advisory escalation only; G3 remains open. Findings F1-F3 and missing render/provenance evidence: [report](reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f.json). No certification. |
 | Unit 1 | G4 ur-translation | ▢ | | Complete six-file draft Urdu mirror and six localized SVG pairs (with derived dark twins) prepared from English 6c04d9e21; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-01/handoff.md |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
 | Unit 1 | G6 assets | ▣ | | Six schematic SVG pairs (fig-U1-1 to fig-U1-6) with derived dark variants placed; banner fig-U1-7 placed in English and Urdu index |
