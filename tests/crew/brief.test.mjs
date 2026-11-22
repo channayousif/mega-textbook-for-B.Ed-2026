@@ -26,3 +26,13 @@ for (const self of [false, true]) {
     assert.equal(rules.includes(g2Refresh), !self);
   });
 }
+
+// 2026-W47 M5 (2026-11-19 C2 digest): plan jobs leave the Urdu topic files to the illustrate job.
+test('plan_illustrations tells the worker to leave the Urdu topic files alone; author does not', async () => {
+  const { STAGE_TASK } = await import('../../scripts/crew/crew.mjs');
+  const sentence = 'The `FIGURE[...]` marker belongs in the English topic file only: do not edit the Urdu topic files, because the illustrate job adds the Urdu <Figure> with Urdu alt text when it places the image.';
+  const job = { course: 'EFPG-401', unit: 3, overview: true };
+  assert.ok(STAGE_TASK.plan_illustrations(job).includes(sentence));
+  assert.ok(!STAGE_TASK.author(job).includes(sentence));
+  assert.ok(!STAGE_TASK.plan_illustrations(job).includes('\u2014'));
+});
