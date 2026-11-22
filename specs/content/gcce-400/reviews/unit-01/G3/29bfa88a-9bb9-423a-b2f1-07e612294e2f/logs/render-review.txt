@@ -1,0 +1,39 @@
+render-review evidence: GCCE-400 Unit 1 (G3 English)
+=====================================================
+Date: 2026-11-23
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (Medium)
+Reviewer Run ID: 29bfa88a-9bb9-423a-b2f1-07e612294e2f
+Course: GCCE-400 Unit 1 (Introduction to Civics and Citizenship)
+Deployed SHA: fa037aff166297e25a9bfc97b89cb3d1793f0420
+HEAD Commit: ae721439e7d35d09cdc5619e0a35e44698eb3b9a
+
+Attempt and Findings:
+---------------------
+1. Live Site Inspection Check:
+   Per the crew job brief, the reviewer was instructed:
+   "if `git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- <this unit's English dir> static/img/figures/gcce-400/unit-01/` exits 0, run `scripts/heavy.sh node scripts/render-inspect.mjs GCCE-400 1 --base https://textbook.com.pk --no-pdf`, record its log and PNGs (stage the folder with `git add --sparse`) as the `render-review` command evidence, and cite the deployed SHA as the rendered input identity. If the diff is not empty, the live site is not your input: record `render-review` as unavailable and name the deployed SHA and HEAD."
+
+   Running `git diff --stat "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/gcce-400/unit-01 static/img/figures/gcce-400/unit-01/` reports:
+     docs/semester-4/gcce-400/unit-01/index.mdx        |   2 ++
+     static/img/figures/gcce-400/unit-01/fig-U1-7.webp | Bin 0 -> 136848 bytes
+     2 files changed, 2 insertions(+)
+   The command exited with status 1 (diff is non-empty).
+   Therefore, the live production site at textbook.com.pk reflects deployed commit fa037af, which does not contain the current candidate inputs of HEAD (specifically index.mdx banner markup and fig-U1-7.webp added in e3313626e). The live site cannot serve as the rendered input identity.
+
+2. Local Render Prohibition:
+   The crew brief and repository rules strictly prohibit running `npm run build`, a local dev/preview server, or Playwright Chromium on this host. No local rendered HTML or browser screenshots could be generated without violating host resource limits.
+
+3. Static Accessibility Inspection Substitution:
+   Comprehensive static inspection was performed across all MDX and SVG files:
+   - Monotonic heading hierarchy verified with zero skipped levels.
+   - All 6 schematic SVG figures verified for text geometry via `measure-figure-text.mjs` (exit 0).
+   - Alt text, captions, <desc> parity, and figure palette compliance confirmed.
+   - Content tables verified for responsive overflow-x formatting.
+   - TranslationStatusBadge and PrintHandout verified present.
+
+Result:
+-------
+Render-review is recorded as unavailable due to the deployed vs candidate SHA mismatch and host execution constraints. The accessibility criterion is therefore marked unverified, leading to an advisory escalation disposition.
+
+exit_code: 1
