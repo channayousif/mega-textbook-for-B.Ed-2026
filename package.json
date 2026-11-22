@@ -27,7 +27,7 @@
     "check:svg-style": "node scripts/check-svg-style.mjs",
     "check:map-sources": "node scripts/check-map-sources.mjs",
     "check:no-em-dash": "node scripts/check-no-em-dash.mjs",
-    "check:licence": "node scripts/check-licence.mjs --allow-missing",
+    "check:licence": "node scripts/check-licence.mjs",
     "licence:map": "node scripts/build-licence-map.mjs",
     "licence:map:check": "node scripts/build-licence-map.mjs --check",
     "build:content-status": "node scripts/report-content-status.mjs",
