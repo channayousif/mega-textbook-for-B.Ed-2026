@@ -74,26 +74,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u02-repair_en-r1, repair_en, opencode) No Urdu mirror exists under i18n/ur/.../gqur-301/unit-02; provenance, G1, rendered accessibility, answer-blind assessment and bound-source checks remain for the owner/evaluator.
 - (gqur-301-u02-repair_en, repair_en, codex) G3 remains open; independent review, authority/provenance checks and permitted visual checks are pending. Urdu mirror is absent.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed all three GQUR-301 Unit 2 raster illustrations (unit banner fig-U2-5, topic scenes fig-U2-6 and fig-U2-7), updated figure manifests to placed, and refreshed G2 gate evidence.
+Generated, inspected, and placed all three GQUR-301 Unit 2 raster illustrations and banner, transitioned figure manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
 - Impact: illustrate for GQUR-301 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed with all 14 content gates green.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all three GQUR-301 Unit 2 raster illustrations (fig-U2-5, fig-U2-6, fig-U2-7), transitioned manifests to placed, and refreshed G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Generated, inspected, and placed all three GQUR-301 Unit 2 raster illustrations and banner, transitioned figure manifests to placed, and refreshed G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Both topic scene illustrations (fig-U2-6 and fig-U2-7) and the unit banner (fig-U2-5) are placed with zero em dashes and verified against all content gates.
-  - No Urdu mirror exists under i18n/ur/.../gqur-301/unit-02; whoever authors the Urdu translation (G4) should place fig-U2-5, fig-U2-6 and fig-U2-7 with localized alt text.
+  - All three raster illustrations (unit banner fig-U2-5, topic scenes fig-U2-6 and fig-U2-7) were generated via gflow, inspected, accepted, placed with zero em dashes, and validated across all 14 content gates.
+  - No Urdu mirror exists yet under i18n/ur for GQUR-301 Unit 2; whoever authors the Urdu translation (G4) will need to place fig-U2-5, fig-U2-6, and fig-U2-7 with localized alt text.
   - G3 English review remains open for independent review on committed bytes.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
