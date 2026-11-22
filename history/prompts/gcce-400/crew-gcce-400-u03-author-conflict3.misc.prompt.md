@@ -87,19 +87,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/gcce-400-u03-author and resolved the specs/content/gcce-400/tasks.md conflict by keeping Unit 3 (this branch) and Units 5-6 (origin/main) rows and reading estimates, with all 14 content gates passing.
+Merged origin/main into crew/gcce-400-u03-author, resolved task tracker conflicts across Units 1 through 6, and verified all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix for GCCE-400 Unit 3 by agy (attempt 3).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Impact: fix for GCCE-400 Unit 3 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 31 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gcce-400-u03-author and resolved the specs/content/gcce-400/tasks.md conflict by keeping Unit 3 (this branch) and Units 5-6 (origin/main) rows and reading estimates, with all 14 content gates passing.
+- Shipped / changed: Merged origin/main into crew/gcce-400-u03-author, resolved task tracker conflicts across Units 1 through 6, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
