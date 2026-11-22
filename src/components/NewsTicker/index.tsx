@@ -220,7 +220,7 @@ export default function NewsTicker({ variant = 'band' }: Props): React.ReactElem
         <div className={styles.rows} onClick={(e) => { if (e.target === e.currentTarget || (e.target as HTMLElement).classList.contains(styles.row)) toggle(); }}>
           {lanes.map((lane) => (
             <div key={lane.key} className={styles.row} data-lane={lane.key}>
-              <button type="button" className={styles.label} onClick={toggle} aria-expanded={open} aria-controls={panelId}>
+              <button type="button" className={styles.label} onClick={toggle} aria-expanded={open} aria-controls={panelId} aria-label={laneLabel(lane.key)}>
                 <Icon name={LANE_ICON[lane.key]} size={18} />
                 <span>{laneLabel(lane.key)}</span>
               </button>
