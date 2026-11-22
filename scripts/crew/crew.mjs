@@ -21,7 +21,7 @@
 import { spawn, spawnSync } from 'node:child_process';
 import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
-import { WORKERS, STAGES, QUOTA_RE, IMAGE_QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker, imageQuotaReset, imageQuotaProducer, workFiles } from './workers.mjs';
+import { WORKERS, STAGES, QUOTA_RE, PROVIDER_RE, IMAGE_QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker, imageQuotaReset, imageQuotaProducer, workFiles } from './workers.mjs';
 import { activeImageQuota, recordImageQuota, availableProducers, producerStatus } from '../lib/image-quota.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
@@ -867,13 +867,17 @@ function reapOne(board, health, events, j) {
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
   if (j.stage === 'illustrate' && imageQuotaRequeue(board, events, j, tail)) return;
   if (j.stage === 'teaser_clips' && mediaHoldRequeue(board, events, j, tail)) return;
-  const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
-  if (quota || (code === 124 && !tail.trim())) {
+  // A provider config or auth failure (PROVIDER_RE, 2026-W47 M3; digests 2026-11-14 C1 and
+  // 2026-11-19 C1) is handled like a quota: the worker is at fault, not the job's work.
+  const end = tail.slice(-1500);
+  const provider = PROVIDER_RE.test(end) && !QUOTA_RE.test(end) && (code !== 0 || !ahead);
+  const quota = QUOTA_RE.test(end) && (code !== 0 || !ahead);
+  if (quota || provider || (code === 124 && !tail.trim())) {
     const mins = cool(health, j.worker, tail || `exit ${code}`);
     j.status = 'queued';
     // A limit says nothing about the work, so it must not use up one of the job's three attempts.
     j.attempts = Math.max(0, (j.attempts || 1) - 1);
-    log(board, j, `${j.worker} hit a limit (exit ${code}); cooling ${mins} min; requeued`);
+    log(board, j, `${j.worker} ${provider ? 'was refused by its provider (config or auth)' : 'hit a limit'} (exit ${code}); cooling ${mins} min; requeued`);
     events.push(`⏸ ${j.worker} cooling ${mins} min; ${j.id} moves to the next worker`);
     return;
   }
