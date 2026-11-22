@@ -41,6 +41,9 @@ import { isMediaStage, teaserNeeds, audioNeeds, limitMedia, mediaLaunchProblem, 
 import { scriptSha, scriptPath, loadLedger as loadTeaserLedger } from '../notebook-studio/teaser.mjs';
 import { gflowReachable } from '../media/producers/quota.mjs';
 import { mediaStatus, ownerSection } from '../media/status.mjs';
+import { SOCIAL_STAGE, ROUNDUP_HOUR_PKT, pkt, socialDue, socialTask, socialScope, socialOwnerLine } from './social.mjs';
+import { LEDGER as SOCIAL_LEDGER, loadLedger as loadSocialLedger, pending as socialPending, approve as approveSocial, reject as rejectSocial } from '../social/updates.mjs';
+import { update as updateLedger } from '../media/ledger.mjs';
 import { activeQuota as activeMediaQuota, recordQuota as recordMediaQuota } from '../media/producers/index.mjs';
 import { briefRules } from './brief.mjs';
 import { closePrDecisions, closeLandedDecisions } from './decisions.mjs';
@@ -58,7 +61,7 @@ const PUSH_SETTLE_MS = 3 * 60e3;
 // Self-maintenance stages sit just after fixes: a handful a week, so the corpus queue cannot starve them.
 const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
   'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author',
-  'media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script'];
+  'media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script', 'social_roundup'];
 /** Self-maintenance (scripts/crew/maintenance.mjs) and intelligence (scripts/crew/intel.mjs) stages. */
 const isSelf = (stage) => /^(maint|intel)_/.test(stage);
 const INTEL_DIR = join(STATE_DIR, 'intel');
@@ -318,6 +321,66 @@ function mediaCommand(v, arg, control, via) {
   return msg;
 }
 
+// ---------------------------------------------------------------- social updates (Feature 031)
+
+/**
+ * Queue the day's roundup (from 18:00 PKT, when a dry collect finds deployed work not yet posted)
+ * or a publish run (an approved post not yet posted everywhere). The ledger lives on this host
+ * (scripts/social/updates.mjs), so state never waits on a batch merge.
+ */
+function socialPhase(board, events) {
+  const control = load('control');
+  const on = control.social === 'on';
+  let L;
+  try { L = loadSocialLedger(); } catch { L = { config: {}, posts: [] }; }
+  const p = socialPending(L);
+  board.social = { ...(board.social || {}), on, at: now(),
+    owner: { awaitingOwner: p.awaitingOwner.map((x) => ({ id: x.id, card: x.card, card_url: x.card_url })), toPublish: p.toPublish.map((x) => ({ id: x.id })) } };
+  if (!on) return;
+  const inFlight = board.jobs.some((j) => j.stage === SOCIAL_STAGE && ['queued', 'running'].includes(j.status));
+  const { day, hour } = pkt();
+  let fresh = false;
+  if (!inFlight && !p.toPublish.length && hour >= ROUNDUP_HOUR_PKT && board.social.lastDay !== day) {
+    const r = spawnSync('node', ['scripts/social/updates.mjs', 'collect', '--dry'], { cwd: ROOT, encoding: 'utf8', timeout: 120_000 });
+    try { fresh = (JSON.parse(r.stdout).drafts ?? []).length > 0; } catch { fresh = false; }
+    if (!fresh) board.social.lastDay = day; // nothing new today: probe again tomorrow
+  }
+  const mode = socialDue({ on, lastDay: board.social.lastDay, fresh, toPublish: p.toPublish.length, inFlight });
+  if (!mode) return;
+  const base = `social-${day}-${mode}`;
+  const n = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`)).length;
+  if (mode === 'publish' && n >= 2) return; // two publish runs a day at most; the rest waits for tomorrow
+  if (mode === 'roundup') board.social.lastDay = day;
+  const id = n ? `${base}-r${n}` : base;
+  const unit = Number(day.slice(5).replace('-', '')) * 10 + (mode === 'publish' ? 1 : 0);
+  board.jobs.push({ id, course: 'SOCIAL', unit, stage: SOCIAL_STAGE, mode, status: 'queued', attempts: 0, tried: [], createdAt: now(), scope: socialScope() });
+  events.push(`📣 social ${mode} queued (${id})`);
+  if (DRY) console.log(`[dry-run] would queue ${id}`);
+}
+
+/** Owner commands: social on|off|status, post <id> (approve), reject-post <id> <note>. */
+function socialCommand(v, arg, control, via) {
+  if (v === 'social') {
+    const sub = (arg.split(/\s+/)[0] || 'status').toLowerCase();
+    if (sub === 'on' || sub === 'off') { control.social = sub; return `social updates ${sub}${sub === 'on' ? ': a roundup of deployed work is drafted from 18:00 PKT each day; content posts publish once the first one is approved (the pilot), feature posts always wait for \`crew post <id>\`' : ''}`; }
+    const b = load('board');
+    return `Social updates ${control.social === 'on' ? 'on' : 'off'}. Waiting on you: ${b.social?.owner ? socialOwnerLine(b.social.owner) : 'nothing'}`;
+  }
+  const [id, ...rest] = arg.split(/\s+/);
+  if (!id) return `usage: crew ${v} <post id, e.g. 2026-11-22-feature>`;
+  try {
+    return updateLedger(SOCIAL_LEDGER, (L) => {
+      if (v === 'reject-post') { rejectSocial(L, id, rest.join(' ').trim() || `rejected by the owner via ${via}`); return `rejected ${id}; its items return in the next roundup`; }
+      const post = approveSocial(L, id, 'owner');
+      post.approved.via = via;
+      // The pilot ends with the owner's first approved content post: content then publishes on its own.
+      const ended = post.kind === 'content' && L.config?.pilot;
+      if (ended) L.config.pilot = false;
+      return `approved ${id}; it publishes at the next tick${ended ? '. Pilot passed: content roundups now publish without waiting for you' : ''}`;
+    });
+  } catch (e) { return e.message; }
+}
+
 // ---------------------------------------------------------------- briefs
 
 /**
@@ -353,6 +416,7 @@ export const STAGE_TASK = {
   media_assemble: mediaTask,
   media_publish: mediaTask,
   audio_overview: mediaTask,
+  social_roundup: socialTask,
   maint_review: (j) => `Act as the INDEPENDENT reviewer of maintenance PR #${j.pr} (weekly-maintenance skill, "Review"). Another model family wrote it. Read the task it answers and \`git diff origin/main...HEAD\`, check every acceptance item and the rules, and change nothing.\n\n${j.task}`,
 };
 
@@ -569,6 +633,7 @@ function launchQueued(board, health, control, events) {
     if (running.length >= MAX_PARALLEL) break;
     if (j.stage === 'illustrate' && noImageProducer) continue;
     // Media jobs: the owner's gates are checked again against main right before launch (FR-012/013).
+    if (j.stage === SOCIAL_STAGE && load('control').social !== 'on') continue; // switched off after queueing: wait
     const mediaWhy = mediaHoldReason(j);
     if (mediaWhy) {
       if (!mediaWhy.startsWith('hold') && !mediaWhy.startsWith('media stages')) { j.status = 'closed'; log(board, j, `not launched: ${mediaWhy}`); events.push(`⏹ ${j.id} not launched: ${mediaWhy}`); }
@@ -1292,7 +1357,7 @@ function ask(decisions, question, options = ['yes', 'no'], extra = {}) {
   return id;
 }
 
-const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | crew maintenance now|skip|status | crew intel now|status | crew media on|off|status | crew approve-script <key> | crew reject <key> <note> | crew publish <key> | C-### <option> [note]';
+const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | crew maintenance now|skip|status | crew intel now|status | crew media on|off|status | crew approve-script <key> | crew reject <key> <note> | crew publish <key> | crew social on|off|status | crew post <post id> | crew reject-post <post id> <note> | C-### <option> [note]';
 
 /**
  * One owner message -> one reply (or null when it is not for the crew). Shared by the tick's
@@ -1340,6 +1405,7 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
       return intelStatus(board);
     }
     if (['media', 'approve-script', 'publish', 'reject'].includes(v)) return mediaCommand(v, arg, control, via);
+    if (['social', 'post', 'reject-post'].includes(v)) return socialCommand(v, arg, control, via);
     if (v === 'note') {
       if (!arg) return 'usage: crew note <directions>';
       control.notes = [...(control.notes || []), { at: now(), via, text: arg }].slice(-50);
@@ -1416,6 +1482,7 @@ function statusText(board, health, decisions, control = load('control')) {
     `Weekly maintenance: ${maintenanceLine(board)}`,
     `Intelligence: ${intelLine(board)}`,
     `Media: ${board.media?.on ? 'on' : 'off'}; waiting on you: ${board.media ? ownerLine(board.media.owner) : 'not planned yet'}`,
+    `Social updates: ${board.social?.on ? 'on' : 'off'}; waiting on you: ${board.social?.owner ? socialOwnerLine(board.social.owner) : 'nothing'}`,
     ...(red.length ? [`Needs a fix: ${red.join(', ')}`] : []),
     `Needs you: ${open.join(' | ') || 'nothing'}`,
     ...(control.priority?.length ? [`Priority: ${control.priority.join(' > ')}`] : [])].join('\n');
@@ -1452,6 +1519,9 @@ ${(board.awaitingG3?.units || []).map((x) => `- ${x.course} Unit ${x.unit}: advi
 ## Media Studio (Feature 030)
 Crew media stages ${board.media?.on ? 'on' : 'off (\`crew media on\`)'}.
 ${mediaOwnerSection()}
+
+## Social updates (Feature 031)
+Daily roundup ${board.social?.on ? 'on' : 'off (\`crew social on\`)'}; waiting on you: ${board.social?.owner ? socialOwnerLine(board.social.owner) : 'nothing'}.
 
 ## Weekly maintenance and intelligence
 - Maintenance: ${maintenanceLine(board)}
@@ -1666,6 +1736,7 @@ function tick() {
     phase('space', () => dropWaitingWorktrees(board));
     phase('intel', () => intelPhase(board, events));
     phase('maintenance', () => maintenancePhase(board, events));
+    phase('social', () => socialPhase(board, events));
     // A cooling worker becomes eligible again when its time passes; the next real job is the probe.
     for (const [w, h] of Object.entries(health)) if (h.state === 'cooling' && Date.parse(h.until) <= Date.now()) health[w] = { ...h, state: 'ok' };
     phase('prs', () => managePrs(board, decisions, events));

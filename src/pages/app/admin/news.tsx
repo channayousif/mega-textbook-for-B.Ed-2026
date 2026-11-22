@@ -8,15 +8,16 @@ import { PageHeader, Panel, FormField, StatusPill, EmptyState, type Tone } from 
 import Icon, { type IconName } from '@site/src/components/icons/Icon';
 import { NewsPreview } from '@site/src/components/NewsTicker';
 import {
-  DEFAULT_ICON, NEWS_ICONS, archiveNewsItem, callDigest, fetchAllNews, fetchDigestRuns, mergeNews, newsStatus,
-  saveNewsItem, type NewsInput, type NewsStatus,
+  DEFAULT_ICON, NEWS_ICONS, archiveNewsItem, callDigest, fetchAllNews, fetchAllPins, fetchDigestRuns, mergeNews, newsStatus,
+  saveNewsItem, setNewsPin, type NewsInput, type NewsPin, type NewsStatus,
 } from '@site/src/lib/news';
 import type { DigestRun, NewsEvent, NewsItem, NewsKind } from '@site/src/lib/types';
 
 /**
  * Feature 028: the admin console for the news ticker and the weekly email.
- * Writes go through upsert_news_item/archive_news_item (migration 0052), which
- * check is_admin() and write admin_action_history; this page is convenience only.
+ * Writes go through upsert_news_item/archive_news_item (migration 0052) and
+ * set_news_pin (0054), which check is_admin() and write admin_action_history; this
+ * page is convenience only.
  */
 
 const KINDS: { value: NewsKind; label: string }[] = [
@@ -64,11 +65,14 @@ function NewsConsole(): React.ReactElement {
   const [notice, setNotice] = useState('');
   const [previewHtml, setPreviewHtml] = useState('');
   const [showArchived, setShowArchived] = useState(false);
+  const [pins, setPins] = useState<NewsPin[]>([]);
+  const [pinUntil, setPinUntil] = useState<Record<string, string>>({});
 
   const load = useCallback(async () => {
-    const [news, digest] = await Promise.all([fetchAllNews(), fetchDigestRuns()]);
+    const [news, digest, pinRows] = await Promise.all([fetchAllNews(), fetchDigestRuns(), fetchAllPins()]);
     if (news.error) setError(news.error.message); else setItems(news.data ?? []);
     if (!digest.error) setRuns(digest.data ?? []);
+    if (!pinRows.error) setPins(pinRows.data ?? []);
   }, []);
   useEffect(() => { void load(); }, [load]);
 
@@ -84,6 +88,16 @@ function NewsConsole(): React.ReactElement {
     if (err) { setError(err.message); return; }
     setNotice(form.id ? 'Item updated.' : 'Item created.');
     setForm(EMPTY);
+    await load();
+  }
+
+  async function togglePin(eventId: string, pinned: boolean) {
+    setBusy(true); setError(''); setNotice('');
+    const until = pinned && pinUntil[eventId] ? new Date(pinUntil[eventId]).toISOString() : null;
+    const r = await setNewsPin(eventId, pinned, until);
+    setBusy(false);
+    if (r.error) { setError(r.error.message); return; }
+    setNotice(pinned ? 'Pinned. It stands still at the front of its row after the next page load.' : 'Unpinned.');
     await load();
   }
 
@@ -174,7 +188,7 @@ function NewsConsole(): React.ReactElement {
           <FormField label="Show until" hint="Optional. Leave empty to keep it until you archive it.">
             <input className="input" type="datetime-local" value={toLocalInput(form.ends_at)} onChange={(e) => set('ends_at', fromLocalInput(e.target.value))} />
           </FormField>
-          <label><input type="checkbox" checked={form.pinned} onChange={(e) => set('pinned', e.target.checked)} /> Pin to the front of the ticker</label>
+          <label><input type="checkbox" checked={form.pinned} onChange={(e) => set('pinned', e.target.checked)} /> Pin: stands still at the front of the Announcements row</label>
           <label><input type="checkbox" checked={form.published} onChange={(e) => set('published', e.target.checked)} /> Published (untick to keep it as a draft)</label>
           <div>
             <p className="margin-bottom--sm"><strong>Preview</strong></p>
@@ -211,15 +225,32 @@ function NewsConsole(): React.ReactElement {
         )}
       </Panel>
 
-      <Panel title="Automatic posts" subtitle="Built from the content on each deploy: new courses, units, Urdu translations and certified reviews. Read only.">
+      <Panel title="Automatic posts" subtitle="Built from the content on each deploy: new courses and units, Urdu translations, revised units, new figures and reviews. Pin one to keep it still at the front of its row.">
         {autoFeed.length === 0 ? <p>No content changes in the last 60 days.</p> : (
           <ul>
-            {autoFeed.map((e) => (
-              <li key={e.id}>
-                <Link to={e.permalink}>{e.type === 'course' ? e.title_en : `${e.course_code} Unit ${e.unit_no}: ${e.title_en}`}</Link>
-                {' '}<small>({e.type === 'review' ? `${e.gate} review certified` : { course: 'new course', unit: 'new unit', urdu: 'Urdu added' }[e.type]}, {new Date(e.date).toLocaleDateString()})</small>
-              </li>
-            ))}
+            {autoFeed.map((e) => {
+              const pin = pins.find((p) => p.event_id === e.id);
+              const active = !!pin && (!pin.pinned_until || Date.parse(pin.pinned_until) > Date.now());
+              const what = e.type === 'review' ? `${e.gate} review certified`
+                : ({ course: 'new course', unit: 'new unit', urdu: 'Urdu added', updated: 'unit revised', figures: `${e.count ?? ''} new figures`, provisional: 'final review pending' } as Record<string, string>)[e.type];
+              return (
+                <li key={e.id}>
+                  <Link to={e.permalink}>{e.type === 'course' ? e.title_en : `${e.course_code} Unit ${e.unit_no}: ${e.title_en}`}</Link>
+                  {' '}<small>({what}, {new Date(e.date).toLocaleDateString()})</small>
+                  {active && <> <StatusPill tone="warning">pinned{pin?.pinned_until ? ` until ${new Date(pin.pinned_until).toLocaleDateString()}` : ''}</StatusPill></>}
+                  {' '}
+                  {active ? (
+                    <button type="button" className="button button--sm button--secondary" disabled={busy} onClick={() => void togglePin(e.id, false)}>Unpin</button>
+                  ) : (
+                    <>
+                      <input type="date" aria-label={`Pin ${e.id} until (optional)`} value={pinUntil[e.id] ?? ''}
+                        onChange={(ev) => setPinUntil((m) => ({ ...m, [e.id]: ev.target.value }))} />{' '}
+                      <button type="button" className="button button--sm button--secondary" disabled={busy} onClick={() => void togglePin(e.id, true)}>Pin</button>
+                    </>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         )}
       </Panel>

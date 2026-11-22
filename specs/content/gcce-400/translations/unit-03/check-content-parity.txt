@@ -1,0 +1,34 @@
+$ npm run check:content  # both index.mdx files temporarily flipped to translation_status: reviewed
+
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 14 content gates
+
+  validate:content        PASS  1.0s
+  check:pipeline-gate     FAIL  26.0s
+  check:depth-gate        PASS  0.8s
+  check:figures           PASS  1.0s
+  check:svg-style         PASS  0.5s
+  check:no-em-dash        PASS  0.5s
+  check:no-answer-keys    PASS  0.7s
+  check:concept-graph     PASS  0.3s
+  check:bloom-bands       PASS  0.3s
+  check:source-floor      PASS  0.3s
+  check:licence           PASS  0.5s
+  licence:map:check       PASS  0.3s
+  check:content-status    PASS  0.8s
+  check:docs-sync         PASS  0.3s
+
+============================================================
+check:pipeline-gate
+============================================================
+
+✗ Pipeline gate failed with 2 finding(s):
+
+  - GCCE-400 Unit 3 (docs/semester-4/gcce-400/unit-03): 'G4 ur-translation' row for Unit 3 is not done (status: '▢')
+  - GCCE-400 Unit 3 (docs/semester-4/gcce-400/unit-03): 'G5 ur-review' row for Unit 3 is not done (status: '▢')
+
+
+1 of 14 content gates failed: check:pipeline-gate.
