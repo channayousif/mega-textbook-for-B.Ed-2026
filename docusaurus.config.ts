@@ -152,7 +152,7 @@ function courseTeasers(): Record<string, { youtube_id: string; title: string; lo
 
 /**
  * The home page's "Courses in 30 seconds" picks (two most watched, two newest), chosen at build
- * time by build-studio-index.mjs from the public teasers and specs/studio/teasers/teaser-stats.json.
+ * time by build-studio-index.mjs from the public teasers and specs/studio/teaser-stats.json.
  */
 function homeTeasers(): Array<{ code: string; youtube_id: string; title: string; locale: string; semester: number; reason: 'top' | 'latest' }> {
   try {

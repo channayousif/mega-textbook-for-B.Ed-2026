@@ -6,7 +6,7 @@
 // Shape: { "<course>/<unit>/<topic>": { "en": [item...], "ur": [item...] }, "teasers": { "<COURSE-CODE>": teaser } }
 // item = { kind, part?, title, audience, alt, src?, url? }   (src = site path of a text asset)
 // teaser = { youtube_id, title, locale, semester, published_at, views }: Feature 030 (T038), only teasers
-// the owner made public; views from specs/studio/teasers/teaser-stats.json (teaser-stats.mjs).
+// the owner made public; views from specs/studio/teaser-stats.json (teaser-stats.mjs).
 // homeTeasers = [{ code, ...teaser, reason: 'top' | 'latest' }]: the home page's "Courses in 30 seconds".
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
@@ -81,7 +81,7 @@ function readTeasers(root) {
   const dir = join(root, 'specs', 'studio', 'teasers');
   const ledger = join(dir, 'media-teasers.json');
   if (!existsSync(ledger)) return {};
-  const statsFile = join(dir, 'teaser-stats.json');
+  const statsFile = join(root, 'specs', 'studio', 'teaser-stats.json'); // beside, not inside, teasers/ (every JSON there is a script)
   const stats = existsSync(statsFile) ? JSON.parse(readFileSync(statsFile, 'utf8')) : {};
   return buildTeaserIndex(JSON.parse(readFileSync(ledger, 'utf8')), (id) => {
     const f = join(dir, `${id}.json`);

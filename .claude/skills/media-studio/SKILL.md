@@ -186,5 +186,5 @@ Channel `UC7cQfkGkdNABCiyjmV5ZaFQ` (@textbookdotcomdotpk); authentication guide 
 skill. Teaser playlist `PLCJn7gAoYIJs`. Edit a published description in place with
 `node scripts/notebook-studio/yt-describe.mjs`, never by re-uploading. After publishing or
 cross-posting, run `node scripts/notebook-studio/teaser-stats.mjs` (1 quota unit) and commit
-`specs/studio/teasers/teaser-stats.json`: the home page shows the two most watched and the two
+`specs/studio/teaser-stats.json`: the home page shows the two most watched and the two
 newest public teasers, and the site build has no YouTube sign-in.

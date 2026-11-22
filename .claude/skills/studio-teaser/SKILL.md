@@ -122,7 +122,7 @@ States: `planned → scripted → script-approved → clips-generated → clips-
     `T advance <key> public --json '{"published_at":"<ISO>"}'`. Give the owner the
     `pinned_comment` line from `T meta` to pin in YouTube Studio; the MCP has no comment tool. The
     owner can also set the Short's "Related video" there. Then refresh the view counts with
-    `node scripts/notebook-studio/teaser-stats.mjs` and commit `specs/studio/teasers/teaser-stats.json`
+    `node scripts/notebook-studio/teaser-stats.mjs` and commit `specs/studio/teaser-stats.json`
     in the same PR: the home page's "Courses in 30 seconds" shows the two most watched and the two
     newest public teasers (`pickHomeTeasers` in `scripts/build-studio-index.mjs`).
 11. **Cross-post (D-2026-0084).** Only after step 10. Render one variant per platform (the follow

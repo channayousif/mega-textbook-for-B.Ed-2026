@@ -5,7 +5,7 @@
 //   node scripts/notebook-studio/teaser-stats.mjs [--dry-run]
 //
 // One YouTube Data API call (videos.list part=statistics, 1 quota unit) with the youtube-uploader
-// sign-in (yt-describe.mjs accessToken). Writes specs/studio/teasers/teaser-stats.json, which
+// sign-in (yt-describe.mjs accessToken). Writes specs/studio/teaser-stats.json, which
 // build-studio-index.mjs reads; the site build itself has no YouTube sign-in. Run it whenever
 // teasers are published or cross-posted and commit the file in that PR.
 import { writeFileSync } from 'node:fs';
@@ -15,7 +15,7 @@ import { accessToken } from './yt-describe.mjs';
 import { loadLedger } from './teaser.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-export const STATS_PATH = join(ROOT, 'specs', 'studio', 'teasers', 'teaser-stats.json');
+export const STATS_PATH = join(ROOT, 'specs', 'studio', 'teaser-stats.json');
 
 /** YouTube ids of the public teasers, in a stable order. */
 export const publicIds = (ledger) => [...new Set(ledger.items.filter((i) => i.state === 'public' && i.youtube_id).map((i) => i.youtube_id))].sort();

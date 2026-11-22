@@ -18,7 +18,7 @@ links:
 files:
   - scripts/notebook-studio/teaser-stats.mjs
   - scripts/notebook-studio/yt-describe.mjs
-  - specs/studio/teasers/teaser-stats.json
+  - specs/studio/teaser-stats.json
   - scripts/build-studio-index.mjs
   - docusaurus.config.ts
   - src/components/landing/HomeTeasers.tsx
@@ -46,7 +46,7 @@ two latest published videos alongwith two top performing")
 
 - New `teaser-stats.mjs`: one YouTube Data API call (videos.list statistics, 1 quota unit) with
   the youtube-uploader sign-in (`accessToken`, now exported from yt-describe.mjs) writes
-  `specs/studio/teasers/teaser-stats.json`. First snapshot: 7 public teasers.
+  `specs/studio/teaser-stats.json`. First snapshot: 7 public teasers.
 - `build-studio-index.mjs`: teasers carry semester, published_at and views; new pure
   `pickHomeTeasers` (two most watched, then the two newest not already picked; ties to the newer;
   no views means the four newest) writes `homeTeasers` into `static/studio-index.json`, read by
