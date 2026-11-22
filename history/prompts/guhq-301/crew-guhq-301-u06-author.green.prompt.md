@@ -4,7 +4,7 @@ title: crew author GUHQ-301 unit 6
 stage: misc
 date: 2026-11-22
 surface: agent
-model: gemini-3.8-flash
+model: agy
 feature: guhq-301
 branch: crew/guhq-301-u06-author
 user: crew
@@ -75,21 +75,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored GUHQ-301 Unit 6 (Historical and Cultural Context of the Quran) in English with Topic 6.1, a 10/10/5 assessment, three placed schematic SVGs with dark variants, coverage/sources/figures/concepts governance artefacts, G2 gate evidence and updated tasks.md tracker; all 14 content gates pass.
+Authored GUHQ-301 Unit 6 (Historical and Cultural Context of the Quran) in English with Topic 6.1, a 10/10/5 assessment, three placed schematic SVGs with dark variants, complete governance artefacts, G2 gate evidence, and the task tracker row, with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: authored GUHQ-301 Unit 6 English content and schematics by agy.
-- Tests: npm run check:content passed in the job worktree before completion.
+- Impact: author for GUHQ-301 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 24 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored GUHQ-301 Unit 6 (Historical and Cultural Context of the Quran) in English with Topic 6.1 (Revelation in its setting), a 10/10/5 assessment, three placed schematic SVGs with dark variants, coverage/sources/figures/concepts artefacts, G2 gate evidence and the tracker row; all 14 content gates pass.
+- Shipped / changed: Authored GUHQ-301 Unit 6 (Historical and Cultural Context of the Quran) in English with Topic 6.1, a 10/10/5 assessment, three placed schematic SVGs with dark variants, complete governance artefacts, G2 gate evidence, and the task tracker row, with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu job needs `.ur.svg` for all three figures and G5 review of the six authored Urdu concept labels.
-  - G3 must make the religious-content check (content-spec drafting note 7); the classroom cases and pedagogical routines are flagged in `sources/unit-06.md` as instructional models.
+  - Urdu job needs `.ur.svg` for all three placed schematic figures and independent G5 review for the six authored Urdu concept labels.
+  - G3 review must make the religious-content check (content-spec drafting note 7); classroom scenarios and pedagogical applications are flagged as instructional models.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
