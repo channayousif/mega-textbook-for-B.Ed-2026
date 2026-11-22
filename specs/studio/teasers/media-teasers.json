@@ -2491,6 +2491,31 @@
    "youtube_id": "MYeopBflsA0",
    "uploaded_at": "2026-11-21T20:30:00Z",
    "scheduled_publish_at": "2026-11-22T15:00:00+05:00"
+  },
+  {
+   "key": "efmp-406-ur",
+   "id": "efmp-406",
+   "locale": "ur",
+   "kind": "short",
+   "state": "scripted",
+   "gates": {
+    "qg0": {
+     "verdict": "pass",
+     "by": "teaser.mjs"
+    }
+   },
+   "clips": [],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-22T10:03:02.867Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-22T10:03:03.407Z"
+    }
+   ],
+   "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b"
   }
  ]
 }

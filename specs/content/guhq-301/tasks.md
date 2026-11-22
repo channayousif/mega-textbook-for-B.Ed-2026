@@ -48,13 +48,13 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 4 | G6 assets | ▣ | | Six English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/guhq-301/reviews/unit-05/G2/20261122T010249289Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/guhq-301/reviews/unit-05/G2/20261122T093153930Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review, including the religious-content check in content-spec drafting note 7; author self-check is not G3 |
 | Unit 5 | G4 ur-translation | ▢ | | Complete four-page draft Urdu mirror and four localized SVG pairs (with derived dark twins) prepared from English 2d90513be; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-05/handoff.md. |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 5 | G6 assets | ▣ | | Four English schematic SVGs placed with derived dark variants; measure-figure-text verified |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/guhq-301/reviews/unit-06/G2/20261122T024306853Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/guhq-301/reviews/unit-06/G2/20261122T094714129Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review, including the religious-content check in content-spec drafting note 7; author self-check is not G3 |
 | Unit 6 | G4 ur-translation | ▢ | | Complete three-page draft Urdu mirror and three localized SVG pairs (with derived dark twins) prepared from English c8b2313e2; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-06/handoff.md. |
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
