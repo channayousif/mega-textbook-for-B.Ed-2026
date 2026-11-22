@@ -1636,10 +1636,11 @@
      "at": "2026-11-22T06:13:42.752Z"
     },
     "tiktok": {
-     "state": "draft",
+     "state": "posted",
      "post_id": "v_inbox_file~v2.7710875565829621780",
      "url": null,
-     "at": "2026-11-22T06:18:29.665Z"
+     "at": "2026-11-22T06:18:29.665Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
     }
    }
   },
@@ -1840,10 +1841,11 @@
      "at": "2026-11-22T07:25:57.512Z"
     },
     "tiktok": {
-     "state": "draft",
+     "state": "posted",
      "post_id": "v_inbox_file~v2.7710894102673475636",
      "url": null,
-     "at": "2026-11-22T07:29:18.689Z"
+     "at": "2026-11-22T07:29:18.689Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
     },
     "instagram": {
      "state": "posted",
@@ -2056,10 +2058,11 @@
      "at": "2026-11-22T08:12:47.943Z"
     },
     "tiktok": {
-     "state": "draft",
+     "state": "posted",
      "post_id": "v_inbox_file~v2.7710906625217890324",
      "url": null,
-     "at": "2026-11-22T08:17:58.274Z"
+     "at": "2026-11-22T08:17:58.274Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
     }
    }
   },
@@ -2281,10 +2284,11 @@
      "at": "2026-11-22T09:14:31.016Z"
     },
     "tiktok": {
-     "state": "draft",
+     "state": "posted",
      "post_id": "v_inbox_file~v2.7710922311173130260",
      "url": null,
-     "at": "2026-11-22T09:18:26.596Z"
+     "at": "2026-11-22T09:18:26.596Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
     }
    }
   },
@@ -2476,10 +2480,11 @@
      "at": "2026-11-22T10:13:07.657Z"
     },
     "tiktok": {
-     "state": "draft",
+     "state": "posted",
      "post_id": "v_inbox_file~v2.7710937666107279366",
      "url": null,
-     "at": "2026-11-22T10:17:38.532Z"
+     "at": "2026-11-22T10:17:38.532Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
     }
    }
   },
@@ -2671,10 +2676,11 @@
      "at": "2026-11-22T11:14:19.806Z"
     },
     "tiktok": {
-     "state": "draft",
+     "state": "posted",
      "post_id": "v_inbox_file~v2.7710953694585653269",
      "url": null,
-     "at": "2026-11-22T11:19:34.692Z"
+     "at": "2026-11-22T11:19:34.692Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
     }
    }
   },
