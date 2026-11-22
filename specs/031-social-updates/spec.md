@@ -1,6 +1,6 @@
 # Feature 031: Social Updates
 
-**Status:** in progress (PR 1 core) · **Owner ruling:** 2026-11-22 (D-2026-0096)
+**Status:** in progress (core and crew; pilot next) · **Owner ruling:** 2026-11-22 (D-2026-0096)
 
 ## Why
 The news ticker (Feature 028) announces content work on the site. The same updates should reach
@@ -32,5 +32,8 @@ and tied to green (merged and deployed) work.
   need the owner's `crew post <id>`.
 - **FR-007** Each source id is posted once; a platform that fails retries; a platform that
   succeeded is never posted again.
+- **FR-009** The working ledger lives on the host (`~/studio-media/social/updates.json`). Posting
+  is a host action and crew branches merge in batches, so a git-only ledger could repost before a
+  batch merged. Each job commits a snapshot to `specs/social/updates.json` as the record.
 - **FR-008** No media in git. Cards live in `~/studio-media/social/` and the public storage bucket
   `social-cards`. Nothing a content gate imports depends on `scripts/social/`.

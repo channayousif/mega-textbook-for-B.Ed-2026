@@ -1,6 +1,6 @@
 ---
 id: 20261243
-title: Feature 031 Social Updates, core (collector, card, image posting, ledger)
+title: Feature 031 Social Updates, core and crew stage
 stage: green
 date: 2026-11-22
 surface: agent
@@ -28,8 +28,15 @@ files:
   - specs/031-social-updates/plan.md
   - specs/031-social-updates/tasks.md
   - specs/decisions/log.md
+  - scripts/crew/social.mjs
+  - scripts/crew/crew.mjs
+  - scripts/crew/workers.mjs
+  - scripts/crew/planner.mjs
+  - tests/crew/social-stage.test.mjs
+  - tests/crew/worker-chains.test.mjs
 tests:
-  - tests/unit/social-updates.test.mjs (11)
+  - tests/unit/social-updates.test.mjs (15)
+  - npm run test:crew (167)
   - tests/unit/media-isolation.test.mjs
   - tests/unit/notebook-studio-social.test.mjs
 ---
@@ -53,22 +60,29 @@ existing content")
   Urdu anchoring, headline wrap, pill fit, Urdu lines for short cards).
 - Image posting added to social-post.mjs (Facebook photo by URL, Instagram image by URL, LinkedIn
   image upload); cards go to a public `social-cards` storage bucket.
-- Ledger `specs/social/updates.json` with pilot approval, auto-approval for content afterwards,
-  owner approval for features.
+- Ledger with pilot approval, auto-approval for content afterwards, owner approval for features.
+  Deviation from the plan: the working ledger is host-local (`~/studio-media/social/updates.json`);
+  a git-only ledger would repost before a crew batch merged and lose approvals made on unmerged
+  drafts. Jobs commit a snapshot to `specs/social/updates.json`.
+- Crew: `social_roundup` stage (daily from 18:00 PKT after a dry collect finds something new;
+  publish runs when an approved post waits), `crew social on|off|status`, `crew post <id>` (the
+  first approved content post ends the pilot), `crew reject-post <id> <note>`, board and status
+  lines with card links, a launch guard when social is off. Shipped in this PR rather than a
+  stacked one.
 
 ## Outcome
 
 - ✅ Impact: the posting pipeline exists and is tested; nothing is posted until the pilot.
-- 🧪 Tests: social-updates 11, isolation and social-post tests pass.
+- 🧪 Tests: social-updates 15, isolation and social-post tests, test:crew 167 pass.
 - 📁 Files: see front matter.
-- 🔁 Next prompts: PR 2 crew stage and commands; PR 3 pilot.
+- 🔁 Next prompts: pilot.
 - 🧠 Reflection: "only deployed work" is enforced by reading the live feed, not the repository.
 
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: scripts/social, image posts, skill, spec, D-2026-0096.
 - Decisions the team must respect: content auto-posts only after the pilot; features need `crew post`.
-- Pending / next owner: Claude: crew stage (PR 2) and pilot (PR 3). ADR candidate "crew-published
+- Pending / next owner: pilot (owner): after merge, a dry-run day, the first approved roundup, then `crew social on`. ADR candidate "crew-published
   social posts" awaits the owner's consent.
 - Paperclip issues affected: none.
 

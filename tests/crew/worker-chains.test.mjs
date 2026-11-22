@@ -35,6 +35,7 @@ test('2026-W45 M1 removes only opencode from intel_distill', () => {
     'teaser_clips': ['claude'],
     'media_assemble': ['claude'],
     'media_publish': ['claude'],
+    'social_roundup': ['claude'],
     'audio_overview': ['claude'],
     'maint_survey': ['claude', 'agy_claude', 'codex', 'agy', 'opencode'],
     'maint_refactor': ['codex', 'claude', 'agy_claude', 'opencode', 'agy'],

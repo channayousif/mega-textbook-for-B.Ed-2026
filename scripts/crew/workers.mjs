@@ -62,6 +62,7 @@ export const STAGES = {
   teaser_clips:   { chain: ['claude'], skill: 'studio-teaser' },
   media_assemble: { chain: ['claude'], skill: 'studio-teaser' },
   media_publish:  { chain: ['claude'], skill: 'studio-teaser' },
+  social_roundup: { chain: ['claude'], skill: 'social-updates' },
   audio_overview: { chain: ['claude'], skill: 'studio-media' },
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.

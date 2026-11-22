@@ -7,13 +7,20 @@
 // Only deployed work counts: content comes from the LIVE news feed (a merged PR whose main CI passed
 // and that the deploy gate published), features from PRs whose merge commit the deploy log shows live.
 //
-//   node scripts/social/updates.mjs collect [--since <iso>] [--date YYYY-MM-DD]
+//   node scripts/social/updates.mjs collect [--since <iso>] [--date YYYY-MM-DD] [--dry]
 //   node scripts/social/updates.mjs check <id>
 //   node scripts/social/updates.mjs render <id>
 //   node scripts/social/updates.mjs approve <id> [--by owner|auto]
 //   node scripts/social/updates.mjs reject <id> <note>
+//   node scripts/social/updates.mjs copy <id> <n> --en "<line>" --ur "<line>"   (feature line n, 1-based)
 //   node scripts/social/updates.mjs publish <id> [--platforms facebook,instagram,linkedin]
 //   node scripts/social/updates.mjs show [<id>]
+//   node scripts/social/updates.mjs snapshot            (copy the host ledger to specs/social/updates.json)
+//
+// The working ledger lives on this host (`~/studio-media/social/updates.json`, beside the cards),
+// because posting is a host action (the tokens are here) and crew branches merge in batches: a
+// ledger kept only in git could repost yesterday's items before yesterday's batch merged. Each crew
+// job commits a snapshot to `specs/social/updates.json` as the record.
 //
 // Nothing here is imported by a content gate (FR-018 pattern); tests: tests/unit/social-*.test.mjs.
 import { execFileSync } from 'node:child_process';
@@ -25,7 +32,8 @@ import { update } from '../media/ledger.mjs';
 import { SITE, LONG_DASH, clean } from '../media/brand.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-export const LEDGER = join(ROOT, 'specs', 'social', 'updates.json');
+export const LEDGER = process.env.SOCIAL_LEDGER ?? join(homedir(), 'studio-media', 'social', 'updates.json');
+export const SNAPSHOT = join(ROOT, 'specs', 'social', 'updates.json');
 export const PLATFORMS = ['facebook', 'instagram', 'linkedin'];
 export const MAX_HIGHLIGHTS = 5;
 export const LIMITS = { headline: 60, highlight: 90 };
@@ -166,6 +174,13 @@ export function loadLedger(path = LEDGER) { return existsSync(path) ? JSON.parse
 export const postedIds = (L) => new Set(L.posts.filter((p) => p.state !== 'rejected').flatMap((p) => p.items ?? []));
 export const lastRoundup = (L) => L.posts.map((p) => p.collected_at).filter(Boolean).sort().at(-1) ?? null;
 
+/** What waits: drafts the owner must approve (features, and content during the pilot) and approved posts not yet posted everywhere. */
+export function pending(L) {
+  const awaitingOwner = L.posts.filter((p) => p.state === 'drafted' && (p.kind === 'feature' || L.config?.pilot) && checkDraft(p).length === 0 && p.card);
+  const toPublish = L.posts.filter((p) => p.state === 'approved');
+  return { awaitingOwner, toPublish };
+}
+
 /** States: drafted -> approved -> posted (or rejected). Content auto-approves after the pilot. */
 export function approve(L, id, by = 'owner', now = new Date()) {
   const p = L.posts.find((x) => x.id === id);
@@ -176,6 +191,19 @@ export function approve(L, id, by = 'owner', now = new Date()) {
   if (f.length) throw new Error(`${id} fails check: ${f.join('; ')}`);
   Object.assign(p, { state: 'approved', approved: { by, at: now.toISOString() } });
   return p;
+}
+
+/** Write the EN/UR line of feature highlight `n` (1-based); the draft must be re-checked and re-rendered. */
+export function setCopy(L, id, n, en, ur) {
+  const p = L.posts.find((x) => x.id === id);
+  if (!p) throw new Error(`no post ${id}`);
+  if (p.state !== 'drafted') throw new Error(`${id} is ${p.state}`);
+  const h = p.highlights[n - 1];
+  if (!h) throw new Error(`${id} has no highlight ${n}`);
+  if (!en?.trim() || !ur?.trim()) throw new Error('both --en and --ur are needed');
+  Object.assign(h, { en: clean(en), ur: clean(ur), needs_copy: false });
+  delete p.card; delete p.card_url;
+  return h;
 }
 
 export function reject(L, id, note, now = new Date()) {
@@ -226,6 +254,11 @@ async function main(argv) {
     const L0 = loadLedger();
     const since = opt('--since') ?? lastRoundup(L0) ?? new Date(Date.now() - 86_400_000).toISOString();
     const facts = await collect({ since, date: opt('--date') ?? pkDate() });
+    if (argv.includes('--dry')) {
+      const drafts = buildDrafts({ ...facts, posted: postedIds(L0) });
+      out({ since, drafts: drafts.map((d) => ({ id: d.id, kind: d.kind, highlights: d.highlights.length })) });
+      return;
+    }
     const now = new Date().toISOString();
     const made = update(LEDGER, (L) => {
       L.config ??= { pilot: true }; L.posts ??= [];
@@ -239,9 +272,11 @@ async function main(argv) {
     out(made.length ? made : 'nothing new since ' + since);
     return;
   }
+  if (cmd === 'snapshot') { mkdirSync(dirname(SNAPSHOT), { recursive: true }); writeFileSync(SNAPSHOT, `${JSON.stringify(loadLedger(), null, 1)}\n`); out(`wrote ${SNAPSHOT.replace(ROOT + '/', '')}`); return; }
   if (cmd === 'show') { const L = loadLedger(); out(id ? L.posts.find((p) => p.id === id) : L.posts.map((p) => ({ id: p.id, kind: p.kind, state: p.state }))); return; }
   if (cmd === 'check') { const p = loadLedger().posts.find((x) => x.id === id); if (!p) throw new Error(`no post ${id}`); const f = checkDraft(p); out(f.length ? f : 'pass'); process.exit(f.length ? 1 : 0); }
   if (cmd === 'approve') { out(update(LEDGER, (L) => approve(L, id, opt('--by') ?? 'owner'))); return; }
+  if (cmd === 'copy') { out(update(LEDGER, (L) => setCopy(L, id, Number(rest[0]), opt('--en'), opt('--ur')))); return; }
   if (cmd === 'reject') { out(update(LEDGER, (L) => reject(L, id, rest.filter((a) => !a.startsWith('--')).join(' ')))); return; }
   if (cmd === 'render') {
     const { renderCard } = await import('./card.mjs');
@@ -251,7 +286,10 @@ async function main(argv) {
     const dir = join(homedir(), 'studio-media', 'social'); mkdirSync(dir, { recursive: true });
     const file = join(dir, `${p.id}.jpg`);
     await renderCard(p, file);
-    out(update(LEDGER, (L) => { const q = L.posts.find((x) => x.id === id); q.card = file.replace(homedir(), '~'); return { id, card: q.card }; }));
+    // Uploaded now, so the owner can open the card from the board or the digest before approving.
+    const { uploadCard } = await import('./publish.mjs');
+    const url = await uploadCard(file, p.id);
+    out(update(LEDGER, (L) => { const q = L.posts.find((x) => x.id === id); q.card = file.replace(homedir(), '~'); q.card_url = url; return { id, card: q.card, card_url: url }; }));
     return;
   }
   if (cmd === 'publish') {
@@ -260,7 +298,7 @@ async function main(argv) {
     out(await publishPost(id, platforms));
     return;
   }
-  console.error('commands: collect [--since iso] [--date d] | show [id] | check id | render id | approve id [--by owner|auto] | reject id note | publish id [--platforms a,b]');
+  console.error('commands: collect [--since iso] [--date d] [--dry] | show [id] | copy id n --en t --ur t | check id | render id | approve id [--by owner|auto] | reject id note | publish id [--platforms a,b] | snapshot');
   process.exit(2);
 }
 

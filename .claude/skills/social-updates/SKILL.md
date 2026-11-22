@@ -25,21 +25,33 @@ This skill holds the daily roundup.
 - **Not announced:** "Final review pending", crew or tooling PRs, fixes, tests or docs.
 
 ## Steps
-1. `node scripts/social/updates.mjs collect` adds the day's drafts to `specs/social/updates.json`.
-   Each source id is announced once.
+The working ledger is on this host (`~/studio-media/social/updates.json`, beside the cards), because
+posting is a host action and crew branches merge in batches. Never edit it by hand: use the CLI.
+1. `node scripts/social/updates.mjs collect` adds the day's drafts to the host ledger. Each source
+   id is announced once.
 2. **Feature lines:** for every highlight marked `needs_copy`, read the PR (`gh pr view <n>`) and write
    one plain sentence in English (90 characters or fewer, starting with the place, for example
    "Home page: ...") and its Urdu rendering (simple spoken register, English technical terms kept).
-   Edit the draft's `en` and `ur`, and set `needs_copy` to false.
+   Write them with `updates.mjs copy <id> <n> --en "..." --ur "..."`.
 3. `updates.mjs check <id>` must pass.
 4. `updates.mjs render <id>`, then read the JPEG: nothing clipped, Urdu reads right to left, the
    address is visible.
 5. **Approval:**
    - content: `updates.mjs approve <id> --by auto`, which the ledger refuses during the pilot;
    - feature: stop. The owner replies `crew post <id>` or `crew reject-post <id> <note>`.
-6. `updates.mjs publish <id>` uploads the card to the public `social-cards` bucket and posts to each
-   platform. A platform that fails is retried on the next publish; one that succeeded is never
-   posted again.
+6. `updates.mjs publish <id>` posts to each platform. The card was uploaded to the public
+   `social-cards` bucket at render, so the owner can open it from the board. A platform that fails
+   is retried on the next publish; one that succeeded is never posted again.
+7. `updates.mjs snapshot`, then commit `specs/social/updates.json` (the record) with the PHR.
+
+## Crew and owner commands
+- `crew social on|off|status`: the daily roundup is off by default. When on, a `social_roundup` job
+  is queued from 18:00 PKT when a dry collect finds deployed work not yet posted. A publish run is
+  queued at any hour when an approved post waits.
+- `crew post <id>` approves a post. The owner's first approved content post ends the pilot, and
+  content roundups publish on their own after that. `crew reject-post <id> <note>` rejects one; its
+  items return in the next roundup.
+- The board and `crew status` show posts waiting for approval, with each card's link.
 
 ## Voice
 - Plain and informative: what changed, for whom, where to read it. No hype, no "revolutionary", no

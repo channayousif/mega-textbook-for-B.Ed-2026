@@ -32,7 +32,7 @@ function env() {
 /** The public address a card gets in the bucket. */
 export const publicUrl = (base, id) => `${base}/storage/v1/object/public/${BUCKET}/${id}.jpg`;
 
-async function uploadCard(file, id) {
+export async function uploadCard(file, id) {
   const { url, key } = env();
   const h = { Authorization: `Bearer ${key}`, apikey: key };
   const b = await fetch(`${url}/storage/v1/bucket`, { method: 'POST', headers: { ...h, 'Content-Type': 'application/json' }, body: JSON.stringify({ id: BUCKET, name: BUCKET, public: true }) });

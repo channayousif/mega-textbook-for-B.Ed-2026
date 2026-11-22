@@ -2,7 +2,7 @@
 // captions, approval rules, image-post request builders and the card.
 import { describe, it, expect } from 'vitest';
 import {
-  highlight, contentHighlights, isFeature, buildDrafts, checkDraft, captionFor, altText, approve, reject, emptyLedger, postedIds,
+  highlight, contentHighlights, isFeature, buildDrafts, checkDraft, captionFor, altText, approve, reject, emptyLedger, postedIds, setCopy, pending,
 } from '../../scripts/social/updates.mjs';
 import { facebookPhotoForm, instagramImageQuery, linkedinImageInit, linkedinImagePost } from '../../scripts/notebook-studio/social-post.mjs';
 import { cardSvg } from '../../scripts/social/card.mjs';
@@ -117,5 +117,23 @@ describe('image posts and the card', () => {
     expect(svg).toContain('GCCE-400 Unit 1: Citizenship');
     expect(svg).toContain('Read free: textbook.com.pk');
     expect(svg).toContain('#e5a333');
+  });
+});
+
+describe('feature copy and what waits', () => {
+  it('writes a feature line through setCopy, clearing the stale card, and lists what waits on the owner', () => {
+    const L = emptyLedger();
+    const [feat] = buildDrafts({ date: 'd', prs: [{ number: 5, title: 'feat(x): y', files: ['src/a.tsx'] }] });
+    L.posts.push({ ...feat, card: '~/c.jpg', card_url: 'https://x/c.jpg' });
+    expect(() => setCopy(L, feat.id, 1, 'Home page: teasers', '')).toThrow(/--ur/);
+    setCopy(L, feat.id, 1, 'Home page: teasers \u2014 new', 'ہوم پیج: تعارفی ویڈیو');
+    const p = L.posts[0];
+    expect(p.highlights[0]).toMatchObject({ en: 'Home page: teasers - new', needs_copy: false });
+    expect(p.card).toBeUndefined();
+    expect(pending(L).awaitingOwner).toHaveLength(0); // needs a fresh card first
+    p.card = '~/c.jpg';
+    expect(pending(L).awaitingOwner.map((x) => x.id)).toEqual([feat.id]);
+    approve(L, feat.id, 'owner');
+    expect(pending(L).toPublish.map((x) => x.id)).toEqual([feat.id]);
   });
 });
