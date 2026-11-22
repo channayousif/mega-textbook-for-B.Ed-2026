@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Opportunities and risks of digital platforms</title><desc id="d">Table of four opportunities and four risks of digital platforms for civic participation. Opportunities: fast and wide reach, low cost, photo and video evidence, and a record of who responded. Risks: misinformation spreads quickly, echo chambers harden views, people without access are excluded, and posts can expose personal data.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.thin { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+.dot { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><text class="h" x="24" y="34">Opportunities and risks of digital platforms</text><line class="thin" x1="24" y1="80" x2="756" y2="80"/><line class="thin" x1="24" y1="100" x2="756" y2="100"/><line class="thin" x1="396" y1="80" x2="396" y2="364"/><line class="thin" x1="24" y1="166" x2="756" y2="166"/><line class="thin" x1="24" y1="232" x2="756" y2="232"/><line class="thin" x1="24" y1="298" x2="756" y2="298"/><text class="h" x="40" y="70">Opportunities</text><text class="h" x="412" y="70">Risks</text><text class="body" x="40" y="128">Fast and wide reach: a post can</text><text class="body" x="40" y="146">reach a whole town in minutes.</text><text class="body" x="40" y="194">Low cost: a complaint or a campaign</text><text class="body" x="40" y="212">costs very little.</text><text class="body" x="40" y="260">Photo and video evidence: a picture</text><text class="body" x="40" y="278">of a broken drain is hard to deny.</text><text class="body" x="40" y="326">A record of who responded: a portal</text><text class="body" x="40" y="344">shows what the office did.</text><text class="body" x="412" y="128">Misinformation spreads quickly, before</text><text class="body" x="412" y="146">anyone can check it.</text><text class="body" x="412" y="194">Echo chambers harden views: people</text><text class="body" x="412" y="212">hear only what agrees with them.</text><text class="body" x="412" y="260">People without access are excluded:</text><text class="body" x="412" y="278">those offline never see the campaign.</text><text class="body" x="412" y="326">Posts can expose personal data: a</text><text class="body" x="412" y="344">name, photo or address can leak.</text><text class="small" x="24" y="384">Each opportunity carries its own risk.</text><text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

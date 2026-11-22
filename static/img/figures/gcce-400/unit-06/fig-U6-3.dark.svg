@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Five checks before sharing</title><desc id="d">Flowchart of five checks before sharing a post about a public issue: check the source, check the date, check the evidence, consider the harm, then decide to share with a note or pause and correct it.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.thin { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+.dot { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="560"/><text class="h" x="24" y="34">Five checks before you share</text><line class="stroke" x1="390" y1="104" x2="390" y2="128" marker-end="url(#arrow)"/><line class="stroke" x1="390" y1="180" x2="390" y2="208" marker-end="url(#arrow)"/><line class="stroke" x1="390" y1="260" x2="390" y2="288" marker-end="url(#arrow)"/><line class="stroke" x1="390" y1="340" x2="390" y2="368" marker-end="url(#arrow)"/><line class="stroke" x1="390" y1="420" x2="230" y2="480" marker-end="url(#arrow)"/><line class="stroke" x1="390" y1="420" x2="550" y2="480" marker-end="url(#arrow)"/><rect class="panel" x="230" y="60" width="320" height="44" rx="8"/><text class="body" x="246" y="88">See a post about a public issue</text><rect class="panel" x="230" y="128" width="320" height="52" rx="8"/><text class="cell" x="246" y="150">Check the source: who made it,</text><text class="cell" x="246" y="168">and can you trust them?</text><rect class="panel" x="230" y="208" width="320" height="52" rx="8"/><text class="cell" x="246" y="230">Check the date: is it current,</text><text class="cell" x="246" y="248">or is it old news?</text><rect class="panel" x="230" y="288" width="320" height="52" rx="8"/><text class="cell" x="246" y="310">Check the evidence: does a fact-check</text><text class="cell" x="246" y="328">or an official page confirm it?</text><rect class="panel" x="230" y="368" width="320" height="52" rx="8"/><text class="cell" x="246" y="390">Consider the harm: could it hurt</text><text class="cell" x="246" y="408">a person or a community?</text><rect class="panel-a" x="90" y="480" width="280" height="52" rx="8"/><text class="body" x="106" y="512">Share with a short note</text><rect class="panel-b" x="410" y="480" width="280" height="52" rx="8"/><text class="body" x="426" y="512">Pause, and correct it</text><text class="wm" x="768" y="550" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
