@@ -27,3 +27,13 @@
 - [x] T016 Add `DIGEST_CRON_SECRET`, `DIGEST_TOKEN_SECRET` to the edge-runtime env, copy the functions, restart the functions container.
 - [ ] T017 After merge and deploy: admin preview and test send, checked in Gmail desktop and mobile.
 - [x] T018 Install the crontab line `0 10 * * 0` for `ops/news/weekly-digest.sh`.
+
+## Phase 6: Three-row ticker, full list, pinning, fresher feed (owner, 2026-11-17)
+- [x] T019 Feed: `updated` (40+ changed lines on a day, a week or more after the unit appeared), `figures` (new figure files per unit per day, counted once across `.ur`/`.dark` variants, not for a unit's first week) and `provisional` (only while G3 is `provisional`) events in `scripts/build-news-feed.mjs`; `MAX_EVENTS` 120; `customFields.newsFeed` carries the newest 40, trimmed.
+- [x] T020 Migration `0054_news_pins.sql`: `news_pins` keyed by feed event id, public read of active pins, admin read of all, writes only through the audited `set_news_pin`; `news_pins.created_by` in `tests/profile-dependents.mjs`.
+- [x] T021 `src/lib/newsMerge.ts`: `laneOf`, `groupBursts` (one kind, one course, within a week; pinned never grouped; figures count figures), `buildLanes` (up to three rows, two still pins per row, ten scrolling).
+- [x] T022 `src/components/NewsTicker`: rows with label buttons, still pinned chips with a pin mark, one Pause, "View all" panel (full 60-day feed, pinned first, bursts expandable, Esc returns focus); `pin` and `figures` icons; Urdu strings.
+- [x] T023 Admin page: Pin/Unpin with an optional end date on each automatic post.
+- [x] T024 Weekly email: "Updated units" (revisions and final review pending) and "New illustrations" (with counts).
+- [x] T025 Tests: `news-feed`, `news-merge`, `digest-email`, `icon-pack`; `tests/rls/news-items.test.mjs` news_pins case. 0054 verified on stubs in a disposable `supabase/postgres:17.6.1.136` container (roles, grants, policies, RPC, audit, set-null).
+- [ ] T026 Rollout (owner approval): apply 0054 to the shared Supabase (CI's RLS job needs it) and `notify pgrst`; after merge copy `_shared/digestEmail.ts` to the edge volume; curl anonymous `news_pins`.

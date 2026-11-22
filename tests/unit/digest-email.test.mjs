@@ -109,3 +109,26 @@ describe('unsubscribe tokens', () => {
     expect(await verifyUnsubscribe('', token)).toBeNull();
   });
 });
+
+describe('renderDigest: updated units and new illustrations', () => {
+  const email = renderDigest({
+    ...base,
+    events: [
+      event({ id: 'updated:EFMP-301:2', type: 'updated', unit_no: 2, title_en: 'Memory', title_ur: 'حافظہ' }),
+      event({ id: 'figures:EFMP-301:3', type: 'figures', unit_no: 3, title_en: 'Motivation', title_ur: 'تحریک', count: 4 }),
+      event({ id: 'provisional:EFMP-301:4', type: 'provisional', unit_no: 4, title_en: 'Assessment', title_ur: null }),
+    ],
+    news: [],
+  });
+
+  it('adds an Updated units section (revisions and final-review-pending) and a New illustrations section with counts', () => {
+    expect(email.html).toContain('Updated units');
+    expect(email.html).toContain('اپ ڈیٹ ہونے والے یونٹ');
+    expect(email.html).toContain('New illustrations');
+    expect(email.html).toContain('Motivation (4 new)');
+    expect(email.html).toContain('تحریک (4 نئی)');
+    expect(email.html).toContain('Assessment (final review pending)');
+    expect(email.text).toContain('📝');
+    expect(email.html).not.toMatch(EM_DASH);
+  });
+});

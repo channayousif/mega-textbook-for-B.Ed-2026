@@ -312,7 +312,7 @@ export type NewsItem = {
 };
 
 /** Feature 028 - an automatic content event from static/news-feed.json. */
-export type NewsEventType = 'course' | 'unit' | 'urdu' | 'review';
+export type NewsEventType = 'course' | 'unit' | 'urdu' | 'review' | 'updated' | 'figures' | 'provisional';
 export type NewsEvent = {
   id: string;
   type: NewsEventType;
@@ -325,6 +325,9 @@ export type NewsEvent = {
   course_title_en: string;
   course_title_ur: string | null;
   permalink: string;
+  /** `figures`: how many new figures; `updated`: changed lines. */
+  count?: number;
+  lines?: number;
 };
 
 /** Feature 028 - one row of the weekly digest ledger (public.digest_runs). */

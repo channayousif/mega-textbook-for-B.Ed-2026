@@ -7,7 +7,7 @@
 
 export type DigestEvent = {
   id: string;
-  type: 'course' | 'unit' | 'urdu' | 'review';
+  type: 'course' | 'unit' | 'urdu' | 'review' | 'updated' | 'figures' | 'provisional';
   gate?: 'G3' | 'G5';
   date: string;
   course_code: string;
@@ -17,6 +17,8 @@ export type DigestEvent = {
   course_title_en: string;
   course_title_ur: string | null;
   permalink: string;
+  /** `figures`: how many new figures. */
+  count?: number;
 };
 
 export type DigestNews = {
@@ -82,10 +84,13 @@ function plural(n: number, one: string, many: string): string {
 
 export function groupDigest(input: Pick<DigestInput, 'events' | 'news' | 'siteUrl'>): Group[] {
   const { events, news, siteUrl } = input;
-  const ev = (type: DigestEvent['type']) => events.filter((e) => e.type === type).map((e) => ({
-    titleEn: type === 'review' ? `${e.title_en} (${e.gate} review)` : e.title_en,
-    titleUr: e.title_ur || e.title_en,
-    context: type === 'course' ? null : e.course_code,
+  const ev = (...types: DigestEvent['type'][]) => events.filter((e) => types.includes(e.type)).map((e) => ({
+    titleEn: e.type === 'review' ? `${e.title_en} (${e.gate} review)`
+      : e.type === 'figures' && e.count ? `${e.title_en} (${e.count} new)`
+        : e.type === 'provisional' ? `${e.title_en} (final review pending)` : e.title_en,
+    titleUr: e.type === 'figures' && e.count ? `${e.title_ur || e.title_en} (${e.count} نئی)`
+      : e.type === 'provisional' ? `${e.title_ur || e.title_en} (حتمی نظرثانی باقی)` : (e.title_ur || e.title_en),
+    context: e.type === 'course' ? null : e.course_code,
     href: absolute(siteUrl, e.permalink),
     hrefUr: absolute(siteUrl, e.permalink, true),
   }));
@@ -94,6 +99,8 @@ export function groupDigest(input: Pick<DigestInput, 'events' | 'news' | 'siteUr
     { key: 'unit', emoji: '📘', en: 'New units', ur: 'نئے یونٹ', items: ev('unit') },
     { key: 'urdu', emoji: '🌐', en: 'Now in Urdu', ur: 'اب اردو میں', items: ev('urdu') },
     { key: 'review', emoji: '✅', en: 'Reviewed units', ur: 'جائزہ مکمل یونٹ', items: ev('review') },
+    { key: 'updated', emoji: '📝', en: 'Updated units', ur: 'اپ ڈیٹ ہونے والے یونٹ', items: ev('updated', 'provisional') },
+    { key: 'figures', emoji: '🖼️', en: 'New illustrations', ur: 'نئی تصاویر', items: ev('figures') },
     {
       key: 'news', emoji: '📣', en: 'News and offers', ur: 'خبریں اور پیشکشیں',
       items: news.map((n) => ({

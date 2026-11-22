@@ -43,6 +43,19 @@ Two sources, merged in the browser, each owned by the layer that already holds i
 - **Docusaurus's built-in `announcementBar`.** Rejected: one static message, set in config, with no admin editing, no list and no icons.
 - **Public read through a `security definer` RPC instead of a table policy.** Rejected: it adds a function per query shape. A row policy with explicit grants is simpler to test, and PostgREST can serve it directly.
 
+## Amendment 2026-11-22 (three-row ticker, owner ruling 2026-11-17)
+
+- **More git-derived event types, same rule.** `updated` (a substantive revision of a unit's English
+  topic or assessment files), `figures` (new figure files for a unit) and `provisional` (a unit
+  published under "Final Review Pending") are derived from git history and the content-status
+  report at build time, like the original four. Nothing is written from CI and no event can claim
+  something the repository does not show.
+- **A second public table, `news_pins`.** Admins pin automatic events by their stable feed id.
+  It follows the `news_items` pattern: public read of active rows only through a policy that does
+  not call `is_admin()`, a separate admin read policy, explicit grants, and writes only through an
+  admin-checked, audited RPC (`set_news_pin`). It holds no private data: an event id, an optional
+  end time and the admin who pinned it (set null when that profile is deleted).
+
 ## References
 
 - Feature Spec: specs/028-news-ticker/spec.md
