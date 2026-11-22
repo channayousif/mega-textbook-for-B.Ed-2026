@@ -32,7 +32,7 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-02/G2/20261122T105142262Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the Sindh Local Government Act example (street lighting as a local function) against the Act's schedule, and the constitutional articles against the current text (sources/unit-02.md) |
-| Unit 2 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
+| Unit 2 | G4 ur-translation | ▢ | | Complete five-file draft Urdu mirror and four localized SVG pairs (with derived dark twins) prepared from English 870144971; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-02/handoff.md |
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and five new glossary Urdu definitions are authored and need checking |
 | Unit 2 | G6 assets | ▣ | | Four English schematic SVGs (fig-U2-1 to fig-U2-4) placed with derived dark variants; no .ur.svg yet; banner fig-U2-5 prompt-only for the illustrate job |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
