@@ -24,15 +24,15 @@ files:
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/unit-assessment.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-05/unit-teacher-notes.mdx
  - specs/content/gcce-400/figures/unit-05.md
- - specs/content/gcce-400/reviews/unit-05/G2/20261122T152925023Z-gates.json
- - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-bloom-bands.txt
- - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-concept-graph.txt
- - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-depth-gate.txt
- - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-docs-sync.txt
- - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-figures.txt
- - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-no-answer-keys.txt
- - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/check-no-em-dash.txt
- - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T152925023Z/validate-content.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/20261122T154837329Z-gates.json
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-05/G2/logs-20261122T154837329Z/validate-content.txt
  - specs/content/gcce-400/tasks.md
  - specs/content/gcce-400/translations/unit-05/check-content-parity.txt
  - specs/content/gcce-400/translations/unit-05/handoff.md
@@ -98,7 +98,7 @@ Translated GCCE-400 Unit 5 into a complete six-file Urdu mirror with six RTL-mir
 - Tests: `npm run check:content` all 14 gates PASS at draft; the reviewed flip passed every gate except the two expected G4/G5 pipeline findings and both indexes were reverted; `figures:variants:check` PASS; `measure-figure-text` exit 0 on all six `.ur.svg`.
 - Files: 33 file(s), listed above.
 - Next prompts: independent G5 Urdu review; rendered Urdu inspection at 360px and A4 print.
-- Reflection: the unit's six key concepts are absent from `terminology.csv`, so `key_terms` binds only the six banked terms that occur and the concepts are recorded as owner proposals rather than silently banked. A caption in `fig-U5-2.ur.svg` and `fig-U5-6.ur.svg` needed its x pulled left to clear the wordmark.
+- Reflection: the unit's six key concepts are absent from `terminology.csv`, so `key_terms` binds only the six banked terms that occur and the concepts are recorded as owner proposals rather than silently banked. A caption in `fig-U5-2.ur.svg` and `fig-U5-6.ur.svg` needed its x pulled left to clear the wordmark. A self-review pass then replaced a set of mistranslations (sensationalism rendered as the word for "beautiful", resilience as "full", a non-word for "scattered", flood repairs as "comfort", brick kilns, the newly elected parliament) in the mirror and in fig-U5-2.
 
 ## Handoff (for CEO and agents)
 
