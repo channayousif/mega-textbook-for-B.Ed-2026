@@ -1,6 +1,6 @@
 ---
 id: crew-gcce-400-u03-author-conflict2
-title: crew fix GCCE-400 unit 3 (conflict2)
+title: crew fix GCCE-400 unit 3
 stage: misc
 date: 2026-11-22
 surface: agent
@@ -16,10 +16,37 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/gcce-400/tasks.md
+ - docs/semester-4/gcce-400/unit-03/index.mdx
+ - docs/semester-4/gcce-400/unit-03/topic-01.mdx
+ - docs/semester-4/gcce-400/unit-03/topic-02.mdx
+ - docs/semester-4/gcce-400/unit-03/unit-assessment.mdx
+ - docs/semester-4/gcce-400/unit-03/unit-teacher-notes.mdx
+ - history/prompts/gcce-400/crew-gcce-400-u03-author-conflict1.misc.prompt.md
  - history/prompts/gcce-400/crew-gcce-400-u03-author-conflict2.misc.prompt.md
+ - history/prompts/gcce-400/crew-gcce-400-u03-author.green.prompt.md
+ - specs/content/gcce-400/concepts/unit-03.md
+ - specs/content/gcce-400/coverage/unit-03.md
+ - specs/content/gcce-400/figures/unit-03.md
+ - specs/content/gcce-400/reviews/unit-03/G2/20261122T113420667Z-gates.json
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-03/G2/logs-20261122T113420667Z/validate-content.txt
+ - specs/content/gcce-400/sources/unit-03.md
+ - specs/content/gcce-400/tasks.md
+ - static/img/figures/gcce-400/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-1.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-2.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-3.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/gcce-400/unit-03/fig-U3-4.svg
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -56,32 +83,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u03-author, author, agy) G3 en-review remains open; the reviewer should confirm the currency of cited constitutional provisions under the 1973 Constitution (Articles 8-28 and Article 5).
 - (gcce-400-u03-author, author, agy) Urdu translation (G4/G5) is a separate downstream job; the unit is published under the required untranslated notice.
 
+
 ## Response snapshot
 
-Merged origin/main (9a1890b5e) into crew/gcce-400-u03-author as merge commit 1aca1948f. The only conflict was specs/content/gcce-400/tasks.md; I kept both sides' entries (Unit 3 rows and reading estimate from this branch, Unit 4 rows and reading estimate from main), dropped the duplicated Unit 1 and Unit 2 estimate copies, and updated the status header to Units 1-4. glossary.json auto-merged with main's five new terms and no ID collision. All 14 content gates pass.
+Merged origin/main into crew/gcce-400-u03-author and resolved the sole specs/content/gcce-400/tasks.md conflict by keeping both Unit 3 (branch) and Unit 4 (main) rows and reading estimates, with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for GCCE-400 Unit 3 by claude_crew (conflict2).
-- Tests: npm run build:content-status then npm run check:content passed (14/14 gates).
-- Files: specs/content/gcce-400/tasks.md and this PHR; the merge commit also carries main's Unit 1 and Unit 4 work.
+- Impact: fix for GCCE-400 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit 1aca1948f on crew/gcce-400-u03-author; specs/content/gcce-400/tasks.md now carries Unit 1, 2, 3 and 4 stage rows and all four reading estimates.
-- Decisions the team must respect: the tracker keeps both sides' entries in numeric unit order; no main entry was changed or removed; the header summary was updated to Units 1-4 because main's Unit 4 is now merged.
+- Shipped / changed: Merged origin/main into crew/gcce-400-u03-author and resolved the sole specs/content/gcce-400/tasks.md conflict by keeping both Unit 3 (branch) and Unit 4 (main) rows and reading estimates, with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 en-review is still open; the reviewer should confirm the currency of cited constitutional provisions under the 1973 Constitution (Articles 8-28 and Article 5).
-  - Urdu translation (G4/G5) is a separate downstream job; the unit stays under the required untranslated notice.
+  - G3 en-review is still open for Unit 3; the reviewer should confirm the currency of cited constitutional provisions under the 1973 Constitution (Articles 8-28 and Article 5).
+  - Urdu G4/G5 is a separate downstream job; Unit 3 stays under the required untranslated notice.
   - The tracker now carries Unit 1, 2, 3 and 4 rows; the next unit job should re-point its G2 row only if its evidence file changes.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: specs/content/gcce-400/tasks.md is a hand-maintained tracker that conflicts on every parallel unit job; both sides also rewrite the reading-estimate block, so a naive merge duplicates the Unit 1 and Unit 2 prose.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14).
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
