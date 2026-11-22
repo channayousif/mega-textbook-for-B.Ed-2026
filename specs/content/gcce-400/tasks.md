@@ -1,6 +1,6 @@
 # GCCE-400 Civics and Community Engagement - Task tracker
 
-## Status: content spec approved (G0/G1); Unit 1 authoring in progress
+## Status: content spec approved (G0/G1); Unit 1 English draft authored and G2 gate evidence recorded; G3 review open
 
 English-only authoring from the approved Unit 1 content-spec. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
