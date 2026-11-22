@@ -82,9 +82,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u01-author, author, agy) Print monographs by Abbas (1993), Corder (1973), and Harrison (1973) are registered under unretrievable sources with owner ruling D-2026-0001 per depth-gate standards.
 - (efpg-401-u01-author, author, agy) Eight schematic SVGs are placed and measured; Urdu mirror (G4) and independent review (G3) remain open for downstream crew jobs.
 
+
 ## Response snapshot
 
-Generated and placed EFPG-401 Unit 1 raster banner and four topic illustrations in English and Urdu unit files, transitioned manifests to placed, and refreshed G2 gate evidence.
+Generated, inspected, and placed all five EFPG-401 Unit 1 raster illustrations in English and Urdu files, transitioned manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
@@ -96,17 +97,17 @@ Generated and placed EFPG-401 Unit 1 raster banner and four topic illustrations 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed EFPG-401 Unit 1 raster banner and four topic illustrations in English and Urdu unit files, transitioned manifests to placed, and refreshed G2 gate evidence.
+- Shipped / changed: Generated, inspected, and placed all five EFPG-401 Unit 1 raster illustrations in English and Urdu files, transitioned manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open and unticked awaiting fresh independent review against committed bytes.
-  - All five raster illustrations (fig-U1-9 through fig-U1-13) were inspected and placed with zero em dashes in English and Urdu files.
+  - All four topic scene illustrations (fig-U1-10 to fig-U1-13) and the unit banner (fig-U1-9) are placed with zero em dashes and verified against all content gates.
+  - G3 English review and G5 Urdu review remain open for independent review on committed bytes.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none.
-- Graders run and results (PASS/FAIL): all 14 content gates passed (validate:content, check:pipeline-gate, check:depth-gate, check:figures, check:svg-style, check:no-em-dash, check:no-answer-keys, check:concept-graph, check:bloom-bands, check:source-floor, check:licence, licence:map:check, check:content-status, check:docs-sync).
-- Prompt variant (if applicable): null
-- Next experiment (smallest change to try): null
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
