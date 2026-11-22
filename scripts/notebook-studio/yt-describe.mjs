@@ -29,7 +29,7 @@ export function mergedSnippet(current, { description, tags }) {
   return s;
 }
 
-async function accessToken() {
+export async function accessToken() {
   const cache = JSON.parse(readFileSync(CACHE, 'utf8'));
   const ch = cache[CHANNEL];
   if (!ch?.token?.refresh_token) throw new Error('no saved YouTube sign-in: run the youtube-uploader authenticate flow');

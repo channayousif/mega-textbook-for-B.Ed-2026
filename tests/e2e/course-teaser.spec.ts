@@ -39,3 +39,27 @@ test('a course without a public teaser shows neither player nor button', async (
   await page.goto('/intro/');
   await expect(page.getByTestId('teaser-button-GQUR-300')).toHaveCount(0);
 });
+
+test('the home page shows the teaser picks under the hero and loads a player only on tap', async ({ page }) => {
+  await page.goto('/');
+  const section = page.getByTestId('home-teasers');
+  await expect(section).toBeVisible();
+  await expect(section.getByRole('heading', { name: 'Courses in 30 seconds' })).toBeVisible();
+  const cards = section.locator('li');
+  expect(await cards.count()).toBeGreaterThanOrEqual(1);
+  expect(await cards.count()).toBeLessThanOrEqual(4);
+  await expect(section.locator('iframe')).toHaveCount(0);
+  const frame = cards.first().getByTestId('teaser-frame');
+  const box = await frame.boundingBox();
+  await cards.first().getByRole('button', { name: /Play the course teaser/ }).click();
+  await expect(cards.first().locator('iframe')).toHaveAttribute('src', /youtube-nocookie\.com\/embed\/[\w-]{11}/);
+  expect((await frame.boundingBox())!.height).toBeCloseTo(box!.height, 0);
+  await expect(cards.first().getByRole('link', { name: 'Open the course' })).toHaveAttribute('href', /\/semester-\d\/[a-z]{4}-\d{3}\/course-overview\/$/);
+});
+
+test('the Urdu home page shows the Urdu heading and no horizontal page scroll on a phone', async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 });
+  await page.goto('/ur/');
+  await expect(page.getByTestId('home-teasers').getByRole('heading', { name: 'کورس 30 سیکنڈ میں' })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});

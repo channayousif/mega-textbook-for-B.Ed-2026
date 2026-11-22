@@ -150,6 +150,18 @@ function courseTeasers(): Record<string, { youtube_id: string; title: string; lo
   }
 }
 
+/**
+ * The home page's "Courses in 30 seconds" picks (two most watched, two newest), chosen at build
+ * time by build-studio-index.mjs from the public teasers and specs/studio/teaser-stats.json.
+ */
+function homeTeasers(): Array<{ code: string; youtube_id: string; title: string; locale: string; semester: number; reason: 'top' | 'latest' }> {
+  try {
+    return JSON.parse(readFileSync('./static/studio-index.json', 'utf8')).homeTeasers ?? [];
+  } catch {
+    return [];
+  }
+}
+
 /** Per-course counts for the catalogue, from the same sources as siteStats(). */
 function courseStatus() {
   const report = JSON.parse(readFileSync('./static/content-status.json', 'utf8'));
@@ -229,6 +241,7 @@ const config: Config = {
     courseStatus: courseStatus(),
     newsFeed: newsFeed(),
     courseTeasers: courseTeasers(),
+    homeTeasers: homeTeasers(),
   },
 
   presets: [
