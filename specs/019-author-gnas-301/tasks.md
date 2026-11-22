@@ -1,6 +1,8 @@
 # Tasks: Author GNAS-301 · Environmental Science
 
 **Feature**: 019-author-gnas-301 | **Branch**: `019-author-gnas-301`
+
+> **Status (2026-11-22): superseded by the crew.** GNAS-301 was authored unit by unit by the crew (`scripts/crew`, since 2026-10-17) and is live; the unticked boxes below are the original plan, not open work. The course tracker `specs/content/gnas-301/tasks.md` is the record.
 **Input**: [spec.md](./spec.md) · [plan.md](./plan.md)
 
 ## Format: `[ID] [P?] [Story] Description`
