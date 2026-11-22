@@ -92,26 +92,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gnas-301-u04-repair_en-r1-conflict2, fix, opencode) G3 remains open pending owner authorization; live mobile and A4 print inspection remains outstanding.
 - (gnas-301-u04-repair_en-r1-conflict1, fix, codex) G3 remains open pending owner authorization; live mobile and A4 print inspection remains outstanding.
 
+
 ## Response snapshot
 
-Inspected and accepted all eight GNAS-301 Unit 4 raster illustrations (unit banner fig-U4-15 and topic scenes fig-U4-16 through fig-U4-22), verified that fig-U4-18 rules sheet and fig-U4-20 notebook carry no readable text, committed figure placements in English and Urdu topic/index pages, marked manifest rows placed, refreshed Unit 4 G2 gate evidence and updated tasks.md, and validated that all 14 content gates pass.
+Placed and verified GNAS-301 Unit 4 raster illustrations (fig-U4-15 through fig-U4-22), refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
-- Impact: illustrate for GNAS-301 Unit 4 by agy.
-- Tests: npm run check:content passed with all 14 gates clean.
+- Impact: illustrate for GNAS-301 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 37 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Placed raster illustrations fig-U4-15 (unit banner) and fig-U4-16 through fig-U4-22 in English and Urdu index and topic files, marked manifest rows placed, refreshed Unit 4 G2 evidence, and passed all 14 content gates.
-- Decisions the team must respect: Verified fig-U4-18 rules sheet and fig-U4-20 notebook carry no readable text; all figures adhere to ADR-0029, ADR-0036 and cultural dress rules.
-- Pending / next owner: Unit 4 G3 review remains open/stale since figure-geometry repair; third review cycle owner-gated (G-2026-31).
+- Shipped / changed: Placed and verified GNAS-301 Unit 4 raster illustrations (fig-U4-15 through fig-U4-22), refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - fig-U4-16, -18, -19 and -20 prompts don't name a Sindh city because prose is set in Faisalabad/Lahore; owner/author decides whether to re-set prose.
-  - G3 remains open pending owner authorization; live mobile and A4 print inspection remains outstanding.
+  - The fig-U4-16, -18, -19 and -20 prompts do not name a Sindh city because their prose is set in Faisalabad or Lahore; author or owner decides whether to re-set prose in Sindh.
+  - Unit 4 G3 review remains open pending owner authorization (third cycle owner-gated by G-2026-31); live mobile and A4 print inspection remains outstanding.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
