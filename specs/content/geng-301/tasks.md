@@ -15,7 +15,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-02/G2/20261113T193245605Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-02/G2/20261123T155535430Z-gates.json |
 | Unit 2 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 04ddc645-f479-4d6d-a614-8f7e23db9fc0): SVG text geometry overflow (all 8 figures), subtopic U2-05 assessment omission, RRQ 5 mark scheme arithmetic contradiction, and unverifiable source declarations. Report: specs/content/geng-301/reviews/unit-02/G3/04ddc645-f479-4d6d-a614-8f7e23db9fc0.json. G3 stays open, unsigned (ADR-0019). |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
@@ -29,7 +29,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-04/G2/20261103T112243231Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-04/G2/20261123T155535618Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, advisory findings F1-F2) at specs/content/geng-301/reviews/unit-04/G3/agent:g3-reviewer:20261019T162139Z.json; agent reviews advisory under ADR-0019; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
@@ -90,3 +90,5 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 5 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-05/G3/20261108T203238Z-g3-desk-a5cfa8c0.json, blocking findings 1-6 in 20261019-codex-review/summary.md. Repairs verified present in the committed Unit 5 files (20261103-repair-en.md): fictional study labelled; assessment evidence, hedging and keys repaired; register guidance and figure labels qualified; weeks 14-15 restored. No further content edits were required. No Urdu mirror exists. Provenance and current desktop/narrow/A4 inspection remain pending; fresh independent G3 required. G3 remains incomplete. |
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-03/G3/20261108T203238Z-g3-desk-2e68277a.json (crew geng-301-u03-repair_en-r1, 2026-11-10). Explanatory and argumentative thesis models balanced across topic-02, index outcome 2, teacher notes, concept CON:GENG-301-3-4 and figures U3-2/U3-7 per D-2026-0062; unsupported UNESCO claim replaced with hypothetical example; print attributions qualified under D-2026-0001; coverage IDs U3-05/U3-06/U3-07 and concept items mapped; MCQ 5 stem disambiguated; 2 MCQ and 2 RRQ per-topic floor satisfied with topic map; mixed conclusion scored and RRQ 2/10 marks aligned; essay-level evaluation and jumbled essay worked example provided; activity inputs and weeks 8-10 aligned; ERQ rubrics syntax cleaned; 16 SVGs measured clean. See reviews/unit-03/G3/20261110-repair-notes.md. No Urdu mirror exists (English-only course). Fresh independent review, frozen handoff, session provenance, and narrow/print rendering remain pending; G3 unticked. |
 | Unit 6 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-06/G3/20261108T203238Z-g3-desk-80672f33.json (agy crew geng-301-u06-repair_en-r1, 2026-11-10). F1-F8: fictional practice data labelled, dated source retrieval audit under D-2026-0001 recorded, library/database discovery and full APA/MLA and signal-phrase quotation models in place, assessment ambiguity and Bloom/blueprint alignment resolved, CRAAP evidence-based extracts and qualified ratings provided, figure meaning and Week 16 schedule aligned. All 16 figure SVGs re-measured clean. See reviews/unit-06/repair-en-r1.md. G3 remains open and unsigned; fresh independent review and host provenance/render evidence pending. |
+| Unit 2 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U2-3 boxes rendered black, hiding their text; fig-U2-6 did not render (unquoted attribute); fixed; the review above predates it; needs a fresh G3 run |
+| Unit 4 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U4-1 boxes rendered black, hiding their text; fixed; the review above predates it; needs a fresh G3 run |

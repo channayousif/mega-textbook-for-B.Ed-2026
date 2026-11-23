@@ -1,0 +1,13 @@
+$ npm run check:figures   (repo HEAD 8307a8a0d, 2026-11-23T15:53:33.171Z)
+
+✗ Figure gate failed with 8 finding(s):
+
+  - EFMP-301 Unit 2 (docs/semester-1/efmp-301/unit-02): figure "fig-U2-2": static/img/figures/efmp-301/unit-02/fig-U2-2.ur.svg has colour literal(s) outside the :root block: #160 - use var(--token)
+  - EFMP-301 Unit 2 (docs/semester-1/efmp-301/unit-02): figure "fig-U2-2": static/img/figures/efmp-301/unit-02/fig-U2-2.ur.dark.svg has colour literal(s) outside the :root block: #160 - use var(--token)
+  - EFMP-301 Unit 2 (docs/semester-1/efmp-301/unit-02): figure "fig-U2-4": static/img/figures/efmp-301/unit-02/fig-U2-4.ur.svg has colour literal(s) outside the :root block: #160 - use var(--token)
+  - EFMP-301 Unit 2 (docs/semester-1/efmp-301/unit-02): figure "fig-U2-4": static/img/figures/efmp-301/unit-02/fig-U2-4.ur.dark.svg has colour literal(s) outside the :root block: #160 - use var(--token)
+  - EFMP-301 Unit 2 (docs/semester-1/efmp-301/unit-02): figure "fig-U2-6": static/img/figures/efmp-301/unit-02/fig-U2-6.ur.svg has colour literal(s) outside the :root block: #160 - use var(--token)
+  - EFMP-301 Unit 2 (docs/semester-1/efmp-301/unit-02): figure "fig-U2-6": static/img/figures/efmp-301/unit-02/fig-U2-6.ur.dark.svg has colour literal(s) outside the :root block: #160 - use var(--token)
+  - GENG-300 Unit 3 (docs/semester-1/geng-300/unit-03): figure "fig-U3-3": static/img/figures/geng-300/unit-03/fig-U3-3.svg <desc> differs from carrier alt in topic-03.mdx
+  - GENG-300 Unit 3 (docs/semester-1/geng-300/unit-03): figure "fig-U3-3": static/img/figures/geng-300/unit-03/fig-U3-3.dark.svg <desc> differs from carrier alt (regenerate with "npm run figures:variants" after updating static/img/figures/geng-300/unit-03/fig-U3-3.svg)
+exit_code=1
