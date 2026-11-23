@@ -1,0 +1,334 @@
+{
+ "course": "EFMP-301",
+ "unit": 1,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Psychology",
+     "definition": "The study of mind and behaviour: why people do what they do, and what is going on inside them while they do it."
+    },
+    {
+     "term": "Educational Psychology",
+     "definition": "The part of psychology that studies mind and behaviour in educational settings: how people learn, what helps and hinders that learning, and what follows for the person trying to teach them."
+    },
+    {
+     "term": "The learner",
+     "definition": "The part of the field's scope about the pupil: what they already know, what they are ready for, what moves them and what they bring from home."
+    },
+    {
+     "term": "The learning process",
+     "definition": "The part of the scope about what actually happens when someone comes to understand something, such as how attention works and how something is held in memory."
+    },
+    {
+     "term": "The learning situation",
+     "definition": "The part of the scope about what surrounds the learning: how the lesson is sequenced, the size and noise of the room, whether it is safe to be wrong out loud, and what the test rewards."
+    },
+    {
+     "term": "Transfer",
+     "definition": "The problem of knowledge learnt in one place failing to appear in another, as when Ayesha cannot carry her roti-halving to the fractions on the blackboard."
+    },
+    {
+     "term": "Scientific study",
+     "definition": "Stating claims so that evidence could count against them, and then gathering evidence on purpose rather than remembering it selectively."
+    },
+    {
+     "term": "Observation",
+     "definition": "Watching what actually happens, systematically, rather than what you assume happens."
+    },
+    {
+     "term": "Experiment",
+     "definition": "Changing one thing on purpose and comparing the results."
+    },
+    {
+     "term": "Case study",
+     "definition": "Following one learner or one class closely and in depth. It cannot show what is true of all pupils, but it can show a possibility nobody had considered."
+    }
+   ],
+   "ur": [
+    {
+     "term": "نفسیات",
+     "definition": "ذہن اور طرزِ عمل کا مطالعہ: لوگ جو کرتے ہیں وہ کیوں کرتے ہیں، اور کرتے وقت ان کے اندر کیا چل رہا ہوتا ہے۔"
+    },
+    {
+     "term": "تعلیمی نفسیات",
+     "definition": "نفسیات کا وہ حصہ جو تعلیمی ماحول میں ذہن اور طرزِ عمل کا مطالعہ کرتا ہے: لوگ کیسے سیکھتے ہیں، اس میں کیا مدد دیتا ہے اور کیا رکاوٹ بنتا ہے، اور پڑھانے والے کے لیے اس سے کیا نتیجہ نکلتا ہے۔"
+    },
+    {
+     "term": "سیکھنے والا",
+     "definition": "شعبے کے دائرہ کار کا وہ حصہ جو شاگرد سے متعلق ہے: اسے پہلے سے کیا آتا ہے، وہ کس چیز کے لیے تیار ہے، اسے کیا حرکت دیتا ہے اور وہ گھر سے کیا لے کر آتا ہے۔"
+    },
+    {
+     "term": "سیکھنے کا عمل",
+     "definition": "دائرہ کار کا وہ حصہ جو یہ دیکھتا ہے کہ کسی بات کو سمجھتے وقت دراصل کیا ہوتا ہے، مثلاً توجہ کیسے کام کرتی ہے اور کوئی چیز یادداشت میں کیسے ٹھہرتی ہے۔"
+    },
+    {
+     "term": "سیکھنے کی صورتحال",
+     "definition": "دائرہ کار کا وہ حصہ جو سیکھنے کے گرد موجود چیزوں سے متعلق ہے: سبق کی ترتیب، کمرے کا حجم اور شور، کیا بلند آواز میں غلط ہونا محفوظ ہے، اور امتحان کس چیز پر نمبر دیتا ہے۔"
+    },
+    {
+     "term": "منتقلی",
+     "definition": "یہ مسئلہ کہ ایک جگہ سیکھا ہوا علم دوسری جگہ ظاہر نہیں ہوتا، جیسے عائشہ روٹی بانٹنے کی اپنی سمجھ کو تختہ سیاہ کی کسور تک نہیں لے جا پاتی۔"
+    },
+    {
+     "term": "سائنسی مطالعہ",
+     "definition": "دعووں کو اس طرح بیان کرنا کہ شہادت ان کے خلاف جا سکے، اور پھر شہادت منتخب طور پر یاد رکھنے کے بجائے جان بوجھ کر جمع کرنا۔"
+    },
+    {
+     "term": "مشاہدہ",
+     "definition": "باقاعدگی کے ساتھ یہ دیکھنا کہ دراصل کیا ہوتا ہے، نہ کہ وہ جو آپ فرض کر لیتے ہیں۔"
+    },
+    {
+     "term": "تجربہ",
+     "definition": "جان بوجھ کر ایک چیز بدلنا اور نتائج کا موازنہ کرنا۔"
+    },
+    {
+     "term": "مطالعہ مثال",
+     "definition": "ایک سیکھنے والے یا ایک جماعت کو قریب سے اور گہرائی میں دیکھنا۔ یہ نہیں بتاتا کہ سب شاگردوں کے بارے میں کیا سچ ہے، مگر ایسا امکان دکھا سکتا ہے جو کسی نے سوچا ہی نہ ہو۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "National Professional Standards for Teachers",
+     "definition": "Pakistan's ten standards for teachers. They make knowing how learners develop part of a teacher's job description, not an academic extra."
+    },
+    {
+     "term": "Human Growth and Development",
+     "definition": "One of the ten National Professional Standards for Teachers. It requires a teacher to understand how learners develop and to use that understanding in practice."
+    },
+    {
+     "term": "Tested theories",
+     "definition": "Ideas about learning, such as how attention is limited or how motivation shifts when a task is graded, that have been checked against evidence rather than recalled from experience. They are not certainties."
+    },
+    {
+     "term": "Methods for finding things out",
+     "definition": "Observation, experiment and case study, which psychology brings to education and which transfer directly into a teacher's classroom."
+    },
+    {
+     "term": "Language for describing learners",
+     "definition": "Precise terms such as working memory, prior knowledge, transfer, motivation and readiness that let two teachers point at the same thing. A word like \"weak\" is a verdict, not a description."
+    },
+    {
+     "term": "Applied field",
+     "definition": "A field that aims to understand in order to improve something. Educational psychology is judged partly by usefulness and by whether its findings survive real conditions."
+    },
+    {
+     "term": "Context",
+     "definition": "The real conditions a finding has to hold in, such as a Sindh government school with sixty pupils and no electricity. For educational psychology this is not a footnote but the question itself."
+    },
+    {
+     "term": "Ethical weight",
+     "definition": "The responsibility that comes from experimenting on other people's children, in the time they have, when they cannot opt out. A change being tried should not be able to harm a pupil's record."
+    },
+    {
+     "term": "Loop",
+     "definition": "The two-way relationship between research and teaching in which a finding arrives, a teacher tries it under their own conditions, and what happens feeds back. It is not a one-way delivery from researchers to teachers."
+    }
+   ],
+   "ur": [
+    {
+     "term": "اساتذہ کے لیے قومی پیشہ ورانہ معیارات",
+     "definition": "پاکستان میں اساتذہ کے دس معیارات۔ یہ سیکھنے والوں کی نشوونما کے علم کو استاد کے کام کی تفصیل کا حصہ بناتے ہیں، کوئی علمی اضافہ نہیں۔"
+    },
+    {
+     "term": "انسانی نمو اور نشوونما",
+     "definition": "اساتذہ کے دس قومی پیشہ ورانہ معیارات میں سے ایک۔ یہ استاد سے تقاضا کرتا ہے کہ وہ سمجھے کہ سیکھنے والے کیسے پروان چڑھتے ہیں اور اس سمجھ کو عمل میں لائے۔"
+    },
+    {
+     "term": "جانچے ہوئے نظریات",
+     "definition": "سیکھنے کے بارے میں تصورات، مثلاً توجہ کیسے محدود ہوتی ہے یا نمبر لگنے پر محرک کیسے بدلتا ہے، جو تجربے سے یاد کرنے کے بجائے شہادت پر جانچے گئے ہیں۔ یہ یقینیات نہیں۔"
+    },
+    {
+     "term": "چیزیں معلوم کرنے کے طریقے",
+     "definition": "مشاہدہ، تجربہ اور مطالعہ مثال، جو نفسیات تعلیم میں لاتی ہے اور جو براہِ راست استاد کی جماعت میں منتقل ہوتے ہیں۔"
+    },
+    {
+     "term": "سیکھنے والوں کو بیان کرنے کی زبان",
+     "definition": "عامل یادداشت، سابقہ علم، منتقلی، محرک اور تیاری جیسی واضح اصطلاحات جو دو اساتذہ کو ایک ہی چیز کی طرف اشارہ کرنے دیتی ہیں۔ \"کمزور\" جیسا لفظ بیان نہیں، فیصلہ ہے۔"
+    },
+    {
+     "term": "اطلاقی شعبہ",
+     "definition": "ایسا شعبہ جس کا مقصد کسی چیز کو بہتر بنانے کے لیے سمجھنا ہو۔ تعلیمی نفسیات کو جزوی طور پر افادیت سے اور اس سے پرکھا جاتا ہے کہ اس کے نتائج حقیقی حالات میں درست رہتے ہیں یا نہیں۔"
+    },
+    {
+     "term": "سیاق و سباق",
+     "definition": "وہ حقیقی حالات جن میں کسی نتیجے کو درست رہنا ہے، جیسے سندھ کا ایک سرکاری اسکول جس میں ساٹھ شاگرد ہوں اور بجلی نہ ہو۔ تعلیمی نفسیات کے لیے یہ حاشیہ نہیں، یہی اصل سوال ہے۔"
+    },
+    {
+     "term": "اخلاقی بوجھ",
+     "definition": "وہ ذمہ داری جو دوسروں کے بچوں پر، ان کے میسر وقت میں، تجربہ کرنے سے آتی ہے جبکہ وہ اس سے الگ نہیں ہو سکتے۔ آزمائی جانے والی تبدیلی کسی شاگرد کے ریکارڈ کو نقصان نہ پہنچا سکے۔"
+    },
+    {
+     "term": "دائرہ",
+     "definition": "تحقیق اور تدریس کے درمیان دو طرفہ رشتہ جس میں ایک نتیجہ آتا ہے، استاد اسے اپنے حالات میں آزماتا ہے، اور جو ہوتا ہے وہ واپس پلٹ کر اثر ڈالتا ہے۔ یہ محققین سے اساتذہ کی طرف ایک طرفہ ترسیل نہیں۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Prior knowledge",
+     "definition": "What a pupil already knew when they walked in. It is the single best predictor of whether they learn today's lesson, because new understanding attaches to old understanding."
+    },
+    {
+     "term": "Readiness",
+     "definition": "Whether a pupil is ready for a given step. A pupil can be ready for the next step and not the one after it: too far ahead the work is meaningless, too far back it is boring."
+    },
+    {
+     "term": "Motivation",
+     "definition": "Not a fixed quantity a pupil has more or less of. It shifts with the task, the subject, the teacher and, above all, with whether the pupil expects effort to pay off."
+    },
+    {
+     "term": "Self-protection",
+     "definition": "A rational decision to stop trying after repeated failure, because trying and failing in public is worse than not trying. What looks like laziness is often self-protection."
+    },
+    {
+     "term": "Boredom",
+     "definition": "Low motivation for one task that asks nothing more of a pupil who has already finished it. From the front of the room it looks the same as failure but needs the opposite response."
+    },
+    {
+     "term": "Interest",
+     "definition": "A pupil's care for something. A task connected to something a pupil already cares about gets attention that the same task in the abstract does not."
+    },
+    {
+     "term": "Language cost",
+     "definition": "The gap between understanding an idea and being able to show it in the language of the test or the classroom. A pupil's silence may be a language cost, not a comprehension failure."
+    },
+    {
+     "term": "Home background",
+     "definition": "Conditions at home that reach into the classroom, such as light and quiet to work in, someone who can explain a missed chapter, or a pupil being needed for work or younger siblings."
+    },
+    {
+     "term": "Ability",
+     "definition": "The single word every difference between learners gets collapsed into. It feels descriptive but is a self-fulfilling prediction: a pupil labelled weak is given easier work and so stays behind."
+    }
+   ],
+   "ur": [
+    {
+     "term": "سابقہ علم",
+     "definition": "وہ جو شاگرد کو اندر آتے وقت پہلے سے آتا تھا۔ یہ اس بات کی سب سے بہتر پیش گوئی ہے کہ وہ آج کا سبق سیکھے گا یا نہیں، کیونکہ نئی سمجھ پرانی سمجھ کے ساتھ جڑتی ہے۔"
+    },
+    {
+     "term": "تیاری",
+     "definition": "یہ کہ شاگرد کسی خاص قدم کے لیے تیار ہے یا نہیں۔ شاگرد اگلے قدم کے لیے تیار ہو سکتا ہے اور اس سے اگلے کے لیے نہیں: بہت آگے کام بے معنی ہو جاتا ہے، بہت پیچھے بیزار کن۔"
+    },
+    {
+     "term": "محرک",
+     "definition": "کوئی مقررہ مقدار نہیں جو شاگرد کے پاس کم یا زیادہ ہو۔ یہ کام، مضمون، استاد اور سب سے بڑھ کر اس کے ساتھ بدلتا ہے کہ شاگرد کو محنت کا پھل ملنے کی توقع ہے یا نہیں۔"
+    },
+    {
+     "term": "اپنی حفاظت",
+     "definition": "بار بار ناکامی کے بعد کوشش چھوڑنے کا معقول فیصلہ، کیونکہ سب کے سامنے کوشش کر کے ناکام ہونا کوشش نہ کرنے سے برا ہے۔ جو سستی دکھائی دیتی ہے وہ اکثر اپنی حفاظت ہوتی ہے۔"
+    },
+    {
+     "term": "بیزاری",
+     "definition": "کسی ایک کام کے لیے کم محرک، جب وہ کام ختم کر چکنے والے شاگرد سے مزید کچھ نہ مانگے۔ کمرے کے سامنے سے یہ ناکامی جیسی دکھتی ہے مگر اس کا جواب الٹ ہوتا ہے۔"
+    },
+    {
+     "term": "دلچسپی",
+     "definition": "کسی چیز سے شاگرد کا لگاؤ۔ جو کام کسی ایسی چیز سے جڑا ہو جس کی شاگرد کو پہلے سے پروا ہے، اسے وہ توجہ ملتی ہے جو وہی کام تجریدی صورت میں نہیں پاتا۔"
+    },
+    {
+     "term": "زبان کی قیمت",
+     "definition": "کسی تصور کو سمجھنے اور اسے امتحان یا جماعت کی زبان میں دکھا سکنے کے درمیان فرق۔ شاگرد کی خاموشی زبان کی قیمت ہو سکتی ہے، سمجھ کی ناکامی نہیں۔"
+    },
+    {
+     "term": "گھریلو پس منظر",
+     "definition": "گھر کے وہ حالات جو جماعت تک پہنچتے ہیں، جیسے کام کے لیے روشنی اور سکون، کوئی جو چھوٹا ہوا باب سمجھا سکے، یا شاگرد کی کام یا چھوٹے بہن بھائیوں کے لیے ضرورت۔"
+    },
+    {
+     "term": "صلاحیت",
+     "definition": "وہ ایک لفظ جس میں سیکھنے والوں کا ہر فرق سمٹ جاتا ہے۔ یہ بیان لگتا ہے مگر خود کو سچ کرنے والی پیش گوئی ہے: کمزور کا لیبل لگے شاگرد کو آسان کام ملتا ہے اور وہ پیچھے ہی رہتا ہے۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "Planning",
+     "definition": "Choosing method, sequence and pace before teaching. It is where most psychological ideas do their quiet work, such as starting from what pupils know."
+    },
+    {
+     "term": "Working Memory",
+     "definition": "A limited capacity for which copying and understanding compete. Four new terms in the first five minutes, while also copying a diagram, is more than it will hold."
+    },
+    {
+     "term": "Worked example",
+     "definition": "A problem done aloud with the reasoning visible, showing the move before pupils are asked to make it. It costs five minutes and saves the exercise."
+    },
+    {
+     "term": "Classroom Management",
+     "definition": "Usually taught as rules and consequences, but better treated as a psychological task: asking what a behaviour is getting a pupil and what would make it unnecessary."
+    },
+    {
+     "term": "Psychological environment",
+     "definition": "What a classroom is beyond its rules: above all, whether it is safe to be wrong out loud, which decides whether pupils will answer a question honestly."
+    },
+    {
+     "term": "Assessment",
+     "definition": "A way of finding out what pupils know. It is most useful while the teacher can still act on it, and it also teaches pupils what to value."
+    },
+    {
+     "term": "Feedback",
+     "definition": "Telling a pupil which step went wrong and what to try next. A mark only tells a pupil where they stand; feedback that names the next step is what changes performance."
+    },
+    {
+     "term": "Reflection",
+     "definition": "Treating your own classroom as the place where claims get tested. Useful reflection contains a prediction that could be shown to be wrong, not just a recorded mood."
+    },
+    {
+     "term": "Continuous Professional Development",
+     "definition": "One of Pakistan's National Professional Standards for Teachers. It asks for the habit of examining and improving one's own practice."
+    },
+    {
+     "term": "Plan, teach, assess, reflect",
+     "definition": "Four steps of teaching that form a cycle. The fourth, reflection, feeds back into planning and is the step most often skipped."
+    }
+   ],
+   "ur": [
+    {
+     "term": "منصوبہ بندی",
+     "definition": "پڑھانے سے پہلے طریقہ، ترتیب اور رفتار کا انتخاب۔ یہی وہ جگہ ہے جہاں زیادہ تر نفسیاتی تصورات خاموشی سے کام کرتے ہیں، جیسے اس سے شروع کرنا جو شاگردوں کو آتا ہے۔"
+    },
+    {
+     "term": "عامل یادداشت",
+     "definition": "ایک محدود گنجائش جس کے لیے نقل کرنا اور سمجھنا مقابلہ کرتے ہیں۔ پہلے پانچ منٹ میں چار نئی اصطلاحات، ساتھ خاکہ نقل کرتے ہوئے، اس سے زیادہ ہیں جتنا یہ سنبھال سکتی ہے۔"
+    },
+    {
+     "term": "حل شدہ مثال",
+     "definition": "بلند آواز میں استدلال ظاہر کرتے ہوئے کیا گیا سوال، جو شاگردوں سے مانگنے سے پہلے کر کے دکھاتا ہے۔ یہ پانچ منٹ لیتی ہے اور پوری مشق بچا لیتی ہے۔"
+    },
+    {
+     "term": "جماعتی انتظام",
+     "definition": "عموماً قواعد اور نتائج کے طور پر سکھایا جاتا ہے، مگر اسے ایک نفسیاتی کام سمجھنا بہتر ہے: یہ پوچھنا کہ کسی طرزِ عمل سے شاگرد کو کیا مل رہا ہے اور کون سی بات اسے غیر ضروری بنا دے گی۔"
+    },
+    {
+     "term": "نفسیاتی ماحول",
+     "definition": "قواعد سے بڑھ کر جماعت کی کیفیت: سب سے بڑھ کر یہ کہ بلند آواز میں غلط ہونا محفوظ ہے یا نہیں، جو طے کرتا ہے کہ شاگرد سوال کا ایمان دار جواب دیں گے یا نہیں۔"
+    },
+    {
+     "term": "تشخیص",
+     "definition": "یہ معلوم کرنے کا ذریعہ کہ شاگردوں کو کیا آتا ہے۔ یہ اس وقت سب سے کارآمد ہے جب استاد اس پر عمل بھی کر سکے، اور یہ شاگردوں کو یہ بھی سکھاتی ہے کہ کس چیز کی قدر کریں۔"
+    },
+    {
+     "term": "رائے",
+     "definition": "شاگرد کو بتانا کہ کون سا قدم غلط ہوا اور آگے کیا آزمانا ہے۔ نمبر صرف مقام بتاتا ہے؛ اگلا قدم بتانے والی رائے ہی کارکردگی بدلتی ہے۔"
+    },
+    {
+     "term": "خود احتسابی",
+     "definition": "اپنی جماعت کو وہ جگہ سمجھنا جہاں دعوے جانچے جاتے ہیں۔ کارآمد خود احتسابی میں ایک پیش گوئی ہوتی ہے جو غلط ثابت ہو سکے، نہ کہ صرف درج کی گئی کیفیت۔"
+    },
+    {
+     "term": "مسلسل پیشہ ورانہ ترقی",
+     "definition": "پاکستان کے اساتذہ کے لیے قومی پیشہ ورانہ معیارات میں سے ایک۔ یہ اس عادت کا تقاضا کرتا ہے کہ استاد اپنی تدریس کو جانچے اور بہتر بنائے۔"
+    },
+    {
+     "term": "منصوبہ بندی، تدریس، تشخیص، خود احتسابی",
+     "definition": "تدریس کے چار مرحلے جو ایک دائرہ بناتے ہیں۔ چوتھا مرحلہ، خود احتسابی، واپس منصوبہ بندی میں جاتا ہے اور یہی سب سے زیادہ چھوڑا جاتا ہے۔"
+    }
+   ]
+  }
+ }
+}
