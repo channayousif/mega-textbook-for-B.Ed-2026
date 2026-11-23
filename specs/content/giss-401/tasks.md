@@ -62,7 +62,7 @@
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261117T122043434Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261123T031944774Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-07/G3/01a1b093-4435-7a02-a21d-e78212bba060.json; ERQ 2 question/rubric mismatch, MCQ 10 Bloom tag and private family circumstances need author repair; parent provenance, source bundle, qualified Islamic Studies scholar and browser/print evidence pending; G3 remains open and unsigned |
 | Unit 7 | G4 ur-translation | ▢ | | separate job |
 | Unit 7 | G5 ur-review | ▢ | | |
@@ -111,3 +111,4 @@ After merging `origin/main` (which added the course overview), `node scripts/pre
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/giss-401/reviews/unit-02/G3/20261108T203238Z-g3-desk-82690fcb.json |
 | Unit 7 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/giss-401/reviews/unit-07/G3/20261108T203238Z-g3-desk-750f7524.json; ERQ 2 practical-advice deliverable added to the question and Urdu mirror, MCQ 10 retagged Remember (EN/UR), private family detail removed from the roster table and fig-U7-2 light/dark/Urdu schematics, role-modelling claims qualified as contextual, fig-U7-2 text equivalent added (EN/UR); parent provenance, source bundle, qualified Islamic Studies scholar and browser/print evidence pending; G3 remains open and unsigned |
 | Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/giss-401/reviews/unit-07/G3/20261122T175629Z-g3-desk-d32875a9.json |
+| Unit 7 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/giss-401/reviews/unit-07/G3/20261122T175629Z-g3-desk-d32875a9.json; findings re-checked against current text: ERQ 2 practical-steps deliverable, MCQ 10 Remember tag, private family detail in the roster table, qualified role-modelling claims and fig-U7-2 text equivalent were already in place (EN/UR) from the earlier repair; fig-U7-2 light/dark EN Mercy row was truncated and now carries the privacy clause; parent provenance, source bundle, qualified Islamic Studies scholar and browser/print evidence pending; G3 remains open and unsigned |
