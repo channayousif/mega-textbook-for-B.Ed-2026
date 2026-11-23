@@ -23,6 +23,7 @@ import ClimbArt from '@site/src/components/landing/ClimbArt';
 import s from '@site/src/components/landing/landing.module.css';
 import NewsTicker from '@site/src/components/NewsTicker';
 import HomeTeasers from '@site/src/components/landing/HomeTeasers';
+import HomeCtaBanner from '@site/src/components/landing/HomeCtaBanner';
 
 type Stats = { courses: number; units: number; urduUnits: number; figures: number };
 type Locale = 'en' | 'ur';
@@ -300,6 +301,7 @@ export default function Home(): React.ReactElement {
           </div>
         </section>
       </main>
+      <HomeCtaBanner c={c} locale={locale} />
     </Layout>
   );
 }
