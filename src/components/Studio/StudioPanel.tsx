@@ -42,6 +42,10 @@ const T = {
   slides: { en: 'Slides', ur: 'سلائیڈز' },
   animation: { en: 'Animations', ur: 'متحرک خاکے' },
   flashcards: { en: 'Flashcards', ur: 'فلیش کارڈ' },
+  deck: { en: 'Presentation', ur: 'پریزنٹیشن' },
+  deckOpen: { en: 'Open full screen', ur: 'پوری اسکرین میں کھولیں' },
+  deckDownload: { en: 'Download PowerPoint', ur: 'پاورپوائنٹ ڈاؤن لوڈ کریں' },
+  deckNote: { en: 'The unit in slides, made from its own text. Use the arrow keys to move.', ur: 'یونٹ سلائیڈز میں، اسی کے متن سے بنایا گیا۔ آگے پیچھے جانے کے لیے تیر والی کلیدیں استعمال کریں۔' },
   animationNote: {
     en: 'The figures of this topic, built step by step with captions. Made from the figures themselves.',
     ur: 'اس موضوع کے خاکے، قدم بہ قدم، تحریری وضاحت کے ساتھ۔ خود انہی خاکوں سے بنائے گئے۔',
@@ -168,6 +172,19 @@ export default function StudioPanel({ courseCode, unitNo, topicNo, locale }: { c
     add('mindmap', (it, loc) => <Json item={it[0]} locale={locale} render={(d) => <StudioMindMap tree={d as never} locale={loc} storageKey={`studio-recall:${courseCode}:${unitNo}:${topicNo}:${loc}`} />} />);
     add('audio', (it) => <Listen items={it} locale={locale} />);
     add('video', (it) => <Listen items={it} locale={locale} />);
+    // Feature 032 phase B: the unit's web slide deck and its PowerPoint.
+    add('deck', (it, loc) => (
+      <div className={styles.parts}>
+        <p className={styles.note}>{T.deckNote[loc]}</p>
+        <div className={styles.frame}>
+          <iframe src={it[0].src} title={it[0].title} loading="lazy" allow="fullscreen" />
+        </div>
+        <p>
+          <a href={it[0].src} target="_blank" rel="noopener noreferrer">{T.deckOpen[loc]}</a>
+          {it[0].url && <>{' · '}<a href={it[0].url} download>{T.deckDownload[loc]}</a></>}
+        </p>
+      </div>
+    ));
     // Feature 032 phase C: the topic's deck, from a per-unit file (src '...unit-NN.json#<topic>').
     add('flashcards', (it, loc) => (
       <Json item={it[0]} locale={locale} render={(d) => {
@@ -210,7 +227,7 @@ export default function StudioPanel({ courseCode, unitNo, topicNo, locale }: { c
         <p className={styles.eyebrow}>{T.eyebrow[locale]}</p>
         <h2 id="studio-panel-title" className={styles.title}>{T.title[locale]}</h2>
         {/* The Gemini Notebook disclaimer covers Notebook items; animations carry their own note. */}
-        {tabs.some((t) => t.id !== 'animation' && t.id !== 'flashcards') && <p className={styles.note}>{T.disclaimer[locale]}</p>}
+        {tabs.some((t) => !['animation', 'flashcards', 'deck'].includes(t.id)) && <p className={styles.note}>{T.disclaimer[locale]}</p>}
       </div>
       <Tabs items={tabs} label={T.tabs[locale]} />
     </section>

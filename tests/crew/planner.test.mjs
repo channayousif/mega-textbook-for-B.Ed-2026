@@ -254,3 +254,13 @@ test('flashcard decks: up to two units at a time, skipping authored and busy uni
   assert.deepEqual(pickFlashcards(needed, new Set(), [{ stage: 'flashcards', course: 'EFMP-301', unit: 1 }]), [{ course: 'EFMP-301', unit: 2 }]);
   assert.deepEqual(pickFlashcards(needed, new Set(), [{ stage: 'flashcards' }, { stage: 'flashcards' }]), []);
 });
+
+test('slide decks: translated units without an outline, one at a time, focus first', async () => {
+  const { slidesCandidate, pickSlides } = await import('../../scripts/crew/planner.mjs');
+  assert.equal(slidesCandidate(unit(), facts({ mirrorComplete: true }), false), true);
+  assert.equal(slidesCandidate(unit(), facts({ mirrorComplete: false }), false), false, 'needs the Urdu mirror');
+  assert.equal(slidesCandidate(unit(), facts({ mirrorComplete: true }), true), false, 'already has an outline');
+  const c = [{ course: 'A', unit: 1 }, { course: 'B', unit: 2 }];
+  assert.deepEqual(pickSlides(c, [], 'B'), { course: 'B', unit: 2 });
+  assert.equal(pickSlides(c, [{ stage: 'slides' }], 'B'), null);
+});
