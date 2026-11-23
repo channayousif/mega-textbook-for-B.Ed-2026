@@ -54,6 +54,8 @@ const MESSAGES = {
   summative: { en: 'Summative', ur: 'جامع' },
   keyContent: { en: 'Marking guidance / model answers', ur: 'نمبر دہی کی رہنمائی / نمونہ جوابات' },
   saved: { en: 'Saved ✓', ur: 'محفوظ ✓' },
+  draft: { en: 'Draft - not shown to students yet', ur: 'مسودہ - ابھی طلبہ کو نہیں دکھایا جاتا' },
+  publish: { en: 'Publish', ur: 'شائع کریں' },
 } as const;
 
 const BLANK_OPTIONS = [
@@ -223,6 +225,18 @@ function AuthoringContent(): React.ReactElement {
     await load();
   }
 
+  async function handlePublish(id: string): Promise<void> {
+    setPending(true);
+    setError(null);
+    const { error: e } = await updateQuizItem(id, { status: 'published' });
+    setPending(false);
+    if (e) {
+      setError(MESSAGES.saveError[locale]);
+      return;
+    }
+    await load();
+  }
+
   async function handleDeleteItem(id: string): Promise<void> {
     if (typeof window !== 'undefined' && !window.confirm(MESSAGES.confirmDel[locale])) return;
     setPending(true);
@@ -304,6 +318,9 @@ function AuthoringContent(): React.ReactElement {
                       />
                     ) : (
                       <div className="quiz-item" data-testid="quiz-item">
+                        {it.status === 'draft' && (
+                          <p className="badge badge--warning" data-testid="quiz-item-draft">{MESSAGES.draft[locale]}</p>
+                        )}
                         <p className="quiz-item__q">{it.question_text}</p>
                         <ul className="quiz-item__opts">
                           {it.options.map((o) => (
@@ -314,6 +331,11 @@ function AuthoringContent(): React.ReactElement {
                           ))}
                         </ul>
                         <div className="margin-top--sm">
+                          {it.status === 'draft' && (
+                            <button type="button" className="button button--primary button--sm margin-right--sm" disabled={pending} onClick={() => handlePublish(it.id)}>
+                              {MESSAGES.publish[locale]}
+                            </button>
+                          )}
                           <button type="button" className="button button--secondary button--sm margin-right--sm" onClick={() => setEditingId(it.id)}>
                             {MESSAGES.edit[locale]}
                           </button>

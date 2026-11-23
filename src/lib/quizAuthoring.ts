@@ -62,6 +62,8 @@ export type QuizItemPatch = Partial<{
   question_text: string;
   options: { key: string; text: string }[];
   correct_option: string;
+  /** Spec 029 / 0056: a verified teacher publishes an imported draft after review. */
+  status: 'draft' | 'published';
 }>;
 
 export async function updateQuizItem(id: string, patch: QuizItemPatch): Promise<Result<QuizItem>> {
