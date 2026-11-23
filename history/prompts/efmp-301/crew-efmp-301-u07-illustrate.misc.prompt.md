@@ -2,7 +2,7 @@
 id: crew-efmp-301-u07-illustrate
 title: crew illustrate EFMP-301 unit 7
 stage: misc
-date: 2026-11-24
+date: 2026-11-23
 surface: agent
 model: agy
 feature: efmp-301
@@ -16,30 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/efmp-301/unit-07/index.mdx
-  - docs/semester-1/efmp-301/unit-07/topic-01.mdx
-  - docs/semester-1/efmp-301/unit-07/topic-02.mdx
-  - history/prompts/efmp-301/crew-efmp-301-u07-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-07/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-07/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-07/topic-02.mdx
-  - specs/content/efmp-301/figures/unit-07.banner.md
-  - specs/content/efmp-301/figures/unit-07.md
-  - specs/content/efmp-301/reviews/unit-07/G2/20261123T210926030Z-gates.json
-  - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-bloom-bands.txt
-  - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-concept-graph.txt
-  - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-depth-gate.txt
-  - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-docs-sync.txt
-  - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-figures.txt
-  - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-no-answer-keys.txt
-  - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-no-em-dash.txt
-  - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/validate-content.txt
-  - specs/content/efmp-301/tasks.md
-  - static/img/figures/efmp-301/unit-07/fig-U7-5.webp
-  - static/img/figures/efmp-301/unit-07/fig-U7-6.webp
-  - static/img/figures/efmp-301/unit-07/fig-U7-7.webp
+ - docs/semester-1/efmp-301/unit-07/index.mdx
+ - docs/semester-1/efmp-301/unit-07/topic-01.mdx
+ - docs/semester-1/efmp-301/unit-07/topic-02.mdx
+ - history/prompts/efmp-301/crew-efmp-301-u07-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-07/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-07/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-07/topic-02.mdx
+ - specs/content/efmp-301/figures/unit-07.banner.md
+ - specs/content/efmp-301/figures/unit-07.md
+ - specs/content/efmp-301/reviews/unit-07/G2/20261123T210926030Z-gates.json
+ - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-bloom-bands.txt
+ - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-concept-graph.txt
+ - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-depth-gate.txt
+ - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-docs-sync.txt
+ - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-figures.txt
+ - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-no-answer-keys.txt
+ - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/check-no-em-dash.txt
+ - specs/content/efmp-301/reviews/unit-07/G2/logs-20261123T210926030Z/validate-content.txt
+ - specs/content/efmp-301/tasks.md
+ - static/img/figures/efmp-301/unit-07/fig-U7-5.webp
+ - static/img/figures/efmp-301/unit-07/fig-U7-6.webp
+ - static/img/figures/efmp-301/unit-07/fig-U7-7.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -74,22 +74,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u07-review_en, review_en, agy) Unit 7 round-1 blocking findings (Rohrer & Pashler 2012 citation and 5/5 blueprint spread) are verified resolved; G3 tracker row remains open ▢ awaiting human sign-off.
 - (efmp-301-u07-review_en, review_en, agy) G5 Urdu review should note the Slow Learner terminology conflict (کمزور متعلم vs slow-is-not-weak teaching) previously escalated to the owner.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed all 3 Unit 7 raster illustrations (banner fig-U7-5, topic scenes fig-U7-6, fig-U7-7) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
+Generated, inspected, and placed all 3 EFMP-301 Unit 7 raster illustrations (unit banner fig-U7-5 and topic scenes fig-U7-6, fig-U7-7) in English and Urdu, updated figure manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-301 Unit 7 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all 3 Unit 7 raster illustrations (banner fig-U7-5, topic scenes fig-U7-6, fig-U7-7) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this work does not certify anything.
+- Shipped / changed: Generated, inspected, and placed all 3 EFMP-301 Unit 7 raster illustrations (unit banner fig-U7-5 and topic scenes fig-U7-6, fig-U7-7) in English and Urdu, updated figure manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 7 round-1 blocking findings (Rohrer & Pashler 2012 citation and 5/5 blueprint spread) are verified resolved; G3 tracker row remains open ▢ awaiting human sign-off.
