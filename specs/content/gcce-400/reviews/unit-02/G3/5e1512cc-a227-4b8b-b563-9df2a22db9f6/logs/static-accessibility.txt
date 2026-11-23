@@ -1,0 +1,48 @@
+static-accessibility evidence: GCCE-400 Unit 2 (G3 English)
+============================================================
+Date: 2026-11-23
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (Medium)
+Reviewer Run ID: 5e1512cc-a227-4b8b-b563-9df2a22db9f6
+Course: GCCE-400 Unit 2 (State, Government and Civil Society)
+
+Structural and Visual Accessibility Audit:
+------------------------------------------
+1. Heading Structure (Monotonicity):
+   - docs/semester-4/gcce-400/unit-02/index.mdx:
+     # h1 -> ## h2 (Unit learning outcomes, Prerequisite knowledge, In this unit, How to use this unit). Strictly monotonic.
+   - docs/semester-4/gcce-400/unit-02/topic-01.mdx:
+     # h1 -> ## h2 (A real classroom situation, Explanation, Activity: Who is responsible?, Check your understanding, Summary, Self-assessment checklist, Try this at your practicum school, Summative task, Further reading) -> ### h3 (Concept of state, Structure of government in Pakistan, Functions of government). Strictly monotonic.
+   - docs/semester-4/gcce-400/unit-02/topic-02.mdx:
+     # h1 -> ## h2 (A real classroom situation, Explanation, Activity: Mapping civil society in our town, Check your understanding, Summary, Self-assessment checklist, Try this at your practicum school, Summative task, Further reading) -> ### h3 (Meaning of civil society, Relationship between democracy and civil society, Importance of political participation and representation). Strictly monotonic.
+   - docs/semester-4/gcce-400/unit-02/unit-assessment.mdx:
+     # h1 -> ## h2 (Unit summary, Summative assessment, Answers and marking guidance) -> ### h3 (Multiple-choice questions (MCQs), Restricted-response questions (RRQs), Extended-response questions (ERQs), MCQ answer key, RRQ model answers and mark schemes, ERQ rubrics). Strictly monotonic.
+   - docs/semester-4/gcce-400/unit-02/unit-teacher-notes.mdx:
+     # h1 -> ## h2 (Sequencing the two weeks, Likely misconceptions and how to handle them, Practical work: service-learning with a local organisation). Strictly monotonic.
+
+2. Figures and Visual Assets:
+   - fig-U2-1: diagram (static/img/figures/gcce-400/unit-02/fig-U2-1.svg, 780x500; dark variant present).
+     Alt text: "Diagram of the state resting on four elements: population, the people of Pakistan; territory, the four provinces and the Islamabad Capital Territory; government, the federal, provincial and local governments; and sovereignty, Pakistan's supreme power to make its own laws and deal with other states. A note says governments change at elections while the state continues."
+     Text geometry verified via measure-figure-text.mjs (widest text at 768.4, wordmark at 675.7, viewBox 780x500, exit 0).
+   - fig-U2-2: flowchart (static/img/figures/gcce-400/unit-02/fig-U2-2.svg, 780x925; dark variant present).
+     Alt text: "Flowchart in two parts. The first shows the three tiers of government in Pakistan: the federal tier with Parliament, the Federal Government and the federal courts; the provincial tier with the Provincial Assembly, the Chief Minister's government, the Governor and the High Court; and the local tier of elected councils set up by provincial law. The second shows a federal bill passing one House, then the other, then going to the President for assent within ten days, with a joint sitting of both Houses if the second House rejects it or does not pass it in 90 days."
+     Text geometry verified via measure-figure-text.mjs (exit 0).
+   - fig-U2-3: concept-map (static/img/figures/gcce-400/unit-02/fig-U2-3.svg, 780x600; dark variant present).
+     Alt text: "Concept map placing civil society in the space between the family, the market and the state. Inside civil society are five kinds of group with Pakistani examples: associations and unions, welfare organisations, media and press, community groups such as a mohalla committee, and professional and cultural bodies. Arrows show civil society voicing needs to the state and watching it, and the state protecting the freedoms of association, speech and assembly."
+     Text geometry verified via measure-figure-text.mjs (exit 0).
+   - fig-U2-4: table (static/img/figures/gcce-400/unit-02/fig-U2-4.svg, 780x480; dark variant present).
+     Alt text: "Table of six forms of political participation, what each asks of a citizen and a Pakistani example: voting in an election, contacting a representative such as an MPA, joining a party campaign, sending a petition to the union council, peaceful protest protected by Article 16, and standing for a union council seat."
+     Text geometry verified via measure-figure-text.mjs (exit 0).
+   - fig-U2-5: illustration webp banner (static/img/figures/gcce-400/unit-02/fig-U2-5.webp).
+     Alt text: "Mothers, a retired teacher and a young reporter gather outside a girls' primary school in Hyderabad with a written application, while pupils watch from the school gate and a public office stands in the background."
+
+3. Tables and Text Formatting:
+   - Topic 2.1 worked example tables (state vs government, which tier, which branch/purpose) format cleanly.
+   - Topic 2.2 worked example tables (which space, following the two directions) format cleanly.
+   - ERQ rubric tables format cleanly with 4 criteria x 4 score levels.
+   - No em dashes found across all files.
+
+4. Component Parity:
+   - TranslationStatusBadge present on index.mdx.
+   - PrintHandout present on topic-01.mdx, topic-02.mdx, and unit-assessment.mdx.
+   - Glossary tags integrated for key conceptual terms: State, Sovereignty, Federation, Legislature, Executive, Judiciary, Separation of Powers, Civil society, Political participation, Representation.
