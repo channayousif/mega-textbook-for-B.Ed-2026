@@ -45,7 +45,9 @@ export function cardSvg(post) {
   const bottom = h - 220;
   // With three items or fewer there is room for each one's Urdu line too.
   const withUr = post.highlights.length <= 3;
-  const items = post.highlights.map((hl) => ({ hl, lines: wrap(hl.en, 34, 2), ur: withUr ? wrap(hl.ur, 44, 2) : null }));
+  // A highlight may carry a short card line (`card_en`/`card_ur`) beside its fuller caption text
+  // (`en`/`ur`): the card has room for about 68 characters, the caption for plain explanation.
+  const items = post.highlights.map((hl) => ({ hl, lines: wrap(hl.card_en ?? hl.en, 34, 2), ur: withUr ? wrap(hl.card_ur ?? hl.ur, 44, 2) : null }));
   const itemH = (it) => it.lines.length * 50 + (it.ur ? it.ur.length * 58 + 8 : 0) + 40;
   const blockH = items.reduce((t, it) => t + itemH(it), 0) + (post.more ? 50 : 0);
   y = top + Math.max(0, Math.floor((bottom - top - blockH) / 2));

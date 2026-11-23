@@ -2,7 +2,7 @@
 // captions, approval rules, image-post request builders and the card.
 import { describe, it, expect } from 'vitest';
 import {
-  highlight, contentHighlights, isFeature, buildDrafts, checkDraft, captionFor, altText, approve, reject, emptyLedger, postedIds, setCopy, pending,
+  highlight, contentHighlights, courseName, isFeature, buildDrafts, checkDraft, captionFor, altText, approve, reject, emptyLedger, postedIds, setCopy, pending,
 } from '../../scripts/social/updates.mjs';
 import { facebookPhotoForm, instagramImageQuery, linkedinImageInit, linkedinImagePost } from '../../scripts/notebook-studio/social-post.mjs';
 import { cardSvg } from '../../scripts/social/card.mjs';
@@ -12,26 +12,47 @@ const ev = (over) => ({ id: 'unit:GCCE-400:1', type: 'unit', date: '2026-11-22T0
   title_en: 'Citizenship', title_ur: 'شہریت', permalink: '/semester-4/gcce-400/unit-01/', ...over });
 
 describe('copy', () => {
-  it('writes one highlight per kind and course, grouping a week-long burst and linking the course root', () => {
-    const hl = contentHighlights([ev(), ev({ id: 'unit:GCCE-400:2', unit_no: 2 }), ev({ id: 'urdu:GCCE-400:1', type: 'urdu' })]);
-    expect(hl.map((h) => h.en)).toEqual(['GCCE-400: 2 new units', 'GCCE-400 Unit 1 now in Urdu']);
-    expect(hl[0]).toMatchObject({ ur: 'GCCE-400: 2 نئے یونٹ', link: '/semester-4/gcce-400/', ids: ['unit:GCCE-400:1', 'unit:GCCE-400:2'] });
+  // Owner, 2026-11-23: full course titles with codes, and plain language for an ordinary reader.
+  const titles = { 'GCCE-400': { en: 'Civics and Community Engagement', ur: 'شہریات اور سماجی شمولیت' },
+    'GQUR-301': { en: 'Quantitative Reasoning-II (Statistics)', ur: 'مقداری استدلال-2 (شماریات)' },
+    'GSOS-301': { en: 'Social Science (Sociology)', ur: 'سماجی علوم (عمرانیات)' },
+    'EFPG-401': { en: 'Teaching of English', ur: 'انگریزی کی تدریس' } };
+
+  it('names courses by code and full title from the catalogue', () => {
+    expect(courseName('GCCE-400')).toBe('GCCE-400 Civics and Community Engagement');
+    expect(courseName('ZZZZ-999')).toBe('ZZZZ-999');
+  });
+
+  it('writes one highlight per kind and course: a short card line and a plain caption line', () => {
+    const hl = contentHighlights([ev(), ev({ id: 'unit:GCCE-400:2', unit_no: 2, title_en: 'Rights', title_ur: 'حقوق' }), ev({ id: 'urdu:GCCE-400:1', type: 'urdu' })]);
+    expect(hl.map((h) => h.card_en)).toEqual(['GCCE-400 Civics and Community Engagement: 2 new units', 'GCCE-400 Unit 1 now in Urdu']);
+    expect(hl[0].en).toBe('GCCE-400 Civics and Community Engagement: 2 new units to read for free, on Citizenship and Rights.');
+    expect(hl[0]).toMatchObject({ link: '/semester-4/gcce-400/', ids: ['unit:GCCE-400:1', 'unit:GCCE-400:2'] });
+    expect(hl[0].ur).toContain('GCCE-400 شہریات اور سماجی شمولیت: 2 نئے یونٹ');
+    expect(hl[1].en).toBe('GCCE-400 Civics and Community Engagement, Unit 1: Citizenship, can now be read in Urdu as well as English.');
   });
 
   it('counts figures, puts new courses first and leaves provisional out', () => {
     const hl = contentHighlights([
       ev({ id: 'figures:GQUR-301:1', type: 'figures', course_code: 'GQUR-301', count: 4 }),
       ev({ id: 'figures:GQUR-301:2', type: 'figures', course_code: 'GQUR-301', count: 3 }),
-      ev({ id: 'course:GCCE-400', type: 'course', title_en: 'Civics', title_ur: 'شہریات' }),
+      ev({ id: 'course:GCCE-400', type: 'course', title_en: 'Civics and Community Engagement', title_ur: 'شہریات' }),
       ev({ id: 'provisional:GCCE-400:1', type: 'provisional' }),
     ]);
-    expect(hl.map((h) => h.en)).toEqual(['New course: Civics', 'GQUR-301: 7 new illustrations and figures']);
+    expect(hl.map((h) => h.card_en)).toEqual(['New course: GCCE-400 Civics and Community Engagement', 'GQUR-301 Quantitative Reasoning-II (Statistics): 7 new diagrams']);
+    expect(hl[1].en).toBe('7 new pictures and diagrams in GQUR-301 Quantitative Reasoning-II (Statistics) make the ideas easier to see and understand.');
   });
 
-  it('describes teasers, revisions and reviews plainly', () => {
-    expect(highlight('teaser', [{ id: 't1', course_code: 'GSOS-301' }]).en).toBe('GSOS-301: 30-second course teaser on YouTube');
-    expect(highlight('updated', [ev({ id: 'updated:EFPG-401:1', type: 'updated', course_code: 'EFPG-401', title_en: 'Lesson Planning' })]).en).toBe('EFPG-401 Unit 1 revised: Lesson Planning');
-    expect(highlight('review', [ev(), ev({ unit_no: 2 })]).en).toBe('GCCE-400: 2 units reviewed');
+  it('describes teasers, revisions and reviews plainly, within the card and caption limits', () => {
+    expect(highlight('teaser', [{ id: 'teaser:gsos-301-ur', course_code: 'GSOS-301' }], titles).en)
+      .toBe('A new 30-second video on YouTube, in Urdu, shows what GSOS-301 Social Science (Sociology) is about.');
+    expect(highlight('updated', [ev({ id: 'updated:EFPG-401:1', type: 'updated', course_code: 'EFPG-401', title_en: 'Lesson Planning' })], titles).en)
+      .toBe('EFPG-401 Teaching of English, Unit 1: Lesson Planning, was revised and improved.');
+    expect(highlight('review', [ev(), ev({ unit_no: 2 })], titles).en).toBe('2 units of GCCE-400 Civics and Community Engagement have completed their review.');
+    const many = ['GSOS-301', 'GQUR-301', 'EFPG-401', 'GCCE-400', 'GSOS-301', 'GQUR-301', 'EFPG-401', 'GCCE-400'].map((c, i) => ({ id: `teaser:${i}-ur`, course_code: c }));
+    const t = highlight('teaser', many, titles);
+    expect(t.en.length).toBeLessThanOrEqual(320);
+    expect(t.card_en.length).toBeLessThanOrEqual(68);
   });
 });
 
@@ -79,9 +100,9 @@ describe('check, captions and approval', () => {
 
   it('writes bilingual captions, "link in bio" on Instagram, and alt text', () => {
     const d = draft();
-    expect(captionFor(d, 'facebook')).toMatch(/^New on textbook.com.pk\n• GCCE-400 Unit 1: Citizenship\n\nنیا مواد\n• GCCE-400 یونٹ 1: شہریت\n\nRead free: https:\/\/textbook.com.pk\/semester-4\/gcce-400\/unit-01\//);
+    expect(captionFor(d, 'facebook')).toMatch(/^New on textbook.com.pk\n• GCCE-400 Civics and Community Engagement, Unit 1: Citizenship, is now free to read.\n\nنیا مواد\n• GCCE-400 شہریات اور سماجی شمولیت، یونٹ 1: شہریت، اب مفت پڑھا جا سکتا ہے۔\n\nRead free: https:\/\/textbook.com.pk\/semester-4\/gcce-400\/unit-01\//);
     expect(captionFor(d, 'instagram')).toContain('Link in bio: textbook.com.pk');
-    expect(altText(d)).toBe('New on textbook.com.pk: GCCE-400 Unit 1: Citizenship');
+    expect(altText(d)).toBe('New on textbook.com.pk: GCCE-400 Civics and Community Engagement, Unit 1: Citizenship, is now free to read.');
   });
 
   it('auto-approves content only after the pilot; feature posts need the owner; rejected ids can come back', () => {

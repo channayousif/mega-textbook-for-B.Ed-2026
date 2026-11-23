@@ -12,7 +12,8 @@
 //   node scripts/social/updates.mjs render <id>
 //   node scripts/social/updates.mjs approve <id> [--by owner|auto]
 //   node scripts/social/updates.mjs reject <id> <note>
-//   node scripts/social/updates.mjs copy <id> <n> --en "<line>" --ur "<line>"   (feature line n, 1-based)
+//   node scripts/social/updates.mjs copy <id> <n> --en "<line>" --ur "<line>" [--card-en "<short>" --card-ur "<short>"]
+//                                    (feature line n, 1-based; the card line is at most 68 characters)
 //   node scripts/social/updates.mjs publish <id> [--platforms facebook,instagram,linkedin]
 //   node scripts/social/updates.mjs show [<id>]
 //   node scripts/social/updates.mjs snapshot            (copy the host ledger to specs/social/updates.json)
@@ -36,7 +37,10 @@ export const LEDGER = process.env.SOCIAL_LEDGER ?? join(homedir(), 'studio-media
 export const SNAPSHOT = join(ROOT, 'specs', 'social', 'updates.json');
 export const PLATFORMS = ['facebook', 'instagram', 'linkedin'];
 export const MAX_HIGHLIGHTS = 5;
-export const LIMITS = { headline: 60, highlight: 90 };
+// The card shows `card_en`/`card_ur` (or `en`/`ur` when no card line is given) in about 68
+// characters; the caption explains in plain words for an ordinary reader (owner, 2026-11-23:
+// "use full course titles with codes, use descriptive language for ordinary audience").
+export const LIMITS = { headline: 60, card: 68, highlight: 320, instagram: 2200 };
 export const HASHTAGS = '#BEd #TeacherEducation #textbookcompk #اردو';
 const BURST_DAYS = 7;
 
@@ -48,29 +52,109 @@ const PRIORITY = ['course', 'unit', 'urdu', 'teaser', 'figures', 'updated', 'rev
 const unitLabel = (e) => `${e.course_code} Unit ${e.unit_no}`;
 const unitLabelUr = (e) => `${e.course_code} یونٹ ${e.unit_no}`;
 
-/** One highlight for a group of same-kind items of one course (or one item). Deterministic copy. */
-export function highlight(type, items) {
+// Full course titles (owner, 2026-11-23: "use full course titles with codes"), from the catalogue.
+let catalogTitles;
+export function courseTitles(path = join(ROOT, 'catalog/courses.json')) {
+  if (catalogTitles) return catalogTitles;
+  catalogTitles = {};
+  try {
+    const c = JSON.parse(readFileSync(path, 'utf8'));
+    for (const course of [...(c.semesters ?? []).flatMap((s) => s.courses ?? []), ...(c.tracks ?? []).flatMap((t) => t.courses ?? [])]) {
+      if (course?.code) catalogTitles[course.code] = { en: course.title_en, ur: course.title_ur || course.title_en };
+    }
+  } catch { /* no catalogue: codes alone */ }
+  return catalogTitles;
+}
+/** "GCCE-400 Civics and Community Engagement" (code alone when the title is unknown). */
+export function courseName(code, lang = 'en', titles = courseTitles()) {
+  const t = titles[code]?.[lang];
+  return t ? `${code} ${t}` : code;
+}
+/** A card line in the room the card has; falls back to the shorter form when the long one does not fit. */
+const fit = (long, short) => (long.length <= 68 ? long : short);
+/** Up to `max` names, then "and N more" (EN) / "اور N مزید" (UR), kept under the caption limit. */
+function listOf(names, lang, max = 4) {
+  const shown = names.slice(0, max);
+  const rest = names.length - shown.length;
+  const and = lang === 'ur' ? ' اور ' : ' and ';
+  const tail = rest > 0 ? (lang === 'ur' ? `، اور ${rest} مزید` : `, and ${rest} more`) : '';
+  if (rest > 0) return `${shown.join(lang === 'ur' ? '؛ ' : '; ')}${tail}`;
+  return shown.length > 1 ? `${shown.slice(0, -1).join(lang === 'ur' ? '، ' : ', ')}${and}${shown.at(-1)}` : (shown[0] ?? '');
+}
+
+/**
+ * One highlight for a group of same-kind items of one course (or one item). Deterministic copy:
+ * `card_en`/`card_ur` is the short card line; `en`/`ur` explains it in plain words for an
+ * ordinary reader, with the course's full title and code.
+ */
+export function highlight(type, items, titles = courseTitles()) {
   const n = items.length;
   const e = items[0];
   const ids = items.map((i) => i.id);
   const link = n === 1 && e.permalink ? e.permalink : (e.permalink ?? '/').replace(/\/unit-\d+\/?$/, '/');
-  const h = (en, ur) => ({ type, ids, en: clean(en), ur: clean(ur), link });
+  const code = e.course_code;
+  const nameEn = courseName(code, 'en', titles), nameUr = courseName(code, 'ur', titles);
+  const h = (cardEn, cardUr, en, ur) => ({ type, ids, card_en: clean(cardEn), card_ur: clean(cardUr), en: clean(en), ur: clean(ur), link });
+  const unitTitles = (lang) => items.slice().sort((a, b) => (a.unit_no ?? 0) - (b.unit_no ?? 0))
+    .map((i) => (lang === 'ur' ? i.title_ur || i.title_en : i.title_en)).filter(Boolean);
   switch (type) {
-    case 'course': return h(`New course: ${e.title_en}`, `نیا کورس: ${e.title_ur || e.title_en}`);
-    case 'unit': return n > 1 ? h(`${e.course_code}: ${n} new units`, `${e.course_code}: ${n} نئے یونٹ`)
-      : h(`${unitLabel(e)}: ${e.title_en}`, `${unitLabelUr(e)}: ${e.title_ur || e.title_en}`);
-    case 'urdu': return n > 1 ? h(`${e.course_code}: ${n} units now in Urdu`, `${e.course_code}: ${n} یونٹ اب اردو میں`)
-      : h(`${unitLabel(e)} now in Urdu`, `${unitLabelUr(e)} اب اردو میں`);
+    case 'course': {
+      const en = e.title_en ? `${code} ${e.title_en}` : nameEn, ur = e.title_ur ? `${code} ${e.title_ur}` : nameUr;
+      return h(fit(`New course: ${en}`, `New course: ${code}`), fit(`نیا کورس: ${ur}`, `نیا کورس: ${code}`),
+        `New course: ${en}. It is free to read on textbook.com.pk, unit by unit, for anyone training to teach.`,
+        `نیا کورس: ${ur}۔ یہ textbook.com.pk پر یونٹ وار مفت پڑھا جا سکتا ہے، ہر اس شخص کے لیے جو تدریس کی تربیت لے رہا ہے۔`);
+    }
+    case 'unit': {
+      if (n === 1) {
+        return h(fit(`${unitLabel(e)}: ${e.title_en}`, `${unitLabel(e)} is new`), fit(`${unitLabelUr(e)}: ${e.title_ur || e.title_en}`, `${unitLabelUr(e)} نیا`),
+          `${nameEn}, Unit ${e.unit_no}: ${e.title_en}, is now free to read.`,
+          `${nameUr}، یونٹ ${e.unit_no}: ${e.title_ur || e.title_en}، اب مفت پڑھا جا سکتا ہے۔`);
+      }
+      const te = unitTitles('en'), tu = unitTitles('ur');
+      return h(fit(`${nameEn}: ${n} new units`, `${code}: ${n} new units`), fit(`${nameUr}: ${n} نئے یونٹ`, `${code}: ${n} نئے یونٹ`),
+        te.length ? `${nameEn}: ${n} new units to read for free, on ${listOf(te, 'en')}.` : `${nameEn}: ${n} new units to read for free.`,
+        tu.length ? `${nameUr}: ${n} نئے یونٹ مفت پڑھنے کے لیے، ان موضوعات پر: ${listOf(tu, 'ur')}۔` : `${nameUr}: ${n} نئے یونٹ مفت پڑھنے کے لیے۔`);
+    }
+    case 'urdu': return n > 1
+      ? h(fit(`${nameEn}: ${n} units now in Urdu`, `${code}: ${n} units now in Urdu`), fit(`${nameUr}: ${n} یونٹ اب اردو میں`, `${code}: ${n} یونٹ اب اردو میں`),
+        `${n} units of ${nameEn} can now be read in Urdu as well as English.`,
+        `${nameUr} کے ${n} یونٹ اب انگریزی کے ساتھ اردو میں بھی پڑھے جا سکتے ہیں۔`)
+      : h(fit(`${unitLabel(e)} now in Urdu`, `${code}: a unit now in Urdu`), fit(`${unitLabelUr(e)} اب اردو میں`, `${code}: ایک یونٹ اب اردو میں`),
+        `${nameEn}, Unit ${e.unit_no}${e.title_en ? `: ${e.title_en}` : ''}, can now be read in Urdu as well as English.`,
+        `${nameUr}، یونٹ ${e.unit_no}${e.title_ur || e.title_en ? `: ${e.title_ur || e.title_en}` : ''}، اب انگریزی کے ساتھ اردو میں بھی پڑھا جا سکتا ہے۔`);
     case 'figures': {
       const c = items.reduce((t, i) => t + (i.count ?? 1), 0);
-      return h(`${e.course_code}: ${c} new illustrations and figures`, `${e.course_code}: ${c} نئی تصاویر اور خاکے`);
+      return h(fit(`${nameEn}: ${c} new diagrams`, `${code}: ${c} new diagrams and pictures`), fit(`${nameUr}: ${c} نئے خاکے`, `${code}: ${c} نئے خاکے اور تصاویر`),
+        `${c} new pictures and diagrams in ${nameEn} make the ideas easier to see and understand.`,
+        `${nameUr} میں ${c} نئی تصاویر اور خاکے بات کو دیکھ کر سمجھنا آسان بناتے ہیں۔`);
     }
-    case 'updated': return n > 1 ? h(`${e.course_code}: ${n} units revised`, `${e.course_code}: ${n} یونٹ بہتر کیے گئے`)
-      : h(`${unitLabel(e)} revised: ${e.title_en}`, `${unitLabelUr(e)} بہتر کیا گیا: ${e.title_ur || e.title_en}`);
-    case 'review': return n > 1 ? h(`${e.course_code}: ${n} units reviewed`, `${e.course_code}: ${n} یونٹوں کی نظرثانی مکمل`)
-      : h(`${unitLabel(e)}: review completed`, `${unitLabelUr(e)}: نظرثانی مکمل`);
-    case 'teaser': return n > 1 ? h(`${n} new 30-second course teasers on YouTube`, `یوٹیوب پر ${n} نئے کورس تعارفی ویڈیو`)
-      : h(`${e.course_code}: 30-second course teaser on YouTube`, `${e.course_code}: یوٹیوب پر 30 سیکنڈ کا تعارفی ویڈیو`);
+    case 'updated': return n > 1
+      ? h(fit(`${nameEn}: ${n} units improved`, `${code}: ${n} units improved`), fit(`${nameUr}: ${n} یونٹ بہتر`, `${code}: ${n} یونٹ بہتر`),
+        `${n} units of ${nameEn} were revised and improved.`,
+        `${nameUr} کے ${n} یونٹوں میں نظرثانی کر کے انہیں بہتر بنایا گیا۔`)
+      : h(fit(`${unitLabel(e)} improved: ${e.title_en}`, `${unitLabel(e)} improved`), fit(`${unitLabelUr(e)} بہتر: ${e.title_ur || e.title_en}`, `${unitLabelUr(e)} بہتر`),
+        `${nameEn}, Unit ${e.unit_no}: ${e.title_en}, was revised and improved.`,
+        `${nameUr}، یونٹ ${e.unit_no}: ${e.title_ur || e.title_en}، میں نظرثانی کر کے اسے بہتر بنایا گیا۔`);
+    case 'review': return n > 1
+      ? h(fit(`${nameEn}: ${n} units reviewed`, `${code}: ${n} units reviewed`), fit(`${nameUr}: ${n} یونٹوں کی نظرثانی مکمل`, `${code}: ${n} یونٹوں کی نظرثانی مکمل`),
+        `${n} units of ${nameEn} have completed their review.`,
+        `${nameUr} کے ${n} یونٹوں کی نظرثانی مکمل ہو گئی ہے۔`)
+      : h(fit(`${unitLabel(e)}: review completed`, `${code}: a unit reviewed`), fit(`${unitLabelUr(e)}: نظرثانی مکمل`, `${code}: ایک یونٹ کی نظرثانی مکمل`),
+        `${nameEn}, Unit ${e.unit_no}${e.title_en ? `: ${e.title_en}` : ''}, has completed its review.`,
+        `${nameUr}، یونٹ ${e.unit_no}${e.title_ur || e.title_en ? `: ${e.title_ur || e.title_en}` : ''}، کی نظرثانی مکمل ہو گئی ہے۔`);
+    case 'teaser': {
+      const ur = items.every((i) => (i.locale ?? (/-en$/.test(i.id ?? '') ? 'en' : 'ur')) === 'ur');
+      const names = (lang) => items.map((i) => courseName(i.course_code, lang, titles));
+      // Name as many courses as fit the caption limit (320), then "and N more".
+      const fitList = (make, lang) => [8, 6, 4, 3, 2].map((m) => make(listOf(names(lang), lang, m))).find((t) => t.length <= 320) ?? make(listOf(names(lang), lang, 1));
+      return n > 1
+        ? h(`${n} new 30-second course videos${ur ? ' in Urdu' : ''}`, `${n} نئی 30 سیکنڈ کی کورس ویڈیوز${ur ? ' اردو میں' : ''}`,
+          fitList((l) => `${n} new 30-second videos on YouTube${ur ? ', in Urdu,' : ''} introduce ${l}.`, 'en'),
+          fitList((l) => `یوٹیوب پر${ur ? ' اردو میں' : ''} ${n} نئے 30 سیکنڈ کے تعارفی ویڈیو: ${l}۔`, 'ur'))
+        : h(fit(`${nameEn}: a 30-second video`, `${code}: a 30-second course video`), fit(`${nameUr}: 30 سیکنڈ کی ویڈیو`, `${code}: 30 سیکنڈ کی کورس ویڈیو`),
+          `A new 30-second video on YouTube${ur ? ', in Urdu,' : ''} shows what ${nameEn} is about.`,
+          `یوٹیوب پر${ur ? ' اردو میں' : ''} 30 سیکنڈ کا نیا ویڈیو بتاتا ہے کہ ${nameUr} کس بارے میں ہے۔`);
+    }
     default: throw new Error(`no copy for ${type}`);
   }
 }
@@ -147,9 +231,14 @@ export function checkDraft(d) {
     if (!h.ids?.length) f.push(`highlight ${i + 1}: no source id`);
     if (!h.ur) f.push(`highlight ${i + 1}: no Urdu`);
     for (const k of ['en', 'ur']) if ((h[k] ?? '').length > LIMITS.highlight) f.push(`highlight ${i + 1} ${k} over ${LIMITS.highlight} characters`);
+    for (const k of ['en', 'ur']) {
+      const line = h[`card_${k}`] ?? h[k] ?? '';
+      if (line.length > LIMITS.card) f.push(`highlight ${i + 1} card ${k} over ${LIMITS.card} characters: add a shorter card_${k}`);
+    }
     if (/certif|accredit|approved by|officially/i.test(h.en) && h.type !== 'review') f.push(`highlight ${i + 1}: certification wording without a review event`);
     if (h.link && !/^\/|^https:\/\/textbook\.com\.pk\//.test(h.link)) f.push(`highlight ${i + 1}: link outside textbook.com.pk`);
   });
+  if (d.headline && d.highlights?.length && captionFor(d, 'instagram').length > LIMITS.instagram) f.push(`Instagram caption over ${LIMITS.instagram} characters`);
   return f;
 }
 
@@ -194,7 +283,7 @@ export function approve(L, id, by = 'owner', now = new Date()) {
 }
 
 /** Write the EN/UR line of feature highlight `n` (1-based); the draft must be re-checked and re-rendered. */
-export function setCopy(L, id, n, en, ur) {
+export function setCopy(L, id, n, en, ur, card = {}) {
   const p = L.posts.find((x) => x.id === id);
   if (!p) throw new Error(`no post ${id}`);
   if (p.state !== 'drafted') throw new Error(`${id} is ${p.state}`);
@@ -202,6 +291,7 @@ export function setCopy(L, id, n, en, ur) {
   if (!h) throw new Error(`${id} has no highlight ${n}`);
   if (!en?.trim() || !ur?.trim()) throw new Error('both --en and --ur are needed');
   Object.assign(h, { en: clean(en), ur: clean(ur), needs_copy: false });
+  for (const k of ['en', 'ur']) if (card[k]?.trim()) h[`card_${k}`] = clean(card[k]);
   delete p.card; delete p.card_url;
   return h;
 }
@@ -276,7 +366,7 @@ async function main(argv) {
   if (cmd === 'show') { const L = loadLedger(); out(id ? L.posts.find((p) => p.id === id) : L.posts.map((p) => ({ id: p.id, kind: p.kind, state: p.state }))); return; }
   if (cmd === 'check') { const p = loadLedger().posts.find((x) => x.id === id); if (!p) throw new Error(`no post ${id}`); const f = checkDraft(p); out(f.length ? f : 'pass'); process.exit(f.length ? 1 : 0); }
   if (cmd === 'approve') { out(update(LEDGER, (L) => approve(L, id, opt('--by') ?? 'owner'))); return; }
-  if (cmd === 'copy') { out(update(LEDGER, (L) => setCopy(L, id, Number(rest[0]), opt('--en'), opt('--ur')))); return; }
+  if (cmd === 'copy') { out(update(LEDGER, (L) => setCopy(L, id, Number(rest[0]), opt('--en'), opt('--ur'), { en: opt('--card-en'), ur: opt('--card-ur') }))); return; }
   if (cmd === 'reject') { out(update(LEDGER, (L) => reject(L, id, rest.filter((a) => !a.startsWith('--')).join(' ')))); return; }
   if (cmd === 'render') {
     const { renderCard } = await import('./card.mjs');

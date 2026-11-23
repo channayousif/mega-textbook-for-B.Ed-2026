@@ -58,6 +58,14 @@ posting is a host action and crew branches merge in batches. Never edit it by ha
   emoji walls, no exclamation strings.
 - Facts from the source only (event, ledger or PR). Never claim certification, accreditation or
   official approval. "Reviewed" is used only for a `review` event.
+- **Full course titles with codes, in descriptive language for an ordinary reader** (owner,
+  2026-11-23). Write "GCCE-400 Civics and Community Engagement", never "GCCE-400" alone, and say
+  what the material is about in everyday words (unit topics, what a video shows, why a diagram
+  helps). Titles come from `catalog/courses.json`; unit topics from the unit titles.
+- Two lengths per highlight: `card_en`/`card_ur` is the card line (at most 68 characters: code and
+  title, then the fact), and `en`/`ur` is the caption sentence (at most 320 characters). The
+  generator writes both; when a feature line needs copy, write both too. The headline stays at
+  most 60 characters and the whole Instagram caption at most 2,200 (`check` enforces all four).
 - Bilingual: English first, then Urdu. No long dashes (a spaced hyphen instead).
 - The card is text only: no faces, maps, flags or sacred imagery.
 
