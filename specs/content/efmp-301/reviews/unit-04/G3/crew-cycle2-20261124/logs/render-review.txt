@@ -1,0 +1,19 @@
+render-review - EFMP-301 Unit 4 G3 - 2026-11-24
+Command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-1/efmp-301/unit-04/ static/img/figures/efmp-301/unit-04/
+deployed SHA: dc60264d97702a5e9488670b1802651e21ee91eb
+HEAD: 98fbbb0647d5e2c6040059edcaaccc1317b620a1
+diff exit code: 1
+Changed paths between deployed SHA and HEAD:
+docs/semester-1/efmp-301/unit-04/index.mdx
+docs/semester-1/efmp-301/unit-04/topic-01.mdx
+docs/semester-1/efmp-301/unit-04/topic-02.mdx
+docs/semester-1/efmp-301/unit-04/topic-03.mdx
+static/img/figures/efmp-301/unit-04/fig-U4-1.webp
+static/img/figures/efmp-301/unit-04/fig-U4-10.webp
+static/img/figures/efmp-301/unit-04/fig-U4-7.webp
+static/img/figures/efmp-301/unit-04/fig-U4-8.webp
+static/img/figures/efmp-301/unit-04/fig-U4-9.webp
+
+Result: the diff is NOT empty, so the production build (CI-built from main) is not the reviewed input.
+Per the crew brief, render-review is recorded as unavailable; no build, dev server or Playwright run was attempted.
+scripts/render-inspect.mjs EFMP-301 4 --base https://textbook.com.pk --no-pdf was NOT run.
