@@ -21,15 +21,15 @@ files:
   - specs/content/gcce-400/translations/unit-07/handoff.md
   - specs/content/gcce-400/translations/unit-07/check-content-parity.txt
   - specs/content/gcce-400/tasks.md
-  - specs/content/gcce-400/reviews/unit-07/G2/20261123T210701829Z-gates.json
-  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T210701829Z/check-bloom-bands.txt
-  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T210701829Z/check-concept-graph.txt
-  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T210701829Z/check-depth-gate.txt
-  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T210701829Z/check-docs-sync.txt
-  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T210701829Z/check-figures.txt
-  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T210701829Z/check-no-answer-keys.txt
-  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T210701829Z/check-no-em-dash.txt
-  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T210701829Z/validate-content.txt
+  - specs/content/gcce-400/reviews/unit-07/G2/20261123T211446361Z-gates.json
+  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T211446361Z/check-bloom-bands.txt
+  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T211446361Z/check-concept-graph.txt
+  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T211446361Z/check-depth-gate.txt
+  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T211446361Z/check-docs-sync.txt
+  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T211446361Z/check-figures.txt
+  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T211446361Z/check-no-answer-keys.txt
+  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T211446361Z/check-no-em-dash.txt
+  - specs/content/gcce-400/reviews/unit-07/G2/logs-20261123T211446361Z/validate-content.txt
 tests:
   - npm run check:content
 ---
@@ -88,7 +88,7 @@ Continued the agy draft on the same branch. Found the stale G2 manifest was caus
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Urdu teacher-notes front matter and H1 translated; G2 gate evidence refreshed and tracker repointed to `reviews/unit-07/G2/20261123T210701829Z-gates.json`; parity log regenerated; handoff updated.
+- Shipped / changed: Urdu teacher-notes front matter and H1 translated; G2 gate evidence refreshed and tracker repointed to `reviews/unit-07/G2/20261123T211446361Z-gates.json`; parity log regenerated; handoff updated.
 - Decisions the team must respect: `translation_status` stays `draft` in both `index.mdx` files; no G4/G5 completion is claimed and no tracker row was flipped.
 - Pending / next owner: independent G5 reviewer for the Urdu mirror; G3 for the English unit (census Table 11/4.21, constitutional currency, kymlicka-norman-2000 and youniss-levine-2009 attributions).
 - Notes for the next job on this unit:
