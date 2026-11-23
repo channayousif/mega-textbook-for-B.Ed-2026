@@ -17,6 +17,9 @@ links:
   pr: null
 files:
  - history/prompts/efmp-407/crew-efmp-407-u01-repair_en-r1-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u01-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-407/reviews/unit-01/G3/20261123-repair-notes.md
+ - specs/content/efmp-407/tasks.md
 tests:
  - npm run check:content
 ---
@@ -54,32 +57,35 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u01-repair_en, repair_en, agy) Browser, narrow-screen, and A4 print rendering remain host-prohibited under the crew brief and are left as owner handoffs.
 - (efmp-407-u01-repair_en, repair_en, agy) Unit 1 G3 remains unticked pending fresh independent review and owner disposition under ADR-0019.
 
+## Feedback from the previous attempt
+the worker committed only a PHR (history/prompts/); a job must produce its stage's work, and the crew writes the PHR itself
+
+
 ## Response snapshot
 
-Verified `origin/main` (`354926588`) is already an ancestor of this branch (ahead 3, behind 0), so `git merge origin/main` reports "Already up to date" and there is no reproducible conflict to resolve. Confirmed the append-only shared registries (`glossary.json`, `specs/decisions/log.md`, `specs/gaps.md`, `specs/content/terminology.csv`) are unchanged from main, and that `specs/content/efmp-407/tasks.md` keeps both Unit 1 G3 rows (main's `20261108T203238Z` row and this branch's `20261122T175629Z` row). All 14 content gates pass.
+Resolved the `specs/content/efmp-407/tasks.md` merge conflict with origin/main by keeping both sides' G3 advisory rows, committed the merge, and left `npm run check:content` fully green.
 
 ## Outcome
 
-- Impact: fix for EFMP-407 Unit 1 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (14/14 gates) in the job worktree.
-- Files: 1 file(s), listed above.
+- Impact: fix for EFMP-407 Unit 1 by claude_crew (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 4 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the branch already contains `origin/main` with no reproducible conflict, confirmed the append-only registries and both Unit 1 G3 tracker rows are preserved, passed all 14 content gates, and committed this conflict-fix PHR.
+- Shipped / changed: Resolved the `specs/content/efmp-407/tasks.md` merge conflict with origin/main by keeping both sides' G3 advisory rows, committed the merge, and left `npm run check:content` fully green.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `origin/main` `354926588` is already an ancestor of this branch (ahead 3, behind 0), so there was no conflict to resolve and no merge commit exists.
-  - `specs/content/efmp-407/tasks.md` is the recurring collision point for parallel EFMP-407 unit jobs; both Unit 1 G3 rows are intentional and must be kept.
-  - Unit 1 G3 remains unticked pending fresh independent review and owner disposition under ADR-0019.
+  - Unit 1 G3 is still unticked by design; the tracker row records the 3d3228c6 repairs as "already resolved on main", so a fresh independent G3 run is still the open owner action.
+  - The merged `tasks.md` still carries main's legacy duplicate-structure rows (Unit 5/8 multiple G3 rows); left as-is since main has them.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
