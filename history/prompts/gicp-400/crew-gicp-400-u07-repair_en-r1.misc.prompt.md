@@ -1,6 +1,6 @@
 ---
 id: crew-gicp-400-u07-repair_en-r1
-title: crew repair_en GICP-400 unit 7 round 1
+title: crew repair_en GICP-400 unit 7
 stage: misc
 date: 2026-11-23
 surface: agent
@@ -19,6 +19,7 @@ files:
  - docs/semester-3/gicp-400/unit-07/index.mdx
  - docs/semester-3/gicp-400/unit-07/topic-01.mdx
  - docs/semester-3/gicp-400/unit-07/unit-assessment.mdx
+ - history/prompts/gicp-400/crew-gicp-400-u07-repair_en-r1.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/gicp-400/unit-07/unit-assessment.mdx
@@ -70,13 +71,13 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Open findings from the latest G3 report
 From `specs/content/gicp-400/reviews/unit-07/G3/20261122T175629Z-g3-desk-2fc6dff0.json` (disposition: revise). Resolve each one:
-- [blocking] sources: The three named dimensions and their contents are not Dean's. docs/semester-3/gicp-400/unit-07/topic-01.mdx:40 says she argued for three interlinked dimensions with lists (deliberation, peaceful conflict resolution, critical media literacy; social justice, equal dignity, pluralism). In the full paper 'dimension', 'civic knowledge', 'civic skills', 'media literacy', 'deliberat' and 'conflict resolution' all return zero hits; 'pluralis' hits only a reference-list title. What Dean does write: effective citizens need a body of knowledge, relevant skills, values and dispositions, and first-hand experience; the abstract names skills (problem-solving, decision-making) and values (civic mindedness, critical consciousness). Dependent items: docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:37, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:111, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:124, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:151. Repair: restate Dean's actual formulation, or attribute the three-part framework to a source that states it and verify; keep MCQ 2 only if reworded to what she wrote.
-- [blocking] sources: docs/semester-3/gicp-400/unit-07/topic-01.mdx:82 opens 'Dean (2005) put it clearly' and attributes 'primary agents of civic formation' and a statement that nation building in education is not indoctrination. Zero hits for 'primary agent', 'civic formation', 'collaborative inquiry', 'indoctrinat' and 'nation building' in the paper. Her nearest sentence is that the teacher is 'essential to the reconceptualization of education for democratic citizenship'. docs/semester-3/gicp-400/unit-07/topic-01.mdx:40 also lists government departments, historical dates and constitutional bodies as what pupils memorised; none of those terms occurs as a memorised-content claim. Transmission teaching, rote memorisation and passive citizenship are supported, so that core stands. Repair: rewrite both passages to what the paper says and remove 'put it clearly'.
-- [blocking] sources: specs/content/gicp-400/sources/texts/dean-2005-citizenship.md second paragraph presents the invented framework as what 'the paper is widely cited for', and sources/unit-07.md claims support for U7-01 and U7-03 from it. The file discloses that the PDF was not authenticated but has no `## Unverifiable sources` section with attempts and owner authorisation, and the prose states these claims with no uncorroborated flag. The disclosure understates the gap: the PDF was retrievable on 2026-11-07, as was the Kennedy full text the file calls bot-protected (www.mdpi.com/2227-7102/2/3/121). Repair: re-bind both excerpts from the read text.
-- [blocking] sources: The National integration section has no source for its central teaching. The assimilation versus integration distinction and 'Forced assimilation breeds resentment' (docs/semester-3/gicp-400/unit-07/topic-01.mdx:64) cite nothing, and the coverage matrix row mapping U7-02 to kennedy-2012-civic is unsupported: the section never cites Kennedy and his paper has zero hits for 'assimilat'. The causal claim about 1971 (docs/semester-3/gicp-400/unit-07/topic-01.mdx:64) is a contested historical judgement stated without any citation, and no unit source covers it. Repair: bind a real source for the concept and for the 1971 claim (or cut the claim), and correct the matrix.
-- [blocking] sources (constitutional accuracy): Article 251 is taught as protecting provincial languages at docs/semester-3/gicp-400/unit-07/topic-01.mdx:70, docs/semester-3/gicp-400/unit-07/topic-01.mdx:96, docs/semester-3/gicp-400/unit-07/topic-01.mdx:119, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:22, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:127, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:129 and the fig-U7-3 label ('provincial languages protected by Article 251'). Clause (3) is permissive: a Provincial Assembly 'may by law prescribe measures' for teaching, promotion and use, without prejudice to the national language. It creates no protection unless a province legislates. The provision that does give a right, Article 28 (any section of citizens with a distinct language, script or culture may preserve and promote it, subject to Article 251), is never mentioned. Sajid's reply to Zainab is also wrong on its own terms, since a village dialect is not a provincial language under 251(3). RRQ 5 (docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:89) builds the error into its stem. Repair: teach 251(3) as a permission, add Article 28, and correct the figure, model answers and summaries.
+- [blocking] sources: The three named dimensions and their contents are not Dean's. docs/semester-3/gicp-400/unit-07/topic-01.mdx:40 says she argued for three interlinked dimensions with lists (deliberation, peaceful conflict resolution, critical media literacy; social justice, equal dignity, pluralism). In the full paper 'dimension', 'civic knowledge', 'civic skills', 'media literacy', 'deliberat' and 'conflict resolution' all return zero hits; 'pluralis' hits only a reference-list title. What Dean does write: effective citizens need a body of knowledge, relevant skills, values and dispositions, and fi...
+- [blocking] sources: docs/semester-3/gicp-400/unit-07/topic-01.mdx:82 opens 'Dean (2005) put it clearly' and attributes 'primary agents of civic formation' and a statement that nation building in education is not indoctrination. Zero hits for 'primary agent', 'civic formation', 'collaborative inquiry', 'indoctrinat' and 'nation building' in the paper. Her nearest sentence is that the teacher is 'essential to the reconceptualization of education for democratic citizenship'. docs/semester-3/gicp-400/unit-07/topic-01.mdx:40 also lists government departments, historical dates and constitutional bodies as w...
+- [blocking] sources: specs/content/gicp-400/sources/texts/dean-2005-citizenship.md second paragraph presents the invented framework as what 'the paper is widely cited for', and sources/unit-07.md claims support for U7-01 and U7-03 from it. The file discloses that the PDF was not authenticated but has no `## Unverifiable sources` section with attempts and owner authorisation, and the prose states these claims with no uncorroborated flag. The disclosure understates the gap: the PDF was retrievable on 2026-11-07, as was the Kennedy full text the file calls bot-protected (www.mdpi.com/2227-7102/2/3/121). R...
+- [blocking] sources: The National integration section has no source for its central teaching. The assimilation versus integration distinction and 'Forced assimilation breeds resentment' (docs/semester-3/gicp-400/unit-07/topic-01.mdx:64) cite nothing, and the coverage matrix row mapping U7-02 to kennedy-2012-civic is unsupported: the section never cites Kennedy and his paper has zero hits for 'assimilat'. The causal claim about 1971 (docs/semester-3/gicp-400/unit-07/topic-01.mdx:64) is a contested historical judgement stated without any citation, and no unit source covers it. Repair: bind a real source ...
+- [blocking] sources (constitutional accuracy): Article 251 is taught as protecting provincial languages at docs/semester-3/gicp-400/unit-07/topic-01.mdx:70, docs/semester-3/gicp-400/unit-07/topic-01.mdx:96, docs/semester-3/gicp-400/unit-07/topic-01.mdx:119, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:22, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:127, docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:129 and the fig-U7-3 label ('provincial languages protected by Article 251'). Clause (3) is permissive: a Provincial Assembly 'may by law prescribe measures' for teaching, promotion a...
 - [blocking] sources (constitutional accuracy): docs/semester-3/gicp-400/unit-07/topic-01.mdx:90 derives 'law applies to everyone, including the accused until proven otherwise' from Article 5(2). Article 5(2) states the obligation to obey the Constitution and law and says nothing about the accused. Fair treatment sits in Article 4 and Article 10A. Repair: cite those articles for that half of the sentence.
-- [blocking] assessment: Two ERQ rubrics score criteria their stems do not ask for. ERQ 2 (docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:99) asks for Dean and an example, but docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:154 awards 3 of 12 marks for using an article. ERQ 3 (docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:100) never asks for an article or a reflection question, but docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:160 and docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:162 score both (the Topic 7.1 summative task does ask for the article). A learner who answers the question as set loses marks. Repair: align stems and rubrics.
+- [blocking] assessment: Two ERQ rubrics score criteria their stems do not ask for. ERQ 2 (docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:99) asks for Dean and an example, but docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:154 awards 3 of 12 marks for using an article. ERQ 3 (docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:100) never asks for an article or a reflection question, but docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:160 and docs/semester-3/gicp-400/unit-07/unit-assessment.mdx:162 score both (the Topic 7.1 summative task does ask for the article). A learner who answers...
 - [blocking] pedagogy: The anchor scenario is incoherent (docs/semester-3/gicp-400/unit-07/topic-01.mdx:24). In a government boys school, 'a third pupil, Zainab' is 'visiting the class with her teacher-education college', so she is both a pupil and a visiting trainee, and she is later answered as a pupil of the class (docs/semester-3/gicp-400/unit-07/topic-01.mdx:96). The topic's closing return to the scenario depends on her. Repair: give her one coherent role, for example a boy in the class or a co-educational school.
 - [blocking] coverage: 'Constitutional values' is a spec key term and the object of the Create task, yet it is never defined (used at docs/semester-3/gicp-400/unit-07/topic-01.mdx:100 and in the task). The activity requires 'the value and the article that carries it' and offers equal citizenship, mutual respect and the rule of law, but the unit gives no article for equal citizenship (Article 25 is never named) or the rule of law as such (Article 4 is never named). Repair: define the term and map each offered value to an article.
 - [blocking] accessibility: fig-U7-1 overprints its own label. The text 'practice feeds the value' is centred at x=698 and the dashed return path runs vertically at x=690 through the same y, so the line strikes through the word 'feeds' in any font (see evidence/fig-U7-1.sharp.png). The label also ends close to the 780 viewBox edge. Repair: move the label clear of the path and re-run measure-figure-text, which could not run here.
@@ -87,28 +88,36 @@ From `specs/content/gicp-400/reviews/unit-07/G3/20261122T175629Z-g3-desk-2fc6dff
 - [advisory] figures: figures appear in the order U7-1, U7-3, U7-2. fig-U7-3 arrowheads land on the centre box corners. The tracker says the banner is prompt-only, but specs/content/gicp-400/figures/ has no unit-07.banner.md although units 1-6 do (G6, not G3).
 - ...and 4 more in the report.
 
+## Notes from earlier jobs on this unit
+- (gicp-400-u07-illustrate, illustrate, agy) Both English and Urdu unit locales remain translation_status: draft with G3, G4, and G5 open pending independent review and qualification.
+- (gicp-400-u07-illustrate, illustrate, agy) Live browser rendering across small-screen viewports (360px) and A4 print emulation remains pending for an authorized host.
+- (gicp-400-u07-illustrate, illustrate, agy) The ideology strand remains pending an owner ruling before translation (G4) or final certification.
+- (gicp-400-u07-translate-r1, translate, agy) Unit 7 draft Urdu mirror has full structural, component and figure parity; translation_status remains draft awaiting independent G5 review.
+- (gicp-400-u07-translate-r1, translate, agy) Rendered mobile 360px and A4 print layout inspection remain outstanding under the crew browser restriction.
+
+
 ## Response snapshot
 
-Repaired GICP-400 Unit 7 per the latest G3 report findings (20261122T175629Z-g3-desk-2fc6dff0.json) by restating verified Dean (2005) formulation, qualifying Kennedy (2012) application as unit inference, binding Berry (1997) for assimilation/integration, excising the 1971 causal claim, teaching Article 251(3) as permissive and adding Article 28, citing Articles 4 and 10A for due process, aligning ERQ 2 and ERQ 3 stems with rubrics, ensuring anchor scenario coherence with Zainab as pupil, defining constitutional values and mapping each to supporting articles, updating Urdu mirrors in parallel, running measure-figure-text on all SVGs, updating G2 gate evidence and tasks tracker.
+Repaired GICP-400 Unit 7 per G3 report 20261122T175629Z-g3-desk-2fc6dff0 by aligning Dean and Kennedy source formulations, binding Berry (1997), teaching Article 251(3) permissively with Article 28 and Articles 4/10A due process, aligning ERQ stems with rubrics, fixing scenario coherence, defining constitutional values, mirroring all repairs into Urdu, and refreshing G2 evidence.
 
 ## Outcome
 
-- Impact: repair_en for GICP-400 Unit 7 round 1 by agy.
-- Tests: validate:content, check:depth-gate, check:figures, check:concept-graph, check:bloom-bands, check:no-em-dash, check:no-answer-keys, check:docs-sync all PASS; measure-figure-text PASS on all SVGs; npm run check:content PASS.
-- Files: 20 file(s), listed above.
-- Next prompts: fresh G3 independent review.
-- Reflection: all blocking and advisory findings resolved cleanly with complete English and Urdu alignment.
+- Impact: repair_en for GICP-400 Unit 7 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 21 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: GICP-400 Unit 7 repairs applied addressing all findings from G3 report 20261122T175629Z-g3-desk-2fc6dff0.json across English and Urdu texts, sources, coverage, G2 gate evidence, and task tracker.
-- Decisions the team must respect: G3 remains open and unticked (advisory only); fresh qualified independent review is required under ADR-0019.
-- Pending / next owner: fresh independent G3 reviewer.
+- Shipped / changed: Repaired GICP-400 Unit 7 per G3 report 20261122T175629Z-g3-desk-2fc6dff0 by aligning Dean and Kennedy source formulations, binding Berry (1997), teaching Article 251(3) permissively with Article 28 and Articles 4/10A due process, aligning ERQ stems with rubrics, fixing scenario coherence, defining constitutional values, mirroring all repairs into Urdu, and refreshing G2 evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - The ideology strand remains pending an owner ruling before final certification.
-  - G3 tracker row appended as advisory revise with repairs applied (unticked).
-  - All content gates and figure font-metric tests pass.
-- Paperclip issues affected: none.
+  - G3 tracker row appended as advisory revise with repairs applied (unticked ▢) awaiting fresh independent qualified review.
+  - Rendered mobile 360px and A4 print layout inspection remain outstanding under the crew browser restriction.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
