@@ -2,14 +2,14 @@
 id: crew-gcce-400-u04-repair_en
 title: crew repair_en GCCE-400 unit 4
 stage: misc
-date: 2026-11-24
+date: 2026-11-23
 surface: agent
-model: claude
+model: claude_crew
 feature: gcce-400
 branch: crew/gcce-400-u04-repair_en
 user: crew
 command: crew repair_en
-labels: ["crew", "claude", "repair_en"]
+labels: ["crew", "claude_crew", "repair_en"]
 links:
   spec: specs/content/gcce-400/content-spec.md
   ticket: null
@@ -19,10 +19,10 @@ files:
  - docs/semester-4/gcce-400/unit-04/topic-01.mdx
  - docs/semester-4/gcce-400/unit-04/topic-02.mdx
  - docs/semester-4/gcce-400/unit-04/unit-assessment.mdx
+ - history/prompts/gcce-400/crew-gcce-400-u04-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-04/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-04/topic-02.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-04/unit-assessment.mdx
- - specs/content/gcce-400/sources/unit-04.md
  - specs/content/gcce-400/reviews/unit-04/G2/20261123T224424097Z-gates.json
  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T224424097Z/check-bloom-bands.txt
  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T224424097Z/check-concept-graph.txt
@@ -32,6 +32,7 @@ files:
  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T224424097Z/check-no-answer-keys.txt
  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T224424097Z/check-no-em-dash.txt
  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T224424097Z/validate-content.txt
+ - specs/content/gcce-400/sources/unit-04.md
  - specs/content/gcce-400/tasks.md
 tests:
  - npm run check:content
@@ -81,26 +82,28 @@ From `specs/content/gcce-400/reviews/unit-04/G3/crew-run1-20261124.json` (dispos
 - (gcce-400-u04-illustrate, illustrate, agy) G5 ur-review remains open (translation_status is draft across English and Urdu indices; G5 owns 360px and A4 print layout inspection).
 - (gcce-400-u04-translate, translate, agy) `translation_status` remains `draft` across English and Urdu indices pending independent G5 review.
 
+
 ## Response snapshot
 
-Applied the G3 run-1 findings for GCCE-400 Unit 4 in English and Urdu: F1 reworded the IAP2 Collaborate example to a shared recommendation the council adopts and added one sentence that the agency still decides at Involve and Collaborate; F3 made the ERQ 4 rubric accept a token consult; F4 retagged MCQ 5 as Apply and re-keyed it D so the key set is A1/B4/C4/D1; F5 removed the duplicate markdown table under fig-U4-2; F6 gave the further-reading URLs descriptive link text and cited D-2026-0001 in the youniss-levine declaration. F2 is unverified lazy rendering, not a content defect, and is recorded as not repairable here. Regenerated the G2 gate evidence, repointed the G2 row and appended the advisory G3 repair row.
+Applied G3 run-1 repairs F1, F3, F4, F5 and F6 to GCCE-400 Unit 4 in English and Urdu, regenerated G2 gate evidence, and appended the unticked advisory G3 repair row.
 
 ## Outcome
 
-- Impact: repair_en for GCCE-400 Unit 4 by claude (attempt 1).
-- Tests: npm run check:content passed in the job worktree (14 content gates, exit 0).
-- Files: 17 file(s), listed above.
+- Impact: repair_en for GCCE-400 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: G3 run-1 repairs F1, F3, F4, F5 and F6 applied in English and Urdu; G2 gate evidence regenerated at the repaired HEAD; Unit 4 G2 row repointed and advisory G3 repair row appended. G3 stays unticked.
-- Decisions the team must respect: G3/G5 remain advisory until a qualified sign-off; nothing here certifies the unit.
+- Shipped / changed: Applied G3 run-1 repairs F1, F3, F4, F5 and F6 to GCCE-400 Unit 4 in English and Urdu, regenerated G2 gate evidence, and appended the unticked advisory G3 repair row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - A fresh independent G3 (cycle 2 of 2) is needed. F2 (fig-U4-2, fig-U4-4 and fig-U4-5 reported as not loaded by render-inspect) is unverified lazy rendering, not a content defect; the production site still runs the pre-repair commit, so check whether it has redeployed before any render and accessibility inspection.
-  - The MCQ 5 option order and key changed in both locales, and the fig-U4-2 markdown table was removed, so a G5 Urdu review should check the new Urdu wording and the figure-only worked example.
+  - F2 is still open: fig-U4-2, fig-U4-4 and fig-U4-5 were reported not loaded by render-inspect (lazy, below fold); production serves the pre-repair SHA 98fbbb064, so the fresh independent G3 (cycle 2 of 2) must confirm redeployment before render/accessibility inspection.
+  - MCQ 5 option order/key and the figure-only Topic 4.1 worked example changed in both locales; G5 should check the new Urdu wording there and in the ERQ 4 rubric.
+  - G3 and G5 remain unticked and `translation_status` is still `draft`; nothing here certifies the unit.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
