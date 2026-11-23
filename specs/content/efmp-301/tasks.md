@@ -44,7 +44,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261103T112233449Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261123T184024256Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/efmp-301/reviews/unit-04/G3/8d35e67d-a55f-4595-a37c-c29acbf04727.json; cycle 2 of 2; 5 blocking findings resolved; 1 uncertain (vosniadou2001 excerpt) carried; visual render uninspected (brief prohibits build/server/browser); no certification |
 | Unit 4 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 4 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at ff33d3a1; G3 dependency escalated to owner; terminology rulings (heuristic/means-ends/spotlight renderings) escalated to owner; report reviews/unit-04/G5/agent-g5-efmp301-u4-run001.json |
@@ -150,7 +150,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 
 | Unit 11 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-11/G3/20261102T212207Z-g3-desk-c705dbc8.json; blocking sources finding: U11-2 signs and U11-4 referral now bound to who2000 (WHO 2000, Preventing suicide: a resource for teachers and other school staff, bound excerpt in sources/texts/who2000.md); unsupported claims removed (local frequency, Monday clustering, sudden calm implying a decision, appearance/self-care, burden talk) and the second same-day sign restated as a sudden, dramatic change in distress, with MCQ 7, RRQ 5/9 keys and fig-U11-2 (four variants) aligned; advisories: Further reading uses linked titles, sourced explicit correction of the talking-plants-the-idea misconception in topic-01 and teacher notes, Language and access separates banked Anxiety/Stress from authored Mental Health/Well-being, ERQs state 300-400 words, coverage duplicates removed and seifert2009 moved to a background Reinforcement row; Urdu mirrored; qualified subject review of clinical interpretation, urgency and local referral procedure, render inspection and review provenance still need owner escalation; ADR-0019 cycles exhausted, so a fresh G3 run needs owner authorisation |
 | Unit 4 | G3 en-review | ▢ | agent:claude | advisory: revise; repairs applied; report reviews/unit-04/G3/20261102T213456Z-g3-desk-147d237b.json; Topic 4.1 capture-factor list aligned with fig-U4-2 (novelty, contrast, meaning, emotion; task demand and expectation shape) in EN and UR; MCQ keys rebalanced to a3/b2/c2/d3 by swapping option positions in EN and UR with keys updated; vosniadou2001 U4-4/U4-5 coverage rows removed and its sources-table row moved to a Further-reading-only note; visual 360px/print inspection still unperformed (no build/browser in crew job); fresh G3 review required; no certification |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261123T124713559Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261123T184024256Z-gates.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-03/G3/20261108T203238Z-g3-desk-abd7d7ca.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-05/G3/20261108T203238Z-g3-desk-c3af68da.json |
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-301/reviews/unit-05/G3/20261108T203238Z-g3-desk-c3af68da.json; seifert2009 bound excerpt no longer claims U5-1 reinforcement (the gifted-stereotype correction is U5-5 only); topic-02 Seifert citation moved onto the accommodation claim it supports, and the acceleration caution no longer cites a source that never mentions acceleration; all other findings verified already resolved on origin/main (multimodal and IQ-prediction claims qualified, Thurstone/CHC restored, ERQ 5 integrative pupil profile, recognizing spelling consistent, figure geometry measured clean); G2 evidence refreshed for EFMP-301 Units 2-12 because the shared seifert2009 source edit invalidated their manifests |
@@ -178,7 +178,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): label on a dark shape made visible; the review above predates it; needs a fresh G3 run |
 | Unit 11 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): nine labels on dark shapes in fig-U11-1 made visible; the review above predates it; needs a fresh G3 run |
 | Unit 12 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): labels on dark shapes made visible; the review above predates it; needs a fresh G3 run |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261123T141231960Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261123T184024256Z-gates.json |
 
 ## Re-restructure in progress (2026-09-11)
 
