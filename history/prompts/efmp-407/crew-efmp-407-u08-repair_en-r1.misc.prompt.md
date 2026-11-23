@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-407-u08-repair_en-r1
-title: crew repair_en EFMP-407 unit 8 r1
+title: crew repair_en EFMP-407 unit 8
 stage: misc
 date: 2026-11-23
 surface: agent
@@ -66,33 +66,33 @@ From `specs/content/efmp-407/reviews/unit-08/G3/20261122T175629Z-g3-desk-21c4765
 - [uncertain] No parent-prepared frozen handoff or independently verified author runtime identity; exact deployed model version unavailable.
 
 ## Notes from earlier jobs on this unit
+- (efmp-407-u08-repair_en-conflict1, fix, opencode) Unit 8 G3/G5 remain open and uncertified; the branch's advisory row leaves G3 unticked.
+- (efmp-407-u08-repair_en-conflict1, fix, opencode) Shared tracker `specs/content/efmp-407/tasks.md` is the recurring collision point for parallel EFMP-407 unit jobs.
+- (efmp-407-u08-repair_en, repair_en, agy) G3 review findings F1-F8 from 20261108T203238Z-g3-desk-04abd597.json are repaired in EN and UR mirrors; G3 tracker row appended leaving G3 unticked.
+- (efmp-407-u08-repair_en, repair_en, agy) G2 gate evidence refreshed at specs/content/efmp-407/reviews/unit-08/G2/20261110T024249494Z-gates.json and all 14 content gates are green.
 - (efmp-407-u08-illustrate, illustrate, agy) Banner fig-U8-5.webp is placed in both English and Urdu unit index files, with unit-08.banner.md set to placed.
-- (efmp-407-u08-illustrate, illustrate, agy) G2 gate evidence has been refreshed to cover the English index update, and all 14 content gates are green.
-- (efmp-407-u08-illustrate, illustrate, agy) G3 English review and G5 Urdu review remain open and uncertified; Jumani and Abbasi (2015) attribution finding belongs to repair_en.
-- (efmp-407-u08-translate-conflict1, fix, opencode) G3 remains open (F1 Jumani and Abbasi attribution unfixed; codex r1 escalation row kept from main); translation_status stays draft.
-- (efmp-407-u08-translate-conflict1, fix, opencode) `static/content-status.json` is gitignored/generated; regenerated locally so `check:content` passes, but it is not committed.
+
 
 ## Response snapshot
 
-Verified all findings of latest G3 desk report 20261122T175629Z-g3-desk-21c4765e.json resolved in EFMP-407 Unit 8 content, appended advisory revise tracker row in tasks.md leaving G3 unticked, and confirmed all 14 content gates pass.
+Verified all findings from the latest G3 review report 20261122T175629Z-g3-desk-21c4765e.json resolved on EFMP-407 Unit 8 across English and Urdu files, appended the advisory revise tracker row in tasks.md leaving G3 unticked, and recorded the prompt history record.
 
 ## Outcome
 
-- Impact: repair_en-r1 for EFMP-407 Unit 8 by agy.
-- Tests: npm run check:content passed with 14/14 content gates green.
+- Impact: repair_en for EFMP-407 Unit 8 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended Unit 8 G3 advisory revise tracker row in tasks.md for report 20261122T175629Z-g3-desk-21c4765e.json, verifying all editable findings (F1-F8) already resolved on main in EN and UR files.
-- Decisions the team must respect: G3 remains open and unticked; no completion or certification claimed.
+- Shipped / changed: Verified all findings from the latest G3 review report 20261122T175629Z-g3-desk-21c4765e.json resolved on EFMP-407 Unit 8 across English and Urdu files, appended the advisory revise tracker row in tasks.md leaving G3 unticked, and recorded the prompt history record.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All findings from 20261122T175629Z-g3-desk-21c4765e.json are verified resolved in both English and Urdu files.
-  - G2 evidence remains valid at 20261110T024249494Z-gates.json.
-  - Unit 8 G3 remains open and unticked pending fresh qualified independent reviewer sign-off.
+  - All findings from 20261122T175629Z-g3-desk-21c4765e.json are verified resolved in EN and UR mirrors; G3 tracker row appended leaving G3 unticked.
+  - G2 gate evidence at specs/content/efmp-407/reviews/unit-08/G2/20261110T024249494Z-gates.json remains valid and all 14 content gates pass.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
