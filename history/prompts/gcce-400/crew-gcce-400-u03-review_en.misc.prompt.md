@@ -4,12 +4,12 @@ title: crew review_en GCCE-400 unit 3
 stage: misc
 date: 2026-11-23
 surface: agent
-model: claude
+model: claude_crew
 feature: gcce-400
 branch: crew/gcce-400-u03-review_en
 user: crew
 command: crew review_en
-labels: ["crew", "claude", "review_en"]
+labels: ["crew", "claude_crew", "review_en"]
 links:
   spec: specs/content/gcce-400/content-spec.md
   ticket: null
@@ -18,26 +18,26 @@ links:
 files:
  - history/prompts/gcce-400/crew-gcce-400-u03-review_en.misc.prompt.md
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0.json
- - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/manifest.json
- - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/summary.md
- - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/source-verification.md
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/assessment-independent.md
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/build-content-status.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-bloom-bands.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-concept-graph.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-content.txt
- - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-depth-gate.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-docs-sync.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-figures.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-no-answer-keys.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-no-em-dash.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-source-floor.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-svg-style.txt
+ - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/check-unit-depth.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/input-verification.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/measure-figure-text.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/render-review.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/static-accessibility.txt
  - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/logs/validate-content.txt
+ - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/manifest.json
+ - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/source-verification.md
+ - specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/summary.md
  - specs/content/gcce-400/tasks.md
 tests:
  - npm run check:content
@@ -74,25 +74,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Conducted the independent G3 English review of GCCE-400 Unit 3, recorded the evidence bundle and a validated revise report, and updated the advisory tracker row.
+Produced and committed an advisory G3 English review of GCCE-400 Unit 3 (disposition revise) with a validated evidence report, source verification, independent assessment solve, logs, tracker row and PHR.
 
 ## Outcome
 
-- Impact: review_en for GCCE-400 Unit 3 by claude (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
+- Impact: review_en for GCCE-400 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 23 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Independent G3 English review of GCCE-400 Unit 3 with a validated `revise` report at `specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0.json`; advisory tracker row updated.
-- Decisions the team must respect: G3 stays advisory until a qualified sign-off; this job does not certify the unit and does not tick G3.
-- Pending / next owner: author to repair F1-F5, then a fresh reviewer; crew lead merges when CI is green.
+- Shipped / changed: Produced and committed an advisory G3 English review of GCCE-400 Unit 3 (disposition revise) with a validated evidence report, source verification, independent assessment solve, logs, tracker row and PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Production deployed SHA e7e113022 differs from HEAD 3ea8c670e on index.mdx, topic-01.mdx, topic-02.mdx and fig-U3-5/6/7.webp, so live render inspection was unavailable and accessibility is unverified.
-  - Constitutional currency is the main defect: Article 9A (26th Amendment 2024) is missing, the "twenty-four" count is outdated, Articles 23-24 are omitted, and the MCQ 4 key repeats the omitted word "alone" in Article 25(2).
-  - The approved blueprint's summative four-scenario Analyze item is absent (F5).
+  - Deployed SHA `e7e113022` differs from reviewed HEAD `3ea8c670e` on `index.mdx`, `topic-01.mdx`, `topic-02.mdx` and `fig-U3-5/6/7.webp`; production render inspection was unavailable, so a re-review after repair must re-check accessibility.
+  - The repair owner should re-read Articles 8-28 in the current transcription before editing: Article 9A (2024), Articles 23-24, Article 17(2)'s new forum, and the Article 184(3) proviso all postdate the 2012 edition the unit cites.
+  - Report and evidence are at `specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0.json`; the report is advisory and does not certify G3.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
