@@ -1,0 +1,7 @@
+# Unit banner - GCCE-400 Unit 6 (Digital Citizenship and Technology)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs gcce-400 6 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U6-7 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: a late afternoon outside a government school in a small town in Sindh, a young B.Ed trainee teacher in shalwar kameez standing with a group of parents and pupils around a smartphone on her open palm, one father pointing at the screen, a mother in dupatta holding a child's hand, a pupil in uniform shalwar kameez looking on; a whitewashed school wall and a hand pump in the background, a few shops and a motorbike further back; some figures hold paper notices, others hold basic phones; calm, cooperative mood, soft golden light; no readable text on any phone, paper, sign or wall, no maps, flags, emblems, party symbols, logos or watermarks | A trainee teacher stands with parents and pupils outside a government school in Sindh, showing something on a smartphone, while a father points at the screen and a mother and pupil look on. |  | prompt-only |

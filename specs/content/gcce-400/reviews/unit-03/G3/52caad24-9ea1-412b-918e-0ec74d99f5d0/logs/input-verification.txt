@@ -1,0 +1,8 @@
+input verification (reviewer recomputed with scripts/lib/review-evidence.mjs inputManifest)
+manifest: specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0/manifest.json
+skill_digest manifest: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+skill_digest recomputed: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+bound inputs: 97
+matched: 97
+mismatches: 0
+result: PASS

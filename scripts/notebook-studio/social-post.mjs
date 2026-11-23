@@ -73,6 +73,19 @@ export const tiktokInit = (size) => {
 
 export const linkedinInit = (owner, size) => ({ initializeUploadRequest: { owner, fileSizeBytes: size, uploadCaptions: false, uploadThumbnail: false } });
 
+// ---------- image posts (Feature 031: daily update cards) ----------
+
+/** Facebook Page photo post from a public image URL. */
+export const facebookPhotoForm = (url, caption, token) => new URLSearchParams({ url, caption, published: 'true', access_token: token });
+/** Instagram image container from a public image URL (Instagram takes images only by URL). */
+export const instagramImageQuery = (imageUrl, caption, token) => new URLSearchParams({ image_url: imageUrl, caption, access_token: token });
+export const linkedinImageInit = (owner) => ({ initializeUploadRequest: { owner } });
+export const linkedinImagePost = (author, image, commentary, altText) => ({
+  author, commentary, visibility: 'PUBLIC',
+  distribution: { feedDistribution: 'MAIN_FEED', targetEntities: [], thirdPartyDistributionChannels: [] },
+  content: { media: { id: image, altText } }, lifecycleState: 'PUBLISHED', isReshareDisabledByAuthor: false,
+});
+
 export const linkedinPost = (author, video, commentary, title) => ({
   author, commentary, visibility: 'PUBLIC',
   distribution: { feedDistribution: 'MAIN_FEED', targetEntities: [], thirdPartyDistributionChannels: [] },
@@ -225,6 +238,45 @@ async function postLinkedin(file, caption, title) {
   const { headers } = await call('https://api.linkedin.com/rest/posts', { method: 'POST', headers: h, body: JSON.stringify(linkedinPost(t.author, init.video, caption, title)) });
   const urn = headers.get('x-restli-id');
   return { state: 'posted', post_id: urn, url: urn ? `https://www.linkedin.com/feed/update/${urn}/` : null };
+}
+
+/**
+ * Post one image card. `imageUrl` is the card's public address (Facebook and Instagram fetch it);
+ * `file` is the local copy LinkedIn uploads. TikTok photo posts need a pulled URL from a verified
+ * domain, so update cards are not posted there.
+ */
+export async function postImage(platform, { file, imageUrl, caption, altText }) {
+  if (platform === 'facebook') {
+    const m = token('meta');
+    const r = (await call(`https://graph.facebook.com/${GRAPH}/${m.page_id}/photos`, { method: 'POST', body: facebookPhotoForm(imageUrl, caption, m.page_token) })).body;
+    const postId = r.post_id ?? r.id;
+    return { state: 'posted', post_id: postId, url: `https://www.facebook.com/${postId}` };
+  }
+  if (platform === 'instagram') {
+    const m = token('meta');
+    if (!m.ig_id) throw new Error('the Facebook Page has no linked Instagram professional account');
+    const id = (await call(`https://graph.facebook.com/${GRAPH}/${m.ig_id}/media?${instagramImageQuery(imageUrl, caption, m.page_token)}`, { method: 'POST' })).body.id;
+    for (let i = 0; i < 30; i++) {
+      const s = (await call(`https://graph.facebook.com/${GRAPH}/${id}?fields=status_code&access_token=${m.page_token}`)).body.status_code;
+      if (s === 'FINISHED') break;
+      if (s === 'ERROR' || s === 'EXPIRED') throw new Error(`Instagram container ${id} ${s}`);
+      await sleep(3000);
+    }
+    const media = (await call(`https://graph.facebook.com/${GRAPH}/${m.ig_id}/media_publish?${new URLSearchParams({ creation_id: id, access_token: m.page_token })}`, { method: 'POST' })).body.id;
+    const link = (await call(`https://graph.facebook.com/${GRAPH}/${media}?fields=permalink&access_token=${m.page_token}`)).body.permalink ?? null;
+    return { state: 'posted', post_id: media, url: link };
+  }
+  if (platform === 'linkedin') {
+    const t = token('linkedin');
+    const h = { Authorization: `Bearer ${t.access_token}`, 'LinkedIn-Version': LINKEDIN_VERSION, 'X-Restli-Protocol-Version': '2.0.0', 'Content-Type': 'application/json' };
+    const init = (await call('https://api.linkedin.com/rest/images?action=initializeUpload', { method: 'POST', headers: h, body: JSON.stringify(linkedinImageInit(t.author)) })).body.value;
+    const r = await fetch(init.uploadUrl, { method: 'PUT', headers: { 'Content-Type': 'application/octet-stream' }, body: readFileSync(file) });
+    if (!r.ok) throw new Error(`LinkedIn image upload -> ${r.status}`);
+    const { headers } = await call('https://api.linkedin.com/rest/posts', { method: 'POST', headers: h, body: JSON.stringify(linkedinImagePost(t.author, init.image, caption, altText)) });
+    const urn = headers.get('x-restli-id');
+    return { state: 'posted', post_id: urn, url: urn ? `https://www.linkedin.com/feed/update/${urn}/` : null };
+  }
+  throw new Error(`image posts are not supported on ${platform}`);
 }
 
 export async function post(platform, key, file, { draft = false } = {}) {

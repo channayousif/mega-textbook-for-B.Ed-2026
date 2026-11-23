@@ -1,0 +1,4 @@
+command: node scripts/check-svg-style.mjs
+started_utc: 2026-11-23T11:05:10Z
+✓ svg-style: 1547 figure(s) checked, 470 grandfathered.
+exit_code: 0

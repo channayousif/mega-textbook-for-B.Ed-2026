@@ -1168,3 +1168,15 @@ html[dir='rtl'] .sidebar-item--en:not(.sidebar-item--en .sidebar-item--en) > .me
 }
 .dashboard-shell__main tbody tr:nth-child(2n), .work-panel tbody tr:nth-child(2n), .table-scroll tbody tr:nth-child(2n) { background: transparent; }
 .dashboard-shell__main td, .work-panel td, .table-scroll td { font-variant-numeric: tabular-nums; }
+
+/* Feature 032: unit self-check (src/components/SelfCheck.tsx). */
+.self-check { margin-block: 2.5rem 1rem; padding: 1.25rem 1.25rem 0.5rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 12px; background: var(--ifm-background-surface-color); }
+.self-check__list { padding-inline-start: 1.25rem; }
+.self-check__list fieldset { border: 0; padding: 0; margin: 0 0 1rem; }
+.self-check__list legend { font-weight: 600; margin-block-end: 0.4rem; }
+.self-check__option { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.2rem 0; cursor: pointer; }
+.self-check__item--wrong legend::before { content: '✗ '; color: var(--ifm-color-danger); }
+.self-check__item--right legend::before { content: '✓ '; color: var(--ifm-color-success); }
+.self-check__error { color: var(--ifm-color-danger); }
+.self-check__note { font-size: 0.9rem; color: var(--ifm-color-emphasis-700); }
+@media print { .self-check { display: none; } }

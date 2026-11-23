@@ -5110,3 +5110,57 @@ content-improvement loop with no further cycle.
   fit 30 s".
 - **Limits:** Certifies no content and publishes nothing; every Short still waits for the owner's
   spot-check before it goes public.
+
+## D-2026-0096 - Daily social update posts from deployed work, published by the crew
+- **Scope:** Facebook Page, Instagram and LinkedIn posts announcing platform updates (Feature 031)
+- **Decided by:** curriculum owner, 2026-11-22 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. One daily roundup; quiet days post nothing.
+  2. Each post is a branded image card with a bilingual English/Urdu caption.
+  3. **What counts:** new content, reviews and improvements to existing content, platform features
+     and media. Only work that is merged green and deployed counts.
+  4. **Approval:** content posts publish automatically after a one-time pilot approval; platform
+     feature posts wait for the owner's approval (`crew post <id>`).
+- **Basis:** owner answers 2026-11-22: "Auto for content, approve features"; "Daily roundup";
+  "Branded image card + caption"; "New content, Platform features, Media, Review and
+  improvements/updates to existing content".
+- **Limits:** This extends D-2026-0094's "owner gates" with automatic publishing for content
+  announcements only; teaser videos and Study Studio media still go public only on the owner's word.
+  It certifies no content and claims no review that the tracker does not show.
+
+## D-2026-0097 - Textbook visuals: which skills to adopt, animated figures, redrawing figures
+- **Scope:** figures, animations, presentations, tables and interactive widgets (Feature 032)
+- **Decided by:** curriculum owner, 2026-11-23 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. Adopt omkamal/animated-diagrams-skill: its authoring rules for static figures (done, PR #723),
+     and animated figures, silent with on-screen captions, for Study Studio videos, Shorts and
+     social, and an optional play-in-place version beside the static figure. Pilot EFMP-301 Unit 4.
+  2. Of the ten skills reviewed, adopt frontend-slides (web decks), pptx, a light use of xlsx,
+     dataviz for charts, and build flashcards, self-checks and charts as our own data-driven
+     components; keep generate-figures over generic SVG skills; do not use excalidraw, runtime
+     Mermaid or canvas-design for figures.
+  3. Existing figures may be redrawn to the improved standard: uncertified units first, by a crew
+     stage course by course; certified units only when they next re-open for review.
+- **Basis:** owner answers 2026-11-23: "Both, in two PRs"; "Study Studio videos, Social and Shorts,
+  On the topic page"; "Silent + on-screen captions"; "EFMP-301 Unit 4"; "we can rewrite existing
+  figures and diagrams to improved versions"; "Uncertified first"; "Crew stage, course by course".
+- **Limits:** No certified unit loses its certification; no review-bound file is rewritten to add
+  a visual. Videos go public only on the owner's word.
+
+## D-2026-0098 - Simple diagrams are SVG; complex diagrams are raster with a full description
+- **Scope:** every figure, new and existing (Feature 032)
+- **Decided by:** curriculum owner, 2026-11-23 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. Simple diagrams (labelled boxes, arrows, tables, timelines, cycles, axes, charts) stay SVG.
+  2. Complex diagrams (scenes, people, rooms, objects, dense pictograms, anything whose Urdu
+     version needs its drawing re-laid out) are raster illustrations with a proper description:
+     alt text and caption in both languages naming every element a reader needs. One raster
+     without readable text serves both locales.
+  3. Broken figures may be fixed, or remade as rasters where complex, even when the fix re-opens
+     a unit's G3 review.
+- **Basis:** owner message 2026-11-23: "simple diagrams may be made as svg but complex diagrams
+  such as The Urdu fig-U4-1 should be made raster images with proper description. approve . fix
+  22 figure if they are complex, make raster images instead. it's okay to fix and reopen g3
+  review."
+- **Limits:** Raster production follows ADR-0024/0029/0036 (agy, gflow or Codex; imagery rules
+  unchanged). Re-opened G3 reviews go through the normal independent review and owner sign-off.

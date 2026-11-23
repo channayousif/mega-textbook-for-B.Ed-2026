@@ -1,0 +1,29 @@
+input-verification evidence: GCCE-400 Unit 1 (G3 English)
+==========================================================
+Date: 2026-11-23
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (Medium)
+Reviewer Run ID: 29bfa88a-9bb9-423a-b2f1-07e612294e2f
+Author Run ID: commit:e3313626e
+Reviewed Commit: ae721439e7d35d09cdc5619e0a35e44698eb3b9a
+
+Verification Summary:
+---------------------
+1. Manifest Preparation:
+   Prepared via `node scripts/review-evidence.mjs prepare GCCE-400 1 G3 specs/content/gcce-400/reviews/unit-01/G3/29bfa88a-9bb9-423a-b2f1-07e612294e2f`.
+   Total bound inputs: 101 files enumerated from git index (cached).
+   All 101 SHA-256 hashes match working tree disk contents exactly.
+
+2. Independence and Provenance:
+   - This review session was launched as a fresh independent run on the `agy` CLI platform.
+   - The candidate content was authored in commit 6c04d9e21 and updated with placed banner in commit e3313626e.
+   - This reviewer did not draft, edit, translate, or place any candidate content, SVGs, or illustrations for this unit.
+   - The author run ID is recorded as `commit:e3313626e` and reviewer run ID is recorded as `29bfa88a-9bb9-423a-b2f1-07e612294e2f`.
+
+3. Bound Roots and Exclusions:
+   - English unit directory: docs/semester-4/gcce-400/unit-01/ (6 MDX files).
+   - Figures: static/img/figures/gcce-400/unit-01/ (6 SVG + 6 dark.svg schematics, 1 webp banner; note: .ur.svg excluded per inScope rule for G3 English).
+   - Content specs, coverage, sources, concepts, figures manifests: specs/content/gcce-400/.
+   - Governance and contracts: specs/014-agent-review-governance/, contracts/, .specify/memory/constitution.md.
+   - Course guides: Scheme-and-Course-guides/, .specify/Course_guides_and_Scheme/.
+   - Validators: 7 review entry scripts and transitive local import closure.

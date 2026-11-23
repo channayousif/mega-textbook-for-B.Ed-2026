@@ -5,6 +5,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import rehypeTopicEnhance from './src/rehype/topic-enhance.mjs';
 import { textbookSidebarItems } from './sidebarItemsGenerator';
+import { buildFigureAnimationIndex } from './src/lib/figureAnimations';
 
 /**
  * Loads `.env.local` into `process.env` for local `npm run build`/`start` -
@@ -131,7 +132,10 @@ function siteStats() {
 function newsFeed() {
   try {
     const feed = JSON.parse(readFileSync('./static/news-feed.json', 'utf8'));
-    return (feed.events ?? []).slice(0, 12);
+    // The newest 40 events, trimmed to what the ticker shows; it groups bursts and splits them into
+    // rows (src/lib/newsMerge.ts). The full 60-day list is fetched by the "View all" panel.
+    return (feed.events ?? []).slice(0, 40).map(({ id, type, gate, date, course_code, unit_no, title_en, title_ur, course_title_en, course_title_ur, permalink, count }) => (
+      { id, type, gate, date, course_code, unit_no, title_en, title_ur, course_title_en, course_title_ur, permalink, count }));
   } catch {
     return [];
   }
@@ -159,6 +163,15 @@ function homeTeasers(): Array<{ code: string; youtube_id: string; title: string;
     return JSON.parse(readFileSync('./static/studio-index.json', 'utf8')).homeTeasers ?? [];
   } catch {
     return [];
+  }
+}
+
+/** Feature 032: approved, playable animations of placed figures, keyed by figure base path. */
+function figureAnimations() {
+  try {
+    return buildFigureAnimationIndex(JSON.parse(readFileSync('./specs/studio/animations/placed.json', 'utf8')));
+  } catch {
+    return {};
   }
 }
 
@@ -242,6 +255,7 @@ const config: Config = {
     newsFeed: newsFeed(),
     courseTeasers: courseTeasers(),
     homeTeasers: homeTeasers(),
+    figureAnimations: figureAnimations(),
   },
 
   presets: [

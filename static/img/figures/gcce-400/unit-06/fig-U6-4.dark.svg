@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 410" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Responsible and irresponsible online behaviour</title><desc id="d">Table of four online situations with a responsible choice, an irresponsible choice and the ethical principle each shows: checking a source before sharing (honesty), asking consent before posting a photo of a pupil (respect for privacy), replying to a rumour with a fact (responsibility), and ignoring a stranger's request for personal data (self-protection).</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.thin { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+.dot { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+</style><rect class="bg" x="0" y="0" width="780" height="410"/><text class="h" x="24" y="34">Responsible choices and the principle each shows</text><line class="thin" x1="24" y1="80" x2="756" y2="80"/><line class="thin" x1="24" y1="100" x2="756" y2="100"/><line class="thin" x1="234" y1="80" x2="234" y2="372"/><line class="thin" x1="546" y1="80" x2="546" y2="372"/><line class="thin" x1="24" y1="168" x2="756" y2="168"/><line class="thin" x1="24" y1="236" x2="756" y2="236"/><line class="thin" x1="24" y1="304" x2="756" y2="304"/><text class="h" x="40" y="70">Situation</text><text class="h" x="250" y="70">Responsible choice</text><text class="h" x="562" y="70">Ethical principle</text><text class="body" x="40" y="128">A post you want</text><text class="body" x="40" y="146">to share</text><text class="body" x="40" y="196">A photo of a pupil</text><text class="body" x="40" y="214">in class</text><text class="body" x="40" y="264">A rumour in a group</text><text class="body" x="40" y="332">A stranger asks for</text><text class="body" x="40" y="350">your identity number</text><text class="body" x="250" y="128">Check the source first</text><text class="body" x="250" y="196">Ask consent before posting</text><text class="body" x="250" y="264">Reply with a fact from</text><text class="body" x="250" y="282">a reliable page</text><text class="body" x="250" y="332">Ignore and report</text><text class="body" x="562" y="128">Honesty</text><text class="body" x="562" y="196">Respect for</text><text class="body" x="562" y="214">privacy</text><text class="body" x="562" y="264">Responsibility</text><text class="body" x="562" y="332">Self-protection</text><text class="small" x="24" y="394">Each situation has an irresponsible choice too; the principle tells you why.</text><text class="wm" x="768" y="400" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

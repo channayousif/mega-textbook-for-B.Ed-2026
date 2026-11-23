@@ -1,0 +1,4 @@
+command: node scripts/report-content-status.mjs
+started_utc: 2026-11-23T11:18:49Z
+✓ Wrote content status for 20 course(s) to static/content-status.json
+exit_code: 0

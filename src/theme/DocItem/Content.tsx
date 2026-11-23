@@ -14,6 +14,7 @@ import { useLocation } from '@docusaurus/router';
 import { ReadingMenu, ReadingProgress, useAnswerNotes } from '@site/src/components/ReadingTools';
 import ReaderBottomBar from '@site/src/components/ReaderBottomBar';
 import StudioPanel from '@site/src/components/Studio/StudioPanel';
+import SelfCheck from '@site/src/components/SelfCheck';
 import { useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
 
 /**
@@ -459,6 +460,10 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
       {/* Feature 029: reviewed Gemini Notebook extras, data-driven from static/studio-index.json (no MDX edits). */}
       {courseCode !== null && unitNo !== null && topicNo !== null && (
         <StudioPanel courseCode={courseCode} unitNo={unitNo} topicNo={topicNo} locale={locale} />
+      )}
+      {/* Feature 032: server-marked self-check of the unit's MCQs (migration 0055), no MDX edits. */}
+      {courseCode !== null && unitNo !== null && source.endsWith('/unit-assessment.mdx') && (
+        <SelfCheck courseCode={courseCode} unitNo={unitNo} locale={locale} />
       )}
       {(courseCode !== null && unitNo !== null) && <FeedbackWidget />}
       <ReaderBottomBar locale={locale} minutes={minutes} previous={metadata?.previous} next={metadata?.next} />

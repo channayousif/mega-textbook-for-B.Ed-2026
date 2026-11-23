@@ -51,7 +51,7 @@ units may be authored.
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20261118T221250801Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20261123T122234525Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json + round-02/agent-g3-gnas301-u6-run002.json; round-2 blocking findings (ERQ-04 6.4+6.5 integration, RRQ/MCQ surplus, WHO framing, anwar2026 claim) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-33) |
 | Unit 6 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 6 | G4 ur-translation | ✅ | auto:g4 | all 9 Urdu mirror files at i18n/ur/.../gnas-301/unit-06/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
@@ -88,3 +88,4 @@ units may be authored.
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261108T203238Z-g3-desk-5baf129a.json |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-01/G3/20261108T203238Z-g3-desk-c79546af.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261108T203238Z-g3-desk-1425bad4.json |
+| Unit 6 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U6-7 arrows restored (short-wave in, long-wave out, part returned) and sun uncovered; the review above predates it; needs a fresh G3 run |

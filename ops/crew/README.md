@@ -167,6 +167,11 @@ one failure recurred 25 times before a person found it.
   (off by default), `crew approve-script <key>` (e.g. `gqur-300-ur`; approves the script file as it
   is now, so a later edit voids it), `crew reject <key> <note>` (a script is redrafted with the
   note; a private Short stays private), `crew publish <key>` (after watching the private Short).
+- Figure refresh (Feature 032 phase D, D-2026-0097/0098): `crew refresh on|off|status` (off by
+  default). While on, each plan queues one `refresh_figures` job: an uncertified unit, not awaiting
+  G3 sign-off, whose placed schematics lack the improved structure (`refreshCandidate` in
+  `scripts/crew/planner.mjs`). The job redraws them, rebuilds the Urdu twins, refreshes G2 and
+  re-opens a G3 claim made on the old figures. It runs beside the focus course, like `figures`.
 
 ### Media stages (`scripts/crew/media.mjs`)
 

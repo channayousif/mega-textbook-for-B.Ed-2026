@@ -1453,7 +1453,7 @@
    "id": "gqur-300",
    "locale": "ur",
    "kind": "short",
-   "state": "approved",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -1603,6 +1603,10 @@
     {
      "state": "approved",
      "at": "2026-11-22T04:32:27.601Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-22T06:00:01.303Z"
     }
    ],
    "script_sha256": "4ddaac6c0bd0508f8eb56c7497f4e034f0f63e2848554ae302be4739a05865f2",
@@ -1610,14 +1614,42 @@
    "thumbnail_file": "~/studio-media/teasers/gqur-300/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "uqt3LR8XIW0",
    "uploaded_at": "2026-11-21T20:27:29Z",
-   "scheduled_publish_at": "2026-11-22T10:00:00+05:00"
+   "scheduled_publish_at": "2026-11-22T10:00:00+05:00",
+   "published_at": "2026-11-22T05:00:00.000Z",
+   "crossposts": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1178828771515525",
+     "url": "https://www.facebook.com/reel/1178828771515525",
+     "at": "2026-11-22T06:04:15.275Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "17920515264262698",
+     "url": "https://www.instagram.com/reel/DgCIE4Ygp2Y/",
+     "at": "2026-11-22T06:09:00.763Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:ugcPost:7530151506172583936",
+     "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7530151506172583936/",
+     "at": "2026-11-22T06:13:42.752Z"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710875565829621780",
+     "url": null,
+     "at": "2026-11-22T06:18:29.665Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
+    }
+   }
   },
   {
    "key": "efmp-305-ur",
    "id": "efmp-305",
    "locale": "ur",
    "kind": "short",
-   "state": "approved",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -1782,6 +1814,10 @@
     {
      "state": "approved",
      "at": "2026-11-22T04:32:27.712Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-22T07:00:01.145Z"
     }
    ],
    "script_sha256": "fe5a90111cf86e67c585a81489a042442d92341efc3737e02cd01726b375cffb",
@@ -1789,14 +1825,42 @@
    "thumbnail_file": "~/studio-media/teasers/efmp-305/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "o-qh7iMDPA4",
    "uploaded_at": "2026-11-21T20:28:02Z",
-   "scheduled_publish_at": "2026-11-22T11:00:00+05:00"
+   "scheduled_publish_at": "2026-11-22T11:00:00+05:00",
+   "published_at": "2026-11-22T06:00:00.000Z",
+   "crossposts": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1914274283344804",
+     "url": "https://www.facebook.com/reel/1914274283344804",
+     "at": "2026-11-22T07:14:53.880Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:ugcPost:7530169687519924226",
+     "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7530169687519924226/",
+     "at": "2026-11-22T07:25:57.512Z"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710894102673475636",
+     "url": null,
+     "at": "2026-11-22T07:29:18.689Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18393891793226889",
+     "url": "https://www.instagram.com/reel/DgCtFVoAqgL/",
+     "at": "2026-11-22T11:32:16.809Z"
+    }
+   }
   },
   {
    "key": "geng-301-ur",
    "id": "geng-301",
    "locale": "ur",
    "kind": "short",
-   "state": "approved",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -1961,6 +2025,10 @@
     {
      "state": "approved",
      "at": "2026-11-22T04:32:27.814Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-22T08:00:00.693Z"
     }
    ],
    "script_sha256": "c2a741e4ac8a93fd40d1410507a8f5d08e018af18a3b2e881836c2e7d1aa4c3f",
@@ -1968,14 +2036,42 @@
    "thumbnail_file": "~/studio-media/teasers/geng-301/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "M-9XdegQL-0",
    "uploaded_at": "2026-11-21T20:28:28Z",
-   "scheduled_publish_at": "2026-11-22T12:00:00+05:00"
+   "scheduled_publish_at": "2026-11-22T12:00:00+05:00",
+   "published_at": "2026-11-22T07:00:00.000Z",
+   "crossposts": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1202957552068861",
+     "url": "https://www.facebook.com/reel/1202957552068861",
+     "at": "2026-11-22T08:05:12.774Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "17906561181366568",
+     "url": "https://www.instagram.com/reel/DgCV2SBikl1/",
+     "at": "2026-11-22T08:09:17.873Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:ugcPost:7530181475074449408",
+     "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7530181475074449408/",
+     "at": "2026-11-22T08:12:47.943Z"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710906625217890324",
+     "url": null,
+     "at": "2026-11-22T08:17:58.274Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
+    }
+   }
   },
   {
    "key": "gpks-402-ur",
    "id": "gpks-402",
    "locale": "ur",
    "kind": "short",
-   "state": "approved",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -2155,6 +2251,10 @@
     {
      "state": "approved",
      "at": "2026-11-22T04:32:27.927Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-22T09:00:00.666Z"
     }
    ],
    "script_sha256": "00ebd7d3956c1250812acb0d016aebf3a0d58212688f1a866d1c224c9658610a",
@@ -2162,14 +2262,42 @@
    "thumbnail_file": "~/studio-media/teasers/gpks-402/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "rn5h_utUprg",
    "uploaded_at": "2026-11-21T20:28:59Z",
-   "scheduled_publish_at": "2026-11-22T13:00:00+05:00"
+   "scheduled_publish_at": "2026-11-22T13:00:00+05:00",
+   "published_at": "2026-11-22T08:00:00.000Z",
+   "crossposts": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1463464138549966",
+     "url": "https://www.facebook.com/reel/1463464138549966",
+     "at": "2026-11-22T09:06:50.091Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18470316832139726",
+     "url": "https://www.instagram.com/reel/DgCc5_2Ahm9/",
+     "at": "2026-11-22T09:10:58.339Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:ugcPost:7530197006905126912",
+     "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7530197006905126912/",
+     "at": "2026-11-22T09:14:31.016Z"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710922311173130260",
+     "url": null,
+     "at": "2026-11-22T09:18:26.596Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
+    }
+   }
   },
   {
    "key": "gqur-301-ur",
    "id": "gqur-301",
    "locale": "ur",
    "kind": "short",
-   "state": "approved",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -2319,6 +2447,10 @@
     {
      "state": "approved",
      "at": "2026-11-22T04:32:28.187Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-22T10:00:00.902Z"
     }
    ],
    "script_sha256": "5f7f83a7f8e869fdd3479e2ad9e9b33320f74320459c51443e98740827468a03",
@@ -2326,14 +2458,42 @@
    "thumbnail_file": "~/studio-media/teasers/gqur-301/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "kNFsqdPHyVU",
    "uploaded_at": "2026-11-21T20:29:28Z",
-   "scheduled_publish_at": "2026-11-22T14:00:00+05:00"
+   "scheduled_publish_at": "2026-11-22T14:00:00+05:00",
+   "published_at": "2026-11-22T09:00:00.000Z",
+   "crossposts": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1200567662650454",
+     "url": "https://www.facebook.com/reel/1200567662650454",
+     "at": "2026-11-22T10:05:31.295Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18133542349877720",
+     "url": "https://www.instagram.com/reel/DgCjnRTgozQ/",
+     "at": "2026-11-22T10:09:37.923Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:ugcPost:7530211756904984576",
+     "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7530211756904984576/",
+     "at": "2026-11-22T10:13:07.657Z"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710937666107279366",
+     "url": null,
+     "at": "2026-11-22T10:17:38.532Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
+    }
+   }
   },
   {
    "key": "gsos-301-ur",
    "id": "gsos-301",
    "locale": "ur",
    "kind": "short",
-   "state": "approved",
+   "state": "public",
    "gates": {
     "script": {
      "verdict": "approve",
@@ -2483,6 +2643,10 @@
     {
      "state": "approved",
      "at": "2026-11-22T04:32:28.300Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-22T11:00:00.955Z"
     }
    ],
    "script_sha256": "51e453131e881b86f69274c73bcdf5c4eaf9e3de4bba8dd6176faeffd4f314f2",
@@ -2490,11 +2654,132 @@
    "thumbnail_file": "~/studio-media/teasers/gsos-301/ur/teaser.youtube.thumb.jpg",
    "youtube_id": "MYeopBflsA0",
    "uploaded_at": "2026-11-21T20:30:00Z",
-   "scheduled_publish_at": "2026-11-22T15:00:00+05:00"
+   "scheduled_publish_at": "2026-11-22T15:00:00+05:00",
+   "published_at": "2026-11-22T10:00:00.000Z",
+   "crossposts": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "2300087720741300",
+     "url": "https://www.facebook.com/reel/2300087720741300",
+     "at": "2026-11-22T11:05:52.532Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18099089675142183",
+     "url": "https://www.instagram.com/reel/DgCqmgEAuxW/",
+     "at": "2026-11-22T11:10:39.153Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:ugcPost:7530227158909317120",
+     "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7530227158909317120/",
+     "at": "2026-11-22T11:14:19.806Z"
+    },
+    "tiktok": {
+     "state": "posted",
+     "post_id": "v_inbox_file~v2.7710953694585653269",
+     "url": null,
+     "at": "2026-11-22T11:19:34.692Z",
+     "posted_note": "owner posted from the TikTok inbox draft, 2026-11-22"
+    }
+   }
   },
   {
    "key": "efmp-406-ur",
    "id": "efmp-406",
+   "locale": "ur",
+   "kind": "short",
+   "state": "script-approved",
+   "gates": {
+    "qg0": {
+     "verdict": "pass",
+     "by": "teaser.mjs"
+    },
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "crew approve-script via openclaw"
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-23T02:50:44.303Z",
+     "artifact_id": "92bc366b-5565-47df-9500-465bf5bb8a63",
+     "media_id": "92bc366b-5565-47df-9500-465bf5bb8a63",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-1-t1.mp4",
+     "sha256": "57270c84b1b69d543180d891da388dab76a5d963d724d22d4ce3e19ebfb525e6",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "کیا صرف پڑھنا لکھنا آنا ہی خواندگی ہے آج کی دنیا اس سے کہیں زیادہ مانگتی ہے؟",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-1-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Presenter in shalwar kameez and waistcoat speaks to camera in a Pakistani classroom; no drawn camera UI, readable text, map or flag; transcript matches the line exactly (QG2 1.0)."
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-23T03:02:47.792Z",
+     "artifact_id": "66dc6a40-4c7a-402a-9dda-668b4355fee2",
+     "media_id": "66dc6a40-4c7a-402a-9dda-668b4355fee2",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-3-t1.mp4",
+     "sha256": "b4133c5b606ac5eb4888f2ce5dbbe8c7234aecba7f5f672504a4a7e9d9bf510f",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.714,
+      "qg2_suggested": "pass-with-notes",
+      "heard": "آن لائن کمیونکیشن، سوشل میڈیا اور ڈیجیٹل ریسورسز کا ذمہدار اور اخلاقی استعمال بھی",
+      "missing": [
+       "online",
+       "social",
+       "ذمہ",
+       "دار"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-3-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass-with-notes",
+      "by": "claude",
+      "notes": "Computer-lab scene, students in blue uniforms and head scarves, teacher in modest dress; no readable text, map or flag. QG2 0.714 only because whisper wrote online/social in Urdu script and joined zimmedar; every word of the line is spoken. One background student face is soft."
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-22T10:03:02.867Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-22T10:03:03.407Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-23T02:46:49.495Z"
+    }
+   ],
+   "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b"
+  },
+  {
+   "key": "efmp-407-ur",
+   "id": "efmp-407",
    "locale": "ur",
    "kind": "short",
    "state": "scripted",
@@ -2508,14 +2793,14 @@
    "history": [
     {
      "state": "planned",
-     "at": "2026-11-22T10:03:02.867Z"
+     "at": "2026-11-22T21:03:29.393Z"
     },
     {
      "state": "scripted",
-     "at": "2026-11-22T10:03:03.407Z"
+     "at": "2026-11-22T21:03:29.516Z"
     }
    ],
-   "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b"
+   "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874"
   }
  ]
 }

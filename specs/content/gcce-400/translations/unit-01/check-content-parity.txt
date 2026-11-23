@@ -1,0 +1,32 @@
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 14 content gates
+
+  validate:content        PASS  1.5s
+  check:pipeline-gate     FAIL  49.3s
+  check:depth-gate        PASS  1.5s
+  check:figures           PASS  2.5s
+  check:svg-style         PASS  0.9s
+  check:no-em-dash        PASS  1.0s
+  check:no-answer-keys    PASS  1.1s
+  check:concept-graph     PASS  1.0s
+  check:bloom-bands       PASS  0.9s
+  check:source-floor      PASS  0.5s
+  check:licence           PASS  1.0s
+  licence:map:check       PASS  0.5s
+  check:content-status    PASS  1.2s
+  check:docs-sync         PASS  0.2s
+
+============================================================
+check:pipeline-gate
+============================================================
+
+✗ Pipeline gate failed with 2 finding(s):
+
+  - GCCE-400 Unit 1 (docs/semester-4/gcce-400/unit-01): 'G4 ur-translation' row for Unit 1 is not done (status: '▢')
+  - GCCE-400 Unit 1 (docs/semester-4/gcce-400/unit-01): 'G5 ur-review' row for Unit 1 is not done (status: '▢')
+
+
+1 of 14 content gates failed: check:pipeline-gate.

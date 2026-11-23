@@ -180,6 +180,12 @@ Known failure modes:
 Credits: `veo_lite` 10 a shot, `veo_fast` 20, `veo_quality` 100; a five-shot Short is 50 on Lite.
 The clip producer keeps a 100-credit floor. Google AI Pro gives 1,000 a month plus 50 a day.
 
+## Daily update posts (Feature 031)
+
+The crew's daily roundup of deployed work (new content, reviews, revisions, public media,
+user-facing features) as a branded card on Facebook, Instagram and LinkedIn: see the
+**social-updates** skill (`scripts/social/`).
+
 ## YouTube
 
 Channel `UC7cQfkGkdNABCiyjmV5ZaFQ` (@textbookdotcomdotpk); authentication guide in the studio-media

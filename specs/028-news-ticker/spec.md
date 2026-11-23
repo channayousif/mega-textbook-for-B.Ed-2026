@@ -57,3 +57,15 @@ Every Sunday at 10:00 PKT, active registered users with a confirmed email receiv
 - FR-003 The ticker meets WCAG 2.2.2 (pause, stop, hide) and works in both locales.
 - FR-004 The weekly email is idempotent per ISO week, honours opt-out, and never reaches deleted or suspended accounts.
 - FR-005 Unsubscribe tokens are HMAC-signed per profile; no sign-in required; link scanners cannot unsubscribe (confirm page POSTs).
+
+## Follow-up (owner, 2026-11-17): three rows, full list, pinning, fresher feed
+
+The live ticker "feels stale": one batch fills the bar, and revisions and new illustrations are never announced.
+- **Rows:** up to three, one per type (announcements; new content; Urdu and reviews), each scrolling on its own; empty rows are hidden.
+- **Freshness:** bursts of one kind for one course are grouped ("EFPG-401: 4 new units"); revised units, new figures and units under "Final Review Pending" are announced.
+- **Full list:** "View all", a row label or empty bar space opens a panel with the last 60 days, pinned first.
+- **Pinning:** admins pin any item, automatic ones included; pinned items stand still at the front of their row.
+
+- FR-006 Revision, figure and final-review events are derived from git and the content-status report only (ADR-0034, amendment 2026-11-22).
+- FR-007 `news_pins` is publicly readable for active pins only; writes only through the admin-checked, audited `set_news_pin`.
+- FR-008 The full-list panel is keyboard reachable, closes on Esc and returns focus to "View all".

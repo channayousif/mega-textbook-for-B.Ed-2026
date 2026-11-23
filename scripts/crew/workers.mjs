@@ -52,6 +52,8 @@ export const STAGES = {
   // Claude owns raster prompts and alt text (ADR-0024); the skill reference is named in the task.
   plan_illustrations: { chain: ['claude', 'agy_claude'], skill: null },
   illustrate: { chain: ['agy', 'codex'], skill: 'generate-figures' },
+  // Feature 032 phase D: redraw a unit's placed schematics to the improved SVG standard (owner switch `crew refresh on`).
+  refresh_figures: { chain: ['claude', 'agy_claude', 'codex'], skill: 'generate-figures' },
   review_en:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
   translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'translate-unit' },
   review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'opencode', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
@@ -62,6 +64,7 @@ export const STAGES = {
   teaser_clips:   { chain: ['claude'], skill: 'studio-teaser' },
   media_assemble: { chain: ['claude'], skill: 'studio-teaser' },
   media_publish:  { chain: ['claude'], skill: 'studio-teaser' },
+  social_roundup: { chain: ['claude'], skill: 'social-updates' },
   audio_overview: { chain: ['claude'], skill: 'studio-media' },
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.

@@ -1,0 +1,77 @@
+{
+ "id": "efmp-407",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "EFMP-407",
+ "semester": 3,
+ "title": {
+  "en": "Education for Sustainable Development (EFMP-407)",
+  "ur": "پائیدار ترقی کے لیے تعلیم (EFMP-407)"
+ },
+ "sources": [
+  "docs/semester-3/efmp-407/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government schools with whitewashed walls, plain green blackboards with no writing, wooden desks, a school garden with young saplings and clay pots, pupils in school uniform. Modest dress. No maps, globes, flags or emblems. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; books, papers, posters, bins and screens are plain, blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident Pakistani man teacher in his thirties in an olive green shalwar kameez and a dark brown waistcoat, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "In a sunlit school garden, a confident Pakistani man teacher in his thirties in an olive green shalwar kameez and a dark brown waistcoat holds a small sapling in a clay pot, then turns to the camera; quick push-in to a close-up as pupils in uniform water plants behind him."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Smooth dolly shot along a row of wooden desks where pupils in uniform and girls in dupattas examine leaves, a jar of water and a small potted plant in pairs, pointing and discussing; all notebooks are blurred and unreadable."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Tracking shot through a classroom as small groups of pupils in uniform sort plain unmarked plastic bottles, paper and cloth into baskets, while a woman teacher in a modest dupatta leans in to ask a question."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a whitewashed school courtyard where pupils, teachers and a few parents from the neighbourhood plant saplings together along the wall, passing watering cans and clay pots from hand to hand."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor lined with potted plants, a confident Pakistani man teacher in his thirties in an olive green shalwar kameez and a dark brown waistcoat walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "ماحول، معاشرہ اور معیشت: کیا یہ سب ہماری کلاس روم سے جڑے ہیں؟",
+    "اس کورس میں آپ sustainable development، UNESCO کا ESD framework اور SDG 4.7 سمجھیں گے۔",
+    "project-based اور inquiry-based learning، systems thinking، اور امن، gender equality اور green economy جیسے موضوعات بھی۔",
+    "آٹھ units، پاکستان میں ESD کی پالیسی، اور اسکول اور community کے ساتھ sustainability projects بنانا سیکھیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "پائیدار ترقی کے لیے تعلیم (EFMP-407)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "کیا ماحول اور معاشرہ آپ کی کلاس سے جڑے ہیں؟ پائیدار ترقی کے لیے تعلیم | EFMP-407",
+   "keywords": [
+    "education for sustainable development",
+    "پائیدار ترقی کے لیے تعلیم",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "ESD",
+    "SDGs",
+    "SDG 4.7",
+    "sustainable development"
+   ],
+   "course_summary": "یہ کورس اقوام متحدہ کے Sustainable Development Goals اور HEC Education Policy 2025 کے مطابق Education for Sustainable Development (ESD) کے اصول، طریقے اور تدریسی حکمت عملیاں متعارف کراتا ہے۔ یہ پائیداری کے ماحولیاتی، سماجی اور معاشی پہلوؤں کو تدریس اور سیکھنے میں لاتا ہے، اور ایسی تدریس کی حوصلہ افزائی کرتا ہے جو سیکھنے والوں کی سوچ اور عمل کو بدلے، انہیں شریک کرے اور ان کی community سے جڑی ہو۔"
+  }
+ }
+}

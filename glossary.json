@@ -2705,6 +2705,66 @@
     "definition_ur": "منتخب افراد کا اسمبلیوں اور کونسلوں میں ان شہریوں کی طرف سے بولنا اور فیصلے کرنا جنہوں نے انہیں منتخب کیا۔"
   },
   {
+    "term": "Accountability",
+    "definition_en": "Being answerable for your duties and decisions: explaining what was done and why, accepting responsibility, and putting things right.",
+    "definition_ur": "اپنے فرائض اور فیصلوں کے لیے جواب دہ ہونا: یہ بتانا کہ کیا کیا گیا اور کیوں، ذمہ داری قبول کرنا، اور غلطی کو درست کرنا۔"
+  },
+  {
+    "term": "Non-violence",
+    "definition_en": "Working for change without hurting people, destroying property or making threats; an active choice of method, not giving up the aim.",
+    "definition_ur": "لوگوں کو نقصان پہنچائے، املاک کو تباہ کیے یا دھمکی دیے بغیر تبدیلی کے لیے کام کرنا؛ یہ طریقۂ کار کا ایک فعال انتخاب ہے، مقصد سے دستبرداری نہیں۔"
+  },
+  {
+    "term": "Community development",
+    "definition_en": "The process by which members of a community work together, often with government and other organisations, to improve their living conditions and build their own ability to solve future problems.",
+    "definition_ur": "وہ عمل جس میں کسی برادری کے لوگ مل کر، اکثر حکومت اور دیگر اداروں کے ساتھ، اپنے حالاتِ زندگی بہتر بناتے ہیں اور آئندہ مسائل خود حل کرنے کی صلاحیت پیدا کرتے ہیں۔"
+  },
+  {
+    "term": "Social cohesion",
+    "definition_en": "The strength of the bonds that hold a society together: working for the well-being of all members, fighting exclusion, and building belonging and trust.",
+    "definition_ur": "وہ رشتوں کی مضبوطی جو معاشرے کو جوڑے رکھتی ہے: تمام افراد کی بہبود کے لیے کام کرنا، محرومی کا مقابلہ کرنا، اور اپنائیت اور اعتماد پیدا کرنا۔"
+  },
+  {
+    "term": "Parental involvement",
+    "definition_en": "Parents taking part in their children's education, at home and at school, for example by communicating with teachers, supporting learning at home, volunteering and sharing in school decisions.",
+    "definition_ur": "والدین کا گھر اور اسکول دونوں جگہ اپنے بچوں کی تعلیم میں حصہ لینا، مثلاً اساتذہ سے رابطہ رکھنا، گھر پر پڑھائی میں مدد کرنا، رضاکارانہ کام کرنا اور اسکول کے فیصلوں میں شریک ہونا۔"
+  },
+  {
+    "term": "Digital platform",
+    "definition_en": "An online service that carries communication and public life, such as social media, a video site, a government app or a petition site.",
+    "definition_ur": "وہ آن لائن خدمت جو مواصلات اور عوامی زندگی کا ذریعہ بنتا ہے، جیسے سوشل میڈیا، ویڈیو سائٹ، سرکاری ایپ یا درخواست کا پورٹل۔"
+  },
+  {
+    "term": "Digital civic engagement",
+    "definition_en": "Civic engagement carried out through digital platforms: any online action that tries to improve shared life or influence a public decision.",
+    "definition_ur": "ڈیجیٹل پلیٹ فارم کے ذریعے کی جانے والی شہری سرگرمی، یعنی آن لائن کوشش جو معاشرے کو بہتر بنائے یا عوامی فیصلوں پر اثر ڈالے۔"
+  },
+  {
+    "term": "Cyber ethics",
+    "definition_en": "The principles that guide right and wrong conduct online, such as honesty, respect, responsibility, respect for privacy and self-protection.",
+    "definition_ur": "وہ اصول جو آن لائن صحیح اور غلط کے رویے کی رہنمائی کرتے ہیں: ایمانداری، احترام، ذمہ داری، رازداری کا احترام اور خود کی حفاظت۔"
+  },
+  {
+    "term": "Misinformation",
+    "definition_en": "False or misleading information that spreads, whether or not anyone meant to deceive.",
+    "definition_ur": "غلط یا گمراہ کرنے والی معلومات جو پھیل جاتی ہے، خواہ کسی نے دھوکہ دینے کا ارادہ کیا ہو یا نہ کیا ہو۔"
+  },
+  {
+    "term": "Disinformation",
+    "definition_en": "False information that is spread on purpose to deceive.",
+    "definition_ur": "غلط معلومات جو جان بوجھ کر پھیلائی جاتی ہے۔"
+  },
+  {
+    "term": "Digital divide",
+    "definition_en": "The gap between people who can use digital tools and the internet well and people who cannot.",
+    "definition_ur": "وہ فرق جو ان لوگوں اور ان لوگوں کے درمیان ہے جو ڈیجیٹل آلات اور انٹرنیٹ کو اچھی طرح استعمال کر سکتے ہیں اور جو نہیں کر سکتے۔"
+  },
+  {
+    "term": "Digital literacy",
+    "definition_en": "The ability to access, understand and use information online.",
+    "definition_ur": "وہ صلاحیت جو کسی شخص کو انٹرنیٹ پر معلومات تک رسائی حاصل کرنے، انہیں سمجھنے اور ان کا استعمال کرنے میں مدد دیتی ہے۔"
+  },
+  {
     "term": "Race",
     "definition_en": "Physical differences that a particular society treats as significant, such as skin colour or features, which vary in meaning from one society to another.",
     "definition_ur": "جسمانی اختلافات جنہیں ایک خاص معاشرہ اہم سمجھتا ہے، جیسے رنگ یا چہرے کے کھرب، جن کے معنی معاشرے سے معاشرے بدلتے ہیں۔"

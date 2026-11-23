@@ -1,0 +1,108 @@
+static accessibility evidence (no rendered page; render-review unavailable)
+date: 2026-11-23
+
+== headings ==
+-- index.mdx
+18:# Rights and Responsibilities
+24:## Unit learning outcomes
+36:## Prerequisite knowledge
+40:## In this unit
+45:## How to use this unit
+-- topic-01.mdx
+21:# Topic 3.1 - Fundamental rights in the Constitution of 1973
+23:## A real classroom situation
+37:## Explanation
+41:### Fundamental rights and liberties
+73:### Constitution of Pakistan (1973)
+109:## Activity: Mapping constitutional rights
+129:## Check your understanding
+138:## Summary
+142:## Self-assessment checklist
+149:## Try this at your practicum school
+157:## Summative task
+173:## Further reading
+-- topic-02.mdx
+21:# Topic 3.2 - The citizen's duties and responsibilities
+23:## A real classroom situation
+37:## Explanation
+41:### Duties of citizens
+83:### Responsibilities in a democratic society
+105:### The reciprocal balance between rights and responsibilities
+113:## Activity: Balancing rights and duties
+134:## Check your understanding
+143:## Summary
+147:## Self-assessment checklist
+154:## Try this at your practicum school
+162:## Summative task
+181:## Further reading
+-- unit-assessment.mdx
+18:# Rights and Responsibilities - Assessment and Review
+20:## Unit summary
+26:## Summative assessment
+30:### Multiple-choice questions (MCQs)
+83:### Restricted-response questions (RRQs)
+96:### Extended-response questions (ERQs)
+124:## Answers and marking guidance
+126:### MCQ answer key
+139:### RRQ model answers and mark schemes
+162:### ERQ rubrics
+164:#### ERQ 1: Constitutional Protection and Judicial Enforcement (6 marks)
+172:#### ERQ 2: Evolution of Rights in Pakistan's Constitutional History (6 marks)
+180:#### ERQ 3: Legal Obligations and Democratic Vitality under Article 5 (6 marks)
+188:#### ERQ 4: Designing a Community Civic Engagement Plan (6 marks)
+196:#### ERQ 5: Reciprocal Balance Between Rights and Duties in Pakistan (6 marks)
+-- unit-teacher-notes.mdx
+14:# Rights and Responsibilities - Notes for Teachers
+18:## Sequencing the two weeks
+23:## Likely misconceptions and how to handle them
+29:## Practical work: school civic audit
+
+== figure markers and alt text ==
+docs/semester-4/gcce-400/unit-03/index.mdx:20:<Figure id="fig-U3-5" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-5.webp" alt="In a Sindh secondary school civics lesson, pupils discuss in small groups around their teacher, one girl holding a mock-election ballot box while two boys carry a dustbin after tidying the room, showing rights and duties in classroom life." />
+docs/semester-4/gcce-400/unit-03/topic-02.mdx:33:<Figure id="fig-U3-7" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-7.webp" alt="On a Hyderabad school veranda strewn with lunch litter, a trainee teacher points to the wrappers while one pupil shrugs off the job and two others start picking up rubbish, with the ballot box from a class mock election visible through a doorway." />
+docs/semester-4/gcce-400/unit-03/topic-02.mdx:35:<Figure id="fig-U3-3" src="/img/figures/gcce-400/unit-03/fig-U3-3.svg" alt="Concept map showing citizen duties and responsibilities branching from a central node into five areas: constitutional loyalty under Article 5, obedience to law, paying taxes, democratic voting, and respecting others' rights." />
+docs/semester-4/gcce-400/unit-03/topic-02.mdx:81:<Figure id="fig-U3-4" src="/img/figures/gcce-400/unit-03/fig-U3-4.svg" alt="Diagram showing the reciprocal balance between fundamental rights and civic responsibilities, showing that protections and freedoms depend upon citizens fulfilling duties like obeying the law and paying taxes." />
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:33:<Figure id="fig-U3-6" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-6.webp" alt="In a Sindh girls' school office, a young trainee teacher holds out an admission form to a labourer father and his daughter who were about to leave, while the headmistress listens from her desk and schoolgirls pass in the corridor." />
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:35:<Figure id="fig-U3-1" src="/img/figures/gcce-400/unit-03/fig-U3-1.svg" alt="Table of selected fundamental rights in the 1973 Constitution of Pakistan, listing Articles 9, 10A, 14, 19, 25 and 25A with their legal guarantee and plain-language safeguard for citizens." />
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:71:<Figure id="fig-U3-2" src="/img/figures/gcce-400/unit-03/fig-U3-2.svg" alt="Timeline of Pakistan's constitutional development showing the 1956, 1962, and 1973 constitutions, followed by the 2010 Eighteenth Amendment which introduced Article 25A and Article 19A for citizens." />
+
+== glossary terms ==
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:47:**<Glossary term="Fundamental Rights">Fundamental rights</Glossary>** are different. They are the supreme class of rights enshrined directly in a country's written constitution. Because the constitution is the supreme law of the land, fundamental rights stand above ordinary laws and administrative decisions. They serve as legal shields that protect individual citizens and minority groups from arbitrary actions by the state, whether by the police, the bureaucracy, or a temporary legislative majority.
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:52:2. **Direct judicial enforceability.** Unlike general political promises or policy aspirations, fundamental rights can be directly enforced through the judiciary. Under Article 199, an aggrieved citizen can file a <Glossary term="Writ petition">writ petition</Glossary> in the relevant provincial High Court. Under Article 184(3), the Supreme Court of Pakistan can take notice of questions of public importance involving fundamental rights. The courts can issue binding orders to public authorities to cease unlawful actions or to carry out mandatory constitutional duties.
+
+== svg title/desc ==
+fig-U3-1.dark.svg: <title id="t">Selected Fundamental Rights in the Constitution of Pakistan (1973)</title>
+fig-U3-1.svg: <title id="t">Selected Fundamental Rights in the Constitution of Pakistan (1973)</title>
+fig-U3-1.ur.dark.svg: <title id="t">1973 کے آئین میں منتخب بنیادی حقوق (دفعات 8 تا 28)</title>
+fig-U3-1.ur.svg: <title id="t">1973 کے آئین میں منتخب بنیادی حقوق (دفعات 8 تا 28)</title>
+fig-U3-2.dark.svg: <title id="t">Timeline of Pakistan's constitutional development and citizen rights</title>
+fig-U3-2.svg: <title id="t">Timeline of Pakistan's constitutional development and citizen rights</title>
+fig-U3-2.ur.dark.svg: <title id="t">پاکستان کے آئینی حقوق کے اہم مراحل</title>
+fig-U3-2.ur.svg: <title id="t">پاکستان کے آئینی حقوق کے اہم مراحل</title>
+fig-U3-3.dark.svg: <title id="t">Duties and responsibilities of a citizen</title>
+fig-U3-3.svg: <title id="t">Duties and responsibilities of a citizen</title>
+fig-U3-3.ur.dark.svg: <title id="t">پاکستان میں ایک شہری کے فرائض اور ذمہ داریاں</title>
+fig-U3-3.ur.svg: <title id="t">پاکستان میں ایک شہری کے فرائض اور ذمہ داریاں</title>
+fig-U3-4.dark.svg: <title id="t">The reciprocal balance between rights and responsibilities</title>
+fig-U3-4.svg: <title id="t">The reciprocal balance between rights and responsibilities</title>
+fig-U3-4.ur.dark.svg: <title id="t">باہمی توازن: بنیادی حقوق اور شہری ذمہ داریاں</title>
+fig-U3-4.ur.svg: <title id="t">باہمی توازن: بنیادی حقوق اور شہری ذمہ داریاں</title>
+
+== measure-figure-text ==
+heavy: slot acquired; waiting for 30 seconds of memory/PSI headroom
+✓ static/img/figures/gcce-400/unit-03/fig-U3-1.dark.svg (780x540, widest text ends at 756.4, wordmark at 663.7)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-1.svg (780x540, widest text ends at 756.4, wordmark at 663.7)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-1.ur.dark.svg (780x540, widest text ends at 756.2, wordmark at 12)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-1.ur.svg (780x540, widest text ends at 756.2, wordmark at 12)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-2.dark.svg (780x580, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-2.svg (780x580, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-2.ur.dark.svg (780x580, widest text ends at 758, wordmark at 12)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-2.ur.svg (780x580, widest text ends at 758, wordmark at 12)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-3.dark.svg (780x540, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-3.svg (780x540, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-3.ur.dark.svg (780x540, widest text ends at 756.5, wordmark at 12)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-3.ur.svg (780x540, widest text ends at 756.5, wordmark at 12)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-4.dark.svg (780x510, widest text ends at 756.4, wordmark at 663.7)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-4.svg (780x510, widest text ends at 756.4, wordmark at 663.7)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-4.ur.dark.svg (780x510, widest text ends at 756, wordmark at 12)
+✓ static/img/figures/gcce-400/unit-03/fig-U3-4.ur.svg (780x510, widest text ends at 756, wordmark at 12)
