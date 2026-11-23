@@ -1,0 +1,89 @@
+static accessibility evidence (source-level; live render inspection see logs/render-review.txt)
+date: 2026-11-23
+
+== headings ==
+-- index.mdx
+18:# Rights and Responsibilities
+24:## Unit learning outcomes
+36:## Prerequisite knowledge
+40:## In this unit
+45:## How to use this unit
+-- topic-01.mdx
+21:# Topic 3.1 - Fundamental rights in the Constitution of 1973
+23:## A real classroom situation
+37:## Explanation
+41:### Fundamental rights and liberties
+73:### Constitution of Pakistan (1973)
+111:## Activity: Mapping constitutional rights
+131:## Check your understanding
+140:## Summary
+144:## Self-assessment checklist
+151:## Try this at your practicum school
+159:## Summative task
+175:## Further reading
+-- topic-02.mdx
+21:# Topic 3.2 - The citizen's duties and responsibilities
+23:## A real classroom situation
+37:## Explanation
+41:### Duties of citizens
+83:### Responsibilities in a democratic society
+105:### The reciprocal balance between rights and responsibilities
+113:## Activity: Balancing rights and duties
+134:## Check your understanding
+143:## Summary
+147:## Self-assessment checklist
+154:## Try this at your practicum school
+162:## Summative task
+181:## Further reading
+-- unit-assessment.mdx
+18:# Rights and Responsibilities - Assessment and Review
+20:## Unit summary
+26:## Summative assessment
+30:### Multiple-choice questions (MCQs)
+83:### Restricted-response questions (RRQs)
+96:### Extended-response questions (ERQs)
+124:## Answers and marking guidance
+126:### MCQ answer key
+139:### RRQ model answers and mark schemes
+162:### ERQ rubrics
+164:#### ERQ 1: Constitutional Protection and Judicial Enforcement (6 marks)
+172:#### ERQ 2: Evolution of Rights in Pakistan's Constitutional History (6 marks)
+180:#### ERQ 3: Legal Obligations and Democratic Vitality under Article 5 (6 marks)
+188:#### ERQ 4: Designing a Community Civic Engagement Plan (6 marks)
+196:#### ERQ 5: Reciprocal Balance Between Rights and Duties in Pakistan (6 marks)
+-- unit-teacher-notes.mdx
+14:# Rights and Responsibilities - Notes for Teachers
+18:## Sequencing the two weeks
+23:## Likely misconceptions and how to handle them
+29:## Practical work: school civic audit
+
+== figure markers and alt text ==
+docs/semester-4/gcce-400/unit-03/index.mdx:20:<Figure id="fig-U3-5" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-5.webp" alt="In a Sindh secondary school civics lesson, pupils discuss in small groups around their teacher, one girl holding a mock-election ballot box while two boys carry a dustbin after tidying the room, showing rights and duties in classroom life." />
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:33:<Figure id="fig-U3-6" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-6.webp" alt="In a Sindh girls' school office, a young trainee teacher holds out an admission form to a labourer father and his daughter who were about to leave, while the headmistress listens from her desk and schoolgirls pass in the corridor." />
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:35:<Figure id="fig-U3-1" src="/img/figures/gcce-400/unit-03/fig-U3-1.svg" alt="Table of selected fundamental rights in the 1973 Constitution of Pakistan, listing Articles 9, 10A, 14, 19, 25 and 25A with their legal guarantee and plain-language safeguard for citizens." />
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:71:<Figure id="fig-U3-2" src="/img/figures/gcce-400/unit-03/fig-U3-2.svg" alt="Timeline of Pakistan's constitutional development showing the 1956, 1962, and 1973 constitutions, followed by the 2010 Eighteenth Amendment which introduced Article 25A and Article 19A for citizens." />
+docs/semester-4/gcce-400/unit-03/topic-02.mdx:33:<Figure id="fig-U3-7" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-7.webp" alt="On a Hyderabad school veranda strewn with lunch litter, a trainee teacher points to the wrappers while one pupil shrugs off the job and two others start picking up rubbish, with the ballot box from a class mock election visible through a doorway." />
+docs/semester-4/gcce-400/unit-03/topic-02.mdx:35:<Figure id="fig-U3-3" src="/img/figures/gcce-400/unit-03/fig-U3-3.svg" alt="Concept map showing citizen duties and responsibilities branching from a central node into five areas: constitutional loyalty under Article 5, obedience to law, paying taxes, democratic voting, and respecting others' rights." />
+docs/semester-4/gcce-400/unit-03/topic-02.mdx:81:<Figure id="fig-U3-4" src="/img/figures/gcce-400/unit-03/fig-U3-4.svg" alt="Diagram showing the reciprocal balance between fundamental rights and civic responsibilities, showing that protections and freedoms depend upon citizens fulfilling duties like obeying the law and paying taxes." />
+
+== glossary terms ==
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:47:**<Glossary term="Fundamental Rights">Fundamental rights</Glossary>** are different. They are the supreme class of rights enshrined directly in a country's written constitution. Because the constitution is the supreme law of the land, fundamental rights stand above ordinary laws and administrative decisions. They serve as legal shields that protect individual citizens and minority groups from arbi
+docs/semester-4/gcce-400/unit-03/topic-01.mdx:52:2. **Direct judicial enforceability.** Unlike general political promises or policy aspirations, fundamental rights can be directly enforced through the judiciary. Under Article 199, an aggrieved citizen can file a <Glossary term="Writ petition">writ petition</Glossary> in the relevant provincial High Court. Under Article 184(3), the Supreme Court of Pakistan can act on an application that raises a
+
+== svg title/desc ==
+fig-U3-1.dark.svg: Selected Fundamental Rights in the Constitution of Pakistan (1973)
+fig-U3-1.svg: Selected Fundamental Rights in the Constitution of Pakistan (1973)
+fig-U3-1.ur.dark.svg: 1973 کے آئین میں منتخب بنیادی حقوق (دفعات 8 تا 28)
+fig-U3-1.ur.svg: 1973 کے آئین میں منتخب بنیادی حقوق (دفعات 8 تا 28)
+fig-U3-2.dark.svg: Timeline of Pakistan's constitutional development and citizen rights
+fig-U3-2.svg: Timeline of Pakistan's constitutional development and citizen rights
+fig-U3-2.ur.dark.svg: پاکستان کے آئینی حقوق کے اہم مراحل
+fig-U3-2.ur.svg: پاکستان کے آئینی حقوق کے اہم مراحل
+fig-U3-3.dark.svg: Duties and responsibilities of a citizen
+fig-U3-3.svg: Duties and responsibilities of a citizen
+fig-U3-3.ur.dark.svg: پاکستان میں ایک شہری کے فرائض اور ذمہ داریاں
+fig-U3-3.ur.svg: پاکستان میں ایک شہری کے فرائض اور ذمہ داریاں
+fig-U3-4.dark.svg: The reciprocal balance between rights and responsibilities
+fig-U3-4.svg: The reciprocal balance between rights and responsibilities
+fig-U3-4.ur.dark.svg: باہمی توازن: بنیادی حقوق اور شہری ذمہ داریاں
+fig-U3-4.ur.svg: باہمی توازن: بنیادی حقوق اور شہری ذمہ داریاں
