@@ -16,11 +16,11 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-407/crew-efmp-407-u01-repair_en-r1.misc.prompt.md
-  - specs/content/efmp-407/reviews/unit-01/G3/20261123-repair-notes.md
-  - specs/content/efmp-407/tasks.md
+ - history/prompts/efmp-407/crew-efmp-407-u01-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-407/reviews/unit-01/G3/20261123-repair-notes.md
+ - specs/content/efmp-407/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -69,22 +69,23 @@ From `specs/content/efmp-407/reviews/unit-01/G3/20261122T175629Z-g3-desk-3d3228c
 - (efmp-407-u01-illustrate, illustrate, codex) No topic illustration prompts exist; the topic generation command had no matching rows.
 - (efmp-407-u01-illustrate, illustrate, codex) Urdu mirror is absent; a translated Figure snippet is recorded for the translation job.
 
+
 ## Response snapshot
 
-Verified all 8 G3 desk review findings from `20261122T175629Z-g3-desk-3d3228c6.json` against current Unit 1 files, confirmed resolution on main from earlier repair pass (commit 1ae3a5103), documented repair handoff notes, and appended the unticked Unit 1 G3 advisory-repair tracker row with all 14 content gates passing.
+Verified all G3 report findings from 20261122T175629Z-g3-desk-3d3228c6.json against existing repairs, documented repair handoff notes, and appended the unticked Unit 1 G3 advisory-repair tracker row with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-407 Unit 1 by agy (attempt 2 / r1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: repair_en for EFMP-407 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the G3 report findings from `20261122T175629Z-g3-desk-3d3228c6.json` (Orr disclosure, RRQ-09 uncertainty, RRQ-03 Bloom label, Topic 1.3 budget constraint), documented `20261123-repair-notes.md`, and appended the unticked Unit 1 advisory-repair tracker row in `tasks.md`.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Verified all G3 report findings from 20261122T175629Z-g3-desk-3d3228c6.json against existing repairs, documented repair handoff notes, and appended the unticked Unit 1 G3 advisory-repair tracker row with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Browser, narrow-screen, and A4 print rendering remain host-prohibited under the crew brief and are left as owner handoffs.
