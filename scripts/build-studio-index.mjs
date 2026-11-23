@@ -8,7 +8,7 @@
 // teaser = { youtube_id, title, locale, semester, published_at, views }: Feature 030 (T038), only teasers
 // the owner made public; views from specs/studio/teaser-stats.json (teaser-stats.mjs).
 // homeTeasers = [{ code, ...teaser, reason: 'top' | 'latest' }]: the home page's "Courses in 30 seconds".
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { findManifests } from './check-studio-manifest.mjs';
@@ -97,11 +97,129 @@ export function addAnimations(index, ledger, topicOf, titleOf) {
   return index;
 }
 
+/**
+ * Feature 032 phase C: flashcards from the reviewed bilingual glossary (glossary.json). For each
+ * topic, the glossary terms that occur in its English text are ranked by how specific they are to
+ * it (occurrences here x rarity across all topics) and the top `max` kept. Pure.
+ * topics: [{ key: 'course/unit/topic', text }]; glossary: [{ term, definition_en, definition_ur }];
+ * urTerms: Map(lowercase EN term -> UR term) from specs/content/terminology.csv.
+ */
+export function buildFlashcards(topics, glossary, urTerms = new Map(), { max = 10, min = 4, origin = {} } = {}) {
+  const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const entries = glossary.filter((e) => e.term && e.definition_en && e.definition_ur)
+    .map((e) => ({ e, re: new RegExp(`(^|[^A-Za-z])${esc(e.term)}(s|es)?(?![A-Za-z])`, 'gi') }));
+  const hits = topics.map((t) => entries.map(({ e, re }) => [e, (t.text.match(re) || []).length]).filter(([, n]) => n > 0));
+  const df = new Map();
+  for (const h of hits) for (const [e] of h) df.set(e.term, (df.get(e.term) ?? 0) + 1);
+  const N = topics.length;
+  const out = {};
+  topics.forEach((t, i) => {
+    const course = t.key.split('/')[0].toUpperCase();
+    const ranked = hits[i]
+      .filter(([e]) => (df.get(e.term) ?? 0) <= Math.max(3, N * 0.3)) // drop terms nearly every topic uses
+      // A term from this topic's own course; another course's term only if the topic leans on it.
+      // Another course's term only if it is a multi-word term the topic leans on ("a fraction of a
+      // second" must not make "Fraction" a card in a memory topic).
+      .filter(([e, n]) => (origin[e.term] ? origin[e.term] === course : n >= 2) || (n >= 3 && /\s/.test(e.term)))
+      .map(([e, n]) => [e, n, origin[e.term] === course])
+      .map(([e, n, own]) => [e, n * Math.log(N / (df.get(e.term) ?? 1)) * (own ? 2 : 1)])
+      .sort((a, b) => b[1] - a[1] || a[0].term.localeCompare(b[0].term))
+      .slice(0, max).map(([e]) => e);
+    if (ranked.length < min) return;
+    out[t.key] = {
+      en: ranked.map((e) => ({ term: e.term, definition: e.definition_en })),
+      ur: ranked.map((e) => ({ term: urTerms.get(e.term.toLowerCase()) ?? e.term, definition: e.definition_ur })),
+    };
+  });
+  return out;
+}
+
+/** Problems with an authored topic deck. Pure. */
+export function validateDeck(d) {
+  const errs = [];
+  for (const loc of ['en', 'ur']) {
+    const cards = d?.[loc];
+    if (!Array.isArray(cards) || cards.length < 4 || cards.length > 12) { errs.push(`${loc}: 4 to 12 cards`); continue; }
+    cards.forEach((c, i) => {
+      if (!c?.term?.trim() || !c?.definition?.trim()) errs.push(`${loc} card ${i + 1}: term and definition`);
+      if (/[\u2014\u2015\u2E3A\u2E3B]/.test(`${c?.term}${c?.definition}`)) errs.push(`${loc} card ${i + 1}: long dash`);
+      if ((c?.definition ?? '').length > 300) errs.push(`${loc} card ${i + 1}: definition over 300 characters`);
+    });
+  }
+  if (Array.isArray(d?.en) && Array.isArray(d?.ur) && d.en.length !== d.ur.length) errs.push('en and ur card counts differ');
+  return errs;
+}
+
+/** Write one deck file per unit (static/studio/flashcards/<course>/unit-NN.json) and index each topic. */
+function readFlashcards(root, index) {
+  const glossaryFile = join(root, 'glossary.json');
+  if (!existsSync(glossaryFile)) return index;
+  const urTerms = new Map();
+  const csv = join(root, 'specs', 'content', 'terminology.csv');
+  if (existsSync(csv)) for (const line of readFileSync(csv, 'utf8').trim().split('\n').slice(1)) {
+    const [en, ur] = line.split(',').map((x) => x.replace(/^"|"$/g, '').trim());
+    if (en && ur) urTerms.set(en.toLowerCase(), ur);
+  }
+  const topics = [];
+  for (const sem of readdirSync(join(root, 'docs')).filter((d) => d.startsWith('semester-'))) {
+    for (const course of readdirSync(join(root, 'docs', sem))) {
+      const cdir = join(root, 'docs', sem, course);
+      if (!statSync(cdir).isDirectory() || !readdirSync(cdir).some((u) => /^unit-\d+$/.test(u))) continue;
+      for (const unit of readdirSync(cdir).filter((u) => /^unit-\d+$/.test(u))) {
+        for (const f of readdirSync(join(cdir, unit)).filter((n) => /^topic-\d+\.mdx$/.test(n))) {
+          topics.push({ key: `${course}/${Number(unit.slice(5))}/${Number(f.match(/\d+/)[0])}`, text: readFileSync(join(cdir, unit, f), 'utf8') });
+        }
+      }
+    }
+  }
+  const originFile = join(root, 'specs', 'studio', 'glossary-origin.json');
+  const origin = existsSync(originFile) ? JSON.parse(readFileSync(originFile, 'utf8')) : {};
+  const decks = buildFlashcards(topics, JSON.parse(readFileSync(glossaryFile, 'utf8')), urTerms, { origin });
+  // Authored decks (crew `flashcards` stage) live in specs/studio/flashcards/<course>/unit-NN.json,
+  // outside every review manifest; an authored topic deck replaces the glossary-derived one.
+  const authoredDir = join(root, 'specs', 'studio', 'flashcards');
+  if (existsSync(authoredDir)) for (const course of readdirSync(authoredDir).filter((c) => /^[a-z]{4}-\d{3}$/.test(c))) {
+    for (const f of readdirSync(join(authoredDir, course)).filter((n) => /^unit-\d{2}\.json$/.test(n))) {
+      const unit = Number(f.slice(5, 7));
+      const deck = JSON.parse(readFileSync(join(authoredDir, course, f), 'utf8'));
+      for (const [topic, d] of Object.entries(deck.topics ?? {})) {
+        const errs = validateDeck(d);
+        if (errs.length) { console.warn(`build-studio-index: skipped ${course} unit ${unit} topic ${topic}: ${errs.join('; ')}`); continue; }
+        decks[`${course}/${unit}/${topic}`] = d;
+      }
+    }
+  }
+  if (process.argv.includes('--coverage')) {
+    const covered = new Set(Object.keys(decks).map((k) => k.split('/').slice(0, 2).join('/')));
+    const units = [...new Set(topics.map((t) => t.key.split('/').slice(0, 2).join('/')))];
+    const needed = units.filter((u) => !covered.has(u)).sort();
+    writeFileSync(join(root, 'specs', 'studio', 'flashcards-needed.json'), `${JSON.stringify({ note: 'Units with no flashcard deck: the crew flashcards stage authors specs/studio/flashcards/<course>/unit-NN.json for them. Regenerate: node scripts/build-studio-index.mjs --coverage', units: needed }, null, 1)}\n`);
+    console.log(`flashcards: ${units.length - needed.length} unit(s) covered, ${needed.length} need an authored deck`);
+  }
+  const byUnit = new Map();
+  for (const [key, deck] of Object.entries(decks)) {
+    const [course, unit, topic] = key.split('/');
+    const k = `${course}/${unit}`;
+    byUnit.set(k, { ...(byUnit.get(k) ?? {}), [topic]: deck });
+  }
+  for (const [k, deck] of byUnit) {
+    const [course, unit] = k.split('/');
+    const rel = `studio/flashcards/${course}/unit-${String(unit).padStart(2, '0')}.json`;
+    mkdirSync(join(root, 'static', 'studio', 'flashcards', course), { recursive: true });
+    writeFileSync(join(root, 'static', rel), `${JSON.stringify(deck)}\n`);
+    for (const topic of Object.keys(deck)) {
+      const slot = (index[`${course}/${unit}/${topic}`] ??= { en: [], ur: [] });
+      for (const loc of ['en', 'ur']) slot[loc].push({ kind: 'flashcards', title: '', audience: 'all', alt: '', src: `/${rel}#${topic}` });
+    }
+  }
+  return index;
+}
+
 function readAnimations(root, index) {
   const ledger = join(root, 'specs', 'studio', 'animations', 'placed.json');
   if (!existsSync(ledger)) return index;
   const unitDir = (course, unit) => {
-    const sem = readdirSync(join(root, 'docs')).find((d) => existsSync(join(root, 'docs', d, course, `unit-${String(unit).padStart(2, '0')}`)));
+    const sem = readdirSync(join(root, 'docs')).find((d) => d.startsWith('semester-') && existsSync(join(root, 'docs', d, course, `unit-${String(unit).padStart(2, '0')}`)));
     return sem ? join(root, 'docs', sem, course, `unit-${String(unit).padStart(2, '0')}`) : null;
   };
   const topicOf = (course, unit, figId) => {
@@ -131,7 +249,7 @@ function readTeasers(root) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const manifests = findManifests(ROOT).map((f) => JSON.parse(readFileSync(f, 'utf8')));
-  const index = readAnimations(ROOT, buildStudioIndex(manifests));
+  const index = readFlashcards(ROOT, readAnimations(ROOT, buildStudioIndex(manifests)));
   index.teasers = readTeasers(ROOT);
   index.homeTeasers = pickHomeTeasers(index.teasers);
   mkdirSync(join(ROOT, 'static'), { recursive: true });

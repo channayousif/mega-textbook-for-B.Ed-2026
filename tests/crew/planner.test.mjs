@@ -246,3 +246,11 @@ test('figure refresh runs one unit at a time, focus course first', () => {
   assert.equal(holdsFocus('refresh_figures'), false, 'figure work runs beside the focus course');
 });
 
+
+test('flashcard decks: up to two units at a time, skipping authored and busy units', async () => {
+  const { pickFlashcards } = await import('../../scripts/crew/planner.mjs');
+  const needed = ['efmp-301/1', 'efmp-301/2', 'efmp-301/3', 'gsos-301/4'];
+  assert.deepEqual(pickFlashcards(needed, new Set(['efmp-301/1']), []), [{ course: 'EFMP-301', unit: 2 }, { course: 'EFMP-301', unit: 3 }]);
+  assert.deepEqual(pickFlashcards(needed, new Set(), [{ stage: 'flashcards', course: 'EFMP-301', unit: 1 }]), [{ course: 'EFMP-301', unit: 2 }]);
+  assert.deepEqual(pickFlashcards(needed, new Set(), [{ stage: 'flashcards' }, { stage: 'flashcards' }]), []);
+});
