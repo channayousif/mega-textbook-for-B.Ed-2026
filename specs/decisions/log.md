@@ -5127,3 +5127,22 @@ content-improvement loop with no further cycle.
 - **Limits:** This extends D-2026-0094's "owner gates" with automatic publishing for content
   announcements only; teaser videos and Study Studio media still go public only on the owner's word.
   It certifies no content and claims no review that the tracker does not show.
+
+## D-2026-0097 - Textbook visuals: which skills to adopt, animated figures, redrawing figures
+- **Scope:** figures, animations, presentations, tables and interactive widgets (Feature 032)
+- **Decided by:** curriculum owner, 2026-11-23 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. Adopt omkamal/animated-diagrams-skill: its authoring rules for static figures (done, PR #723),
+     and animated figures, silent with on-screen captions, for Study Studio videos, Shorts and
+     social, and an optional play-in-place version beside the static figure. Pilot EFMP-301 Unit 4.
+  2. Of the ten skills reviewed, adopt frontend-slides (web decks), pptx, a light use of xlsx,
+     dataviz for charts, and build flashcards, self-checks and charts as our own data-driven
+     components; keep generate-figures over generic SVG skills; do not use excalidraw, runtime
+     Mermaid or canvas-design for figures.
+  3. Existing figures may be redrawn to the improved standard: uncertified units first, by a crew
+     stage course by course; certified units only when they next re-open for review.
+- **Basis:** owner answers 2026-11-23: "Both, in two PRs"; "Study Studio videos, Social and Shorts,
+  On the topic page"; "Silent + on-screen captions"; "EFMP-301 Unit 4"; "we can rewrite existing
+  figures and diagrams to improved versions"; "Uncertified first"; "Crew stage, course by course".
+- **Limits:** No certified unit loses its certification; no review-bound file is rewritten to add
+  a visual. Videos go public only on the owner's word.
