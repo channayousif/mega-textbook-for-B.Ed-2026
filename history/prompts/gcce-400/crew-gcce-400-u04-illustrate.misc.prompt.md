@@ -13,26 +13,26 @@ labels: ["crew", "agy", "illustrate"]
 links:
   spec: specs/content/gcce-400/content-spec.md
   ticket: null
-  adr: history/adr/0029-local-image-generation-flow-and-agy-role.md
+  adr: null
   pr: null
 files:
-  - docs/semester-4/gcce-400/unit-04/index.mdx
-  - history/prompts/gcce-400/crew-gcce-400-u04-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-04/index.mdx
-  - specs/content/gcce-400/figures/unit-04.banner.md
-  - specs/content/gcce-400/reviews/unit-04/G2/20261123T172408903Z-gates.json
-  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-bloom-bands.txt
-  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-concept-graph.txt
-  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-depth-gate.txt
-  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-docs-sync.txt
-  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-figures.txt
-  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-no-answer-keys.txt
-  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-no-em-dash.txt
-  - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/validate-content.txt
-  - specs/content/gcce-400/tasks.md
-  - static/img/figures/gcce-400/unit-04/fig-U4-6.webp
+ - docs/semester-4/gcce-400/unit-04/index.mdx
+ - history/prompts/gcce-400/crew-gcce-400-u04-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-04/index.mdx
+ - specs/content/gcce-400/figures/unit-04.banner.md
+ - specs/content/gcce-400/reviews/unit-04/G2/20261123T172408903Z-gates.json
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-04/G2/logs-20261123T172408903Z/validate-content.txt
+ - specs/content/gcce-400/tasks.md
+ - static/img/figures/gcce-400/unit-04/fig-U4-6.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -73,29 +73,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated raster banner illustration fig-U4-6 via generate-illustration.mjs using gflow (Nano Banana). Read and visually inspected the WebP image for pedagogical alignment and cultural authenticity (Sindhi village otaq setting with charpais, durrie, primary school courtyard, hand pump, fathers in shalwar kameez and Sindhi caps, mothers in shalwar kameez with dupattas/ajraks, woman teacher and trainee teacher taking notes, schoolchildren in uniforms, soft afternoon light, no readable text, no sacred depictions). Placed Figure components in English and Urdu index files, updated unit-04.banner.md manifest row to placed, recorded fresh G2 gate evidence, updated task tracker, and verified all 14 content gates pass.
+Generated, inspected, and placed GCCE-400 Unit 4 banner illustration fig-U4-6 across English and Urdu index files, recorded fresh G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate GCCE-400 Unit 4 raster banner illustration (fig-U4-6) and place in English and Urdu index files.
-- Tests: npm run check:content passed (14/14 content gates).
+- Impact: illustrate for GCCE-400 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
-- Next prompts: crew lead merges branch or schedules downstream reviews.
-- Reflection: None.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: GCCE-400 Unit 4 banner illustration fig-U4-6 generated, inspected, and placed in English and Urdu index MDX files; manifest updated to placed; fresh G2 gate evidence recorded and tracked.
-- Decisions the team must respect: G3 en-review and G5 ur-review remain open and independent.
-- Pending / next owner: crew lead / G3 reviewer.
+- Shipped / changed: Generated, inspected, and placed GCCE-400 Unit 4 banner illustration fig-U4-6 across English and Urdu index files, recorded fresh G2 gate evidence, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 en-review remains open (confirm youniss-levine-2009 title-level use, oecd-2011-social-cohesion definition, constitutional currency of Articles 16, 19 and 25).
-  - G5 ur-review remains open (translation_status remains draft across English and Urdu indices; G5 owns 360px and A4 print layout inspection).
-- Paperclip issues affected: none.
+  - G3 en-review remains open (reviewer to confirm youniss-levine-2009 title use, oecd-2011-social-cohesion definition, and constitutional currency of Articles 16, 19, and 25).
+  - G5 ur-review remains open (translation_status is draft across English and Urdu indices; G5 owns 360px and A4 print layout inspection).
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14 content gates).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
