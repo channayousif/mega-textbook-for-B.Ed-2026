@@ -16,10 +16,50 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/gcce-400/unit-07/index.mdx
+ - docs/semester-4/gcce-400/unit-07/topic-01.mdx
+ - docs/semester-4/gcce-400/unit-07/topic-02.mdx
+ - docs/semester-4/gcce-400/unit-07/topic-03.mdx
+ - docs/semester-4/gcce-400/unit-07/topic-04.mdx
+ - docs/semester-4/gcce-400/unit-07/unit-assessment.mdx
+ - docs/semester-4/gcce-400/unit-07/unit-teacher-notes.mdx
  - glossary.json
- - specs/content/gcce-400/sources/texts/openstax-sociology-3e.md
- - specs/content/gcce-400/tasks.md
  - history/prompts/gcce-400/crew-gcce-400-u07-author-conflict1.misc.prompt.md
+ - history/prompts/gcce-400/crew-gcce-400-u07-author.green.prompt.md
+ - specs/content/gcce-400/concepts/unit-07.md
+ - specs/content/gcce-400/coverage/unit-07.md
+ - specs/content/gcce-400/figures/unit-07.banner.md
+ - specs/content/gcce-400/figures/unit-07.md
+ - specs/content/gcce-400/reviews/unit-07/G2/20261122T132732300Z-gates.json
+ - specs/content/gcce-400/reviews/unit-07/G2/logs-20261122T132732300Z/check-bloom-bands.txt
+ - specs/content/gcce-400/reviews/unit-07/G2/logs-20261122T132732300Z/check-concept-graph.txt
+ - specs/content/gcce-400/reviews/unit-07/G2/logs-20261122T132732300Z/check-depth-gate.txt
+ - specs/content/gcce-400/reviews/unit-07/G2/logs-20261122T132732300Z/check-docs-sync.txt
+ - specs/content/gcce-400/reviews/unit-07/G2/logs-20261122T132732300Z/check-figures.txt
+ - specs/content/gcce-400/reviews/unit-07/G2/logs-20261122T132732300Z/check-no-answer-keys.txt
+ - specs/content/gcce-400/reviews/unit-07/G2/logs-20261122T132732300Z/check-no-em-dash.txt
+ - specs/content/gcce-400/reviews/unit-07/G2/logs-20261122T132732300Z/validate-content.txt
+ - specs/content/gcce-400/sources/texts/constitution-pakistan.md
+ - specs/content/gcce-400/sources/texts/openstax-sociology-3e.md
+ - specs/content/gcce-400/sources/texts/pbs-census-2023.md
+ - specs/content/gcce-400/sources/unit-07.md
+ - specs/content/gcce-400/tasks.md
+ - static/img/figures/gcce-400/unit-07/fig-U7-1.dark.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-1.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-2.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-3.dark.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-3.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-4.dark.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-4.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-5.dark.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-5.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-6.dark.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-6.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-7.dark.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-7.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-8.dark.svg
+ - static/img/figures/gcce-400/unit-07/fig-U7-8.svg
 tests:
  - npm run check:content
 ---
@@ -55,27 +95,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u07-author, author, claude_crew) kymlicka-norman-2000 and youniss-levine-2009 are print-only and declared under `## Unverifiable sources`; G3 should confirm the framing attributed to them, as Units 1 and 2 were asked to.
 - (gcce-400-u07-author, author, claude_crew) course-overview.mdx still introduces only Unit 1 (left unchanged because it is bound into every unit's G2 evidence); banner fig-U7-9 is prompt-only and there are no .ur.svg files yet.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gcce-400-u07-author and resolved three conflicts. glossary.json keeps main's twelve new terms first, then this branch's six Unit 7 terms, with no duplicate keys. specs/content/gcce-400/tasks.md keeps main's Units 1-6 rows and stage rows, adds this branch's Unit 7 row and stage rows, and carries the Unit 7 reading-estimate paragraph after main's Unit 6 paragraph. specs/content/gcce-400/sources/texts/openstax-sociology-3e.md is an add/add source-evidence file, so it now holds a shared Source/Consulted/Locator header, main's Unit 5 evidence notes, then this branch's Unit 7 evidence notes. All 14 content gates pass.
+Merged origin/main into crew/gcce-400-u07-author, resolved the glossary.json, tasks.md and openstax-sociology-3e.md conflicts keeping both sides' entries, and left all 14 content gates passing with the work committed.
 
 ## Outcome
 
 - Impact: fix for GCCE-400 Unit 7 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (14 of 14 gates) in the job worktree.
-- Files: 4 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 44 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gcce-400-u07-author; resolved glossary.json, specs/content/gcce-400/tasks.md and specs/content/gcce-400/sources/texts/openstax-sociology-3e.md by keeping both sides' entries, main's order first; all 14 content gates pass.
-- Decisions the team must respect: Unit 7's English draft is unchanged by the merge and its existing G2 en-draft evidence and tracker row still stand; G3/G5 stay open and nothing is certified.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into crew/gcce-400-u07-author, resolved the glossary.json, tasks.md and openstax-sociology-3e.md conflicts keeping both sides' entries, and left all 14 content gates passing with the work committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The openstax-sociology-3e.md file is now shared by Unit 5 and Unit 7; Unit 7's own `specs/content/gcce-400/sources/unit-07.md` row and its G2 evidence were not regenerated because no English unit file, unit source list, coverage or concept file changed.
-  - Banner fig-U7-9 is prompt-only and no `.ur.svg` exists yet; G3 should confirm the census figures against Table 11 and Table 4.21, the constitutional articles against the current text, and the kymlicka-norman-2000 and youniss-levine-2009 attributions declared unverifiable.
-  - The merged tasks.md lists Unit 5's stage rows before Unit 7's (main's order); the tracker's "last row for a unit and stage is authoritative" rule is unaffected.
+  - Unit 7's English draft, `sources/unit-07.md`, coverage, concepts and G2 evidence are unchanged by the merge; G3 stays open (census Table 11/4.21, constitutional currency, and the declared-unverifiable kymlicka-norman-2000 and youniss-levine-2009 attributions).
+  - `openstax-sociology-3e` does not match the `citedKeysFor` key pattern, so its shared source-text file is not bound in Unit 7's G2/G3 input manifests; the next evidence job should know the file changed without invalidating them.
+  - Banner `fig-U7-9` is still prompt-only and no `.ur.svg` exists yet.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
