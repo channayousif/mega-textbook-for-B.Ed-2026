@@ -5146,3 +5146,21 @@ content-improvement loop with no further cycle.
   figures and diagrams to improved versions"; "Uncertified first"; "Crew stage, course by course".
 - **Limits:** No certified unit loses its certification; no review-bound file is rewritten to add
   a visual. Videos go public only on the owner's word.
+
+## D-2026-0098 - Simple diagrams are SVG; complex diagrams are raster with a full description
+- **Scope:** every figure, new and existing (Feature 032)
+- **Decided by:** curriculum owner, 2026-11-23 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. Simple diagrams (labelled boxes, arrows, tables, timelines, cycles, axes, charts) stay SVG.
+  2. Complex diagrams (scenes, people, rooms, objects, dense pictograms, anything whose Urdu
+     version needs its drawing re-laid out) are raster illustrations with a proper description:
+     alt text and caption in both languages naming every element a reader needs. One raster
+     without readable text serves both locales.
+  3. Broken figures may be fixed, or remade as rasters where complex, even when the fix re-opens
+     a unit's G3 review.
+- **Basis:** owner message 2026-11-23: "simple diagrams may be made as svg but complex diagrams
+  such as The Urdu fig-U4-1 should be made raster images with proper description. approve . fix
+  22 figure if they are complex, make raster images instead. it's okay to fix and reopen g3
+  review."
+- **Limits:** Raster production follows ADR-0024/0029/0036 (agy, gflow or Codex; imagery rules
+  unchanged). Re-opened G3 reviews go through the normal independent review and owner sign-off.
