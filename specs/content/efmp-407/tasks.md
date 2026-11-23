@@ -16,7 +16,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 2 | G5 ur-review | ▢ | | Pending English review and Urdu translation; authored concept labels need register review. |
 | Unit 2 | G6 assets | ▣ | | Six English SVG schematics placed with derived dark variants; browser geometry check barred by crew brief and pending CI; Urdu and banner remain separate jobs. |
 | Unit 2 | G7 publish | ▢ | | Publication and catalog integration are outside this authoring job. |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-03/G2/20261110T104223301Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-03/G2/20261123T034841126Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. Source support, conflicting category guidance, readability and pedagogy require repairs; render/provenance incomplete. [Report](reviews/unit-03/G3/20261107-codex.json). No certification. |
 | Unit 3 | G4 ur-translation | ▣ | agent:opencode | Five Urdu pages and six RTL schematic variants with derived dark twins prepared from English acf1104dfa; draft pending independent G5 and CI render/A4 inspection. [Translation handoff](translation/unit-03.md). No completion or review certification claimed. |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
@@ -92,6 +92,7 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 | Unit 3 | G3 en-review | ▢ | agent:opencode | advisory: revise; repairs applied; F1 source note added and tier lists softened, F2 SDG 5 category guidance reconciled, F5 Target 4.1/ESD-GCED/rubric zero/formative labels revised, F6 specialist terms defined or replaced, F7 fictional case and water-safety safeguards added; F3 render and F4 host provenance remain unverified; report: specs/content/efmp-407/reviews/unit-03/G3/20261108T203238Z-g3-desk-dd5ef8ea.json |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-01/G3/20261122T175629Z-g3-desk-3d3228c6.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-03/G3/20261122T175629Z-g3-desk-138b4db3.json |
+| Unit 3 | G3 en-review | ▢ | agent:claude | advisory: revise; repairs applied; report: specs/content/efmp-407/reviews/unit-03/G3/20261122T175629Z-g3-desk-138b4db3.json; F1 Sindh SDG unit roles now qualified as reported (source note, summary and tier wording already disclosed), F2 SDG 5 Category 2 guidance confirmed consistent, F5 zero-mark meaning added to topic mini-rubrics (Target 4.1, ESD/GCED and formative labels already revised), F6 specialist terms confirmed defined or removed, F7 fictional figures labelled and RRQ 7 safe-water condition added; F3 render and F4 host provenance remain unverified |
 | Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-07/G3/20261122T175629Z-g3-desk-f45bf9fe.json |
 | Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-08/G3/20261122T175629Z-g3-desk-21c4765e.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-02/G3/20261122T175851Z-g3-desk-6e63fd47.json |
