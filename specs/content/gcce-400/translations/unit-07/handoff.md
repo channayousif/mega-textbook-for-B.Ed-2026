@@ -4,7 +4,7 @@
 - English baseline: `78cb581cd` (last change to the English unit, its figures and its figure manifest). No English unit file, figure manifest, sources, coverage or concepts file was changed. The G2 evidence was nevertheless stale, because `translations/unit-07/*` is inside the bound `specs/content/gcce-400/` tree and is named for this unit, so writing it changed the G3 input manifest; it was refreshed with `node scripts/prepare-gate-evidence.mjs gcce-400 7` and the tracker row repointed to `reviews/unit-07/G2/20261123T205520685Z-gates.json`.
 - Complete seven-file mirror under `i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gcce-400/unit-07/`: `index.mdx`, `topic-01.mdx`, `topic-02.mdx`, `topic-03.mdx`, `topic-04.mdx`, `unit-assessment.mdx`, `unit-teacher-notes.mdx`.
 - Eight `.ur.svg` figures (`fig-U7-1` to `fig-U7-8`) with their `.ur.dark.svg` twins from `npm run figures:variants`, wired into the topic files. Each SVG `<desc>` equals the Urdu page alt text.
-- `translation_status` stays `draft` in both `index.mdx` files: only an accepted independent G5 earns `reviewed`. The G4 tracker row keeps status ▢ with a factual note; no row was appended and G5 is not claimed.
+- `translation_status` stays `draft` in both `index.mdx` files: only an accepted independent G5 earns `reviewed`. The G4 tracker row carries status ▢ with a factual note; no completion is claimed and G5 is not claimed.
 
 ## Conventions used
 
