@@ -39,3 +39,22 @@ Consulted: 2026-11-22, current text with amendment notes in the transcription (P
 - Articles 16, 17, 19 and 25A: as recorded above for Unit 1.
 
 Currency: unlike the Unit 1 note, every article listed in this section was read in its current form, including notes for the Twenty-sixth (2024) and Twenty-seventh (2025) Amendments where shown.
+
+## Provisions checked for GCCE-400 Unit 7
+
+Consulted: 2026-11-22, current text with amendment notes in the accessible transcription (Part II Chapter 1, Articles 8-28; Part II Chapter 2, Articles 29-40). Paraphrased unless quoted. Drafting note 7 of the content-spec requires that Articles 25, 26, 27, 36 and 37 be checked against the current text before use, and each was read in that form on this date.
+
+- Article 16: every citizen has the right to assemble peacefully and without arms, subject to reasonable restrictions imposed by law in the interest of public order.
+- Article 19: freedom of speech and expression, and of the press, subject to reasonable restrictions imposed by law on listed grounds.
+- Article 25(1): "All citizens are equal before law and are entitled to equal protection of law." Article 25(2): there shall be no discrimination on the basis of sex. Article 25(3): nothing in the Article prevents the State from making any special provision for the protection of women and children.
+- Article 25A: the State shall provide free and compulsory education to all children aged five to sixteen, in such manner as may be determined by law.
+- Article 26(1): in respect of access to places of public entertainment or resort not intended for religious purposes only, there shall be no discrimination against any citizen on the ground only of race, religion, caste, sex, residence or place of birth. Article 26(2) allows special provision for women and children.
+- Article 27(1): no citizen otherwise qualified for appointment in the service of Pakistan shall be discriminated against in respect of any such appointment on the ground only of race, religion, caste, sex, residence or place of birth. The article then carries provisos allowing posts to be reserved for a class or area to secure adequate representation, and allowing under-representation of any class or area in the service to be redressed by an Act of Parliament. Article 27(2) allows a Provincial Government or local authority to prescribe residence conditions for up to three years.
+- Article 28: subject to Article 251, any section of citizens having a distinct language, script or culture shall have the right to preserve and promote the same and, subject to law, establish institutions for that purpose.
+- Article 33: the State shall discourage parochial, racial, tribal, sectarian and provincial prejudices among the citizens.
+- Article 34: steps shall be taken to ensure full participation of women in all spheres of national life.
+- Article 36: the State shall safeguard the legitimate rights and interests of minorities, including their due representation in the Federal and Provincial services.
+- Article 37: the State shall (a) promote, with special care, the educational and economic interests of backward classes or areas; (b) remove illiteracy and provide free and compulsory secondary education within the minimum possible period; (c) make technical and professional education generally available and higher education equally accessible to all on the basis of merit; (d) ensure inexpensive and expeditious justice; (e) make provision for securing just and humane conditions of work.
+- Article 38(a): the State shall secure the well-being of the people, irrespective of sex, caste, creed or race, by raising their standard of living, preventing the concentration of wealth and means of production in the hands of a few, and ensuring equitable adjustment of rights between employers and employees, and landlords and tenants.
+
+Currency: the article text above was read in the accessible transcription on 2026-11-22 with its amendment notes. None of Articles 16, 19, 25, 26, 27, 28, 33, 34, 36, 37 and 38 is shown by the transcription's notes as changed by the Twenty-sixth (2024) or Twenty-seventh (2025) Amendments. A reviewer should still confirm the current text before stating any of them as law.
