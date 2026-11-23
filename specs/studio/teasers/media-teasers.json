@@ -2689,11 +2689,17 @@
    "id": "efmp-406",
    "locale": "ur",
    "kind": "short",
-   "state": "scripted",
+   "state": "script-approved",
    "gates": {
     "qg0": {
      "verdict": "pass",
      "by": "teaser.mjs"
+    },
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-22",
+     "note": "crew approve-script via openclaw"
     }
    },
    "clips": [],
@@ -2705,6 +2711,10 @@
     {
      "state": "scripted",
      "at": "2026-11-22T10:03:03.407Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-23T02:46:49.495Z"
     }
    ],
    "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b"
