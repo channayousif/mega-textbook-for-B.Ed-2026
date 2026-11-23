@@ -43,6 +43,8 @@ continue with flashcards
   (owner switch `crew flashcards on`, two at a time) authors them for the 79 units listed in
   specs/studio/flashcards-needed.json.
 - <Flashcards> tab in the Study Studio panel: flip, previous, next, shuffle, keyboard, a print list.
+- Self-check importer now reads every Urdu layout (Urdu letters with the Urdu full stop, bold keys, key
+  tables, headings without "MCQ"): all 259 pages valid; live bank 1,400 EN + 1,190 UR items.
 
 ## Outcome
 
