@@ -16,7 +16,7 @@ Checked 2026-11-22. Prose is original; quotations are under 15 words and cited. 
 
 ## Unverifiable sources
 
-- youniss-levine-2009: print only; the book could not be read on this host and only the content-spec's Open Library record and title were relied on. Used for U4-07 for the general idea, given by its title and scope as an edited volume on engaging young people in civic life, that schools and community organisations can engage young people in civic life; no page, chapter or wording is claimed.
+- youniss-levine-2009: print only; the book could not be read on this host and only the content-spec's Open Library record and title were relied on. Used for U4-07 for the general idea, given by its title and scope as an edited volume on engaging young people in civic life, that schools and community organisations can engage young people in civic life; no page, chapter or wording is claimed. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
 
 ## Notes
 
