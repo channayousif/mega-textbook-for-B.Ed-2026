@@ -1,23 +1,24 @@
 ---
 id: crew-efmp-407-u08-repair_en-r1-conflict1
-title: crew fix EFMP-407 unit 8 (r1 conflict)
+title: crew fix EFMP-407 unit 8
 stage: misc
 date: 2026-11-23
 surface: agent
-model: claude
+model: claude_crew
 feature: efmp-407
 branch: crew/efmp-407-u08-repair_en-r1
 user: crew
 command: crew fix
-labels: ["crew", "claude", "fix"]
+labels: ["crew", "claude_crew", "fix"]
 links:
   spec: specs/content/efmp-407/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - specs/content/efmp-407/tasks.md
  - history/prompts/efmp-407/crew-efmp-407-u08-repair_en-r1-conflict1.misc.prompt.md
+ - history/prompts/efmp-407/crew-efmp-407-u08-repair_en-r1.misc.prompt.md
+ - specs/content/efmp-407/tasks.md
 tests:
  - npm run check:content
 ---
@@ -55,31 +56,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u08-repair_en-conflict1, fix, opencode) Shared tracker `specs/content/efmp-407/tasks.md` is the recurring collision point for parallel EFMP-407 unit jobs.
 - (efmp-407-u08-repair_en, repair_en, agy) G3 review findings F1-F8 from 20261108T203238Z-g3-desk-04abd597.json are repaired in EN and UR mirrors; G3 tracker row appended leaving G3 unticked.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-407-u08-repair_en-r1, resolved the single conflict in the shared tracker specs/content/efmp-407/tasks.md by keeping main's Unit 2 advisory row followed by this branch's Unit 8 advisory row, verified the append-only registries still contain every line from both parents, and left all 14 content gates passing.
+Resolved the origin/main merge conflict in EFMP-407's shared tasks.md by preserving both sides' advisory rows, committed the merge and its PHR, and left all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFMP-407 Unit 8 by claude (conflict resolution on the r1 branch).
-- Tests: npm run check:content passed (all 14 content gates PASS) after `npm run build:content-status`.
-- Files: 2 file(s), listed above; the merge itself brought in main's unrelated unit-03 and giss-401 changes, which were left untouched.
+- Impact: fix for EFMP-407 Unit 8 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merge commit 327f18e5b on crew/efmp-407-u08-repair_en-r1 resolving specs/content/efmp-407/tasks.md by preserving both sides' advisory rows; all 14 content gates green.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Resolved the origin/main merge conflict in EFMP-407's shared tasks.md by preserving both sides' advisory rows, committed the merge and its PHR, and left all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 8 G3/G5 remain open and uncertified; the branch's advisory row leaves G3 unticked.
-  - Shared tracker `specs/content/efmp-407/tasks.md` is the recurring collision point for parallel EFMP-407 unit jobs.
+  - Unit 8 G3/G5 remain open and uncertified; the branch's advisory G3 row leaves G3 unticked.
+  - `specs/content/efmp-407/tasks.md` is the recurring collision point for parallel EFMP-407 unit jobs; expect further conflicts on the next merge.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 1 earlier attempt(s) on the sibling branch; see the board history
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
