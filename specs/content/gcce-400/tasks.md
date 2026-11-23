@@ -1,8 +1,8 @@
 # GCCE-400 Civics and Community Engagement - Task tracker
 
-## Status: content spec approved (G0/G1); Units 1, 2, 3, 4, 5 and 6 English drafts authored and G2 gate evidence recorded; G3 reviews open
+## Status: content spec approved (G0/G1); Units 1, 2, 3, 4, 5, 6 and 7 English drafts authored and G2 gate evidence recorded; G3 reviews open
 
-English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 and Unit 6 content-spec subsections. No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5, Unit 6 and Unit 7 content-spec subsections. No publication or review certification is claimed by this tracker. All seven course units are covered; no other units are outstanding.
 
 ## Units
 
@@ -11,10 +11,10 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 | 1 | Introduction to Civics and Citizenship | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-22; six schematic SVGs placed with dark variants; banner fig-U1-7 placed; G3 and Urdu remain open |
 | 2 | State, Government and Civil Society | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-22; four schematic SVGs placed with dark variants; banner fig-U2-5 placed; G3 and Urdu remain open |
 | 3 | Rights and Responsibilities | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-22; four schematic SVGs placed with dark variants; banner fig-U3-5, fig-U3-6 and fig-U3-7 placed; G3 and Urdu remain open |
-| 4 | Ethics and Community Engagement | ✓ | ☐ | ▣ | ☐ | placed (EN) | English authored 2026-11-22; five schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
+| 4 | Ethics and Community Engagement | ✓ | ☐ | ▣ | ☐ | placed | English authored 2026-11-22; five schematic SVGs placed with dark variants; banner fig-U4-6 placed; G3 and Urdu remain open |
 | 5 | Advocacy and Activism | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; six schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 6 | Digital Citizenship and Technology | ✓ | ☐ | ▣ | ☐ | placed (EN) | English authored 2026-11-22; six schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
-| 7 | Diversity, Inclusion and Social Justice | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 7 | Diversity, Inclusion and Social Justice | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-22; eight schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -44,11 +44,11 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
 | Unit 3 | G6 assets | ▣ | | Four schematic SVG pairs (fig-U3-1 to fig-U3-4) with derived dark variants placed; banner fig-U3-5, fig-U3-6 and fig-U3-7 placed in English and Urdu |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-04/G2/20261122T144142079Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-04/G2/20261123T172408903Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the youniss-levine-2009 title-level use, the oecd-2011-social-cohesion definition against the report, and constitutional currency of Articles 16, 19 and 25 (sources/unit-04.md) |
 | Unit 4 | G4 ur-translation | ▢ | | Complete five-file draft Urdu mirror and five localized SVG pairs (with derived dark twins) prepared from English 7953d1221; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-04/handoff.md |
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and the five new glossary Urdu definitions are authored and need checking |
-| Unit 4 | G6 assets | ▣ | | Five English schematic SVGs (fig-U4-1 to fig-U4-5) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U4-6 prompt-only for the illustrate job |
+| Unit 4 | G6 assets | ▣ | | Five schematic SVG pairs (fig-U4-1 to fig-U4-5) with derived dark variants placed; banner fig-U4-6 placed in English and Urdu index |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-06/G2/20261122T161030644Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the CoE handbook attribution, the Shair et al. (2022) figures and the Pakistani examples (sources/unit-06.md) |
@@ -62,6 +62,12 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
 | Unit 5 | G6 assets | ▣ | | Six English schematic SVGs (fig-U5-1 to fig-U5-6) placed with derived dark variants; six .ur.svg pairs added with derived .ur.dark.svg twins and measure-figure-text verified; banner fig-U5-7 prompt-only for the illustrate job |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-07/G2/20261122T132732300Z-gates.json |
+| Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the census figures against Table 11 and Table 4.21, the constitutional articles against the current text (sources/unit-07.md), and the kymlicka-norman-2000 and youniss-levine-2009 attributions, which are declared unverifiable |
+| Unit 7 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
+| Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and six new glossary Urdu definitions are authored and need checking |
+| Unit 7 | G6 assets | ▣ | | Eight English schematic SVGs (fig-U7-1 to fig-U7-8) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U7-9 prompt-only for the illustrate job |
+| Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
 
 Reading estimates use final visible text at about 200 words per minute: index 3, Topic 1.1 10, Topic 1.2 10, Topic 1.3 11, assessment 15, teacher notes 2, total 51 minutes, inside the approved 36-52 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. The course overview uses the guide's marks (formative 20, summative 80). The guide supplies practical activities, so a short unit teacher-notes page points to community storytelling.
 
@@ -74,3 +80,5 @@ Unit 4 reading estimates use final visible text at about 200 words per minute: i
 Unit 5 reading estimates use final visible text at about 200 words per minute: index 3, Topic 5.1 10, Topic 5.2 10, Topic 5.3 11, assessment 15, teacher notes 2, total 51 minutes, inside the approved 36-52 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs; ERQ 2 is the content-spec's Create item on an advocacy plan. The teacher notes point to the guide's community event planning activity.
 
 Unit 6 reading estimates use final visible text at about 200 words per minute: index 3, Topic 6.1 9, Topic 6.2 9, Topic 6.3 8, assessment 15, teacher notes 2, total 46 minutes, inside the approved 36-52 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. The teacher notes point to a digital-literacy service task.
+
+Unit 7 reading estimates use final visible text at about 200 words per minute: index 3, Topic 7.1 10, Topic 7.2 9, Topic 7.3 10, Topic 7.4 9, assessment 15, teacher notes 3, total 59 minutes, inside the approved 44-64 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs; ERQ 4 is the content-spec's Create item on designing one inclusive classroom routine, and ERQ 5 integrates the unit. Constitutional articles 16, 19, 25, 25A, 26, 27, 28, 33, 34, 36, 37 and 38 were read in their current text with the amendment notes, which drafting note 7 requires for Articles 25, 26, 27, 36 and 37. The teacher notes point to the guide's community storytelling and cultural exchange activities. The course overview still introduces only Unit 1; it is bound to every unit's evidence, so it was left unchanged.

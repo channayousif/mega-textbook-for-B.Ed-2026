@@ -1,0 +1,7 @@
+# Unit banner - GCCE-400 Unit 7 (Diversity, Inclusion and Social Justice)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs gcce-400 7 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U7-9 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: a late-afternoon school courtyard in a small town in interior Sindh, Pakistan; three children of primary school age in shalwar kameez stand together near a low whitewashed wall, one child using a crutch, another holding an open book, a third pointing toward a notice board; a young woman teacher in shalwar kameez and dupatta kneels beside them at their height, listening; behind them a single-storey government school building with a veranda, a neem tree, and a few more pupils in uniform walking in small mixed groups; soft golden light, calm and respectful mood, plain walls with no writing; no readable text on any paper, book, notice board or wall, no maps, flags, emblems, party symbols, logos or watermarks | Three primary school children, one using a crutch, stand with a young woman teacher who kneels beside them at their height in a school courtyard in interior Sindh, with a government school building and other pupils behind them. |  | prompt-only |

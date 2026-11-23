@@ -94,3 +94,22 @@
 /* Hosted media (owner ruling 2026-11-09): YouTube for audio/video, Google Drive for slides. */
 .frame { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: var(--ifm-color-emphasis-200); }
 .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Feature 032 phase C: flashcards. */
+.flashcards { display: grid; gap: 0.75rem; }
+.flashcard {
+  display: grid; place-items: center; min-height: 11rem; padding: 1.25rem; text-align: center;
+  border: 2px solid var(--brand-teal, #123e43); border-radius: 14px; background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base); font: inherit; cursor: pointer; box-shadow: 0 6px 18px rgba(18, 62, 67, 0.12);
+}
+.flashcard:focus-visible { outline: 3px solid var(--brand-amber, #e5a333); outline-offset: 3px; }
+.flashcardBack { background: color-mix(in srgb, var(--brand-teal, #123e43) 7%, var(--ifm-background-surface-color)); }
+.flashTermFront { font-size: 1.5rem; }
+.flashTerm { display: block; margin-block-end: 0.5rem; }
+.flashDef { display: block; line-height: 1.6; }
+.flashNav { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem; }
+.flashPrint { display: none; }
+@media print {
+  .flashcard, .flashNav { display: none; }
+  .flashPrint { display: block; }
+}

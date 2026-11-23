@@ -25,7 +25,8 @@ const letter = (x) => UR_LETTERS[x] ?? x.toLowerCase();
 function sections(text) {
   const lines = text.split('\n');
   // "### Multiple-choice questions (MCQs)", "### MCQ answer key", "### کثیر الاختیاری سوالات", ...
-  const heads = lines.map((l, i) => (/^###\s.*(MCQ|multiple[- ]choice|کثیر\s*(ال)?(اختیاری|انتخابی))/i.test(l) ? i : -1)).filter((i) => i >= 0);
+  // Urdu names it several ways: کثیر الاختیاری، کثیر الانتخاب، کثیرالانتخاب، کثیر انتخابی، کثیر الجواباتی، متعدد الانتخاب.
+  const heads = lines.map((l, i) => (/^###\s.*(MCQ|multiple[- ]choice|کثیر|متعدد)/i.test(l) ? i : -1)).filter((i) => i >= 0);
   const body = (start) => {
     const out = [];
     for (let i = start + 1; i < lines.length && !/^#{2,3}\s/.test(lines[i]); i++) out.push(lines[i]);
@@ -42,7 +43,8 @@ export function parseAssessment(text) {
   for (const raw of questions) {
     const q = raw.match(/^(\d+)\.\s+(.*)$/);
     // "   a) text", "   - A) text", "   - (b) text", "   * c. text"
-    const o = raw.match(new RegExp(`^\\s+(?:[-*]\\s+)?\\(?(${LETTER})[).]\\s+(.*)$`));
+    // "   a) text", "   - A) text", "   - (b) text", "   * c. text", "   - الف۔ text"
+    const o = raw.match(new RegExp(`^\\s+(?:[-*]\\s+)?\\(?(${LETTER})[).۔]\\s+(.*)$`));
     if (q) {
       cur = { item_no: Number(q[1]), question: q[2], options: {}, bloom: null };
       items.push(cur); opt = null;
@@ -68,7 +70,8 @@ export function parseAssessment(text) {
   }
   for (const raw of key) {
     // "1. **a** - ...", "1. B - ...", "1. (c) ...", "1. **(D)**"
-    const m = raw.match(new RegExp(`^(\\d+)\\.\\s+(?:\\*\\*)?\\(?(${LETTER})\\)?(?:\\*\\*)?(?=[\\s.:،,)-]|$)`));
+    // also "1. **ب۔** ..." (Urdu full stop inside the bold)
+    const m = raw.match(new RegExp(`^(\\d+)\\.\\s+(?:\\*\\*)?\\(?(${LETTER})\\)?[۔.]?(?:\\*\\*)?(?=[\\s.:،,)۔-]|$)`));
     if (m) answers[Number(m[1])] = letter(m[2]);
   }
   return { items, answers };
