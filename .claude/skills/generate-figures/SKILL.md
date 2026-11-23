@@ -138,7 +138,10 @@ to direct authoring" and proceed.
 
 Per `references/svg-authoring.md`, for each schematic figure:
 
-1. Pick the closest archetype; lay out the shapes and labels to match the marker `prompt`.
+1. Pick the closest archetype; lay out the shapes and labels to match the marker `prompt`, on
+   the 20px grid, in the four layer groups with named nodes (`node-*`) and connectors
+   (`edge-<from>-<to>`, drawn source to destination) - see "Structure" and "Connectors" in
+   `references/svg-authoring.md`.
 2. Use the boilerplate: `viewBox`, `role="img"`, `<title>` = the alt's first clause, `<desc>` =
    the full alt, an inline `<style>` opening with the published `:root` token block pasted
    verbatim, then `var(--token)` everywhere, a system-font `font-family` stack, and one

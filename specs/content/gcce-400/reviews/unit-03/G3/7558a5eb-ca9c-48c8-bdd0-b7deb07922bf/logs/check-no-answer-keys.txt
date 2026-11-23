@@ -1,0 +1,4 @@
+command: node scripts/check-no-answer-keys.mjs
+started_utc: 2026-11-23T11:05:09Z
+✓ No answer keys / private marking material found (scanned: docs, licence, i18n, specs/content).
+exit_code: 0

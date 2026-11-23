@@ -1,0 +1,146 @@
+command: scripts/heavy.sh node scripts/render-inspect.mjs GCCE-400 3 --base https://textbook.com.pk --no-pdf --out specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders
+started_utc: 2026-11-23T11:08:02Z
+heavy: slot acquired; waiting for 30 seconds of memory/PSI headroom
+### render-inspect  GCCE-400 Unit 3
+### route: /semester-4/gcce-400/unit-03  pages: 5  placed figures: 6
+### host: https://textbook.com.pk   browser: chromium 149.0.7827.0
+### started: 2026-11-23T11:08:33.283Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=1 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/gcce-400/unit-03/fig-U3-5.webp natural=1344x756 shown=true loading=lazy alt="In a Sindh secondary school civics lesson, pupils discuss in small groups around their tea"
+   heading order: no skipped levels
+
+-- topic-01: headings=12 imgs=5 visibleBroken=1 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/gcce-400/unit-03/fig-U3-6.webp natural=1344x756 shown=true loading=lazy alt="In a Sindh girls' school office, a young trainee teacher holds out an admission form to a "
+   img /img/figures/gcce-400/unit-03/fig-U3-1.svg natural=217x150 shown=true loading=lazy alt="Table of selected fundamental rights in the 1973 Constitution of Pakistan, listing Article"
+   img /img/figures/gcce-400/unit-03/fig-U3-1.dark.svg natural=0x0 shown=false loading=lazy alt="Table of selected fundamental rights in the 1973 Constitution of Pakistan, listing Article"
+   img /img/figures/gcce-400/unit-03/fig-U3-2.svg natural=0x0 shown=true loading=lazy alt="Timeline of Pakistan's constitutional development showing the 1956, 1962, and 1973 constit"
+   img /img/figures/gcce-400/unit-03/fig-U3-2.dark.svg natural=0x0 shown=false loading=lazy alt="Timeline of Pakistan's constitutional development showing the 1956, 1962, and 1973 constit"
+   heading order: no skipped levels
+   DEFECT visible image did not load: /img/figures/gcce-400/unit-03/fig-U3-2.svg
+   advisory bare-URL link text: https://www.pakistani.org/pakistan/constitution/ | https://ecommons.aku.edu/pakistan_ied_pdck/30 | https://doi.org/10.52214/cice.v7i1.11389
+
+-- topic-02: headings=13 imgs=5 visibleBroken=1 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/gcce-400/unit-03/fig-U3-7.webp natural=1344x756 shown=true loading=lazy alt="On a Hyderabad school veranda strewn with lunch litter, a trainee teacher points to the wr"
+   img /img/figures/gcce-400/unit-03/fig-U3-3.svg natural=217x150 shown=true loading=lazy alt="Concept map showing citizen duties and responsibilities branching from a central node into"
+   img /img/figures/gcce-400/unit-03/fig-U3-3.dark.svg natural=0x0 shown=false loading=lazy alt="Concept map showing citizen duties and responsibilities branching from a central node into"
+   img /img/figures/gcce-400/unit-03/fig-U3-4.svg natural=0x0 shown=true loading=lazy alt="Diagram showing the reciprocal balance between fundamental rights and civic responsibiliti"
+   img /img/figures/gcce-400/unit-03/fig-U3-4.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram showing the reciprocal balance between fundamental rights and civic responsibiliti"
+   heading order: no skipped levels
+   DEFECT visible image did not load: /img/figures/gcce-400/unit-03/fig-U3-4.svg
+   advisory bare-URL link text: https://www.pakistani.org/pakistan/constitution/ | https://ecommons.aku.edu/pakistan_ied_pdck/30 | https://doi.org/10.52214/cice.v7i1.11389
+
+-- unit-assessment: headings=15 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=4 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=1 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+
+-- topic-01: docHorizontalOverflow=0px tables=2 figures=3 spill=8
+   table[0] client=328 scroll=598 fits=false lastHeader="Constitutional conclusio" scroller=TABLE. (client=328 scroll=598 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[1] client=289 scroll=571 fits=false lastHeader="Exemplary (3 marks)" scroller=TABLE. (client=289 scroll=571 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=275 scroll=275 scroller=none
+   figure[2] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=2 figures=3 spill=8
+   table[0] client=328 scroll=433 fits=false lastHeader="Civic responsibility" scroller=TABLE. (client=328 scroll=433 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[1] client=289 scroll=622 fits=false lastHeader="Exemplary (3 marks)" scroller=TABLE. (client=289 scroll=622 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=275 scroll=275 scroller=none
+   figure[2] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=5 figures=0 spill=4
+   table[0] client=328 scroll=328 fits=true lastHeader="Criteria" scroller=NONE
+   table[1] client=328 scroll=328 fits=true lastHeader="Criteria" scroller=NONE
+   table[2] client=328 scroll=328 fits=true lastHeader="Criteria" scroller=NONE
+   table[3] client=328 scroll=328 fits=true lastHeader="Criteria" scroller=NONE
+   table[4] client=328 scroll=328 fits=true lastHeader="Criteria" scroller=NONE
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=1 answerHeadings=[]
+   printfig /img/figures/gcce-400/unit-03/fig-U3-5.webp w=762 right=778 fits
+
+-- topic-01 @print: clippedElems=0 figureImgs=5 answerHeadings=[]
+   printfig /img/figures/gcce-400/unit-03/fig-U3-6.webp w=709 right=754 fits
+   printfig /img/figures/gcce-400/unit-03/fig-U3-1.svg w=709 right=754 fits
+   printfig /img/figures/gcce-400/unit-03/fig-U3-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/gcce-400/unit-03/fig-U3-2.svg w=2 right=398 fits
+   printfig /img/figures/gcce-400/unit-03/fig-U3-2.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=5 answerHeadings=[]
+   printfig /img/figures/gcce-400/unit-03/fig-U3-7.webp w=709 right=754 fits
+   printfig /img/figures/gcce-400/unit-03/fig-U3-3.svg w=709 right=754 fits
+   printfig /img/figures/gcce-400/unit-03/fig-U3-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/gcce-400/unit-03/fig-U3-4.svg w=2 right=398 fits
+   printfig /img/figures/gcce-400/unit-03/fig-U3-4.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U3-1.light [table] viewBox=780x540 texts=49 wordmark@x=663.7 -> clean
+   fig-U3-1.dark [table] viewBox=780x540 texts=49 wordmark@x=663.7 -> clean
+   fig-U3-2.light [timeline] viewBox=780x580 texts=20 wordmark@x=675.7 -> clean
+   fig-U3-2.dark [timeline] viewBox=780x580 texts=20 wordmark@x=675.7 -> clean
+   fig-U3-3.light [concept-map] viewBox=780x540 texts=25 wordmark@x=675.7 -> clean
+   fig-U3-3.dark [concept-map] viewBox=780x540 texts=25 wordmark@x=675.7 -> clean
+   fig-U3-4.light [diagram] viewBox=780x510 texts=27 wordmark@x=663.7 -> clean
+   fig-U3-4.dark [diagram] viewBox=780x510 texts=27 wordmark@x=663.7 -> clean
+   fig-U3-6.light MISSING (HTTP 404)
+   DEFECT variant light not served
+   fig-U3-6.dark MISSING (HTTP 404)
+   DEFECT variant .dark not served
+   fig-U3-7.light MISSING (HTTP 404)
+   DEFECT variant light not served
+   fig-U3-7.dark MISSING (HTTP 404)
+   DEFECT variant .dark not served
+
+### finished: 2026-11-23T11:09:12.525Z
+### defects: 6
+###   topic-01: visible image did not load: /img/figures/gcce-400/unit-03/fig-U3-2.svg
+###   topic-02: visible image did not load: /img/figures/gcce-400/unit-03/fig-U3-4.svg
+###   fig-U3-6: variant light not served
+###   fig-U3-6: variant .dark not served
+###   fig-U3-7: variant light not served
+###   fig-U3-7: variant .dark not served
+
+Artifacts: /home/a2ahs/crew-wt/gcce-400-u03-review_en-r1/specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders
+exit_code: 1
+
+Note on defects (reviewer analysis, 2026-11-23):
+
+The six render-inspect defects are tooling artifacts, not content defects.
+
+1. fig-U3-6.light/.dark and fig-U3-7.light/.dark "MISSING (HTTP 404)": Section D tests
+   `<fig-id>.svg` and `<fig-id>.dark.svg` for every placed figure. fig-U3-6 and fig-U3-7 are
+   raster illustrations (.webp), not SVGs, and have no SVG variants. Section A loaded both
+   WebP files successfully (natural 1344x756, HTTP 200, shown=true). The same artifact appears
+   in specs/content/efpg-401/reviews/unit-05/G3/crew-job-efpg-401-u05-review_en-r1.
+
+2. topic-01 "visible image did not load: fig-U3-2.svg" and topic-02 "visible image did not
+   load: fig-U3-4.svg": both SVGs are served (HTTP 200, image/svg+xml, bytes identical to the
+   committed files) and Section D renders them cleanly. The desktop pass measured naturalWidth
+   before the below-fold `loading="lazy"` images entered Chrome's lazy-load distance. A follow-up
+   browser probe that scrolls the page first (logs/probe-figure-loading.txt) measures
+   fig-U3-2.svg at 860x640 and fig-U3-4.svg at 860x563, both complete and visible.
+
+Live production inspection at deployed SHA dd2b914838b704cc754b14f06751be96540dcd7f (equal to
+HEAD) otherwise found: desktop 1280x900 no heading-level jumps, no missing alt text, no document
+overflow; narrow 360x780 document horizontal overflow 0px with every wide table scrolling inside
+its own container with tabindex="0" and an aria-label; A4 print 794px zero clipped elements, all
+figures fit, and the answers and marking guidance section present. The two WebP illustrations and
+four schematic SVGs render. In accordance with the crew brief, the automated exit code 1 is
+treated as a tooling limitation (accessibility unverified for machine pass) rather than a content
+defect.

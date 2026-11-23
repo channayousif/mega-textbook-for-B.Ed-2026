@@ -7,6 +7,7 @@ All three guide leaves (Week 15) map to their approved topic and exact Explanati
 | U7-01 | topic-01.mdx | Civic education | kennedy-2012-civic |
 | U7-01 | topic-01.mdx | Civic education | dean-2005-citizenship |
 | U7-02 | topic-01.mdx | National integration | pak-constitution-1973 |
+| U7-02 | topic-01.mdx | National integration | berry-1997-acculturation |
 | U7-03 | topic-01.mdx | Responsibilities of teachers | dean-2005-citizenship |
 | U7-03 | topic-01.mdx | Responsibilities of teachers | pak-constitution-1973 |
 
