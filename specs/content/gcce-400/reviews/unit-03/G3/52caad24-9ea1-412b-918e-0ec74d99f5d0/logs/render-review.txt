@@ -1,0 +1,60 @@
+render-review: UNAVAILABLE
+reason: production build is not the review input; unit-03 English files and figures differ between deployed SHA and HEAD.
+
+deployed SHA: e7e1130220816c9d83316cd40336060adcaf9ad2
+HEAD: 3ea8c670e552cbafd99c59d3e36eb35cb4788f25
+
+command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/gcce-400/unit-03/ static/img/figures/gcce-400/unit-03/
+exit code: 1
+
+diff --stat:
+ docs/semester-4/gcce-400/unit-03/index.mdx        |   2 ++
+ docs/semester-4/gcce-400/unit-03/topic-01.mdx     |   2 +-
+ docs/semester-4/gcce-400/unit-03/topic-02.mdx     |   2 +-
+ static/img/figures/gcce-400/unit-03/fig-U3-5.webp | Bin 0 -> 135570 bytes
+ static/img/figures/gcce-400/unit-03/fig-U3-6.webp | Bin 0 -> 137440 bytes
+ static/img/figures/gcce-400/unit-03/fig-U3-7.webp | Bin 0 -> 140792 bytes
+ 6 files changed, 4 insertions(+), 2 deletions(-)
+
+diff (text files):
+diff --git a/docs/semester-4/gcce-400/unit-03/index.mdx b/docs/semester-4/gcce-400/unit-03/index.mdx
+index dcfaf64c4..9d8897f28 100644
+--- a/docs/semester-4/gcce-400/unit-03/index.mdx
++++ b/docs/semester-4/gcce-400/unit-03/index.mdx
+@@ -17,6 +17,8 @@ import TranslationStatusBadge from '@site/src/components/TranslationStatusBadge'
+ 
+ # Rights and Responsibilities
+ 
++<Figure id="fig-U3-5" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-5.webp" alt="In a Sindh secondary school civics lesson, pupils discuss in small groups around their teacher, one girl holding a mock-election ballot box while two boys carry a dustbin after tidying the room, showing rights and duties in classroom life." />
++
+ "Can a school turn away a child whose parents cannot pay fees? Does a citizen have to obey a law they disagree with?" Trainee teachers in Sindh hear questions like these whenever families speak about schooling, local taxes, or public rules. This unit examines the constitutional answers. In a democratic society, rights and responsibilities are not separate gifts; they are two sides of a single legal and moral compact. Without enforceable rights, citizens become vulnerable subjects. Without shared duties, freedoms collapse into disorder.
+ 
+ ## Unit learning outcomes
+diff --git a/docs/semester-4/gcce-400/unit-03/topic-01.mdx b/docs/semester-4/gcce-400/unit-03/topic-01.mdx
+index d733d3321..87c2e8c65 100644
+--- a/docs/semester-4/gcce-400/unit-03/topic-01.mdx
++++ b/docs/semester-4/gcce-400/unit-03/topic-01.mdx
+@@ -30,7 +30,7 @@ Bushra remembers her coursework on the Constitution of Pakistan. She knows that
+ 
+ Bushra asks the headmistress if she can help the father complete a temporary admission form under provincial enrolment rules while his identity documents are processed. By the end of this topic, you will understand what fundamental rights are, how Pakistan's 1973 Constitution guarantees them, and how citizens and teachers can recognise them in daily life.
+ 
+-{/* FIGURE[fig-U3-6]: illustration, landscape 16:9: the headmistress's office of a government girls' elementary school near Sukkur, Sindh, on a weekday morning; a thin, tired labourer father in a worn shalwar kameez and cap stands near the door with his hand on the shoulder of his eleven-year-old daughter, who wears a simple shalwar kameez and dupatta and clutches a cloth bag, both half-turned as if about to leave; behind a plain wooden desk stacked with registers sits the headmistress in shalwar kameez and dupatta, listening; between them a young female B.Ed trainee teacher in shalwar kameez and dupatta steps forward and holds out a blank admission form towards the father with an encouraging gesture, turning the moment from refusal to enrolment; through the open door a corridor with girls in white uniforms and dupattas walking to class; no readable text on any form, register or wall, no map, flag, emblem or portrait; soft morning light through a barred window, documentary watercolour feel; alt: In a Sindh girls' school office, a young trainee teacher holds out an admission form to a labourer father and his daughter who were about to leave, while the headmistress listens from her desk and schoolgirls pass in the corridor. */}
++<Figure id="fig-U3-6" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-6.webp" alt="In a Sindh girls' school office, a young trainee teacher holds out an admission form to a labourer father and his daughter who were about to leave, while the headmistress listens from her desk and schoolgirls pass in the corridor." />
+ 
+ <Figure id="fig-U3-1" src="/img/figures/gcce-400/unit-03/fig-U3-1.svg" alt="Table of selected fundamental rights in the 1973 Constitution of Pakistan, listing Articles 9, 10A, 14, 19, 25 and 25A with their legal guarantee and plain-language safeguard for citizens." />
+ 
+diff --git a/docs/semester-4/gcce-400/unit-03/topic-02.mdx b/docs/semester-4/gcce-400/unit-03/topic-02.mdx
+index da4397733..6144ca3bd 100644
+--- a/docs/semester-4/gcce-400/unit-03/topic-02.mdx
++++ b/docs/semester-4/gcce-400/unit-03/topic-02.mdx
+@@ -30,7 +30,7 @@ Another student adds, "My uncle says ordinary citizens have no duties in Pakista
+ 
+ Farhana realises that her pupils have developed a one-sided understanding of citizenship: they see themselves as consumers who demand rights, services, and conveniences from the state, but they do not see themselves as responsible members who sustain their shared community. By the end of this topic, you will be able to explain the mandatory legal duties every citizen owes under Article 5 of the Constitution, the voluntary responsibilities essential for a democracy, and why rights cannot survive without civic duty.
+ 
+-{/* FIGURE[fig-U3-7]: illustration, landscape 16:9: the open veranda of a community secondary school in Hyderabad, Sindh, just after the lunch break; juice boxes and plastic wrappers lie scattered on the veranda floor; a young female B.Ed trainee teacher in shalwar kameez and dupatta stands among a group of Class 8 pupils in school uniform shalwar kameez, some girls in white dupattas, gesturing towards the litter; one boy shrugs with open palms as if saying it is someone else's job, while two other pupils have already bent down to pick up wrappers and drop them into a plain dustbin; behind them a classroom doorway shows a desk with a small cardboard ballot box left from the morning's mock monitor election; no readable text on any surface, packaging, box or wall, no map, flag, emblem or party symbol; bright midday light, documentary watercolour feel; alt: On a Hyderabad school veranda strewn with lunch litter, a trainee teacher points to the wrappers while one pupil shrugs off the job and two others start picking up rubbish, with the ballot box from a class mock election visible through a doorway. */}
++<Figure id="fig-U3-7" kind="illustration" src="/img/figures/gcce-400/unit-03/fig-U3-7.webp" alt="On a Hyderabad school veranda strewn with lunch litter, a trainee teacher points to the wrappers while one pupil shrugs off the job and two others start picking up rubbish, with the ballot box from a class mock election visible through a doorway." />
+ 
+ <Figure id="fig-U3-3" src="/img/figures/gcce-400/unit-03/fig-U3-3.svg" alt="Concept map showing citizen duties and responsibilities branching from a central node into five areas: constitutional loyalty under Article 5, obedience to law, paying taxes, democratic voting, and respecting others' rights." />
+ 
+
+No render-inspect run: the brief permits render-inspect against https://textbook.com.pk only when the diff is empty.
