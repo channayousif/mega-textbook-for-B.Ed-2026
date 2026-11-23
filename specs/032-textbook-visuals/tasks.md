@@ -13,7 +13,7 @@
 - [ ] T008 Urdu figure defect: 22 `.ur.svg` files keep the English polygon coordinates (EFMP-301 fig-U4-1 visually confirmed broken); fix needs owner approval where it re-opens G3 evidence.
 
 ## Phase B
-- [ ] T010 `studio-slides` (frontend-slides adapted to the brand, EN and UR), pptx export, Slides tab; EFMP-301 U4 deck.
+- [x] T010 Web slide decks from unit outlines (specs/studio/slides/, outside review evidence): scripts/studio-slides.mjs renders a self-contained 16:9 deck per language at build time; PowerPoint export (scripts/studio/slides-pptx.py, python-pptx via uv; figures rasterised in Chromium); Presentation tab in the Study Studio panel; crew stage `slides` (`crew slides on`); EFMP-301 Unit 4 pilot (13 slides EN and UR).
 
 ## Phase C
 - [x] T020a Self-check (owner, 2026-11-23: "Terms + server marking"): migration 0055 (self_check_items, self_check_attempts, self_check_questions(), check_self_quiz() with a daily cap), importer scripts/quiz/import-assessment-mcq.mjs (all 259 pages: 140 units EN, 119 UR; 2,590 items live), <SelfCheck> on assessment pages, RLS + unit + e2e tests. Done 2026-11-23.

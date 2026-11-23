@@ -28,7 +28,7 @@ import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks, workMade } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeTrackerRows } from './batch.mjs';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, IN_FLIGHT, isCorpusStage, limitIllustrate, limitPlanIllustrations, refreshCandidate, pickRefresh, pickFlashcards } from './planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, IN_FLIGHT, isCorpusStage, limitIllustrate, limitPlanIllustrations, refreshCandidate, pickRefresh, pickFlashcards, slidesCandidate, pickSlides } from './planner.mjs';
 import { illustrationFacts, g3UnitChanges, gateJsonEntries, unstructuredSchematics } from './review-facts.mjs';
 import { walkUnits, walkCourses } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
@@ -157,6 +157,7 @@ function plan() {
   const added = [];
   const awaiting = [];
   const refreshCandidates = [];
+  const slidesCandidates = [];
   const queue = (course, unit, stage, extra = {}) => {
     const base = jobId(course, unit, stage);
     const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
@@ -174,6 +175,7 @@ function plan() {
       }
       for (const stage of stagesFor(u, facts)) queue(c.course_code, u.unit_no, stage);
       if (refreshCandidate(u, facts)) refreshCandidates.push({ course: c.course_code, unit: u.unit_no, count: facts.unstructuredSchematics });
+      if (slidesCandidate(u, facts, existsSync(join(ROOT, 'specs', 'studio', 'slides', c.course_code.toLowerCase(), `unit-${pad(u.unit_no)}.json`)))) slidesCandidates.push({ course: c.course_code, unit: u.unit_no });
     }
   }
   // Units an approved spec defines but nobody has written yet are not in the content status at all.
@@ -206,6 +208,7 @@ function plan() {
   planMedia(board, queue, added, inFlight);
   planRefresh(board, queue, added, inFlight, refreshCandidates);
   planFlashcards(board, queue, added, inFlight);
+  planSlides(board, queue, added, inFlight, slidesCandidates);
   // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
   board.awaitingG3 = { at: now(), units: awaiting };
   if (!DRY) { board.jobs.push(...added); save('board', board); }
@@ -241,6 +244,25 @@ function planFlashcards(board, queue, added, inFlight) {
   board.flashcards = { on: control.flashcards === 'on', remaining: needed.filter((k) => !authored.has(k)).length, at: now() };
   if (control.flashcards !== 'on') return;
   for (const p of pickFlashcards(needed, authored, [...inFlight, ...added])) queue(p.course, p.unit, 'flashcards');
+}
+
+/** Feature 032 phase B: one unit slide deck at a time (`crew slides on`). */
+function planSlides(board, queue, added, inFlight, candidates) {
+  const control = load('control');
+  board.slides = { on: control.slides === 'on', remaining: candidates.length, at: now() };
+  if (control.slides !== 'on') return;
+  const pick = pickSlides(candidates, [...inFlight, ...added], board.focus?.course);
+  if (pick) queue(pick.course, pick.unit, 'slides');
+}
+
+function slidesCommand(arg, control) {
+  const sub = (arg.split(/\s+/)[0] || '').toLowerCase();
+  if (sub === 'on' || sub === 'off') {
+    control.slides = sub;
+    return `slide decks ${sub}${sub === 'on' ? ': the next plans queue one translated unit at a time; each job writes specs/studio/slides/<course>/unit-NN.json and its two PowerPoints (outside every review manifest)' : ''}`;
+  }
+  const b = load('board');
+  return `Slide decks ${control.slides === 'on' ? 'on' : 'off'}; ${b.slides?.remaining ?? '?'} unit(s) without a deck.`;
 }
 
 function flashcardsCommand(arg, control) {
@@ -454,6 +476,7 @@ export const STAGE_TASK = {
   repair_en: (j) => `Apply the findings of the latest G3 report under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit ${j.unit} G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.`,
   figures: (j) => `Render every prompt-only schematic figure for ${j.course} Unit ${j.unit} (generate-figures skill): diagrams, tables, concept maps, flowcharts and timelines as SVG with their .ur.svg variants. Leave raster illustrations at prompt-only for the illustrate job. Every SVG must pass npm run check:svg-style; render each one to PNG and look at it (light and dark) before placing it.`,
   plan_illustrations: (j) => `Plan the raster images for ${j.course} Unit ${j.unit} (ADR-0029 point 5; owner ruling 2026-11-09: units authored before the author-unit skill planned them are backfilled). Read \`.claude/skills/author-unit/references/figure-prompts.md\` and model the banner on \`specs/content/efmp-304/figures/unit-02.banner.md\`. Write \`specs/content/${j.course.toLowerCase()}/figures/unit-${pad(j.unit)}.banner.md\` with one 16:9 banner row for the unit index (next free figure ID, Kind illustration, Status prompt-only). Then add one illustration scene per topic for its "A real classroom situation", unless the scene would only decorate: a \`FIGURE[...]\` marker in the English topic file and a matching prompt-only row in \`figures/unit-${pad(j.unit)}.md\`. The \`FIGURE[...]\` marker belongs in the English topic file only: do not edit the Urdu topic files, because the illustrate job adds the Urdu <Figure> with Urdu alt text when it places the image. Every prompt is a complete brief for a scene that teaches the unit's point: a Sindh school or classroom, Pakistani dress, no text, maps, flags or emblems, and never a prophet, companion, angel or other sacred person, nor scripture or calligraphy (this matters most for Islamic studies and Qur'an courses: show teachers and pupils learning, not sacred figures). Alt text describes what the image will show. Do not generate, place or draw any image and do not touch other figures: the illustrate job produces and places these rows.`,
+  slides: (j) => `Make the slide deck for ${j.course} Unit ${j.unit} (Feature 032 phase B; model: specs/studio/slides/efmp-301/unit-04.json). Read every English topic file of the unit and its Urdu mirror. Write \`specs/studio/slides/${j.course.toLowerCase()}/unit-${pad(j.unit)}.json\` with the unit title and a subtitle naming the course code and title, then 10 to 16 slides: a section slide per topic, two or three points slides per topic and one summary slide, plus a figure slide for any placed schematic that carries a topic's core idea (figure is its base path, /img/figures/<course>/unit-NN/fig-..., without .svg). Every point restates the topic's Summary or Explanation in plain words (no new facts, numbers or examples), at most 5 points of at most 110 characters; each Urdu point says what the Urdu topic says. No long dashes. Run \`node scripts/build-studio-index.mjs\` (it must not print "skipped slides" for this unit), then \`node scripts/studio/figure-pngs.mjs <outline> /tmp/slides-png\` and, for en and ur, \`uv run --with python-pptx python scripts/studio/slides-pptx.py <outline> <lang> /tmp/slides-png static/studio/slides/${j.course.toLowerCase()}/unit-${pad(j.unit)}.<lang>.pptx\`. Commit the outline and both .pptx files. Do not edit topic MDX or any file under specs/content/.`,
   flashcards: (j) => `Author the flashcard deck for ${j.course} Unit ${j.unit} (Feature 032 phase C; owner, 2026-11-23: "Terms + server marking"). Read every English topic file of the unit and its Urdu mirror. For each topic, pick 6 to 10 key terms a learner must know from that topic, each one used in the topic's own text; prefer the topic's bold or defined terms. Write a plain definition of each in one or two sentences (at most 300 characters), saying only what the topic says (no new facts, no examples the text does not give), and its Urdu card: the Urdu term from \`specs/content/terminology.csv\` when a pair exists, otherwise the term as the Urdu topic writes it, and an academic-plain Urdu definition matching the English one. Write \`specs/studio/flashcards/${j.course.toLowerCase()}/unit-${pad(j.unit)}.json\` as { "course": "${j.course}", "unit": ${j.unit}, "topics": { "1": { "en": [{ "term": "...", "definition": "..." }], "ur": [ ...same order... ] }, ... } }. No long dashes. Run \`node scripts/build-studio-index.mjs --coverage\` (it must not print "skipped" for this unit, and the unit leaves flashcards-needed.json) and commit both files. Do not edit glossary.json, terminology.csv, topic MDX or any file under specs/content/: decks stay outside the review evidence.`,
   refresh_figures: (j) => `Redraw the placed SVG schematics of ${j.course} Unit ${j.unit} to the improved standard (Feature 032 phase D, D-2026-0097/0098; owner, 2026-11-23: "we can rewrite existing figures and diagrams to improved versions"). Read \`.claude/skills/generate-figures/references/svg-authoring.md\` (structure layers and ids, connectors, grid, flowchart shapes, the self-check) and \`references/bilingual-figures.md\`. For every \`static/img/figures/${j.course.toLowerCase()}/unit-${pad(j.unit)}/fig-*.svg\` without \`id="layer-nodes"\`: redraw it as the same figure, keeping its file name, figure id, alt text, manifest row and meaning (a visual redraw, never a content change: no new facts, labels or arrows the text does not support). A complex picture (people, rooms, objects, dense pictograms) is not redrawn as SVG: leave it and say so in your handoff, since D-2026-0098 makes it a raster for the owner to schedule. Rebuild each Urdu twin from the new English drawing with the Urdu labels of the old \`.ur.svg\`, then \`node scripts/mirror-figure-rtl.mjs <file.ur.svg>\` (never a whole-drawing transform); number lines, charts and curves keep their left-to-right axes. Run \`npm run figures:variants\`, \`node scripts/measure-figure-text.mjs <every changed svg>\` until it exits 0, and \`npm run check:svg-style\`. Render every changed figure, English beside Urdu, with \`scripts/heavy.sh\` and read the images: every label visible (no text on a dark shape drawn ink on ink, nothing painted over by a later shape), nothing clipped, Urdu right to left. Commit, then \`scripts/heavy.sh node scripts/prepare-gate-evidence.mjs ${j.course} ${j.unit}\` (repoint the G2 row) and \`npm run check:content\`. If the unit's latest G3 row is ⏳ or carries an agent report, append a ▢ G3 row: "figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run". Do not edit topic MDX, assessments or any other unit.`,
   illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it picks the image producer itself (agy, then gflow while the owner's PC is reachable, then Codex; each image's producer is printed on its ✓ line), optimises to WebP and moves each row to generated. Never call an image tool (generate_image, image_gen) yourself: every image goes through that script. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, any depiction of a prophet, companion, angel or other sacred person, any scripture or calligraphy, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job. If generate-illustration.mjs exits 3 (every image producer is out of quota), stop at once: commit nothing, not even a PHR, print one CREW-HANDOFF line with the reset time, and exit; the crew holds this job until the quota resets.`,
@@ -1464,6 +1487,7 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
     if (['social', 'post', 'reject-post'].includes(v)) return socialCommand(v, arg, control, via);
     if (v === 'refresh') return refreshCommand(arg, control);
     if (v === 'flashcards') return flashcardsCommand(arg, control);
+    if (v === 'slides') return slidesCommand(arg, control);
     if (v === 'note') {
       if (!arg) return 'usage: crew note <directions>';
       control.notes = [...(control.notes || []), { at: now(), via, text: arg }].slice(-50);

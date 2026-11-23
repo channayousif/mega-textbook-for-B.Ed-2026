@@ -150,3 +150,5 @@ __pycache__/
 
 # Feature 032: flashcard decks, rebuilt by build-studio-index.mjs (prestart/prebuild); the source is glossary.json and specs/studio/flashcards/.
 static/studio/flashcards/
+# Feature 032 phase B: web slide decks, rendered by build-studio-index.mjs from specs/studio/slides/ (the .pptx beside them is committed).
+static/studio/slides/**/*.html

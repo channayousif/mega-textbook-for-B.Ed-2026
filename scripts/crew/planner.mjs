@@ -237,7 +237,7 @@ export const isCorpusStage = (stage) => !/^(maint|intel|teaser|media|audio|socia
  * tracks, so media jobs still run but never hold the course focus. Before this, one raster job
  * waiting days for image quota held every new course's author jobs.
  */
-export const MEDIA_STAGES = ['figures', 'illustrate', 'plan_illustrations', 'refresh_figures', 'flashcards'];
+export const MEDIA_STAGES = ['figures', 'illustrate', 'plan_illustrations', 'refresh_figures', 'flashcards', 'slides'];
 export const holdsFocus = (stage) => isCorpusStage(stage) && !MEDIA_STAGES.includes(stage);
 
 /**
@@ -305,5 +305,19 @@ export function pickFlashcards(needed, authored, inFlight, max = 2) {
   const busy = new Set(inFlight.map((j) => `${String(j.course).toLowerCase()}/${j.unit}`));
   return needed.filter((k) => !authored.has(k) && !busy.has(k)).slice(0, slots)
     .map((k) => { const [c, u] = k.split('/'); return { course: c.toUpperCase(), unit: Number(u) }; });
+}
+
+/**
+ * Feature 032 phase B: one slide deck at a time for an authored unit whose Urdu mirror exists (the
+ * Urdu slides restate the Urdu text) and that has no outline yet, focus course first.
+ */
+export function slidesCandidate(u, f, hasOutline) {
+  return Boolean(u.authored && f.mirrorComplete && !hasOutline);
+}
+export function pickSlides(candidates, inFlight, focus) {
+  if (inFlight.some((j) => j.stage === 'slides')) return null;
+  const busy = new Set(inFlight.map((j) => `${j.course}#${j.unit}`));
+  const free = candidates.filter((c) => !busy.has(`${c.course}#${c.unit}`));
+  return free.find((c) => c.course === focus) ?? free[0] ?? null;
 }
 

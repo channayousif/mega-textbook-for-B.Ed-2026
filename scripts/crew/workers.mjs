@@ -60,6 +60,8 @@ export const STAGES = {
   translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'claude_crew'], skill: 'translate-unit' },
   review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'claude_crew', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
   fix:        { chain: ['claude_crew', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
+  // Feature 032 phase B: a unit's slide outline, web deck and PowerPoint (owner switch `crew slides on`).
+  slides: { chain: ['claude', 'agy_claude', 'codex'], skill: null },
   // Media Studio (Feature 030, scripts/crew/media.mjs). Clips, uploads and NotebookLM need the gflow
   // and youtube-uploader MCP servers, which only the claude worker has; a script draft needs neither.
   teaser_script:  { chain: ['claude', 'agy_claude'], skill: 'studio-teaser' },
