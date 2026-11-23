@@ -40,6 +40,26 @@ timeline could lose its Urdu variant and CI stayed green. It now keys on the ass
    reverse the step positions and flip the arrow directions. `fig-U1-1.ur.svg` does this, and a
    left-to-right RTL table is a real usability defect even though no gate measures it. The
    `viewBox` and the shape geometry stay identical; what moves is which content sits where.
+
+   What mirroring means for each pattern (`scripts/mirror-figure-rtl.mjs` does the coordinates;
+   check these by eye afterwards). Run the mirror on the translated copy **before** moving anything
+   by hand: it also moves the wordmark to the bottom-left, so a wordmark moved first ends up back
+   on the right.
+   - **Flow and timeline:** the first step or earliest date sits on the RIGHT and arrows point
+     LEFT. Connectors are redrawn from source to destination, so the arrow direction in the file
+     still matches the page.
+   - **Flowchart branches:** the main path runs right to left; the "yes" branch continues left
+     and the "no" branch drops downward.
+   - **Node internals:** a box with an icon or number badge puts the badge on the RIGHT and the
+     label to its left, end-anchored near the badge.
+   - **Region and panel titles:** top-right, `text-anchor="end"`.
+   - **Interaction sequence:** the first participant is the rightmost lifeline; steps still read
+     top to bottom.
+   - **Tables:** the row-label column on the right, as above.
+   - Never put `letter-spacing` on Urdu text: tracking breaks the joins between Nastaliq letters.
+   - Keep Western digits (1, 2, 3) unless the unit's Urdu prose uses Eastern Arabic digits.
+
+   *These pattern rules are adapted from omkamal/animated-diagrams-skill (Apache-2.0).*
 4. **Font stack** - put a Nastaliq face first so Urdu renders correctly, then keep the Latin
    fallback for any untranslated token:
    ```

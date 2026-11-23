@@ -145,6 +145,53 @@ Label text on a tinted panel is always `--ink`, never the accent - `--ink` is wh
   2–8 KB; if you're near the limit you have too many nodes or over-long labels.
 - **No `<script>`, no `<foreignObject>`, no external `<image>`/`<use href="http…">`.**
 
+## Structure: layers and names (every new schematic)
+
+Draw the figure in four plain layer groups, bottom to top, and give every meaningful element a
+stable id. Structure is what lets a reviewer, the RTL mirror (`scripts/mirror-figure-rtl.mjs`) and
+an animated version of the figure find the parts of a figure without reading
+coordinates.
+
+```svg
+<g id="layer-regions"> … </g>   <!-- background panels, swimlanes, groupings -->
+<g id="layer-edges">   … </g>   <!-- connectors and their labels' leader lines -->
+<g id="layer-nodes">   … </g>   <!-- boxes, ellipses, table cells with their text -->
+<g id="layer-labels">  … </g>   <!-- free-standing captions and annotations -->
+```
+
+| Element | id | Example |
+|---|---|---|
+| node (box, circle, cell group) | `node-<name>` | `<g id="node-autonomy">` wrapping its shape and text |
+| connector | `edge-<from>-<to>` | `<line id="edge-schooling-identity" …>` |
+| region (panel, lane, group) | `region-<name>` | `<rect id="region-industrial" …>` |
+| free label | `label-<name>` | `<text id="label-caption" …>` |
+
+- Names are short, lowercase, hyphenated English words, the same in the `.ur.svg` (the ids are
+  structure, not text, so they are not translated).
+- **No `transform` on a layer group or a node group.** Coordinates stay on the shapes, as the
+  RTL mirror rewrites them in place.
+- **Draw every connector from its source to its destination** (`x1,y1` at the source, or the
+  path's first point there), so the direction in the file matches the arrow on the page.
+- Ids add no visible weight and need no style; the drawing-style gate ignores them. Older
+  figures without layers are fine; a figure you redraw gets them.
+
+## Connectors (routing that reads at a glance)
+
+- **Leave and enter at the facing midpoint** of a box (right edge to left edge in a
+  left-to-right flow; bottom to top in a top-down one). Never start a line inside a box or at a
+  corner.
+- **Route straight, orthogonal or gently curved.** Use straight lines for a flow, right-angle
+  routes with one bend for a tidy tree, and a soft cubic curve (`<path d="M… C…">`) where a concept
+  map's spokes would otherwise cross. No zig-zags, no line crossing a box.
+- **Snap to a 20px grid** on the 780 canvas: box edges and centres on multiples of 20 keep rows
+  and columns aligned and make spacing even. Leave **at least 40px between boxes** joined by a
+  connector, so the arrowhead and any edge label have room.
+- **Avoid crossings.** Reorder nodes before accepting a crossing; if one is unavoidable, give
+  one line a small gap where it passes the other.
+- **Edge labels** sit beside the line near its start, never on top of it, and use `.small`.
+- One connector style per meaning: solid for "leads to", dashed (`stroke-dasharray`) for
+  "influences" or "returns to"; say which in the caption when both appear.
+
 ## Fit and spacing (no label may touch another)
 
 Most figure defects found in review are geometry, not meaning: a label running into the next
@@ -175,10 +222,10 @@ viewBox. They come from guessing widths. Plan with the budget below, then **meas
   text over other text (or closer than 4px on the same line), and text spilling out of the
   rect it starts in. It must exit 0. CI runs the same check on every SVG a PR adds or changes.
 
-## The five layout patterns
+## The six layout patterns
 
 These are drawing recipes; each maps to a manifest `Kind`: 1 → `table`, 2 → `diagram`,
-3 → `concept-map`, 4 → `diagram`, 5 → `flowchart` or `timeline`.
+3 → `concept-map`, 4 → `diagram`, 5 → `flowchart` or `timeline`, 6 → `diagram` (or `flowchart`).
 
 ### 1. Comparison table / matrix
 
@@ -233,6 +280,34 @@ contrast.
 Boxes (`.panel`) left to right joined by arrows (`<line>` + arrowhead `marker`). One idea per
 box, ≤ 4 words each. A timeline adds a base axis line with tick marks and date/label text below.
 
+### 6. Interaction sequence (who does what, in order)
+
+Two to four participants (teacher, pupil, parent, head teacher) as labelled boxes in a row at the
+top, each with a thin vertical lifeline below (`.grid` line). Each step is a horizontal arrow
+between two lifelines, numbered and labelled above the line, in strict top-to-bottom order;
+replies and feedback use a dashed line. Maps to `Kind: diagram` (or `flowchart` when the steps
+branch). At most eight steps; split a longer exchange into two figures.
+
+### Flowchart shapes (archetype 5)
+
+| Shape | Means |
+|---|---|
+| stadium (rect with `rx` = half its height) | start or end |
+| rounded rect (`rx="8"`) | a step or action |
+| diamond (`<polygon>`) | a decision; its exits are labelled "yes" / "no" (or the two options) beside the diamond |
+| parallelogram (`<polygon>`) | information in or out (a record, a report, a form) |
+
+Walk the main path in a straight line (left to right, or top to bottom); branches leave the
+diamond sideways or downward and rejoin the main path where they end. A flowchart of more than
+eight steps is two figures.
+
+## Recreating a figure from a source image
+
+When a figure adapts one from a course guide or a reference (a scanned table, a diagram in a
+PDF), **rebuild it, never trace it**: list its nodes, connectors and groupings, choose the matching
+pattern above, and lay it out on the grid with this file's spacing. Match the source's
+information, not its geometry, and cite the source in the manifest row as usual.
+
 ## Arrowhead marker (reuse in archetypes 2, 3, 5)
 
 ```svg
@@ -270,3 +345,10 @@ Give the arrowhead **the same token as the line it terminates**. If the arrow's 
 - [ ] No external font / image / script.
 - [ ] `npm run optimize:figure -- --svg <f> <f>` exits 0 and reports ≤ 20 KB.
 - [ ] `node scripts/measure-figure-text.mjs <f>` exits 0 (no overlap, spill or overflow), for the `.ur.svg` too.
+- [ ] Four layer groups (regions, edges, nodes, labels), no `transform` on them; nodes `node-*`,
+      connectors `edge-<from>-<to>` drawn from source to destination.
+- [ ] Connectors leave and enter at facing midpoints, on the 20px grid, with no crossing a box.
+
+*The structure, connector, flowchart-shape, interaction-sequence and "rebuild, never trace"
+guidance is adapted from omkamal/animated-diagrams-skill (Apache-2.0), reworked for this
+repository's static, gate-checked figures.*

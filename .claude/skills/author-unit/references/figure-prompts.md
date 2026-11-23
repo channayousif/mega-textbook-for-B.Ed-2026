@@ -55,6 +55,15 @@ A concrete image-generation instruction, in this order:
 2. **Subject** - exactly what the figure shows. Prefer the topic's contrast pair: "comparison
    table, three columns (government-school teacher, shopkeeper, doctor) × four rows (specialised
    knowledge, formal training, code of conduct, public accountability), ticks and crosses".
+   For a `concept-map`, `flowchart`, `timeline` or interaction sequence, **name the structure**:
+   the nodes (at most eight; split a bigger idea into two figures), each connector with its
+   direction ("A leads to B"), any grouping ("three causes on the left, two effects on the
+   right"), and for a flowchart the start, the end and each decision with its two labelled
+   exits. Example: `flowchart, top to bottom: start "pupil gives a wrong answer"; step "ask for
+   the reasoning"; decision "is the reasoning sound?" yes -> "praise the reasoning, correct the
+   slip", no -> "re-teach the step with a new example"; both end at "check with a similar
+   question"`. The schematic author then draws exactly that, on the grid in
+   `generate-figures/references/svg-authoring.md`.
 3. **Style** - for schematics: `clean flat vector, labelled, high contrast, no colour-only
    meaning`. For an `illustration`, specify the medium, composition, cultural setting and
    teaching action; avoid readable text, logos and watermarks unless exact text is essential.
