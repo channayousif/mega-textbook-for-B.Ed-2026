@@ -172,6 +172,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-03/G3/20261122T175629Z-g3-desk-45e354d8.json |
 | Unit 2 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): labels on dark shapes made visible; the review above predates it; needs a fresh G3 run |
 | Unit 4 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): label on the blackboard made visible; the review above predates it; needs a fresh G3 run |
+| Unit 4 | G3 en-review | ▢ | agent:claude | advisory cycle 2: escalate; prior findings verified resolved (factor list aligned with fig-U4-2, MCQ keys a3/b2/c2/d3, vosniadou moved to further-reading-only, Seifert Chapter 9 and ariel2018 bound, gorilla "nearly half", blueprint 4/3/3 and 3/4/3, SLO 4-2 labels); render-review unavailable because HEAD 98fbbb064 differs from deployed dc60264d9; visual accessibility unverified; no certification; report specs/content/efmp-301/reviews/unit-04/G3/crew-cycle2-20261124.json |
 | Unit 5 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): label on a dark shape made visible; the review above predates it; needs a fresh G3 run |
 | Unit 7 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): labels on dark shapes made visible; the review above predates it; needs a fresh G3 run |
 | Unit 8 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U8-1 centre label made visible; Urdu consistency box no longer covered; the review above predates it; needs a fresh G3 run |
