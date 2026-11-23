@@ -22,10 +22,15 @@ describe('figure animation index (Feature 032)', () => {
     expect(idx).toEqual({ '/img/figures/a/fig-1': { en: 'AAAAAAAAAAA' } });
   });
 
-  it('the committed ledger is valid and shows nothing while the pilot is private', () => {
+  it('the committed ledger is valid; every public entry was approved', () => {
     const ledger = JSON.parse(readFileSync('specs/studio/animations/placed.json', 'utf8'));
     expect(ledger.schema_version).toBe(1);
-    for (const a of ledger.animations) expect(a.figure).toMatch(/^\/img\/figures\/[a-z0-9-]+\/unit-\d{2}\/fig-U\d+-\d+$/);
-    expect(buildFigureAnimationIndex(ledger)).toEqual({});
+    for (const a of ledger.animations) {
+      expect(a.figure).toMatch(/^\/img\/figures\/[a-z0-9-]+\/unit-\d{2}\/fig-U\d+-\d+$/);
+      if (a.status !== 'private') expect(a.approved).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    }
+    const idx = buildFigureAnimationIndex(ledger);
+    expect(idx['/img/figures/efmp-301/unit-04/fig-U4-3']).toEqual({ en: 'lcHh3qG3L3E', ur: '0xoCN70ARgg' });
+    expect(idx['/img/figures/efmp-301/unit-04/fig-U4-1']).toEqual({ en: 'aGWlr2i3AWs' });
   });
 });

@@ -2,15 +2,15 @@
   "schema_version": 1,
   "note": "Feature 032. Animated figures the owner approved, with their YouTube videos. Only public or unlisted 16x9 entries reach the site (the Watch it animate button); private ones are review copies.",
   "animations": [
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-3", "lang": "en", "format": "16x9", "youtube_id": "lcHh3qG3L3E", "status": "private", "approved": "2026-11-23" },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-3", "lang": "ur", "format": "16x9", "youtube_id": "0xoCN70ARgg", "status": "private", "approved": "2026-11-23" },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-3", "lang": "en", "format": "9x16", "youtube_id": "nBjWfe9ERN0", "status": "private", "approved": "2026-11-23" },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-3", "lang": "ur", "format": "9x16", "youtube_id": "2mzzvALQj6g", "status": "private", "approved": "2026-11-23" },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-1", "lang": "en", "format": "16x9", "youtube_id": "aGWlr2i3AWs", "status": "private", "approved": null },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-1", "lang": "en", "format": "9x16", "youtube_id": "AfXskDSqI-w", "status": "private", "approved": null },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-5", "lang": "en", "format": "16x9", "youtube_id": "auhUlybTrRY", "status": "private", "approved": null },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-5", "lang": "en", "format": "9x16", "youtube_id": "MYA_gWfQfpY", "status": "private", "approved": null },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-5", "lang": "ur", "format": "16x9", "youtube_id": "ueIPOXOkXtk", "status": "private", "approved": null },
-    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-5", "lang": "ur", "format": "9x16", "youtube_id": "FA-0YCFNsxA", "status": "private", "approved": null }
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-3", "lang": "en", "format": "16x9", "youtube_id": "lcHh3qG3L3E", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-3", "lang": "ur", "format": "16x9", "youtube_id": "0xoCN70ARgg", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-3", "lang": "en", "format": "9x16", "youtube_id": "nBjWfe9ERN0", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-3", "lang": "ur", "format": "9x16", "youtube_id": "2mzzvALQj6g", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-1", "lang": "en", "format": "16x9", "youtube_id": "aGWlr2i3AWs", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-1", "lang": "en", "format": "9x16", "youtube_id": "AfXskDSqI-w", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-5", "lang": "en", "format": "16x9", "youtube_id": "auhUlybTrRY", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-5", "lang": "en", "format": "9x16", "youtube_id": "MYA_gWfQfpY", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-5", "lang": "ur", "format": "16x9", "youtube_id": "ueIPOXOkXtk", "status": "public", "approved": "2026-11-23" },
+    { "figure": "/img/figures/efmp-301/unit-04/fig-U4-5", "lang": "ur", "format": "9x16", "youtube_id": "FA-0YCFNsxA", "status": "public", "approved": "2026-11-23" }
   ]
 }
