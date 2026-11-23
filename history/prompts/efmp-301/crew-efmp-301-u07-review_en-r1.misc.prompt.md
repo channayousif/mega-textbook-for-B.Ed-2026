@@ -2,7 +2,7 @@
 id: crew-efmp-301-u07-review_en-r1
 title: crew review_en EFMP-301 unit 7
 stage: misc
-date: 2026-11-24
+date: 2026-11-23
 surface: agent
 model: agy
 feature: efmp-301
@@ -16,6 +16,7 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-301/crew-efmp-301-u07-review_en-r1.misc.prompt.md
  - specs/content/efmp-301/reviews/unit-07/G3/agy-cycle2-20261124.json
  - specs/content/efmp-301/reviews/unit-07/G3/agy-cycle2-20261124/advisory-tracker-row.md
  - specs/content/efmp-301/reviews/unit-07/G3/agy-cycle2-20261124/assessment-solutions.md
@@ -69,25 +70,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Added a fresh independent advisory G3 cycle-2 review of EFMP-301 Unit 7 that escalates due to unavailable render/print evidence, with all prior findings verified and an advisory tracker row produced.
+Completed independent G3 English cycle-2 review for EFMP-301 Unit 7 escalating on unavailable render evidence with all prior findings verified and all content gates passing.
 
 ## Outcome
 
-- Impact: review_en for EFMP-301 Unit 7 by agy (cycle 2).
-- Tests: node scripts/review-evidence.mjs validate passed; npm run check:content passed in the worktree.
-- Files: 18 file(s), listed above.
+- Impact: review_en for EFMP-301 Unit 7 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added an independent advisory G3 cycle-2 review for EFMP-301 Unit 7 that escalates due to unavailable render/print evidence, with all prior findings verified and an advisory tracker row produced.
-- Decisions the team must respect: G3 remains open, unticked, reviewer token `agent:g3-reviewer`, no certification or self-signing.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless PR touches a protected path).
+- Shipped / changed: Completed independent G3 English cycle-2 review for EFMP-301 Unit 7 escalating on unavailable render evidence with all prior findings verified and all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - A permitted host must run `scripts/render-inspect.mjs EFMP-301 7 --base https://textbook.com.pk --no-pdf` once the site is deployed with HEAD `ac3d5e2fc`; currently deployed SHA `98fbbb064` is stale on Unit 7.
-  - Distractor clustering advisory (8 of 10 MCQ keys are option b) is carried forward for a future authoring maintenance pass.
-- Paperclip issues affected: none.
+  - A permitted host must run render-inspect against a deployment matching HEAD ac3d5e2fc; the deployed SHA 98fbbb064 is stale on Unit 7 prose and 3 illustration assets.
+  - G3 remains open (ADR-0019 cycle 2 of 2), unticked, reviewer token agent:g3-reviewer, no certification.
+  - Advisory finding carried forward: 8 of 10 MCQ keys remain option (b) in unit-assessment.mdx:155-165; distractors should be shuffled in a future authoring pass.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
