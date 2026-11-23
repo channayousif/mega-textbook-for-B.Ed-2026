@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Conducted independent G3 English review of GCCE-400 Unit 2, generated full evidence logs and validated escalation report, updated the tracker advisory row, and committed changes locally.
+Conducted independent G3 English review of GCCE-400 Unit 2, recorded full evidence logs and validated escalation report, and updated the advisory tracker row.
 
 ## Outcome
 
@@ -85,12 +85,13 @@ Conducted independent G3 English review of GCCE-400 Unit 2, generated full evide
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G3 English review of GCCE-400 Unit 2, generated full evidence logs and validated escalation report, updated the tracker advisory row, and committed changes locally.
+- Shipped / changed: Conducted independent G3 English review of GCCE-400 Unit 2, recorded full evidence logs and validated escalation report, and updated the advisory tracker row.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live site SHA 6804a30c differs from candidate HEAD e30a8ed69 on index.mdx and fig-U2-5.webp.
-  - Render review recorded as unavailable, leading to advisory escalation without certifying G3.
+  - Production deployed SHA 6804a30c differs from candidate HEAD on index.mdx and fig-U2-5.webp; live render inspection was unavailable.
+  - Street lighting was verified as an explicit statutory municipal function under Schedule II of the Sindh Local Government Act 2013.
+  - G3 English review report recorded with advisory escalation disposition; G3 stage remains open pending qualified sign-off.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
@@ -98,3 +99,4 @@ Conducted independent G3 English review of GCCE-400 Unit 2, generated full evide
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
