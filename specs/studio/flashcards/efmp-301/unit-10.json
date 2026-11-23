@@ -1,0 +1,56 @@
+{
+ "course": "EFMP-301",
+ "unit": 10,
+ "topics": {
+  "1": {
+   "en": [
+    { "term": "Teaching method", "definition": "A tool for teaching that is known by its job. Each method earns its place by doing something the others do not, and none is best for everything." },
+    { "term": "Lecture", "definition": "A method that covers new ground fast and gives a class a shared framework. Its weakness is the passive listening it demands, so it earns its length by pausing, recapping and being short." },
+    { "term": "Demonstration", "definition": "A method that shows a process, making it an event rather than a word. It demands materials and visibility, and it prompts why-questions from the class." },
+    { "term": "Interactive discussion", "definition": "A method that makes thinking audible and gives the teacher a window into the room's ideas. It demands a question worth discussing and norms that make talk safe." },
+    { "term": "Question-answer", "definition": "The guided practice of thinking: the teacher's questions carry the steps, and the answers show where the steps break. Its craft is in questions that reach past yes and no, and in waiting after asking." },
+    { "term": "Group work", "definition": "A method that rehearses ideas socially. It demands a task that genuinely needs the group, roles so no one hides, and monitoring so no one drifts; without these it is only rearranged seating." },
+    { "term": "Case study analysis", "definition": "A method that puts the class on real material and demands a judgement. It needs a real case and time, and its gift is transfer, the test of understanding." },
+    { "term": "Choosing frame", "definition": "Choosing a strategy as one decision in three parts, in order: the purpose, the constraints, then the method, with a check that the method still serves the purpose." },
+    { "term": "Purpose", "definition": "What pupils must be able to do by the end of the lesson. The purpose names the verb, and the verb names the method family." },
+    { "term": "Constraints", "definition": "The real conditions of teaching, such as sixty pupils, one blackboard and forty minutes. They are not excuses but the material the design works in." }
+   ],
+   "ur": [
+    { "term": "تدریسی طریقہ", "definition": "تدریس کا ایک آلہ جو اپنے کام سے پہچانا جاتا ہے۔ ہر طریقہ اپنی جگہ اس لیے رکھتا ہے کہ وہ کچھ کرتا ہے جو باقی نہیں کرتے، اور کوئی بھی ہر کام کے لیے بہترین نہیں۔" },
+    { "term": "لیکچر", "definition": "ایسا طریقہ جو نیا میدان تیزی سے ڈھانپتا ہے اور جماعت کو مشترک ڈھانچہ دیتا ہے۔ اس کی کمزوری غیر فعال سننا ہے، اس لیے اسے رک کر، خلاصہ کر کے اور مختصر رہ کر چلنا چاہیے۔" },
+    { "term": "مظاہرہ", "definition": "ایسا طریقہ جو کسی عمل کو دکھاتا ہے اور اسے لفظ کے بجائے واقعہ بنا دیتا ہے۔ یہ سامان اور دکھائی دینا مانگتا ہے، اور جماعت میں \"کیوں\" کے سوال جگاتا ہے۔" },
+    { "term": "متعاملانہ بحث", "definition": "ایسا طریقہ جو سوچ کو سنائی دینے والا بناتا ہے اور استاد کو کمرے کے خیالات کی کھڑکی دیتا ہے۔ یہ بحث کے قابل سوال اور ایسے اصول مانگتا ہے جو بات چیت کو محفوظ بنائیں۔" },
+    { "term": "سوال جواب", "definition": "سوچ کی رہنمائی والی مشق: استاد کے سوال مراحل آگے لے جاتے ہیں اور جواب دکھاتے ہیں کہ مراحل کہاں ٹوٹتے ہیں۔ اس کا فن ہاں نہ سے آگے جانے والے سوالوں اور سوال کے بعد انتظار میں ہے۔" },
+    { "term": "گروہی کام", "definition": "ایسا طریقہ جو خیالات کی سماجی مشق کراتا ہے۔ یہ ایسا کام مانگتا ہے جسے واقعی گروپ چاہیے، کردار تاکہ کوئی چھپ نہ سکے، اور نگرانی تاکہ کوئی بہک نہ جائے؛ ورنہ یہ صرف بیٹھنے کی نئی ترتیب ہے۔" },
+    { "term": "کیس اسٹڈی تجزیہ", "definition": "ایسا طریقہ جو جماعت کو اصل مواد پر لگاتا ہے اور فیصلہ مانگتا ہے۔ اسے اصل کیس اور وقت چاہیے، اور اس کا تحفہ منتقلی ہے، جو سمجھ کی جانچ ہے۔" },
+    { "term": "چننے کا فریم", "definition": "حکمتِ تدریس کا چناؤ تین حصوں والے ایک فیصلے کے طور پر، ترتیب سے: مقصد، حدود، پھر طریقہ، اور یہ جانچ کہ طریقہ اب بھی مقصد پورا کرتا ہے۔" },
+    { "term": "مقصد", "definition": "سبق کے آخر تک شاگردوں کو کیا کر سکنا چاہیے۔ مقصد فعل کا نام لیتا ہے، اور فعل طریقے کے خاندان کا نام لیتا ہے۔" },
+    { "term": "حدود", "definition": "تدریس کے اصل حالات، جیسے ساٹھ شاگرد، ایک تختہ اور چالیس منٹ۔ یہ بہانے نہیں بلکہ وہ مواد ہیں جس میں ڈیزائن کام کرتا ہے۔" }
+   ]
+  },
+  "2": {
+   "en": [
+    { "term": "Instructional design", "definition": "The discipline of deciding, before teaching, what success will look like and building the lesson to produce it. Its order is backward: outcome first, evidence second, activity third." },
+    { "term": "Planning backward", "definition": "Designing a lesson from the end: first the outcome, then the evidence that would show it is met, then the activity chosen to produce that evidence." },
+    { "term": "Outcome", "definition": "What the lesson aims at, named as a behaviour that can be observed, something a student does or says, with conditions of performance and a criterion for judging it." },
+    { "term": "Evidence", "definition": "What would show that the outcome is met. The assessment is designed before the activity, so that it tests the outcome rather than the activity." },
+    { "term": "Forward check", "definition": "The design's test of whether the planned activity produces the evidence for the outcome. If it does not, the activity changes, not the outcome." },
+    { "term": "Lesson plan", "definition": "A plan built backward is a promise about learning, not a script or a timetable of activities. It exists to be checked against, not obeyed." },
+    { "term": "Teacher effectiveness", "definition": "A set of observable practices, none of which is charisma. Each practice is visible in a classroom, nameable in an observation and improvable by deliberate work." },
+    { "term": "Observable practices", "definition": "The things an effective teacher does that can be seen in a classroom, such as planning backward, running the formative cycle and giving feedback that names the next step." },
+    { "term": "Repertoire", "definition": "The set of practices a teacher has built. Unlike a gift, it can be built by watching for a practice, naming it, trying it and checking what the evidence says." }
+   ],
+   "ur": [
+    { "term": "تدریسی ڈیزائن", "definition": "پڑھانے سے پہلے یہ طے کرنے کا ضابطہ کہ کامیابی کیسی دکھے گی، اور سبق کو اسے پیدا کرنے کے لیے بنانا۔ اس کی ترتیب پیچھے کی طرف ہے: پہلے نتیجہ، دوسرا ثبوت، تیسرا سرگرمی۔" },
+    { "term": "پیچھے کی طرف منصوبہ بندی", "definition": "سبق کو آخر سے بنانا: پہلے نتیجہ، پھر وہ ثبوت جو دکھائے کہ نتیجہ پورا ہوا، پھر وہ سرگرمی جو یہ ثبوت پیدا کرنے کے لیے چنی جائے۔" },
+    { "term": "نتیجہ", "definition": "سبق کا ہدف، ایسے رویے کے طور پر بیان کیا گیا جس کا مشاہدہ ہو سکے، یعنی جو طالب علم کرے یا کہے، کارکردگی کی شرائط اور جانچنے کے معیار کے ساتھ۔" },
+    { "term": "ثبوت", "definition": "وہ چیز جو دکھائے کہ نتیجہ پورا ہوا۔ جانچ سرگرمی سے پہلے ڈیزائن کی جاتی ہے تاکہ وہ نتیجے کو جانچے، سرگرمی کو نہیں۔" },
+    { "term": "آگے کی جانچ", "definition": "ڈیزائن کی یہ جانچ کہ آیا منصوبہ بند سرگرمی نتیجے کے لیے ثبوت پیدا کرتی ہے۔ اگر نہیں، تو سرگرمی بدلتی ہے، نتیجہ نہیں۔" },
+    { "term": "سبقی منصوبہ", "definition": "پیچھے کی طرف بنا منصوبہ تعلم کے بارے میں وعدہ ہے، اسکرپٹ یا سرگرمیوں کا ٹائم ٹیبل نہیں۔ یہ جانچے جانے کے لیے موجود ہے، ماننے کے لیے نہیں۔" },
+    { "term": "معلم کی افادیت", "definition": "دیکھی جانے والی مشقوں کا ایک سیٹ، جن میں سے کوئی کرشماتی صلاحیت نہیں۔ ہر مشق جماعت میں نظر آتی ہے، مشاہدے میں نام لی جا سکتی ہے اور سوچی سمجھی محنت سے بہتر ہوتی ہے۔" },
+    { "term": "دیکھی جانے والی مشقیں", "definition": "مؤثر استاد کے وہ کام جو جماعت میں دیکھے جا سکتے ہیں، جیسے پیچھے کی طرف منصوبہ بنانا، تشکیلی چکر چلانا اور اگلا قدم بتانے والا بازخورد دینا۔" },
+    { "term": "ذخیرہ", "definition": "مشقوں کا وہ مجموعہ جو استاد نے بنایا ہو۔ تحفے کے برعکس یہ بنایا جا سکتا ہے: مشق کو دیکھ کر، اس کا نام لے کر، آزما کر اور جانچ کر کہ ثبوت کیا کہتا ہے۔" }
+   ]
+  }
+ }
+}
