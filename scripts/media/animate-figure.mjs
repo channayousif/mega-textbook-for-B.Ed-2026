@@ -40,6 +40,8 @@ export function validateBeats(spec, icons) {
   if (!spec || typeof spec !== 'object') return ['beats file is not an object'];
   for (const k of ['course', 'unit', 'figure', 'svg']) if (!spec[k]) errs.push(`missing ${k}`);
   if (!Array.isArray(spec.beats) || spec.beats.length < 2) errs.push('need at least two beats');
+  if (spec.langs !== undefined && (!Array.isArray(spec.langs) || !spec.langs.length || spec.langs.some((l) => !['en', 'ur'].includes(l)))) errs.push('langs must list en and/or ur');
+  if (spec.langs && spec.langs.length < 2 && !spec.langs_note) errs.push('langs_note must say why a language is left out');
   for (const [i, b] of (spec.beats ?? []).entries()) {
     const regions = regionsOf(b);
     if (!regions.length || regions.some((r) => !Array.isArray(r) || r.length !== 4 || r.some((n) => typeof n !== 'number'))) errs.push(`beat ${i}: region must be [x, y, w, h] or a list of them`);
@@ -189,7 +191,9 @@ fig.querySelectorAll('rect.hl').forEach((r) => {
 // Colour each beat in the figure's own palette (video only; the placed figure is untouched).
 BEATS.forEach((beat, i) => inBeat[i].forEach((el) => {
   const c = el.getAttribute('class') || '';
-  if (el.tagName === 'rect' && /panel/.test(c)) { el.style.fill = 'var(--' + beat.accent + '-fill)'; el.style.stroke = 'var(--' + beat.accent + ')'; }
+  // Tint only part-sized panels: a frame that holds half the figure would wash out its contents.
+  const big = el.tagName === 'rect' && el.getBBox().width * el.getBBox().height > 0.25 * VB.width * VB.height;
+  if (el.tagName === 'rect' && /panel/.test(c) && !big) { el.style.fill = 'var(--' + beat.accent + '-fill)'; el.style.stroke = 'var(--' + beat.accent + ')'; }
   if (el.tagName === 'text' && /\b(h|sh)\b/.test(c) && i > 0) el.style.fill = 'var(--' + beat.accent + ')';
 }));
 const tl = gsap.timeline({ paused: true, defaults: { ease: 'power2.out' } });

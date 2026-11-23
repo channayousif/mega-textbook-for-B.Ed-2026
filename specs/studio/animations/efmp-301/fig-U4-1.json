@@ -1,0 +1,150 @@
+{
+  "course": "EFMP-301",
+  "unit": 4,
+  "figure": "fig-U4-1",
+  "svg": "static/img/figures/efmp-301/unit-04/fig-U4-1.svg",
+  "note": "Captions restate the figure and its topic text; they add no claim.",
+  "langs": [
+    "en"
+  ],
+  "langs_note": "The published fig-U4-1.ur.svg has unmirrored polygons (focused and split beams sit in the wrong panels). Urdu waits for that figure fix, which re-opens the unit G3 evidence and needs the owner.",
+  "beats": [
+    {
+      "region": [
+        [
+          14,
+          14,
+          464,
+          62
+        ],
+        [
+          240,
+          214,
+          12,
+          12
+        ]
+      ],
+      "seconds": 4,
+      "icon": "eye",
+      "accent": "a1",
+      "caption": {
+        "en": "Focused attention: one target. The spotlight selects task and pupil.",
+        "ur": "مرکوز توجہ: ایک ہدف۔ سپاٹ لائٹ کام اور شاگرد کو چنتی ہے۔"
+      }
+    },
+    {
+      "region": [
+        30,
+        78,
+        320,
+        100
+      ],
+      "seconds": 3.5,
+      "icon": "chalkboard",
+      "accent": "a1",
+      "caption": {
+        "en": "The teacher stands at the blackboard.",
+        "ur": "استاد بورڈ کے پاس کھڑا ہے۔"
+      }
+    },
+    {
+      "region": [
+        [
+          100,
+          140,
+          295,
+          240
+        ],
+        [
+          200,
+          145,
+          70,
+          20
+        ]
+      ],
+      "seconds": 5,
+      "icon": "student",
+      "accent": "a1",
+      "caption": {
+        "en": "The spotlight beam falls on the task and on the pupil at the desk.",
+        "ur": "سپاٹ لائٹ کی کرن کام اور میز پر بیٹھے شاگرد پر پڑتی ہے۔"
+      }
+    },
+    {
+      "region": [
+        [
+          14,
+          180,
+          90,
+          190
+        ],
+        [
+          380,
+          190,
+          95,
+          200
+        ]
+      ],
+      "seconds": 5,
+      "icon": "warning",
+      "accent": "a3",
+      "caption": {
+        "en": "Outside the beam: road noise, heat, hunger and a neighbour's chatter.",
+        "ur": "کرن سے باہر: سڑک کا شور، گرمی، بھوک اور پڑوسی کی بک بک۔"
+      }
+    },
+    {
+      "region": [
+        [
+          492,
+          14,
+          274,
+          130
+        ],
+        [
+          624,
+          214,
+          12,
+          12
+        ]
+      ],
+      "seconds": 4,
+      "icon": "users",
+      "accent": "a2",
+      "caption": {
+        "en": "Divided attention: one beam split between two targets.",
+        "ur": "تقسیم شدہ توجہ: ایک کرن دو اہداف کے بیچ بٹی ہوئی۔"
+      }
+    },
+    {
+      "region": [
+        500,
+        115,
+        260,
+        260
+      ],
+      "seconds": 4.5,
+      "icon": "classes",
+      "accent": "a2",
+      "caption": {
+        "en": "The split beam reaches desk A and desk B.",
+        "ur": "بٹی ہوئی کرن میز الف اور میز ب تک پہنچتی ہے۔"
+      }
+    },
+    {
+      "region": [
+        500,
+        375,
+        260,
+        45
+      ],
+      "seconds": 4.5,
+      "icon": "sparkle",
+      "accent": "a1",
+      "caption": {
+        "en": "When attention is divided, each target gets less.",
+        "ur": "جب توجہ بٹ جائے تو ہر ایک کو کم ملتی ہے۔"
+      }
+    }
+  ]
+}

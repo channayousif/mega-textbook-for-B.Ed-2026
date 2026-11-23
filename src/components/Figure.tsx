@@ -1,5 +1,6 @@
 import React from 'react';
 import { WORDMARK_TEXT } from '@site/src/lib/brand';
+import FigureAnimationButton from '@site/src/components/Studio/FigureAnimation';
 
 /**
  * Renders a teaching figure (Spec 009, extended by Spec 013).
@@ -96,6 +97,8 @@ export default function Figure({
         {/* The domain is Latin script; without an explicit direction it
             bidi-reorders inside an RTL caption. */}
         <span className="figure__credit" dir="ltr">{WORDMARK_TEXT}</span>
+        {/* Feature 032: only when this figure has an approved, playable animation. */}
+        <FigureAnimationButton src={src} alt={alt} />
       </figcaption>
     </figure>
   );

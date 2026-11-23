@@ -51,7 +51,9 @@ function pack(batch, beatsFiles, langs, formats) {
     const spec = JSON.parse(readFileSync(file, 'utf8'));
     const errs = validateBeats(spec, loadIcons());
     if (errs.length) throw new Error(`${file}: ${errs.join('; ')}`);
-    for (const lang of langs) for (const format of formats) {
+    // A beats file may limit its languages (with `langs_note` saying why), e.g. while a figure's
+    // Urdu version needs a fix that would re-open its review.
+    for (const lang of langs.filter((l) => !spec.langs || spec.langs.includes(l))) for (const format of formats) {
       const id = compositionId(spec, lang, format);
       const duration = writeComposition(spec, { lang, format, out: join(work, 'compositions', id) });
       compositions.push({ id, beats: file, lang, format, duration });

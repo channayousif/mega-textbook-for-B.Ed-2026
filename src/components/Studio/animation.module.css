@@ -1,0 +1,27 @@
+/* Feature 032: "Watch it animate" under a figure, and its 16:9 dialog. */
+.watch {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 36px; margin-block-start: 6px; padding: 6px 14px;
+  border: 1.5px solid var(--brand-teal, #123e43); border-radius: 999px;
+  background: transparent; color: var(--brand-teal, #123e43);
+  font: inherit; font-size: 0.88rem; font-weight: 700; cursor: pointer;
+}
+[data-theme='dark'] .watch { border-color: var(--ifm-color-primary-lighter); color: var(--ifm-font-color-base); }
+.watch:hover { background: var(--brand-amber, #e5a333); border-color: var(--brand-amber, #e5a333); color: var(--brand-teal, #123e43); }
+.watch:focus-visible { outline: 3px solid var(--ifm-font-color-base); outline-offset: 2px; }
+.play {
+  width: 0; height: 0; border-block: 6px solid transparent;
+  border-inline-start: 10px solid currentColor;
+}
+[dir='rtl'] .play { transform: scaleX(-1); }
+.dialog { padding: 0; border: 0; background: transparent; max-width: none; overflow: visible; }
+.dialog::backdrop { background: rgba(0, 0, 0, 0.72); }
+.body { position: relative; width: min(92vw, calc(80vh * 16 / 9), 1100px); aspect-ratio: 16 / 9; }
+.body iframe { width: 100%; height: 100%; border: 0; border-radius: 10px; background: #000; }
+.close {
+  position: absolute; inset-block-start: -44px; inset-inline-end: 0;
+  width: 40px; height: 40px; border: 0; border-radius: 50%;
+  background: var(--ifm-background-surface-color); color: var(--ifm-font-color-base);
+  font-size: 1.1rem; cursor: pointer;
+}
+@media print { .watch { display: none; } }

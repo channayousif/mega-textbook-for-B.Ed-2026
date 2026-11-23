@@ -5,6 +5,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import rehypeTopicEnhance from './src/rehype/topic-enhance.mjs';
 import { textbookSidebarItems } from './sidebarItemsGenerator';
+import { buildFigureAnimationIndex } from './src/lib/figureAnimations';
 
 /**
  * Loads `.env.local` into `process.env` for local `npm run build`/`start` -
@@ -165,6 +166,15 @@ function homeTeasers(): Array<{ code: string; youtube_id: string; title: string;
   }
 }
 
+/** Feature 032: approved, playable animations of placed figures, keyed by figure base path. */
+function figureAnimations() {
+  try {
+    return buildFigureAnimationIndex(JSON.parse(readFileSync('./specs/studio/animations/placed.json', 'utf8')));
+  } catch {
+    return {};
+  }
+}
+
 /** Per-course counts for the catalogue, from the same sources as siteStats(). */
 function courseStatus() {
   const report = JSON.parse(readFileSync('./static/content-status.json', 'utf8'));
@@ -245,6 +255,7 @@ const config: Config = {
     newsFeed: newsFeed(),
     courseTeasers: courseTeasers(),
     homeTeasers: homeTeasers(),
+    figureAnimations: figureAnimations(),
   },
 
   presets: [
