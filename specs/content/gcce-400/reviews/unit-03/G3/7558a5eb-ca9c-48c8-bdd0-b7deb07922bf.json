@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "course_code": "GCCE-400",
+  "unit_no": 3,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:claude",
+  "author_run_id": "crew-job:gcce-400-u03-repair_en",
+  "reviewer_run_id": "crew-job:gcce-400-u03-review_en-r1",
+  "model": "LongCat-2.5",
+  "started_at": "2026-11-23T10:45:00Z",
+  "completed_at": "2026-11-23T11:25:47.537Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/3rd 2026.pdf": "f0de34d0a166d0306afbb87aaca2caa58a077ca6024b26e192b6aa02e09eb028",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "b88b3948868b85c99fb9bf93d55ef2c3d346ebff40bfc5cb684b7aefba9c6cbd",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-4/gcce-400/course-overview.mdx": "4eeb43eeb413c75da88a98a2722a405d0a941c91cdbc8fb1d8ae2523a7ca2a13",
+    "docs/semester-4/gcce-400/unit-03/index.mdx": "f436048bbf3006abe8db4f21e798c3aa8856377da6dfb7f02f385d9c1d68c61b",
+    "docs/semester-4/gcce-400/unit-03/topic-01.mdx": "b5b1cfc6de1f269a3ee97aea4db35aa7e3833055313e4c4cb888f6dcb2c5bfa0",
+    "docs/semester-4/gcce-400/unit-03/topic-02.mdx": "6c7168e95633b7187fe3822075ae83ccc615d0497d63f4983121cf303f8ad3ea",
+    "docs/semester-4/gcce-400/unit-03/unit-assessment.mdx": "2b52e8fdb2ca84bae5c5deddde7a8e2cc60f80f6453365fcd3503fd5fc344215",
+    "docs/semester-4/gcce-400/unit-03/unit-teacher-notes.mdx": "821f0a2dc90a765f66585331b6160bde9dcc64483a8db06b0d3d69166746d105",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "33e46f435128a99f53a38c597b289d730c85b398a7f27b068392552540128622",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "22eaaee128cd13f1756a1c1d4037a8ed7143cfc9f0428c12f49a8b4752fb7f93",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gcce-400/concepts/unit-03.md": "9564c7d661ed429952505f49a00716878012d6696a255f87a6e8d39c908a229a",
+    "specs/content/gcce-400/content-spec.md": "41fa69e67bb0bc1f641003b192300501cd160590b8460b08ab0b9376d9d4a12c",
+    "specs/content/gcce-400/coverage/unit-03.md": "0ba38b43795f23140c9f4de6489a1e807265081e2f9f3fe9124ab2768c45fe00",
+    "specs/content/gcce-400/figures/unit-03.banner.md": "6489d06d95807fbcba288ecf30721c524f3128469f5043b23bab54c53834f8af",
+    "specs/content/gcce-400/figures/unit-03.md": "4b0612dfde52bfd370d594ea189aa9fc40ad5f9de956d3c1b3f1712463bc71df",
+    "specs/content/gcce-400/sources/unit-03.md": "8806cd20f14d73dd6eb0b87a9b3b65e4395f3986772bb6b4a757bd4001d09ea6",
+    "specs/content/gcce-400/translations/unit-03/check-content-parity.txt": "4f90ad27679d6e33324bd68b08405534551816b1f0303c09be08a1ea8ac07a1e",
+    "specs/content/gcce-400/translations/unit-03/handoff.md": "0b006f448bc98f2a05ac73d0b826b09692c2d2b1e32637984ce8603e8456c1e1",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/gcce-400/unit-03/fig-U3-1.dark.svg": "edc8f1e088c52e3c13a1a40533d0775edf35c1d9543ecd1ae65284a442616478",
+    "static/img/figures/gcce-400/unit-03/fig-U3-1.svg": "44a71ff897550b4ee2fec7eedc127a4fbc5cb4707f89b7229020c2812db60d7f",
+    "static/img/figures/gcce-400/unit-03/fig-U3-2.dark.svg": "48cb8e88ecef49c329fca459ed48abab8ec66ff23a24fe46390a503cd88c04a5",
+    "static/img/figures/gcce-400/unit-03/fig-U3-2.svg": "581046cdd35dbd61fc1c5730db10ed6a1f45a9f07a5a36feb6308c9e547e0d12",
+    "static/img/figures/gcce-400/unit-03/fig-U3-3.dark.svg": "d511c5e17776b7bed26344318067b8b4af89cd49646d154a11cd912f0dca6fa8",
+    "static/img/figures/gcce-400/unit-03/fig-U3-3.svg": "564732c8f04da8c3bd5cd2fe77ae68fec061a876e06df54ec3459aa0ecbaa7d3",
+    "static/img/figures/gcce-400/unit-03/fig-U3-4.dark.svg": "3d6ad680e4c3608c6aa48eefa1798591003fc5c80e699a4b20d26f0a3f7a6c8d",
+    "static/img/figures/gcce-400/unit-03/fig-U3-4.svg": "96b1a3e486d77e5c85ab70a448e61d6ed0ca55396832cd11f982352f7e1da369",
+    "static/img/figures/gcce-400/unit-03/fig-U3-5.webp": "caa9f4beed5823e9da5ccb01411212dc85d63491960168bc57130fef54680ec6",
+    "static/img/figures/gcce-400/unit-03/fig-U3-6.webp": "8c403beebd3ae35acf849506f2279642bc9c8db17579f0dc8813da82abda0429",
+    "static/img/figures/gcce-400/unit-03/fig-U3-7.webp": "87dd6307c7db13d63de3b0f7e84d5a3d2893b044ca220ce347e3a3e8ec9a01b7"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:138-144",
+        "specs/content/gcce-400/content-spec.md:189-231",
+        "specs/content/gcce-400/coverage/unit-03.md:5-18",
+        "docs/semester-4/gcce-400/unit-03/topic-01.mdx:41,73",
+        "docs/semester-4/gcce-400/unit-03/topic-02.mdx:41,83"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/source-verification.md",
+        "specs/content/gcce-400/sources/unit-03.md:7,18",
+        "docs/semester-4/gcce-400/unit-03/topic-01.mdx:52",
+        "docs/semester-4/gcce-400/unit-03/unit-assessment.mdx:101,141,168-169"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gcce-400/coverage/unit-03.md:5-31",
+        "specs/content/gcce-400/content-spec.md:196",
+        "docs/semester-4/gcce-400/unit-03/unit-assessment.mdx:94"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/assessment-independent.md",
+        "docs/semester-4/gcce-400/unit-03/unit-assessment.mdx:47-51",
+        "docs/semester-4/gcce-400/unit-03/unit-assessment.mdx:94",
+        "docs/semester-4/gcce-400/unit-03/unit-assessment.mdx:101,141,168-169"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/render-review.txt",
+        "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/probe-figure-loading.txt",
+        "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/static-accessibility.txt",
+        "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/measure-figure-text.txt",
+        "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/desktop-topic-01.png",
+        "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/narrow360-topic-01.png"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-4/gcce-400/unit-03/topic-01.mdx:41-59",
+        "docs/semester-4/gcce-400/unit-03/topic-02.mdx:41-63",
+        "docs/semester-4/gcce-400/unit-03/unit-teacher-notes.mdx:23-27"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-4/gcce-400/unit-03/topic-01.mdx:23-31,59-71,109-127,149-171",
+        "docs/semester-4/gcce-400/unit-03/topic-02.mdx:23-31,65-81,113-132,154-179"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "Cycle 1 constitutional-currency finding repaired: Chapter 1 of Part II is now counted as twenty-five articles (topic-01.mdx:82) with Article 9A taught (topic-01.mdx:86) and Articles 23-24 taught (topic-01.mdx:92-99); the current transcription confirms 25 articles and Article 9A between Articles 9 and 10. sources/unit-03.md:18 no longer claims later amendments do not alter the rights."
+    },
+    {
+      "id": "F2",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "MCQ 4 key repaired: unit-assessment.mdx:131 now reads \"on the basis of sex\", matching the current Article 25(2) (the Eighteenth Amendment omitted \"alone\")."
+    },
+    {
+      "id": "F3",
+      "severity": "uncertain",
+      "resolved": true,
+      "message": "MCQ 4 ambiguity repaired: unit-assessment.mdx:47-51 is now a gender-differentiated traffic fine governed by Article 25, so Article 26 is not a better answer."
+    },
+    {
+      "id": "F4",
+      "severity": "uncertain",
+      "resolved": true,
+      "message": "Article 184(3) proviso disclosure repaired: topic-01.mdx:52 now states the Supreme Court may act on an application and cannot act suo motu beyond it."
+    },
+    {
+      "id": "F5",
+      "severity": "uncertain",
+      "resolved": true,
+      "message": "Blueprint item repaired: RRQ 10 (unit-assessment.mdx:94) is the approved four-scenario Analyze item naming the right at stake and the balancing duty in each scenario."
+    },
+    {
+      "id": "F6",
+      "severity": "uncertain",
+      "resolved": true,
+      "message": "Render input repaired: the deployed SHA dd2b914838b704cc754b14f06751be96540dcd7f now equals HEAD, so the live site is the review input and a live render inspection was performed."
+    },
+    {
+      "id": "F7",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Article 26 examples narrowed: topic-01.mdx:107 now says \"places of public entertainment or resort, such as public parks\"."
+    },
+    {
+      "id": "F8",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Glencoe declaration repaired: sources/unit-03.md:14 names owner ruling D-2026-0001 and the prose presents the idea as general civics knowledge with the book as an example."
+    },
+    {
+      "id": "F9",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Article 184 was omitted from the Constitution by the Twenty-seventh Amendment Act, 2025 (Article 29, effective 13 November 2025). The public-importance fundamental-rights jurisdiction now sits in the Federal Constitutional Court under Article 175E(3), which requires an application. The unit still teaches the repealed article and court at topic-01.mdx:52, unit-assessment.mdx:101, unit-assessment.mdx:141 and unit-assessment.mdx:168-169, and sources/unit-03.md:7,18 still claims the article is current. Repair: re-point these passages to Article 175E(3) and the Federal Constitutional Court and correct the sources note."
+    },
+    {
+      "id": "F10",
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "render-review tooling limitation: render-inspect.mjs exited 1 on six artifacts - Section D tested .svg variants on the two WebP illustrations (fig-U3-6, fig-U3-7), and the desktop pass measured two below-fold lazy images before Chrome loaded them. A scroll probe (logs/probe-figure-loading.txt) measures fig-U3-2.svg at 860x640 and fig-U3-4.svg at 860x563, both complete and visible. Accessibility is therefore recorded as unverified for machine pass rather than as a content defect."
+    },
+    {
+      "id": "F11",
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "This independent review is advisory only. No server-protected signing host or qualified registry entry was used, so it does not certify G3 or support a tracker done state. With review cycle 2 completed under ADR-0019, the unit is escalated for an owner ruling on the Article 184 repair and final editorial qualification."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-unit-depth.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-docs-sync.txt"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-concept-graph.txt"
+    },
+    {
+      "name": "check:bloom-bands",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-bloom-bands.txt"
+    },
+    {
+      "name": "check:svg-style",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-svg-style.txt"
+    },
+    {
+      "name": "check:source-floor",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-source-floor.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/measure-figure-text.txt"
+    },
+    {
+      "name": "build:content-status",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/build-content-status.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-content.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/render-review.txt"
+    },
+    {
+      "name": "probe:figure-loading",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/probe-figure-loading.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/assessment-independent.md": "a0596d32fd15f31864d69c02f498ef26508b81df8c084ffb01db37172612dd1b",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/build-content-status.txt": "7da7b4b62655e8c4cd2b9bce5db4d453d6918de0475182253781671638592939",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-bloom-bands.txt": "569d79405167eb700934e5483394ab5da768f80aa8e624daaee07f3f5ed12cd9",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-concept-graph.txt": "f6decf6cfc6c72ef6a664a53defcda4a1c724e9ed265324cbc09c831e26421a7",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-content.txt": "d15d3288f5e91f0e1c7e27f2c796773cb7dd790bca2b1e84211712fcb163aed7",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-docs-sync.txt": "973c4a013ffe432961369ec09e130c8d0de3597aa25d3a6ccb80ac483699c675",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-figures.txt": "6fde2a7b60a29580687ae25b488e45c22aaeba96abeace66e6c044c1fd82e268",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-no-answer-keys.txt": "26b00509ef61ecfad165f7a26ca36fc42ff2365aea1756833d57163d610be223",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-no-em-dash.txt": "e64cd1c7d7c98472bc005f5648ec4f5f42e44e6d8a639cf8500523ddce5936f1",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-source-floor.txt": "bb6a407b57ad521ef8baf321071ee6a6f3f4d27606d10bb75f9599ed7db8a7bd",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-svg-style.txt": "5299b22dd12fb609744de266517c8a1161368d3ac503d13ee79f27dd33b189bd",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/check-unit-depth.txt": "dc3dd19fa42a2a717c124bf43b6042568687ccd9f8c65fd17f4f0d77728a1790",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/input-verification.txt": "035fda3bc6cd5db0d995ffb9ce63731cd24bc1b66c6468c1225e72366bc99002",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/measure-figure-text.txt": "be846f7054bd7227eb5b974f1323936f849d8bdefac6915621720c2790e0d845",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/probe-figure-loading.txt": "46229db95b33eb4c2c3ece0df6a909aa4f82f009a37f790782f0199217cef030",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/render-review.txt": "3f0c7974445b782bc74a7010d8a82c416e1e9115e131beff457e87b170b54d6e",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/static-accessibility.txt": "dbd8aa8f9ec6956a3d401d9916dd51fea06f96b8c9bd3ba8c985a18583d11f53",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/logs/validate-content.txt": "a725bb9b0a8908951eba8f1f47e1161ef146ebb94cd5fd27a1cdac6e41193cd4",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/manifest.json": "a61da6ddc48b2e04a00375d79703c461f97f336a83f1382dba1574ba87ddddce",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/desktop-index.png": "1122ddeda33160fe97f5157122bf00114e061f8a1ae83156676e174afa71c8b8",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/desktop-topic-01.png": "5bab71e4d76c5a6d3d664ed1d104989af35b2a2826a37043ed7841fb86ffb9ab",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/desktop-topic-02.png": "db96b86d97407caf847b63d894c4c646595b8cc777439fac4bfe8fe9b3f8c932",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/desktop-unit-assessment.png": "74de4c80a9a9890df6ddda2403e276a2a8798c0fc3fb0d0e8f4e9842ccbfc217",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/desktop-unit-teacher-notes.png": "89f0b202dab3f34fda97ad692335cda47a5cf94340f61ebe711fef508ebc8e44",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/narrow360-index.png": "b53782197e8cb5623709c490c0e978581db15be7f014d58030b14a25decab53e",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/narrow360-topic-01.png": "3f2224cf27db4d21545f35a2a389a5356353f498be03cfe07767534eda9235cd",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/narrow360-topic-02.png": "de110832f931434c3cb7a47f69f76afbbf94ae860709b6f2ce9fd9a8d38ab01a",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/narrow360-unit-assessment.png": "c2a462994a9753b7e4aa42e3d2944a75a654653a490b10f130e42d21f7a8fdf1",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/narrow360-unit-teacher-notes.png": "3c58b79aa443de329a852d4efe705c1a7f67b56becb7ee61e6da56ffccd7ac86",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/render-inspect.json": "c9e02e8920bc428d329a49cf7f8d2b51471874c96d85d4c4de15763b71cb41c3",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/renders/render-inspect.log": "c7047fbf3eb828d93691d98fdc99a70d4775ca61ab83dcfaf845d62cf502bebd",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/source-verification.md": "d4a06ea6a864fe27e3d2446bfcd7f30e1289b8c192359e6f2e444dd1545900c5",
+    "specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf/summary.md": "4158f68b7750efda51c5097a142df78ec79afaf764c2ef909da04b7424427681"
+  },
+  "reviewed_commit": "dd2b914838b704cc754b14f06751be96540dcd7f",
+  "supersedes": [
+    "specs/content/gcce-400/reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0.json"
+  ],
+  "limitations": [
+    "The candidate answers sit in the same worktree file as the questions, so the independent solve was not blind.",
+    "The parent handoff was the git commit plus the crew brief, not a frozen external bundle; the reviewer prepared and verified the manifest at HEAD.",
+    "Constitutional currency was checked against the pakistani.org transcription (a private transcription, not the official gazette) fetched 2026-11-23.",
+    "render-inspect.mjs exited 1 on tooling artifacts (raster figures checked as SVG variants; below-fold lazy images measured before load), so the machine pass contract for render-review is unmet even though the live pages inspect clean."
+  ]
+}
