@@ -2,7 +2,7 @@
 id: crew-gcce-400-u05-illustrate
 title: crew illustrate GCCE-400 unit 5
 stage: misc
-date: 2026-11-24
+date: 2026-11-23
 surface: agent
 model: agy
 feature: gcce-400
@@ -73,24 +73,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed GCCE-400 Unit 5 banner illustration fig-U5-7 across English and Urdu index files, recorded fresh G2 gate evidence, and passed all content gates.
+Generated, inspected, and placed GCCE-400 Unit 5 banner illustration fig-U5-7 in English and Urdu index files, recorded fresh G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: illustrate for GCCE-400 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the job.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GCCE-400 Unit 5 banner illustration fig-U5-7 across English and Urdu index files, recorded fresh G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed GCCE-400 Unit 5 banner illustration fig-U5-7 in English and Urdu index files, recorded fresh G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 en-review remains open (reviewer to confirm Lawyers' Movement timeline against Batool et al. 2019 and constitutional articles against current text).
-  - G5 ur-review remains open (translation_status is draft across English and Urdu indices; G5 owns 360px and A4 print layout inspection).
+  - G3 en-review remains open; reviewer should confirm the Lawyers' Movement timeline against Batool et al. (2019) and constitutional articles against the current text.
+  - G5 ur-review remains open; translation_status is draft across English and Urdu indices, and G5 owns Nastaliq shaping, 360px and A4 print layout inspection.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
@@ -98,3 +98,4 @@ Generated, inspected, and placed GCCE-400 Unit 5 banner illustration fig-U5-7 ac
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
