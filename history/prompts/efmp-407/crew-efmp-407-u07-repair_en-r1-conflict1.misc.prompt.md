@@ -56,26 +56,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u07-repair_en, repair_en, claude) The Urdu side has only index.mdx, so the translate job should copy the corrected "section 6.2 (Curriculum Reform), policy action 5" locator into the Urdu topic-01.
 - (efmp-407-u07-illustrate, illustrate, agy) Placed banner fig-U7-5.webp in English and draft Urdu index files, updated unit-07.banner.md to placed, and refreshed G2 gate evidence.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-407-u07-repair_en-r1, resolved the conflict in specs/content/efmp-407/tasks.md by keeping both main and branch rows in order, and verified that all 14 content gates pass.
+Merged origin/main into crew/efmp-407-u07-repair_en-r1, resolved the G3 tracker conflict in specs/content/efmp-407/tasks.md by keeping both entries in order, and verified all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix merge conflict for EFMP-407 Unit 7 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Impact: fix for EFMP-407 Unit 7 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-407-u07-repair_en-r1, resolved the conflict in specs/content/efmp-407/tasks.md by preserving both main and branch G3 advisory tracker rows, and verified all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Merged origin/main into crew/efmp-407-u07-repair_en-r1, resolved the G3 tracker conflict in specs/content/efmp-407/tasks.md by keeping both entries in order, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 7 G3 needs a fresh independent review: report f45bf9fe repeats the r1 findings that b02ba6e6e and a9c118a0a had already fixed.
-  - The Urdu side has only `index.mdx`; the translate job must carry the "section 6.2 (Curriculum Reform), policy action 5" locator into the Urdu topic-01.
+  - The Urdu side has only index.mdx; the translate job must carry the "section 6.2 (Curriculum Reform), policy action 5" locator into the Urdu topic-01.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
