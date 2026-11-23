@@ -53,11 +53,6 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 
 | Sub-topic | Enduring understanding | Target Bloom level | Explanation heading | Evidence |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261110T020358345Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
-| Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
-| Unit 1 | G5 ur-review | ▢ | | |
-| Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
 | U2-01 | Learning domains need distinct evidence; competencies are used in a situation. | Apply | The UNESCO framework of ESD | Topic 2.1 retrieval 1-3, checklist, lesson revision; MCQ 1-4, RRQ 1-3, ERQ 1 |
 | U2-02 | EE and ESD overlap; classification rests on connected learning evidence. | Analyze | ESD compared with environmental education | Topic 2.2 retrieval 1-3, checklist, comparison; MCQ 5-7, RRQ 4-6, ERQ 2 |
 | U2-03 | Reflection tests assumptions while preserving learner agency. | Analyze | Transformative learning | Topic 2.3 retrieval 1-2, checklist, claim analysis; MCQ 8, RRQ 7-8, ERQ 3 |
@@ -100,3 +95,4 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 | Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-07/G3/20261122T175629Z-g3-desk-f45bf9fe.json |
 | Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-08/G3/20261122T175629Z-g3-desk-21c4765e.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-407/reviews/unit-02/G3/20261122T175851Z-g3-desk-6e63fd47.json |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-407/reviews/unit-02/G3/20261122T175851Z-g3-desk-6e63fd47.json; five duplicated Unit 1 tracker rows removed from the Unit 2 backward-design alignment table; course-overview "Unit 1 is available now" left unchanged because Unit 2 is not yet published (update at G7 publication, outside this unit scope); browser, 360px, keyboard table scrolling and A4 print inspection remain unverified under the crew brief; G3 remains open and unsigned; fresh independent review required |
