@@ -1,13 +1,34 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { buildComposition, layout, mirrorRegion, regionsOf, validateBeats } from '../../scripts/media/animate-figure.mjs';
+import { buildComposition, layout, loadIcons, mirrorRegion, regionsOf, validateBeats } from '../../scripts/media/animate-figure.mjs';
 
 const pilot = JSON.parse(readFileSync('specs/studio/animations/efmp-301/fig-U4-3.json', 'utf8'));
 const svg = readFileSync(pilot.svg, 'utf8');
 
 describe('animate-figure (Feature 032)', () => {
-  it('accepts the pilot beats file', () => {
-    expect(validateBeats(pilot)).toEqual([]);
+  const icons = loadIcons();
+
+  it('accepts the pilot beats file, icons from the site pack', () => {
+    expect(Object.keys(icons).length).toBeGreaterThan(40);
+    expect(validateBeats(pilot, icons)).toEqual([]);
+  });
+
+  it('rejects an unknown icon or accent', () => {
+    const b = structuredClone(pilot);
+    b.beats[1].icon = 'not-an-icon';
+    b.beats[2].accent = 'a9';
+    const errs = validateBeats(b, icons).join('\n');
+    expect(errs).toMatch(/beat 1: unknown icon/);
+    expect(errs).toMatch(/beat 2: accent/);
+  });
+
+  it('draws icon badges, accent highlights and Urdu badges on the right', () => {
+    const en = buildComposition(pilot, svg, { lang: 'en', icons });
+    expect(en.html).toContain('class="badge" style="background: var(--a2)"');
+    expect(en.html).toContain(icons.eye[0]);
+    expect(en.html).toMatch(/<rect class="hl hl-0" id="hl-0-0"/);
+    // highlights sit behind the figure content, right after its background
+    expect(en.html.indexOf('class="hl hl-0"')).toBeGreaterThan(en.html.indexOf('<rect class="bg"'));
   });
 
   it('rejects missing captions, bad regions and em dashes', () => {

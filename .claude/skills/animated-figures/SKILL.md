@@ -37,6 +37,15 @@ motion part is used, on our own figures, in our own look.
    `caption: { en, ur }`. An element joins the beat whose region holds its centre; when regions
    overlap, the smallest wins (so small marks such as crosses can join a later beat). The first
    beat is usually the title; the last, the take-away line. Keep the total near 30 to 45 s.
+   **Colour and icons** (owner, 2026-11-23: "add some colors and icons"): each beat may set
+   `accent` (`a1` teal, `a2` blue, `a3` orange, `a4` purple, the figure palette) and `icon` (a
+   name from the site's own pack, `src/components/icons/paths.ts`, e.g. `eye`, `clock`, `link`,
+   `history`, `warning`, `records`, `explain`, `sparkle`). In the video only, the beat's panels
+   tint and its headings take the accent, a highlight fitted to its elements frames it, earlier
+   beats dim while it builds (all return for the last beat), and a coloured icon badge pops
+   beside the caption (left in English, right in Urdu). Colour is decoration: the caption always
+   carries the meaning. Pick icons that name the idea, not the topic (eye for senses, clock for
+   seconds, link for connecting); keep one accent per idea across a unit.
 3. **Render on Kaggle** (default; the host renders at about half a second per frame and
    froze under load before). Same pattern as video-studio's VS-ADR-0011: a hashed private
    dataset, a pinned private CPU kernel (no GPU quota), a verified fetch.

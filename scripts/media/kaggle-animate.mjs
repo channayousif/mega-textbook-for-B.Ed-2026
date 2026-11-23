@@ -13,7 +13,7 @@ import { createHash } from 'node:crypto';
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join, relative } from 'node:path';
-import { FORMATS, SKILL_DIR, compositionId, validateBeats, writeComposition } from './animate-figure.mjs';
+import { FORMATS, SKILL_DIR, compositionId, loadIcons, validateBeats, writeComposition } from './animate-figure.mjs';
 
 const ROOT = join(homedir(), 'studio-media/animations');
 export const datasetSlug = (batch) => `anim-${batch}`;
@@ -49,7 +49,7 @@ function pack(batch, beatsFiles, langs, formats) {
   const compositions = [];
   for (const file of beatsFiles) {
     const spec = JSON.parse(readFileSync(file, 'utf8'));
-    const errs = validateBeats(spec);
+    const errs = validateBeats(spec, loadIcons());
     if (errs.length) throw new Error(`${file}: ${errs.join('; ')}`);
     for (const lang of langs) for (const format of formats) {
       const id = compositionId(spec, lang, format);
