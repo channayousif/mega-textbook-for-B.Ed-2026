@@ -37,7 +37,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5 
 | Unit 2 | G6 assets | ▣ | | Four schematic SVG pairs (fig-U2-1 to fig-U2-4) with derived dark variants placed; banner fig-U2-5 placed in English and Urdu index |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-03/G2/20261123T063911326Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; reviewer should confirm the currency of cited constitutional provisions under the 1973 Constitution (Articles 8-28 and Article 5) |
+| Unit 3 | G3 en-review | ▢ | agent:claude | Advisory revise only; G3 remains open. Findings F1-F8 incl. constitutional currency (Article 9A, Articles 23-24, Article 25(2) key) and missing live render evidence: [report](reviews/unit-03/G3/52caad24-9ea1-412b-918e-0ec74d99f5d0.json). No certification. |
 | Unit 3 | G4 ur-translation | ▢ | | Complete five-file draft Urdu mirror and four localized SVG pairs (with derived dark twins) prepared from English cacf4aac0; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-03/handoff.md |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
 | Unit 3 | G6 assets | ▣ | | Four schematic SVG pairs (fig-U3-1 to fig-U3-4) with derived dark variants placed; banner fig-U3-5, fig-U3-6 and fig-U3-7 placed in English and Urdu |
