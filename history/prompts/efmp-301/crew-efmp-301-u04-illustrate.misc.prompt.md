@@ -38,10 +38,10 @@ files:
  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261123T184024256Z/validate-content.txt
  - specs/content/efmp-301/tasks.md
  - static/img/figures/efmp-301/unit-04/fig-U4-1.webp
+ - static/img/figures/efmp-301/unit-04/fig-U4-10.webp
  - static/img/figures/efmp-301/unit-04/fig-U4-7.webp
  - static/img/figures/efmp-301/unit-04/fig-U4-8.webp
  - static/img/figures/efmp-301/unit-04/fig-U4-9.webp
- - static/img/figures/efmp-301/unit-04/fig-U4-10.webp
 tests:
  - npm run check:content
 ---
@@ -84,7 +84,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated via gflow, inspected, and placed all 5 Unit 4 raster illustrations (banner fig-U4-7, topic scenes fig-U4-1, fig-U4-8, fig-U4-9, fig-U4-10) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
+Generated, inspected, and placed all 5 Unit 4 raster illustrations (banner fig-U4-7, topic scenes fig-U4-1, fig-U4-8, fig-U4-9, fig-U4-10) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
@@ -96,12 +96,10 @@ Generated via gflow, inspected, and placed all 5 Unit 4 raster illustrations (ba
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated via gflow, inspected, and placed all 5 Unit 4 raster illustrations (banner fig-U4-7, topic scenes fig-U4-1, fig-U4-8, fig-U4-9, fig-U4-10) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
+- Shipped / changed: Generated, inspected, and placed all 5 Unit 4 raster illustrations (banner fig-U4-7, topic scenes fig-U4-1, fig-U4-8, fig-U4-9, fig-U4-10) in English and Urdu, updated manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G2 gate evidence refreshed and committed at `specs/content/efmp-301/reviews/unit-04/G2/20261123T184024256Z-gates.json`.
-  - All tracker rows for Unit 4 G2 en-draft updated to point to the latest evidence file.
   - MCQ option order changed in both locales (keys 1a 2b 3d 4b 5d 6c 7a 8c 9a 10d); a G5 re-review should check the Urdu reorder.
   - 360px and A4 print inspection of Unit 4 is still unperformed and needs a host where building and browsers are allowed.
   - vosniadou2001 is no longer in Unit 4's sources table or coverage; re-binding it needs a longer excerpt plus both table and coverage rows.
