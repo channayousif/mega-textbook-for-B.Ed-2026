@@ -130,7 +130,12 @@ main() {
     fi
   done
 
-  rsync -a --delete build/ "$DOCROOT"/
+  # Zero-downtime swap (2026-11-23, as in ~/bin/deploy-via-davinci.sh): new hashed assets first,
+  # old ones kept so pages mid-swap and open tabs still load; pages switch together at the end;
+  # assets unused for 7 days are pruned. A plain --delete showed visitors "did not load properly".
+  rsync -a build/assets/ "$DOCROOT"/assets/
+  rsync -a --delay-updates --delete-after --exclude='/assets/' build/ "$DOCROOT"/
+  find "$DOCROOT"/assets -type f -mtime +7 -delete 2>/dev/null || true
   echo "$target" >"$STATE"
   log "deployed $target OK"
 }

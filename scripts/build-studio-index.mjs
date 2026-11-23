@@ -12,6 +12,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSy
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { findManifests } from './check-studio-manifest.mjs';
+import { renderDeck, validateOutline } from './studio-slides.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -215,6 +216,37 @@ function readFlashcards(root, index) {
   return index;
 }
 
+/**
+ * Feature 032 phase B: web slide decks from specs/studio/slides/<course>/unit-NN.json, written to
+ * static/studio/slides/<course>/unit-NN.<lang>.html and listed on every topic of the unit. The
+ * PowerPoint beside each deck (unit-NN.<lang>.pptx) is built offline (scripts/studio/slides-pptx.py).
+ */
+function readSlides(root, index) {
+  const dir = join(root, 'specs', 'studio', 'slides');
+  if (!existsSync(dir)) return index;
+  for (const course of readdirSync(dir).filter((c) => /^[a-z]{4}-\d{3}$/.test(c))) {
+    for (const f of readdirSync(join(dir, course)).filter((n) => /^unit-\d{2}\.json$/.test(n))) {
+      const outline = JSON.parse(readFileSync(join(dir, course, f), 'utf8'));
+      const errs = validateOutline(outline);
+      if (errs.length) { console.warn(`build-studio-index: skipped slides ${course}/${f}: ${errs.slice(0, 3).join('; ')}`); continue; }
+      const unit = Number(f.slice(5, 7));
+      mkdirSync(join(root, 'static', 'studio', 'slides', course), { recursive: true });
+      const sem = readdirSync(join(root, 'docs')).find((d) => d.startsWith('semester-') && existsSync(join(root, 'docs', d, course, `unit-${f.slice(5, 7)}`)));
+      const topics = sem ? readdirSync(join(root, 'docs', sem, course, `unit-${f.slice(5, 7)}`)).filter((n) => /^topic-\d+\.mdx$/.test(n)).map((n) => Number(n.match(/\d+/)[0])) : [];
+      for (const lang of ['en', 'ur']) {
+        const base = `studio/slides/${course}/unit-${f.slice(5, 7)}.${lang}`;
+        writeFileSync(join(root, 'static', `${base}.html`), renderDeck(outline, lang));
+        const pptx = existsSync(join(root, 'static', `${base}.pptx`)) ? `/${base}.pptx` : undefined;
+        for (const topic of topics) {
+          const slot = (index[`${course}/${unit}/${topic}`] ??= { en: [], ur: [] });
+          slot[lang].push({ kind: 'deck', title: outline.title[lang], audience: 'all', alt: '', src: `/${base}.html`, ...(pptx ? { url: pptx } : {}) });
+        }
+      }
+    }
+  }
+  return index;
+}
+
 function readAnimations(root, index) {
   const ledger = join(root, 'specs', 'studio', 'animations', 'placed.json');
   if (!existsSync(ledger)) return index;
@@ -249,7 +281,7 @@ function readTeasers(root) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const manifests = findManifests(ROOT).map((f) => JSON.parse(readFileSync(f, 'utf8')));
-  const index = readFlashcards(ROOT, readAnimations(ROOT, buildStudioIndex(manifests)));
+  const index = readSlides(ROOT, readFlashcards(ROOT, readAnimations(ROOT, buildStudioIndex(manifests))));
   index.teasers = readTeasers(ROOT);
   index.homeTeasers = pickHomeTeasers(index.teasers);
   mkdirSync(join(ROOT, 'static'), { recursive: true });

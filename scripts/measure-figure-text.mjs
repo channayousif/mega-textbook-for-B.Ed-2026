@@ -20,7 +20,10 @@
  * text running out of the panel that holds it. So it also fails:
  *   - two different <text> elements that intersect, or that share a line and
  *     sit closer than MIN_GAP px apart (a column label running into the next);
- *   - text that starts inside a painted rect and spills past its edges.
+ *   - text that starts inside a painted rect and spills past its edges;
+ *   - text painted over by a shape drawn after it (paint order);
+ *   - text whose colour is within 1.6:1 of the shape under it (ink on ink);
+ *   - a file that is not well-formed XML (an HTML entity like &nbsp; blanks the whole image).
  *
  *   --ci-fonts        force the CI fallback face (DejaVu Sans) on every text
  *                     node before measuring, so local checks match CI figure-geometry
@@ -69,8 +72,21 @@ let warned = 0;
 const report = [];
 
 for (const file of files) {
-  await page.setContent(readFileSync(file, 'utf8'), { waitUntil: 'load' });
-  const { viewBox, texts, shapes } = await page.evaluate((ciFonts) => {
+  const source = readFileSync(file, 'utf8');
+  // A browser loads a figure through <img> as strict XML, where one HTML entity such as &nbsp;
+  // blanks the whole image; setContent below parses forgivingly as HTML, so check XML first.
+  const xmlError = await page.evaluate((src) => {
+    const doc = new DOMParser().parseFromString(src, 'image/svg+xml');
+    const err = doc.querySelector('parsererror');
+    return err ? err.textContent.replace(/\s+/g, ' ').slice(0, 160) : null;
+  }, source);
+  if (xmlError) {
+    failures++;
+    console.log(`✗ ${file}\n    is not well-formed XML, so browsers show nothing: ${xmlError}`);
+    continue;
+  }
+  await page.setContent(source, { waitUntil: 'load' });
+  const { viewBox, texts, shapes, paint } = await page.evaluate((ciFonts) => {
     const svg = document.querySelector('svg');
     if (ciFonts) {
       // 2026-W47 M2: force the CI fallback face (DejaVu Sans) on every text node
@@ -84,7 +100,40 @@ for (const file of files) {
       }
     }
     const vb = svg.viewBox.baseVal;
+    // 2026-11-23 (Feature 032 figure fixes): paint-order checks a coordinate gate cannot see.
+    // A label drawn ink on ink (a stylesheet text{fill} rule beating a fill attribute) or painted
+    // over by a later shape passed every gate and reached the site in 22 files.
+    const rgb = (c) => { const m = String(c).match(/rgba?\(([^)]+)\)/); if (!m) return null; const [r, g, b, a = 1] = m[1].split(',').map(Number); return a < 0.5 ? null : [r, g, b]; };
+    const lum = ([r, g, b]) => { const f = (v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }; return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b); };
+    const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+    const painted = [...svg.querySelectorAll('rect, circle, ellipse, polygon, path')].filter((el) => {
+      const cs = getComputedStyle(el);
+      return rgb(cs.fill) && Number(cs.fillOpacity) >= 0.5 && Number(cs.opacity) >= 0.5 && !el.closest('defs, marker, symbol, clipPath, mask');
+    });
+    // True fill geometry at a screen point: a grid of line segments has a large box but fills nothing.
+    const inside = (el, x, y) => {
+      const r = el.getBoundingClientRect();
+      if (!(x > r.left && x < r.right && y > r.top && y < r.bottom)) return false;
+      try { return el.isPointInFill(new DOMPoint(x, y).matrixTransform(el.getScreenCTM().inverse())); } catch { return true; }
+    };
+    // The page under a figure is white unless the figure paints its own background rect.
+    const bgRect = svg.querySelector('rect.bg');
+    const bgFill = (bgRect && rgb(getComputedStyle(bgRect).fill)) || [255, 255, 255];
+    const paint = [...svg.querySelectorAll('text')].flatMap((t) => {
+      const s = t.textContent.trim();
+      if (!s || t.getAttribute('aria-hidden') === 'true') return [];
+      const r = t.getBoundingClientRect();
+      const x = r.left + r.width / 2, y = r.top + r.height / 2;
+      const after = painted.filter((el) => t.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING && !el.contains(t) && inside(el, x, y));
+      if (after.length) return [{ kind: 'covered', s, by: after[0].getAttribute('class') || after[0].tagName }];
+      const under = painted.filter((el) => t.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_PRECEDING && inside(el, x, y)).at(-1);
+      const tf = rgb(getComputedStyle(t).fill);
+      const base = under ? rgb(getComputedStyle(under).fill) : bgFill;
+      if (tf && base && contrast(tf, base) < 1.6) return [{ kind: 'invisible', s, ratio: +contrast(tf, base).toFixed(2), on: under ? (under.getAttribute('class') || under.tagName) : 'background' }];
+      return [];
+    });
     return {
+      paint,
       viewBox: [vb.width, vb.height],
       texts: [...svg.querySelectorAll('text')].map((t) => {
         const b = t.getBBox();
@@ -120,6 +169,10 @@ for (const file of files) {
   }, CI_FONTS);
 
   const problems = [];
+  for (const p of paint) {
+    if (p.kind === 'covered') problems.push(`is painted over by a later .${p.by}: "${p.s.slice(0, 60)}"`);
+    else problems.push(`is invisible on its .${p.on} (contrast ${p.ratio}:1, need 1.6): "${p.s.slice(0, 60)}"`);
+  }
   const warnings = [];
   for (const t of texts) {
     if (t.x2 > viewBox[0]) problems.push(`overflows right edge by ${(t.x2 - viewBox[0]).toFixed(1)}px: "${t.s.slice(0, 60)}"`);

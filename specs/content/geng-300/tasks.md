@@ -30,7 +30,7 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-03/G2/20261115T035802322Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-03/G2/20261123T155534537Z-gates.json |
 | Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory preflight: escalate; provenance, authority and render handoff pending. advisory:specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight.json; not certification; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ▢ | | English-only course |
 | Unit 3 | G5 ur-review | ▢ | | English-only course |
@@ -61,3 +61,4 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-03/G3/20261108T203238Z-g3-desk-8a32ad91.json (all three findings are provenance, authority and render handoff items, not author-repairable: author-run identity and parent frozen-bundle handoff unavailable; duplicate D-2026-0019 entries and the intake Partition D-2026-00XX placeholder need owner clarification; fresh narrow-view/A4 render inspection needs a permitted render host); no author-repairable content finding was present; owner and render host action required; fresh independent G3 needed |
 | Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-04/G3/20261108T203238Z-g3-desk-d45ca89b.json (fig-U4-1 geometry already repaired in 69e32dca7 and ab85b5815 and verified: measure-figure-text.mjs exits 0 for all unit-04 SVGs; source limitations already disclosed in topics 4.1-4.3 and the sources ledger; render-review not author-repairable under this job's build/server prohibition, needs a browser-capable host); G3 remains open and unsigned |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-03/G3/20261122T175629Z-g3-desk-0b752678.json |
+| Unit 3 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U3-3 did not render (malformed XML: bare ampersand); fixed, and "Q&A" now "Q and A" in its alt; the review above predates it; needs a fresh G3 run |

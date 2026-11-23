@@ -32,19 +32,19 @@
   <rect class="panel" x="30" y="70" width="215" height="270" rx="8"/>
   <rect class="panel-a" x="30" y="70" width="215" height="38" rx="8"/>
   <text class="sh" x="137" y="95" text-anchor="middle"><tspan x="137" dy="0">1. Curriculum Foundations</tspan></text>
-  <text class="body" x="45" y="130"><tspan x="45" dy="0">- Constitutional literacy</tspan><tspan x="55" dy="17">(Articles 8-28 rights & duties)</tspan></text>
+  <text class="body" x="45" y="130"><tspan x="45" dy="0">- Constitutional literacy</tspan><tspan x="55" dy="17">(Articles 8-28 rights &amp; duties)</tspan></text>
   <text class="body" x="45" y="175"><tspan x="45" dy="0">- Valuing provincial, linguistic</tspan><tspan x="55" dy="17">and religious diversity</tspan></text>
   <text class="body" x="45" y="220"><tspan x="45" dy="0">- Evidence-based history</tspan><tspan x="55" dy="17">beyond rote memorisation</tspan></text>
   <text class="body" x="45" y="265"><tspan x="45" dy="0">- Shared environmental and</tspan><tspan x="55" dy="17">civic responsibility</tspan></text>
 
-  <!-- Stage 2: Classroom & School Practice -->
+  <!-- Stage 2: Classroom &amp; School Practice -->
   <rect class="panel" x="285" y="70" width="215" height="270" rx="8"/>
   <rect class="panel-a" x="285" y="70" width="215" height="38" rx="8"/>
-  <text class="sh" x="392" y="95" text-anchor="middle"><tspan x="392" dy="0">2. School & Class Practice</tspan></text>
+  <text class="sh" x="392" y="95" text-anchor="middle"><tspan x="392" dy="0">2. School &amp; Class Practice</tspan></text>
   <text class="body" x="300" y="130"><tspan x="300" dy="0">- Open, respectful dialogue</tspan><tspan x="310" dy="17">on contemporary issues</tspan></text>
   <text class="body" x="300" y="175"><tspan x="300" dy="0">- Equal dignity and care for</tspan><tspan x="310" dy="17">every student in the room</tspan></text>
   <text class="body" x="300" y="220"><tspan x="300" dy="0">- Collaborative inquiry and</tspan><tspan x="310" dy="17">group problem-solving</tspan></text>
-  <text class="body" x="300" y="265"><tspan x="300" dy="0">- Student responsibility through</tspan><tspan x="310" dy="17">class councils & service</tspan></text>
+  <text class="body" x="300" y="265"><tspan x="300" dy="0">- Student responsibility through</tspan><tspan x="310" dy="17">class councils &amp; service</tspan></text>
 
   <!-- Stage 3: National Integration -->
   <rect class="panel" x="540" y="70" width="215" height="270" rx="8"/>
