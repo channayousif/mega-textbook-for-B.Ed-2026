@@ -61,3 +61,45 @@ describe('self-check import (Feature 032 phase C)', () => {
     }
   });
 });
+
+describe('Urdu assessment layouts', () => {
+  it('reads Urdu letters with an Urdu full stop, bold keys, and a heading without "MCQ"', () => {
+    const ur = `### کثیر الانتخابی سوالات
+
+1. سوال ایک؟ *(یاد رکھنا)*
+   - الف۔ پہلا
+   - ب۔ دوسرا
+   - ج۔ تیسرا
+
+### محدود جواب کے سوالات
+
+## جوابات اور نمبر دہی کی رہنمائی
+
+### کثیر الانتخابی سوالات کے جوابات
+
+1. **ب۔** کیونکہ۔
+`;
+    const p = parseAssessment(ur);
+    expect(p.items[0].options).toEqual({ a: 'پہلا', b: 'دوسرا', c: 'تیسرا' });
+    expect(p.answers).toEqual({ 1: 'b' });
+    expect(validate(p)).toEqual([]);
+  });
+
+  it('reads a key table and the متعدد heading', () => {
+    const ur = `### متعدد الانتخاب سوال (MCQs)
+
+1. سوال؟
+   a) ایک
+   b) دو
+
+## جوابات
+
+### متعدد الانتخاب کا جوابی کلید
+
+| سوال | جواب | توجہ |
+|---|---|---|
+| 1 | ب | کیونکہ |
+`;
+    expect(parseAssessment(ur).answers).toEqual({ 1: 'b' });
+  });
+});

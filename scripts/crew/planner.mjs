@@ -237,7 +237,7 @@ export const isCorpusStage = (stage) => !/^(maint|intel|teaser|media|audio|socia
  * tracks, so media jobs still run but never hold the course focus. Before this, one raster job
  * waiting days for image quota held every new course's author jobs.
  */
-export const MEDIA_STAGES = ['figures', 'illustrate', 'plan_illustrations', 'refresh_figures'];
+export const MEDIA_STAGES = ['figures', 'illustrate', 'plan_illustrations', 'refresh_figures', 'flashcards'];
 export const holdsFocus = (stage) => isCorpusStage(stage) && !MEDIA_STAGES.includes(stage);
 
 /**
@@ -292,5 +292,18 @@ export function refreshCandidate(u, f) {
 export function pickRefresh(candidates, inFlight, focus) {
   if (inFlight.some((j) => j.stage === 'refresh_figures')) return null;
   return candidates.find((c) => c.course === focus) ?? candidates[0] ?? null;
+}
+
+/**
+ * Feature 032 phase C: units that still need an authored flashcard deck, at most `max` in flight.
+ * `needed` is specs/studio/flashcards-needed.json (units: ['efmp-301/4', ...]); `authored` the
+ * set of 'course/unit' keys that already have specs/studio/flashcards/<course>/unit-NN.json.
+ */
+export function pickFlashcards(needed, authored, inFlight, max = 2) {
+  const slots = max - inFlight.filter((j) => j.stage === 'flashcards').length;
+  if (slots <= 0) return [];
+  const busy = new Set(inFlight.map((j) => `${String(j.course).toLowerCase()}/${j.unit}`));
+  return needed.filter((k) => !authored.has(k) && !busy.has(k)).slice(0, slots)
+    .map((k) => { const [c, u] = k.split('/'); return { course: c.toUpperCase(), unit: Number(u) }; });
 }
 

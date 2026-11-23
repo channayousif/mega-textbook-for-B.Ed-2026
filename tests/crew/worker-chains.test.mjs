@@ -30,6 +30,7 @@ test('2026-W45 M1 removes only claude_crew from intel_distill', () => {
     'review_ur': ['claude', 'agy_claude', 'agy', 'claude_crew', 'codex'],
     'fix': ['claude_crew', 'codex', 'agy', 'claude', 'agy_claude'],
     'refresh_figures': ['claude', 'agy_claude', 'codex'],
+    'flashcards': ['claude', 'agy_claude', 'codex'],
     'intel_distill': ['agy', 'codex', 'claude', 'agy_claude'],
     // Feature 030 media stages: MCP-bound steps run only on claude.
     'teaser_script': ['claude', 'agy_claude'],

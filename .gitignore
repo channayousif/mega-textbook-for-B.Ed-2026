@@ -147,3 +147,6 @@ __pycache__/
 
 # Feature 029: Gemini Notebook source packs and downloads (local only)
 .studio/
+
+# Feature 032: flashcard decks, rebuilt by build-studio-index.mjs (prestart/prebuild); the source is glossary.json and specs/studio/flashcards/.
+static/studio/flashcards/

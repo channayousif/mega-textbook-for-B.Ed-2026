@@ -18,6 +18,7 @@ import { youtubeEmbed, isYouTubeMusic, driveEmbed } from '@site/src/lib/studioMe
 import StudioPoster from './StudioPoster';
 import StudioMindMap from './StudioMindMap';
 import styles from './studio.module.css';
+import Flashcards, { type Card } from './Flashcards';
 
 type Locale = 'en' | 'ur';
 export type StudioItem = { kind: string; part?: number; title: string; audience: 'all' | 'teacher'; alt: string; src?: string; url?: string };
@@ -40,6 +41,7 @@ const T = {
   video: { en: 'Watch', ur: 'دیکھیں' },
   slides: { en: 'Slides', ur: 'سلائیڈز' },
   animation: { en: 'Animations', ur: 'متحرک خاکے' },
+  flashcards: { en: 'Flashcards', ur: 'فلیش کارڈ' },
   animationNote: {
     en: 'The figures of this topic, built step by step with captions. Made from the figures themselves.',
     ur: 'اس موضوع کے خاکے، قدم بہ قدم، تحریری وضاحت کے ساتھ۔ خود انہی خاکوں سے بنائے گئے۔',
@@ -166,6 +168,14 @@ export default function StudioPanel({ courseCode, unitNo, topicNo, locale }: { c
     add('mindmap', (it, loc) => <Json item={it[0]} locale={locale} render={(d) => <StudioMindMap tree={d as never} locale={loc} storageKey={`studio-recall:${courseCode}:${unitNo}:${topicNo}:${loc}`} />} />);
     add('audio', (it) => <Listen items={it} locale={locale} />);
     add('video', (it) => <Listen items={it} locale={locale} />);
+    // Feature 032 phase C: the topic's deck, from a per-unit file (src '...unit-NN.json#<topic>').
+    add('flashcards', (it, loc) => (
+      <Json item={it[0]} locale={locale} render={(d) => {
+        const topic = (it[0].src ?? '').split('#')[1];
+        const deck = (d as Record<string, Record<Locale, Card[]>>)[topic]?.[loc] ?? [];
+        return <Flashcards cards={deck} locale={loc} />;
+      }} />
+    ));
     add('animation', (it, loc) => (
       <>
         <p className={styles.note}>{T.animationNote[loc]}</p>
@@ -200,7 +210,7 @@ export default function StudioPanel({ courseCode, unitNo, topicNo, locale }: { c
         <p className={styles.eyebrow}>{T.eyebrow[locale]}</p>
         <h2 id="studio-panel-title" className={styles.title}>{T.title[locale]}</h2>
         {/* The Gemini Notebook disclaimer covers Notebook items; animations carry their own note. */}
-        {tabs.some((t) => t.id !== 'animation') && <p className={styles.note}>{T.disclaimer[locale]}</p>}
+        {tabs.some((t) => t.id !== 'animation' && t.id !== 'flashcards') && <p className={styles.note}>{T.disclaimer[locale]}</p>}
       </div>
       <Tabs items={tabs} label={T.tabs[locale]} />
     </section>

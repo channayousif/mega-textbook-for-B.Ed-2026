@@ -54,6 +54,8 @@ export const STAGES = {
   illustrate: { chain: ['agy', 'codex'], skill: 'generate-figures' },
   // Feature 032 phase D: redraw a unit's placed schematics to the improved SVG standard (owner switch `crew refresh on`).
   refresh_figures: { chain: ['claude', 'agy_claude', 'codex'], skill: 'generate-figures' },
+  // Feature 032 phase C: author a unit's flashcard deck in specs/studio/flashcards/ (owner switch `crew flashcards on`).
+  flashcards: { chain: ['claude', 'agy_claude', 'codex'], skill: null },
   review_en:  { chain: ['agy', 'codex', 'claude_crew', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
   translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'claude_crew'], skill: 'translate-unit' },
   review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'claude_crew', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
