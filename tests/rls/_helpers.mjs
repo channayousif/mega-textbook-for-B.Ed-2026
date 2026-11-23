@@ -63,6 +63,17 @@ async function withTransportRetry(fn) {
   }
 }
 
+/**
+ * Wrap every client call in the same transport retry that fixture setup already
+ * had. Node's undici fetch throws `TypeError: fetch failed` (cause ECONNRESET)
+ * when the peer resets a keep-alive connection mid-request, and the hosted
+ * Supabase does that occasionally. One reset red the whole suite on PR #744
+ * (2026-11-23) because only setup was wrapped, so an assertion call failed on a
+ * packet loss that a retry would have absorbed. HTTP responses, including 42501
+ * policy rejections, are returned untouched, so a real policy result still
+ * fails immediately.
+ */
+const retryingFetch = (input, init) => withTransportRetry(() => fetch(input, init));
 
 const URL = process.env.DOCUSAURUS_SUPABASE_URL;
 const ANON = process.env.DOCUSAURUS_SUPABASE_ANON_KEY;
@@ -83,13 +94,19 @@ export function requireConfig() {
 /** Service-role client — bypasses RLS. Fixture setup/teardown ONLY, never assertions. */
 export function serviceClient() {
   requireConfig();
-  return createClient(URL, SERVICE, { auth: { persistSession: false, autoRefreshToken: false } });
+  return createClient(URL, SERVICE, {
+    auth: { persistSession: false, autoRefreshToken: false },
+    global: { fetch: retryingFetch },
+  });
 }
 
 /** Anonymous client — the unauthenticated caller. */
 export function anonClient() {
   requireConfig();
-  return createClient(URL, ANON, { auth: { persistSession: false, autoRefreshToken: false } });
+  return createClient(URL, ANON, {
+    auth: { persistSession: false, autoRefreshToken: false },
+    global: { fetch: retryingFetch },
+  });
 }
 
 export const testEmail = (tag) => `rls-${tag}-${randomUUID()}@example.test`;
