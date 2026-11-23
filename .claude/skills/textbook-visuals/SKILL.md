@@ -18,7 +18,7 @@ One shared look, many outputs. Decide the output here, then follow the skill tha
 | The topic needs... | Make | Skill |
 |---|---|---|
 | a relationship, process, sequence, comparison or timeline | SVG schematic (`table`, `concept-map`, `flowchart`, `timeline`, `diagram`) | **generate-figures** (`references/svg-authoring.md`) |
-| a scene: a classroom, a place, people doing something | raster illustration | **generate-figures** → crew `illustrate` (agy, gflow, Codex: ADR-0024/0029/0036) |
+| a scene, or any complex diagram (people, rooms, objects, dense pictograms; D-2026-0098) | raster illustration with a full alt text and caption in both languages | **generate-figures** → crew `illustrate` (agy, gflow, Codex: ADR-0024/0029/0036) |
 | motion that teaches: a process unfolding, a map built step by step | animated figure (silent, captioned video of an existing connected figure) | **animated-figures** |
 | a talk or a lesson to present | web slide deck (16:9, in the Study Studio) plus a downloadable pptx | **studio-slides** (Phase B) and **pptx** |
 | numbers or data a reader should explore | an interactive chart with a static print fallback | `<Chart>` (Phase C) and **dataviz** |

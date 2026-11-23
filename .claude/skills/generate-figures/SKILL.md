@@ -77,6 +77,15 @@ figures for a unit that has no per-topic markers yet.
    (Spec 012;
    `references/svg-authoring.md` §"Diagram or illustration"). The content-spec `**Figure plan**`
    usually already names it - carry that through unless it is plainly wrong.
+   **Simple or complex (owner ruling D-2026-0098, 2026-11-23).** Simple diagrams are SVG: boxes,
+   arrows, tables, timelines, cycles, axes and charts, where every mark is a labelled shape. A
+   *complex* diagram is a raster `illustration` with a proper description: a scene or picture
+   (people, rooms, objects, a spotlight on a pupil), dense pictograms, or anything whose Urdu
+   version would need its drawing, not just its labels, re-laid out (EFMP-301 fig-U4-1 is the
+   reference case: its stick figures and beams broke when mirrored). The raster carries no
+   readable text, so one `.webp` serves both locales; the meaning goes into the alt text and the
+   caption in each language, which must name every element and relation a reader needs. When
+   unsure, ask: "would a hand-drawn version of this need an artist?" If yes, it is complex.
    - **Schematics** (hand-authored SVG): `table` (comparison / matrix), `concept-map`
      (node-and-arrow web of related ideas), `flowchart` (decision / process flow), `timeline`
      (ordered sequence along time), `diagram` (any other schematic - triangle / Venn / cycle /

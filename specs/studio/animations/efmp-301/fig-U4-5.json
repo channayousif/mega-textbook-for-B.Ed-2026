@@ -1,0 +1,19 @@
+{
+  "course": "EFMP-301",
+  "unit": 4,
+  "figure": "fig-U4-5",
+  "svg": "static/img/figures/efmp-301/unit-04/fig-U4-5.svg",
+  "note": "Captions restate the figure and its topic text; they add no claim.",
+  "beats": [
+    { "region": [300, 195, 180, 115], "seconds": 3.5, "icon": "explain", "accent": "a4",
+      "caption": { "en": "Thinking: the mind at work.", "ur": "سوچ: ذہن کام پر۔" } },
+    { "region": [[14, 26, 255, 142], [260, 150, 55, 75]], "seconds": 6, "icon": "bookmark", "accent": "a1",
+      "caption": { "en": "Concepts are learned categories with defining features, as when a Class 1 pupil builds \"sabzi\" from market visits.", "ur": "تصورات سیکھی گئی اقسام ہیں جن کے پہچانے ہوئے خدوخال ہیں، جیسے جماعت اول کا شاگرد بازار کے چکر سے سبزی کا تصور بناتا ہے۔" } },
+    { "region": [[510, 24, 255, 206], [470, 160, 50, 70]], "seconds": 6, "icon": "search", "accent": "a2",
+      "caption": { "en": "Problem-solving has strategies with names: algorithm, heuristic, means-ends, working backwards and analogy.", "ur": "مسئلہ حل کرنے کی حکمت عملیوں کے نام ہیں: الگورتھم، قاعدہ سر انگشت، ذرائع و اغراض، پیچھے سے آگے، اور قیاس۔" } },
+    { "region": [[14, 300, 282, 146], [285, 280, 35, 55]], "seconds": 6, "icon": "link", "accent": "a3",
+      "caption": { "en": "Reasoning runs from cases to a rule (inductive) and from a rule to a case (deductive).", "ur": "استدلال مثالوں سے قاعدے کی طرف (استقرائی) اور قاعدے سے مثال کی طرف (استنتاجی) چلتا ہے۔" } },
+    { "region": [0, 0, 1, 1], "seconds": 4.5, "icon": "sparkle", "accent": "a4",
+      "caption": { "en": "Concepts, problem-solving and reasoning: three ways the mind works.", "ur": "تصورات، مسئلہ حل کرنا اور استدلال: ذہن کے کام کرنے کے تین طریقے۔" } }
+  ]
+}
