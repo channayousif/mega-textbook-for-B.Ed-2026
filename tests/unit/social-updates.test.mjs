@@ -2,7 +2,7 @@
 // captions, approval rules, image-post request builders and the card.
 import { describe, it, expect } from 'vitest';
 import {
-  highlight, contentHighlights, courseName, isFeature, buildDrafts, checkDraft, captionFor, altText, approve, reject, emptyLedger, postedIds, setCopy, pending,
+  highlight, contentHighlights, courseName, animationEvents, isFeature, buildDrafts, checkDraft, captionFor, altText, approve, reject, emptyLedger, postedIds, setCopy, pending,
 } from '../../scripts/social/updates.mjs';
 import { facebookPhotoForm, instagramImageQuery, linkedinImageInit, linkedinImagePost } from '../../scripts/notebook-studio/social-post.mjs';
 import { cardSvg } from '../../scripts/social/card.mjs';
@@ -53,6 +53,29 @@ describe('copy', () => {
     const t = highlight('teaser', many, titles);
     expect(t.en.length).toBeLessThanOrEqual(320);
     expect(t.card_en.length).toBeLessThanOrEqual(68);
+  });
+});
+
+describe('animated figures (Feature 032)', () => {
+  it('announces public 16:9 animations per course, counting figures, in both languages', async () => {
+    const { mkdtempSync, writeFileSync } = await import('node:fs');
+    const { tmpdir } = await import('node:os');
+    const dir = mkdtempSync(`${tmpdir()}/anim-`);
+    const f = `${dir}/placed.json`;
+    writeFileSync(f, JSON.stringify({ animations: [
+      { figure: '/img/figures/efmp-301/unit-04/fig-U4-3', lang: 'en', format: '16x9', youtube_id: 'AAAAAAAAAAA', status: 'public', approved: '2026-11-23' },
+      { figure: '/img/figures/efmp-301/unit-04/fig-U4-3', lang: 'ur', format: '16x9', youtube_id: 'BBBBBBBBBBB', status: 'public', approved: '2026-11-23' },
+      { figure: '/img/figures/efmp-301/unit-04/fig-U4-3', lang: 'en', format: '9x16', youtube_id: 'CCCCCCCCCCC', status: 'public', approved: '2026-11-23' },
+      { figure: '/img/figures/efmp-301/unit-04/fig-U4-5', lang: 'en', format: '16x9', youtube_id: 'DDDDDDDDDDD', status: 'private', approved: null },
+    ] }));
+    const ev = animationEvents(dir, '2026-11-22T00:00:00Z', f);
+    expect(ev.map((e) => e.id)).toEqual(['animation:/img/figures/efmp-301/unit-04/fig-U4-3:en', 'animation:/img/figures/efmp-301/unit-04/fig-U4-3:ur']);
+    expect(animationEvents(dir, '2026-11-24T00:00:00Z', f)).toEqual([]);
+    const [h] = contentHighlights(ev);
+    expect(h.type).toBe('animation');
+    expect(h.card_en).toMatch(/^EFMP-301 .*: 1 animated diagram$/);
+    expect(h.en).toContain('with captions in English and Urdu');
+    expect(h.en.length).toBeLessThanOrEqual(320);
   });
 });
 

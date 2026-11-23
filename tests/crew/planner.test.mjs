@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, figureBacklog, limitIllustrate,
-  needsIllustrationPlan, illustrationsPending, unitScopedChanges, limitPlanIllustrations, holdsFocus } from '../../scripts/crew/planner.mjs';
+  needsIllustrationPlan, illustrationsPending, unitScopedChanges, limitPlanIllustrations, holdsFocus, refreshCandidate, pickRefresh } from '../../scripts/crew/planner.mjs';
 
 const unit = (G3 = 'open', G5 = 'open', over = {}) => ({ authored: true, gates: { G3, G5 }, figures: { prompt_only: 0 }, ...over });
 const facts = (over = {}) => ({ bilingual: true, g3Report: null, g3Repaired: false, g5Report: null, mirrorComplete: true, ...over });
@@ -226,3 +226,23 @@ test('at most two plan_illustrations jobs are in flight', () => {
   assert.deepEqual(limitPlanIllustrations([job(1), other], [job(9)]).map((j) => j.id), ['u1', 'r']);
   assert.deepEqual(limitPlanIllustrations([job(1)], [job(8), job(9)]), []);
 });
+
+test('figure refresh: uncertified units with unstructured schematics, never certified or awaiting sign-off', () => {
+  // Feature 032 phase D (owner, 2026-11-23: "Uncertified first", "Crew stage, course by course").
+  assert.equal(refreshCandidate(unit('open'), facts({ unstructuredSchematics: 3 })), true);
+  assert.equal(refreshCandidate(unit('done'), facts({ unstructuredSchematics: 3 })), false, 'certified');
+  assert.equal(refreshCandidate(unit('open'), facts({ unstructuredSchematics: 0 })), false, 'nothing to redraw');
+  assert.equal(refreshCandidate(unit('open'), facts({ unstructuredSchematics: 3, g3Report: { disposition: 'pass' } })), false, 'awaiting the owner\'s G3 sign-off');
+  assert.equal(refreshCandidate(unit('open', 'open', { figures: { prompt_only: 1 } }), facts({ unstructuredSchematics: 3 })), false, 'figures job first');
+  assert.equal(refreshCandidate({ authored: false, gates: {} }, facts({ unstructuredSchematics: 3 })), false);
+});
+
+test('figure refresh runs one unit at a time, focus course first', () => {
+  const c = [{ course: 'A', unit: 1 }, { course: 'B', unit: 2 }];
+  assert.deepEqual(pickRefresh(c, [], 'B'), { course: 'B', unit: 2 });
+  assert.deepEqual(pickRefresh(c, [], 'Z'), { course: 'A', unit: 1 });
+  assert.equal(pickRefresh(c, [{ stage: 'refresh_figures' }], 'A'), null);
+  assert.equal(pickRefresh([], [], 'A'), null);
+  assert.equal(holdsFocus('refresh_figures'), false, 'figure work runs beside the focus course');
+});
+

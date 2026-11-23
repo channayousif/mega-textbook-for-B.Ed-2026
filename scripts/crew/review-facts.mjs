@@ -61,3 +61,12 @@ export function g3UnitChanges(root, course, unit, report) {
     return [];
   }
 }
+
+/** Placed English SVG schematics of a unit that lack the layered structure (Feature 032 phase D). */
+export function unstructuredSchematics(root, course, unit) {
+  const dir = join(root, 'static', 'img', 'figures', course.toLowerCase(), `unit-${String(unit).padStart(2, '0')}`);
+  if (!existsSync(dir)) return 0;
+  return readdirSync(dir).filter((n) => /^fig-U\d+-\d+\.svg$/.test(n))
+    .filter((n) => !readFileSync(join(dir, n), 'utf8').includes('id="layer-nodes"')).length;
+}
+

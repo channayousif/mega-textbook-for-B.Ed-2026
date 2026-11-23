@@ -45,7 +45,7 @@ export const HASHTAGS = '#BEd #TeacherEducation #textbookcompk #اردو';
 const BURST_DAYS = 7;
 
 /** Order highlights by what readers care about most. Provisional is not announced socially. */
-const PRIORITY = ['course', 'unit', 'urdu', 'teaser', 'figures', 'updated', 'review'];
+const PRIORITY = ['course', 'unit', 'urdu', 'teaser', 'animation', 'figures', 'updated', 'review'];
 
 // ---------- copy (pure) ----------
 
@@ -155,6 +155,15 @@ export function highlight(type, items, titles = courseTitles()) {
           `A new 30-second video on YouTube${ur ? ', in Urdu,' : ''} shows what ${nameEn} is about.`,
           `یوٹیوب پر${ur ? ' اردو میں' : ''} 30 سیکنڈ کا نیا ویڈیو بتاتا ہے کہ ${nameUr} کس بارے میں ہے۔`);
     }
+    case 'animation': {
+      // Feature 032: approved, public animated versions of placed figures.
+      const figs = new Set(items.map((i) => i.figure)).size;
+      const both = new Set(items.map((i) => i.lang)).size > 1;
+      const plural = figs === 1 ? 'diagram' : 'diagrams';
+      return h(fit(`${nameEn}: ${figs} animated ${plural}`, `${code}: ${figs} animated ${plural}`), fit(`${nameUr}: ${figs} متحرک خاکے`, `${code}: ${figs} متحرک خاکے`),
+        `${figs} ${plural} in ${nameEn} now play as short animations that build step by step, with captions${both ? ' in English and Urdu' : ''}. Watch them on YouTube or with the "Watch it animate" button under each diagram.`,
+        `${nameUr} کے ${figs} خاکے اب مختصر متحرک ویڈیو کی صورت میں ہیں جو قدم بہ قدم بنتے ہیں، ساتھ تحریری وضاحت${both ? ' انگریزی اور اردو میں' : ''}۔ انہیں یوٹیوب پر یا ہر خاکے کے نیچے "متحرک دیکھیں" بٹن سے دیکھیں۔`);
+    }
     default: throw new Error(`no copy for ${type}`);
   }
 }
@@ -177,6 +186,19 @@ export function contentHighlights(items) {
     if (rest.length) out.push({ ...highlight(rest[0].type, rest), date: rest[0].date });
   }
   return out.sort((a, b) => PRIORITY.indexOf(a.type) - PRIORITY.indexOf(b.type) || b.date.localeCompare(a.date));
+}
+
+/** Public 16:9 animated figures from the Feature 032 ledger, approved after `since`. */
+export function animationEvents(root, since, ledgerPath = join(root, 'specs/studio/animations/placed.json')) {
+  if (!existsSync(ledgerPath)) return [];
+  const L = JSON.parse(readFileSync(ledgerPath, 'utf8'));
+  return (L.animations ?? []).filter((a) => a.status === 'public' && a.format === '16x9' && a.approved)
+    .map((a) => {
+      const m = a.figure.match(/^\/img\/figures\/([a-z0-9-]+)\/unit-(\d+)\//);
+      return m && { id: `animation:${a.figure}:${a.lang}`, type: 'animation', date: `${a.approved}T12:00:00+05:00`,
+        course_code: m[1].toUpperCase(), unit_no: Number(m[2]), figure: a.figure, lang: a.lang, permalink: '/' };
+    })
+    .filter((e) => e && Date.parse(e.date) > Date.parse(since));
 }
 
 /** A user-facing platform change: a feat(...) PR touching what visitors see. */
@@ -325,6 +347,7 @@ async function collect({ since, date }) {
     const s = JSON.parse(readFileSync(join(ROOT, 'specs/studio/teasers', `${i.id}.json`), 'utf8'));
     return { id: `teaser:${i.key}`, type: 'teaser', date: i.published_at, course_code: s.course_code ?? 'Licence', permalink: `https://youtube.com/shorts/${i.youtube_id}` };
   });
+  events.push(...animationEvents(ROOT, since));
   const head = deployedSha();
   execFileSync('git', ['-C', ROOT, 'fetch', '-q', 'origin', 'main'], { stdio: 'ignore' });
   const raw = JSON.parse(execFileSync('gh', ['pr', 'list', '--state', 'merged', '--base', 'main', '--search', `merged:>=${since.slice(0, 10)}`,

@@ -178,6 +178,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): label on a dark shape made visible; the review above predates it; needs a fresh G3 run |
 | Unit 11 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): nine labels on dark shapes in fig-U11-1 made visible; the review above predates it; needs a fresh G3 run |
 | Unit 12 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): labels on dark shapes made visible; the review above predates it; needs a fresh G3 run |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261123T141231960Z-gates.json |
 
 ## Re-restructure in progress (2026-09-11)
 
