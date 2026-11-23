@@ -1,23 +1,25 @@
 ---
 id: crew-efmp-301-u10-flashcards-conflict1
-title: crew flashcards EFMP-301 unit 10 (merge conflict)
+title: crew fix EFMP-301 unit 10
 stage: misc
-date: 2026-11-24
+date: 2026-11-23
 surface: agent
-model: claude
+model: claude_crew
 feature: efmp-301
 branch: crew/efmp-301-u10-flashcards
 user: crew
-command: crew flashcards
-labels: ["crew", "claude", "flashcards"]
+command: crew fix
+labels: ["crew", "claude_crew", "fix"]
 links:
   spec: specs/content/efmp-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - specs/studio/flashcards-needed.json
  - history/prompts/efmp-301/crew-efmp-301-u10-flashcards-conflict1.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u10-flashcards.misc.prompt.md
+ - specs/studio/flashcards-needed.json
+ - specs/studio/flashcards/efmp-301/unit-10.json
 tests:
  - npm run check:content
 ---
@@ -54,27 +56,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u10-review_en, review_en, agy) Six advisory findings (non-blocking) are carried in report agent-g3-efmp301-u10-run002.json.
 - (efmp-301-u10-review_en, review_en, agy) G3 tracker row left unticked with no reviewer initials, awaiting human G3 sign-off under ADR-0019.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-301-u10-flashcards and resolved the single conflict in specs/studio/flashcards-needed.json by union of both sides' removals (main dropped efmp-301/1, this branch dropped efmp-301/10; both dropped efmp-305/5 and gcce-400/5), confirmed by regenerating with `node scripts/build-studio-index.mjs --coverage`.
+Merged origin/main into crew/efmp-301-u10-flashcards, union-resolved the flashcards-needed.json conflict (dropping efmp-301/1 and efmp-301/10), committed the merge and its PHR, and left npm run check:content fully green.
 
 ## Outcome
 
-- Impact: merge conflict resolution for EFMP-301 Unit 10 flashcards by claude (attempt 1).
-- Tests: npm run check:content passed (all 14 content gates PASS).
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-301 Unit 10 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 4 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-301-u10-flashcards; resolved specs/studio/flashcards-needed.json by keeping both sides' removals; regenerated the coverage list with `node scripts/build-studio-index.mjs --coverage`; committed the merge and this PHR.
-- Decisions the team must respect: the merged flashcards-needed.json is the script-generated canonical list, so it drops efmp-301/1 (main's unit-01 deck), efmp-301/10 (this branch's deck), efmp-305/5 and gcce-400/5.
+- Shipped / changed: Merged origin/main into crew/efmp-301-u10-flashcards, union-resolved the flashcards-needed.json conflict (dropping efmp-301/1 and efmp-301/10), committed the merge and its PHR, and left npm run check:content fully green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `static/studio/flashcards/` is gitignored but main tracks generated decks there; running the coverage script rewrites tracked decks for other courses, so restore them (`git checkout -- static/studio/flashcards/`) before committing a merge.
-  - `static/content-status.json` is gitignored and was regenerated with `npm run build:content-status`; regenerate it again after any tracker edit or the gate fails as stale.
-  - G3 for EFMP-301 Unit 10 remains unticked with no reviewer initials, awaiting human sign-off under ADR-0019.
+  - `static/studio/flashcards/` is gitignored yet main tracks generated decks there; the coverage script rewrites tracked decks for other courses, so restore them (`git checkout -- static/studio/flashcards/`) before committing a merge.
+  - EFMP-301 Unit 10 G3 remains unticked with no reviewer initials, awaiting human sign-off under ADR-0019.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
