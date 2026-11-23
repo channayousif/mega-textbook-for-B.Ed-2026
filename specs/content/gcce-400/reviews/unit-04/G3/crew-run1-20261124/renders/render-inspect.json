@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "course_code": "GCCE-400",
+  "unit_no": 4,
+  "locale": "en",
+  "base": "https://textbook.com.pk",
+  "route": "/semester-4/gcce-400/unit-04",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U4-1",
+    "fig-U4-2",
+    "fig-U4-3",
+    "fig-U4-4",
+    "fig-U4-5"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "topic-01: visible image did not load: /img/figures/gcce-400/unit-04/fig-U4-2.svg",
+    "topic-02: visible image did not load: /img/figures/gcce-400/unit-04/fig-U4-5.svg, /img/figures/gcce-400/unit-04/fig-U4-4.svg"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-11-23T21:04:04.096Z"
+}

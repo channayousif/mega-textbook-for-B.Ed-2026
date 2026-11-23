@@ -1,0 +1,15 @@
+render-review - GCCE-400 Unit 4 G3 - 2026-11-24 (Asia/Karachi)
+Identity check: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/gcce-400/unit-04/ static/img/figures/gcce-400/unit-04/
+deployed SHA (rendered input identity): 98fbbb0647d5e2c6040059edcaaccc1317b620a1
+HEAD reviewed: 9502097ffbfe5ed2856b82dc60052cddae071767
+diff exit code: 0 (unit English directory and figure assets identical between deployed SHA and HEAD)
+Command: scripts/heavy.sh node scripts/render-inspect.mjs GCCE-400 4 --base https://textbook.com.pk --no-pdf --out specs/content/gcce-400/reviews/unit-04/G3/crew-run1-20261124/renders
+Browser: chromium 149.0.7827.0 (headless, via render-inspect.mjs). Views: desktop 1280x900, narrow 360x780, A4 print media 794px.
+Full log: logs/render-review.log ; structured result: renders/render-inspect.json ; PNGs: renders/*.png
+render-inspect exit code: 1 (2 reported defects, both "visible image did not load" for fig-U4-2, fig-U4-4 and fig-U4-5)
+
+Reviewer follow-up on the reported defects:
+- curl of each of the three assets from https://textbook.com.pk/img/figures/gcce-400/unit-04/ returned HTTP 200, and the served bytes are byte-identical (cmp) to HEAD for fig-U4-1, fig-U4-2, fig-U4-4 and fig-U4-5.
+- All three are loading=lazy images below the fold; natural=0x0 at measurement time is consistent with lazy loading not triggered by the inspector, not with a missing asset.
+- Per the crew brief this is recorded as UNVERIFIED rendering of those three figures, not as a content defect.
+Other observations: no horizontal document overflow at 360px; every wide table is its own scroll container with tabindex=0 and an aria-label; no skipped heading levels; all images carry alt text; print view reports clippedElems=0 on every page and the answers section headings appear only on the assessment page.
