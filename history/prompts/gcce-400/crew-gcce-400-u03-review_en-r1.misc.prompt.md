@@ -1,6 +1,6 @@
 ---
 id: crew-gcce-400-u03-review_en-r1
-title: crew review_en GCCE-400 unit 3 (cycle 2)
+title: crew review_en GCCE-400 unit 3
 stage: misc
 date: 2026-11-23
 surface: agent
@@ -13,7 +13,7 @@ labels: ["crew", "claude_crew", "review_en"]
 links:
   spec: specs/content/gcce-400/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
  - history/prompts/gcce-400/crew-gcce-400-u03-review_en-r1.misc.prompt.md
@@ -54,7 +54,6 @@ files:
  - specs/content/gcce-400/tasks.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf.json
 ---
 
 ## Prompt
@@ -85,32 +84,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Produced and committed an advisory G3 English review of GCCE-400 Unit 3 (disposition escalate, cycle 2) with a validated evidence report, source verification, independent assessment solve, live render inspection, logs, renders, tracker row and PHR.
+Committed an advisory G3 cycle 2 review of GCCE-400 Unit 3 that verifies the F1-F8 repairs and escalates on a new blocking finding that Article 184 was repealed by the 27th Amendment and is still taught.
 
 ## Outcome
 
-- Impact: review_en for GCCE-400 Unit 3 by claude_crew (cycle 2, final cycle under ADR-0019).
-- Tests: npm run check:content passed in the job worktree; report validated with scripts/review-evidence.mjs.
+- Impact: review_en for GCCE-400 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 36 file(s), listed above.
-- Next prompts: the crew planner derives the unit next stage from main after merge; an owner ruling is needed on the Article 184 repair.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: advisory G3 cycle 2 report at specs/content/gcce-400/reviews/unit-03/G3/7558a5eb-ca9c-48c8-bdd0-b7deb07922bf.json with evidence under the same run id; advisory tracker row appended to specs/content/gcce-400/tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything and does not tick G3.
-- Pending / next owner: owner ruling on the Article 184 repair (a third cycle needs authorisation under ADR-0019); crew lead for merge.
+- Shipped / changed: Committed an advisory G3 cycle 2 review of GCCE-400 Unit 3 that verifies the F1-F8 repairs and escalates on a new blocking finding that Article 184 was repealed by the 27th Amendment and is still taught.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - F9 blocking: Article 184 was omitted by the Twenty-seventh Amendment Act, 2025 (effective 13 November 2025); the public-importance fundamental-rights jurisdiction is now Article 175E(3) of the Federal Constitutional Court. topic-01.mdx:52, unit-assessment.mdx:101,141,168-169 and sources/unit-03.md:7,18 still teach the repealed article.
-  - Cycle 1 findings F1-F8 are verified repaired; F10 is a render-inspect tooling artifact (raster figures checked as SVG variants, below-fold lazy images), not a content defect.
-  - The deployed SHA equalled HEAD for this run, so the live render inspection is valid for the reviewed bytes.
+  - F9 needs an owner ruling: re-point the four passages to Article 175E(3)/Federal Constitutional Court, or authorise a third cycle (ADR-0019 allows two).
+  - `render-inspect.mjs` Section D assumes every placed figure has `.svg`/`.dark.svg` variants, so it flags the WebP illustrations fig-U3-6/7 as MISSING; that is a tool limitation, not a content defect.
+  - `~/deploy/deployed-sha` moved from `8fc777848` to `dd2b91483` during this run; the live render evidence is valid for the reviewed HEAD `dd2b91483`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS
-- Prompt variant (if applicable): crew brief v1, cycle 2
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
