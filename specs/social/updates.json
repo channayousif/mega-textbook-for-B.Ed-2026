@@ -1,41 +1,22 @@
 {
  "config": {
-  "pilot": true
+  "pilot": false
  },
  "posts": [
   {
    "id": "2026-11-23-content",
    "kind": "content",
    "date": "2026-11-23",
-   "state": "drafted",
+   "state": "posted",
    "headline": {
-    "en": "New on textbook.com.pk",
-    "ur": "نیا مواد"
+    "en": "New this week: free B.Ed courses",
+    "ur": "اس ہفتے نیا: مفت B.Ed کورس"
    },
    "highlights": [
     {
      "type": "course",
      "ids": [
-      "course:GCCE-400"
-     ],
-     "en": "New course: Civics and Community Engagement",
-     "ur": "نیا کورس: شہریات اور سماجی شمولیت",
-     "link": "/semester-4/gcce-400/",
-     "date": "2026-11-22T11:10:20+05:00"
-    },
-    {
-     "type": "course",
-     "ids": [
-      "course:GUHQ-301"
-     ],
-     "en": "New course: Fehm-e-Quran - I",
-     "ur": "نیا کورس: فہمِ قرآن - I",
-     "link": "/semester-3/guhq-301/",
-     "date": "2026-11-22T00:21:51+05:00"
-    },
-    {
-     "type": "unit",
-     "ids": [
+      "course:GCCE-400",
       "unit:GCCE-400:5",
       "unit:GCCE-400:6",
       "unit:GCCE-400:4",
@@ -43,14 +24,16 @@
       "unit:GCCE-400:2",
       "unit:GCCE-400:1"
      ],
-     "en": "GCCE-400: 6 new units",
-     "ur": "GCCE-400: 6 نئے یونٹ",
      "link": "/semester-4/gcce-400/",
-     "date": "2026-11-22T17:35:28+05:00"
+     "card_en": "New course: GCCE-400 Civics and Community Engagement",
+     "card_ur": "نیا کورس: GCCE-400 شہریات اور سماجی شمولیت",
+     "en": "New course: GCCE-400 Civics and Community Engagement. Six units explain what citizenship means, how the state, government and civil society fit together, our rights and responsibilities, ethics and serving the community, advocacy, and how to be a responsible citizen online.",
+     "ur": "نیا کورس: GCCE-400 شہریات اور سماجی شمولیت۔ چھ یونٹ بتاتے ہیں کہ شہریت کیا ہے، ریاست، حکومت اور سول سوسائٹی کا آپس میں کیا تعلق ہے، ہمارے حقوق اور ذمہ داریاں، اخلاقیات اور سماجی خدمت، وکالت، اور آن لائن ذمہ دار شہری کیسے بنیں۔"
     },
     {
-     "type": "unit",
+     "type": "course",
      "ids": [
+      "course:GUHQ-301",
       "unit:GUHQ-301:7",
       "unit:GUHQ-301:6",
       "unit:GUHQ-301:5",
@@ -59,10 +42,11 @@
       "unit:GUHQ-301:3",
       "unit:GUHQ-301:1"
      ],
-     "en": "GUHQ-301: 7 new units",
-     "ur": "GUHQ-301: 7 نئے یونٹ",
      "link": "/semester-3/guhq-301/",
-     "date": "2026-11-22T06:09:15+05:00"
+     "card_en": "New Quran course: GUHQ-301 Fehm-e-Quran - I",
+     "card_ur": "قرآن کا نیا کورس: GUHQ-301 فہمِ قرآن - I",
+     "en": "New course: GUHQ-301 Fehm-e-Quran - I (understanding the Quran). Seven units teach Quranic Arabic step by step: its letters, roots and common words, grammar and sentence structure, reading and understanding the text, and the historical and cultural setting of the Quran.",
+     "ur": "نیا کورس: GUHQ-301 فہمِ قرآن - I۔ سات یونٹ قرآنی عربی کو قدم بہ قدم سکھاتے ہیں: حروف، مادے اور عام الفاظ، قواعد اور جملوں کی ساخت، متن کو پڑھنا اور سمجھنا، اور قرآن کا تاریخی و ثقافتی پس منظر۔"
     },
     {
      "type": "urdu",
@@ -72,15 +56,54 @@
       "urdu:GCCE-400:5",
       "urdu:GCCE-400:4",
       "urdu:GCCE-400:2",
-      "urdu:GCCE-400:1"
+      "urdu:GCCE-400:1",
+      "urdu:GUHQ-301:7",
+      "urdu:GUHQ-301:6",
+      "urdu:GUHQ-301:5",
+      "urdu:GUHQ-301:4",
+      "urdu:GUHQ-301:2",
+      "urdu:GUHQ-301:3",
+      "urdu:GUHQ-301:1"
      ],
-     "en": "GCCE-400: 6 units now in Urdu",
-     "ur": "GCCE-400: 6 یونٹ اب اردو میں",
-     "link": "/semester-4/gcce-400/",
-     "date": "2026-11-23T00:00:12+05:00"
+     "link": "/ur/",
+     "card_en": "All 13 new units free in English and Urdu",
+     "card_ur": "تمام 13 نئے یونٹ انگریزی اور اردو میں مفت",
+     "en": "All 13 units of both courses are free to read, in English and in Urdu.",
+     "ur": "دونوں کورسز کے تمام 13 یونٹ انگریزی اور اردو دونوں میں مفت پڑھے جا سکتے ہیں۔"
+    },
+    {
+     "type": "teaser",
+     "ids": [
+      "teaser:gsos-301-ur",
+      "teaser:gqur-301-ur",
+      "teaser:gpks-402-ur",
+      "teaser:geng-301-ur",
+      "teaser:efmp-305-ur",
+      "teaser:gqur-300-ur"
+     ],
+     "link": "/",
+     "card_en": "6 new 30-second course videos in Urdu",
+     "card_ur": "6 نئی 30 سیکنڈ کی کورس ویڈیوز اردو میں",
+     "en": "Six new 30-second Urdu videos on YouTube introduce GSOS-301 Social Science (Sociology), GQUR-301 Quantitative Reasoning-II (Statistics), GPKS-402 Pakistan Studies, GENG-301 Expository Writing, EFMP-305 Inclusive Education and GQUR-300 Quantitative Reasoning-I.",
+     "ur": "یوٹیوب پر اردو میں چھ نئے 30 سیکنڈ کے تعارفی ویڈیو: GSOS-301 سماجی علوم (عمرانیات)، GQUR-301 مقداری استدلال-2 (شماریات)، GPKS-402 مطالعہ پاکستان، GENG-301 تشریحی تحریر، EFMP-305 شمولیتی تعلیم اور GQUR-300 مقداری استدلال-1۔"
+    },
+    {
+     "type": "figures",
+     "ids": [
+      "figures:GQUR-301:5",
+      "figures:GQUR-301:2",
+      "figures:EFPG-401:1",
+      "figures:GQUR-300:6",
+      "figures:GNAS-301:4"
+     ],
+     "link": "/",
+     "card_en": "New diagrams in 4 courses",
+     "card_ur": "4 کورسز میں نئے خاکے اور تصاویر",
+     "en": "New pictures and diagrams that make ideas easier to see in GQUR-301 Quantitative Reasoning-II (Statistics), EFPG-401 Teaching of English, GQUR-300 Quantitative Reasoning-I and GNAS-301 Environmental Science.",
+     "ur": "نئی تصاویر اور خاکے جو بات کو دیکھ کر سمجھنا آسان بناتے ہیں: GQUR-301 مقداری استدلال-2 (شماریات)، EFPG-401 انگریزی کی تدریس، GQUR-300 مقداری استدلال-1 اور GNAS-301 ماحولیاتی سائنس۔"
     }
    ],
-   "more": 6,
+   "more": 0,
    "items": [
     "course:GCCE-400",
     "course:GUHQ-301",
@@ -125,11 +148,187 @@
    "link": "/",
    "collected_at": "2026-11-22T21:17:03.766Z",
    "since": "2026-11-21T21:16:58.462Z",
-   "card": "~/studio-media/social/2026-11-23-content.jpg",
-   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-content.jpg"
+   "card": "~/studio-media/social/2026-11-23-content-v2.jpg",
+   "approved": {
+    "by": "owner",
+    "at": "2026-11-23T12:57:46.636Z",
+    "via": "board-direct (Claude Code, owner: \"Post now\")"
+   },
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-content-v2.jpg",
+   "platforms": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1404300426106517_122110426755545614",
+     "url": "https://www.facebook.com/1404300426106517_122110426755545614",
+     "at": "2026-11-23T12:58:05.237Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18120821111042358",
+     "url": "https://www.instagram.com/p/DgFbvSWJWiZ/",
+     "at": "2026-11-23T12:58:05.237Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:share:7530615656782938114",
+     "url": "https://www.linkedin.com/feed/update/urn:li:share:7530615656782938114/",
+     "at": "2026-11-23T12:58:05.237Z"
+    }
+   }
   },
   {
    "id": "2026-11-23-feature",
+   "kind": "feature",
+   "date": "2026-11-23",
+   "state": "posted",
+   "headline": {
+    "en": "Platform update: new on the home page",
+    "ur": "پلیٹ فارم اپ ڈیٹ: ہوم پیج پر نیا"
+   },
+   "highlights": [
+    {
+     "type": "feature",
+     "ids": [
+      "pr:712"
+     ],
+     "en": "A news ticker on the home page now shows, in three rows, what was added and improved most recently, with the most important news pinned at the front so it is never missed.",
+     "ur": "ہوم پیج پر نیوز ٹکر اب تین قطاروں میں دکھاتا ہے کہ حال ہی میں کیا شامل اور بہتر کیا گیا، اور سب سے اہم خبریں سب سے آگے رہتی ہیں تاکہ کوئی خبر نظر سے نہ رہ جائے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 712,
+     "card_en": "Home page news ticker: the newest updates, key news pinned",
+     "card_ur": "ہوم پیج نیوز ٹکر: تازہ اپ ڈیٹس، اہم خبریں سب سے آگے"
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:701"
+     ],
+     "en": "Four short course videos now play on the home page, the two most watched and the two newest, so a visitor can see what a course is about in 30 seconds before starting it.",
+     "ur": "ہوم پیج پر اب چار مختصر کورس ویڈیوز ہیں، دو سب سے زیادہ دیکھی گئی اور دو نئی، تاکہ کوئی بھی کورس شروع کرنے سے پہلے 30 سیکنڈ میں جان لے کہ وہ کس بارے میں ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 701,
+     "card_en": "Home page: four 30-second videos to preview courses",
+     "card_ur": "ہوم پیج: کورس دیکھنے کے لیے چار 30 سیکنڈ کی ویڈیوز"
+    }
+   ],
+   "more": 0,
+   "items": [
+    "pr:712",
+    "pr:701"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-22T21:17:03.766Z",
+   "since": "2026-11-21T21:16:58.462Z",
+   "card": "~/studio-media/social/2026-11-23-feature-v2.jpg",
+   "approved": {
+    "by": "owner",
+    "at": "2026-11-23T12:57:46.639Z",
+    "via": "board-direct (Claude Code, owner: \"Post now\")"
+   },
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-feature-v2.jpg",
+   "platforms": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1404300426106517_122110427085545614",
+     "url": "https://www.facebook.com/1404300426106517_122110427085545614",
+     "at": "2026-11-23T12:58:21.391Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18081612671726085",
+     "url": "https://www.instagram.com/p/DgFbxcol9pn/",
+     "at": "2026-11-23T12:58:21.391Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:share:7530615725644980225",
+     "url": "https://www.linkedin.com/feed/update/urn:li:share:7530615725644980225/",
+     "at": "2026-11-23T12:58:21.391Z"
+    }
+   }
+  },
+  {
+   "id": "2026-11-23-content-2",
+   "kind": "content",
+   "date": "2026-11-23",
+   "state": "posted",
+   "headline": {
+    "en": "New on textbook.com.pk",
+    "ur": "نیا مواد"
+   },
+   "highlights": [
+    {
+     "type": "animation",
+     "ids": [
+      "animation:/img/figures/efmp-301/unit-04/fig-U4-3:en",
+      "animation:/img/figures/efmp-301/unit-04/fig-U4-3:ur",
+      "animation:/img/figures/efmp-301/unit-04/fig-U4-1:en",
+      "animation:/img/figures/efmp-301/unit-04/fig-U4-5:en",
+      "animation:/img/figures/efmp-301/unit-04/fig-U4-5:ur"
+     ],
+     "card_en": "EFMP-301 Educational Psychology: 3 animated diagrams",
+     "card_ur": "EFMP-301 تعلیمی نفسیات: 3 متحرک خاکے",
+     "en": "3 diagrams in EFMP-301 Educational Psychology now play as short animations that build step by step, with captions in English and Urdu. Watch them on YouTube or with the \"Watch it animate\" button under each diagram.",
+     "ur": "EFMP-301 تعلیمی نفسیات کے 3 خاکے اب مختصر متحرک ویڈیو کی صورت میں ہیں جو قدم بہ قدم بنتے ہیں، ساتھ تحریری وضاحت انگریزی اور اردو میں۔ انہیں یوٹیوب پر یا ہر خاکے کے نیچے \"متحرک دیکھیں\" بٹن سے دیکھیں۔",
+     "link": "/",
+     "date": "2026-11-23T12:00:00+05:00"
+    },
+    {
+     "type": "updated",
+     "ids": [
+      "updated:GICP-400:7"
+     ],
+     "card_en": "GICP-400 Unit 7 improved",
+     "card_ur": "GICP-400 یونٹ 7 بہتر: نظریہ اور آئین کے لیے تعلیم",
+     "en": "GICP-400 Ideology and Constitution of Pakistan, Unit 7: Education for Ideology and the Constitution, was revised and improved.",
+     "ur": "GICP-400 نظریہ اور آئینِ پاکستان، یونٹ 7: نظریہ اور آئین کے لیے تعلیم، میں نظرثانی کر کے اسے بہتر بنایا گیا۔",
+     "link": "/semester-3/gicp-400/unit-07/",
+     "date": "2026-11-23T10:27:36+05:00"
+    }
+   ],
+   "more": 0,
+   "items": [
+    "animation:/img/figures/efmp-301/unit-04/fig-U4-3:en",
+    "animation:/img/figures/efmp-301/unit-04/fig-U4-3:ur",
+    "animation:/img/figures/efmp-301/unit-04/fig-U4-1:en",
+    "animation:/img/figures/efmp-301/unit-04/fig-U4-5:en",
+    "animation:/img/figures/efmp-301/unit-04/fig-U4-5:ur",
+    "updated:GICP-400:7"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-23T15:34:15.242Z",
+   "since": "2026-11-22T21:17:03.766Z",
+   "card": "~/studio-media/social/2026-11-23-content-2.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-content-2.jpg",
+   "approved": {
+    "by": "auto",
+    "at": "2026-11-23T15:36:02.769Z"
+   },
+   "platforms": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1404300426106517_122110485411545614",
+     "url": "https://www.facebook.com/1404300426106517_122110485411545614",
+     "at": "2026-11-23T15:36:20.065Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18034477646683243",
+     "url": "https://www.instagram.com/p/DgFt2X1D-li/",
+     "at": "2026-11-23T15:36:20.065Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:share:7530655481367785472",
+     "url": "https://www.linkedin.com/feed/update/urn:li:share:7530655481367785472/",
+     "at": "2026-11-23T15:36:20.065Z"
+    }
+   }
+  },
+  {
+   "id": "2026-11-23-feature-2",
    "kind": "feature",
    "date": "2026-11-23",
    "state": "drafted",
@@ -141,36 +340,40 @@
     {
      "type": "feature",
      "ids": [
-      "pr:712"
+      "pr:736"
      ],
-     "en": "Home page: a three-row news ticker with pinned news",
-     "ur": "ہوم پیج: تین قطاروں والا نیوز ٹکر، اہم خبریں سب سے آگے",
+     "en": "Study Studio: each topic's Study Studio now has an Animations tab that gathers the topic's animated diagrams in one place, so a reader can watch them again while revising. The first are in EFMP-301 Educational Psychology, Unit 4.",
+     "ur": "اسٹڈی اسٹوڈیو: ہر ٹاپک کے اسٹڈی اسٹوڈیو میں اب \"متحرک خاکے\" کا ٹیب ہے جس میں اس ٹاپک کے سب متحرک خاکے ایک جگہ مل جاتے ہیں، تاکہ دہرائی کے وقت انہیں دوبارہ دیکھا جا سکے۔ پہلے خاکے EFMP-301 تعلیمی نفسیات، یونٹ 4 میں ہیں۔",
      "link": "/",
      "needs_copy": false,
-     "pr": 712
+     "pr": 736,
+     "card_en": "Study Studio: a new Animations tab for each topic",
+     "card_ur": "اسٹڈی اسٹوڈیو: ہر ٹاپک کے لیے نیا \"متحرک خاکے\" ٹیب"
     },
     {
      "type": "feature",
      "ids": [
-      "pr:701"
+      "pr:733"
      ],
-     "en": "Home page: four course teasers, most watched and newest",
-     "ur": "ہوم پیج: چار کورس ٹیزر، سب سے زیادہ دیکھے گئے اور نئے",
+     "en": "Diagrams: some diagrams in the textbook now have a \"Watch it animate\" button. It plays a short video that builds the diagram step by step, with captions in English and Urdu. The first are in EFMP-301 Educational Psychology, Unit 4.",
+     "ur": "خاکے: کتاب کے کچھ خاکوں کے نیچے اب \"متحرک دیکھیں\" کا بٹن ہے۔ یہ ایک مختصر ویڈیو چلاتا ہے جس میں خاکہ قدم بہ قدم بنتا ہے، ساتھ انگریزی اور اردو میں تحریری وضاحت ہوتی ہے۔ پہلے خاکے EFMP-301 تعلیمی نفسیات، یونٹ 4 میں ہیں۔",
      "link": "/",
      "needs_copy": false,
-     "pr": 701
+     "pr": 733,
+     "card_en": "Diagrams: a \"Watch it animate\" button builds them step by step",
+     "card_ur": "خاکے: \"متحرک دیکھیں\" بٹن سے خاکہ قدم بہ قدم بنتا دیکھیں"
     }
    ],
    "more": 0,
    "items": [
-    "pr:712",
-    "pr:701"
+    "pr:736",
+    "pr:733"
    ],
    "link": "/",
-   "collected_at": "2026-11-22T21:17:03.766Z",
-   "since": "2026-11-21T21:16:58.462Z",
-   "card": "~/studio-media/social/2026-11-23-feature.jpg",
-   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-feature.jpg"
+   "collected_at": "2026-11-23T15:34:15.242Z",
+   "since": "2026-11-22T21:17:03.766Z",
+   "card": "~/studio-media/social/2026-11-23-feature-2.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-feature-2.jpg"
   }
  ]
 }
