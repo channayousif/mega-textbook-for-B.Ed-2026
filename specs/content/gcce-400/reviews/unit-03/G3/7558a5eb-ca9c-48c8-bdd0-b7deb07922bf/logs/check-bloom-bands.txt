@@ -1,0 +1,4 @@
+command: node scripts/check-bloom-bands.mjs
+started_utc: 2026-11-23T11:05:10Z
+✓ Bloom tags honour their unit spec's blueprint bands (2250 items checked).
+exit_code: 0

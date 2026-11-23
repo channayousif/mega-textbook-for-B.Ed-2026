@@ -1,0 +1,4 @@
+command: node scripts/validate-content.mjs
+started_utc: 2026-11-23T11:05:05Z
+✓ Content validation passed.
+exit_code: 0

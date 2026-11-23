@@ -1,0 +1,21 @@
+command: scripts/heavy.sh node .crew/probe.mjs
+purpose: re-measure figure imgs after scrolling the live page, to test whether the two
+         render-inspect 'visible image did not load' defects are lazy-load timing artifacts.
+started_utc: 2026-11-23T11:20:42Z
+
+== topic-01
+   /img/figures/gcce-400/unit-03/fig-U3-6.webp nat 1344x756 rect 807x455 display inline vis visible complete true
+   /img/figures/gcce-400/unit-03/fig-U3-1.svg nat 217x150 rect 807x559 display inline vis visible complete true
+   /img/figures/gcce-400/unit-03/fig-U3-1.dark.svg nat 0x0 rect 0x0 display none vis visible complete false
+   /img/figures/gcce-400/unit-03/fig-U3-2.svg nat 202x150 rect 860x640 display inline vis visible complete true
+   /img/figures/gcce-400/unit-03/fig-U3-2.dark.svg nat 0x0 rect 0x0 display none vis visible complete false
+== topic-02
+   /img/figures/gcce-400/unit-03/fig-U3-7.webp nat 1344x756 rect 807x455 display inline vis visible complete true
+   /img/figures/gcce-400/unit-03/fig-U3-3.svg nat 217x150 rect 807x559 display inline vis visible complete true
+   /img/figures/gcce-400/unit-03/fig-U3-3.dark.svg nat 0x0 rect 0x0 display none vis visible complete false
+   /img/figures/gcce-400/unit-03/fig-U3-4.svg nat 229x150 rect 860x563 display inline vis visible complete true
+   /img/figures/gcce-400/unit-03/fig-U3-4.dark.svg nat 0x0 rect 0x0 display none vis visible complete false
+
+result: every visible figure loads and lays out after the page is scrolled; the two
+        render-inspect defects are lazy-load timing artifacts, not missing assets.
+exit_code: 0
