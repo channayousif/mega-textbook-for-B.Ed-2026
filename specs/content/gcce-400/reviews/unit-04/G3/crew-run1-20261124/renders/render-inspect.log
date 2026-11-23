@@ -1,0 +1,103 @@
+### render-inspect  GCCE-400 Unit 4
+### route: /semester-4/gcce-400/unit-04  pages: 5  placed figures: 5
+### host: https://textbook.com.pk   browser: chromium 149.0.7827.0
+### started: 2026-11-23T21:03:23.101Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=1 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/gcce-400/unit-04/fig-U4-6.webp natural=1200x675 shown=true loading=lazy alt="Parents, teachers and a trainee teacher sit together in a calm circle in the shaded courty"
+   heading order: no skipped levels
+
+-- topic-01: headings=13 imgs=4 visibleBroken=1 notServed=0 missingAlt=0 bareUrlLinks=4 vagueLinks=0 hOverflow=false
+   img /img/figures/gcce-400/unit-04/fig-U4-1.svg natural=209x150 shown=true loading=lazy alt="Concept map with ethical civic engagement at the centre and five linked values, each with "
+   img /img/figures/gcce-400/unit-04/fig-U4-1.dark.svg natural=0x0 shown=false loading=lazy alt="Concept map with ethical civic engagement at the centre and five linked values, each with "
+   img /img/figures/gcce-400/unit-04/fig-U4-2.svg natural=0x0 shown=true loading=lazy alt="Table comparing six methods for the same aim of a working school hand pump. A signed appli"
+   img /img/figures/gcce-400/unit-04/fig-U4-2.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing six methods for the same aim of a working school hand pump. A signed appli"
+   heading order: no skipped levels
+   DEFECT visible image did not load: /img/figures/gcce-400/unit-04/fig-U4-2.svg
+   advisory bare-URL link text: https://doi.org/10.1111/pech.12009 | https://na.gov.pk/uploads/documents/1333523681_951 | https://doi.org/10.1177/0956247806069626 | https://doi.org/10.54675/DRHC3544
+
+-- topic-02: headings=15 imgs=6 visibleBroken=2 notServed=0 missingAlt=0 bareUrlLinks=5 vagueLinks=0 hOverflow=false
+   img /img/figures/gcce-400/unit-04/fig-U4-3.svg natural=225x150 shown=true loading=lazy alt="Flowchart of a five-step cycle of community engagement: identify a need, mobilise everyone"
+   img /img/figures/gcce-400/unit-04/fig-U4-3.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart of a five-step cycle of community engagement: identify a need, mobilise everyone"
+   img /img/figures/gcce-400/unit-04/fig-U4-5.svg natural=0x0 shown=true loading=lazy alt="Timeline of the Orangi Pilot Project: set up in 1980; infant mortality in lanes that built"
+   img /img/figures/gcce-400/unit-04/fig-U4-5.dark.svg natural=0x0 shown=false loading=lazy alt="Timeline of the Orangi Pilot Project: set up in 1980; infant mortality in lanes that built"
+   img /img/figures/gcce-400/unit-04/fig-U4-4.svg natural=0x0 shown=true loading=lazy alt="Diagram of a school at the centre of its community, linked by two-way arrows to parents an"
+   img /img/figures/gcce-400/unit-04/fig-U4-4.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram of a school at the centre of its community, linked by two-way arrows to parents an"
+   heading order: no skipped levels
+   DEFECT visible image did not load: /img/figures/gcce-400/unit-04/fig-U4-5.svg, /img/figures/gcce-400/unit-04/fig-U4-4.svg
+   advisory bare-URL link text: https://doi.org/10.1177/0956247806069626 | https://doi.org/10.2105/AJPH.91.12.1929 | https://www.epa.gov/international-cooperation/publ | https://doi.org/10.1787/persp_glob_dev-2012-en | https://ecommons.aku.edu/cgi/viewcontent.cgi?artic
+
+-- unit-assessment: headings=11 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=4 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=1 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+
+-- topic-01: docHorizontalOverflow=0px tables=3 figures=2 spill=8
+   table[0] client=328 scroll=328 fits=true lastHeader="Answer in the hand pump " scroller=NONE
+   table[1] client=328 scroll=365 fits=false lastHeader="Value kept or broken" scroller=TABLE. (client=328 scroll=365 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[2] client=289 scroll=520 fits=false lastHeader="Missing (0)" scroller=TABLE. (client=289 scroll=520 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=5 figures=3 spill=8
+   table[0] client=328 scroll=656 fits=false lastHeader="Community?" scroller=TABLE. (client=328 scroll=656 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[1] client=328 scroll=369 fits=false lastHeader="Example: choosing where " scroller=TABLE. (client=328 scroll=369 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[2] client=328 scroll=328 fits=true lastHeader="Evidence from Orangi" scroller=NONE
+   table[3] client=328 scroll=482 fits=false lastHeader="Idea from this topic" scroller=TABLE. (client=328 scroll=482 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[4] client=289 scroll=609 fits=false lastHeader="Missing (0)" scroller=TABLE. (client=289 scroll=609 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+   figure[2] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=0 figures=0 spill=4
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=1 answerHeadings=[]
+   printfig /img/figures/gcce-400/unit-04/fig-U4-6.webp w=762 right=778 fits
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/gcce-400/unit-04/fig-U4-1.svg w=709 right=754 fits
+   printfig /img/figures/gcce-400/unit-04/fig-U4-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/gcce-400/unit-04/fig-U4-2.svg w=2 right=398 fits
+   printfig /img/figures/gcce-400/unit-04/fig-U4-2.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=6 answerHeadings=[]
+   printfig /img/figures/gcce-400/unit-04/fig-U4-3.svg w=709 right=754 fits
+   printfig /img/figures/gcce-400/unit-04/fig-U4-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/gcce-400/unit-04/fig-U4-5.svg w=2 right=398 fits
+   printfig /img/figures/gcce-400/unit-04/fig-U4-5.dark.svg w=0 right=0 fits
+   printfig /img/figures/gcce-400/unit-04/fig-U4-4.svg w=2 right=398 fits
+   printfig /img/figures/gcce-400/unit-04/fig-U4-4.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U4-1.light [concept-map] viewBox=780x560 texts=27 wordmark@x=675.7 -> clean
+   fig-U4-1.dark [concept-map] viewBox=780x560 texts=27 wordmark@x=675.7 -> clean
+   fig-U4-2.light [table] viewBox=780x490 texts=34 wordmark@x=675.7 -> clean
+   fig-U4-2.dark [table] viewBox=780x490 texts=34 wordmark@x=675.7 -> clean
+   fig-U4-3.light [flowchart] viewBox=780x520 texts=21 wordmark@x=675.7 -> clean
+   fig-U4-3.dark [flowchart] viewBox=780x520 texts=21 wordmark@x=675.7 -> clean
+   fig-U4-4.light [diagram] viewBox=780x580 texts=23 wordmark@x=675.7 -> clean
+   fig-U4-4.dark [diagram] viewBox=780x580 texts=23 wordmark@x=675.7 -> clean
+   fig-U4-5.light [timeline] viewBox=780x420 texts=30 wordmark@x=675.7 -> clean
+   fig-U4-5.dark [timeline] viewBox=780x420 texts=30 wordmark@x=675.7 -> clean
+
+### finished: 2026-11-23T21:04:04.095Z
+### defects: 2
+###   topic-01: visible image did not load: /img/figures/gcce-400/unit-04/fig-U4-2.svg
+###   topic-02: visible image did not load: /img/figures/gcce-400/unit-04/fig-U4-5.svg, /img/figures/gcce-400/unit-04/fig-U4-4.svg
+### exit_code: 1
