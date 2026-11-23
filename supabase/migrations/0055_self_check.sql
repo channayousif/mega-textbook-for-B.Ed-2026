@@ -13,6 +13,27 @@
 -- the numbers of the wrong items (never the right option), and allows a few attempts per unit per
 -- day, so the key cannot be read off by trying each option.
 
+create table public.self_check_attempts (
+  id           uuid primary key default gen_random_uuid(),
+  profile_id   uuid not null references public.profiles(id) on delete cascade,
+  course_code  text not null,
+  unit_no      integer not null,
+  locale       text not null,
+  score        integer not null,
+  total        integer not null,
+  attempted_at timestamptz not null default now()
+);
+
+comment on table public.self_check_attempts is
+  'Feature 032: one row per self-check submission; written only by check_self_quiz(). A learner reads their own rows.';
+
+alter table public.self_check_attempts enable row level security;
+revoke all on public.self_check_attempts from anon, authenticated;
+create policy self_check_attempts_own on public.self_check_attempts for select to authenticated
+  using (profile_id = public.current_profile_id());
+grant select on public.self_check_attempts to authenticated;
+create index self_check_attempts_daily on public.self_check_attempts (profile_id, course_code, unit_no, attempted_at);
+
 create table public.self_check_items (
   id             uuid primary key default gen_random_uuid(),
   course_code    text not null check (course_code ~ '^[A-Z]{4}-[0-9]{3}$'),
@@ -34,27 +55,6 @@ comment on table public.self_check_items is
 
 alter table public.self_check_items enable row level security;
 revoke all on public.self_check_items from anon, authenticated;
-
-create table public.self_check_attempts (
-  id           uuid primary key default gen_random_uuid(),
-  profile_id   uuid not null references public.profiles(id) on delete cascade,
-  course_code  text not null,
-  unit_no      integer not null,
-  locale       text not null,
-  score        integer not null,
-  total        integer not null,
-  attempted_at timestamptz not null default now()
-);
-
-comment on table public.self_check_attempts is
-  'Feature 032: one row per self-check submission; written only by check_self_quiz(). A learner reads their own rows.';
-
-alter table public.self_check_attempts enable row level security;
-revoke all on public.self_check_attempts from anon, authenticated;
-create policy self_check_attempts_own on public.self_check_attempts for select to authenticated
-  using (profile_id = public.current_profile_id());
-grant select on public.self_check_attempts to authenticated;
-create index self_check_attempts_daily on public.self_check_attempts (profile_id, course_code, unit_no, attempted_at);
 
 -- Questions without the key, in item order.
 create or replace function public.self_check_questions(p_course text, p_unit integer, p_locale text)
