@@ -81,10 +81,36 @@ def ensure_node():
     return subprocess.run(["node", "--version"], capture_output=True, text=True).stdout.strip()
 
 
+APT_OPTS = ["-o", "Acquire::Retries=3", "-o", "Acquire::http::Timeout=30", "-o", "Acquire::https::Timeout=30"]
+
+
 def ensure_chrome_libs():
-    subprocess.run(["apt-get", "update", "-qq"], check=False, timeout=300)
-    for lib in CHROME_LIBS:
-        subprocess.run(["apt-get", "install", "-y", "-qq", lib], check=False, timeout=300, stdout=subprocess.DEVNULL)
+    """Install Chrome's system libraries. Kaggle's image lists third-party apt repositories (an R
+    mirror among them) that can hang `apt-get update`; only the Ubuntu archive is needed here,
+    so the others are set aside for this step. A missing library fails the render loudly."""
+    set_aside = []
+    d = "/etc/apt/sources.list.d"
+    for f in (os.listdir(d) if os.path.isdir(d) else []):
+        p = os.path.join(d, f)
+        try:
+            if os.path.isfile(p) and "ubuntu.com" not in open(p, encoding="utf-8", errors="ignore").read():
+                os.rename(p, p + ".anim-off")
+                set_aside.append(p)
+        except OSError:
+            pass
+    try:
+        subprocess.run(["apt-get", *APT_OPTS, "update", "-qq"], check=False, timeout=300)
+        subprocess.run(["apt-get", *APT_OPTS, "install", "-y", "-qq", "--no-install-recommends", *CHROME_LIBS],
+                       check=False, timeout=600, stdout=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired as e:
+        print("render_animations: apt step timed out (%s)" % " ".join(e.cmd[:4]), flush=True)
+    finally:
+        for p in set_aside:
+            os.rename(p + ".anim-off", p)
+    have = subprocess.run(["ldconfig", "-p"], capture_output=True, text=True).stdout
+    missing = [lib for lib in ("libatk-1.0.so.0", "libnss3.so", "libgbm.so.1") if lib not in have]
+    if missing:
+        die("Chrome libraries missing after apt: " + ", ".join(missing))
 
 
 def run(cmd, **kw):
