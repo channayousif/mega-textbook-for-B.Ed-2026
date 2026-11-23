@@ -1,0 +1,25 @@
+{
+  "course": "EFMP-301",
+  "unit": 4,
+  "figure": "fig-U4-3",
+  "svg": "static/img/figures/efmp-301/unit-04/fig-U4-3.svg",
+  "note": "Captions restate the figure and its topic text; they add no claim.",
+  "beats": [
+    { "region": [0, 0, 780, 60], "seconds": 3,
+      "caption": { "en": "How information moves through memory", "ur": "معلومات یادداشت میں کیسے سفر کرتی ہے" } },
+    { "region": [0, 110, 195, 200], "seconds": 5,
+      "caption": { "en": "Sensory memory holds sights, sounds and tastes for a second or two. Most is lost here.", "ur": "حسی یادداشت منظر، آواز اور ذائقہ ایک دو سیکنڈ کے لیے رکھتی ہے۔ زیادہ تر یہیں گم ہو جاتا ہے۔" } },
+    { "region": [195, 110, 185, 200], "seconds": 5.5,
+      "caption": { "en": "Working memory, the workbench, holds about four things at once, for seconds, not minutes.", "ur": "عامل یادداشت، یعنی کام کی میز، ایک ساتھ تقریباً چار چیزیں سیکنڈوں کے لیے رکھتی ہے، منٹوں کے لیے نہیں۔" } },
+    { "region": [380, 110, 195, 200], "seconds": 5,
+      "caption": { "en": "Encoding moves material into long-term memory by connecting it to what is already known.", "ur": "ترمیز مواد کو پہلے سے معلوم باتوں سے جوڑ کر طویل مدتی یادداشت میں لے جاتی ہے۔" } },
+    { "region": [575, 110, 205, 200], "seconds": 4,
+      "caption": { "en": "Long-term memory: storage believed to be unlimited.", "ur": "طویل مدتی یادداشت: اس کی گنجائش بے حد سمجھی جاتی ہے۔" } },
+    { "region": [0, 310, 780, 60], "seconds": 4.5,
+      "caption": { "en": "Retrieval brings stored knowledge back to the workbench when it is needed.", "ur": "بازیابی محفوظ علم کو ضرورت کے وقت واپس کام کی میز پر لاتی ہے۔" } },
+    { "region": [[0, 60, 780, 50], [185, 180, 20, 30], [380, 180, 20, 30], [575, 180, 20, 30]], "seconds": 5,
+      "caption": { "en": "Forgetting can cut in at more than one point: decay, interference and retrieval failure.", "ur": "بھولنا زنجیر کو ایک سے زیادہ مقام پر کاٹ سکتا ہے: زوال، مداخلت اور بازیابی کی ناکامی۔" } },
+    { "region": [0, 370, 780, 100], "seconds": 4.5,
+      "caption": { "en": "Memory is not a one-way pipe: what is stored can be brought back to the workbench.", "ur": "یادداشت یک رخی نالی نہیں: محفوظ چیز کو کام کی میز پر واپس لایا جا سکتا ہے۔" } }
+  ]
+}

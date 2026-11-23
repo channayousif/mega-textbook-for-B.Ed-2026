@@ -1,0 +1,213 @@
+#!/usr/bin/env node
+// Feature 032 (D-2026-0097): turn a placed figure plus a beats file into a HyperFrames
+// composition, and optionally render it to a silent, captioned MP4.
+//
+//   node scripts/media/animate-figure.mjs --beats specs/studio/animations/<course>/<fig>.json \
+//     [--lang en|ur] [--format 16x9|9x16] [--out <dir>] [--render]
+//
+// The figure is never edited: its SVG is read and inlined. Each beat names a region of the
+// figure (x, y, w, h in the figure's own viewBox); every top-level element whose box centre
+// falls inside it is revealed in that beat, with arrows drawn on. For Urdu the regions are
+// mirrored (the .ur.svg is laid out right to left). Captions come from the beats file and
+// must restate the unit text, never add to it. Output is media: it goes to ~/studio-media,
+// never into git. Rendering is heavy: run it through scripts/heavy.sh in a capped scope.
+import { cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { homedir } from 'node:os';
+import { join, resolve } from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { BRAND } from './brand.mjs';
+
+export const SKILL_DIR = process.env.ANIMATED_DIAGRAMS_DIR ?? join(homedir(), '.local/share/animated-diagrams');
+export const FORMATS = { '16x9': { w: 1920, h: 1080 }, '9x16': { w: 1080, h: 1920 } };
+const HOLD_END = 2;
+const LEAD_IN = 0.3;
+
+function arg(name, fallback) {
+  const i = process.argv.indexOf(`--${name}`);
+  return i > 0 ? process.argv[i + 1] : fallback;
+}
+
+export function validateBeats(spec) {
+  const errs = [];
+  if (!spec || typeof spec !== 'object') return ['beats file is not an object'];
+  for (const k of ['course', 'unit', 'figure', 'svg']) if (!spec[k]) errs.push(`missing ${k}`);
+  if (!Array.isArray(spec.beats) || spec.beats.length < 2) errs.push('need at least two beats');
+  for (const [i, b] of (spec.beats ?? []).entries()) {
+    const regions = regionsOf(b);
+    if (!regions.length || regions.some((r) => !Array.isArray(r) || r.length !== 4 || r.some((n) => typeof n !== 'number'))) errs.push(`beat ${i}: region must be [x, y, w, h] or a list of them`);
+    if (!b.caption?.en) errs.push(`beat ${i}: missing caption.en`);
+    if (!b.caption?.ur) errs.push(`beat ${i}: missing caption.ur`);
+    if (!(b.seconds > 0 && b.seconds <= 12)) errs.push(`beat ${i}: seconds must be in (0, 12]`);
+    for (const lang of ['en', 'ur']) if (/[\u2014\u2015\u2E3A\u2E3B]/.test(b.caption?.[lang] ?? '')) errs.push(`beat ${i}: em dash in caption.${lang}`);
+  }
+  return errs;
+}
+
+// A beat names one region or several; an element goes to the smallest region that holds it.
+export function regionsOf(beat) {
+  const r = beat?.region;
+  if (!Array.isArray(r)) return [];
+  return Array.isArray(r[0]) ? r : [r];
+}
+
+// Map an English region onto the right-to-left Urdu figure: mirror it, then scale it to the
+// Urdu viewBox (the .ur.svg is the English layout mirrored and enlarged for Nastaliq). A beat
+// may give `region_ur` instead when the Urdu layout differs more than that.
+export function mirrorRegion([x, y, w, h], enW, urW = enW, sy = 1) {
+  const sx = urW / enW;
+  const r = (n) => Math.round(n * 10) / 10;
+  return [r((enW - x - w) * sx), r(y * sy), r(w * sx), r(h * sy)];
+}
+
+export const viewBoxOf = (svgText) => {
+  const vb = svgText.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/);
+  if (!vb) throw new Error('figure SVG has no "0 0 w h" viewBox');
+  return { w: Number(vb[1]), h: Number(vb[2]) };
+};
+
+// Fit the figure and a caption band onto the canvas.
+export function layout(format, vbW, vbH) {
+  const { w, h } = FORMATS[format];
+  const captionH = format === '9x16' ? 420 : 190;
+  const margin = format === '9x16' ? 40 : 60;
+  const scale = Math.min((w - 2 * margin) / vbW, (h - captionH - 2 * margin) / vbH);
+  const fw = vbW * scale, fh = vbH * scale;
+  const fx = (w - fw) / 2;
+  const fy = format === '9x16' ? (h - captionH - fh) / 2 : margin;
+  return { w, h, scale, fx, fy, fw, fh, captionY: fy + fh + (format === '9x16' ? 90 : 40), captionH };
+}
+
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+export function buildComposition(spec, svgText, { lang = 'en', format = '16x9', en } = {}) {
+  const { w: vbW, h: vbH } = viewBoxOf(svgText);
+  const src = en ?? { w: vbW, h: vbH };
+  const L = layout(format, vbW, vbH);
+  const beats = spec.beats.map((b) => ({
+    regions: lang === 'ur'
+      ? (b.region_ur ? regionsOf({ region: b.region_ur }) : regionsOf(b).map((r) => mirrorRegion(r, src.w, vbW, vbH / src.h)))
+      : regionsOf(b),
+    caption: b.caption[lang],
+    seconds: b.seconds,
+  }));
+  const duration = LEAD_IN + beats.reduce((s, b) => s + b.seconds, 0) + HOLD_END;
+  // The figure's own font stack sits on its root <svg>, which is replaced below: carry it over,
+  // or the text falls back to the renderer's default (a serif on Kaggle).
+  const figFont = svgText.match(/<svg[^>]*\sfont-family="([^"]*)"/)?.[1] ?? '';
+  // Inline the figure, drop its own title/desc (the video has captions) and size it.
+  const inner = svgText
+    .replace(/^[\s\S]*?<svg[^>]*>/, '')
+    .replace(/<\/svg>\s*$/, '')
+    .replace(/<title[\s\S]*?<\/title>/, '')
+    .replace(/<desc[\s\S]*?<\/desc>/, '');
+  const rtl = lang === 'ur';
+  const font = rtl ? "'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif" : "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif";
+  const capSize = format === '9x16' ? (rtl ? 50 : 54) : (rtl ? 40 : 44);
+  return { duration, html: `<!doctype html>
+<html lang="${lang}" dir="${rtl ? 'rtl' : 'ltr'}">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=${L.w}, height=${L.h}" />
+<script src="./vendor/gsap.min.js"></script>
+<script src="./vendor/DrawSVGPlugin.min.js"></script>
+<style>
+${rtl ? "@font-face { font-family: 'Noto Nastaliq Urdu'; src: url('./fonts/NotoNastaliqUrdu-Regular.woff2') format('woff2'); }\n" : ''}html, body { margin: 0; width: ${L.w}px; height: ${L.h}px; background: ${BRAND.paper}; overflow: hidden; }
+#fig { position: absolute; left: ${L.fx}px; top: ${L.fy}px; width: ${L.fw}px; height: ${L.fh}px;
+  border-radius: 18px; box-shadow: 0 10px 40px rgba(18, 62, 67, .14); background: #fff;
+  direction: ltr; /* the figure carries its own anchors; an inherited rtl would flip them */ }
+#cap { position: absolute; left: 80px; right: 80px; top: ${L.captionY}px; min-height: ${L.captionH - 60}px;
+  display: flex; align-items: flex-start; justify-content: center; text-align: center;
+  font-family: ${font}; font-size: ${capSize}px; line-height: ${rtl ? 2.1 : 1.3}; color: ${BRAND.teal}; }
+#cap span { position: absolute; left: 0; right: 0; opacity: 0; }
+#mark { position: absolute; ${rtl ? 'left' : 'right'}: 40px; bottom: 26px; font: 600 26px system-ui, sans-serif; color: ${BRAND.teal}; opacity: .55; }
+#bar { position: absolute; left: 0; bottom: 0; height: 8px; width: ${L.w}px; background: ${BRAND.amber}; transform-origin: ${rtl ? 'right' : 'left'}; transform: scaleX(0); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="${duration}" data-width="${L.w}" data-height="${L.h}">
+<svg id="fig" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${vbW} ${vbH}"${figFont ? ` font-family="${figFont}"` : ''}>${inner}</svg>
+<div id="cap">${beats.map((b, i) => `<span id="cap-${i}">${esc(b.caption)}</span>`).join('')}</div>
+<div id="mark">textbook.com.pk</div>
+<div id="bar"></div>
+</div>
+<script>
+gsap.registerPlugin(DrawSVGPlugin);
+const BEATS = ${JSON.stringify(beats.map(({ regions, seconds }) => ({ regions, seconds })))};
+const fig = document.getElementById('fig');
+// The background rect and the watermark stay; every other top-level element joins a beat.
+const els = [...fig.children].filter((el) => !['defs', 'style', 'title', 'desc'].includes(el.tagName)
+  && !el.classList.contains('bg') && !el.classList.contains('wm'));
+const inBeat = BEATS.map(() => []);
+for (const el of els) {
+  const b = el.getBBox();
+  const cx = b.x + b.width / 2, cy = b.y + b.height / 2;
+  let k = BEATS.length - 1, best = Infinity;
+  BEATS.forEach(({ regions }, i) => regions.forEach(([x, y, w, h]) => {
+    if (cx >= x && cx <= x + w && cy >= y && cy <= y + h && w * h < best) { best = w * h; k = i; }
+  }));
+  inBeat[k].push(el);
+}
+const tl = gsap.timeline({ paused: true, defaults: { ease: 'power2.out' } });
+let t = ${LEAD_IN};
+BEATS.forEach((beat, i) => {
+  const lines = inBeat[i].filter((el) => el.tagName === 'path' && (el.getAttribute('marker-end') || /stroke|cross|grid/.test(el.getAttribute('class') || '')));
+  const rest = inBeat[i].filter((el) => !lines.includes(el));
+  gsap.set(inBeat[i], { opacity: 0 });
+  if (rest.length) tl.to(rest, { opacity: 1, duration: 0.5, stagger: Math.min(0.08, 1.2 / rest.length) }, t);
+  if (lines.length) tl.set(lines, { opacity: 1 }, t + 0.4).from(lines, { drawSVG: '0%', duration: 0.7, ease: 'power1.inOut', stagger: 0.15 }, t + 0.4);
+  tl.to('#cap-' + i, { opacity: 1, duration: 0.4 }, t);
+  if (i > 0) tl.to('#cap-' + (i - 1), { opacity: 0, duration: 0.3 }, t);
+  t += beat.seconds;
+});
+tl.to('#bar', { scaleX: 1, duration: ${duration - LEAD_IN}, ease: 'none' }, ${LEAD_IN});
+window.__timelines = window.__timelines || {};
+window.__timelines.main = tl;
+</script>
+</body>
+</html>
+` };
+}
+
+export function writeComposition(spec, { lang, format, out }) {
+  const svgPath = lang === 'ur' ? spec.svg.replace(/\.svg$/, '.ur.svg') : spec.svg;
+  const en = viewBoxOf(readFileSync(spec.svg, 'utf8'));
+  const { html, duration } = buildComposition(spec, readFileSync(svgPath, 'utf8'), { lang, format, en });
+  mkdirSync(join(out, 'vendor'), { recursive: true });
+  for (const f of ['gsap.min.js', 'DrawSVGPlugin.min.js']) {
+    const src = join(SKILL_DIR, 'assets/vendor/gsap', f);
+    if (!existsSync(src)) throw new Error(`${src} missing: install animated-diagrams-skill (see .claude/skills/animated-figures)`);
+    cpSync(src, join(out, 'vendor', f));
+  }
+  if (lang === 'ur') {
+    // Ship the font with the composition so a fresh renderer (Kaggle) shapes Nastaliq the same.
+    mkdirSync(join(out, 'fonts'), { recursive: true });
+    cpSync('static/fonts/NotoNastaliqUrdu-Regular.woff2', join(out, 'fonts/NotoNastaliqUrdu-Regular.woff2'));
+  }
+  writeFileSync(join(out, 'index.html'), html);
+  return duration;
+}
+
+export const compositionId = (spec, lang, format) =>
+  `${spec.course.toLowerCase()}-u${String(spec.unit).padStart(2, '0')}-${spec.figure}-${lang}-${format}`;
+
+function main() {
+  const beatsPath = arg('beats');
+  if (!beatsPath) { console.error('usage: animate-figure.mjs --beats <file> [--lang en|ur] [--format 16x9|9x16] [--out dir] [--render]'); process.exit(2); }
+  const spec = JSON.parse(readFileSync(beatsPath, 'utf8'));
+  const errs = validateBeats(spec);
+  if (errs.length) { console.error(errs.map((e) => `✗ ${e}`).join('\n')); process.exit(1); }
+  const lang = arg('lang', 'en'), format = arg('format', '16x9');
+  if (!FORMATS[format] || !['en', 'ur'].includes(lang)) { console.error('bad --lang or --format'); process.exit(2); }
+  const id = compositionId(spec, lang, format);
+  const out = resolve(arg('out', join(homedir(), 'studio-media/animations', id)));
+  let duration;
+  try { duration = writeComposition(spec, { lang, format, out }); } catch (e) { console.error(`✗ ${e.message}`); process.exit(1); }
+  console.log(`composition ${out}/index.html · ${duration}s · ${lang} · ${format}`);
+  if (process.argv.includes('--render')) {
+    const env = { ...process.env, HYPERFRAMES_NO_TELEMETRY: '1', PRODUCER_LOW_MEMORY_MODE: '1' };
+    const r = spawnSync('node', [join(SKILL_DIR, 'scripts/render.mjs'), '--project', out, '--output', join(out, `${id}.mp4`), '--snapshots', '6', '--probe'], { stdio: 'inherit', env });
+    process.exit(r.status ?? 1);
+  }
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) main();
