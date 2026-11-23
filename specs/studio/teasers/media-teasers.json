@@ -2702,7 +2702,65 @@
      "note": "crew approve-script via openclaw"
     }
    },
-   "clips": [],
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-23T02:50:44.303Z",
+     "artifact_id": "92bc366b-5565-47df-9500-465bf5bb8a63",
+     "media_id": "92bc366b-5565-47df-9500-465bf5bb8a63",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-1-t1.mp4",
+     "sha256": "57270c84b1b69d543180d891da388dab76a5d963d724d22d4ce3e19ebfb525e6",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "کیا صرف پڑھنا لکھنا آنا ہی خواندگی ہے آج کی دنیا اس سے کہیں زیادہ مانگتی ہے؟",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-1-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Presenter in shalwar kameez and waistcoat speaks to camera in a Pakistani classroom; no drawn camera UI, readable text, map or flag; transcript matches the line exactly (QG2 1.0)."
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-23T03:02:47.792Z",
+     "artifact_id": "66dc6a40-4c7a-402a-9dda-668b4355fee2",
+     "media_id": "66dc6a40-4c7a-402a-9dda-668b4355fee2",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-3-t1.mp4",
+     "sha256": "b4133c5b606ac5eb4888f2ce5dbbe8c7234aecba7f5f672504a4a7e9d9bf510f",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.714,
+      "qg2_suggested": "pass-with-notes",
+      "heard": "آن لائن کمیونکیشن، سوشل میڈیا اور ڈیجیٹل ریسورسز کا ذمہدار اور اخلاقی استعمال بھی",
+      "missing": [
+       "online",
+       "social",
+       "ذمہ",
+       "دار"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-3-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass-with-notes",
+      "by": "claude",
+      "notes": "Computer-lab scene, students in blue uniforms and head scarves, teacher in modest dress; no readable text, map or flag. QG2 0.714 only because whisper wrote online/social in Urdu script and joined zimmedar; every word of the line is spoken. One background student face is soft."
+     }
+    }
+   ],
    "history": [
     {
      "state": "planned",
