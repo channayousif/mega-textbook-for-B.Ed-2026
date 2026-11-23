@@ -16,6 +16,8 @@
 - [ ] T010 `studio-slides` (frontend-slides adapted to the brand, EN and UR), pptx export, Slides tab; EFMP-301 U4 deck.
 
 ## Phase C
+- [x] T020a Self-check (owner, 2026-11-23: "Terms + server marking"): migration 0055 (self_check_items, self_check_attempts, self_check_questions(), check_self_quiz() with a daily cap), importer scripts/quiz/import-assessment-mcq.mjs (227 of 259 pages; all English), <SelfCheck> on assessment pages, RLS + unit + e2e tests. Done 2026-11-23; 32 Urdu pages in other layouts still to parse.
+- [ ] T020b Flashcards: crew adds 8-12 bilingual key terms per unit (glossary.json + a per-unit list outside review-bound files); <Flashcards> deck.
 - [ ] T020 `<Flashcards>`, `<SelfCheck>`, `<Chart>` (data-driven, print fallback, tests); pilots EFMP-301 U4 and one GQUR-301 unit.
 
 ## Phase D
