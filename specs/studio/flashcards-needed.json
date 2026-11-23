@@ -1,7 +1,6 @@
 {
  "note": "Units with no flashcard deck: the crew flashcards stage authors specs/studio/flashcards/<course>/unit-NN.json for them. Regenerate: node scripts/build-studio-index.mjs --coverage",
  "units": [
-  "efmp-301/1",
   "efmp-301/10",
   "efmp-301/11",
   "efmp-301/12",
@@ -20,7 +19,6 @@
   "efmp-302/5",
   "efmp-302/6",
   "efmp-305/2",
-  "efmp-305/5",
   "efmp-406/1",
   "efmp-406/2",
   "efmp-406/3",
@@ -42,7 +40,6 @@
   "efpg-401/7",
   "gcce-400/1",
   "gcce-400/2",
-  "gcce-400/5",
   "geng-300/2",
   "geng-300/4",
   "geng-301/5",
