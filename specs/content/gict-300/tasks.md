@@ -21,7 +21,7 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-01/G2/20261103T112236753Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-01/G2/20261123T122234282Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory run 001 (disposition: revise) at reviews/unit-01/G3/agent-g3-gict300-u1-run001.json; blocking findings F1/F2 repaired at 140dd8a, advisory F3/F4 repaired, F5 (bare URLs) left; agent reviews are advisory under ADR-0019; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G4 ur-translation | ▣ | | Complete 7-file UR mirror reconciled with EN baseline ee13c3e2 on 2026-10-18 (crew gict-300-u01-translate-r1); semantic, register, and figure-label repairs; bank-conformant key_terms; handoff: reviews/unit-01/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5; no certification claimed. |
 | Unit 1 | G5 ur-review | ▢ | | advisory run 001 (disposition: escalate; F1 stale G3 dependency needs run002, F2-F4 Urdu defects repaired) at reviews/unit-01/G5/agent-g5-gict300-u1-run001.json; agent reviews advisory under ADR-0019 |
@@ -81,4 +81,5 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied for report specs/content/gict-300/reviews/unit-03/G3/20261102T212207Z-g3-desk-319cad35.json (crew gict-300-u03-repair_en-r1, 2026-11-05): F5 verbatim ch 39 file definition ('linear array of bytes, each of which you can read or write') and F6 metadata excerpt verified in ostep.md; buffer, spooling and deletion semantics disclosed title-level under shellyVermaat in sources/unit-03.md; F3 MCQ keys rebalanced across a3/b2/c2/d3 in EN and UR; F4 ERQ-01..04 given distinct scenarios from topic Summative tasks in EN and UR; F7/F8 topic-02 Further reading and bourgeois2019 ch 3 annotations verified; F10 descriptive reading links across all four topics in EN and UR; F9 (year-less ostep key outside ADR-0027 digest binding) left as owner decision touching approved spec; ADR-0019 two-cycle G3 budget exhausted: run 003 needs owner authorisation in specs/decisions/log.md; G3 remains open, unticked |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-03/G3/20261108T203238Z-g3-desk-4a1e4039.json |
+| Unit 1 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): labels on dark shapes in fig-U1-6 made visible; the review above predates it; needs a fresh G3 run |
 
