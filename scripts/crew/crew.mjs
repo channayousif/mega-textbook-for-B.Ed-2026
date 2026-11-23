@@ -28,8 +28,8 @@ import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks, workMade } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeTrackerRows } from './batch.mjs';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, IN_FLIGHT, isCorpusStage, limitIllustrate, limitPlanIllustrations } from './planner.mjs';
-import { illustrationFacts, g3UnitChanges, gateJsonEntries } from './review-facts.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, authorQueue, focusCourse, IN_FLIGHT, isCorpusStage, limitIllustrate, limitPlanIllustrations, refreshCandidate, pickRefresh } from './planner.mjs';
+import { illustrationFacts, g3UnitChanges, gateJsonEntries, unstructuredSchematics } from './review-facts.mjs';
 import { walkUnits, walkCourses } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
 import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
@@ -144,6 +144,7 @@ function unitFacts(course, u, bilingual, dirs) {
     g5Report: latestReport(course, u.unit_no, 'G5'),
     mirrorComplete: d ? mirrorComplete(listDir(d.unitDir), listDir(d.urUnitDir)) : false,
     ...illustrationFacts(ROOT, course, u.unit_no),
+    unstructuredSchematics: unstructuredSchematics(ROOT, course, u.unit_no),
     g3UnitChanges: u.gates.G3 === 'done' ? [] : g3UnitChanges(ROOT, course, u.unit_no, g3Report),
   };
 }
@@ -155,6 +156,7 @@ function plan() {
   const dirs = unitDirs();
   const added = [];
   const awaiting = [];
+  const refreshCandidates = [];
   const queue = (course, unit, stage, extra = {}) => {
     const base = jobId(course, unit, stage);
     const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
@@ -171,6 +173,7 @@ function plan() {
         awaiting.push({ course: c.course_code, unit: u.unit_no, disposition: facts.g3Report.disposition, report: relative(ROOT, facts.g3Report.file) });
       }
       for (const stage of stagesFor(u, facts)) queue(c.course_code, u.unit_no, stage);
+      if (refreshCandidate(u, facts)) refreshCandidates.push({ course: c.course_code, unit: u.unit_no, count: facts.unstructuredSchematics });
     }
   }
   // Units an approved spec defines but nobody has written yet are not in the content status at all.
@@ -201,12 +204,39 @@ function plan() {
   const inFlight = board.jobs.filter((j) => IN_FLIGHT.includes(j.status));
   added.splice(0, added.length, ...limitPlanIllustrations(limitIllustrate(added, inFlight), inFlight));
   planMedia(board, queue, added, inFlight);
+  planRefresh(board, queue, added, inFlight, refreshCandidates);
   // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
   board.awaitingG3 = { at: now(), units: awaiting };
   if (!DRY) { board.jobs.push(...added); save('board', board); }
   console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off; focus: ${board.focus.course ?? 'none'} (${board.focus.reason})${held.length ? `; held ${held.length} author job(s) for ${[...new Set(held.map((j) => j.course))].join(', ')}` : ''}${waitingOverview.length ? `; waiting for course overview: ${waitingOverview.join(', ')}` : ''}`);
   for (const j of added) console.log(`  + ${j.id}`);
   return added;
+}
+
+// ---------------------------------------------------------------- figure refresh (Feature 032 phase D)
+
+/**
+ * Redraw placed schematics to the improved SVG standard, one unit at a time, only while the owner
+ * has it on (`crew refresh on`). The unit must be uncertified and not waiting for G3 sign-off
+ * (`refreshCandidate`); a unit already busy with another job is skipped this round.
+ */
+function planRefresh(board, queue, added, inFlight, candidates) {
+  const control = load('control');
+  board.refresh = { on: control.refresh === 'on', candidates: candidates.length, at: now() };
+  if (control.refresh !== 'on') return;
+  const busy = new Set([...inFlight, ...added].map((j) => `${j.course}#${j.unit}`));
+  const pick = pickRefresh(candidates.filter((c) => !busy.has(`${c.course}#${c.unit}`)), [...inFlight, ...added], board.focus?.course);
+  if (pick) queue(pick.course, pick.unit, 'refresh_figures');
+}
+
+function refreshCommand(arg, control) {
+  const sub = (arg.split(/\s+/)[0] || '').toLowerCase();
+  if (sub === 'on' || sub === 'off') {
+    control.refresh = sub;
+    return `figure refresh ${sub}${sub === 'on' ? ': the next plan queues one uncertified unit at a time (never a certified unit or one awaiting your G3 sign-off) to have its schematics redrawn to the improved standard' : ''}`;
+  }
+  const b = load('board');
+  return `Figure refresh ${control.refresh === 'on' ? 'on' : 'off'}; ${b.refresh?.candidates ?? 0} unit(s) eligible at the last plan.`;
 }
 
 // ---------------------------------------------------------------- media (Feature 030)
@@ -400,6 +430,7 @@ export const STAGE_TASK = {
   repair_en: (j) => `Apply the findings of the latest G3 report under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit ${j.unit} G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.`,
   figures: (j) => `Render every prompt-only schematic figure for ${j.course} Unit ${j.unit} (generate-figures skill): diagrams, tables, concept maps, flowcharts and timelines as SVG with their .ur.svg variants. Leave raster illustrations at prompt-only for the illustrate job. Every SVG must pass npm run check:svg-style; render each one to PNG and look at it (light and dark) before placing it.`,
   plan_illustrations: (j) => `Plan the raster images for ${j.course} Unit ${j.unit} (ADR-0029 point 5; owner ruling 2026-11-09: units authored before the author-unit skill planned them are backfilled). Read \`.claude/skills/author-unit/references/figure-prompts.md\` and model the banner on \`specs/content/efmp-304/figures/unit-02.banner.md\`. Write \`specs/content/${j.course.toLowerCase()}/figures/unit-${pad(j.unit)}.banner.md\` with one 16:9 banner row for the unit index (next free figure ID, Kind illustration, Status prompt-only). Then add one illustration scene per topic for its "A real classroom situation", unless the scene would only decorate: a \`FIGURE[...]\` marker in the English topic file and a matching prompt-only row in \`figures/unit-${pad(j.unit)}.md\`. The \`FIGURE[...]\` marker belongs in the English topic file only: do not edit the Urdu topic files, because the illustrate job adds the Urdu <Figure> with Urdu alt text when it places the image. Every prompt is a complete brief for a scene that teaches the unit's point: a Sindh school or classroom, Pakistani dress, no text, maps, flags or emblems, and never a prophet, companion, angel or other sacred person, nor scripture or calligraphy (this matters most for Islamic studies and Qur'an courses: show teachers and pupils learning, not sacred figures). Alt text describes what the image will show. Do not generate, place or draw any image and do not touch other figures: the illustrate job produces and places these rows.`,
+  refresh_figures: (j) => `Redraw the placed SVG schematics of ${j.course} Unit ${j.unit} to the improved standard (Feature 032 phase D, D-2026-0097/0098; owner, 2026-11-23: "we can rewrite existing figures and diagrams to improved versions"). Read \`.claude/skills/generate-figures/references/svg-authoring.md\` (structure layers and ids, connectors, grid, flowchart shapes, the self-check) and \`references/bilingual-figures.md\`. For every \`static/img/figures/${j.course.toLowerCase()}/unit-${pad(j.unit)}/fig-*.svg\` without \`id="layer-nodes"\`: redraw it as the same figure, keeping its file name, figure id, alt text, manifest row and meaning (a visual redraw, never a content change: no new facts, labels or arrows the text does not support). A complex picture (people, rooms, objects, dense pictograms) is not redrawn as SVG: leave it and say so in your handoff, since D-2026-0098 makes it a raster for the owner to schedule. Rebuild each Urdu twin from the new English drawing with the Urdu labels of the old \`.ur.svg\`, then \`node scripts/mirror-figure-rtl.mjs <file.ur.svg>\` (never a whole-drawing transform); number lines, charts and curves keep their left-to-right axes. Run \`npm run figures:variants\`, \`node scripts/measure-figure-text.mjs <every changed svg>\` until it exits 0, and \`npm run check:svg-style\`. Render every changed figure, English beside Urdu, with \`scripts/heavy.sh\` and read the images: every label visible (no text on a dark shape drawn ink on ink, nothing painted over by a later shape), nothing clipped, Urdu right to left. Commit, then \`scripts/heavy.sh node scripts/prepare-gate-evidence.mjs ${j.course} ${j.unit}\` (repoint the G2 row) and \`npm run check:content\`. If the unit's latest G3 row is ⏳ or carries an agent report, append a ▢ G3 row: "figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run". Do not edit topic MDX, assessments or any other unit.`,
   illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it picks the image producer itself (agy, then gflow while the owner's PC is reachable, then Codex; each image's producer is printed on its ✓ line), optimises to WebP and moves each row to generated. Never call an image tool (generate_image, image_gen) yourself: every image goes through that script. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, any depiction of a prophet, companion, angel or other sacred person, any scripture or calligraphy, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job. If generate-illustration.mjs exits 3 (every image producer is out of quota), stop at once: commit nothing, not even a PHR, print one CREW-HANDOFF line with the reset time, and exit; the crew holds this job until the quota resets.`,
   review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row; write the report JSON directly under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/ (supporting evidence may sit in a subfolder). Never tick G3, never add reviewer initials, never self-sign.${renderStep(j, false)}${latestReport(j.course, j.unit, 'G3') ? ' This is the second and last review cycle (ADR-0019): repairs were applied for the latest report under the unit\'s reviews/.../G3/ folder. Verify each of its findings against the current files, carry any that remain unresolved, and give a new name to your report.' : ''}`,
   translate: (j) => `Translate ${j.course} Unit ${j.unit} into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft. Topic titles read "موضوع N.M - ...", matching the English numbering.`,
@@ -1406,6 +1437,7 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
     }
     if (['media', 'approve-script', 'publish', 'reject'].includes(v)) return mediaCommand(v, arg, control, via);
     if (['social', 'post', 'reject-post'].includes(v)) return socialCommand(v, arg, control, via);
+    if (v === 'refresh') return refreshCommand(arg, control);
     if (v === 'note') {
       if (!arg) return 'usage: crew note <directions>';
       control.notes = [...(control.notes || []), { at: now(), via, text: arg }].slice(-50);

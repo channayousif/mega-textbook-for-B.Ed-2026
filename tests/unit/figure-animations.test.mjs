@@ -34,3 +34,16 @@ describe('figure animation index (Feature 032)', () => {
     expect(idx['/img/figures/efmp-301/unit-04/fig-U4-1']).toEqual({ en: 'aGWlr2i3AWs' });
   });
 });
+
+describe('Study Studio listing of animations (Feature 032 T005)', () => {
+  it('adds public 16:9 animations to the topic that holds the figure', async () => {
+    const { addAnimations } = await import('../../scripts/build-studio-index.mjs');
+    const index = addAnimations({}, { animations: [
+      { figure: '/img/figures/efmp-301/unit-04/fig-U4-3', lang: 'en', format: '16x9', youtube_id: 'AAAAAAAAAAA', status: 'public' },
+      { figure: '/img/figures/efmp-301/unit-04/fig-U4-3', lang: 'en', format: '9x16', youtube_id: 'BBBBBBBBBBB', status: 'public' },
+      { figure: '/img/figures/efmp-301/unit-04/fig-U4-5', lang: 'ur', format: '16x9', youtube_id: 'CCCCCCCCCCC', status: 'private' },
+    ] }, (course, unit, fig) => (fig === 'fig-U4-3' ? 2 : 3), (course, fig, lang) => `${fig} ${lang}`);
+    expect(Object.keys(index)).toEqual(['efmp-301/4/2']);
+    expect(index['efmp-301/4/2'].en).toEqual([{ kind: 'animation', title: 'fig-U4-3 en', audience: 'all', alt: '', url: 'https://youtu.be/AAAAAAAAAAA' }]);
+  });
+});

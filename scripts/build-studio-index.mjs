@@ -8,7 +8,7 @@
 // teaser = { youtube_id, title, locale, semester, published_at, views }: Feature 030 (T038), only teasers
 // the owner made public; views from specs/studio/teaser-stats.json (teaser-stats.mjs).
 // homeTeasers = [{ code, ...teaser, reason: 'top' | 'latest' }]: the home page's "Courses in 30 seconds".
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { findManifests } from './check-studio-manifest.mjs';
@@ -77,6 +77,46 @@ export function pickHomeTeasers(teasers, { top = 2, latest = 2 } = {}) {
   return [...picked, ...fresh];
 }
 
+/**
+ * Feature 032: public animated figures (specs/studio/animations/placed.json) as `animation` items
+ * of the topic that holds the figure, so the Studio panel can list them. Only public 16:9 videos.
+ * `topicOf(course, unit, figId)` returns the topic number; `titleOf(course, figId, lang)` a title.
+ */
+export function addAnimations(index, ledger, topicOf, titleOf) {
+  for (const a of ledger?.animations ?? []) {
+    if (a.status !== 'public' || a.format !== '16x9' || !/^[A-Za-z0-9_-]{11}$/.test(a.youtube_id ?? '')) continue;
+    const m = a.figure.match(/^\/img\/figures\/([a-z0-9-]+)\/unit-(\d+)\/(fig-[A-Za-z0-9-]+)$/);
+    if (!m) continue;
+    const [, course, unitStr, figId] = m;
+    const unit = Number(unitStr);
+    const topic = topicOf(course, unit, figId);
+    if (!topic) continue;
+    const slot = (index[`${course}/${unit}/${topic}`] ??= { en: [], ur: [] });
+    slot[a.lang].push({ kind: 'animation', title: titleOf(course, figId, a.lang) ?? figId, audience: 'all', alt: '', url: `https://youtu.be/${a.youtube_id}` });
+  }
+  return index;
+}
+
+function readAnimations(root, index) {
+  const ledger = join(root, 'specs', 'studio', 'animations', 'placed.json');
+  if (!existsSync(ledger)) return index;
+  const unitDir = (course, unit) => {
+    const sem = readdirSync(join(root, 'docs')).find((d) => existsSync(join(root, 'docs', d, course, `unit-${String(unit).padStart(2, '0')}`)));
+    return sem ? join(root, 'docs', sem, course, `unit-${String(unit).padStart(2, '0')}`) : null;
+  };
+  const topicOf = (course, unit, figId) => {
+    const dir = unitDir(course, unit);
+    if (!dir) return null;
+    const f = readdirSync(dir).find((n) => /^topic-\d+\.mdx$/.test(n) && readFileSync(join(dir, n), 'utf8').includes(`id="${figId}"`));
+    return f ? Number(f.match(/\d+/)[0]) : null;
+  };
+  const titleOf = (course, figId, lang) => {
+    const f = join(root, 'specs', 'studio', 'animations', course, `${figId}.json`);
+    return existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')).beats?.[0]?.caption?.[lang] ?? null : null;
+  };
+  return addAnimations(index, JSON.parse(readFileSync(ledger, 'utf8')), topicOf, titleOf);
+}
+
 function readTeasers(root) {
   const dir = join(root, 'specs', 'studio', 'teasers');
   const ledger = join(dir, 'media-teasers.json');
@@ -91,7 +131,7 @@ function readTeasers(root) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const manifests = findManifests(ROOT).map((f) => JSON.parse(readFileSync(f, 'utf8')));
-  const index = buildStudioIndex(manifests);
+  const index = readAnimations(ROOT, buildStudioIndex(manifests));
   index.teasers = readTeasers(ROOT);
   index.homeTeasers = pickHomeTeasers(index.teasers);
   mkdirSync(join(ROOT, 'static'), { recursive: true });

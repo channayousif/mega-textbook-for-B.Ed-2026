@@ -6,10 +6,10 @@
 - [x] T003 Install animated-diagrams-skill (pinned 3de812d) and its runtime outside the repo; read setup.sh first (not run: ARM64 host, Playwright Chromium via HYPERFRAMES_BROWSER_PATH; telemetry off).
 - [x] T004 `animated-figures` skill and `scripts/media/animate-figure.mjs` (region beats, EN/UR captions, mirrored and scaled Urdu regions, 16x9 and 9x16).
 - [x] T004b Kaggle render route `scripts/media/kaggle-animate.mjs` + `scripts/media/kaggle/render_animations.py` (owner, 2026-11-23: "can we move renders to kaggle?"): private dataset, private CPU kernel, verified fetch; ~80 s per 39 s video vs 15+ min on the host.
-- [ ] T005 Media Studio kind `video.animation`; Study Studio manifest kind `animation`; tests.
+- [x] T005 Ledger is `specs/studio/animations/placed.json` (a Media Studio kind was not needed); Study Studio panel lists a topic's public animations in an "Animations" tab (`addAnimations` in build-studio-index); tests.
 - [x] T006 Pilot renders: EFMP-301 U4 fig-U4-3 EN/UR x 16x9/9x16 with colours and icons; owner approved the look 2026-11-23. fig-U4-1 (EN only: its published .ur.svg has unmirrored polygons) and fig-U4-5 (EN/UR) rendered in batch 2.
 - [x] T007a Site: `specs/studio/animations/placed.json` ledger, `figureAnimations` customField, `Figure.tsx` "Watch it animate" button + 16:9 dialog (only public/unlisted entries show).
-- [ ] T007b Owner makes approved videos unlisted or public; set `status` in placed.json; Study Studio listing; e2e.
+- [x] T007b Owner made all ten videos public (2026-11-23); ledger `status: public`; Study Studio listing; e2e `tests/e2e/figure-animation.spec.ts`.
 - [ ] T008 Urdu figure defect: 22 `.ur.svg` files keep the English polygon coordinates (EFMP-301 fig-U4-1 visually confirmed broken); fix needs owner approval where it re-opens G3 evidence.
 
 ## Phase B

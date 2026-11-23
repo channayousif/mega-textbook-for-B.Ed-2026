@@ -14,4 +14,5 @@
 - [x] T009 Crew tests (`tests/crew/social-stage.test.mjs`); worker-chains pin.
 
 ## PR 3: Pilot
-- [ ] T010 Dry-run day rendered for the owner; first content roundup approved by the owner and posted on Facebook, Instagram and LinkedIn; ledger `pilot` set to false; `crew social on`.
+- [x] T010 Dry-run day rendered for the owner; first content roundup approved by the owner and posted on Facebook, Instagram and LinkedIn; ledger `pilot` set to false; `crew social on`. Done 2026-11-23: rewritten with full course titles and plain language (owner), posted on Facebook, Instagram and LinkedIn; pilot passed (PR #735).
+- [x] T011 Animated figures (Feature 032 ledger) announced as media lines in the daily roundup.

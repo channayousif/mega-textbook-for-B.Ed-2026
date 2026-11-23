@@ -237,7 +237,7 @@ export const isCorpusStage = (stage) => !/^(maint|intel|teaser|media|audio|socia
  * tracks, so media jobs still run but never hold the course focus. Before this, one raster job
  * waiting days for image quota held every new course's author jobs.
  */
-export const MEDIA_STAGES = ['figures', 'illustrate', 'plan_illustrations'];
+export const MEDIA_STAGES = ['figures', 'illustrate', 'plan_illustrations', 'refresh_figures'];
 export const holdsFocus = (stage) => isCorpusStage(stage) && !MEDIA_STAGES.includes(stage);
 
 /**
@@ -273,3 +273,24 @@ export function focusCourse({ started, jobs, newCourses, catalogOrder }) {
   const next = [...newCourses].sort((a, b) => rank(a) - rank(b))[0];
   return next ? { course: next, reason: 'new course: every started course is done for the crew' } : null;
 }
+
+/**
+ * Feature 032 phase D (D-2026-0097; owner, 2026-11-23: "Uncertified first", "Crew stage, course by
+ * course"): a unit whose placed schematics may be redrawn to the improved SVG standard. Never a
+ * certified unit, never one awaiting the owner's G3 sign-off (a redraw would void evidence the owner
+ * accepted or is about to sign), never while figure or illustration work is pending.
+ * `f.unstructuredSchematics` counts placed English schematics without the `layer-nodes` structure.
+ */
+export function refreshCandidate(u, f) {
+  if (!u.authored || u.gates?.G3 === 'done') return false;
+  if (awaitingG3(u, f) || illustrationsPending(u, f)) return false;
+  if ((f.figureBacklog?.schematic ?? u.figures?.prompt_only ?? 0) > 0) return false;
+  return (f.unstructuredSchematics ?? 0) > 0;
+}
+
+/** One figure refresh at a time, focus course first, then the order the units came in. */
+export function pickRefresh(candidates, inFlight, focus) {
+  if (inFlight.some((j) => j.stage === 'refresh_figures')) return null;
+  return candidates.find((c) => c.course === focus) ?? candidates[0] ?? null;
+}
+

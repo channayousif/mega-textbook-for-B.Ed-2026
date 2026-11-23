@@ -39,6 +39,11 @@ const T = {
   studyguide: { en: 'Study guide', ur: 'اسٹڈی گائیڈ' },
   video: { en: 'Watch', ur: 'دیکھیں' },
   slides: { en: 'Slides', ur: 'سلائیڈز' },
+  animation: { en: 'Animations', ur: 'متحرک خاکے' },
+  animationNote: {
+    en: 'The figures of this topic, built step by step with captions. Made from the figures themselves.',
+    ur: 'اس موضوع کے خاکے، قدم بہ قدم، تحریری وضاحت کے ساتھ۔ خود انہی خاکوں سے بنائے گئے۔',
+  },
   openMusic: { en: 'Open in YouTube Music', ur: 'YouTube Music میں کھولیں' },
   openYouTube: { en: 'Open on YouTube', ur: 'YouTube پر کھولیں' },
   openDrive: { en: 'Open in Google Drive', ur: 'Google Drive میں کھولیں' },
@@ -161,6 +166,12 @@ export default function StudioPanel({ courseCode, unitNo, topicNo, locale }: { c
     add('mindmap', (it, loc) => <Json item={it[0]} locale={locale} render={(d) => <StudioMindMap tree={d as never} locale={loc} storageKey={`studio-recall:${courseCode}:${unitNo}:${topicNo}:${loc}`} />} />);
     add('audio', (it) => <Listen items={it} locale={locale} />);
     add('video', (it) => <Listen items={it} locale={locale} />);
+    add('animation', (it, loc) => (
+      <>
+        <p className={styles.note}>{T.animationNote[loc]}</p>
+        <Listen items={it} locale={locale} />
+      </>
+    ));
     add('brief', (it) => <Prose item={it[0]} locale={locale} />);
     add('studyguide', (it) => <Prose item={it[0]} locale={locale} />);
     add('slides', (it) => (
@@ -188,7 +199,8 @@ export default function StudioPanel({ courseCode, unitNo, topicNo, locale }: { c
       <div className={styles.head}>
         <p className={styles.eyebrow}>{T.eyebrow[locale]}</p>
         <h2 id="studio-panel-title" className={styles.title}>{T.title[locale]}</h2>
-        <p className={styles.note}>{T.disclaimer[locale]}</p>
+        {/* The Gemini Notebook disclaimer covers Notebook items; animations carry their own note. */}
+        {tabs.some((t) => t.id !== 'animation') && <p className={styles.note}>{T.disclaimer[locale]}</p>}
       </div>
       <Tabs items={tabs} label={T.tabs[locale]} />
     </section>
