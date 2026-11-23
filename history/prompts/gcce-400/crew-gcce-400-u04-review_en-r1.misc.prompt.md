@@ -70,25 +70,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English cycle 2 review for GCCE-400 Unit 4, verifying all run-1 content repairs (F1, F3, F4, F5, F6) resolved, validating all content checks at exit 0, and escalating on unavailable live render evidence due to deployed build staleness.
+Completed independent G3 English cycle 2 review for GCCE-400 Unit 4, validating all run-1 content repairs resolved, verifying figure geometry and content gates, and escalating on unavailable live render review due to deployed build staleness.
 
 ## Outcome
 
 - Impact: review_en for GCCE-400 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing (14 content gates, exit 0).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English cycle 2 review for GCCE-400 Unit 4 escalating on unavailable render evidence with all prior findings verified and all content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this review does not certify anything.
+- Shipped / changed: Completed independent G3 English cycle 2 review for GCCE-400 Unit 4, validating all run-1 content repairs resolved, verifying figure geometry and content gates, and escalating on unavailable live render review due to deployed build staleness.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - A permitted host must run render-inspect against a deployment matching HEAD 175a90b7a; the deployed SHA ac3d5e2fc is stale on Unit 4 prose and assessment files.
+  - A permitted host must run render-inspect against a deployment matching HEAD 175a90b7a; deployed SHA ac3d5e2fc lacks the Unit 4 content repairs.
   - G3 remains open (ADR-0019 cycle 2 of 2), unticked, reviewer token agent:g3-reviewer, no certification.
-  - All run-1 content repairs (F1 IAP2 Collaborate example and agency-decides sentence, F3 ERQ 4 token consult rubric, F4 MCQ 5 Apply/D key, F5 duplicate table removal, F6 descriptive links and D-2026-0001 citation) are verified resolved in current files.
+  - All run-1 content repairs (F1, F3, F4, F5, F6) are verified resolved in current English files.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
