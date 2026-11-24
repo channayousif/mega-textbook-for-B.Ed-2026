@@ -1,15 +1,15 @@
 ---
 id: crew-gent-401-u07-author
 title: crew author GENT-401 unit 7
-stage: green
+stage: misc
 date: 2026-11-24
 surface: agent
-model: claude
+model: claude_crew
 feature: gent-401
 branch: crew/gent-401-u07-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/gent-401/content-spec.md
   ticket: null
@@ -22,6 +22,7 @@ files:
  - docs/semester-4/gent-401/unit-07/unit-assessment.mdx
  - docs/semester-4/gent-401/unit-07/unit-teacher-notes.mdx
  - glossary.json
+ - history/prompts/gent-401/crew-gent-401-u07-author.green.prompt.md
  - specs/content/gent-401/concepts/unit-07.md
  - specs/content/gent-401/coverage/unit-07.md
  - specs/content/gent-401/figures/unit-07.banner.md
@@ -50,7 +51,6 @@ files:
  - static/img/figures/gent-401/unit-07/fig-U7-4.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/gent-401/unit-07/fig-U7-1.svg static/img/figures/gent-401/unit-07/fig-U7-2.svg static/img/figures/gent-401/unit-07/fig-U7-3.svg static/img/figures/gent-401/unit-07/fig-U7-4.svg
 ---
 
 ## Prompt
@@ -81,28 +81,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored GENT-401 Unit 7 in English (index, two nine-part topic cycles, 10/10/5 unit assessment with a bounded answers section, teacher notes, four placed schematic SVGs with derived dark variants, coverage matrix v2, sources consulted with bound notes, concept graph v4, banner sidecar, two glossary entries, task tracker rows and G2 gate evidence). All 14 content gates pass and the figure text geometry check exits 0.
+Authored GENT-401 Unit 7 (Growing a Business and Pitching It) in English with two per-topic cycles, a 10/10/5 assessment, teacher notes, four placed schematic SVGs with dark variants, and its coverage/sources/concepts/figures governance, all content gates green.
 
 ## Outcome
 
-- ✅ Impact: author for GENT-401 Unit 7 by claude (crew job gent-401-u07-author).
-- 🧪 Tests: `npm run check:content` passed in the job worktree after the G2 tracker row was added; `scripts/measure-figure-text.mjs` exited 0 on all four SVGs; `check:svg-style` passed on the committed bytes.
-- 📁 Files: 32 file(s), listed above.
-- 🔁 Next prompts: downstream G3 independent review and Urdu translation jobs.
-- 🧠 Reflection: the draft landed at 45 reading-minutes against the 32-44 band, so the prose was tightened rather than re-baselining the budget; the final total is 44, at the top of the band.
+- Impact: author for GENT-401 Unit 7 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 33 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: GENT-401 Unit 7 English draft at the per-topic standard, with four placed schematics (fig-U7-3 is the required flowchart) and the governance artefacts the gates read.
-- Decisions the team must respect: the seven-part pitch structure (hook, problem, solution, market, model, team, ask, next step) and the risk-matrix quadrant reading are the author's teaching devices built on OpenStax sections 7.3 and 13.7, not the book's own procedures; the unit banner (fig-U7-5) stays `prompt-only` for the illustrate job.
-- Pending / next owner: G3 independent review and G4 Urdu translation, both separate jobs. The two DOAJ substitutes (`sme-risk-review`, `pitch-competition`) are read only to their abstracts, so a reviewer should hold the unit to that limit.
-- Paperclip issues affected: none.
+- Shipped / changed: Authored GENT-401 Unit 7 (Growing a Business and Pitching It) in English with two per-topic cycles, a 10/10/5 assessment, teacher notes, four placed schematic SVGs with dark variants, and its coverage/sources/concepts/figures governance, all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - the unit banner fig-U7-5 is still prompt-only for the illustrate job; G3 en-review and G4/G5 Urdu are separate jobs, and all six concept Urdu labels are authored (not banked in terminology.csv).
+  - `specs/content/gent-401/sources/texts/openstax-entrepreneurship.md` is shared by key across units, so Unit 1's accepted G2 input manifest may now read as stale; `--refresh-stale` is the intended repair and belongs to whichever job touches Unit 1 next.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the shared `sources/texts/openstax-entrepreneurship.md` must be edited in place rather than duplicated per unit, because the review-evidence scope rule binds an excerpt to the units that cite its key, and a separate file would bind to every unit and invalidate accepted reviews.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS; `measure-figure-text` PASS after fixing two caption overlaps and three text spills.
-- Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): have the authoring skill state the reading-minutes band arithmetic on first draft, since the overrun was only found after a full word count.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
