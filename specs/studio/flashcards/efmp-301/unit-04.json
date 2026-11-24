@@ -1,0 +1,240 @@
+{
+ "course": "EFMP-301",
+ "unit": 4,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Attention",
+     "definition": "The mind's selection: of all the information arriving at the senses at any moment, attention is what gets through. It is the gateway to learning, because what is never attended is never encoded."
+    },
+    {
+     "term": "Spotlight",
+     "definition": "The image of attention as a narrow beam that lights one task, one voice or one problem at a time. Everything outside the beam still exists but is not processed for learning."
+    },
+    {
+     "term": "Divided attention",
+     "definition": "Attention split between two targets, like a split beam, so each gets less. The cost lands on the harder task, which is why copying while listening produces notes without understanding."
+    },
+    {
+     "term": "Inattentional blindness",
+     "definition": "Failing to notice something in plain view because the mind is occupied: in the classic study, nearly half of the viewers counting basketball passes missed a person in a gorilla costume."
+    },
+    {
+     "term": "Sensation",
+     "definition": "Detection by a receptor, such as light on the retina or sound on the ear. The senses deliver sensations; the mind delivers the world."
+    },
+    {
+     "term": "Perception",
+     "definition": "The organisation and interpretation of what the senses detect: the way sensory information is organised, interpreted and consciously experienced. It is active, so what a pupil sees depends on what they already know."
+    },
+    {
+     "term": "Teaching perception",
+     "definition": "Arranging many encounters with the material, with its parts named, until the pupil's interpretation becomes automatic, so that novices learn to perceive what experts perceive quickly."
+    }
+   ],
+   "ur": [
+    {
+     "term": "توجہ",
+     "definition": "ذہن کا انتخاب: کسی بھی لمحے حواس پر آنے والی تمام معلومات میں سے توجہ وہی ہے جو اندر گزرتی ہے۔ یہ تعلم کا داخلا ہے، کیونکہ جو کبھی توجہ نہیں پاتا وہ کبھی ترمیز نہیں ہوتا۔"
+    },
+    {
+     "term": "روشنی کا ستون",
+     "definition": "توجہ کی وہ تصویر جس میں وہ ایک تنگ شعاع ہے جو ایک وقت میں ایک کام، ایک آواز یا ایک مسئلہ روشن کرتی ہے۔ شعاع کے باہر کی ہر چیز موجود رہتی ہے مگر تعلم کے لیے پروسیس نہیں ہوتی۔"
+    },
+    {
+     "term": "تقسیم شدہ توجہ",
+     "definition": "دو ہدفوں میں بٹی ہوئی توجہ، جیسے بٹی ہوئی شعاع، اس لیے ہر ہدف کو کم ملتا ہے۔ لاگت مشکل کام پر گرتی ہے، اسی لیے سنتے ہوئے نقل کرنے سے بغیر سمجھ کے نوٹس بنتے ہیں۔"
+    },
+    {
+     "term": "بے توجہی والی نابینائی",
+     "definition": "مصروف ذہن کا سامنے کی چیز نوٹ نہ کرنا: کلاسیک مطالعے میں باسکٹ بال کی پاس گننے والے دیکھنے والوں میں سے تقریباً آدھے نے گوریلے کے لباس میں ایک شخص کو نوٹ نہیں کیا۔"
+    },
+    {
+     "term": "احساس",
+     "definition": "رسیپٹر کا پتہ لگانا، جیسے ریٹینا پر روشنی یا کان پر آواز۔ حواس احساسات پہنچاتے ہیں؛ ذہن دنیا پہنچاتا ہے۔"
+    },
+    {
+     "term": "ادراک",
+     "definition": "حواس کی پتہ لگائی گئی چیز کی تنظیم اور تشریح: حسی معلومات کو منظم کرنے، اس کی تشریح کرنے اور اسے شعوری طور پر تجربہ کرنے کا طریقہ۔ یہ فعال ہے، اس لیے شاگرد جو دیکھتا ہے وہ اس پر منحصر ہے کہ وہ پہلے سے کیا جانتا ہے۔"
+    },
+    {
+     "term": "ادراک پڑھانا",
+     "definition": "مواد سے کئی ملاقاتیں ترتیب دینا، اس کے حصوں کے نام کے ساتھ، یہاں تک کہ شاگرد کی تشریح خود کار ہو جائے، تاکہ نئے سیکھنے والے وہ ادراک کرنا سیکھیں جو ماہر جلدی کرتے ہیں۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Sensory memory",
+     "definition": "The first memory system: it holds raw impressions such as sights, sounds and tastes for up to a couple of seconds. Almost everything is lost; its job is to keep input alive long enough for attention to select from it."
+    },
+    {
+     "term": "Working memory",
+     "definition": "The small, active workbench where thinking happens. It holds only a handful of items at once, with a practical capacity nearer four, for seconds to a minute unless they are actively kept alive."
+    },
+    {
+     "term": "Long-term memory",
+     "definition": "The archive: the continuous storage of information, with a capacity believed to be unlimited. Everything in it was once an item on the workbench that survived the crossing."
+    },
+    {
+     "term": "Encoding",
+     "definition": "The input of information into the memory system. It is not passive: encoding material well takes a lot of work and attention, and material that connects to what the pupil already knows is encoded."
+    },
+    {
+     "term": "Storage",
+     "definition": "The retention of what was encoded, cemented by connections to what is already known. It strengthens when material is revisited over time rather than crammed together."
+    },
+    {
+     "term": "Retrieval",
+     "definition": "Getting information out of memory storage and back into conscious awareness. Retrieval is a skill: it strengthens with practice."
+    },
+    {
+     "term": "Retrieval practice",
+     "definition": "Pulling material back out of memory, as in a self-test, a closed-book attempt or an explanation to a partner. It strengthens the route more than re-exposure does and builds recall, not just recognition."
+    },
+    {
+     "term": "Decay",
+     "definition": "The face of forgetting in which the memory trace fades with disuse, as a route grows over. Decay answers spacing."
+    },
+    {
+     "term": "Interference",
+     "definition": "The face of forgetting in which newer material crowds older material, as the October chapter loses to the November chapter. Interference answers distinctiveness."
+    },
+    {
+     "term": "Retrieval failure",
+     "definition": "The face of forgetting in which the material is there but the route to it is not practised: the tip-of-the-tongue state. It is the only face that responds to trying harder, and it answers practice."
+    }
+   ],
+   "ur": [
+    {
+     "term": "حسی یادداشت",
+     "definition": "یادداشت کا پہلا نظام: یہ مناظر، آوازوں اور ذائقوں جیسے خام تاثرات ایک دو سیکنڈ تک تھامتی ہے۔ تقریباً ہر چیز ضائع ہو جاتی ہے؛ اس کا کام داخل کو اتنی دیر زندہ رکھنا ہے کہ توجہ اس میں سے چن لے۔"
+    },
+    {
+     "term": "عامل یادداشت",
+     "definition": "کام کی وہ چھوٹی، فعال میز جہاں سوچ ہوتی ہے۔ یہ ایک بار صرف مٹھی بھر چیزیں تھامتی ہے، جس کی عملی صلاحیت تقریباً چار ہے، اور انہیں سیکنڈ سے منٹ تک تھامتی ہے جب تک فعال طور پر زندہ نہ رکھی جائیں۔"
+    },
+    {
+     "term": "طویل مدتی یادداشت",
+     "definition": "محفوظ خانہ: معلومات کا مسلسل ذخیرہ، جس کی صلاحیت لامحدود سمجھی جاتی ہے۔ اس میں موجود ہر چیز کبھی کام کی میز پر ایک چیز تھی جو پار اتر گئی۔"
+    },
+    {
+     "term": "ترمیز",
+     "definition": "یادداشت کے نظام میں معلومات کا داخل۔ یہ غیر فعال نہیں ہے: مواد کو اچھی طرح ترمیز کرنے میں بہت کام اور توجہ لگتی ہے، اور جو مواد شاگرد کی معلوم چیز سے جڑتا ہے وہ ترمیز ہوتا ہے۔"
+    },
+    {
+     "term": "محفوظ کرنا",
+     "definition": "ترمیز شدہ چیز کی حفاظت، جو پہلے سے معلوم چیزوں سے رابطوں سے پختہ ہوتی ہے۔ یہ اس وقت مضبوط ہوتا ہے جب مواد ایک ساتھ بھرنے کے بجائے وقت کے ساتھ دوبارہ دیکھا جائے۔"
+    },
+    {
+     "term": "حاصل کرنا",
+     "definition": "معلومات کو یادداشت کے ذخیرے سے باہر اور شعوری آگہی میں واپس لانا۔ حاصل کرنا ایک مہارت ہے: یہ مشق سے مضبوط ہوتی ہے۔"
+    },
+    {
+     "term": "حاصل کرنے کی مشق",
+     "definition": "مواد کو یادداشت سے واپس کھینچنا، جیسے خود جانچ، بند کتاب کی کوشش یا ساتھی کو وضاحت۔ یہ راستے کو دوبارہ دیکھنے سے زیادہ مضبوط کرتی ہے اور صرف پہچان نہیں بلکہ یاد دہانی بناتی ہے۔"
+    },
+    {
+     "term": "زوال",
+     "definition": "بھولنے کا وہ چہرہ جس میں نشان بے استعمالی سے مدھم ہوتا ہے، جیسے راستے پر جھاڑی اگ آئے۔ زوال کا جواب وقفہ دینا ہے۔"
+    },
+    {
+     "term": "مداخلت",
+     "definition": "بھولنے کا وہ چہرہ جس میں نیا مواد پرانے کو دباتا ہے، جیسے اکتوبر کا باب نومبر کے باب سے ہار جاتا ہے۔ مداخلت کا جواب انفرادیت ہے۔"
+    },
+    {
+     "term": "حاصل کرنے میں ناکامی",
+     "definition": "بھولنے کا وہ چہرہ جس میں مواد موجود ہے مگر اس تک راستہ مشق نہیں ہوا: \"زبان پر ہے\" والی حالت۔ صرف یہی چہرہ زیادہ کوشش سے جواب دیتا ہے، اور اس کا جواب مشق ہے۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Concept",
+     "definition": "A learned category that carries features and rules, built from many encounters as the features are noticed and the boundaries drawn. The more precise a concept, the less working memory each thought costs."
+    },
+    {
+     "term": "Algorithm",
+     "definition": "A guaranteed procedure, such as the long-division steps. It is reliable and slow, and only available when one exists."
+    },
+    {
+     "term": "Heuristic",
+     "definition": "A rule of thumb, such as \"find the question\", \"draw the situation\" or \"try a simpler case\". It is fast and fallible, and it is the main content of being good at problems."
+    },
+    {
+     "term": "Means-ends analysis",
+     "definition": "A strategy: compare where you are with where you must be, do the step that shrinks the gap most, and repeat."
+    },
+    {
+     "term": "Working backwards",
+     "definition": "A strategy: start from what is asked and ask what would produce it."
+    },
+    {
+     "term": "Analogy",
+     "definition": "A strategy: seeing that this problem is like one you already know. It is the strategy that makes transfer the mark of understanding."
+    },
+    {
+     "term": "Functional fixedness",
+     "definition": "An obstacle to problem-solving: seeing an object only in its usual role, so the scarf is never a fisherman's net."
+    },
+    {
+     "term": "Set effect",
+     "definition": "An obstacle to problem-solving: a habit, such as Bilal's \"use the numbers\", that solved yesterday's problems and blocks today's."
+    },
+    {
+     "term": "Inductive reasoning",
+     "definition": "Reasoning that runs from cases to a rule: the reasoning of generalisation. It is fallible by nature, because the next case can always break the rule."
+    },
+    {
+     "term": "Deductive reasoning",
+     "definition": "Reasoning that runs from a rule to a case: the reasoning of proof. A deduction that fails tells you the rule is wrong, not that the world is misbehaving."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تصور",
+     "definition": "سیکھی ہوئی قسم جو خصوصیات اور قواعد رکھتی ہے، اور بہت سی ملاقاتوں سے بنتی ہے جب خصوصیات نوٹ ہوتی ہیں اور سرحدیں کھنچتی ہیں۔ تصور جتنا درست ہو، ہر خیال عامل یادداشت کو اتنا کم خرچ ہوتا ہے۔"
+    },
+    {
+     "term": "الگورتھم",
+     "definition": "گارنٹی والا طریقہ کار، جیسے طویل تقسیم کے مراحل۔ یہ قابل بھروسا اور سست ہے، اور صرف وہاں دستیاب ہے جہاں ایک موجود ہو۔"
+    },
+    {
+     "term": "ہیورسٹک",
+     "definition": "انگلی پر گنتی والا اصول، جیسے \"سوال ڈھونڈو\"، \"صورتحال بناؤ\" یا \"آسان کیس آزماؤ\"۔ یہ تیز ہے مگر اس میں غلطی ہو سکتی ہے، اور یہ مسائل میں اچھا ہونے کا مرکزی مواد ہے۔"
+    },
+    {
+     "term": "ذریعہ سے مقصد تجزیہ",
+     "definition": "ایک حکمت عملی: جہاں ہیں اس کا موازنہ جہاں ہونا ہے اس سے کریں، وہ قدم کریں جو شگاف سب سے زیادہ چھوٹا کرے، اور دہرائیں۔"
+    },
+    {
+     "term": "پیچھے سے کام",
+     "definition": "ایک حکمت عملی: جو پوچھا گیا ہے اس سے شروع کریں اور پوچھیں کہ اسے کیا پیدا کرے گا۔"
+    },
+    {
+     "term": "قیاس",
+     "definition": "ایک حکمت عملی: یہ دیکھنا کہ یہ مسئلہ کسی جانے ہوئے مسئلے جیسا ہے۔ یہی حکمت عملی منتقلی کو سمجھ کی نشانی بناتی ہے۔"
+    },
+    {
+     "term": "فعلی جمود",
+     "definition": "مسئلہ حل کرنے میں رکاوٹ: چیز کو صرف اس کے عام کردار میں دیکھنا، اس لیے دوپٹہ کبھی مچھیرے کا جال نہیں بن پاتا۔"
+    },
+    {
+     "term": "سیٹ اثر",
+     "definition": "مسئلہ حل کرنے میں رکاوٹ: وہ عادت، جیسے بلال کا \"اعداد استعمال کرو\"، جو کل کے مسئلے حل کرتی تھی اور آج کے مسئلے کو روکتی ہے۔"
+    },
+    {
+     "term": "استقرائی استدلال",
+     "definition": "وہ استدلال جو کیسوں سے قاعدے کی طرف چلتا ہے: تعمیم کا استدلال۔ یہ فطرتاً غلطی کا شکار ہو سکتا ہے، کیونکہ اگلا کیس ہمیشہ قاعدہ توڑ سکتا ہے۔"
+    },
+    {
+     "term": "استنتاجی استدلال",
+     "definition": "وہ استدلال جو قاعدے سے کیس کی طرف چلتا ہے: ثبوت کا استدلال۔ جو استخراج ناکام ہو وہ بتاتا ہے کہ قاعدہ غلط ہے، نہ یہ کہ دنیا بگڑ رہی ہے۔"
+    }
+   ]
+  }
+ }
+}
