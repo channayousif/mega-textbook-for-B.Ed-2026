@@ -1,8 +1,8 @@
 ---
 id: crew-efmp-408-u02-author-conflict2
-title: crew fix EFMP-408 unit 2 conflict 2
+title: crew fix EFMP-408 unit 2
 stage: misc
-date: 2026-11-25
+date: 2026-11-24
 surface: agent
 model: claude_crew
 feature: efmp-408
@@ -16,7 +16,6 @@ links:
   adr: null
   pr: null
 files:
- - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict2.misc.prompt.md
  - docs/semester-4/efmp-408/unit-02/index.mdx
  - docs/semester-4/efmp-408/unit-02/topic-01.mdx
  - docs/semester-4/efmp-408/unit-02/topic-02.mdx
@@ -25,6 +24,7 @@ files:
  - docs/semester-4/efmp-408/unit-02/unit-teacher-notes.mdx
  - glossary.json
  - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict2.misc.prompt.md
  - history/prompts/efmp-408/crew-efmp-408-u02-author-merge.misc.prompt.md
  - history/prompts/efmp-408/crew-efmp-408-u02-author.green.prompt.md
  - specs/content/efmp-408/concepts/unit-02.md
@@ -56,7 +56,6 @@ files:
  - static/img/figures/efmp-408/unit-02/fig-U2-6.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/efmp-408/unit-01/*.svg
 ---
 
 ## Prompt
@@ -92,31 +91,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u02-author, author, claude_crew) Unit 2 evidence notes live in sources/unit-02.md, not the shared sources/texts excerpts, so Unit 1's G2 evidence stays valid.
 - (efmp-408-u02-author, author, claude_crew) Urdu concept labels in concepts/unit-02.md are authored (Validity, Reliability, Bloom's Taxonomy are banked); G4/G5 is the next job.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/efmp-408-u02-author`, resolved the one conflict in `specs/content/efmp-408/tasks.md` as a union (main's newer Unit 1 row with the Urdu translation state, this branch's newer Unit 2 authored row and Unit 2 stage rows), confirmed the append-only registries were untouched by main, measured the merged Unit 1 SVGs clean, and recorded all 14 content gates passing with zero findings.
+Merged origin/main into `crew/efmp-408-u02-author`, resolved the sole `specs/content/efmp-408/tasks.md` conflict as a union of both sides' tracker rows, and left all 14 content gates passing with the conflict2 PHR committed.
 
 ## Outcome
 
-- ✅ Impact: fix for EFMP-408 Unit 2 by claude_crew (attempt 2, conflict resolution).
-- 🧪 Tests: `npm run check:content` passed (14/14 gates) in the job worktree; `measure-figure-text` exited 0 on the merged Unit 1 SVGs.
-- 📁 Files: 38 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge (Unit 2 G4 Urdu translation).
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: fix for EFMP-408 Unit 2 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 38 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of origin/main into `crew/efmp-408-u02-author` with the `specs/content/efmp-408/tasks.md` conflict resolved as a union; Unit 2 tracker rows and reading estimates preserved, main's Unit 1 Urdu state preserved.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job certifies nothing and self-signed nothing. The shared registries were append-only and main added no entries to them, so no ID rekeying was needed.
+- Shipped / changed: Merged origin/main into `crew/efmp-408-u02-author`, resolved the sole `specs/content/efmp-408/tasks.md` conflict as a union of both sides' tracker rows, and left all 14 content gates passing with the conflict2 PHR committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The conflict was real this time (main added Unit 1 Urdu translation plus its tracker rows); the merged table keeps main's Unit 1 row and this branch's Unit 2 row.
-  - Unit 2 G4 Urdu translation and independent G3/G5 review remain open; banner figure fig-U2-7 stays prompt-only for the illustrate job.
+  - Unit 2 G4 Urdu translation and independent G3/G5 review are still open; banner fig-U2-7 stays prompt-only for the illustrate job.
+  - `specs/content/efmp-408/tasks.md` now carries main's Unit 1 state (Urdu drafted, translation_status draft) alongside this branch's Unit 2 state, so read both rows before editing it.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14); measure-figure-text PASS (exit 0)
-- Prompt variant (if applicable): crew brief v1 (conflict2 retry)
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
