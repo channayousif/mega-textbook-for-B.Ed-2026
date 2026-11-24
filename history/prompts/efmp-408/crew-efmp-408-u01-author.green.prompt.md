@@ -29,6 +29,15 @@ files:
  - specs/content/efmp-408/coverage/unit-01.md
  - specs/content/efmp-408/figures/unit-01.banner.md
  - specs/content/efmp-408/figures/unit-01.md
+ - specs/content/efmp-408/reviews/unit-01/G2/20261124T162306904Z-gates.json
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T162306904Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T162306904Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T162306904Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T162306904Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T162306904Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T162306904Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T162306904Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T162306904Z/validate-content.txt
  - specs/content/efmp-408/sources/texts/hec-2013-classroom-assessment.md
  - specs/content/efmp-408/sources/texts/hec-2013-testdev.md
  - specs/content/efmp-408/sources/texts/seifert-sutton-2009.md
