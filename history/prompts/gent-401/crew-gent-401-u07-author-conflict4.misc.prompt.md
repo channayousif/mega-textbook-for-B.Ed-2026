@@ -16,9 +16,43 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
- - specs/content/gent-401/tasks.md
+ - docs/semester-4/gent-401/unit-07/index.mdx
+ - docs/semester-4/gent-401/unit-07/topic-01.mdx
+ - docs/semester-4/gent-401/unit-07/topic-02.mdx
+ - docs/semester-4/gent-401/unit-07/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-07/unit-teacher-notes.mdx
+ - glossary.json
+ - history/prompts/gent-401/crew-gent-401-u07-author-conflict1.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u07-author-conflict2.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u07-author-conflict3.misc.prompt.md
  - history/prompts/gent-401/crew-gent-401-u07-author-conflict4.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u07-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-07.md
+ - specs/content/gent-401/coverage/unit-07.md
+ - specs/content/gent-401/figures/unit-07.banner.md
+ - specs/content/gent-401/figures/unit-07.md
+ - specs/content/gent-401/reviews/unit-07/G2/20261124T060041498Z-gates.json
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/validate-content.txt
+ - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
+ - specs/content/gent-401/sources/texts/pitch-competition.md
+ - specs/content/gent-401/sources/texts/sme-risk-review.md
+ - specs/content/gent-401/sources/unit-07.md
+ - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-07/fig-U7-1.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-1.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-2.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-3.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-3.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-4.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-4.svg
 tests:
  - npm run check:content
 ---
@@ -56,27 +90,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u07-author-conflict2, fix, claude_crew) The OpenStax evidence file now has four per-unit blocks whose note numbers restart (U1 1-7, U3 8-11, U4 8-12, U7 12-20); later jobs should append, not renumber.
 - (gent-401-u07-author-conflict2, fix, claude_crew) `specs/content/gent-401/glossary.json` is missing from this sparse checkout and both parents, so the branch's Unit 7 glossary keys could not be diffed against main; verify in a full checkout.
 
+
 ## Response snapshot
 
-Merged origin/main (6ba1de283) into crew/gent-401-u07-author and resolved both conflicts by union. The OpenStax evidence file keeps main's Unit 5 chapter 9 block then the branch's Unit 7 block, and the closing `## Use in GENT-401` summary now carries Units 1, 4, 5, 6 and 7. tasks.md records Units 1 to 7 authored, with main's Unit 5 stage rows then the branch's Unit 7 stage rows. glossary.json merged cleanly with both sides' keys and no duplicates; no branch-added D-/G- ID collides with main. All 14 content gates pass.
+Merged origin/main into crew/gent-401-u07-author, resolved the two conflicts by keeping both sides' entries (OpenStax Unit 5 and Unit 7 evidence blocks, tasks.md Units 1-7 with Unit 5 and Unit 7 stage rows), and committed the merge plus its PHR with all content gates passing.
 
 ## Outcome
 
-- Impact: fix for GENT-401 Unit 7 by claude_crew (attempt 4).
-- Tests: npm run check:content passed in the job worktree after the merge commit.
-- Files: 2 conflict-resolved files plus this PHR; the merge commit also carries main's Unit 5 work.
+- Impact: fix for GENT-401 Unit 7 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 37 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gent-401-u07-author and resolved both conflicts by union; the OpenStax evidence file now holds main's Unit 5 block and the branch's Unit 7 block, and tasks.md records Units 1 to 7 with both Unit 5 and Unit 7 stage rows. All 14 content gates pass.
-- Decisions the team must respect: the shared registries were merged append-only (main's entries first, then this branch's, exact duplicates dropped); G3/G5 stay advisory until a qualified sign-off; this branch certifies nothing.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into crew/gent-401-u07-author, resolved the two conflicts by keeping both sides' entries (OpenStax Unit 5 and Unit 7 evidence blocks, tasks.md Units 1-7 with Unit 5 and Unit 7 stage rows), and committed the merge plus its PHR with all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 7's G2 row (`20261124T060041498Z-gates.json`) still matches its inputs because no GENT-401 G2 manifest hashes `sources/texts/*`; the openstax-entrepreneurship.md change does not stale it.
-  - Unit 7 stays English-only with banner fig-U7-5 prompt-only and G3/G5 unticked, so G3 en-review is the next stage.
-  - The OpenStax `Consulted:` line remains the 28-section union (main's Unit 5 chapter 9 sections are listed inside main's own Unit 5 block, not in the top line); later jobs should append, not renumber the per-unit note blocks.
+  - Unit 7's G2 evidence `20261124T060041498Z-gates.json` is unaffected (no GENT-401 G2 manifest hashes `sources/texts/*`); Unit 7 stays English-only with banner fig-U7-5 prompt-only and G3/G5 unticked, so G3 en-review is the next stage.
+  - `openstax-entrepreneurship.md` now holds main's Unit 5 chapter 9 block then the branch's Unit 7 block; per-unit note numbers restart, so later jobs should append, not renumber.
+  - `glossary.json` merged both sides with no duplicate keys; `D-2026-0053` and `G-2026-212` are pre-existing main IDs cited by Unit 7, not new branch IDs.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
