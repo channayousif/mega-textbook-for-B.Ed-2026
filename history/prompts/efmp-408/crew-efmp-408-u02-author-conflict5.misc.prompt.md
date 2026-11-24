@@ -2,7 +2,7 @@
 id: crew-efmp-408-u02-author-conflict5
 title: crew fix EFMP-408 unit 2
 stage: misc
-date: 2026-11-25
+date: 2026-11-24
 surface: agent
 model: claude_crew
 feature: efmp-408
@@ -16,9 +16,56 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-408/tasks.md
- - specs/gaps.md
+ - docs/semester-4/efmp-408/unit-02/index.mdx
+ - docs/semester-4/efmp-408/unit-02/topic-01.mdx
+ - docs/semester-4/efmp-408/unit-02/topic-02.mdx
+ - docs/semester-4/efmp-408/unit-02/topic-03.mdx
+ - docs/semester-4/efmp-408/unit-02/unit-assessment.mdx
+ - docs/semester-4/efmp-408/unit-02/unit-teacher-notes.mdx
+ - glossary.json
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict4.misc.prompt.md
  - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict5.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-merge.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author.green.prompt.md
+ - specs/content/efmp-408/concepts/unit-02.md
+ - specs/content/efmp-408/coverage/unit-02.md
+ - specs/content/efmp-408/figures/unit-02.banner.md
+ - specs/content/efmp-408/figures/unit-02.md
+ - specs/content/efmp-408/reviews/unit-02/G2/20261124T181004352Z-gates.json
+ - specs/content/efmp-408/reviews/unit-02/G2/20261124T205350146Z-gates.json
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/validate-content.txt
+ - specs/content/efmp-408/sources/unit-02.md
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-1.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-2.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-2.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-3.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-3.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-4.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-5.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-5.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-6.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-6.svg
 tests:
  - npm run check:content
 ---
@@ -56,27 +103,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u02-author-conflict3, fix, claude_crew) Unit 2 G4 Urdu translation and independent G3/G5 review are still open; banner fig-U2-7 stays prompt-only for the illustrate job.
 - (efmp-408-u02-author-conflict3, fix, claude_crew) `specs/content/efmp-408/tasks.md` now carries Unit 1, Unit 2 and Unit 3 state, so read all three units' rows before editing it.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-408-u02-author, resolved the single `specs/content/efmp-408/tasks.md` conflict as a union of both sides (Unit 2 row from this branch, Unit 3 row and the Unit 5 additions from main), and confirmed all 14 content gates pass.
+Merged origin/main into crew/efmp-408-u02-author, resolved the single `specs/content/efmp-408/tasks.md` conflict as a union of both sides, committed the merge and its PHR, and confirmed all 14 content gates pass.
 
 ## Outcome
 
 - Impact: fix for EFMP-408 Unit 2 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (all 14 content gates PASS).
-- Files: 3 file(s) authored or resolved by this job, listed above; the merge also pulled in main's Unit 3, 5 and 6 files.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 50 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-408-u02-author and resolved the only conflict, `specs/content/efmp-408/tasks.md`, as a union: status line and Unit 2 row from this branch, Unit 3 row and Unit 5 state from main. `specs/gaps.md` auto-merged main's G-2026-235 entry.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
+- Shipped / changed: Merged origin/main into crew/efmp-408-u02-author, resolved the single `specs/content/efmp-408/tasks.md` conflict as a union of both sides, committed the merge and its PHR, and confirmed all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 2 G4 Urdu translation and independent G3/G5 review remain open; banner fig-U2-7 stays prompt-only for the illustrate job.
+  - Unit 2 G4 Urdu translation and independent G3/G5 review are still open; banner fig-U2-7 stays prompt-only for the illustrate job.
   - `specs/content/efmp-408/tasks.md` now carries Units 1, 2, 3, 5 and 6 state, so read all five units' rows before editing it.
-  - The shared registries were untouched by main this merge, so no append-order or duplicate-ID work was required.
+  - main added Unit 3/5/6 files and Urdu mirrors in this merge; they are outside Unit 2 scope, so leave them untouched.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
