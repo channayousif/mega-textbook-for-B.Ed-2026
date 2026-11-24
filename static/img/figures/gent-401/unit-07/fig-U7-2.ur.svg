@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">امکان اور اثر کے لحاظ سے خطرات کی ترتیب</title><desc id="d">امکان اور اثر کا رسک میٹرکس، جس کے چاروں خانوں میں ایک چھوٹے پرنٹنگ منصوبے کے چار مثالی خطرات رکھے گئے ہیں اور زیادہ امکان و شدید اثر والے خطرات پر فوری عمل کا نوٹ موجود ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.frame { stroke: var(--ink); stroke-width: 2; fill: none; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+.dot-a { fill: var(--a1); }
+.dot-b { fill: var(--a2); }
+.dot-c { fill: var(--a3); }
+.dot-d { fill: var(--a4); }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="560"/><g id="layer-regions"><rect id="region-plot" class="frame" x="100" y="80" width="600" height="360"/><rect id="region-tl" class="panel-a" x="100" y="80" width="300" height="180"/><rect id="region-tr" class="panel-b" x="400" y="80" width="300" height="180"/></g><g id="layer-edges"><line class="grid" x1="400" y1="80" x2="400" y2="440"/><line class="grid" x1="100" y1="260" x2="700" y2="260"/><line class="stroke" x1="100" y1="440" x2="700" y2="440"/><line class="stroke" x1="100" y1="440" x2="100" y2="72"/><line class="stroke" x1="100" y1="440" x2="94" y2="452"/><line class="stroke" x1="100" y1="440" x2="106" y2="452"/><line class="stroke" x1="100" y1="80" x2="88" y2="92"/><line class="stroke" x1="100" y1="80" x2="112" y2="92"/></g><g id="layer-nodes"><g id="node-flood"><circle class="dot-a" cx="190" cy="150" r="9"/><text class="body" x="130" y="182">سیلاب سے کاغذ</text><text class="body" x="130" y="200">کا نقصان</text></g><g id="node-competitor"><circle class="dot-b" cx="620" cy="150" r="9"/><text class="body" x="500" y="182">نیا پرنٹر سستے</text><text class="body" x="500" y="200">صفحات پیش کرے</text></g><g id="node-helper"><circle class="dot-c" cx="400" cy="260" r="9"/><text class="body" x="440" y="240">امتحانی سیزن میں</text><text class="body" x="440" y="258">مددگار کی رخصت</text></g><g id="node-accident"><circle class="dot-d" cx="620" cy="390" r="9"/><text class="body" x="470" y="370">ترسیلی موٹر سائیکل کا حادثہ</text></g></g><g id="layer-labels"><text id="label-title" class="h" x="756" y="34" text-anchor="end">امکان اور اثر کے لحاظ سے خطرات کی ترتیب</text><text class="small" x="400" y="470" text-anchor="middle">خطرے کا امکان</text><text class="small" x="50" y="260" text-anchor="middle">وقوع کا اثر</text><text class="small" x="420" y="100">زیادہ امکان،</text><text class="small" x="420" y="116">شدید اثر: فوری عمل کریں</text><text class="small" x="112" y="100">شدید اثر، کم</text><text class="small" x="112" y="116">امکان: پیشگی تیاری و بیمہ</text><text id="label-caption" class="small" x="756" y="510" text-anchor="end">اوپر دائیں پر فوری عمل کریں؛ اوپر بائیں کی پیشگی تیاری؛ درمیانے کی نگرانی؛ باقی قبول کریں۔</text><text class="wm" x="24" y="548" text-anchor="start" font-family="system-ui, sans-serif" aria-hidden="true">textbook.com.pk</text></g></svg>
