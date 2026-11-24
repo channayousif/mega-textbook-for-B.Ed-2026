@@ -2,7 +2,7 @@
 id: crew-efmp-408-u02-author-conflict3
 title: crew fix EFMP-408 unit 2
 stage: misc
-date: 2026-11-25
+date: 2026-11-24
 surface: agent
 model: claude_crew
 feature: efmp-408
@@ -16,8 +16,32 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/efmp-408/unit-02/index.mdx
+ - docs/semester-4/efmp-408/unit-02/topic-01.mdx
+ - docs/semester-4/efmp-408/unit-02/topic-02.mdx
+ - docs/semester-4/efmp-408/unit-02/topic-03.mdx
+ - docs/semester-4/efmp-408/unit-02/unit-assessment.mdx
+ - docs/semester-4/efmp-408/unit-02/unit-teacher-notes.mdx
+ - glossary.json
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict2.misc.prompt.md
  - history/prompts/efmp-408/crew-efmp-408-u02-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author-merge.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-author.green.prompt.md
+ - specs/content/efmp-408/concepts/unit-02.md
+ - specs/content/efmp-408/coverage/unit-02.md
+ - specs/content/efmp-408/figures/unit-02.banner.md
+ - specs/content/efmp-408/figures/unit-02.md
+ - specs/content/efmp-408/reviews/unit-02/G2/20261124T181004352Z-gates.json
  - specs/content/efmp-408/reviews/unit-02/G2/20261124T205350146Z-gates.json
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/validate-content.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-bloom-bands.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-concept-graph.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-depth-gate.txt
@@ -26,7 +50,20 @@ files:
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-no-answer-keys.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/check-no-em-dash.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T205350146Z/validate-content.txt
+ - specs/content/efmp-408/sources/unit-02.md
  - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-1.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-2.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-2.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-3.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-3.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-4.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-5.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-5.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-6.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-6.svg
 tests:
  - npm run check:content
 ---
@@ -64,32 +101,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u02-author-conflict1, fix, claude_crew) Unit 2 G4 Urdu translation and independent G3/G5 review remain open; banner figure fig-U2-7 stays prompt-only for the illustrate job.
 - (efmp-408-u02-author, author, claude_crew) Six figures are placed with measured-clean light and dark variants; banner fig-U2-7 stays prompt-only for the illustrate job.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/efmp-408-u02-author`, resolved the sole `specs/content/efmp-408/tasks.md` conflict as a union of both sides (main's Unit 1 and Unit 3 rows plus this branch's Unit 2 rows), and re-recorded Unit 2's G2 gate evidence because main's added notes to the shared `sources/texts` excerpts Unit 2 cites had made its recorded input manifest stale. All 14 content gates pass.
+Merged origin/main, resolved the `specs/content/efmp-408/tasks.md` conflict as a union of both sides, and refreshed Unit 2's stale G2 gate evidence so all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix for EFMP-408 Unit 2 by claude_crew (attempt 3).
-- Tests: `npm run check:content` passed (14/14 gates) after `npm run build:content-status`.
-- Files: 11 file(s), listed above.
+- Impact: fix for EFMP-408 Unit 2 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 48 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit `dd243a547` (tasks.md union) and `2176253c3` (Unit 2 G2 evidence refresh to `20261124T205350146Z-gates.json`); all content gates green.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job certifies nothing.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main, resolved the `specs/content/efmp-408/tasks.md` conflict as a union of both sides, and refreshed Unit 2's stale G2 gate evidence so all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 2 G4 Urdu translation and independent G3/G5 review are still open; banner fig-U2-7 stays prompt-only for the illustrate job.
-  - `specs/content/efmp-408/tasks.md` now carries main's Unit 1 and Unit 3 state alongside this branch's Unit 2 state, so read all three units' rows before editing it.
-  - Main's Unit 3 authoring added evidence notes to `sources/texts/hec-2013-testdev.md` and `sources/texts/seifert-sutton-2009.md`; any unit citing those keys must re-run `prepare-gate-evidence.mjs` after a merge.
+  - `specs/content/efmp-408/tasks.md` now carries Unit 1, Unit 2 and Unit 3 state, so read all three units' rows before editing it.
+  - Any unit citing `hec-2013-testdev` or `seifert-sutton-2009` must re-run `prepare-gate-evidence.mjs` after a merge, since main's Unit 3 notes changed those shared excerpts.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a merge that edits a shared `sources/texts` excerpt invalidates every unit citing that key, so the tracker row must be repointed after the merge.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
