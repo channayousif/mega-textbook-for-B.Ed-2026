@@ -22,6 +22,7 @@
     "GICP-400": { "source": "Scheme-and-Course-guides/3rd 2026.pdf", "pages": [18, 20], "pdf": "guides/semester-3/gicp-400.pdf" },
     "EFPG-607": { "source": "Scheme-and-Course-guides/3rd 2026.pdf", "pages": [21, 22], "pdf": "guides/semester-7/efpg-607.pdf" },
     "GCCE-400": { "source": "static/guides/sources/4th-semester.pdf", "pages": [4, 6], "pdf": "guides/semester-4/gcce-400.pdf" },
-    "GENT-401": { "source": "static/guides/sources/4th-semester.pdf", "pages": [10, 13], "pdf": "guides/semester-4/gent-401.pdf" }
+    "GENT-401": { "source": "static/guides/sources/4th-semester.pdf", "pages": [10, 13], "pdf": "guides/semester-4/gent-401.pdf" },
+    "EFMP-408": { "source": "static/guides/sources/4th-semester.pdf", "pages": [7, 9], "pdf": "guides/semester-4/efmp-408.pdf" }
   }
 }
