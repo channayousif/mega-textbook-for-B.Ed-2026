@@ -1,0 +1,7 @@
+# Unit banner - EFMP-408 Unit 3 (Constructing Tests)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs efmp-408 3 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U3-9 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: inside a bright, orderly government elementary school staff room in Sindh; two Pakistani teachers (a male teacher wearing a neat shalwar kameez and waistcoat, and a female teacher wearing a modest dupatta and shalwar kameez) sit together at a clean wooden table reviewing a test blueprint and draft question papers; a grid chart labelled Table of Specifications lies between them with handwritten marks allocations; on the table are curriculum textbooks, notebooks, a ruler and pencils; warm morning sunlight filters through tall barred windows; authentic Pakistani school environment, no readable text on documents, posters, or chalkboards, no flags, maps, logos or watermarks | Two Pakistani teachers in a school staff room collaborate over a table of specifications and test draft papers spread across a wooden work table. |  | prompt-only |
