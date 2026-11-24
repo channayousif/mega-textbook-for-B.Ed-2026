@@ -20,6 +20,7 @@ import { dirname, join } from 'node:path';
 import { homedir } from 'node:os';
 import { parseRpcBody, gflowPayload, gflowRelativePath, GFLOW_QUOTA_RE } from './image.mjs';
 import { GFLOW_MCP_URL, GFLOW_FILES_URL } from './quota.mjs';
+import { pace, paceRecord, PaceHold } from '../pacing.mjs';
 import { save, withLock } from '../ledger.mjs';
 import { buildPrompt } from '../recipes.mjs';
 
@@ -166,7 +167,8 @@ export async function recover({ key, part, call, claimed, out, filesUrl, journal
  * `ctx`: { claimed: Set of clip ids already recorded in any ledger, take: take number for the file name }.
  */
 export function gflowVideo({ mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL, profile = process.env.GFLOW_PROFILE || 'a2ahs-alpha',
-  projects = projectsFile(), journal = journalFile(), timeoutMs = CALL_TIMEOUT_MS, floor = CREDIT_FLOOR } = {}) {
+  projects = projectsFile(), journal = journalFile(), timeoutMs = CALL_TIMEOUT_MS, floor = CREDIT_FLOOR,
+  pace: paceFn = pace, record: recordFn = paceRecord } = {}) {
   const call = (name, args, ms) => mcpCall(name, args, { url: mcpUrl, timeoutMs: ms ?? 60000 });
   return async (job, part, ctx = {}) => {
     const { key, script, recipe, locale = 'ur', outDir } = job;
@@ -181,6 +183,15 @@ export function gflowVideo({ mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL,
       if (rec) return rec;
       const { credits: before } = await call('gflow_get_credits', { profile });
       if (Number(before) - cost < floor) return { status: 'held', reason: `Flow balance ${before} would fall under the ${floor}-credit floor` };
+      try {
+        await paceFn('gflow.video', cost);
+      } catch (e) {
+        if (e instanceof PaceHold) return { status: 'quota', paced: true, resetAt: e.resetAt, reason: e.message };
+        throw e;
+      }
+      // Flow charges on submission, so the spend is counted now (a clip recovered later after a
+      // timeout is then counted once, and a refused submission errs on the safe side).
+      recordFn('gflow.video', cost);
       const proj = readJson(projects)[key];
       const at = new Date().toISOString();
       journalUpdate(journal, (x) => { x[jkey(key, part)] = { status: 'submitted', at, before: Number(before), credits: cost, model: recipe.model, project: proj ?? null }; });

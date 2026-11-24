@@ -9,19 +9,21 @@ import { STAGE_TASK } from '../../scripts/crew/crew.mjs';
 
 const at = (iso) => new Date(iso);
 
-test('the roundup is due from 18:00 PKT once a day, only with something new, and only while on', () => {
-  const evening = at('2026-11-22T13:30:00Z'); // 18:30 PKT
-  assert.equal(pkt(evening).day, '2026-11-22');
-  assert.equal(socialDue({ on: true, now: evening, fresh: true }), 'roundup');
-  assert.equal(socialDue({ on: true, now: evening, fresh: false }), null);
-  assert.equal(socialDue({ on: true, now: evening, fresh: true, lastDay: '2026-11-22' }), null);
-  assert.equal(socialDue({ on: true, now: at('2026-11-22T10:00:00Z'), fresh: true }), null); // 15:00 PKT
-  assert.equal(socialDue({ on: false, now: evening, fresh: true }), null);
-  assert.equal(socialDue({ on: true, now: evening, fresh: true, inFlight: true }), null);
+test('the roundup is due from 13:00 PKT once a day, only with something new, and only while on', () => {
+  const afternoon = at('2026-11-22T08:30:00Z'); // 13:30 PKT, inside media hours (D-2026-0100)
+  assert.equal(pkt(afternoon).day, '2026-11-22');
+  assert.equal(socialDue({ on: true, now: afternoon, fresh: true }), 'roundup');
+  assert.equal(socialDue({ on: true, now: afternoon, fresh: false }), null);
+  assert.equal(socialDue({ on: true, now: afternoon, fresh: true, lastDay: '2026-11-22' }), null);
+  assert.equal(socialDue({ on: true, now: at('2026-11-22T06:00:00Z'), fresh: true }), null); // 11:00 PKT, before the roundup hour
+  assert.equal(socialDue({ on: true, now: at('2026-11-22T13:30:00Z'), fresh: true }), null); // 18:30 PKT, media hours closed
+  assert.equal(socialDue({ on: false, now: afternoon, fresh: true }), null);
+  assert.equal(socialDue({ on: true, now: afternoon, fresh: true, inFlight: true }), null);
 });
 
-test('an approved post waiting to publish is due at any hour', () => {
-  assert.equal(socialDue({ on: true, now: at('2026-11-22T03:00:00Z'), toPublish: 1 }), 'publish');
+test('an approved post waiting to publish is due only in media hours', () => {
+  assert.equal(socialDue({ on: true, now: at('2026-11-22T05:00:00Z'), toPublish: 1 }), 'publish'); // 10:00 PKT
+  assert.equal(socialDue({ on: true, now: at('2026-11-22T03:00:00Z'), toPublish: 1 }), null); // 08:00 PKT
 });
 
 test('the brief never lets the worker approve a feature post, and keeps ledger edits to the CLI', () => {

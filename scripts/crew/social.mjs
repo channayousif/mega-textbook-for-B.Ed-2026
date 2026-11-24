@@ -1,10 +1,12 @@
 // Feature 031: the crew's daily social roundup (social-updates skill). Off until the owner sends
-// `crew social on`. One `social_roundup` job a day from 18:00 PKT when there is something new, and
-// one at any time when an approved post still waits to be published (the owner's `crew post`).
+// `crew social on`. One `social_roundup` job a day from 13:00 PKT when there is something new, and
+// one, still inside media hours, when an approved post waits to be published (the owner's `crew post`).
 // Content posts publish without the owner after the pilot; feature posts never do.
+import { withinHours, limits as paceLimits } from '../media/pacing.mjs';
 
 export const SOCIAL_STAGE = 'social_roundup';
-export const ROUNDUP_HOUR_PKT = 18;
+/** Inside media hours (09:00-15:00 PKT, D-2026-0100), with two hours left to draft and publish. */
+export const ROUNDUP_HOUR_PKT = 13;
 
 /** The Pakistan date and hour of an instant. */
 export const pkt = (d = new Date()) => {
@@ -16,8 +18,9 @@ export const pkt = (d = new Date()) => {
  * Whether to queue a roundup now. `lastDay` is the PKT day the last scheduled roundup was queued;
  * `fresh` says the dry collect found something new; `toPublish` counts approved, unposted posts.
  */
-export function socialDue({ on, now = new Date(), lastDay = null, fresh = false, toPublish = 0, inFlight = false }) {
+export function socialDue({ on, now = new Date(), lastDay = null, fresh = false, toPublish = 0, inFlight = false, hours = paceLimits().hours }) {
   if (!on || inFlight) return null;
+  if (!withinHours(now.getTime(), hours)) return null; // posting is paced to media hours (D-2026-0100)
   if (toPublish > 0) return 'publish';
   const { day, hour } = pkt(now);
   if (hour >= ROUNDUP_HOUR_PKT && lastDay !== day && fresh) return 'roundup';
