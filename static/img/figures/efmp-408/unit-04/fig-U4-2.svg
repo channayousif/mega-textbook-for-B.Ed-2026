@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">The same science report scored analytically and holistically</title><desc id="d">Table comparing the same science report scored with an analytic rubric and a holistic rubric, showing the separate criterion scores and the single overall score.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.frame { stroke: var(--ink); stroke-width: 2; fill: none; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+</style><rect class="bg" x="0" y="0" width="780" height="480"/><g id="layer-table"><rect class="panel" x="24" y="55" width="732" height="345" rx="8"/><rect class="panel-a" x="24" y="55" width="732" height="45" rx="8"/><line class="frame" x1="24" y1="100" x2="756" y2="100"/><line class="frame" x1="24" y1="160" x2="756" y2="160"/><line class="frame" x1="24" y1="220" x2="756" y2="220"/><line class="frame" x1="24" y1="280" x2="756" y2="280"/><line class="frame" x1="24" y1="340" x2="756" y2="340"/><line class="frame" x1="24" y1="400" x2="756" y2="400"/><line class="frame" x1="300" y1="55" x2="300" y2="400"/><line class="frame" x1="520" y1="55" x2="520" y2="400"/><text class="h" x="36" y="83">Criterion</text><text class="h" x="312" y="83">Analytic rubric</text><text class="h" x="532" y="83">Holistic rubric</text><text class="sh" x="36" y="138">Content</text><text class="cell" x="312" y="138">3 / 4</text><text class="sh" x="36" y="198">Organisation</text><text class="cell" x="312" y="198">2 / 3</text><text class="sh" x="36" y="258">Language</text><text class="cell" x="312" y="258">1 / 3</text><text class="sh" x="36" y="318">Presentation</text><text class="cell" x="312" y="318">1 / 2</text><text class="sh" x="36" y="378">Total</text><text class="cell" x="312" y="378">7 / 12</text><text class="cell" x="532" y="378">Level 2 of 4</text></g><g id="layer-labels"><text id="label-title" class="h" x="24" y="34">One report, two ways of scoring</text><text id="label-caption" class="small" x="24" y="440">The analytic rubric adds four criterion scores; the holistic rubric gives one overall level.</text><text class="wm" x="768" y="465" text-anchor="end" aria-hidden="true">textbook.com.pk</text></g></svg>

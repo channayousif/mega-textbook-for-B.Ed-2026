@@ -12,8 +12,14 @@ Consulted: 2026-11-24, read from the author-hosted distribution and the reposito
 3. Chapter 12 (Standardized and other formal assessments): Standardized and formal testing systems use explicit scoring rules and standardised conditions. Scores can be interpreted normatively (comparing an individual to a reference norm group to establish relative standing) or in a criterion-referenced manner (comparing performance against an absolute performance standard or learning objective).
 4. Chapter 12: Norm-referenced comparisons are useful for selection, placement, and identifying relative rank, but they can foster unhelpful competition and conceal whether learners have mastered fundamental curricular competencies. Criterion-referenced assessments focus directly on mastery of specific educational objectives, making them pedagogically superior for day-to-day classroom guidance.
 
+5. Chapter 11 (Teacher-made assessment strategies): Using assessment to advance learning requires viewing assessment as a process integral to all phases of teaching, including planning, classroom interactions, instruction, communication with parents and self-reflection (Stiggins, 2002). Its steps include having clear instructional goals and communicating them to students, selecting appropriate assessment techniques, and using assessment to enhance motivation and confidence. Students' motivation and confidence is influenced by the type of assessment used as well as the feedback given about the assessment results.
+
 ## Unit 1 use
 
 Note 1 supports Topic 1.1 (U1-04).
 Note 2 supports Topic 1.2 (U1-05, U1-06).
 Notes 3-4 support Topic 1.3 (U1-08, U1-09).
+
+## Unit 4 use
+
+Note 5 supports Topic 4.1 (U4-01, on selecting assessment techniques) and Topic 4.3 (U4-06 and U4-09, on assessment integral to teaching and on feedback and motivation).

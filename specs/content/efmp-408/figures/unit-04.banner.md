@@ -1,0 +1,7 @@
+# Unit banner - EFMP-408 Unit 4 (Performance-Based and Classroom Assessment)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs efmp-408 4 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U4-4 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: inside a bright government primary school classroom in Sindh; a female Pakistani teacher in modest shalwar kameez and dupatta stands beside a group of Class 5 pupils who are demonstrating a simple science experiment with a leaf, a hand lens and a small glass of iodine on a wooden desk; one pupil points to the leaf while the teacher nods and holds a small tick-and-cross checklist; on the wall behind them a pinned portfolio page shows three dated pieces of writing and a short reflection; other pupils work in pairs at their desks with notebooks and slates; morning sunlight through open arched windows, neem shadow on the wall, no readable text, letters or numbers on any paper, board or notebook, no map, flag, logo or emblem | A teacher in a Sindh government school classroom watches a Class 5 pupil demonstrate a leaf experiment with a hand lens and iodine while holding a checklist, with a portfolio page on the wall behind them. |  | prompt-only |
