@@ -16,26 +16,26 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/gcce-400/crew-gcce-400-u06-review_en.misc.prompt.md
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124.json
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/advisory-tracker-row.md
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/assessment-solutions.md
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/limitations.md
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/build-content-status.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check-content.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:depth-gate.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:docs-sync.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:figures.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:no-answer-keys.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:no-em-dash.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/measure-figure-text.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/render-review.txt
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/validate:content.log
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/make-report.mjs
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/manifest.json
-  - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/summary.md
+ - history/prompts/gcce-400/crew-gcce-400-u06-review_en.misc.prompt.md
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124.json
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/advisory-tracker-row.md
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/assessment-solutions.md
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/limitations.md
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/build-content-status.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check-content.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:depth-gate.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:docs-sync.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:figures.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:no-answer-keys.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:no-em-dash.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/measure-figure-text.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/render-review.txt
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/validate:content.log
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/make-report.mjs
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/manifest.json
+ - specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/summary.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -69,26 +69,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English review for GCCE-400 Unit 6, validating all content criteria (authority, sources, coverage, assessment correctness, readability, pedagogy), verifying figure geometry on all 24 SVGs with measure-figure-text, passing all content gates, and escalating on unavailable live render review due to deployed build staleness (HEAD differs from deployed SHA on index.mdx and fig-U6-7.webp).
+Conducted independent G3 English review of GCCE-400 Unit 6, verifying all content criteria, assessment solutions, and SVG geometries, producing validated evidence report and advisory tracker row with disposition escalate due to deployed build staleness.
 
 ## Outcome
 
-- Impact: review_en for GCCE-400 Unit 6 by agy (run 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: review_en for GCCE-400 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English run 1 review for GCCE-400 Unit 6, producing validated evidence report and advisory tracker row with disposition escalate due to deployed build staleness.
-- Decisions the team must respect: G3/G5 stay advisory until qualified sign-off; this review does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless PR touches a protected path).
+- Shipped / changed: Conducted independent G3 English review of GCCE-400 Unit 6, verifying all content criteria, assessment solutions, and SVG geometries, producing validated evidence report and advisory tracker row with disposition escalate due to deployed build staleness.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - A permitted host must run render-inspect against a deployment matching HEAD 6da753a0c; deployed SHA 175a90b7a lacks the placed banner fig-U6-7.
-  - G3 remains open, unticked, reviewer token agent:g3-reviewer, no certification.
-  - Author should consider advisory findings: RRQ 6 model answer describes check 4 (harm) rather than check 5 (decide); MCQ key balance lacks option D; and sources/texts/shair-2022-digital-divide.md references Unit 1 instead of Unit 6.
-- Paperclip issues affected: none (Paperclip paused; work tracked by crew board).
+  - Live render inspection could not be run because deployed SHA 175a90b7a differs from HEAD 6da753a0c on Unit 6 files (index.mdx and fig-U6-7.webp); visual accessibility remains unverified while all content criteria pass.
+  - Author should note advisory findings: RRQ 6 model answer explains check 4 (harm) rather than check 5 (decide); MCQ key distribution lacks key D; and sources/texts/shair-2022-digital-divide.md references Unit 1 instead of Unit 6.
+  - G3 remains open, unticked, with reviewer token agent:g3-reviewer, disposition escalate, and report at specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124.json.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
