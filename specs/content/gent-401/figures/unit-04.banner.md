@@ -1,0 +1,7 @@
+# Unit banner - GENT-401 Unit 4 (Developing a Business Plan)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs gent-401 4 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U4-5 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: afternoon inside a sunlit teacher-training college classroom in Hyderabad, Sindh; a diverse group of three Pakistani B.Ed student-teachers (two young women in modest shalwar kameez with dupattas, one young man in shalwar kameez) sit around a wooden table working together on large butcher-paper charts displaying handwritten business plan outlines with headings like Executive Summary, Marketing Plan, and Operations; they have notebooks, rulers, and sample wooden educational learning blocks on the table; through the open window, palm trees and bright Sindh sunlight are visible; respectful, collaborative educational atmosphere, warm realistic tones; no readable text on any sign, paper, packet or wall, no maps, flags, emblems, party symbols, brand logos or watermarks | Three student-teachers in a sunlit classroom collaborate around a table drafting business plan charts with educational learning materials. |  | prompt-only |
