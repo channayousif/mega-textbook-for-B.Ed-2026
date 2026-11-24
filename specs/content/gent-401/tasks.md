@@ -1,8 +1,8 @@
 # GENT-401 Entrepreneurship - Task tracker
 
-## Status: content spec approved (G0/G1); Units 1, 2, 3, 4, 5 and 6 English drafts authored and G2 gate evidence recorded; G3 review open
+## Status: content spec approved (G0/G1); Units 1, 2, 3, 4, 5, 6 and 7 English drafts authored and G2 gate evidence recorded; G3 review open
 
-English-only authoring from the approved content-spec subsections for Units 1, 2, 3, 4, 5 and 6. Unit 1 additionally carries a drafted Urdu mirror. No publication or review certification is claimed by this tracker. Other units are outside these jobs.
+English-only authoring from the approved content-spec subsections for Units 1, 2, 3, 4, 5, 6 and 7. Unit 1 additionally carries a drafted Urdu mirror. A separate authoring job covered Unit 7 from the same approved subsections. No publication or review certification is claimed by this tracker. Other units are outside these jobs.
 
 ## Units
 
@@ -14,7 +14,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | 4 | Developing a Business Plan | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (5 files) and four localized SVG pairs (with derived dark twins) drafted; translation_status stays draft pending G5 |
 | 5 | Financial Planning and Funding | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (5 files) and four localized SVG pairs (with derived dark twins) drafted; translation_status stays draft pending G5 |
 | 6 | Marketing, Legal and Ethical Issues | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
-| 7 | Growing a Business and Pitching It | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 7 | Growing a Business and Pitching It | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -62,7 +62,12 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all six concept Urdu labels are authored and need checking |
 | Unit 5 | G6 assets | ▣ | | Four English schematic SVGs (fig-U5-1 to fig-U5-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U5-5 prompt-only for the illustrate job |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
-
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-07/G2/20261124T060041498Z-gates.json |
+| Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the mellor-2009 row supports only the premise in its title, and that the two DOAJ substitutes are used only within their abstracts |
+| Unit 7 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
+| Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review; all six concept Urdu labels are authored and need checking |
+| Unit 7 | G6 assets | ▣ | | Four English schematic SVGs (fig-U7-1 to fig-U7-4) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U7-5 prompt-only for the illustrate job |
+| Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
 Reading estimates use final visible text at about 200 words per minute: Unit 1 index 2, Topic 1.1 11, Topic 1.2 11, assessment 15, teacher notes 2, total 41 minutes, inside the approved 32-44 depth budget band. Its assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 4 is the blueprint's Analyze item comparing an entrepreneur and a salaried manager in a school-supplies business. The guide supplies teaching strategies and practical work, so a short unit teacher-notes page adds a local entrepreneur case study. The course overview uses the programme default weighting (formative 40, summative 60), as the guide gives no marks.
 
 Unit 2 estimates on the same basis: index 2, Topic 2.1 12, Topic 2.2 12, assessment 15, teacher notes 2, total 43 minutes, inside the same 32-44 band. Each assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; Unit 2 ERQ 4 is the blueprint's Evaluate item screening three ideas for a small town with a weighted checklist. The guide supplies teaching strategies and practical work, so each unit carries a short teacher-notes page with a practical activity.
@@ -74,3 +79,5 @@ Unit 2 estimates on the same basis: index 2, Topic 2.1 12, Topic 2.2 12, assessm
 - Unit 5: index 2, Topic 5.1 11, Topic 5.2 10, assessment 15, teacher notes 2, total 40 minutes, inside the approved 34-46 depth budget band. The assessment carries 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 1 is the blueprint's Apply-then-Evaluate item on calculating a break-even quantity and judging whether a small venture's plan is realistic.
 
 - Unit 6: index 2, Topic 6.1 11, Topic 6.2 11, assessment 15, teacher notes 2, total 41 minutes, inside the approved 32-44 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 4 is the blueprint's Evaluate item judging whether a described marketing claim is ethical and lawful.
+
+Unit 7 estimates on the same basis: index 2, Topic 7.1 13, Topic 7.2 12, assessment 15, teacher notes 2, total 44 minutes, inside the same 32-44 band. Its assessment holds 10 MCQs, 10 RRQs and 5 ERQs in the bounded final section; ERQ 4 is the blueprint's Evaluate item analysing a failed pitch and rewriting its structure, and ERQ 5 is the integrative item that pitches the course project. The guide supplies teaching strategies and practical work, so the unit teacher-notes page uses the local entrepreneur case study and adds a class pitch competition.

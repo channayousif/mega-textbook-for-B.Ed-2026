@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Risk matrix of likelihood against impact</title><desc id="d">Risk matrix of likelihood against impact, with four example risks from a small printing venture placed in the quadrants and a note to act first on high-likelihood, high-impact risks.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.frame { stroke: var(--ink); stroke-width: 2; fill: none; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+.dot-a { fill: var(--a1); }
+.dot-b { fill: var(--a2); }
+.dot-c { fill: var(--a3); }
+.dot-d { fill: var(--a4); }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="560"/><g id="layer-regions"><rect id="region-plot" class="frame" x="100" y="80" width="600" height="360"/><rect id="region-tl" class="panel-a" x="100" y="80" width="300" height="180"/><rect id="region-tr" class="panel-b" x="400" y="80" width="300" height="180"/></g><g id="layer-edges"><line class="grid" x1="400" y1="80" x2="400" y2="440"/><line class="grid" x1="100" y1="260" x2="700" y2="260"/><line class="stroke" x1="100" y1="440" x2="700" y2="440"/><line class="stroke" x1="100" y1="440" x2="100" y2="72"/><line class="stroke" x1="100" y1="440" x2="94" y2="452"/><line class="stroke" x1="100" y1="440" x2="106" y2="452"/><line class="stroke" x1="100" y1="80" x2="88" y2="92"/><line class="stroke" x1="100" y1="80" x2="112" y2="92"/></g><g id="layer-nodes"><g id="node-flood"><circle class="dot-a" cx="190" cy="150" r="9"/><text class="body" x="130" y="182">flood damages</text><text class="body" x="130" y="200">paper stock</text></g><g id="node-competitor"><circle class="dot-b" cx="620" cy="150" r="9"/><text class="body" x="500" y="182">a new printer offers</text><text class="body" x="500" y="200">cheaper sheets</text></g><g id="node-helper"><circle class="dot-c" cx="400" cy="260" r="9"/><text class="body" x="440" y="240">a helper leaves</text><text class="body" x="440" y="258">in exam season</text></g><g id="node-accident"><circle class="dot-d" cx="620" cy="390" r="9"/><text class="body" x="470" y="370">a delivery accident</text></g></g><g id="layer-labels"><text id="label-title" class="h" x="24" y="34">Sort each risk by likelihood and impact</text><text class="small" x="400" y="470" text-anchor="middle">likelihood of the risk</text><text class="small" x="60" y="260" text-anchor="middle">impact if it happens</text><text class="small" x="420" y="100">high likelihood,</text><text class="small" x="420" y="116">high impact: act now</text><text class="small" x="112" y="100">high impact, low</text><text class="small" x="112" y="116">likelihood: insure</text><text id="label-caption" class="small" x="24" y="510">Act first on the top-right; prepare for the top-left; watch the middle; accept the rest.</text><text class="wm" x="768" y="548" text-anchor="end" aria-hidden="true">textbook.com.pk</text></g></svg>
