@@ -41,7 +41,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 3
 | Unit 4 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation |
 | Unit 4 | G6 assets | ▣ | | Six English schematic SVGs placed with derived dark variants; banner fig-U4-4 prompt-only |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-408/reviews/unit-06/G2/20261124T203715644Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-408/reviews/unit-06/G2/20261124T221258227Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 6 | G4 ur-translation | ▢ | | Separate Urdu job; English-only draft with untranslated notice |
 | Unit 6 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation |
