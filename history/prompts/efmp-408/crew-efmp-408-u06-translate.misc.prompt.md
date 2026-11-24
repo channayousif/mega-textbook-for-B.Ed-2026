@@ -2,7 +2,7 @@
 id: crew-efmp-408-u06-translate
 title: crew translate EFMP-408 unit 6
 stage: misc
-date: 2026-11-25
+date: 2026-11-24
 surface: agent
 model: agy
 feature: efmp-408
@@ -16,34 +16,34 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-408/crew-efmp-408-u06-translate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/topic-04.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/unit-teacher-notes.mdx
-  - specs/content/efmp-408/reviews/unit-06/G4/translation-handoff.md
-  - specs/content/efmp-408/tasks.md
-  - static/img/figures/efmp-408/unit-06/fig-U6-1.ur.dark.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-1.ur.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-2.ur.dark.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-2.ur.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-3.ur.dark.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-3.ur.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-4.ur.dark.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-4.ur.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-5.ur.dark.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-5.ur.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-6.ur.dark.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-6.ur.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-7.ur.dark.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-7.ur.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-8.ur.dark.svg
-  - static/img/figures/efmp-408/unit-06/fig-U6-8.ur.svg
+ - history/prompts/efmp-408/crew-efmp-408-u06-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/unit-teacher-notes.mdx
+ - specs/content/efmp-408/reviews/unit-06/G4/translation-handoff.md
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-06/fig-U6-1.ur.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-1.ur.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-2.ur.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-2.ur.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-3.ur.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-3.ur.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-4.ur.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-4.ur.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-5.ur.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-5.ur.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-6.ur.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-6.ur.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-7.ur.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-7.ur.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-8.ur.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-8.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -84,25 +84,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Translated EFMP-408 Unit 6 into its complete 7-page Urdu mirror at G4 (academic-plain register bound to `specs/content/terminology.csv`), authored 8 localized RTL `.ur.svg` figure schematics with verified text geometry and derived `.ur.dark.svg` variants, performed temporary conditional flip checks, recorded G4 stage row and translation handoff, and verified that all 14 content gates pass cleanly.
+Translated EFMP-408 Unit 6 into its complete seven-page Urdu mirror at G4 with eight localized RTL schematic SVGs and derived dark variants, verified clean against all content gates.
 
 ## Outcome
 
-- Impact: complete G4 Urdu translation mirror for EFMP-408 Unit 6 by agy.
-- Tests: `npm run check:content` passed in the job worktree before commit.
+- Impact: translate for EFMP-408 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 26 file(s), listed above.
-- Next prompts: independent G5 Urdu review or G3 English review.
-- Reflection: none.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Complete seven-page Urdu mirror under `i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-06/`, eight localized schematic figures (`fig-U6-1` to `fig-U6-8` `.ur.svg` and `.ur.dark.svg`), G4 translation handoff at `specs/content/efmp-408/reviews/unit-06/G4/translation-handoff.md`, and updated `tasks.md`.
-- Decisions the team must respect: G4 translation_status remains `draft` pending independent G5 review; G5 review cannot be performed in this authoring/translating session; banner figure `fig-U6-9` remains prompt-only for the illustration pipeline.
-- Pending / next owner: independent G5 reviewer (and G3 English reviewer).
+- Shipped / changed: Translated EFMP-408 Unit 6 into its complete seven-page Urdu mirror at G4 with eight localized RTL schematic SVGs and derived dark variants, verified clean against all content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 6 `translation_status` remains `draft` throughout; G5 review is open.
-  - Unit banner figure `fig-U6-9` is prompt-only in `specs/content/efmp-408/figures/unit-06.banner.md`.
-- Paperclip issues affected: none (work tracked by the crew board).
+  - Unit 6 translation_status remains draft pending independent G5 review; translation handoff recorded at specs/content/efmp-408/reviews/unit-06/G4/translation-handoff.md.
+  - Banner figure fig-U6-9 remains prompt-only in specs/content/efmp-408/figures/unit-06.banner.md for the illustrate job.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
