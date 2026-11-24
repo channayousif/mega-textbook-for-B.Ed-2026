@@ -69,12 +69,12 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Conducted independent G3 English review of GCCE-400 Unit 7, verifying all content criteria, assessment solutions, and SVG geometries, producing validated evidence report and advisory tracker row with disposition escalate due to deployed build differences.
+Conducted independent G3 English review of GCCE-400 Unit 7, verifying all content criteria, assessment solutions, and SVG geometries, producing validated evidence report and advisory tracker row with disposition escalate due to deployed build staleness.
 
 ## Outcome
 
 - Impact: review_en for GCCE-400 Unit 7 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
@@ -82,11 +82,11 @@ Conducted independent G3 English review of GCCE-400 Unit 7, verifying all conten
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: Conducted independent G3 English review of GCCE-400 Unit 7, verifying all content criteria, assessment solutions, and SVG geometries, producing validated evidence report and advisory tracker row with disposition escalate due to deployed build staleness.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this review does not certify anything.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live render inspection could not be run because deployed SHA 5a3deb303 differs from HEAD 88e07887c on Unit 7 files (index.mdx and fig-U7-9.webp); visual accessibility remains unverified while all content criteria pass.
-  - Test developers may note advisory findings: MCQ key distribution in unit-assessment.mdx has Option B as correct in 6 out of 10 items; and topic-02.mdx:40 cites Table 3.3 for literacy which matches Table 4.21 values.
+  - Live render inspection could not be performed because deployed SHA 5a3deb303 differs from candidate HEAD on index.mdx and fig-U7-9.webp; visual accessibility remains unverified while all content criteria pass.
+  - Advisory findings record that MCQ correct key B represents 6 out of 10 items in unit-assessment.mdx, and topic-02.mdx:40 cites summary Table 3.3 for literacy while Table 4.21 provides the detailed section data.
   - G3 remains open, unticked, with reviewer token agent:g3-reviewer, disposition escalate, and report at specs/content/gcce-400/reviews/unit-07/G3/agy-run1-20261124.json.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
