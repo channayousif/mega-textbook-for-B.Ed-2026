@@ -18,13 +18,3 @@ Consulted: 2026-11-24, read from the repository's bundled copy (`Scheme-and-Cour
 Notes 1-3 support Topic 1.1 (U1-01, U1-02, U1-03, U1-04).
 Note 4 supports Topic 1.2 (U1-05, U1-06).
 Note 5 supports Topic 1.3 (U1-07).
-
-## Unit 2 use
-
-Notes 6-10 support Unit 2 (U2-01, U2-03, U2-04, U2-07).
-
-6. Unit 1, Week 1 (p. 16): validity and reliability are logical concepts until they are measured for a particular test, and they are not properties of tests but of the interpretations and conclusions drawn from test scores; all assessments are subject to error.
-7. Unit 1, Week 6 (p. 60): interpretations and conclusions made from test scores should be valid and reliable, and test scores do not lead directly to educational decisions.
-8. Unit 4 (p. 22): effective and fair tests represent the instructional material in their entirety and do not include anything not taught; assessment is not a neutral enterprise, because the teacher who uses the data also made the decisions that created the assessment.
-9. Unit 4, Week 12 (pp. 87-88): a fair test assesses all the topics taught in the unit and stays away from untaught topics, and the Table of Specifications is the blueprint that matches items to the appropriate learning objectives.
-10. Unit 4 (p. 252): in the lesson-plan standard, a strong plan shows clear alignment between individual learning outcomes, instructional activities and assessment strategies, including formal and informal methods.

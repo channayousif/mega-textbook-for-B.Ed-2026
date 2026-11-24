@@ -16,13 +16,3 @@ Consulted: 2026-11-24, read from the repository's bundled copy (`Scheme-and-Cour
 
 Notes 1-3 support Topic 1.1 (U1-01, U1-03).
 Note 4 supports Topic 1.3 (U1-07, U1-08, U1-09).
-
-## Unit 2 use
-
-Notes 6-10 support Unit 2 (U2-01 to U2-06).
-
-6. Unit 3, "Taxonomy in testing: Using Bloom's Taxonomy in test development" (pp. 63-65): Bloom's Taxonomy orders levels of student understanding, and a test developer chooses the appropriate level for each item. Command words determine the cognitive level a question measures, and some command words fall in more than one category.
-7. Unit 3, "Determining the behaviours to be assessed" (pp. 66-68): a learning outcome states what students should know, be able to do, or be able to demonstrate; outcomes are expressed as knowledge, skills, attitudes or values; and a command word names an observable and measurable action. Three types of outcome are introduced: cognitive (knowledge or mental skills), affective (growth in feelings or emotional areas) and psychomotor (manual or physical skills).
-8. Unit 4, "Test reliability" (pp. 68-69): reliability is consistent outcomes on repeated occasions; the forms named are interrater, split-half internal consistency, and test-retest, and all involve a correlation between repeated attempts or repeated judgements.
-9. Unit 4, "Test validity" (pp. 69-70) and "Types of reliability" (pp. 71-72): validity concerns whether a test measures what it claims, and the guide treats content, construct, concurrent and predictive validity; rater (scorer) reliability is improved by a scoring rubric with agreed descriptors.
-10. Unit 4, "Utility of test" (p. 73): the session applies validity, reliability, objectivity, adequacy and differentiability, and covers scoring, interpreting and reporting test results to the testee and other stakeholders.
