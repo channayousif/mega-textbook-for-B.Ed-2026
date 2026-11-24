@@ -6,7 +6,8 @@ Consulted: 2026-11-24, online edition (222 pp., ISBN 978-0-9818-260-1-1), free t
 
 Locator: Scott, J. T. (2017). *The entrepreneur's guide to building a successful business* (2nd ed.). EFMD.
 
-## Evidence notes (paraphrased; short phrases quoted)
+## Evidence notes for Unit 3 (paraphrased; short phrases quoted)
+
 1. Chapter 5, p. 34: "the word market is defined as a collection of buyers (or potential buyers) of a particular product or service". The purpose of market research is "to gather information about a product and its demand". Knowing the size and make-up of a market indicates how lucrative a product might be.
 2. Chapter 5, pp. 34-35: the objectives of a research project are to determine an accurate estimate of costs and produce a reliable estimate of revenues. Research should identify who will buy, how many will buy, and how long demand will last.
 3. Chapter 5, p. 35: market research is a four-stage procedure: define a question or opportunity, decide the tools, collect the information, analyse it. Two types of data fill the second stage: "Primary Data consists of obtaining information firsthand, at its source, for a specific purpose" and "Secondary Data involves information that has already been collected". Primary methods named are questionnaires, personal interviews, focus groups, and mail and telephone surveys; secondary sources include government data, books, magazines and internet searches.
@@ -19,7 +20,9 @@ Locator: Scott, J. T. (2017). *The entrepreneur's guide to building a successful
 10. Chapter 9, p. 58: "Re-working a business plan is not a sign of weakness if the current plan is proving futile", and businesses that try to be all things to all people tend to be "confused, unfocused". Persistence versus stubbornness: know what and why you are changing before taking a different course.
 11. Chapter 27, p. 144: "Price is the only component of the marketing mix ... that produces revenue. All others represent costs." Pricing can be changed quickly, and a price that is too high or too low can both turn buyers away.
 
-## Evidence notes for Unit 4 (page numbers are those printed in the book)
+Use in GENT-401 Unit 3: notes 1-5 support Topic 3.1 (market and customer understanding, data-collection methods); notes 6-7 support Topic 3.1 (competitor analysis and the SWOT chart); notes 8-10 support Topic 3.2 (types of business models and the model-versus-plan distinction); note 11 supports Topic 3.2 (revenue streams). Page numbers are those printed in the book.
+
+## Evidence notes for Unit 4
 
 1. Business Planning (pp. 53-56): A business plan is a practical working tool rather than an academic dissertation. Scott cautions entrepreneurs against unnecessary complexity, overly dense prose, or unrealistic projections. The plan must provide reliable analysis and clear explanations of the venture's market opportunity, resources, and operating model.
 2. Executive Summary (pp. 57-60): The executive summary serves as an "at-a-glance" gateway to the business plan. Because potential investors, lenders, and partners read it first to decide whether to read further, it must be concise (one to two pages) and written strictly after the operational, market, and financial sections are completed and verified. It must summarize the business concept, market size, management capabilities, and financial needs.
