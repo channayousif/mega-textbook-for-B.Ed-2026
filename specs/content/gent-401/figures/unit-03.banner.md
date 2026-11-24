@@ -1,0 +1,7 @@
+# Unit banner - GENT-401 Unit 3 (Market Research and Business Models)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs gent-401 3 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U3-5 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: a small-town bazaar street in Sindh on a weekday morning; on one side a young woman trainee teacher in shalwar kameez and dupatta stands at a small table handing printed practice sheets to schoolgirls in uniform, while one girl counts coins from her pocket; beside them a shopkeeper arranges notebooks and pens on a shelf, and a young man fills a simple chart on a clipboard; a fourth pupil watches a free science lesson on a borrowed phone; men wear Pakistani shalwar kameez, some with caps; busy, hopeful mood, soft morning light, dusty street, a rickshaw in the background; no readable text on any sign, paper, packet or wall, no maps, flags, emblems, party symbols, brand logos or watermarks | At a small-town bazaar in Sindh, a trainee teacher hands printed practice sheets to schoolgirls, a shopkeeper arranges notebooks, a young man fills a chart on a clipboard and a pupil watches a free lesson on a borrowed phone. |  | prompt-only |
