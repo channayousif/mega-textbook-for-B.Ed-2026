@@ -33,9 +33,11 @@ describe.skipIf(!rlsConfigured)('classes guard trigger — column and ownership 
     const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
+    // The course stays immutable for non-admins. Name and term became owner-editable in 0057
+    // (Spec 011 FR-013); tests/rls/class-details-edit.test.mjs covers that.
     const { error } = await teacher.client
       .from('classes')
-      .update({ name: 'Renamed Section' })
+      .update({ course_code: 'EFMP-302' })
       .eq('id', klass.id);
     expect(error).toBeTruthy();
     expect(error.message).toContain('not editable');
