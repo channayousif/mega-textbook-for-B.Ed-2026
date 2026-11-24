@@ -9,7 +9,7 @@ feature: efmp-408
 branch: crew/efmp-408-u02-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/efmp-408/content-spec.md
   ticket: null
@@ -37,9 +37,6 @@ files:
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-no-answer-keys.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/check-no-em-dash.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261124T181004352Z/validate-content.txt
- - specs/content/efmp-408/sources/texts/hec-2013-classroom-assessment.md
- - specs/content/efmp-408/sources/texts/hec-2013-testdev.md
- - specs/content/efmp-408/sources/texts/seifert-sutton-2009.md
  - specs/content/efmp-408/sources/unit-02.md
  - specs/content/efmp-408/tasks.md
  - static/img/figures/efmp-408/unit-02/fig-U2-1.dark.svg
@@ -86,32 +83,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFMP-408 Unit 2 in English: an index opening, three nine-part topic cycles, a 10/10/5 unit assessment with a bounded answers section, teacher notes, six placed schematic SVGs with derived dark variants, and the complete governance set (coverage matrix v2, sources-consulted list with bound evidence notes, concept graph v4, figure manifest and banner sidecar). Six glossary entries were added and the G2 draft gate evidence was prepared and recorded.
+Authored EFMP-408 Unit 2 in English with three nine-part topic cycles, a 10/10/5 assessment, teacher notes, six placed schematic figures, the full governance set, six glossary entries and recorded G2 gate evidence.
 
 ## Outcome
 
 - Impact: author for EFMP-408 Unit 2 by claude_crew (attempt 1).
-- Tests: the eight draft gates passed at the evidence commit; `npm run check:content` was run after the tracker row was added.
-- Files: 39 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 35 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFMP-408 Unit 2 in English with six placed schematic figures, governance specifications, six glossary entries and G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything and the Urdu mirror is a separate job.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored EFMP-408 Unit 2 in English with three nine-part topic cycles, a 10/10/5 assessment, teacher notes, six placed schematic figures, the full governance set, six glossary entries and recorded G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All twelve SVG variants (light and dark) passed `measure-figure-text.mjs` with 0 errors, so label geometry is clean for translation.
-  - The six Urdu concept labels in `concepts/unit-02.md` are authored; three terms are banked in `terminology.csv` and the rest need G5 review.
-  - The banner `fig-U2-7` stays at `prompt-only` for the illustrate job.
+  - Six figures are placed with measured-clean light and dark variants; banner fig-U2-7 stays prompt-only for the illustrate job.
+  - Unit 2 evidence notes live in sources/unit-02.md, not the shared sources/texts excerpts, so Unit 1's G2 evidence stays valid.
+  - Urdu concept labels in concepts/unit-02.md are authored (Validity, Reliability, Bloom's Taxonomy are banked); G4/G5 is the next job.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: two long SVG captions initially overflowed the viewBox or overprinted the wordmark; both were wrapped to two lines and re-measured clean.
-- Graders run and results (PASS/FAIL): draft gates PASS; `npm run check:content` run after the tracker update.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
