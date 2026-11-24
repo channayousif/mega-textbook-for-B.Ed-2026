@@ -1,0 +1,7 @@
+# Unit banner - GENT-401 Unit 7 (Growing a Business and Pitching It)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs gent-401 7 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U7-5 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: a small community hall in a town in Sindh, where a young woman in shalwar kameez and dupatta stands before a panel of three seated local business owners, gesturing towards a hand-painted chart on an easel that shows a simple rising line and a small stall; behind her, three classmates in school uniform hold a wooden crate of neatly packed worksheet packs and a folded reading corner of stacked books; the panel members, two men and one woman in Pakistani dress, lean forward with notebooks and a cup of tea; a small audience of teachers and pupils watches from plastic chairs; hopeful, attentive mood, warm afternoon light through tall windows, tiled floor, a ceiling fan; no readable text on any chart, paper, banner, book or wall, no maps, flags, emblems, party symbols, brand logos or watermarks | In a Sindh town hall, a young woman presents a hand-drawn chart to a panel of three local business owners while her classmates hold a crate of worksheet packs behind her. |  | prompt-only |
