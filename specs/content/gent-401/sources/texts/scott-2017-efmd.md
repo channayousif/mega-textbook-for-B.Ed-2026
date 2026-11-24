@@ -31,3 +31,16 @@ Use in GENT-401 Unit 3: notes 1-5 support Topic 3.1 (market and customer underst
 5. Organization and Management (pp. 75-76): Scott highlights that unassigned responsibilities lead directly to business errors. A clearly delineated organizational structure assigns distinct roles, reporting lines, and accountability, ensuring that critical administrative, operational, and customer-facing functions are not overlooked as the venture expands.
 
 Use in GENT-401 Unit 4: notes 1-2 support Topic 4.1 (business plan components, executive summary); notes 3-5 support Topic 4.2 (marketing plan, operational plan, organizational structure).
+
+## Evidence notes for Unit 6 (chapters 4 and 7, read online 2026-11-24)
+
+1. Chapter 4 (Marketing and Business Development): marketing starts with deep understanding of customer segments and their unmet needs; competitive advantage requires clear positioning that separates a venture from existing market choices.
+2. Chapter 4: branding represents the core promise and ongoing reputation of the enterprise; small businesses build brand equity through consistent quality, transparent communication, and customer referrals rather than expensive commercial advertising.
+3. Chapter 4: bootstrap promotion techniques for startups include personal demonstrations, direct relationships with community leaders, referral programs, and targeted local notices.
+4. Chapter 7 (Legal, Governance and Regulatory Frameworks): formal business registration provides credibility with institutional clients and limits personal exposure; contracts, intellectual property protection, and regulatory compliance are essential for sustainable growth.
+5. Chapter 7: ethical business practices, truth in advertising, and honoring commercial agreements build long-term enterprise value and customer loyalty.
+
+## Use in GENT-401
+
+- Unit 4: notes 1-2 support Topic 4.1 (business plan components, executive summary); notes 3-5 support Topic 4.2 (marketing plan, operational plan, organizational structure).
+- Unit 6: notes 1-3 support Topic 6.1 (branding, positioning, bootstrap promotional strategies); notes 4-5 support Topic 6.2 (registration value, contracts, ethical practices).
