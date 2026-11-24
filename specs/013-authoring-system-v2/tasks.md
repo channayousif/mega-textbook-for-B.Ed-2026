@@ -67,8 +67,10 @@ Status: `[ ]` todo · `[x]` done
 - [x] T048 `style-guide.md` 3.3 -> 3.4 with the missing v3.3 AND the new v3.4 changelog entries.
 - [x] T049 Mirror the style-guide changes into `structure-standard.md` (the twin).
 - [x] T050 ADR-0018: dual-`<img>` over `useColorMode`/SVGR; commit-vs-prebuild variants.
-- [ ] T051 `CLAUDE.md` + `specs/backlog.md` reconciliation.
-- [ ] T052 Impl PHR.
+- [x] T051 `CLAUDE.md` + `specs/backlog.md` reconciliation. (Verified 2026-11-24: the deferred items are in
+  `specs/backlog.md` "From 013-authoring-system-v2"; `CLAUDE.md` now only imports `AGENTS.md`, which holds no
+  stale Spec 013 claim.)
+- [x] T052 Impl PHR. (`history/prompts/013-authoring-system-v2/0001-evaluate-and-reinforce-authoring-system.green.prompt.md`)
 
 ## Phase G - Title rewrite (last; P3)
 

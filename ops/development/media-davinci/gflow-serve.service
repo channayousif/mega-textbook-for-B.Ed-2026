@@ -1,0 +1,15 @@
+[Unit]
+Description=gflow-cli MCP server (Google Flow: Veo, Nano Banana) on 127.0.0.1:18800, Chrome on the VNC desktop
+After=workspace-chrome.service
+
+[Service]
+Environment=DISPLAY=:1
+Environment=XAUTHORITY=%h/.Xauthority
+Environment=GFLOW_CLI_OUTPUT_DIR=%h/Downloads/gflow-cli
+ExecStartPre=/bin/sh -c "until [ -S /tmp/.X11-unix/X1 ]; do sleep 2; done"
+ExecStart=%h/.local/bin/gflow serve --host 127.0.0.1 --port 18800 --profile a2ahs-alpha
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=default.target

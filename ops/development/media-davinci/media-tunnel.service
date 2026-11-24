@@ -1,0 +1,16 @@
+[Unit]
+Description=Media producers on davinci: gflow MCP 18800, gflow files 18801, VNC desktop 15901, workspace Chrome CDP 18802
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/ssh -N -o BatchMode=yes -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 \
+  -L 127.0.0.1:18800:127.0.0.1:18800 \
+  -L 127.0.0.1:18801:127.0.0.1:18801 \
+  -L 127.0.0.1:15901:127.0.0.1:5901 \
+  -L 127.0.0.1:18802:127.0.0.1:9222 \
+  davinci
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

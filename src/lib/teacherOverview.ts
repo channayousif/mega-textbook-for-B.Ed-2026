@@ -120,6 +120,8 @@ export type RecentActivityItem = {
   id: string;
   kind: 'submission' | 'quiz_attempt';
   classId: string;
+  /** profiles.id of the student who acted; links the row to the student drill-down (Spec 011 T024). */
+  studentId: string;
   className: string;
   assignmentTitle: string;
   occurredAt: string;
@@ -136,12 +138,12 @@ export async function fetchRecentActivity(limit = 10): Promise<Result<RecentActi
   const [submissionsRes, quizAttemptsRes] = await Promise.all([
     supabase
       .from('submissions')
-      .select('id, submitted_at, assignments(id, title, class_id, classes(name))')
+      .select('id, student_id, submitted_at, assignments(id, title, class_id, classes(name))')
       .order('submitted_at', { ascending: false })
       .limit(limit),
     supabase
       .from('quiz_attempts')
-      .select('id, attempted_at, assignments(id, title, class_id, classes(name))')
+      .select('id, student_id, attempted_at, assignments(id, title, class_id, classes(name))')
       .order('attempted_at', { ascending: false })
       .limit(limit),
   ]);
@@ -149,8 +151,8 @@ export async function fetchRecentActivity(limit = 10): Promise<Result<RecentActi
   if (quizAttemptsRes.error) return { data: null, error: quizAttemptsRes.error };
 
   type EmbeddedAssignment = { id: string; title: string; class_id: string; classes: { name: string } | null };
-  type SubmissionRow = { id: string; submitted_at: string; assignments: EmbeddedAssignment | null };
-  type QuizAttemptRow = { id: string; attempted_at: string; assignments: EmbeddedAssignment | null };
+  type SubmissionRow = { id: string; student_id: string; submitted_at: string; assignments: EmbeddedAssignment | null };
+  type QuizAttemptRow = { id: string; student_id: string; attempted_at: string; assignments: EmbeddedAssignment | null };
 
   const submissionItems: RecentActivityItem[] = ((submissionsRes.data ?? []) as unknown as SubmissionRow[])
     .filter((row) => row.assignments)
@@ -158,6 +160,7 @@ export async function fetchRecentActivity(limit = 10): Promise<Result<RecentActi
       id: row.id,
       kind: 'submission',
       classId: row.assignments!.class_id,
+      studentId: row.student_id,
       className: row.assignments!.classes?.name ?? '',
       assignmentTitle: row.assignments!.title,
       occurredAt: row.submitted_at,
@@ -169,6 +172,7 @@ export async function fetchRecentActivity(limit = 10): Promise<Result<RecentActi
       id: row.id,
       kind: 'quiz_attempt',
       classId: row.assignments!.class_id,
+      studentId: row.student_id,
       className: row.assignments!.classes?.name ?? '',
       assignmentTitle: row.assignments!.title,
       occurredAt: row.attempted_at,

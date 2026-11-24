@@ -102,8 +102,15 @@ export async function updateAssignment(assignmentId: string, patch: AssignmentPa
  */
 export async function deleteAssignment(assignmentId: string): Promise<Result<null>> {
   const supabase = await client();
-  const { error } = await supabase.from('assignments').delete().eq('id', assignmentId);
-  return { data: null, error };
+  // RLS refuses a delete once the assignment has submissions (or the caller does not own it)
+  // by filtering the row out: no error, zero rows. Ask for the deleted row back so that case
+  // reaches the caller as an error instead of a silent no-op.
+  const { data, error } = await supabase.from('assignments').delete().eq('id', assignmentId).select('id');
+  if (error) return { data: null, error };
+  if (!data || data.length === 0) {
+    return { data: null, error: new Error('not_deleted') };
+  }
+  return { data: null, error: null };
 }
 
 /** Teacher's full list for a class, including unpublished (FR-006). */
