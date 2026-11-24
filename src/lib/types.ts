@@ -83,6 +83,8 @@ export type QuizItem = {
   question_text: string;
   options: { key: string; text: string }[];
   correct_option?: string; // present only for verified-teacher/admin full-row reads
+  /** present only on full-row reads; quiz_items_public returns published items only (0056) */
+  status?: 'draft' | 'published';
   created_by: string | null;
   created_at: string;
 };
