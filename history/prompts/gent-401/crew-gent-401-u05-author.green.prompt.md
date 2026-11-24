@@ -4,12 +4,12 @@ title: crew author GENT-401 unit 5
 stage: misc
 date: 2026-11-24
 surface: agent
-model: claude
+model: claude_crew
 feature: gent-401
 branch: crew/gent-401-u05-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/gent-401/content-spec.md
   ticket: null
@@ -83,27 +83,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored GENT-401 Unit 5 in English (index, two topic cycles, 10/10/5 assessment, teacher notes, four placed schematic SVGs with dark variants, coverage, sources, concepts, glossary terms, tracker and G2 evidence), with all content gates passing.
+Authored GENT-401 Unit 5 (Financial Planning and Funding) in English with its full governance set, 10/10/5 assessment and four placed schematic figures, and recorded its G2 gate evidence.
 
 ## Outcome
 
-- Impact: author for GENT-401 Unit 5 by claude (attempt 1).
-- Tests: npm run check:content passed in the job worktree after the G2 row was repointed.
-- Files: 32 file(s), listed above.
+- Impact: author for GENT-401 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 35 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored GENT-401 Unit 5 in English (index, two topic cycles, 10/10/5 assessment, teacher notes, four placed schematic SVGs with dark variants, coverage, sources, concepts, glossary terms, tracker and G2 evidence), with all content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored GENT-401 Unit 5 (Financial Planning and Funding) in English with its full governance set, 10/10/5 assessment and four placed schematic figures, and recorded its G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The G3 reviewer should confirm that the three open-access articles (Polish startup financing, break-even in MSMEs, Indonesian crowdfunding) are not presented as Pakistani evidence and that the tuition centre numbers are the author's teaching device (sources/unit-05.md).
-  - Figures are placed in English only (fig-U5-1 to fig-U5-4, no .ur.svg yet); banner fig-U5-5 is a prompt-only row in figures/unit-05.banner.md for the illustrate job.
-  - The unit uses three sources beyond the mapped readings (cegielska-2018-startup-financing, sintha-2020-break-even, wati-2018-crowdfunding) to satisfy the open-access floor; all are marked open-access-substitute.
+  - The Urdu mirror and `.ur.svg` files are deliberately absent (separate G4/G5 job; EN index is `translation_status: draft`), and banner `fig-U5-5` is a prompt-only row for the illustrate job.
+  - G3 should confirm the three substitute open-access sources (Polish startup financing, MSME break-even, Indonesian crowdfunding) are not read as Pakistani evidence and that Imran's tuition-centre figures are the author's teaching device (`sources/unit-05.md`).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
