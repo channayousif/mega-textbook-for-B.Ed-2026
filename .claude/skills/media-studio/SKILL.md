@@ -5,7 +5,7 @@ description: >-
   D-2026-0094): one job model and state vocabulary, versioned recipes, the producer contract
   (gflow Veo and Nano Banana, manual Flow, NotebookLM, agy, Codex) with quota holds and
   lost-clip recovery, the QG0-QG3 checks, the owner's gates, crew stages and owner commands,
-  social cross-posting, and the gflow Windows route with its known failure modes. Read it before
+  social cross-posting, and the gflow route (davinci, owner PC fallback) with its known failure modes. Read it before
   any teaser, Study Studio audio/video or raster-illustration work, then follow the kind's own
   skill: studio-teaser (Shorts), studio-media (NotebookLM audio/video), generate-figures (figures).
 ---
@@ -90,14 +90,14 @@ stops and asks the owner, never falling back (the next route could spend credits
 |---|---|---|
 | image | agy, gflow (Nano Banana), codex | `generate-illustration.mjs`; quota in `~/.cache/mega-book/image-quota.json` |
 | clip | gflow.video, manual.flow | `teaser-clips.mjs`; quota in `~/.cache/mega-book/media-quota.json` |
-| overview | nlm | NotebookLM; expired cookies are `unavailable` (owner runs `nlm login`) |
+| overview | nlm | NotebookLM; expired cookies are `unavailable`; refresh from davinci's workspace Chrome: `nlm login --provider openclaw --cdp-url http://127.0.0.1:18802` |
 | schematic | codex, claude | generate-figures |
 
 - **gflow.video** (`producers/gflow-video.mjs`): one Flow project per teaser
   (`~/.cache/mega-book/gflow-projects.json`), a fresh HTTP connection per request, 15 minutes per
   call. Every submission is journalled (`gflow-video-journal.json`) before the call; the next call
   for that shot adopts the finished clip (by media id, or the unclaimed file that landed in
-  `Downloads\gflow-cli`) or holds. After checking Flow:
+  the `gflow-cli` output folder) or holds. After checking Flow:
   `node scripts/media/producers/gflow-video.mjs journal | clear <key> <shot>`.
 - **manual.flow** (`producers/manual-flow.mjs`): writes a copy-button prompt page and holds; the
   owner saves `<key>_shot-<n>.mp4` in `Downloads\gflow-cli` (or `~/studio-media/inbox`). A joined
@@ -149,14 +149,38 @@ and never printed. Setup: `social-post.mjs auth-url <provider>`, the owner opens
 the address, then `social-post.mjs exchange <provider> '<address>'` (redirect URI
 `https://textbook.com.pk/`). Bios on TikTok and Instagram link textbook.com.pk.
 
-## gflow route (owner's Windows PC)
+## gflow route (davinci; owner's PC is the fallback)
 
-gflow-cli drives real Google Chrome, so it runs on the owner's PC and this server reaches it over
-the owner's SSH tunnel: MCP on `127.0.0.1:18800`, the PC's `Downloads\gflow-cli` folder served on
-`127.0.0.1:18801`. Check with `ss -ltn | grep -E ':1880[01] '`.
+gflow-cli drives real Google Chrome. Since 2026-11-24 it runs on **davinci** (Ubuntu 24.04
+arm64, `google-chrome-stable` arm64, gflow-cli 0.106.0), so Flow no longer depends on the owner's
+laptop being on. This server reaches it through the `media-tunnel` user unit
+(`~/.config/systemd/user/media-tunnel.service`, an `ssh -N -L` to davinci): MCP on
+`127.0.0.1:18800`, davinci's `~/Downloads/gflow-cli` folder served on `127.0.0.1:18801`, the VNC
+desktop on `127.0.0.1:15901`, and the workspace Chrome's DevTools port on `127.0.0.1:18802`.
+Check with `ss -ltn | grep -E ':1880[012] '` and `systemctl --user status media-tunnel`.
+`producerStatus()` "gflow ok" is only a port probe; `gflow_auth_status` over MCP proves the session.
 
-On Windows (Command Prompt; Smart App Control blocks uv launchers and `gflow.exe`, so always
-`py -3.12 -m`): `py -3.12 -m pip install --user -U gflow-cli` (at least 0.102.1; 0.103.0 verified),
+On davinci (user `ubuntu`, linger on; everything binds to localhost only):
+- `tigervncserver@:1` (system unit): persistent XFCE desktop on display `:1`, config in
+  `~/.vnc/tigervnc.conf`, password in `~/.vnc/passwd` (owner's copy `~/.config/tigervnc/owner-pass.txt`).
+- `gflow-serve` (user unit): `gflow serve --host 127.0.0.1 --port 18800 --profile a2ahs-alpha`
+  with `DISPLAY=:1` and `GFLOW_CLI_OUTPUT_DIR=~/Downloads/gflow-cli` (the folder name must end in
+  `gflow-cli`: `gflowRelativePath()` strips everything up to it).
+- `gflow-files` (user unit): `python3 -m http.server 18801` on that folder.
+- `workspace-chrome` (user unit): a normal Chrome profile (`~/.local/share/workspace-chrome`) on
+  `:1` for NotebookLM, meta.ai and Meta Business Suite, DevTools on `127.0.0.1:9222`.
+
+The owner reaches the desktop from the laptop with `ssh -N -L 45901:127.0.0.1:15901
+textbook-editor` and a VNC viewer on `localhost:45901` (Windows reserves 5901 and 15901 on the
+owner's PC: "bind ... Permission denied"). Re-login there: `gflow auth login --browser chrome` in
+a desktop terminal (`GFLOW_CLI_AUTH_LOGIN_TIMEOUT=1800`; finish the **Flow app** sign-in, not just
+Google, or it times out), then turn Flow's Agent chip off. Chrome's yellow "unsupported
+command-line flag: --disable-blink-features=AutomationControlled" bar is expected. Never leave a
+test clip in `~/Downloads/gflow-cli`: the clip producer adopts unclaimed `.mp4` files there.
+
+**Fallback, the owner's Windows PC** (stop `media-tunnel` first; only one route can hold 18800).
+Command Prompt; Smart App Control blocks uv launchers and `gflow.exe`, so always `py -3.12 -m`:
+`py -3.12 -m pip install --user -U gflow-cli` (at least 0.102.1),
 `py -3.12 -m gflow_cli auth login --browser chrome` (profile `a2ahs-alpha`), then keep three windows:
 - `py -3.12 -m gflow_cli serve --host 127.0.0.1 --port 18800 --profile a2ahs-alpha`
 - `py -3.12 -m http.server 18801 --bind 127.0.0.1 -d "%USERPROFILE%\Downloads\gflow-cli"`
@@ -164,8 +188,9 @@ On Windows (Command Prompt; Smart App Control blocks uv launchers and `gflow.exe
   `RemoteForward` in the SSH config and VS Code `remote.autoForwardPorts` off).
 
 Known failure modes:
-- **"remote port forwarding failed":** a stale session holds the ports; end the old `sshd: a2ahs`
-  processes on the server. A leftover `gflow serve` gives WinError 10048 on 18800.
+- **"remote port forwarding failed"** (PC fallback): `media-tunnel` or a stale session holds the
+  ports; stop the unit or end the old `sshd: a2ahs` processes. A leftover `gflow serve` gives
+  WinError 10048 on 18800.
 - **UiSelectorDriftError before submit (no spend):** Flow's agent sidebar is open; close it in
   gflow's Chrome window and turn the Agent chip off (the classic composer is required).
 - **ConfigurationError "no duration control offering '8s'":** omit `duration` (clips are 8 s anyway).
