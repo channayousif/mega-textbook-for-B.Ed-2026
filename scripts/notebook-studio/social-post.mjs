@@ -20,6 +20,7 @@ import { fileURLToPath } from 'node:url';
 import { randomBytes } from 'node:crypto';
 import { loadScript, socialMeta, recordCrosspost, ledgerPath } from './teaser.mjs';
 import { update } from '../media/ledger.mjs';
+import { pace, paceRecord } from '../media/pacing.mjs';
 
 export const GRAPH = 'v27.0';
 export const LINKEDIN_VERSION = '202610';
@@ -245,7 +246,19 @@ async function postLinkedin(file, caption, title) {
  * `file` is the local copy LinkedIn uploads. TikTok photo posts need a pulled URL from a verified
  * domain, so update cards are not posted there.
  */
+/**
+ * Paced per platform (scripts/media/pacing.mjs, D-2026-0100): office hours, a gap of about two
+ * hours and three posts a day per platform. A hold throws with its reset time; publishPost keeps
+ * that platform as failed and the next run retries it. Drafts post nothing public and are not paced.
+ */
+export async function paceSocial(platform, { pace: paceFn = pace, record = paceRecord } = {}) {
+  const channel = `social.${platform}`;
+  await paceFn(channel, 1);
+  record(channel, 1);
+}
+
 export async function postImage(platform, { file, imageUrl, caption, altText }) {
+  await paceSocial(platform);
   if (platform === 'facebook') {
     const m = token('meta');
     const r = (await call(`https://graph.facebook.com/${GRAPH}/${m.page_id}/photos`, { method: 'POST', body: facebookPhotoForm(imageUrl, caption, m.page_token) })).body;
@@ -281,6 +294,7 @@ export async function postImage(platform, { file, imageUrl, caption, altText }) 
 
 export async function post(platform, key, file, { draft = false } = {}) {
   if (!PROVIDER_OF[platform]) throw new Error(`unknown platform ${platform}`);
+  if (!draft) await paceSocial(platform);
   const ledger = readJson(fileURLToPath(new URL('../../specs/studio/teasers/media-teasers.json', import.meta.url)));
   const item = ledger.items.find((i) => i.key === key);
   if (!item) throw new Error(`no item ${key}`);

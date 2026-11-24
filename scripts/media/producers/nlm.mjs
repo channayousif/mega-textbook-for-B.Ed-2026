@@ -10,6 +10,7 @@ import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, statSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { pace, paceRecord, PaceHold } from '../pacing.mjs';
 
 export const AUTH_RE = /cookies? (have|has) expired|authentication (may have )?expired|not authenticated|re-?authenticate|nlm login|401|unauthori[sz]ed/i;
 export const NLM_QUOTA_RE = /quota|limit reached|daily limit|too many requests|429/i;
@@ -53,13 +54,21 @@ export function artifactStatus(stdout) {
  * job: { key, kind, notebook_id, artifact_id?, format?, length?, language?, focus?, outDir }.
  * part is unused (one artifact per job).
  */
-export function nlmProducer({ run = defaultRun, waitMs = 25 * 60 * 1000, pollMs = 30000, profile } = {}) {
+export function nlmProducer({ run = defaultRun, waitMs = 25 * 60 * 1000, pollMs = 30000, profile, pace: paceFn = pace, record: recordFn = paceRecord } = {}) {
   const pf = profile ? ['--profile', profile] : [];
   return async (job) => {
     const type = TYPE[job.kind];
     if (!type) return { status: 'failed', reason: `nlm does not make ${job.kind}` };
     let id = job.artifact_id;
     if (!id) {
+      // Paced (D-2026-0100): creating an artifact is the call NotebookLM counts; downloads are not.
+      try {
+        await paceFn('nlm.studio', 1);
+      } catch (e) {
+        if (e instanceof PaceHold) return { status: 'quota', paced: true, resetAt: e.resetAt, reason: e.message };
+        throw e;
+      }
+      recordFn('nlm.studio', 1);
       const args = [type, 'create', job.notebook_id, '--confirm', '--json', ...pf];
       if (job.format) args.push('--format', job.format);
       if (job.length) args.push('--length', job.length);

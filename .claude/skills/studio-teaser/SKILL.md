@@ -112,7 +112,8 @@ States: `planned → scripted → script-approved → clips-generated → clips-
    −16 LUFS, peak ≤ −1 dBTP. Extract about nine frames across the cut and look at them: the caption is fully visible, Urdu reads RTL, and the end card shows the
    exact address. Then `T advance <key> qa-pass` with `gates.qa1`.
 8. **Upload private.** Get the metadata with `T meta <key>`.
-   - Call `upload_video` (YouTube MCP) with its `upload_video` fields.
+   - Run `node scripts/media/pacing.mjs check youtube.upload` first (a `hold` means stop and hand off with the time; media-studio "Pacing"), then call `upload_video` (YouTube MCP) with its `upload_video` fields.
+     After a successful upload run `node scripts/media/pacing.mjs record youtube.upload`.
    - Call `update_video` with the teaser playlist "Course teasers (اردو)". The owner creates it;
      record its ID below.
    - Then run `T advance <key> uploaded-private --json '{"youtube_id":"…","uploaded_at":"<ISO>"}'`.
