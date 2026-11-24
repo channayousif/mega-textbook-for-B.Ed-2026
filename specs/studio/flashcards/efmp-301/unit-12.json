@@ -1,0 +1,240 @@
+{
+ "course": "EFMP-301",
+ "unit": 12,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Guidance",
+     "definition": "Information and direction: helping a person see the options and choose a path. Its tool is accurate information, given at the moment a choice is actually open."
+    },
+    {
+     "term": "Counseling",
+     "definition": "A skilled relationship in which a trained listener helps a person work through a difficulty that information alone cannot touch."
+    },
+    {
+     "term": "Teaching",
+     "definition": "A third discipline, aimed at learning rather than at direction or understanding of self. It is held by different hands from guidance and counseling because each is a discipline."
+    },
+    {
+     "term": "Confidentiality",
+     "definition": "What makes the counseling relationship work and the opening safe. It has one limit: it ends where safety begins, and the counselor, too, escalates."
+    },
+    {
+     "term": "The relationship is the method",
+     "definition": "What helps in counseling is being heard by someone steady, not the advice that person could have written on a slip. Advice comes, if at all, only after understanding is built."
+    },
+    {
+     "term": "Guidance programme",
+     "definition": "At minimum: a named person pupils can reach, a referral route every teacher knows, information about choices before they close, and records that follow the pupil without labelling them."
+    },
+    {
+     "term": "First line",
+     "definition": "The teacher's part in guidance: the noticing, the listening that helps, and the referral that carries, with the words written down."
+    },
+    {
+     "term": "Referral",
+     "definition": "Handing a pupil's difficulty to the designated person through the school's route, with what was seen and said written down and dated, rather than counseling or diagnosing it yourself."
+    }
+   ],
+   "ur": [
+    {
+     "term": "رہنمائی",
+     "definition": "معلومات اور سمت: کسی شخص کو اختیارات دیکھنے اور راستہ چننے میں مدد۔ اس کا آلہ درست معلومات ہیں، جو اُس لمحے دی جائیں جب انتخاب اصل میں کھلا ہو۔"
+    },
+    {
+     "term": "مشاورت",
+     "definition": "ایک مہارت والا رشتہ جس میں ایک تربیت یافتہ سامع کسی شخص کو اُس مشکل سے نکلنے میں مدد دیتا ہے جسے صرف معلومات نہیں چھو سکتیں۔"
+    },
+    {
+     "term": "تدریس",
+     "definition": "تیسرا ضابطہ، جس کا نشانہ تعلم ہے، سمت یا خود کی سمجھ نہیں۔ یہ رہنمائی اور مشاورت سے مختلف ہاتھوں میں ہے کیونکہ ہر ایک ایک ضابطہ ہے۔"
+    },
+    {
+     "term": "رازداری",
+     "definition": "وہ چیز جو مشاورت کے رشتے کو چلاتی اور کھلنے کو محفوظ بناتی ہے۔ اس کی ایک حد ہے: یہ حفاظت شروع ہوتے ہی ختم ہوتی ہے، اور مشیر بھی معاملہ آگے بڑھاتا ہے۔"
+    },
+    {
+     "term": "رشتہ ہی طریقہ ہے",
+     "definition": "مشاورت میں مدد کسی مستقل شخص کا سنا جانا کرتا ہے، نہ وہ مشورہ جو وہ کاغذ پر لکھ سکتا تھا۔ مشورہ، اگر آئے تو، سمجھ بننے کے بعد ہی آتا ہے۔"
+    },
+    {
+     "term": "رہنمائی پروگرام",
+     "definition": "کم سے کم: ایک نامی شخص جس تک شاگرد پہنچ سکیں، ایک رجوع راستہ جو ہر استاد جانے، انتخابوں کے بند ہونے سے پہلے ان کی معلومات، اور ریکارڈ جو شاگرد کا پیچھا کریں بغیر لیبل لگائے۔"
+    },
+    {
+     "term": "پہلی صف",
+     "definition": "رہنمائی میں استاد کا حصہ: نوٹ کرنا، وہ سننا جو مدد کرے، اور وہ رجوع جو معاملہ آگے لے جائے، الفاظ لکھ کر۔"
+    },
+    {
+     "term": "رجوع",
+     "definition": "شاگرد کی مشکل کو اسکول کے راستے سے مقرر کردہ شخص کے حوالے کرنا، جو دیکھا اور کہا گیا اسے لکھ کر اور تاریخ لگا کر، بجائے اس کے کہ خود مشاورت یا تشخیص کی جائے۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Professional ethics",
+     "definition": "Not a list of prohibitions but the set of duties that make the teacher's role trustworthy. Each duty protects someone the pupil cannot protect alone."
+    },
+    {
+     "term": "Fairness",
+     "definition": "Every pupil gets the same standard, the same attention and the same chance. Marks and opportunities reflect the work, never the relationship."
+    },
+    {
+     "term": "Confidentiality",
+     "definition": "What a pupil tells you stays, with one limit: safety outranks secrecy. Never promise it absolutely; promise only to share with the person whose job it is to help."
+    },
+    {
+     "term": "Boundaries",
+     "definition": "The teacher-pupil relationship serves the pupil and stays professional. The line is the referral: a teacher who becomes a pupil's daily confidant has gone beyond the role."
+    },
+    {
+     "term": "Honest reporting",
+     "definition": "Records, reports and marks tell the truth, whatever the pressure. The line: what is written is what happened."
+    },
+    {
+     "term": "Pupil welfare first",
+     "definition": "The duty that orders all the others. When duties conflict, the pupil's welfare outranks reputation, results and convenience."
+    },
+    {
+     "term": "Professional standards",
+     "definition": "Pakistan's National Professional Standards for Teachers frame teacher professionalism as a matter of public accountability, not private virtue."
+    },
+    {
+     "term": "Dilemma",
+     "definition": "A real ethical choice in which two duties pull against each other and both options are costly. Rules alone do not decide it."
+    },
+    {
+     "term": "Ethics decision path",
+     "definition": "Four steps for a real dilemma: whose interest each option serves, which duty each honours or breaks, what the standards say, and what I will do and record."
+    }
+   ],
+   "ur": [
+    {
+     "term": "پیشہ ورانہ اخلاقیات",
+     "definition": "پابندیوں کی فہرست نہیں بلکہ فرائض کا وہ سیٹ جو استاد کے کردار کو قابل بھروسا بناتا ہے۔ ہر فرض اُس کو بچاتا ہے جسے شاگرد اکیلے نہیں بچا سکتا۔"
+    },
+    {
+     "term": "انصاف",
+     "definition": "ہر شاگرد کو وہی معیار، وہی توجہ اور وہی موقع ملے۔ نمبر اور مواقع کام کی عکاسی کریں، رشتے کی کبھی نہیں۔"
+    },
+    {
+     "term": "رازداری",
+     "definition": "جو شاگرد بتائے وہ رہتا ہے، ایک حد کے ساتھ: حفاظت راز سے بڑی ہے۔ اس کا مکمل وعدہ کبھی نہ کریں؛ صرف یہ وعدہ کریں کہ اُسی شخص سے بات ہوگی جس کا کام مدد کرنا ہے۔"
+    },
+    {
+     "term": "حدودیں",
+     "definition": "استاد اور شاگرد کا رشتہ شاگرد کے لیے ہے اور پیشہ ورانہ رہتا ہے۔ لکیر رجوع ہے: جو استاد شاگرد کا روزانہ رازدار بن جائے وہ کردار سے آگے نکل گیا۔"
+    },
+    {
+     "term": "ایماندار رپورٹنگ",
+     "definition": "ریکارڈ، رپورٹیں اور نمبر سچ بولیں، دباؤ کچھ بھی ہو۔ لکیر: جو لکھا گیا وہی ہوا۔"
+    },
+    {
+     "term": "شاگرد کی فلاح سب سے پہلے",
+     "definition": "وہ فرض جو باقی سب کو ترتیب دیتا ہے۔ جب فرائض آپس میں کھینچیں تو شاگرد کی فلاح شہرت، نتائج اور سہولت سب سے بڑی ہے۔"
+    },
+    {
+     "term": "پیشہ ورانہ معیارات",
+     "definition": "پاکستان کے نیشنل پروفیشنل اسٹینڈرڈز فار ٹیچرز استاد کی پیشہ ورانیت کو عوامی جواب دہی کا معاملہ بناتے ہیں، ذاتی فضیلت کا نہیں۔"
+    },
+    {
+     "term": "دو پہلو",
+     "definition": "ایک حقیقی اخلاقی انتخاب جس میں دو فرض ایک دوسرے کے خلاف کھینچتے ہیں اور دونوں اختیار مہنگے ہیں۔ صرف قاعدے اس کا فیصلہ نہیں کرتے۔"
+    },
+    {
+     "term": "اخلاقی فیصلے کا راستہ",
+     "definition": "حقیقی دو پہلو کے لیے چار قدم: ہر اختیار کس کے فائدے کا ہے، کون سا فرض پورا یا توڑتا ہے، معیار کیا کہتے ہیں، اور میں کیا کروں گا اور کیا ریکارڈ کروں گا۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Application of educational psychology",
+     "definition": "Reading one real classroom situation with the whole course: the learner and development, the theories, the mind's work, the room, the evidence and the profession."
+    },
+    {
+     "term": "Educational psychology",
+     "definition": "Not a package of techniques but a set of questions that hold together. A teacher who holds them together sees more of the room than any single lens allows."
+    },
+    {
+     "term": "Practice with instant feedback",
+     "definition": "An affordance of technology: a quiz app that marks at once is reinforcement with the delay removed."
+    },
+    {
+     "term": "Access to the unseen",
+     "definition": "An affordance of technology: a video shows a process, as a demonstration, that a large class could not all see at once."
+    },
+    {
+     "term": "Creation and real audiences",
+     "definition": "An affordance of technology: a typed, printed and displayed product gives elaboration a reason."
+    },
+    {
+     "term": "The load moves, not disappears",
+     "definition": "A cost of technology: English instructions on a screen consume the same working memory as English instructions on paper."
+    },
+    {
+     "term": "Comparison culture",
+     "definition": "A cost of technology that travels onto screens: a quiz app that ranks pupils publicly is the protect loop with a leaderboard."
+    },
+    {
+     "term": "Observational learning",
+     "definition": "Learning by observing a human model, which can happen through a recording. A recorded model cannot notice this pupil's response and adapt, so the teacher judges what comes next."
+    },
+    {
+     "term": "Equity is not automatic",
+     "definition": "A cost of technology: one device for four pupils becomes a cooperation design or a hierarchy, depending entirely on the teacher."
+    },
+    {
+     "term": "Teacher-augmented",
+     "definition": "The future the course prepares for: not teacher-less, but technology chosen by a teacher who knows what each tool is for, while keeping the teacher's judgement."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تعلیمی نفسیات کا اطلاق",
+     "definition": "ایک حقیقی جماعتی صورتحال کو پورے کورس سے پڑھنا: سیکھنے والا اور نشوونما، نظریات، ذہن کا کام، کمرہ، ثبوت اور پیشہ۔"
+    },
+    {
+     "term": "تعلیمی نفسیات",
+     "definition": "تکنیکوں کا پیکج نہیں بلکہ سوالوں کا ایک سیٹ جو ساتھ ساتھ تھامے رہتے ہیں۔ جو استاد انہیں ساتھ تھامے وہ کمرے کا کسی اکیلے شیشے سے زیادہ دیکھتا ہے۔"
+    },
+    {
+     "term": "فوری بازخورد کے ساتھ مشق",
+     "definition": "ٹیکنالوجی کا ایک فائدہ: فوراً نمبر دینے والی کوئز ایپ وہ تقویت ہے جس سے تاخیر ہٹا دی گئی۔"
+    },
+    {
+     "term": "نظر نہ آنے والے تک رسائی",
+     "definition": "ٹیکنالوجی کا ایک فائدہ: ویڈیو بطور مظاہرہ وہ عمل دکھاتی ہے جو بڑی جماعت ایک ساتھ سب نہیں دیکھ سکتی۔"
+    },
+    {
+     "term": "تخلیق اور اصل سامعین",
+     "definition": "ٹیکنالوجی کا ایک فائدہ: لکھا، چھاپا اور دکھایا گیا مصنوعہ تفصیل کو وجہ دیتا ہے۔"
+    },
+    {
+     "term": "بوجھ بدل جاتا ہے، غائب نہیں ہوتا",
+     "definition": "ٹیکنالوجی کی ایک لاگت: اسکرین پر انگریزی ہدایات کاغذ والی انگریزی ہدایات جتنی ہی کام کی میز کھاتی ہیں۔"
+    },
+    {
+     "term": "موازنے کی ثقافت",
+     "definition": "ٹیکنالوجی کی ایک لاگت جو اسکرین تک سفر کرتی ہے: جو کوئز ایپ شاگردوں کو عوامی طور پر درجہ دے وہ بچانے کا چکر ہے جسے لیڈر بورڈ مل گیا۔"
+    },
+    {
+     "term": "مشاہداتی تعلم",
+     "definition": "کسی انسانی نمونے کو دیکھ کر سیکھنا، جو ریکارڈنگ سے بھی ہو سکتا ہے۔ ریکارڈنگ اس شاگرد کا ردعمل دیکھ کر طریقہ نہیں بدل سکتی، اس لیے اگلا قدم استاد طے کرتا ہے۔"
+    },
+    {
+     "term": "انصاف خود بخود نہیں ہوتا",
+     "definition": "ٹیکنالوجی کی ایک لاگت: چار شاگردوں کے لیے ایک آلہ تعاون کا ڈیزائن بنتا ہے یا درجہ بندی، پورا کا پورا استاد پر منحصر۔"
+    },
+    {
+     "term": "استاد کے ساتھ بڑھا ہوا",
+     "definition": "وہ مستقبل جس کے لیے کورس تیار کرتا ہے: استاد کے بغیر نہیں، بلکہ ایسی ٹیکنالوجی جو وہ استاد چنے جو جانتا ہے ہر آلہ کس کام کے لیے ہے، اور فیصلہ استاد کا رہے۔"
+    }
+   ]
+  }
+ }
+}
