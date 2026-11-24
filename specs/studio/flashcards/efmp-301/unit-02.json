@@ -1,0 +1,310 @@
+{
+ "course": "EFMP-301",
+ "unit": 2,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Development",
+     "definition": "Long-term, orderly change in a person: change in body, thinking, feeling and relationships as age advances. It covers the whole package, not only growing bigger."
+    },
+    {
+     "term": "Growth",
+     "definition": "Physical increase: getting taller, heavier and stronger. It is measured in centimetres and kilograms, and it is the engine a teacher has least influence over."
+    },
+    {
+     "term": "Maturation",
+     "definition": "The unfolding of a built-in programme with age, as puberty arrives on its own schedule whatever the school does. A pupil held back by maturation needs waiting, not remedial drills."
+    },
+    {
+     "term": "Learning",
+     "definition": "Change through experience: what practice, teaching and encounters with the world add. A pupil held back by missing learning needs teaching."
+    },
+    {
+     "term": "Continuous yet stage-like",
+     "definition": "The principle that change happens every day but not as a smooth slope: long plateaus are punctuated by bursts. The staircase image, flat steps then a rise, describes it better than a ramp."
+    },
+    {
+     "term": "Sequence",
+     "definition": "The principle that the order of development is essentially the same for everyone. No child skips a step; what differs between children is not the order but the speed."
+    },
+    {
+     "term": "Rate",
+     "definition": "The speed of development, which is uneven between pupils and within one pupil. Two children with the same birthday can be a year apart in reading, and one child can be ahead in language and behind in number."
+    },
+    {
+     "term": "Heredity",
+     "definition": "What a pupil inherits, which supplies the range of possibilities: the height a body can reach, the temperament a child arrives with, the raw speed of certain mental processes."
+    },
+    {
+     "term": "Environment",
+     "definition": "What decides where inside the inherited range a pupil actually lands: food, health, sleep, talk at home, books, teaching and safety. A teacher controls part of it."
+    }
+   ],
+   "ur": [
+    {
+     "term": "نشوونما",
+     "definition": "کسی شخص میں طویل المدتی، باقاعدہ تبدیلی: جسم، سوچ، جذبات اور تعلقات میں وہ تبدیلی جو عمر کے ساتھ آتی ہے۔ یہ پورا پیکیج ہے، صرف بڑا ہونا نہیں۔"
+    },
+    {
+     "term": "نشو",
+     "definition": "جسمانی اضافہ: لمبا، بھاری اور مضبوط ہونا۔ یہ سینٹی میٹر اور کلوگرام میں ماپا جاتا ہے، اور یہ وہ انجن ہے جس پر استاد کا سب سے کم اثر ہوتا ہے۔"
+    },
+    {
+     "term": "پختگی",
+     "definition": "عمر کے ساتھ اندرونی پروگرام کا کھلنا، جیسے بلوغت اپنے وقت پر آتی ہے چاہے اسکول کچھ بھی کرے۔ جو شاگرد پختگی کی وجہ سے کچھ نہیں کر سکتا اسے انتظار چاہئے، اصلاحی مشق نہیں۔"
+    },
+    {
+     "term": "سیکھنا",
+     "definition": "تجربے سے تبدیلی (تعلم): مشق، تدریس اور دنیا سے ملاقات جو کچھ شامل کرتی ہے۔ جو شاگرد تعلم کی کمی کی وجہ سے کچھ نہیں کر سکتا اسے تدریس چاہئے۔"
+    },
+    {
+     "term": "مسلسل مگر مرحلہ وار",
+     "definition": "یہ اصول کہ تبدیلی روزانہ ہوتی ہے مگر ہموار ڈھلوان کی طرح نہیں: لمبے جماؤ کے بیچ اچانک اچھال آتے ہیں۔ سیڑھی کی تصویر، پہلے ہموار قدم پھر اٹھان، اسے ڈھلوان سے بہتر بیان کرتی ہے۔"
+    },
+    {
+     "term": "ترتیب",
+     "definition": "یہ اصول کہ نشوونما کی ترتیب ہر شخص کے لیے بنیادی طور پر ایک جیسی ہے۔ کوئی بچہ کوئی مرحلہ نہیں چھوڑتا؛ بچوں میں فرق ترتیب کا نہیں بلکہ رفتار کا ہوتا ہے۔"
+    },
+    {
+     "term": "رفتار",
+     "definition": "نشوونما کی رفتار، جو شاگردوں کے درمیان اور ایک شاگرد کے اندر غیر مساوی ہوتی ہے۔ ایک ہی تاریخ پیدائش کے دو بچے پڑھائی میں پورا سال الگ ہو سکتے ہیں، اور ایک بچہ زبان میں آگے اور حساب میں پیچھے ہو سکتا ہے۔"
+    },
+    {
+     "term": "وراثت",
+     "definition": "جو شاگرد وراثت میں لاتا ہے، اور جو امکانات کا دائرہ دیتی ہے: وہ قد جس تک جسم پہنچ سکتا ہے، وہ مزاج جس کے ساتھ بچہ آتا ہے، اور بعض ذہنی عملوں کی بنیادی رفتار۔"
+    },
+    {
+     "term": "ماحول",
+     "definition": "وہ جو طے کرتا ہے کہ وراثت کے دائرے کے اندر شاگرد اصل میں کہاں پہنچے گا: کھانا، صحت، نیند، گھر میں بات چیت، کتابیں، تدریس اور تحفظ۔ استاد اس کے ایک حصے کو کنٹرول کرتا ہے۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Physical development",
+     "definition": "Change in the body through the school years: two steep phases of growth, in early childhood and adolescence, bracket a long, steady plateau through the primary years."
+    },
+    {
+     "term": "Spread",
+     "definition": "The wide range of individual sizes that an average hides. At age six the average child is about 115 cm tall, but healthy six-year-olds range from about 109 to 125 cm."
+    },
+    {
+     "term": "Chronic undernourishment",
+     "definition": "Long-term lack of food, which shows in weight long before it shows in height. A class that is uniformly light for age is telling the school about food, not about heredity."
+    },
+    {
+     "term": "Gross motor skills",
+     "definition": "Large-movement skills such as running, jumping and catching. They are largely in place by the early primary years, though they keep refining."
+    },
+    {
+     "term": "Fine motor skills",
+     "definition": "Small, controlled skills such as holding a pencil with a relaxed grip, threading, cutting along a line and writing small letters neatly. They mature later and more slowly than gross motor skills."
+    },
+    {
+     "term": "Adolescence",
+     "definition": "The period of the second wave of steep physical growth, which this time brings sexual maturation with it."
+    },
+    {
+     "term": "Puberty",
+     "definition": "The set of changes, internal and visible, that produces sexual maturity. Girls typically begin roughly two years earlier than boys, and it arrives unevenly, pupil by pupil and day by day."
+    },
+    {
+     "term": "Small for age",
+     "definition": "A measurement usually said as a verdict. In a classroom it has almost no teaching consequence except furniture, unless extreme, and predicts nothing reliable about intelligence, effort or maturity."
+    }
+   ],
+   "ur": [
+    {
+     "term": "جسمانی نشوونما",
+     "definition": "اسکول کے سالوں میں جسم کی تبدیلی: نشو کے دو تیز مرحلے، ابتدائی بچپن اور مراہقت، پرائمری سالوں کے ایک لمبے مستحکم جماؤ کو گھیرتے ہیں۔"
+    },
+    {
+     "term": "پھیلاؤ",
+     "definition": "انفرادی قد و قامت کا وہ وسیع دائرہ جو اوسط چھپا لیتی ہے۔ چھ سال کی عمر میں اوسط بچہ تقریباً 115 سینٹی میٹر لمبا ہوتا ہے، مگر صحت مند چھ سالہ بچے تقریباً 109 سے 125 سینٹی میٹر تک ہوتے ہیں۔"
+    },
+    {
+     "term": "دائمی کم غذائیت",
+     "definition": "غذا کی طویل کمی، جو قد سے بہت پہلے وزن میں دکھائی دیتی ہے۔ جو جماعت عمر کے مطابق یکساں طور پر ہلکی ہو وہ اسکول کو غذا کے بارے میں بتا رہی ہے، نسل کے بارے میں نہیں۔"
+    },
+    {
+     "term": "بڑی حرکی مہارتیں",
+     "definition": "بڑی حرکت والی مہارتیں جیسے دوڑنا، چھلانگ لگانا اور پکڑنا۔ یہ پرائمری سالوں کے شروع تک بڑی حد تک موجود ہوتی ہیں، اگرچہ مسلسل نکھرتی رہتی ہیں۔"
+    },
+    {
+     "term": "باریک حرکی مہارتیں",
+     "definition": "باریک، قابو والی مہارتیں جیسے پنسل کو آرام سے پکڑنا، دھاگہ پرونا، کینچی سے لکیر پر کاٹنا اور چھوٹے حروف صاف لکھنا۔ یہ بڑی حرکی مہارتوں کے بعد اور زیادہ آہستہ پختہ ہوتی ہیں۔"
+    },
+    {
+     "term": "مراہقت",
+     "definition": "نشو کی دوسری تیز لہر کا دور، جو اس بار جنسی پختگی بھی ساتھ لاتا ہے۔"
+    },
+    {
+     "term": "بلوغت",
+     "definition": "وہ تبدیلیاں، اندرونی اور ظاہری، جو جنسی پختگی پیدا کرتی ہیں۔ لڑکیاں عموماً لڑکوں سے تقریباً دو سال پہلے شروع کرتی ہیں، اور یہ شاگرد بہ شاگرد اور دن بہ دن غیر مساوی آتی ہے۔"
+    },
+    {
+     "term": "عمر سے کم قد",
+     "definition": "ایک پیمائش جو عموماً فیصلے کے طور پر کہی جاتی ہے۔ جماعت میں اس کا تدریسی نتیجہ تقریباً صرف فرنیچر ہے، سوائے انتہائی صورت کے، اور یہ ذہانت، محنت یا پختگی کے بارے میں کچھ قابل بھروسہ نہیں بتاتی۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Cognitive Development",
+     "definition": "Long-term change in thinking and memory. Its best-known account is Jean Piaget's stage theory."
+    },
+    {
+     "term": "Preoperational stage",
+     "definition": "Piaget's stage of roughly two to seven years, in which the pupil is led by how things look and feel right now: the tall glass looks bigger, so it holds more."
+    },
+    {
+     "term": "Concrete operational stage",
+     "definition": "Piaget's stage of roughly seven to eleven years, in which the pupil can hold a rule, such as 'if nothing is added or taken away, the amount stays the same', and apply it to real objects."
+    },
+    {
+     "term": "Conservation",
+     "definition": "Piaget's classic test of whether a pupil can hold the rule that an amount stays the same when nothing is added or taken away, as when water is poured into a tall thin glass."
+    },
+    {
+     "term": "Reversibility",
+     "definition": "A gain of concrete operations: the pupil can think through the steps of a process in any order, not only the order in which they happened."
+    },
+    {
+     "term": "Decentration",
+     "definition": "A gain of concrete operations: the pupil can hold two features of a problem at once, such as the height of the water and the width of the glass, instead of being captured by the most striking one."
+    },
+    {
+     "term": "Emotional Development",
+     "definition": "The long movement from having feelings to being able to do something with them, marked by narrowing expression, a growing vocabulary for feelings, and strategies such as asking for help."
+    },
+    {
+     "term": "Regulation",
+     "definition": "The capacity to notice an emotion, name it, and choose a response rather than be the response. A teacher who names emotions calmly and models recovery is teaching it."
+    },
+    {
+     "term": "Social Development",
+     "definition": "The long-term changes in relationships and interactions involving self, peers and family, including how friendships develop."
+    },
+    {
+     "term": "Peer Group",
+     "definition": "The friends a pupil plays, sits and works with. Its power grows through the school years, and by the teenage years friends carry at least as much weight as adults."
+    }
+   ],
+   "ur": [
+    {
+     "term": "ادراکی نشوونما",
+     "definition": "سوچ اور یادداشت میں طویل المدتی تبدیلی۔ اس کا سب سے مشہور بیان جان پیاژے کا مرحلائی نظریہ ہے۔"
+    },
+    {
+     "term": "قبل عملی مرحلہ",
+     "definition": "پیاژے کا تقریباً دو سے سات سال کا مرحلہ، جس میں شاگرد اس سے رہنمائی لیتا ہے کہ چیزیں ابھی کیسی دکھتی اور محسوس ہوتی ہیں: لمبا گلاس دیکھنے میں بڑا ہے، سو اس میں زیادہ ہے۔"
+    },
+    {
+     "term": "ٹھوس عملی مرحلہ",
+     "definition": "پیاژے کا تقریباً سات سے گیارہ سال کا مرحلہ، جس میں شاگرد ایک اصول پکڑ سکتا ہے، جیسے 'اگر کچھ شامل یا نکالا نہیں گیا تو مقدار وہی رہتی ہے'، اور اسے حقیقی چیزوں پر لاگو کر سکتا ہے۔"
+    },
+    {
+     "term": "بقا",
+     "definition": "پیاژے کی کلاسک جانچ کہ آیا شاگرد یہ اصول پکڑ سکتا ہے کہ کچھ شامل یا نکالا نہ جائے تو مقدار وہی رہتی ہے، جیسے پانی لمبے پتلے گلاس میں ڈالا جائے۔"
+    },
+    {
+     "term": "الٹ پلٹ",
+     "definition": "ٹھوس عملوں کی ایک صلاحیت: شاگرد کسی عمل کے مراحل کو کسی بھی ترتیب میں سوچ سکتا ہے، صرف اُس ترتیب میں نہیں جس میں وہ ہوئے۔"
+    },
+    {
+     "term": "مرکز سے ہٹنا",
+     "definition": "ٹھوس عملوں کی ایک صلاحیت: شاگرد کسی مسئلے کی دو خصوصیات ایک ساتھ پکڑ سکتا ہے، جیسے پانی کی اونچائی اور گلاس کی چوڑائی، بجائے اس کے کہ سب سے نمایاں پر قید ہو۔"
+    },
+    {
+     "term": "جذباتی نشوونما",
+     "definition": "جذبات رکھنے سے ان کے ساتھ کچھ کر سکنے تک کا لمبا سفر، جس کی نشانیاں اظہار کا سکڑنا، جذبات کے الفاظ کا بڑھنا، اور مدد مانگنے جیسی حکمت عملیاں ہیں۔"
+    },
+    {
+     "term": "ضبط",
+     "definition": "احساس نوٹ کرنے، اسے نام دینے، اور خود جواب بن جانے کے بجائے جواب چننے کی صلاحیت۔ جو استاد جذبات کو پرسکون نام دیتا اور بحالی کا نمونہ دیتا ہے وہ ضبط سکھا رہا ہے۔"
+    },
+    {
+     "term": "معاشرتی نشوونما",
+     "definition": "خود، ہم عمر اور خاندان سے متعلق رشتوں اور باہمی میل جول میں طویل المدتی تبدیلیاں، بشمول یہ کہ دوستیاں کیسے بنتی ہیں۔"
+    },
+    {
+     "term": "ہم عمر گروہ",
+     "definition": "وہ ساتھی جن کے ساتھ شاگرد کھیلتا، بیٹھتا اور کام کرتا ہے۔ اس کی طاقت اسکول کے سالوں میں بڑھتی ہے، اور نوعمری تک دوست کم از کم بڑوں جتنا وزن رکھتے ہیں۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "Developmental stage",
+     "definition": "A pattern of functioning that holds for a period and then gives way to the next in a fixed order: the same order for everyone, no skipping, each stage a real transformation of the last."
+    },
+    {
+     "term": "Stage reading",
+     "definition": "Using the stage idea as a reading tool: from a pupil's work or behaviour, read which stage it is consistent with. It works in one direction only, never backwards from age to expectation."
+    },
+    {
+     "term": "Stage descriptions",
+     "definition": "The correct comparison for a pupil's work, rather than the class average. Read against them, the work locates the pupil on a road everyone travels and names what comes next."
+    },
+    {
+     "term": "Demanding the next stage early",
+     "definition": "A classic error, such as abstract symbols before concrete experience or formal argument from ten-year-olds. It produces copying without understanding."
+    },
+    {
+     "term": "Resting at the current stage forever",
+     "definition": "The other classic error, such as concrete materials with a class ready for rules. It produces boredom and misbehaviour from pupils whose thinking has moved on."
+    },
+    {
+     "term": "Educational implications",
+     "definition": "The moves that match teaching to development: start concrete, check instructions against reversibility, fit the page to the fingers, read behaviour developmentally, use the peer group, and expect unevenness."
+    },
+    {
+     "term": "Concrete before symbolic",
+     "definition": "The order that matches development for a new concept: handle or see the thing, then pictures of it, then its symbols. It can be compressed for older pupils but not skipped for younger ones."
+    },
+    {
+     "term": "Reading behaviour developmentally",
+     "definition": "Starting from 'where is this pupil?' instead of 'what is wrong with this pupil?'. It changes the response from correction to design, while still teaching the better behaviour."
+    }
+   ],
+   "ur": [
+    {
+     "term": "نشوونمائی مرحلہ",
+     "definition": "کام کرنے کا ایک انداز جو کچھ عرصہ قائم رہتا ہے اور پھر مقرر ترتیب میں اگلے کو راستہ دیتا ہے: سب کے لیے ایک ترتیب، کوئی چھوٹنا نہیں، ہر مرحلہ پچھلے کی حقیقی تبدیلی۔"
+    },
+    {
+     "term": "مرحلوں کی قرأت",
+     "definition": "مرحلے کے تصور کو قرأت کے آلے کے طور پر برتنا: شاگرد کے کام یا رویے سے پڑھنا کہ وہ کس مرحلے سے ہم آہنگ ہے۔ یہ صرف ایک سمت چلتا ہے، کبھی الٹا عمر سے توقع تک نہیں۔"
+    },
+    {
+     "term": "مرحلوں کی تفصیل",
+     "definition": "شاگرد کے کام کا درست موازنہ، جماعت کی اوسط کے بجائے۔ ان کے مقابل پڑھا جائے تو کام شاگرد کو اُس سڑک پر رکھتا ہے جس پر سب چلتے ہیں اور بتاتا ہے کہ آگے کیا آئے گا۔"
+    },
+    {
+     "term": "اگلا مرحلہ جلدی مانگنا",
+     "definition": "ایک کلاسیکی غلطی، جیسے ٹھوس تجربے سے پہلے تجریدی علامتیں یا دس سالہ شاگردوں سے رسمی دلیل۔ یہ بغیر سمجھ کے نقل پیدا کرتی ہے۔"
+    },
+    {
+     "term": "موجودہ مرحلے پر ہمیشہ ٹھہرنا",
+     "definition": "دوسری کلاسیکی غلطی، جیسے اُس جماعت کے ساتھ ٹھوس سامان جو اصولوں کے لیے تیار ہے۔ یہ اُن شاگردوں سے بوریت اور بدتمیزی پیدا کرتی ہے جن کی سوچ آگے بڑھ چکی ہے۔"
+    },
+    {
+     "term": "تعلیمی مطلب",
+     "definition": "وہ اقدامات جو تدریس کو نشوونما سے ملاتے ہیں: ٹھوس سے آغاز، ہدایات کو الٹ پلٹ سے جانچنا، صفحے کو انگلیوں کے مطابق رکھنا، رویے کو نشوونمائی پڑھنا، ہم عمر گروہ کو استعمال کرنا، اور ناہمواری کی توقع۔"
+    },
+    {
+     "term": "ٹھوس سے علامتوں تک",
+     "definition": "نئے تصور کے لیے نشوونما سے ملتی ترتیب: چیز کو پکڑنا یا دیکھنا، پھر اس کی تصویریں، پھر اس کی علامتیں۔ بڑے شاگردوں کے لیے یہ ترتیب دبائی جا سکتی ہے، چھوٹوں کے لیے چھوڑی نہیں جا سکتی۔"
+    },
+    {
+     "term": "رویے کی نشوونمائی قرأت",
+     "definition": "'اس شاگرد میں کیا خرابی ہے؟' کے بجائے 'یہ شاگرد کہاں ہے؟' سے شروع کرنا۔ یہ جواب کو اصلاح سے ڈیزائن میں بدل دیتی ہے، اور بہتر رویہ سکھانا پھر بھی شامل رہتا ہے۔"
+    }
+   ]
+  }
+ }
+}
