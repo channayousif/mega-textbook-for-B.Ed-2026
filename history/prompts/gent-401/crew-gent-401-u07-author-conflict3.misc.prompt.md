@@ -89,27 +89,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u07-author-conflict1, fix, claude_crew) origin/main advanced mid-run to 6f358f0eb (a concurrent Unit 4 job); this branch merged dc10363e9, so a later conflict2 merge against 6f358f0eb will be needed.
 - (gent-401-u07-author-conflict1, fix, claude_crew) the merged OpenStax text now has three blocks (Unit 1 notes 1-7, Unit 3 notes 8-11, Unit 7 notes 12-20); its `Consulted:` line still lists only the Unit 1 and Unit 7 sections, so a future job may add main's Unit 3 sections.
 
+
 ## Response snapshot
 
-Merged origin/main (91287e81b) into crew/gent-401-u07-author and resolved both conflicts by union. The OpenStax evidence file keeps main's Unit 6 and Unit 3 blocks and its Consulted section list, and adds the branch's Unit 7 block plus its nine extra consulted sections (28 sections total). tasks.md records Units 6 and 7 as authored, with both units' stage rows and reading estimates. All 14 content gates pass.
+Merged origin/main into crew/gent-401-u07-author and resolved both conflicts by union (OpenStax evidence keeps main's Unit 6/Unit 3 blocks and Consulted sections plus the branch's Unit 7 block and sections; tasks.md records Units 6 and 7 authored), with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for GENT-401 Unit 7 by claude_crew (attempt 3).
-- Tests: npm run check:content passed (14/14 gates).
-- Files: 2 conflict-resolved files plus this PHR.
+- Impact: fix for GENT-401 Unit 7 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 36 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gent-401-u07-author and resolved the OpenStax evidence and tasks.md conflicts by union; all content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
+- Shipped / changed: Merged origin/main into crew/gent-401-u07-author and resolved both conflicts by union (OpenStax evidence keeps main's Unit 6/Unit 3 blocks and Consulted sections plus the branch's Unit 7 block and sections; tasks.md records Units 6 and 7 authored), with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The OpenStax `Consulted:` line is now the union of main's 19 and the branch's 9 sections. The closing `## Use in GENT-401` summary still lists only Units 1, 4 and 6, matching main's existing partial-index convention (it already omitted Unit 3), so a later job may add Unit 7.
-  - No GENT-401 G2 input manifest hashes `sources/texts/*`, so the shared source-text change does not stale any G2 evidence; Unit 7's G2 row stays pointed at `20261124T060041498Z-gates.json`.
-  - `D-2026-0053` cited in `specs/content/gent-401/sources/unit-07.md:19` is the Semester 2 owner ruling already cited on main, not a new branch ID; main's intake already escalates its Semester 4 use (`G-2026-212`).
+  - The OpenStax `Consulted:` line is now the 28-section union; the closing `## Use in GENT-401` summary still lists only Units 1, 4 and 6 (main's partial index already omitted Unit 3), so a later job may add Unit 7.
+  - No GENT-401 G2 manifest hashes `sources/texts/*`, so the shared source-text change does not stale Unit 7's G2 row (`20261124T060041498Z-gates.json`); Unit 7 stays English-only with banner fig-U7-5 prompt-only and G3/G5 unticked, so G3 en-review is the next stage.
+  - `D-2026-0053` cited in `specs/content/gent-401/sources/unit-07.md:19` is the Semester 2 owner ruling already on main, not a new branch ID; main's intake already escalates its Semester 4 use (`G-2026-212`).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
