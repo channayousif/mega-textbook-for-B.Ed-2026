@@ -16,41 +16,58 @@ links:
   adr: null
   pr: null
 files:
- - docs/semester-4/gent-401/unit-02/index.mdx
- - docs/semester-4/gent-401/unit-02/topic-01.mdx
- - docs/semester-4/gent-401/unit-02/topic-02.mdx
- - docs/semester-4/gent-401/unit-02/unit-assessment.mdx
- - docs/semester-4/gent-401/unit-02/unit-teacher-notes.mdx
- - glossary.json
- - history/prompts/gent-401/crew-gent-401-u02-author-conflict1.misc.prompt.md
- - history/prompts/gent-401/crew-gent-401-u02-author.green.prompt.md
+ - docs/semester-4/gent-401/unit-04/index.mdx
+ - docs/semester-4/gent-401/unit-04/topic-01.mdx
+ - docs/semester-4/gent-401/unit-04/topic-02.mdx
+ - docs/semester-4/gent-401/unit-04/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-04/unit-teacher-notes.mdx
+ - history/prompts/gent-401/crew-gent-401-u04-author-conflict1.misc.prompt.md
  - history/prompts/gent-401/crew-gent-401-u04-author-conflict2.misc.prompt.md
- - specs/content/gent-401/concepts/unit-02.md
- - specs/content/gent-401/coverage/unit-02.md
- - specs/content/gent-401/figures/unit-02.banner.md
- - specs/content/gent-401/figures/unit-02.md
- - specs/content/gent-401/reviews/unit-02/G2/20261124T045217007Z-gates.json
- - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-bloom-bands.txt
- - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-concept-graph.txt
- - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-depth-gate.txt
- - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-docs-sync.txt
- - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-figures.txt
- - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-no-answer-keys.txt
- - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-no-em-dash.txt
- - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/validate-content.txt
- - specs/content/gent-401/sources/texts/qamar-2020-social.md
- - specs/content/gent-401/sources/unit-02.md
+ - history/prompts/gent-401/crew-gent-401-u04-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-04.md
+ - specs/content/gent-401/coverage/unit-04.md
+ - specs/content/gent-401/figures/unit-04.banner.md
+ - specs/content/gent-401/figures/unit-04.md
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T050320192Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T062155314Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T062449556Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/validate-content.txt
+ - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
+ - specs/content/gent-401/sources/texts/scott-2017-efmd.md
+ - specs/content/gent-401/sources/unit-04.md
  - specs/content/gent-401/tasks.md
- - static/img/figures/gent-401/unit-02/fig-U2-1.dark.svg
- - static/img/figures/gent-401/unit-02/fig-U2-1.svg
- - static/img/figures/gent-401/unit-02/fig-U2-2.dark.svg
- - static/img/figures/gent-401/unit-02/fig-U2-2.svg
- - static/img/figures/gent-401/unit-02/fig-U2-3.dark.svg
- - static/img/figures/gent-401/unit-02/fig-U2-3.svg
- - static/img/figures/gent-401/unit-02/fig-U2-4.dark.svg
- - static/img/figures/gent-401/unit-02/fig-U2-4.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-1.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-2.dark.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-2.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-3.dark.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-3.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-4.dark.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-4.svg
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -87,27 +104,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u04-author, author, agy) G3 English review and G4 Urdu translation remain open; Urdu labels in concepts/unit-04.md are authored and require independent G5 review.
 - (gent-401-u04-author, author, agy) Reading estimates total 41 minutes (index 2, topic-01 11, topic-02 11, assessment 15, teacher notes 2), inside the approved 32-44 depth budget band.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gent-401-u04-author. The only conflict was specs/content/gent-401/tasks.md, where main's Unit 2 status and this branch's Unit 4 status were combined. All 14 content gates pass.
+Merged origin/main into crew/gent-401-u04-author, resolved the sole tasks.md conflict by keeping both main's Unit 2 and this branch's Unit 4 entries, and confirmed all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix for GENT-401 Unit 4 by claude_crew (attempt 2, merge with current main).
-- Tests: npm run check:content passed (14/14) after npm run build:content-status.
-- Files: 32 file(s) from the merge, listed above, plus this PHR.
+- Impact: fix for GENT-401 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 51 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gent-401-u04-author and resolved the specs/content/gent-401/tasks.md conflict by keeping main's Unit 2 rows and reading estimates alongside this branch's Unit 4 rows, and merging the status header so Units 1-4 are all reported. All 14 content gates pass.
-- Decisions the team must respect: the merged tracker status now reads "Units 1-4 English drafts authored and G2 gate evidence recorded"; Unit 1's drafted Urdu mirror is still draft pending G5. G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the merge touches a protected path).
+- Shipped / changed: Merged origin/main into crew/gent-401-u04-author, resolved the sole tasks.md conflict by keeping both main's Unit 2 and this branch's Unit 4 entries, and confirmed all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 4's G2 evidence is 20261124T062449556Z-gates.json; the earlier 20261124T062155314Z and 20261124T050320192Z evidence directories are stale leftovers still on the branch and can be pruned.
-  - The merged scott-2017-efmd.md binds Unit 4 notes with pp. 53-76 locators that only the branch authored; a G3 reviewer should check them against the printed pagination.
-  - The merge brought main's Unit 2 (docs, specs, figures, G2 evidence, glossary terms, PHRs). It is outside this job's Unit 4 scope and was not re-reviewed here.
+  - Unit 4's G2 evidence is 20261124T062449556Z-gates.json; the stale 20261124T062155314Z and 20261124T050320192Z evidence directories are still on the branch and can be pruned.
+  - The merged scott-2017-efmd.md binds Unit 4 notes with pp. 53-76 locators authored only on this branch; a G3 reviewer should check them against the printed pagination.
+  - The merge pulled main's Unit 2 (docs, specs, figures, G2 evidence, glossary terms, PHRs), which is outside this job's Unit 4 scope and was not re-reviewed here.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
