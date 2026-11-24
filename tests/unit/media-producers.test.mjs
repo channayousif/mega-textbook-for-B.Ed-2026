@@ -98,12 +98,16 @@ function stubGflow() {
   }))));
 }
 
+// Pacing (D-2026-0100) is unit-tested in tests/crew/media-pacing.test.mjs; here it is a no-op
+// so the producers' own behaviour runs without sleeping or the office-hours hold.
+const noPace = { pace: async () => {}, record: () => {} };
+
 describe('gflow.video producer', () => {
   let g; let dir; let opts; let job;
   beforeEach(async () => {
     g = await stubGflow();
     dir = tmp();
-    opts = { mcpUrl: g.mcpUrl, filesUrl: g.filesUrl, projects: join(dir, 'projects.json'), journal: join(dir, 'journal.json'), timeoutMs: 400 };
+    opts = { mcpUrl: g.mcpUrl, filesUrl: g.filesUrl, projects: join(dir, 'projects.json'), journal: join(dir, 'journal.json'), timeoutMs: 400, ...noPace };
     job = { key: 'efmp-301-ur', script, recipe, locale: 'ur', outDir: join(dir, 'out') };
   });
   afterEach(() => g.close());
@@ -211,7 +215,7 @@ describe('manual.flow producer', () => {
 describe('nlm producer', () => {
   const job = (o = {}) => ({ key: 'gnas-301-u01-t1-ur-audio', kind: 'audio.brief', notebook_id: 'nb1', outDir: tmp(), ...o });
   it('returns unavailable on expired cookies, not failed', async () => {
-    const r = await nlmProducer({ run: () => ({ status: 1, stdout: '', stderr: 'Error: Cookies have expired. Run nlm login' }) })(job());
+    const r = await nlmProducer({ ...noPace, run: () => ({ status: 1, stdout: '', stderr: 'Error: Cookies have expired. Run nlm login' }) })(job());
     expect(r.status).toBe('unavailable');
     expect(classify({ status: 1, stdout: '', stderr: 'boom' }).status).toBe('failed');
   });
@@ -223,7 +227,7 @@ describe('nlm producer', () => {
       if (args[0] === 'studio') return { status: 0, stdout: JSON.stringify([{ status: 'in_progress' }]), stderr: '' };
       return { status: 1, stdout: '', stderr: '' };
     };
-    const r = await nlmProducer({ run, waitMs: 0 })(job());
+    const r = await nlmProducer({ ...noPace, run, waitMs: 0 })(job());
     expect(r).toMatchObject({ status: 'unavailable', mediaId: 'a1' });
     calls.length = 0;
     const j = job({ artifact_id: 'a1' });
@@ -233,7 +237,7 @@ describe('nlm producer', () => {
       if (args[0] === 'download') { writeFileSync(args[args.indexOf('--output') + 1], 'audio'); return { status: 0, stdout: '', stderr: '' }; }
       return { status: 1, stdout: '', stderr: '' };
     };
-    expect(await nlmProducer({ run: run2 })(j)).toMatchObject({ status: 'ok', mediaId: 'a1' });
+    expect(await nlmProducer({ ...noPace, run: run2 })(j)).toMatchObject({ status: 'ok', mediaId: 'a1' });
     expect(calls).not.toContain('audio create');
   });
 });

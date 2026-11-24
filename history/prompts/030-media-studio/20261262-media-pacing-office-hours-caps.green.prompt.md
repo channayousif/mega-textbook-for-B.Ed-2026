@@ -76,6 +76,7 @@ caps). Nothing spaced requests, and Flow is now reachable 24/7 from davinci.
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: `scripts/media/pacing.mjs` and its hooks; media stages launch only 09:00-15:00 PKT; social roundup at 13:00 PKT.
+- CI fix: `tests/unit/media-producers.test.mjs` called the real pacer (sleeps, office-hours hold), so 7 tests timed out or held; producer tests now inject a no-op `pace`/`record`. Pacing itself stays covered by `tests/crew/media-pacing.test.mjs`.
 - Decisions the team must respect: D-2026-0100. Never bypass `pace()` in a producer; every new media producer or poster must call it. YouTube uploads need `pacing.mjs check` before and `record` after.
 - Pending / next owner: owner may set `cycleDay` (Google AI Pro renewal day) and any limit in `~/.config/mega-book/media-limits.json`; defaults assume the 1st.
 - Paperclip issues affected: none.
