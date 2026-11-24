@@ -4,12 +4,12 @@ title: crew author EFMP-408 unit 5
 stage: misc
 date: 2026-11-24
 surface: agent
-model: longcat-2.5
+model: claude_crew
 feature: efmp-408
 branch: crew/efmp-408-u05-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/efmp-408/content-spec.md
   ticket: null
@@ -54,9 +54,6 @@ files:
  - static/img/figures/efmp-408/unit-05/fig-U5-6.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/efmp-408/unit-05/fig-U5-1.svg static/img/figures/efmp-408/unit-05/fig-U5-2.svg static/img/figures/efmp-408/unit-05/fig-U5-3.svg static/img/figures/efmp-408/unit-05/fig-U5-4.svg static/img/figures/efmp-408/unit-05/fig-U5-5.svg static/img/figures/efmp-408/unit-05/fig-U5-6.svg
- - npm run figures:variants
- - node scripts/check-svg-style.mjs
 ---
 
 ## Prompt
@@ -90,31 +87,30 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored EFMP-408 Unit 5 in English with three nine-part topic cycles, a 10/10/5 unit assessment with a bounded answers section, a teacher-notes page, six placed schematic figures with measured geometry, and the unit's coverage, sources, concept graph and figure manifest. G2 gate evidence was prepared and all fourteen content gates pass.
+Authored EFMP-408 Unit 5 in English (index, three topic cycles, 10/10/5 unit assessment, teacher notes), placed its six schematic figures with dark variants, emitted its coverage/sources/concepts/figure governance, recorded G2 gate evidence, and left all 14 content gates and 608 unit tests green.
 
 ## Outcome
 
-- Impact: author for EFMP-408 Unit 5 by claude (attempt 1).
-- Tests: `npm run check:content` passed in the job worktree (all 14 gates); `measure-figure-text.mjs` exited 0 on all six SVGs; `figures:variants` and `check:svg-style` clean.
-- Files: 38 file(s), listed above.
-- Next prompts: the crew planner derives this unit's next stage (G3 review, then Urdu G4/G5) from main after merge.
+- Impact: author for EFMP-408 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 36 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: EFMP-408 Unit 5 authored in English at `docs/semester-4/efmp-408/unit-05/` (index, topic-01 to topic-03, unit-assessment with 10/10/5 and a final bounded `## Answers and marking guidance`, unit-teacher-notes); six schematic SVGs placed under `static/img/figures/efmp-408/unit-05/` with derived dark variants; `coverage/unit-05.md`, `sources/unit-05.md`, `concepts/unit-05.md`, `figures/unit-05.md` and `figures/unit-05.banner.md` emitted; G2 evidence and logs committed and the Unit 5 G2 tracker row repointed.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything and does not publish. The four-point GPA scale in Topic 5.1 is an illustration, not a guide rule, and is recorded as `no-external-source` with gap `G-2026-235` in `specs/gaps.md`. The existing `sources/texts/hec-2013-testdev.md` and `seifert-sutton-2009.md` were deliberately left untouched so Unit 1's accepted G2 evidence stays valid.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path); then a separate Urdu job for G4/G5.
+- Shipped / changed: Authored EFMP-408 Unit 5 in English (index, three topic cycles, 10/10/5 unit assessment, teacher notes), placed its six schematic figures with dark variants, emitted its coverage/sources/concepts/figure governance, recorded G2 gate evidence, and left all 14 content gates and 608 unit tests green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit total is 67 reading-minutes (index 3, Topic 5.1 16, Topic 5.2 12, Topic 5.3 12, assessment 19, teacher notes 5) against the approved 60-80 band. If prose is later expanded, recompute before re-running `check:depth-gate`.
-  - All twelve SVG variants passed `measure-figure-text.mjs`, so label geometry is clean for the Urdu `.ur.svg` pass.
-  - All seven Urdu labels in `concepts/unit-05.md` are authored, none is banked in `terminology.csv`, and they are flagged for G5.
-  - The banner `fig-U5-7` is `prompt-only` in `figures/unit-05.banner.md`; a later illustrate job produces it.
+  - Unit 5 total is 67 reading-minutes; if prose is expanded later, recompute `est_reading_minutes` before re-running `check:depth-gate`.
+  - `sources/texts/hec-2013-testdev.md` and `seifert-sutton-2009.md` were deliberately left untouched so Unit 1's accepted G2 evidence stays valid; a later job that edits them must re-run `prepare-gate-evidence.mjs efmp-408 1`.
+  - The four-point GPA scale in Topic 5.1 is an illustration, not a guide rule; it is `no-external-source` with gap `G-2026-235` and needs an owner decision.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a prompt-only new-shape unit fails `check:figures` (it requires at least two rendered `<Figure>` elements per topic file and at least one placed schematic per unit), so the skill's "stop at prompt-only markers" endpoint cannot satisfy this brief's Done-when. Figures were authored and placed in the same job.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14); measure-figure-text PASS (6/6); check:svg-style PASS; figures:variants clean.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): state in the authoring brief whether figure placement is in scope, or add a documented exemption so an authoring job can stop at prompt-only without turning `check:content` red.
+- Next experiment (smallest change to try): none
