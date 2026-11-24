@@ -16,9 +16,40 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/gent-401/unit-07/index.mdx
+ - docs/semester-4/gent-401/unit-07/topic-01.mdx
+ - docs/semester-4/gent-401/unit-07/topic-02.mdx
+ - docs/semester-4/gent-401/unit-07/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-07/unit-teacher-notes.mdx
+ - glossary.json
  - history/prompts/gent-401/crew-gent-401-u07-author-conflict1.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u07-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-07.md
+ - specs/content/gent-401/coverage/unit-07.md
+ - specs/content/gent-401/figures/unit-07.banner.md
+ - specs/content/gent-401/figures/unit-07.md
+ - specs/content/gent-401/reviews/unit-07/G2/20261124T060041498Z-gates.json
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/validate-content.txt
  - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
+ - specs/content/gent-401/sources/texts/pitch-competition.md
+ - specs/content/gent-401/sources/texts/sme-risk-review.md
+ - specs/content/gent-401/sources/unit-07.md
  - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-07/fig-U7-1.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-1.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-2.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-3.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-3.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-4.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-4.svg
 tests:
  - npm run check:content
 ---
@@ -53,28 +84,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u07-author, author, claude_crew) the unit banner fig-U7-5 is still prompt-only for the illustrate job; G3 en-review and G4/G5 Urdu are separate jobs, and all six concept Urdu labels are authored (not banked in terminology.csv).
 - (gent-401-u07-author, author, claude_crew) `specs/content/gent-401/sources/texts/openstax-entrepreneurship.md` is shared by key across units, so Unit 1's accepted G2 input manifest may now read as stale; `--refresh-stale` is the intended repair and belongs to whichever job touches Unit 1 next.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gent-401-u07-author and resolved both conflicts. glossary.json auto-merged cleanly (575 entries, no duplicates). In the shared OpenStax source text, main's new Unit 3 evidence block keeps its note numbers 8-11 and this branch's Unit 7 notes move to the next free numbers 12-20 under their own heading, with the Unit 7 use paragraph's references updated. In tasks.md the status header and stage rows combine both sides (main's Unit 2 and Unit 3 rows first, then this branch's Unit 7 rows) and the reading-estimate paragraphs are kept, with the Unit 7 ERQ 4 clause corrected. `npm run check:content` is fully green.
+Merged origin/main into crew/gent-401-u07-author, resolving the shared OpenStax source-text conflict by keeping main's Unit 3 notes 8-11 and renumbering Unit 7's notes to 12-20 with updated references, and the tasks.md conflict by combining both sides' rows, leaving all content gates green.
 
 ## Outcome
 
 - Impact: fix for GENT-401 Unit 7 by claude_crew (attempt 1).
-- Tests: npm run check:content passed in the job worktree (all 14 content gates).
-- Files: 3 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 34 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gent-401-u07-author; resolved the openstax-entrepreneurship.md and tasks.md conflicts by keeping both sides' entries, renumbering this branch's Unit 7 notes 8-16 to 12-20 because main already used 8-11 for Unit 3, and combining the tracker rows and reading estimates.
-- Decisions the team must respect: main's Unit 3 notes keep 8-11 and its section heading is untouched; this branch's Unit 7 notes are 12-20. The Unit 7 tracker prose no longer repeats Unit 1's ERQ 4 wording: Unit 7 ERQ 4 is the Evaluate item on a failed pitch and ERQ 5 is the integrative course-project pitch. G3/G5 stay advisory; nothing is certified.
+- Shipped / changed: Merged origin/main into crew/gent-401-u07-author, resolving the shared OpenStax source-text conflict by keeping main's Unit 3 notes 8-11 and renumbering Unit 7's notes to 12-20 with updated references, and the tasks.md conflict by combining both sides' rows, leaving all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 7 G2 evidence at reviews/unit-07/G2/20261124T060041498Z-gates.json is still fresh at the merge commit: `sources/texts/openstax-entrepreneurship.md` is not in the unit's bound input manifest (its key matches no cited-key pattern), and no Unit 7 bound input changed, so no re-run was needed.
-  - Unit 7 remains English-only (no `.ur.svg`, no Urdu mirror); banner `fig-U7-5` is still a prompt-only row for the illustrate job, and G3/G5 are unticked.
-  - The shared OpenStax text now carries three evidence blocks (Unit 1 notes 1-7, Unit 3 notes 8-11, Unit 7 notes 12-20); the `Consulted:` line still lists only the Unit 1 and Unit 7 sections, so a future job may add main's Unit 3 sections (5.2, 8.2, 11.1, 11.2) for completeness.
-  - glossary.json will keep conflicting for every sibling gent-401 job; the fix is always main's entries first, then the branch's, with no duplicate terms.
+  - origin/main advanced mid-run to 6f358f0eb (a concurrent Unit 4 job); this branch merged dc10363e9, so a later conflict2 merge against 6f358f0eb will be needed.
+  - the merged OpenStax text now has three blocks (Unit 1 notes 1-7, Unit 3 notes 8-11, Unit 7 notes 12-20); its `Consulted:` line still lists only the Unit 1 and Unit 7 sections, so a future job may add main's Unit 3 sections.
+  - Unit 7 stays English-only with banner fig-U7-5 prompt-only and G3/G5 unticked; the next job is G3 en-review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
