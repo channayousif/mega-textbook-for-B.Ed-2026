@@ -3,8 +3,8 @@
   "course_code": "GENT-401",
   "unit_no": 4,
   "stage": "G2",
-  "reviewed_commit": "e753ea066",
-  "generated_at": "2026-11-24T05:00:53.744Z",
+  "reviewed_commit": "da882ccec",
+  "generated_at": "2026-11-24T05:03:20.194Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
@@ -88,7 +88,7 @@
     "specs/content/gent-401/coverage/unit-04.md": "5a6fe006d0baef908e9bcba795456c48c02d4a624e043fb6ec8c59fb5a4b592a",
     "specs/content/gent-401/figures/unit-04.banner.md": "c39336c8f9f71541599bb558f47b2bdcb2fec4e683b7e1a362102e0b83e642bf",
     "specs/content/gent-401/figures/unit-04.md": "063a656c0ccf7e24e161388eed2b075bfb89679f95220823f2993fe1ed87afab",
-    "specs/content/gent-401/sources/unit-04.md": "d97d9b41258f49aa9829f2f9e11072298da7f12313e8b15ae6828a9b5bb64c42",
+    "specs/content/gent-401/sources/unit-04.md": "32b04c18c1763fc5547c09d94da8bc3ad80d9d3a4beddad84711e199436d94dd",
     "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
     "static/img/figures/gent-401/unit-04/fig-U4-1.dark.svg": "b10eaf75352c0feaa431d7dc1952fccb64fb244c328c271cf40581fe77662de6",
     "static/img/figures/gent-401/unit-04/fig-U4-1.svg": "7a2eb0b8a4fc7e246b42c947fa13172da9dea2241f7789ad86645342746116b2",
@@ -103,52 +103,52 @@
     {
       "name": "validate:content",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/validate-content.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/validate-content.txt"
     },
     {
       "name": "check:depth-gate",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-depth-gate.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-depth-gate.txt"
     },
     {
       "name": "check:figures",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-figures.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-figures.txt"
     },
     {
       "name": "check:concept-graph",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-concept-graph.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-concept-graph.txt"
     },
     {
       "name": "check:bloom-bands",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-bloom-bands.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-bloom-bands.txt"
     },
     {
       "name": "check:no-em-dash",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-no-em-dash.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-em-dash.txt"
     },
     {
       "name": "check:no-answer-keys",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-no-answer-keys.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-answer-keys.txt"
     },
     {
       "name": "check:docs-sync",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-docs-sync.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-docs-sync.txt"
     }
   ],
   "evidence_manifest": {
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/validate-content.txt": "f4ddd9c0c67278641aca2201cd2b930b2520843986d506e078f8379b37695cf7",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-depth-gate.txt": "84b98b92a89da0df1b7ca96606617d8e6614dab427a1d6919dd90fd1ba50be89",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-figures.txt": "5f214fc0f1cfed9aafaa27b6fdada45c0259bb38bd38d1af78dc7818b3e604bf",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-concept-graph.txt": "5baf940a647df37f7bc0ad2172fb1234522d59bce2ee23da668ee456e3e000c1",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-bloom-bands.txt": "c98d306c16328a802a4221857a9e460de212a091bbc601ddbfde484e5ba8a196",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-no-em-dash.txt": "b57f7290443d54ba87804e033a4ec7e594051dbc80ce483c898cccd3850776b3",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-no-answer-keys.txt": "03e80ff2dbf084dbd04fcb070ef204002bd8f7b4e00f0ebdc120e77a17624a0c",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050053741Z/check-docs-sync.txt": "7b7c26217bb3b00677e3de41fa2781ae27f68779f3b17e563800eb1d1a745e4c"
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/validate-content.txt": "bb24591c31040d805271eb1eeea1a232e30fdf1394c6828dbae538464154ff5e",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-depth-gate.txt": "1efad5d5ef909e98c1bd493ccb38af676c6a5e933e8e68928164bbf385eb611c",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-figures.txt": "dcb382aa206f6ac4cc983202c184687abda16d4f082848f405fe9d4218d0db85",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-concept-graph.txt": "268b9613040a0fe337a7364468c173238a74bb931f73c14985fec6d54411685a",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-bloom-bands.txt": "ba4d8472d6f88778a2f11f18e8c868fa778e93eeb723e93552e33a271faaa15b",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-em-dash.txt": "3078224f5441171f408da3f4f74a145ab7bc1f577b3ec3de55ac3686920c537b",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-answer-keys.txt": "4208a94672946ddf9da670479e5bd06f9a76df0ce1afca5a92eb21b4ffaef204",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-docs-sync.txt": "717f612c3430ea264fbe3aa21e9ed48f9f14ea94224dd0f27fe5fc23a1618512"
   }
 }
