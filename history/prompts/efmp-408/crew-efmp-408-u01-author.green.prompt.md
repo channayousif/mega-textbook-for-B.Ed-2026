@@ -4,7 +4,7 @@ title: crew author EFMP-408 unit 1
 stage: misc
 date: 2026-11-24
 surface: agent
-model: gemini
+model: agy
 feature: efmp-408
 branch: crew/efmp-408-u01-author
 user: crew
@@ -25,6 +25,7 @@ files:
  - docs/semester-4/efmp-408/unit-01/topic-03.mdx
  - docs/semester-4/efmp-408/unit-01/unit-assessment.mdx
  - docs/semester-4/efmp-408/unit-01/unit-teacher-notes.mdx
+ - history/prompts/efmp-408/crew-efmp-408-u01-author.green.prompt.md
  - specs/content/efmp-408/concepts/unit-01.md
  - specs/content/efmp-408/coverage/unit-01.md
  - specs/content/efmp-408/figures/unit-01.banner.md
@@ -91,25 +92,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored EFMP-408 Unit 1 in English with course overview, category configuration, course guide PDF extract, six placed schematic figures with measured geometry, complete governance specifications, and G2 gate evidence preparation.
+Authored EFMP-408 Unit 1 in English with course overview, category configuration, course guide PDF extract, six placed schematic figures with measured geometry, complete governance specifications, and verified G2 gate evidence.
 
 ## Outcome
 
 - Impact: author for EFMP-408 Unit 1 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the run.
-- Files: 31 authored/generated file(s), plus G2 gate evidence records.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 41 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFMP-408 Unit 1 in English with its course overview, six placed schematics, governance files, tracker and G2 gate evidence, leaving G3, G4 and G5 open.
+- Shipped / changed: Authored EFMP-408 Unit 1 in English with course overview, category configuration, course guide PDF extract, six placed schematic figures with measured geometry, complete governance specifications, and verified G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Figure text geometry has been measured via measure-figure-text.mjs and passed with 0 errors across all 12 SVG variants.
-  - All eleven Urdu labels in `concepts/unit-01.md` have verified Urdu translations aligned with educational assessment terminology.
-  - Banner `fig-U1-4` is `prompt-only` per the visual standard for illustration banners.
+  - All twelve SVG variants (light and dark) passed `measure-figure-text.mjs` with 0 errors, so label geometry is clean for translation.
+  - All eleven Urdu labels in `concepts/unit-01.md` are authored and aligned with Pakistani classroom assessment conventions.
+  - Banner figure `fig-U1-4` is kept at `prompt-only` per the visual density standard for illustration banners.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
