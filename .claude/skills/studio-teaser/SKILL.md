@@ -19,7 +19,7 @@ teaser-specific steps.
 Owner ruling D-2026-0082 (2026-11-10, `specs/decisions/log.md`):
 - **Flow automation.** Flow is automated only from the owner's Windows PC. Superseded on host by
   the owner on 2026-11-24: Flow now runs on davinci (owner's own sign-in, laptop as fallback); see
-  the media-studio skill. The decisions log entry is pending.
+  the media-studio skill. Recorded as D-2026-0099.
 - **Narration.** Veo speaks the narration, generated separately for EN and UR.
 - **Length.** About 45 s: five 8-second shots plus a 5 s end card. Superseded on pace (owner,
   2026-11-17, "slow and lame"): the assembler now cuts dead air, speeds the voice 12% and ends

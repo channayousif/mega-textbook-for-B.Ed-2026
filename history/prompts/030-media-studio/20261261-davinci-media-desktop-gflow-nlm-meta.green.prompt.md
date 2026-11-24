@@ -14,7 +14,7 @@ links:
   spec: specs/030-media-studio/spec.md
   ticket: null
   adr: history/adr/0037-unified-media-studio.md
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/761
 files:
   - .claude/skills/media-studio/SKILL.md
   - .claude/skills/studio-teaser/SKILL.md
@@ -24,6 +24,7 @@ files:
   - ops/development/media-davinci/gflow-files.service
   - ops/development/media-davinci/workspace-chrome.service
   - ops/development/media-davinci/tigervnc.conf
+  - specs/decisions/log.md
 tests:
   - gflow image t2i (Nano Banana) on davinci, image inspected
   - MCP gflow_auth_status over the media-tunnel: authenticated, wire accepted
@@ -70,14 +71,14 @@ Done:
 - ✅ Impact: Flow clips and images, NotebookLM and Meta sessions no longer depend on the owner's laptop; the crew's teaser and image jobs can run whenever davinci is up.
 - 🧪 Tests: still, auth status, one 10-credit clip end to end, nlm check; all pass.
 - 📁 Files: two skills, ops README, five unit/config copies.
-- 🔁 Next prompts: owner records the D-2026-0082 host change in the decisions log; optional Meta AI producer spec.
+- 🔁 Next prompts: optional Meta AI producer spec.
 - 🧠 Reflection: "x86_64 only" upstream was a packaging statement, not a hard limit, once Google shipped arm64 Chrome; a 2-minute headless probe settled it before the owner spent time signing in.
 
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: davinci hosts gflow (18800), its output folder (18801), a VNC desktop and a workspace Chrome; the production host's `media-tunnel` unit forwards them. No crew code change.
 - Decisions the team must respect: davinci is the primary Flow route and the laptop the fallback (stop `media-tunnel` first). Keep `~/Downloads/gflow-cli` free of stray `.mp4` files. Everything stays localhost-only behind SSH; no OCI resources or security-list rules were added.
-- Pending / next owner: owner to record the D-2026-0082 supersession in `specs/decisions/log.md` (not edited here; log edits can stale review evidence). Meta AI as a crew producer would need its own spec. Watch davinci memory (about 5 GB free with both Chromes).
+- Pending / next owner: the host change is recorded as D-2026-0099 (appended at the owner's instruction; D-2026-0082 left unchanged so reports citing it stay valid). Meta AI as a crew producer would need its own spec. Watch davinci memory (about 5 GB free with both Chromes).
 - Paperclip issues affected: none.
 
 ## Evaluation notes (flywheel)
