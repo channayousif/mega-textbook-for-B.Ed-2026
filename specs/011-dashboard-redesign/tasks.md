@@ -60,10 +60,10 @@ description: "Task list for 011-dashboard-redesign"
   role="student">`; keep each page's `<Layout title>` + content.
 - [x] T011 [US1] Adopt it in `src/pages/app/teacher/{index,analytics,student,teaching-log,
   feedback-suggestions}.tsx` with `role="teacher"`.
-- [ ] T012 [P] [US1] `tests/e2e/dashboard-shell.spec.ts` - student reaches every menu item by
+- [x] T012 [P] [US1] `tests/e2e/dashboard-shell.spec.ts` - student reaches every menu item by
   click with the active one marked; teacher likewise; 360px drawer opens/closes by keyboard,
   traps focus, returns focus to the toggle.
-- [ ] T013 [US1] a11y pass on the shell (chrome-devtools-mcp a11y skill): semantic `<nav>`,
+- [x] T013 [US1] (delivered as axe WCAG 2.2 AA + 44px drawer-target checks in `tests/e2e/dashboard-shell.spec.ts`) a11y pass on the shell (chrome-devtools-mcp a11y skill): semantic `<nav>`,
   `aria-current`, focus order, 44px targets, contrast.
 
 **Checkpoint**: every dashboard/teacher page has the shell; nav + drawer tested.
@@ -79,7 +79,7 @@ description: "Task list for 011-dashboard-redesign"
   `fetchOwnUnitProgress()` (drop the `enrolledCourseCodes` filter, FR-007); union
   `fetchOwnChecksForCourses` for topic-level completion; totals from `content-index.json`;
   keep the CSS coverage bars.
-- [ ] T016 [P] [US2] `tests/e2e/dashboard-join-and-progress.spec.ts` - join a class from the
+- [x] T016 [P] [US2] `tests/e2e/dashboard-join-and-progress.spec.ts` - join a class from the
   dashboard menu; mark a unit studied on a non-enrolled course; Progress shows both courses
   grouped, non-enrolled not hidden.
 
@@ -97,7 +97,7 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T020 [P] [US3] `tests/rls/student-notes.test.mjs` - a student reaches only their own
   notes; a second student cannot read/update/delete the first's; a teacher/admin cannot; an
   over-length body is rejected.
-- [ ] T021 [P] [US3] `tests/e2e/student-notes.spec.ts` - create from the Notes page + from two
+- [x] T021 [P] [US3] `tests/e2e/student-notes.spec.ts` - create from the Notes page + from two
   content pages, edit one, delete one, filter by course; second student sees none.
 
 ---
@@ -112,7 +112,7 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T024 [US4] `src/pages/app/teacher/index.tsx` - each class row links to
   `/app/teacher/analytics?classId=` and its roster; recent-activity rows link to
   `/app/teacher/student?classId=&studentId=`. (Menu links added in T007.)
-- [ ] T025 [P] [US4] `tests/e2e/teacher-course-dropdown-and-nav.spec.ts` - create a class picking
+- [x] T025 [P] [US4] (found and fixed: T024's recent-activity rows had no student link) `tests/e2e/teacher-course-dropdown-and-nav.spec.ts` - create a class picking
   a course from the dropdown (no text box); reach Analytics + a student drill-down by link only.
 
 ---
@@ -129,7 +129,7 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T029 [P] [US5] `tests/rls/assignment-delete.test.mjs` - owning teacher deletes an empty
   assignment; deletion refused when submissions exist; non-owner refused. `tests/rls/class-edit`
   covered by the existing `classes_update` (add a case if none).
-- [ ] T030 [P] [US5] `tests/e2e/teacher-manage-assignments-classes.spec.ts` - edit an
+- [x] T030 [P] [US5] (found and fixed: the class rename was refused by 0013's guard, migration 0057; assignment delete gave no refusal message, `deleteAssignment` fix; FR-013's course edit stays open) `tests/e2e/teacher-manage-assignments-classes.spec.ts` - edit an
   assignment's due/max-mark (student sees the change); delete an empty one; edit a class name.
 
 ---
@@ -144,7 +144,7 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T033 [P] [US6] `tests/rls/quiz-authoring.test.mjs` - a verified teacher can
   insert/update/delete `quiz_items` + `answer_keys`; an unverified teacher and a student are
   refused every verb; `quiz_items_public` still hides `correct_option`.
-- [ ] T034 [P] [US6] `tests/e2e/quiz-authoring.spec.ts` - verified teacher adds/edits/deletes an
+- [x] T034 [P] [US6] `tests/e2e/quiz-authoring.spec.ts` - verified teacher adds/edits/deletes an
   item + key, then it is assignable; unverified teacher + student see the gated notice.
 - [x] T035 [US6] Update `specs/backlog.md` - strike the Spec 003 "Quiz item / answer-key
   authoring UI" item as delivered by Spec 011.
