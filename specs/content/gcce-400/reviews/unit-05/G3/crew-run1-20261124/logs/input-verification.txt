@@ -1,0 +1,11 @@
+input-verification - GCCE-400 Unit 5 G3 - 2026-11-24
+prepared manifest: specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/manifest.json
+prepared at: 2026-11-24 04:32:44.468751191 +0500
+inputs bound: 100
+skill_digest: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+manifest sha256: 939fb541f653a3ebbbc215df09a0d91e1b9c971669c9c37f0ceee34b4fd31ef9
+HEAD: 175a90b7a644bd366cf3d1d2592090a93f912bcb
+git status (bound roots, must be clean):
+  ?? specs/content/gcce-400/reviews/unit-05/G3/
+(empty above means clean)
+note: evidence files under specs/content/gcce-400/reviews/ are excluded from the bound set by the prepare contract.
