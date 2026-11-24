@@ -82,6 +82,18 @@ export const STAGES = {
   maint_review:   { chain: ['agy', 'codex', 'claude', 'agy_claude', 'claude_crew'], skill: 'weekly-maintenance', reviewOf: 'parent' },
 };
 
+/**
+ * Launch order among queued jobs of equal course priority (crew.mjs queueOrder). Every key of
+ * STAGES must appear here (tests/crew/stage-order.test.mjs): a stage left out sorts at index -1,
+ * AHEAD of everything. That is how refresh_figures, flashcards and slides, added without an entry,
+ * took the single claude slot every time it freed and starved the claude-only teaser_clips job
+ * for a day (2026-11-23/24). Side work that can wait goes last.
+ */
+export const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
+  'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author',
+  'media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script', 'social_roundup',
+  'refresh_figures', 'flashcards', 'slides'];
+
 /** Text in a worker's log that means "out of quota", not "bad work". */
 // "hit your weekly limit" (claude) and "model is at capacity" (codex) slipped past this on
 // 2026-10-22, so eight jobs spent all three attempts on quota errors and went gate_red.

@@ -21,7 +21,7 @@
 import { spawn, spawnSync } from 'node:child_process';
 import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
-import { WORKERS, STAGES, QUOTA_RE, PROVIDER_RE, IMAGE_QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker, imageQuotaReset, imageQuotaProducer, workFiles } from './workers.mjs';
+import { WORKERS, STAGES, STAGE_ORDER, QUOTA_RE, PROVIDER_RE, IMAGE_QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker, imageQuotaReset, imageQuotaProducer, workFiles } from './workers.mjs';
 import { activeImageQuota, recordImageQuota, availableProducers, producerStatus } from '../lib/image-quota.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
@@ -59,9 +59,6 @@ const SPARSE = ['/*', '!/specs/content/*/reviews/**/renders-*/'];
 const JOB_TIMEOUT = process.env.CREW_JOB_TIMEOUT || '3h';
 const PUSH_SETTLE_MS = 3 * 60e3;
 // Self-maintenance stages sit just after fixes: a handful a week, so the corpus queue cannot starve them.
-const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
-  'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author',
-  'media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script', 'social_roundup'];
 /** Self-maintenance (scripts/crew/maintenance.mjs) and intelligence (scripts/crew/intel.mjs) stages. */
 const isSelf = (stage) => /^(maint|intel)_/.test(stage);
 const INTEL_DIR = join(STATE_DIR, 'intel');
