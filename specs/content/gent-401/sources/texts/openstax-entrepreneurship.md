@@ -2,7 +2,7 @@
 
 Source: https://openstax.org/details/books/entrepreneurship (CC BY-NC-SA 4.0)
 
-Consulted: 2026-11-24, sections read online at https://openstax.org/books/entrepreneurship/pages/ (1-1-entrepreneurship-today, 1-3-the-entrepreneurial-mindset, 2-1-overview-of-the-entrepreneurial-journey, 4-1-tools-for-creativity-and-innovation, 4-2-creativity-innovation-and-invention-how-they-differ, 3-1-what-are-business-ethics-and-social-responsibility, 8-1-overview-of-the-entrepreneurial-marketing-mix, 8-2-market-research-and-target-marketing, 8-3-marketing-strategy-and-the-marketing-plan, 8-4-the-promotional-mix, 13-1-business-structures-in-the-united-states, 13-2-intellectual-property-patents-copyrights-and-trademarks).
+Consulted: 2026-11-24, sections read online at https://openstax.org/books/entrepreneurship/pages/ (1-1-entrepreneurship-today, 1-3-the-entrepreneurial-mindset, 2-1-overview-of-the-entrepreneurial-journey, 4-1-tools-for-creativity-and-innovation, 4-2-creativity-innovation-and-invention-how-they-differ, 7-1-developing-vision-and-mission-statements, 8-1-overview-of-entrepreneurial-marketing-and-sales, 11-1-realities-of-developing-a-business-model-and-plan, 11-2-developing-the-business-model, 11-4-the-business-plan, 12-1-building-networks-and-foundations, 13-1-business-structure-options, 3-1-what-are-business-ethics-and-social-responsibility, 8-1-overview-of-the-entrepreneurial-marketing-mix, 8-2-market-research-and-target-marketing, 8-3-marketing-strategy-and-the-marketing-plan, 8-4-the-promotional-mix, 13-1-business-structures-in-the-united-states, 13-2-intellectual-property-patents-copyrights-and-trademarks).
 
 Locator: Laverty, M., & Littel, C. (2020). *Entrepreneurship*. OpenStax, Rice University.
 
@@ -15,13 +15,27 @@ Locator: Laverty, M., & Littel, C. (2020). *Entrepreneurship*. OpenStax, Rice Un
 5. Section 4.2: creativity is the ability to develop something original, especially an idea; innovation is a "change that adds value" to an existing product or service and is the application of creativity; invention is a truly novel product, service or process; creativity, innovation and inventiveness can be developed.
 6. Section 4.1: design thinking moves through empathy, defining the problem, ideating, prototyping and testing; statement starters such as "How might we ...?" open up ideas.
 7. Section 2.1: the entrepreneurial journey runs from inspiration to launch, and difficulties are opportunities to learn.
+8. Section 11.1 & 11.4: A business plan is a formal roadmap describing what a venture intends to do and how it plans to do it. It serves two core audiences: internal founders and managers (guiding decisions, timelines and milestone tracking) and external stakeholders (banks, investors, partners). It is a living document rather than a fixed contract; it must adapt as assumptions are tested. Standard components include the executive summary, company description, products/services, market analysis, marketing and sales plan, operations plan, management team and organization, financial plan, and appendices.
+9. Section 11.2 & 11.4: The executive summary is a concise synopsis (1-2 pages) of the entire business plan. It must capture the essence of the venture: the problem, the proposed solution, the target market, competitive advantages, the management team, and financial highlights (funding request, break-even timeline). Although positioned at the very front of the plan, it is always drafted last after all other sections are fully developed.
+10. Chapter 7 & Section 11.3: A vision statement articulates the long-term aspirational destination of the venture (what success looks like in 5-10 years). A mission statement expresses the organization's present purpose, answering who the venture is, what it does, whom it serves, and what unique value it provides today. Together, they prevent mission drift and guide operational focus.
+11. Chapter 8 & Section 11.4: The marketing plan translates market research into actionable strategies covering target customer segments, positioning, pricing, distribution (place), and promotional tactics (the marketing mix). It defines how the venture will attract and retain buyers.
+12. Chapter 11, 12, 13: The operational plan describes the day-to-day facilities, workflows, inventory, equipment, suppliers, and quality assurance processes required to produce and deliver goods or services. The organizational structure defines roles, responsibilities, reporting hierarchies, and governance, showing how tasks are allocated and who is accountable as the business scales from a solo founder to larger teams.
+
+## Unit 1 and Unit 4 use (sections read online 2026-11-24)
+
+Use in GENT-401 Unit 1: notes 1-4 support Topic 1.1 (meaning, economic role, characteristics) and the risk and problem-solving parts of Topic 1.2; notes 5-7 support creativity and innovation in Topic 1.2. The five-step problem-to-innovation flowchart and the three-question test are the author's teaching devices built on these notes, not the book's own procedures.
+
+Use in GENT-401 Unit 4: notes 8-10 support Topic 4.1 (business plan components, executive summary, vision and mission statements); notes 11-12 support Topic 4.2 (marketing plan, operational plan, organizational structure).
+
+## Evidence notes for Unit 6 (sections read online 2026-11-24)
+
 8. Section 8.1 and 8.2: the entrepreneurial marketing mix encompasses the 4 Ps (Product, Price, Place, Promotion); market positioning is establishing a distinct place in the target customer's mind relative to competitors; a brand represents the emotional and perceptual promise of value made to customers.
 9. Section 8.3 and 8.4: promotion consists of communications designed to inform, persuade, and remind target customers; small businesses leverage bootstrap promotion techniques including personal selling, word of mouth, referral incentives, and targeted local notices; digital marketing employs social media, messaging platforms, and content marketing to build customer relationships cost-effectively.
 10. Section 3.1: ethics refers to moral standards and principles that distinguish right from wrong in human conduct; ethical issues in entrepreneurship include truth in advertising, fair treatment of employees, consumer safety, and honoring contractual commitments under financial pressure.
 11. Section 13.1: legal business structures include sole proprietorships, partnerships, and corporations/limited companies; liability ranges from unlimited personal liability in proprietorships and partnerships to limited liability in incorporated companies.
 12. Section 13.2: intellectual property protects intangible creations of the human intellect; distinct categories include trademarks (brand identifiers), copyrights (original literary and artistic expressions), patents (inventions and functional technical processes), and designs; bare ideas carry no intellectual property protection until fixed in a tangible medium or registered.
 
-Use in GENT-401 Unit 1: notes 1-4 support Topic 1.1 (meaning, economic role, characteristics) and the risk and problem-solving parts of Topic 1.2; notes 5-7 support creativity and innovation in Topic 1.2. The five-step problem-to-innovation flowchart and the three-question test are the author's teaching devices built on these notes, not the book's own procedures.
+Use in GENT-401 Unit 6: notes 8-9 support Topic 6.1 (branding, positioning, promotional mix, digital marketing); notes 10-12 support Topic 6.2 (business structures, intellectual property categories, ethics in entrepreneurship).
 
 ## Evidence notes for Unit 3 (chapters 5, 8 and 11, read online 2026-11-24)
 
@@ -35,4 +49,5 @@ Use in GENT-401 Unit 3: notes 8-9 support Topic 3.1 (understanding customers and
 ## Use in GENT-401
 
 - Unit 1: notes 1-4 support Topic 1.1; notes 5-7 support Topic 1.2.
+- Unit 4: notes 8-10 support Topic 4.1 (business plan components, executive summary, vision and mission statements); notes 11-12 support Topic 4.2 (marketing plan, operational plan, organizational structure).
 - Unit 6: notes 8-9 support Topic 6.1 (branding, positioning, promotional mix, digital marketing); notes 10-12 support Topic 6.2 (business structures, intellectual property categories, ethics in entrepreneurship).
