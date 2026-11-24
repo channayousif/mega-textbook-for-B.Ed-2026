@@ -1,0 +1,7 @@
+# Unit banner - GENT-401 Unit 1 (Entrepreneurship and the Entrepreneurial Mindset)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs gent-401 1 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U1-5 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: early morning outside the gate of a government school in a small town in Sindh; on one side a row of three similar small stationery shops with pens and registers on display; in the foreground a young woman in shalwar kameez and dupatta stands at a small clean table selling wrapped breakfast rolls to pupils in school uniform, while an older woman beside her hands a bundle of printed worksheet packs to a teacher; a young male B.Ed trainee teacher with a notebook watches and talks with a pupil; men wear Pakistani shalwar kameez, some with caps; busy, hopeful mood, soft morning light, dusty street, a rickshaw in the background; no readable text on any sign, paper, packet or wall, no maps, flags, emblems, party symbols, brand logos or watermarks | Outside a Sindh school gate, a young woman sells breakfast rolls to pupils and an older woman hands worksheet packs to a teacher, beside a row of similar stationery shops, while a trainee teacher watches. |  | prompt-only |

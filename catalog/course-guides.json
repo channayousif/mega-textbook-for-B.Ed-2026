@@ -1,5 +1,5 @@
 {
-  "$comment": "Where each course's official University of Sindh course guide lives. Pages are 1-based and inclusive, in the semester PDF named by source. scripts/split-course-guides.py cuts each range into static/guides/<pdf>; validate-content.mjs requires every B.Ed course overview to have an entry here and its PDF. Semester 3 source is a LibreOffice PDF export of 3rd 2026.docx; GISS-401 pages 15-17 are the Ethics for Non-Muslims (GETH-401) alternative, and the guide's GUHQ-401 label is the catalog's GUHQ-301. Pages 21-22 (labelled EFID-604, Semester 3) are EFPG-607 in Semester 7 per the final-authority scheme (G-2026-210). Semester 4 source is a LibreOffice PDF export of 4TH SEMESTER.docx, kept under static/guides/sources/ because Scheme-and-Course-guides is a whole-corpus review-input root; GCCE-400 is pages 4-6.",
+  "$comment": "Where each course's official University of Sindh course guide lives. Pages are 1-based and inclusive, in the semester PDF named by source. scripts/split-course-guides.py cuts each range into static/guides/<pdf>; validate-content.mjs requires every B.Ed course overview to have an entry here and its PDF. Semester 3 source is a LibreOffice PDF export of 3rd 2026.docx; GISS-401 pages 15-17 are the Ethics for Non-Muslims (GETH-401) alternative, and the guide's GUHQ-401 label is the catalog's GUHQ-301. Pages 21-22 (labelled EFID-604, Semester 3) are EFPG-607 in Semester 7 per the final-authority scheme (G-2026-210). Semester 4 source is a LibreOffice PDF export of 4TH SEMESTER.docx, kept under static/guides/sources/ because Scheme-and-Course-guides is a whole-corpus review-input root; GCCE-400 is pages 4-6; GENT-401 is pages 10-13 (page 13 also carries the start of EFMP-409).",
   "courses": {
     "GENG-300": { "source": "Scheme-and-Course-guides/1st 2026.pdf", "pages": [1, 2], "pdf": "guides/semester-1/geng-300.pdf" },
     "GNAS-301": { "source": "Scheme-and-Course-guides/1st 2026.pdf", "pages": [3, 6], "pdf": "guides/semester-1/gnas-301.pdf" },
@@ -21,6 +21,7 @@
     "GISS-401": { "source": "Scheme-and-Course-guides/3rd 2026.pdf", "pages": [12, 17], "pdf": "guides/semester-3/giss-401.pdf" },
     "GICP-400": { "source": "Scheme-and-Course-guides/3rd 2026.pdf", "pages": [18, 20], "pdf": "guides/semester-3/gicp-400.pdf" },
     "EFPG-607": { "source": "Scheme-and-Course-guides/3rd 2026.pdf", "pages": [21, 22], "pdf": "guides/semester-7/efpg-607.pdf" },
-    "GCCE-400": { "source": "static/guides/sources/4th-semester.pdf", "pages": [4, 6], "pdf": "guides/semester-4/gcce-400.pdf" }
+    "GCCE-400": { "source": "static/guides/sources/4th-semester.pdf", "pages": [4, 6], "pdf": "guides/semester-4/gcce-400.pdf" },
+    "GENT-401": { "source": "static/guides/sources/4th-semester.pdf", "pages": [10, 13], "pdf": "guides/semester-4/gent-401.pdf" }
   }
 }
