@@ -1,8 +1,8 @@
 # GENT-401 Entrepreneurship - Task tracker
 
-## Status: content spec approved (G0/G1); Unit 1 English draft authored and G2 gate evidence recorded; G3 review open
+## Status: content spec approved (G0/G1); Units 1 and 5 English drafts authored and G2 gate evidence recorded; G3 review open
 
-English-only authoring from the approved Unit 1 content-spec subsection. No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved Unit 1 and Unit 5 content-spec subsections. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
 ## Units
 
@@ -12,7 +12,7 @@ English-only authoring from the approved Unit 1 content-spec subsection. No publ
 | 2 | Types of Entrepreneurship and Opportunity Recognition | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 3 | Market Research and Business Models | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 4 | Developing a Business Plan | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
-| 5 | Financial Planning and Funding | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
+| 5 | Financial Planning and Funding | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 6 | Marketing, Legal and Ethical Issues | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 7 | Growing a Business and Pitching It | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 
