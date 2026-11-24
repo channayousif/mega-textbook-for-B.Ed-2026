@@ -8,7 +8,7 @@ English-only authoring from the approved content-spec subsections for Units 1 an
 
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | Understanding Assessment and Evaluation | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; six schematic SVGs placed with derived dark variants; banner prompt-only; G3 and Urdu remain open |
+| 1 | Understanding Assessment and Evaluation | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (6 files) and six localized SVG pairs (with derived dark twins) drafted; translation_status stays draft pending G5 |
 | 2 | Objectives, Alignment and the Principles of Good Assessment | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; six schematic SVGs placed with derived dark variants; banner prompt-only; G3 and Urdu remain open |
 | 3 | Constructing Tests | ☐ | ☐ | ☐ | ☐ | ☐ | content spec approved |
 | 4 | Performance and Classroom Assessment Techniques | ☐ | ☐ | ☐ | ☐ | ☐ | content spec approved |
@@ -25,9 +25,9 @@ English-only authoring from the approved content-spec subsections for Units 1 an
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-408/reviews/unit-01/G2/20261124T162306904Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
-| Unit 1 | G4 ur-translation | ▢ | | Separate Urdu job; English-only draft with untranslated notice |
+| Unit 1 | G4 ur-translation | ▢ | | Complete six-page draft Urdu mirror and six localized SVG pairs (with derived dark variants) prepared from English 0ac0a4071; see reviews/unit-01/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 1 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation |
-| Unit 1 | G6 assets | ▣ | | Six English schematic SVGs placed with derived dark variants; banner fig-U1-4 prompt-only |
+| Unit 1 | G6 assets | ▣ | | Six English schematic SVGs (fig-U1-1 to fig-U1-3, fig-U1-5 to fig-U1-7) and six Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U1-4 prompt-only |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-408/reviews/unit-02/G2/20261124T181004352Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
