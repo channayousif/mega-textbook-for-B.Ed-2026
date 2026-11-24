@@ -90,8 +90,9 @@ Translated GENT-401 Unit 5 into its complete five-file Urdu mirror with four loc
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 5 financial planning terms (ابتدائی اخراجات، مقررہ اخراجات، متغیر اخراجات، بریک ایوین تجزیہ، کنٹری بیوشن مارجن، بنیادی مالی گوشوارے، کیش فلو اسٹیٹمنٹ، بوٹ اسٹریپنگ، ایکویٹی فنانسنگ، اینجل سرمایہ کار، وینچر کیپیٹل، کراؤڈ فنڈنگ) are authored proposals not banked in terminology.csv; an independent G5 reviewer should verify them.
-  - Four localized RTL schematic SVGs (fig-U5-1 to fig-U5-4) and derived dark variants passed text geometry measurement cleanly and match page alt text.
+  - Unit 5 financial planning terms (ابتدائی اخراجات، مقررہ اخراجات، متغیر اخراجات، بریک ایوین تجزیہ، کنٹری بیوشن مارجن، بنیادی مالی گوشوارے، کیش فلو، بوٹ اسٹریپنگ، ایکویٹی فنانسنگ، اینجل سرمایہ کار، وینچر کیپیٹل، کراؤڈ فنڈنگ) are authored proposals not banked in terminology.csv; an independent G5 reviewer should verify them.
+  - Four localized RTL schematic SVGs (fig-U5-1 to fig-U5-4) and derived dark twins passed text geometry measurement cleanly and match page alt text; unit banner fig-U5-5 remains prompt-only for the illustrate job.
+  - translation_status remains draft across both index.mdx files pending independent G5 review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
