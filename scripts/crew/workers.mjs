@@ -89,6 +89,10 @@ export const STAGES = {
  * took the single claude slot every time it freed and starved the claude-only teaser_clips job
  * for a day (2026-11-23/24). Side work that can wait goes last.
  */
+/** Stages whose workers call outside media services (Flow, Gemini, NotebookLM, YouTube, Meta);
+ * crew.mjs launches them only in media hours (scripts/media/pacing.mjs, D-2026-0100). */
+export const OUTSIDE_SERVICE_STAGES = ['illustrate', 'teaser_clips', 'audio_overview', 'media_assemble', 'media_publish', 'social_roundup'];
+
 export const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
   'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author',
   'media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script', 'social_roundup',

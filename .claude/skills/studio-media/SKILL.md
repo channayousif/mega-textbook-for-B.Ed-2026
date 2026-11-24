@@ -131,7 +131,8 @@ Notation: `L = node scripts/notebook-studio/media-ledger.mjs`, `M = ~/studio-med
      `static/content-index.json`.
      The playlist is the language's podcast playlist for audio, or the course video playlist
      for video; IDs are under "Channel facts" below.
-   - Call `upload_video` with `file_path` = the encoded mp4 and the `upload_video` fields.
+   - Run `node scripts/media/pacing.mjs check youtube.upload` first (a `hold` means stop and hand off with the time; media-studio "Pacing"), then call `upload_video` with `file_path` = the encoded mp4 and the `upload_video` fields.
+     After a successful upload run `node scripts/media/pacing.mjs record youtube.upload`.
    - Then call `update_video` with the `update_video` fields (playlist, thumbnail,
      `contains_synthetic_media`).
    - Finish with `L advance … uploaded-private --json '{"youtube_id":"…","uploaded_at":"<ISO now>"}'`.

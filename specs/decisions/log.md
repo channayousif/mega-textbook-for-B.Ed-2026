@@ -5189,3 +5189,24 @@ content-improvement loop with no further cycle.
 - **Limits:** Certifies no content, qualifies no reviewer and authorises no publication beyond the
   owner's own spot-check (Art. VII.8). Account risk from automating Flow stays the owner's. The
   media stages still run only under the owner's existing gates (`crew media on`, script approval).
+
+## D-2026-0100 - Media creation is paced: office hours, gaps, hourly and daily caps
+- **Status:** confirmed
+- **Gate:** none (Feature 029/030/031 media; not video-studio)
+- **Scope:** every automated call to Google Flow (Veo, Nano Banana), Gemini (agy), Codex images,
+  NotebookLM, YouTube uploads and Meta, TikTok and LinkedIn posts, by the crew or by scripts
+- **Decided by:** curriculum owner, 2026-11-24 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **Media hours are 09:00-15:00 PKT.** No automated media call is made outside them, and the
+     crew does not launch media stages that call outside services then.
+  2. **Veo budget:** 200 credits a day while the billing month's 1,000-credit pool lasts, then 50 a
+     day until the monthly reset.
+  3. **Every channel is paced** with a minimum gap plus random jitter and hourly and daily caps, so
+     use looks like one person's working day. Defaults live in `scripts/media/pacing.mjs` and the
+     media-studio skill ("Pacing"); the owner may tighten or loosen any of them in the host-local
+     `~/.config/mega-book/media-limits.json`.
+- **Basis:** owner message 2026-11-24: "impose safe and realistic limits on madia creation to avoid
+  the accounts being flagged as misuse"; answers the same day: "200 a day and 50/day when 1000
+  credits spent until reset" and "9 to 3 office hours".
+- **Limits:** Adds limits only; changes no owner gate (script approval, private-first uploads,
+  spot-check before public). Manual work over the davinci desktop is outside the automated ledger.

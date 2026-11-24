@@ -46,8 +46,9 @@ posting is a host action and crew branches merge in batches. Never edit it by ha
 
 ## Crew and owner commands
 - `crew social on|off|status`: the daily roundup is off by default. When on, a `social_roundup` job
-  is queued from 18:00 PKT when a dry collect finds deployed work not yet posted. A publish run is
-  queued at any hour when an approved post waits.
+  is queued from 13:00 PKT when a dry collect finds deployed work not yet posted. A publish run is
+  queued when an approved post waits. Both run only in media hours (09:00-15:00 PKT), and each
+  platform takes at most three posts a day about two hours apart (media-studio skill, "Pacing").
 - `crew post <id>` approves a post. The owner's first approved content post ends the pilot, and
   content roundups publish on their own after that. `crew reject-post <id> <note>` rejects one; its
   items return in the next roundup.
