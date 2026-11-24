@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "course_code": "GCCE-400",
+  "unit_no": 6,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:83395d0296907b259329dd93071f020f043f0e8f",
+  "reviewer_run_id": "759d9e52-79fb-4844-92e5-0c1c6b4bceef",
+  "model": "Gemini 3.8 Flash (Medium)",
+  "started_at": "2026-11-24T00:46:09.000Z",
+  "completed_at": "2026-11-24T00:58:06.642Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/3rd 2026.pdf": "f0de34d0a166d0306afbb87aaca2caa58a077ca6024b26e192b6aa02e09eb028",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "b88b3948868b85c99fb9bf93d55ef2c3d346ebff40bfc5cb684b7aefba9c6cbd",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-4/gcce-400/course-overview.mdx": "4eeb43eeb413c75da88a98a2722a405d0a941c91cdbc8fb1d8ae2523a7ca2a13",
+    "docs/semester-4/gcce-400/unit-06/index.mdx": "e1b829e72064efaf7bde83b00be946aedc138dd657a97b79e0fd44ed745a6405",
+    "docs/semester-4/gcce-400/unit-06/topic-01.mdx": "b3ea7c50edbf98f0e69c18990c149b0c8bc6898047cbbf0059367deba8cafa09",
+    "docs/semester-4/gcce-400/unit-06/topic-02.mdx": "8b8b55dfbbadb1c47bd5fe8e196b44986a49c1326b2ed9ddf322fda3d5ed786d",
+    "docs/semester-4/gcce-400/unit-06/topic-03.mdx": "96a15ff359986a526e641ca5491b3e56995f5dd528ec9c41dc48bd36de852569",
+    "docs/semester-4/gcce-400/unit-06/unit-assessment.mdx": "d73c2bb7b924d8bdb32e978a8acc34cea5ba663b74232d9a2abf5420d84dc17f",
+    "docs/semester-4/gcce-400/unit-06/unit-teacher-notes.mdx": "bd6629a3989d911b22ad2efe4ac73d5a685abdbb0e469828ed44e3ae87ca2bc4",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "33e46f435128a99f53a38c597b289d730c85b398a7f27b068392552540128622",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "22eaaee128cd13f1756a1c1d4037a8ed7143cfc9f0428c12f49a8b4752fb7f93",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gcce-400/concepts/unit-06.md": "f4b88a67921187f77ba21abc9d0f976546db93b228f18c4ebe1dd0b92953b2a0",
+    "specs/content/gcce-400/content-spec.md": "8b97a01a83699dbaa86803aa2d630582731a32496e937a4b3be1087af77c2e38",
+    "specs/content/gcce-400/coverage/unit-06.md": "aba303247a2b284a9a7a2365222f269fa2ab1587eb4ac5c4903d0f7d6471af35",
+    "specs/content/gcce-400/figures/unit-06.banner.md": "5285b0cde08c32d2fef7f04ffbfebae64810b102c8b7d502146705ea27857dc0",
+    "specs/content/gcce-400/figures/unit-06.md": "4cc4a2d0452b3037dbcd89e89a76a0a40d1b69457e060b1c548b3f25094d303e",
+    "specs/content/gcce-400/sources/unit-06.md": "a09043ad5ee1f23ae52aca36ebb50d270831ac9c82475414799873037854bd08",
+    "specs/content/gcce-400/translations/unit-06/check-content-parity.txt": "0c5e9be7ab2115030867c4df6700d292c7c71c342c19521f45ccc23ca073aa19",
+    "specs/content/gcce-400/translations/unit-06/handoff.md": "9972b7bd05fbfab3c6cf8b5b6dff75562299be77d69d85df13a2f7e4cce1714f",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/gcce-400/unit-06/fig-U6-1.dark.svg": "c6d86688a991562b1b17ddeda2fe3f165b25c17758c3df7fca2b3a53387483ab",
+    "static/img/figures/gcce-400/unit-06/fig-U6-1.svg": "011cf59b011dc3a01971366bbdf2c8adc04d920e98b3cdd1d89abf4af6695507",
+    "static/img/figures/gcce-400/unit-06/fig-U6-2.dark.svg": "225218060c0cc5bd4581f2b4c6b918b513aa624676379ac37f6dcc47c0b3f0ea",
+    "static/img/figures/gcce-400/unit-06/fig-U6-2.svg": "1ad8a07f7cb475e7b941863a9f45a6a3beee713568aeba5827c609f63075ffb4",
+    "static/img/figures/gcce-400/unit-06/fig-U6-3.dark.svg": "81e502abdcfd59c047cc8e37921af8e68af056d9147ef85f1c1eccd4a18e4801",
+    "static/img/figures/gcce-400/unit-06/fig-U6-3.svg": "64d6e54205244d6e7974c44e3b2b94b904b8353d4df6cecc60d52dd8de5ef4c9",
+    "static/img/figures/gcce-400/unit-06/fig-U6-4.dark.svg": "281be97eada485995bbb4c4967bf55b10307a23ef63458d1079356a4b2ca431a",
+    "static/img/figures/gcce-400/unit-06/fig-U6-4.svg": "b9211ede216ef58c1c6d6972a0a44fced78cad52f076bea230deed7cdaf9801c",
+    "static/img/figures/gcce-400/unit-06/fig-U6-5.dark.svg": "98124c3ee67a2d0e85e88826783f51a3275589815e7716e34ec221ec0872ad59",
+    "static/img/figures/gcce-400/unit-06/fig-U6-5.svg": "85fb68bd15c83780932fe7bef38e6926c1342c7a1e82d29edcfde8a6e034b2c1",
+    "static/img/figures/gcce-400/unit-06/fig-U6-6.dark.svg": "02a6609c549950cbf2397abab49731d802171a4407e9b5619746c6f22f76ce53",
+    "static/img/figures/gcce-400/unit-06/fig-U6-6.svg": "38ca32e8ed3d1ee2884ed3ca5b70333f8f5eb7cd2cc0e4f0031f23125db64df3",
+    "static/img/figures/gcce-400/unit-06/fig-U6-7.webp": "08af8516d5d1876af9031e16b8f96c6e405e0d30ae0a6c1548d3ac489230046f"
+  },
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gcce-400/content-spec.md:327-372 Unit 6 G1 spec: sub-topics U6-01..U6-03, figure plan fig-U6-1..6, banner fig-U6-7, unit-end blueprint 10/10/5.",
+        "docs/semester-4/gcce-400/unit-06/topic-01.mdx ### The use of digital platforms for civic engagement matches U6-01.",
+        "docs/semester-4/gcce-400/unit-06/topic-02.mdx ### Cyber ethics and responsible use of social media matches U6-02.",
+        "docs/semester-4/gcce-400/unit-06/topic-03.mdx ### Digital divides and their impact on citizenship matches U6-03.",
+        "CLO/SLO references SLO:GCCE-400-6-1, 6-2, 6-3 traced across all unit topics and assessments."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gcce-400/sources/texts/coe-2019-dce.md: Digital citizen definition p. 11 (\"actively, positively and responsibly engage in both on- and offline communities\"), ten domains, ethics and empathy p. 13 match topic-01.mdx:36 and topic-02.mdx:34.",
+        "specs/content/gcce-400/sources/texts/khalid-2026-social-media-civic.md: 384 university students, social media usage predicts civic engagement, digital literacy mediation, dual effect of connectivity and echo chambers match topic-01.mdx:63 and topic-03.mdx:37.",
+        "specs/content/gcce-400/sources/texts/constitution-pakistan.md: Articles 17 and 19 (freedom of association and freedom of speech subject to reasonable legal limits) match topic-01.mdx:46.",
+        "specs/content/gcce-400/sources/texts/ali-2023-misinformation.md: RCT in urban Pakistan, low digital literacy, general video messages no significant effect, personalized feedback +0.14 SD improvement match topic-02.mdx:46.",
+        "specs/content/gcce-400/sources/texts/shair-2022-digital-divide.md & publisher abstract: PSLM-HIES survey, logit model, ICT infrastructure and access as leading determinants, sizeable digital divide, Pakistan ranked 135 out of 144 in internet access match topic-03.mdx:41.",
+        "specs/content/gcce-400/sources/texts/iftikhar-2023-digital-divide.md: university students post-Covid, widening existing divide, barriers of gadgets, internet access, income, gender, study field, age, and location match topic-03.mdx:43.",
+        "specs/content/gcce-400/sources/unit-06.md ## Unverifiable sources: mattson-2017 declared under owner ruling 2026-09-19 (D-2026-0001); topic-01.mdx and reading list use only title-level book aim without unverified quotations."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gcce-400/coverage/unit-06.md maps all three sub-topics U6-01..U6-03 to exact topic headings with bound sources; design trace details retrieval items, MCQs, RRQs, and ERQs.",
+        "check:depth-gate exit 0: concept coverage, required pedagogical blocks (hook, explanation, worked example, misconceptions, activity, retrieval, summary, self-assessment, practicum, summative task with rubric), formative floor, reading-minutes band (46 min vs 36-52 min band), coverage-sources consistency.",
+        "specs/content/gcce-400/concepts/unit-06.md defines 8 core concepts (CON:GCCE-400-6-1..8) with prerequisites, SLO mappings, and assessment links."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/assessment-solutions.md: independent solve of MCQs 1-10 (B, A, B, A, B, C, B, A, A, C) matches docs/semester-4/gcce-400/unit-06/unit-assessment.mdx ### MCQ answer key 10/10.",
+        "RRQs 1-10 derived answers verified against model answers and mark schemes; Bloom demand ranges Understand to Analyze.",
+        "ERQs 1-5 feature 4-criterion analytic rubrics (0-3 marks per criterion, 12 marks total each) matching Bloom cognitive demand (Analyze, Create, Evaluate); ERQ 5 is blueprint practicum Create task.",
+        "Advisory finding noted in assessment-solutions.md regarding RRQ 6 model answer describing check 4 (harm) while prompt asks for last check (decide), and MCQ key distribution lacking key D."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "render-review unavailable (exit 1): deployed SHA 175a90b7a644bd366cf3d1d2592090a93f912bcb differs from HEAD 6da753a0c89ff4be5d224b7884655bf7520911c2 on docs/semester-4/gcce-400/unit-06/index.mdx and static/img/figures/gcce-400/unit-06/fig-U6-7.webp; host limits and brief prohibit local build, dev server, or browser runs.",
+        "Structural accessibility passes from source: all figures have descriptive alt text; all SVGs carry role=\"img\", aria-labelledby, <title>, and <desc>; semantic headings and table markup verified.",
+        "measure-figure-text exits 0 across all 24 SVGs in static/img/figures/gcce-400/unit-06/."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-4/gcce-400/unit-06/index.mdx, topic-01.mdx, topic-02.mdx, topic-03.mdx: clear, plain sentences suitable for B.Ed trainees without specialist prerequisite knowledge.",
+        "Key terms defined at first use with Glossary components (Digital citizenship, Digital platform, Digital civic engagement, Cyber ethics, Personal data, Data protection, Misinformation, Disinformation, Digital divide, Digital literacy).",
+        "Contextualized with authentic Pakistani and Sindhi examples (Thatta, Khairpur, Sanghar, Badin, Pakistan Citizen's Portal)."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "All three topics execute complete pedagogical progression: classroom situation -> explanation -> worked example -> misconception correction -> group activity -> retrieval -> summary -> self-assessment -> practicum connection -> summative task with mini-rubric.",
+        "Common misconceptions explicitly debunked: online participation as shallow (Topic 6.1), anything online is private (Topic 6.2), sharing is not the same as saying it (Topic 6.2), everyone in Pakistan has internet (Topic 6.3).",
+        "Activities feasible in local classrooms with chart paper, slips, and peer exchanges."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Render and print inspection (360px viewport, table scrolling, desktop layout, A4 print, figure clipping) could not be performed. The crew brief prohibits npm run build, a dev server and Playwright, and the production site is not the reviewed input: the deployed SHA 175a90b7a644bd366cf3d1d2592090a93f912bcb differs from HEAD 6da753a0c89ff4be5d224b7884655bf7520911c2 on docs/semester-4/gcce-400/unit-06/index.mdx and static/img/figures/gcce-400/unit-06/fig-U6-7.webp. render-review is recorded as unavailable (exit 1). Visual accessibility remains unverified; structural accessibility and figure geometry pass from source."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "In docs/semester-4/gcce-400/unit-06/unit-assessment.mdx:90, RRQ 6 asks: \"List the five checks you should make before sharing a post about a public issue, and explain in one sentence what the last check asks.\" The model answer at line 131 states: \"The last check asks what the post could do to a person or community before you share it\" and marks \"1 for the harm check explained\". This explains the fourth check (\"consider the harm\") rather than the fifth/last check (\"decide\"). Authors should align the prompt or mark scheme."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "In docs/semester-4/gcce-400/unit-06/unit-assessment.mdx:30-81, MCQ correct keys are distributed as A: 4, B: 4, C: 2, D: 0. Option D is never the correct key across all 10 items. All items and distractors are clear and unambiguous, but balancing the key distribution across A-D in future revisions is recommended."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "In specs/content/gcce-400/sources/texts/shair-2022-digital-divide.md:11, the note mentions \"Use in GCCE-400 Unit 1: Topic 1.3...\". Unit 6 also relies on this bound note for U6-03; updating the note text to reference Unit 6 would clarify provenance for future reviewers."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/validate:content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check-content.log"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/measure-figure-text.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/manifest.json": "a96ce22ef1cfbcfca869e26cfb8874dc8fb88130394ccad65f8dfad8e041abff",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/assessment-solutions.md": "aac2f09e6b05ae5b8084a41c24481c47e3313e1288766ae8b03f772dd97c45d8",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/limitations.md": "3a9242c80b1be1f5c21e86687dc0414e0403ab49324537f21490cebe3783fb23",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/summary.md": "187573025f05bd000cb7d5d27c0a452c4e0fa6c806e7f6befd1289136e896988",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/advisory-tracker-row.md": "aa4cc176a68274e0b4a3fb6e176de01370bacd6e3cd03f1d1c26e4109a1e5eb8",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/make-report.mjs": "23c413c593ee1f846a7c77107ee49389eec5bda0e8b2510e8866a90e5fba6590",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/validate:content.log": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:depth-gate.log": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:figures.log": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:no-em-dash.log": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:no-answer-keys.log": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check:docs-sync.log": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/render-review.txt": "b8213e8540f624b649b57cf2adbc042abbf7b06f211aee4c1a9dffa0fb34e1ee",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/check-content.log": "8808e44e858f9180775da0dae42f3948bbced8fea5153f1a9d384463f0720d2a",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/build-content-status.log": "a201b20271efcd7b5040260012140e3550dcce3d8f0cc0751cb76bfb255b0632",
+    "specs/content/gcce-400/reviews/unit-06/G3/agy-run1-20261124/logs/measure-figure-text.log": "142a477c2c90be9854bd9b9775d950f11784ad62fb3ae1ddb295613f4e050c7f"
+  }
+}
