@@ -1,0 +1,3 @@
+$ node scripts/validate-content.mjs
+✓ Content validation passed.
+exit=0
