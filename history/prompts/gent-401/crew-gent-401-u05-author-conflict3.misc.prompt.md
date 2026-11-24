@@ -16,10 +16,73 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/gent-401/unit-05/index.mdx
+ - docs/semester-4/gent-401/unit-05/topic-01.mdx
+ - docs/semester-4/gent-401/unit-05/topic-02.mdx
+ - docs/semester-4/gent-401/unit-05/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-05/unit-teacher-notes.mdx
+ - glossary.json
+ - history/prompts/gent-401/crew-gent-401-u05-author-conflict1.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u05-author-conflict2.misc.prompt.md
  - history/prompts/gent-401/crew-gent-401-u05-author-conflict3.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u05-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-05.md
+ - specs/content/gent-401/coverage/unit-05.md
+ - specs/content/gent-401/figures/unit-05.banner.md
+ - specs/content/gent-401/figures/unit-05.md
+ - specs/content/gent-401/reviews/unit-05/G2/20261124T054301209Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/20261124T094530692Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/20261124T102242274Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/20261124T105512776Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T105512776Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T105512776Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T105512776Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T105512776Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T105512776Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T105512776Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T105512776Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T105512776Z/validate-content.txt
+ - specs/content/gent-401/sources/texts/cegielska-2018-startup-financing.md
+ - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
+ - specs/content/gent-401/sources/texts/scott-2017-efmd.md
+ - specs/content/gent-401/sources/texts/sintha-2020-break-even.md
+ - specs/content/gent-401/sources/texts/wati-2018-crowdfunding.md
+ - specs/content/gent-401/sources/unit-05.md
+ - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-1.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-2.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-4.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/gent-401/unit-05/*.svg
 ---
 
 ## Prompt
@@ -55,32 +118,36 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u05-author-conflict1, fix, claude_crew) Unit 5 Urdu mirror, `.ur.svg` variants and the `fig-U5-5` illustrate job remain open for separate G4/G5 and illustrate jobs.
 - (gent-401-u05-author-conflict1, fix, claude_crew) G3 should confirm the Polish and Indonesian substitute sources are not read as Pakistani evidence and that Imran's tuition-centre figures are the author's teaching device (`specs/content/gent-401/sources/unit-05.md`).
 
+## Feedback from the previous attempt
+the worker committed only a PHR (history/prompts/); a job must produce its stage's work, and the crew writes the PHR itself
+
+
 ## Response snapshot
 
-`git fetch origin` followed by `git merge origin/main` reported "Already up to date": origin/main (6f358f0eb) is already an ancestor of this branch, merged by the previous conflict job in cae484b38. Verified the three conflicted files keep both sides (main's Unit 3 and Unit 4 sections ahead of this branch's Unit 5 section in openstax-entrepreneurship.md and scott-2017-efmd.md; main's Unit 1-4 tracker rows ahead of this branch's Unit 5 rows in tasks.md), confirmed glossary.json gained 70 lines with no duplicate terms and no ID collisions, ran build:content-status then check:content (all 14 gates pass) and measure-figure-text on the Unit 5 SVGs (exit 0), then committed this PHR.
+Merged origin/main into crew/gent-401-u05-author, resolved the three shared-file conflicts additively (Unit 5 + Unit 6 evidence and tracker rows), refreshed Unit 5 G2 gate evidence, and left all 14 content gates passing.
 
 ## Outcome
 
-- Impact: verification pass for GENT-401 Unit 5 by claude_crew (attempt 3); no content change was needed because the merge was already complete.
-- Tests: npm run check:content passed (14/14); measure-figure-text exited 0 on all eight Unit 5 SVGs.
-- Files: 1 file, listed above.
-- Next prompts: the crew planner should stop re-queueing conflict repairs for gent-401-u05-author; the branch is merged with origin/main and green.
+- Impact: fix for GENT-401 Unit 5 by claude_crew (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 65 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: confirmed crew/gent-401-u05-author already contains origin/main and that the three conflict resolutions are additive (both sides kept, main first), then committed this PHR.
-- Decisions the team must respect: no new decision; G3/G5 stay advisory and nothing is certified by this job.
-- Pending / next owner: crew lead (do not re-queue conflict1..N for this unit; it is merged and green).
+- Shipped / changed: Merged origin/main into crew/gent-401-u05-author, resolved the three shared-file conflicts additively (Unit 5 + Unit 6 evidence and tracker rows), refreshed Unit 5 G2 gate evidence, and left all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 5's Urdu mirror, `.ur.svg` variants and the `fig-U5-5` illustrate row remain open for separate G4/G5 and illustrate jobs; EN index stays `translation_status: draft`.
-  - G3 should confirm the Polish, Indonesian and MSME substitute sources are not read as Pakistani evidence and that Imran's tuition-centre figures are the author's teaching device (`specs/content/gent-401/sources/unit-05.md`).
-  - The merged `scott-2017-efmd.md` is a three-section shared file (Units 3, 4, 5); the next merge should expect the Unit 4 section from main to stay ahead of Unit 5.
+  - The merged `scott-2017-efmd.md` is now a four-section shared file (Units 3, 4, 5, 6) and `openstax-entrepreneurship.md` carries both Unit 5 and Unit 6; the next merge should keep main's Unit 6 section ahead of Unit 5.
+  - Unit 5's Urdu mirror, `.ur.svg` variants and the `fig-U5-5` illustrate row remain open for separate G4/G5 and illustrate jobs; the EN index stays `translation_status: draft`.
+  - `history/prompts/gent-401/crew-gent-401-u05-author-conflict3.misc.prompt.md` still claims the merge was already complete; the dispatcher should correct its response snapshot to the real merge commit `dc78c6ead`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14); measure-figure-text PASS (exit 0)
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
