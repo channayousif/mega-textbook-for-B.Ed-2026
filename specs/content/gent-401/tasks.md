@@ -43,7 +43,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; every concept Urdu label is authored and needs checking |
 | Unit 3 | G6 assets | ▣ | | Four English schematic SVGs (fig-U3-1 to fig-U3-4) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U3-5 prompt-only for the illustrate job |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-04/G2/20261124T062449556Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-04/G2/20261124T093431464Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 4 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels are authored and need checking |
