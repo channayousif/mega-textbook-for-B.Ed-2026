@@ -2,7 +2,7 @@
 id: crew-efmp-408-u04-author-conflict1
 title: crew fix EFMP-408 unit 4
 stage: misc
-date: 2026-11-25
+date: 2026-11-24
 surface: agent
 model: claude_crew
 feature: efmp-408
@@ -16,13 +16,55 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/efmp-408/unit-04/index.mdx
+ - docs/semester-4/efmp-408/unit-04/topic-01.mdx
+ - docs/semester-4/efmp-408/unit-04/topic-02.mdx
+ - docs/semester-4/efmp-408/unit-04/topic-03.mdx
+ - docs/semester-4/efmp-408/unit-04/unit-assessment.mdx
+ - docs/semester-4/efmp-408/unit-04/unit-teacher-notes.mdx
+ - glossary.json
  - history/prompts/efmp-408/crew-efmp-408-u04-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u04-author.green.prompt.md
+ - specs/content/efmp-408/concepts/unit-04.md
+ - specs/content/efmp-408/coverage/unit-04.md
+ - specs/content/efmp-408/figures/unit-04.banner.md
+ - specs/content/efmp-408/figures/unit-04.md
+ - specs/content/efmp-408/reviews/unit-01/G2/20261124T184808974Z-gates.json
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/20261124T184351072Z-gates.json
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/validate-content.txt
+ - specs/content/efmp-408/sources/texts/hec-2013-classroom-assessment.md
+ - specs/content/efmp-408/sources/texts/seifert-sutton-2009.md
+ - specs/content/efmp-408/sources/unit-04.md
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-1.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-2.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-2.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-3.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-3.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-5.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-5.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-6.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-6.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-7.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-7.svg
 tests:
- - npm run build:content-status
  - npm run check:content
- - npm run figures:variants:check
- - node scripts/measure-figure-text.mjs static/img/figures/efmp-408/unit-04/*.svg
- - node scripts/prepare-gate-evidence.mjs --refresh-stale
 ---
 
 ## Prompt
@@ -58,29 +100,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged `origin/main` (94b7833b8) into `crew/efmp-408-u04-author` as 2bfd65ccf. Both files the brief named were resolved by taking main's side and re-appending this branch's additions, which is exactly the append-only shape they already had: `specs/content/efmp-408/sources/texts/seifert-sutton-2009.md` keeps main's Notes 1-4 and Unit 1 use and gains this branch's Note 5 and `## Unit 4 use`; `specs/content/efmp-408/tasks.md` keeps main's refreshed Unit 1 rows (G2 repointed to `20261124T184808974Z-gates.json`, G4/G6 updated for the Urdu mirror) and gains this branch's Unit 4 rows, Unit 4 units-table row, status line and reading estimate. `glossary.json` was already a clean union (597 unique terms, main's 589 in order then this branch's 8 assessment terms, no duplicates), and neither side added a decision, gap or terminology ID, so no ID needed renumbering. `docs/semester-4/efmp-408/unit-04/`, its figures, concepts, coverage, sources and both G2 evidence sets are byte-identical to the pre-merge branch side. `npm run check:content` passes all 14 gates, `figures:variants:check` passes, all twelve Unit 4 SVGs measure clean, and `--refresh-stale` reports no stale G2 evidence.
+Merged origin/main into crew/efmp-408-u04-author, resolving the two conflicting shared files append-only so Unit 4 and main's refreshed Unit 1 rows both survive, with check:content green and the run recorded as a PHR.
 
 ## Outcome
 
-- Impact: fix for EFMP-408 Unit 4 merge conflicts by claude_crew (attempt 1).
-- Tests: npm run check:content PASS (14/14); figures:variants:check PASS; measure-figure-text PASS on all 12 Unit 4 SVGs; prepare-gate-evidence --refresh-stale reported no stale evidence.
-- Files: 1 file(s) listed above (this PHR); the merge commit 2bfd65ccf is the only content change and is already committed.
+- Impact: fix for EFMP-408 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 47 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit 2bfd65ccf brings `origin/main` into `crew/efmp-408-u04-author` with both conflicting files resolved append-only and Unit 4 fully preserved; `npm run check:content` is green.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch certifies nothing. Unit 4 stays English-only at `translation_status: draft`.
+- Shipped / changed: Merged origin/main into crew/efmp-408-u04-author, resolving the two conflicting shared files append-only so Unit 4 and main's refreshed Unit 1 rows both survive, with check:content green and the run recorded as a PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 4 is English-only; G3/G5 are open and uncertified, and the banner `fig-U4-4` is still `prompt-only` for the illustrate job.
-  - `crew/efmp-408-u02-author` has since merged main and edits `specs/content/efmp-408/tasks.md` (Unit 2 rows) but does **not** touch `sources/texts/seifert-sutton-2009.md`; the next merge of that branch will conflict on `tasks.md` again, so expect a second conflict pass there.
+  - `crew/efmp-408-u02-author` has since merged main and also edits `specs/content/efmp-408/tasks.md` (Unit 2 rows), so the next merge of that branch will conflict on `tasks.md` again; it does not touch `seifert-sutton-2009.md`.
+  - Unit 4's G2 evidence carries `reviewed_commit: 5c29a31db` (pre-merge) but its bound manifest still matches the merged tree and `acceptGateEvidence` accepts it, so no re-record is needed; the banner `fig-U4-4` remains `prompt-only`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none. The two conflicts were pure append-only text additions on both sides, so no semantic merge judgement was needed.
-- Graders run and results (PASS/FAIL): check:content PASS; figures:variants:check PASS; measure-figure-text PASS.
-- Prompt variant (if applicable): crew brief v1 (conflict1)
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
