@@ -4,7 +4,7 @@ title: crew review_en GCCE-400 unit 5
 stage: misc
 date: 2026-11-24
 surface: agent
-model: LongCat-2.5
+model: claude_crew
 feature: gcce-400
 branch: crew/gcce-400-u05-review_en
 user: crew
@@ -21,9 +21,6 @@ files:
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/advisory-tracker-row.md
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/assessment-independent.md
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/limitations.md
- - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/summary.md
- - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/make-report.mjs
- - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/manifest.json
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/logs/check:content.log
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/logs/check:depth-gate.log
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/logs/check:docs-sync.log
@@ -35,6 +32,8 @@ files:
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/logs/render-review.txt
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/logs/static-accessibility.txt
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/logs/validate:content.log
+ - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/make-report.mjs
+ - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/manifest.json
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/source-checks/batool-2019-article.pdf
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/source-checks/batool-2019-article.txt
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/source-checks/batool-2019-lawyers-movement.md
@@ -42,6 +41,7 @@ files:
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/source-checks/digital-divide-claim.md
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/source-checks/openstax-21-2.md
  - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/source-checks/youniss-levine-2009.md
+ - specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124/summary.md
 tests:
  - npm run check:content
 ---
@@ -77,30 +77,30 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed an independent advisory G3 English review of GCCE-400 Unit 5 (verdict escalate) with 11 findings, the strongest being that the Lawyers' Movement case study is attributed to a source that does not contain it. All content gates pass; render-review is unavailable because the deployed build is not the review input.
+Added an advisory independent G3 review of GCCE-400 Unit 5 (verdict escalate) whose blocking finding is that the Lawyers' Movement case study is attributed to a source that does not contain it, with all evidence, an advisory tracker row and a PHR committed on the branch.
 
 ## Outcome
 
 - Impact: review_en for GCCE-400 Unit 5 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (14 of 14 gates) in the job worktree before commit.
-- Files: 25 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 26 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added an advisory G3 report for GCCE-400 Unit 5 at specs/content/gcce-400/reviews/unit-05/G3/crew-run1-20261124.json with its evidence folder, an advisory tracker row and this PHR.
-- Decisions the team must respect: G3 stays advisory and open; no signature, no registry entry, no tracker row written, no certification and no publication. The report disposition is escalate.
-- Pending / next owner: crew lead and owner. F1 needs an owner ruling or a new bound source because the approved content-spec maps batool-2019-civil-society to Unit 5 and the article does not document the Lawyers' Movement.
+- Shipped / changed: Added an advisory independent G3 review of GCCE-400 Unit 5 (verdict escalate) whose blocking finding is that the Lawyers' Movement case study is attributed to a source that does not contain it, with all evidence, an advisory tracker row and a PHR committed on the branch.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - F1 (blocking): the Batool, Mahmood and Ullah (2019) article at doi 10.47264/idea.lassij/3.1.8 was read in full and contains no Lawyers' Movement material; the bound note sources/texts/batool-2019-civil-society.md:12 repeats the false claim. Any repair must re-open the approved content-spec mapped reading or bind a different source.
-  - F2 (blocking): the digital-divide sentence at topic-01.mdx:65 is uncited; the course's digital-divide notes belong to Unit 6.
-  - F8: render-review is unavailable because deployed SHA ac3d5e2fcd1818492dd11bc9b72d8cfed9a25e8d differs from HEAD for index.mdx and fig-U5-7.webp; a fresh G3 with a matching deployed build is needed for the visual checks.
+  - F1 needs an owner ruling or a newly bound source because the approved content-spec maps batool-2019-civil-society to Unit 5 and the article does not document the Lawyers' Movement; the full PDF and extracted text are in `source-checks/` for verification.
+  - A fresh G3 run needs a deployed build matching HEAD (the current deploy lacks the fig-U5-7 banner) before the accessibility criterion can move off unverified.
+  - G3 remains open and advisory; the report supports no certification, tracker done state or publication.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a bound source note (sources/texts/batool-2019-civil-society.md) asserted content the cited open-access article does not contain, and the unit built its core case study on it. The full-text fetch caught it; the abstract-level note did not.
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS.
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): for G3 source checks, fetch the cited open-access full text when a source is central to a topic, rather than relying on the bound note alone.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
