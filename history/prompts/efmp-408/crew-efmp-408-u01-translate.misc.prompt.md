@@ -16,29 +16,29 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-408/crew-efmp-408-u01-translate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/unit-teacher-notes.mdx
-  - specs/content/efmp-408/reviews/unit-01/G4/translation-handoff.md
-  - specs/content/efmp-408/tasks.md
-  - static/img/figures/efmp-408/unit-01/fig-U1-1.ur.dark.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-1.ur.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-2.ur.dark.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-2.ur.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-3.ur.dark.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-3.ur.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-5.ur.dark.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-5.ur.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-6.ur.dark.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-6.ur.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-7.ur.dark.svg
-  - static/img/figures/efmp-408/unit-01/fig-U1-7.ur.svg
+ - history/prompts/efmp-408/crew-efmp-408-u01-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/unit-teacher-notes.mdx
+ - specs/content/efmp-408/reviews/unit-01/G4/translation-handoff.md
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-01/fig-U1-1.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-1.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-2.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-2.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-3.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-3.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-5.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-5.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-6.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-6.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-7.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-7.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -74,27 +74,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u01-author, author, agy) All eleven Urdu labels in `concepts/unit-01.md` are authored and aligned with Pakistani classroom assessment conventions.
 - (efmp-408-u01-author, author, agy) Banner figure `fig-U1-4` is kept at `prompt-only` per the visual density standard for illustration banners.
 
+
 ## Response snapshot
 
-Translated EFMP-408 Unit 1 into Urdu across six files with complete structural parity, localized six schematic SVG figures with generated dark variants, verified clean text geometry, updated tasks tracker, and recorded translation handoff.
+Translated EFMP-408 Unit 1 into its full Urdu mirror across six files with complete structural parity, localized six schematic SVGs with derived dark twins, verified clean text geometry, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: translate for EFMP-408 Unit 1 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 21 file(s), listed above.
-- Next prompts: the crew planner derives the unit's next stage (G3 / G5 review) from main after merge.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated EFMP-408 Unit 1 into Urdu with full file and heading parity across all six files, localized six schematic SVGs with derived dark twins, verified clean text geometry with measure-figure-text.mjs, updated tasks tracker, and provided translation handoff.
-- Decisions the team must respect: translation_status remains draft until independent G5 review; no self-signing or certification claimed.
+- Shipped / changed: Translated EFMP-408 Unit 1 into its full Urdu mirror across six files with complete structural parity, localized six schematic SVGs with derived dark twins, verified clean text geometry, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All twelve Urdu SVG variants (light and dark) passed `measure-figure-text.mjs` with 0 errors.
-  - Temporary flip to `reviewed` confirmed exact heading parity, figure parity, and terminology conformance with zero unexpected findings.
-  - Proposed terms for G5 review are recorded in `specs/content/efmp-408/reviews/unit-01/G4/translation-handoff.md`.
+  - All six Urdu unit files and twelve SVG variants (light and dark) passed all gates with zero text geometry errors; translation_status remains draft pending independent G5 review.
+  - Key terms in index.mdx are bound to terminology.csv; unbanked terms (such as placement assessment / تقرری جانچ and appraisal / قدر پیمائی) are documented in the G4 translation handoff.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
