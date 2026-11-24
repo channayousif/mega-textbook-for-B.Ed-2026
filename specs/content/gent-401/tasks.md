@@ -12,7 +12,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | 2 | Types of Entrepreneurship and Opportunity Recognition | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 3 | Market Research and Business Models | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 4 | Developing a Business Plan | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (5 files) and four localized SVG pairs (with derived dark twins) drafted; translation_status stays draft pending G5 |
-| 5 | Financial Planning and Funding | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
+| 5 | Financial Planning and Funding | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (5 files) and four localized SVG pairs (with derived dark twins) drafted; translation_status stays draft pending G5 |
 | 6 | Marketing, Legal and Ethical Issues | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 7 | Growing a Business and Pitching It | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 
@@ -52,15 +52,15 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 6 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-06/G2/20261124T101619522Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should verify SECP and IPO-Pakistan procedures and check marketing ethics evaluation items |
-| Unit 6 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
+| Unit 6 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 91287e81b; see reviews/unit-06/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels need checking |
-| Unit 6 | G6 assets | ▣ | | Four English schematic SVGs (fig-U6-1 to fig-U6-4) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U6-5 prompt-only for the illustrate job |
+| Unit 6 | G6 assets | ▣ | | Four English schematic SVGs (fig-U6-1 to fig-U6-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U6-5 prompt-only for the illustrate job |
 | Unit 6 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-05/G2/20261124T105512776Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the open-access articles' settings are not presented as Pakistani evidence and that the tuition centre numbers are the author's teaching device (sources/unit-05.md) |
-| Unit 5 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
+| Unit 5 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 6ba1de283; see reviews/unit-05/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all six concept Urdu labels are authored and need checking |
-| Unit 5 | G6 assets | ▣ | | Four English schematic SVGs (fig-U5-1 to fig-U5-4) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U5-5 prompt-only for the illustrate job |
+| Unit 5 | G6 assets | ▣ | | Four English schematic SVGs (fig-U5-1 to fig-U5-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U5-5 prompt-only for the illustrate job |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
 
 Reading estimates use final visible text at about 200 words per minute: Unit 1 index 2, Topic 1.1 11, Topic 1.2 11, assessment 15, teacher notes 2, total 41 minutes, inside the approved 32-44 depth budget band. Its assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 4 is the blueprint's Analyze item comparing an entrepreneur and a salaried manager in a school-supplies business. The guide supplies teaching strategies and practical work, so a short unit teacher-notes page adds a local entrepreneur case study. The course overview uses the programme default weighting (formative 40, summative 60), as the guide gives no marks.
