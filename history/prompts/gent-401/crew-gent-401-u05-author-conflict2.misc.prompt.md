@@ -16,9 +16,61 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/gent-401/unit-05/index.mdx
+ - docs/semester-4/gent-401/unit-05/topic-01.mdx
+ - docs/semester-4/gent-401/unit-05/topic-02.mdx
+ - docs/semester-4/gent-401/unit-05/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-05/unit-teacher-notes.mdx
+ - glossary.json
+ - history/prompts/gent-401/crew-gent-401-u05-author-conflict1.misc.prompt.md
  - history/prompts/gent-401/crew-gent-401-u05-author-conflict2.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u05-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-05.md
+ - specs/content/gent-401/coverage/unit-05.md
+ - specs/content/gent-401/figures/unit-05.banner.md
+ - specs/content/gent-401/figures/unit-05.md
+ - specs/content/gent-401/reviews/unit-05/G2/20261124T054301209Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/20261124T094530692Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/20261124T102242274Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T102242274Z/validate-content.txt
+ - specs/content/gent-401/sources/texts/cegielska-2018-startup-financing.md
+ - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
  - specs/content/gent-401/sources/texts/scott-2017-efmd.md
+ - specs/content/gent-401/sources/texts/sintha-2020-break-even.md
+ - specs/content/gent-401/sources/texts/wati-2018-crowdfunding.md
+ - specs/content/gent-401/sources/unit-05.md
  - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-1.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-2.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-4.svg
 tests:
  - npm run check:content
 ---
@@ -56,26 +108,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u05-author, author, claude_crew) The Urdu mirror and `.ur.svg` files are deliberately absent (separate G4/G5 job; EN index is `translation_status: draft`), and banner `fig-U5-5` is a prompt-only row for the illustrate job.
 - (gent-401-u05-author, author, claude_crew) G3 should confirm the three substitute open-access sources (Polish startup financing, MSME break-even, Indonesian crowdfunding) are not read as Pakistani evidence and that Imran's tuition-centre figures are the author's teaching device (`sources/unit-05.md`).
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gent-401-u05-author, resolved the two remaining GENT-401 source and tracker conflicts additively (main's Unit 4 material first, then this branch's Unit 5 material), and confirmed all 14 content gates pass.
+Merged origin/main into crew/gent-401-u05-author, resolved the two GENT-401 source and tracker conflicts additively (main's Unit 4 first, then this branch's Unit 5), refreshed Unit 5's G2 gate evidence, and committed the merge plus its PHR with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for GENT-401 Unit 5 by claude_crew (attempt 2).
-- Tests: npm run check:content passed (14/14 gates) after `npm run build:content-status`.
-- Files: 16 file(s), listed above.
+- Impact: fix for GENT-401 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 55 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gent-401-u05-author and resolved the two conflicts, `specs/content/gent-401/sources/texts/scott-2017-efmd.md` and `specs/content/gent-401/tasks.md`, keeping both sides' entries. Because Unit 5 cites `scott-2017-efmd`, the merge changed its bound G2 input set, so the job also ran `node scripts/prepare-gate-evidence.mjs gent-401 5`, repointed the Unit 5 G2 en-draft tracker row to `20261124T102242274Z-gates.json` and committed the JSON with its `logs-20261124T102242274Z/` directory.
-- Decisions the team must respect: `scott-2017-efmd.md` now carries Unit 3, then Unit 4 (main), then Unit 5 (branch) sections under one header. `tasks.md` Unit 4 and Unit 5 rows and stage rows are both present, so the tracker is now the union of both sides. No glossary, terminology, gaps or decision-log collision occurred; `specs/decisions/log.md` only gained main's D-2026-0100.
+- Shipped / changed: Merged origin/main into crew/gent-401-u05-author, resolved the two GENT-401 source and tracker conflicts additively (main's Unit 4 first, then this branch's Unit 5), refreshed Unit 5's G2 gate evidence, and committed the merge plus its PHR with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 5 Urdu mirror, `.ur.svg` variants and the `fig-U5-5` illustrate job remain open for separate G4/G5 and illustrate jobs.
+  - Unit 5's Urdu mirror, `.ur.svg` variants and the `fig-U5-5` illustrate row remain open for separate G4/G5 and illustrate jobs; EN index stays `translation_status: draft`.
   - G3 should confirm the Polish, Indonesian and MSME substitute sources are not read as Pakistani evidence and that Imran's tuition-centre figures are the author's teaching device (`specs/content/gent-401/sources/unit-05.md`).
+  - The merged `scott-2017-efmd.md` is now a three-section shared file (Units 3, 4, 5); the next merge should expect the Unit 4 section from main to stay ahead of Unit 5.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
