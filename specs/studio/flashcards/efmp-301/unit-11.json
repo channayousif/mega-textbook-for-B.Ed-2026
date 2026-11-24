@@ -1,0 +1,170 @@
+{
+ "course": "EFMP-301",
+ "unit": 11,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Mental health",
+     "definition": "In WHO's framing, a state of mental well-being that enables people to cope with the stresses of life, realise their abilities, learn and work well, and contribute to their community. It is more than the absence of illness, and a basic human right."
+    },
+    {
+     "term": "Well-being",
+     "definition": "A balance of demands against supports, not a feeling and not the marks. It is not the absence of demands, since school is demands, but the presence of supports that meet them."
+    },
+    {
+     "term": "Demands",
+     "definition": "One pan of the well-being balance: the pressures on a pupil, such as the examination schedule, the comparison culture, the noisy hot room and the load some pupils carry at home."
+    },
+    {
+     "term": "Supports",
+     "definition": "The other pan of the well-being balance: what meets the demands, such as routine, belonging, feedback that names the next step, safety, and the one adult who notices."
+    },
+    {
+     "term": "Coping",
+     "definition": "Dealing with the stresses of life, which WHO frames as part of mental health. Because coping can be learned, well-being is partly a skill set, not a fixed endowment, and the school's supports can build it."
+    },
+    {
+     "term": "Anxiety",
+     "definition": "One of the difficulties a classroom can meet: exam nerves that have outgrown the exam."
+    },
+    {
+     "term": "Persistent low mood",
+     "definition": "A difficulty seen as withdrawal that lasts weeks, not days."
+    },
+    {
+     "term": "Hopelessness",
+     "definition": "Talk that treats the future as closed. A pupil's hopeless sentence is the most reliable evidence available and must always be taken as real, never dismissed as drama."
+    },
+    {
+     "term": "Notice without diagnosing",
+     "definition": "Part of the teacher's discipline with the signs: a sign is a reason to look and to listen, never a label to apply. Diagnosis, therapy and treatment are not the school's business."
+    },
+    {
+     "term": "Same-day escalation",
+     "definition": "The response two signs demand regardless of anything else: talk of self-harm or suicide, and a sudden, dramatic change in a pupil who has been in visible distress."
+    }
+   ],
+   "ur": [
+    {
+     "term": "ذہنی صحت",
+     "definition": "ڈبلیو ایچ او کے مطابق ذہنی فلاح کی وہ حالت جو لوگوں کو زندگی کے دباؤ سے نمٹنے، اپنی صلاحیتیں پوری کرنے، اچھی طرح سیکھنے اور کام کرنے، اور اپنی برادری میں حصہ ڈالنے کے قابل بناتی ہے۔ یہ بیماری کی غیر موجودگی سے زیادہ ہے، اور ایک بنیادی انسانی حق ہے۔"
+    },
+    {
+     "term": "فلاح",
+     "definition": "مانگوں اور سہاروں کا توازن، نہ کوئی احساس اور نہ نمبر۔ یہ مانگوں کی غیر موجودگی نہیں، کیونکہ اسکول مانگیں ہی ہے، بلکہ اُن سہاروں کی موجودگی ہے جو ان مانگوں سے ملیں۔"
+    },
+    {
+     "term": "مانگیں",
+     "definition": "فلاح کے توازن کا ایک پلڑا: شاگرد پر پڑنے والے دباؤ، جیسے امتحان کا شیڈول، موازنے کی ثقافت، شور والا گرم کمرہ، اور وہ بوجھ جو بعض شاگرد گھر میں اٹھاتے ہیں۔"
+    },
+    {
+     "term": "سہارے",
+     "definition": "فلاح کے توازن کا دوسرا پلڑا: جو مانگوں سے ملتا ہے، جیسے معمول، تعلق، وہ بازخورد جو اگلا قدم بتائے، حفاظت، اور وہ ایک بڑا جو نوٹ کرتا ہے۔"
+    },
+    {
+     "term": "نمٹنا",
+     "definition": "زندگی کے دباؤ کا سامنا کرنا، جسے ڈبلیو ایچ او ذہنی صحت کا حصہ مانتا ہے۔ چونکہ نمٹنا سیکھا جا سکتا ہے، اس لیے فلاح جزوی طور پر مہارتوں کا مجموعہ ہے، مقرر تحفہ نہیں، اور اسکول کے سہارے اسے بنا سکتے ہیں۔"
+    },
+    {
+     "term": "اضطراب",
+     "definition": "اُن مشکلوں میں سے ایک جن کا جماعت کو سامنا ہو سکتا ہے: امتحانی گھبراہٹ جو امتحان سے بڑھ گئی ہو۔"
+    },
+    {
+     "term": "مسلسل اداس مزاج",
+     "definition": "ایک مشکل جو ایسے کھنچاؤ کی صورت میں دکھتی ہے جو دنوں نہیں بلکہ ہفتوں چلے۔"
+    },
+    {
+     "term": "مایوسی",
+     "definition": "ایسی بات جو مستقبل کو بند سمجھے۔ شاگرد کا مایوس جملہ دستیاب سب سے قابل بھروسا ثبوت ہے اور اسے ہمیشہ سچ ماننا ہے، کبھی ڈرامہ کہہ کر رد نہیں کرنا۔"
+    },
+    {
+     "term": "تشخیص کیے بغیر نوٹ کریں",
+     "definition": "نشانیوں کے ساتھ استاد کے ضابطے کا حصہ: نشانی دیکھنے اور سننے کی وجہ ہے، لگانے والا لیبل کبھی نہیں۔ تشخیص، تھراپی اور علاج اسکول کا کام نہیں۔"
+    },
+    {
+     "term": "اسی دن بڑھاوا",
+     "definition": "وہ جواب جو دو نشانیاں ہر حال میں مانگتی ہیں: خود کو نقصان پہنچانے یا خودکشی کی بات، اور اُس شاگرد میں اچانک، نمایاں تبدیلی جو نمایاں تکلیف میں رہا ہو۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Station of the school day",
+     "definition": "A point in the day, such as assembly, lessons, break, the last period or home time. Every station is at once a demand and a support, and the school designs which it becomes."
+    },
+    {
+     "term": "Walk of the timetable",
+     "definition": "An audit that reads the day station by station, turning the vague duty to support well-being into a list of which stations work as demands without supports and what would flip them."
+    },
+    {
+     "term": "Notice",
+     "definition": "The first part of the teacher's role in well-being: the signs of Topic 11.1, read as patterns and kept in a private map."
+    },
+    {
+     "term": "Private map",
+     "definition": "The teacher's private, factual record of the pupils being watched. It is not surveillance but attention with a memory: the difference between \"he seems off today\" and \"this is the third Monday running\"."
+    },
+    {
+     "term": "Respond within the classroom",
+     "definition": "The second part of the role: greet by name, keep the routine unbroken, reduce the demand you control, name feelings calmly, and keep the pupil included by role. None is therapy; all are inside the teaching role."
+    },
+    {
+     "term": "Refer beyond it",
+     "definition": "The third part of the role: escalating to the head teacher or the designated person when the signs exceed the classroom's reach. The referral is not a failure of care; it is the care, delivered by the right hands."
+    },
+    {
+     "term": "Same-day handover",
+     "definition": "Passing the pupil's words, written down and dated, to the head teacher or designated person the same day. It is the unit's minimum, not a replacement for the school's own safeguarding procedure."
+    },
+    {
+     "term": "Referral triggers",
+     "definition": "Signs that exceed the classroom's reach: any talk of self-harm or suicide; a sudden, dramatic change in visible distress; a pattern that deepens despite classroom supports; or anything the teacher cannot keep safe."
+    },
+    {
+     "term": "The boundary",
+     "definition": "The role's limit, which protects the pupil twice: from a teacher who counsels beyond training, and from a kept confidence that leaves the pupil carrying it alone. What ends at handover is responsibility for treatment, never the relationship."
+    }
+   ],
+   "ur": [
+    {
+     "term": "اسکول کے دن کا اسٹیشن",
+     "definition": "دن کا ایک مرحلہ، جیسے اسمبلی، سبق، وقفہ، آخری پیریڈ یا گھر واپسی۔ ہر اسٹیشن بیک وقت مانگ اور سہارا ہے، اور اسکول ڈیزائن کرتا ہے کہ وہ کیا بنے گا۔"
+    },
+    {
+     "term": "ٹائم ٹیبل کی چہل قدمی",
+     "definition": "ایک جانچ جو دن کو اسٹیشن بہ اسٹیشن پڑھتی ہے، اور فلاح کا سہارا دینے کے مبہم فرض کو اس فہرست میں بدل دیتی ہے کہ کون سے اسٹیشن سہارے کے بغیر مانگ کے طور پر چل رہے ہیں اور انہیں کیا پلٹ سکتا ہے۔"
+    },
+    {
+     "term": "نوٹ کریں",
+     "definition": "فلاح میں استاد کے کردار کا پہلا حصہ: موضوع 11.1 کی نشانیاں، نمونوں کے طور پر پڑھی ہوئی اور ایک نجی نقشے میں رکھی ہوئی۔"
+    },
+    {
+     "term": "نجی نقشہ",
+     "definition": "استاد کا نجی اور حقائق پر مبنی ریکارڈ اُن شاگردوں کا جنہیں وہ دیکھ رہا ہے۔ یہ نگہبانی نہیں بلکہ یادداشت والی توجہ ہے: \"وہ آج مختلف لگ رہا ہے\" اور \"یہ مسلسل تیسرا پیر ہے\" کا فرق۔"
+    },
+    {
+     "term": "جماعت کے اندر جواب دیں",
+     "definition": "کردار کا دوسرا حصہ: نام سے سلام کریں، معمول نہ توڑیں، جو مانگ آپ کے اختیار میں ہے کم کریں، جذبات کا پرسکون نام لیں، اور شاگرد کو کردار دے کر شامل رکھیں۔ ان میں کوئی تھراپی نہیں؛ سب تدریسی کردار کے اندر ہیں۔"
+    },
+    {
+     "term": "آگے رجوع کریں",
+     "definition": "کردار کا تیسرا حصہ: جب نشانیاں جماعت کی پہنچ سے بڑھ جائیں تو ہیڈ ٹیچر یا مقرر کردہ شخص تک بات پہنچانا۔ رجوع دیکھ بھال کی ناکامی نہیں؛ یہی دیکھ بھال ہے، درست ہاتھوں سے پہنچائی ہوئی۔"
+    },
+    {
+     "term": "اسی دن حوالگی",
+     "definition": "شاگرد کے الفاظ، لکھے ہوئے اور تاریخ والے، اسی دن ہیڈ ٹیچر یا مقرر کردہ شخص کے حوالے کرنا۔ یہ اس یونٹ کی کم از کم حد ہے، اسکول کے اپنے تحفظ کے طریقہ کار کا متبادل نہیں۔"
+    },
+    {
+     "term": "رجوع کے محرک",
+     "definition": "وہ نشانیاں جو جماعت کی پہنچ سے بڑھ جائیں: خود کو نقصان یا خودکشی کی کوئی بات؛ نمایاں تکلیف میں اچانک، نمایاں تبدیلی؛ کوئی نمونہ جو جماعتی سہاروں کے باوجود گہرا ہو؛ یا کوئی چیز جسے استاد محفوظ نہیں رکھ سکتا۔"
+    },
+    {
+     "term": "حد",
+     "definition": "کردار کی حد، جو شاگرد کو دو بار بچاتی ہے: تربیت سے آگے مشورہ دینے والے استاد سے، اور اُس راز سے جو شاگرد کو اکیلے اٹھائے چھوڑ دے۔ حوالگی پر علاج کی ذمہ داری ختم ہوتی ہے، رشتہ کبھی نہیں۔"
+    }
+   ]
+  }
+ }
+}
