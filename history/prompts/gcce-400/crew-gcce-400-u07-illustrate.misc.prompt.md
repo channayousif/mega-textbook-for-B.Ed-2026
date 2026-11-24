@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed GCCE-400 Unit 7 banner illustration fig-U7-9 across English and Urdu indices, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed GCCE-400 Unit 7 banner illustration fig-U7-9 across English and Urdu index pages, recorded fresh G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -85,12 +85,12 @@ Generated, inspected, and placed GCCE-400 Unit 7 banner illustration fig-U7-9 ac
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GCCE-400 Unit 7 banner illustration fig-U7-9 across English and Urdu indices, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed GCCE-400 Unit 7 banner illustration fig-U7-9 across English and Urdu index pages, recorded fresh G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 en-review remains open; reviewer should confirm census figures against Table 11 and Table 4.21, constitutional articles against current text (sources/unit-07.md), and the kymlicka-norman-2000 and youniss-levine-2009 attributions declared unverifiable.
-  - G5 ur-review remains open; translation_status is draft across English and Urdu indices, and G5 owns Nastaliq shaping, 360px and A4 print layout inspection.
+  - G3 en-review remains open on census Table 11/4.21 figures, constitutional currency, and declared-unverifiable kymlicka-norman-2000 and youniss-levine-2009 attributions.
+  - G5 ur-review remains open; translation_status is draft across English and Urdu indices, and rendered Urdu inspection (Nastaliq shaping, 360px, A4 print) is pending against textbook.com.pk.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
