@@ -1,0 +1,156 @@
+---
+title: "Topic 5.3 - Item analysis"
+description: "Compute the difficulty and discrimination indices of a test item from a small score table, interpret both, and decide whether to keep, revise or drop the item."
+course_code: EFMP-408
+unit_no: 5
+topic_no: 3
+topic_label: "5.3"
+credit_hours: "3 (3-0)"
+category: "Major: Professional"
+assessment_weighting:
+  summative: 60
+  formative: 40
+clo_refs:
+  - "SLO:EFMP-408-5-3"
+blooms_summary: "Remember the formulas for the item difficulty index and the item discrimination index; understand what each number describes about an item; apply both to a five-item quiz and justify a keep, revise or drop decision for each item."
+est_reading_minutes: 12
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Figure from '@site/src/components/Figure';
+
+<PrintHandout />
+
+# Topic 5.3 - Item analysis
+
+## A real classroom situation
+
+At a government elementary school in Ghotki, Mr Kamran gives his Class 6 General Mathematics class a ten-item test and marks it that evening. Two pupils, Sajid and Tariq, score 9 out of 10. Three others score 4. Mr Kamran turns to item 7, because Sajid and Tariq both got it wrong while two of the pupils who scored 4 got it right. That should not happen. An item on which the strongest pupils fail and the weakest pupils succeed is either badly written or wrongly keyed, and until Mr Kamran knows which, he cannot say what the test measured. He sits down with his mark sheet, ranks the twenty pupils by total score, and splits them into an upper group and a lower group. Twenty minutes later he has two numbers for every item on the paper.
+
+<Figure id="fig-U5-3" src="/img/figures/efmp-408/unit-05/fig-U5-3.svg" alt="A worked item analysis table for a five-item quiz taken by 30 pupils, showing the upper, middle and lower group correct counts, the difficulty index and the discrimination index for each item." />
+
+## Explanation
+
+### Item difficulty index
+
+The **item difficulty index** is the proportion of pupils who answer an item correctly.
+
+> difficulty index (p) = number of pupils answering the item correctly / number of pupils who attempted the item
+
+It runs from 0 to 1, or from 0 percent to 100 percent. A value of 0.90 means that nine out of ten pupils got the item right, so the item is easy for that group. A value of 0.15 means only three out of twenty got it right, so the item is hard for that group.
+
+The HEC course guide names the same calculation: difficulty can be measured by calculating the proportion of test-takers who respond correctly to the question, or estimated before the item is used by categorising it as easy, moderate or difficult on the predicted percentage who will respond correctly (HEC, 2012). The guide's teaching notes also ask a sharper question about a finished test: which items have mismatched estimated and actual difficulty levels, and why.
+
+Difficulty is a description, not a verdict. There is no universal value of p that makes an item good. What matters is fit to the purpose of the test:
+
+- A mastery test of a basic skill that every pupil must have should contain items that almost everyone gets right, so a p near 1 is exactly what the teacher wants.
+- A competitive scholarship test that must separate a small number of applicants needs items that most candidates miss, so a low p is appropriate.
+- A ordinary classroom unit test usually aims for a spread, with most items in the middle and a few easy and a few hard.
+
+> **Common misconception: a hard item is a bad item.**
+> Hardness and quality are different things. An item that everyone fails may be testing exactly the objective the teacher intended, and an item that everyone answers correctly may be a waste of paper. The question a teacher should ask is not "is this item hard?" but "does the difficulty of this item match the purpose of this test, and does the item still separate stronger pupils from weaker ones?" Difficulty alone cannot answer the second half of that question. For that, you need the discrimination index.
+
+### Item discrimination index
+
+The **item discrimination index** measures how well an item separates pupils who did well on the whole test from pupils who did poorly. The idea in the HEC guide is that pupils who achieve high scores on the entire test should be more likely to get a given item right than pupils who are not high scorers (HEC, 2012). An item that behaves that way is contributing to the reliability of the test. An item that does not is noise.
+
+The guide sets out a five-step procedure:
+
+1. Rank the pupils by their total scores on the test.
+2. Divide them into three groups: top, middle and bottom. If the scores do not divide evenly into three groups and there is a remainder, assign the remainder to the top and bottom groups in equal numbers.
+3. For each item, count how many pupils in each group got the item right.
+4. Subtract the number who got it right in the bottom group from the number who got it right in the top group, and divide the difference by the number of pupils in the bottom group.
+5. The result is a proportion, which the guide calls E13, lying between +1.0 and -1.0.
+
+An item with a discrimination index of +1.0 is ideal: everyone in the top group got it right and nobody in the bottom group did. An index of 0 means the item does not separate the groups at all. A negative index means the bottom group did better than the top group, which is a warning.
+
+**Worked example: a five-item quiz.** A Class 6 section of 30 pupils in a government school in Sukkur takes a five-item quiz. Thirty divides evenly into three groups of ten. The counts are as follows.
+
+| Item | Top group correct (of 10) | Middle group correct (of 10) | Bottom group correct (of 10) | Total correct | Difficulty p | Discrimination D |
+|---|---|---|---|---|---|---|
+| 1 | 10 | 8 | 2 | 20 | 20/30 = 0.67 | (10 - 2)/10 = 0.80 |
+| 2 | 9 | 6 | 5 | 20 | 20/30 = 0.67 | (9 - 5)/10 = 0.40 |
+| 3 | 5 | 5 | 5 | 15 | 15/30 = 0.50 | (5 - 5)/10 = 0.00 |
+| 4 | 10 | 10 | 10 | 30 | 30/30 = 1.00 | (10 - 10)/10 = 0.00 |
+| 5 | 2 | 1 | 3 | 6 | 6/30 = 0.20 | (2 - 3)/10 = -0.10 |
+
+Now read each item the way a teacher should:
+
+- **Item 1 (p = 0.67, D = 0.80).** Two-thirds of the class got it right and it separates the groups strongly. Keep it.
+- **Item 2 (p = 0.67, D = 0.40).** Similar difficulty, weaker but still positive separation. Keep it, and consider whether the distractors can be improved next time.
+- **Item 3 (p = 0.50, D = 0.00).** Half the class got it right, but the top, middle and bottom groups all got it right at the same rate. The item is not measuring what the rest of the test measures. Check the key. If the key is right, the item is probably testing something incidental, and it should be revised or replaced.
+- **Item 4 (p = 1.00, D = 0.00).** Everyone got it right, so it separates nobody. It may still earn its place as a baseline check that every pupil holds the prerequisite skill, but it contributes nothing to the rank order and it shortens the test's range.
+- **Item 5 (p = 0.20, D = -0.10).** Hard, and the bottom group did slightly better than the top group. This is the pattern that signals a faulty item: a wrong key, ambiguous wording, or a slip that only the strongest pupils made. It should not count towards the pupils' marks, and it should be dropped or rewritten.
+
+The guide's advice on a zero or negative index is blunt and worth remembering: such an item should not be used, and rewriting the stem or the options rarely rescues it. It is better to write a new item from the same cell of the specification grid, and if that does not work, to reconsider whether that cell or topic belongs in the test at all (HEC, 2012). Item analysis in the guide has a third element too, **plausibility**, which asks whether the wrong options actually attracted pupils; a distractor nobody chooses is wasted space.
+
+<Figure id="fig-U5-6" src="/img/figures/efmp-408/unit-05/fig-U5-6.svg" alt="Flowchart for deciding the fate of a test item: after computing difficulty and discrimination, a negative discrimination sends the teacher to check the key, a near-zero discrimination leads to revising or replacing the item, and a difficulty outside the band the test needs leads to revising the item, otherwise the item is kept." />
+
+## Activity: Three items, three decisions
+
+**Objective:** Compute a difficulty and a discrimination index from a small score table and defend a keep, revise or drop decision.  
+**Grouping:** Small groups of 3 to 4 trainee teachers.  
+**Time:** 25 minutes.
+
+### Instructions
+
+1. Read the table below. It shows how three items in a Class 7 General Mathematics test were answered by 20 pupils, divided into an upper group of 7, a middle group of 6 and a lower group of 7.
+
+   | Item | Upper group correct (of 7) | Middle group correct (of 6) | Lower group correct (of 7) |
+   |---|---|---|---|
+   | A | 7 | 4 | 1 |
+   | B | 4 | 3 | 3 |
+   | C | 2 | 2 | 5 |
+
+2. Compute the difficulty index for all three items.
+3. Compute the discrimination index for item C, showing each step of the procedure in the Explanation.
+4. Decide what to do with each of items A, B and C, and give one reason for each decision.
+5. For the item you would change, write the note you would put in the item bank so that the next teacher who uses it knows what happened.
+6. Appoint a rapporteur to report your group's three decisions and to say which piece of evidence was decisive in each case.
+
+## Check your understanding
+
+1. State the formula for the item difficulty index, and explain what a value of 0.90 means for a classroom test. *(Remember)*
+2. In a class of 30 pupils, 21 answer item 7 correctly. Calculate the difficulty index. Then give two reasons why a low difficulty index on its own is not a reason to discard an item. *(Apply)*
+3. An item has a discrimination index of -0.20. Give two checks the teacher should make before deciding what to do with the item, and explain why each one matters. *(Apply)*
+
+## Summary
+
+The item difficulty index is the proportion of pupils who answer an item correctly, and it describes how hard the item was for that group. The item discrimination index compares the upper group with the lower group and describes whether the item measures the same thing as the rest of the test. An item can be hard and still be excellent, and an item can be easy and be worthless. The decision a teacher makes, keep, revise or drop, follows from the two numbers together and from the purpose of the test, and a negative discrimination index is always a signal to check the item before anything else.
+
+## Self-assessment checklist
+
+- [ ] I can state the formula for the item difficulty index and compute it from a small score table.
+- [ ] I can describe the upper, middle and lower group procedure and compute a discrimination index from it.
+- [ ] I can explain why a hard item is not necessarily a bad item.
+- [ ] I can justify a keep, revise or drop decision for a described item using both indices.
+
+## Try this at your practicum school
+
+During your next practicum visit:
+
+1. Ask your cooperating teacher for the mark sheet of one recently marked objective test, with names removed.
+2. Rank the pupils by total score and divide them into upper, middle and lower groups, handling any remainder as the guide describes.
+3. Compute the difficulty and discrimination index for each item.
+4. Identify the item most in need of attention and write down the first check you would make, with a reason.
+
+## Summative task
+
+Write an item-review note (about 300 to 400 words) for the teacher who set a Class 8 General Science test, using the three items in the Activity table. In your note:
+
+1. Report the difficulty index for items A, B and C and the discrimination index for item C. *(Apply)*
+2. Analyse what the pair of numbers for item C tells the teacher, and propose the first two checks the teacher should make. *(Analyze)*
+3. Recommend one change to how the school builds and reviews its item bank, with a reason drawn from this exercise. *(Create)*
+
+### Mini-rubric
+
+| Criterion | Below Standard (1 mark) | Meets Standard (2 marks) | Exceeds Standard (3 marks) |
+|---|---|---|---|
+| **Computation (Apply)** | The indices are missing, or the working contains an arithmetic error. | Both indices are computed correctly with the working shown. | Both indices are correct and the reader can follow each step without ambiguity. |
+| **Analysis of item C (Analyze)** | Describes the numbers without explaining what they imply. | Explains what the pair of numbers implies and proposes two sensible first checks. | Explains the implication precisely and orders the checks by what each would rule out. |
+| **Recommendation** | The recommendation is generic or unrelated to the exercise. | Recommends one change to the item bank with a reason drawn from this exercise. | Recommends one change, reasoned from this exercise and feasible in a government school. |
+
+## Further reading
+
+- Higher Education Commission. (2012). *Test development and evaluation: Course guide, B.Ed. (Hons) Elementary* (revised September 2013). HEC, Islamabad. Teaching notes on difficulty level and on evaluating test items by their discrimination power, including the item classification table. https://www.hec.gov.pk/english/services/universities/RevisedCurricula/Documents/2011-2012/Education/TestDevEval_Sept13.pdf
