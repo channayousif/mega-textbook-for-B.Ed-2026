@@ -2,7 +2,7 @@
 id: crew-efmp-408-u04-author-conflict3
 title: crew fix EFMP-408 unit 4
 stage: misc
-date: 2026-11-25
+date: 2026-11-24
 surface: agent
 model: claude_crew
 feature: efmp-408
@@ -16,7 +16,66 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/efmp-408/unit-04/index.mdx
+ - docs/semester-4/efmp-408/unit-04/topic-01.mdx
+ - docs/semester-4/efmp-408/unit-04/topic-02.mdx
+ - docs/semester-4/efmp-408/unit-04/topic-03.mdx
+ - docs/semester-4/efmp-408/unit-04/unit-assessment.mdx
+ - docs/semester-4/efmp-408/unit-04/unit-teacher-notes.mdx
+ - glossary.json
+ - history/prompts/efmp-408/crew-efmp-408-u04-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u04-author-conflict2.misc.prompt.md
  - history/prompts/efmp-408/crew-efmp-408-u04-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u04-author.green.prompt.md
+ - specs/content/efmp-408/concepts/unit-04.md
+ - specs/content/efmp-408/coverage/unit-04.md
+ - specs/content/efmp-408/figures/unit-04.banner.md
+ - specs/content/efmp-408/figures/unit-04.md
+ - specs/content/efmp-408/reviews/unit-01/G2/20261124T184808974Z-gates.json
+ - specs/content/efmp-408/reviews/unit-01/G2/20261124T205634609Z-gates.json
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184808974Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T205634609Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T205634609Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T205634609Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T205634609Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T205634609Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T205634609Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T205634609Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T205634609Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/20261124T205634818Z-gates.json
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T205634818Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T205634818Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T205634818Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T205634818Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T205634818Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T205634818Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T205634818Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T205634818Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/20261124T184351072Z-gates.json
+ - specs/content/efmp-408/reviews/unit-04/G2/20261124T205255782Z-gates.json
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T184351072Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T205255782Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T205255782Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T205255782Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T205255782Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T205255782Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T205255782Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T205255782Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-04/G2/logs-20261124T205255782Z/validate-content.txt
  - specs/content/efmp-408/reviews/unit-06/G2/20261124T221258227Z-gates.json
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T221258227Z/check-bloom-bands.txt
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T221258227Z/check-concept-graph.txt
@@ -26,7 +85,22 @@ files:
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T221258227Z/check-no-answer-keys.txt
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T221258227Z/check-no-em-dash.txt
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T221258227Z/validate-content.txt
+ - specs/content/efmp-408/sources/texts/hec-2013-classroom-assessment.md
+ - specs/content/efmp-408/sources/texts/seifert-sutton-2009.md
+ - specs/content/efmp-408/sources/unit-04.md
  - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-1.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-2.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-2.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-3.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-3.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-5.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-5.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-6.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-6.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-7.dark.svg
+ - static/img/figures/efmp-408/unit-04/fig-U4-7.svg
 tests:
  - npm run check:content
 ---
@@ -66,23 +140,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u04-author-conflict1, fix, claude_crew) `crew/efmp-408-u02-author` has since merged main and also edits `specs/content/efmp-408/tasks.md` (Unit 2 rows), so the next merge of that branch will conflict on `tasks.md` again; it does not touch `seifert-sutton-2009.md`.
 - (efmp-408-u04-author-conflict1, fix, claude_crew) Unit 4's G2 evidence carries `reviewed_commit: 5c29a31db` (pre-merge) but its bound manifest still matches the merged tree and `acceptGateEvidence` accepts it, so no re-record is needed; the banner `fig-U4-4` remains `prompt-only`.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/efmp-408-u04-author`, resolved the single `specs/content/efmp-408/tasks.md` conflict keeping both this branch's Unit 4 rows and main's Unit 6 rows, then refreshed Unit 6's G2 evidence because this branch's shared `seifert-sutton-2009.md` note is also cited by Unit 6. `npm run check:content` is green with all work committed.
+Merged origin/main, resolved the `tasks.md` conflict keeping both Unit 4 and Unit 6 rows, refreshed Unit 6's G2 evidence invalidated by the branch's shared source note, and left `npm run check:content` fully green with all work committed.
 
 ## Outcome
 
-- Impact: fix for EFMP-408 Unit 4 by claude_crew (attempt 3).
+- Impact: fix for EFMP-408 Unit 4 by claude_crew (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 11 file(s), listed above.
+- Files: 85 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into `crew/efmp-408-u04-author`, resolved the `tasks.md` conflict keeping both Unit 4 and Unit 6 rows, refreshed Unit 6's G2 evidence (this branch's shared `seifert-sutton-2009.md` note is cited by Unit 6 too), and left `npm run check:content` green with all work committed.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this run does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main, resolved the `tasks.md` conflict keeping both Unit 4 and Unit 6 rows, refreshed Unit 6's G2 evidence invalidated by the branch's shared source note, and left `npm run check:content` fully green with all work committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Any further edit to `specs/content/efmp-408/sources/texts/seifert-sutton-2009.md` re-invalidates the G2 evidence of Units 1, 3, 4 and 6, so run `node scripts/prepare-gate-evidence.mjs --refresh-stale` afterwards.
   - `crew/efmp-408-u02-author` also edits `specs/content/efmp-408/tasks.md` (Unit 2 rows), so its next merge will conflict on that file again.
