@@ -49,7 +49,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels are authored and need checking |
 | Unit 4 | G6 assets | ▣ | | Four English schematic SVGs (fig-U4-1 to fig-U4-4) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U4-5 prompt-only for the illustrate job |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-05/G2/20261124T094530692Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-05/G2/20261124T102242274Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the open-access articles' settings are not presented as Pakistani evidence and that the tuition centre numbers are the author's teaching device (sources/unit-05.md) |
 | Unit 5 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all six concept Urdu labels are authored and need checking |

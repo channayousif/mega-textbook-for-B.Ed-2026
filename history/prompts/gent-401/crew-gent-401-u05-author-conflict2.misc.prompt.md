@@ -64,13 +64,13 @@ Merged origin/main into crew/gent-401-u05-author, resolved the two remaining GEN
 
 - Impact: fix for GENT-401 Unit 5 by claude_crew (attempt 2).
 - Tests: npm run check:content passed (14/14 gates) after `npm run build:content-status`.
-- Files: 3 file(s), listed above.
+- Files: 16 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gent-401-u05-author and resolved the two conflicts, `specs/content/gent-401/sources/texts/scott-2017-efmd.md` and `specs/content/gent-401/tasks.md`, keeping both sides' entries.
+- Shipped / changed: Merged origin/main into crew/gent-401-u05-author and resolved the two conflicts, `specs/content/gent-401/sources/texts/scott-2017-efmd.md` and `specs/content/gent-401/tasks.md`, keeping both sides' entries. Because Unit 5 cites `scott-2017-efmd`, the merge changed its bound G2 input set, so the job also ran `node scripts/prepare-gate-evidence.mjs gent-401 5`, repointed the Unit 5 G2 en-draft tracker row to `20261124T102242274Z-gates.json` and committed the JSON with its `logs-20261124T102242274Z/` directory.
 - Decisions the team must respect: `scott-2017-efmd.md` now carries Unit 3, then Unit 4 (main), then Unit 5 (branch) sections under one header. `tasks.md` Unit 4 and Unit 5 rows and stage rows are both present, so the tracker is now the union of both sides. No glossary, terminology, gaps or decision-log collision occurred; `specs/decisions/log.md` only gained main's D-2026-0100.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
