@@ -1,6 +1,6 @@
 ---
 id: crew-gent-401-u02-author-conflict1
-title: crew fix GENT-401 unit 2 merge conflicts
+title: crew fix GENT-401 unit 2
 stage: misc
 date: 2026-11-24
 surface: agent
@@ -16,9 +16,38 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/gent-401/unit-02/index.mdx
+ - docs/semester-4/gent-401/unit-02/topic-01.mdx
+ - docs/semester-4/gent-401/unit-02/topic-02.mdx
+ - docs/semester-4/gent-401/unit-02/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-02/unit-teacher-notes.mdx
  - glossary.json
  - history/prompts/gent-401/crew-gent-401-u02-author-conflict1.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u02-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-02.md
+ - specs/content/gent-401/coverage/unit-02.md
+ - specs/content/gent-401/figures/unit-02.banner.md
+ - specs/content/gent-401/figures/unit-02.md
+ - specs/content/gent-401/reviews/unit-02/G2/20261124T045217007Z-gates.json
+ - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-02/G2/logs-20261124T045217007Z/validate-content.txt
+ - specs/content/gent-401/sources/texts/qamar-2020-social.md
+ - specs/content/gent-401/sources/unit-02.md
  - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/gent-401/unit-02/fig-U2-1.svg
+ - static/img/figures/gent-401/unit-02/fig-U2-2.dark.svg
+ - static/img/figures/gent-401/unit-02/fig-U2-2.svg
+ - static/img/figures/gent-401/unit-02/fig-U2-3.dark.svg
+ - static/img/figures/gent-401/unit-02/fig-U2-3.svg
+ - static/img/figures/gent-401/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/gent-401/unit-02/fig-U2-4.svg
 tests:
  - npm run check:content
 ---
@@ -54,26 +83,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u02-author, author, claude_crew) `mellor-2009` is declared under `## Unverifiable sources` and backs only general background; no page or wording is claimed.
 - (gent-401-u02-author, author, claude_crew) figures are placed English-only (no `.ur.svg`); banner `fig-U2-5` is a prompt-only row in `figures/unit-02.banner.md` for the illustrate job, and the Urdu mirror is a separate G4 job.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gent-401-u02-author, resolved the two conflicts by keeping both sides (main's Unit 3 glossary entries and tracker rows, this branch's Unit 2 entries and rows, main's order first, no duplicates), committed the merge with its PHR, and left `npm run check:content` fully green (14/14 gates).
+Merged origin/main into crew/gent-401-u02-author, resolved the glossary.json and tasks.md conflicts by keeping both sides' entries (main first, no duplicates), and left npm run check:content fully green.
 
 ## Outcome
 
 - Impact: fix for GENT-401 Unit 2 by claude_crew (attempt 1).
-- Tests: `npm run check:content` passed in the job worktree (all 14 content gates).
-- Files: 3 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 32 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gent-401-u02-author and resolved `glossary.json` (main's six Unit 3 terms first, then this branch's eight Unit 2 terms) and `specs/content/gent-401/tasks.md` (main's Unit 1 and Unit 3 rows plus this branch's Unit 2 rows). No IDs collided and no exact duplicates were found.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
+- Shipped / changed: Merged origin/main into crew/gent-401-u02-author, resolved the glossary.json and tasks.md conflicts by keeping both sides' entries (main first, no duplicates), and left npm run check:content fully green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 2's G2 evidence manifest was re-verified against HEAD and is still fresh (0 hash diffs), so no re-run of `prepare-gate-evidence.mjs` was needed.
-  - Unit 2 files are unchanged by the merge; only the tracker and glossary were touched.
+  - Unit 2 G2 evidence at reviews/unit-02/G2/20261124T045217007Z-gates.json is still fresh at the merge commit; no re-run needed.
+  - Unit 2 remains English-only (no `.ur.svg`, no Urdu mirror); banner `fig-U2-5` is still a prompt-only row for the illustrate job, and G3/G5 are unticked.
+  - glossary.json will keep conflicting for every sibling gent-401 job; the fix is always main's entries first, then the branch's, with no duplicate terms.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
