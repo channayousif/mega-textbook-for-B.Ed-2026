@@ -16,9 +16,28 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/gent-401/unit-05/index.mdx
+ - docs/semester-4/gent-401/unit-05/topic-01.mdx
+ - docs/semester-4/gent-401/unit-05/topic-02.mdx
+ - docs/semester-4/gent-401/unit-05/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-05/unit-teacher-notes.mdx
  - glossary.json
  - history/prompts/gent-401/crew-gent-401-u05-author-conflict1.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u05-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-05.md
+ - specs/content/gent-401/coverage/unit-05.md
+ - specs/content/gent-401/figures/unit-05.banner.md
+ - specs/content/gent-401/figures/unit-05.md
+ - specs/content/gent-401/reviews/unit-05/G2/20261124T054301209Z-gates.json
  - specs/content/gent-401/reviews/unit-05/G2/20261124T094530692Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T054301209Z/validate-content.txt
  - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-bloom-bands.txt
  - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-concept-graph.txt
  - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-depth-gate.txt
@@ -27,13 +46,23 @@ files:
  - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-no-answer-keys.txt
  - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/check-no-em-dash.txt
  - specs/content/gent-401/reviews/unit-05/G2/logs-20261124T094530692Z/validate-content.txt
+ - specs/content/gent-401/sources/texts/cegielska-2018-startup-financing.md
  - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
  - specs/content/gent-401/sources/texts/scott-2017-efmd.md
+ - specs/content/gent-401/sources/texts/sintha-2020-break-even.md
+ - specs/content/gent-401/sources/texts/wati-2018-crowdfunding.md
+ - specs/content/gent-401/sources/unit-05.md
  - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-1.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-2.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-4.svg
 tests:
  - npm run check:content
- - node scripts/prepare-gate-evidence.mjs GENT-401 5
- - origin/main baseline content gates
 ---
 
 ## Prompt
@@ -66,28 +95,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u05-author, author, claude_crew) The Urdu mirror and `.ur.svg` files are deliberately absent (separate G4/G5 job; EN index is `translation_status: draft`), and banner `fig-U5-5` is a prompt-only row for the illustrate job.
 - (gent-401-u05-author, author, claude_crew) G3 should confirm the three substitute open-access sources (Polish startup financing, MSME break-even, Indonesian crowdfunding) are not read as Pakistani evidence and that Imran's tuition-centre figures are the author's teaching device (`sources/unit-05.md`).
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gent-401-u05-author, resolved all four conflicts by keeping both sides' entries (main first, then this branch's), refreshed the Unit 5 G2 gate evidence at the merge commit, and repointed the tracker row.
+Merged origin/main into crew/gent-401-u05-author, resolved the glossary and GENT-401 source/tracker conflicts keeping both sides' entries, and refreshed Unit 5's G2 gate evidence so all 14 content gates pass.
 
 ## Outcome
 
-- ✅ Impact: The branch now carries main's Units 2 and 3 work alongside Unit 5, with no lost entries in the shared glossary and source registries.
-- 🧪 Tests: `npm run check:content` passes 14/14; the eight deterministic draft gates pass; `npm run build:content-status` exits 0.
-- 📁 Files: Merge commit `0f7ec5168` (four conflict resolutions) and evidence commit `7b41f3173` (new Unit 5 G2 JSON, its logs directory and the tracker row).
-- 🔁 Next prompts: Independent G3 review, Urdu translation (G4/G5), the `fig-U5-5` illustrate job, and `.ur.svg` figure variants remain separate work.
-- 🧠 Reflection: The conflict markers in glossary.json hid the shared opening brace and closing brace, so a naive side-by-side splice produced invalid JSON; the seam had to be rebuilt around the common `{` and `}` lines.
+- Impact: fix for GENT-401 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 45 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merge of origin/main; glossary.json keeps main's 14 new terms then this branch's 14; openstax-entrepreneurship.md keeps Unit 1, Unit 3 and Unit 5 sections; scott-2017-efmd.md keeps a single source header with Unit 3 and Unit 5 note sections; tasks.md status header and stage rows now cover Units 1-3 and 5; Unit 5 G2 evidence refreshed.
-- Decisions the team must respect: No entry from main was changed or dropped; no ID collision occurred (no D-/G- IDs and no glossary-key overlap); scott's duplicate Consulted/Locator header from the branch side was dropped because main's header already carries the same ISBN, publisher and consult date.
-- Pending / next owner: G3 review, G4/G5 Urdu work, the illustrate job for `fig-U5-5`, and `.ur.svg` variants are all still open.
-- Paperclip issues affected: Crew job gent-401-u05-author-conflict1; no ticket supplied.
+- Shipped / changed: Merged origin/main into crew/gent-401-u05-author, resolved the glossary and GENT-401 source/tracker conflicts keeping both sides' entries, and refreshed Unit 5's G2 gate evidence so all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 5 Urdu mirror, `.ur.svg` variants and the `fig-U5-5` illustrate job remain open for separate G4/G5 and illustrate jobs.
+  - G3 should confirm the Polish and Indonesian substitute sources are not read as Pakistani evidence and that Imran's tuition-centre figures are the author's teaching device (`specs/content/gent-401/sources/unit-05.md`).
+  - `scott-2017-efmd.md` now has one header plus Unit 3 and Unit 5 sections; the branch's duplicate header was dropped as a duplicate of main's.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Conflict markers can absorb a common opening or closing line, so a literal both-sides concatenation breaks JSON or duplicates a source header; verify the seam structure before splicing.
-- Graders run and results (PASS/FAIL): PASS: `npm run check:content` 14/14; PASS: `node scripts/prepare-gate-evidence.mjs GENT-401 5` (eight draft gates); PASS: glossary.json parses with 587 unique terms and no duplicates; PASS: no conflict markers remain in the resolved files.
-- Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): When merging two independently created bound-source files, normalise them to one header plus per-unit sections rather than concatenating two full documents.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
