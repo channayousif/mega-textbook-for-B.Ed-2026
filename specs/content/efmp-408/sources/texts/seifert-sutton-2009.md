@@ -17,3 +17,9 @@ Consulted: 2026-11-24, read from the author-hosted distribution and the reposito
 Note 1 supports Topic 1.1 (U1-04).
 Note 2 supports Topic 1.2 (U1-05, U1-06).
 Notes 3-4 support Topic 1.3 (U1-08, U1-09).
+
+## Unit 2 use
+
+Note 5 supports Unit 2 (U2-03).
+
+5. Chapters 10 and 11 (Teacher-made assessment strategies): assessment is integral to planning, classroom interactions, instructional delivery and post-instructional reflection, so using assessment well means treating it as an ongoing communication channel rather than an isolated terminal grading event. This grounds the treatment of alignment as the integration of objectives, teaching and assessment.
