@@ -18,6 +18,7 @@ import http from 'node:http';
 import https from 'node:https';
 import { QUOTA_RE, resetMinutes } from '../../crew/workers.mjs';
 import { GFLOW_MCP_URL, GFLOW_FILES_URL } from './quota.mjs';
+import { pace, paceRecord, PaceHold, IMAGE_CHANNEL } from '../pacing.mjs';
 
 export class QuotaError extends Error {
   constructor(producer, message, resetAt = null) {
@@ -323,7 +324,26 @@ export function codexProducer({ brief, png, stagingDir }) {
   return { model: 'codex image_gen' };
 }
 
-export const PRODUCER_FNS = { agy: agyProducer, gflow: gflowProducer, codex: codexProducer };
+/**
+ * Every image call is paced (scripts/media/pacing.mjs, D-2026-0100): office hours, a gap with
+ * jitter, hourly and daily caps. A pacing hold surfaces as a QuotaError with its reset time, so
+ * generate-illustration.mjs records it and moves on exactly as for a provider's own quota.
+ */
+export function paced(name, fn, { pace: paceFn = pace, record = paceRecord } = {}) {
+  const channel = IMAGE_CHANNEL[name];
+  return async (args) => {
+    try {
+      await paceFn(channel, 1);
+    } catch (e) {
+      if (e instanceof PaceHold) throw new QuotaError(name, e.message, e.resetAt);
+      throw e;
+    }
+    record(channel, 1); // the request is what a provider counts, whether or not an image comes back
+    return fn(args);
+  };
+}
+
+export const PRODUCER_FNS = { agy: paced('agy', agyProducer), gflow: paced('gflow', gflowProducer), codex: paced('codex', codexProducer) };
 
 /** Remove a stale staging file before a producer writes a new one. */
 export function clearStaged(png) {

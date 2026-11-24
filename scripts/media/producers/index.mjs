@@ -3,7 +3,8 @@
 // A producer is `async (job, part, ctx) => result`, where result is
 //   { status: 'ok' | 'quota' | 'unavailable' | 'failed' | 'held', file?, resetAt?, reason, credits?, mediaId?, model?, source? }
 // - ok:          the part was made; `file` is local, `credits` is what it cost.
-// - quota:       the producer's quota is out until `resetAt`; recorded, next producer tried.
+// - quota:       the producer's quota is out until `resetAt`; recorded, next producer tried
+//                (unless `paced: true`, our own pacing limit: recorded, no fallback).
 // - unavailable: cannot be reached now (offline, expired cookies, timeout); skipped for this run
 //                without spending an attempt, next producer tried.
 // - failed:      this part failed; counts an attempt; no fallback (the cause is usually the prompt).
@@ -89,6 +90,9 @@ export async function produce(medium, job, part, { impls, order = REGISTRY[mediu
     if (r.status === 'quota') {
       recordQuota(producer, r.resetAt, r.reason, quotaFile, nowMs);
       last = { ...r, resetAt: activeQuota(producer, quotaFile, nowMs)?.resetAt };
+      // A pacing hold (scripts/media/pacing.mjs) is our own limit, not the provider's: wait for it,
+      // never fall back (the next producer for clips is the owner making them by hand).
+      if (r.paced) return { ...last, producer, tried };
       continue;
     }
     if (r.status === 'unavailable') { last = r; continue; }

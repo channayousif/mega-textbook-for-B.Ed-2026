@@ -2,11 +2,11 @@
 
 Source: https://www.efmdglobal.org/wp-content/uploads/The-Entrepreneurs-Guide-to-Building-a-Successful-Business-2017.pdf
 
-Consulted: 2026-11-24, full PDF (222 pp.), free to read from the publisher's own site. Title page and Library of Congress cataloguing page give: Jonathan T. Scott, *The Entrepreneur's Guide to Building a Successful Business* (2nd edition), EFMD aisbl, Brussels, 2017, ISBN 978-0-9818-260-1-1. The PDF's embedded metadata carries the title of the author's earlier book, *The Sustainable Business*, so the printed cataloguing page was used for the citation. All rights reserved; free to read.
+Consulted: 2026-11-24, online edition (222 pp., ISBN 978-0-9818-260-1-1), free to read from the publisher's own site. Title page and Library of Congress cataloguing page give: Jonathan T. Scott, *The Entrepreneur's Guide to Building a Successful Business* (2nd edition), EFMD aisbl, Brussels, 2017, ISBN 978-0-9818-260-1-1. The PDF's embedded metadata carries the title of the author's earlier book, *The Sustainable Business*, so the printed cataloguing page was used for the citation. All rights reserved; free to read.
 
 Locator: Scott, J. T. (2017). *The entrepreneur's guide to building a successful business* (2nd ed.). EFMD.
 
-## Evidence notes (paraphrased; short phrases quoted)
+## Evidence notes for Unit 3 (paraphrased; short phrases quoted)
 
 1. Chapter 5, p. 34: "the word market is defined as a collection of buyers (or potential buyers) of a particular product or service". The purpose of market research is "to gather information about a product and its demand". Knowing the size and make-up of a market indicates how lucrative a product might be.
 2. Chapter 5, pp. 34-35: the objectives of a research project are to determine an accurate estimate of costs and produce a reliable estimate of revenues. Research should identify who will buy, how many will buy, and how long demand will last.
@@ -21,6 +21,16 @@ Locator: Scott, J. T. (2017). *The entrepreneur's guide to building a successful
 11. Chapter 27, p. 144: "Price is the only component of the marketing mix ... that produces revenue. All others represent costs." Pricing can be changed quickly, and a price that is too high or too low can both turn buyers away.
 
 Use in GENT-401 Unit 3: notes 1-5 support Topic 3.1 (market and customer understanding, data-collection methods); notes 6-7 support Topic 3.1 (competitor analysis and the SWOT chart); notes 8-10 support Topic 3.2 (types of business models and the model-versus-plan distinction); note 11 supports Topic 3.2 (revenue streams). Page numbers are those printed in the book.
+
+## Evidence notes for Unit 4
+
+1. Business Planning (pp. 53-56): A business plan is a practical working tool rather than an academic dissertation. Scott cautions entrepreneurs against unnecessary complexity, overly dense prose, or unrealistic projections. The plan must provide reliable analysis and clear explanations of the venture's market opportunity, resources, and operating model.
+2. Executive Summary (pp. 57-60): The executive summary serves as an "at-a-glance" gateway to the business plan. Because potential investors, lenders, and partners read it first to decide whether to read further, it must be concise (one to two pages) and written strictly after the operational, market, and financial sections are completed and verified. It must summarize the business concept, market size, management capabilities, and financial needs.
+3. Marketing Strategies (pp. 61-68): Marketing within the plan must focus on defined target customers, clear pricing justifications, practical distribution methods, and effective communication channels, avoiding generic assertions of market dominance.
+4. Operational Workflows and Controls (pp. 69-74): Operations planning requires mapping the step-by-step path from raw material or inventory procurement through assembly, packaging, and final delivery to the buyer. Documented workflows and quality checks prevent bottlenecks, minimize waste, and ensure dependable customer service.
+5. Organization and Management (pp. 75-76): Scott highlights that unassigned responsibilities lead directly to business errors. A clearly delineated organizational structure assigns distinct roles, reporting lines, and accountability, ensuring that critical administrative, operational, and customer-facing functions are not overlooked as the venture expands.
+
+Use in GENT-401 Unit 4: notes 1-2 support Topic 4.1 (business plan components, executive summary); notes 3-5 support Topic 4.2 (marketing plan, operational plan, organizational structure).
 
 ## Evidence notes for GENT-401 Unit 5 (paraphrased; short phrases quoted)
 

@@ -21,7 +21,7 @@
 import { spawn, spawnSync } from 'node:child_process';
 import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
-import { WORKERS, STAGES, STAGE_ORDER, QUOTA_RE, PROVIDER_RE, IMAGE_QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker, imageQuotaReset, imageQuotaProducer, workFiles } from './workers.mjs';
+import { WORKERS, STAGES, STAGE_ORDER, OUTSIDE_SERVICE_STAGES, QUOTA_RE, PROVIDER_RE, IMAGE_QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker, imageQuotaReset, imageQuotaProducer, workFiles } from './workers.mjs';
 import { activeImageQuota, recordImageQuota, availableProducers, producerStatus } from '../lib/image-quota.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
@@ -40,6 +40,7 @@ import { resumeHere } from './resume.mjs';
 import { isMediaStage, teaserNeeds, audioNeeds, limitMedia, mediaLaunchProblem, approveScript, rejectMedia, approvePublish, ownerLine, mediaTask, mediaScope, mediaHold, teaserKey } from './media.mjs';
 import { scriptSha, scriptPath, loadLedger as loadTeaserLedger } from '../notebook-studio/teaser.mjs';
 import { gflowReachable } from '../media/producers/quota.mjs';
+import { withinHours, limits as paceLimits } from '../media/pacing.mjs';
 import { mediaStatus, ownerSection } from '../media/status.mjs';
 import { SOCIAL_STAGE, ROUNDUP_HOUR_PKT, pkt, socialDue, socialTask, socialScope, socialOwnerLine } from './social.mjs';
 import { LEDGER as SOCIAL_LEDGER, loadLedger as loadSocialLedger, pending as socialPending, approve as approveSocial, reject as rejectSocial } from '../social/updates.mjs';
@@ -705,8 +706,12 @@ function launchQueued(board, health, control, events) {
   // An illustrate job needs one image producer (agy, gflow while the tunnel is up, or Codex) that is
   // not out of quota; with none, every illustrate job would fail, so they wait. Probed only when needed.
   const noImageProducer = queue.some((j) => j.stage === 'illustrate') && !availableProducers().length;
+  // Stages that call Flow, Gemini, NotebookLM, YouTube or Meta launch only in media hours
+  // (D-2026-0100); text and local work is untouched. The producers enforce the same window.
+  const mediaClosed = !withinHours(Date.now(), paceLimits().hours);
   for (const j of queue) {
     if (running.length >= MAX_PARALLEL) break;
+    if (mediaClosed && OUTSIDE_SERVICE_STAGES.includes(j.stage)) continue;
     if (j.stage === 'illustrate' && noImageProducer) continue;
     // Media jobs: the owner's gates are checked again against main right before launch (FR-012/013).
     if (j.stage === SOCIAL_STAGE && load('control').social !== 'on') continue; // switched off after queueing: wait
