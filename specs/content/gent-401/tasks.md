@@ -11,7 +11,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | 1 | Entrepreneurship and the Entrepreneurial Mindset | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (5 files) and four localized SVG pairs (with derived dark twins) drafted; translation_status stays draft pending G5 |
 | 2 | Types of Entrepreneurship and Opportunity Recognition | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 3 | Market Research and Business Models | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
-| 4 | Developing a Business Plan | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
+| 4 | Developing a Business Plan | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (5 files) and four localized SVG pairs (with derived dark twins) drafted; translation_status stays draft pending G5 |
 | 5 | Financial Planning and Funding | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
 | 6 | Marketing, Legal and Ethical Issues | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; four schematic SVGs placed with dark variants; banner prompt-only; G3 and Urdu remain open |
 | 7 | Growing a Business and Pitching It | ☐ | ☐ | ☐ | ☐ | ☐ | not started |
@@ -45,9 +45,9 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-04/G2/20261124T093431464Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
-| Unit 4 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
+| Unit 4 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 91287e81b; see reviews/unit-04/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels are authored and need checking |
-| Unit 4 | G6 assets | ▣ | | Four English schematic SVGs (fig-U4-1 to fig-U4-4) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U4-5 prompt-only for the illustrate job |
+| Unit 4 | G6 assets | ▣ | | Four English schematic SVGs (fig-U4-1 to fig-U4-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U4-5 prompt-only for the illustrate job |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 6 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-06/G2/20261124T101619522Z-gates.json |
