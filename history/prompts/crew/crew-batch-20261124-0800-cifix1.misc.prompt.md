@@ -1,24 +1,62 @@
 ---
 id: crew-batch-20261124-0800-cifix1
-title: crew fix GENT-401 unit 4
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-24
 surface: agent
-model: LongCat-2.5
+model: claude_crew
 feature: crew
 branch: crew/batch-20261124-0800
 user: crew
 command: crew fix
-labels: ["crew", "claude", "fix"]
+labels: ["crew", "claude_crew", "fix"]
 links:
-  spec: specs/content/gent-401/content-spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: 760
+  pr: null
 files:
+ - docs/semester-4/gent-401/unit-04/index.mdx
  - docs/semester-4/gent-401/unit-04/topic-01.mdx
+ - docs/semester-4/gent-401/unit-04/topic-02.mdx
+ - docs/semester-4/gent-401/unit-04/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-04/unit-teacher-notes.mdx
  - history/prompts/crew/crew-batch-20261124-0800-cifix1.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u04-author-conflict1.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u04-author-conflict2.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u04-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-04.md
+ - specs/content/gent-401/coverage/unit-04.md
+ - specs/content/gent-401/figures/unit-04.banner.md
+ - specs/content/gent-401/figures/unit-04.md
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T050320192Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T062155314Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T062449556Z-gates.json
  - specs/content/gent-401/reviews/unit-04/G2/20261124T093431464Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/validate-content.txt
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-bloom-bands.txt
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-concept-graph.txt
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-depth-gate.txt
@@ -27,7 +65,18 @@ files:
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-no-answer-keys.txt
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-no-em-dash.txt
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/validate-content.txt
+ - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
+ - specs/content/gent-401/sources/texts/scott-2017-efmd.md
+ - specs/content/gent-401/sources/unit-04.md
  - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-1.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-2.dark.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-2.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-3.dark.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-3.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-4.dark.svg
+ - static/img/figures/gent-401/unit-04/fig-U4-4.svg
 tests:
  - npm run check:content
 ---
@@ -64,28 +113,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261122-1603-cifix1, fix, claude_crew) CI measures changed SVGs with a DejaVu Sans fallback (no Noto Nastaliq on runners); local default-font runs can pass the same file, so always re-check with `--ci-fonts`.
 - (batch-20261122-1603-cifix1, fix, claude_crew) The Urdu timeline's fourth line is the reason the last baseline was on the panel edge; any future text edit there should re-run `measure-figure-text.mjs --ci-fonts`.
 
+
 ## Response snapshot
 
-Fixed the PR #760 build failure by replacing the unsupported LaTeX math block at docs/semester-4/gent-401/unit-04/topic-01.mdx:101 with the plain bold formula this repo uses elsewhere, then refreshed the Unit 4 G2 gate evidence and repointed its tracker row.
+Replaced the unsupported LaTeX math block in GENT-401 Unit 4 topic-01 with a plain bold formula, refreshed the unit's G2 gate evidence and tracker row, and got all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for GENT-401 Unit 4 by claude_crew (attempt 1).
-- Tests: npm run check:content passed all 14 content gates in the job worktree.
-- Files: 11 file(s), listed above.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 61 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: replaced the `$$\text{...}$$` LaTeX block at topic-01.mdx:101 with `**Mission = Target Customer + Core Need/Problem + Specific Offering + Distinctive Approach**`, refreshed G2 evidence (20261124T093431464Z-gates.json) and repointed the Unit 4 G2 row in tasks.md.
-- Decisions the team must respect: the site has no remark-math/KaTeX plugin, so braces in prose are read as MDX expressions; use plain-text bold formulas (precedent: docs/semester-2/gqur-301/unit-04/topic-01.mdx:45). G3/G5 stay advisory; this PR certifies nothing.
+- Shipped / changed: Replaced the unsupported LaTeX math block in GENT-401 Unit 4 topic-01 with a plain bold formula, refreshed the unit's G2 gate evidence and tracker row, and got all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
-- Paperclip issues affected: none.
+- Notes for the next job on this unit:
+  - The repo has no math plugin, so any `$$...$$` or `\text{...}` in prose breaks the build; keep formulas as plain bold text.
+  - G2 evidence for Unit 4 now points at `20261124T093431464Z-gates.json`; older `20261124T05*/06*` evidence dirs were left in place.
+  - `npm run build` was not run locally (forbidden by the brief); CI's build job still has to confirm the acorn error is gone.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Docusaurus MDX parses unescaped curly braces in `$$...$$` LaTeX as JavaScript expressions when no math plugin is configured, so acorn rejects `{Target Customer}` ("Could not parse expression with acorn").
-- Graders run and results (PASS/FAIL): check:content PASS (14/14); local @mdx-js/mdx 3.1.1 compile of all five Unit 4 files OK.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): add a remark-math/rehype-katex pipeline so formulas can stay in LaTeX, or add a check that flags `{` in prose before CI.
+- Next experiment (smallest change to try): none
