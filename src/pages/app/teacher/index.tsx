@@ -183,6 +183,7 @@ function OverviewContent(): React.ReactElement {
             tone: 'plum',
             title: item.assignmentTitle,
             subtitle: `${item.className} · ${fmt(item.occurredAt)}`,
+            to: `/app/teacher/student?classId=${item.classId}&studentId=${item.studentId}`,
           }))}
         />
         <ListCard

@@ -105,6 +105,7 @@ function ItemForm({
           </label>
           <input
             className="input"
+            aria-label={`${MESSAGES.option[locale]} ${o.key}`}
             value={o.text}
             required
             onChange={(e) => {
