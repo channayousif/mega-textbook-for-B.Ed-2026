@@ -167,3 +167,32 @@ to the davinci host: it pushes the worktree's HEAD to `refs/crew/build` in davin
 build's exit code. If davinci is unreachable or the transfer fails, it falls back to the local
 slot. Builds from the owner's checkout, the deploy clone and every other heavy job still run
 locally. To disable offload, remove the symlink.
+
+## Media desktop on davinci
+
+Since 2026-11-24 the Flow producer (gflow-cli) and the browser sessions media work needs run on
+davinci, so they no longer depend on the owner's laptop. Unit files are copied in
+`ops/development/media-davinci/` (installed copies are live; edit those, then re-copy).
+
+| Where | Unit | What |
+|---|---|---|
+| davinci (system) | `tigervncserver@:1` | XFCE desktop on display `:1`, localhost only (`~/.vnc/tigervnc.conf`, `/etc/tigervnc/vncserver.users`) |
+| davinci (user `ubuntu`) | `gflow-serve` | gflow MCP on 127.0.0.1:18800, profile `a2ahs-alpha`, Chrome on `:1` |
+| davinci (user) | `gflow-files` | `~/Downloads/gflow-cli` on 127.0.0.1:18801 |
+| davinci (user) | `workspace-chrome` | Chrome for NotebookLM, meta.ai, Business Suite; DevTools on 127.0.0.1:9222 |
+| production host (user `a2ahs`) | `media-tunnel` | `ssh -N -L` 18800, 18801, 15901 (VNC), 18802 (DevTools) to davinci |
+
+Both users have linger on, so all of it starts at boot without a login. Nothing listens on a
+public interface and no OCI security-list rule was added: the desktop, gflow and DevTools are
+reached only through SSH.
+
+- **Owner's view of the desktop:** from the laptop, `ssh -N -L 45901:127.0.0.1:15901
+  textbook-editor`, then a VNC viewer on `localhost:45901`. The password is in
+  `~/.config/tigervnc/owner-pass.txt` on davinci. Windows reserves 5901 and 15901 on the owner's PC.
+- **Re-login:** see the media-studio skill ("gflow route"). NotebookLM for `nlm`:
+  `nlm login --provider openclaw --cdp-url http://127.0.0.1:18802` on the production host.
+- **Memory:** the two Chromes and gflow's warm session use about 4-5 GB on davinci, leaving about
+  5 GB; remote builds are capped at 5 GiB, so a build during a heavy Business Suite session can be
+  slow. Close Business Suite tabs when idle.
+- **Back to the laptop route:** `systemctl --user stop media-tunnel` here, then start the three
+  Windows windows (media-studio skill). Only one route can hold 18800.

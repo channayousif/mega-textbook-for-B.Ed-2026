@@ -1,0 +1,10 @@
+[Unit]
+Description=gflow output folder (clips <media_id>.mp4, images/) on 127.0.0.1:18801
+
+[Service]
+ExecStart=/usr/bin/python3 -m http.server 18801 --bind 127.0.0.1 -d %h/Downloads/gflow-cli
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

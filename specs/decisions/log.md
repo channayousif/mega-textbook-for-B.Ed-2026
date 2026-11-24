@@ -5164,3 +5164,28 @@ content-improvement loop with no further cycle.
   review."
 - **Limits:** Raster production follows ADR-0024/0029/0036 (agy, gflow or Codex; imagery rules
   unchanged). Re-opened G3 reviews go through the normal independent review and owner sign-off.
+
+## D-2026-0099 - Flow automation and media sign-ins move from the owner's PC to davinci
+- **Status:** confirmed
+- **Gate:** none (Feature 029/030 media; not video-studio)
+- **Scope:** the host that runs `gflow-cli` (Google Flow: Veo clips, Nano Banana images) and the
+  browser sessions media work needs (NotebookLM for `nlm`, meta.ai, Meta Business Suite)
+- **Decided by:** curriculum owner, 2026-11-24 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **Supersedes D-2026-0082 item 1 on the host only.** Flow is automated from **davinci**, a
+     persistent localhost-only desktop the owner signs in to over VNC, not only from the owner's
+     Windows PC. The owner's PC stays a manual fallback. Everything else in D-2026-0082 stands:
+     Veo narration per language, the batch scope, script approval before credits, at most two
+     retakes per shot, private-first uploads and the owner's spot-check before public.
+  2. NotebookLM, meta.ai and Meta Business Suite sessions live in a workspace Chrome on the same
+     desktop; `nlm` refreshes its login from it. Meta AI and Business Suite are used by hand;
+     automating Meta AI as a producer needs its own spec.
+  3. Nothing is exposed publicly and no OCI resource is added: the desktop, gflow and DevTools
+     bind to localhost and are reached only through SSH (`media-tunnel` unit).
+- **Basis:** owner message 2026-11-24: "is it practical to install light weight gui and chrome on
+  dava to signin to flow and meta to be independent of my laptop? this will be more persistent for
+  media"; plan approved; owner signed in over VNC; "merge 761 when green, you record the decision".
+  Verified the same day: a Nano Banana still and an 8 s Veo Lite clip end to end (PHR 20261261).
+- **Limits:** Certifies no content, qualifies no reviewer and authorises no publication beyond the
+  owner's own spot-check (Art. VII.8). Account risk from automating Flow stays the owner's. The
+  media stages still run only under the owner's existing gates (`crew media on`, script approval).
