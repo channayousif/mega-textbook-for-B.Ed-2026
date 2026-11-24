@@ -1,0 +1,31 @@
+static source inspection - GCCE-400 Unit 5 G3 - 2026-11-24
+Reviewer: agent:claude (LongCat-2.5), run crew-gcce-400-u05-review_en-run1-20261124
+
+This is SOURCE inspection only. No rendered page, narrow view or A4 print view was inspected
+because render-review is unavailable (see logs/render-review.txt). Source inspection cannot
+satisfy the visual checks in the G3 rubric; the accessibility criterion is recorded as
+unverified.
+
+Figures (7 markers across the unit):
+- fig-U5-1 (topic-01), fig-U5-2 (topic-01), fig-U5-3 (topic-02), fig-U5-4 (topic-02),
+  fig-U5-5 (topic-03), fig-U5-6 (topic-03), fig-U5-7 banner (index) all carry descriptive alt
+  text that states the figure's instructional meaning. check:figures exit 0.
+- measure-figure-text exit 0 on all 24 SVG files (EN + UR + dark variants).
+
+Headings:
+- index.mdx h1; topic files h2 (situation, Explanation, Activity, Check your understanding,
+  Summary, Self-assessment checklist, Try this at your practicum school, Summative task) with
+  h3/h4 subheadings; no skipped levels observed.
+
+Links:
+- Internal links ("unit assessment", "notes for teachers", topic links in "In this unit") are
+  descriptive. Further-reading entries use bare URLs (F9).
+
+Tables:
+- Markdown tables only: topic-02 activity message matrix (3 columns), three summative mini-rubrics
+  (4 columns) and five ERQ rubrics (4 columns). No HTML tables. Wide-table behaviour at 360px
+  could not be measured without a render.
+
+Answers:
+- check:no-answer-keys exit 0; answers are confined to the final bounded
+  ## Answers and marking guidance section of unit-assessment.mdx.

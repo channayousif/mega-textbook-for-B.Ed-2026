@@ -1,0 +1,30 @@
+render-review: UNAVAILABLE
+reason: production build is not the review input; unit-05 English files and figures differ between deployed SHA and HEAD.
+
+deployed SHA: ac3d5e2fcd1818492dd11bc9b72d8cfed9a25e8d
+HEAD: 175a90b7a644bd366cf3d1d2592090a93f912bcb
+
+command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/gcce-400/unit-05/ static/img/figures/gcce-400/unit-05/
+exit code: 1
+
+diff --stat:
+ docs/semester-4/gcce-400/unit-05/index.mdx        |   2 ++
+ static/img/figures/gcce-400/unit-05/fig-U5-7.webp | Bin 0 -> 141724 bytes
+ 2 files changed, 2 insertions(+)
+
+diff (text files):
+diff --git a/docs/semester-4/gcce-400/unit-05/index.mdx b/docs/semester-4/gcce-400/unit-05/index.mdx
+index efc8f675f..67c142380 100644
+--- a/docs/semester-4/gcce-400/unit-05/index.mdx
++++ b/docs/semester-4/gcce-400/unit-05/index.mdx
+@@ -18,6 +18,8 @@ import TranslationStatusBadge from '@site/src/components/TranslationStatusBadge'
+ 
+ # Advocacy and Activism
+ 
++<Figure id="fig-U5-7" kind="illustration" src="/img/figures/gcce-400/unit-05/fig-U5-7.webp" alt="A trainee teacher presents an educational advocacy plan on an easel to a group of teachers, parents and community members gathered in a Sindh community hall." />
++
+ "If our school lacks clean water or safe transport, who is responsible for changing it? Can teachers and parents do anything, or must we wait for higher authorities?" A B.Ed trainee in Sukkur asked this during a seminar on community participation. Many citizens feel powerless when confronted with community problems, believing that change requires either political connections or sudden street demonstrations.
+ 
+ This unit explores how citizens systematically identify problems, build public support, and achieve lasting improvements. You will examine how public opinion forms through reasoned discussion, how structured advocacy campaigns solve local problems, and how social action movements develop across history to protect democratic and constitutional rights.
+
+No rendered page or print view was inspected. The live site is not the review input, so no PNG/WebP render exists for this attempt and the accessibility criterion is unverified.
