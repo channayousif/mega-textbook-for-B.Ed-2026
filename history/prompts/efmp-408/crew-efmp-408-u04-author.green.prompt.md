@@ -4,12 +4,12 @@ title: crew author EFMP-408 unit 4
 stage: misc
 date: 2026-11-24
 surface: agent
-model: claude
+model: claude_crew
 feature: efmp-408
 branch: crew/efmp-408-u04-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/efmp-408/content-spec.md
   ticket: null
@@ -94,31 +94,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFMP-408 Unit 4 in English from the approved content-spec: a unit opening, three nine-part topic cycles, a 10/10/5 unit assessment with a bounded answers section, teacher notes, six placed schematic SVGs with derived dark variants, and the full governance set (coverage matrix, sources list with bound evidence notes, concept graph, figure manifest and banner sidecar). Recorded G2 gate evidence and left all fourteen content gates green.
+Authored the English EFMP-408 Unit 4 per-topic unit (three topic cycles, 10/10/5 assessment, teacher notes, six placed schematic figures and full governance set) and recorded green G2 gate evidence on the branch.
 
 ## Outcome
 
-- ✅ Impact: author EFMP-408 Unit 4 by claude (attempt 1).
-- 🧪 Tests: npm run check:content passed (14/14 content gates); measure-figure-text exited 0 on all twelve light and dark SVGs.
-- 📁 Files: 46 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: author for EFMP-408 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 46 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: EFMP-408 Unit 4 English draft at the per-topic standard, with six placed schematic figures (fig-U4-3 is the required flowchart) and the unit banner `fig-U4-4` left prompt-only for the illustrate job.
-- Decisions the team must respect: the unit is English-only at `translation_status: draft`; G3/G5 stay open and no review is certified. The shared Seifert and Sutton evidence note gained its Unit 4 use, which invalidated Unit 1's accepted G2 input manifest, so Unit 1's G2 evidence was refreshed and its tracker row repointed.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path). Next unit jobs: G3 independent review, then the Urdu mirror.
+- Shipped / changed: Authored the English EFMP-408 Unit 4 per-topic unit (three topic cycles, 10/10/5 assessment, teacher notes, six placed schematic figures and full governance set) and recorded green G2 gate evidence on the branch.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All twelve SVG variants passed `measure-figure-text.mjs` with 0 errors, so label geometry is clean for translation.
-  - The unit's Urdu concept labels are authored; `Rubric`, `Portfolio Assessment`, `Peer Assessment` and `Self-Assessment` are banked in `terminology.csv`, the rest need G5 review.
-  - The banner `fig-U4-4` is prompt-only; the illustrate job should generate it before the unit is presented as fully illustrated.
+  - Unit 4 is English-only at `translation_status: draft`; G3/G5 are open and uncertified, and the banner `fig-U4-4` is still `prompt-only` for the illustrate job.
+  - The shared Seifert and Sutton evidence note gained its Unit 4 use, which invalidated Unit 1's accepted G2 manifest, so Unit 1's evidence was refreshed and its tracker row repointed; a later merge of the Unit 2 branch (which also edits shared source notes) may re-invalidate evidence, so run `node scripts/prepare-gate-evidence.mjs --refresh-stale`.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the first draft omitted the `## A real classroom situation` heading in all three topic files and used a 206-character assessment description; both were caught by `check:depth-gate` and `validate:content` and fixed before the evidence run.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14).
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
