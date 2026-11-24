@@ -1,6 +1,6 @@
 ---
 id: crew-batch-20261124-1946-cifix1
-title: crew fix EFMP-408 unit 3 MDX build
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-24
 surface: agent
@@ -11,14 +11,43 @@ user: crew
 command: crew fix
 labels: ["crew", "claude_crew", "fix"]
 links:
-  spec: specs/content/efmp-408/content-spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/773
+  pr: null
 files:
- - history/prompts/crew/crew-batch-20261124-1946-cifix1.misc.prompt.md
+ - docs/semester-4/efmp-408/unit-03/index.mdx
  - docs/semester-4/efmp-408/unit-03/topic-01.mdx
+ - docs/semester-4/efmp-408/unit-03/topic-02.mdx
+ - docs/semester-4/efmp-408/unit-03/topic-03.mdx
+ - docs/semester-4/efmp-408/unit-03/topic-04.mdx
+ - docs/semester-4/efmp-408/unit-03/unit-assessment.mdx
+ - docs/semester-4/efmp-408/unit-03/unit-teacher-notes.mdx
+ - history/prompts/crew/crew-batch-20261124-1946-cifix1.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u03-author.green.prompt.md
+ - specs/content/efmp-408/concepts/unit-03.md
+ - specs/content/efmp-408/coverage/unit-03.md
+ - specs/content/efmp-408/figures/unit-03.banner.md
+ - specs/content/efmp-408/figures/unit-03.md
+ - specs/content/efmp-408/reviews/unit-01/G2/20261124T184857338Z-gates.json
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/20261124T184540786Z-gates.json
  - specs/content/efmp-408/reviews/unit-03/G2/20261124T200357258Z-gates.json
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/validate-content.txt
  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T200357258Z/check-bloom-bands.txt
  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T200357258Z/check-concept-graph.txt
  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T200357258Z/check-depth-gate.txt
@@ -27,10 +56,28 @@ files:
  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T200357258Z/check-no-answer-keys.txt
  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T200357258Z/check-no-em-dash.txt
  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T200357258Z/validate-content.txt
+ - specs/content/efmp-408/sources/texts/hec-2013-testdev.md
+ - specs/content/efmp-408/sources/texts/seifert-sutton-2009.md
+ - specs/content/efmp-408/sources/unit-03.md
  - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-1.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-2.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-3.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-4.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-5.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-6.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-7.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-7.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-8.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-8.svg
 tests:
- - npm run build:content-status && npm run check:content (14/14 PASS)
- - node .crew/mdx-check.mjs on all seven PR-touched MDX files (compile OK; LaTeX negative control still fails with the CI acorn error)
+ - npm run check:content
 ---
 
 ## Prompt
@@ -65,45 +112,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261124-1300-cifix1, fix, claude_crew) The Urdu header row is now two lines for "ملکیت کی قسم" and "یہ کس چیز کا تحفظ کرتی ہے"; the English figure is unchanged.
 - (batch-20261124-0800-cifix1, fix, claude_crew) The repo has no math plugin, so any `$$...$$` or `\text{...}` in prose breaks the build; keep formulas as plain bold text.
 
+
 ## Response snapshot
 
-Read the failed build log for PR #773: Docusaurus MDX compilation failed on
-`docs/semester-4/efmp-408/unit-03/topic-01.mdx` at line 77 ("Could not parse expression with acorn").
-The file carried a LaTeX display block (`$$\text{Weightage}...`) and four inline `$...$` spans; this repo has no
-math plugin, so the braces were read as MDX expressions. Rewrote the weightage formula and the four worked-example
-lines as plain text (using `×` and `≈`, matching the plain-math convention already used in
-`unit-assessment.mdx`). Committed, regenerated the Unit 3 G2 gate evidence with
-`node scripts/prepare-gate-evidence.mjs efmp-408 3`, repointed the Unit 3 G2 en-draft tracker row at the new
-evidence file, committed that, then rebuilt content status and ran the content gates.
+Replaced the LaTeX weightage formula in EFMP-408 Unit 3 Topic 1 with plain text to fix the MDX build break, refreshed the Unit 3 G2 evidence and tracker row, and committed the fix plus its PHR with all content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFMP-408 Unit 3 by claude_crew (attempt 1); the PR #773 build break is resolved.
-- Tests: npm run check:content passed 14/14 in the job worktree; every PR-touched MDX file compiled with the
-  `@mdx-js/mdx` processor, and a negative control carrying the original LaTeX still reproduced the CI acorn error.
-- Files: 13 file(s), listed above.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 60 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: replaced the LaTeX weightage formula in Unit 3 Topic 1 with plain text so MDX compiles;
-  refreshed Unit 3 G2 evidence and repointed its tracker row.
-- Decisions the team must respect: the repo has no math plugin, so formulas stay plain text (no `$$`, no `\text{}`).
-  G3/G5 stay advisory; this PR certifies nothing.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Shipped / changed: Replaced the LaTeX weightage formula in EFMP-408 Unit 3 Topic 1 with plain text to fix the MDX build break, refreshed the Unit 3 G2 evidence and tracker row, and committed the fix plus its PHR with all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `npm run build` was not run locally (forbidden by the brief); CI's build job still has to confirm the acorn
-    error is gone.
-  - The old Unit 3 G2 evidence set (`20261124T184540786Z-gates.json` and its logs dir) is now unreferenced and was
-    left in place, matching the earlier Unit 4 precedent.
+  - CI's build job still has to confirm the acorn error is gone (`npm run build` was not run locally, per the brief); the now-unreferenced old evidence set `20261124T184540786Z-gates.json` and its logs dir were left in place, matching the earlier Unit 4 precedent.
+  - G3 and the Urdu mirror for Unit 3 remain open; this PR certifies nothing.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: an authored unit shipped LaTeX math into a repo with no math plugin; the first CI run
-  stops at the first MDX parse failure, so later files in the same PR were never checked.
-- Graders run and results (PASS/FAIL): check:content PASS 14/14; MDX compile PASS on 7/7 files; negative control FAIL
-  (expected, reproduces CI).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): none.
+- Next experiment (smallest change to try): none
