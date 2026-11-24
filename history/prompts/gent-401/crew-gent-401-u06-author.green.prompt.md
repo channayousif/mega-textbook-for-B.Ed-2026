@@ -4,7 +4,7 @@ title: crew author GENT-401 unit 6
 stage: misc
 date: 2026-11-24
 surface: agent
-model: gemini
+model: agy
 feature: gent-401
 branch: crew/gent-401-u06-author
 user: crew
@@ -21,6 +21,7 @@ files:
  - docs/semester-4/gent-401/unit-06/topic-02.mdx
  - docs/semester-4/gent-401/unit-06/unit-assessment.mdx
  - docs/semester-4/gent-401/unit-06/unit-teacher-notes.mdx
+ - history/prompts/gent-401/crew-gent-401-u06-author.green.prompt.md
  - specs/content/gent-401/concepts/unit-06.md
  - specs/content/gent-401/coverage/unit-06.md
  - specs/content/gent-401/figures/unit-06.banner.md
@@ -80,32 +81,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored GENT-401 Unit 6 in English (index, two topic cycles, 10/10/5 assessment, teacher notes, four placed schematic SVGs with derived dark variants, coverage, sources with OpenAlex verification, concepts, task tracker and G2 gate evidence), with all 14 content gates passing.
+Authored GENT-401 Unit 6 in English with two nine-part topic cycles, 10/10/5 assessment, teacher notes, four placed schematic SVGs with dark variants, coverage, sources, concept graph, and G2 gate evidence.
 
 ## Outcome
 
 - Impact: author for GENT-401 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed cleanly with 14/14 gates green in the job worktree.
-- Files: 32 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 33 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored GENT-401 Unit 6 in English (index, two topic cycles, 10/10/5 assessment with bounded self-study answers, teacher notes, four placed schematic SVGs with dark variants, coverage matrix v2, sources consulted with bound text notes and OpenAlex verification, concept graph v4.0, task tracker and G2 gate evidence) with all 14 content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (merge crew branch to main).
+- Shipped / changed: Authored GENT-401 Unit 6 in English with two nine-part topic cycles, 10/10/5 assessment, teacher notes, four placed schematic SVGs with dark variants, coverage, sources, concept graph, and G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The G3 reviewer should verify the SECP eZfile incorporation steps and IPO-Pakistan intellectual property classification.
   - Figures are placed in English only (fig-U6-1 to fig-U6-4, no .ur.svg yet); banner fig-U6-5 is prompt-only in figures/unit-06.banner.md for the illustrate job.
-  - Urdu translation (G4) and Urdu review (G5) remain open.
-- Paperclip issues affected: none (work tracked by the crew board).
+  - G3 en-review and Urdu translation/review (G4/G5) remain open; reviewer should verify SECP eZfile incorporation steps and IPO-Pakistan IP classifications.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14 gates)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
