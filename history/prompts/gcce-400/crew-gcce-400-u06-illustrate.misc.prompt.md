@@ -70,25 +70,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gcce-400-u06-author-conflict1, fix, claude_crew) Unit 6 G3 en-review stays open; the reviewer should confirm the CoE handbook attribution (rm.coe.int returns HTTP 403 here, use the Internet Archive snapshot), the Shair et al. (2022) figures and the Pakistani examples in `specs/content/gcce-400/sources/unit-06.md`.
 - (gcce-400-u06-author-conflict1, fix, claude_crew) Banner `fig-U6-7` is prompt-only and no `.ur.svg` exists yet (Urdu mirror is a separate job); the seven new glossary entries' Urdu definitions are authored and need G5 checking.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed GCCE-400 Unit 6 banner illustration fig-U6-7 in English and Urdu index files, recorded fresh G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed GCCE-400 Unit 6 banner illustration fig-U6-7 across English and Urdu indices, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: illustrate for GCCE-400 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the job.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed GCCE-400 Unit 6 banner illustration fig-U6-7 in English and Urdu index files, recorded fresh G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed GCCE-400 Unit 6 banner illustration fig-U6-7 across English and Urdu indices, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 en-review remains open; reviewer should confirm the CoE handbook attribution, Shair et al. (2022) figures and Pakistani examples in sources/unit-06.md.
+  - G3 en-review remains open; reviewer should confirm the CoE handbook attribution, the Shair et al. (2022) figures and the Pakistani examples in specs/content/gcce-400/sources/unit-06.md.
   - G5 ur-review remains open; translation_status is draft across English and Urdu indices, and G5 owns Nastaliq shaping, 360px and A4 print layout inspection.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
