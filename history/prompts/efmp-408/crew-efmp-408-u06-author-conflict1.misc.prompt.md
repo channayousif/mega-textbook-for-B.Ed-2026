@@ -1,23 +1,45 @@
 ---
 id: crew-efmp-408-u06-author-conflict1
-title: Merge main and repair EFMP-408 Unit 6 G2 evidence
+title: crew fix EFMP-408 unit 6
 stage: misc
-date: 2026-11-25
+date: 2026-11-24
 surface: agent
-model: longcat-2.5
+model: claude_crew
 feature: efmp-408
 branch: crew/efmp-408-u06-author
 user: crew
-command: Read .crew/brief.md and carry it out
-labels: ["claude_crew", "crew", "efmp-408", "u06", "merge", "g2"]
+command: crew fix
+labels: ["crew", "claude_crew", "fix"]
 links:
   spec: specs/content/efmp-408/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - specs/content/efmp-408/tasks.md
+ - docs/semester-4/efmp-408/unit-06/index.mdx
+ - docs/semester-4/efmp-408/unit-06/topic-01.mdx
+ - docs/semester-4/efmp-408/unit-06/topic-02.mdx
+ - docs/semester-4/efmp-408/unit-06/topic-03.mdx
+ - docs/semester-4/efmp-408/unit-06/topic-04.mdx
+ - docs/semester-4/efmp-408/unit-06/unit-assessment.mdx
+ - docs/semester-4/efmp-408/unit-06/unit-teacher-notes.mdx
+ - history/prompts/efmp-408/crew-efmp-408-u06-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u06-author.green.prompt.md
+ - history/prompts/general/20261264-efmp-408-u06-author.general.prompt.md
+ - specs/content/efmp-408/concepts/unit-06.md
+ - specs/content/efmp-408/coverage/unit-06.md
+ - specs/content/efmp-408/figures/unit-06.banner.md
+ - specs/content/efmp-408/figures/unit-06.md
+ - specs/content/efmp-408/reviews/unit-06/G2/20261124T193548727Z-gates.json
  - specs/content/efmp-408/reviews/unit-06/G2/20261124T203715644Z-gates.json
+ - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T193548727Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T193548727Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T193548727Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T193548727Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T193548727Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T193548727Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T193548727Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T193548727Z/validate-content.txt
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T203715644Z/check-bloom-bands.txt
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T203715644Z/check-concept-graph.txt
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T203715644Z/check-depth-gate.txt
@@ -26,15 +48,30 @@ files:
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T203715644Z/check-no-answer-keys.txt
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T203715644Z/check-no-em-dash.txt
  - specs/content/efmp-408/reviews/unit-06/G2/logs-20261124T203715644Z/validate-content.txt
+ - specs/content/efmp-408/sources/texts/npstp-2009.md
+ - specs/content/efmp-408/sources/unit-06.md
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-06/fig-U6-1.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-1.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-2.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-2.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-3.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-3.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-4.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-4.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-5.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-5.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-6.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-6.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-7.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-7.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-8.dark.svg
+ - static/img/figures/efmp-408/unit-06/fig-U6-8.svg
 tests:
  - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-
-## Brief (verbatim)
 
 # Crew job efmp-408-u06-author-conflict1
 
@@ -66,28 +103,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u06-author, author, agy) Topic 6.4 is marked as curriculum enrichment (covering Licensing Objective 5 and NPSTP Standard 5, derived from EED-411).
 - (efmp-408-u06-author, author, agy) Eight schematic SVGs are placed with derived dark variants; the unit banner fig-U6-9 remains prompt-only in figures/unit-06.banner.md for the illustrate job.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-408-u06-author. The only conflict was specs/content/efmp-408/tasks.md; I kept both sides' entries (Unit 1 and Unit 3 from main, Unit 6 from this branch) in main's order then the branch's, with one combined status line and reading estimates for Units 1, 3 and 6. I checked the shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv): neither side changed them since the merge base, so there was nothing to reconcile and no ID collisions. I then diagnosed the remaining pipeline-gate finding: the merge updated the bound source text specs/content/efmp-408/sources/texts/seifert-sutton-2009.md, which changed Unit 6's G2 input manifest (104 keys, one digest changed). I regenerated the G2 gate evidence at the merged HEAD, committed the JSON and its logs, repointed the Unit 6 G2 en-draft tracker row, and reran the gates.
+Merged origin/main into crew/efmp-408-u06-author, resolved the tasks.md conflict by keeping both sides' unit rows, regenerated Unit 6's G2 gate evidence invalidated by main's source-text update, and left the branch with all 14 content gates passing.
 
 ## Outcome
 
-- ✅ Impact: crew/efmp-408-u06-author now merges cleanly onto origin/main and `npm run check:content` passes all 14 gates with no findings.
-- 🧪 Tests: `npm run build:content-status` then `npm run check:content` (14 gates, all PASS).
-- 📁 Files: specs/content/efmp-408/tasks.md (merge resolution plus G2 row repoint); new specs/content/efmp-408/reviews/unit-06/G2/20261124T203715644Z-gates.json and its logs-20261124T203715644Z/ directory.
-- 🔁 Next prompts: the Urdu mirror job (G4) and an independent G3 review of Unit 6; the banner figure fig-U6-9 is still prompt-only.
-- 🧠 Reflection: a merge can invalidate gate evidence without touching the unit's own prose, because the bound input set reaches shared source texts. Re-evidence after merging, not just after editing the unit.
+- Impact: fix for EFMP-408 Unit 6 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 51 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of origin/main committed; Unit 6 G2 evidence regenerated and tracker row repointed; all content gates green.
-- Decisions the team must respect: tasks.md keeps Unit 1, Unit 3 and Unit 6 rows and reading estimates together; the old Unit 6 G2 evidence file 20261124T193548727Z-gates.json is superseded but left in place as history.
-- Pending / next owner: G3 independent review and the G4 Urdu mirror for Unit 6; the illustrate job owns banner fig-U6-9.
-- Paperclip issues affected: none (links.ticket null).
+- Shipped / changed: Merged origin/main into crew/efmp-408-u06-author, resolved the tasks.md conflict by keeping both sides' unit rows, regenerated Unit 6's G2 gate evidence invalidated by main's source-text update, and left the branch with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 6 G2 row points at `specs/content/efmp-408/reviews/unit-06/G2/20261124T203715644Z-gates.json`; the older `20261124T193548727Z-gates.json` is superseded but left in place as history.
+  - `specs/content/efmp-408/tasks.md` now carries Unit 1, Unit 3 and Unit 6 rows together; a future merge from main must not drop the Unit 3 rows.
+  - banner figure fig-U6-9 is still prompt-only in `specs/content/efmp-408/figures/unit-06.banner.md`; G3 review and the G4 Urdu mirror for Unit 6 remain open.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: bound shared source texts changing on main silently stale a unit's G2 manifest; the pipeline gate names the unit but not the changed file.
-- Graders run and results (PASS/FAIL): npm run check:content PASS (14/14).
-- Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): have prepare-gate-evidence emit the differing manifest keys, so the next merge repair names the cause without a manual diff.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
