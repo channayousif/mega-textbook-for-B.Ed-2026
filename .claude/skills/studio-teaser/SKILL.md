@@ -3,11 +3,11 @@ name: studio-teaser
 description: >-
   Course and licence-track teaser YouTube Shorts (Feature 029, D-2026-0082; recipe teaser@3,
   D-2026-0094): write a five-shot script, under 30 s once assembled, per course from its course overview, take the owner's script approval, generate
-  each shot with Google Flow (Veo, narration spoken per language) through the gflow-cli MCP on the
-  owner's Windows PC, check every take, assemble the Short with captions and a link end card, upload
+  each shot with Google Flow (Veo, narration spoken per language) through the gflow-cli MCP on davinci
+  (the owner's Windows PC is the fallback), check every take, assemble the Short with captions and a link end card, upload
   it private to the textbook.com.pk channel, take the owner's spot-check and publish. Use when asked
   to "make the course teasers", "make a Short for <course>", "run the teaser pipeline", or to resume
-  the teaser ledger. Also holds the Windows/gflow setup and tunnel guide.
+  the teaser ledger. Also holds the gflow setup and tunnel guide.
 ---
 
 # Course teaser Shorts
@@ -17,7 +17,9 @@ checks, crew stages, cross-posting, the gflow route and its failure modes). This
 teaser-specific steps.
 
 Owner ruling D-2026-0082 (2026-11-10, `specs/decisions/log.md`):
-- **Flow automation.** Flow is automated only from the owner's Windows PC.
+- **Flow automation.** Flow is automated only from the owner's Windows PC. Superseded on host by
+  the owner on 2026-11-24: Flow now runs on davinci (owner's own sign-in, laptop as fallback); see
+  the media-studio skill. The decisions log entry is pending.
 - **Narration.** Veo speaks the narration, generated separately for EN and UR.
 - **Length.** About 45 s: five 8-second shots plus a 5 s end card. Superseded on pace (owner,
   2026-11-17, "slow and lame"): the assembler now cuts dead air, speeds the voice 12% and ends
@@ -167,7 +169,7 @@ States: `planned → scripted → script-approved → clips-generated → clips-
 
 ## Setup and budget
 
-Cross-post credentials, the gflow Windows route and tunnel, its failure modes and the credit
+Cross-post credentials, the gflow route (davinci, with the Windows PC as fallback), its failure modes and the credit
 budget are in the media-studio skill.
 
 ## Channel facts
