@@ -64,7 +64,7 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5,
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
 | Unit 5 | G6 assets | ▣ | | Six English schematic SVGs (fig-U5-1 to fig-U5-6) placed with derived dark variants; six .ur.svg pairs added with derived .ur.dark.svg twins and measure-figure-text verified; banner fig-U5-7 placed in English and Urdu index |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-07/G2/20261123T211446361Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-07/G2/20261124T012720971Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the census figures against Table 11 and Table 4.21, the constitutional articles against the current text (sources/unit-07.md), and the kymlicka-norman-2000 and youniss-levine-2009 attributions, which are declared unverifiable |
 | Unit 7 | G4 ur-translation | ▢ | | Complete seven-file draft Urdu mirror and eight localized SVG pairs (with derived dark twins) prepared from English 78cb581cd; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-07/handoff.md |
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and six new glossary Urdu definitions are authored and need checking |
