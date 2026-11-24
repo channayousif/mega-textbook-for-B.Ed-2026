@@ -2,7 +2,7 @@
 
 Source: https://openstax.org/details/books/entrepreneurship (CC BY-NC-SA 4.0)
 
-Consulted: 2026-11-24, sections read online at https://openstax.org/books/entrepreneurship/pages/ (1-1-entrepreneurship-today, 1-3-the-entrepreneurial-mindset, 2-1-overview-of-the-entrepreneurial-journey, 4-1-tools-for-creativity-and-innovation, 4-2-creativity-innovation-and-invention-how-they-differ, 7-1-developing-vision-and-mission-statements, 8-1-overview-of-entrepreneurial-marketing-and-sales, 11-1-realities-of-developing-a-business-model-and-plan, 11-2-developing-the-business-model, 11-4-the-business-plan, 12-1-building-networks-and-foundations, 13-1-business-structure-options).
+Consulted: 2026-11-24, sections read online at https://openstax.org/books/entrepreneurship/pages/ (1-1-entrepreneurship-today, 1-3-the-entrepreneurial-mindset, 2-1-overview-of-the-entrepreneurial-journey, 4-1-tools-for-creativity-and-innovation, 4-2-creativity-innovation-and-invention-how-they-differ, 7-1-developing-vision-and-mission-statements, 8-1-overview-of-entrepreneurial-marketing-and-sales, 11-1-realities-of-developing-a-business-model-and-plan, 11-2-developing-the-business-model, 11-4-the-business-plan, 12-1-building-networks-and-foundations, 13-1-business-structure-options, 3-1-what-are-business-ethics-and-social-responsibility, 8-1-overview-of-the-entrepreneurial-marketing-mix, 8-2-market-research-and-target-marketing, 8-3-marketing-strategy-and-the-marketing-plan, 8-4-the-promotional-mix, 13-1-business-structures-in-the-united-states, 13-2-intellectual-property-patents-copyrights-and-trademarks).
 
 Locator: Laverty, M., & Littel, C. (2020). *Entrepreneurship*. OpenStax, Rice University.
 
@@ -27,6 +27,16 @@ Use in GENT-401 Unit 1: notes 1-4 support Topic 1.1 (meaning, economic role, cha
 
 Use in GENT-401 Unit 4: notes 8-10 support Topic 4.1 (business plan components, executive summary, vision and mission statements); notes 11-12 support Topic 4.2 (marketing plan, operational plan, organizational structure).
 
+## Evidence notes for Unit 6 (sections read online 2026-11-24)
+
+8. Section 8.1 and 8.2: the entrepreneurial marketing mix encompasses the 4 Ps (Product, Price, Place, Promotion); market positioning is establishing a distinct place in the target customer's mind relative to competitors; a brand represents the emotional and perceptual promise of value made to customers.
+9. Section 8.3 and 8.4: promotion consists of communications designed to inform, persuade, and remind target customers; small businesses leverage bootstrap promotion techniques including personal selling, word of mouth, referral incentives, and targeted local notices; digital marketing employs social media, messaging platforms, and content marketing to build customer relationships cost-effectively.
+10. Section 3.1: ethics refers to moral standards and principles that distinguish right from wrong in human conduct; ethical issues in entrepreneurship include truth in advertising, fair treatment of employees, consumer safety, and honoring contractual commitments under financial pressure.
+11. Section 13.1: legal business structures include sole proprietorships, partnerships, and corporations/limited companies; liability ranges from unlimited personal liability in proprietorships and partnerships to limited liability in incorporated companies.
+12. Section 13.2: intellectual property protects intangible creations of the human intellect; distinct categories include trademarks (brand identifiers), copyrights (original literary and artistic expressions), patents (inventions and functional technical processes), and designs; bare ideas carry no intellectual property protection until fixed in a tangible medium or registered.
+
+Use in GENT-401 Unit 6: notes 8-9 support Topic 6.1 (branding, positioning, promotional mix, digital marketing); notes 10-12 support Topic 6.2 (business structures, intellectual property categories, ethics in entrepreneurship).
+
 ## Evidence notes for Unit 3 (chapters 5, 8 and 11, read online 2026-11-24)
 
 8. Section 5.2, "Researching Potential Business Opportunities": an idea becomes an opportunity only where significant market demand, significant market structure and size, and significant margins and resources intersect. Primary research gathers new data through surveys and questionnaires, focus groups and in-depth interviews, secret shoppers, direct customer observation and competitor shopping; secondary research uses existing published data and is fast but often lacks specificity. Screening questions cover whether others would value the product, whether the market is definable, whether the timing is right, what the competitive advantage is, and the timeline to first sale.
@@ -45,3 +55,10 @@ Consulted 2026-11-24, chapter 9 sections read online at https://openstax.org/boo
 10. Section 9.4: the balance sheet summarises the accounting equation (assets = liabilities + equity); the income statement provides the results of operations (revenue minus expenses equals net income); the statement of cash flows explains the sources and uses of cash, because the income statement records revenue when work is completed, not when cash arrives. Contribution margin is selling price minus variable costs; break-even is the level of operations that results in exactly enough revenue to cover costs, calculated as fixed costs divided by contribution margin (the pizzeria example: Rs-equivalent $2,000 / $8 = 250 pizzas a month). Burn rate is the rate at which cash outflow exceeds cash inflow.
 
 Use in GENT-401 Unit 5: notes 8-10 support the funding sources and bootstrapping in Topic 5.2 and the budgets, break-even formula and three statements in Topic 5.1. The tuition centre numbers are the author's, not the book's.
+
+## Use in GENT-401
+
+- Unit 1: notes 1-4 support Topic 1.1; notes 5-7 support Topic 1.2.
+- Unit 4: notes 8-10 support Topic 4.1 (business plan components, executive summary, vision and mission statements); notes 11-12 support Topic 4.2 (marketing plan, operational plan, organizational structure).
+- Unit 5: notes 8-10 support Topic 5.1 (budgets, break-even formula, three statements) and Topic 5.2 (funding sources, bootstrapping).
+- Unit 6: notes 8-9 support Topic 6.1 (branding, positioning, promotional mix, digital marketing); notes 10-12 support Topic 6.2 (business structures, intellectual property categories, ethics in entrepreneurship).

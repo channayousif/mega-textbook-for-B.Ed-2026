@@ -42,3 +42,17 @@ Use in GENT-401 Unit 4: notes 1-2 support Topic 4.1 (business plan components, e
 6. Chapter 13, "Balance Sheets", "Monthly Net Profit" and "Profits": a balance sheet shows assets and liabilities in two columns that must balance. Monthly net profit is total sales for one month minus labour, material and equipment costs, taxes and other expenditures. Gross profit is the total of all sales before expenses are subtracted; operating profit deducts the expenses directly related to producing a product; net profit is the amount left after all expenses.
 
 Use in GENT-401 Unit 5: notes 1-3 support Topic 5.2 (bootstrapping, the funding source options and the control/repayment trade-off); notes 4-6 support Topic 5.1 (the purpose of a budget, fixed and variable costs, the break-even formula and the basic statements). The tuition centre numbers are the author's own teaching device.
+
+## Evidence notes for Unit 6 (chapters 4 and 7, read online 2026-11-24)
+
+1. Chapter 4 (Marketing and Business Development): marketing starts with deep understanding of customer segments and their unmet needs; competitive advantage requires clear positioning that separates a venture from existing market choices.
+2. Chapter 4: branding represents the core promise and ongoing reputation of the enterprise; small businesses build brand equity through consistent quality, transparent communication, and customer referrals rather than expensive commercial advertising.
+3. Chapter 4: bootstrap promotion techniques for startups include personal demonstrations, direct relationships with community leaders, referral programs, and targeted local notices.
+4. Chapter 7 (Legal, Governance and Regulatory Frameworks): formal business registration provides credibility with institutional clients and limits personal exposure; contracts, intellectual property protection, and regulatory compliance are essential for sustainable growth.
+5. Chapter 7: ethical business practices, truth in advertising, and honoring commercial agreements build long-term enterprise value and customer loyalty.
+
+## Use in GENT-401
+
+- Unit 4: notes 1-2 support Topic 4.1 (business plan components, executive summary); notes 3-5 support Topic 4.2 (marketing plan, operational plan, organizational structure).
+- Unit 5: notes 1-3 support Topic 5.2 (bootstrapping, funding sources, control/repayment trade-off); notes 4-6 support Topic 5.1 (budget purpose, fixed and variable costs, break-even, basic statements).
+- Unit 6: notes 1-3 support Topic 6.1 (branding, positioning, bootstrap promotional strategies); notes 4-5 support Topic 6.2 (registration value, contracts, ethical practices).
