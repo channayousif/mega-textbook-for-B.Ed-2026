@@ -15,7 +15,7 @@
 - [x] Pilot EFMP-301 Unit 4: 14 items generated and gated; owner approved; 9 public and placed, embeds browser-checked EN/UR (2026-11-10)
 - [ ] Upload, publish and place the remaining 5 (t2-ur-video, t3-en-audio-p1, t3-ur-audio-p1, t3-en-video, t3-ur-video) after the channel cap resets or verification
 - [ ] Slides: upload deck v4 to Google Drive (owner confirms "anyone with the link" sharing) and place
-- [ ] Quiz v2 import script into quiz_items as drafts (service role, owner-run) + RLS test
+- [x] Quiz v2 import script into quiz_items as drafts (service role, owner-run) + RLS test (migration 0056 live 2026-11-24; `scripts/studio/import-quiz-drafts.mjs`; owner still supplies the quiz v2 JSON)
 - [ ] Urdu-reader check of UR assets before wider rollout
 - [ ] Separate track: Urdu corpus register proposal (style guide + terminology), not in this feature
 - [ ] Rollout plan per course after the pilot is live
