@@ -1,0 +1,136 @@
+/* Homepage sign-up invitation (HomeCtaBanner.tsx). A slim bar fixed to the bottom of the
+   viewport, below the navbar (z-index 200) and the mobile menu overlay (400). It never
+   covers the footer for long: the component sets html[data-cta] and the body reserves the
+   strip the bar covers, so the bar sits over that reserved space. */
+
+.banner {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: calc(var(--ifm-z-index-fixed) - 1);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: var(--brand-teal);
+  color: #fff;
+  box-shadow: 0 -8px 24px rgb(0 0 0 / .18);
+  animation: cta-rise var(--motion-base) var(--motion-ease-out);
+}
+
+@keyframes cta-rise {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.text {
+  flex: 1 1 320px;
+  min-width: 0;
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.4;
+  color: #e8f0ee;
+}
+
+.lead {
+  margin-inline-end: .35em;
+  color: var(--brand-amber);
+  font-weight: 800;
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  gap: 8px;
+}
+
+.signup,
+.signin,
+.close {
+  min-height: 44px;
+}
+
+.signup,
+.signin {
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+.signup,
+.signup:hover {
+  background: var(--brand-amber);
+  border-color: var(--brand-amber);
+  color: var(--brand-teal);
+}
+
+.signup:hover {
+  background: var(--brand-amber-soft);
+  border-color: var(--brand-amber-soft);
+}
+
+.signin,
+.signin:hover {
+  background: transparent;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: inset 0 0 0 2px rgb(255 255 255 / .6);
+}
+
+.signin:hover {
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.close {
+  flex: none;
+  margin-inline-start: auto;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: rgb(255 255 255 / .14);
+}
+
+.signup:focus-visible,
+.signin:focus-visible,
+.close:focus-visible {
+  outline: 2px solid var(--brand-amber);
+  outline-offset: 2px;
+}
+
+:global(html[dir='rtl']) .text {
+  font-family: 'Noto Naskh Arabic', 'Noto Nastaliq Urdu', serif;
+  line-height: 1.9;
+}
+
+/* Reserve the strip the banner covers. The bar is visible whenever this is set, so the
+   reserved space stays behind it. Screen only, so print keeps its own layout. */
+@media screen {
+  :global(html[data-cta='1']) body { padding-bottom: 76px; }
+  @media (max-width: 996px) {
+    :global(html[data-cta='1']) body { padding-bottom: 100px; }
+  }
+  @media (max-width: 760px) {
+    :global(html[data-cta='1']) body { padding-bottom: 128px; }
+    .banner { gap: 6px 10px; padding-inline: 12px; }
+    .text { flex-basis: 100%; }
+    .actions { flex: 1; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner { animation: none; }
+}
+
+@media print {
+  .banner { display: none; }
+}
