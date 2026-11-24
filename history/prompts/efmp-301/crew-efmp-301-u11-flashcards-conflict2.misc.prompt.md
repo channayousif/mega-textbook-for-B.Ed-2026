@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-301-u11-flashcards-conflict2
-title: crew fix EFMP-301 unit 11 (conflict 2)
+title: crew fix EFMP-301 unit 11
 stage: misc
 date: 2026-11-24
 surface: agent
@@ -16,8 +16,11 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-301/crew-efmp-301-u11-flashcards-conflict1.misc.prompt.md
  - history/prompts/efmp-301/crew-efmp-301-u11-flashcards-conflict2.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u11-flashcards.misc.prompt.md
  - specs/studio/flashcards-needed.json
+ - specs/studio/flashcards/efmp-301/unit-11.json
 tests:
  - npm run check:content
 ---
@@ -55,25 +58,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u11-flashcards, flashcards, claude) Only "Anxiety" has a `terminology.csv` pair; the other Urdu card terms (for example نمٹنا, اسی دن بڑھاوا, نجی نقشہ) copy the draft Urdu topic and should be checked again when that topic's G5 review changes its wording.
 - (efmp-301-u11-illustrate, illustrate, agy) Qualified subject review of WHO-bound clinical interpretation, urgency, and local referral procedure remains an owner escalation item prior to certification.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-301-u11-flashcards. The only conflict was the generated coverage list `specs/studio/flashcards-needed.json`: this branch had added the Unit 11 deck and removed `efmp-301/11`, while main had added the Unit 12 deck and removed `efmp-301/12`. Both decks now exist, so the list was regenerated with `node scripts/build-studio-index.mjs --coverage`, which drops both entries, and the git-ignored generated `static/studio/flashcards/` edits were discarded with `git checkout`. The shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) were unchanged on both sides and merged clean. No IDs needed renumbering. `npm run check:content` is fully green.
+Merged origin/main into crew/efmp-301-u11-flashcards, resolving the generated flashcards-needed.json coverage conflict so both Unit 11 and Unit 12 leave the needed list, and left npm run check:content fully green.
 
 ## Outcome
 
-- Impact: fix for EFMP-301 Unit 11 flashcards conflict by claude_crew (attempt 2).
-- Tests: `npm run build:content-status` then `npm run check:content` passed (all 14 content gates).
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-301 Unit 11 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 5 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit 8fd03b0b3 on crew/efmp-301-u11-flashcards resolving the flashcards-needed.json conflict; branch is 0 behind and 6 ahead of origin/main; diff vs main is only the Unit 11 deck, its PHRs and the one-line coverage removal.
-- Decisions the team must respect: the flashcards-needed list is generated, so resolve it by rerunning `node scripts/build-studio-index.mjs --coverage`, never by hand-editing; discard `static/studio/flashcards/` afterwards because it is git-ignored.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). This job did not push and did not open a PR.
+- Shipped / changed: Merged origin/main into crew/efmp-301-u11-flashcards, resolving the generated flashcards-needed.json coverage conflict so both Unit 11 and Unit 12 leave the needed list, and left npm run check:content fully green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `flashcards-needed.json` will keep conflicting for every sibling flashcards job; rerun the generator and `git checkout -- static/studio/flashcards/` before committing.
+  - `flashcards-needed.json` will keep conflicting for every sibling flashcards job; rerun `node scripts/build-studio-index.mjs --coverage` then `git checkout -- static/studio/flashcards/` before committing.
   - Only "Anxiety" has a `terminology.csv` pair, so the other Urdu card terms in `unit-11.json` copy the draft Urdu topic and need rechecking if that topic's G5 review rewords it.
   - EFMP-301 Unit 11 G3 is still unticked with no reviewer initials, and `fig-U11-5/6/7` are still unplaced.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
@@ -81,6 +85,6 @@ Merged origin/main into crew/efmp-301-u11-flashcards. The only conflict was the 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
