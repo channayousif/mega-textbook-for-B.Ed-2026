@@ -13,8 +13,8 @@ labels: [board-direct, crew, media]
 links:
   spec: specs/030-media-studio/spec.md
   ticket: null
-  adr: history/adr/0037-media-studio.md
-  pr: null
+  adr: history/adr/0037-unified-media-studio.md
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/751
 files:
   - scripts/crew/workers.mjs
   - scripts/crew/crew.mjs
