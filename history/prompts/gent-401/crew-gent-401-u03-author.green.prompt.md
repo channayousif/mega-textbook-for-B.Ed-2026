@@ -22,6 +22,7 @@ files:
  - docs/semester-4/gent-401/unit-03/unit-assessment.mdx
  - docs/semester-4/gent-401/unit-03/unit-teacher-notes.mdx
  - glossary.json
+ - history/prompts/gent-401/crew-gent-401-u03-author.green.prompt.md
  - specs/content/gent-401/concepts/unit-03.md
  - specs/content/gent-401/coverage/unit-03.md
  - specs/content/gent-401/figures/unit-03.banner.md
@@ -56,7 +57,7 @@ tests:
 
 # Crew job gent-401-u03-author
 
-You are the claude worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/gent-401-u03-author`.
+You are the claude_crew worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/gent-401-u03-author`.
 Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or the Playwright e2e suite (a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server), keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`. Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0. `static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git, never mark G3/G5 done, never self-sign or use
 human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec. After changing any English unit file or its figures manifest, sources, coverage or concepts, the job commits, runs `node scripts/prepare-gate-evidence.mjs <course> <unit>`, commits the JSON and every `logs-*` directory it writes, and points the unit's G2 en-draft tracker row at the new file before `npm run check:content`.
 
@@ -80,28 +81,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored GENT-401 Unit 3 in English on `crew/gent-401-u03-author` in two commits: the unit itself (`7cbdfae84`) and its G2 gate evidence plus the tracker rows (`4453042b2`). Nothing is pushed and there is no PR. `npm run check:content` passes all 14 gates. The four SVGs (and their dark variants) pass `measure-figure-text`.
+Authored GENT-401 Unit 3 (Market Research and Business Models) in English with four placed schematic SVGs, full governance artefacts, G2 gate evidence and tracker rows, all content gates passing.
 
 ## Outcome
 
-- ✅ Impact: author for GENT-401 Unit 3 by claude_crew (attempt 1).
-- 🧪 Tests: `npm run check:content` passed in the job worktree (14/14 gates) after `npm run build:content-status`.
-- 📁 Files: 32 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: author for GENT-401 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 33 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored GENT-401 Unit 3 in English (index, two topic cycles, a 10/10/5 assessment, teacher notes, four placed schematic SVGs with derived dark variants, coverage, sources, concept graph, figure manifest, banner prompt row, tracker rows and G2 gate evidence). Also added six glossary terms and bound source notes for the EFMD guide and an open-access canvas teaching case.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch certifies nothing. The unit is English-only with the untranslated notice, so the parity gate skips it.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). The planner should queue the `figures`/`illustrate` follow-ups: banner fig-U3-5 is prompt-only.
+- Shipped / changed: Authored GENT-401 Unit 3 (Market Research and Business Models) in English with four placed schematic SVGs, full governance artefacts, G2 gate evidence and tracker rows, all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The content-spec maps Unit 3 to OpenStax chapters 5 and 11. Chapter 8 (section 8.2, the book's market-research chapter) was added because it is the closest match to the Week 5 leaves; the sources file records this.
-  - `spriggs-2016-bmc` is an author-selected open-access source beyond the spec's reading list, added under the author-unit skill's rule for a fact that needs a source (the canvas as a teaching tool in U3-04). The G3 reviewer should confirm it is genuinely on-topic.
-  - The reading-minutes band is tight: the first draft totalled 46 minutes against the approved 32-44 band, so redundant prose was cut to land at 43. If a later revision adds text, re-check the band before committing.
-  - Figures are placed in English only (fig-U3-1 to fig-U3-4, no `.ur.svg` yet); the G4 translate job must mirror them.
+  - The content-spec maps Unit 3 to OpenStax chapters 5 and 11; I added chapter 8 (section 8.2 is the book's market-research chapter) and an author-selected OA source `spriggs-2016-bmc`, both recorded in `sources/unit-03.md` - G3 should confirm they are genuinely on-topic.
+  - The reading-minutes band is tight: the first draft totalled 46 minutes against the approved 32-44 band, so redundant prose was cut to land at 43. Any later addition must re-check the band before committing.
+  - Figures are English-only (no `.ur.svg`); banner `fig-U3-5` is a prompt-only row in `figures/unit-03.banner.md` for the illustrate job.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
