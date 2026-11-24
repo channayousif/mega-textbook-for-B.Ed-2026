@@ -1,27 +1,45 @@
 ---
 id: crew-batch-20261124-1845-cifix1
-title: crew fix EFMP-408 unit 1 figure geometry
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-24
 surface: agent
 model: claude_crew
-feature: efmp-408
+feature: crew
 branch: crew/batch-20261124-1845
 user: crew
 command: crew fix
 labels: ["crew", "claude_crew", "fix"]
 links:
-  spec: specs/content/efmp-408/content-spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: 772
+  pr: null
 files:
  - history/prompts/crew/crew-batch-20261124-1845-cifix1.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u01-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/unit-teacher-notes.mdx
+ - specs/content/efmp-408/reviews/unit-01/G4/translation-handoff.md
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-01/fig-U1-1.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-1.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-2.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-2.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-3.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-3.ur.svg
  - static/img/figures/efmp-408/unit-01/fig-U1-5.ur.dark.svg
  - static/img/figures/efmp-408/unit-01/fig-U1-5.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-6.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-6.ur.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-7.ur.dark.svg
+ - static/img/figures/efmp-408/unit-01/fig-U1-7.ur.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs --ci-fonts static/img/figures/efmp-408/unit-01/fig-U1-5.ur.svg static/img/figures/efmp-408/unit-01/fig-U1-5.ur.dark.svg
 ---
 
 ## Prompt
@@ -56,31 +74,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261124-0800-cifix1, fix, claude_crew) G2 evidence for Unit 4 now points at `20261124T093431464Z-gates.json`; older `20261124T05*/06*` evidence dirs were left in place.
 - (batch-20261124-0800-cifix1, fix, claude_crew) `npm run build` was not run locally (forbidden by the brief); CI's build job still has to confirm the acorn error is gone.
 
+
 ## Response snapshot
 
-Split the over-long Urdu table header in `fig-U1-5.ur.svg` into two lines, regenerated its derived dark variant, and got all 14 content gates plus the CI-font figure measurement passing.
+Split the over-wide Urdu header in fig-U1-5.ur.svg into two lines, regenerated its dark variant, and confirmed the CI figure-geometry measurement and all content gates pass.
 
 ## Outcome
 
-- Impact: fix for EFMP-408 Unit 1 figure geometry by claude_crew (attempt 1).
-- Tests: `npm run check:content` passed; `measure-figure-text.mjs --ci-fonts` passed on both variants.
-- Files: 3 file(s), listed above.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Fixed the CI figure-geometry failure on PR #772 by splitting the Urdu header "بنیادی سوال جس کا یہ جواب دیتی ہے" into two lines ("بنیادی سوال" / "جس کا یہ جواب دیتی ہے") in `fig-U1-5.ur.svg`, then regenerated `fig-U1-5.ur.dark.svg` with `scripts/build-figure-variants.mjs`.
-- Decisions the team must respect: the dark variant is derived, never hand-edited; the English `fig-U1-5.svg` and the manifest are unchanged, so the G2 evidence (which hashes only English SVGs) stays valid.
+- Shipped / changed: Split the over-wide Urdu header in fig-U1-5.ur.svg into two lines, regenerated its dark variant, and confirmed the CI figure-geometry measurement and all content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The overlap was 39px in CI's DejaVu Sans fallback while local Noto Nastaliq rendering already had a 47px gap; always re-check changed Urdu SVGs with `--ci-fonts`.
-  - CI's figure-geometry job measures with `--changed <base>` and no `--ci-fonts`, on a runner without Noto Nastaliq.
+  - CI measures changed SVGs with a DejaVu Sans fallback and no Noto Nastaliq; local default-font runs can pass a file CI fails, so always re-check with `--ci-fonts`.
+  - The dark variant is derived from the light source by `scripts/build-figure-variants.mjs`; never hand-edit `.dark.svg`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Urdu header text wider than its table column under the CI fallback face, colliding with the neighbouring column header.
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text --ci-fonts PASS.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
