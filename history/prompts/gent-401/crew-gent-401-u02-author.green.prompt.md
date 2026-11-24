@@ -4,12 +4,12 @@ title: crew author GENT-401 unit 2
 stage: misc
 date: 2026-11-24
 surface: agent
-model: claude
+model: claude_crew
 feature: gent-401
 branch: crew/gent-401-u02-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/gent-401/content-spec.md
   ticket: null
@@ -22,6 +22,7 @@ files:
  - docs/semester-4/gent-401/unit-02/unit-assessment.mdx
  - docs/semester-4/gent-401/unit-02/unit-teacher-notes.mdx
  - glossary.json
+ - history/prompts/gent-401/crew-gent-401-u02-author.green.prompt.md
  - specs/content/gent-401/concepts/unit-02.md
  - specs/content/gent-401/coverage/unit-02.md
  - specs/content/gent-401/figures/unit-02.banner.md
@@ -78,32 +79,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored GENT-401 Unit 2 in English (index, two nine-part topic cycles, a 10/10/5 unit assessment with a bounded answers section, teacher notes, four placed schematic SVGs with dark variants, coverage matrix, sources-consulted list, figure manifest and concept graph), banked eight glossary terms, and recorded the unit's G2 gate evidence and tracker row. All 14 content gates pass.
+Authored GENT-401 Unit 2 (index, two nine-part topic cycles, 10/10/5 assessment, teacher notes, four placed schematic SVGs, coverage/sources/figures/concepts governance, G2 evidence and PHR) with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: author for GENT-401 Unit 2 by claude (attempt 1).
-- Tests: npm run check:content passed in the job worktree (14/14 gates).
+- Impact: author for GENT-401 Unit 2 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 31 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored GENT-401 Unit 2 in English (index, two nine-part topic cycles, 10/10/5 assessment with a bounded answers section, teacher notes, four placed schematic SVGs with dark variants, coverage, sources, figure manifest, concept graph), banked eight glossary terms, and recorded the G2 gate evidence and tracker row. All 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. Figures are placed in English only (no `.ur.svg` yet), so the unit is not a finished bilingual unit.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored GENT-401 Unit 2 (index, two nine-part topic cycles, 10/10/5 assessment, teacher notes, four placed schematic SVGs, coverage/sources/figures/concepts governance, G2 evidence and PHR) with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The G3 reviewer should confirm the `qamar-2020-social` row against its OpenAlex record (the DOI host `ojstest.umt.edu.pk` did not resolve on 2026-11-24) and the `butler-iea` edition year (spec says 2020).
+  - G3 reviewer should confirm the `qamar-2020-social` row against its OpenAlex record W3118924195 (the DOI host `ojstest.umt.edu.pk` did not resolve on 2026-11-24) and the `butler-iea` edition year (spec says 2020).
   - `mellor-2009` is declared under `## Unverifiable sources` and backs only general background; no page or wording is claimed.
-  - Banner `fig-U2-5` is a prompt-only row in `figures/unit-02.banner.md` for the illustrate job.
+  - figures are placed English-only (no `.ur.svg`); banner `fig-U2-5` is a prompt-only row in `figures/unit-02.banner.md` for the illustrate job, and the Urdu mirror is a separate G4 job.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
