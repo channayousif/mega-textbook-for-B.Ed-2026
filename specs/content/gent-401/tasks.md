@@ -1,6 +1,6 @@
 # GENT-401 Entrepreneurship - Task tracker
 
-## Status: content spec approved (G0/G1); Unit 1 English draft authored
+## Status: content spec approved (G0/G1); Unit 1 English draft authored and G2 gate evidence recorded; G3 review open
 
 English-only authoring from the approved Unit 1 content-spec subsection. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
@@ -25,6 +25,7 @@ English-only authoring from the approved Unit 1 content-spec subsection. No publ
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-01/G2/20261124T023608050Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the butler-iea edition year and that the unverifiable mellor-2009 row supports only the premise in its title (sources/unit-01.md) |
 | Unit 1 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels other than تخلیقیت are authored and need checking |
