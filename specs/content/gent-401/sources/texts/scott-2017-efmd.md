@@ -2,11 +2,27 @@
 
 Source: https://www.efmdglobal.org/wp-content/uploads/The-Entrepreneurs-Guide-to-Building-a-Successful-Business-2017.pdf
 
-Consulted: 2026-11-24, PDF confirmed and read online.
+Consulted: 2026-11-24, full PDF (222 pp.), free to read from the publisher's own site. Title page and Library of Congress cataloguing page give: Jonathan T. Scott, *The Entrepreneur's Guide to Building a Successful Business* (2nd edition), EFMD aisbl, Brussels, 2017, ISBN 978-0-9818-260-1-1. The PDF's embedded metadata carries the title of the author's earlier book, *The Sustainable Business*, so the printed cataloguing page was used for the citation. All rights reserved; free to read.
 
-Locator: Scott, J. T. (2017). *The entrepreneur's guide to building a successful business*. EFMD. ISBN 978-0-9818-260-1-1.
+Locator: Scott, J. T. (2017). *The entrepreneur's guide to building a successful business* (2nd ed.). EFMD.
 
-## Evidence notes
+## Evidence notes (paraphrased; short phrases quoted)
+
+1. Chapter 5, p. 34: "the word market is defined as a collection of buyers (or potential buyers) of a particular product or service". The purpose of market research is "to gather information about a product and its demand". Knowing the size and make-up of a market indicates how lucrative a product might be.
+2. Chapter 5, pp. 34-35: the objectives of a research project are to determine an accurate estimate of costs and produce a reliable estimate of revenues. Research should identify who will buy, how many will buy, and how long demand will last.
+3. Chapter 5, p. 35: market research is a four-stage procedure: define a question or opportunity, decide the tools, collect the information, analyse it. Two types of data fill the second stage: "Primary Data consists of obtaining information firsthand, at its source, for a specific purpose" and "Secondary Data involves information that has already been collected". Primary methods named are questionnaires, personal interviews, focus groups, and mail and telephone surveys; secondary sources include government data, books, magazines and internet searches.
+4. Chapter 5, pp. 37-38: questionnaires should be "simple, clear, concise, and purpose-driven", and should avoid biased wording, unfamiliar terms, poorly phrased or personal questions, and too many questions. The bad example "Would you be interested in a new restaurant if it opened in this area?" is biased, because most people say yes and the answer proves nothing; better questions ask how often people eat out and what makes them return.
+5. Chapter 5, p. 39: "since markets have a tendency to change rapidly, different research sources and methods should be used to confirm results - a process called triangulation". Combine at least one primary and one secondary approach before establishing a conclusion. The point behind research is to reduce risk.
+6. Chapter 6, pp. 40-41: external research steps include defining what you have and what you wish to do, evaluating the idea and the industry, knowing your customers (who will use the product, where they are, why and how they will use it, what benefits they derive, whether they can afford it), and researching the competition (whether a business already provides a similar product, and whether another can produce it cheaper or better).
+7. Chapter 6, pp. 43-44: a SWOT analysis sets strengths and weaknesses (internal) against opportunities and threats (external) in an easy-to-read chart, so the entrepreneur can see what to address.
+8. Chapter 9, p. 53: "a business model refers to a workable business strategy or the way an organization does business", based on a sales technique, a pricing strategy, the wants and needs of a target market, or any method that capitalises on what the business does best and what customers want most. Choosing a model is "mostly through research followed by trial and error".
+9. Chapter 9, pp. 53-57: the model choices as pairs of opposites. Sales volume versus profit margins (Trujillo: "Percentages aren't put into a bank ... only money is put into a bank", p. 54); high prices versus low prices; market share versus profitability (Pick 'n Pay's chairman put profitability over market share, p. 55); less choice versus more choice (a travel agency cut twelve international tours to three and they filled up); competition versus cooperation (cooperative networking, p. 55); selling versus sales and service (Dow Chemical sells the benefit of its chemicals rather than the chemicals, pp. 56-57).
+10. Chapter 9, p. 58: "Re-working a business plan is not a sign of weakness if the current plan is proving futile", and businesses that try to be all things to all people tend to be "confused, unfocused". Persistence versus stubbornness: know what and why you are changing before taking a different course.
+11. Chapter 27, p. 144: "Price is the only component of the marketing mix ... that produces revenue. All others represent costs." Pricing can be changed quickly, and a price that is too high or too low can both turn buyers away.
+
+Use in GENT-401 Unit 3: notes 1-5 support Topic 3.1 (market and customer understanding, data-collection methods); notes 6-7 support Topic 3.1 (competitor analysis and the SWOT chart); notes 8-10 support Topic 3.2 (types of business models and the model-versus-plan distinction); note 11 supports Topic 3.2 (revenue streams). Page numbers are those printed in the book.
+
+## Evidence notes for Unit 6 (chapters 4 and 7, read online 2026-11-24)
 
 1. Chapter 4 (Marketing and Business Development): marketing starts with deep understanding of customer segments and their unmet needs; competitive advantage requires clear positioning that separates a venture from existing market choices.
 2. Chapter 4: branding represents the core promise and ongoing reputation of the enterprise; small businesses build brand equity through consistent quality, transparent communication, and customer referrals rather than expensive commercial advertising.
