@@ -2863,5 +2863,75 @@
     "term": "Crowdsourcing",
     "definition_en": "Asking a large group of people, usually online, to send in ideas or solutions to a problem, often with a prize or payment for the best one.",
     "definition_ur": "عام طور پر آن لائن بڑی تعداد میں لوگوں سے کسی مسئلے کے خیالات یا حل بھیجنے کو کہنا، اکثر بہترین کے لیے انعام یا معاوضے کے ساتھ۔"
+  },
+  {
+    "term": "Start-up cost",
+    "definition_en": "Money spent once to open a business, before the first customer arrives - such as a rent deposit, furniture or registration.",
+    "definition_ur": "کاروبار شروع کرنے کے لیے ایک بار خرچ ہونے والی لاگت، جیسے کرایہ کی پیشگی، فرنیچر یا رجسٹریشن۔"
+  },
+  {
+    "term": "Fixed cost",
+    "definition_en": "A cost that stays about the same each month, whatever the sales - such as rent or a salary.",
+    "definition_ur": "وہ اخراجات جو مہینے بھر میں لگے رہتے ہیں، چاہے فروخت کتنی بھی ہو، جیسے کرایہ یا تنخواہ۔"
+  },
+  {
+    "term": "Variable cost",
+    "definition_en": "A cost that rises and falls with the number of units made or sold - such as materials, printing or transport.",
+    "definition_ur": "وہ اخراجات جو پیداوار یا فروخت کی مقدار کے ساتھ بڑھتے یا گھٹتے ہیں، جیسے خام مال، پرنٹنگ یا ٹرانسپورٹ۔"
+  },
+  {
+    "term": "Break-even point",
+    "definition_en": "The level of sales at which total revenue exactly equals total costs, so the business makes no profit and no loss.",
+    "definition_ur": "وہ فروخت کی سطح جہاں کل آمدنی بالکل کل لاگت کے برابر ہو جائے، یعنی نہ نفع اور نہ نقصان۔"
+  },
+  {
+    "term": "Contribution margin",
+    "definition_en": "The selling price per unit minus the variable cost per unit; the amount each unit contributes towards paying fixed costs.",
+    "definition_ur": "فی یونٹ قیمت میں سے فی یونٹ متغیرہ لاگت گھٹا کر بچی ہوئی رقم جو مقررہ اخراجات پورے کرنے میں مدد دیتی ہے۔"
+  },
+  {
+    "term": "Income statement",
+    "definition_en": "A financial statement that shows revenue minus expenses over a period, giving the net income.",
+    "definition_ur": "وہ مالی گوشوارہ جو ایک مخصوص مدت کی آمدنی اور اخراجات دکھا کر صاف منافع بتاتا ہے۔"
+  },
+  {
+    "term": "Balance sheet",
+    "definition_en": "A financial statement that shows assets, liabilities and the owner's equity on one day, where assets must equal liabilities plus equity.",
+    "definition_ur": "وہ مالی گوشوارہ جو کسی ایک دن کے ربط میں اثاثے، قرضے اور مالک کا حصہ دکھاتا ہے، جہاں اثاثے ہمیشہ قرضے اور مالک کے حصے کے برابر ہوتے ہیں۔"
+  },
+  {
+    "term": "Cash flow",
+    "definition_en": "The money actually moving in and out of a business; a cash-flow statement records where cash came from and where it went.",
+    "definition_ur": "وہ رقم جو کاروبار کے اندر باہر ہوتی ہے؛ نقد بہاؤ کا گوشوارہ دکھاتا ہے کہ پیسہ کب آیا اور کب گیا۔"
+  },
+  {
+    "term": "Bootstrapping",
+    "definition_en": "Funding a venture from the founder's own savings and early income, instead of taking outside money.",
+    "definition_ur": "کاروبار کو باہر سے قرض یا سرمایہ کے بجائے اپنی بچت اور ابتدائی آمدنی سے چلانا۔"
+  },
+  {
+    "term": "Bank loan",
+    "definition_en": "Money borrowed from a bank that must be repaid with interest, often with collateral.",
+    "definition_ur": "بینک سے لیا گیا قرض جو سود کے ساتھ واپس کرنا ہوتا ہے، اور اکثر کسی ضمانت کے ساتھ۔"
+  },
+  {
+    "term": "Equity financing",
+    "definition_en": "Raising money by selling part ownership in a business; the investor becomes a part owner and shares in the success.",
+    "definition_ur": "کاروبار میں حصہ بیچ کر مالی مدد لینا؛ سرمایہ کار حصہ دار بن جاتا ہے اور منافع کا حصہ لیتا ہے۔"
+  },
+  {
+    "term": "Angel investor",
+    "definition_en": "A wealthy private individual who invests in a new venture, usually in exchange for part ownership, and often offers advice.",
+    "definition_ur": "امیر نجی فرد جو نئے کاروبار میں حصے کے عوض پیسہ لگاتا ہے اور اکثر مشورہ بھی دیتا ہے۔"
+  },
+  {
+    "term": "Venture capital",
+    "definition_en": "Financing from a specialist group that invests in early-stage companies for part ownership and expects fast growth.",
+    "definition_ur": "وہ سرمایہ جو مہارت رکھنے والے گروہ کی طرف سے نئے کاروباروں میں حصے کے عوض دیا جاتا ہے اور جس میں تیز ترقی کی توقع ہوتی ہے۔"
+  },
+  {
+    "term": "Crowdfunding",
+    "definition_en": "Collecting small sums of money from a large number of people, usually through an online campaign.",
+    "definition_ur": "انٹرنیٹ پر بہت سے لوگوں سے چھوٹی چھوٹی رقوم اٹھا کر کاروبار یا منصوبے کو مالی مدد دینا۔"
   }
 ]

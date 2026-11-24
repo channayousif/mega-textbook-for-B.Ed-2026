@@ -46,8 +46,19 @@ Use in GENT-401 Unit 6: notes 8-9 support Topic 6.1 (branding, positioning, prom
 
 Use in GENT-401 Unit 3: notes 8-9 support Topic 3.1 (understanding customers and markets, data-collection methods, competitor analysis); notes 10-11 support Topic 3.2 (types of business models, value proposition, revenue streams). The market-research cycle flowchart and the four-method table are the author's teaching devices built on these notes, not the book's own diagrams.
 
+## Evidence notes for GENT-401 Unit 5 (chapter 9)
+
+Consulted 2026-11-24, chapter 9 sections read online at https://openstax.org/books/entrepreneurship/pages/ (9-1-overview-of-entrepreneurial-finance-and-accounting-strategies, 9-2-special-funding-strategies, 9-3-accounting-basics-for-entrepreneurs, 9-4-developing-startup-financial-statements-and-projections).
+
+8. Section 9.1: financing is the process of raising money for an intended purpose, and accounting is the system business owners use to summarise, manage and communicate financial operations. Seed-stage funding comes from personal savings, small investments from friends and family, and angel investors; early-stage funding from angel investors or funds, venture capitalists or private equity; mature growth from self-sustaining income, private equity sale or an initial public offering. An angel investor is a wealthy private individual seeking investment options; a venture capitalist specialises in funding early-stage companies. Debt financing is borrowing funds from another party; equity financing is financing provided in exchange for part ownership. Table 9.1: debt means the lender has no ownership but requires early and regular cash outflow; equity gives the lender an ownership stake but no immediate cash outflow.
+9. Section 9.2: bootstrapping is the process of self-funding a company, based on the adage about pulling ourselves up by our bootstraps. Its advantages are no ownership given up, creative low-cost solutions and full founder control; its disadvantages are slow to start and personal sacrifice. Crowdfunding is collecting small sums of money from a large number of people, whose contributors are called backers; models include reward, donation, equity and debt campaigns, and Kickstarter uses an all-or-nothing model. The section warns that many projects deliver rewards late and that abuse of crowdfunding may lead to legal action.
+10. Section 9.4: the balance sheet summarises the accounting equation (assets = liabilities + equity); the income statement provides the results of operations (revenue minus expenses equals net income); the statement of cash flows explains the sources and uses of cash, because the income statement records revenue when work is completed, not when cash arrives. Contribution margin is selling price minus variable costs; break-even is the level of operations that results in exactly enough revenue to cover costs, calculated as fixed costs divided by contribution margin (the pizzeria example: Rs-equivalent $2,000 / $8 = 250 pizzas a month). Burn rate is the rate at which cash outflow exceeds cash inflow.
+
+Use in GENT-401 Unit 5: notes 8-10 support the funding sources and bootstrapping in Topic 5.2 and the budgets, break-even formula and three statements in Topic 5.1. The tuition centre numbers are the author's, not the book's.
+
 ## Use in GENT-401
 
 - Unit 1: notes 1-4 support Topic 1.1; notes 5-7 support Topic 1.2.
 - Unit 4: notes 8-10 support Topic 4.1 (business plan components, executive summary, vision and mission statements); notes 11-12 support Topic 4.2 (marketing plan, operational plan, organizational structure).
+- Unit 5: notes 8-10 support Topic 5.1 (budgets, break-even formula, three statements) and Topic 5.2 (funding sources, bootstrapping).
 - Unit 6: notes 8-9 support Topic 6.1 (branding, positioning, promotional mix, digital marketing); notes 10-12 support Topic 6.2 (business structures, intellectual property categories, ethics in entrepreneurship).
