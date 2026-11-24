@@ -16,9 +16,41 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/gent-401/unit-07/index.mdx
+ - docs/semester-4/gent-401/unit-07/topic-01.mdx
+ - docs/semester-4/gent-401/unit-07/topic-02.mdx
+ - docs/semester-4/gent-401/unit-07/unit-assessment.mdx
+ - docs/semester-4/gent-401/unit-07/unit-teacher-notes.mdx
+ - glossary.json
+ - history/prompts/gent-401/crew-gent-401-u07-author-conflict1.misc.prompt.md
  - history/prompts/gent-401/crew-gent-401-u07-author-conflict2.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u07-author.green.prompt.md
+ - specs/content/gent-401/concepts/unit-07.md
+ - specs/content/gent-401/coverage/unit-07.md
+ - specs/content/gent-401/figures/unit-07.banner.md
+ - specs/content/gent-401/figures/unit-07.md
+ - specs/content/gent-401/reviews/unit-07/G2/20261124T060041498Z-gates.json
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-07/G2/logs-20261124T060041498Z/validate-content.txt
  - specs/content/gent-401/sources/texts/openstax-entrepreneurship.md
+ - specs/content/gent-401/sources/texts/pitch-competition.md
+ - specs/content/gent-401/sources/texts/sme-risk-review.md
+ - specs/content/gent-401/sources/unit-07.md
  - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-07/fig-U7-1.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-1.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-2.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-3.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-3.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-4.dark.svg
+ - static/img/figures/gent-401/unit-07/fig-U7-4.svg
 tests:
  - npm run check:content
 ---
@@ -56,31 +88,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u07-author, author, claude_crew) the unit banner fig-U7-5 is still prompt-only for the illustrate job; G3 en-review and G4/G5 Urdu are separate jobs, and all six concept Urdu labels are authored (not banked in terminology.csv).
 - (gent-401-u07-author, author, claude_crew) `specs/content/gent-401/sources/texts/openstax-entrepreneurship.md` is shared by key across units, so Unit 1's accepted G2 input manifest may now read as stale; `--refresh-stale` is the intended repair and belongs to whichever job touches Unit 1 next.
 
+
 ## Response snapshot
 
-Merged origin/main (6f358f0eb) into crew/gent-401-u07-author. In the shared OpenStax source text, kept main's Unit 4 notes 8-12 and Unit 3 block, kept this branch's Unit 7 notes 12-20, and unioned the `Consulted:` section list (main's sections first, then this branch's additions). In tasks.md, kept main's Units 1-4 status, table row and stage rows and re-added this branch's Unit 7 table row, six stage rows and reading estimate. All 14 content gates pass.
+Merged origin/main into crew/gent-401-u07-author, resolving the OpenStax source-evidence and tasks.md conflicts by keeping main's Unit 4/Unit 3 content alongside this branch's Unit 7 content, and left all content gates passing.
 
 ## Outcome
 
-- Impact: fix for GENT-401 Unit 7 by claude_crew (attempt 2).
-- Tests: npm run check:content passed (14/14 gates) in the job worktree after the merge commit.
-- Files: 3 file(s), listed above.
+- Impact: fix for GENT-401 Unit 7 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 35 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit 3a2336bba on crew/gent-401-u07-author resolving the two conflicts against origin/main; no content files touched.
-- Decisions the team must respect: the OpenStax evidence file keeps three per-unit note blocks whose numbering restarts (Unit 1 notes 1-7, Unit 3 notes 8-11, Unit 4 notes 8-12, Unit 7 notes 12-20); later jobs should append rather than renumber. G3/G5 stay unticked and advisory.
-- Pending / next owner: crew lead (auto-merge when CI is green); next content job on Unit 7 is the G3 en-review.
+- Shipped / changed: Merged origin/main into crew/gent-401-u07-author, resolving the OpenStax source-evidence and tasks.md conflicts by keeping main's Unit 4/Unit 3 content alongside this branch's Unit 7 content, and left all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `specs/content/gent-401/glossary.json` is absent from this sparse checkout and from both parents, so the branch's Unit 7 glossary keys could not be re-verified against main; check them in a full checkout before relying on them.
-  - Unit 7 stays English-only with banner fig-U7-5 prompt-only; Unit 1's accepted G2 input manifest may still read as stale after the shared source text changed.
+  - The OpenStax evidence file now has four per-unit blocks whose note numbers restart (U1 1-7, U3 8-11, U4 8-12, U7 12-20); later jobs should append, not renumber.
+  - `specs/content/gent-401/glossary.json` is missing from this sparse checkout and both parents, so the branch's Unit 7 glossary keys could not be diffed against main; verify in a full checkout.
+  - Unit 7 stays English-only with banner fig-U7-5 prompt-only and G3/G5 unticked; Unit 1's accepted G2 input manifest may read as stale after the shared source text changed.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
