@@ -16,58 +16,58 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-4/efmp-408/unit-03/index.mdx
-  - docs/semester-4/efmp-408/unit-03/topic-01.mdx
-  - docs/semester-4/efmp-408/unit-03/topic-02.mdx
-  - docs/semester-4/efmp-408/unit-03/topic-03.mdx
-  - docs/semester-4/efmp-408/unit-03/topic-04.mdx
-  - docs/semester-4/efmp-408/unit-03/unit-assessment.mdx
-  - docs/semester-4/efmp-408/unit-03/unit-teacher-notes.mdx
-  - history/prompts/efmp-408/crew-efmp-408-u03-author.green.prompt.md
-  - specs/content/efmp-408/concepts/unit-03.md
-  - specs/content/efmp-408/coverage/unit-03.md
-  - specs/content/efmp-408/figures/unit-03.banner.md
-  - specs/content/efmp-408/figures/unit-03.md
-  - specs/content/efmp-408/reviews/unit-01/G2/20261124T184857338Z-gates.json
-  - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-bloom-bands.txt
-  - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-concept-graph.txt
-  - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-depth-gate.txt
-  - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-docs-sync.txt
-  - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-figures.txt
-  - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-no-answer-keys.txt
-  - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-no-em-dash.txt
-  - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/validate-content.txt
-  - specs/content/efmp-408/reviews/unit-03/G2/20261124T184540786Z-gates.json
-  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-bloom-bands.txt
-  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-concept-graph.txt
-  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-depth-gate.txt
-  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-docs-sync.txt
-  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-figures.txt
-  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-no-answer-keys.txt
-  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-no-em-dash.txt
-  - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/validate-content.txt
-  - specs/content/efmp-408/sources/texts/hec-2013-testdev.md
-  - specs/content/efmp-408/sources/texts/seifert-sutton-2009.md
-  - specs/content/efmp-408/sources/unit-03.md
-  - specs/content/efmp-408/tasks.md
-  - static/img/figures/efmp-408/unit-03/fig-U3-1.dark.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-1.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-2.dark.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-2.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-3.dark.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-3.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-4.dark.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-4.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-5.dark.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-5.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-6.dark.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-6.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-7.dark.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-7.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-8.dark.svg
-  - static/img/figures/efmp-408/unit-03/fig-U3-8.svg
+ - docs/semester-4/efmp-408/unit-03/index.mdx
+ - docs/semester-4/efmp-408/unit-03/topic-01.mdx
+ - docs/semester-4/efmp-408/unit-03/topic-02.mdx
+ - docs/semester-4/efmp-408/unit-03/topic-03.mdx
+ - docs/semester-4/efmp-408/unit-03/topic-04.mdx
+ - docs/semester-4/efmp-408/unit-03/unit-assessment.mdx
+ - docs/semester-4/efmp-408/unit-03/unit-teacher-notes.mdx
+ - history/prompts/efmp-408/crew-efmp-408-u03-author.green.prompt.md
+ - specs/content/efmp-408/concepts/unit-03.md
+ - specs/content/efmp-408/coverage/unit-03.md
+ - specs/content/efmp-408/figures/unit-03.banner.md
+ - specs/content/efmp-408/figures/unit-03.md
+ - specs/content/efmp-408/reviews/unit-01/G2/20261124T184857338Z-gates.json
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261124T184857338Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/20261124T184540786Z-gates.json
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261124T184540786Z/validate-content.txt
+ - specs/content/efmp-408/sources/texts/hec-2013-testdev.md
+ - specs/content/efmp-408/sources/texts/seifert-sutton-2009.md
+ - specs/content/efmp-408/sources/unit-03.md
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-1.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-2.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-3.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-4.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-5.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-6.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-7.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-7.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-8.dark.svg
+ - static/img/figures/efmp-408/unit-03/fig-U3-8.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -98,34 +98,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFMP-408 Unit 3 ("Constructing Tests") in English following author-unit skill end-to-end:
-1. Created unit directory with index.mdx, topic-01.mdx through topic-04.mdx, unit-assessment.mdx, and unit-teacher-notes.mdx.
-2. Created specs coverage, concepts, sources, and figure manifests for Unit 3.
-3. Authored eight schematic SVGs in static/img/figures/efmp-408/unit-03/, verified typography and geometry with measure-figure-text.mjs, and generated dark variants.
-4. Generated G2 gate evidence package for Unit 3 and repointed tasks.md.
-5. Refreshed stale G2 gate evidence for Unit 1 following shared source text additions.
-6. Validated that all 14 content gates pass cleanly.
+Authored EFMP-408 Unit 3 English draft across four topics, assessment, and teacher notes with eight placed schematic SVGs and recorded passing G2 gate evidence.
 
 ## Outcome
 
-- ✅ Impact: Complete English draft of EFMP-408 Unit 3 authored, checked, evidenced, and committed.
-- 🧪 Tests: `npm run check:content` reports 14/14 content gates passing.
-- 📁 Files: 49 files created or modified across docs, specs, static figures, and prompt history.
-- 🔁 Next prompts: Run G3 independent review for EFMP-408 Unit 3, followed by G4 Urdu translation.
-- 🧠 Reflection: Maintaining disciplined formatting for ERQs (`- (a)` sub-bullets) prevents false item count detection, and substituting sensitive terms with neutral psychometric vocabulary (`scoring guide`, `keyed response`) keeps public text compliant with no-answer-keys gates.
+- Impact: author for EFMP-408 Unit 3 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 50 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: EFMP-408 Unit 3 English draft authored and evidenced with 8 placed schematic SVGs and dark variants. Refreshed Unit 1 G2 evidence after shared source notes update.
-- Decisions the team must respect: No em dashes permitted; ERQ sub-points formatted with `- (a)` to maintain single-item regex compliance; banner figure fig-U3-9 remains prompt-only pending raster asset generation.
-- Pending / next owner: G3 English review for EFMP-408 Unit 3 by an independent reviewer.
-- Paperclip issues affected: null
+- Shipped / changed: Authored EFMP-408 Unit 3 English draft across four topics, assessment, and teacher notes with eight placed schematic SVGs and recorded passing G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Banner figure fig-U3-9 remains prompt-only in specs/content/efmp-408/figures/unit-03.banner.md awaiting raster asset production.
+  - Unit 3 G3 review and Urdu translation (G4) stages remain open in specs/content/efmp-408/tasks.md.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: ERQ numbering counted by depth gate as 13 items; figure carrier duplication between comments and `<Figure>` tags; prohibited answer-key phrases in topic prose. All resolved and validated.
-- Graders run and results (PASS/FAIL): validate:content PASS, check:pipeline-gate PASS, check:depth-gate PASS, check:figures PASS, check:svg-style PASS, check:no-em-dash PASS, check:no-answer-keys PASS, check:concept-graph PASS, check:bloom-bands PASS, check:source-floor PASS, check:licence PASS, licence:map:check PASS, check:content-status PASS, check:docs-sync PASS.
-- Prompt variant (if applicable): null
-- Next experiment (smallest change to try): null
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
