@@ -52,11 +52,11 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5,
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and the five new glossary Urdu definitions are authored and need checking |
 | Unit 4 | G6 assets | ▣ | | Five schematic SVG pairs (fig-U4-1 to fig-U4-5) with derived dark variants placed; banner fig-U4-6 placed in English and Urdu index |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-06/G2/20261122T161030644Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-06/G2/20261123T235144523Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the CoE handbook attribution, the Shair et al. (2022) figures and the Pakistani examples (sources/unit-06.md) |
 | Unit 6 | G4 ur-translation | ▢ | | Complete six-file draft Urdu mirror and six localized SVG pairs (with derived dark twins) prepared from English 83395d029; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-06/handoff.md |
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
-| Unit 6 | G6 assets | ▣ | | Six English schematic SVGs (fig-U6-1 to fig-U6-6) placed with derived dark variants; measure-figure-text verified; no .ur.svg yet; banner fig-U6-7 prompt-only for the illustrate job |
+| Unit 6 | G6 assets | ▣ | | Six English schematic SVGs (fig-U6-1 to fig-U6-6) placed with derived dark variants; six .ur.svg pairs added with derived .ur.dark.svg twins and measure-figure-text verified; banner fig-U6-7 placed in English and Urdu index |
 | Unit 6 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gcce-400/reviews/unit-05/G2/20261123T225218333Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the Lawyers' Movement timeline against Batool et al. (2019) and constitutional articles against the current text (sources/unit-05.md) |
