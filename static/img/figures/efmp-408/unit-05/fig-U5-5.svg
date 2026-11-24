@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 385" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">When each measure of centre misleads</title><desc id="d">Table naming three situations in which the mean, the median and the mode each mislead a teacher, and which measure to report in each situation instead.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.frame { stroke: var(--ink); stroke-width: 2; fill: none; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+</style><rect class="bg" x="0" y="0" width="780" height="385"/><g id="layer-table"><rect class="panel" x="24" y="55" width="732" height="270" rx="8"/><line class="frame" x1="24" y1="100" x2="756" y2="100"/><line class="frame" x1="24" y1="175" x2="756" y2="175"/><line class="frame" x1="24" y1="250" x2="756" y2="250"/><line class="frame" x1="124" y1="55" x2="124" y2="325"/><line class="frame" x1="464" y1="55" x2="464" y2="325"/><text class="h" x="35" y="83">Measure</text><text class="h" x="136" y="83">When it misleads</text><text class="h" x="476" y="83">Report instead</text><text class="sh" x="35" y="124">Mean</text><text class="cell" x="136" y="120">One very high or very low mark</text><text class="cell" x="136" y="137">pulls it away from where most</text><text class="cell" x="136" y="154">pupils actually are</text><text class="cell" x="476" y="120">The median, which ignores how far</text><text class="cell" x="476" y="137">the extreme mark is from the rest</text><text class="sh" x="35" y="199">Median</text><text class="cell" x="136" y="195">You need the total, for example how</text><text class="cell" x="136" y="212">much of the syllabus the class finished</text><text class="cell" x="136" y="229">or the two middle values differ a lot</text><text class="cell" x="476" y="195">The mean, when the total matters</text><text class="cell" x="476" y="212">and always report the range</text><text class="sh" x="35" y="274">Mode</text><text class="cell" x="136" y="270">Marks rarely repeat, so there may be</text><text class="cell" x="136" y="287">no mode at all, or several values tie</text><text class="cell" x="136" y="304">in a skewed set it can sit at an extreme</text><text class="cell" x="476" y="270">The median, and say the mode is</text><text class="cell" x="476" y="287">not meaningful here</text></g><g id="layer-labels"><text id="label-title" class="h" x="24" y="34">Each measure has a situation where it fails</text><text id="label-caption" class="small" x="24" y="355">Choose the measure that fits the question, not the one that is easiest to compute.</text><text class="wm" x="768" y="375" text-anchor="end" aria-hidden="true">textbook.com.pk</text></g></svg>

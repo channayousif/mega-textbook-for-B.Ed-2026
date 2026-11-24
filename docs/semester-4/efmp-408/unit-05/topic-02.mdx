@@ -1,0 +1,158 @@
+---
+title: "Topic 5.2 - Describing a set of scores"
+description: "Calculate and interpret the mean, median, mode and standard deviation of a small score set, and learn which measure gives the fairest picture of a real classroom."
+course_code: EFMP-408
+unit_no: 5
+topic_no: 2
+topic_label: "5.2"
+credit_hours: "3 (3-0)"
+category: "Major: Professional"
+assessment_weighting:
+  summative: 60
+  formative: 40
+clo_refs:
+  - "SLO:EFMP-408-5-2"
+blooms_summary: "Remember the formulas for mean, median, mode and standard deviation; understand why the median resists outliers and what a standard deviation describes; apply all four to a small classroom score set and choose the fairest summary."
+est_reading_minutes: 12
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Figure from '@site/src/components/Figure';
+
+<PrintHandout />
+
+# Topic 5.2 - Describing a set of scores
+
+## A real classroom situation
+
+At a government girls' elementary school in Thatta, Ms Saira has marked the Class 6 General Mathematics unit test, which carried 50 marks. She enters the ten totals in her register and works out the average: 31 out of 50. At the parent-teacher meeting she says, "The class average is 31." A parent whose daughter scored 46 nods, satisfied that her daughter is comfortably above average. Another parent, whose daughter scored 12, hears only that the class is failing. Neither parent has been told anything useful. Ms Saira looks again at her register. Six pupils scored between 28 and 34. Two scored in the mid-40s and two scored below 15. One number, 31, has flattened all of that into a sentence that is technically true and practically misleading.
+
+<Figure id="fig-U5-2" src="/img/figures/efmp-408/unit-05/fig-U5-2.svg" alt="Two number lines showing the marks of two Class 7 sections, both with a mean of 13; Section A is tightly clustered around 13 while Section B spreads from 6 to 20." />
+
+## Explanation
+
+### Mean, median and mode
+
+Three numbers are used to describe the centre of a set of marks. Each answers a slightly different question, and choosing the wrong one is the most common statistical error a teacher makes.
+
+The **mean** is the arithmetic average: add all the values and divide by how many there are.
+
+> mean = (sum of all values) / (number of values)
+
+The mean uses every value, which is its strength and its weakness. A single extreme mark pulls it. Statisticians write the sample mean as x bar and the population mean as mu.
+
+The **median** is the middle value once the data are ordered from smallest to largest. If the number of values is odd, the median is the middle value. If it is even, the median is the average of the two middle values. OpenStax gives the location of the median as (n + 1) / 2, where n is the number of values, and notes that the location and the value are not the same thing (Illowsky and Dean, 2023).
+
+The **mode** is the value that occurs most often. A set may have one mode, more than one, or none at all. In a very hard test the mode might be a low score; in a very easy test it might be full marks.
+
+**Worked example: one quiz, three numbers.** A Class 5 section in a government school in Larkana takes a ten-mark Sindhi quiz. The eight scores are 4, 6, 7, 7, 8, 8, 8, 9.
+
+- Mean = (4 + 6 + 7 + 7 + 8 + 8 + 8 + 9) / 8 = 57 / 8 = **7.125**
+- Ordered data: 4, 6, 7, 7, 8, 8, 8, 9. The two middle values are the 4th and 5th, both in the pair 7 and 8, so median = (7 + 8) / 2 = **7.5**
+- Mode = **8**, because 8 occurs three times and no other value occurs as often
+
+Now add one pupil who was ill for the whole unit and scored 2. The nine scores are 2, 4, 6, 7, 7, 8, 8, 8, 9. The mean falls to 59 / 9 = **6.56**. The median stays at the 5th value, which is **7**, and the mode stays at **8**. One mark out of nine moved the mean by half a mark and left the other two measures untouched. That is the whole argument for knowing all three.
+
+OpenStax states the rule plainly: the median is generally a better measure of the centre when there are extreme values or outliers, because it is not affected by the precise numerical values of the outliers (Illowsky and Dean, 2023).
+
+<Figure id="fig-U5-5" src="/img/figures/efmp-408/unit-05/fig-U5-5.svg" alt="Table naming three situations in which the mean, the median and the mode each mislead a teacher, and which measure to report in each situation instead." />
+
+> **Common misconception: the average tells you how the class did.**
+> The mean tells you one thing about the class: the value every pupil would have if the total were shared out equally. It says nothing about how the marks are distributed, and it is dragged around by extreme marks. In Ms Saira's class of ten, a mean of 31 out of 50 is pulled downward by two very low scores and hides the fact that six pupils sit within six marks of each other. Report the mean together with the median and the range, and say which one you are using and why.
+
+### Standard deviation and the spread of scores
+
+The centre of a distribution is only half the story. The other half is how spread out the marks are, and the standard number for that is the **standard deviation**. OpenStax defines it as a number that measures how far data values are from their mean (Illowsky and Dean, 2023). A small standard deviation means the marks are clustered close to the mean. A large one means they are scattered.
+
+To calculate the sample standard deviation, follow these steps:
+
+1. Find the mean of the data set.
+2. Subtract the mean from each value. Each result is a deviation.
+3. Square every deviation.
+4. Add all the squared deviations.
+5. Divide that sum by (n - 1), where n is the number of values.
+6. Take the square root of the result.
+
+> s = square root of ( sum of (each value - mean) squared / (n - 1) )
+
+**Worked example: two sections, one mean.** Two sections of Class 7 General Mathematics in a government boys' school in Hyderabad each sit a 20-mark test. Section A's ten scores are 10, 11, 12, 12, 13, 13, 14, 14, 15, 16. Section B's ten scores are 6, 8, 10, 11, 12, 14, 15, 16, 18, 20.
+
+Both sections have a mean of 13. Both have a median of 13. The difference is in the spread.
+
+*Section A.* The deviations from 13 are -3, -2, -1, -1, 0, 0, 1, 1, 2, 3. Squared, they are 9, 4, 1, 1, 0, 0, 1, 1, 4, 9, which sum to 30. Divide by 9: 30 / 9 = 3.33. The square root is about **1.83**.
+
+*Section B.* The deviations from 13 are -7, -5, -3, -2, -1, 1, 2, 3, 5, 7. Squared, they are 49, 25, 9, 4, 1, 1, 4, 9, 25, 49, which sum to 176. Divide by 9: 176 / 9 = 19.56. The square root is about **4.42**.
+
+Read the two numbers as a teacher, not as a mathematician. In Section A a pupil one standard deviation above the mean scored about 14.8 marks. In Section B the same phrase means about 17.4 marks. Section A can be taught largely as one group, because almost every pupil is within two marks of the mean. Section B has pupils working at very different levels at the same time, and its teacher needs at least two different starting points in the same lesson.
+
+OpenStax makes the same point with a non-school example: two supermarkets both average a five-minute wait, but one has a standard deviation of two minutes and the other four, so the second has far more variation in wait times, and a particular customer's experience is much less predictable there (Illowsky and Dean, 2023).
+
+> **Common misconception: a bigger standard deviation means the class did worse.**
+> Spread is not quality. A class with a low mean and a small standard deviation has uniformly weak work; a class with a high mean and a large standard deviation has some excellent work and some that is far behind. The standard deviation tells you how wide the gap is, not which side of it is better. Confusing the two leads a teacher to congratulate a widely spread high-scoring class on its consistency, which is exactly backwards.
+
+## Activity: Report it three ways
+
+**Objective:** Compute the mean, median, mode and range of a classroom score set and decide which summary a parent should hear.  
+**Grouping:** Small groups of 3 to 4 trainee teachers.  
+**Time:** 25 minutes.
+
+### Instructions
+
+1. Read the data set below. It is the General Mathematics result of a Class 8 section in a government school in Sukkur. The paper carried 25 marks.
+
+   The twelve marks, in no particular order, are: 2, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.
+
+   Pupil 1 scored 20 and pupil 12 scored 2.
+
+2. Calculate the mean, the median, the mode and the range of the twelve marks.
+3. Decide which single measure you would report to the parent of pupil 12, and which you would report to the parent of pupil 1. Give a reason for each choice.
+4. Write one sentence for each of those two parents that tells them something they could act on.
+5. Appoint a rapporteur to read both sentences aloud and to say what information the mean alone would have hidden.
+
+## Check your understanding
+
+1. Define the mean, the median and the mode in one sentence each. Then state which one Illowsky and Dean recommend when a data set contains an outlier, and why. *(Remember)*
+2. A Class 7 section of ten pupils scores 5, 60, 62, 64, 66, 68, 70, 72, 74, 76 on a 100-mark General Mathematics paper. Calculate the mean and the median. Explain which of the two better describes this class, and why. *(Apply)*
+3. Two sections of the same class both have a mean mark of 55. Section A has a standard deviation of 3 and Section B has a standard deviation of 12. Explain what this tells the teacher about the two sections, and what it implies for how each should be taught. *(Apply)*
+
+## Summary
+
+The mean, median and mode describe the centre of a set of marks in three different ways. The mean uses every value and is pulled by extremes; the median is the middle of the ordered data and resists outliers; the mode is the most frequent value and may not exist at all. The standard deviation describes the spread around the mean, and it is the number that tells a teacher whether a class can be taught as one group or must be taught as several. Reporting one number without the others, and without saying which one you have chosen, is the most common way a teacher misleads a parent.
+
+## Self-assessment checklist
+
+- [ ] I can calculate the mean, median, mode and range of a small score set without referring to notes.
+- [ ] I can explain why the median resists an outlier and give a classroom example of that.
+- [ ] I can compute a sample standard deviation from a small data set and say what a large or small value means for teaching.
+- [ ] I can choose the fairest summary for a described parent and justify the choice.
+
+## Try this at your practicum school
+
+During your next practicum visit:
+
+1. Ask your cooperating teacher for the marks of one recent test in one class, with the names removed.
+2. Calculate the mean, median, mode, range and standard deviation of the set.
+3. Write down two things the mean alone would have hidden from you.
+4. Ask the teacher which of those numbers they report to parents, and whether they would change that answer after seeing the spread.
+
+## Summative task
+
+Write a short statistical note (about 300 to 400 words) for the head teacher of a government elementary school in Sindh, titled "One average is not a description". In your note:
+
+1. Using the data set in the Activity section, report the mean, median, mode and range, and state which measure you would put in a summary for the board. *(Apply)*
+2. Analyse what the mean alone would have communicated to a parent of pupil 12, and what the spread tells you instead. *(Analyze)*
+3. Recommend two concrete changes to how the school summarises results, with a reason for each. *(Create)*
+
+### Mini-rubric
+
+| Criterion | Below Standard (1 mark) | Meets Standard (2 marks) | Exceeds Standard (3 marks) |
+|---|---|---|---|
+| **Computation (Apply)** | One or more of the four measures is missing or wrong. | All four measures are calculated correctly from the data set. | All four are correct and the working is shown clearly enough for a reader to check. |
+| **Analysis of the mean (Analyze)** | Restates the numbers without explaining what the mean hides. | Explains what a parent of pupil 12 would conclude from the mean, and what the spread shows instead. | Explains the distortion precisely and connects it to a specific consequence for that pupil's learning. |
+| **Recommendations** | Recommendations are vague or unrelated to the data. | Recommends two changes to the school's reporting, each with a reason. | Recommends two changes, each reasoned and feasible in a government school with no additional resources. |
+
+## Further reading
+
+- Illowsky, B., & Dean, S. (2023). *Introductory statistics 2e*. OpenStax, Rice University. Section 2.5 (Measures of the Center of the Data), Section 2.6 (Skewness and the Mean, Median, and Mode) and Section 2.7 (Measures of the Spread of the Data). https://openstax.org/details/books/introductory-statistics-2e
+- Higher Education Commission. (2012). *Test development and evaluation: Course guide, B.Ed. (Hons) Elementary* (revised September 2013). HEC, Islamabad. Teaching notes on measures of central tendency and measures of variability. https://www.hec.gov.pk/english/services/universities/RevisedCurricula/Documents/2011-2012/Education/TestDevEval_Sept13.pdf
