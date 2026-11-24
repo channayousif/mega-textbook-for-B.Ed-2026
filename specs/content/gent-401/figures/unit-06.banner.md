@@ -1,0 +1,7 @@
+# Unit banner - GENT-401 Unit 6 (Marketing, Legal and Ethical Issues)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs gent-401 6 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U6-5 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: inside a well-lit community centre classroom in Hyderabad, Sindh; at a wooden table, two young Pakistani entrepreneurs (a young woman in shalwar kameez and dupatta, and a young man in shalwar kameez) display neatly packaged, labelled STEM learning kits and colorful printed workbooks; three smiling government school teachers and a headteacher inspect the materials with keen interest; in the background, a whiteboard shows a drawn marketing positioning grid and an official government incorporation certificate in a neat glass frame rests on a side desk; natural morning sunlight streaming through open arched windows; respectful Pakistani dress; calm, professional, credible mood; no readable text on any sign, paper, packet or wall, no maps, flags, emblems, party symbols, brand logos or watermarks | In a Hyderabad community room, two young entrepreneurs present science kits to interested school teachers beside a whiteboard displaying a market positioning grid. |  | prompt-only |
