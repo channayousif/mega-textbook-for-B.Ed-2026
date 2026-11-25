@@ -60,7 +60,7 @@ page with plugin-client-redirects.
 
 - Shipped / changed: #797, #798, #799 (PR closes them).
 - Decisions the team must respect: the admin guide lives at `/app/admin/guide` only; the guard is cosmetic (Art. IX.2), so never put secrets in it. The Urdu CTA wording is my choice in the plain register; the owner may change it.
-- Pending / next owner: owner checks whether "Explore the course catalogue" should point at `/intro` rather than the on-page programme chooser `#who`.
+- Pending / next owner: none for Stage 2 (owner then ruled the CTAs go to `/intro`, PHR 20261274).
 - Paperclip issues affected: none; GitHub #797, #798, #799.
 
 ## Evaluation notes (flywheel)

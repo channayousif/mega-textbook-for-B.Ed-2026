@@ -125,7 +125,7 @@ export default function Home(): React.ReactElement {
               <h1 className={s.h1}>{c.h1a}{c.h1b}<span className={s.h1Urdu} lang="ur">{c.h1c}</span>{c.h1d}</h1>
               <p className={s.lead}>{c.lead}</p>
               <div className={s.ctas}>
-                <Link className={clsx('button button--lg', s.btnAmber)} to="#who" onClick={track('hero-programme')}>{c.cta1} <Icon name="arrow" size={20} accent={false} /></Link>
+                <Link className={clsx('button button--lg', s.btnAmber)} to="/intro" onClick={track('hero-programme')}>{c.cta1} <Icon name="arrow" size={20} accent={false} /></Link>
                 <Link className={clsx('button button--lg', s.btnGhost)} to={SAMPLE_TOPIC} onClick={track('hero-sample')}>{c.cta2}</Link>
               </div>
               <Ticks items={[c.r1, c.r2, c.r3]} onTeal />
@@ -296,7 +296,7 @@ export default function Home(): React.ReactElement {
             <div className={s.finalText}>
               <h2 className={s.finalH}>{c.f_h}</h2>
               <p>{c.f_d}</p>
-              <Link className={clsx('button button--lg', s.btnAmber)} to="#who" onClick={track('final-programme')}>{c.cta1} <Icon name="arrow" size={20} accent={false} /></Link>
+              <Link className={clsx('button button--lg', s.btnAmber)} to="/intro" onClick={track('final-programme')}>{c.cta1} <Icon name="arrow" size={20} accent={false} /></Link>
             </div>
           </div>
         </section>
