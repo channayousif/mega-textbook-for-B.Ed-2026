@@ -4,12 +4,12 @@ title: crew author EFMP-409 unit 2
 stage: misc
 date: 2026-11-25
 surface: agent
-model: claude
+model: claude_crew
 feature: efmp-409
 branch: crew/efmp-409-u02-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/efmp-409/content-spec.md
   ticket: null
@@ -21,6 +21,7 @@ files:
  - docs/semester-4/efmp-409/unit-02/topic-02.mdx
  - docs/semester-4/efmp-409/unit-02/unit-assessment.mdx
  - docs/semester-4/efmp-409/unit-02/unit-teacher-notes.mdx
+ - history/prompts/efmp-409/crew-efmp-409-u02-author.green.prompt.md
  - specs/content/efmp-409/concepts/unit-02.md
  - specs/content/efmp-409/coverage/unit-02.md
  - specs/content/efmp-409/figures/unit-02.banner.md
@@ -56,7 +57,6 @@ files:
  - static/img/figures/efmp-409/unit-02/fig-U2-4.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/efmp-409/unit-02/fig-U2-1.svg static/img/figures/efmp-409/unit-02/fig-U2-2.svg static/img/figures/efmp-409/unit-02/fig-U2-3.svg static/img/figures/efmp-409/unit-02/fig-U2-4.svg
 ---
 
 ## Prompt
@@ -87,28 +87,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFMP-409 Unit 2 (two topics, 10/10/5 assessment, teacher notes, four placed SVG figures with dark variants) with its sources, coverage, concept graph, figure manifest and banner plan, recorded the G2 gate evidence, and left all 14 content gates green.
+Authored EFMP-409 Unit 2 (two per-topic cycles, a 10/10/5 assessment, teacher notes, four placed SVG figures) with its coverage, sources, concept graph, figure manifest, banner plan, G2 evidence and PHR, all content gates green.
 
 ## Outcome
 
-- Impact: author for EFMP-409 Unit 2 by claude (attempt 1).
-- Tests: npm run check:content passed in the job worktree; `scripts/heavy.sh node scripts/measure-figure-text.mjs` exits 0 on all four SVGs.
-- Files: 40 file(s), listed above.
+- Impact: author for EFMP-409 Unit 2 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 39 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFMP-409 Unit 2 (two topics, 10/10/5 assessment, teacher notes, four placed schematic SVG figures with derived dark variants) with its coverage, sources, concept graph, figure manifest, banner plan, G2 evidence and tracker rows; all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. The unit's declared reading-minutes total 52, at the ceiling of the approved 40-52 band; the draft ran long and redundant passages were cut rather than padding or dropping the required worked examples.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Authored EFMP-409 Unit 2 (two per-topic cycles, a 10/10/5 assessment, teacher notes, four placed SVG figures) with its coverage, sources, concept graph, figure manifest, banner plan, G2 evidence and PHR, all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The G3 reviewer should have a qualified scholar check the Islamic material in Topic 2.2 (the Objectives Resolution text, Qur'an 96:1-5 and 39:9, tarbiyah/ta'lim/ta'dib), per content-spec drafting note 8.
-  - The banner `fig-U2-5` is still prompt-only, and the Urdu concept labels are authored and need G5 review.
-  - `specs/content/efmp-409/sources/texts/hec-2013-foundations.md` gained Unit 2 evidence notes; that file is not in Unit 1's accepted G2 input manifest, so Unit 1's evidence is unaffected. `tasks.md` is shared with the other EFMP-409 unit jobs and will conflict when they merge; keep every unit's rows.
-  - The `pak-constitution-1973` PDF was read from the National Assembly's official copy; this host needed certificate verification disabled to fetch it.
+  - G3 needs a qualified scholar to check Topic 2.2's Islamic material (Objectives Resolution text, Qur'an 96:1-5 and 39:9, tarbiyah/ta'lim/ta'dib), per content-spec drafting note 8.
+  - banner `fig-U2-5` is still prompt-only, and the Urdu concept labels are authored and need G5 review.
+  - the declared reading-minutes total 52, at the ceiling of the approved 40-52 band; the draft ran long and redundant passages were cut rather than dropping required worked examples. `tasks.md` is shared with the other EFMP-409 unit jobs and will conflict on merge.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
