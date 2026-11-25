@@ -477,7 +477,7 @@ function studioCommand(v, arg, control, via) {
 // ---------------------------------------------------------------- social updates (Feature 031)
 
 /**
- * Queue the day's roundup (from 09:00 PKT, in media hours, when a dry collect finds deployed work not yet posted)
+ * Queue the day's roundup (from 15:00 PKT, in media hours, when a dry collect finds deployed work not yet posted)
  * or a publish run (an approved post not yet posted everywhere). The ledger lives on this host
  * (scripts/social/updates.mjs), so state never waits on a batch merge.
  */
@@ -515,7 +515,7 @@ function socialPhase(board, events) {
 function socialCommand(v, arg, control, via) {
   if (v === 'social') {
     const sub = (arg.split(/\s+/)[0] || 'status').toLowerCase();
-    if (sub === 'on' || sub === 'off') { control.social = sub; return `social updates ${sub}${sub === 'on' ? ': a roundup of deployed work is drafted from 09:00 PKT each day (media hours); content posts publish once the first one is approved (the pilot), feature posts always wait for \`crew post <id>\`' : ''}`; }
+    if (sub === 'on' || sub === 'off') { control.social = sub; return `social updates ${sub}${sub === 'on' ? ': a roundup of deployed work is drafted from 15:00 PKT each day (media hours: every hour except 09:00-15:00); content posts publish once the first one is approved (the pilot), feature posts always wait for \`crew post <id>\`' : ''}`; }
     const b = load('board');
     return `Social updates ${control.social === 'on' ? 'on' : 'off'}. Waiting on you: ${b.social?.owner ? socialOwnerLine(b.social.owner) : 'nothing'}`;
   }

@@ -112,10 +112,12 @@ working day, not a bot (`scripts/media/pacing.mjs`). The producers enforce it th
 gap is slept, anything longer becomes a `quota` hold with `paced: true` and its reset time (the job
 waits; clips never fall back to `manual.flow` for a pacing hold).
 
-- **Media hours: 09:00-15:00 PKT.** Outside them no Flow, Gemini, Codex image, NotebookLM, YouTube or
+- **Media hours: 15:00-09:00 PKT, every hour except the owner's 09:00-15:00 office hours** (owner,
+  2026-11-25, correcting the first build, which had it the other way round). In office hours no Flow, Gemini, Codex image, NotebookLM, YouTube or
   Meta call is made, and the crew does not launch `illustrate`, `teaser_clips`, `studio_media`,
   `studio_publish`, `media_assemble`, `media_publish` or `social_roundup` (text and local stages run
-  as usual). The social roundup is due from 09:00 PKT (the opening of media hours).
+  as usual). The social roundup is due from 15:00 PKT (the opening of media hours). Daily caps
+  reset at 00:00 PKT, inside the window.
 - **Limits** (defaults; the owner may override any of them in `~/.config/mega-book/media-limits.json`):
 
 | Channel | Gap (+ random jitter) | Per hour | Per day |
