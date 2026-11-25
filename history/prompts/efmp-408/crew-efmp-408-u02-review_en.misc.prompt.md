@@ -69,25 +69,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English run 1 review for EFMP-408 Unit 2, producing validated evidence report agy-run1-20261125.json with escalate disposition due to production build divergence while passing all content criteria and repository gates.
+Conducted independent G3 English review for EFMP-408 Unit 2, generating validated evidence report agy-run1-20261125.json with escalate disposition due to production build divergence while passing all 14 content gates.
 
 ## Outcome
 
 - Impact: review_en for EFMP-408 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English run 1 review for EFMP-408 Unit 2, producing validated evidence report agy-run1-20261125.json with escalate disposition due to production build divergence while passing all content criteria and repository gates.
+- Shipped / changed: Conducted independent G3 English review for EFMP-408 Unit 2, generating validated evidence report agy-run1-20261125.json with escalate disposition due to production build divergence while passing all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live site build 3910d2616 differs from HEAD across Unit 2 index and illustration banner asset fig-U2-7.webp; visual accessibility remains unverified until inspected on a matching deployed build.
-  - G3 remains advisory (cycle 1, disposition escalate, reviewer token agent:g3-reviewer); no certification or tracker tick was performed.
-  - Advisory observation: 6 of 10 MCQ keys are option (B), with option (D) unused; distractor positions may be balanced during future content revision.
+  - Live site build 3910d2616 differs from HEAD on Unit 2 index and illustration asset fig-U2-7.webp, leaving visual accessibility unverified until tested against a matching deployment.
+  - G3 remains advisory (cycle 1, disposition escalate, reviewer token agent:g3-reviewer); no tracker tick or certification performed.
+  - Advisory observation: MCQ keys have 6 option (B) answers and 0 option (D) answers; distractor options can be balanced in subsequent content maintenance.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
