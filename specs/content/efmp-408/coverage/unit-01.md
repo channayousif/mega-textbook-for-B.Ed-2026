@@ -8,6 +8,7 @@ Contract: `contracts/coverage-matrix-v2.md`. Every sub-topic from the content-sp
 | U1-01 | topic-01.mdx | ### The concept of assessment, and how it differs from evaluation | hec-2013-testdev |
 | U1-01 | topic-01.mdx | ### The concept of assessment, and how it differs from evaluation | scheerens-2003 |
 | U1-02 | topic-01.mdx | ### Purpose and importance of assessment in education | hec-2013-classroom-assessment |
+| U1-02 | topic-01.mdx | ### Purpose and importance of assessment in education | npstp-2009 |
 | U1-02 | topic-01.mdx | ### Purpose and importance of assessment in education | scheerens-2003 |
 | U1-03 | topic-01.mdx | ### Key terms: measurement, test, appraisal | hec-2013-classroom-assessment |
 | U1-03 | topic-01.mdx | ### Key terms: measurement, test, appraisal | hec-2013-testdev |
