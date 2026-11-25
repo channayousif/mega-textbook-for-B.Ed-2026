@@ -62,14 +62,20 @@ export const STAGES = {
   fix:        { chain: ['claude_crew', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
   // Feature 032 phase B: a unit's slide outline, web deck and PowerPoint (owner switch `crew slides on`).
   slides: { chain: ['claude', 'agy_claude', 'codex'], skill: null },
-  // Media Studio (Feature 030, scripts/crew/media.mjs). Clips, uploads and NotebookLM need the gflow
-  // and youtube-uploader MCP servers, which only the claude worker has; a script draft needs neither.
+  // Media Studio (Feature 030, scripts/crew/media.mjs). Clips, uploads and NotebookLM need the gflow,
+  // youtube-uploader and gemini-notebook-studio MCP servers, which the claude and claude_crew workers
+  // have (~/.claude-crew/.claude.json carries the same servers); a script draft needs none. claude_crew
+  // stands in when claude is cooling, so one cooling worker no longer stalls media (2026-11-25).
   teaser_script:  { chain: ['claude', 'agy_claude'], skill: 'studio-teaser' },
-  teaser_clips:   { chain: ['claude'], skill: 'studio-teaser' },
-  media_assemble: { chain: ['claude'], skill: 'studio-teaser' },
-  media_publish:  { chain: ['claude'], skill: 'studio-teaser' },
-  social_roundup: { chain: ['claude'], skill: 'social-updates' },
-  audio_overview: { chain: ['claude'], skill: 'studio-media' },
+  teaser_clips:   { chain: ['claude', 'claude_crew'], skill: 'studio-teaser' },
+  media_assemble: { chain: ['claude', 'claude_crew'], skill: 'studio-teaser' },
+  media_publish:  { chain: ['claude', 'claude_crew'], skill: 'studio-teaser' },
+  // The roundup runs scripts and gh only (no MCP), so any worker can carry it.
+  social_roundup: { chain: ['claude', 'agy_claude', 'claude_crew', 'codex'], skill: 'social-updates' },
+  studio_media:   { chain: ['claude', 'claude_crew'], skill: 'studio-media' },
+  studio_publish: { chain: ['claude', 'claude_crew'], skill: 'studio-media' },
+  // The old name of studio_media, kept so board rows queued before the rename still launch.
+  audio_overview: { chain: ['claude', 'claude_crew'], skill: 'studio-media' },
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.
   intel_distill:  { chain: ['agy', 'codex', 'claude', 'agy_claude'], skill: 'intel-distill' },
@@ -91,11 +97,11 @@ export const STAGES = {
  */
 /** Stages whose workers call outside media services (Flow, Gemini, NotebookLM, YouTube, Meta);
  * crew.mjs launches them only in media hours (scripts/media/pacing.mjs, D-2026-0100). */
-export const OUTSIDE_SERVICE_STAGES = ['illustrate', 'teaser_clips', 'audio_overview', 'media_assemble', 'media_publish', 'social_roundup'];
+export const OUTSIDE_SERVICE_STAGES = ['illustrate', 'teaser_clips', 'audio_overview', 'studio_media', 'studio_publish', 'media_assemble', 'media_publish', 'social_roundup'];
 
 export const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
   'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author',
-  'media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script', 'social_roundup',
+  'media_publish', 'studio_publish', 'media_assemble', 'teaser_clips', 'studio_media', 'audio_overview', 'teaser_script', 'social_roundup',
   'refresh_figures', 'flashcards', 'slides'];
 
 /** Text in a worker's log that means "out of quota", not "bad work". */

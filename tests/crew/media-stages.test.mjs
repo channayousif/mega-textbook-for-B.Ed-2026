@@ -26,7 +26,8 @@ test('media stages exist for the claude worker and never start or focus a course
     assert.ok(STAGES[s], s);
     assert.equal(isCorpusStage(s), false, s);
   }
-  for (const s of ['teaser_clips', 'media_assemble', 'media_publish']) assert.deepEqual(STAGES[s].chain, ['claude']);
+  // MCP-bound steps: claude, then claude_crew (same MCP servers) when claude is cooling (2026-11-25).
+  for (const s of ['teaser_clips', 'media_assemble', 'media_publish', 'studio_media', 'studio_publish']) assert.deepEqual(STAGES[s].chain, ['claude', 'claude_crew']);
 });
 
 test('a dry run queues teaser_script for a course with no teaser and waits for the owner at scripted', () => {
@@ -113,12 +114,13 @@ test('a producer hold stops the run with a MEDIA-HOLD line the crew can read', a
 });
 
 test('the crew never publishes: only an owner-approved media_publish may, and no code sets public', () => {
-  for (const stage of MEDIA_STAGES.filter((s) => s !== 'media_publish')) {
+  for (const stage of MEDIA_STAGES.filter((s) => !['media_publish', 'studio_publish'].includes(s))) {
     const t = mediaTask({ stage, course: 'GQUR-300', unit: 1 });
     assert.match(t, /Never make a video public/, stage);
     assert.doesNotMatch(t, /privacy_status public/, stage);
   }
   assert.throws(() => mediaTask({ id: 'x', stage: 'media_publish', course: 'GQUR-300' }), /owner's crew publish/);
+  assert.throws(() => mediaTask({ id: 'x', stage: 'studio_publish', course: 'EFMP-301', unit: 4 }), /owner's crew approve-studio/);
   assert.match(mediaTask({ stage: 'media_publish', course: 'GQUR-300', publish: { at: '2026-11-21T10:00:00Z', via: 'discord', youtube_id: 'abc' } }), /abc\) public/);
   assert.equal(mediaLaunchProblem({ stage: 'media_publish' }, { item: item('qa3-pass'), approval: {} }), 'no owner publish approval');
   const approvals = {};

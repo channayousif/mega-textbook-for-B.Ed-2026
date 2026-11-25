@@ -91,15 +91,15 @@ export function figureBacklog(rows) {
   return out;
 }
 
-/** Raster generation is serial (one lock, one image quota): keep one illustrate job in flight. */
+/**
+ * One illustrate job per image producer lane (agy, gflow, codex; resources.mjs IMAGE_LANES): each
+ * job is pinned to one producer at launch, so up to three units' images are made at once (owner,
+ * 2026-11-25: "different media producers in parallel, each producer max one slot").
+ */
+export const MAX_ILLUSTRATE = 3;
 export function limitIllustrate(added, inFlight) {
-  let slot = !inFlight.some((j) => j.stage === 'illustrate');
-  return added.filter((j) => {
-    if (j.stage !== 'illustrate') return true;
-    if (!slot) return false;
-    slot = false;
-    return true;
-  });
+  let slots = MAX_ILLUSTRATE - inFlight.filter((j) => j.stage === 'illustrate').length;
+  return added.filter((j) => j.stage !== 'illustrate' || slots-- > 0);
 }
 
 /**
@@ -229,7 +229,7 @@ export function authorQueue(unitsInSpec, onDisk, hasOverview) {
 /** Job states that are crew work in flight. `gate_red` and `blocked` wait on a person, so they never hold the crew. */
 export const IN_FLIGHT = ['queued', 'running', 'pr_open', 'ready', 'batched'];
 /** Media stages (scripts/crew/media.mjs) are course-level side work: they never start or focus a course. */
-export const isCorpusStage = (stage) => !/^(maint|intel|teaser|media|audio|social)_/.test(stage);
+export const isCorpusStage = (stage) => !/^(maint|intel|teaser|media|audio|studio|social)_/.test(stage);
 
 /**
  * Figure and image work (SVG schematics, raster illustrations and their planning) is media
