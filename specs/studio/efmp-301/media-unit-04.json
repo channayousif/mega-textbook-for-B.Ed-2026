@@ -856,7 +856,7 @@
    "published_at": "2026-11-09T18:53:39Z"
   },
   {
-   "state": "qa2-pass",
+   "state": "qa3-pass",
    "gates": {
     "qa1": {
      "verdict": "pass",
@@ -903,6 +903,12 @@
      "date": "2026-11-09",
      "notes": "Faithful to the text: October/December cramming, four-item workbench, three processes, three faces of forgetting, three strategies.",
      "urdu_flag": "Transcript in Devanagari; listen for register."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-25",
+     "notes": "private, processed, on channel UC7cQfkGkdNABCiyjmV5ZaFQ, in the UR video playlist PLZVdgN09a2qs; tags repaired in place after the MCP array/string mismatch; embed check deferred to the placement build"
     }
    },
    "history": [
@@ -929,13 +935,21 @@
     {
      "state": "qa2-pass",
      "at": "2026-11-09T18:05:02.807Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-25T14:59:09.053Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-25T14:59:36.547Z"
     }
    ],
    "topic": 2,
    "locale": "ur",
    "kind": "video",
    "title": "اکتوبر ٹیسٹ کا راز",
-   "alt": "Urdu video overview of memory and information processing, technical terms in English.",
+   "alt": "memory systems، information processing اور forgetting پر اردو ویڈیو جائزہ؛ تکنیکی اصطلاحات انگریزی میں۔",
    "prompt_ref": "specs/studio/prompts/video.md v1",
    "notebook_id": "65df3479-3f23-44c2-9f27-2e3a233d7530",
    "key": "t2-ur-video",
@@ -943,7 +957,9 @@
    "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-video.mp4",
    "sha256": "1cbae7b40eddd49e66238d3646f26e3c08a4b8a86cc50c6b40071b796b207169",
    "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-video.yt.mp4",
-   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-video.yt.mp4.thumb.jpg"
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-02/t2-ur-video.yt.mp4.thumb.jpg",
+   "youtube_id": "egOH0dxmmw4",
+   "uploaded_at": "2026-11-25T14:56:06.946Z"
   },
   {
    "state": "qa2-pass",
