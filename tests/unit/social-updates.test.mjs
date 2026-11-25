@@ -5,7 +5,7 @@ import {
   highlight, contentHighlights, courseName, animationEvents, isFeature, buildDrafts, checkDraft, captionFor, altText, approve, reject, emptyLedger, postedIds, setCopy, pending,
 } from '../../scripts/social/updates.mjs';
 import { facebookPhotoForm, instagramImageQuery, linkedinImageInit, linkedinImagePost } from '../../scripts/notebook-studio/social-post.mjs';
-import { cardSvg } from '../../scripts/social/card.mjs';
+import { cardSvg, layout, CARD } from '../../scripts/social/card.mjs';
 import { publicUrl } from '../../scripts/social/publish.mjs';
 
 const ev = (over) => ({ id: 'unit:GCCE-400:1', type: 'unit', date: '2026-11-22T05:00:00Z', course_code: 'GCCE-400', unit_no: 1,
@@ -161,6 +161,18 @@ describe('image posts and the card', () => {
     expect(svg).toContain('GCCE-400 Unit 1: Citizenship');
     expect(svg).toContain('Read free: textbook.com.pk');
     expect(svg).toContain('#e5a333');
+  });
+
+  // 2026-11-25: a five-highlight card with its "and N more" line drew the last lines under the
+  // address pill. The column must fit above the pill for any draft the builder can produce.
+  it('keeps every card line above the address pill', () => {
+    const many = Array.from({ length: 7 }, (_, i) => ev({ id: `unit:C${i}:1`, course_code: `C${i}` }));
+    const drafts = buildDrafts({ date: '2026-11-25', events: many });
+    for (const d of [...drafts, { ...drafts[0], headline: { en: 'A longer English headline here', ur: 'اردو' } }]) {
+      const { rows } = layout(d);
+      expect(rows.length).toBeGreaterThan(0);
+      for (const r of rows) expect(r.y).toBeLessThan(CARD.h - 168);
+    }
   });
 });
 

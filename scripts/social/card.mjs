@@ -28,6 +28,51 @@ const ICON = {
 
 const dateLabel = (iso) => new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Karachi' }).format(new Date(`${iso}T12:00:00Z`));
 
+const LINE_H = 50;   // one card line
+const ITEM_PAD = 40; // space under each highlight
+const UR_LINE_H = 58;
+const PILL_TOP = CARD.h - 168;
+
+/** The last y a bullet baseline may take: the address pill starts at PILL_TOP. */
+const BOTTOM = PILL_TOP - 14;
+// Full card: five highlights and the "and N more" line leave no slack, so the line pitch and the
+// gap under each highlight close up instead of letting the last line run under the pill (2026-11-25).
+const TIGHT_LINE_H = 42;
+const TIGHT_PAD = 22;
+
+/**
+ * Height each highlight takes on the card, and the lines it is drawn as. The column is measured
+ * against the address pill, and a tight card uses the tighter pitch: text is never cut or overlapped.
+ */
+export function layout(post) {
+  const headLines = wrap(post.headline.en, 20, 2);
+  const top = 330 + (headLines.length - 1) * 76 + 30 + 140;
+  const withUr = post.highlights.length <= 3;
+  const items = post.highlights.map((hl) => ({
+    hl,
+    lines: wrap(hl.card_en ?? hl.en, 34, 2),
+    ur: withUr ? wrap(hl.card_ur ?? hl.ur, 44, 2) : null,
+  }));
+  const height = (it, lh, pad) => it.lines.length * lh + (it.ur ? it.ur.length * UR_LINE_H + 8 : 0) + pad;
+  const need = (lh, pad) => items.reduce((t, it) => t + height(it, lh, pad), 0) + (post.more ? lh : 0);
+  const tight = need(TIGHT_LINE_H, TIGHT_PAD) <= BOTTOM - top;
+  const lh = tight ? TIGHT_LINE_H : LINE_H;
+  const pad = tight ? TIGHT_PAD : ITEM_PAD;
+  const blockH = need(lh, pad);
+  const y = top + Math.max(0, Math.floor((BOTTOM - top - blockH) / 2));
+  const rows = [];
+  let yy = y;
+  for (const it of items) {
+    rows.push({ text: it.lines.at(-1), y: yy + (it.lines.length - 1) * lh });
+    yy += height(it, lh, pad);
+  }
+  if (post.more) rows.push({ text: `and ${post.more} more on the site`, y: yy });
+  return { items, blockH, top, rows, y, lh, pad };
+}
+
+/** Where the first highlight baseline starts. */
+export const layoutStart = (post) => layout(post).y;
+
 /** The card's SVG (exported for tests and previews). */
 export function cardSvg(post) {
   const { w, h } = CARD;
@@ -35,28 +80,21 @@ export function cardSvg(post) {
   const logo = readFileSync(join(ROOT, 'static/img/kit/horizontal-reverse.svg')).toString('base64');
   const eyebrow = post.kind === 'feature' ? 'PLATFORM UPDATE' : "WHAT'S NEW";
   const headLines = wrap(post.headline.en, 20, 2);
-  let y = 330;
-  const head = headLines.map((l, i) => `<text x="${pad}" y="${y + i * 76}" font-size="64" font-weight="800" fill="#fff" font-family="${LATIN}">${esc(l)}</text>`).join('');
-  y += (headLines.length - 1) * 76 + 30;
+  const head = headLines.map((l, i) => `<text x="${pad}" y="${330 + i * 76}" font-size="64" font-weight="800" fill="#fff" font-family="${LATIN}">${esc(l)}</text>`).join('');
   // Urdu: anchored at the right margin; no SVG `direction` (it flips the anchor in librsvg), the
   // shaper handles the right-to-left run and bidiUr isolates any English terms.
-  const urHead = `<text x="${w - pad}" y="${y + 52}" font-size="44" font-weight="700" fill="${BRAND.amber}" text-anchor="end" font-family="${URDU}">${esc(bidiUr(post.headline.ur))}</text>`;
-  const top = y + 140;
-  const bottom = h - 220;
-  // With three items or fewer there is room for each one's Urdu line too.
-  const withUr = post.highlights.length <= 3;
+  const urHead = `<text x="${w - pad}" y="${330 + (headLines.length - 1) * 76 + 30 + 52}" font-size="44" font-weight="700" fill="${BRAND.amber}" text-anchor="end" font-family="${URDU}">${esc(bidiUr(post.headline.ur))}</text>`;
   // A highlight may carry a short card line (`card_en`/`card_ur`) beside its fuller caption text
   // (`en`/`ur`): the card has room for about 68 characters, the caption for plain explanation.
-  const items = post.highlights.map((hl) => ({ hl, lines: wrap(hl.card_en ?? hl.en, 34, 2), ur: withUr ? wrap(hl.card_ur ?? hl.ur, 44, 2) : null }));
-  const itemH = (it) => it.lines.length * 50 + (it.ur ? it.ur.length * 58 + 8 : 0) + 40;
-  const blockH = items.reduce((t, it) => t + itemH(it), 0) + (post.more ? 50 : 0);
-  y = top + Math.max(0, Math.floor((bottom - top - blockH) / 2));
+  const { items, lh, pad: itemPad } = layout(post);
+  const itemH = (it) => it.lines.length * lh + (it.ur ? it.ur.length * UR_LINE_H + 8 : 0) + itemPad;
+  let y = layoutStart(post);
   const bullets = [];
   for (const it of items) {
     const d = ICON[it.hl.type] ?? ICON.feature;
     bullets.push(`<g transform="translate(${pad + 26} ${y - 14})"><circle r="26" fill="${BRAND.amber}"/><path d="${d}" fill="none" stroke="${BRAND.teal}" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></g>`);
-    it.lines.forEach((l, i) => bullets.push(`<text x="${pad + 76}" y="${y + i * 50}" font-size="40" font-weight="${i ? 600 : 700}" fill="#fff" font-family="${LATIN}">${esc(l)}</text>`));
-    (it.ur ?? []).forEach((u, i) => bullets.push(`<text x="${w - pad}" y="${y + it.lines.length * 50 + 22 + i * 58}" font-size="32" font-weight="400" fill="${BRAND.pale}" text-anchor="end" font-family="${URDU}">${esc(bidiUr(u))}</text>`));
+    it.lines.forEach((l, i) => bullets.push(`<text x="${pad + 76}" y="${y + i * lh}" font-size="40" font-weight="${i ? 600 : 700}" fill="#fff" font-family="${LATIN}">${esc(l)}</text>`));
+    (it.ur ?? []).forEach((u, i) => bullets.push(`<text x="${w - pad}" y="${y + it.lines.length * lh + 22 + i * UR_LINE_H}" font-size="32" font-weight="400" fill="${BRAND.pale}" text-anchor="end" font-family="${URDU}">${esc(bidiUr(u))}</text>`));
     y += itemH(it);
   }
   if (post.more) { bullets.push(`<text x="${pad + 76}" y="${y}" font-size="36" font-weight="600" fill="${BRAND.pale}" font-family="${LATIN}">and ${post.more} more on the site</text>`); }
