@@ -1,0 +1,3 @@
+$ npm run check:no-answer-keys   (repo HEAD a984482da, 2026-11-25T13:53:42.613Z)
+✓ No answer keys / private marking material found (scanned: docs, licence, i18n, specs/content).
+exit_code=0
