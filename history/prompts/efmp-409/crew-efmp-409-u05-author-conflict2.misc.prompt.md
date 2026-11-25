@@ -16,44 +16,48 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-409/tasks.md
- - specs/content/efmp-409/reviews/unit-03/G4/translation-handoff.md
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/index.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-01.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-02.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-03.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-04.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-05.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-06.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/unit-assessment.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/unit-teacher-notes.mdx
- - history/prompts/efmp-409/crew-efmp-409-u03-translate.green.prompt.md
- - history/prompts/efmp-409/crew-efmp-409-u03-translate.misc.prompt.md
- - static/img/figures/efmp-409/unit-03/fig-U3-1.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-1.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-2.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-2.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-3.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-3.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-4.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-4.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-5.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-5.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-6.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-6.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-7.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-7.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-8.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-8.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-9.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-9.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-10.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-10.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-11.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-11.ur.dark.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-12.ur.svg
- - static/img/figures/efmp-409/unit-03/fig-U3-12.ur.dark.svg
+ - docs/semester-4/efmp-409/unit-05/index.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-01.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-02.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-03.mdx
+ - docs/semester-4/efmp-409/unit-05/unit-assessment.mdx
+ - docs/semester-4/efmp-409/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-409/crew-efmp-409-u05-author-conflict1.misc.prompt.md
  - history/prompts/efmp-409/crew-efmp-409-u05-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u05-author.green.prompt.md
+ - specs/content/efmp-409/concepts/unit-05.md
+ - specs/content/efmp-409/coverage/unit-05.md
+ - specs/content/efmp-409/figures/unit-05.banner.md
+ - specs/content/efmp-409/figures/unit-05.md
+ - specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/validate-content.txt
+ - specs/content/efmp-409/sources/texts/inverge-2025-punjab.md
+ - specs/content/efmp-409/sources/texts/pie-1959-commission.md
+ - specs/content/efmp-409/sources/texts/pie-1979-policy.md
+ - specs/content/efmp-409/sources/texts/pie-1998-policy.md
+ - specs/content/efmp-409/sources/texts/saiyid-nihcr.md
+ - specs/content/efmp-409/sources/texts/wb-wdi-2026.md
+ - specs/content/efmp-409/sources/unit-05.md
+ - specs/content/efmp-409/tasks.md
+ - static/img/figures/efmp-409/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-3.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-5.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-5.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-6.svg
 tests:
  - npm run check:content
 ---
@@ -93,27 +97,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-409-u05-author, author, claude_crew) Banner `fig-U5-7` is still prompt-only for the `illustrate` job; the six schematics are placed and measured clean.
 - (efmp-409-u05-author, author, claude_crew) Unit 5 is English only (no Urdu mirror, no `key_terms`); G3/G5/G4 stay open and un certified. Reading-minutes total is 62, at the ceiling of the approved 46-62 band.
 
+
 ## Response snapshot
 
-Merged origin/main (16 commits, 81 files) into crew/efmp-409-u05-author. The only overlapping file, specs/content/efmp-409/tasks.md, auto-merged cleanly: main's Unit 3 G4/G6 updates and this branch's Unit 5 G2 en-draft row are in separate hunks, so both survive and no manual conflict resolution or ID remap was needed. The merge is committed and all 14 content gates pass.
+Merged origin/main into crew/efmp-409-u05-author (clean auto-merge of the EFMP-409 tracker, no conflicts), committed the merge and its PHR, and confirmed all 14 content gates pass with the Unit 5 G2 row intact.
 
 ## Outcome
 
-- Impact: fix for EFMP-409 Unit 5 by claude_crew (attempt 2).
-- Tests: npm run check:content passed in the job worktree after the merge and again after this PHR was added.
-- Files: 38 file(s), listed above (the merge's EFMP-409 files plus this PHR).
+- Impact: fix for EFMP-409 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 42 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit 66d7a2e20 brings origin/main into crew/efmp-409-u05-author; Unit 5's G2 en-draft tracker row and its gate evidence are intact and the branch is 0 commits behind main.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
+- Shipped / changed: Merged origin/main into crew/efmp-409-u05-author (clean auto-merge of the EFMP-409 tracker, no conflicts), committed the merge and its PHR, and confirmed all 14 content gates pass with the Unit 5 G2 row intact.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - No conflict actually occurred: specs/content/efmp-409/tasks.md auto-merged because main's edits (Unit 3 G4/G6 rows) and this branch's (Unit 5 rows) are disjoint hunks. No shared registry was touched by either side, so no ID remapping was needed.
-  - Unit 5 G2 evidence still points at reviews/unit-05/G2/20261125T085534293Z-gates.json; no Unit 5 English file, figure manifest, source, coverage or concept changed, so no fresh evidence run was required.
-  - Banner fig-U5-7 stays prompt-only; Unit 5 is English only, so G3/G4/G5 stay open; reading-minutes total 62 sits at the 46-62 ceiling.
+  - The brief's premise did not reproduce: the tasks.md merge was clean, so the hourly batch's failure likely came from a different conflict resolution, not from a missing G2 row.
+  - Unit 5 G2 evidence still points at reviews/unit-05/G2/20261125T085534293Z-gates.json; no Unit 5 English file, manifest, source, coverage or concept changed, so no fresh prepare-gate-evidence run was required.
+  - Reading-minutes total 62 is exactly at the approved 46-62 ceiling, banner fig-U5-7 is still prompt-only, and Unit 5 is English only, so G3/G4/G5 stay open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
