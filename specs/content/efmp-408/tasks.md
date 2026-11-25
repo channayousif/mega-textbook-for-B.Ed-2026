@@ -12,7 +12,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 3
 | 2 | Objectives, Alignment and the Principles of Good Assessment | ☐ | ☐ | ☐ | ☐ | ☐ | content spec approved |
 | 3 | Constructing Tests | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (7 files) and eight localized SVG pairs (with derived dark twins) drafted 2026-11-25; banner prompt-only; translation_status stays draft pending G3 and G5 |
 | 4 | Performance and Classroom Assessment Techniques | ☐ | ☐ | ☐ | ☐ | ☐ | content spec approved |
-| 5 | Grading, Reporting and Interpreting Scores | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-24; six schematic SVGs placed with derived dark variants; banner prompt-only; G3 and Urdu remain open |
+| 5 | Grading, Reporting and Interpreting Scores | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-24; complete Urdu mirror (6 files) and six localized SVG pairs (with derived dark twins) drafted 2026-11-25; banner prompt-only; translation_status stays draft pending G3 and G5 |
 | 6 | Standardized Testing, Ethics and Modern Trends | ✓ | ☐ | ▣ | ☐ | placed (EN+UR) | English authored 2026-11-25; complete Urdu mirror (7 files) and eight localized SVG pairs (with derived dark twins) drafted; translation_status stays draft pending G5 |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
@@ -43,9 +43,9 @@ English-only authoring from the approved content-spec subsections for Units 1, 3
 | Unit 6 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-408/reviews/unit-05/G2/20261124T210439864Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
-| Unit 5 | G4 ur-translation | ▢ | | Separate Urdu job; English-only draft with untranslated notice |
+| Unit 5 | G4 ur-translation | ▢ | | Complete six-page draft Urdu mirror and six localized SVG pairs (with derived dark variants) prepared from English 4de49d901; see reviews/unit-05/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation |
-| Unit 5 | G6 assets | ▣ | | Six English schematic SVGs placed with derived dark variants; banner fig-U5-7 prompt-only |
+| Unit 5 | G6 assets | ▣ | | Six English schematic SVGs (fig-U5-1 to fig-U5-6) and six Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U5-7 prompt-only |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
 
 Reading estimates use final visible text at about 200 words per minute: Unit 1 index 3, Topic 1.1 20, Topic 1.2 16, Topic 1.3 18, assessment 22, teacher notes 4, total 83 minutes, inside the approved 70-95 depth budget band. Its assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 4 is the blueprint's Analyze item classifying a described assessment practice on purpose and reference frame with justification. The guide supplies teaching strategies and practical work, so a unit teacher-notes page provides practical activities and strategies. The course overview uses the programme default weighting (formative 40, summative 60), as the guide gives no marks.
