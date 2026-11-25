@@ -4,7 +4,7 @@ title: crew translate EFMP-408 unit 2
 stage: misc
 date: 2026-11-25
 surface: agent
-model: gemini-flash
+model: agy
 feature: efmp-408
 branch: crew/efmp-408-u02-translate
 user: crew
@@ -16,28 +16,29 @@ links:
   adr: null
   pr: null
 files:
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/unit-teacher-notes.mdx
-  - specs/content/efmp-408/reviews/unit-02/G4/translation-handoff.md
-  - specs/content/efmp-408/tasks.md
-  - static/img/figures/efmp-408/unit-02/fig-U2-1.ur.dark.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-1.ur.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-2.ur.dark.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-2.ur.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-3.ur.dark.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-3.ur.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-4.ur.dark.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-4.ur.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-5.ur.dark.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-5.ur.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-6.ur.dark.svg
-  - static/img/figures/efmp-408/unit-02/fig-U2-6.ur.svg
+ - history/prompts/efmp-408/crew-efmp-408-u02-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/unit-teacher-notes.mdx
+ - specs/content/efmp-408/reviews/unit-02/G4/translation-handoff.md
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-02/fig-U2-1.ur.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-1.ur.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-2.ur.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-2.ur.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-3.ur.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-3.ur.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-4.ur.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-4.ur.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-5.ur.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-5.ur.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-6.ur.dark.svg
+ - static/img/figures/efmp-408/unit-02/fig-U2-6.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -75,28 +76,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u02-author-conflict4, fix, claude_crew) Unit 2 G4 Urdu translation and independent G3/G5 review remain open; banner fig-U2-7 stays prompt-only for the illustrate job.
 - (efmp-408-u02-author-conflict4, fix, claude_crew) `specs/content/efmp-408/tasks.md` now carries Units 1, 2, 3 and 6 state, so read all four units' rows before editing it.
 
+
 ## Response snapshot
 
-Translated EFMP-408 Unit 2 into a complete draft Urdu mirror (6 pages, 6 RTL schematic figures with derived dark variants), recorded the G4 tracker note and handoff, with translation_status still draft and all 14 content gates passing.
+Translated EFMP-408 Unit 2 into a complete Urdu mirror (6 pages, 6 RTL schematic SVGs with dark twins), updated the task tracker, and passed all 14 content gates.
 
 ## Outcome
 
-- ✅ Impact: Translated EFMP-408 Unit 2 into complete Urdu mirror with RTL schematic figures, passing all gates.
-- 🧪 Tests: `npm run build:content-status && npm run check:content` passed (14 content gates). `measure-figure-text.mjs` passed with 0 exit code on all 6 figures with `--ci-fonts`.
-- 📁 Files: 21 file(s) created or modified (6 Urdu MDX pages, 6 Urdu SVGs, 6 dark SVG variants, 1 handoff, 1 tasks tracker, 1 PHR).
-- 🔁 Next prompts: Next stage G3 (English review) or G5 (Urdu review) by independent reviewer.
-- 🧠 Reflection: Maintained exact heading and component parity, zero em dashes, and banked terminology conformance.
+- Impact: translate for EFMP-408 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 21 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated EFMP-408 Unit 2 into a complete draft Urdu mirror (6 pages, 6 RTL figures with dark variants), recorded the G4 tracker note and handoff, with translation_status still draft and all content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: independent G3 and G5 reviewers.
-- Paperclip issues affected: null
+- Shipped / changed: Translated EFMP-408 Unit 2 into a complete Urdu mirror (6 pages, 6 RTL schematic SVGs with dark twins), updated the task tracker, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 2 G3 English review and G5 Urdu review remain open; translation_status stays draft in both index.mdx files pending independent G5 acceptance.
+  - Banner figure fig-U2-7 remains prompt-only in specs/content/efmp-408/figures/unit-02.banner.md awaiting raster asset production.
+  - Six Urdu schematic SVGs and their derived dark variants passed measure-figure-text.mjs and figures:variants:check clean; render-inspect was not run locally as per host limits.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): PASS
-- Prompt variant (if applicable): null
-- Next experiment (smallest change to try): null
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
