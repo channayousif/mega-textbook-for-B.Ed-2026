@@ -1,0 +1,22 @@
+render-review - EFMP-408 Unit 1 G3 - 2026-11-25
+Command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efmp-408/unit-01/ static/img/figures/efmp-408/unit-01/
+deployed SHA: 3910d26161b35a1faf18ce848fd50ab0b4cf59f7
+HEAD: 7bb9e4d484428859cbfe2f6e3775c0e8291b11ea
+diff exit code: 1
+
+Changed paths between deployed SHA and HEAD:
+M docs/semester-4/efmp-408/unit-01/index.mdx
+A static/img/figures/efmp-408/unit-01/fig-U1-4.webp
+
+diff --git a/docs/semester-4/efmp-408/unit-01/index.mdx b/docs/semester-4/efmp-408/unit-01/index.mdx
+@@ -23,6 +23,8 @@
+ # Unit 1: Understanding Assessment and Evaluation
+
++<Figure id="fig-U1-4" kind="illustration" src="/img/figures/efmp-408/unit-01/fig-U1-4.webp" alt="A teacher in a Sindh government school classroom bends beside a student's desk to give supportive feedback on a lesson worksheet while other pupils work in pairs." width={1344} height={756} />
++
+ Welcome to Unit 1 of Educational Assessment and Evaluation.
+
+Result: the diff is NOT empty, so the production build (CI-built from the deployed SHA) is not the reviewed input.
+Per the crew brief, render-review is recorded as unavailable; no build, dev server or Playwright run was attempted.
+`scripts/heavy.sh node scripts/render-inspect.mjs EFMP-408 1 --base https://textbook.com.pk --no-pdf` was NOT run.
+Changed images can be served stale for up to 30 days, so a missing or mismatched asset is treated as unverified, not as a content defect.
