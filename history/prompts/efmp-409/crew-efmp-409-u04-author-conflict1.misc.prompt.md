@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-409-u04-author-conflict1
-title: crew resolve EFMP-409 unit 4 merge conflicts
+title: crew fix EFMP-409 unit 4
 stage: misc
 date: 2026-11-25
 surface: agent
@@ -16,11 +16,50 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-409/sources/texts/hec-2013-foundations.md
- - specs/content/efmp-409/tasks.md
+ - docs/semester-4/efmp-409/unit-04/index.mdx
+ - docs/semester-4/efmp-409/unit-04/topic-01.mdx
+ - docs/semester-4/efmp-409/unit-04/topic-02.mdx
+ - docs/semester-4/efmp-409/unit-04/topic-03.mdx
+ - docs/semester-4/efmp-409/unit-04/unit-assessment.mdx
+ - docs/semester-4/efmp-409/unit-04/unit-teacher-notes.mdx
  - history/prompts/efmp-409/crew-efmp-409-u04-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u04-author.green.prompt.md
+ - specs/content/efmp-409/concepts/unit-04.md
+ - specs/content/efmp-409/coverage/unit-04.md
+ - specs/content/efmp-409/figures/unit-04.banner.md
+ - specs/content/efmp-409/figures/unit-04.md
+ - specs/content/efmp-409/reviews/unit-04/G2/20261125T072435069Z-gates.json
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/validate-content.txt
+ - specs/content/efmp-409/sources/texts/anwer-2024-charter-magna-carta.md
+ - specs/content/efmp-409/sources/texts/besari-2023-knowledge-ethics.md
+ - specs/content/efmp-409/sources/texts/farooq-2018-farewell-sermon.md
+ - specs/content/efmp-409/sources/texts/hec-2013-foundations.md
+ - specs/content/efmp-409/sources/texts/quran-translation.md
+ - specs/content/efmp-409/sources/texts/sani-2019-suffa.md
+ - specs/content/efmp-409/sources/texts/sep-curren-education.md
+ - specs/content/efmp-409/sources/texts/tobroni-2020-medina-charter.md
+ - specs/content/efmp-409/sources/unit-04.md
+ - specs/content/efmp-409/tasks.md
+ - static/img/figures/efmp-409/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-1.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-2.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-2.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-3.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-3.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-4.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-4.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-5.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-5.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-6.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-6.svg
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -55,33 +94,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-409-u04-author, author, claude_crew) `besari-2023-knowledge-ethics`, `farooq-2018-farewell-sermon` and `sani-2019-suffa` were verified only through Crossref metadata and abstracts (full texts not read); their `sources/texts` notes say so, and the Topic 4.1 hadith citations are paraphrased by collection and number.
 - (efmp-409-u04-author, author, claude_crew) banner `fig-U4-7` is still prompt-only; the Urdu mirror is a separate job; the authored Urdu concept labels need G5 review.
 
+
 ## Response snapshot
 
-Merged `origin/main` (70e141423) into `crew/efmp-409-u04-author`. Two content conflicts, both resolved by union:
-
-- `specs/content/efmp-409/tasks.md`: kept main's Unit 2 tracker rows, reading estimates and author-notes paragraph, then this branch's Unit 4 rows and reading estimates; the status header now reads Units 1, 2 and 4. Main's author-notes paragraph was kept verbatim because it is a strict superset of the branch's (it adds the Unit 2 re-citations and the shared HEC note sentence).
-- `specs/content/efmp-409/sources/texts/hec-2013-foundations.md`: kept notes 1-5, then main's `## Unit 2 evidence notes` (6-10), then this branch's Unit 4 notes renumbered 11-13 under a new `## Unit 4 evidence notes` heading. The branch's notes 6-8 collided with main's 6-10, so they took the next free numbers; nothing references those note numbers.
-
-No shared registry (glossary.json, specs/decisions/log.md, specs/gaps.md, terminology.csv) was touched by either side, so no append-only merge was needed. No ID collisions. Committed as a merge commit, then rebuilt `static/content-status.json` and ran the content gates.
+Merged origin/main into crew/efmp-409-u04-author and union-resolved the two conflicts in `tasks.md` and `hec-2013-foundations.md` (main's entries first, branch's Unit 4 evidence notes renumbered 11-13), committed the merge plus its PHR, and left `npm run check:content` green.
 
 ## Outcome
 
-- ✅ Impact: branch now contains main's Unit 2 work and this branch's Unit 4 work with no conflicting tracker rows or source notes; `npm run check:content` passes all 14 gates.
-- 🧪 Tests: `npm run build:content-status` wrote `static/content-status.json`; `npm run check:content` reported "All content gates passed" (validate:content, check:pipeline-gate, check:depth-gate, check:figures, check:svg-style, check:no-em-dash, check:no-answer-keys, check:concept-graph, check:bloom-bands, check:source-floor, check:licence, licence:map:check, check:content-status, check:docs-sync).
-- 📁 Files: `specs/content/efmp-409/tasks.md`, `specs/content/efmp-409/sources/texts/hec-2013-foundations.md`, this PHR.
-- 🔁 Next prompts: the Unit 4 G3 review job and the Unit 4 Urdu mirror job.
-- 🧠 Reflection: a shared bound-source note and a shared tracker both grew on two branches at once; union-resolving with main's entries first and renumbering the branch's colliding list indices kept every entry without losing main's.
+- Impact: fix for EFMP-409 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 43 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of `origin/main` into `crew/efmp-409-u04-author`; union-resolved `tasks.md` (Unit 2 + Unit 4 rows, estimates, author notes) and `hec-2013-foundations.md` (Unit 2 notes 6-10, Unit 4 notes 11-13).
-- Decisions the team must respect: main's entries were left byte-for-byte intact; the branch's Unit 4 evidence notes were renumbered 6-8 to 11-13 because main's Unit 2 notes already occupy 6-10. Do not renumber main's section.
-- Pending / next owner: Unit 4 G3 review (qualified scholar for the Islamic material) and the Unit 4 Urdu mirror; banner `fig-U4-7` remains prompt-only.
-- Paperclip issues affected: none recorded (`links.ticket: null`).
+- Shipped / changed: Merged origin/main into crew/efmp-409-u04-author and union-resolved the two conflicts in `tasks.md` and `hec-2013-foundations.md` (main's entries first, branch's Unit 4 evidence notes renumbered 11-13), committed the merge plus its PHR, and left `npm run check:content` green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The shared HEC note is not in Unit 4's G2 input manifest, so the existing G2 evidence stayed valid and was not regenerated.
+  - Unit 4's evidence notes are now 11-13 in `hec-2013-foundations.md`; main's 6-10 are byte-for-byte untouched, so do not renumber them.
+  - banner `fig-U4-7` is still prompt-only and the Urdu mirror is a separate job; G3 still needs a qualified scholar for the Islamic material.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: two parallel authoring branches appended to the same shared tracker and the same bound-source note, so both the row lists and the numbered evidence notes collided.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS (14/14); `node scripts/check-no-em-dash.mjs` PASS.
-- Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): give each unit its own bound-source note file, or put per-unit evidence notes in `sources/unit-NN.md`, so parallel units stop colliding in one shared note.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
