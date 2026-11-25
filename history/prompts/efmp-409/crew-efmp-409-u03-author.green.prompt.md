@@ -29,6 +29,15 @@ files:
   - specs/content/efmp-409/coverage/unit-03.md
   - specs/content/efmp-409/figures/unit-03.banner.md
   - specs/content/efmp-409/figures/unit-03.md
+  - specs/content/efmp-409/reviews/unit-03/G2/20261125T070051288Z-gates.json
+  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-bloom-bands.txt
+  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-concept-graph.txt
+  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-depth-gate.txt
+  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-docs-sync.txt
+  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-figures.txt
+  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-no-answer-keys.txt
+  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-no-em-dash.txt
+  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/validate-content.txt
   - specs/content/efmp-409/sources/texts/cheddadi-1994-ibn-khaldun.md
   - specs/content/efmp-409/sources/texts/iqbal-cyber-library.md
   - specs/content/efmp-409/sources/texts/sep-bertram-rousseau.md
