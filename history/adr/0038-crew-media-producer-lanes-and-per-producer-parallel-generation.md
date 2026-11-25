@@ -7,8 +7,11 @@
 - **Feature:** Cross-cutting crew scheduling for Media Studio (Feature 030), raster illustrations (ADR-0029/0036), Study Studio (Feature 029) and social updates (Feature 031)
 - **Amends:** [ADR-0036](0036-multi-producer-raster-illustrations-with-per-producer-quotas.md) point 6 ("one illustrate job and one generation lock at a time; no parallel producers for now") and [ADR-0037](0037-unified-media-studio.md) point 6 ("one A/V job runs at a time"), only as stated below. ADR-0029's acceptance rule, the producer contract, per-producer quotas, media hours and pacing (D-2026-0100) and every owner gate are unchanged.
 - **Context:**
-  - **Media hours are short.** Since D-2026-0100 (PR #762, 2026-11-24) every outside media call
-    happens only 09:00-15:00 PKT, paced per channel. Six hours a day is the whole media budget.
+  - **Media hours are bounded.** Since D-2026-0100 (PR #762, 2026-11-24) every outside media call
+    happens only in media hours, paced per channel. The first build read the owner's "9 to 3 office
+    hours" as the media window (six hours); on 2026-11-25 the owner corrected it to every hour
+    except 09:00-15:00 PKT (15:00-09:00, across midnight). Either way the window and the daily caps
+    are the whole media budget.
   - **Media waited behind text.** Media jobs shared the crew's two slots (`CREW_MAX_PARALLEL=2`)
     with authoring, translation and review, which usually filled both. Raster images, teasers and
     Study Studio items queued for hours inside the only window they may run in.
@@ -64,7 +67,7 @@ The crew schedules media work on **producer lanes** (`scripts/crew/resources.mjs
 
 ### Positive
 
-- Media work uses the whole six-hour window on every producer with quota, instead of one producer
+- Media work uses the whole media window on every producer with quota, instead of one producer
   at a time behind authoring; the dry run on 2026-11-25 queued three image units, the stuck Study
   Studio unit and the social roundup on separate lanes.
 - Daily caps and media hours still bound every account, so parallelism does not raise any one

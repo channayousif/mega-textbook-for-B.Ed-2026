@@ -7,17 +7,22 @@
  * Flow, Gemini, NotebookLM, YouTube and Meta calls back to back around the clock until a provider
  * stopped it, which is how accounts get flagged as automated misuse. Since 2026-11-24 Flow is
  * reachable 24/7 from davinci, so the risk is higher. This module makes every call look like one
- * person's working day: office hours only, a gap with random jitter between calls, and hourly and
- * daily caps. Veo spend also follows the owner's monthly budget.
+ * person's rhythm: media hours only, a gap with random jitter between calls, and hourly and daily
+ * caps. Veo spend also follows the owner's monthly budget.
+ *
+ * Media hours are 15:00-09:00 PKT: every hour EXCEPT 09:00-15:00, the owner's office hours (owner,
+ * 2026-11-25: "I asked to set all the hours except 9am to 3pm"; the first build, 2026-11-24, read
+ * "9 to 3 office hours" the other way round). A window whose start is after its end runs across
+ * midnight.
  *
  * A producer calls `pace(channel, units)` right before it spends, and `paceRecord(channel, units)`
- * after the call succeeded. A short gap is slept; a cap or the office-hours window throws
+ * after the call succeeded. A short gap is slept; a cap or the media-hours window throws
  * `PaceHold` carrying `resetAt`, which callers map to their own "quota" status so the job is held
  * and retried later (no new failure path). Agent-driven steps (YouTube uploads through MCP) use the
  * CLI: `node scripts/media/pacing.mjs check youtube.upload` before, `record youtube.upload` after.
  *
  * Owner overrides: ~/.config/mega-book/media-limits.json, e.g.
- *   { "hours": { "start": 9, "end": 15 }, "cycleDay": 1, "channels": { "gflow.image": { "perDay": 30 } } }
+ *   { "hours": { "start": 15, "end": 9 }, "cycleDay": 1, "channels": { "gflow.image": { "perDay": 30 } } }
  * Host-local and never committed. Do not import this file from any content gate (FR-018).
  */
 import { existsSync, mkdirSync, readFileSync } from 'node:fs';
@@ -43,7 +48,8 @@ export const MAX_SLEEP_MS = 10 * MIN;
  * in the billing cycle, then `afterPoolPerDay` until the cycle day.
  */
 export const DEFAULTS = {
-  hours: { start: 9, end: 15 },
+  // 15:00 to 09:00 PKT, across midnight: never in the owner's 09:00-15:00 office hours.
+  hours: { start: 15, end: 9 },
   cycleDay: 1,
   channels: {
     'gflow.video': { gapMs: 3 * MIN, jitterMs: 90e3, perHourCount: 8, perDayUnits: 200, monthlyPool: 1000, afterPoolPerDay: 50 },
@@ -88,12 +94,15 @@ const pktParts = (ms) => { const d = new Date(ms + PKT_OFFSET_MS); return { y: d
 const pktInstant = (y, m, d, h = 0) => Date.UTC(y, m, d, h) - PKT_OFFSET_MS;
 const pktDayStart = (ms) => { const p = pktParts(ms); return pktInstant(p.y, p.m, p.d); };
 
+/** Inside media hours? A window with start > end (15 -> 9) runs across midnight. */
 export function withinHours(nowMs = Date.now(), hours = DEFAULTS.hours) {
   const { h } = pktParts(nowMs);
-  return h >= hours.start && h < hours.end;
+  if (hours.start === hours.end) return true; // a 24-hour window
+  return hours.start < hours.end ? h >= hours.start && h < hours.end : h >= hours.start || h < hours.end;
 }
 
-/** The next instant the office-hours window opens (now, if already open). */
+/** The next instant the media-hours window opens (now, if already open). Closed hours lie
+ * before today's start in both shapes, so the next opening is today's start or tomorrow's. */
 export function nextOpen(nowMs = Date.now(), hours = DEFAULTS.hours) {
   if (withinHours(nowMs, hours)) return nowMs;
   const p = pktParts(nowMs);

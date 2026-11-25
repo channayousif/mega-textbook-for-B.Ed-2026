@@ -325,7 +325,7 @@ export function codexProducer({ brief, png, stagingDir }) {
 }
 
 /**
- * Every image call is paced (scripts/media/pacing.mjs, D-2026-0100): office hours, a gap with
+ * Every image call is paced (scripts/media/pacing.mjs, D-2026-0100): media hours (never 09:00-15:00 PKT), a gap with
  * jitter, hourly and daily caps. A pacing hold surfaces as a QuotaError with its reset time, so
  * generate-illustration.mjs records it and moves on exactly as for a provider's own quota.
  */
