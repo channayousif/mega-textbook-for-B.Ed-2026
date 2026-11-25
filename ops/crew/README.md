@@ -181,11 +181,26 @@ Rules, producers and checks: `.claude/skills/media-studio/SKILL.md` (ADR-0037, D
 `crew approve-script` on the current script hash and spends Flow credits through
 `scripts/media/teaser-clips.mjs` (lost-clip recovery, never a second payment); `media_assemble`
 assembles and uploads **private**, then stops at `qa3-pass`; `media_publish` is queued only by
-`crew publish`, and is the one job allowed to set a video public; `audio_overview` makes planned
-NotebookLM audio. One media job is in flight at a time (they all write a shared ledger), at most six
-scripts wait for the owner, and `teaser_clips` is held without spending an attempt while gflow is
-offline or out of quota. Clip, upload and NotebookLM stages run only on the claude worker (it has
-the gflow and youtube-uploader MCP servers). Approvals live in `~/.crew/mega-book/media.json`.
+`crew publish`, and is one of the two jobs allowed to set a video public. Study Studio (`crew studio
+on`): `studio_media` (formerly `audio_overview`) resumes a unit's NotebookLM audio and video from
+any state to `qa3-pass` and plans the next certified unit; `studio_publish` runs only after
+`crew approve-studio <course> <unit>` and is the other job allowed to set a video public. Jobs that
+write one ledger never overlap, at most six scripts wait for the owner, and `teaser_clips` is held
+without spending an attempt while gflow is offline or out of quota. Clip, upload and NotebookLM
+stages run on claude, or claude_crew when claude is cooling (both have the gflow, youtube-uploader
+and gemini-notebook-studio MCP servers). Approvals live in `~/.crew/mega-book/media.json`.
+
+**Producer lanes** (`scripts/crew/resources.mjs`; owner, 2026-11-25: "different media producers in
+parallel, each producer max one slot" in media hours). Every outside-service stage runs on a lane
+with at most one running job: `notebook` (NotebookLM: `studio_media`), `flow` (gflow images and Veo:
+`teaser_clips`, or `illustrate` pinned with `--producer gflow`), `agy` and `codex` (`illustrate`
+pinned to that producer), `youtube` (`media_assemble`, `media_publish`, `studio_publish`), `social`
+(`social_roundup`) and `meta` (reserved, specs/033). Lanes run in parallel and outside the text
+slots (`CREW_MAX_PARALLEL`); a lane takes a job only in media hours and while its paced channel has
+room today, the memory and disk floors still apply, and in media hours media jobs pick a worker
+before text jobs (the social roundup first). Jobs that write one ledger never overlap (the teaser
+ledger; each unit's Study Studio ledger). BOARD.md "Today's media plan" shows each lane, its next
+job and why it waits.
 
 Two paths deliver them, and each command is applied once:
 

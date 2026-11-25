@@ -174,11 +174,12 @@ test('illustrations go to illustrate, schematics to figures (2026-11-03: illustr
   assert.deepEqual(stagesFor(unit('open', 'open', { figures: { prompt_only: 1 } }), { ...passed, figureBacklog: { schematic: 0, illustration: 1 } }), ['illustrate']);
 });
 
-test('one illustrate job at a time: generation is serial', () => {
+test('one illustrate job per image producer lane (agy, gflow, codex) in flight', () => {
   const j = (id, stage) => ({ id, stage });
-  const added = [j('a', 'illustrate'), j('b', 'figures'), j('c', 'illustrate')];
-  assert.deepEqual(limitIllustrate(added, []).map((x) => x.id), ['a', 'b']);
-  assert.deepEqual(limitIllustrate(added, [j('z', 'illustrate')]).map((x) => x.id), ['b']);
+  const added = [j('a', 'illustrate'), j('b', 'figures'), j('c', 'illustrate'), j('d', 'illustrate'), j('e', 'illustrate')];
+  assert.deepEqual(limitIllustrate(added, []).map((x) => x.id), ['a', 'b', 'c', 'd']);
+  assert.deepEqual(limitIllustrate(added, [j('y', 'illustrate'), j('z', 'illustrate')]).map((x) => x.id), ['a', 'b']);
+  assert.deepEqual(limitIllustrate(added, [j('x', 'illustrate'), j('y', 'illustrate'), j('z', 'illustrate')]).map((x) => x.id), ['b']);
 });
 
 test('a unit with no banner is planned, held from review and kept off the desk (D-2026-0081)', () => {

@@ -1,8 +1,8 @@
 # EFMP-409 Foundations of Education - Task tracker
 
-## Status: content spec approved (G0/G1); Units 1, 2, 3 and 5 English drafts authored; G2 gate evidence recorded for each; G3 review open
+## Status: content spec approved (G0/G1); Units 1, 2, 3, 4 and 5 English drafts authored; G2 gate evidence recorded for each; G3 reviews open
 
-English-only authoring from the approved content-spec subsections for Units 1, 2, 3 and 5. No publication or review certification is claimed by this tracker. Other units are outside this job.
+English-only authoring from the approved content-spec subsections for Units 1, 2, 3, 4 and 5. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
@@ -24,6 +24,12 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 3 | G5 ur-review | ▢ | | Awaiting independent review; authored concept labels also need checking |
 | Unit 3 | G6 assets | ▣ | | Twelve English schematic SVGs (fig-U3-1 to fig-U3-12) and twelve Urdu schematic SVGs placed with derived dark variants; measure-figure-text clean; banner fig-U3-13 prompt-only |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-04/G2/20261125T072435069Z-gates.json |
+| Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. The reviewer should check the Islamic material (Surah Al-Alaq, the Hadith on knowledge, the Charter of Medina, the Last Sermon, As-Suffa) with a qualified scholar, per content-spec drafting note 8 |
+| Unit 4 | G4 ur-translation | ▢ | | English-only draft authored 2026-11-25. The Urdu mirror is a separate job: six page files plus six localized SVG pairs (with derived dark variants); key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
+| Unit 4 | G5 ur-review | ▢ | | Awaiting independent review; authored concept labels also need checking |
+| Unit 4 | G6 assets | ▣ | | Six English schematic SVGs (fig-U4-1 to fig-U4-6) placed with derived dark variants; measure-figure-text clean on 2026-11-25; banner fig-U4-7 prompt-only |
+| Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 5 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
@@ -36,6 +42,8 @@ Unit 1 reading estimates use final visible text at about 200 words per minute: i
 Unit 2 reading estimates use the same method: index 3, Topic 2.1 18, Topic 2.2 15, assessment 13, teacher notes 3, total 52 minutes, inside the approved 40-52 depth budget band. The draft ran slightly long against the band, so redundant passages were cut rather than padding or trimming the required worked examples and misconceptions. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs; ERQ 5 is the blueprint's Analyze item that sorts ten features of a Pakistani school by the foundation each reflects and explains two. Four placed schematic SVGs carry the unit's visual density (fig-U2-1 concept map, fig-U2-2 and fig-U2-3 tables, fig-U2-4 diagram).
 
 Unit 3 reading estimates use final visible text at about 200 words per minute: index 2, Topic 3.1 12, Topic 3.2 12, Topic 3.3 13, Topic 3.4 15, Topic 3.5 13, Topic 3.6 13, assessment 14, teacher notes 3, total 97 minutes, inside the approved 74-102 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 5 is the blueprint's Create item asking the learner to write a 250-word teaching philosophy statement that names the school of thought it draws on (the licence's CRQ 8 form). The guide supplies teaching strategies and practical work, so a unit teacher-notes page is included with 6-week sequencing (Weeks 5-10).
+
+Unit 4 reading estimates use final visible text at about 200 words per minute: index 3, Topic 4.1 13, Topic 4.2 12, Topic 4.3 11, assessment 11, teacher notes 4, total 54 minutes, inside the approved 42-58 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 3 is the blueprint's Analyze item comparing the As-Suffa model with a present-day Pakistani primary classroom. The guide supplies teaching strategies and practical work, so a unit teacher-notes page is included. The unit is English-only at this stage; the Urdu mirror is a separate job.
 
 Unit 5 reading estimates use the same method: index 3, Topic 5.1 14, Topic 5.2 15, Topic 5.3 14, assessment 13, teacher notes 3, total 62 minutes, at the ceiling of the approved 46-62 depth budget band. The draft ran slightly long, so redundant passages were cut rather than padding or trimming the required worked examples and misconceptions. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs; ERQ 5 is the blueprint's Evaluate item that judges whether one target of the 1998-2010 policy was met using a bound source. Six placed schematic SVGs carry the unit's visual density (fig-U5-1 flowchart, fig-U5-3 timeline, fig-U5-2, fig-U5-4 and fig-U5-5 tables, fig-U5-6 concept map).
 
