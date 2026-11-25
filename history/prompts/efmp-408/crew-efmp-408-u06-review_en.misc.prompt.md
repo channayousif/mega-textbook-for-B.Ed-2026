@@ -2,7 +2,7 @@
 id: crew-efmp-408-u06-review_en
 title: crew review_en EFMP-408 unit 6
 stage: misc
-date: 2026-11-26
+date: 2026-11-25
 surface: agent
 model: claude_crew
 feature: efmp-408
@@ -21,9 +21,6 @@ files:
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/advisory-tracker-row.md
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/assessment-solutions.md
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/limitations.md
- - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/summary.md
- - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/manifest.json
- - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/make-report.mjs
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/logs/build-content-status.txt
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/logs/check-content.txt
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/logs/check-depth-gate.txt
@@ -36,6 +33,8 @@ files:
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/logs/render-followup.txt
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/logs/render-review.txt
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/logs/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/make-report.mjs
+ - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/manifest.json
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/render/desktop-index.png
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/render/desktop-topic-01.png
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/render/desktop-topic-02.png
@@ -52,9 +51,9 @@ files:
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/render/narrow360-unit-teacher-notes.png
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/render/render-inspect.json
  - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/render/render-inspect.log
+ - specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/summary.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1.json
 ---
 
 ## Prompt
@@ -85,47 +84,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Added a validated advisory G3 `revise` review of EFMP-408 Unit 6 with a hashed evidence bundle
-(gate logs, independent assessment solutions, source verification, production render evidence and
-a lazy-load follow-up) and a proposed advisory tracker row, all committed on
-`crew/efmp-408-u06-review_en`. G3 stays open and unsigned; no tracker row was edited and no prose
-was repaired.
+Added a validated advisory G3 `revise` review of EFMP-408 Unit 6 with a hashed evidence bundle, production render and print inspection, and a proposed tracker row, all committed on `crew/efmp-408-u06-review_en`.
 
 ## Outcome
 
-- ✅ Impact: review_en for EFMP-408 Unit 6 by claude_crew (attempt 1).
-- 🧪 Tests: `npm run check:content` passed (14/14 content gates); `node scripts/review-evidence.mjs validate` returned exit 0 for the report.
-- 📁 Files: 37 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: review_en for EFMP-408 Unit 6 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 36 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: a validated advisory G3 `revise` report at
-  `specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1.json` with 34 hashed
-  evidence artifacts under the same run folder, plus `advisory-tracker-row.md` (not applied).
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this run does
-  not certify the unit, sign anything, append a tracker row or change `translation_status`.
-- Pending / next owner: crew lead appends the advisory row, then a separate author repairs the
-  findings and a fresh independent reviewer rechecks a new manifest.
+- Shipped / changed: Added a validated advisory G3 `revise` review of EFMP-408 Unit 6 with a hashed evidence bundle, production render and print inspection, and a proposed tracker row, all committed on `crew/efmp-408-u06-review_en`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Blocking: MCQ key A0/B9/C1/D0 with the keyed option longest in 9 of 10 items; undeclared
-    missing sources for NTS/NEAS/STEDA/FPSC/SEF/PEAC/CIE-IB and the Sindh Teaching Licence claim.
-  - Uncertain: `topic-01.mdx:96` and `fig-U6-4` claim Pakistan participated in TIMSS 2019 at
-    Grade 4; no bound source supports it. Verify or remove.
-  - do not re-report `render-inspect`'s `fig-U6-4` / `fig-U6-6` "did not load" flags as content
-    defects; they are lazy-load timing artifacts cleared in `logs/render-followup.txt`.
-  - `render-inspect` exit 1 is real and is recorded as such; its other two defects are the
-    `fig-U6-5` title geometry advisory.
-  - `sources/texts/hec-*.md` are not manifest-bound; HEC claims were checked against the bound
-    full guide text.
-- Paperclip issues affected: none.
+  - The advisory tracker row is written to `reviews/unit-06/G3/crew-efmp-408-u06-review_en-r1/advisory-tracker-row.md`; the review skill forbids a reviewer editing `tasks.md`, so the crew lead must append it.
+  - Repair owner has four blocking/uncertain items: MCQ key and option-length giveaway, the missing `no-external-source` declaration, the TIMSS 2019 claim, plus RRQ 6/9 and the Topic 6.2 HEC attribution.
+  - Do not re-report `render-inspect`'s `fig-U6-4`/`fig-U6-6` "did not load" flags as content defects; they are cleared in `logs/render-followup.txt`, and the tool's real exit 1 is the `fig-U6-5` title advisory.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
