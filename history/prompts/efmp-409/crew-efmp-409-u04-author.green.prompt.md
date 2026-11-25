@@ -4,12 +4,12 @@ title: crew author EFMP-409 unit 4
 stage: misc
 date: 2026-11-25
 surface: agent
-model: claude
+model: claude_crew
 feature: efmp-409
 branch: crew/efmp-409-u04-author
 user: crew
 command: crew author
-labels: ["crew", "claude", "author"]
+labels: ["crew", "claude_crew", "author"]
 links:
   spec: specs/content/efmp-409/content-spec.md
   ticket: null
@@ -22,6 +22,7 @@ files:
  - docs/semester-4/efmp-409/unit-04/topic-03.mdx
  - docs/semester-4/efmp-409/unit-04/unit-assessment.mdx
  - docs/semester-4/efmp-409/unit-04/unit-teacher-notes.mdx
+ - history/prompts/efmp-409/crew-efmp-409-u04-author.green.prompt.md
  - specs/content/efmp-409/concepts/unit-04.md
  - specs/content/efmp-409/coverage/unit-04.md
  - specs/content/efmp-409/figures/unit-04.banner.md
@@ -59,7 +60,6 @@ files:
  - static/img/figures/efmp-409/unit-04/fig-U4-6.svg
 tests:
  - npm run check:content
- - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efmp-409/unit-04/*.svg
 ---
 
 ## Prompt
@@ -90,32 +90,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFMP-409 Unit 4 (three topics, 10/10/5 assessment, teacher notes, six placed SVG figures with derived dark variants) with its sources, coverage, concept graph, figure manifest, banner sidecar, G2 gate evidence and tracker row. All 14 content gates pass.
+Authored EFMP-409 Unit 4 (Islamic perspectives on education) end to end - three per-topic cycles, a 10/10/5 assessment, teacher notes, six placed figures with dark variants, all governance artefacts, G2 evidence and tracker rows - with all 14 content gates green.
 
 ## Outcome
 
-- Impact: author for EFMP-409 Unit 4 by claude (attempt 1).
-- Tests: npm run check:content passed in the job worktree; measure-figure-text exited 0 on all twelve SVGs.
+- Impact: author for EFMP-409 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 42 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFMP-409 Unit 4, Islamic perspectives on education (three topics, 10/10/5 assessment, teacher notes, six placed SVG figures with dark variants) with sources, coverage, concept graph, figure manifest, banner sidecar, G2 gate evidence and tracker row. All 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Authored EFMP-409 Unit 4 (Islamic perspectives on education) end to end - three per-topic cycles, a 10/10/5 assessment, teacher notes, six placed figures with dark variants, all governance artefacts, G2 evidence and tracker rows - with all 14 content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The G3 reviewer should have a qualified scholar check the Islamic material (Surah Al-Alaq, the hadith on knowledge, the Charter of Medina, the Last Sermon, As-Suffa), per content-spec drafting note 8.
-  - Three bound sources were verified only through their Crossref metadata and abstract: `besari-2023-knowledge-ethics` (PDF not read), `farooq-2018-farewell-sermon` (full text host did not resolve) and `sani-2019-suffa` (Arabic body not read). Their `sources/texts` notes say so. The hadith reportings in Topic 4.1 are cited by collection and number and paraphrased; the three short sayings follow the HEC guide's wording.
-  - The banner fig-U4-7 is still prompt-only; the Urdu mirror is a separate job; the authored Urdu concept labels need G5 review.
+  - G3 should have a qualified scholar check the Islamic material (Surah Al-Alaq, the hadith on knowledge, the Charter of Medina, the Last Sermon, As-Suffa) per content-spec drafting note 8.
+  - `besari-2023-knowledge-ethics`, `farooq-2018-farewell-sermon` and `sani-2019-suffa` were verified only through Crossref metadata and abstracts (full texts not read); their `sources/texts` notes say so, and the Topic 4.1 hadith citations are paraphrased by collection and number.
+  - banner `fig-U4-7` is still prompt-only; the Urdu mirror is a separate job; the authored Urdu concept labels need G5 review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
