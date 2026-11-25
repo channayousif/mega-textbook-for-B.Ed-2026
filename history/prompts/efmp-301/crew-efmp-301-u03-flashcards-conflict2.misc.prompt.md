@@ -16,8 +16,11 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-301/crew-efmp-301-u03-flashcards-conflict1.misc.prompt.md
  - history/prompts/efmp-301/crew-efmp-301-u03-flashcards-conflict2.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u03-flashcards.misc.prompt.md
  - specs/studio/flashcards-needed.json
+ - specs/studio/flashcards/efmp-301/unit-03.json
 tests:
  - npm run check:content
 ---
@@ -55,25 +58,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u03-flashcards, flashcards, claude) Urdu topic-04 writes "مستقل بیساکی", which looks like a typo for بیساکھی. The card uses بیساکھی, so the topic text should be checked at G5. The Accommodation card uses مطابقت, because the terminology.csv entry سہولت کاری is for access adaptation, a different sense.
 - (efmp-301-u03-slides, slides, claude) Running `node scripts/build-studio-index.mjs` rewrites unrelated `static/studio/flashcards/*.json` files; restore them with `git checkout -- static/studio/flashcards/` before committing.
 
+
 ## Response snapshot
 
-Fetched origin and merged origin/main (7ca7b2129) into crew/efmp-301-u03-flashcards. One conflict, specs/studio/flashcards-needed.json: main had re-added efmp-301/3 while this branch (and main) had both unit-03 and unit-05 decks present, so the resolution keeps both efmp-301/3 and efmp-301/5 out of the needed list and keeps main's new efmp-408 entries. Verified by regenerating with `node scripts/build-studio-index.mjs --coverage`, which reproduced the resolved file byte for byte, then restored the unrelated static/studio/flashcards rewrites. Merge committed as f0fe550da with `npm run check:content` green.
+Merged origin/main into crew/efmp-301-u03-flashcards, resolving the single flashcards-needed.json conflict so both efmp-301/3 and efmp-301/5 stay covered, and committed the merge plus its PHR with all content gates green.
 
 ## Outcome
 
-- Impact: fix for EFMP-301 Unit 3 by claude_crew (attempt 2, conflict2).
-- Tests: `npm run build:content-status` then `npm run check:content`: all 14 content gates PASS.
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-301 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 5 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of origin/main into crew/efmp-301-u03-flashcards (f0fe550da) resolving the single conflict in specs/studio/flashcards-needed.json; both efmp-301/3 and efmp-301/5 stay out of the needed list because both decks now exist.
-- Decisions the team must respect: the needed list is generated coverage state, not an append-only ledger; efmp-301/3 was dropped because specs/studio/flashcards/efmp-301/unit-03.json exists on this branch and efmp-301/5 because unit-05.json arrived with main's PR #782. G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
+- Shipped / changed: Merged origin/main into crew/efmp-301-u03-flashcards, resolving the single flashcards-needed.json conflict so both efmp-301/3 and efmp-301/5 stay covered, and committed the merge plus its PHR with all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - A regeneration before PR #782 merged re-added efmp-301/3 on main; unit-05.json is now in the tree, so the resolved list is stable.
+  - flashcards-needed.json is stable now that unit-05.json is in the tree; a `--coverage` regeneration reproduces the committed list exactly.
   - Unit 3 G3/G5 stay open; G5 still owes the Motivation Urdu term call (محرک vs حوصلہ) and the topic-04 بیساکی / بیساکھی typo check.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
