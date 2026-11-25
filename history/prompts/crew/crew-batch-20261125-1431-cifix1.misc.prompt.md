@@ -1,6 +1,6 @@
 ---
 id: crew-batch-20261125-1431-cifix1
-title: crew fix figure-geometry overlap in efmp-409 unit 05
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-25
 surface: agent
@@ -16,12 +16,76 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-4/efmp-408/unit-01/index.mdx
+ - docs/semester-4/efmp-408/unit-02/index.mdx
+ - docs/semester-4/efmp-408/unit-03/index.mdx
+ - history/prompts/030-media-studio/20261272-efmp-406-teaser-assemble-upload.green.prompt.md
  - history/prompts/crew/crew-batch-20261125-1431-cifix1.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u00-media_assemble.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u01-illustrate.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u02-illustrate.misc.prompt.md
+ - history/prompts/efmp-408/crew-efmp-408-u03-illustrate.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u05-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-01/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-03/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-05/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-05/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-05/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-05/unit-teacher-notes.mdx
+ - specs/content/efmp-408/figures/unit-01.banner.md
+ - specs/content/efmp-408/figures/unit-02.banner.md
+ - specs/content/efmp-408/figures/unit-03.banner.md
+ - specs/content/efmp-408/reviews/unit-01/G2/20261125T135343773Z-gates.json
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261125T135343773Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261125T135343773Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261125T135343773Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261125T135343773Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261125T135343773Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261125T135343773Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261125T135343773Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-01/G2/logs-20261125T135343773Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/20261125T140929582Z-gates.json
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/validate-content.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/20261125T142256890Z-gates.json
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261125T142256890Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261125T142256890Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261125T142256890Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261125T142256890Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261125T142256890Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261125T142256890Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261125T142256890Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-03/G2/logs-20261125T142256890Z/validate-content.txt
+ - specs/content/efmp-408/tasks.md
+ - specs/content/efmp-409/reviews/unit-05/G4/translation-handoff.md
+ - specs/content/efmp-409/tasks.md
+ - specs/studio/teasers/media-teasers.json
+ - static/img/figures/efmp-408/unit-01/fig-U1-4.webp
+ - static/img/figures/efmp-408/unit-02/fig-U2-7.webp
+ - static/img/figures/efmp-408/unit-03/fig-U3-9.webp
+ - static/img/figures/efmp-409/unit-05/fig-U5-1.ur.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-1.ur.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-2.ur.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-2.ur.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-3.ur.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-3.ur.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-4.ur.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-4.ur.svg
  - static/img/figures/efmp-409/unit-05/fig-U5-5.ur.dark.svg
  - static/img/figures/efmp-409/unit-05/fig-U5-5.ur.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-6.ur.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-6.ur.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs --ci-fonts --changed 3910d26161b35a1faf18ce848fd50ab0b4cf59f7
 ---
 
 ## Prompt
@@ -56,22 +120,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261124-2201-cifix1, fix, claude_crew) This PR certifies nothing; G3 and the Unit 3 Urdu mirror remain open.
 - (batch-20261124-1946-cifix1, fix, claude_crew) CI's build job still has to confirm the acorn error is gone (`npm run build` was not run locally, per the brief); the now-unreferenced old evidence set `20261124T184540786Z-gates.json` and its logs dir were left in place, matching the earlier Unit 4 precedent.
 
+
 ## Response snapshot
 
-Re-broke the over-wide Urdu right-column heading in efmp-409 `fig-U5-5.ur.svg` ("1998-2010 کی پالیسی" / "میں ہدف" to "1998-2010 کی" / "پالیسی میں ہدف") and mirrored it into the derived dark variant, clearing the CI figure-geometry label-gap failure under the CI fallback face.
+Re-wrapped the over-wide Urdu right-column header in efmp-409 fig-U5-5.ur.svg and its dark variant so the CI figure-geometry label-gap check passes, with all content gates green and the fix plus PHR committed.
 
 ## Outcome
 
-- ✅ Impact: fix for CREW Unit 0 by claude_crew (attempt 1): PR #864 figure-geometry red to green.
-- 🧪 Tests: `npm run check:content` passed (14/14); `node scripts/measure-figure-text.mjs --ci-fonts --changed 3910d261...` exited 0 on all 12 changed Urdu SVGs.
-- 📁 Files: 3 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 68 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: the Urdu right-column heading of `static/img/figures/efmp-409/unit-05/fig-U5-5.ur.svg` and its `.ur.dark.svg` variant now wraps as "1998-2010 کی" / "پالیسی میں ہدف", so the header stays inside its column and keeps a 63px gap from the middle header under the CI fallback face.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything. Urdu-only figure edits do not stale a unit's G2 evidence (it binds English SVGs only), so no gate-evidence refresh was needed.
+- Shipped / changed: Re-wrapped the over-wide Urdu right-column header in efmp-409 fig-U5-5.ur.svg and its dark variant so the CI figure-geometry label-gap check passes, with all content gates green and the fix plus PHR committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - CI's figure-geometry job still has to confirm on PR #864, though the local `--ci-fonts --changed 3910d261...` run is the same measurement and exits 0.
@@ -81,6 +146,6 @@ Re-broke the over-wide Urdu right-column heading in efmp-409 `fig-U5-5.ur.svg` (
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text --ci-fonts PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
