@@ -2960,6 +2960,31 @@
     }
    ],
    "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874"
+  },
+  {
+   "key": "efpg-401-ur",
+   "id": "efpg-401",
+   "locale": "ur",
+   "kind": "short",
+   "state": "scripted",
+   "gates": {
+    "qg0": {
+     "verdict": "pass",
+     "by": "teaser.mjs"
+    }
+   },
+   "clips": [],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-25T16:48:57.739Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-25T16:48:57.846Z"
+    }
+   ],
+   "script_sha256": "174b861e2957d023e1851daaef9034db85d4b8f75f3f4592a5adcd3b92017931"
   }
  ]
 }

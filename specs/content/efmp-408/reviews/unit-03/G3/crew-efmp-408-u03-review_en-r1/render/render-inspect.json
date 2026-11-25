@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-408",
+  "unit_no": 3,
+  "locale": "en",
+  "base": "https://textbook.com.pk",
+  "route": "/semester-4/efmp-408/unit-03",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U3-1",
+    "fig-U3-5",
+    "fig-U3-2",
+    "fig-U3-6",
+    "fig-U3-3",
+    "fig-U3-7",
+    "fig-U3-4",
+    "fig-U3-8"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "topic-03: visible image did not load: /img/figures/efmp-408/unit-03/fig-U3-7.svg"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-11-25T16:33:08.780Z"
+}
