@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-409-u04-author-conflict2
-title: crew fix EFMP-409 unit 4 (merge main)
+title: crew fix EFMP-409 unit 4
 stage: misc
 date: 2026-11-25
 surface: agent
@@ -16,10 +16,51 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-409/tasks.md
+ - docs/semester-4/efmp-409/unit-04/index.mdx
+ - docs/semester-4/efmp-409/unit-04/topic-01.mdx
+ - docs/semester-4/efmp-409/unit-04/topic-02.mdx
+ - docs/semester-4/efmp-409/unit-04/topic-03.mdx
+ - docs/semester-4/efmp-409/unit-04/unit-assessment.mdx
+ - docs/semester-4/efmp-409/unit-04/unit-teacher-notes.mdx
+ - history/prompts/efmp-409/crew-efmp-409-u04-author-conflict1.misc.prompt.md
  - history/prompts/efmp-409/crew-efmp-409-u04-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u04-author.green.prompt.md
+ - specs/content/efmp-409/concepts/unit-04.md
+ - specs/content/efmp-409/coverage/unit-04.md
+ - specs/content/efmp-409/figures/unit-04.banner.md
+ - specs/content/efmp-409/figures/unit-04.md
+ - specs/content/efmp-409/reviews/unit-04/G2/20261125T072435069Z-gates.json
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-04/G2/logs-20261125T072435069Z/validate-content.txt
+ - specs/content/efmp-409/sources/texts/anwer-2024-charter-magna-carta.md
+ - specs/content/efmp-409/sources/texts/besari-2023-knowledge-ethics.md
+ - specs/content/efmp-409/sources/texts/farooq-2018-farewell-sermon.md
+ - specs/content/efmp-409/sources/texts/hec-2013-foundations.md
+ - specs/content/efmp-409/sources/texts/quran-translation.md
+ - specs/content/efmp-409/sources/texts/sani-2019-suffa.md
+ - specs/content/efmp-409/sources/texts/sep-curren-education.md
+ - specs/content/efmp-409/sources/texts/tobroni-2020-medina-charter.md
+ - specs/content/efmp-409/sources/unit-04.md
+ - specs/content/efmp-409/tasks.md
+ - static/img/figures/efmp-409/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-1.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-2.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-2.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-3.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-3.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-4.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-4.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-5.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-5.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-6.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-6.svg
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -58,32 +99,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-409-u04-author, author, claude_crew) G3 should have a qualified scholar check the Islamic material (Surah Al-Alaq, the hadith on knowledge, the Charter of Medina, the Last Sermon, As-Suffa) per content-spec drafting note 8.
 - (efmp-409-u04-author, author, claude_crew) `besari-2023-knowledge-ethics`, `farooq-2018-farewell-sermon` and `sani-2019-suffa` were verified only through Crossref metadata and abstracts (full texts not read); their `sources/texts` notes say so, and the Topic 4.1 hadith citations are paraphrased by collection and number.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-409-u04-author. The only conflict was `specs/content/efmp-409/tasks.md`: main carried the Unit 3 author rows, this branch carried the Unit 4 rows. Kept both, main's order first, updated the status header to Units 1, 2, 3 and 4, kept main's newer Unit 2 G4/G5/G6 rows and main's Unit 3 prose byte-for-byte, then reran the gates.
+Merged origin/main into crew/efmp-409-u04-author, union-resolved the sole conflict in specs/content/efmp-409/tasks.md keeping main's Unit 3 rows and this branch's Unit 4 rows, and left all 14 content gates passing.
 
 ## Outcome
 
-- Impact: fix for EFMP-409 Unit 4 by claude_crew (attempt 2).
-- Tests: `npm run build:content-status` then `npm run check:content`: all 14 content gates PASS.
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-409 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 44 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit `effebf395` on `crew/efmp-409-u04-author` resolving `specs/content/efmp-409/tasks.md` as a union of main's Unit 3 rows and this branch's Unit 4 rows; `npm run check:content` is green.
-- Decisions the team must respect: no Unit 4 English file, figure manifest, source, coverage or concept file was touched by the merge, so the existing G2 evidence (`specs/content/efmp-409/reviews/unit-04/G2/20261125T072435069Z-gates.json`) stayed valid and was not regenerated. The tracker's Unit 4 G2 row still points at that file.
+- Shipped / changed: Merged origin/main into crew/efmp-409-u04-author, union-resolved the sole conflict in specs/content/efmp-409/tasks.md keeping main's Unit 3 rows and this branch's Unit 4 rows, and left all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The merge auto-merged main's newer Unit 2 G4/G5/G6 rows over this branch's older wording; those rows now describe the completed Unit 2 Urdu translation.
-  - `tasks.md` now lists Units 1-4; do not drop main's Unit 3 rows when editing Unit 4 rows.
-  - banner `fig-U4-7` is still prompt-only and the Urdu mirror is a separate job; G3 still needs a qualified scholar for the Islamic material.
+  - `specs/content/efmp-409/tasks.md` now lists Units 1-4; keep main's Unit 3 rows when editing Unit 4 rows, and note main's Unit 2 G4/G5/G6 rows now describe the completed Urdu translation.
+  - banner `fig-U4-7` is still prompt-only, the Urdu mirror is a separate job, and G3 still needs a qualified scholar for the Islamic material.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): build:content-status PASS, check:content PASS (14/14)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
