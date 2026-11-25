@@ -59,27 +59,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u03-flashcards-conflict1, fix, claude_crew) Unit 3 G3/G5 stay open; G5 still owes the Motivation Urdu term call (محرک vs حوصلہ) and the topic-04 بیساکی / بیساکھی typo check.
 - (efmp-301-u03-flashcards, flashcards, claude) For Motivation I used the terminology.csv pair محرک, but Urdu topic-03 writes حوصلہ, and topic-01 also uses محرک for "stimulus". G5 should decide whether the Motivation card's Urdu term is right.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-301-u03-flashcards. The single conflict, specs/studio/flashcards-needed.json, was resolved by regenerating the coverage list: the merged tree has both authored decks (efmp-301/3 from this branch, efmp-301/6 from main), so both drop off the list, and `node scripts/build-studio-index.mjs --coverage` reproduces the committed file exactly. The merge is committed and all 14 content gates pass.
+Merged origin/main into crew/efmp-301-u03-flashcards, resolving the single flashcards-needed.json conflict by regeneration so efmp-301/3 and efmp-301/6 are both covered, committed the merge and its PHR, and left all 14 content gates green.
 
 ## Outcome
 
 - Impact: fix for EFMP-301 Unit 3 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates PASS).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 6 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-301-u03-flashcards and resolved the one conflict in specs/studio/flashcards-needed.json by regenerating it, so efmp-301/3 and efmp-301/6 are both covered and efmp-409/1 is newly listed.
-- Decisions the team must respect: the coverage list is generated state, not a hand-edited registry; regenerate rather than editing. G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into crew/efmp-301-u03-flashcards, resolving the single flashcards-needed.json conflict by regeneration so efmp-301/3 and efmp-301/6 are both covered, committed the merge and its PHR, and left all 14 content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - main did not change glossary.json, specs/decisions/log.md, specs/gaps.md or specs/content/terminology.csv, so the append-only registries had nothing to reconcile and no ID collision arose.
-  - Unit 3 G3/G5 stay open; G5 still owes the Motivation Urdu term call (محرک vs حوصلہ) and the topic-04 بیساکی / بیساکھی typo check.
-  - Running build-studio-index rewrites 22 tracked-but-gitignored static/studio/flashcards/*.json files; revert them before committing, as an earlier job noted.
+  - flashcards-needed.json is generated state; regenerate with `node scripts/build-studio-index.mjs --coverage` rather than hand-editing, and revert the static/studio/flashcards churn it also writes before committing.
+  - main did not touch the append-only registries, so the next conflict job should still check them, but this merge had no ID collisions.
+  - Unit 3 G3/G5 remain open; G5 still owes the Motivation Urdu term call (محرک vs حوصلہ) and the topic-04 بیساکی / بیساکھی typo check.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
