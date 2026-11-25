@@ -2,7 +2,7 @@
 
 > **Scope**: Document decision clusters, not individual technology choices. Group related decisions that work together (e.g., "Frontend Stack" not separate ADRs for framework, styling, deployment).
 
-- **Status:** Accepted by owner instruction on 2026-11-20 (decision D-2026-0094)
+- **Status:** Accepted by owner instruction on 2026-11-20 (decision D-2026-0094); amended by [ADR-0038](0038-crew-media-producer-lanes-and-per-producer-parallel-generation.md) (2026-11-25), point 6: jobs on one ledger never overlap, other media run in parallel on producer lanes
 - **Date:** 2026-11-20
 - **Feature:** [030-media-studio](../../specs/030-media-studio/spec.md)
 - **Amends:**
