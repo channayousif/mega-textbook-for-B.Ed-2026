@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed banner illustration fig-U1-4 for EFMP-408 Unit 1 in English and Urdu index pages, updated G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed banner illustration fig-U1-4 for EFMP-408 Unit 1 in English and Urdu index files, updated G2 gate evidence, and verified all 14 content gates pass cleanly.
 
 ## Outcome
 
@@ -85,7 +85,7 @@ Generated, inspected, and placed banner illustration fig-U1-4 for EFMP-408 Unit 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed banner illustration fig-U1-4 for EFMP-408 Unit 1 in English and Urdu index pages, updated G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed banner illustration fig-U1-4 for EFMP-408 Unit 1 in English and Urdu index files, updated G2 gate evidence, and verified all 14 content gates pass cleanly.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
