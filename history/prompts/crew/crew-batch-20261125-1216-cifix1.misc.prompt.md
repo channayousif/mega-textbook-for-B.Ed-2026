@@ -1,6 +1,6 @@
 ---
 id: crew-batch-20261125-1216-cifix1
-title: crew fix efmp-409-u04 figure-geometry
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-25
 surface: agent
@@ -11,17 +11,78 @@ user: crew
 command: crew fix
 labels: ["crew", "claude_crew", "fix"]
 links:
-  spec: specs/009-figure-rendering/spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
-  adr: history/adr/0012-figure-rendering-component-manifest-lifecycle-and-the-generate-figures-skill.md
+  adr: null
   pr: null
 files:
- - static/img/figures/efmp-409/unit-04/fig-U4-4.ur.svg
- - static/img/figures/efmp-409/unit-04/fig-U4-4.ur.dark.svg
+ - docs/semester-4/efmp-409/unit-05/index.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-01.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-02.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-03.mdx
+ - docs/semester-4/efmp-409/unit-05/unit-assessment.mdx
+ - docs/semester-4/efmp-409/unit-05/unit-teacher-notes.mdx
  - history/prompts/crew/crew-batch-20261125-1216-cifix1.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u04-translate.green.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u04-translate.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u05-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u05-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u05-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u05-author.green.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-04/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-04/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-04/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-04/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-04/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-04/unit-teacher-notes.mdx
+ - specs/content/efmp-409/concepts/unit-05.md
+ - specs/content/efmp-409/coverage/unit-05.md
+ - specs/content/efmp-409/figures/unit-05.banner.md
+ - specs/content/efmp-409/figures/unit-05.md
+ - specs/content/efmp-409/reviews/unit-04/G4/translation-handoff.md
+ - specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/validate-content.txt
+ - specs/content/efmp-409/sources/texts/inverge-2025-punjab.md
+ - specs/content/efmp-409/sources/texts/pie-1959-commission.md
+ - specs/content/efmp-409/sources/texts/pie-1979-policy.md
+ - specs/content/efmp-409/sources/texts/pie-1998-policy.md
+ - specs/content/efmp-409/sources/texts/saiyid-nihcr.md
+ - specs/content/efmp-409/sources/texts/wb-wdi-2026.md
+ - specs/content/efmp-409/sources/unit-05.md
+ - specs/content/efmp-409/tasks.md
+ - static/img/figures/efmp-409/unit-04/fig-U4-1.ur.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-1.ur.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-2.ur.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-2.ur.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-3.ur.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-3.ur.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-4.ur.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-4.ur.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-5.ur.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-5.ur.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-6.ur.dark.svg
+ - static/img/figures/efmp-409/unit-04/fig-U4-6.ur.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-3.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-5.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-5.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-6.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs --ci-fonts --changed origin/main
 ---
 
 ## Prompt
@@ -56,37 +117,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261124-1946-cifix1, fix, claude_crew) G3 and the Urdu mirror for Unit 3 remain open; this PR certifies nothing.
 - (batch-20261124-1845-cifix1, fix, claude_crew) CI measures changed SVGs with a DejaVu Sans fallback and no Noto Nastaliq; local default-font runs can pass a file CI fails, so always re-check with `--ci-fonts`.
 
+
 ## Response snapshot
 
-Wrapped the two over-wide Urdu headings in `static/img/figures/efmp-409/unit-04/fig-U4-4.ur.svg`
-("قانون کی نظر میں برابری" and "حقوق و فرائض میں توازن") onto two lines each, matching the two-line
-pattern already used in rows 2 and 6 of the same table, then regenerated its derived dark variant with
-`scripts/build-figure-variants.mjs`. The CI figure-geometry overlap is cleared.
+Re-broke the two over-wide Urdu headings in efmp-409 `fig-U4-4.ur.svg` onto two lines (and regenerated its derived dark variant) to clear the CI figure-geometry overlap, with all content gates passing.
 
 ## Outcome
 
-- Impact: fix for efmp-409 unit-04 Urdu figure geometry (attempt 1).
-- Tests: `npm run check:content` passed; `node scripts/measure-figure-text.mjs --ci-fonts` exits 0 on both
-  edited files and on the whole `--changed origin/main` set.
-- Files: 3 file(s), listed above.
-- Next prompts: the crew planner derives this unit's next stage from main after merge.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 65 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: the two-line re-break of the two long Urdu headings in `fig-U4-4.ur.svg`, with the
-  derived `.ur.dark.svg` regenerated; the CI figure-geometry overlap is cleared.
-- Decisions the team must respect: a `.dark.svg` is derived from its light source by
-  `scripts/build-figure-variants.mjs` and is never hand-edited. A Urdu-only figure edit does not stale a
-  unit's G2 evidence, because that evidence binds the English SVGs only.
-- Pending / next owner: CI's figure-geometry job still has to confirm on the PR. G3 and the unit-03 Urdu
-  mirror remain open; this PR certifies nothing.
-- Paperclip issues affected: none (work tracked by the crew board).
+- Shipped / changed: Re-broke the two over-wide Urdu headings in efmp-409 `fig-U4-4.ur.svg` onto two lines (and regenerated its derived dark variant) to clear the CI figure-geometry overlap, with all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - CI's figure-geometry job still has to confirm on PR #792, though the local `--ci-fonts --changed origin/main` run is the same measurement and exits 0.
+  - Urdu-only figure edits do not stale a unit's G2 evidence (it binds English SVGs only), so no gate-evidence refresh was needed; G3 and the unit-03 Urdu mirror remain open.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: two Urdu column headings were wider than their 170px column and printed over the
-  adjacent column; CI's DejaVu Sans fallback measurement caught what a default-font local run can miss.
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text --ci-fonts PASS.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
