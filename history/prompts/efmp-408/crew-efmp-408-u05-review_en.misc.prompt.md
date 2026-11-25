@@ -16,32 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-408/crew-efmp-408-u05-review_en.misc.prompt.md
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1.json
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/advisory-tracker-row.md
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/assessment-solutions.md
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/source-verification.md
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/summary.md
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/manifest.json
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/check-content.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkbloom-bands.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkconcept-graph.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkdepth-gate.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkdocs-sync.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkfigures.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkno-answer-keys.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkno-em-dash.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checksvg-style.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/measure-figure-text.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/render-review.txt
-  - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/validatecontent.txt
+ - history/prompts/efmp-408/crew-efmp-408-u05-review_en.misc.prompt.md
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1.json
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/advisory-tracker-row.md
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/assessment-solutions.md
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/check-content.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkbloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkconcept-graph.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkdepth-gate.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkdocs-sync.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkfigures.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkno-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checkno-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/checksvg-style.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/measure-figure-text.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/render-review.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/logs/validatecontent.txt
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/manifest.json
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/source-verification.md
+ - specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1/summary.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
 
 # Crew job efmp-408-u05-review_en
 
@@ -69,19 +67,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Added a validated advisory G3 escalate review of EFMP-408 Unit 5 with a hashed evidence bundle (gate logs, independent assessment solutions, source verification, render-review unavailable record) and an open advisory tracker row on `crew/efmp-408-u05-review_en`.
+Produced validated advisory G3 escalate review evidence report and bundle for EFMP-408 Unit 5 with all content gates passing.
 
 ## Outcome
 
-- Impact: review_en for EFMP-408 Unit 5 by agy (cycle 1).
-- Status: Completed advisory review, escalated due to render-review unavailability (deployed SHA differs from HEAD).
-- Disposition: escalate. G3 remains open, no self-sign or certification.
+- Impact: review_en for EFMP-408 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 19 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped: Advisory G3 review report at `specs/content/efmp-408/reviews/unit-05/G3/crew-efmp-408-u05-review_en-r1.json` with supporting evidence bundle.
-- Decisions: Unit 5 content, sources, coverage, and assessment pass all criteria. Visual accessibility is unverified because deployed SHA 7d1ba9655 differs from HEAD 7fb77de68 (unit 5 index.mdx and banner fig-U5-7). Disposition is escalate; G3 remains open.
-- Pending: Visual rendering inspection once main is deployed to production. Distractor clustering advisory (7 of 10 MCQ keys are B) for future authoring maintenance.
-- Affected issues: None.
+- Shipped / changed: Produced validated advisory G3 escalate review evidence report and bundle for EFMP-408 Unit 5 with all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Production deployment differs from reviewed HEAD on unit-05/index.mdx and fig-U5-7.webp; visual accessibility remains unverified until deployed.
+  - MCQ option key clustering noted (7 of 10 items keyed B); consider distractor shuffling during future authoring maintenance.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
