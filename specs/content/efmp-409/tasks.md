@@ -32,7 +32,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
-| Unit 5 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 5 | G4 ur-translation | ▢ | | Complete six-page draft Urdu mirror and six localized SVG pairs (with derived dark variants) prepared from English 63cfa5fd3; see reviews/unit-05/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 5 | G6 assets | ▣ | | Six English schematic SVGs (fig-U5-1 to fig-U5-6) placed with derived dark variants; measure-figure-text clean; banner fig-U5-7 prompt-only |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
