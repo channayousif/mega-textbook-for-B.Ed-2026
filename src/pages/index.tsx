@@ -299,6 +299,23 @@ export default function Home(): React.ReactElement {
           </div>
         </section>
 
+        {/* Feature 034 T018 (#805): invite readers to review. Applications are open to the public
+            (/app/reviewer/apply); approval stays with the admins. */}
+        <section className={s.band} id="review">
+          <div className={clsx(s.wrap, s.sec, s.reviewGrid)}>
+            <div>
+              <p className={clsx(s.eye, s.eyeOnTeal)}>{c.rv_eye}</p>
+              <h2 className={clsx(s.h2, s.h2OnTeal)}>{c.rv_h}</h2>
+              <p className={s.lead}>{c.rv_d}</p>
+            </div>
+            <div className={s.reviewCard}>
+              <Ticks items={c.rv_l} />
+              <Link className={clsx('button button--lg', s.btnAmber)} to="/app/reviewer/apply" onClick={track('review-apply')}>{c.rv_cta} <Icon name="arrow" size={20} accent={false} /></Link>
+              <p className={s.reviewNote}>{c.rv_note}</p>
+            </div>
+          </div>
+        </section>
+
         <section className={clsx(s.wrap, s.sec)}>
           <div className={s.final}>
             <div className={s.finalArt}><ClimbArt rtl={rtl} /></div>
