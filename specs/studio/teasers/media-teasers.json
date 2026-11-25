@@ -2759,6 +2759,92 @@
       "by": "claude",
       "notes": "Computer-lab scene, students in blue uniforms and head scarves, teacher in modest dress; no readable text, map or flag. QG2 0.714 only because whisper wrote online/social in Urdu script and joined zimmedar; every word of the line is spoken. One background student face is soft."
      }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-25T04:49:49.251Z",
+     "artifact_id": "32f1033d-c21b-4dd7-9cee-9e08e99d3ac0",
+     "media_id": "32f1033d-c21b-4dd7-9cee-9e08e99d3ac0",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-2-t1.mp4",
+     "sha256": "6065973425b2c2d8e03b74bd9d0529a41e4840fedae8c69d3d11cc3c55b3ec31",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.857,
+      "qg2_suggested": "pass",
+      "heard": "اس کورس میں آپ کرٹیکل, ڈیجیکل, میڈیا, ویجول اور انفرمیشن لٹریسی کو سمجھیں گے",
+      "missing": [
+       "digital",
+       "visual"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-2-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Dolly along desks, pupils in uniform (girl in white dupatta) with a newspaper, picture card and tablet; newspaper print and screen are blurred and unreadable, no camera UI, map or flag. QG2 0.857: whisper spelled digital and visual in Urdu script; the whole line is spoken."
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-25T04:56:07.120Z",
+     "artifact_id": "fa59eb1f-81f5-44bd-bb3c-91c9ac1e78f4",
+     "media_id": "fa59eb1f-81f5-44bd-bb3c-91c9ac1e78f4",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-4-t1.mp4",
+     "sha256": "790eb90e3aee52b980eeff6e3c1f7bd18fd30fc3f90dd4fb0b937daf940696a0",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.875,
+      "qg2_suggested": "pass",
+      "heard": "چھ یونٹس تاکہ آپ لرنر سینٹریڈ اور پروجیکٹ بیس طریقوں سے\nہاج کی لٹریسی پڑھا سکیں",
+      "missing": [
+       "based",
+       "آج"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-4-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Rising view over a school courtyard with pupil groups on mats arranging photo and drawing cards on chart paper; girls in uniform with dupattas, teacher in modest shalwar kameez moving between groups. No readable text, camera UI, map or flag. QG2 0.875: whisper heard project-based as بیس and آج as ہاج; the line is spoken in full."
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-25T05:00:41.238Z",
+     "artifact_id": "5e03eb2b-1a5f-4324-bfce-bf5370b94be0",
+     "media_id": "5e03eb2b-1a5f-4324-bfce-bf5370b94be0",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-5-t1.mp4",
+     "sha256": "816ee196f548bb97d54f816e04f61a79367eefe247774048e8288718b691e1b4",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.929,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑھیں\ntextbook.com.p کے پر\nلنک نیچے ہے",
+      "missing": [
+       "ڈاٹ"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-5-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "Presenter, dress, corridor and phone with blank screen are right and the line is spoken (QG2 0.929, only ڈاٹ dropped by whisper), but the closing close-up shows drawn viewfinder corner marks (camera interface)."
+     }
     }
    ],
    "history": [
