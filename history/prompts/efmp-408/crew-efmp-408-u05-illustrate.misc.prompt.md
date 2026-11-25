@@ -16,23 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-4/efmp-408/unit-05/index.mdx
-  - history/prompts/efmp-408/crew-efmp-408-u05-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-05/index.mdx
-  - specs/content/efmp-408/figures/unit-05.banner.md
-  - specs/content/efmp-408/reviews/unit-05/G2/20261125T163804968Z-gates.json
-  - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-bloom-bands.txt
-  - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-concept-graph.txt
-  - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-depth-gate.txt
-  - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-docs-sync.txt
-  - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-figures.txt
-  - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-no-answer-keys.txt
-  - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-no-em-dash.txt
-  - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/validate-content.txt
-  - specs/content/efmp-408/tasks.md
-  - static/img/figures/efmp-408/unit-05/fig-U5-7.webp
+ - docs/semester-4/efmp-408/unit-05/index.mdx
+ - history/prompts/efmp-408/crew-efmp-408-u05-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-05/index.mdx
+ - specs/content/efmp-408/figures/unit-05.banner.md
+ - specs/content/efmp-408/reviews/unit-05/G2/20261125T163804968Z-gates.json
+ - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-bloom-bands.txt
+ - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-concept-graph.txt
+ - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-depth-gate.txt
+ - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-docs-sync.txt
+ - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-figures.txt
+ - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-no-answer-keys.txt
+ - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/check-no-em-dash.txt
+ - specs/content/efmp-408/reviews/unit-05/G2/logs-20261125T163804968Z/validate-content.txt
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-05/fig-U5-7.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -70,23 +70,36 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u05-author-conflict1, fix, claude_crew) Unit 5's old G2 evidence `20261124T201707838Z-gates.json` is superseded but left in place as history; do not point the tracker back at it.
 - (efmp-408-u05-author-conflict1, fix, claude_crew) `tasks.md` now carries Units 1, 3, 5 and 6 together, so any future merge from main must not drop the Unit 3, 5 or 6 rows.
 
+## Feedback from the previous attempt
+worker exited -1:
+I have launched the git status check and am waiting for it to complete.
+root agent idle; waiting for 1 background task(s) to finish
+I have launched the illustration generator for topic scenes via `scripts/heavy.sh` and am waiting for the process to complete.
+I am waiting for the heavy task to complete. You will receive an update once it finishes.
+I have started the banner generation task via `scripts/heavy.sh` and will wait for it to complete.
+I have launched the retry of `scripts/heavy.sh node scripts/generate-illustration.mjs EFMP-408 5 --producer agy --banner` and will wait for it to complete.
+I am waiting for the illustration generation task to complete. You will be notified when it finishes.
+I have started the banner generation command via `scripts/heavy.sh` and will await notification when it finishes.
+
+
+
 ## Response snapshot
 
-Generated with gflow, inspected, and placed the Unit 5 raster banner illustration (fig-U5-7) in English and Urdu, updated the manifest to placed, refreshed G2 gate evidence, and passed all content gates.
+Generated with gflow, inspected, and placed the EFMP-408 Unit 5 raster banner illustration (fig-U5-7) across English and Urdu index pages, updated manifests to placed, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
-- Impact: illustrate for EFMP-408 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Impact: illustrate for EFMP-408 Unit 5 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with gflow, inspected, and placed the Unit 5 raster banner illustration (fig-U5-7) in English and Urdu, updated the manifest to placed, refreshed G2 gate evidence, and passed all content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Generated with gflow, inspected, and placed the EFMP-408 Unit 5 raster banner illustration (fig-U5-7) across English and Urdu index pages, updated manifests to placed, refreshed G2 gate evidence, and passed all content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G2 gate evidence for Unit 5 refreshed to 20261125T163804968Z-gates.json with full logs committed.
   - Banner figure fig-U5-7 is placed in English and Urdu index.mdx; Unit 5 G3 review and G5 review remain open for independent evaluation.
@@ -95,7 +108,7 @@ Generated with gflow, inspected, and placed the Unit 5 raster banner illustratio
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
