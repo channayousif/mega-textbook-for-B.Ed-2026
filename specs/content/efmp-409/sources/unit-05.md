@@ -1,0 +1,21 @@
+# EFMP-409 Unit 5 - Sources consulted
+
+Checked 2026-11-25. Prose is original; quotations are under 15 words and cited. Every external key has a bound note in `sources/texts/`. The content-spec's mapped readings `pie-1959-commission`, `pie-1979-policy`, `pie-1998-policy` and `saiyid-nihcr` were downloaded from the PIE listing and the journal and read directly; they are marked `open-access-substitute` because the content-spec lists them under `### Author-selected (open access)` rather than `### Guide-listed`. The guide's print anthologies (`provenzo-2006` and the other suggested texts) do not treat Pakistan's policies and were not available, so no claim rests on them.
+
+| Key | Citation | URL/DOI | Supports | Kind |
+|---|---|---|---|---|
+| pie-1959-commission | Government of Pakistan. (1959). *Report of the Commission on National Education* (the Sharif Commission). Ministry of Education. | https://drive.google.com/file/d/1OV8jX7stKz6WyuY5ysAoriH6OmwQ9yGn/view | U5-01, U5-02, U5-05; PDF downloaded from the PIE listing and read 2026-11-25 | open-access-substitute |
+| pie-1979-policy | Government of Pakistan. (1979). *National Education Policy and Implementation Programme 1979*. Ministry of Education, Islamabad. | https://drive.google.com/file/d/1w0BY3bjsDABvZYF_mqzQ_czCzqu_Xr5I/view | U5-01, U5-02, U5-06; PDF downloaded from the PIE listing and read 2026-11-25 | open-access-substitute |
+| pie-1998-policy | Government of Pakistan. (1998). *National Education Policy 1998-2010*. Ministry of Education, Islamabad. | https://drive.google.com/file/d/1wgok27S1TekT8JJMFSutDE3MFLcSoZO2/view | U5-03, U5-04, U5-06, U5-07, U5-08, U5-09; PDF downloaded from the PIE listing and read 2026-11-25 | open-access-substitute |
+| saiyid-nihcr | Saiyid, D. H. (1987). An evaluation of the Sharif, Hamoodur Rehman and Nur Khan reports on education in Pakistan. *Pakistan Journal of History and Culture, VIII*(1), 61-69. | https://pjhc.nihcr.edu.pk/wp-content/uploads/2020/09/3-An_Evaluation_of_the_SharifHamoodur_Rehman_and_Nur_Khan_reports_on_Edudcation_in_PakistanDushka_H._Saiyid.pdf | U5-04, U5-05, U5-06; scanned journal PDF read 2026-11-25 | open-access-substitute |
+| inverge-2025-punjab | Bukhari, S. T., Rafiq-uz-Zaman, M., & Bano, S. (2025). Analysing the impact of education policies and their implementation on the school education system in Punjab, Pakistan. *Inverge Journal of Social Sciences, 4*(1), 98-110. | https://doi.org/10.63544/ijss.v4i1.136 | U5-04, U5-08, U5-09; open-access PDF read and DOI checked against OpenAlex 2026-11-25 | open-access-substitute |
+| wb-wdi-2026 | World Bank. (2026). *World Development Indicators*: Pakistan, adult literacy rate (ages 15+) and gross primary enrolment, retrieved 2026-11-25. | https://api.worldbank.org/v2/country/PAK/indicator/SE.ADT.LITR.ZS?format=json ; https://api.worldbank.org/v2/country/PAK/indicator/SE.PRM.ENRR?format=json | U5-08; API values for 2000-2012 read 2026-11-25 | open-access-substitute |
+| nep-2009 | Government of Pakistan. (2009). *National Education Policy 2009*. Ministry of Education, November edition hosted by UNESCO. | https://media.unesco.org/sites/default/files/webform/r2e002/a9a9a5c08261acdc4d1cff930054a63dd4b44a6d.pdf | U5-09; bound by Unit 1 as `nep-2009`, re-cited here for the 2009 policy that followed the 1998-2010 policy | open-access-substitute |
+
+## Notes
+
+- `nep-2009` is bound by Unit 1 and re-cited here only for the fact that a new national policy was issued in 2009; its existing bound note already covers the passages used elsewhere.
+- The World Bank series are national estimates compiled by the UNESCO Institute for Statistics. They are reported as later evidence about the 1998-2010 targets, not as the policy's own measure; the unit says so where it cites them.
+- The guide-listed website `sindh-education-web` (http://www.sindheducation.govt.pk) did not resolve on 2026-11-25, so it is not bound and no claim rests on it.
+- The guide-listed print anthology `provenzo-2006` was not available to the author and is not bound; the unit's conceptual content on reports, policies and implementation is grounded in the three bound policy documents and the two bound scholarly articles instead.
+- The open-access floor is met by `inverge-2025-punjab`, whose DOI was checked against OpenAlex on 2026-11-25.
