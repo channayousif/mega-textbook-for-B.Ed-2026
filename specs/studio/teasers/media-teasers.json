@@ -2689,7 +2689,7 @@
    "id": "efmp-406",
    "locale": "ur",
    "kind": "short",
-   "state": "clips-qa",
+   "state": "qa3-pass",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -2706,6 +2706,17 @@
      "by": "claude",
      "date": "2026-11-25",
      "notes": "Passing takes: shot 1 t1, 2 t1, 3 t1, 4 t1, 5 t2 (5 t1 failed on drawn viewfinder marks)."
+    },
+    "qa1": {
+     "verdict": "pass",
+     "at": "2026-11-25T13:54:30Z",
+     "notes": "29.37 s, 1080x1920, -16.3 LUFS, -3.1 dBTP, no silence or black runs; nine-frame grid checked: captions fully visible, Urdu RTL correct, end card shows the exact address; thumbnail hook reads at phone size"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-25",
+     "notes": "list_videos: DQxspPM4QmE private on the channel, processed, title and description intact; teaser playlist PLCJn7gAoYIJs and custom thumbnail set (update_video success)"
     }
    },
    "clips": [
@@ -2901,9 +2912,29 @@
     {
      "state": "clips-qa",
      "at": "2026-11-25T08:52:29.199Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-25T13:53:57.023Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-25T13:54:05.643Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-25T13:55:35.073Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-25T13:57:26.255Z"
     }
    ],
-   "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b"
+   "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b",
+   "encoded_file": "/home/a2ahs/studio-media/teasers/efmp-406/ur/teaser.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/teasers/efmp-406/ur/teaser.thumb.jpg",
+   "youtube_id": "DQxspPM4QmE",
+   "uploaded_at": "2026-11-25T13:56:00Z"
   },
   {
    "key": "efmp-407-ur",
