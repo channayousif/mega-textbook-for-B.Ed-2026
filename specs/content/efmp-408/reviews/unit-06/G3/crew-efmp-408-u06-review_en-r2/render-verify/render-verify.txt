@@ -1,0 +1,33 @@
+render-verify - EFMP-408 Unit 6 G3 (cycle 2) - 2026-11-26
+
+The rendered-page and print inspection is UNAVAILABLE in this cycle.
+
+Reason: the crew brief permits scripts/render-inspect.mjs against the production host only
+when the production build IS the reviewed input. That requires
+  git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efmp-408/unit-06/ static/img/figures/efmp-408/unit-06/
+to exit 0. It exits 1.
+
+deployed SHA: 074ab11456b999cf5d3c9b8aa6e603b2de834eb5
+HEAD:         83b5dd5ec49f76485d955f71838470fa83702697
+
+Changed paths:
+docs/semester-4/efmp-408/unit-06/topic-01.mdx
+docs/semester-4/efmp-408/unit-06/topic-02.mdx
+docs/semester-4/efmp-408/unit-06/unit-assessment.mdx
+static/img/figures/efmp-408/unit-06/fig-U6-4.dark.svg
+static/img/figures/efmp-408/unit-06/fig-U6-4.svg
+static/img/figures/efmp-408/unit-06/fig-U6-4.ur.dark.svg
+static/img/figures/efmp-408/unit-06/fig-U6-4.ur.svg
+static/img/figures/efmp-408/unit-06/fig-U6-5.dark.svg
+static/img/figures/efmp-408/unit-06/fig-U6-5.svg
+
+So the CI-built production site is not this submission and was not inspected.
+The brief also forbids npm run build, a dev server and the Playwright e2e suite for a
+review job, so no local render was produced as a substitute.
+
+Consequence: narrow-viewport scrolling, A4 print clipping and visual accessibility of the
+CURRENT bytes are unverified. Structural checks (heading order, alt text, manifest
+consistency, SVG glyph geometry) were run from source and pass.
+
+Changed images can be served stale for up to 30 days, so a missing or mismatched asset
+is treated as unverified, not as a content defect.

@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-408",
+  "unit_no": 6,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:claude-crew",
+  "author_run_id": "agy:crew-efmp-408-u06-repair_en",
+  "reviewer_run_id": "crew-efmp-408-u06-review_en-r2",
+  "model": "Claude Code (model identity LongCat-2.5; exact deployment version unavailable)",
+  "started_at": "2026-11-25T22:19:00Z",
+  "completed_at": "2026-11-25T22:40:18.673Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/3rd 2026.pdf": "f0de34d0a166d0306afbb87aaca2caa58a077ca6024b26e192b6aa02e09eb028",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "22b4aaece61b7116cee92b42ad74f152dd56fbe5e682ddfdc1ba3174668793f3",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-4/efmp-408/course-overview.mdx": "91fbd14383ffd82c6f0396b03f2f99a0758e61fc842b0fa5004d09212824a631",
+    "docs/semester-4/efmp-408/unit-06/index.mdx": "79bb495a4ddc1cacada322ed96f76f27dfbc6f7fbb2b8907af4d12ca8d3de0f9",
+    "docs/semester-4/efmp-408/unit-06/topic-01.mdx": "d7b6fe369126fd833f31d7a94c72484feb1ac5065cd62c21d3236af008d36f15",
+    "docs/semester-4/efmp-408/unit-06/topic-02.mdx": "2afa6e9ef8d9a32933e511c1114f60e34ccf94d0426653a3f3a95380c0b4ea12",
+    "docs/semester-4/efmp-408/unit-06/topic-03.mdx": "b463f8b9a7a9726c90b40096d40c969712f36d95ab1e48a7a2d65dd6fafdec81",
+    "docs/semester-4/efmp-408/unit-06/topic-04.mdx": "a30d4d8eb57b5f9cb504189b719667cdd4369216e49e6ec269d4e153bb213126",
+    "docs/semester-4/efmp-408/unit-06/unit-assessment.mdx": "81e0dc13c317f3dbd313a1a29180a647234cf6c617cb5ec7b54af1c8e81d0527",
+    "docs/semester-4/efmp-408/unit-06/unit-teacher-notes.mdx": "4a8c72cb5461255b43bb5e0bbd702d07608a0d52b676bc74c2ae8df7767da03b",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "33e46f435128a99f53a38c597b289d730c85b398a7f27b068392552540128622",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "22eaaee128cd13f1756a1c1d4037a8ed7143cfc9f0428c12f49a8b4752fb7f93",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-408/concepts/unit-06.md": "fefdb32f57b19f94c5bb0c93e318fcd6fc6f2ce70db55ebc69fbc4912e68e719",
+    "specs/content/efmp-408/content-spec.md": "763c4aafd0576db24236fa01bfea5433060cefbc0b4b5b86ac09072befc1c9fc",
+    "specs/content/efmp-408/coverage/unit-06.md": "29fbfc7aac3bb4fe785196d525e18c34c229fb89ab7d884492d5fa72228c139f",
+    "specs/content/efmp-408/figures/unit-06.banner.md": "fbf40ceec582242ee118985422683adf8c6f2517d03110af7afa64738c3d73ee",
+    "specs/content/efmp-408/figures/unit-06.md": "8e73ba7dbc1a86430db2e32a7d516bf638b2bc809e7da8670a723343501b659f",
+    "specs/content/efmp-408/sources/texts/npstp-2009.md": "6ce8b9b5ef2312056da1278f0aba4f8dfb5c3d222a36f93dfd7b2d1c3066ee42",
+    "specs/content/efmp-408/sources/texts/seifert-sutton-2009.md": "980a45c9e9c2c62269f943b6d6a4e426b213ba8eeb615a24d44fdd743f02a52a",
+    "specs/content/efmp-408/sources/unit-06.md": "f98a0e0d6b5b00a89da48308eca8f8a4e387b5c06e2911eb667d64c00c0b28ed",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/efmp-408/unit-06/fig-U6-1.dark.svg": "532291cf0cd4c710d9108b3955abed020f850d13e7b1dcb44c8080303ad6b5c2",
+    "static/img/figures/efmp-408/unit-06/fig-U6-1.svg": "ade99d30e47b6d30ca60e78bac45aaea7d44aa880782af894f2ada19feb7b121",
+    "static/img/figures/efmp-408/unit-06/fig-U6-2.dark.svg": "ce5d0452a5942e0197b145b4f438ded57c1a2d9e104bd0cc1cd0cd37353fc397",
+    "static/img/figures/efmp-408/unit-06/fig-U6-2.svg": "4134007d4efa5b06b14ae0688fa3de6048bf5daa6cf2bb22073bd79fa928c032",
+    "static/img/figures/efmp-408/unit-06/fig-U6-3.dark.svg": "f7f696a6e50c0aaf99dda6ff88524c9b38b1541a1a4217514d7f81c8d60c12e5",
+    "static/img/figures/efmp-408/unit-06/fig-U6-3.svg": "3680701c794ff715c1fa730e49dc34476a64e934abac643bd6ae032ddd926381",
+    "static/img/figures/efmp-408/unit-06/fig-U6-4.dark.svg": "9ee2c2b7ce1fab50de4e098b2d5d089b4ed7a114de5f1c5aa56c99caa6ac1bdb",
+    "static/img/figures/efmp-408/unit-06/fig-U6-4.svg": "0ca6ea5985b56a91642dcd6339bf0f1dad9c2afb8918d09d0e9912714fa58862",
+    "static/img/figures/efmp-408/unit-06/fig-U6-5.dark.svg": "e0a3c9fa929cd0ebdde96291613edd47af35cbb6dbcf62ab98855f2f1229bd27",
+    "static/img/figures/efmp-408/unit-06/fig-U6-5.svg": "d1aed47ba0d6cd3311b4e109a4b47a9b1a7af29d0c66ce30bdeb5a9a04360fd0",
+    "static/img/figures/efmp-408/unit-06/fig-U6-6.dark.svg": "c4be37686a200ae15366923dc17c2c42aef73fa1a60772ba4319edf58550b9e2",
+    "static/img/figures/efmp-408/unit-06/fig-U6-6.svg": "c037a503a790de7c25860e7c86d047ebe6617f15c522769ba632ed95bf736157",
+    "static/img/figures/efmp-408/unit-06/fig-U6-7.dark.svg": "347376681502b4f406bdb5a321b06e9a2f7edee2fd889f80520572c46dfbb46a",
+    "static/img/figures/efmp-408/unit-06/fig-U6-7.svg": "6272d059d7eb3cede58aa67af9fe8c291ab07c4d897c94d2af93c925006ebd63",
+    "static/img/figures/efmp-408/unit-06/fig-U6-8.dark.svg": "5a1a659647a6c18f01266fcdd90f007c77bb0cb8cb6450c3fc0da1c0076bff5f",
+    "static/img/figures/efmp-408/unit-06/fig-U6-8.svg": "0dea40392007e5e503e70f3e4402f1218a0c30d69f5c866bbe34b52f74c18c00",
+    "static/img/figures/efmp-408/unit-06/fig-U6-9.webp": "440b6222922af8e9cb2cb9e9f05f7903ef30300374080018cd1039b34e434506"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt:266-277 allots Week 13 (Standardized Testing), Week 14 (Ethical Issues) and Week 15 (Modern Trends) to EFMP-408; specs/content/efmp-408/content-spec.md:345-360 carries the same twelve leaves as U6-01..U6-12 with frontmatter status: approved.",
+        "specs/content/efmp-408/content-spec.md:358-360 derives U6-10..U6-12 from licence objective 5 under owner decision D-2026-0093 item 6; topic-04.mdx:27-29 carries the visible Curriculum enrichment topic banner required by content-spec.md:373-375.",
+        "specs/content/efmp-408/coverage/unit-06.md:5-33 maps every sub-topic to a real ### heading that exists and teaches it: topic-01.mdx:39,59,79; topic-02.mdx:39,54,76; topic-03.mdx:39,52,68; topic-04.mdx:45,60,93."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "All four cycle-1 source findings re-checked and closed: sources/unit-06.md:12 carries a no-external-source row naming NTS 2002, NEAS Grades 4 and 8, STEDA and the Sindh Teaching Licence, FPSC CBT, SEF and PEAC, CIE O/A Levels and IB, the CAT mechanism and academic integrity classifications, with Supports = U6-01, U6-03, U6-05, U6-06, U6-08, U6-10; coverage/unit-06.md grounds the same six IDs; specs/gaps.md:3588-3593 records escalation G-2026-236.",
+        "topic-01.mdx:96 no longer states that Pakistan participated in TIMSS 2019; fig-U6-4.svg, fig-U6-4.dark.svg, fig-U6-4.ur.svg and fig-U6-4.ur.dark.svg now read International surveys instead of TIMSS participation. The bound TestDevEval_Sept13.txt:655-675 names TIMSS, PISA, NEAS, ASER, AKU-EB and FBISE as international and national assessment systems, supporting the remaining general description.",
+        "topic-02.mdx:56 and :78 no longer cite HEC (2012); a full-text search of the bound ClassroomAssess_Sept13.txt still returns no cheating, academic integrity, confidentiality or privacy passage. topic-02.mdx:78 keeps NPSTP (2009), supported by sources/texts/npstp-2009.md notes 2 and 4. topic-02.mdx:41 keeps HEC (2012) for the fairness definition, supported by ClassroomAssess_Sept13.txt:405-411.",
+        "sources/unit-06.md:7 drops U6-05 and U6-06 from the hec-2013-classroom-assessment scope and coverage/unit-06.md follows, so no source scope is overstated. check:depth-gate exit 0 includes the coverage-to-sources scope agreement.",
+        "scheerens-2003 remains declared unverifiable at sources/unit-06.md:15 under D-2026-0001 and is used only for systemic evaluation, assessment monitoring and institutional cultures, which the declaration names (topic-01.mdx:61; topic-04.mdx:95).",
+        "See source-verification.md for the passage-level re-reads."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/efmp-408/coverage/unit-06.md:5-33 maps U6-01..U6-12; the content-spec Topic list (content-spec.md:364-369) partitions the same IDs across the four topic files with none assigned twice and none unmapped.",
+        "Reading minutes: index 3 + topic-01 18 + topic-02 17 + topic-03 17 + topic-04 18 + assessment 22 + notes 4 = 99, inside the approved 85-115 band (check:depth-gate exit 0).",
+        "Assessment spread: 6.1 MCQ 1-3 / RRQ 1-2 / ERQ 1; 6.2 MCQ 4-5 / RRQ 3-6 / ERQ 2; 6.3 MCQ 6-7 / RRQ 7-8 / ERQ 3; 6.4 MCQ 8-10 / RRQ 9-10 / ERQ 4-5 (specs/content/efmp-408/concepts/unit-06.md:7-17)."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "All 10 MCQs solved independently before the supplied key was read; the derived key matches the supplied key on every letter (assessment-solutions.md).",
+        "Cycle-1 key defect closed: the key is now A3 / B2 / C2 / D3 (items 1-10 = A, C, D, B, A, D, C, B, A, D), so the all-B strategy that scored 9/10 in cycle 1 now scores 2/10 and no option letter is empty (unit-assessment.mdx:126-135).",
+        "Cycle-1 RRQ band defect closed: RRQ 6 is now tagged Understand and RRQ 9 Analyze (unit-assessment.mdx:106,109), inside the RRQ band Understand to Analyze (specs/content/style-guide.md:248); their mark schemes were updated to match (lines 159-173).",
+        "RRQ model answers and mark schemes and both ERQ rubrics were read and checked: point-by-point marks, performance descriptors that require higher-order work, and no conflicting keys. check:no-answer-keys exit 0.",
+        "Residual advisory A-1: the keyed option is the longest or tied-longest option in 5 of the 10 MCQs, so a weak length cue remains."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "render-review unavailable (exit 1): deployed SHA 074ab11456b999cf5d3c9b8aa6e603b2de834eb5 differs from HEAD 83b5dd5ec49f76485d3c9b8ae6e603b2de834eb5 on docs/semester-4/efmp-408/unit-06/topic-01.mdx, topic-02.mdx, unit-assessment.mdx and five unit-06 SVGs, so the production build is not the reviewed input and no browser or print inspection was run (logs/render-review.txt, render-verify/render-verify.txt).",
+        "Structural checks from source: all nine Figure uses carry non-empty descriptive alt text; every topic file carries the nine canonical cycle headings in order; heading order is monotonic in all seven files; the unit tables are rendered by the static display:block / overflow-x:auto rule in src/css/custom.css, so each table is its own scroll container.",
+        "measure-figure-text exit 0 on all 16 bound unit SVGs (logs/measure-figure-text.txt); no glyph overflow, intersection or wordmark collision reported. The cycle-1 fig-U6-5 title defect is closed: the title is now 48 characters and the widest text ends at 768.4px in a 780px viewBox.",
+        "360px scrolling, A4 print and figure clipping remain uninspected for the current bytes. The cycle-1 render passed on the pre-repair bytes and is not evidence about this submission."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "All seven English files read in full. The register holds for a fresh HSC/intermediate graduate: short single-idea paragraphs, a Mirpurkhas/Larkana/Hyderabad/Sukkur classroom vignette before each abstraction, and technical terms defined at first use (standardized test at topic-01.mdx:41, norming at :49, construct-irrelevant barrier at topic-02.mdx:43, CAT at topic-03.mdx:59, competency-based assessment at :83, NPSTP Standard 5 dimensions at topic-04.mdx:68-91).",
+        "check:no-em-dash exit 0 (logs/check-no-em-dash.txt); validate:content exit 0 (logs/validate-content.txt).",
+        "The cycle-1 HEC attribution and TIMSS sentence rewrites keep the register: topic-02.mdx:56 now states the cheating claim without a citation and topic-01.mdx:96 states the TIMSS description in the same plain register as the surrounding sentences."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "The nine-part learning cycle is intact and ordered in all four topic files (check:depth-gate exit 0); each carries a classroom situation, a named activity with grouping, time and materials, retrieval checks, a self-assessment checklist, a practicum task, a summative task with a rubric and a further-reading list.",
+        "The approved misconceptions (content-spec.md:338-339) are all named and corrected: standardized means the same paper for everyone (topic-01.mdx:51-52), digital assessment is automatically more objective (topic-03.mdx:49-50), continuous assessment means more tests (topic-03.mdx:75-76); topic-02.mdx:51-52 adds the equality-versus-equity misconception and unit-teacher-notes.mdx:38-47 gives handling strategies.",
+        "Activities are feasible in the stated Pakistani/Sindhi context (pairs or groups of three to four, 25-30 minutes, chart paper, board and printed cases only), and the practicum tasks are realistic for a trainee with no authority. Progression runs classroom situation to explanation, activity, retrieval, reflection and assessment."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Render and print inspection unavailable. Deployed SHA 074ab11456b999cf5d3c9b8aa6e603b2de834eb5 differs from HEAD 83b5dd5ec49f76485d3c9b8ae6e603b2de834eb5 on the unit English directory and figure folder, so the CI-built production site is not the reviewed input; the brief also forbids building or serving the site from a review job. render-review is recorded as unavailable (exit 1) in logs/render-review.txt and render-verify/render-verify.txt. Narrow-viewport scrolling, A4 print clipping and visual accessibility of the current bytes remain unverified, so accessibility cannot pass and the report escalates."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Residual MCQ option-length cue (unit-assessment.mdx:39-97). The key is now A3 / B2 / C2 / D3 and the cycle-1 all-B giveaway is gone, but the keyed option is still the longest or tied-longest option in 5 of the 10 items (items 1, 3, 4, 6, 8), and it is the shortest in item 2. The item-writing rule asks for similar length with no giveaway. REPAIR (optional): vary option length further so the correct option is not disproportionately the longest."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Cycle-1 B-1 (blocking, MCQ key A0 / B9 / C1 / D0 with the keyed option longest in 9 of 10 items) is resolved by the repair: the key is A3 / B2 / C2 / D3 and option lengths were rebalanced in English and Urdu."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Cycle-1 B-2 (blocking, undeclared missing sources for NTS 2002, NEAS Grades 4 and 8, STEDA, FPSC, SEF, PEAC, CIE/IB and the Sindh Teaching Licence claim) is resolved: sources/unit-06.md:12 records the no-external-source row, coverage grounds the same six sub-topics, and G-2026-236 is escalated in specs/gaps.md."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Cycle-1 S-2 (uncertain, TIMSS 2019 participation unverified) is resolved: the claim is removed from topic-01.mdx:96 and from fig-U6-4.svg and its dark and Urdu variants."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Cycle-1 A-2 (RRQ 6 and RRQ 9 tagged Remember below the RRQ floor) is resolved: RRQ 6 is tagged Understand and RRQ 9 Analyze, with their mark schemes updated."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Cycle-1 A-3 (HEC cited at topic-02.mdx:56 and :78 for content absent from the bound guide) is resolved: both citations were removed and the source scope updated."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Cycle-1 A-4 (fig-U6-5 title ending at 779.1px in a 780px viewBox) is resolved: the title is shortened and measure-figure-text reports the widest text at 768.4px."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-content.txt"
+    },
+    {
+      "name": "check:bloom-bands",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-bloom-bands.txt"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-concept-graph.txt"
+    },
+    {
+      "name": "check:svg-style",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-svg-style.txt"
+    },
+    {
+      "name": "check:source-floor",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-source-floor.txt"
+    },
+    {
+      "name": "check:licence",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-licence.txt"
+    },
+    {
+      "name": "check:pipeline-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-pipeline-gate.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/measure-figure-text.txt"
+    },
+    {
+      "name": "build:content-status",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/build-content-status.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/advisory-tracker-row.md": "a13bf5b308b5e0c1a13d7fa4d3d81e06ac63a0ef064e5fdb69aab2596ba86b8d",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/assessment-solutions.md": "afaaf3c36c03a1bd0008ede6fe646d8b5d3af8cb2445005865c0a14035e2f10f",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/limitations.md": "292beeaf015b8523bda2293fed395346868e7e2f827c8a9179688f5dd403dcab",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/build-content-status.txt": "da0bec13ad04bc5ec06e98cef1148b906ae6db7899caa6fc565fd7e134174b6e",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-bloom-bands.txt": "847c547bf1d310568efe6ca3dde6b1ebf1eb6d1e2207f2a453f48608ff059b0d",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-concept-graph.txt": "489b5f2c09d24d15206c56f4f092cee19b9f6c4fa91d61bae33abf82b46fba8a",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-content.txt": "fce75ca9e1e86059a8e468bb78d9a297c29c5e681b1288762a979bb535637a99",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-licence.txt": "ade26e02bda2729fc5d43795060eab808f0936fb3dba30039e031b7a23ade82e",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-pipeline-gate.txt": "283c5ae20a49b3de4670f1013046363f9bee02311388d8acb4b1c3af79ffe6ca",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-source-floor.txt": "308385761580e55e826f09691a2c9bc7955bfecbf49d04c5b7c2ec3179c143f7",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/check-svg-style.txt": "3faafcc97633076a9864505d72e7ee1052b8b6b95e94709e1a60d52119a2bff6",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/input-verification.txt": "17a27501af19c2832ba551497415fa3c378ea5a0d9a1fd62c8ad56ca52dab19a",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/measure-figure-text.txt": "86b8cb160febee04055e323ee22d491fc8d6319ee5e3899bb8105d35ed96e651",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/prepare.txt": "208351abec618df5d16b0c7c1781fcda35fe9db65139efba42896469c9bb6475",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/render-review.txt": "f16e6863a9f7e9a8bd0f3d651c6c4ffc50271011b195394b41461dec43c1b5fb",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/logs/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/make-report.mjs": "a140afd49e88d82dfaec89721ff75775b7c78b326739fa46ce5643b940900314",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/render-verify/render-verify.txt": "f16e6863a9f7e9a8bd0f3d651c6c4ffc50271011b195394b41461dec43c1b5fb",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/source-verification.md": "efe8a3082dd24dc808e413f59d215c4ec92bc6cc024dd3fb8702d9096b51fbb1",
+    "specs/content/efmp-408/reviews/unit-06/G3/crew-efmp-408-u06-review_en-r2/summary.md": "dbdbc9c938b59d819c2da18fba552e36bd6165f314693705680b33d519876010"
+  },
+  "reviewed_commit": "83b5dd5ec49f76485d3c9b8aa6e603b2de834eb5",
+  "limitations": [
+    "Render and print inspection was not performed: deployed SHA 074ab11456b999cf5d3c9b8aa6e603b2de834eb5 differs from HEAD 83b5dd5ec49f76485d3c9b8aa6e603b2de834eb5 on the unit English directory and figure folder, and the brief forbids a build, dev server or Playwright e2e run from a review job. accessibility is therefore unverified and the report escalates.",
+    "No parent-prepared frozen handoff or runtime provenance was supplied; the manifest was prepared locally over a clean tree and re-verified against a fresh inputManifest() computation (105 inputs, 0 mismatches). The author identity is taken from history/prompts/efmp-408/crew-efmp-408-u06-repair_en.misc.prompt.md.",
+    "The Urdu mirror and the .ur.svg variants are G5 scope. The repair edits were spot-checked for parity (MCQ key, RRQ 6 and 9 demand, TIMSS removal, HEC citation removal) but were not reviewed as Urdu content, and they are not in the G3 manifest.",
+    "No new external retrieval of NTS, NEAS, TIMSS, PISA, STEDA, FPSC, SEF, PEAC, CIE, IB or the HEC PDFs was attempted. External-body facts are accepted as declared under no-external-source and escalated in specs/gaps.md; they remain unverified.",
+    "specs/gaps.md and specs/decisions/log.md are not in the G3 manifest. specs/gaps.md was read as the escalation record for G-2026-236; no decision ruling is cited, so the report carries no rulings block.",
+    "Advisory only: this report does not certify the unit, sign anything, append a tracker row, change translation_status, alter the registry or publish."
+  ]
+}
