@@ -9,15 +9,69 @@ feature: efmp-409
 branch: crew/efmp-409-u03-author
 user: crew
 command: crew fix
-labels: ["crew", "claude_crew", "conflict"]
+labels: ["crew", "claude_crew", "fix"]
 links:
   spec: specs/content/efmp-409/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - docs/semester-4/efmp-409/unit-03/index.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-01.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-02.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-03.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-04.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-05.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-06.mdx
+ - docs/semester-4/efmp-409/unit-03/unit-assessment.mdx
+ - docs/semester-4/efmp-409/unit-03/unit-teacher-notes.mdx
  - history/prompts/efmp-409/crew-efmp-409-u03-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-409/crew-efmp-409-u03-author.green.prompt.md
+ - specs/content/efmp-409/concepts/unit-03.md
+ - specs/content/efmp-409/coverage/unit-03.md
+ - specs/content/efmp-409/figures/unit-03.banner.md
+ - specs/content/efmp-409/figures/unit-03.md
+ - specs/content/efmp-409/reviews/unit-03/G2/20261125T070051288Z-gates.json
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/validate-content.txt
+ - specs/content/efmp-409/sources/texts/cheddadi-1994-ibn-khaldun.md
+ - specs/content/efmp-409/sources/texts/iqbal-cyber-library.md
+ - specs/content/efmp-409/sources/texts/sep-bertram-rousseau.md
+ - specs/content/efmp-409/sources/texts/sep-hildebrand-dewey.md
+ - specs/content/efmp-409/sources/texts/sep-kraut-plato.md
+ - specs/content/efmp-409/sources/texts/sep-shields-aristotle.md
+ - specs/content/efmp-409/sources/unit-03.md
  - specs/content/efmp-409/tasks.md
+ - static/img/figures/efmp-409/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-1.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-10.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-10.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-11.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-11.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-12.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-12.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-2.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-3.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-4.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-5.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-6.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-7.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-7.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-8.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-8.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-9.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-9.svg
 tests:
  - npm run check:content
 ---
@@ -58,32 +112,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Merged origin/main (Unit 2 author job and efmp-301 flashcards) into crew/efmp-409-u03-author; the only conflict was specs/content/efmp-409/tasks.md, resolved by keeping main's Unit 1 and Unit 2 rows plus this branch's Unit 3 rows and combining the reading estimates and author notes, committed as 4690ba5e5 with npm run check:content green (all 14 gates pass).
+Merged origin/main into crew/efmp-409-u03-author and resolved the sole conflict in specs/content/efmp-409/tasks.md so the tracker keeps Unit 1, 2 and 3 rows, with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: conflict fix for EFMP-409 Unit 3 by claude_crew (attempt 1).
-- Tests: npm run check:content passed in the job worktree after the merge.
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-409 Unit 3 by claude_crew (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 56 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-409-u03-author and resolved the single conflict in specs/content/efmp-409/tasks.md so the tracker carries Unit 1, Unit 2 and Unit 3 rows (main's order then the branch's, exact duplicates dropped); npm run check:content passes all 14 gates.
-- Decisions the team must respect: the merged tracker keeps both sides' Unit 1 reading-estimate paragraph once (exact duplicate) and keeps both author-note paragraphs; no G3/G5 status was changed and no human initials were used.
+- Shipped / changed: Merged origin/main into crew/efmp-409-u03-author and resolved the sole conflict in specs/content/efmp-409/tasks.md so the tracker keeps Unit 1, 2 and 3 rows, with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Neither side touched glossary.json, specs/decisions/log.md, specs/gaps.md or specs/content/terminology.csv in this merge, so no ID remapping was needed.
-  - Unit 3 G2 evidence still points at reviews/unit-03/G2/20261125T070051288Z-gates.json; the merge did not alter Unit 3's docs, figures manifest, sources, coverage or concepts, so no fresh evidence run was required.
-  - Banner illustration fig-U3-13 remains prompt-only; G3 Islamic-content scholar check and the 13 authored Urdu concept labels remain open for G5.
+  - No shared registry was touched by either side, so no ID remapping was needed.
+  - Unit 3 G2 evidence still points at reviews/unit-03/G2/20261125T070051288Z-gates.json; no English unit file, figure manifest, source, coverage or concept changed, so no fresh evidence run was required.
+  - Banner fig-U3-13 stays prompt-only; the G3 Islamic-content scholar check and the 13 authored Urdu concept labels remain open for G5.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
