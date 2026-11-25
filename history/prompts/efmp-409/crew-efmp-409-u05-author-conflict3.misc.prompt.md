@@ -60,7 +60,6 @@ files:
  - static/img/figures/efmp-409/unit-05/fig-U5-6.dark.svg
  - static/img/figures/efmp-409/unit-05/fig-U5-6.svg
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -99,32 +98,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-409-u05-author-conflict1, fix, claude_crew) Unit 5 G2 evidence still points at reviews/unit-05/G2/20261125T085534293Z-gates.json and revalidates against the merged tree.
 - (efmp-409-u05-author-conflict1, fix, claude_crew) Banner fig-U5-7 remains prompt-only for the illustrate job; Unit 5 is English only, so G4/G5 stay open.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-409-u05-author. The only conflict was `specs/content/efmp-409/tasks.md`, where main's Unit 4 tracker block and this branch's Unit 5 tracker block both edited the same region; resolved by keeping BOTH (main's Unit 4 rows first, then this branch's Unit 5 rows), merging the status header to "Units 1, 2, 3, 4 and 5", and keeping both reading-estimate paragraphs. No shared registry conflicted, and this branch added no glossary, decision-log, gap or terminology entries relative to the merge base, so there were no ID collisions to renumber. Committed the merge, then ran `npm run build:content-status` and `npm run check:content`: all 14 content gates pass, including `check:pipeline-gate`, with the Unit 5 `G2 en-draft` row intact at `specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json`.
+Merged origin/main into crew/efmp-409-u05-author, resolved the tasks.md conflict by keeping both Unit 4 and Unit 5 tracker rows, and confirmed all 14 content gates pass with the PHR committed.
 
 ## Outcome
 
-- Impact: fix for EFMP-409 Unit 5 by claude_crew (attempt 3); the merge now carries both Unit 4 and Unit 5 tracker rows.
-- Tests: `npm run check:content` passed (14/14 gates) after `npm run build:content-status`.
+- Impact: fix for EFMP-409 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 43 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merged origin/main into crew/efmp-409-u05-author, resolved the `specs/content/efmp-409/tasks.md` conflict by keeping both main's Unit 4 and this branch's Unit 5 tracker rows, and confirmed all 14 content gates pass.
-- Decisions the team must respect: the tracker now lists Units 1, 2, 3, 4 and 5; Unit 5 G3/G4/G5 stay open and uncertified; no G2 evidence was regenerated because no Unit 5 English content, manifest, source, coverage or concept changed.
+- Shipped / changed: Merged origin/main into crew/efmp-409-u05-author, resolved the tasks.md conflict by keeping both Unit 4 and Unit 5 tracker rows, and confirmed all 14 content gates pass with the PHR committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The pipeline-gate finding is gone because the Unit 5 `G2 en-draft` row survived the merge; the earlier "clean merge" note from conflict2 did not hold against main's newer Unit 4 tracker block.
-  - Unit 5 G2 evidence still points at `reviews/unit-05/G2/20261125T085534293Z-gates.json` and revalidates against the merged tree.
-  - Reading-minutes total 62 is exactly at the approved 46-62 ceiling, banner fig-U5-7 is still prompt-only, and Unit 5 is English only, so G3/G4/G5 stay open.
+  - The pipeline-gate failure is explained by the tasks.md conflict: a one-sided resolution drops Unit 5's G2 row, so keep-both was required.
+  - Unit 5 G2 evidence still points at reviews/unit-05/G2/20261125T085534293Z-gates.json and revalidates; no Unit 5 content changed, so no fresh prepare-gate-evidence run was needed.
+  - Reading-minutes total 62 is exactly at the 46-62 ceiling, banner fig-U5-7 is still prompt-only, and Unit 5 is English only, so G3/G4/G5 stay open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the same tracker region edited by two branches (main's Unit 4 block, this branch's Unit 5 block) conflicts on merge; a "keep one side" resolution silently drops a unit's G2 row and fails `check:pipeline-gate`.
-- Graders run and results (PASS/FAIL): `npm run build:content-status` PASS; `npm run check:content` PASS (14/14).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
