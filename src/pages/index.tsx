@@ -61,11 +61,18 @@ const TITLES: Record<string, { en: string; ur?: string }> = {};
   }
 })(catalog);
 
-function Scene({ id, locale, className, eager }: { id: SceneId; locale: Locale; className?: string; eager?: boolean }): React.ReactElement {
+/** Feature 034 T015 (#802): every landing picture wider than 640 px has a `-640w.webp` copy next to
+ *  it (a new path, so the 30-day static cache never serves a stale file); phones at up to 2x
+ *  pixel density pick the smaller one through srcset. */
+const small = (src: string): string => src.replace(/\.webp$/, '-640w.webp');
+
+function Scene({ id, locale, className, eager, sizes }: { id: SceneId; locale: Locale; className?: string; eager?: boolean; sizes: string }): React.ReactElement {
   const sc = SCENES[id];
   const src = useBaseUrl(sc.src);
+  const src640 = useBaseUrl(small(sc.src));
   return (
-    <img className={className} src={src} width={sc.w} height={sc.h} alt={sc[locale]}
+    <img className={className} src={src} srcSet={sc.w > 640 ? `${src640} 640w, ${src} ${sc.w}w` : undefined}
+      sizes={sc.w > 640 ? sizes : undefined} width={sc.w} height={sc.h} alt={sc[locale]}
       loading={eager ? undefined : 'lazy'} decoding="async" />
   );
 }
@@ -91,6 +98,7 @@ export default function Home(): React.ReactElement {
   const c = COPY[locale];
   const stats = siteConfig.customFields?.siteStats as Stats;
   const hero = useBaseUrl('/img/site/hero-efmp-302-fig-U1-10.webp');
+  const hero640 = useBaseUrl(small('/img/site/hero-efmp-302-fig-U1-10.webp'));
   const [aud, setAud] = useState(0);
   const [lang, setLang] = useState<Locale>(locale);
   const track = (what: string) => () => trackEvent('landing_click', { what });
@@ -132,7 +140,7 @@ export default function Home(): React.ReactElement {
             </div>
             <div className={s.heroArt}>
               <div className={s.heroBlock} aria-hidden="true" />
-              <img className={s.heroImg} src={hero} width={1100} height={614} alt={c.alt} fetchPriority="high" />
+              <img className={s.heroImg} src={hero} srcSet={`${hero640} 640w, ${hero} 1100w`} sizes="(max-width: 996px) calc(100vw - 36px), 46vw" width={1100} height={614} alt={c.alt} fetchPriority="high" />
               <div className={s.heroCard}>
                 <div className={s.heroCardHead}>
                   <p className={s.meta}>{c.card_k} · {c.card_min}</p>
@@ -192,7 +200,7 @@ export default function Home(): React.ReactElement {
                   </div>
                   <div className={s.stack}>
                     {AUDIENCE_STACKS[i].map((id, k) => (
-                      <figure key={id} className={clsx(s.photo, s[`stack${k}`])}><Scene id={id} locale={locale} /></figure>
+                      <figure key={id} className={clsx(s.photo, s[`stack${k}`])}><Scene id={id} locale={locale} sizes={k === 0 ? '(max-width: 996px) 84vw, 42vw' : '(max-width: 996px) 46vw, 23vw'} /></figure>
                     ))}
                   </div>
                 </div>
@@ -216,7 +224,7 @@ export default function Home(): React.ReactElement {
           <div className={s.gallery}>
             {GALLERY.map(([id, code]) => (
               <figure key={id} className={s.photo}>
-                <Scene id={id} locale={locale} />
+                <Scene id={id} locale={locale} sizes="(max-width: 760px) 50vw, 33vw" />
                 <figcaption>
                   {/* Seven of these are site scenes, not textbook figures: say so (owner, 2026-11-08). */}
                   {FROM_TEXTBOOK.has(id)

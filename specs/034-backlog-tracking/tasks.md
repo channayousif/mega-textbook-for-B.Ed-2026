@@ -55,7 +55,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 3 | Area: navbar | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: under the mobile breakpoint the profile name is replaced by a round avatar with the user's initial, only search, language and profile icons show beside the logo, every icon has an accessible name, and the logo is not squeezed.
-- [ ] T015 Optimise landing page images for speed, especially on mobile (#802)
+- [x] T015 Optimise landing page images for speed, especially on mobile (#802)
   - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: landing images are responsive (`srcset`/sizes, WebP or AVIF, explicit width and height), lazy below the fold, the hero image is preloaded; changed images use new paths (30-day cache); Lighthouse mobile before and after is recorded in the PR.
