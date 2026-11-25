@@ -275,6 +275,12 @@ export const COPY = {
         "Yes. Pages are light, and you can change text size or print a topic as a PDF."
       ]
     ],
+    "rv_eye": "Help improve the textbook",
+    "rv_h": "Spot a mistake? Become a reviewer.",
+    "rv_d": "Every unit here was written for current and future teachers, and every unit can still get better. Reviewers read units in a subject they know, flag errors and unclear passages, and suggest better wording, so the next reader learns from a cleaner page.",
+    "rv_l": ["Choose the B.Ed or the teaching licence, and a course you know", "Tell us briefly about your teaching or subject experience", "Review units at your own pace once your application is approved"],
+    "rv_cta": "Apply to review",
+    "rv_note": "Not ready to apply? Use “Suggest improvement” at the end of any page.",
     "f_h": "Start with one topic today",
     "f_d": "Free to read in English and Urdu, with no sign-up.",
     "aria_lang": "Passage language",
@@ -586,6 +592,12 @@ export const COPY = {
         "جی ہاں۔ صفحات ہلکے ہیں، اور آپ متن کا سائز بدل سکتے ہیں یا موضوع PDF میں پرنٹ کر سکتے ہیں۔"
       ]
     ],
+    "rv_eye": "درسی کتاب کو بہتر بنانے میں مدد کریں",
+    "rv_h": "کوئی غلطی نظر آئی؟ جائزہ کار بنیں۔",
+    "rv_d": "یہاں ہر یونٹ موجودہ اور مستقبل کے اساتذہ کے لیے لکھا گیا ہے، اور ہر یونٹ مزید بہتر ہو سکتا ہے۔ جائزہ کار اپنے جانے پہچانے مضمون کے یونٹ پڑھتے ہیں، غلطیوں اور غیر واضح حصوں کی نشاندہی کرتے ہیں اور بہتر الفاظ تجویز کرتے ہیں، تاکہ اگلا قاری زیادہ صاف صفحے سے سیکھے۔",
+    "rv_l": ["بی ایڈ یا تدریسی لائسنس، اور اپنا جانا پہچانا کورس منتخب کریں", "اپنے تدریسی یا مضمون کے تجربے کے بارے میں مختصراً بتائیں", "درخواست منظور ہونے کے بعد اپنی رفتار سے یونٹوں کا جائزہ لیں"],
+    "rv_cta": "جائزے کے لیے درخواست دیں",
+    "rv_note": "ابھی درخواست نہیں دینا چاہتے؟ کسی بھی صفحے کے آخر میں “بہتری تجویز کریں” استعمال کریں۔",
     "f_h": "آج ایک موضوع سے شروع کریں",
     "f_d": "اردو اور انگریزی میں مفت، بغیر سائن اپ۔",
     "aria_lang": "اقتباس کی زبان",

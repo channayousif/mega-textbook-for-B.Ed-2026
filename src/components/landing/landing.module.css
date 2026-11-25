@@ -188,8 +188,15 @@
 .finalText p { margin: 0 0 18px; color: var(--lp-on-teal); }
 :global(html[dir='rtl']) .finalH { font-size: 1.75rem; line-height: 2.6; }
 
+/* Become a reviewer (Feature 034 T018, #805) */
+.reviewGrid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 36px; align-items: center; }
+.eye.eyeOnTeal { color: var(--lp-amber); }
+.h2.h2OnTeal { color: #fff; margin-block-end: 14px; }
+.reviewCard { background: var(--lp-surface); color: var(--ifm-font-color-base); border-radius: 20px; padding: 24px; box-shadow: var(--lp-shadow); }
+.reviewCard :global(.button) { display: inline-flex; align-items: center; gap: 8px; }
+.reviewNote { margin: 14px 0 0; font-size: .92rem; color: var(--ifm-color-content-secondary); }
 @media (max-width: 996px) {
-  .heroGrid, .audience { grid-template-columns: minmax(0, 1fr); }
+  .heroGrid, .audience, .reviewGrid { grid-template-columns: minmax(0, 1fr); }
   .climb, .g4, .counts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .g3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .riser { display: none; }

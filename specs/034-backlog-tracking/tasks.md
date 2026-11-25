@@ -67,7 +67,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
   - Source: owner request 2026-11-25 ("too basic and feels confusing sometime")
   - Done when: the animation (`ClimbArt.tsx`, `climb.module.css`, `scenes.ts`) tells one clear story that matches the section text, looks finished, respects reduced motion, and the owner approves a screenshot or recording.
-- [ ] T018 Add a persuasive "Become a reviewer" section to the landing page (#805)
+- [x] T018 Add a persuasive "Become a reviewer" section to the landing page (#805)
   - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: a landing section invites readers to help find errors and improvements in the content, in English and Urdu, and links to the reviewer sign-up flow (Feature 017).
