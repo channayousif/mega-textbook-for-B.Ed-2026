@@ -1,0 +1,178 @@
+{
+ "course": "EFMP-301",
+ "unit": 6,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Motivation",
+     "definition": "The wants or needs that direct behaviour toward a goal. The definition puts the cause of behaviour inside the pupil, in wants and needs, rather than in the pupil's character."
+    },
+    {
+     "term": "Intrinsic motivation",
+     "definition": "Doing a thing because of the sense of personal satisfaction it brings, like the pupil who writes stories for pleasure."
+    },
+    {
+     "term": "Extrinsic motivation",
+     "definition": "Doing a thing in order to receive something from others, like the pupil who writes for the sticker."
+    },
+    {
+     "term": "Overjustification effect",
+     "definition": "Intrinsic motivation is diminished when extrinsic motivation is given. It does not forbid rewards: reward effort and progress where no intrinsic motive exists yet, and do not buy what the pupil already owns."
+    },
+    {
+     "term": "Hierarchy of needs",
+     "definition": "Maslow's ordered levels of need: physiological; safety and security; love and belonging; esteem; and at the apex self-actualization, achieving one's full potential once the lower needs are met. For a teacher it is a triage order."
+    },
+    {
+     "term": "Deficit needs",
+     "definition": "In Maslow's theory, the lower four needs, which demand relief. They must be satisfied before growth needs can influence behaviour."
+    },
+    {
+     "term": "Growth needs",
+     "definition": "In Maslow's theory, the top need, self-actualization, which pulls rather than pushes. It can influence behaviour only once the deficit needs are satisfied."
+    },
+    {
+     "term": "Motivators",
+     "definition": "In Herzberg's two-factor theory, the things that drive satisfaction: achievement, recognition, the work itself, responsibility and growth."
+    },
+    {
+     "term": "Hygiene factors",
+     "definition": "In Herzberg's two-factor theory, things such as pay, working conditions, policy, supervision and relationships. They do not motivate when present, but their absence demotivates."
+    },
+    {
+     "term": "Self-determination theory",
+     "definition": "Deci and Ryan's theory that three needs feed intrinsic motivation together: autonomy (being the origin of one's actions), competence (experiencing mastery) and relatedness (being connected to others)."
+    }
+   ],
+   "ur": [
+    {
+     "term": "محرک",
+     "definition": "وہ خواہشات یا ضرورتیں جو رویے کو کسی ہدف کی طرف لے جاتی ہیں۔ یہ تعریف رویے کی وجہ شاگرد کے کردار میں نہیں بلکہ اس کے اندر، اس کی خواہشات اور ضرورتوں میں رکھتی ہے۔"
+    },
+    {
+     "term": "باطنی محرک",
+     "definition": "کوئی کام اس ذاتی اطمینان کے احساس کی وجہ سے کرنا جو وہ لاتا ہے، جیسے وہ شاگرد جو مزے کے لیے کہانیاں لکھتا ہے۔"
+    },
+    {
+     "term": "خارجی محرک",
+     "definition": "کوئی کام دوسروں سے کچھ پانے کے لیے کرنا، جیسے وہ شاگرد جو اسٹیکر کے لیے لکھتا ہے۔"
+    },
+    {
+     "term": "حد سے زیادہ جواز کا اثر",
+     "definition": "جب خارجی محرک دیا جاتا ہے تو باطنی محرک کم ہو جاتا ہے۔ یہ انعام کو منع نہیں کرتا: جہاں ابھی کوئی باطنی محرک نہ ہو وہاں محنت اور پیش قدمی کو انعام دیں، اور جو شاگرد پہلے سے رکھتا ہے اسے مت خریدیں۔"
+    },
+    {
+     "term": "ضرورتوں کی ترتیب",
+     "definition": "میسلو کی ضرورتوں کی ترتیب وار سطحیں: جسمانی؛ حفاظت اور تحفظ؛ محبت اور تعلق؛ عزت؛ اور چوٹی پر خود کی تکمیل، یعنی نیچے کی ضرورتیں پوری ہونے کے بعد اپنی پوری صلاحیت حاصل کرنا۔ استاد کے لیے یہ ترتیب بندی کی فہرست ہے۔"
+    },
+    {
+     "term": "خسارے والی ضرورتیں",
+     "definition": "میسلو کے نظریے میں نیچے کی چار ضرورتیں، جو راحت مانگتی ہیں۔ نشوونما والی ضرورتیں رویے پر اثر ڈالیں، اس سے پہلے انہیں پورا ہونا چاہیے۔"
+    },
+    {
+     "term": "نشوونما والی ضرورتیں",
+     "definition": "میسلو کے نظریے میں اوپر والی ضرورت، خود کی تکمیل، جو دھکیلتی نہیں بلکہ کھینچتی ہے۔ یہ رویے پر صرف تب اثر ڈالتی ہے جب خسارے والی ضرورتیں پوری ہو چکی ہوں۔"
+    },
+    {
+     "term": "محرک (ہرزبرگ)",
+     "definition": "ہرزبرگ کے دو عنصری نظریے میں وہ چیزیں جو اطمینان چلاتی ہیں: کامیابی، پہچان، کام خود، ذمہ داری اور نشوونما۔"
+    },
+    {
+     "term": "صفائی عوامل",
+     "definition": "ہرزبرگ کے دو عنصری نظریے میں تنخواہ، کام کے حالات، پالیسی، نگرانی اور تعلقات جیسی چیزیں۔ موجود ہوں تو محرک نہیں بنتیں، مگر ان کی غیر موجودگی محرک گراتی ہے۔"
+    },
+    {
+     "term": "خود ارادیت کا نظریہ",
+     "definition": "ڈیسی اور رایان کا نظریہ کہ تین ضرورتیں مل کر باطنی محرک کو پالتی ہیں: خود مختاری (اپنے اعمال کا آغاز خود ہونا)، مہارت (قابلیت کا تجربہ) اور تعلق (دوسروں سے جڑا ہونا)۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Achievement motivation",
+     "definition": "The drive to do well against a standard. Research sorts pupils by the goals they hold: mastery goals, performance goals and failure-avoidant goals."
+    },
+    {
+     "term": "Mastery goals",
+     "definition": "Goals that aim at competence: to get better. The mastery-oriented pupil reads failure as information: the attempt was wrong, not the self."
+    },
+    {
+     "term": "Failure-avoidant goals",
+     "definition": "Among performance goals (which aim to look good), the destructive kind whose aim is simply not to look bad. The pupil reads failure as a verdict and avoids attempting, since unattempted questions cannot be wrong."
+    },
+    {
+     "term": "Attribution",
+     "definition": "An explanation of an outcome. It sits between the outcome and the next attempt, and it has three dimensions: locus, stability and controllability."
+    },
+    {
+     "term": "Locus",
+     "definition": "The attribution dimension that asks whether the cause is inside the pupil (effort, ability) or outside (luck, task difficulty)."
+    },
+    {
+     "term": "Stability",
+     "definition": "The attribution dimension that asks whether the cause is fixed (ability, aptitude) or changeable (effort, strategy)."
+    },
+    {
+     "term": "Controllability",
+     "definition": "The attribution dimension that asks whether the pupil can affect the cause. Changeable, controllable explanations feed the approach loop; stable, uncontrollable ones lead to self-protection."
+    },
+    {
+     "term": "Anxiety",
+     "definition": "An emotion that narrows. A little sharpens focus on a known task; a lot narrows working memory until the pupil can hold only the fear. Levers are familiarity, structure and calmly naming the feeling."
+    },
+    {
+     "term": "Interest",
+     "definition": "An emotion that widens. Situational interest is cheap and brief; personal interest is expensive and durable. The teaching move is to catch with the situational and keep with the personal."
+    },
+    {
+     "term": "Curiosity",
+     "definition": "The appetite for a specific gap: the question that opens. It thrives where questions are safe, gaps are visible and answers are findable."
+    }
+   ],
+   "ur": [
+    {
+     "term": "کامیابی کا محرک",
+     "definition": "کسی معیار کے مقابل اچھا کرنے کی قوت۔ تحقیق شاگردوں کو ان کے ہدفوں سے ترتیب دیتی ہے: مہارت کے ہدف، کارکردگی کے ہدف اور ناکامی سے بچاؤ کے ہدف۔"
+    },
+    {
+     "term": "مہارت کے ہدف",
+     "definition": "وہ ہدف جو قابلیت کا نشانہ رکھتے ہیں: بہتر ہونا۔ مہارت والا شاگرد ناکامی کو معلومات کے طور پر پڑھتا ہے: کوشش غلط تھی، وہ خود نہیں۔"
+    },
+    {
+     "term": "ناکامی سے بچاؤ کے ہدف",
+     "definition": "کارکردگی کے ہدفوں (جن کا نشانہ اچھا دکھنا ہے) میں تباہ کن قسم، جس کا نشانہ صرف برا نہ لگنا ہے۔ شاگرد ناکامی کو فیصلہ سمجھتا ہے اور کوشش سے بچتا ہے، کیونکہ نہ کیے گئے سوال غلط نہیں ہو سکتے۔"
+    },
+    {
+     "term": "اسناد",
+     "definition": "کسی نتیجے کی وضاحت۔ یہ نتیجے اور اگلی کوشش کے بیچ ہوتی ہے، اور اس کے تین پہلو ہیں: مقام، استحکام اور قابو پذیری۔"
+    },
+    {
+     "term": "مقام",
+     "definition": "اسناد کا وہ پہلو جو پوچھتا ہے کہ وجہ شاگرد کے اندر ہے (محنت، قابلیت) یا باہر (قسمت، کام کی مشکل)۔"
+    },
+    {
+     "term": "استحکام",
+     "definition": "اسناد کا وہ پہلو جو پوچھتا ہے کہ وجہ مقرر ہے (قابلیت، رجحان) یا بدل سکتی ہے (محنت، حکمت عملی)۔"
+    },
+    {
+     "term": "قابو پذیری",
+     "definition": "اسناد کا وہ پہلو جو پوچھتا ہے کہ کیا شاگرد اس وجہ پر اثر ڈال سکتا ہے۔ بدلنے والی، قابل قابو وضاحتیں آگے بڑھنے کا چکر چلاتی ہیں؛ مستحکم، ناقابل قابو وضاحتیں خود کو بچانے کی طرف لے جاتی ہیں۔"
+    },
+    {
+     "term": "اضطراب",
+     "definition": "ایک جذبہ جو تنگ کرتا ہے۔ تھوڑا اضطراب معلوم کام پر توجہ تیز کرتا ہے؛ زیادہ اضطراب عامل یادداشت کو اتنا تنگ کر دیتا ہے کہ شاگرد صرف خوف تھام سکے۔ لیور: واقفیت، ڈھانچہ اور احساس کا پرسکون نام لینا۔"
+    },
+    {
+     "term": "دلچسپی",
+     "definition": "ایک جذبہ جو وسیع کرتا ہے۔ صورتحال والی دلچسپی سستی اور مختصر ہے؛ ذاتی دلچسپی مہنگی اور پائیدار ہے۔ تدریسی اقدام: صورتحال والی سے پکڑیں اور ذاتی والی سے رکھیں۔"
+    },
+    {
+     "term": "تجسس",
+     "definition": "ایک مخصوص شگاف کی بھوک: وہ سوال جو کھلتا ہے۔ یہ وہاں پھلتا ہے جہاں سوال محفوظ ہوں، شگاف نظر آئیں اور جواب ڈھونڈے جا سکیں۔"
+    }
+   ]
+  }
+ }
+}
