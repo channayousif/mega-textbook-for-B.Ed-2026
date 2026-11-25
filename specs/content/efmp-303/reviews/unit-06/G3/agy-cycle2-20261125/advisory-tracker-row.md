@@ -1,0 +1,1 @@
+| Unit 6 | G3 en-review | ▢ | agent:g3-reviewer | advisory cycle 2: escalate; prior finding fig-U6-2 collision resolved; Khan (2018) in further reading carried; render-review unavailable because HEAD 5a14660cb differs from deployed 7ca7b2129; visual accessibility unverified; no certification; report specs/content/efmp-303/reviews/unit-06/G3/agy-cycle2-20261125.json |
