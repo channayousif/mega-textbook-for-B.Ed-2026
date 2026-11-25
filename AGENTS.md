@@ -162,6 +162,11 @@ write it to `history/prompts/constitution/`, `history/prompts/<feature>/` or
 prompt verbatim and untruncated, and leave no `{{...}}` behind. The full procedure is in
 `.specify/memory/agent-reference.md`; `/sp.phr` follows it.
 
+**Leftover tasks become issues (Feature 034).** A task still unticked when a feature PR merges
+carries a GitHub issue number, `(#N)`, on its line; create it with
+`node scripts/issue-sync.mjs --create specs/<feature>/tasks.md`. PRs close issues with `Closes #N`.
+`node scripts/issue-sync.mjs` reports drift. Course trackers under `specs/content/` are exempt.
+
 **ADR suggestions.** When a decision has long-term impact, had real alternatives and cuts across
 the system, say: "📋 Architectural decision detected: <brief>. Document? Run `/sp.adr <title>`."
 Never create an ADR without the owner's consent.

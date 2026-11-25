@@ -11,12 +11,12 @@
 - [x] Verify agent cgroup ancestry and heartbeat across editor slice stop.
 - [x] Confirm kernel OOM enforcement in disposable 32 MiB cgroup.
 - [x] Owner supplies client public key; authorize it using the supplied helper.
-- [ ] Owner saves buffers, migrates existing Claude sessions explicitly and closes old editors.
+- [ ] Owner saves buffers, migrates existing Claude sessions explicitly and closes old editors. (#841)
 - [x] Verify dedicated alias SSH command lands in development-editor.slice (owner supplied client output).
 - [x] Verify actual installed VS Code Remote SSH server, extension host, watcher and terminal ancestry.
-- [ ] Verify explicit application port forwarding through the dedicated alias.
-- [ ] Confirm multiple windows share budget, reconnect and server update ancestry.
-- [ ] Verify editing, search, Git, refresh and attachment from Windows VS Code and SSH.
-- [ ] Run extensions-disabled baseline, Extension Bisect and extension-host profile.
-- [ ] Identify offender from evidence before disabling it on this host.
-- [ ] Observe one normal workday, review metadata and production responsiveness.
+- [ ] Verify explicit application port forwarding through the dedicated alias. (#841)
+- [ ] Confirm multiple windows share budget, reconnect and server update ancestry. (#841)
+- [ ] Verify editing, search, Git, refresh and attachment from Windows VS Code and SSH. (#841)
+- [ ] Run extensions-disabled baseline, Extension Bisect and extension-host profile. (#841)
+- [ ] Identify offender from evidence before disabling it on this host. (#841)
+- [ ] Observe one normal workday, review metadata and production responsiveness. (#841)

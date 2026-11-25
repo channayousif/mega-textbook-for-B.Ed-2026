@@ -74,8 +74,8 @@ Status: `[ ]` todo · `[x]` done
 
 ## Phase G - Title rewrite (last; P3)
 
-- [ ] T053 Title/H1 rewrite for search intent, course by course.
-- [ ] T054 After each course: `validate:content` green, no URL change.
+- [ ] T053 Title/H1 rewrite for search intent, course by course. (#809)
+- [ ] T054 After each course: `validate:content` green, no URL change. (#809)
 
 ---
 
