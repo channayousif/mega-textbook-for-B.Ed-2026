@@ -2,7 +2,7 @@
 id: crew-efmp-409-u03-illustrate
 title: crew illustrate EFMP-409 unit 3
 stage: misc
-date: 2026-11-26
+date: 2026-11-25
 surface: agent
 model: agy
 feature: efmp-409
@@ -73,25 +73,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed the Unit 3 raster banner illustration (fig-U3-13) in English and Urdu, updated the unit banner manifest to placed, refreshed G2 gate evidence, and passed all content gates.
+Generated, inspected, and placed the EFMP-409 Unit 3 raster banner illustration (fig-U3-13) in English and Urdu index pages, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-409 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the Unit 3 raster banner illustration (fig-U3-13) in English and Urdu, updated the unit banner manifest to placed, refreshed G2 gate evidence, and passed all content gates.
-- Decisions the team must respect: G3 and G5 review stages remain independent and advisory until human sign-off; do not self-certify.
-- Pending / next owner: crew lead and independent reviewers (G3 review and G5 review for Unit 3).
+- Shipped / changed: Generated, inspected, and placed the EFMP-409 Unit 3 raster banner illustration (fig-U3-13) in English and Urdu index pages, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G2 gate evidence for Unit 3 refreshed to 20261125T225553825Z-gates.json with full logs committed.
-  - Banner figure fig-U3-13 is placed in English and Urdu index.mdx; Unit 3 G3 review and G5 review remain open for independent evaluation.
-- Paperclip issues affected: none (work tracked on crew board).
+  - Unit banner fig-U3-13 is placed in English and Urdu index.mdx; Unit 3 G3 review and G5 review remain open for independent evaluation.
+  - G5 must inspect rendered Urdu pages at 360 px and A4, verify proposed terms, the 13 authored Urdu concept labels, and the Islamic-content scholar check.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
