@@ -111,7 +111,6 @@ export default function Home(): React.ReactElement {
       {/* Without JavaScript every audience panel stays readable. */}
       <noscript><style>{`.${s.panel}[hidden]{display:block}`}</style></noscript>
       <ReturningStrip c={c} />
-      <NewsTicker />
       <main className={s.root}>
         <section className={s.hero}>
           <svg className={s.heroMark} viewBox="0 0 116 135" aria-hidden="true" focusable="false">
@@ -151,6 +150,9 @@ export default function Home(): React.ReactElement {
           </div>
           <StepsEdge rtl={rtl} height={rtl ? 308 : 180} />
         </section>
+
+        {/* Feature 034 T013 (#800): the ticker follows the hero so the hero fills the first view. */}
+        <NewsTicker />
 
         <HomeTeasers c={c} locale={locale} titles={TITLES} />
 
