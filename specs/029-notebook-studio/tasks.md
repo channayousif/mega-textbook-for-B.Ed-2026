@@ -10,12 +10,12 @@
 - [x] Owner ruling 2026-11-09: audio and video on YouTube / YouTube Music, slides on Google Drive; schema enforces hosts per kind; panel embeds youtube-nocookie and Drive /embed or /preview (`src/lib/studioMedia.ts`), adds a Watch tab
 - [x] Phone-width browser check EN/UR light/dark: tab selected state (shared fix in PR #518), table overflow, ASCII diagram stripped by postprocess, Urdu mind-map tab label
 - [x] studio-media pipeline skill (`.claude/skills/studio-media/`): ledger state machine with sha256 dedupe and 95/day quota guard, QG1 media-qa (ffprobe/ebur128/silence/black), audio-to-video brand card + loudnorm, youtube-meta, place-media, ledger schema in check-studio-manifest, 14 tests; youtube-uploader MCP v0.3.1 built for arm64 and registered; ffmpeg 7.0.2 static in ~/.local/bin
-- [ ] Owner: create textbook.com.pk channel + podcast/video playlists; enable YouTube Data API v3, add test user, publish OAuth app to production; complete consent (skill "YouTube authentication")
+- [ ] Owner: create textbook.com.pk channel + podcast/video playlists; enable YouTube Data API v3, add test user, publish OAuth app to production; complete consent (skill "YouTube authentication") (#840)
 - [x] Smoke upload (private) and delete (eh1SNfJPPBs, 2026-11-09)
 - [x] Pilot EFMP-301 Unit 4: 14 items generated and gated; owner approved; 9 public and placed, embeds browser-checked EN/UR (2026-11-10)
-- [ ] Upload, publish and place the remaining 5 (t2-ur-video, t3-en-audio-p1, t3-ur-audio-p1, t3-en-video, t3-ur-video) after the channel cap resets or verification
-- [ ] Slides: upload deck v4 to Google Drive (owner confirms "anyone with the link" sharing) and place
+- [ ] Upload, publish and place the remaining 5 (t2-ur-video, t3-en-audio-p1, t3-ur-audio-p1, t3-en-video, t3-ur-video) after the channel cap resets or verification (#814)
+- [ ] Slides: upload deck v4 to Google Drive (owner confirms "anyone with the link" sharing) and place (#815)
 - [x] Quiz v2 import script into quiz_items as drafts (service role, owner-run) + RLS test (migration 0056 live 2026-11-24; `scripts/studio/import-quiz-drafts.mjs`; owner still supplies the quiz v2 JSON)
-- [ ] Urdu-reader check of UR assets before wider rollout
-- [ ] Separate track: Urdu corpus register proposal (style guide + terminology), not in this feature
-- [ ] Rollout plan per course after the pilot is live
+- [ ] Urdu-reader check of UR assets before wider rollout (#816)
+- [ ] Separate track: Urdu corpus register proposal (style guide + terminology), not in this feature (#817)
+- [ ] Rollout plan per course after the pilot is live (#818)

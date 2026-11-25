@@ -6,6 +6,42 @@ lost, without blocking delivery of the feature that surfaced them.
 
 ---
 
+## Triage, 2026-11-25 (Feature 034)
+
+Every item below was checked against origin/main. Open items are tracked as GitHub issues through
+`specs/034-backlog-tracking/tasks.md` (task IDs below; the issue number sits on the task line).
+
+| Item | Outcome |
+|---|---|
+| 003 quiz authoring UI | Delivered (Spec 011) |
+| 003 rejoin-after-removal semantics | Open: 034 T039 |
+| 003 grading-queue pagination | Open: 034 T040 |
+| 007 EFMP-301 Unit 1 per-topic re-proof | Delivered (per-topic files on main) |
+| 007 EFMP-302 Units 2-6 re-draft | Delivered (per-topic files on main) |
+| 007 EFMP-302 Unit 1 Urdu | Delivered (2026-09-09) |
+| 007 EFMP-302 `course-review.mdx` | Open: 034 T033 |
+| 008 figure image pass | Delivered (Spec 009) |
+| 008 figures for EFMP-302 Units 2-6 and other courses | Delivered (crew `generate-figures`) |
+| 008 and 013 `fig-U1-2` raster re-do and accent pass | Owner option: 034 T060 |
+| 012 EFMP-301 Unit 1 golden re-proof to v3.3 | Delivered (crew authoring) |
+| 012 EFMP-302 Units 2-6 visual density | Delivered (`check:figures` enforces it) |
+| 013 title and H1 rewrite | Open: 034 T022 |
+| 013 `description` for `guides/` | Open: 034 T032 |
+| 013 alt-vs-manifest check | Delivered (`check:figures` desc/alt parity, v4.6) |
+| 016 widen `course_code` patterns | Deferred until an SSC/HSC scheme lands: 034 T042 |
+| 016 cross-unit prerequisite edges | Deferred to the freeze-lift batch: 034 T041 |
+| 016 EFMP-301 content-spec `## Unit 1` heading | Delivered (heading present) |
+| 017 human-initials rows unresolved in `validateAgentTrackerRow` | Open: 034 T034 |
+| 017 CI applies an approved export | Owner decision: 034 T043 |
+| 017 qualify one external reviewer | Owner: 034 T053 |
+| EFMP-301 G5 wide figures on phones | Open: 034 T035 |
+| EFMP-301 G5 theme strings, navbar, footer Urdu | Open: 034 T038 |
+| EFMP-301 G5 noun `جانچ` | Folded into the register proposal: 034 T030 |
+| EFMP-302 G3 figure scroll affordance | Open: 034 T036 |
+| EFMP-302 G3 RRQ mark weighting | Owner-scheduled: 034 T037 |
+
+---
+
 ## From 003-classes-assignments (2026-07-19)
 
 - ~~**Quiz item / answer-key authoring UI.**~~ **Delivered by Spec 011 (US6, 2026-09-10).**

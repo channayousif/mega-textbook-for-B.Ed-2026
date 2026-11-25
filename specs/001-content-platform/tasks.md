@@ -149,7 +149,7 @@ Single static-content project rooted at the repo (Docusaurus convention, per pla
 - [X] T038 [P] Add the Lighthouse CI gate to `.github/workflows/ci.yml`: content text < 200 KB excluding images, FCP < 2.5s on Slow-4G, accessibility pass (SC-002; depends on T011). **Also verify total first-load weight incl. the self-hosted Nastaliq font (WOFF2 Urdu subset, single weight, `font-display: swap`) stays within budget** — the font counts against first paint even though SC-002's text budget excludes images (research R3, Constitution V.5)
 - [X] T039 [P] Accessibility sweep across components and content: semantic heading order, alt text on all images/diagrams, no color-only meaning, RTL correctness (FR-013)
 - [X] T040 [P] Deployment config: Vercel primary + GitHub Pages fallback, deploy preview on PR and prod on merge to `main` (research R9)
-- [ ] T041 Golden-unit review gates — Content + Engineering + Teacher sign-off — then freeze the unit template as the quality bar (FR-015, SC-008)
+- [ ] T041 Golden-unit review gates — Content + Engineering + Teacher sign-off — then freeze the unit template as the quality bar (FR-015, SC-008) (#832)
 - [X] T042 Run the full `quickstart.md` acceptance verification map (SC-001…SC-010) and record results
 
 ---
