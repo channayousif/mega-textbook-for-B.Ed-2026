@@ -1,12 +1,12 @@
 # EFMP-409 Foundations of Education - Task tracker
 
-## Status: content spec approved (G0/G1); Unit 1 English draft authored; G3 review open
+## Status: content spec approved (G0/G1); Unit 1 English draft authored; G2 gate evidence recorded; G3 review open
 
 English-only authoring from the approved content-spec subsection for Unit 1. No publication or review certification is claimed by this tracker. Other units are outside this job.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ▢ | | Gate evidence pending |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-01/G2/20261125T022045316Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. The reviewer should check the Islamic material (Qur'an 96:1-5, 39:9; tarbiyah, ta'lim, ta'dib) with a qualified scholar, per content-spec drafting note 8 |
 | Unit 1 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
