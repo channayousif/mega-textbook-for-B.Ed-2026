@@ -1,0 +1,9 @@
+input-manifest verification - EFMP-408 Unit 1 G3
+prepared inputs: 99
+live inputs:     99
+skill_digest prepared: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+skill_digest live:     eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+missing from live: (none)
+extra in live:     (none)
+changed digests:  (none)
+result: MATCH
