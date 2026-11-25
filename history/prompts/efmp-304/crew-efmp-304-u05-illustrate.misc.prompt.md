@@ -83,9 +83,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-304-u05-fix, fix, opencode) Column widths for fig-U5-7 are now 90/140/130/100/120/140 (not the original 90/100/130/120/100/180)  -  any future edit to this figure must preserve the new geometry.
 - (efmp-304-u05-fix, fix, opencode) No further figure work is owed on EFMP-304 Unit 5; `check:content` 13/13 pass and `measure-figure-text.mjs` exits 0 for both locales.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed the EFMP-304 Unit 5 banner illustration (fig-U5-9) and four topic illustrations (fig-U5-10, fig-U5-11, fig-U5-12, fig-U5-13) in English and Urdu topic and index files, updated figure manifests to placed, refreshed G2 gate evidence, and verified check:content clean across all 14 content gates.
+Produced, inspected, and placed unit banner fig-U5-9 and topic illustrations fig-U5-10 through fig-U5-13 for EFMP-304 Unit 5 in English and Urdu, refreshed G2 gate evidence, and verified clean passes across all 14 content gates.
 
 ## Outcome
 
@@ -97,11 +98,11 @@ Generated, inspected, and placed the EFMP-304 Unit 5 banner illustration (fig-U5
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, visually inspected, and placed EFMP-304 Unit 5 banner (fig-U5-9) and four topic illustrations (fig-U5-10, fig-U5-11, fig-U5-12, fig-U5-13) in English and Urdu files, updated manifests to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Produced, inspected, and placed unit banner fig-U5-9 and topic illustrations fig-U5-10 through fig-U5-13 for EFMP-304 Unit 5 in English and Urdu, refreshed G2 gate evidence, and verified clean passes across all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 en-review row for EFMP-304 Unit 5 is stale and needs a fresh independent review.
+  - G3 en-review row for EFMP-304 Unit 5 remains open/stale and needs a fresh independent G3 run following the figure placements.
   - Column widths for fig-U5-7 remain 90/140/130/100/120/140; any future edit must preserve this geometry.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
