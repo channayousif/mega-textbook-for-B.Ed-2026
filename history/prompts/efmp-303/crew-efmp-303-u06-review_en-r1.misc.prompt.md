@@ -70,7 +70,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English cycle-2 review for EFMP-303 Unit 6 escalating on unavailable render evidence with prior findings verified and all content gates passing.
+Recorded independent G3 English cycle-2 review report and evidence for EFMP-303 Unit 6 escalating on unavailable live render inspection while all content gates passed.
 
 ## Outcome
 
@@ -82,14 +82,13 @@ Completed independent G3 English cycle-2 review for EFMP-303 Unit 6 escalating o
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English cycle-2 review for EFMP-303 Unit 6 escalating on unavailable render evidence with prior findings verified and all content gates passing.
+- Shipped / changed: Recorded independent G3 English cycle-2 review report and evidence for EFMP-303 Unit 6 escalating on unavailable live render inspection while all content gates passed.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - A permitted host must run render-inspect against a deployment matching HEAD 5a14660cb; the deployed SHA 7ca7b2129 is stale on Unit 6 prose and 4 illustration assets.
-  - G3 remains open (ADR-0019 cycle 2 of 2), unticked, reviewer token agent:g3-reviewer, no certification.
-  - Advisory finding carried forward: Khan (2018) in Further reading sections (topic-01, topic-02, topic-03).
-  - Advisory finding carried forward: 9 of 10 MCQ keys remain option (B) in unit-assessment.mdx:138-147; distractors should be shuffled in a future authoring pass.
+  - Live site `7ca7b2129` differs from HEAD `5a14660cb` on Unit 6 prose and 4 raster illustration assets; visual accessibility remains unverified until inspected on a matching deployment.
+  - G3 remains advisory (cycle 2 of 2, disposition escalate, reviewer token `agent:g3-reviewer`); no certification or tracker tick was performed.
+  - Advisory findings carried: Khan (2018) in further reading and 9 of 10 MCQ keys clustering on option (B).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
