@@ -14,7 +14,7 @@ links:
   spec: specs/034-backlog-tracking/spec.md
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/863
 files:
   - specs/034-backlog-tracking/spec.md
   - specs/034-backlog-tracking/plan.md
@@ -89,7 +89,7 @@ an issue number.
 - ✅ Impact: every unfinished task is a GitHub issue with a stage milestone and labels; drift is reportable.
 - 🧪 Tests: issue-sync unit tests pass; drift report clean.
 - 📁 Files: see list above.
-- 🔁 Next prompts: owner runs `gh auth refresh -s project` (issue for T006) so the Projects board can be created; then start Stage 2 (#797-#799).
+- 🔁 Next prompts: board created (project 4, 67 issues: 44 Blocked on owner, 23 Todo); start Stage 2 (#797-#799).
 - 🧠 Reflection: the local checkout was stale; the inventory had to come from origin/main. Several backlog items and the 029 YouTube task were already delivered.
 
 ## Handoff (for CEO and agents)

@@ -25,7 +25,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 0 | Area: ops | Type: new | Priority: p2 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: AGENTS.md Work records has the rule.
-- [ ] T006 Grant the `project` token scope so the Projects board can be created and filled (#796)
+- [x] T006 Grant the `project` token scope so the Projects board can be created and filled (#796)
   - Stage: 6 | Area: ops | Type: new | Priority: p1 | Owner: yes
   - Source: Feature 034 plan
   - Done when: the owner has run `gh auth refresh -s project`; the board "textbook.com.pk work" exists with columns Todo, In progress, Blocked on owner, In review, Done, and every open issue is on it.
