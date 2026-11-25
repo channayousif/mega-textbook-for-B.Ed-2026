@@ -47,7 +47,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
 
 ## Stage 3: landing page and navbar
 
-- [ ] T013 Fit the landing hero in the first viewport below the navbar and news ticker (#800)
+- [x] T013 Fit the landing hero in the first viewport below the navbar and news ticker (#800)
   - Stage: 3 | Area: landing | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: at 360x740, 390x844 and 1366x768 the whole hero (heading, text, CTA) is visible without scrolling, in English and Urdu.

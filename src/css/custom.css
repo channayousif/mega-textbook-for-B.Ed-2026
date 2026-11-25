@@ -1180,3 +1180,6 @@ html[dir='rtl'] .sidebar-item--en:not(.sidebar-item--en .sidebar-item--en) > .me
 .self-check__error { color: var(--ifm-color-danger); }
 .self-check__note { font-size: 0.9rem; color: var(--ifm-color-emphasis-700); }
 @media print { .self-check { display: none; } }
+
+/* Feature 034 T013 (#800): keep a navbar dropdown label and its caret on one line ("Programmes" wrapped at 1366px, adding 8px to the header above the hero). */
+.navbar__items .dropdown > .navbar__link { white-space: nowrap; }
