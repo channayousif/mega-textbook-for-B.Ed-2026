@@ -1,0 +1,77 @@
+{
+ "id": "gicp-400",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "GICP-400",
+ "semester": 3,
+ "title": {
+  "en": "Ideology and Constitution of Pakistan (GICP-400)",
+  "ur": "نظریہ اور آئینِ پاکستان (GICP-400)"
+ },
+ "sources": [
+  "docs/semester-3/gicp-400/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government middle and secondary schools and a teacher-training college with whitewashed walls, plain green blackboards with no writing, wooden desks, a shaded school verandah, pupils in school uniform, girls in white dupattas, student teachers in modest shalwar kameez. Modest dress. No maps, globes, flags, emblems, monuments, portraits or banners anywhere in the frame. No on-screen text, letters, captions, logos or watermarks; books, booklets, papers and screens are plain, blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident young Pakistani woman teacher in her late twenties in a navy blue shalwar kameez with a white dupatta over her shoulders, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "In a bright secondary-school classroom with a plain green blackboard, a confident young Pakistani woman teacher in a navy blue shalwar kameez with a white dupatta holds a thick closed book with a plain unmarked cover, then turns to the camera; quick push-in to a close-up as pupils in uniform sit at wooden desks behind her."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Smooth dolly shot along a teacher-training college seminar room where student teachers in modest shalwar kameez and dupattas sit around wooden tables, turning the pages of plain blurred books and taking notes in unreadable notebooks while a woman lecturer gestures as she explains."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Tracking shot around small groups of student teachers in modest dress who discuss eagerly, point to plain unmarked booklets and pass a blank sheet between them, nodding and raising their hands; every page and screen is blurred and unreadable."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a shaded school verandah where a woman teacher in a modest dupatta lets pupils in uniform take turns to speak, girls in white dupattas and boys side by side; pupils share a task, help one another and smile."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor with whitewashed walls, a confident young Pakistani woman teacher in a navy blue shalwar kameez with a white dupatta walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "پاکستان کن نظریات پر بنا، اور اس کا آئین ہمیں کیا حقوق دیتا ہے؟ آئیے جانیں!",
+    "اس کورس میں آپ پاکستان کی نظریاتی بنیاد اور آئینی ترقی کی تاریخ پڑھیں گے۔",
+    "انیس سو تہتر کے آئین کی نمایاں خصوصیات، حکومت، اور شہریوں کے بنیادی حقوق اور فرائض۔",
+    "ایک استاد کے طور پر اسکول میں منصفانہ برتاؤ، شہری ذمہ داری اور قومی یکجہتی کیسے سکھائیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "نظریہ اور آئینِ پاکستان (GICP-400)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "آئین ہمیں کیا حقوق دیتا ہے؟ نظریہ اور آئینِ پاکستان | GICP-400",
+   "keywords": [
+    "Ideology and Constitution of Pakistan",
+    "نظریہ اور آئینِ پاکستان",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "Constitution of Pakistan 1973",
+    "fundamental rights",
+    "constitutional development",
+    "ideology of Pakistan"
+   ],
+   "course_summary": "سمسٹر 3 کا یہ کورس پاکستان کے بنیادی نظریات، آئینی ترقی، حکومت اور شہریوں کے حقوق کا جائزہ لیتا ہے۔ یہ مستقبل کے اساتذہ سے کہتا ہے کہ وہ ان نظریات کو اسکول کی زندگی میں منصفانہ برتاؤ اور شہری ذمہ داری سے جوڑیں۔"
+  }
+ }
+}

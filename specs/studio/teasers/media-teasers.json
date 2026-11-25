@@ -2985,6 +2985,31 @@
     }
    ],
    "script_sha256": "174b861e2957d023e1851daaef9034db85d4b8f75f3f4592a5adcd3b92017931"
+  },
+  {
+   "key": "gicp-400-ur",
+   "id": "gicp-400",
+   "locale": "ur",
+   "kind": "short",
+   "state": "scripted",
+   "gates": {
+    "qg0": {
+     "verdict": "pass",
+     "by": "teaser.mjs"
+    }
+   },
+   "clips": [],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-25T18:35:05.021Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-25T18:35:08.552Z"
+    }
+   ],
+   "script_sha256": "30292cc711993deff83a0b3439ffc26a0f883fc02cfff9cafbdb4b78e6a8f7df"
   }
  ]
 }
