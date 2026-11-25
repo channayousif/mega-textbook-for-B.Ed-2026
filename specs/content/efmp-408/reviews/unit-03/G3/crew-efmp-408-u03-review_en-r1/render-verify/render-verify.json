@@ -1,0 +1,488 @@
+{
+  "base": "https://textbook.com.pk",
+  "route": "/semester-4/efmp-408/unit-03",
+  "started_at": "2026-11-25T16:41:02.436Z",
+  "desktop": {
+    "index": {
+      "headings": 5,
+      "imgs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-9.webp",
+          "alt": "Two Pakistani teachers in a school staff room collaborate over a table of specifications and test draft papers spread across a wooden work table.",
+          "w": 1376,
+          "h": 768,
+          "shown": true
+        }
+      ],
+      "bare": [],
+      "jumps": [],
+      "overflow": false
+    },
+    "topic-01": {
+      "headings": 17,
+      "imgs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-1.svg",
+          "alt": "Table showing a worked table of specifications for a Grade 6 general science unit on matter and energy, specifying content topics, cognitive levels, item formats, and percentage weightage.",
+          "w": 244,
+          "h": 150,
+          "shown": true
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-1.dark.svg",
+          "alt": "Table showing a worked table of specifications for a Grade 6 general science unit on matter and energy, specifying content topics, cognitive levels, item formats, and percentage weightage.",
+          "w": 0,
+          "h": 0,
+          "shown": false
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-5.svg",
+          "alt": "Flowchart showing the systematic test construction process from curriculum syllabus analysis through blueprint development and item drafting to test assembly and review.",
+          "w": 234,
+          "h": 150,
+          "shown": true
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-5.dark.svg",
+          "alt": "Flowchart showing the systematic test construction process from curriculum syllabus analysis through blueprint development and item drafting to test assembly and review.",
+          "w": 0,
+          "h": 0,
+          "shown": false
+        }
+      ],
+      "bare": [
+        "https://www.hec.gov.pk/english/services/universiti",
+        "https://open.umn.edu/opentextbooks/textbooks/153"
+      ],
+      "jumps": [],
+      "overflow": false
+    },
+    "topic-02": {
+      "headings": 20,
+      "imgs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-6.svg",
+          "alt": "Diagram illustrating marker score divergence between two examiners evaluating the same student essay response without an analytic rubric, showing where scores drift due to handwriting, halo effect, and length bias.",
+          "w": 234,
+          "h": 150,
+          "shown": true
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-6.dark.svg",
+          "alt": "Diagram illustrating marker score divergence between two examiners evaluating the same student essay response without an analytic rubric, showing where scores drift due to handwriting, halo effect, and length bias.",
+          "w": 0,
+          "h": 0,
+          "shown": false
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-2.svg",
+          "alt": "Table comparing essay questions and short-answer items across cognitive demand, breadth of curriculum coverage, question writing effort, scoring time, and vulnerability to marker bias.",
+          "w": 244,
+          "h": 150,
+          "shown": true
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-2.dark.svg",
+          "alt": "Table comparing essay questions and short-answer items across cognitive demand, breadth of curriculum coverage, question writing effort, scoring time, and vulnerability to marker bias.",
+          "w": 0,
+          "h": 0,
+          "shown": false
+        }
+      ],
+      "bare": [
+        "https://www.hec.gov.pk/english/services/universiti",
+        "https://open.umn.edu/opentextbooks/textbooks/153"
+      ],
+      "jumps": [],
+      "overflow": false
+    },
+    "topic-03": {
+      "headings": 20,
+      "imgs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-3.svg",
+          "alt": "Diagram dissecting a classroom multiple-choice question into its component parts: the problem-defining stem, the single keyed response, and plausible diagnostic distractors.",
+          "w": 244,
+          "h": 150,
+          "shown": true
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-3.dark.svg",
+          "alt": "Diagram dissecting a classroom multiple-choice question into its component parts: the problem-defining stem, the single keyed response, and plausible diagnostic distractors.",
+          "w": 0,
+          "h": 0,
+          "shown": false
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-7.svg",
+          "alt": "Table comparing multiple-choice, true-false, and matching item formats by target cognitive level, vulnerability to guessing, construction difficulty, and common design pitfalls.",
+          "w": 244,
+          "h": 150,
+          "shown": true
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-7.dark.svg",
+          "alt": "Table comparing multiple-choice, true-false, and matching item formats by target cognitive level, vulnerability to guessing, construction difficulty, and common design pitfalls.",
+          "w": 0,
+          "h": 0,
+          "shown": false
+        }
+      ],
+      "bare": [
+        "https://www.hec.gov.pk/english/services/universiti",
+        "https://open.umn.edu/opentextbooks/textbooks/153"
+      ],
+      "jumps": [],
+      "overflow": false
+    },
+    "topic-04": {
+      "headings": 25,
+      "imgs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-4.svg",
+          "alt": "Table presenting core item-writing guidelines with contrasting examples of flawed items containing common errors and their corrected versions.",
+          "w": 234,
+          "h": 150,
+          "shown": true
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-4.dark.svg",
+          "alt": "Table presenting core item-writing guidelines with contrasting examples of flawed items containing common errors and their corrected versions.",
+          "w": 0,
+          "h": 0,
+          "shown": false
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-8.svg",
+          "alt": "Diagram illustrating the three-step revision of a flawed classroom test item, removing negative phrasing, eliminating grammatical clues, and replacing implausible distractors with diagnostic alternatives.",
+          "w": 234,
+          "h": 150,
+          "shown": true
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-8.dark.svg",
+          "alt": "Diagram illustrating the three-step revision of a flawed classroom test item, removing negative phrasing, eliminating grammatical clues, and replacing implausible distractors with diagnostic alternatives.",
+          "w": 0,
+          "h": 0,
+          "shown": false
+        }
+      ],
+      "bare": [
+        "https://www.hec.gov.pk/english/services/universiti",
+        "https://open.umn.edu/opentextbooks/textbooks/153"
+      ],
+      "jumps": [],
+      "overflow": false
+    },
+    "unit-assessment": {
+      "headings": 25,
+      "imgs": [],
+      "bare": [],
+      "jumps": [],
+      "overflow": false
+    },
+    "unit-teacher-notes": {
+      "headings": 8,
+      "imgs": [],
+      "bare": [],
+      "jumps": [],
+      "overflow": false
+    }
+  },
+  "narrow": {
+    "index": {
+      "docOverflow": 0,
+      "tables": [],
+      "figs": [
+        {
+          "cw": 328,
+          "sw": 328
+        }
+      ]
+    },
+    "topic-01": {
+      "docOverflow": 0,
+      "tables": [
+        {
+          "cw": 328,
+          "sw": 593,
+          "fits": false,
+          "lastRight": 608,
+          "lastHeader": "Exceeds Standard (3 mark",
+          "afterScroll": {
+            "scrollLeft": 265,
+            "lastRight": 343,
+            "tabindex": "0",
+            "role": "region",
+            "aria": "Scrollable table, scroll sideways to see all columns",
+            "overflowX": "auto"
+          }
+        }
+      ],
+      "figs": [
+        {
+          "cw": 275,
+          "sw": 275
+        },
+        {
+          "cw": 328,
+          "sw": 328
+        }
+      ]
+    },
+    "topic-02": {
+      "docOverflow": 0,
+      "tables": [
+        {
+          "cw": 328,
+          "sw": 581,
+          "fits": false,
+          "lastRight": 597,
+          "lastHeader": "Exceeds Standard (3 mark",
+          "afterScroll": {
+            "scrollLeft": 253,
+            "lastRight": 344,
+            "tabindex": "0",
+            "role": "region",
+            "aria": "Scrollable table, scroll sideways to see all columns",
+            "overflowX": "auto"
+          }
+        }
+      ],
+      "figs": [
+        {
+          "cw": 275,
+          "sw": 275
+        },
+        {
+          "cw": 328,
+          "sw": 328
+        }
+      ]
+    },
+    "topic-03": {
+      "docOverflow": 0,
+      "tables": [
+        {
+          "cw": 328,
+          "sw": 573,
+          "fits": false,
+          "lastRight": 589,
+          "lastHeader": "Exceeds Standard (3 mark",
+          "afterScroll": {
+            "scrollLeft": 245,
+            "lastRight": 344,
+            "tabindex": "0",
+            "role": "region",
+            "aria": "Scrollable table, scroll sideways to see all columns",
+            "overflowX": "auto"
+          }
+        }
+      ],
+      "figs": [
+        {
+          "cw": 275,
+          "sw": 275
+        },
+        {
+          "cw": 328,
+          "sw": 328
+        }
+      ]
+    },
+    "topic-04": {
+      "docOverflow": 0,
+      "tables": [
+        {
+          "cw": 328,
+          "sw": 415,
+          "fits": false,
+          "lastRight": 431,
+          "lastHeader": "Status",
+          "afterScroll": {
+            "scrollLeft": 87,
+            "lastRight": 344,
+            "tabindex": "0",
+            "role": "region",
+            "aria": "Scrollable table, scroll sideways to see all columns",
+            "overflowX": "auto"
+          }
+        },
+        {
+          "cw": 328,
+          "sw": 614,
+          "fits": false,
+          "lastRight": 630,
+          "lastHeader": "Exceeds Standard (3 mark",
+          "afterScroll": {
+            "scrollLeft": 286,
+            "lastRight": 344,
+            "tabindex": "0",
+            "role": "region",
+            "aria": "Scrollable table, scroll sideways to see all columns",
+            "overflowX": "auto"
+          }
+        }
+      ],
+      "figs": [
+        {
+          "cw": 275,
+          "sw": 275
+        },
+        {
+          "cw": 328,
+          "sw": 328
+        }
+      ]
+    },
+    "unit-assessment": {
+      "docOverflow": 0,
+      "tables": [],
+      "figs": []
+    },
+    "unit-teacher-notes": {
+      "docOverflow": 0,
+      "tables": [],
+      "figs": []
+    }
+  },
+  "print": {
+    "index": {
+      "clipped": [],
+      "figs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-9.webp",
+          "w": 762,
+          "right": 778,
+          "natural": 1376
+        }
+      ]
+    },
+    "topic-01": {
+      "clipped": [],
+      "figs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-1.svg",
+          "w": 709,
+          "right": 754,
+          "natural": 244
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-1.dark.svg",
+          "w": 0,
+          "right": 0,
+          "natural": 0
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-5.svg",
+          "w": 762,
+          "right": 778,
+          "natural": 234
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-5.dark.svg",
+          "w": 0,
+          "right": 0,
+          "natural": 0
+        }
+      ]
+    },
+    "topic-02": {
+      "clipped": [],
+      "figs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-6.svg",
+          "w": 709,
+          "right": 754,
+          "natural": 234
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-6.dark.svg",
+          "w": 0,
+          "right": 0,
+          "natural": 0
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-2.svg",
+          "w": 762,
+          "right": 778,
+          "natural": 244
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-2.dark.svg",
+          "w": 0,
+          "right": 0,
+          "natural": 0
+        }
+      ]
+    },
+    "topic-03": {
+      "clipped": [],
+      "figs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-3.svg",
+          "w": 709,
+          "right": 754,
+          "natural": 244
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-3.dark.svg",
+          "w": 0,
+          "right": 0,
+          "natural": 0
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-7.svg",
+          "w": 762,
+          "right": 778,
+          "natural": 244
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-7.dark.svg",
+          "w": 0,
+          "right": 0,
+          "natural": 0
+        }
+      ]
+    },
+    "topic-04": {
+      "clipped": [],
+      "figs": [
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-4.svg",
+          "w": 709,
+          "right": 754,
+          "natural": 234
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-4.dark.svg",
+          "w": 0,
+          "right": 0,
+          "natural": 0
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-8.svg",
+          "w": 762,
+          "right": 778,
+          "natural": 234
+        },
+        {
+          "src": "/img/figures/efmp-408/unit-03/fig-U3-8.dark.svg",
+          "w": 0,
+          "right": 0,
+          "natural": 0
+        }
+      ]
+    },
+    "unit-assessment": {
+      "clipped": [],
+      "figs": []
+    },
+    "unit-teacher-notes": {
+      "clipped": [],
+      "figs": []
+    }
+  },
+  "defects": [],
+  "finished_at": "2026-11-25T16:42:54.840Z"
+}
