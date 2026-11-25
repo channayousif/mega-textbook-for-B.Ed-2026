@@ -374,6 +374,233 @@
    "since": "2026-11-22T21:17:03.766Z",
    "card": "~/studio-media/social/2026-11-23-feature-2.jpg",
    "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-feature-2.jpg"
+  },
+  {
+   "id": "2026-11-25-content",
+   "kind": "content",
+   "date": "2026-11-25",
+   "state": "posted",
+   "headline": {
+    "en": "New on textbook.com.pk",
+    "ur": "نیا مواد"
+   },
+   "highlights": [
+    {
+     "type": "course",
+     "ids": [
+      "course:EFMP-409"
+     ],
+     "card_en": "New course: EFMP-409 Foundations of Education",
+     "card_ur": "نیا کورس: EFMP-409 تعلیم کی بنیادیں",
+     "en": "New course: EFMP-409 Foundations of Education. It is free to read on textbook.com.pk, unit by unit, for anyone training to teach.",
+     "ur": "نیا کورس: EFMP-409 تعلیم کی بنیادیں۔ یہ textbook.com.pk پر یونٹ وار مفت پڑھا جا سکتا ہے، ہر اس شخص کے لیے جو تدریس کی تربیت لے رہا ہے۔",
+     "link": "/semester-4/efmp-409/",
+     "date": "2026-11-25T07:20:35+05:00"
+    },
+    {
+     "type": "course",
+     "ids": [
+      "course:EFMP-408"
+     ],
+     "card_en": "New course: EFMP-408 Educational Assessment and Evaluation",
+     "card_ur": "نیا کورس: EFMP-408 تعلیمی جانچ اور تشخیص",
+     "en": "New course: EFMP-408 Educational Assessment and Evaluation. It is free to read on textbook.com.pk, unit by unit, for anyone training to teach.",
+     "ur": "نیا کورس: EFMP-408 تعلیمی جانچ اور تشخیص۔ یہ textbook.com.pk پر یونٹ وار مفت پڑھا جا سکتا ہے، ہر اس شخص کے لیے جو تدریس کی تربیت لے رہا ہے۔",
+     "link": "/semester-4/efmp-408/",
+     "date": "2026-11-24T21:22:57+05:00"
+    },
+    {
+     "type": "course",
+     "ids": [
+      "course:GENT-401"
+     ],
+     "card_en": "New course: GENT-401 Entrepreneurship",
+     "card_ur": "نیا کورس: GENT-401 کاروباری صلاحیت",
+     "en": "New course: GENT-401 Entrepreneurship. It is free to read on textbook.com.pk, unit by unit, for anyone training to teach.",
+     "ur": "نیا کورس: GENT-401 کاروباری صلاحیت۔ یہ textbook.com.pk پر یونٹ وار مفت پڑھا جا سکتا ہے، ہر اس شخص کے لیے جو تدریس کی تربیت لے رہا ہے۔",
+     "link": "/semester-4/gent-401/",
+     "date": "2026-11-24T07:36:03+05:00"
+    },
+    {
+     "type": "unit",
+     "ids": [
+      "unit:EFMP-409:4",
+      "unit:EFMP-409:3",
+      "unit:EFMP-409:2",
+      "unit:EFMP-409:1"
+     ],
+     "card_en": "EFMP-409 Foundations of Education: 4 new units",
+     "card_ur": "EFMP-409 تعلیم کی بنیادیں: 4 نئے یونٹ",
+     "en": "EFMP-409 Foundations of Education: 4 new units to read for free, on Philosophy of Education, The Foundations of Education, The History of Education and Islamic Perspectives on Education.",
+     "ur": "EFMP-409 تعلیم کی بنیادیں: 4 نئے یونٹ مفت پڑھنے کے لیے، ان موضوعات پر: تعلیم کا فلسفہ، تعلیم کی بنیادی بنیادیں، تعلیم کی تاریخ اور Islamic Perspectives on Education۔",
+     "link": "/semester-4/efmp-409/",
+     "date": "2026-11-25T12:24:22+05:00"
+    },
+    {
+     "type": "unit",
+     "ids": [
+      "unit:EFMP-408:5",
+      "unit:EFMP-408:6",
+      "unit:EFMP-408:3",
+      "unit:EFMP-408:2",
+      "unit:EFMP-408:1"
+     ],
+     "card_en": "EFMP-408 Educational Assessment and Evaluation: 5 new units",
+     "card_ur": "EFMP-408 تعلیمی جانچ اور تشخیص: 5 نئے یونٹ",
+     "en": "EFMP-408 Educational Assessment and Evaluation: 5 new units to read for free, on Unit 1: Understanding Assessment and Evaluation; Unit 2: Objectives, Alignment and the Principles of Good Assessment; Unit 3: Constructing Tests; Unit 5: Grading, Reporting and Interpreting Scores, and 1 more.",
+     "ur": "EFMP-408 تعلیمی جانچ اور تشخیص: 5 نئے یونٹ مفت پڑھنے کے لیے، ان موضوعات پر: یونٹ 1: تشخیص اور جائزے کی تفہیم؛ یونٹ 2: مقاصد، ہم آہنگی اور اچھی تشخیص کے اصول؛ یونٹ 3: آزمائش کی تیاری؛ یونٹ 5: گریڈنگ، رپورٹنگ اور نمبروں کی تشریح، اور 1 مزید۔",
+     "link": "/semester-4/efmp-408/",
+     "date": "2026-11-25T01:16:09+05:00"
+    }
+   ],
+   "more": 8,
+   "items": [
+    "course:EFMP-409",
+    "course:EFMP-408",
+    "course:GENT-401",
+    "unit:EFMP-409:4",
+    "unit:EFMP-409:3",
+    "unit:EFMP-409:2",
+    "unit:EFMP-409:1",
+    "unit:EFMP-408:5",
+    "unit:EFMP-408:6",
+    "unit:EFMP-408:3",
+    "unit:EFMP-408:2",
+    "unit:EFMP-408:1",
+    "unit:GENT-401:7",
+    "unit:GENT-401:5",
+    "unit:GENT-401:6",
+    "unit:GENT-401:3",
+    "unit:GENT-401:4",
+    "unit:GENT-401:2",
+    "unit:GENT-401:1",
+    "urdu:EFMP-409:3",
+    "urdu:EFMP-409:2",
+    "urdu:EFMP-409:1",
+    "urdu:EFMP-408:2",
+    "urdu:EFMP-408:5",
+    "urdu:EFMP-408:3",
+    "urdu:EFMP-408:6",
+    "urdu:EFMP-408:1",
+    "urdu:GENT-401:7",
+    "urdu:GENT-401:5",
+    "urdu:GENT-401:6",
+    "urdu:GENT-401:4",
+    "urdu:GENT-401:2",
+    "urdu:GENT-401:3",
+    "urdu:GENT-401:1",
+    "urdu:GCCE-400:7",
+    "figures:EFMP-304:6",
+    "figures:EFMP-304:5",
+    "figures:EFMP-303:6",
+    "figures:EFMP-301:7",
+    "figures:EFMP-301:4"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-25T13:47:37.714Z",
+   "since": "2026-11-23T15:34:15.242Z",
+   "approved": {
+    "by": "auto",
+    "at": "2026-11-25T14:04:32.640Z"
+   },
+   "card": "~/studio-media/social/2026-11-25-content.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-25-content.jpg",
+   "platforms": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1404300426106517_122111433993545614",
+     "url": "https://www.facebook.com/1404300426106517_122111433993545614",
+     "at": "2026-11-25T14:09:06.992Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18042592847652694",
+     "url": "https://www.instagram.com/p/DgKtdXuFDQB/",
+     "at": "2026-11-25T14:09:06.992Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:share:7531358307014500352",
+     "url": "https://www.linkedin.com/feed/update/urn:li:share:7531358307014500352/",
+     "at": "2026-11-25T14:09:06.992Z"
+    }
+   }
+  },
+  {
+   "id": "2026-11-25-feature",
+   "kind": "feature",
+   "date": "2026-11-25",
+   "state": "drafted",
+   "headline": {
+    "en": "Platform update",
+    "ur": "پلیٹ فارم اپ ڈیٹ"
+   },
+   "highlights": [
+    {
+     "type": "feature",
+     "ids": [
+      "pr:752"
+     ],
+     "en": "Study Studio: quiz questions imported for the first time are now drafts that a teacher can publish.",
+     "ur": "اسٹڈیو اسٹوڈیو: پہلی بار درج ہونے والے کوئز سوالات اب مسودات کے طور پر آتے ہیں جنہیں استاد شائع کر سکتا ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 752,
+     "card_en": "Study Studio: quiz drafts for teachers",
+     "card_ur": "اسٹوڈیو: استاد کے لیے کوئز مسودات"
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:747"
+     ],
+     "en": "Home page: a small sign-up banner now invites signed-out visitors to make a free account, and can be dismissed.",
+     "ur": "ہوم پیج: ایک چھوٹا سائن اپ بینر غیر اندراج شدہ زائرین کو مفت اکاؤنٹ بنانے کی دعوت دیتا ہے، اور اسے ہٹایا جا سکتا ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 747,
+     "card_en": "Home page: dismissible sign-up banner",
+     "card_ur": "ہوم پیج: ہٹانے کے قابل سائن اپ بینر"
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:743"
+     ],
+     "en": "Study Studio: each unit now has a presentation tab with a web slide deck and a PowerPoint download.",
+     "ur": "اسٹڈیو اسٹوڈیو: ہر یونٹ میں اب ایک پیشکش ٹیب ہے جس میں ویب سلائیڈ ڈیک اور پاورپوائنٹ ڈاؤن لوڈ شامل ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 743,
+     "card_en": "Study Studio: slide deck and PowerPoint",
+     "card_ur": "اسٹوڈیو: سلائیڈ ڈیک اور پاورپوائنٹ"
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:741"
+     ],
+     "en": "Study Studio: a flashcards tab now turns the reviewed glossary terms of each unit into cards to flip and shuffle.",
+     "ur": "اسٹڈیو اسٹوڈیو: فلیش کارڈز ٹیب اب ہر یونٹ کے نظرثانی شدہ لغت کے الفاظ کو پلٹنے اور ملانے کے قابل کارڈز میں بدل دیتا ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 741,
+     "card_en": "Study Studio: flashcards from the glossary",
+     "card_ur": "اسٹوڈیو: لغت سے فلیش کارڈز"
+    }
+   ],
+   "more": 0,
+   "items": [
+    "pr:752",
+    "pr:747",
+    "pr:743",
+    "pr:741"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-25T13:47:37.714Z",
+   "since": "2026-11-23T15:34:15.242Z",
+   "card": "~/studio-media/social/2026-11-25-feature.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-25-feature.jpg"
   }
  ]
 }
