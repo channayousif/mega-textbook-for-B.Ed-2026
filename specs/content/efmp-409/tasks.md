@@ -12,7 +12,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 1 | G5 ur-review | ▢ | | Awaiting independent review; authored concept labels also need checking |
 | Unit 1 | G6 assets | ▣ | | Four English schematic SVGs (fig-U1-1 to fig-U1-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text clean; banner fig-U1-5 prompt-only |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-02/G2/20261125T062818674Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-02/G2/20261125T223817358Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. The reviewer should check the Islamic material (Objectives Resolution, Qur'an 96:1-5 and 39:9, tarbiyah, ta'lim, ta'dib) with a qualified scholar, per content-spec drafting note 8 |
 | Unit 2 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 70e141423; see reviews/unit-02/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 2 | G5 ur-review | ▢ | | Awaiting independent review; authored concept labels also need checking |
