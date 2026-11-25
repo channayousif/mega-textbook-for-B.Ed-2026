@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">نشانے کے دو خاکے جو تیروں کی مدد سے اعتماديت اور صداقت کو ظاہر کرتے ہیں</title><desc id="d">نشانے کے دو خاکے: تیروں کا مرکز سے دور مگر باہم قریب لگنا بغیر صداقت کے اعتماديت کو ظاہر کرتا ہے، جبکہ مرکز میں باہم قریب لگنا صداقت اور اعتماديت دونوں کو ظاہر کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.frame { stroke: var(--ink); stroke-width: 2; fill: none; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+</style><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions"><rect class="panel" x="400" y="60" width="360" height="280" rx="8"/><rect class="panel" x="20" y="60" width="360" height="280" rx="8"/><circle class="panel-a" cx="580" cy="200" r="80"/><circle class="panel-b" cx="580" cy="200" r="54"/><circle class="panel-c" cx="580" cy="200" r="28"/><circle class="panel-a" cx="200" cy="200" r="80"/><circle class="panel-b" cx="200" cy="200" r="54"/><circle class="panel-c" cx="200" cy="200" r="28"/></g><g id="layer-nodes"><circle class="ah" cx="638" cy="158" r="6"/><circle class="ah" cx="652" cy="166" r="6"/><circle class="ah" cx="632" cy="172" r="6"/><circle class="ah" cx="646" cy="150" r="6"/><circle class="ah" cx="658" cy="160" r="6"/><circle class="ah" cx="194" cy="194" r="6"/><circle class="ah" cx="206" cy="202" r="6"/><circle class="ah" cx="198" cy="210" r="6"/><circle class="ah" cx="210" cy="192" r="6"/><circle class="ah" cx="190" cy="202" r="6"/><text class="sh" x="580" y="46" text-anchor="middle">‏قابلِ اعتماد مگر غیر صادق‏</text><text class="sh" x="200" y="46" text-anchor="middle">‏صادق اور قابلِ اعتماد‏</text><text class="cell" x="580" y="364" text-anchor="middle">‏باہم قریب مگر مرکز سے دور‏</text><text class="cell" x="200" y="364" text-anchor="middle">‏باہم قریب اور مرکز پر‏</text></g><g id="layer-labels"><text id="label-title" class="h" x="760" y="26" text-anchor="end">‏نتائج میں یکسانیت اور درست پیمائش الگ صفات ہیں‏</text><text id="label-caption" class="small" x="760" y="412" text-anchor="end">‏ایک ٹیسٹ مستقل مزاج اسکورز دے کر بھی غلط مہارت کی پیمائش کر سکتا ہے۔‏</text><text class="wm" x="20" y="430" text-anchor="start" font-family="system-ui, sans-serif" aria-hidden="true">textbook.com.pk</text></g></svg>
