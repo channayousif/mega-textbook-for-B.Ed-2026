@@ -69,28 +69,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u03-author, author, agy) Banner figure fig-U3-9 remains prompt-only in specs/content/efmp-408/figures/unit-03.banner.md awaiting raster asset production.
 - (efmp-408-u03-author, author, agy) Unit 3 G3 review and Urdu translation (G4) stages remain open in specs/content/efmp-408/tasks.md.
 
+
 ## Response snapshot
 
-Generated and placed the raster banner illustration fig-U3-9 for EFMP-408 Unit 3 in English and Urdu, updated the unit banner manifest to placed, refreshed G2 gate evidence, and updated tasks.md.
+Generated, inspected, and placed the Unit 3 raster banner illustration (fig-U3-9) in English and Urdu, updated the manifest to placed, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
 - Impact: illustrate for EFMP-408 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
-- Next prompts: crew planner advances Unit 3 to its next stage.
-- Reflection: none recorded.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed Unit 3 banner illustration fig-U3-9 in docs/semester-4/efmp-408/unit-03/index.mdx and Urdu mirror, updated specs/content/efmp-408/figures/unit-03.banner.md to placed, generated G2 gate evidence, and updated tasks.md.
-- Decisions the team must respect: G3 and G5 review stages remain independent and advisory until human sign-off; do not self-certify.
-- Pending / next owner: crew lead and independent reviewers (G3 review and G5 review for Unit 3).
+- Shipped / changed: Generated, inspected, and placed the Unit 3 raster banner illustration (fig-U3-9) in English and Urdu, updated the manifest to placed, refreshed G2 gate evidence, and passed all content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G2 gate evidence points to `20261125T142256890Z-gates.json` with logs committed.
-  - Flawed items whose flaw depends on the English article "an" are kept in English with an Urdu meaning (listed in reviews/unit-03/G4/translation-handoff.md).
-  - Unbanked terms such as جدولِ تخصیص, رہنمائے نمبرات and گمراہ کن متبادل are listed as proposals in the handoff.
-- Paperclip issues affected: none (work tracked on crew board).
+  - G2 gate evidence for Unit 3 refreshed to 20261125T142256890Z-gates.json with full logs committed.
+  - Banner figure fig-U3-9 is placed in English and Urdu index.mdx; Unit 3 G3 review and G5 review remain open for independent evaluation.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
