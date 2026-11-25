@@ -24,6 +24,7 @@ import s from '@site/src/components/landing/landing.module.css';
 import NewsTicker from '@site/src/components/NewsTicker';
 import HomeTeasers from '@site/src/components/landing/HomeTeasers';
 import HomeCtaBanner from '@site/src/components/landing/HomeCtaBanner';
+import Carousel from '@site/src/components/landing/Carousel';
 
 type Stats = { courses: number; units: number; urduUnits: number; figures: number };
 type Locale = 'en' | 'ur';
@@ -221,10 +222,10 @@ export default function Home(): React.ReactElement {
         <section className={clsx(s.wrap, s.sec)} id="gallery">
           <p className={s.eye}>{c.e_gal}</p>
           <h2 className={s.h2}>{c.h_gal}</h2>
-          <div className={s.gallery}>
+          <Carousel label={c.h_gal} locale={locale} className={s.gallery}>
             {GALLERY.map(([id, code]) => (
               <figure key={id} className={s.photo}>
-                <Scene id={id} locale={locale} sizes="(max-width: 760px) 50vw, 33vw" />
+                <Scene id={id} locale={locale} sizes="(max-width: 760px) 82vw, (max-width: 996px) 50vw, 33vw" />
                 <figcaption>
                   {/* Seven of these are site scenes, not textbook figures: say so (owner, 2026-11-08). */}
                   {FROM_TEXTBOOK.has(id)
@@ -234,13 +235,13 @@ export default function Home(): React.ReactElement {
                 </figcaption>
               </figure>
             ))}
-          </div>
+          </Carousel>
         </section>
 
         <section className={clsx(s.wrap, s.sec)} id="features">
           <p className={s.eye}>{c.e_feat}</p>
           <h2 className={s.h2}>{c.h_feat}</h2>
-          <div className={s.g3}>
+          <Carousel label={c.h_feat} locale={locale}>
             {c.f.map(([, title, text], i) => (
               <Reveal as="article" key={title} className={s.bubble}>
                 <span className={s.tile}><Icon name={FEATURE_ICONS[i]} size={26} /></span>
@@ -248,7 +249,7 @@ export default function Home(): React.ReactElement {
                 <p className={s.small}>{text}</p>
               </Reveal>
             ))}
-          </div>
+          </Carousel>
         </section>
 
         <section className={s.white}>

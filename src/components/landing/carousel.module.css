@@ -1,0 +1,40 @@
+/* Feature 034 T016 (#803): landing card carousel (Carousel.tsx). */
+.carousel { position: relative; }
+.track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  /* Room for card shadows and the hover lift, which overflow would otherwise clip. */
+  padding: 10px 4px 22px;
+  margin-inline: -4px;
+}
+.track:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; border-radius: 12px; }
+.item { flex: 0 0 calc((100% - 44px) / 3); scroll-snap-align: start; min-width: 0; display: flex; }
+.item > * { flex: 1; }
+@media (max-width: 996px) { .item { flex-basis: calc((100% - 22px) / 2); } }
+/* Phones: one card and a peek of the next, which says "swipe". */
+@media (max-width: 760px) { .track { gap: 14px; } .item { flex-basis: 82%; } }
+
+.controls { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; }
+.btn {
+  display: inline-grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+}
+.btn:hover:not(:disabled) { border-color: var(--ifm-color-primary); color: var(--ifm-color-primary); }
+.btn:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
+.btn:disabled { opacity: .4; cursor: default; }
+.pointLeft { transform: rotate(90deg); }
+.pointRight { transform: rotate(-90deg); }
+
+@media (prefers-reduced-motion: reduce) { .track { scroll-behavior: auto; } }
+@media print {
+  .controls { display: none; }
+  .track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; }
+}

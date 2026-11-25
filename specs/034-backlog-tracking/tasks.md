@@ -59,7 +59,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: landing images are responsive (`srcset`/sizes, WebP or AVIF, explicit width and height), lazy below the fold, the hero image is preloaded; changed images use new paths (30-day cache); Lighthouse mobile before and after is recorded in the PR.
-- [ ] T016 Turn the "Learning aids" and "Features" card grids into carousels (#803)
+- [x] T016 Turn the "Learning aids" and "Features" card grids into carousels (#803)
   - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: both sections scroll horizontally with snap, swipe, previous and next buttons and keyboard support, respect reduced motion, work in RTL, and degrade to a readable list without JavaScript.
