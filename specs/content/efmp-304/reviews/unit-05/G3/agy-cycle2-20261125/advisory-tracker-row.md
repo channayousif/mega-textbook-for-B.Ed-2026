@@ -1,0 +1,1 @@
+| Unit 5 | G3 en-review | ▢ | agent:g3-reviewer | advisory cycle 2: escalate; prior findings none; render-review unavailable because HEAD b7417e1e0 differs from deployed 70e141423; visual accessibility unverified; no certification; report specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125.json |
