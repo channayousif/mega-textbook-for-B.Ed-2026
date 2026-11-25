@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed the Unit 6 raster banner illustration (fig-U6-9) across English and Urdu index pages, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated with gflow, inspected, and placed the EFMP-408 Unit 6 banner illustration (fig-U6-9) across English and Urdu index pages, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -85,7 +85,7 @@ Generated, inspected, and placed the Unit 6 raster banner illustration (fig-U6-9
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the Unit 6 raster banner illustration (fig-U6-9) across English and Urdu index pages, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated with gflow, inspected, and placed the EFMP-408 Unit 6 banner illustration (fig-U6-9) across English and Urdu index pages, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
