@@ -13,15 +13,13 @@ labels: ["crew", "agy", "illustrate"]
 links:
   spec: specs/content/efmp-408/content-spec.md
   ticket: null
-  adr: history/adr/0029-gemini-raster-illustrations.md
+  adr: null
   pr: null
 files:
  - docs/semester-4/efmp-408/unit-02/index.mdx
  - history/prompts/efmp-408/crew-efmp-408-u02-illustrate.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-02/index.mdx
  - specs/content/efmp-408/figures/unit-02.banner.md
- - specs/content/efmp-408/tasks.md
- - static/img/figures/efmp-408/unit-02/fig-U2-7.webp
  - specs/content/efmp-408/reviews/unit-02/G2/20261125T140929582Z-gates.json
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-bloom-bands.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-concept-graph.txt
@@ -31,6 +29,8 @@ files:
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-no-answer-keys.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/check-no-em-dash.txt
  - specs/content/efmp-408/reviews/unit-02/G2/logs-20261125T140929582Z/validate-content.txt
+ - specs/content/efmp-408/tasks.md
+ - static/img/figures/efmp-408/unit-02/fig-U2-7.webp
 tests:
  - npm run check:content
 ---
@@ -70,27 +70,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u02-author-conflict5, fix, claude_crew) Unit 2 G4 Urdu translation and independent G3/G5 review are still open; banner fig-U2-7 stays prompt-only for the illustrate job.
 - (efmp-408-u02-author-conflict5, fix, claude_crew) `specs/content/efmp-408/tasks.md` now carries Units 1, 2, 3, 5 and 6 state, so read all five units' rows before editing it.
 
+
 ## Response snapshot
 
-Generated unit banner raster fig-U2-7 using gflow, inspected and verified compliance, placed in English and Urdu index pages, and recorded manifest and task tracker updates.
+Produced, verified, and placed the EFMP-408 Unit 2 banner illustration (fig-U2-7) across English and Urdu index pages, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate for EFMP-408 Unit 2 by agy.
-- Tests: npm run check:content passed in the job worktree.
-- Files: listed above plus gate evidence files.
-- Next prompts: crew planner queues independent G3 and G5 reviews.
-- Reflection: none.
+- Impact: illustrate for EFMP-408 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated unit banner illustration fig-U2-7 with gflow, inspected image for pedagogical and cultural alignment, placed as Figure in English and Urdu index pages, updated sidecar banner manifest and task tracker, and refreshed gate evidence.
-- Decisions the team must respect: G3 and G5 reviews remain open and advisory until independent review.
-- Pending / next owner: crew lead.
+- Shipped / changed: Produced, verified, and placed the EFMP-408 Unit 2 banner illustration (fig-U2-7) across English and Urdu index pages, updated manifests, refreshed G2 gate evidence, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 2 G3 English review and G5 Urdu review remain open; translation_status stays draft in both index.mdx files pending independent G5 acceptance.
-  - All unit figures (schematic SVGs fig-U2-1 through fig-U2-6 and banner illustration fig-U2-7) are placed in both English and Urdu mirrors.
-- Paperclip issues affected: none.
+  - All Unit 2 figures (schematic SVGs fig-U2-1 through fig-U2-6 and banner raster fig-U2-7) are placed in both English and Urdu mirrors.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
