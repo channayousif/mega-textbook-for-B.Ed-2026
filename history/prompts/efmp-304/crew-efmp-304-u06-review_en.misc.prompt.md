@@ -70,25 +70,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English cycle-2 review for EFMP-304 Unit 6, producing validated evidence report agy-cycle2-20261125.json with escalate disposition due to production build divergence while passing all 14 repository content gates.
+Completed independent G3 English cycle-2 review for EFMP-304 Unit 6, producing validated evidence report agy-cycle2-20261125.json with escalate disposition due to production build divergence while passing all 14 content gates.
 
 ## Outcome
 
 - Impact: review_en for EFMP-304 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English cycle-2 review for EFMP-304 Unit 6, producing validated evidence report agy-cycle2-20261125.json with escalate disposition due to production build divergence while passing all 14 repository content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this review does not certify anything.
+- Shipped / changed: Completed independent G3 English cycle-2 review for EFMP-304 Unit 6, producing validated evidence report agy-cycle2-20261125.json with escalate disposition due to production build divergence while passing all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live site b7417e1e differs from HEAD 68fbc2c2 across Unit 6 prose and 3 WebP illustrations; visual accessibility remains unverified until inspected against a matching deployment.
+  - Live site build b7417e1e differs from HEAD across Unit 6 prose and 3 illustration assets; visual accessibility remains unverified until inspected on a matching deployed build.
   - G3 remains advisory (cycle 2 of 2, disposition escalate, reviewer token agent:g3-reviewer); no certification or tracker tick was performed.
-  - Advisory observation: 9 of 10 MCQ keys are option (B).
+  - Advisory observation: 9 of 10 MCQ keys are option (B); distractor positions may be shuffled during future content maintenance.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
