@@ -16,48 +16,48 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-4/efmp-409/unit-05/index.mdx
-  - docs/semester-4/efmp-409/unit-05/topic-01.mdx
-  - docs/semester-4/efmp-409/unit-05/topic-02.mdx
-  - docs/semester-4/efmp-409/unit-05/topic-03.mdx
-  - docs/semester-4/efmp-409/unit-05/unit-assessment.mdx
-  - docs/semester-4/efmp-409/unit-05/unit-teacher-notes.mdx
-  - history/prompts/efmp-409/crew-efmp-409-u05-author.green.prompt.md
-  - specs/content/efmp-409/concepts/unit-05.md
-  - specs/content/efmp-409/coverage/unit-05.md
-  - specs/content/efmp-409/figures/unit-05.banner.md
-  - specs/content/efmp-409/figures/unit-05.md
-  - specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json
-  - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-bloom-bands.txt
-  - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-concept-graph.txt
-  - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-depth-gate.txt
-  - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-docs-sync.txt
-  - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-figures.txt
-  - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-no-answer-keys.txt
-  - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-no-em-dash.txt
-  - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/validate-content.txt
-  - specs/content/efmp-409/sources/texts/inverge-2025-punjab.md
-  - specs/content/efmp-409/sources/texts/pie-1959-commission.md
-  - specs/content/efmp-409/sources/texts/pie-1979-policy.md
-  - specs/content/efmp-409/sources/texts/pie-1998-policy.md
-  - specs/content/efmp-409/sources/texts/saiyid-nihcr.md
-  - specs/content/efmp-409/sources/texts/wb-wdi-2026.md
-  - specs/content/efmp-409/sources/unit-05.md
-  - specs/content/efmp-409/tasks.md
-  - static/img/figures/efmp-409/unit-05/fig-U5-1.dark.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-1.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-2.dark.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-2.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-3.dark.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-3.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-4.dark.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-4.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-5.dark.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-5.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-6.dark.svg
-  - static/img/figures/efmp-409/unit-05/fig-U5-6.svg
+ - docs/semester-4/efmp-409/unit-05/index.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-01.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-02.mdx
+ - docs/semester-4/efmp-409/unit-05/topic-03.mdx
+ - docs/semester-4/efmp-409/unit-05/unit-assessment.mdx
+ - docs/semester-4/efmp-409/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-409/crew-efmp-409-u05-author.green.prompt.md
+ - specs/content/efmp-409/concepts/unit-05.md
+ - specs/content/efmp-409/coverage/unit-05.md
+ - specs/content/efmp-409/figures/unit-05.banner.md
+ - specs/content/efmp-409/figures/unit-05.md
+ - specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-05/G2/logs-20261125T085534293Z/validate-content.txt
+ - specs/content/efmp-409/sources/texts/inverge-2025-punjab.md
+ - specs/content/efmp-409/sources/texts/pie-1959-commission.md
+ - specs/content/efmp-409/sources/texts/pie-1979-policy.md
+ - specs/content/efmp-409/sources/texts/pie-1998-policy.md
+ - specs/content/efmp-409/sources/texts/saiyid-nihcr.md
+ - specs/content/efmp-409/sources/texts/wb-wdi-2026.md
+ - specs/content/efmp-409/sources/unit-05.md
+ - specs/content/efmp-409/tasks.md
+ - static/img/figures/efmp-409/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-3.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-5.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-5.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-6.dark.svg
+ - static/img/figures/efmp-409/unit-05/fig-U5-6.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -88,27 +88,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFMP-409 Unit 5 (Education Reports and Policies) from the approved content-spec: three nine-part topic cycles, a 10/10/5 unit assessment with a bounded answers section, teacher notes, six placed schematic SVG figures with derived dark variants, and the coverage, sources, concept graph, figure manifest and banner plan. Recorded the G2 gate evidence and pointed the tracker row at it; all 14 content gates pass.
+Authored EFMP-409 Unit 5 (Education Reports and Policies) from its approved content-spec with three topic cycles, a 10/10/5 assessment, teacher notes, six placed SVG figures and the governance artefacts, and recorded its G2 gate evidence with all content gates green.
 
 ## Outcome
 
 - Impact: author for EFMP-409 Unit 5 by claude_crew (attempt 1).
-- Tests: npm run check:content passed in the job worktree (all 14 gates).
-- Files: 41 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 40 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFMP-409 Unit 5 (Education Reports and Policies) with three per-topic cycles, a 10/10/5 assessment, teacher notes, six placed schematic figures (fig-U5-1 flowchart, fig-U5-2, fig-U5-4 and fig-U5-5 tables, fig-U5-3 timeline, fig-U5-6 concept map), and the coverage, sources, concept graph, figure manifest and banner plan. G2 gate evidence recorded and the tracker row pointed at it.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything. The unit is English only; the Urdu mirror is a separate job. The six figures are hand-authored SVG schematics; the banner `fig-U5-7` is still prompt-only for the `illustrate` job.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). G3 review open; G4/G5 await translation.
+- Shipped / changed: Authored EFMP-409 Unit 5 (Education Reports and Policies) from its approved content-spec with three topic cycles, a 10/10/5 assessment, teacher notes, six placed SVG figures and the governance artefacts, and recorded its G2 gate evidence with all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The reading-minutes total is 62, at the ceiling of the approved 46-62 band; redundant passages were cut rather than dropping required worked examples or misconceptions.
-  - `tasks.md` is shared with the other EFMP-409 unit jobs and will conflict on merge.
-  - The bound sources are the three PIE policy documents, the Saiyid 1987 article, the 2025 Inverge review and the World Bank indicators; the guide-listed `sindh-education-web` did not resolve and `provenzo-2006` was unavailable, both noted in `sources/unit-05.md`.
+  - Banner `fig-U5-7` is still prompt-only for the `illustrate` job; the six schematics are placed and measured clean.
+  - Unit 5 is English only (no Urdu mirror, no `key_terms`); G3/G5/G4 stay open and un certified. Reading-minutes total is 62, at the ceiling of the approved 46-62 band.
+  - The bound sources are the three PIE policy documents, Saiyid (1987), the 2025 Inverge review and World Bank indicators; `sindh-education-web` did not resolve and `provenzo-2006` was unavailable, both noted in `sources/unit-05.md`.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
