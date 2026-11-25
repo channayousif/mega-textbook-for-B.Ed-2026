@@ -16,6 +16,7 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-408/crew-efmp-408-u05-translate.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-05/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-05/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-408/unit-05/topic-02.mdx
@@ -75,27 +76,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-408-u05-author, author, claude_crew) Unit 5 total is 67 reading-minutes; if prose is expanded later, recompute `est_reading_minutes` before re-running `check:depth-gate`.
 - (efmp-408-u05-author, author, claude_crew) `sources/texts/hec-2013-testdev.md` and `seifert-sutton-2009.md` were deliberately left untouched so Unit 1's accepted G2 evidence stays valid; a later job that edits them must re-run `prepare-gate-evidence.mjs efmp-408 1`.
 
+
 ## Response snapshot
 
-Translated EFMP-408 Unit 5 into a complete draft Urdu mirror (6 pages, 6 localized figures with dark variants), recorded the G4 tracker note and handoff, with translation_status still draft and all content gates passing.
+Translated EFMP-408 Unit 5 into a complete draft Urdu mirror across 6 MDX pages and 6 localized SVG figure pairs with derived dark twins, passing all content gates with translation_status draft.
 
 ## Outcome
 
-- Impact: translate for EFMP-408 Unit 5 by agy.
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: translate for EFMP-408 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated EFMP-408 Unit 5 into a complete draft Urdu mirror (6 pages, 6 localized figures with dark variants), recorded the G4 tracker note and handoff, with translation_status still draft and all content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead.
+- Shipped / changed: Translated EFMP-408 Unit 5 into a complete draft Urdu mirror across 6 MDX pages and 6 localized SVG figure pairs with derived dark twins, passing all content gates with translation_status draft.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Gap `G-2026-235` (four-point GPA scale in Topic 5.1) remains open for owner resolution.
-  - Rendered Urdu pages were not inspected locally (no local build allowed); G5 needs render-inspect evidence. Unbanked terms are listed as proposals in `reviews/unit-05/G4/translation-handoff.md`.
-- Paperclip issues affected: none.
+  - Gap G-2026-235 (the illustrative four-point GPA scale in Topic 5.1) remains open for owner resolution.
+  - Rendered Urdu pages were not inspected locally (no local build allowed); G5 needs render-inspect evidence.
+  - Proposed unbanked terms (including حسابی اوسط، وسطانیہ، اعادہ، آئٹم مشکل شاخص، اور آئٹم امتیاز شاخص) are recorded in reviews/unit-05/G4/translation-handoff.md for independent G5 review.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
