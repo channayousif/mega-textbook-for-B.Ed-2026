@@ -1,0 +1,10 @@
+prepared inputs: 104
+fresh inputs:    104
+missing from prepared: []
+extra in prepared:    []
+digest mismatches:    []
+prepared skill_digest: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+fresh skill_digest:    eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+skill digest match:    true
+prepared criteria:     ["authority","sources","coverage","assessment","accessibility","readability","pedagogy"]
+INPUT VERIFICATION: OK
