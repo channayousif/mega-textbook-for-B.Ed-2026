@@ -1,0 +1,2 @@
+prepared=105 current=105 mismatches=0
+skill_digest prepared=eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
