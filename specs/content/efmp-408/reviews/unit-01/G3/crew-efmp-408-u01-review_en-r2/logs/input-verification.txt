@@ -1,0 +1,8 @@
+prepared inputs: 100
+fresh inputs: 100
+missing from fresh: 0 
+extra in fresh: 0 
+digest mismatches: 0 
+dirty bound inputs: 0 
+skill digest matches: true
+VERIFIED: manifest is current and tree clean
