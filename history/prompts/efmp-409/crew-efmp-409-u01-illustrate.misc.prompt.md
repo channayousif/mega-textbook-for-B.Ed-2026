@@ -2,7 +2,7 @@
 id: crew-efmp-409-u01-illustrate
 title: crew illustrate EFMP-409 unit 1
 stage: misc
-date: 2026-11-26
+date: 2026-11-25
 surface: agent
 model: agy
 feature: efmp-409
@@ -77,7 +77,7 @@ Generated, inspected, and placed banner illustration fig-U1-5 for EFMP-409 Unit 
 
 ## Outcome
 
-- Impact: illustrate for EFMP-409 Unit 1 by agy (attempt 1).
+- Impact: illustrate for EFMP-409 Unit 1 by agy (attempt 2).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -89,13 +89,13 @@ Generated, inspected, and placed banner illustration fig-U1-5 for EFMP-409 Unit 
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 1 G3 en-review and G5 ur-review rows remain open and require fresh independent review runs following figure placements.
-  - The Islamic material in Topic 1.1 (Qur'an 96:1-5, 39:9; tarbiyah, ta'lim, ta'dib) requires checking by a qualified scholar during review.
+  - Unit 1 G3 en-review and G5 ur-review rows remain open and require fresh independent review runs following banner placement.
+  - The Islamic material in Topic 1.1 (Qur'an 96:1-5, 39:9; tarbiyah, ta'lim, ta'dib with al-Attas attribution) requires checking by a qualified scholar during review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
