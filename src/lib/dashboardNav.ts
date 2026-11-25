@@ -64,6 +64,7 @@ export const adminNav: readonly NavItem[] = [
   { key: 'content-status', label: { en: 'Content status', ur: 'مواد کی صورتحال' }, to: '/app/admin/overview', activeMatch: /^\/app\/admin\/overview/, icon: 'analytics' },
   { key: 'agent-jobs', label: { en: 'Agent jobs', ur: 'ایجنٹ کے کام' }, to: '/app/admin/agent-jobs', activeMatch: /^\/app\/admin\/agent-jobs/, icon: 'jobs' },
   { key: 'audit', label: { en: 'Privilege audit', ur: 'اختیارات کا ریکارڈ' }, to: '/app/admin/audit', activeMatch: /^\/app\/admin\/(audit|feedback\/?$)/, icon: 'audit' },
+  { key: 'guide', label: { en: 'Admin guide', ur: 'منتظم کی رہنمائی' }, to: '/app/admin/guide', activeMatch: /^\/app\/admin\/guide/, icon: 'reading' },
 ] as const;
 
 /** Reviewer tools, shown to accounts with the reviewer capability. */
