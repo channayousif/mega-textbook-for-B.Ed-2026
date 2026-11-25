@@ -962,7 +962,7 @@
    "uploaded_at": "2026-11-25T14:56:06.946Z"
   },
   {
-   "state": "qa2-pass",
+   "state": "qa3-pass",
    "gates": {
     "qa1": {
      "verdict": "pass",
@@ -1008,6 +1008,12 @@
      "by": "Claude QG2 transcript check",
      "date": "2026-11-09",
      "notes": "Faithful to the text: rickshaw problem, concepts and near-misses, five strategies, three obstacles, induction and deduction, lesson redesign (costs no money is in the text)."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-25",
+     "notes": "private, processed, on channel UC7cQfkGkdNABCiyjmV5ZaFQ, in the EN video playlist PLBPGR4jAnhh4; tags correct (comma-joined string); embed check deferred to the placement build"
     }
    },
    "history": [
@@ -1034,6 +1040,14 @@
     {
      "state": "qa2-pass",
      "at": "2026-11-09T18:19:13.619Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-25T15:59:33.256Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-25T16:00:05.327Z"
     }
    ],
    "topic": 3,
@@ -1048,7 +1062,9 @@
    "file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-video.mp4",
    "sha256": "ff7b9d33f6def85d8374de005835421299fe67fed0f4d827a4b9649c78435abb",
    "encoded_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-video.yt.mp4",
-   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-video.yt.mp4.thumb.jpg"
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-301/unit-04/topic-03/t3-en-video.yt.mp4.thumb.jpg",
+   "youtube_id": "eSxw0ibxBG4",
+   "uploaded_at": "2026-11-25T15:59:20Z"
   },
   {
    "state": "qa2-pass",
