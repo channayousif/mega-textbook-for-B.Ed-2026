@@ -1,0 +1,154 @@
+{
+ "course": "EFMP-301",
+ "unit": 5,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "General factor (g)",
+     "definition": "Spearman's view that intelligence consists of one general factor, called g, which can be measured and compared among individuals. It starts from the observation that pupils who do well on one kind of test tend to do well on others."
+    },
+    {
+     "term": "Multiple intelligences",
+     "definition": "Gardner's theory that each person possesses at least eight intelligences: linguistic, logical-mathematical, musical, bodily kinesthetic, spatial, interpersonal, intrapersonal and naturalistic."
+    },
+    {
+     "term": "Primary mental abilities",
+     "definition": "Louis Thurstone's historical proposal that intelligence is a set of primary mental abilities rather than a single general factor."
+    },
+    {
+     "term": "Cattell-Horn-Carroll (CHC) theory",
+     "definition": "A modern theory that organises intelligence hierarchically: general ability (g) at the top, broad abilities such as fluid and crystallized intelligence in the middle, and narrow abilities at the base."
+    },
+    {
+     "term": "Evidence caution",
+     "definition": "Among cognitive psychologists, Gardner's theory has been heavily criticized for lacking empirical evidence. Educators still use it because it names abilities schools have historically ignored, and both halves are true at once."
+    },
+    {
+     "term": "Learning styles",
+     "definition": "The claim that pupils learn best when taught in their preferred style (visual, auditory, kinaesthetic). A review of the data gives no support for style-based instruction, and the claim is not the same as multiple intelligences."
+    },
+    {
+     "term": "IQ (intelligence quotient)",
+     "definition": "A score earned on a test designed to measure intelligence. The tests are standardised: on most, the mean IQ score is 100 and one standard deviation is 15 points."
+    },
+    {
+     "term": "Average band",
+     "definition": "IQ scores from 85 to 115, which count as the average range and cover about two-thirds of the population."
+    }
+   ],
+   "ur": [
+    {
+     "term": "عمومی عنصر (g)",
+     "definition": "اسپیئرمین کا نظریہ کہ ذہانت ایک عمومی عنصر پر مشتمل ہے جسے g کہا جاتا ہے، جسے ناپا اور افراد میں موازنہ کیا جا سکتا ہے۔ اس کی بنیاد یہ مشاہدہ ہے کہ جو شاگرد ایک قسم کے ٹیسٹ میں اچھے ہوتے ہیں وہ دوسروں میں بھی اچھے ہوتے ہیں۔"
+    },
+    {
+     "term": "متعدد ذہانتیں",
+     "definition": "گارڈنر کا نظریہ کہ ہر شخص کم از کم آٹھ ذہانتیں رکھتا ہے: لسانی، منطقی ریاضیاتی، موسیقی، جسمانی حرکی، مکانی، بین الاشخاص، درون اشخاص اور قدرتی۔"
+    },
+    {
+     "term": "بنیادی ذہنی قابلیتیں",
+     "definition": "لوئس تھرسٹن کا تاریخی تصور کہ ذہانت ایک اکیلے عمومی عنصر کے بجائے بنیادی ذہنی قابلیتوں کا مجموعہ ہے۔"
+    },
+    {
+     "term": "کیٹل-ہارن-کیرول (CHC) نظریہ",
+     "definition": "جدید نظریہ جو ذہانت کو درجہ بندی میں ترتیب دیتا ہے: سب سے اوپر عمومی صلاحیت (g)، درمیان میں وسیع قابلیتیں جیسے سیال اور متبلور ذہانت، اور بنیاد میں مخصوص قابلیتیں۔"
+    },
+    {
+     "term": "ثبوتی احتیاط",
+     "definition": "ادراکی ماہرین نفسیات کے ہاں گارڈنر کے نظریے پر تجربی ثبوت کی کمی کی بھاری تنقید ہوئی ہے۔ پھر بھی ماہرین تعلیم اسے استعمال کرتے ہیں کیونکہ یہ ان قابلیتوں کو نام دیتا ہے جنہیں اسکولوں نے نظرانداز کیا، اور دونوں باتیں ایک ساتھ سچ ہیں۔"
+    },
+    {
+     "term": "طرزِ تعلم",
+     "definition": "یہ دعوی کہ شاگرد بہترین سیکھتے ہیں جب انہیں ان کے پسندیدہ اسلوب (بصری، سماعی، حرکی) میں پڑھایا جائے۔ ڈیٹا کا جائزہ طرز پر مبنی تدریس کو کوئی سہارا نہیں دیتا، اور یہ دعوی متعدد ذہانتوں جیسا نہیں۔"
+    },
+    {
+     "term": "IQ (ذہانت کا خارج قسمت)",
+     "definition": "ذہانت ناپنے کے لیے بنے ٹیسٹ پر حاصل کیا گیا نمبر۔ ٹیسٹ معیاری ہیں: زیادہ تر پر اوسط IQ نمبر 100 ہے اور ایک معیاری انحراف 15 نمبر ہے۔"
+    },
+    {
+     "term": "اوسط بینڈ",
+     "definition": "85 سے 115 تک کے IQ نمبر، جو اوسط شمار ہوتے ہیں اور آبادی کے تقریباً دو تہائی حصے پر مشتمل ہیں۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Creativity",
+     "definition": "The ability to generate, create, or discover new ideas, solutions, and possibilities. For a teacher it is observable: not a mysterious gift but a set of moves that can be counted, named and practised."
+    },
+    {
+     "term": "Fluency",
+     "definition": "The part of creativity that counts how many ideas a pupil produces."
+    },
+    {
+     "term": "Flexibility",
+     "definition": "The part of creativity that counts how many kinds of idea a pupil produces."
+    },
+    {
+     "term": "Originality",
+     "definition": "The part of creativity that asks how new the ideas are in this room. It is a species of risk-taking, so it grows when wrong answers are safe in public."
+    },
+    {
+     "term": "Elaboration",
+     "definition": "The part of creativity that asks how far an idea is worked out. It is effort, and effort needs a reason, such as a real audience."
+    },
+    {
+     "term": "Divergent thinking",
+     "definition": "Thinking that allows an individual to arrive at unique, multiple solutions to a given problem: the flood of ideas that comes before the choice."
+    },
+    {
+     "term": "Convergent thinking",
+     "definition": "The ability to provide a correct or well-established answer or solution: the choice that follows the flood. Creativity needs both modes."
+    },
+    {
+     "term": "Giftedness",
+     "definition": "An unusual level of skill or knowledge in some domain. The traditional reading meant high verbal and test performance; the modern, wider reading means unusual talents in a range of activities, hence \"gifted and talented\"."
+    },
+    {
+     "term": "Gifted learner",
+     "definition": "A pupil who learns more quickly and independently than most of the same age, often with advanced language, strong motivation by challenge and high standards. Such pupils come from all economic and cultural groups and can become bored without accommodation."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تخلیقیت",
+     "definition": "نئے خیالات، حل اور امکانات پیدا کرنے، بنانے یا دریافت کرنے کی صلاحیت۔ استاد کے لیے یہ دیکھی جا سکتی ہے: کوئی پراسرار تحفہ نہیں بلکہ اقدامات کا ایک سیٹ جو گنے، نام کیے اور مشق کیے جا سکتے ہیں۔"
+    },
+    {
+     "term": "روانی",
+     "definition": "تخلیقیت کا وہ حصہ جو گنتا ہے کہ شاگرد کتنے خیال پیدا کرتا ہے۔"
+    },
+    {
+     "term": "لچک",
+     "definition": "تخلیقیت کا وہ حصہ جو گنتا ہے کہ شاگرد کتنی قسم کے خیال پیدا کرتا ہے۔"
+    },
+    {
+     "term": "انفرادیت",
+     "definition": "تخلیقیت کا وہ حصہ جو پوچھتا ہے کہ خیال اس کمرے میں کتنے نئے ہیں۔ یہ خطرہ لینے کی ایک قسم ہے، اس لیے یہ تب بڑھتی ہے جب غلط جواب سب کے سامنے محفوظ ہوں۔"
+    },
+    {
+     "term": "تفصیل",
+     "definition": "تخلیقیت کا وہ حصہ جو پوچھتا ہے کہ خیال کتنی دور تک نکالا گیا۔ یہ محنت ہے، اور محنت کو وجہ چاہیے، جیسے اصل سامعین۔"
+    },
+    {
+     "term": "بکھری سوچ",
+     "definition": "وہ سوچ جو فرد کو دیے گئے مسئلے کے منفرد اور متعدد حل تک پہنچنے دیتی ہے: انتخاب سے پہلے خیالات کا سیلاب۔"
+    },
+    {
+     "term": "مرکوز سوچ",
+     "definition": "درست یا اچھی طرح قائم جواب یا حل دینے کی صلاحیت: سیلاب کے بعد کا انتخاب۔ تخلیقیت کو دونوں انداز چاہئیں۔"
+    },
+    {
+     "term": "خاص صلاحیت",
+     "definition": "کسی شعبے میں مہارت یا علم کا غیر معمولی درجہ۔ روایتی قرأت اونچی لسانی اور ٹیسٹ کارکردگی تھی؛ جدید اور وسیع قرأت سرگرمیوں کی ایک حد میں غیر معمولی صلاحیتیں ہیں، اسی لیے \"خاص صلاحیت اور باصلاحیت\" کہا جاتا ہے۔"
+    },
+    {
+     "term": "ذہین متعلم",
+     "definition": "وہ شاگرد جو اپنی عمر کے زیادہ تر شاگردوں سے تیز اور آزادانہ سیکھتا ہے، اکثر ترقی یافتہ زبان، چیلنج سے مضبوط تحریک اور اونچے معیار رکھتا ہے۔ ایسے شاگرد تمام معاشی اور ثقافتی گروہوں سے آتے ہیں اور سہارا نہ ملنے پر بور ہو سکتے ہیں۔"
+    }
+   ]
+  }
+ }
+}
