@@ -345,9 +345,13 @@ const config: Config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        redirects: (JSON.parse(readFileSync('./catalog/licence-redirects.json', 'utf8')) as {
-          redirects: { from: string; to: string }[];
-        }).redirects,
+        redirects: [
+          ...(JSON.parse(readFileSync('./catalog/licence-redirects.json', 'utf8')) as {
+            redirects: { from: string; to: string }[];
+          }).redirects,
+          // Feature 034 T012 (#799): the admin guide moved into the admin console (admins only).
+          { from: '/guides/admin-guide', to: '/app/admin/guide' },
+        ],
       },
     ],
   ],
@@ -399,7 +403,7 @@ const config: Config = {
         },
         { to: '/#features', label: 'Features', position: 'left', activeBaseRegex: '^$' },
         { to: '/guides/teacher-guide/', label: 'Teachers', position: 'left' },
-        { to: '/contact', label: 'Institutions', position: 'left' },
+        { to: '/contact', label: 'Contact', position: 'left' },
         // Spec 010 follow-up, 2026-09-07 - registers
         // src/components/MobileTopBarWidgets.tsx; renders nothing at
         // desktop widths, a compact locale-switch + sign-in-status pair at

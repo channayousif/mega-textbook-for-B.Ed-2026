@@ -32,15 +32,15 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
 
 ## Stage 2: quick fixes
 
-- [ ] T010 Rename the navbar "Institutions" link to "Contact" (#797)
+- [x] T010 Rename the navbar "Institutions" link to "Contact" (#797)
   - Stage: 2 | Area: navbar | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: `docusaurus.config.ts` navbar item for `/contact` reads "Contact" and the Urdu navbar translation matches; build passes.
-- [ ] T011 Change both "Choose your programme" CTAs to "Explore the course catalogue" (#798)
+- [x] T011 Change both "Choose your programme" CTAs to "Explore the course catalogue" (#798)
   - Stage: 2 | Area: landing | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: the hero CTA (`src/components/landing/copy.ts` `cta1`) and the "Start with one topic today" section CTA say "Explore the course catalogue" in English, with a matching Urdu string.
-- [ ] T012 Make the admin guide admin-only by moving it into the admin console (#799)
+- [x] T012 Make the admin guide admin-only by moving it into the admin console (#799)
   - Stage: 2 | Area: admin | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25; owner ruling: move into `/app/admin`
   - Done when: the guide renders at `/app/admin/guide` behind the existing admin role check; `guides/admin-guide/` is gone from the public guides sidebar, search index and sitemap; `/guides/admin-guide/*` redirects to the new page; students and teachers see no link to it.
