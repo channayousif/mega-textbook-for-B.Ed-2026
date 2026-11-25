@@ -1,4 +1,4 @@
-import Translate from '@docusaurus/Translate';
+import { translate } from '@docusaurus/Translate';
 import React from 'react';
 import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -7,6 +7,7 @@ import { useWindowSize } from '@docusaurus/theme-common';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
 import LanguageToggle from './LanguageToggle';
+import Icon from './icons/Icon';
 import styles from './MobileTopBarWidgets.module.css';
 
 /**
@@ -58,6 +59,12 @@ function useOtherLocale(): { code: string; label: string; url: string } | null {
   };
 }
 
+/** First letter of a display name for the avatar (Unicode-aware, so Urdu names work). */
+export function initialOf(name: string | null | undefined): string {
+  const first = Array.from((name ?? '').trim())[0];
+  return first ? first.toLocaleUpperCase() : '?';
+}
+
 export default function MobileTopBarWidgets({
   mobile = false,
 }: {
@@ -84,13 +91,17 @@ export default function MobileTopBarWidgets({
     <div className={styles.widgetGroup}>
       {other && <LanguageToggle compact />}
       {isConfigured && !loading && (
+        // Feature 034 T014 (#801): a round avatar with the reader's initial (or a profile icon
+        // when signed out) instead of a text pill, so the logo has room on a phone.
         session ? (
-          <a className={styles.pill} href="/app/profile" title={displayName ?? undefined}>
-            {displayName}
+          <a className={styles.avatar} href="/app/profile" title={displayName ?? undefined}
+            aria-label={translate({ id: 'nav.profileOf', message: 'Your profile: {name}' }, { name: displayName ?? '' })}>
+            <span className={styles.avatarDisc} aria-hidden="true">{initialOf(displayName)}</span>
           </a>
         ) : (
-          <a className={styles.pill} href={loginUrlWithReturnTo(location.pathname, 'login')}>
-            <Translate id="nav.signIn">Sign in</Translate>
+          <a className={styles.avatar} href={loginUrlWithReturnTo(location.pathname, 'login')}
+            aria-label={translate({ id: 'nav.signIn', message: 'Sign in' })} title={translate({ id: 'nav.signIn', message: 'Sign in' })}>
+            <span className={styles.avatarDisc} aria-hidden="true"><Icon name="signin" size={20} accent={false} /></span>
           </a>
         )
       )}

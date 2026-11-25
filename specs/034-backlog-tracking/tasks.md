@@ -51,7 +51,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 3 | Area: landing | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: at 360x740, 390x844 and 1366x768 the whole hero (heading, text, CTA) is visible without scrolling, in English and Urdu.
-- [ ] T014 Mobile navbar: initial-letter avatar and icon-only search, language and profile (#801)
+- [x] T014 Mobile navbar: initial-letter avatar and icon-only search, language and profile (#801)
   - Stage: 3 | Area: navbar | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: under the mobile breakpoint the profile name is replaced by a round avatar with the user's initial, only search, language and profile icons show beside the logo, every icon has an accessible name, and the logo is not squeezed.
