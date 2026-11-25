@@ -2689,7 +2689,7 @@
    "id": "efmp-406",
    "locale": "ur",
    "kind": "short",
-   "state": "script-approved",
+   "state": "clips-qa",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -2700,6 +2700,12 @@
      "by": "owner",
      "date": "2026-11-22",
      "note": "crew approve-script via openclaw"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "claude",
+     "date": "2026-11-25",
+     "notes": "Passing takes: shot 1 t1, 2 t1, 3 t1, 4 t1, 5 t2 (5 t1 failed on drawn viewfinder marks)."
     }
    },
    "clips": [
@@ -2845,6 +2851,34 @@
       "by": "claude",
       "notes": "Presenter, dress, corridor and phone with blank screen are right and the line is spoken (QG2 0.929, only ڈاٹ dropped by whisper), but the closing close-up shows drawn viewfinder corner marks (camera interface)."
      }
+    },
+    {
+     "shot": 5,
+     "take": 2,
+     "at": "2026-11-25T08:49:24.501Z",
+     "artifact_id": "c833692b-1ccd-45af-9025-06c698ceddcb",
+     "media_id": "c833692b-1ccd-45af-9025-06c698ceddcb",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-5-t2.mp4",
+     "sha256": "962e5c9e1363fca93a267f09b840595c1d5e23fcdc7aa7d8606af45a71f4226c",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.929,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑھیں\ntextbook.com.p کے پر\nلنک نیچے ہے",
+      "missing": [
+       "ڈاٹ"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-5-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Presenter in grey shalwar kameez and navy waistcoat walks the school corridor, holds up a phone with a blank screen, push-in to a smiling close-up; pupils in uniform soft behind. No viewfinder marks, readable text, map or flag. QG2 0.929: whisper dropped ڈاٹ inside the address; the line is spoken in full."
+     }
     }
    ],
    "history": [
@@ -2859,6 +2893,14 @@
     {
      "state": "script-approved",
      "at": "2026-11-23T02:46:49.495Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-25T08:52:29.083Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-25T08:52:29.199Z"
     }
    ],
    "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b"
