@@ -4,12 +4,12 @@ title: crew review_en EFMP-408 unit 3
 stage: misc
 date: 2026-11-25
 surface: agent
-model: Claude Code (model identity LongCat-2.5; exact deployment version unavailable)
+model: claude_crew
 feature: efmp-408
 branch: crew/efmp-408-u03-review_en
 user: crew
 command: crew review_en
-labels: ["crew", "claude", "review_en"]
+labels: ["crew", "claude_crew", "review_en"]
 links:
   spec: specs/content/efmp-408/content-spec.md
   ticket: null
@@ -17,7 +17,6 @@ links:
   pr: null
 files:
  - history/prompts/efmp-408/crew-efmp-408-u03-review_en.misc.prompt.md
- - specs/content/efmp-408/tasks.md
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1.json
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/assessment-solutions.md
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/logs/check-content.txt
@@ -34,6 +33,12 @@ files:
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/logs/render-verify.txt
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/logs/validatecontent.txt
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/manifest.json
+ - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-index-lastfigure.png
+ - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-topic-01-lastfigure.png
+ - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-topic-02-lastfigure.png
+ - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-topic-03-lastfigure.png
+ - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-topic-04-lastfigure.png
+ - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/render-verify.json
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render/desktop-index.png
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render/desktop-topic-01.png
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render/desktop-topic-02.png
@@ -50,17 +55,11 @@ files:
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render/narrow360-unit-teacher-notes.png
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render/render-inspect.json
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render/render-inspect.log
- - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-index-lastfigure.png
- - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-topic-01-lastfigure.png
- - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-topic-02-lastfigure.png
- - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-topic-03-lastfigure.png
- - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/desktop-topic-04-lastfigure.png
- - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/render-verify/render-verify.json
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/source-verification.md
  - specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1/summary.md
+ - specs/content/efmp-408/tasks.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1.json
 ---
 
 ## Prompt
@@ -91,49 +90,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Conducted the independent G3 English review of EFMP-408 Unit 3, recorded a validated advisory
-`revise` report with a hashed evidence bundle (gate logs, independent assessment solutions,
-source verification, render-inspect and a follow-up render driver), and added the open advisory
-tracker row. G3 stays open and unsigned.
+Added a validated advisory G3 `revise` review of EFMP-408 Unit 3 with a hashed evidence bundle (gate logs, independent assessment solutions, source verification, production render evidence) and an open tracker row, all committed on `crew/efmp-408-u03-review_en`.
 
 ## Outcome
 
-- Impact: review_en for EFMP-408 Unit 3 by Claude Code (attempt 1).
-- Tests: `npm run check:content` passed (14/14 gates); `review-evidence.mjs validate` reports
-  "Report structurally valid: revise".
+- Impact: review_en for EFMP-408 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 42 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Independent G3 English review of EFMP-408 Unit 3. Added the advisory report
-  `specs/content/efmp-408/reviews/unit-03/G3/crew-efmp-408-u03-review_en-r1.json`, its evidence
-  bundle (manifest, gate logs, assessment solutions, source verification, render artifacts) and an
-  open advisory row in `specs/content/efmp-408/tasks.md`. G3 is not ticked and nothing is signed.
-- Decisions the team must respect: the report is advisory; it does not certify the unit, qualify
-  the reviewer, or authorise publication. The reviewer identity is `agent:claude-g3-reviewer` and
-  the author run is `crew-efmp-408-u03-author`.
-- Pending / next owner: a repair job for the four assessment findings (A-1 to A-4) and the three
-  source attributions (S-1 to S-3); then a fresh independent review on a new manifest.
+- Shipped / changed: Added a validated advisory G3 `revise` review of EFMP-408 Unit 3 with a hashed evidence bundle (gate logs, independent assessment solutions, source verification, production render evidence) and an open tracker row, all committed on `crew/efmp-408-u03-review_en`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Disposition is `revise`: assessment criterion fails on MCQ 10's key rationale, three RRQs below
-    the style-guide RRQ floor, one formative item above the declared band, and 16 formative items
-    against the approved 12 (D-2026-0093 item 4).
-  - `scripts/render-inspect.mjs` reports a lazy-load false positive on fig-U3-7 (below-the-fold
-    `loading="lazy"`); the follow-up scrolling driver confirms all figures render. Do not re-report
-    it as a content defect.
-  - `sources/texts/hec-2013-testdev.md` is not manifest-bound (the key regex captures `hec-2013`);
-    verify HEC claims against the bound full guide text.
-- Paperclip issues affected: none.
+  - G3 stays open and unsigned under an advisory `revise`; a repair job owns A-1 to A-4 and S-1 to S-3, then a fresh manifest and independent re-review.
+  - do not re-report `render-inspect`'s `fig-U3-7` "did not load" as a content defect; it is a lazy-load measurement artifact, resolved in `logs/render-verify.txt`.
+  - `sources/texts/hec-2013-testdev.md` is not manifest-bound (the key regex captures `hec-2013`); verify HEC claims against the bound full guide text.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the prescribed render tool measures lazy below-the-fold images before
-  fetch, producing a false "visible image did not load" defect; a scrolling driver resolves it.
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS (revise).
-- Prompt variant (if applicable): crew brief v1 (efmp-408 u03 review_en).
-- Next experiment (smallest change to try): have `render-inspect.mjs` scroll before measuring, or
-  treat `loading="lazy"` below-the-fold images as not-yet-loaded rather than broken.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
