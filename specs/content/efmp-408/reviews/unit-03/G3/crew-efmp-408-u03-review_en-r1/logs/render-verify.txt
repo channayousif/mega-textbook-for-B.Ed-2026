@@ -1,0 +1,4 @@
+heavy: slot acquired; waiting for 30 seconds of memory/PSI headroom
+chromium 149.0.7827.0
+defects=0
+finished 2026-11-25T16:42:54.840Z
