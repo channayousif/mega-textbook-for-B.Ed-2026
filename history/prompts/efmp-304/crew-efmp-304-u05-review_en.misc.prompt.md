@@ -16,27 +16,27 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-304/crew-efmp-304-u05-review_en.misc.prompt.md
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125.json
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/advisory-tracker-row.md
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/assessment-solutions.md
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/limitations.md
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/build-content-status.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check-content.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:depth-gate.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:docs-sync.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:figures.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:no-answer-keys.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:no-em-dash.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/measure-figure-text.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/render-review.txt
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/validate:content.log
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/make-report.mjs
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/manifest.json
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/prior-findings.md
-  - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/summary.md
+ - history/prompts/efmp-304/crew-efmp-304-u05-review_en.misc.prompt.md
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125.json
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/advisory-tracker-row.md
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/assessment-solutions.md
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/limitations.md
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/build-content-status.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check-content.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:depth-gate.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:docs-sync.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:figures.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:no-answer-keys.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/check:no-em-dash.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/measure-figure-text.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/render-review.txt
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/logs/validate:content.log
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/make-report.mjs
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/manifest.json
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/prior-findings.md
+ - specs/content/efmp-304/reviews/unit-05/G3/agy-cycle2-20261125/summary.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -70,26 +70,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Recorded independent G3 English cycle-2 review report and evidence for EFMP-304 Unit 5 escalating on unavailable live render inspection while all content gates passed.
+Completed independent G3 English cycle-2 review for EFMP-304 Unit 5, producing validated evidence report agy-cycle2-20261125.json with escalate disposition due to production build divergence while passing all 14 repository content gates.
 
 ## Outcome
 
-- Impact: review_en for EFMP-304 Unit 5 by agy (cycle 2).
-- Tests: npm run check:content passed in the job worktree before the commit.
+- Impact: review_en for EFMP-304 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded independent G3 English cycle-2 review report and evidence for EFMP-304 Unit 5 escalating on unavailable live render inspection while all content gates passed.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Completed independent G3 English cycle-2 review for EFMP-304 Unit 5, producing validated evidence report agy-cycle2-20261125.json with escalate disposition due to production build divergence while passing all 14 repository content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Live site `70e141423` differs from HEAD `b7417e1e0` on Unit 5 prose and 5 raster illustration assets; visual accessibility remains unverified until inspected on a matching deployment.
-  - G3 remains advisory (cycle 2 of 2, disposition escalate, reviewer token `agent:g3-reviewer`); no certification or tracker tick was performed.
+  - Live site 70e141423 differs from HEAD b7417e1e0 across Unit 5 prose and 5 WebP illustrations; visual accessibility remains unverified until inspected against a matching deployment.
+  - G3 remains advisory (cycle 2 of 2, disposition escalate, reviewer token agent:g3-reviewer); no certification or tracker tick was performed.
   - Advisory observation: 5 of 10 MCQ keys are option (B).
-- Paperclip issues affected: none (work tracked by the crew board).
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
