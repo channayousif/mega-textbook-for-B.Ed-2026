@@ -20,9 +20,9 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-03/G2/20261125T070051288Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. The reviewer should check the Islamic material (Ibn Khaldun's Muqaddimah, Iqbal's Khudi and educational poetry) with a qualified scholar, per content-spec drafting note 8 |
-| Unit 3 | G4 ur-translation | ▢ | | Pending Urdu translation job |
+| Unit 3 | G4 ur-translation | ▢ | | Complete nine-page draft Urdu mirror and twelve localized SVG pairs (with derived dark variants) prepared from English b7417e1e0; see reviews/unit-03/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting independent review; authored concept labels also need checking |
-| Unit 3 | G6 assets | ▣ | | Twelve schematic SVGs (fig-U3-1 to fig-U3-12) placed with derived dark variants; measure-figure-text clean; banner fig-U3-13 prompt-only |
+| Unit 3 | G6 assets | ▣ | | Twelve English schematic SVGs (fig-U3-1 to fig-U3-12) and twelve Urdu schematic SVGs placed with derived dark variants; measure-figure-text clean; banner fig-U3-13 prompt-only |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
