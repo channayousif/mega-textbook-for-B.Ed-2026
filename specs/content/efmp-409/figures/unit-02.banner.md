@@ -1,0 +1,7 @@
+# Unit banner - EFMP-409 Unit 2 (The Foundations of Education)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs efmp-409 2 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U2-5 | index | illustration | unit banner, wide 16:9 landscape scene in a calm documentary illustration style: a government middle school courtyard in Sindh on a winter morning, whitewashed walls and a brick archway; a woman head teacher in shalwar kameez and dupatta stands with a clipboard talking to a young B.Ed trainee, also in shalwar kameez and dupatta, who holds a notebook; behind them pupils in school uniform gather in small groups, some in rows for assembly and others clustered around a teacher pointing at a wall chart; a mango tree and a dusty playing field with a cricket pitch in the background; warm morning light, thoughtful mood; no readable text, maps, flags, emblems, calligraphy, logos or watermarks | A head teacher and a B.Ed trainee talk in a Sindh school courtyard while pupils gather in rows and small groups behind them, with a playing field and mango tree in the morning light. |  | prompt-only |
