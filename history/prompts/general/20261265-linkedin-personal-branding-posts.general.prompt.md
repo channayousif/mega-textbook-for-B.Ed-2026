@@ -1,5 +1,5 @@
 ---
-id: 20261264
+id: 20261265
 title: LinkedIn personal-branding posts with a weekly review page (career crew)
 stage: general
 date: 2026-11-25
@@ -18,7 +18,7 @@ links:
 files:
   - ~/career (branch feat/linkedin-posts, commit 8ab0788): build/posts.py, build/visuals.py, templates/posts/, review/career-review/index.ts, scripts/crew/{linkedin,review,post-stages,posts-pipeline}.mjs, scripts/crew/career.mjs, scripts/crew/briefs/posts_*.md, .claude/skills/linkedin-posts/SKILL.md, data/posts/2026-W49.yaml, data/linkedin.yaml, tests/
   - ~/supabase-project/volumes/functions/career-review/index.ts (deployed copy, production host)
-  - history/prompts/general/20261264-linkedin-personal-branding-posts.general.prompt.md
+  - history/prompts/general/20261265-linkedin-personal-branding-posts.general.prompt.md
 tests:
   - career: node --test tests/*.test.mjs (14 pass), uv run pytest -q (44 pass), build/linkedin.py --check, build/build.py --all --check
   - review page: invalid token 403; valid link 200 text/html; image 200; MP4 Range 206; CSP, no-referrer, noindex, no-store headers; decision API accepts valid and rejects unknown post, bad token, empty change note
