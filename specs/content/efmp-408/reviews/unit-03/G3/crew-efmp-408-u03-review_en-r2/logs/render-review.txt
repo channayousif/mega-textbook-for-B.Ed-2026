@@ -1,0 +1,17 @@
+render-review - EFMP-408 Unit 3 G3 (cycle 2) - 2026-11-26
+Command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efmp-408/unit-03/ static/img/figures/efmp-408/unit-03/
+deployed SHA: 7fb77de68f5d59bbc507e85c07a892a3cbf93eca
+HEAD: 467e2a0876a783e4c8649e4aad7f476f0ccf330a
+diff exit code: 1
+Changed paths between deployed SHA and HEAD:
+M	docs/semester-4/efmp-408/unit-03/topic-01.mdx
+M	docs/semester-4/efmp-408/unit-03/topic-02.mdx
+M	docs/semester-4/efmp-408/unit-03/topic-03.mdx
+M	docs/semester-4/efmp-408/unit-03/topic-04.mdx
+M	docs/semester-4/efmp-408/unit-03/unit-assessment.mdx
+
+Result: the diff is NOT empty, so the production build (CI-built from main) is not the reviewed input.
+Per the crew brief, render-review is recorded as unavailable; no build, dev server or Playwright run was attempted.
+scripts/render-inspect.mjs EFMP-408 3 --base https://textbook.com.pk --no-pdf was NOT run.
+
+Changed images can be served stale for up to 30 days, so a missing or mismatched asset is treated as unverified, not as a content defect.
