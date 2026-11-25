@@ -1,0 +1,7 @@
+# Unit banner - EFMP-408 Unit 2 (Objectives, Alignment and the Principles of Good Assessment)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs efmp-408 2 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U2-7 | index | illustration | unit banner, wide 16:9 landscape scene in a warm documentary style: inside a government primary school classroom in Sindh after school; a female Pakistani teacher in modest shalwar kameez and dupatta sits at a wooden desk covered with a test paper, a simple tick-and-cross checklist and a small target diagram drawn on scrap paper, marking with a pencil and a thoughtful expression; on the desk a neat stack of pupils' notebooks and a cup of tea; behind her a chalkboard shows faint chalk boxes and arrows suggesting objectives linked to questions, and a shelf holds chart paper and a few science models; late afternoon light through a barred window, neem shadow on the wall, no readable text, letters or numbers on any paper, board or notebook, no map, flag, logo or emblem | A teacher in a Sindh government school classroom reviews a test paper against a simple checklist and a target diagram at her desk after school. |  | prompt-only |

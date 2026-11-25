@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">The same mathematics item shown in a biased and a fair context</title><desc id="d">The same mathematics item shown twice: a version set in an unfamiliar foreign context and a version set in a familiar local market, showing how context can introduce bias.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+.stroke { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.frame { stroke: var(--ink); stroke-width: 2; fill: none; }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.body { font-size: 14px; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+.ah { fill: var(--ink); }
+</style><rect class="bg" x="0" y="0" width="780" height="420"/><g id="layer-regions"><rect class="panel" x="20" y="60" width="360" height="280" rx="8"/><rect class="panel" x="400" y="60" width="360" height="280" rx="8"/><rect class="panel-c" x="40" y="80" width="320" height="180" rx="6"/><rect class="panel-a" x="420" y="80" width="320" height="180" rx="6"/></g><g id="layer-nodes"><text class="sh" x="200" y="46" text-anchor="middle">biased item</text><text class="sh" x="580" y="46" text-anchor="middle">fair item</text><text class="small" x="60" y="108">word problem:</text><text class="cell" x="60" y="136">A ski resort sells 40 tickets</text><text class="cell" x="60" y="158">in December and 60 in January.</text><text class="cell" x="60" y="180">By what percentage did</text><text class="cell" x="60" y="202">sales increase?</text><text class="cell" x="200" y="244" text-anchor="middle">(60 - 40) / 40 x 100 = 50%</text><text class="small" x="440" y="108">word problem:</text><text class="cell" x="440" y="136">A fruit seller in Sanghar sells</text><text class="cell" x="440" y="158">40 kg of apples on Monday and</text><text class="cell" x="440" y="180">60 kg on Tuesday. By what</text><text class="cell" x="440" y="202">percentage did sales increase?</text><text class="cell" x="580" y="244" text-anchor="middle">(60 - 40) / 40 x 100 = 50%</text><text class="cell" x="200" y="372" text-anchor="middle">assumes snow and ski resorts</text><text class="cell" x="580" y="372" text-anchor="middle">uses a familiar local market</text></g><g id="layer-labels"><text id="label-title" class="h" x="20" y="26">Same mathematics, different context</text><text id="label-caption" class="small" x="20" y="402">A context the class has never met can turn a mathematics item into a reading test.</text><text class="wm" x="768" y="412" text-anchor="end" aria-hidden="true">textbook.com.pk</text></g></svg>
