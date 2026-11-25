@@ -23,11 +23,11 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-408/reviews/unit-01/G2/20261124T184857338Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-408/reviews/unit-01/G2/20261125T135343773Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 1 | G4 ur-translation | ▢ | | Complete six-page draft Urdu mirror and six localized SVG pairs (with derived dark variants) prepared from English 0ac0a4071; see reviews/unit-01/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 1 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation |
-| Unit 1 | G6 assets | ▣ | | Six English schematic SVGs (fig-U1-1 to fig-U1-3, fig-U1-5 to fig-U1-7) and six Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U1-4 prompt-only |
+| Unit 1 | G6 assets | ▣ | | Six English schematic SVGs (fig-U1-1 to fig-U1-3, fig-U1-5 to fig-U1-7) and six Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U1-4 placed |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-408/reviews/unit-02/G2/20261124T205350146Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
