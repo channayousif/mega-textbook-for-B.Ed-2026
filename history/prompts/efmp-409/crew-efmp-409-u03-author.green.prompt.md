@@ -1,10 +1,10 @@
 ---
 id: crew-efmp-409-u03-author
 title: crew author EFMP-409 unit 3
-stage: green
+stage: misc
 date: 2026-11-25
 surface: agent
-model: gemini
+model: agy
 feature: efmp-409
 branch: crew/efmp-409-u03-author
 user: crew
@@ -16,62 +16,63 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-4/efmp-409/unit-03/index.mdx
-  - docs/semester-4/efmp-409/unit-03/topic-01.mdx
-  - docs/semester-4/efmp-409/unit-03/topic-02.mdx
-  - docs/semester-4/efmp-409/unit-03/topic-03.mdx
-  - docs/semester-4/efmp-409/unit-03/topic-04.mdx
-  - docs/semester-4/efmp-409/unit-03/topic-05.mdx
-  - docs/semester-4/efmp-409/unit-03/topic-06.mdx
-  - docs/semester-4/efmp-409/unit-03/unit-assessment.mdx
-  - docs/semester-4/efmp-409/unit-03/unit-teacher-notes.mdx
-  - specs/content/efmp-409/concepts/unit-03.md
-  - specs/content/efmp-409/coverage/unit-03.md
-  - specs/content/efmp-409/figures/unit-03.banner.md
-  - specs/content/efmp-409/figures/unit-03.md
-  - specs/content/efmp-409/reviews/unit-03/G2/20261125T070051288Z-gates.json
-  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-bloom-bands.txt
-  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-concept-graph.txt
-  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-depth-gate.txt
-  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-docs-sync.txt
-  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-figures.txt
-  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-no-answer-keys.txt
-  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-no-em-dash.txt
-  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/validate-content.txt
-  - specs/content/efmp-409/sources/texts/cheddadi-1994-ibn-khaldun.md
-  - specs/content/efmp-409/sources/texts/iqbal-cyber-library.md
-  - specs/content/efmp-409/sources/texts/sep-bertram-rousseau.md
-  - specs/content/efmp-409/sources/texts/sep-hildebrand-dewey.md
-  - specs/content/efmp-409/sources/texts/sep-kraut-plato.md
-  - specs/content/efmp-409/sources/texts/sep-shields-aristotle.md
-  - specs/content/efmp-409/sources/unit-03.md
-  - specs/content/efmp-409/tasks.md
-  - static/img/figures/efmp-409/unit-03/fig-U3-1.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-1.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-2.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-2.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-3.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-3.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-4.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-4.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-5.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-5.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-6.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-6.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-7.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-7.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-8.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-8.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-9.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-9.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-10.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-10.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-11.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-11.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-12.dark.svg
-  - static/img/figures/efmp-409/unit-03/fig-U3-12.svg
+ - docs/semester-4/efmp-409/unit-03/index.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-01.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-02.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-03.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-04.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-05.mdx
+ - docs/semester-4/efmp-409/unit-03/topic-06.mdx
+ - docs/semester-4/efmp-409/unit-03/unit-assessment.mdx
+ - docs/semester-4/efmp-409/unit-03/unit-teacher-notes.mdx
+ - history/prompts/efmp-409/crew-efmp-409-u03-author.green.prompt.md
+ - specs/content/efmp-409/concepts/unit-03.md
+ - specs/content/efmp-409/coverage/unit-03.md
+ - specs/content/efmp-409/figures/unit-03.banner.md
+ - specs/content/efmp-409/figures/unit-03.md
+ - specs/content/efmp-409/reviews/unit-03/G2/20261125T070051288Z-gates.json
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261125T070051288Z/validate-content.txt
+ - specs/content/efmp-409/sources/texts/cheddadi-1994-ibn-khaldun.md
+ - specs/content/efmp-409/sources/texts/iqbal-cyber-library.md
+ - specs/content/efmp-409/sources/texts/sep-bertram-rousseau.md
+ - specs/content/efmp-409/sources/texts/sep-hildebrand-dewey.md
+ - specs/content/efmp-409/sources/texts/sep-kraut-plato.md
+ - specs/content/efmp-409/sources/texts/sep-shields-aristotle.md
+ - specs/content/efmp-409/sources/unit-03.md
+ - specs/content/efmp-409/tasks.md
+ - static/img/figures/efmp-409/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-1.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-10.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-10.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-11.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-11.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-12.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-12.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-2.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-3.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-4.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-5.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-6.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-7.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-7.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-8.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-8.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-9.dark.svg
+ - static/img/figures/efmp-409/unit-03/fig-U3-9.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -102,19 +103,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFMP-409 Unit 3 (six topics, 10/10/5 assessment, teacher notes, twelve placed SVG figures with dark variants) with sources, coverage, concepts, tracker and G2 evidence, all content gates green.
+Authored EFMP-409 Unit 3 (six topics, 10/10/5 assessment, teacher notes, 12 placed SVG figure pairs) with specs, coverage, concepts, tracker, and verified G2 evidence, passing all 14 content gates.
 
 ## Outcome
 
-- Impact: author for EFMP-409 Unit 3 by agy.
-- Tests: npm run check:content passed in the job worktree before completing task.
-- Files: 46 file(s), listed above.
+- Impact: author for EFMP-409 Unit 3 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 55 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- **What shipped**: Complete English authoring of EFMP-409 Unit 3 (The History of Education), including 6 topics, unit assessment (10 MCQs, 10 RRQs, 5 ERQs), teacher notes, 12 placed SVG figures (and 12 dark variants) with zero text overflows, full coverage matrix (U3-01 to U3-19), concept graph (CON:EFMP-409-3-1 to CON:EFMP-409-3-13), bound source texts, and verified G2 gate evidence.
-- **Decisions**: Unit 3 is a 6-topic unit spanning Weeks 5-10; depth budget stands at 97 reading-min (within the approved 74-102 band).
-- **Pending and owners**: G3 independent review, figure generation for banner (fig-U3-13 prompt-only), and Urdu translation (G4/G5) by subsequent crew workers.
-- **Affected issues**: EFMP-409 Unit 3 curriculum progression.
+- Shipped / changed: Authored EFMP-409 Unit 3 (six topics, 10/10/5 assessment, teacher notes, 12 placed SVG figure pairs) with specs, coverage, concepts, tracker, and verified G2 evidence, passing all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Banner illustration fig-U3-13 is prompt-only in figures/unit-03.banner.md for Codex raster generation.
+  - G3 reviewer should check Islamic educational content (Ibn Khaldun and Iqbal) with a qualified scholar per spec note 8.
+  - All 13 concept labels in concepts/unit-03.md carry authored Urdu labels ready for independent checking during G5.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
