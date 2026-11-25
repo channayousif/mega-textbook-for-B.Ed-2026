@@ -483,5 +483,9 @@
   },
   "news.viewAll": {
     "message": "سب دیکھیں"
+  },
+  "nav.profileOf": {
+    "message": "آپ کی پروفائل: {name}",
+    "description": "Mobile navbar avatar link label (Feature 034 T014)"
   }
 }

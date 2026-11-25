@@ -7,19 +7,28 @@
   gap: 0.35rem;
 }
 
-.pill {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-  max-width: 4.75rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 0.3rem 0.5rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: var(--ifm-font-weight-semibold);
+
+/* Feature 034 T014 (#801): profile as a round avatar. The link is a 44px target; the disc inside is
+   36px so it reads as an icon beside the search button. */
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.avatar:hover { text-decoration: none; }
+.avatar:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 1px; }
+.avatarDisc {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--brand-teal, var(--ifm-color-primary));
+  color: #fff;
+  font-weight: var(--ifm-font-weight-bold);
+  font-size: 1rem;
   line-height: 1;
-  color: var(--ifm-navbar-link-color);
-  background: var(--ifm-color-emphasis-200);
 }
