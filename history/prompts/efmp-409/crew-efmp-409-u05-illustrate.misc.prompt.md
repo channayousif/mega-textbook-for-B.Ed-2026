@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed the EFMP-409 Unit 5 raster banner illustration (fig-U5-7) in English and Urdu index pages, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all content gates.
+Generated, inspected, and placed the EFMP-409 Unit 5 banner illustration in English and Urdu index pages, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
@@ -85,15 +85,13 @@ Generated, inspected, and placed the EFMP-409 Unit 5 raster banner illustration 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the EFMP-409 Unit 5 raster banner illustration (fig-U5-7) in English and Urdu index pages, updated the banner manifest to placed, refreshed G2 gate evidence, and passed all content gates.
+- Shipped / changed: Generated, inspected, and placed the EFMP-409 Unit 5 banner illustration in English and Urdu index pages, refreshed G2 gate evidence, and passed all content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G2 gate evidence for Unit 5 refreshed to 20261126T035315531Z-gates.json with full logs committed.
-  - Unit banner fig-U5-7 is placed in English and Urdu index.mdx; Unit 5 G3 review and G5 review remain open for independent evaluation.
-  - The concept labels for CON:EFMP-409-5-3 and 5-4 use اجراء for "implementation", while the Urdu prose uses نفاذ for implementation and اجرا for "launch"; G5 should decide whether to align the labels.
-  - fig-U5-4 and fig-U5-5 Urdu viewBoxes are taller than the English (540 vs 430, 400 vs 330), and labels with hyphenated numbers use LRM inside an RTL embedding.
-  - G5 must inspect rendered Urdu pages at 360 px and A4 on the live site.
+  - Unit banner fig-U5-7 is placed; Unit 5 G3 review and G5 review remain open for independent evaluation.
+  - CON:EFMP-409-5-3 and 5-4 use اجراء for "implementation" whereas Urdu prose uses نفاذ for implementation and اجرا for "launch"; G5 should decide on alignment.
+  - Urdu rendered-page inspection at 360 px and A4 has not been run and should be verified on the live site by G5.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
