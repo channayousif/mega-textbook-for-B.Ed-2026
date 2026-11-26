@@ -14,6 +14,13 @@ definition of done. Paperclip is paused (its data is kept); nothing here depends
 | agy_claude | `agy -p --model claude-opus-4-6-thinking` | anthropic | none: next after claude in every chain that has claude (agy's separate Claude/GPT quota) |
 | opencode | `opencode run -m longcat/LongCat-2.0` | longcat | fix (mechanical gate repairs) |
 
+**Claude model per stage (Feature 034, quota efficiency).** The `claude` worker passes `--model` and
+`--effort` from `CLAUDE_ROUTING` in `scripts/crew/workers.mjs`: Opus (high) for author, review_en,
+review_ur, maint_survey and maint_review; Opus (medium) for plan_illustrations, teaser_script,
+intel_distill and maint_adr; Sonnet (medium) for every other stage. Override one stage on the host
+with `CREW_CLAUDE_MODEL_<STAGE>` / `CREW_CLAUDE_EFFORT_<STAGE>`. `node scripts/ops/claude-usage.mjs`
+reports the effect by model and by kind (interactive, crew, subagent).
+
 openclaw is not a worker. It is the owner channel: Discord `#etextbook-platform` for everything,
 WhatsApp as well for urgent items and decisions.
 
