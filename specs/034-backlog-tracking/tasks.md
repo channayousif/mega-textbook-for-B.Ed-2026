@@ -78,7 +78,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 4 | Area: notes | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: signed-in students and teachers can open a floating notes panel on any textbook page, save a note tied to that page (reusing `src/lib/studentNotes.ts`), and follow a link to the dashboard Notes page; signed-out readers see a sign-in prompt; works in RTL and on mobile; e2e test added.
-- [ ] T020 Grey out the language toggle on pages with no Urdu translation and show a callout (#807)
+- [x] T020 Grey out the language toggle on pages with no Urdu translation and show a callout (#807)
   - Stage: 4 | Area: i18n | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: on a page with no Urdu version the locale dropdown entry for Urdu is disabled with a tooltip, and the page shows a callout saying the Urdu translation is not available yet (reusing the translation status behind `TranslationStatusBadge.tsx`).

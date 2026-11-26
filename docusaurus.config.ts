@@ -297,6 +297,8 @@ const config: Config = {
   ],
 
   plugins: [
+    // Feature 034 T020 (#807): pages without an Urdu file, for the language toggle and callout.
+    './src/plugins/urdu-pages.mjs',
     /**
      * Second docs-plugin instance for the Student/Teacher Guides (Spec 004,
      * ADR-0009, research.md R6, T001). Kept deliberately separate from the

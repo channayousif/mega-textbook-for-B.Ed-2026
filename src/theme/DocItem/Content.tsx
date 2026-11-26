@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import ContentOriginal from '@theme-original/DocItem/Content';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { saveLastRead } from '@site/src/lib/lastRead';
@@ -14,6 +14,8 @@ import { useLocation } from '@docusaurus/router';
 import { ReadingMenu, ReadingProgress, useAnswerNotes } from '@site/src/components/ReadingTools';
 import ReaderBottomBar from '@site/src/components/ReaderBottomBar';
 import NotesWidget from '@site/src/components/NotesWidget';
+import { usePluginData } from '@docusaurus/useGlobalData';
+import { setUrduMissing, useUrduAvailability } from '@site/src/lib/urduAvailability';
 import StudioPanel from '@site/src/components/Studio/StudioPanel';
 import SelfCheck from '@site/src/components/SelfCheck';
 import { useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
@@ -287,6 +289,14 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
   const minutes = typeof frontMatter?.est_reading_minutes === 'number' ? frontMatter.est_reading_minutes : null;
   useAnswerNotes(locale, pathname);
 
+  // Feature 034 T020 (#807): does this page have an Urdu file? The navbar toggle greys out its
+  // Urdu segment when not, and an Urdu-route page served from the English source says so.
+  const { missing: missingUrdu } = usePluginData('urdu-pages') as { missing: string[] };
+  const urduMissing = useMemo(() => missingUrdu.includes(source.replace(/^@site\//, '')), [missingUrdu, source]);
+  useEffect(() => { setUrduMissing(urduMissing); return () => setUrduMissing(false); }, [urduMissing]);
+  const { notice: urduNotice } = useUrduAvailability();
+  const showUrduCallout = urduMissing && (locale === 'ur' || urduNotice);
+
   // The landing page's "Continue reading": course and licence pages only, kept on this device.
   useEffect(() => {
     if (!metadata?.title || (courseCode === null && !pathname.includes('/licence/'))) return;
@@ -452,6 +462,12 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
     <>
       <ReadingProgress locale={locale} />
       <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
+      {showUrduCallout && (
+        <div className="alert alert--info urdu-unavailable" role="note">
+          <span lang="ur" dir="rtl">اس صفحے کا اردو ترجمہ ابھی دستیاب نہیں۔</span>{' '}
+          <span lang="en" dir="ltr">The Urdu translation of this page is not available yet.</span>
+        </div>
+      )}
       {/* With a course bar, the menu sits in the bar (CourseNavBar); otherwise it sits here. */}
       {!hasNavBar && <div className="reader-menu-fallback"><ReadingMenu minutes={minutes} locale={locale} /></div>}
       {isCourseOverview && <CourseGuideNotice courseCode={courseCode} locale={locale} />}
