@@ -21,5 +21,6 @@ Contract: `contracts/coverage-matrix-v2.md`. Every sub-topic from the content-sp
 | U1-11 | topic-04.mdx | ### Analysing observation findings | hec-2013-practicum |
 | U1-11 | topic-04.mdx | ### Analysing observation findings | teach-primary-2021 |
 | U1-12 | topic-04.mdx | ### Giving professional and constructive feedback | hec-2013-practicum |
+| U1-12 | topic-04.mdx | ### Giving professional and constructive feedback | teach-primary-2021 |
 | U1-12 | topic-04.mdx | ### Giving professional and constructive feedback | hec-2013-methods |
 | U1-13 | topic-04.mdx | ### Linking observation to self-improvement: the role of reflection in teaching practice | hec-2013-practicum |
