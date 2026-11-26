@@ -1,0 +1,25 @@
+prepared inputs: 95
+fresh inputManifest: 95
+manifests identical: true
+skill_digest prepared: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+skill_digest fresh:    eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+skill digest match: true
+missing from fresh: none
+extra in fresh: none
+changed digests: none
+
+bound roots include:
+  docs/semester-4/efmp-409/unit-01/index.mdx
+  docs/semester-4/efmp-409/unit-01/topic-01.mdx
+  docs/semester-4/efmp-409/unit-01/topic-02.mdx
+  docs/semester-4/efmp-409/unit-01/unit-assessment.mdx
+  docs/semester-4/efmp-409/unit-01/unit-teacher-notes.mdx
+  static/img/figures/efmp-409/unit-01/fig-U1-1.dark.svg
+  static/img/figures/efmp-409/unit-01/fig-U1-1.svg
+  static/img/figures/efmp-409/unit-01/fig-U1-2.dark.svg
+  static/img/figures/efmp-409/unit-01/fig-U1-2.svg
+  static/img/figures/efmp-409/unit-01/fig-U1-3.dark.svg
+  static/img/figures/efmp-409/unit-01/fig-U1-3.svg
+  static/img/figures/efmp-409/unit-01/fig-U1-4.dark.svg
+  static/img/figures/efmp-409/unit-01/fig-U1-4.svg
+  static/img/figures/efmp-409/unit-01/fig-U1-5.webp
