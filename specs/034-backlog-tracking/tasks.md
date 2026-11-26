@@ -133,7 +133,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 5 | Area: content | Type: backlog | Priority: p3 | Owner: no
   - Source: `specs/backlog.md` (013)
   - Done when: every page under `guides/student-guide/` and `guides/teacher-guide/`, English and Urdu, has a description.
-- [ ] T033 Author the EFMP-302 `course-review.mdx` page (#820)
+- [x] T033 Author the EFMP-302 `course-review.mdx` page (#820)
   - Stage: 5 | Area: content | Type: backlog | Priority: p2 | Owner: no
   - Source: `specs/backlog.md` (007); plan seeded in the EFMP-302 content-spec
   - Done when: the page exists from the content-spec's course review plan and passes the content gates.
