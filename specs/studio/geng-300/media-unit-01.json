@@ -209,7 +209,7 @@
    "uploaded_at": "2026-11-26T13:19:38Z"
   },
   {
-   "state": "qa2-pass",
+   "state": "qa3-pass",
    "gates": {
     "qa1": {
      "verdict": "pass",
@@ -250,6 +250,12 @@
      "by": "Claude QG2 transcript check",
      "date": "2026-11-26",
      "notes": "Covers all four word-formation processes and all four sentence structures with the hooks, and closes on the practicum task. Transcript renders Multan as Molton and televise as televised: check the pronunciation."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + YouTube Data API snippet check",
+     "date": "2026-11-26",
+     "notes": "private on channel UC7cQfkGkdNABCiyjmV5ZaFQ, processing succeeded, title and description intact, custom thumbnail success, in the EN audio podcast playlist PLLdTwYdZvUFc; tags repaired in place via yt-describe.mjs after the MCP array/string mismatch; embed check deferred to the placement build when all unit items are uploaded"
     }
    },
    "history": [
@@ -276,6 +282,14 @@
     {
      "state": "qa2-pass",
      "at": "2026-11-26T13:24:06.523Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-26T19:22:47.680Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-26T19:24:08.224Z"
     }
    ],
    "topic": 2,
@@ -291,7 +305,9 @@
    "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-audio-p1.m4a",
    "sha256": "c688eb5248267563bb1669307386c7cc2dcf9f360252037d35eb9bd0edd562e6",
    "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-audio-p1.mp4",
-   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-audio-p1.mp4.thumb.jpg"
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-audio-p1.mp4.thumb.jpg",
+   "youtube_id": "DPYt3jQonhw",
+   "uploaded_at": "2026-11-26T19:22:47Z"
   },
   {
    "state": "qa2-pass",
