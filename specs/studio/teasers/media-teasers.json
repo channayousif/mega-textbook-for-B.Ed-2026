@@ -3174,14 +3174,186 @@
    "id": "efpg-401",
    "locale": "ur",
    "kind": "short",
-   "state": "scripted",
+   "state": "clips-qa",
    "gates": {
     "qg0": {
      "verdict": "pass",
      "by": "teaser.mjs"
+    },
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-26",
+     "note": "crew approve-script via openclaw"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "claude",
+     "date": "2026-11-27",
+     "notes": "5/5 shots have a passing take; shot 1 take 2 (take 1 failed for a drawn REC overlay); shot 4 QG2 0.882 from whisper Urdu-script transcription, full line spoken"
     }
    },
-   "clips": [],
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-26T22:50:43.357Z",
+     "artifact_id": "d017aa0f-38c1-4711-896a-3c14b7e08a2b",
+     "media_id": "d017aa0f-38c1-4711-896a-3c14b7e08a2b",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-1-t1.mp4",
+     "sha256": "ee87c3cd60265b9d58d762ffed5e88316758512b814a70ec7db21db57746a3e1",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "انگریزی پڑھانا مشکل لگتا ہے؟\nسننا، بولنا، پڑھنا اور لکھنا\nیہ چاروں مہارتیں کیسے سکھائیں؟",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-1-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "QG1 pass, QG2 1.0, but drawn camera interface throughout: REC indicator top-left, battery icon top-right and viewfinder corner brackets; not usable without a heavy crop. The book cover is blurred pseudo-script, not the reason."
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-26T23:02:32.762Z",
+     "artifact_id": "9291c266-6857-4f8d-ba5f-406dc96016ad",
+     "media_id": "9291c266-6857-4f8d-ba5f-406dc96016ad",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-2-t1.mp4",
+     "sha256": "47f46ca7450b9f9561c88120cd4e42d44905bc8635ed3844ab68827af7b2641d",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "اس کورس میں آپ لسننگ، سپیکنگ، ریڈنگ اور رائٹنگ کی سرگرمیاں تیار کرنا سیکھیں گے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-2-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; dolly along desks, pupils in blue uniform and girls in white dupattas, teacher in modest dress; wall poster and notebooks carry only blurred unreadable pseudo-text, no camera UI, map or flag"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-26T23:06:56.821Z",
+     "artifact_id": "016b7cb1-44f4-42c5-b5d3-96cb35a3759d",
+     "media_id": "016b7cb1-44f4-42c5-b5d3-96cb35a3759d",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-3-t1.mp4",
+     "sha256": "b6ccdc0a0b5389907a6ce1497b05238833f04b32046bd17de81930420c3c798a",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "جدید methods اور approaches اور prose, poetry, composition اور grammar کے lesson plans بنانا بھی",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-3-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; tracking shot of a woman teacher in a modest blue dupatta acting out a poem while pupils in green-uniform middle-school uniform hold plain picture cards; wall chart and clock blurred, no readable text, camera UI, map or flag"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-26T23:11:14.701Z",
+     "artifact_id": "e55dac0a-9c7a-43de-a422-fd33903cf10c",
+     "media_id": "e55dac0a-9c7a-43de-a422-fd33903cf10c",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-4-t1.mp4",
+     "sha256": "0c15605c8e77108ce0847907bbdacc986a67d1d562b205c9f4627c192294185f",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.882,
+      "qg2_suggested": "pass",
+      "heard": "آڈیو ویجول ایڈز کا مؤثر استعمال\nاور پہلی سے آٹھویں جماعت تک انگریزی میں ترقی کی جانچ",
+      "missing": [
+       "visual",
+       "aids"
+      ],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-4-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 0.882 (whisper wrote audio-visual aids in Urdu script; the whole line is spoken); crane-style view over a shaded verandah, teacher in modest cream dress holding a plain picture chart and a portable speaker, pupils in uniform raising hands; chart text is blurred pseudo-script, notebooks plain, no camera UI, map or flag"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-26T23:15:27.457Z",
+     "artifact_id": "ef69cf5b-7594-4aba-8010-80078e2c9463",
+     "media_id": "ef69cf5b-7594-4aba-8010-80078e2c9463",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-5-t1.mp4",
+     "sha256": "7cb2dca01bb080557b6c8254942eb12ef6233107de2da8cf0f93bd54676f52b6",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑیں\ntextbook.com.pk\nپر\nلنک نیچے ہے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-5-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 (heard the site address spelled out); presenter in maroon shalwar kameez and cream dupatta walks toward camera in a sunlit whitewashed corridor holding a phone with a dark blank screen, pupils in uniform soft behind; wall board blurred, no readable text, camera UI, map or flag"
+     }
+    },
+    {
+     "shot": 1,
+     "take": 2,
+     "at": "2026-11-26T23:24:31.859Z",
+     "artifact_id": "0d83994d-384f-432d-bc16-c74e0e88aa6c",
+     "media_id": "0d83994d-384f-432d-bc16-c74e0e88aa6c",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-1-t2.mp4",
+     "sha256": "b865a23e0f95aa285bcac90582b0a48f008774f8e84cb0e25acc28c3fa6d7e3c",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "انگریزی پڑھانا مشکل لگتا ہے سننا بولنا پڑھنا اور لکھنا یہ چاروں مہارتیں کیسے سکھائیں",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-1-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass-with-notes",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; presenter in maroon shalwar kameez and cream dupatta holds a red book and turns to camera in a bright classroom, pupils behind; no camera UI, map or flag. The book cover carries sharp Urdu-like pseudo-script (not meaningful words), the only blemish."
+     }
+    }
+   ],
    "history": [
     {
      "state": "planned",
@@ -3190,6 +3362,18 @@
     {
      "state": "scripted",
      "at": "2026-11-25T16:48:57.846Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-26T22:48:02.936Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-26T23:30:59.335Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-26T23:30:59.441Z"
     }
    ],
    "script_sha256": "174b861e2957d023e1851daaef9034db85d4b8f75f3f4592a5adcd3b92017931"
