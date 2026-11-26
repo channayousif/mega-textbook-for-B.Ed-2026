@@ -710,7 +710,7 @@ function launch(board, j, worker) {
   const briefText = brief(j, board);
   writeFileSync(join(j.worktree, '.crew', 'brief.md'), briefText);
   const prompt = `Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.`;
-  const [bin, binArgs] = WORKERS[worker].cmd(prompt);
+  const [bin, binArgs] = WORKERS[worker].cmd(prompt, j.stage);
   j.log = join(LOG_DIR, `${j.id}.${(j.attempts || 0) + 1}.log`);
   const exitFile = `${j.log}.exit`;
   // A requeued job reuses its log name (retry and a quota requeue both lower the attempt count),

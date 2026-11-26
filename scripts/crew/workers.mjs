@@ -8,12 +8,45 @@
  * (notify.mjs), not a worker.
  */
 
+/**
+ * Feature 034 (quota efficiency): the `claude` worker's model and effort per stage, so the weekly
+ * Max quota goes further. Opus where judgement dominates (authoring, reviewing, planning,
+ * surveying); Sonnet where the worker follows a written brief (repairs, translation, figures,
+ * decks, media and maintenance chores). A stage not listed uses `default`. Override one stage
+ * without a code change: CREW_CLAUDE_MODEL_<STAGE>=opus, CREW_CLAUDE_EFFORT_<STAGE>=high
+ * (stage name upper-cased). Measure the effect with scripts/ops/claude-usage.mjs.
+ */
+export const CLAUDE_ROUTING = {
+  default: { model: 'sonnet', effort: 'medium' },
+  author: { model: 'opus', effort: 'high' },
+  review_en: { model: 'opus', effort: 'high' },
+  review_ur: { model: 'opus', effort: 'high' },
+  plan_illustrations: { model: 'opus', effort: 'medium' },
+  teaser_script: { model: 'opus', effort: 'medium' },
+  intel_distill: { model: 'opus', effort: 'medium' },
+  maint_survey: { model: 'opus', effort: 'high' },
+  maint_adr: { model: 'opus', effort: 'medium' },
+  maint_review: { model: 'opus', effort: 'high' },
+};
+
+export function claudeRouting(stage, env = process.env) {
+  const base = { ...CLAUDE_ROUTING.default, ...(CLAUDE_ROUTING[stage] || {}) };
+  const key = String(stage || '').toUpperCase();
+  return {
+    model: env[`CREW_CLAUDE_MODEL_${key}`] || base.model,
+    effort: env[`CREW_CLAUDE_EFFORT_${key}`] || base.effort,
+  };
+}
+
 /** `family` is the model family; review stages never use the author's family. */
 export const WORKERS = {
   claude: {
     family: 'anthropic',
     maxConcurrent: 1,
-    cmd: (prompt) => ['claude', ['-p', prompt, '--dangerously-skip-permissions']],
+    cmd: (prompt, stage) => {
+      const { model, effort } = claudeRouting(stage);
+      return ['claude', ['-p', prompt, '--dangerously-skip-permissions', '--model', model, '--effort', effort]];
+    },
   },
   codex: {
     family: 'openai',
