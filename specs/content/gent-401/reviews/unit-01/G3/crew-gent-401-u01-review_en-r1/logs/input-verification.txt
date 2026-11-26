@@ -1,0 +1,6 @@
+prepared inputs: 93
+current inputs: 93
+missing: 0 
+extra: 0 
+changed: 0 
+skill_digest match: true

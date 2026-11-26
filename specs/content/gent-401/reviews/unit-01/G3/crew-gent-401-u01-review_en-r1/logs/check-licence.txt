@@ -1,0 +1,5 @@
+
+> bed-mega-textbook@0.1.0 check:licence
+> node scripts/check-licence.mjs
+
+✓ Licence track: 57/57 objective pages, 67 pages checked.
