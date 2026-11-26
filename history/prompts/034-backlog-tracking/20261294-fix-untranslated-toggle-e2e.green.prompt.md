@@ -1,6 +1,6 @@
 ---
 id: 20261294
-title: Fix the untranslated-toggle e2e click on an aria-disabled button
+title: Fix two e2e specs left red on main (toggle click, chart placement)
 stage: green
 date: 2026-11-27
 surface: agent
@@ -17,6 +17,7 @@ links:
   pr: null
 files:
   - tests/e2e/untranslated-toggle.spec.ts
+  - tests/e2e/chart.spec.ts
 tests:
   - CI e2e on the PR
 ---
@@ -33,7 +34,10 @@ The failing test was `untranslated-toggle.spec.ts`: `locator.click()` timed out 
 segment because Playwright treats `aria-disabled="true"` as not enabled and waits for it. Real
 readers can tap the button and see the callout, so the feature is fine; the test now clicks with
 `{ force: true }` and a comment says why. Main's CI was red on this test, which blocks the
-CI-gated deploy and every open PR's e2e, so this lands first.
+CI-gated deploy and every open PR's e2e, so this lands first. PR #900 (#812) was then also merged
+with a red e2e: `chart.spec.ts` still expected the chart right after its heading, but review moved
+it after the table it summarises; the test now checks the chart follows that table within the
+heading's section.
 
 ## Outcome
 
