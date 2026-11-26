@@ -31,7 +31,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels other than تخلیقیت are authored and need checking |
 | Unit 1 | G6 assets | ▣ | | Four English schematic SVGs (fig-U1-1 to fig-U1-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U1-5 prompt-only for the illustrate job |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-02/G2/20261124T045217007Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-02/G2/20261126T175343588Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the qamar-2020-social row against its OpenAlex record and the butler-iea edition year (sources/unit-02.md) |
 | Unit 2 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 91287e81b; see reviews/unit-02/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels are authored and need checking |
