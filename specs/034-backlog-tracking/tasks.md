@@ -74,7 +74,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
 
 ## Stage 4: learning features
 
-- [ ] T019 Floating notes widget for students and teachers, linked to the dashboard (#806)
+- [x] T019 Floating notes widget for students and teachers, linked to the dashboard (#806)
   - Stage: 4 | Area: notes | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: signed-in students and teachers can open a floating notes panel on any textbook page, save a note tied to that page (reusing `src/lib/studentNotes.ts`), and follow a link to the dashboard Notes page; signed-out readers see a sign-in prompt; works in RTL and on mobile; e2e test added.
@@ -129,7 +129,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 5 | Area: media | Type: carryover | Priority: p3 | Owner: no
   - Source: `specs/029-notebook-studio/tasks.md`
   - Done when: a rollout order and schedule per course is written and approved by the owner.
-- [ ] T032 Add `description` frontmatter to the Student and Teacher Guide pages (#819)
+- [x] T032 Add `description` frontmatter to the Student and Teacher Guide pages (#819)
   - Stage: 5 | Area: content | Type: backlog | Priority: p3 | Owner: no
   - Source: `specs/backlog.md` (013)
   - Done when: every page under `guides/student-guide/` and `guides/teacher-guide/`, English and Urdu, has a description.
