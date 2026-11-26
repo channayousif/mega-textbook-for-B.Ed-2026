@@ -157,11 +157,11 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 5 | Area: i18n | Type: backlog | Priority: p2 | Owner: yes
   - Source: `specs/backlog.md` (EFMP-301 G5 F-12)
   - Done when: `i18n/ur/code.json`, navbar and footer have real Urdu; course names without approved Urdu wait for the owner.
-- [ ] T039 Decide rejoin-after-removal semantics for class enrolments (#826)
+- [-] T039 Decide rejoin-after-removal semantics for class enrolments (#826)
   - Stage: 5 | Area: platform | Type: backlog | Priority: p3 | Owner: no
   - Source: `specs/backlog.md` (003)
   - Done when: a story needs "rejoined" versus "never left", or the item is closed as not needed.
-- [ ] T040 Grading-queue pagination and observability at scale (#827)
+- [-] T040 Grading-queue pagination and observability at scale (#827)
   - Stage: 5 | Area: platform | Type: backlog | Priority: p3 | Owner: no
   - Source: `specs/backlog.md` (003)
   - Done when: the queue paginates beyond 200 students, or the item is closed as not needed.
