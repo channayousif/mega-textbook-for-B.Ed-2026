@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-409",
+  "unit_no": 4,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:8b00a3f53c9bbc580a83f5a9fc30358d7a1154d8",
+  "reviewer_run_id": "6db538c7-bfd8-4d10-b233-a55663871884",
+  "model": "Gemini 3.8 Flash (Medium)",
+  "started_at": "2026-11-26T04:15:43.000Z",
+  "completed_at": "2026-11-26T04:21:12.086Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/3rd 2026.pdf": "f0de34d0a166d0306afbb87aaca2caa58a077ca6024b26e192b6aa02e09eb028",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "5824af961f77f566ecd5e6e23c8fd834dddb20767eb0bb9a884d322b4b6c653d",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-4/efmp-409/course-overview.mdx": "ead5e561eb722d537c90dec0bed62acaf8d35fcfd679d295cb1eada05596d6f1",
+    "docs/semester-4/efmp-409/unit-04/index.mdx": "8cd67bfd4738ba1bada3194dd90a01a2031a80ff11fc69fc63d3e2497c61a4ec",
+    "docs/semester-4/efmp-409/unit-04/topic-01.mdx": "d973b13bfec1d65af3acfb92ab692515eb6a24d32170707603f16c604ad88fbe",
+    "docs/semester-4/efmp-409/unit-04/topic-02.mdx": "e6cb471b35d75df5a5895f301baa8952bb602783ba109d90b5f23ef0fdf8104d",
+    "docs/semester-4/efmp-409/unit-04/topic-03.mdx": "280d1f374cfac0baddc1a7ffad232466524c4282c7837ae5967458aa750a3a87",
+    "docs/semester-4/efmp-409/unit-04/unit-assessment.mdx": "8f5330c771f19d01cc64d424cd1c2027ea9d389ee1934536252e899c3e799290",
+    "docs/semester-4/efmp-409/unit-04/unit-teacher-notes.mdx": "4209ec60cad2150336999c2219456fae4a281197bf6377b322419de62705300b",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "33e46f435128a99f53a38c597b289d730c85b398a7f27b068392552540128622",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "22eaaee128cd13f1756a1c1d4037a8ed7143cfc9f0428c12f49a8b4752fb7f93",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-409/concepts/unit-04.md": "dea6e4681a3305e3c7642ad984469d961268328d12f07f9b4c47a2338c6f0656",
+    "specs/content/efmp-409/content-spec.md": "5fefc075ab5b36f4b3eef1b2cf1c4a6b27c8bb2b4706316bbb90bd03b2b8b224",
+    "specs/content/efmp-409/coverage/unit-04.md": "ec268a4b88666ef403df9e27a4fad5bb9307aad1cfe7d9d3b39db93dc619ab43",
+    "specs/content/efmp-409/figures/unit-04.banner.md": "433d633effc6aed1d76f41317e3d7af337dc9bb340858f8a760fea7d28531e92",
+    "specs/content/efmp-409/figures/unit-04.md": "71d85718d64c3b5a9cff2cf511ff80978f820da53915caa9e242c032b8a78a57",
+    "specs/content/efmp-409/sources/unit-04.md": "3b5ca3b6738de037b23e1773a2d39e2dae5bb475b32e5030753297e2c1a7f826",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/efmp-409/unit-04/fig-U4-1.dark.svg": "dd89536e67d90e548a0185e4fdae4666980b3af904481b09d5658fe1eeed4c02",
+    "static/img/figures/efmp-409/unit-04/fig-U4-1.svg": "16fa0c8398754b9592c7ba98bc42d18ef5f1cfdcdfc836a848ac1a20d38c99d7",
+    "static/img/figures/efmp-409/unit-04/fig-U4-2.dark.svg": "d25be025e2e98984c26f5f9bab4467db8ded26e2cde08809789d7c0439d8cc21",
+    "static/img/figures/efmp-409/unit-04/fig-U4-2.svg": "035c3944045bd922280ffa278f55f3ee363a411b3d8f37e4c180f8fd52bf980f",
+    "static/img/figures/efmp-409/unit-04/fig-U4-3.dark.svg": "4dba53d29be01e7ed9e60cb8cf23bbce5cd240c2bc966e40191608dda1b0ff1b",
+    "static/img/figures/efmp-409/unit-04/fig-U4-3.svg": "d88039d4f0597dac4cd383eb9909e9c77723f0d538f8b892bdb4ee720d41a180",
+    "static/img/figures/efmp-409/unit-04/fig-U4-4.dark.svg": "5bb913060b512a09a5a86ae5695c7a11265f73fb14e420ef5de28bcfd8df1188",
+    "static/img/figures/efmp-409/unit-04/fig-U4-4.svg": "dd6e512dd085c1dbb8238471d742838376f191a66e0d4d96371d702bb3878d53",
+    "static/img/figures/efmp-409/unit-04/fig-U4-5.dark.svg": "40fc8a803ff842851fbdd31a718bfec99f75bd203bb42139576c37da2cbe5948",
+    "static/img/figures/efmp-409/unit-04/fig-U4-5.svg": "12bddad3f25c0076d883be820247d37682eea2fe31033bfe9b733beab6b9fc48",
+    "static/img/figures/efmp-409/unit-04/fig-U4-6.dark.svg": "c25512feda64cc4f9e7064420872e27c374247c9b78ad604095ccbe2eb2d4556",
+    "static/img/figures/efmp-409/unit-04/fig-U4-6.svg": "4a6a0bbfc66e910c074963b1eb2f2671e4a2dec59225d90008fd4cfc903e6f2f",
+    "static/img/figures/efmp-409/unit-04/fig-U4-7.webp": "e0bea40cd455e8969f6250be72988258d6247596172e0365b97b905513e77dd2"
+  },
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "specs/content/efmp-409/content-spec.md:300-345 Unit 4 G1 spec: sub-topics U4-01..U4-09, figure plan fig-U4-1..6, banner fig-U4-7, blueprint 10/10/5.",
+        "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt: Unit 4 Islamic Perspectives on Education allocates topics on education in light of Quran and Hadith, Meesaq-e-Madina, Khutbat-ul-Wida, and As-Suffa.",
+        "docs/semester-4/efmp-409/unit-04/topic-01.mdx ### Explaining Surah Al-Alaq matches U4-01.",
+        "docs/semester-4/efmp-409/unit-04/topic-01.mdx ### The emphasis on the acquisition of education in the Qur'an matches U4-02.",
+        "docs/semester-4/efmp-409/unit-04/topic-01.mdx ### The emphasis on the acquisition of education in the Hadith matches U4-03.",
+        "docs/semester-4/efmp-409/unit-04/topic-02.mdx ### Meesaq-e-Madina: the foundation stone of education matches U4-04.",
+        "docs/semester-4/efmp-409/unit-04/topic-02.mdx ### The Last Sermon: its relevance to education matches U4-05.",
+        "docs/semester-4/efmp-409/unit-04/topic-02.mdx ### Analysing the educational principles of the Last Sermon matches U4-06.",
+        "docs/semester-4/efmp-409/unit-04/topic-03.mdx ### As-Suffa: the first institute in Islam matches U4-07.",
+        "docs/semester-4/efmp-409/unit-04/topic-03.mdx ### The method of teaching in As-Suffa matches U4-08.",
+        "docs/semester-4/efmp-409/unit-04/topic-03.mdx ### The curriculum of As-Suffa matches U4-09.",
+        "CLO/SLO references SLO:EFMP-409-4-1, SLO:EFMP-409-4-2, and SLO:EFMP-409-4-3 traced across index, topics, and assessment."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "specs/content/efmp-409/sources/texts/quran-translation.md: Surah Al-Alaq 96:1-5, Surah Az-Zumar 39:9, Surah Al-Mujadilah 58:11, Surah Taha 20:114, Surah Al-Baqarah 2:269, Surah Al-Ghashiyah 88:17-20.",
+        "specs/content/efmp-409/sources/texts/hec-2013-foundations.md: HEC (2012) Foundations of Education guide Unit 4 outline and Education in Islam sayings.",
+        "specs/content/efmp-409/sources/texts/sep-curren-education.md: Philosophy of education scope and values.",
+        "specs/content/efmp-409/sources/texts/besari-2023-knowledge-ethics.md: Islamic education and ethics in seeking knowledge.",
+        "specs/content/efmp-409/sources/texts/tobroni-2020-medina-charter.md: Medina Charter principles of peace, pluralism, and protection of rights.",
+        "specs/content/efmp-409/sources/texts/anwer-2024-charter-magna-carta.md: Comparative constitutional analysis of the Charter of Medina.",
+        "specs/content/efmp-409/sources/texts/farooq-2018-farewell-sermon.md: Analytical review of the Farewell Sermon (Khutbat-ul-Wida) and moral principles.",
+        "specs/content/efmp-409/sources/texts/sani-2019-suffa.md: Ashab e Suffa role, residential structure, and tarbiya system.",
+        "specs/content/efmp-409/sources/unit-04.md: All external sources verified and bound; no unverifiable sources declared."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/efmp-409/coverage/unit-04.md: Maps all nine subtopics U4-01..U4-09 to exact headings with bound sources; design trace details retrieval items, MCQs, RRQs, and ERQs.",
+        "check:depth-gate exit 0: concept coverage, required pedagogical blocks (classroom situation, explanation, worked example, misconceptions, activity, retrieval, summary, self-assessment, practicum, summative task with rubric), formative floor, reading-minutes band (54 min vs 42-58 min band), coverage-sources consistency.",
+        "specs/content/efmp-409/concepts/unit-04.md: Defines 7 core concepts (CON:EFMP-409-4-1..7) with prerequisites, SLO mappings, and assessment links."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/assessment-solutions.md: Independent solve of MCQs 1-10 (B, A, B, C, B, A, C, B, B, A) matches docs/semester-4/efmp-409/unit-04/unit-assessment.mdx:111-120 10/10.",
+        "MCQ topic spread across Topic 4.1 (4 items), Topic 4.2 (3 items), and Topic 4.3 (3 items); RRQ topic spread 4/3/3 matching syllabus balance.",
+        "RRQs 1-10 derived answers verified against model answers and marking criteria; cognitive demand ranges Understand to Analyze.",
+        "ERQs 1-5 feature analytic rubrics with Bloom demand Analyze to Create; ERQ 3 is approved blueprint item comparing As-Suffa with a present-day primary classroom."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "render-review unavailable (exit 1): deployed SHA 074ab11456b999cf5d3c9b8aa6e603b2de834eb5 differs from HEAD b50f44f33e423da959742824832bdfd05e7a0933 on docs/semester-4/efmp-409/unit-04/index.mdx and static/img/figures/efmp-409/unit-04/fig-U4-7.webp; host limits and brief prohibit local build, dev server, or browser runs.",
+        "Structural accessibility passes from source: all figures have descriptive alt text; all SVGs carry role=\"img\", aria-labelledby, <title>, and <desc>; semantic headings and table markup verified.",
+        "measure-figure-text exits 0 across all 24 SVGs in static/img/figures/efmp-409/unit-04/."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-4/efmp-409/unit-04/index.mdx, topic-01.mdx, topic-02.mdx, topic-03.mdx: clear, plain prose suitable for B.Ed trainees without specialist background.",
+        "Core concepts defined at first use with bold text (ilm, iqra, Meesaq-e-Madina, Khutbat-ul-Wida, As-Suffa, halaqah).",
+        "Grounded in realistic Pakistani classroom contexts across Sindh and beyond (Larkana, Hyderabad, Nawabshah, Umerkot, Sukkur)."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "All topics execute complete pedagogical progression: classroom situation -> explanation -> worked example -> misconception correction -> group activity -> retrieval -> summary -> self-assessment -> practicum connection -> summative task with rubric.",
+        "Common misconceptions explicitly addressed: Islam values only religious knowledge (Topic 4.1), the Charter of Medina was only a military treaty (Topic 4.2), the Last Sermon is only a religious address (Topic 4.2), As-Suffa was only a place of shelter (Topic 4.3), a circle is just a seating plan (Topic 4.3).",
+        "Islamic material handled with scholarly accuracy, respect, and non-sectarian restraint, advising teachers to refer complex theological matters to qualified scholars."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Render and print inspection (360px viewport, table scrolling, desktop layout, A4 print, figure clipping) could not be performed. The crew brief prohibits npm run build, a dev server and Playwright, and the production site is not the reviewed input: the deployed SHA 074ab11456b999cf5d3c9b8aa6e603b2de834eb5 differs from HEAD b50f44f33e423da959742824832bdfd05e7a0933 on docs/semester-4/efmp-409/unit-04/index.mdx and static/img/figures/efmp-409/unit-04/fig-U4-7.webp. render-review is recorded as unavailable (exit 1). Visual accessibility remains unverified; structural accessibility and figure geometry pass from source."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Per content-spec drafting note 8, Islamic material (Surah Al-Alaq, the Hadith on knowledge, the Charter of Medina, the Last Sermon, and As-Suffa) should be checked by a qualified scholar before certification. Content in this unit handles Islamic concepts with care, quotes verses by reference, names translations and collections, and explicitly guides teachers to refer religious interpretation to qualified scholars."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/validate:content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check-content.log"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/measure-figure-text.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/manifest.json": "2c55e3f4685ba3d86ad3e5fe0522c05f39ad3acbd6ad0c2a3a241cef1c27ec24",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/assessment-solutions.md": "e379566b2e5371b8d7d6ba5b0d37dfca9c6b977d3c0818efbcf1dcfca14d019f",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/limitations.md": "06d27bbee3b79d906c58668cf87418cf05fbaabb1056c100e8e0b62a6e51dfd4",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/summary.md": "5f792ccf4843df9a8b0700e6321df3455adde77eea45db30b4b1693b9d20ba99",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/advisory-tracker-row.md": "2862829d0f5b4626ab7dc2a8d115e0ae01aa17ca0b98afaab7702110c2e112f1",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/make-report.mjs": "c062449661148f7a350629cd3cb79a149b9c7c42df6d940ce84325d3ad2fa18a",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/validate:content.log": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:depth-gate.log": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:figures.log": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:no-em-dash.log": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:no-answer-keys.log": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check:docs-sync.log": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/render-review.txt": "98578539cf5e9386ad3ead1fa2332ac42c84e3890d9a36001a32732520fe0b93",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/check-content.log": "174bb0fc73574d202444ebd355db5aa78d5ce57c899d479a4f0428b7daecaaa0",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/build-content-status.log": "da0bec13ad04bc5ec06e98cef1148b906ae6db7899caa6fc565fd7e134174b6e",
+    "specs/content/efmp-409/reviews/unit-04/G3/agy-run1-20261126/logs/measure-figure-text.log": "aa46e0ecd82dde0b9aafe6b468e0605349c49eac4a7abc893e82aa06fa867f2e"
+  }
+}
