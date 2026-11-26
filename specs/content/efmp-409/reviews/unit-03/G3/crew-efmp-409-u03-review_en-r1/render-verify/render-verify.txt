@@ -1,0 +1,14 @@
+render-review: unavailable
+date: 2026-11-26T00:37:28Z
+deployed SHA: 074ab11456b999cf5d3c9b8aa6e603b2de834eb5
+HEAD: 895cc30bc6b9edbc87b56365f50f479c8939d049
+command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efmp-409/unit-03/ static/img/figures/efmp-409/unit-03/
+exit=1
+changed paths:
+M	docs/semester-4/efmp-409/unit-03/index.mdx
+A	static/img/figures/efmp-409/unit-03/fig-U3-13.webp
+
+Per the crew brief, a non-empty diff means the CI-built production site is not the reviewed input.
+The brief forbids building or serving the site from a review job, so no browser or print inspection was run.
+deployed build last touched the unit in: c44b5fa54 feat(efmp-409): translate Unit 3 into draft Urdu mirror (G4)
+HEAD last touched the unit in: a87e56c25 feat(efmp-409): place Unit 3 banner illustration fig-U3-13
