@@ -16,6 +16,7 @@ links:
   adr: null
   pr: null
 files:
+  - catalog/course-guides.json
   - docs/semester-4/efpc-411/_category_.json
   - docs/semester-4/efpc-411/course-overview.mdx
   - docs/semester-4/efpc-411/unit-01/index.mdx
@@ -29,12 +30,22 @@ files:
   - specs/content/efpc-411/coverage/unit-01.md
   - specs/content/efpc-411/figures/unit-01.banner.md
   - specs/content/efpc-411/figures/unit-01.md
+  - specs/content/efpc-411/reviews/unit-01/G2/20261126T020252566Z-gates.json
   - specs/content/efpc-411/sources/texts/hec-2013-currdev.md
   - specs/content/efpc-411/sources/texts/hec-2013-methods.md
   - specs/content/efpc-411/sources/texts/hec-2013-practicum.md
   - specs/content/efpc-411/sources/texts/teach-primary-2021.md
   - specs/content/efpc-411/sources/unit-01.md
   - specs/content/efpc-411/tasks.md
+  - static/guides/semester-4/efpc-411.pdf
+  - static/img/figures/efpc-411/unit-01/fig-U1-1.svg
+  - static/img/figures/efpc-411/unit-01/fig-U1-2.svg
+  - static/img/figures/efpc-411/unit-01/fig-U1-3.svg
+  - static/img/figures/efpc-411/unit-01/fig-U1-4.svg
+  - static/img/figures/efpc-411/unit-01/fig-U1-5.svg
+  - static/img/figures/efpc-411/unit-01/fig-U1-6.svg
+  - static/img/figures/efpc-411/unit-01/fig-U1-7.svg
+  - static/img/figures/efpc-411/unit-01/fig-U1-8.svg
 tests:
   - npm run check:content
 ---
@@ -61,7 +72,7 @@ Recorded G2 gate evidence via prepare-gate-evidence.mjs and validated full conte
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: EFPC-411 Unit 1 English draft, course-overview.mdx, figures manifests (8 prompt-only schematics + banner), coverage, sources, concept graph, and G2 gate evidence.
+- Shipped / changed: EFPC-411 Unit 1 English draft, course-overview.mdx, course guide PDF, 8 schematic SVGs (placed with dark variants), banner manifest, coverage, sources, concept graph, and G2 gate evidence.
 - Decisions the team must respect: EFPC-411 credit hours 2 (0-2), course code EFPC-411, 20/40/20/20 assessment weighting per guide.
 - Pending / next owner: G3 independent English review and G4 Urdu translation.
 - Paperclip issues affected: None.

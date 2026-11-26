@@ -2,6 +2,7 @@
 
 Source: Molina, E., Pushparatnam, A., Melo, C., Wilichowski, T., del Toro Mijares, A. T., Ding, E., Aloys, J. B., Carter, E., & Singal, N. (2021). *Teach Primary: Observer manual* (2nd ed.). World Bank.
 URL: https://documents1.worldbank.org/curated/en/872291641201520569/pdf/Teach-Primary-Observer-Manual.pdf
+DOI: https://doi.org/10.1596/37669 (Crossref and OpenAlex verified: 2026-11-26)
 
 Consulted: 2026-11-26, open-access publication (CC BY 4.0 IGO).
 
