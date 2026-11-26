@@ -50,12 +50,11 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels are authored and need checking |
 | Unit 4 | G6 assets | ▣ | | Four English schematic SVGs (fig-U4-1 to fig-U4-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U4-5 placed |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 6 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-06/G2/20261124T101619522Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-06/G2/20261126T205300572Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should verify SECP and IPO-Pakistan procedures and check marketing ethics evaluation items |
 | Unit 6 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 91287e81b; see reviews/unit-06/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels need checking |
-| Unit 6 | G6 assets | ▣ | | Four English schematic SVGs (fig-U6-1 to fig-U6-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U6-5 prompt-only for the illustrate job |
+| Unit 6 | G6 assets | ▣ | | Four English schematic SVGs (fig-U6-1 to fig-U6-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U6-5 placed |
 | Unit 6 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-05/G2/20261126T202645838Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the open-access articles' settings are not presented as Pakistani evidence and that the tuition centre numbers are the author's teaching device (sources/unit-05.md) |
