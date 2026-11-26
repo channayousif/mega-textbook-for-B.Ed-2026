@@ -45,6 +45,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-04/G2/20261126T195406275Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 4 | G3 en-review | ▢ | agent:claude-crew | Advisory escalate: specs/content/gent-401/reviews/unit-04/G3/crew-gent-401-u04-review_en-r1.json; render-review unavailable (deployed 366019f8 vs HEAD 4f558d48a); sources and assessment findings; no certification |
 | Unit 4 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 91287e81b; see reviews/unit-04/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels are authored and need checking |
 | Unit 4 | G6 assets | ▣ | | Four English schematic SVGs (fig-U4-1 to fig-U4-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U4-5 placed |
