@@ -2,7 +2,7 @@
 id: crew-efpc-411-u01-author-cifix1
 title: crew fix EFPC-411 unit 1
 stage: misc
-date: 2026-11-27
+date: 2026-11-26
 surface: agent
 model: claude_crew
 feature: efpc-411
@@ -14,11 +14,55 @@ links:
   spec: specs/content/efpc-411/content-spec.md
   ticket: null
   adr: null
-  pr: 882
+  pr: null
 files:
+ - catalog/course-guides.json
+ - docs/semester-4/efpc-411/_category_.json
+ - docs/semester-4/efpc-411/course-overview.mdx
+ - docs/semester-4/efpc-411/unit-01/index.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-01.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-02.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-03.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-04.mdx
+ - docs/semester-4/efpc-411/unit-01/unit-assessment.mdx
  - history/prompts/efpc-411/crew-efpc-411-u01-author-cifix1.misc.prompt.md
- - supabase/migrations/0058_notes_for_teachers.sql
- - tests/rls/student-notes.test.mjs
+ - history/prompts/efpc-411/crew-efpc-411-u01-author.green.prompt.md
+ - specs/content/efpc-411/concepts/unit-01.md
+ - specs/content/efpc-411/coverage/unit-01.md
+ - specs/content/efpc-411/figures/unit-01.banner.md
+ - specs/content/efpc-411/figures/unit-01.md
+ - specs/content/efpc-411/reviews/unit-01/G2/20261126T020510698Z-gates.json
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-bloom-bands.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-concept-graph.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-depth-gate.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-docs-sync.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-figures.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-no-answer-keys.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-no-em-dash.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/validate-content.txt
+ - specs/content/efpc-411/sources/texts/hec-2013-currdev.md
+ - specs/content/efpc-411/sources/texts/hec-2013-methods.md
+ - specs/content/efpc-411/sources/texts/hec-2013-practicum.md
+ - specs/content/efpc-411/sources/texts/teach-primary-2021.md
+ - specs/content/efpc-411/sources/unit-01.md
+ - specs/content/efpc-411/tasks.md
+ - static/guides/semester-4/efpc-411.pdf
+ - static/img/figures/efpc-411/unit-01/fig-U1-1.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-1.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-2.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-2.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-3.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-3.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-4.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-4.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-5.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-5.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-6.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-6.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-7.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-7.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-8.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-8.svg
 tests:
  - npm run check:content
 ---
@@ -52,31 +96,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 ## Notes from earlier jobs on this unit
 - (efpc-411-u01-author, author, agy) Unit 1 English draft is ready for independent G3 review; banner figure fig-U1-9 is prompt-only for the illustration pipeline.
 
+
 ## Response snapshot
 
-Read the failed RLS job, found the branch's `tests/rls/student-notes.test.mjs` was stale against the live shared Supabase (main's migration 0058 lets teachers keep notes, and main's test asserts that), fast-forwarded the branch to the PR head and merged `origin/main` (e42d48673) so the test and migration match the deployed schema, then ran `npm run build:content-status` and `npm run check:content` (14/14 gates green). Committed the PHR.
+Merged `origin/main` into `crew/efpc-411-u01-author` so the stale `student-notes` RLS test and migration 0058 match the live shared Supabase, and committed the fix PHR with `npm run check:content` green (14/14).
 
 ## Outcome
 
 - Impact: fix for EFPC-411 Unit 1 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (14/14 gates) in the job worktree after the merge.
-- Files: 3 file(s), listed above; the merge commit itself is `a4dcd67da` (parents 5f411147c and e42d48673).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 47 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged `origin/main` into `crew/efpc-411-u01-author` so the RLS suite's `student-notes` test and migration 0058 match the live shared Supabase; no EFPC-411 content file changed.
-- Decisions the team must respect: the RLS failure was schema drift on the shared database, not an EFPC-411 content defect; the fix is the main merge, not a test edit. G3/G5 stay advisory until a qualified sign-off.
-- Pending / next owner: crew lead (push the branch so PR #882 re-runs CI, then auto-merge when green).
+- Shipped / changed: Merged `origin/main` into `crew/efpc-411-u01-author` so the stale `student-notes` RLS test and migration 0058 match the live shared Supabase, and committed the fix PHR with `npm run check:content` green (14/14).
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 1 English draft is ready for independent G3 review; banner figure fig-U1-9 is prompt-only for the illustration pipeline.
-  - The branch is now current with `origin/main` (e42d48673); re-run `npm run check:content` after any further main merge.
+  - Push the branch so PR #882 re-runs CI; the RLS red was shared-DB schema drift (main's 0058), not EFPC-411 content.
+  - Unit 1 English is ready for independent G3; banner figure fig-U1-9 is still prompt-only for the illustration pipeline.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 1 earlier attempt(s); see the board history
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
