@@ -1,0 +1,560 @@
+{
+ "course": "geng-300",
+ "unit": 1,
+ "items": [
+  {
+   "state": "qa3-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 98.522268,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 98.522,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 98.5
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers register, collocation, connotation and the grammar error areas through the mnemonic, and stays with the topic. Does not expand subject-verb agreement, verb tenses and modifiers, and adds a short outfit analogy. Transcript renders Miss Ayesha as Miss Aisha, Karachi as Karach, Urdu as Erdu and Sindhi as Cindy: check the pronunciation."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-26",
+     "notes": "private on channel UC7cQfkGkdNABCiyjmV5ZaFQ, title and description intact, custom thumbnail success, in the EN audio podcast playlist PLLdTwYdZvUFc; tags repaired in place via yt-describe.mjs after the MCP array/string mismatch; embed check deferred to the placement build"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:34.579Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T12:11:59.284Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T12:12:41.020Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T12:13:22.038Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T12:16:47.858Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T12:17:46.766Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-26T12:19:48.888Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-26T12:20:07.267Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Words in Context: Register, Collocation and Connotation",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for register, collocation and the common grammar errors.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t1-en-audio-p1",
+   "artifact_id": "2d108a40-6556-4734-b5be-8546ea68a1b8",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-audio-p1.m4a",
+   "sha256": "396945a6d79f6378662707433c076532fee9307f5c002f69df8c5bcd90241945",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-audio-p1.mp4.thumb.jpg",
+   "youtube_id": "Fre7sTw5_6c",
+   "uploaded_at": "2026-11-26T12:19:48Z"
+  },
+  {
+   "state": "qa3-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 496.140771,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 496.083333
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.672177,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 496.2,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 496.083333
+      },
+      "loudness": {
+       "integrated_lufs": -16.3,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 1,
+      "longest_silence_s": 3.670958,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers register, collocation, connotation, idioms and the communicative grammar traps, and returns to the classroom situation. Two things for the owner: the video teaches make a mistake as correct, while topic-01.mdx:52 literally says we commit a mistake (not make a mistake), so that topic line reads backwards; and the video is about 8 minutes with motivational framing the source does not contain. Transcript renders Urdu as Uru/Ordo/erdo, Sindhi as Cindy, Karachi as Karach and headteacher as headteer."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-26",
+     "notes": "private on channel UC7cQfkGkdNABCiyjmV5ZaFQ, title and description intact, custom thumbnail success; no GENG-300 video playlist exists on the channel yet, so the item was uploaded without a playlist (add one with update_video when the owner creates it); tags repaired in place via yt-describe.mjs; embed check deferred to the placement build"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:34.659Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T12:26:34.893Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T12:38:38.779Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T12:39:42.110Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T12:43:38.477Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T12:45:47.421Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-26T13:19:38.292Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-26T13:20:22.374Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "video",
+   "title": "Choosing the Right Word: Vocabulary and Grammar in Context",
+   "alt": "Video explainer on vocabulary in context and communicative grammar, set in a Pakistani classroom.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t1-en-video",
+   "artifact_id": "37baad2c-a0df-4f6b-b8a2-f2fa49fbc46c",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-video.mp4",
+   "sha256": "e2218467e669004c4b39efdcd1bfd0beee5391344a54904e0d20d2ccc98c3b61",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-video.yt.mp4.thumb.jpg",
+   "youtube_id": "ENYN7SBfvio",
+   "uploaded_at": "2026-11-26T13:19:38Z"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 102.56254,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 102.563,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 102.5
+      },
+      "loudness": {
+       "integrated_lufs": -17.1,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers all four word-formation processes and all four sentence structures with the hooks, and closes on the practicum task. Transcript renders Multan as Molton and televise as televised: check the pronunciation."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:34.705Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T13:09:27.819Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T13:20:38.636Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T13:21:26.982Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T13:23:21.766Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T13:24:06.523Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "How English Builds Words and Sentences",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for word formation and sentence structures.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t2-en-audio-p1",
+   "artifact_id": "e1410fe4-2a53-48e6-9354-58fdf44e50cb",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-audio-p1.m4a",
+   "sha256": "c688eb5248267563bb1669307386c7cc2dcf9f360252037d35eb9bd0edd562e6",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-audio-p1.mp4.thumb.jpg"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 441.434558,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 441.375
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.704467,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 441.5,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 441.375
+      },
+      "loudness": {
+       "integrated_lufs": -16.4,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 1,
+      "longest_silence_s": 3.700042,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers all four word-formation processes and all four sentence structures with the source examples, and closes on the practicum task. Transcript renders Mr Tariq as Mr Tar, Multan as Molton, Urdu as udu and Sindhi as Cindy: check the pronunciation."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:34.931Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T13:30:03.914Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T13:40:54.931Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T13:41:59.635Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T13:44:01.223Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T13:46:13.149Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "video",
+   "title": "Word Formation and the Four Sentence Structures",
+   "alt": "Video explainer on the four word-formation processes and the four sentence structures.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t2-en-video",
+   "artifact_id": "c17d3425-25c2-4e43-ad5e-0c6bcf603090",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-video.mp4",
+   "sha256": "5dd098d96271454df121004fd62b9c0f7d305274930c98ade6adddabc6599dbd",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-video.yt.mp4.thumb.jpg"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 102.887619,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 102.888,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 102.833333
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers the 44 phonemes against 26 letters, the th/v/w sounds Urdu lacks, and stress and intonation, and closes on the minimal-pairs activity. Transcript renders Urdu as erdo: check the pronunciation."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:35.012Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T14:11:35.167Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T14:14:40.428Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T14:15:24.138Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T14:17:18.364Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T14:18:10.110Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "The Sounds of English: Phonemes, Stress and Intonation",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for phonemes, stress and intonation.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t3-en-audio-p1",
+   "artifact_id": "47eabccf-3b0a-4e71-b4b9-6f0b6cdeb9a6",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-audio-p1.m4a",
+   "sha256": "d030b7eb356ad5e75f1b6a7e284e18f43bf9bb156970ad914b0e249cf684307f",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-audio-p1.mp4.thumb.jpg"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 397.177324,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 397.125
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.722018,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 397.2,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 397.125
+      },
+      "loudness": {
+       "integrated_lufs": -16.5,
+       "true_peak_dbfs": -1.4
+      },
+      "silences": 1,
+      "longest_silence_s": 3.685146,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers the 44 phonemes, the missing th/v/w sounds, final clusters, vowel length, stress and intonation, and closes on the minimal-pairs activity. Transcript artifacts to check: the pupils dis for this comes through as this, full/fool as fool and fool, sink as sync, deskes as deskas, and Urdu as erdo/Ordo."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:35.068Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T14:30:48.997Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T14:39:42.919Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T14:40:36.985Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T14:42:42.334Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T14:44:30.036Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "video",
+   "title": "Why Urdu Speakers Miss English Sounds",
+   "alt": "Video explainer on the English sound system and the pronunciation challenges Urdu speakers face.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t3-en-video",
+   "artifact_id": "0e8e918f-1062-4f05-ab14-09bb615d4d0e",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-video.mp4",
+   "sha256": "a6fddbee6e65a141bee2bbdec2d6a25db268a8a7e481b24c70fd8302ccb12ec3",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-video.yt.mp4.thumb.jpg"
+  }
+ ]
+}
