@@ -651,6 +651,78 @@
      "at": "2026-11-26T12:16:15.615Z"
     }
    }
+  },
+  {
+   "id": "2026-11-26-content",
+   "kind": "content",
+   "date": "2026-11-26",
+   "state": "posted",
+   "headline": {
+    "en": "New on textbook.com.pk",
+    "ur": "نیا مواد"
+   },
+   "highlights": [
+    {
+     "type": "unit",
+     "ids": [
+      "unit:EFMP-409:5"
+     ],
+     "card_en": "EFMP-409 Unit 5: Education Reports and Policies",
+     "card_ur": "EFMP-409 یونٹ 5: تعلیمی رپورٹیں اور پالیسیاں",
+     "en": "EFMP-409 Foundations of Education, Unit 5: Education Reports and Policies, is now free to read.",
+     "ur": "EFMP-409 تعلیم کی بنیادیں، یونٹ 5: تعلیمی رپورٹیں اور پالیسیاں، اب مفت پڑھا جا سکتا ہے۔",
+     "link": "/semester-4/efmp-409/unit-05/",
+     "date": "2026-11-25T13:55:19+05:00"
+    },
+    {
+     "type": "urdu",
+     "ids": [
+      "urdu:EFMP-409:5",
+      "urdu:EFMP-409:4"
+     ],
+     "card_en": "EFMP-409 Foundations of Education: 2 units now in Urdu",
+     "card_ur": "EFMP-409 تعلیم کی بنیادیں: 2 یونٹ اب اردو میں",
+     "en": "2 units of EFMP-409 Foundations of Education can now be read in Urdu as well as English.",
+     "ur": "EFMP-409 تعلیم کی بنیادیں کے 2 یونٹ اب انگریزی کے ساتھ اردو میں بھی پڑھے جا سکتے ہیں۔",
+     "link": "/semester-4/efmp-409/",
+     "date": "2026-11-25T18:40:22+05:00"
+    }
+   ],
+   "more": 0,
+   "items": [
+    "unit:EFMP-409:5",
+    "urdu:EFMP-409:5",
+    "urdu:EFMP-409:4"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-26T12:34:45.959Z",
+   "since": "2026-11-25T13:47:37.714Z",
+   "card": "~/studio-media/social/2026-11-26-content.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-26-content.jpg",
+   "approved": {
+    "by": "auto",
+    "at": "2026-11-26T12:35:12.350Z"
+   },
+   "platforms": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1404300426106517_122111891757545614",
+     "url": "https://www.facebook.com/1404300426106517_122111891757545614",
+     "at": "2026-11-26T14:35:17.334Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18122780855084835",
+     "url": "https://www.instagram.com/p/DgNVPzvCQdN/",
+     "at": "2026-11-26T14:35:17.334Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:share:7531727283217133569",
+     "url": "https://www.linkedin.com/feed/update/urn:li:share:7531727283217133569/",
+     "at": "2026-11-26T14:35:17.334Z"
+    }
+   }
   }
  ]
 }
