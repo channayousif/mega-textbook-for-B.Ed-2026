@@ -331,7 +331,7 @@
    "id": "2026-11-23-feature-2",
    "kind": "feature",
    "date": "2026-11-23",
-   "state": "drafted",
+   "state": "posted",
    "headline": {
     "en": "Platform update",
     "ur": "پلیٹ فارم اپ ڈیٹ"
@@ -373,7 +373,32 @@
    "collected_at": "2026-11-23T15:34:15.242Z",
    "since": "2026-11-22T21:17:03.766Z",
    "card": "~/studio-media/social/2026-11-23-feature-2.jpg",
-   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-feature-2.jpg"
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-23-feature-2.jpg",
+   "approved": {
+    "by": "owner",
+    "at": "2026-11-26T04:59:17.682Z",
+    "via": "discord"
+   },
+   "platforms": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1404300426106517_122111798259545614",
+     "url": "https://www.facebook.com/1404300426106517_122111798259545614",
+     "at": "2026-11-26T10:04:10.903Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18094764800222119",
+     "url": "https://www.instagram.com/p/DgM2OcpDqTZ/",
+     "at": "2026-11-26T10:04:10.903Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:share:7531659055858262017",
+     "url": "https://www.linkedin.com/feed/update/urn:li:share:7531659055858262017/",
+     "at": "2026-11-26T10:04:10.903Z"
+    }
+   }
   },
   {
    "id": "2026-11-25-content",
@@ -530,7 +555,7 @@
    "id": "2026-11-25-feature",
    "kind": "feature",
    "date": "2026-11-25",
-   "state": "drafted",
+   "state": "approved",
    "headline": {
     "en": "Platform update",
     "ur": "پلیٹ فارم اپ ڈیٹ"
@@ -600,7 +625,29 @@
    "collected_at": "2026-11-25T13:47:37.714Z",
    "since": "2026-11-23T15:34:15.242Z",
    "card": "~/studio-media/social/2026-11-25-feature.jpg",
-   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-25-feature.jpg"
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-25-feature.jpg",
+   "approved": {
+    "by": "owner",
+    "at": "2026-11-26T05:00:26.464Z",
+    "via": "discord_channel"
+   },
+   "platforms": {
+    "facebook": {
+     "state": "failed",
+     "error": "paced: social.facebook: hourly cap of 1 reached; next at 2026-11-26T12:09:29.705Z",
+     "at": "2026-11-26T10:04:24.329Z"
+    },
+    "instagram": {
+     "state": "failed",
+     "error": "paced: social.instagram: hourly cap of 1 reached; next at 2026-11-26T12:08:45.303Z",
+     "at": "2026-11-26T10:04:24.329Z"
+    },
+    "linkedin": {
+     "state": "failed",
+     "error": "paced: social.linkedin: hourly cap of 1 reached; next at 2026-11-26T12:13:51.253Z",
+     "at": "2026-11-26T10:04:24.329Z"
+    }
+   }
   }
  ]
 }
