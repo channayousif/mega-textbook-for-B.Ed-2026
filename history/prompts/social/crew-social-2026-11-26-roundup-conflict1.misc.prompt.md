@@ -1,6 +1,6 @@
 ---
 id: crew-social-2026-11-26-roundup-conflict1
-title: crew social_roundup conflict resolution SOCIAL unit 11260
+title: crew fix SOCIAL unit 11260
 stage: misc
 date: 2026-11-26
 surface: agent
@@ -8,8 +8,8 @@ model: claude_crew
 feature: social
 branch: crew/social-2026-11-26-roundup
 user: crew
-command: crew social_roundup
-labels: ["crew", "claude_crew", "social_roundup"]
+command: crew fix
+labels: ["crew", "claude_crew", "fix"]
 links:
   spec: specs/content/social/content-spec.md
   ticket: null
@@ -17,6 +17,7 @@ links:
   pr: null
 files:
  - history/prompts/social/crew-social-2026-11-26-roundup-conflict1.misc.prompt.md
+ - history/prompts/social/crew-social-2026-11-26-roundup.misc.prompt.md
  - specs/social/updates.json
 tests:
  - npm run check:content
@@ -52,31 +53,36 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (social-2026-11-26-roundup, social_roundup, claude_crew) Today's per-platform social cap (3 each) is now used, so no further social post should go out until the next PKT day.
 - (social-2026-11-26-roundup, social_roundup, claude_crew) The host ledger `~/studio-media/social/updates.json` is authoritative; `specs/social/updates.json` is only the git record.
 
+## Feedback from the previous attempt
+the worker committed only a PHR (history/prompts/); a job must produce its stage's work, and the crew writes the PHR itself
+
+
 ## Response snapshot
 
-Merged origin/main into `crew/social-2026-11-26-roundup` and resolved the single conflict in `specs/social/updates.json`: main's `2026-11-25-feature` platforms fix is byte-identical to this branch's, so the resolution keeps that and retains this branch's appended `2026-11-26-content` entry. Committed the merge, rebuilt `static/content-status.json`, and all 14 content gates pass.
+Re-fetched and merged the moved `origin/main` (`4994527ed`) into `crew/social-2026-11-26-roundup` as `3dc892b6d`, keeping main's six ledger entries unchanged and in order plus the branch's `2026-11-26-content`, with all 14 content gates green.
 
 ## Outcome
 
-- Impact: social_roundup merge-conflict resolution for SOCIAL Unit 11260 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (14/14 gates) after `npm run build:content-status`.
-- Files: 2 file(s), listed above.
+- Impact: fix for SOCIAL Unit 11260 by claude_crew (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit `f86e565e7` resolving the `specs/social/updates.json` conflict (main's posted platforms for `2026-11-25-feature` plus this branch's `2026-11-26-content` entry), and the PHR for this prompt.
-- Decisions the team must respect: the merged ledger keeps main's entry order and adds `2026-11-26-content` last; no entry was removed or renumbered, and no ID on main was reused.
+- Shipped / changed: Re-fetched and merged the moved `origin/main` (`4994527ed`) into `crew/social-2026-11-26-roundup` as `3dc892b6d`, keeping main's six ledger entries unchanged and in order plus the branch's `2026-11-26-content`, with all 14 content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
+  - `specs/social/updates.json` on this branch is main's six entries unchanged and in order plus the appended `2026-11-26-content`, byte-identical to `~/studio-media/social/updates.json`; a later job must not re-resolve it.
+  - The earlier merge `f86e565e7` was contentless for the ledger (the branch already carried main's posted `2026-11-25-feature` values); the fresh merge `3dc892b6d` of the moved main is what gives this branch a work-file diff, so do not collapse the two merges.
   - Today's per-platform social cap (3 each) is used, so no further social post should go out until the next PKT day.
-  - The host ledger `~/studio-media/social/updates.json` is authoritative; `specs/social/updates.json` is only the git record.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
-- Prompt variant (if applicable): crew brief v1 (conflict variant)
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
