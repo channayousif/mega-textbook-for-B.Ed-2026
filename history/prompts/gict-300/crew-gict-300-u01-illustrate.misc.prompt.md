@@ -2,7 +2,7 @@
 id: crew-gict-300-u01-illustrate
 title: crew illustrate GICT-300 unit 1
 stage: misc
-date: 2026-11-27
+date: 2026-11-26
 surface: agent
 model: agy
 feature: gict-300
@@ -84,31 +84,33 @@ npm run check:content has 2 finding(s) that main does not have:
 ✗ Pipeline gate failed with 1 finding(s):
 - GICT-300 Unit 1 (docs/semester-1/gict-300/unit-01): G2 en-draft: stale or incomplete input manifest
 
+
 ## Response snapshot
 
-Generated topic illustration fig-U1-13 via gflow, visually inspected all four topic raster illustrations (fig-U1-10 through fig-U1-13), placed them as `<Figure>` elements in English topic files and their Urdu mirrors, marked their manifest rows placed, prepared fresh G2 gate evidence, and passed all 14 content gates. Banner fig-U1-9 generation blocked by Flow WAF challenge.
+Generated fig-U1-13 with gflow, inspected and placed topic illustrations fig-U1-10 through fig-U1-13 in English and Urdu topics, updated manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate for GICT-300 Unit 1 by agy.
-- Tests: npm run check:content passed with 14/14 content gates clean.
-- Files: 24 files changed/added.
-- Next prompts: fresh G3 English review and banner generation retry once WAF challenge is clear.
-- Reflection: gflow produced fig-U1-13 cleanly but hit Flow WAF bot check (HTTP 403 / PUBLIC_ERROR_UNUSUAL_ACTIVITY) when attempting fig-U1-9 banner.
+- Impact: illustrate for GICT-300 Unit 1 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 24 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed topic illustrations fig-U1-10 through fig-U1-13 in English and Urdu topic files, updated manifest to placed, refreshed G2 evidence, and passed check:content.
-- Decisions the team must respect: Never attempt to solve or bypass anti-bot challenges; banner fig-U1-9 remains prompt-only in sidecar manifest until Flow WAF challenge clears or another producer is assigned.
-- Pending / next owner: crew lead / G3 reviewer.
+- Shipped / changed: Generated fig-U1-13 with gflow, inspected and placed topic illustrations fig-U1-10 through fig-U1-13 in English and Urdu topics, updated manifest to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Topic illustrations fig-U1-10 to fig-U1-13 are placed in both English and Urdu topics and verified clean.
-  - Banner fig-U1-9 in unit-01.banner.md remains prompt-only due to Flow WAF challenge on the gflow lane.
-  - G2 evidence has been refreshed and passes pipeline gate; G3 English review remains stale and needs a fresh run.
-- Paperclip issues affected: none.
+  - Topic illustrations fig-U1-10 to fig-U1-13 are placed in English and Urdu topics, verified clean, and all 14 content gates pass.
+  - Banner fig-U1-9 in unit-01.banner.md remains prompt-only due to Flow WAF challenge on the gflow lane (PUBLIC_ERROR_UNUSUAL_ACTIVITY).
+  - G2 gate evidence refreshed at specs/content/gict-300/reviews/unit-01/G2/20261126T222416707Z-gates.json; G3 English review remains stale and needs a fresh run.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: gflow hit WAF anti-bot challenge on banner generation.
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
