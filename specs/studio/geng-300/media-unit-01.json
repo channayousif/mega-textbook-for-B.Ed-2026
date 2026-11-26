@@ -1,0 +1,199 @@
+{
+ "course": "geng-300",
+ "unit": 1,
+ "items": [
+  {
+   "state": "qa3-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 98.522268,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 98.522,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 98.5
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers register, collocation, connotation and the grammar error areas through the mnemonic, and stays with the topic. Does not expand subject-verb agreement, verb tenses and modifiers, and adds a short outfit analogy. Transcript renders Miss Ayesha as Miss Aisha, Karachi as Karach, Urdu as Erdu and Sindhi as Cindy: check the pronunciation."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-26",
+     "notes": "private on channel UC7cQfkGkdNABCiyjmV5ZaFQ, title and description intact, custom thumbnail success, in the EN audio podcast playlist PLLdTwYdZvUFc; tags repaired in place via yt-describe.mjs after the MCP array/string mismatch; embed check deferred to the placement build"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:34.579Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T12:11:59.284Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T12:12:41.020Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T12:13:22.038Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T12:16:47.858Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T12:17:46.766Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-26T12:19:48.888Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-26T12:20:07.267Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Words in Context: Register, Collocation and Connotation",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for register, collocation and the common grammar errors.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t1-en-audio-p1",
+   "artifact_id": "2d108a40-6556-4734-b5be-8546ea68a1b8",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-audio-p1.m4a",
+   "sha256": "396945a6d79f6378662707433c076532fee9307f5c002f69df8c5bcd90241945",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-01/t1-en-audio-p1.mp4.thumb.jpg",
+   "youtube_id": "Fre7sTw5_6c",
+   "uploaded_at": "2026-11-26T12:19:48Z"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:34.659Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "video",
+   "title": "Choosing the Right Word: Vocabulary and Grammar in Context",
+   "alt": "Video explainer on vocabulary in context and communicative grammar, set in a Pakistani classroom.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t1-en-video"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:34.705Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "How English Builds Words and Sentences",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for word formation and sentence structures.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t2-en-audio-p1"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:34.931Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "video",
+   "title": "Word Formation and the Four Sentence Structures",
+   "alt": "Video explainer on the four word-formation processes and the four sentence structures.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t2-en-video"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:35.012Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "The Sounds of English: Phonemes, Stress and Intonation",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for phonemes, stress and intonation.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t3-en-audio-p1"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T12:07:35.068Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "video",
+   "title": "Why Urdu Speakers Miss English Sounds",
+   "alt": "Video explainer on the English sound system and the pronunciation challenges Urdu speakers face.",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+   "key": "t3-en-video"
+  }
+ ]
+}
