@@ -294,8 +294,54 @@
    "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-audio-p1.mp4.thumb.jpg"
   },
   {
-   "state": "generated",
-   "gates": {},
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 441.434558,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 441.375
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.704467,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 441.5,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 441.375
+      },
+      "loudness": {
+       "integrated_lufs": -16.4,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 1,
+      "longest_silence_s": 3.700042,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers all four word-formation processes and all four sentence structures with the source examples, and closes on the practicum task. Transcript renders Mr Tariq as Mr Tar, Multan as Molton, Urdu as udu and Sindhi as Cindy: check the pronunciation."
+    }
+   },
    "history": [
     {
      "state": "planned",
@@ -304,6 +350,22 @@
     {
      "state": "generated",
      "at": "2026-11-26T13:30:03.914Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T13:40:54.931Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T13:41:59.635Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T13:44:01.223Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T13:46:13.149Z"
     }
    ],
    "topic": 2,
@@ -314,15 +376,80 @@
    "prompt_ref": "specs/studio/prompts/video.md v1",
    "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
    "key": "t2-en-video",
-   "artifact_id": "c17d3425-25c2-4e43-ad5e-0c6bcf603090"
+   "artifact_id": "c17d3425-25c2-4e43-ad5e-0c6bcf603090",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-video.mp4",
+   "sha256": "5dd098d96271454df121004fd62b9c0f7d305274930c98ade6adddabc6599dbd",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-02/t2-en-video.yt.mp4.thumb.jpg"
   },
   {
-   "state": "planned",
-   "gates": {},
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 102.887619,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 102.888,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 102.833333
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers the 44 phonemes against 26 letters, the th/v/w sounds Urdu lacks, and stress and intonation, and closes on the minimal-pairs activity. Transcript renders Urdu as erdo: check the pronunciation."
+    }
+   },
    "history": [
     {
      "state": "planned",
      "at": "2026-11-26T12:07:35.012Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T14:11:35.167Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T14:14:40.428Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T14:15:24.138Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T14:17:18.364Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T14:18:10.110Z"
     }
    ],
    "topic": 3,
@@ -333,7 +460,12 @@
    "alt": "Audio brief, about two minutes, with the three memory hooks for phonemes, stress and intonation.",
    "prompt_ref": "specs/studio/prompts/audio.md v2",
    "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
-   "key": "t3-en-audio-p1"
+   "key": "t3-en-audio-p1",
+   "artifact_id": "47eabccf-3b0a-4e71-b4b9-6f0b6cdeb9a6",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-audio-p1.m4a",
+   "sha256": "d030b7eb356ad5e75f1b6a7e284e18f43bf9bb156970ad914b0e249cf684307f",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-audio-p1.mp4.thumb.jpg"
   },
   {
    "state": "planned",
