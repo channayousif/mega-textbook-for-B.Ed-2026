@@ -25,7 +25,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-01/G2/20261124T023608050Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-01/G2/20261126T173740774Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the butler-iea edition year and that the unverifiable mellor-2009 row supports only the premise in its title (sources/unit-01.md) |
 | Unit 1 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English bd60c874b; see reviews/unit-01/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels other than تخلیقیت are authored and need checking |
