@@ -1,0 +1,21 @@
+[
+  {
+    "topic": 2,
+    "afterHeading": "Building a distribution from records",
+    "afterHeadingUr": "ریکارڈ سے تقسیم بنانا",
+    "type": "bar",
+    "title": {
+      "en": "Pupils absent per school day over 50 days (Larkana)",
+      "ur": "50 دنوں میں روزانہ غیر حاضر طلبہ (لاڑکانہ)"
+    },
+    "xLabel": { "en": "Absent pupils (x)", "ur": "غیر حاضر طلبہ (x)" },
+    "yLabel": { "en": "Number of days", "ur": "دنوں کی تعداد" },
+    "series": [
+      {
+        "label": { "en": "Days", "ur": "دن" },
+        "points": [[0, 5], [1, 12], [2, 15], [3, 10], [4, 6], [5, 2]]
+      }
+    ],
+    "source": "docs/semester-2/gqur-301/unit-10/topic-02.mdx, worked example 'absentees in Larkana' (table: x 0-5, days 5, 12, 15, 10, 6, 2; total 50)"
+  }
+]
