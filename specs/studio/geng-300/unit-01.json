@@ -1,0 +1,70 @@
+{
+ "course": "geng-300",
+ "unit": 1,
+ "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
+ "artifacts": [
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "status": "planned",
+   "audience": "all",
+   "title": "Words in Context: Register, Collocation and Connotation",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for register, collocation and the common grammar errors."
+  },
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "video",
+   "status": "planned",
+   "audience": "all",
+   "title": "Choosing the Right Word: Vocabulary and Grammar in Context",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "alt": "Video explainer on vocabulary in context and communicative grammar, set in a Pakistani classroom."
+  },
+  {
+   "topic": 2,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "status": "planned",
+   "audience": "all",
+   "title": "How English Builds Words and Sentences",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for word formation and sentence structures."
+  },
+  {
+   "topic": 2,
+   "locale": "en",
+   "kind": "video",
+   "status": "planned",
+   "audience": "all",
+   "title": "Word Formation and the Four Sentence Structures",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "alt": "Video explainer on the four word-formation processes and the four sentence structures."
+  },
+  {
+   "topic": 3,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "status": "planned",
+   "audience": "all",
+   "title": "The Sounds of English: Phonemes, Stress and Intonation",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for phonemes, stress and intonation."
+  },
+  {
+   "topic": 3,
+   "locale": "en",
+   "kind": "video",
+   "status": "planned",
+   "audience": "all",
+   "title": "Why Urdu Speakers Miss English Sounds",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "alt": "Video explainer on the English sound system and the pronunciation challenges Urdu speakers face."
+  }
+ ]
+}
