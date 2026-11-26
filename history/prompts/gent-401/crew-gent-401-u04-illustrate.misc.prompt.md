@@ -2,7 +2,7 @@
 id: crew-gent-401-u04-illustrate
 title: crew illustrate GENT-401 unit 4
 stage: misc
-date: 2026-11-27
+date: 2026-11-26
 surface: agent
 model: agy
 feature: gent-401
@@ -20,7 +20,37 @@ files:
  - history/prompts/gent-401/crew-gent-401-u04-illustrate.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gent-401/unit-04/index.mdx
  - specs/content/gent-401/figures/unit-04.banner.md
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T050320192Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T062155314Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/20261124T062449556Z-gates.json
  - specs/content/gent-401/reviews/unit-04/G2/20261126T195406275Z-gates.json
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T050320192Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062155314Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T062449556Z/validate-content.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/validate-content.txt
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-bloom-bands.txt
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-concept-graph.txt
  - specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-depth-gate.txt
@@ -70,31 +100,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u04-author-conflict2, fix, claude_crew) The merged scott-2017-efmd.md binds Unit 4 notes with pp. 53-76 locators authored only on this branch; a G3 reviewer should check them against the printed pagination.
 - (gent-401-u04-author-conflict2, fix, claude_crew) The merge pulled main's Unit 2 (docs, specs, figures, G2 evidence, glossary terms, PHRs), which is outside this job's Unit 4 scope and was not re-reviewed here.
 
+
 ## Response snapshot
 
-Generated with gflow, inspected, and placed the GENT-401 Unit 4 banner illustration (fig-U4-5) in the English index page and Urdu mirror, updated unit-04.banner.md to placed, refreshed G2 gate evidence, pruned stale evidence directories, and passed all 14 content gates.
+Generated with gflow, inspected, and placed the GENT-401 Unit 4 banner illustration (fig-U4-5) across English and Urdu index pages, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: illustrate for GENT-401 Unit 4 by agy.
-- Tests: npm run check:content passed cleanly in the job worktree.
-- Files: 15 file(s) changed/added/pruned.
-- Next prompts: crew planner advances Unit 4 review tasks.
-- Reflection: None.
+- Impact: illustrate for GENT-401 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 45 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with gflow, inspected, and placed the GENT-401 Unit 4 banner illustration (fig-U4-5) in English and Urdu index pages, updated unit-04.banner.md, refreshed G2 gate evidence (20261126T195406275Z-gates.json), pruned stale G2 directories, and passed all 14 content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not self-certify.
-- Pending / next owner: crew lead (merge when CI is green); independent G3 and G5 reviewers for Unit 4.
+- Shipped / changed: Generated with gflow, inspected, and placed the GENT-401 Unit 4 banner illustration (fig-U4-5) across English and Urdu index pages, refreshed G2 gate evidence, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit banner fig-U4-5 is placed; Unit 4 G3 review and G5 review remain open for independent evaluation.
-  - Unit 4 business plan terms (کاروباری منصوبہ، انتظامی خلاصہ، تصور اور مقصد کے بیانات، مارکیٹنگ کا منصوبہ، عملیاتی منصوبہ، تنظیمی ڈھانچہ) are authored proposals not in terminology.csv; an independent G5 reviewer should verify them.
-  - Four localized RTL schematic SVGs (fig-U4-1 to fig-U4-4) and derived dark variants passed text geometry measurement cleanly and match page alt text.
-  - Merged scott-2017-efmd.md binds Unit 4 notes with pp. 53-76 locators authored only on this branch; a G3 reviewer should check them against the printed pagination.
+  - Unit 4 banner fig-U4-5 is placed with gflow; G3 en-review and G5 ur-review remain open for independent evaluation.
+  - Proposed Urdu business plan terms in reviews/unit-04/G4/translation-handoff.md are authored and require G5 verification.
+  - Bound scott-2017-efmd.md locators (pp. 53-76) should be verified by a G3 reviewer against printed pagination.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
