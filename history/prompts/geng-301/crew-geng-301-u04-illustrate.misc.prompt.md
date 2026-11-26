@@ -16,29 +16,29 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/geng-301/unit-04/index.mdx
-  - docs/semester-2/geng-301/unit-04/topic-01.mdx
-  - docs/semester-2/geng-301/unit-04/topic-02.mdx
-  - docs/semester-2/geng-301/unit-04/topic-03.mdx
-  - history/prompts/geng-301/crew-geng-301-u04-illustrate.misc.prompt.md
-  - specs/content/geng-301/figures/unit-04.banner.md
-  - specs/content/geng-301/figures/unit-04.md
-  - specs/content/geng-301/reviews/unit-04/G2/20261126T172545046Z-gates.json
-  - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-bloom-bands.txt
-  - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-concept-graph.txt
-  - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-depth-gate.txt
-  - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-docs-sync.txt
-  - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-figures.txt
-  - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-no-answer-keys.txt
-  - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-no-em-dash.txt
-  - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/validate-content.txt
-  - specs/content/geng-301/tasks.md
-  - static/img/figures/geng-301/unit-04/fig-U4-10.webp
-  - static/img/figures/geng-301/unit-04/fig-U4-7.webp
-  - static/img/figures/geng-301/unit-04/fig-U4-8.webp
-  - static/img/figures/geng-301/unit-04/fig-U4-9.webp
+ - docs/semester-2/geng-301/unit-04/index.mdx
+ - docs/semester-2/geng-301/unit-04/topic-01.mdx
+ - docs/semester-2/geng-301/unit-04/topic-02.mdx
+ - docs/semester-2/geng-301/unit-04/topic-03.mdx
+ - history/prompts/geng-301/crew-geng-301-u04-illustrate.misc.prompt.md
+ - specs/content/geng-301/figures/unit-04.banner.md
+ - specs/content/geng-301/figures/unit-04.md
+ - specs/content/geng-301/reviews/unit-04/G2/20261126T172545046Z-gates.json
+ - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-bloom-bands.txt
+ - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-concept-graph.txt
+ - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-depth-gate.txt
+ - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-docs-sync.txt
+ - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-figures.txt
+ - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-no-answer-keys.txt
+ - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/check-no-em-dash.txt
+ - specs/content/geng-301/reviews/unit-04/G2/logs-20261126T172545046Z/validate-content.txt
+ - specs/content/geng-301/tasks.md
+ - static/img/figures/geng-301/unit-04/fig-U4-10.webp
+ - static/img/figures/geng-301/unit-04/fig-U4-7.webp
+ - static/img/figures/geng-301/unit-04/fig-U4-8.webp
+ - static/img/figures/geng-301/unit-04/fig-U4-9.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -76,26 +76,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (geng-301-u04-fix, fix, opencode) The `.wm` class omission is a recurring template-authoring bug; consider adding it explicitly to the svg-authoring.md boilerplate to prevent recurrence in future figure generation.
 - (geng-301-u04-review_en, review_en, agy) Advisory finding F1 notes "textbook.com.pk" wordmark overflows right viewBox boundary on all 12 SVG figure assets for Unit 4.
 
+
 ## Response snapshot
 
-Generated remaining raster illustrations (fig-U4-10 and banner fig-U4-7) with gflow under ADR-0029, inspected all 4 WebP images for cultural and pedagogical fidelity, placed them in GENG-301 Unit 4 index and topics, updated manifests to placed, refreshed G2 gate evidence and tasks.md tracker, and verified all 14 content gates pass.
+Generated and placed the Unit 4 banner and topic raster illustrations in GENG-301 with manifests updated to placed, refreshed G2 gate evidence and tasks tracker, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for GENG-301 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated remaining raster illustrations (fig-U4-10 and banner fig-U4-7) with gflow under ADR-0029, inspected all 4 WebP images for cultural and pedagogical fidelity, placed them in GENG-301 Unit 4 index and topics, updated manifests to placed, refreshed G2 gate evidence and tasks.md tracker, and verified all 14 content gates pass.
+- Shipped / changed: Generated and placed the Unit 4 banner and topic raster illustrations in GENG-301 with manifests updated to placed, refreshed G2 gate evidence and tasks tracker, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 4 has no Urdu mirror, so no Urdu files were modified or created.
-  - The G3 en-review for Unit 4 still needs a fresh independent run (ADR-0019); the placed illustrations are now part of the content it will evaluate.
+  - GENG-301 Unit 4 has no Urdu mirror, so no Urdu files were modified or created.
+  - The G3 en-review for Unit 4 still needs a fresh independent run (ADR-0019); the newly placed illustrations are part of the content it will evaluate.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
