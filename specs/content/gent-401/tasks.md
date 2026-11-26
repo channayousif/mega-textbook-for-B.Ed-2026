@@ -41,7 +41,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the OpenStax chapter mapping (the spec names chapters 5 and 11; chapter 8 is added for the market-research leaves) and that the extra spriggs-2016-bmc row is genuinely on-topic for U3-04 and U3-05 (sources/unit-03.md) |
 | Unit 3 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 6581b0d35; see reviews/unit-03/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; every concept Urdu label is authored and needs checking |
-| Unit 3 | G6 assets | ▣ | | Four English schematic SVGs (fig-U3-1 to fig-U3-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U3-5 prompt-only for the illustrate job |
+| Unit 3 | G6 assets | ▣ | | Four English schematic SVGs (fig-U3-1 to fig-U3-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U3-5 placed |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-04/G2/20261124T093431464Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
