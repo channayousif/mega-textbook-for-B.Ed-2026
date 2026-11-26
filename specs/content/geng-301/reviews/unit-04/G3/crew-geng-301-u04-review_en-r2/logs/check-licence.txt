@@ -1,0 +1,7 @@
+$ npm run check:licence   (repo HEAD 6a810e62c, 2026-11-26T20:41:41.507Z)
+
+> bed-mega-textbook@0.1.0 check:licence
+> node scripts/check-licence.mjs
+
+✓ Licence track: 57/57 objective pages, 67 pages checked.
+exit_code=0
