@@ -2941,7 +2941,7 @@
    "id": "efmp-407",
    "locale": "ur",
    "kind": "short",
-   "state": "qa-pass",
+   "state": "qa3-pass",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -2963,6 +2963,12 @@
      "verdict": "pass",
      "at": "2026-11-26T19:55:12Z",
      "notes": "28.9 s, 1080x1920, -14.8 LUFS, -3.0 dBTP, no silence or black runs; frames checked: captions fully visible, Urdu RTL correct, end card shows the exact address /ur/semester-3/efmp-407/course-overview/; thumbnail hook reads at phone size"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-27",
+     "notes": "list_videos: Xgx6-JJ5ReY private on the channel, processed, title and description intact; teaser playlist PLCJn7gAoYIJs and custom thumbnail set (update_video success)"
     }
    },
    "clips": [
@@ -3147,11 +3153,21 @@
     {
      "state": "qa-pass",
      "at": "2026-11-26T19:55:12.993Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-26T20:50:46.827Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-26T20:52:19.692Z"
     }
    ],
    "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874",
    "encoded_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.mp4",
-   "thumbnail_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.thumb.jpg"
+   "thumbnail_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.thumb.jpg",
+   "youtube_id": "Xgx6-JJ5ReY",
+   "uploaded_at": "2026-11-26T20:50:46Z"
   },
   {
    "key": "efpg-401-ur",
