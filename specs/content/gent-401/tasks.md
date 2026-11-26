@@ -60,7 +60,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the open-access articles' settings are not presented as Pakistani evidence and that the tuition centre numbers are the author's teaching device (sources/unit-05.md) |
 | Unit 5 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 6ba1de283; see reviews/unit-05/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all six concept Urdu labels are authored and need checking |
-| Unit 5 | G6 assets | ▣ | | Four English schematic SVGs (fig-U5-1 to fig-U5-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U5-5 prompt-only for the illustrate job |
+| Unit 5 | G6 assets | ▣ | | Four English schematic SVGs (fig-U5-1 to fig-U5-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U5-5 placed |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-07/G2/20261124T060041498Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the mellor-2009 row supports only the premise in its title, and that the two DOAJ substitutes are used only within their abstracts |
