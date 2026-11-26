@@ -3,8 +3,8 @@
   "course_code": "GENT-401",
   "unit_no": 4,
   "stage": "G2",
-  "reviewed_commit": "befefe10d",
-  "generated_at": "2026-11-24T09:34:31.466Z",
+  "reviewed_commit": "fe34a4699",
+  "generated_at": "2026-11-26T19:54:06.277Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
@@ -61,7 +61,7 @@
     "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
     "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
     "docs/semester-4/gent-401/course-overview.mdx": "2ea406e264202c0b88d81a52d6c6a94f0217ad4865a0f0a9002c5230ef879deb",
-    "docs/semester-4/gent-401/unit-04/index.mdx": "83175d7aabeef30e940e342342bcd42ecd8d03b1b7c6fa7ba9df4a7fc8de53a3",
+    "docs/semester-4/gent-401/unit-04/index.mdx": "19a32302cff4e38f5c4f7326992a0eb37f19ab3dbf63fe93bb83812ae5d9b74f",
     "docs/semester-4/gent-401/unit-04/topic-01.mdx": "aebafe72fcaf4d7a493e009da31c3cc54c373f95f65255c02ac3aebd43db4e68",
     "docs/semester-4/gent-401/unit-04/topic-02.mdx": "fe1b7567d3b231f65839e64ee1aea20bee0648f89268a3316830a10bf35405e7",
     "docs/semester-4/gent-401/unit-04/unit-assessment.mdx": "46c940a6770f71516ee1167e45b577cc9b85cc60f1a2be1a576553bf2fe0de60",
@@ -86,7 +86,7 @@
     "specs/content/gent-401/concepts/unit-04.md": "35b6e5a4c3db63386729f9ac9ab3a331d9a03b871991611982310b09ae9c2583",
     "specs/content/gent-401/content-spec.md": "2b69dbea68865506b285eb1232cbbbf1f47f835bacdabd30b2070938ea7e551d",
     "specs/content/gent-401/coverage/unit-04.md": "5a6fe006d0baef908e9bcba795456c48c02d4a624e043fb6ec8c59fb5a4b592a",
-    "specs/content/gent-401/figures/unit-04.banner.md": "c39336c8f9f71541599bb558f47b2bdcb2fec4e683b7e1a362102e0b83e642bf",
+    "specs/content/gent-401/figures/unit-04.banner.md": "c8c061528ef1e992cc7d04898f00b3da8ccd2ca9b2c2be18bab200db78b0f79a",
     "specs/content/gent-401/figures/unit-04.md": "063a656c0ccf7e24e161388eed2b075bfb89679f95220823f2993fe1ed87afab",
     "specs/content/gent-401/sources/unit-04.md": "32b04c18c1763fc5547c09d94da8bc3ad80d9d3a4beddad84711e199436d94dd",
     "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
@@ -97,58 +97,59 @@
     "static/img/figures/gent-401/unit-04/fig-U4-3.dark.svg": "13f0661e3cfb658f19fdab4059bb0bcac80a622f002053e5caa6583da0e9573b",
     "static/img/figures/gent-401/unit-04/fig-U4-3.svg": "43385a13793271a7d04970c0e6c3b02286272d98720fbb034616ba4d05917932",
     "static/img/figures/gent-401/unit-04/fig-U4-4.dark.svg": "5bb7dde7037f2e481a22600d7faad424b57580e9d2cab853d53cf67507bfcc4d",
-    "static/img/figures/gent-401/unit-04/fig-U4-4.svg": "528d896ce3888415818055efc61834d5fafd861168a611dd642d0a62c5e09290"
+    "static/img/figures/gent-401/unit-04/fig-U4-4.svg": "528d896ce3888415818055efc61834d5fafd861168a611dd642d0a62c5e09290",
+    "static/img/figures/gent-401/unit-04/fig-U4-5.webp": "f9c4d4b1fbebab2ecd198ca4ebc33477f41249c6abad5a0089825e09686a120e"
   },
   "commands": [
     {
       "name": "validate:content",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/validate-content.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/validate-content.txt"
     },
     {
       "name": "check:depth-gate",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-depth-gate.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-depth-gate.txt"
     },
     {
       "name": "check:figures",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-figures.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-figures.txt"
     },
     {
       "name": "check:concept-graph",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-concept-graph.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-concept-graph.txt"
     },
     {
       "name": "check:bloom-bands",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-bloom-bands.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-bloom-bands.txt"
     },
     {
       "name": "check:no-em-dash",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-no-em-dash.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-no-em-dash.txt"
     },
     {
       "name": "check:no-answer-keys",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-no-answer-keys.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-no-answer-keys.txt"
     },
     {
       "name": "check:docs-sync",
       "exit_code": 0,
-      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-docs-sync.txt"
+      "log_path": "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-docs-sync.txt"
     }
   ],
   "evidence_manifest": {
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/validate-content.txt": "b6a251172e1f9539c76f2fed9b40ec4ce818a5ace4df5f046e78d25105a93be7",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-depth-gate.txt": "aac3bebbd073da0bcc42964ded2216d2774c9e75e8ba32aba3addc570db69a5d",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-figures.txt": "030cbac493ef88081bb73d62166f6085bb38d32464643d24eb8149b6f76b969c",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-concept-graph.txt": "be8e795d02715e30c1a5a903c07249c1215ed1f2771a1917efd8a290427a82ab",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-bloom-bands.txt": "e42ae8cb4132cf29bd0aef12e0379123917e603d9ae71875ecd680bf27f5fa5e",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-no-em-dash.txt": "825d42982829b37a7d2be0f2638a981f2a00cff4b74b4a64107977b74858d341",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-no-answer-keys.txt": "a457f302d067fce7e8fc3e57c1b7b7ce7d65925ee31b5a14716088a5abc03b8b",
-    "specs/content/gent-401/reviews/unit-04/G2/logs-20261124T093431464Z/check-docs-sync.txt": "ef5c2a875861266542ba8a577019da3742a7e8394893977a35e526cd14f2734f"
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/validate-content.txt": "6cb134986e7f6c00cf95aea362b045bd941c3ce2888c998903e331d84822a9ea",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-depth-gate.txt": "30f9fe7691b96a4aff5eda89218221040b95949f57e9ff31a8bf0bec9cba96c4",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-figures.txt": "d18200ecfcad856e28e2b68f00d5a44f7cafad1e1c973332ad535967e7b041ba",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-concept-graph.txt": "240e79ffc663b8fc62c7d12cefe31688a47ff23b4a09fadf67708eb4b02a96be",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-bloom-bands.txt": "8d5b85ea626002f43f2dc9e66b2f58ab693aaab959cbe59165ac159a2ac58162",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-no-em-dash.txt": "d7148406d93a7b669a639b94cb88c1fd8cb067b91ed5f805e4bc6f4253981dd7",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-no-answer-keys.txt": "5685e274032e15734249270dd4c5e920a702c4e040f90bde9d35180d50008a3d",
+    "specs/content/gent-401/reviews/unit-04/G2/logs-20261126T195406275Z/check-docs-sync.txt": "f9556d7876add6f8441c807b28aee6c7636e0658263ff47591464f0cefd1fd8d"
   }
 }
