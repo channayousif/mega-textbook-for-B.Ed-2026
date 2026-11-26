@@ -82,7 +82,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 4 | Area: i18n | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: on a page with no Urdu version the locale dropdown entry for Urdu is disabled with a tooltip, and the page shows a callout saying the Urdu translation is not available yet (reusing the translation status behind `TranslationStatusBadge.tsx`).
-- [ ] T021 Unit assessment: one set of question cards (MCQ, RRQ, ERQ) and no duplicated MCQs (#808)
+- [x] T021 Unit assessment: one set of question cards (MCQ, RRQ, ERQ) and no duplicated MCQs (#808)
   - Stage: 4 | Area: assessment | Type: new | Priority: p1 | Owner: no
   - Source: owner request 2026-11-25; duplication seen on `/semester-1/geng-300/unit-02/unit-assessment/`
   - Done when: MCQs render once as cards built from the `SelfCheck` design (stem, then choices with radios, or checkboxes for multi-select items), wired to the existing server-side marking; RRQ and ERQ render as cards with stem, Bloom level and marks; the plain MDX list stays as the print and no-JavaScript fallback; done at render time with no unit MDX edits; no answer key reaches the client; works on every course and unit, English and Urdu.
