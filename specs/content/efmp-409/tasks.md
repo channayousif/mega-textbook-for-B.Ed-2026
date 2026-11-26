@@ -30,11 +30,11 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 4 | G5 ur-review | ▢ | | Awaiting independent review; authored concept labels also need checking |
 | Unit 4 | G6 assets | ▣ | | Six English schematic SVGs (fig-U4-1 to fig-U4-6) and six Urdu schematic SVGs placed with derived dark variants; measure-figure-text clean; banner fig-U4-7 prompt-only |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-05/G2/20261125T085534293Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-409/reviews/unit-05/G2/20261126T035315531Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 5 | G4 ur-translation | ▢ | | Complete six-page draft Urdu mirror and six localized SVG pairs (with derived dark variants) prepared from English 63cfa5fd3; see reviews/unit-05/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
-| Unit 5 | G6 assets | ▣ | | Six English schematic SVGs (fig-U5-1 to fig-U5-6) placed with derived dark variants; measure-figure-text clean; banner fig-U5-7 prompt-only |
+| Unit 5 | G6 assets | ▣ | | Six English schematic SVGs (fig-U5-1 to fig-U5-6) placed with derived dark variants; measure-figure-text clean; banner fig-U5-7 placed |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
 
 Unit 1 reading estimates use final visible text at about 200 words per minute: index 2, Topic 1.1 14, Topic 1.2 13, assessment 14, teacher notes 3, total 46 minutes, inside the approved 36-48 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 4 is the blueprint's Analyze item identifying the aims implied in three statements by Pakistani policy-makers (Jinnah 1947; National Education Policy 2009 aims 4 and 8). The guide supplies teaching strategies and practical work, so a unit teacher-notes page is included. The course overview uses the programme default weighting (formative 40, summative 60), as the guide gives no marks.
