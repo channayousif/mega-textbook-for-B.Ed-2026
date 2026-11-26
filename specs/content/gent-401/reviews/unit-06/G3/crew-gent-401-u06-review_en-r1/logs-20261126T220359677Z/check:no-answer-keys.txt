@@ -1,0 +1,7 @@
+$ npm run check:no-answer-keys   (repo HEAD f71773ed96f566c1e421ec586142274b2fdf3acd, 2026-11-26T22:04:21.509Z)
+
+> bed-mega-textbook@0.1.0 check:no-answer-keys
+> node scripts/check-no-answer-keys.mjs
+
+✓ No answer keys / private marking material found (scanned: docs, licence, i18n, specs/content).
+exit_code=0
