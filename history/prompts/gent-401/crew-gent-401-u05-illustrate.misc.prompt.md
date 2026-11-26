@@ -70,9 +70,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u05-author-conflict3, fix, claude_crew) The merged `scott-2017-efmd.md` is now a four-section shared file (Units 3, 4, 5, 6) and `openstax-entrepreneurship.md` carries both Unit 5 and Unit 6; the next merge should keep main's Unit 6 section ahead of Unit 5.
 - (gent-401-u05-author-conflict3, fix, claude_crew) Unit 5's Urdu mirror, `.ur.svg` variants and the `fig-U5-5` illustrate row remain open for separate G4/G5 and illustrate jobs; the EN index stays `translation_status: draft`.
 
+
 ## Response snapshot
 
-Generated with gflow, inspected, and placed the GENT-401 Unit 5 banner illustration (fig-U5-5) in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all content gates.
+Generated with gflow, inspected, and placed the GENT-401 Unit 5 banner illustration (fig-U5-5) in English and Urdu index pages, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -84,12 +85,12 @@ Generated with gflow, inspected, and placed the GENT-401 Unit 5 banner illustrat
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with gflow, inspected, and placed the GENT-401 Unit 5 banner illustration (fig-U5-5) in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all content gates.
+- Shipped / changed: Generated with gflow, inspected, and placed the GENT-401 Unit 5 banner illustration (fig-U5-5) in English and Urdu index pages, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit banner fig-U5-5 is placed; Unit 5 G3 review and G5 review remain open for independent evaluation.
-  - Unit 5 financial planning terms (ابتدائی اخراجات، مقررہ اخراجات، متغیر اخراجات، بریک ایوین تجزیہ، کنٹری بیوشن مارجن، بنیادی مالی گوشوارے، کیش فلو، بوٹ اسٹریپنگ، ایکویٹی فنانسنگ، اینجل سرمایہ کار، وینچر کیپیٹل، کراؤڈ فنڈنگ) are authored proposals not banked in terminology.csv; an independent G5 reviewer should verify them.
+  - Unit 5 financial planning terms are authored proposals not banked in terminology.csv; an independent G5 reviewer should verify them.
   - translation_status remains draft across both index.mdx files pending independent G5 review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
