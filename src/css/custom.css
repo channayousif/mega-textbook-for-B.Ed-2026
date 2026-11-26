@@ -1183,3 +1183,32 @@ html[dir='rtl'] .sidebar-item--en:not(.sidebar-item--en .sidebar-item--en) > .me
 
 /* Feature 034 T013 (#800): keep a navbar dropdown label and its caret on one line ("Programmes" wrapped at 1366px, adding 8px to the header above the hero). */
 .navbar__items .dropdown > .navbar__link { white-space: nowrap; }
+
+/* Feature 034 T021 (#808): unit assessment question cards (src/rehype/assessment-cards.mjs) and
+   the self-check cards that replace the plain MCQ list on screen (src/components/SelfCheck.tsx). */
+.aq-list { list-style: none; padding: 0; margin: 1rem 0 1.5rem; display: grid; gap: 0.9rem; counter-reset: aq; }
+.aq-card { counter-increment: aq; position: relative; margin: 0; padding: 0.9rem 1rem 0.9rem 3.25rem; border: 1px solid var(--ifm-color-emphasis-200); border-radius: 14px; background: var(--ifm-background-surface-color); box-shadow: 0 4px 14px rgb(16 43 53 / .05); }
+html[dir='rtl'] .aq-card { padding: 0.9rem 3.25rem 0.9rem 1rem; }
+.aq-card::before { content: counter(aq); position: absolute; inset-inline-start: 0.9rem; top: 0.85rem; width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center; background: var(--brand-teal, var(--ifm-color-primary)); color: #fff; font-weight: 700; font-size: 0.9rem; }
+.aq-list--rrq .aq-card::before { background: #1b5a60; }
+.aq-list--erq .aq-card::before { background: #8a5a00; }
+.aq-card > p:first-child { margin-top: 0; }
+.aq-card > p:last-child { margin-bottom: 0; }
+.aq-card .bloom-chip { margin-inline-start: 0.35rem; vertical-align: middle; }
+.aq-choices { list-style: none; padding: 0; margin: 0.5rem 0 0; display: grid; gap: 0.35rem; }
+.aq-choices li { margin: 0; padding: 0.35rem 0.6rem; border: 1px solid var(--ifm-color-emphasis-200); border-radius: 10px; }
+html[data-self-check] .aq-list--mcq { display: none; }
+.self-check--inline { margin-block: 0.5rem 1.5rem; padding: 0; border: 0; background: transparent; }
+.self-check__intro { color: var(--ifm-color-content-secondary); font-size: 0.95rem; }
+.self-check--inline .self-check__list { list-style: none; padding: 0; display: grid; gap: 0.9rem; counter-reset: aq; }
+.self-check--inline .self-check__list > li { counter-increment: aq; position: relative; padding: 0.9rem 1rem 0.9rem 3.25rem; border: 1px solid var(--ifm-color-emphasis-200); border-radius: 14px; background: var(--ifm-background-surface-color); box-shadow: 0 4px 14px rgb(16 43 53 / .05); }
+html[dir='rtl'] .self-check--inline .self-check__list > li { padding: 0.9rem 3.25rem 0.9rem 1rem; }
+.self-check--inline .self-check__list > li::before { content: counter(aq); position: absolute; inset-inline-start: 0.9rem; top: 0.85rem; width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center; background: var(--brand-teal, var(--ifm-color-primary)); color: #fff; font-weight: 700; font-size: 0.9rem; }
+.self-check--inline .self-check__list fieldset { margin: 0; }
+.self-check--inline .self-check__option { align-items: center; gap: 0.6rem; margin-top: 0.35rem; padding: 0.45rem 0.7rem; border: 1px solid var(--ifm-color-emphasis-200); border-radius: 10px; }
+.self-check--inline .self-check__option:has(input:checked) { border-color: var(--ifm-color-primary); background: var(--ifm-color-emphasis-100); }
+.self-check__key { min-width: 1.4rem; font-weight: 700; color: var(--ifm-color-content-secondary); }
+@media print {
+  html[data-self-check] .aq-list--mcq { display: grid; }
+  .aq-card, .self-check--inline .self-check__list > li { box-shadow: none; break-inside: avoid; }
+}

@@ -4,6 +4,7 @@ import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import rehypeTopicEnhance from './src/rehype/topic-enhance.mjs';
+import rehypeAssessmentCards from './src/rehype/assessment-cards.mjs';
 import { textbookSidebarItems } from './sidebarItemsGenerator';
 import { buildFigureAnimationIndex } from './src/lib/figureAnimations';
 
@@ -269,7 +270,8 @@ const config: Config = {
           sidebarItemsGenerator: textbookSidebarItems,
           // UX refresh: styles the nine-part topic cycle (sections, callouts,
           // Bloom chips) from existing markup, without editing any content file.
-          rehypePlugins: [rehypeTopicEnhance],
+          // Feature 034 T021 (#808): question cards on unit assessment pages, same approach.
+          rehypePlugins: [rehypeTopicEnhance, rehypeAssessmentCards],
         },
         blog: false,
         theme: {
