@@ -16,23 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-4/gent-401/unit-06/index.mdx
-  - history/prompts/gent-401/crew-gent-401-u06-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gent-401/unit-06/index.mdx
-  - specs/content/gent-401/figures/unit-06.banner.md
-  - specs/content/gent-401/reviews/unit-06/G2/20261126T205300572Z-gates.json
-  - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-bloom-bands.txt
-  - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-concept-graph.txt
-  - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-depth-gate.txt
-  - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-docs-sync.txt
-  - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-figures.txt
-  - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-no-answer-keys.txt
-  - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-no-em-dash.txt
-  - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/validate-content.txt
-  - specs/content/gent-401/tasks.md
-  - static/img/figures/gent-401/unit-06/fig-U6-5.webp
+ - docs/semester-4/gent-401/unit-06/index.mdx
+ - history/prompts/gent-401/crew-gent-401-u06-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gent-401/unit-06/index.mdx
+ - specs/content/gent-401/figures/unit-06.banner.md
+ - specs/content/gent-401/reviews/unit-06/G2/20261126T205300572Z-gates.json
+ - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-06/G2/logs-20261126T205300572Z/validate-content.txt
+ - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-06/fig-U6-5.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -73,25 +73,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated with gflow, inspected, and placed the GENT-401 Unit 6 banner illustration (fig-U6-5) across English and Urdu index pages, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated with gflow, inspected, and placed the GENT-401 Unit 6 banner illustration across English and Urdu index pages, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: illustrate for GENT-401 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the job.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with gflow, inspected, and placed the GENT-401 Unit 6 banner illustration (fig-U6-5) across English and Urdu index pages, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated with gflow, inspected, and placed the GENT-401 Unit 6 banner illustration across English and Urdu index pages, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 6 banner fig-U6-5 is placed with gflow; G3 en-review and G5 ur-review remain open for independent evaluation.
-  - Reviewer should verify SECP eZfile incorporation steps and IPO-Pakistan IP classifications.
-  - OpenStax consulted list keeps duplicate section slugs (8-1 and 13-1) from an earlier merge; deduplication is pending a future pass.
+  - Independent reviewer should verify SECP eZfile incorporation steps and IPO-Pakistan IP classifications.
+  - OpenStax consulted list retains duplicate section slugs (8-1 and 13-1) from an earlier merge, pending future deduplication.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
