@@ -70,25 +70,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u07-author-conflict4, fix, claude_crew) Unit 7's G2 evidence `20261124T060041498Z-gates.json` is unaffected (no GENT-401 G2 manifest hashes `sources/texts/*`); Unit 7 stays English-only with banner fig-U7-5 prompt-only and G3/G5 unticked, so G3 en-review is the next stage.
 - (gent-401-u07-author-conflict4, fix, claude_crew) `openstax-entrepreneurship.md` now holds main's Unit 5 chapter 9 block then the branch's Unit 7 block; per-unit note numbers restart, so later jobs should append, not renumber.
 
+
 ## Response snapshot
 
-Generated with gflow, inspected, and placed the GENT-401 Unit 7 banner illustration (fig-U7-5) in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all content gates.
+Generated the GENT-401 Unit 7 banner illustration with gflow, inspected and placed fig-U7-5 in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: illustrate for GENT-401 Unit 7 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with gflow, inspected, and placed the GENT-401 Unit 7 banner illustration (fig-U7-5) in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Generated the GENT-401 Unit 7 banner illustration with gflow, inspected and placed fig-U7-5 in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit banner fig-U7-5 is placed; Unit 7 G3 review and G5 review remain open for independent evaluation.
+  - Unit banner fig-U7-5 is placed and verified clean; G3 English review and G5 Urdu review remain open for independent evaluation.
   - G4 draft translation is complete with translation_status: draft preserved.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
@@ -96,3 +97,5 @@ Generated with gflow, inspected, and placed the GENT-401 Unit 7 banner illustrat
 
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
