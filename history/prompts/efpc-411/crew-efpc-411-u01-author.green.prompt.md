@@ -1,10 +1,10 @@
 ---
 id: crew-efpc-411-u01-author
 title: crew author EFPC-411 unit 1
-stage: green
+stage: misc
 date: 2026-11-26
 surface: agent
-model: gemini-3.8-flash
+model: agy
 feature: efpc-411
 branch: crew/efpc-411-u01-author
 user: crew
@@ -16,68 +16,109 @@ links:
   adr: null
   pr: null
 files:
-  - catalog/course-guides.json
-  - docs/semester-4/efpc-411/_category_.json
-  - docs/semester-4/efpc-411/course-overview.mdx
-  - docs/semester-4/efpc-411/unit-01/index.mdx
-  - docs/semester-4/efpc-411/unit-01/topic-01.mdx
-  - docs/semester-4/efpc-411/unit-01/topic-02.mdx
-  - docs/semester-4/efpc-411/unit-01/topic-03.mdx
-  - docs/semester-4/efpc-411/unit-01/topic-04.mdx
-  - docs/semester-4/efpc-411/unit-01/unit-assessment.mdx
-  - history/prompts/efpc-411/crew-efpc-411-u01-author.green.prompt.md
-  - specs/content/efpc-411/concepts/unit-01.md
-  - specs/content/efpc-411/coverage/unit-01.md
-  - specs/content/efpc-411/figures/unit-01.banner.md
-  - specs/content/efpc-411/figures/unit-01.md
-  - specs/content/efpc-411/reviews/unit-01/G2/20261126T020510698Z-gates.json
-  - specs/content/efpc-411/sources/texts/hec-2013-currdev.md
-  - specs/content/efpc-411/sources/texts/hec-2013-methods.md
-  - specs/content/efpc-411/sources/texts/hec-2013-practicum.md
-  - specs/content/efpc-411/sources/texts/teach-primary-2021.md
-  - specs/content/efpc-411/sources/unit-01.md
-  - specs/content/efpc-411/tasks.md
-  - static/guides/semester-4/efpc-411.pdf
-  - static/img/figures/efpc-411/unit-01/fig-U1-1.svg
-  - static/img/figures/efpc-411/unit-01/fig-U1-2.svg
-  - static/img/figures/efpc-411/unit-01/fig-U1-3.svg
-  - static/img/figures/efpc-411/unit-01/fig-U1-4.svg
-  - static/img/figures/efpc-411/unit-01/fig-U1-5.svg
-  - static/img/figures/efpc-411/unit-01/fig-U1-6.svg
-  - static/img/figures/efpc-411/unit-01/fig-U1-7.svg
-  - static/img/figures/efpc-411/unit-01/fig-U1-8.svg
+ - catalog/course-guides.json
+ - docs/semester-4/efpc-411/_category_.json
+ - docs/semester-4/efpc-411/course-overview.mdx
+ - docs/semester-4/efpc-411/unit-01/index.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-01.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-02.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-03.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-04.mdx
+ - docs/semester-4/efpc-411/unit-01/unit-assessment.mdx
+ - history/prompts/efpc-411/crew-efpc-411-u01-author.green.prompt.md
+ - specs/content/efpc-411/concepts/unit-01.md
+ - specs/content/efpc-411/coverage/unit-01.md
+ - specs/content/efpc-411/figures/unit-01.banner.md
+ - specs/content/efpc-411/figures/unit-01.md
+ - specs/content/efpc-411/reviews/unit-01/G2/20261126T020510698Z-gates.json
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-bloom-bands.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-concept-graph.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-depth-gate.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-docs-sync.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-figures.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-no-answer-keys.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/check-no-em-dash.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261126T020510698Z/validate-content.txt
+ - specs/content/efpc-411/sources/texts/hec-2013-currdev.md
+ - specs/content/efpc-411/sources/texts/hec-2013-methods.md
+ - specs/content/efpc-411/sources/texts/hec-2013-practicum.md
+ - specs/content/efpc-411/sources/texts/teach-primary-2021.md
+ - specs/content/efpc-411/sources/unit-01.md
+ - specs/content/efpc-411/tasks.md
+ - static/guides/semester-4/efpc-411.pdf
+ - static/img/figures/efpc-411/unit-01/fig-U1-1.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-1.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-2.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-2.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-3.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-3.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-4.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-4.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-5.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-5.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-6.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-6.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-7.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-7.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-8.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-8.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+# Crew job efpc-411-u01-author
+
+You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efpc-411-u01-author`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or the Playwright e2e suite (a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server), keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`. Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0. `static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec. After changing any English unit file or its figures manifest, sources, coverage or concepts, the job commits, runs `node scripts/prepare-gate-evidence.mjs <course> <unit>`, commits the JSON and every `logs-*` directory it writes, and points the unit's G2 en-draft tracker row at the new file before `npm run check:content`.
+
+## Task
+Author EFPC-411 Unit 1 from its approved content-spec, following the author-unit skill end to end (English only; the Urdu mirror is a separate job). Topic titles read "Topic N.M - Title" (validate:content checks it). This course has no course-overview.mdx yet: write it as part of this commit, modelled on docs/semester-3/gicp-400/course-overview.mdx, so later author jobs and the course's G2 evidence can bind it.
+
+Follow `.claude/skills/author-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFPC-411 Unit 1 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efpc-411/`, and `static/img/figures/efpc-411/unit-01/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
 
 ## Response snapshot
 
-Author EFPC-411 Unit 1 from its approved content-spec, following the author-unit skill end to end in English.
-Created course-overview.mdx and _category_.json for EFPC-411 in docs/semester-4/efpc-411/.
-Authored Unit 1 (index.mdx, topic-01.mdx, topic-02.mdx, topic-03.mdx, topic-04.mdx, unit-assessment.mdx with 10 MCQs, 10 RRQs, 5 ERQs, and answers section).
-Generated governance files: coverage/unit-01.md, sources/unit-01.md, sources/texts/, figures/unit-01.md, figures/unit-01.banner.md, concepts/unit-01.md, and tasks.md.
-Recorded G2 gate evidence via prepare-gate-evidence.mjs and validated full content gate suite.
+Authored EFPC-411 Unit 1 and course overview with placed schematic figures, governance artifacts, and G2 gate evidence.
 
 ## Outcome
 
-- ✅ Impact: Authored EFPC-411 School Observation Unit 1 (Foundations of Classroom Observation) and course overview with full governance artifacts and G2 gate evidence.
-- 🧪 Tests: All 14 content gates passed cleanly via `npm run check:content`.
-- 📁 Files: Unit 1 markdown docs, course overview, figures manifest, sources consulted, coverage matrix, concept graph, bound text evidence notes, and task tracker.
-- 🔁 Next prompts: Downstream jobs for figure illustration/rendering and Urdu translation (G4/G5).
-- 🧠 Reflection: Following backward design and strictly avoiding em dashes ensured zero lint regressions; exact alignment of checklist IDs across coverage and concepts matched gate expectations smoothly.
+- Impact: author for EFPC-411 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 46 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: EFPC-411 Unit 1 English draft, course-overview.mdx, course guide PDF, 8 schematic SVGs (placed with dark variants), banner manifest, coverage, sources, concept graph, and G2 gate evidence.
-- Decisions the team must respect: EFPC-411 credit hours 2 (0-2), course code EFPC-411, 20/40/20/20 assessment weighting per guide.
-- Pending / next owner: G3 independent English review and G4 Urdu translation.
-- Paperclip issues affected: None.
+- Shipped / changed: Authored EFPC-411 Unit 1 and course overview with placed schematic figures, governance artifacts, and G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 1 English draft is ready for independent G3 review; banner figure fig-U1-9 is prompt-only for the illustration pipeline.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: None.
-- Graders run and results (PASS/FAIL): PASS on npm run check:content.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
