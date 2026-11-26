@@ -2,9 +2,9 @@
 id: crew-gent-401-u01-review_en
 title: crew review_en GENT-401 unit 1
 stage: misc
-date: 2026-11-27
+date: 2026-11-26
 surface: agent
-model: Claude Code (LongCat-2.5)
+model: claude_crew
 feature: gent-401
 branch: crew/gent-401-u01-review_en
 user: crew
@@ -13,17 +13,14 @@ labels: ["crew", "claude_crew", "review_en"]
 links:
   spec: specs/content/gent-401/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
+ - history/prompts/gent-401/crew-gent-401-u01-review_en.misc.prompt.md
  - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1.json
- - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/summary.md
- - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/limitations.md
- - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/source-verification.md
- - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/assessment-solutions.md
  - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/advisory-tracker-row.md
- - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/manifest.json
- - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/make-report.mjs
+ - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/assessment-solutions.md
+ - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/limitations.md
  - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/logs/build-content-status-final.txt
  - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/logs/check-bloom-bands.txt
  - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/logs/check-concept-graph.txt
@@ -41,11 +38,13 @@ files:
  - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/logs/measure-figure-text.txt
  - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/logs/render-review.txt
  - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/logs/validate-content.txt
+ - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/make-report.mjs
+ - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/manifest.json
+ - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/source-verification.md
+ - specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/summary.md
  - specs/content/gent-401/tasks.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate
- - scripts/heavy.sh node scripts/measure-figure-text.mjs
 ---
 
 ## Prompt
@@ -76,28 +75,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Produced the independent G3 English review of GENT-401 Unit 1. The unit is structurally sound and all six deterministic checks pass, but the report escalates: two blocking content defects (the MCQ key and option-length giveaway, and the "appear in both sources" claim about the seven characteristics) and one unavailable render, because the deployed SHA is not the reviewed HEAD.
+Produced and committed the advisory G3 English review of GENT-401 Unit 1, escalating on two blocking content defects (MCQ key/option-length giveaway, an overstated both-sources claim) and an unavailable render, with the tracker row left open.
 
 ## Outcome
 
-- Impact: review_en for GENT-401 Unit 1 by claude_crew (attempt 1 of this branch).
-- Tests: `npm run check:content` passed (14 gates); `node scripts/review-evidence.mjs validate` exit 0; `measure-figure-text` exit 0 on all 16 bound SVGs.
-- Files: 26 file(s), listed above.
+- Impact: review_en for GENT-401 Unit 1 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 27 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added the GENT-401 Unit 1 G3 advisory report and its evidence bundle under `specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1/`, and appended the advisory row to `specs/content/gent-401/tasks.md` (status stays open).
-- Decisions the team must respect: G3 stays unticked and advisory. Do not treat the missing banner render as a content defect; it is unverified because the deployed SHA predates the reviewed HEAD. The report escalates, so a repair author must fix F1 and F2 and a fresh reviewer must recheck after the repaired commit is deployed.
-- Pending / next owner: crew lead to route the repair (MCQ key redistribution and option-length rebalance; reword the "both sources" sentence). The butler-iea edition year 2020 still needs IEA confirmation (advisory A-1).
-- Paperclip issues affected: none.
+- Shipped / changed: Produced and committed the advisory G3 English review of GENT-401 Unit 1, escalating on two blocking content defects (MCQ key/option-length giveaway, an overstated both-sources claim) and an unavailable render, with the tracker row left open.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - A repair job must fix F1 (rebalance MCQ key and option lengths) and F2 (reword the "both sources" sentence); a fresh G3 attempt is only meaningful after the repaired commit is deployed, since the production build is the required render input.
+  - Advisory A-1 remains: the `butler-iea` edition year 2020 needs IEA confirmation (`sources/unit-01.md:17-19`).
+  - The Urdu mirror and `.ur.svg` variants are G5 scope and were not evaluated here.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the production host can lag the reviewed commit, so the admissible render path is unavailable; the report must say so rather than borrowing another unit's render or inspecting a stale page.
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS; measure-figure-text PASS.
-- Prompt variant (if applicable): crew brief v1, first G3 attempt for this unit.
-- Next experiment (smallest change to try): add a standing rule that a G3 render is only admissible after the reviewed commit is deployed.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
