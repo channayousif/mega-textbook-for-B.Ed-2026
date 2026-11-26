@@ -16,26 +16,26 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-409/crew-efmp-409-u05-review_en.misc.prompt.md
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126.json
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/advisory-tracker-row.md
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/assessment-solutions.md
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/limitations.md
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/build-content-status.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check-content.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:depth-gate.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:docs-sync.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:figures.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:no-answer-keys.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:no-em-dash.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/measure-figure-text.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/render-review.txt
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/validate:content.log
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/make-report.mjs
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/manifest.json
-  - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/summary.md
+ - history/prompts/efmp-409/crew-efmp-409-u05-review_en.misc.prompt.md
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126.json
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/advisory-tracker-row.md
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/assessment-solutions.md
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/limitations.md
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/build-content-status.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check-content.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:depth-gate.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:docs-sync.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:figures.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:no-answer-keys.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/check:no-em-dash.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/measure-figure-text.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/render-review.txt
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/logs/validate:content.log
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/make-report.mjs
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/manifest.json
+ - specs/content/efmp-409/reviews/unit-05/G3/agy-run1-20261126/summary.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -65,6 +65,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
 
 ## Response snapshot
 
