@@ -2941,14 +2941,179 @@
    "id": "efmp-407",
    "locale": "ur",
    "kind": "short",
-   "state": "scripted",
+   "state": "clips-qa",
    "gates": {
     "qg0": {
      "verdict": "pass",
      "by": "teaser.mjs"
+    },
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-26",
+     "note": "crew approve-script via openclaw"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "claude",
+     "date": "2026-11-26",
+     "notes": "5/5 shots pass; shot 3 take 1 failed on a drawn REC viewfinder overlay, take 2 passes; QG1 all pass, QG2 0.941-1.0"
     }
    },
-   "clips": [],
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-26T18:04:50.119Z",
+     "artifact_id": "00f66900-6c68-440b-aeb5-18cd9c219f89",
+     "media_id": "00f66900-6c68-440b-aeb5-18cd9c219f89",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-1-t1.mp4",
+     "sha256": "a3e5018669c1d90d77e1690fecc349c0785c4ba4ffa6995d652f5b1c6ed80418",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "ماحول، معاشرہ اور معیشت کیا یہ سب ہماری کلاس روم سے جڑے ہیں؟",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-1-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; male presenter olive shalwar kameez and brown waistcoat holding a clay-potted sapling in a sunlit school garden, pupils in blue uniform behind; no text, map, flag or viewfinder marks"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-26T18:10:40.544Z",
+     "artifact_id": "b8a9ca2e-fbc3-4dbe-bce3-898636589f0d",
+     "media_id": "b8a9ca2e-fbc3-4dbe-bce3-898636589f0d",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-2-t1.mp4",
+     "sha256": "260050164b1aa16a8a3f6bf7971e73d8cf06d9b69c7cc3bf29a0c546f72f9fa3",
+     "source": "generated",
+     "producer": "gflow.video",
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; pupils in uniform and girls in dupattas at wooden desks with leaves, a water jar and potted plants, notebooks blurred; no readable text, map, flag or viewfinder marks"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-26T18:17:12.010Z",
+     "artifact_id": "705bb9f0-c42c-4241-97cf-5fbfbfbad4bd",
+     "media_id": "705bb9f0-c42c-4241-97cf-5fbfbfbad4bd",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-3-t1.mp4",
+     "sha256": "3d5c3436284aa139b488da53e4eaad7a859c88454cf2d3babe159b8c2d5d880c",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "project-based or inquiry-based learning, systems thinking\nاور امن, gender equality اور green economy جیسے موضوعات بھی",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-3-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "QG1 pass but QG2 1.0; drawn camera overlay: REC indicator top-left, battery icon top-right and viewfinder corner brackets in every frame; not usable without a heavy crop"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-26T18:25:49.056Z",
+     "artifact_id": "edf45ff0-9b5d-41bf-851c-ee7b0aa7025e",
+     "media_id": "edf45ff0-9b5d-41bf-851c-ee7b0aa7025e",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-4-t1.mp4",
+     "sha256": "2dad90697544483b02028c65810019e0b5978764418810498db7c4c57e1aafbc",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.941,
+      "qg2_suggested": "pass",
+      "heard": "آٹھ یونٹس پاکستان میں ای ایس ڈی کی پولیسی اور اسکول اور کمیونٹی کے ساتھ سسٹینیبیلٹی پروجیکٹس بنانا سیکھیں",
+      "missing": [
+       "esd"
+      ],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-4-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 0.941 (whisper wrote units/ESD/community/sustainability projects in Urdu script; every word of the line is spoken); crane shot over a whitewashed courtyard, pupils teachers and parents planting saplings and passing watering cans; modest dress, no readable text, map, flag or viewfinder marks"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-26T18:30:35.824Z",
+     "artifact_id": "b57d7ae0-2fa2-45a5-89bc-e215c7a03b68",
+     "media_id": "b57d7ae0-2fa2-45a5-89bc-e215c7a03b68",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-5-t1.mp4",
+     "sha256": "33e942a0dbf668d42c755e5b63c7097aa24df821efdfb492840709630bd5a119",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑھیں\ntextbook.com.pk پر\nلنک نیچے ہے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-5-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 (heard the site address spelled out); presenter walks toward camera in a plant-lined corridor holding a phone with a blurred screen; no readable text, map, flag or viewfinder marks"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 2,
+     "at": "2026-11-26T18:37:29.670Z",
+     "artifact_id": "3bfbae03-84aa-48e7-a2d0-cb3fc330ff51",
+     "media_id": "3bfbae03-84aa-48e7-a2d0-cb3fc330ff51",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-3-t2.mp4",
+     "sha256": "772b4a39c41fcad20bdab601ebe81483fe554e681e4d25427f493a37e81e1144",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.944,
+      "qg2_suggested": "pass",
+      "heard": "project-based or inquiry-based learning, systems thinking or aman, gender equality or green economy\nجیسے موزواد بھی",
+      "missing": [
+       "موضوعات"
+      ],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-3-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 0.944 (whisper wrote the Urdu اور as or and موضوعات as موزواد; every word of the line is spoken); retake without the REC overlay: pupils sort plain bottles, paper and cloth into baskets while a woman teacher in a modest dupatta leans in; no readable text, map, flag or viewfinder marks"
+     }
+    }
+   ],
    "history": [
     {
      "state": "planned",
@@ -2957,6 +3122,18 @@
     {
      "state": "scripted",
      "at": "2026-11-22T21:03:29.516Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-26T18:02:32.770Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-26T18:40:32.237Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-26T18:41:03.369Z"
     }
    ],
    "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874"
