@@ -63,7 +63,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
   - Source: owner request 2026-11-25
   - Done when: both sections scroll horizontally with snap, swipe, previous and next buttons and keyboard support, respect reduced motion, work in RTL, and degrade to a readable list without JavaScript.
-- [ ] T017 Redesign the moving character in "Start with one topic today" (#804)
+- [x] T017 Redesign the moving character in "Start with one topic today" (#804)
   - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
   - Source: owner request 2026-11-25 ("too basic and feels confusing sometime")
   - Done when: the animation (`ClimbArt.tsx`, `climb.module.css`, `scenes.ts`) tells one clear story that matches the section text, looks finished, respects reduced motion, and the owner approves a screenshot or recording.
