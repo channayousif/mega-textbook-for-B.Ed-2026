@@ -69,7 +69,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English review for EFMP-409 Unit 4 with validated advisory escalation evidence and command logs.
+Added the first-cycle independent G3 English review report (advisory escalate due to deployed render unavailability) and supporting evidence files for EFMP-409 Unit 4.
 
 ## Outcome
 
@@ -81,12 +81,12 @@ Completed independent G3 English review for EFMP-409 Unit 4 with validated advis
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English review for EFMP-409 Unit 4 with validated advisory escalation evidence and command logs.
+- Shipped / changed: Added the first-cycle independent G3 English review report (advisory escalate due to deployed render unavailability) and supporting evidence files for EFMP-409 Unit 4.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Visual accessibility remains unverified because deployed SHA 074ab1145 predates commit 8b00a3f53 (fig-U4-7.webp placed in index.mdx); re-run render-inspect once deployed.
-  - Per content-spec drafting note 8, Islamic material (Surah Al-Alaq, the Hadith on knowledge, the Charter of Medina, the Last Sermon, As-Suffa) should be confirmed with a qualified scholar before certification.
+  - Per content-spec drafting note 8, Islamic material (Surah Al-Alaq, Hadith on knowledge, Charter of Medina, Last Sermon, As-Suffa) should be confirmed with a qualified scholar before certification.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
