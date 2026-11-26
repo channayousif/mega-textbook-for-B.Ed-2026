@@ -1212,3 +1212,15 @@ html[dir='rtl'] .self-check--inline .self-check__list > li { padding: 0.9rem 3.2
   html[data-self-check] .aq-list--mcq { display: grid; }
   .aq-card, .self-check--inline .self-check__list > li { box-shadow: none; break-inside: avoid; }
 }
+/* Feature 034 T035 (#822): full-size figure viewer (src/components/FigureZoom.tsx). */
+.figure__zoom { display: none; }
+@media (max-width: 760px) {
+  .figure__zoom { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; margin-inline-start: auto; padding: 4px 12px; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 999px; background: var(--ifm-background-surface-color); color: var(--ifm-font-color-base); font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+}
+.figure-zoom { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--ifm-background-color); }
+.figure-zoom::backdrop { background: rgb(0 0 0 / .6); }
+.figure-zoom__bar { position: sticky; top: 0; z-index: 1; display: flex; justify-content: flex-end; padding: 8px; background: var(--ifm-background-color); }
+.figure-zoom__close { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--ifm-color-emphasis-200); color: inherit; cursor: pointer; }
+.figure-zoom__frame { overflow: auto; height: calc(100dvh - 60px); padding: 8px; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y pinch-zoom; }
+.figure-zoom__frame img { display: block; max-width: none; height: auto; }
+@media print { .figure__zoom, .figure-zoom { display: none !important; } }
