@@ -30,8 +30,11 @@ export default function Carousel({ label, locale, children, className, itemClass
     if (!el) return;
     const max = el.scrollWidth - el.clientWidth;
     const pos = Math.abs(el.scrollLeft); // negative in RTL
-    setAtStart(pos <= 2);
-    setAtEnd(pos >= max - 2);
+    // .track's 4px inline padding (carousel.module.css) makes the first mandatory-snap
+    // position scrollLeft = 4 (RTL -4), not 0; a 2px tolerance read that as "scrolled"
+    // and enabled Previous on the first slide.
+    setAtStart(pos <= 8);
+    setAtEnd(pos >= max - 8);
   }, []);
 
   useEffect(() => {
