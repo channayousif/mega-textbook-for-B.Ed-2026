@@ -1,0 +1,15 @@
+$ scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/geng-301/unit-04/*.svg   (repo HEAD 6a810e62c, 2026-11-26T20:29:23.539Z)
+heavy: slot acquired; waiting for 30 seconds of memory/PSI headroom
+✓ static/img/figures/geng-301/unit-04/fig-U4-1.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-1.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-2.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-3.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-4.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-5.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-6.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-301/unit-04/fig-U4-6.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+exit_code=0

@@ -1,0 +1,10 @@
+prepared inputs: 106
+fresh inputs:    106
+only in prepared: 0 
+only in fresh:    0 
+value mismatches: 0 
+skill_digest prepared: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+skill_digest fresh:    eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+skill digest match: true
+required_criteria: authority, sources, coverage, assessment, accessibility, readability, pedagogy
+dirty bound inputs: 0
