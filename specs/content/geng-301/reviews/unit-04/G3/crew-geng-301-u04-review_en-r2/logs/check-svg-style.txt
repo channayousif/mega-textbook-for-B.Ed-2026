@@ -1,0 +1,7 @@
+$ npm run check:svg-style   (repo HEAD 6a810e62c, 2026-11-26T20:41:40.160Z)
+
+> bed-mega-textbook@0.1.0 check:svg-style
+> node scripts/check-svg-style.mjs
+
+✓ svg-style: 1751 figure(s) checked, 388 grandfathered.
+exit_code=0

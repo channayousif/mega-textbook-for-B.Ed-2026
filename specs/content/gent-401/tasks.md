@@ -27,6 +27,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 1 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-01/G2/20261126T173740774Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the butler-iea edition year and that the unverifiable mellor-2009 row supports only the premise in its title (sources/unit-01.md) |
+| Unit 1 | G3 en-review | ▢ | agent:claude-crew | advisory: escalate; F1 blocking - MCQ key A1/B7/C2/D0 (an all-B answer scores 7/10) and the keyed option is the longest in 7 of 10 items; F2 blocking - topic-01.mdx:91 says seven characteristics appear in both sources, but confidence, problem-solving, openness to learning, persistence and curiosity are not in both bound lists; F3 uncertain - render-review unavailable (deployed 366019f8a vs reviewed HEAD 6a810e62c), accessibility unverified; report: specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1.json |
 | Unit 1 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English bd60c874b; see reviews/unit-01/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels other than تخلیقیت are authored and need checking |
 | Unit 1 | G6 assets | ▣ | | Four English schematic SVGs (fig-U1-1 to fig-U1-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U1-5 placed |
@@ -45,28 +46,28 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-04/G2/20261126T195406275Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 4 | G3 en-review | ▢ | agent:claude-crew | Advisory escalate: specs/content/gent-401/reviews/unit-04/G3/crew-gent-401-u04-review_en-r1.json; render-review unavailable (deployed 366019f8 vs HEAD 4f558d48a); sources and assessment findings; no certification |
 | Unit 4 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 91287e81b; see reviews/unit-04/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels are authored and need checking |
 | Unit 4 | G6 assets | ▣ | | Four English schematic SVGs (fig-U4-1 to fig-U4-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U4-5 placed |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 6 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-06/G2/20261124T101619522Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-06/G2/20261126T205300572Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should verify SECP and IPO-Pakistan procedures and check marketing ethics evaluation items |
 | Unit 6 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 91287e81b; see reviews/unit-06/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review; concept Urdu labels need checking |
-| Unit 6 | G6 assets | ▣ | | Four English schematic SVGs (fig-U6-1 to fig-U6-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U6-5 prompt-only for the illustrate job |
+| Unit 6 | G6 assets | ▣ | | Four English schematic SVGs (fig-U6-1 to fig-U6-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U6-5 placed |
 | Unit 6 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-05/G2/20261124T105512776Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-05/G2/20261126T202645838Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the open-access articles' settings are not presented as Pakistani evidence and that the tuition centre numbers are the author's teaching device (sources/unit-05.md) |
 | Unit 5 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English 6ba1de283; see reviews/unit-05/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; all six concept Urdu labels are authored and need checking |
-| Unit 5 | G6 assets | ▣ | | Four English schematic SVGs (fig-U5-1 to fig-U5-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U5-5 prompt-only for the illustrate job |
+| Unit 5 | G6 assets | ▣ | | Four English schematic SVGs (fig-U5-1 to fig-U5-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U5-5 placed |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-07/G2/20261124T060041498Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-07/G2/20261126T211118798Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the mellor-2009 row supports only the premise in its title, and that the two DOAJ substitutes are used only within their abstracts |
 | Unit 7 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English e82d04b42; see reviews/unit-07/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review; all six concept Urdu labels are authored and need checking |
-| Unit 7 | G6 assets | ▣ | | Four English schematic SVGs (fig-U7-1 to fig-U7-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U7-5 prompt-only for the illustrate job |
+| Unit 7 | G6 assets | ▣ | | Four English schematic SVGs (fig-U7-1 to fig-U7-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U7-5 placed |
 | Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
 Reading estimates use final visible text at about 200 words per minute: Unit 1 index 2, Topic 1.1 11, Topic 1.2 11, assessment 15, teacher notes 2, total 41 minutes, inside the approved 32-44 depth budget band. Its assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 4 is the blueprint's Analyze item comparing an entrepreneur and a salaried manager in a school-supplies business. The guide supplies teaching strategies and practical work, so a short unit teacher-notes page adds a local entrepreneur case study. The course overview uses the programme default weighting (formative 40, summative 60), as the guide gives no marks.
 

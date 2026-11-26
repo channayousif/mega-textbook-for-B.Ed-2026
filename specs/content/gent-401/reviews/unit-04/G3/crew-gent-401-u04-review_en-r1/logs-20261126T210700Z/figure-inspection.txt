@@ -1,0 +1,156 @@
+Figure inspection (static, no browser render)
+date: 2026-11-26
+
+--- static/img/figures/gent-401/unit-04/fig-U4-1.svg
+Core rule: The executive summary is placed first, but drafted last after all other sections.
+1. Executive Summary
+Brief snapshot of problem,
+solution, market and team
+(drafted last before sharing)
+2. Company Profile
+Mission, vision, core values,
+ownership, legal form, and
+founding background
+3. Products and Services
+What you offer, customer
+benefits, uniqueness, and
+intellectual property
+4. Market Analysis
+Target customers, market
+size, buyer habits, and
+competitor strengths
+5. Marketing and Sales
+Pricing strategy, selling
+channels, promotion plan,
+and customer service
+6. Operational Plan
+Physical facilities, tools,
+daily workflow, suppliers,
+and quality control
+7. Organization and Team
+Roles, reporting hierarchy,
+key staff profiles, and
+advisory support
+8. Financial Plan
+Start-up costs, sales goals,
+cash-flow projections, and
+break-even calculation
+9. Appendices
+Letters of support, permits,
+surveys, product photos,
+and price lists
+Standard sections of a business plan in sequence
+Arrows indicate the reading order for external partners and investors.
+textbook.com.pk
+--- static/img/figures/gent-401/unit-04/fig-U4-2.svg
+Dimension
+Vision Statement
+Mission Statement
+Core focus
+Future destination: what the
+venture strives to become
+Present purpose: what the
+venture does today and for whom
+Time horizon
+Long term: 5 to 10 years or
+an enduring aspirational target
+Immediate and ongoing: guides
+daily operations right now
+Key question
+&quot;Where do we want our
+work to lead in the future?&quot;
+&quot;Who are we, what do we offer,
+and how do we serve buyers?&quot;
+Weak example
+&quot;To become the most famous
+learning enterprise in Pakistan.&quot;
+&quot;We sell activity kits to schools
+and earn a good profit.&quot;
+Strong example
+(Sindh venture)
+&quot;A Sindh where every primary pupil
+discovers science through hands-on
+activity kits in their classroom.&quot;
+&quot;We supply low-cost, curriculum-linked
+science kits to rural Sindh schools
+backed by practical teacher guides.&quot;
+Vision and mission statements compared
+A vision inspires the ultimate goal; a mission directs weekly resources and staff effort.
+textbook.com.pk
+--- static/img/figures/gent-401/unit-04/fig-U4-3.svg
+1. Order received and logged
+School places order; verify quantity and payment
+2. Inventory and parts check
+Check activity cards, containers and tools in stock
+3. Assembly and packaging
+Pack kit items using verified unit packing checklist
+4. Quality check
+Does package meet standard?
+5. Dispatch and delivery
+Hand to courier; share tracking notice with school
+6. Customer confirmation and feedback
+Confirm delivery; record teacher review for upgrades
+Daily operational workflow of a small educational venture
+no: return to
+assembly
+yes: approved
+Continuous
+feedback loop
+to inventory
+Every order follows a repeatable path with a strict quality checkpoint before dispatch.
+textbook.com.pk
+--- static/img/figures/gent-401/unit-04/fig-U4-4.svg
+One-Person Venture
+Solo founder (all functions)
+Founder / Owner
+1. Product &amp; Curriculum
+2. Marketing &amp; Sales
+3. Assembly &amp; Delivery
+4. Cash &amp; Invoices
+Direct execution by founder
+Five-Person Team
+Specialised team roles
+Founder / Team Lead
+Product &amp;
+Design (1)
+Marketing &amp;
+Sales (1)
+Assembly &amp;
+Packing (1)
+Finance &amp;
+Admin (1)
+Clear division of duties;
+each owns one workflow
+Direct reporting to founder
+Twenty-Person Venture
+Functional departments
+Managing Director
+Ops
+Lead
+Market
+Lead
+Finance
+Lead
+8 Staff
+(making,
+dispatch)
+5 Staff
+(sales,
+support)
+4 Staff
+(accounts,
+admin)
+Department heads lead teams
+Simple organisational structures for growing ventures
+As venture scale increases, generalist tasks divide into specialised functional roles.
+textbook.com.pk
+
+--- fig-U4-5.webp (raster banner)
+static/img/figures/gent-401/unit-04/fig-U4-5.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1344x756, Scaling: [none]x[none], YUV color, decoders should clamp
+
+Alt text carriers:
+docs/semester-4/gent-401/unit-04/index.mdx:20:<Figure id="fig-U4-5" kind="illustration" src="/img/figures/gent-401/unit-04/fig-U4-5.webp" alt="Three student-teachers in a sunlit classroom collaborate around a table drafting business plan charts with educational learning materials." width={1200} height={675} />
+docs/semester-4/gent-401/unit-04/topic-02.mdx:30:<Figure id="fig-U4-3" src="/img/figures/gent-401/unit-04/fig-U4-3.svg" alt="Flowchart illustrating the daily operations of a small venture from customer order to delivery, showing quality inspection check, dispatch, and feedback loop." />
+docs/semester-4/gent-401/unit-04/topic-02.mdx:90:<Figure id="fig-U4-4" src="/img/figures/gent-401/unit-04/fig-U4-4.svg" alt="Diagram showing three stages of organizational structure for an entrepreneurial venture: solo founder, five-person team, and twenty-person company with functional departments." />
+docs/semester-4/gent-401/unit-04/topic-01.mdx:30:<Figure id="fig-U4-1" src="/img/figures/gent-401/unit-04/fig-U4-1.svg" alt="Diagram showing the nine standard sections of a business plan in logical order from executive summary to appendices, noting that the executive summary appears first but is written last." />
+docs/semester-4/gent-401/unit-04/topic-01.mdx:97:<Figure id="fig-U4-2" src="/img/figures/gent-401/unit-04/fig-U4-2.svg" alt="Table comparing vision and mission statements across five dimensions, including clear contrasting examples for a Pakistani educational venture." />

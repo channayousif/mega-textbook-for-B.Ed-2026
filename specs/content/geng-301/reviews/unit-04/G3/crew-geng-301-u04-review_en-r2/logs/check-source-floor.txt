@@ -1,0 +1,7 @@
+$ npm run check:source-floor   (repo HEAD 6a810e62c, 2026-11-26T20:41:40.948Z)
+
+> bed-mega-textbook@0.1.0 check:source-floor
+> node scripts/check-source-floor.mjs
+
+✓ Open-access source floor met (136 unit(s) across 20 course(s) declaring a floor).
+exit_code=0
