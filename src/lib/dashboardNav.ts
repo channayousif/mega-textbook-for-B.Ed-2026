@@ -40,6 +40,7 @@ export const teacherNav: readonly NavItem[] = [
   { key: 'analytics', label: { en: 'Analytics', ur: 'تجزیات' }, to: '/app/teacher/analytics', activeMatch: /^\/app\/teacher\/(analytics|student|class)/, icon: 'analytics' },
   { key: 'quiz-authoring', label: { en: 'Quiz authoring', ur: 'کوئز تیاری' }, to: '/app/teacher/quiz-authoring', activeMatch: /^\/app\/teacher\/quiz-authoring/, icon: 'quiz' },
   { key: 'teaching-log', label: { en: 'Teaching log', ur: 'تدریسی نوٹ بک' }, to: '/app/teacher/teaching-log', activeMatch: /^\/app\/teacher\/teaching-log/, icon: 'log' },
+  { key: 'notes', label: { en: 'Notes', ur: 'نوٹس' }, to: '/app/teacher/notes', activeMatch: /^\/app\/teacher\/notes/, icon: 'notes' },
   { key: 'feedback', label: { en: 'Feedback & suggestions', ur: 'رائے اور تجاویز' }, to: '/app/teacher/feedback-suggestions', activeMatch: /^\/app\/teacher\/feedback-suggestions/, icon: 'feedback' },
   { key: 'review', label: { en: 'Review content', ur: 'مواد کا جائزہ' }, to: '/app/reviewer/apply', activeMatch: /^\/app\/reviewer/, icon: 'review' },
 ] as const;

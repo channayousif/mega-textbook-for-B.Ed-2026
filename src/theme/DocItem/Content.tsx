@@ -13,6 +13,7 @@ import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/sel
 import { useLocation } from '@docusaurus/router';
 import { ReadingMenu, ReadingProgress, useAnswerNotes } from '@site/src/components/ReadingTools';
 import ReaderBottomBar from '@site/src/components/ReaderBottomBar';
+import NotesWidget from '@site/src/components/NotesWidget';
 import StudioPanel from '@site/src/components/Studio/StudioPanel';
 import SelfCheck from '@site/src/components/SelfCheck';
 import { useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
@@ -467,6 +468,8 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
       )}
       {(courseCode !== null && unitNo !== null) && <FeedbackWidget />}
       <ReaderBottomBar locale={locale} minutes={minutes} previous={metadata?.previous} next={metadata?.next} />
+      {/* Feature 034 T019 (#806): floating private notes for students and teachers. */}
+      <NotesWidget locale={locale} pageTitle={metadata?.title ?? null} courseCode={courseCode} unitNo={unitNo} topicNo={topicNo} />
     </>
   );
 }

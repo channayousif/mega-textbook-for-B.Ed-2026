@@ -1,0 +1,26 @@
+/* Floating notes widget (Feature 034 T019, #806). Sits at the inline end, above Docusaurus's
+   back-to-top button on desktop and above the reader's bottom bar (72 px) on phones. */
+.root { position: fixed; inset-inline-end: 16px; bottom: 5.25rem; z-index: calc(var(--ifm-z-index-fixed) - 1); display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.fab { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--brand-teal, var(--ifm-color-primary)); color: #fff; font: inherit; font-weight: 700; box-shadow: 0 8px 22px rgb(16 43 53 / .25); cursor: pointer; }
+.fab:hover { filter: brightness(1.08); }
+.fab:focus-visible { outline: 3px solid var(--brand-amber, #e5a333); outline-offset: 2px; }
+.panel { width: min(360px, calc(100vw - 32px)); max-height: min(70vh, 520px); overflow-y: auto; background: var(--ifm-background-surface-color); color: var(--ifm-font-color-base); border: 1px solid var(--ifm-color-emphasis-200); border-radius: 16px; padding: 14px 16px; box-shadow: 0 16px 40px rgb(16 43 53 / .22); }
+.head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.title { font-size: 1rem; margin: 0; }
+.close { display: inline-grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 50%; background: transparent; color: inherit; cursor: pointer; }
+.close:hover { background: var(--ifm-color-emphasis-100); }
+.label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 4px; }
+.area { width: 100%; resize: vertical; font: inherit; padding: 8px 10px; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 10px; background: var(--ifm-background-color); color: inherit; }
+.row { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+.status { font-size: .85rem; color: var(--ifm-color-success-darkest); }
+.text { margin: 0; }
+.muted { color: var(--ifm-color-content-secondary); font-size: .85rem; margin: 6px 0; }
+.list { list-style: none; margin: 6px 0; padding: 0; display: grid; gap: 6px; }
+.list li { padding: 8px 10px; border-radius: 10px; background: var(--ifm-color-emphasis-100); font-size: .9rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; margin: 8px 0 0; font-size: .9rem; }
+@media screen and (max-width: 996px) {
+  .root { bottom: calc(84px + env(safe-area-inset-bottom)); inset-inline-end: 12px; }
+  .fab { padding: 0; width: 48px; justify-content: center; }
+  .fabLabel { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+@media print { .root { display: none; } }

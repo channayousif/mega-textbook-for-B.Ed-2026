@@ -2,8 +2,9 @@
  * Spec 011 US3 / FR-008 - student_notes RLS regression.
  *
  * A student can CRUD their own notes; a second student can neither read, update, nor
- * delete the first student's notes; a teacher and an admin cannot create a note (the
- * INSERT policy requires the caller to currently hold the student role); an over-length
+ * delete the first student's notes; a teacher can keep their own notes (Feature 034, #806,
+ * migration 0058) but cannot read a student's; an admin cannot create a note (the INSERT
+ * policy requires the caller to currently hold the student or teacher role); an over-length
  * body is rejected by the CHECK constraint.
  */
 import { describe, test, expect, afterAll } from 'vitest';
@@ -72,16 +73,32 @@ describe.skipIf(!rlsConfigured)('student_notes RLS', () => {
     expect(aStill[0].body).toBe('private to A');
   });
 
-  test('a teacher cannot create a note, even naming their own profile id', async () => {
+  test('a teacher can keep their own notes but cannot read a student\'s (0058)', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
-    createdUsers.push(teacher.authUserId);
-    const profile = await getProfileByAuthId(teacher.authUserId);
+    const student = await createSignedInUser({ role: 'student' });
+    createdUsers.push(teacher.authUserId, student.authUserId);
+    const teacherProfile = await getProfileByAuthId(teacher.authUserId);
+    const studentProfile = await getProfileByAuthId(student.authUserId);
 
-    const { error } = await teacher.client
+    const { data: created, error } = await teacher.client
       .from('student_notes')
-      .insert({ student_id: profile.id, body: 'from a teacher' })
+      .insert({ student_id: teacherProfile.id, course_code: 'EFMP-302', unit_no: 1, body: 'from a teacher' })
+      .select()
+      .single();
+    expect(error).toBeNull();
+    const { error: updErr } = await teacher.client
+      .from('student_notes').update({ body: 'edited by the teacher' }).eq('id', created.id);
+    expect(updErr).toBeNull();
+
+    await student.client.from('student_notes').insert({ student_id: studentProfile.id, body: 'student private' });
+    const { data: seen } = await teacher.client.from('student_notes').select('body');
+    expect(seen.map((r) => r.body)).toEqual(['edited by the teacher']);
+
+    const { error: forged } = await teacher.client
+      .from('student_notes')
+      .insert({ student_id: studentProfile.id, body: 'forged' })
       .select();
-    expect(error).toBeTruthy();
+    expect(forged).toBeTruthy();
   });
 
   test('an admin cannot create a note', async () => {

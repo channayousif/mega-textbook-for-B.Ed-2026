@@ -10,7 +10,8 @@ import { PageHeader, EmptyState } from '@site/src/components/ui';
 
 /**
  * Personal notes area (Spec 011, US3 / FR-008). List newest-first, create, edit, delete,
- * filter by course. RLS keeps every query scoped to the signed-in student.
+ * filter by course. RLS keeps every query scoped to the signed-in author (students, and since
+ * migration 0058 teachers, who reach the same list at /app/teacher/notes).
  */
 
 function useLocale(): 'en' | 'ur' {
@@ -50,7 +51,8 @@ function noteTag(n: StudentNote, locale: 'en' | 'ur'): string {
   return parts.join(' · ');
 }
 
-function NotesContent(): React.ReactElement {
+/** Shared with the teacher Notes page (Feature 034 T019, #806). */
+export function NotesContent(): React.ReactElement {
   const locale = useLocale();
   const { profile } = useAuth();
   const [notes, setNotes] = useState<StudentNote[] | null>(null);
