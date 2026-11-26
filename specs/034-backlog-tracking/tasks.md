@@ -141,7 +141,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 5 | Area: review-gov | Type: backlog | Priority: p3 | Owner: yes
   - Source: `specs/backlog.md` (017)
   - Done when: a human row's `review:<path>` is resolved and must have disposition `pass`. This edits a gate script, so it re-opens G2 evidence and needs the owner's timing.
-- [ ] T035 Make wide figures legible on phones (#822)
+- [x] T035 Make wide figures legible on phones (#822)
   - Stage: 5 | Area: figures | Type: backlog | Priority: p2 | Owner: no
   - Source: `specs/backlog.md` (EFMP-301 G5 F-11)
   - Done when: a design decision is recorded (scroll wrapper or stacked narrow variant) and wide schematics are readable at 360 px in both languages.
