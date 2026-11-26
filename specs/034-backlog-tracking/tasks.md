@@ -101,7 +101,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 5 | Area: figures | Type: carryover | Priority: p1 | Owner: yes
   - Source: `specs/032-textbook-visuals/tasks.md` T008
   - Done when: every affected `.ur.svg` matches its English geometry (EFMP-301 fig-U4-1 first); `measure-figure-text.mjs` exits 0; the owner approved any fix that re-opens G3 evidence.
-- [ ] T025 Build the `<Chart>` component and the GQUR-301 pilot (#812)
+- [x] T025 Build the `<Chart>` component and the GQUR-301 pilot (#812)
   - Stage: 5 | Area: figures | Type: carryover | Priority: p2 | Owner: no
   - Source: `specs/032-textbook-visuals/tasks.md` T020 (Flashcards and SelfCheck already shipped)
   - Done when: a data-driven `<Chart>` with a print fallback and tests exists and one GQUR-301 unit uses it.

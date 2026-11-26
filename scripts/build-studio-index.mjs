@@ -247,6 +247,55 @@ function readSlides(root, index) {
   return index;
 }
 
+/** Problems with an authored topic chart (specs/studio/charts/<course>/unit-NN.json). Pure. */
+export function validateChart(c) {
+  const errs = [];
+  const bil = (v, name) => {
+    if (!v || typeof v.en !== 'string' || !v.en.trim() || typeof v.ur !== 'string' || !v.ur.trim()) errs.push(`${name}: en and ur required`);
+  };
+  if (!c || typeof c !== 'object') return ['chart must be an object'];
+  if (!Number.isInteger(c.topic) || c.topic < 1) errs.push('topic must be a positive integer');
+  if (typeof c.afterHeading !== 'string' || !c.afterHeading.trim()) errs.push('afterHeading required');
+  if (c.afterHeadingUr != null && typeof c.afterHeadingUr !== 'string') errs.push('afterHeadingUr must be a string or null');
+  if (c.type !== 'bar' && c.type !== 'line') errs.push('type must be bar or line');
+  bil(c.title, 'title'); bil(c.xLabel, 'xLabel'); bil(c.yLabel, 'yLabel');
+  if (typeof c.source !== 'string' || !c.source.trim()) errs.push('source required');
+  if (!Array.isArray(c.series) || c.series.length < 1) errs.push('at least one series');
+  else c.series.forEach((s, i) => {
+    bil(s?.label, `series ${i + 1} label`);
+    const pts = s?.points;
+    if (!Array.isArray(pts) || pts.length < 2) { errs.push(`series ${i + 1}: at least 2 points`); return; }
+    pts.forEach((p, j) => {
+      if (!Array.isArray(p) || p.length !== 2) errs.push(`series ${i + 1} point ${j + 1}: [x, y] expected`);
+      else {
+        if (typeof p[0] !== 'string' && !(typeof p[0] === 'number' && Number.isFinite(p[0]))) errs.push(`series ${i + 1} point ${j + 1}: x must be a string or number`);
+        if (typeof p[1] !== 'number' || !Number.isFinite(p[1])) errs.push(`series ${i + 1} point ${j + 1}: y must be numeric`);
+      }
+    });
+  });
+  if (/[\u2014\u2015\u2E3A\u2E3B]/.test(JSON.stringify(c))) errs.push('long dash');
+  return errs;
+}
+
+/** Charts from specs/studio/charts/<course>/unit-NN.json, added to each topic's index entry as `charts`. */
+function readCharts(root, index) {
+  const dir = join(root, 'specs', 'studio', 'charts');
+  if (!existsSync(dir)) return index;
+  for (const course of readdirSync(dir).filter((c) => /^[a-z]{4}-\d{3}$/.test(c))) {
+    for (const f of readdirSync(join(dir, course)).filter((n) => /^unit-\d{2}\.json$/.test(n))) {
+      const unit = Number(f.slice(5, 7));
+      const charts = JSON.parse(readFileSync(join(dir, course, f), 'utf8'));
+      (Array.isArray(charts) ? charts : []).forEach((c, i) => {
+        const errs = validateChart(c);
+        if (errs.length) { console.warn(`build-studio-index: skipped chart ${course}/${f} #${i + 1}: ${errs.slice(0, 3).join('; ')}`); return; }
+        const slot = (index[`${course}/${unit}/${c.topic}`] ??= { en: [], ur: [] });
+        (slot.charts ??= []).push(c);
+      });
+    }
+  }
+  return index;
+}
+
 function readAnimations(root, index) {
   const ledger = join(root, 'specs', 'studio', 'animations', 'placed.json');
   if (!existsSync(ledger)) return index;
@@ -281,7 +330,7 @@ function readTeasers(root) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const manifests = findManifests(ROOT).map((f) => JSON.parse(readFileSync(f, 'utf8')));
-  const index = readSlides(ROOT, readFlashcards(ROOT, readAnimations(ROOT, buildStudioIndex(manifests))));
+  const index = readCharts(ROOT, readSlides(ROOT, readFlashcards(ROOT, readAnimations(ROOT, buildStudioIndex(manifests)))));
   index.teasers = readTeasers(ROOT);
   index.homeTeasers = pickHomeTeasers(index.teasers);
   mkdirSync(join(ROOT, 'static'), { recursive: true });

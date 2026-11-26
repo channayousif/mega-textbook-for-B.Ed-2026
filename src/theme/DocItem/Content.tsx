@@ -17,6 +17,7 @@ import NotesWidget from '@site/src/components/NotesWidget';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import { setUrduMissing, useUrduAvailability } from '@site/src/lib/urduAvailability';
 import StudioPanel from '@site/src/components/Studio/StudioPanel';
+import TopicCharts from '@site/src/components/Studio/TopicCharts';
 import SelfCheck from '@site/src/components/SelfCheck';
 import { useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
 
@@ -474,6 +475,10 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
       {/* Feature 030: the course's public teaser Short (build-time studio index), Urdu on both locales. */}
       {isCourseOverview && <CourseTeaser courseCode={courseCode} locale={locale} />}
       <ContentOriginal {...props} />
+      {/* Feature 034 T025 (#812): data-driven charts placed after their heading, no MDX edits. */}
+      {courseCode !== null && unitNo !== null && topicNo !== null && (
+        <TopicCharts key={pathname} courseCode={courseCode} unitNo={unitNo} topicNo={topicNo} locale={locale} />
+      )}
       {/* Feature 029: reviewed Gemini Notebook extras, data-driven from static/studio-index.json (no MDX edits). */}
       {courseCode !== null && unitNo !== null && topicNo !== null && (
         <StudioPanel courseCode={courseCode} unitNo={unitNo} topicNo={topicNo} locale={locale} />

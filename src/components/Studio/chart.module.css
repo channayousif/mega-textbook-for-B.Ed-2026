@@ -1,0 +1,28 @@
+/* Study Studio chart (T025). Teal #123E43 family with the amber #E5A333 accent; light and dark follow html[data-theme]. */
+.chart { margin: 1.25rem 0; padding: 0.9rem 1rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 10px; background: var(--ifm-background-surface-color); }
+.title { font-weight: 700; margin-bottom: 0.4rem; color: var(--ifm-heading-color); }
+.svg { width: 100%; height: auto; display: block; --c0: #123e43; --c1: #e5a333; --txt: var(--ifm-font-color-base); }
+:global(html[data-theme='dark']) .svg { --c0: #5fc4bc; --c1: #e5a333; }
+.axis { stroke: var(--ifm-color-emphasis-600); stroke-width: 1.5; }
+.grid { stroke: var(--ifm-color-emphasis-300); stroke-width: 1; stroke-dasharray: 3 4; }
+.tick { font-size: 13px; fill: var(--txt); }
+.axisLabel { font-size: 14px; font-weight: 600; fill: var(--txt); }
+.value { font-size: 13px; font-weight: 700; fill: var(--txt); }
+.s0 { fill: var(--c0); }
+.s1 { fill: var(--c1); }
+.l0 { stroke: var(--c0); stroke-width: 3; }
+.l1 { stroke: var(--c1); stroke-width: 3; }
+.d0 { fill: var(--c0); }
+.d1 { fill: var(--c1); }
+.legend { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; margin: 0.4rem 0 0; padding: 0; font-size: 0.9rem; }
+.swatch { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 2px; margin-inline-end: 0.35rem; }
+.k0 { background: #123e43; }
+.k1 { background: #e5a333; }
+:global(html[data-theme='dark']) .k0 { background: #5fc4bc; }
+.details { margin-top: 0.6rem; }
+.details summary { cursor: pointer; font-weight: 600; }
+.details table { margin-top: 0.5rem; width: 100%; }
+@media print {
+  .details > :not(summary) { display: table; }
+  .details summary { font-weight: 700; }
+}
