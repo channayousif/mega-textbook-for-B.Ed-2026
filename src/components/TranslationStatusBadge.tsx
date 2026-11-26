@@ -25,7 +25,9 @@ export default function TranslationStatusBadge({
   const fallback = !metadata.source.startsWith('@site/i18n/');
   const declared = (frontMatter as { translation_status?: string }).translation_status;
   const state = fallback ? 'untranslated' : declared === 'reviewed' || declared === 'draft' ? declared : status;
-  if (state === 'reviewed') return null;
+  // Feature 034 T020 (#807): an untranslated page now shows the page-level callout from
+  // src/theme/DocItem/Content.tsx on every page, so the badge only reports drafts.
+  if (state === 'reviewed' || state === 'untranslated') return null;
 
   const label =
     state === 'draft'
