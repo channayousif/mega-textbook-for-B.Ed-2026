@@ -1,0 +1,78 @@
+{
+ "id": "giss-401",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "GISS-401",
+ "semester": 3,
+ "title": {
+  "en": "Islamic Studies (GISS-401)",
+  "ur": "اسلامیات (GISS-401)"
+ },
+ "sources": [
+  "docs/semester-3/giss-401/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government middle and secondary schools with whitewashed walls, plain green blackboards with no writing, wooden desks, pupils in school uniform, girls in white dupattas, student teachers in modest shalwar kameez. Modest dress. No sacred figures, religious scripture, calligraphy, plaques or framed verses anywhere in the frame. No maps, globes, flags, emblems, monuments, portraits or banners. No on-screen text, letters, captions, logos or watermarks; books, booklets, papers and screens are plain, blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident young Pakistani man teacher in his late twenties in a cream shalwar kameez with a brown waistcoat, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "In a bright secondary-school classroom with a plain green blackboard, a confident young Pakistani man teacher in a cream shalwar kameez with a brown waistcoat sets down a thick closed book with a plain unmarked cover on the desk, then turns to the camera with an inviting gesture; quick push-in to a close-up as pupils in uniform sit at wooden desks behind him."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Smooth dolly shot along a sunlit classroom where pupils in uniform sit at wooden desks writing in notebooks with blurred pages; a woman teacher in a modest dupatta walks between the rows, pointing to a plain unmarked booklet that a pupil holds open; every page is blurred and unreadable."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Tracking shot around a group of student teachers in modest shalwar kameez and dupattas seated in a circle on a shaded school verandah, talking animatedly and taking turns to speak; one raises a hand, another nods and points to a plain closed notebook; no papers with readable text."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a school courtyard in warm daylight where a teacher in modest dress stands with a small group of pupils in uniform; the pupils listen attentively, one offers a hand to help a classmate up from a bench; friendly, cooperative atmosphere."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor with whitewashed walls, a confident young Pakistani man teacher in a cream shalwar kameez with a brown waistcoat walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "اسلام کے عقائد، اخلاق اور سماجی نظام کو ایک استاد کی نظر سے سمجھنا چاہتے ہیں؟",
+    "یہ کورس اسلام کے بنیادی عقائد، قرآن و سنت کے مآخذ، عبادات اور اخلاقی نظام سکھاتا ہے۔",
+    "معاشی، سیاسی اور سماجی نظام، اور اسلام کی تعلیم، تہذیب اور عصری مسائل سے جوڑ بھی۔",
+    "تاکہ آپ بطور استاد رواداری، امن اور اخلاقی ترقی کو اسکول میں فروغ دے سکیں۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "اسلامیات (GISS-401)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "اسلام کو استاد کی نظر سے سمجھیں؟ اسلامیات | GISS-401",
+   "keywords": [
+    "Islamic Studies",
+    "اسلامیات",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "Islamic ethics",
+    "Islamic social system",
+    "Quran and Sunnah",
+    "moral values Islam",
+    "GISS-401"
+   ],
+   "course_summary": "سمسٹر 3 کا یہ کورس اسلام کے عقائد، تعلیمات، اخلاقی اقدار اور سماجی نظام کی مکمل تصویر دیتا ہے۔ یہ آپ سے کہتا ہے کہ اسلامی اصولوں کو ذاتی، سماجی اور پیشہ ورانہ زندگی میں لاگو کریں، خاص طور پر بطور استاد۔ یہ کردار سازی، سماجی ہم آہنگی اور پاکستان کی قومی ترقی میں اسلام کے کردار کو بھی دیکھتا ہے۔"
+  }
+ }
+}

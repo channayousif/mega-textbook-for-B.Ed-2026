@@ -1,0 +1,21 @@
+render-review: unavailable (exit 1)
+Deployed SHA: 074ab11456b999cf5d3c9b8aa6e603b2de834eb5
+HEAD SHA: d73f4d36b1c7e077c14e6e3487095ba525ba3151
+
+Command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efmp-409/unit-05/ static/img/figures/efmp-409/unit-05/
+diff exit code: 1
+
+git diff 074ab11456b999cf5d3c9b8aa6e603b2de834eb5 HEAD -- docs/semester-4/efmp-409/unit-05/ static/img/figures/efmp-409/unit-05/ --stat
+reports changes in 2 files:
+ docs/semester-4/efmp-409/unit-05/index.mdx        |   2 ++
+ static/img/figures/efmp-409/unit-05/fig-U5-7.webp | Bin 0 -> 71296 bytes
+ 2 files changed, 2 insertions(+)
+
+The production site at https://textbook.com.pk serves the pre-illustration build (deployed SHA 074ab11456b999cf5d3c9b8aa6e603b2de834eb5) and does not reflect the reviewed unit inputs at HEAD (commit 1e0656c0a added fig-U5-7.webp and placed the banner in index.mdx).
+Per crew brief and AGENTS.md host resource limits:
+- Prohibited from running npm run build, a dev server, or Playwright e2e suite.
+- scripts/render-inspect.mjs may only run with --base https://textbook.com.pk when deployed SHA matches HEAD.
+- Because deployed SHA differs from HEAD on unit English files and illustration assets, live site is not the reviewed input.
+- render-review is recorded as unavailable (exit 1).
+Visual accessibility (360px viewport, horizontal table scrolling, desktop layout, A4 print layout, figure clipping) remains unverified.
+Structural accessibility (semantic HTML, heading hierarchy, Figure alt text, SVG accessibility attributes) and figure geometry pass from source inspection.

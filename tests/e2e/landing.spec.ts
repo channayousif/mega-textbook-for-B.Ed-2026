@@ -30,7 +30,7 @@ test('every landing panel is in the static HTML, for search engines and no JavaS
 
 test('the partner logos revolve, and the visitor can stop them', async ({ page }) => {
   await page.goto('/');
-  const track = page.locator('[class*="track"]').first();
+  const track = page.locator('[data-testid="logo-track"]');
   await expect(track).toHaveCSS('animation-play-state', 'running');
   await page.getByRole('button', { name: 'Pause logos' }).click();
   await expect(track).toHaveCSS('animation-play-state', 'paused');
@@ -49,7 +49,7 @@ test('the logo band never shows a gap at the end of its cycle', async ({ page })
   await page.setViewportSize({ width: 1920, height: 1000 });
   await page.goto('/');
   const covered = await page.evaluate(() => {
-    const track = document.querySelector('[class*="track_"]') as HTMLElement;
+    const track = document.querySelector('[data-testid="logo-track"]') as HTMLElement;
     const animation = track.getAnimations()[0];
     animation.pause();
     animation.currentTime = (animation.effect!.getComputedTiming().duration as number) - 1;
