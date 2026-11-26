@@ -1,6 +1,6 @@
 # Study Studio rollout plan (per course)
 
-**Status:** proposed for the owner's approval (GitHub #818, Feature 034 T031) · **Date:** 2026-11-27
+**Status:** approved by the owner on 2026-11-27 (PR #905 merged; GitHub #818, Feature 034 T031) · **Date:** 2026-11-27
 
 ## Where things stand
 
@@ -61,3 +61,12 @@ with the watch queue. The crew already holds new units while two wait, so the ow
 Approve the **lean recipe as default** and the **order** above, or name changes. On approval, the
 crew's Studio planner gets the lean recipe (a recipe file under `specs/studio/`) and this plan's
 status becomes "approved".
+
+## Applied (2026-11-27)
+
+- The crew's Studio planner (`studioTask` in `scripts/crew/media.mjs`) now plans the lean recipe
+  for new units: an audio brief per topic in English, and in Urdu where the mirror exists, plus one
+  unit overview video per language on topic 1 (`specs/studio/prompts/video-unit.md`).
+- Mind maps and study guides are in the lean recipe but not yet in the crew pipeline (the media
+  ledger and the NotebookLM producer handle audio and video only). Until a follow-up adds document
+  kinds, they are made the way the pilot's were.

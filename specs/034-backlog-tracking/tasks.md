@@ -125,7 +125,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 5 | Area: i18n | Type: carryover | Priority: p2 | Owner: yes
   - Source: `specs/029-notebook-studio/tasks.md` (separate track); `specs/backlog.md` (EFMP-301 G5, the noun `جانچ`)
   - Done when: a register proposal is written for the owner, including the context-by-context `جانچ` noun pass; it lands only when the style-guide freeze allows.
-- [ ] T031 Study Studio per-course rollout plan (#818)
+- [x] T031 Study Studio per-course rollout plan (#818)
   - Stage: 5 | Area: media | Type: carryover | Priority: p3 | Owner: no
   - Source: `specs/029-notebook-studio/tasks.md`
   - Done when: a rollout order and schedule per course is written and approved by the owner.

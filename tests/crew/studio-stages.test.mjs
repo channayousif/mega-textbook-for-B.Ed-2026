@@ -76,6 +76,9 @@ test('only the owner can approve; publish needs that approval; rejects are carri
 test('the studio brief plans a new unit, paces NotebookLM and YouTube, and stops for the owner', () => {
   const t = mediaTask({ stage: 'studio_media', course: 'EFMP-301', unit: 5, plan: true });
   assert.match(t, /has no Study Studio ledger yet: plan it first/);
+  assert.match(t, /LEAN recipe/);
+  assert.match(t, /ONE video per language for the whole unit/);
+  assert.match(t, /video-unit\.md/);
   assert.match(t, /pacing\.mjs check nlm\.studio/);
   assert.match(t, /pacing\.mjs check youtube\.upload/);
   assert.match(t, /crew approve-studio EFMP-301 5/);
