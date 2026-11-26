@@ -47,6 +47,6 @@ test('the owner line links the card and says how to approve', () => {
 
 test('the stage runs on claude with the social-updates skill and is not corpus work', () => {
   // Scripts and gh only, so any worker carries it when claude is cooling (2026-11-25).
-  assert.deepEqual(STAGES[SOCIAL_STAGE], { chain: ['claude', 'agy_claude', 'claude_crew', 'codex'], skill: 'social-updates' });
+  assert.deepEqual(STAGES[SOCIAL_STAGE], { chain: ['claude', 'agy_claude', 'agy2_claude', 'claude_crew', 'codex'], skill: 'social-updates' });
   assert.equal(isCorpusStage(SOCIAL_STAGE), false);
 });

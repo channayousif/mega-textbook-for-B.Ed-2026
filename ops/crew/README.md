@@ -13,6 +13,14 @@ definition of done. Paperclip is paused (its data is kept); nothing here depends
 | agy | `agy -p` | google | review_en (G3), illustrate (ADR-0029; the image itself comes from `generate-illustration.mjs`, which tries agy, gflow, then Codex and holds the job only when all three are out, D-2026-0085; gflow images share one Flow project, recorded in `~/.cache/mega-book/gflow-project.json` and rotated every 50 images, or pinned with `GFLOW_PROJECT`) |
 | agy_claude | `agy -p --model claude-opus-4-6-thinking` | anthropic | none: next after claude in every chain that has claude (agy's separate Claude/GPT quota) |
 | opencode | `opencode run -m longcat/LongCat-2.0` | longcat | fix (mechanical gate repairs) |
+| agy2 | `agy2 -p` (agy with `HOME=~/.agy2`, `ops/crew/bin/agy2`) | google | none: right after agy in every chain except illustrate (a second Antigravity account, Feature 034) |
+| agy2_claude | `agy2 -p --model claude-opus-4-6-thinking` | anthropic | none: right after agy_claude in every chain |
+
+**Second Antigravity account (Feature 034).** `agy2` runs agy with `HOME=~/.agy2`, a profile with its
+own `.gemini` login that links `.gitconfig`, `.ssh`, `.nvm`, `.local` and `~/.config/{gh,git}` back to the
+real home. Install with `ln -s ~/crew-system/ops/crew/bin/agy2 ~/.local/bin/agy2` and sign in once
+with `HOME=~/.agy2 agy`. Until then the wrapper exits with `UNAUTHENTICATED (code 401)`, so both
+agy2 workers cool down like any refused provider instead of holding a job.
 
 **Claude model per stage (Feature 034, quota efficiency).** The `claude` worker passes `--model` and
 `--effort` from `CLAUDE_ROUTING` in `scripts/crew/workers.mjs`: Opus (high) for author, review_en,
