@@ -1,6 +1,6 @@
 ---
 id: 20261294
-title: Fix two e2e specs left red on main (toggle click, chart placement)
+title: Fix e2e left red on main (toggle click, chart placement, viewer image)
 stage: green
 date: 2026-11-27
 surface: agent
@@ -18,6 +18,7 @@ links:
 files:
   - tests/e2e/untranslated-toggle.spec.ts
   - tests/e2e/chart.spec.ts
+  - src/components/FigureZoom.tsx
 tests:
   - CI e2e on the PR
 ---
@@ -37,7 +38,9 @@ readers can tap the button and see the callout, so the feature is fine; the test
 CI-gated deploy and every open PR's e2e, so this lands first. PR #900 (#812) was then also merged
 with a red e2e: `chart.spec.ts` still expected the chart right after its heading, but review moved
 it after the table it summarises; the test now checks the chart follows that table within the
-heading's section.
+heading's section. PR #898 (#822) then merged with a red e2e too: the full-size viewer kept an
+`<img>` with no source inside every figure, and the print test counts every figure image as
+needing to load; the viewer now renders its image only while open.
 
 ## Outcome
 

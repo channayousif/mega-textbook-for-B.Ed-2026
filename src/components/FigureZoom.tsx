@@ -5,7 +5,7 @@
  * by scrolling and can pinch to zoom. The inline figure is unchanged. Native <dialog>: Escape
  * closes it and focus returns to the control.
  */
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Icon from '@site/src/components/icons/Icon';
 
@@ -20,11 +20,13 @@ export default function FigureZoom({ src, darkSrc, alt, width, height }: Props):
   const { i18n } = useDocusaurusContext();
   const locale = i18n.currentLocale === 'ur' ? 'ur' : 'en';
   const dialog = useRef<HTMLDialogElement>(null);
-  const img = useRef<HTMLImageElement>(null);
+  // The image exists only while the viewer is open: a closed viewer must add no <img> to the figure
+  // (print and lazy-load checks count every figure image, tests/e2e/handout-print.spec.ts).
+  const [shown, setShown] = useState<string | null>(null);
 
   const open = () => {
     const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-    if (img.current) img.current.src = dark && darkSrc ? darkSrc : src;
+    setShown(dark && darkSrc ? darkSrc : src);
     dialog.current?.showModal();
   };
 
@@ -33,14 +35,14 @@ export default function FigureZoom({ src, darkSrc, alt, width, height }: Props):
       <button type="button" className="figure__zoom" onClick={open}>
         <Icon name="search" size={16} accent={false} /> {T.open[locale]}
       </button>
-      <dialog ref={dialog} className="figure-zoom" aria-label={alt} onClick={(e) => { if (e.target === dialog.current) dialog.current?.close(); }}>
+      <dialog ref={dialog} className="figure-zoom" aria-label={alt} onClose={() => setShown(null)} onClick={(e) => { if (e.target === dialog.current) dialog.current?.close(); }}>
         <form method="dialog" className="figure-zoom__bar">
           <button type="submit" className="figure-zoom__close" aria-label={T.close[locale]}>
             <Icon name="close" size={22} accent={false} />
           </button>
         </form>
         <div className="figure-zoom__frame">
-          <img ref={img} alt={alt} width={width} height={height} style={width ? { width: `${Math.max(width, 720)}px` } : { width: '200vw' }} />
+          {shown && <img src={shown} alt={alt} width={width} height={height} style={width ? { width: `${Math.max(width, 720)}px` } : { width: '200vw' }} />}
         </div>
       </dialog>
     </>
