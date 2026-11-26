@@ -2,7 +2,7 @@
 id: crew-efpg-401-u00-teaser_clips
 title: crew teaser_clips EFPG-401 unit 0
 stage: misc
-date: 2026-11-27
+date: 2026-11-26
 surface: agent
 model: claude_crew
 feature: efpg-401
@@ -17,6 +17,7 @@ links:
   pr: null
 files:
  - history/prompts/030-media-studio/20261295-efpg-401-teaser-clips.green.prompt.md
+ - history/prompts/efpg-401/crew-efpg-401-u00-teaser_clips.misc.prompt.md
  - specs/studio/teasers/media-teasers.json
 tests:
  - npm run check:content
@@ -53,41 +54,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-401-u00-teaser_script, teaser_script, claude) `objectives` left out because `parseOverview` (scripts/notebook-studio/describe.mjs) doesn't read the overview's "## Course objectives" heading; adding them later is metadata only and does not reopen approval.
 - (efpg-401-u00-teaser_script, teaser_script, claude) PHR id 20261273 was the next free id on origin/main when I committed; renumber it if a sibling branch merges the same id first.
 
+
 ## Response snapshot
 
-Recorded the owner's script approval, generated and QA-passed all five EFPG-401 Urdu teaser shots
-(one retake for a drawn REC overlay), advanced efpg-401-ur to clips-qa, and committed the ledger plus
-PHRs.
+Recorded the owner's script approval, generated and QA-passed all five EFPG-401 Urdu teaser shots (shot 1 retaken for a drawn REC overlay), and advanced efpg-401-ur to clips-qa.
 
 ## Outcome
 
 - Impact: teaser_clips for EFPG-401 Unit 0 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (14/14) in the job worktree.
-- Files: 2 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Recorded the owner's script approval, generated and QA-passed all five EFPG-401
-  Urdu teaser shots (one retake for a drawn REC overlay), advanced efpg-401-ur to clips-qa, and
-  committed the ledger plus PHRs.
-- Decisions the team must respect: shot 1 assembles from take 2 (`chosenTakes`); take 1 is the failed
-  REC-overlay clip. Nothing was assembled, uploaded or published.
+- Shipped / changed: Recorded the owner's script approval, generated and QA-passed all five EFPG-401 Urdu teaser shots (shot 1 retaken for a drawn REC overlay), and advanced efpg-401-ur to clips-qa.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `assemble-teaser.mjs efpg-401 ur <out> 1 2 3 4 5` resolves the right take per shot via
-    `chosenTakes`; shot 1 uses take 2.
-  - Shots 2 and 3 carry sharp Urdu-like pseudo-text on a wall poster and a book cover; both passed as
-    pseudo-script, and the owner may still reject them at spot-check.
-  - Flow's WAF refused two submissions (`PUBLIC_ERROR_UNUSUAL_ACTIVITY`) and charged nothing; the
-    journal recovery cleared them, so a WAF refusal is retryable, not a failed take.
-  - PHR id 20261295 was the next free id on origin/main at commit time (20261273 was already taken).
+  - Shot 1 assembles from take 2 (`chosenTakes`); take 1 is the failed REC-overlay clip, so `assemble-teaser.mjs efpg-401 ur <out> 1 2 3 4 5` resolves it.
+  - Shots 2 and 3 carry sharp Urdu-like pseudo-text (wall poster, red book cover); both passed as pseudo-script rather than readable words, and the owner may still reject them at spot-check.
+  - Flow's WAF refused two submissions at no charge and the journal recovery cleared them, so a WAF refusal is retryable, not a failed take.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none beyond the WAF refusals and the tool's default background time limit.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
