@@ -129,7 +129,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 5 | Area: media | Type: carryover | Priority: p3 | Owner: no
   - Source: `specs/029-notebook-studio/tasks.md`
   - Done when: a rollout order and schedule per course is written and approved by the owner.
-- [ ] T032 Add `description` frontmatter to the Student and Teacher Guide pages (#819)
+- [x] T032 Add `description` frontmatter to the Student and Teacher Guide pages (#819)
   - Stage: 5 | Area: content | Type: backlog | Priority: p3 | Owner: no
   - Source: `specs/backlog.md` (013)
   - Done when: every page under `guides/student-guide/` and `guides/teacher-guide/`, English and Urdu, has a description.
