@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed the GENT-401 Unit 2 banner illustration in English and Urdu index pages, refreshed G2 gate evidence, and passed all content gates.
+Generated with gflow, inspected, and placed the GENT-401 Unit 2 banner illustration (fig-U2-5) in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
@@ -85,17 +85,18 @@ Generated, inspected, and placed the GENT-401 Unit 2 banner illustration in Engl
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the GENT-401 Unit 2 banner illustration in English and Urdu index pages, refreshed G2 gate evidence, and passed all content gates.
+- Shipped / changed: Generated with gflow, inspected, and placed the GENT-401 Unit 2 banner illustration (fig-U2-5) in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit banner fig-U2-5 is placed; Unit 2 G3 review and G5 review remain open for independent evaluation.
-  - The Urdu figure labels and pages have not been seen rendered (no render-inspect), so G5 must inspect `fig-U2-*.ur.svg` and the pages at narrow width and in A4 print.
-  - `glossary.json` `definition_ur` for "Small business" says "مقامی بازار کو اہتمام کرتا ہے", which needs a glossary fix outside this unit's scope.
-  - Proposed Urdu terms are listed in `reviews/unit-02/G4/translation-handoff.md` for owner decision.
+  - The Urdu figure labels and pages have not been seen rendered (no render-inspect), so G5 must inspect fig-U2-*.ur.svg and the pages at narrow width and in A4 print.
+  - glossary.json definition_ur for "Small business" says "مقامی بازار کو اہتمام کرتا ہے", which needs a glossary fix outside this unit's scope.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
