@@ -262,3 +262,25 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 
 ## Recent Changes
 - 001-content-platform: Planned - Docusaurus v3 static site; `@easyops-cn/docusaurus-search-local` for bilingual offline search; `gray-matter`+`ajv` validation with an EN↔UR structural parity gate; client-side print-stylesheet A4 handouts (no PDF pipeline); missing-Urdu fallback to EN with an "untranslated" banner; self-hosted Noto Nastaliq Urdu webfont
+
+## Antigravity (`agy`) invocation
+
+Moved verbatim from AGENTS.md (Feature 034, 2026-11-27); AGENTS.md points here before any agy run.
+
+Invocation, verified 2026-09-20 against `agy` 1.2.7:
+
+```bash
+agy -p "<task>" --add-dir /home/a2ahs/mega_book_for_B.Ed \
+    --model gemini-3.1-pro-high --effort high \
+    --output-format json --print-timeout 55m
+```
+
+`--add-dir` is required and there is no `--cwd`: without it the workspace is unset, and neither
+`AGENTS.md` nor `.agents/skills.json` is loaded. Headless runs cannot prompt for a tool
+permission, so a denied command aborts the turn while still reporting `status: SUCCESS` with an
+empty response; the cause is printed on stderr. `permissions.allow` does not fix this, because
+project scope clears it ("no grants for project ... cleared project permissions"). Set
+`toolPermission: "always-proceed"` in `~/.gemini/antigravity-cli/settings.json` instead, which
+is narrower than `--dangerously-skip-permissions`. Do not pass `--disable-slash-commands`, which
+switches off skill expansion. `--mode plan` cannot be used for review, because the reviewer must
+write its report. See `history/adr/0019-*` and the Feature 014 evidence contract.
