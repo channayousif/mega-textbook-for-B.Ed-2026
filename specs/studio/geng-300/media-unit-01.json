@@ -468,12 +468,78 @@
    "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-audio-p1.mp4.thumb.jpg"
   },
   {
-   "state": "planned",
-   "gates": {},
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 397.177324,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 397.125
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.722018,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-26",
+     "metrics": {
+      "duration_s": 397.2,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 397.125
+      },
+      "loudness": {
+       "integrated_lufs": -16.5,
+       "true_peak_dbfs": -1.4
+      },
+      "silences": 1,
+      "longest_silence_s": 3.685146,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-26",
+     "notes": "Covers the 44 phonemes, the missing th/v/w sounds, final clusters, vowel length, stress and intonation, and closes on the minimal-pairs activity. Transcript artifacts to check: the pupils dis for this comes through as this, full/fool as fool and fool, sink as sync, deskes as deskas, and Urdu as erdo/Ordo."
+    }
+   },
    "history": [
     {
      "state": "planned",
      "at": "2026-11-26T12:07:35.068Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-26T14:30:48.997Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-26T14:39:42.919Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-26T14:40:36.985Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-26T14:42:42.334Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-26T14:44:30.036Z"
     }
    ],
    "topic": 3,
@@ -483,7 +549,12 @@
    "alt": "Video explainer on the English sound system and the pronunciation challenges Urdu speakers face.",
    "prompt_ref": "specs/studio/prompts/video.md v1",
    "notebook_id": "539d6543-43ee-48e8-bbda-9bb782473af8",
-   "key": "t3-en-video"
+   "key": "t3-en-video",
+   "artifact_id": "0e8e918f-1062-4f05-ab14-09bb615d4d0e",
+   "file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-video.mp4",
+   "sha256": "a6fddbee6e65a141bee2bbdec2d6a25db268a8a7e481b24c70fd8302ccb12ec3",
+   "encoded_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-video.yt.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/geng-300/unit-01/topic-03/t3-en-video.yt.mp4.thumb.jpg"
   }
  ]
 }
