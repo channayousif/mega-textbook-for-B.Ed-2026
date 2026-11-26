@@ -49,9 +49,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Collected the 2026-11-26 roundup (one content draft: EFMP-409 Unit 5 new, EFMP-409 Units 4 and 5 now in Urdu; no feature PR), checked and rendered the card, auto-approved it after the pilot, waited out the social pacing window and published it to Facebook, Instagram and LinkedIn, then committed the ledger snapshot.
+Published the 2026-11-26 content roundup (EFMP-409 Unit 5 and Urdu Units 4-5) to Facebook, Instagram and LinkedIn after the pacing window, and committed the ledger snapshot with its PHR.
 
 ## Outcome
 
@@ -63,10 +64,12 @@ Collected the 2026-11-26 roundup (one content draft: EFMP-409 Unit 5 new, EFMP-4
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Published the 2026-11-26 content roundup `2026-11-26-content` (EFMP-409 Unit 5 new; EFMP-409 Units 4 and 5 now in Urdu) to Facebook, Instagram and LinkedIn after the pacing window, and committed the ledger snapshot.
-- Decisions the team must respect: the pilot is over, so content roundups auto-approve; feature posts still wait for the owner's `crew post <id>`. Social platforms stay paced (2 h gap, 3 a day); the publish waited to 14:35 UTC rather than failing inside the window.
+- Shipped / changed: Published the 2026-11-26 content roundup (EFMP-409 Unit 5 and Urdu Units 4-5) to Facebook, Instagram and LinkedIn after the pacing window, and committed the ledger snapshot with its PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
-- Notes for the next job on this unit: no feature PR was live today, so no `needs_copy` line was needed. The host ledger is at `~/studio-media/social/updates.json`; the snapshot is only the git record.
+- Notes for the next job on this unit:
+  - Today's per-platform social cap (3 each) is now used, so no further social post should go out until the next PKT day.
+  - The host ledger `~/studio-media/social/updates.json` is authoritative; `specs/social/updates.json` is only the git record.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
