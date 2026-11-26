@@ -1,0 +1,6 @@
+prepared inputs: 113
+fresh inputs: 113
+manifest identical: true
+skill_digest matches: true
+required criteria: authority,sources,coverage,assessment,accessibility,readability,pedagogy
+urdu-bound paths: 0
