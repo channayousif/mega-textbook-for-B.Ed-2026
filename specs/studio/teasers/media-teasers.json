@@ -2941,7 +2941,7 @@
    "id": "efmp-407",
    "locale": "ur",
    "kind": "short",
-   "state": "clips-qa",
+   "state": "qa-pass",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -2958,6 +2958,11 @@
      "by": "claude",
      "date": "2026-11-26",
      "notes": "5/5 shots pass; shot 3 take 1 failed on a drawn REC viewfinder overlay, take 2 passes; QG1 all pass, QG2 0.941-1.0"
+    },
+    "qa1": {
+     "verdict": "pass",
+     "at": "2026-11-26T19:55:12Z",
+     "notes": "28.9 s, 1080x1920, -14.8 LUFS, -3.0 dBTP, no silence or black runs; frames checked: captions fully visible, Urdu RTL correct, end card shows the exact address /ur/semester-3/efmp-407/course-overview/; thumbnail hook reads at phone size"
     }
    },
    "clips": [
@@ -3134,9 +3139,19 @@
     {
      "state": "clips-qa",
      "at": "2026-11-26T18:41:03.369Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-26T19:55:05.557Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-26T19:55:12.993Z"
     }
    ],
-   "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874"
+   "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874",
+   "encoded_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.thumb.jpg"
   },
   {
    "key": "efpg-401-ur",
