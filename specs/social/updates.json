@@ -555,7 +555,7 @@
    "id": "2026-11-25-feature",
    "kind": "feature",
    "date": "2026-11-25",
-   "state": "approved",
+   "state": "posted",
    "headline": {
     "en": "Platform update",
     "ur": "پلیٹ فارم اپ ڈیٹ"
@@ -633,19 +633,22 @@
    },
    "platforms": {
     "facebook": {
-     "state": "failed",
-     "error": "paced: social.facebook: hourly cap of 1 reached; next at 2026-11-26T12:09:29.705Z",
-     "at": "2026-11-26T10:04:24.329Z"
+     "state": "posted",
+     "post_id": "1404300426106517_122111841033545614",
+     "url": "https://www.facebook.com/1404300426106517_122111841033545614",
+     "at": "2026-11-26T12:16:15.615Z"
     },
     "instagram": {
-     "state": "failed",
-     "error": "paced: social.instagram: hourly cap of 1 reached; next at 2026-11-26T12:08:45.303Z",
-     "at": "2026-11-26T10:04:24.329Z"
+     "state": "posted",
+     "post_id": "17969591046236119",
+     "url": "https://www.instagram.com/p/DgNFVvtjRT0/",
+     "at": "2026-11-26T12:16:15.615Z"
     },
     "linkedin": {
-     "state": "failed",
-     "error": "paced: social.linkedin: hourly cap of 1 reached; next at 2026-11-26T12:13:51.253Z",
-     "at": "2026-11-26T10:04:24.329Z"
+     "state": "posted",
+     "post_id": "urn:li:share:7531692293188403202",
+     "url": "https://www.linkedin.com/feed/update/urn:li:share:7531692293188403202/",
+     "at": "2026-11-26T12:16:15.615Z"
     }
    }
   }
