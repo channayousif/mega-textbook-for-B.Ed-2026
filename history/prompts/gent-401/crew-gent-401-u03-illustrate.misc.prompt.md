@@ -2,7 +2,7 @@
 id: crew-gent-401-u03-illustrate
 title: crew illustrate GENT-401 unit 3
 stage: misc
-date: 2026-11-27
+date: 2026-11-26
 surface: agent
 model: agy
 feature: gent-401
@@ -70,6 +70,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u03-author, author, claude_crew) The content-spec maps Unit 3 to OpenStax chapters 5 and 11; I added chapter 8 (section 8.2 is the book's market-research chapter) and an author-selected OA source `spriggs-2016-bmc`, both recorded in `sources/unit-03.md` - G3 should confirm they are genuinely on-topic.
 - (gent-401-u03-author, author, claude_crew) The reading-minutes band is tight: the first draft totalled 46 minutes against the approved 32-44 band, so redundant prose was cut to land at 43. Any later addition must re-check the band before committing.
 
+
 ## Response snapshot
 
 Generated with gflow, inspected, and placed the GENT-401 Unit 3 banner illustration (fig-U3-5) in the English index page and Urdu mirror, refreshed G2 gate evidence, and passed all 14 content gates.
@@ -89,9 +90,8 @@ Generated with gflow, inspected, and placed the GENT-401 Unit 3 banner illustrat
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit banner fig-U3-5 is placed; Unit 3 G3 review and G5 review remain open for independent evaluation.
-  - English fig-U3-3 note says "two shaded blocks" but three are shaded; translated faithfully, and the English owner should fix it (the .ur.svg would then need a matching edit).
-  - The Urdu pages were not checked rendered (render-inspect --locale ur needs a build or a deployed page); G5 must inspect them at narrow width and in A4 print.
-  - glossary.json definition_ur for "Business model" and "Value proposition" have "کی" for "کیا", out of scope here and worth a glossary fix.
+  - English fig-U3-3 note says "two shaded blocks" but three are shaded; translated faithfully, and the English owner should fix it (matching .ur.svg edit needed).
+  - The Urdu pages were not checked rendered (render-inspect --locale ur needs a build or deployed page); G5 must inspect at narrow width and in A4 print.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
