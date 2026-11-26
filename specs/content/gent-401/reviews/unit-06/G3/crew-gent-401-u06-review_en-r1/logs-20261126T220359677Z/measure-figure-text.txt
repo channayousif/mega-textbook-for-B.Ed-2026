@@ -1,0 +1,10 @@
+$ node scripts/measure-figure-text.mjs static/img/figures/gent-401/unit-06/fig-U6-1.dark.svg static/img/figures/gent-401/unit-06/fig-U6-1.svg static/img/figures/gent-401/unit-06/fig-U6-2.dark.svg static/img/figures/gent-401/unit-06/fig-U6-2.svg static/img/figures/gent-401/unit-06/fig-U6-3.dark.svg static/img/figures/gent-401/unit-06/fig-U6-3.svg static/img/figures/gent-401/unit-06/fig-U6-4.dark.svg static/img/figures/gent-401/unit-06/fig-U6-4.svg    (repo HEAD f71773ed96f566c1e421ec586142274b2fdf3acd, 2026-11-26T22:05:26.616Z)
+✓ static/img/figures/gent-401/unit-06/fig-U6-1.dark.svg (780x590, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gent-401/unit-06/fig-U6-1.svg (780x590, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gent-401/unit-06/fig-U6-2.dark.svg (780x480, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gent-401/unit-06/fig-U6-2.svg (780x480, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gent-401/unit-06/fig-U6-3.dark.svg (780x620, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gent-401/unit-06/fig-U6-3.svg (780x620, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gent-401/unit-06/fig-U6-4.dark.svg (780x500, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gent-401/unit-06/fig-U6-4.svg (780x500, widest text ends at 768.4, wordmark at 675.7)
+exit_code=0

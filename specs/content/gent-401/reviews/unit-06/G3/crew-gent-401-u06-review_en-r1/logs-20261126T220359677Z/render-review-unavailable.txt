@@ -1,0 +1,10 @@
+$ git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/gent-401/unit-06/ static/img/figures/gent-401/unit-06/   (repo HEAD f71773ed96f566c1e421ec586142274b2fdf3acd, 2026-11-26T22:16:04.896Z)
+deployed SHA: 366019f8ace647e892523e553b81ab6d1832ec68
+reviewed HEAD: f71773ed96f566c1e421ec586142274b2fdf3acd
+exit_code=1 (nonzero means the diff is not empty)
+
+$ git diff --name-status "366019f8ace647e892523e553b81ab6d1832ec68" HEAD -- docs/semester-4/gent-401/unit-06/ static/img/figures/gent-401/unit-06/
+M	docs/semester-4/gent-401/unit-06/index.mdx
+A	static/img/figures/gent-401/unit-06/fig-U6-5.webp
+
+render-review: UNAVAILABLE. The deployed production build is built from 366019f8ace647e892523e553b81ab6d1832ec68, which differs from the reviewed HEAD f71773ed96f566c1e421ec586142274b2fdf3acd for this unit (docs/semester-4/gent-401/unit-06/index.mdx modified: the fig-U6-5 banner carrier added; static/img/figures/gent-401/unit-06/fig-U6-5.webp added). The crew brief prohibits building or serving the site, so the live pages are not the reviewed input and no narrow-screen, reading-order, clipping or A4 print inspection was performed. Rendered input identity: deployed 366019f8ace647e892523e553b81ab6d1832ec68 vs reviewed HEAD f71773ed96f566c1e421ec586142274b2fdf3acd.

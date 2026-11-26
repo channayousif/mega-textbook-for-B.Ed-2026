@@ -1,0 +1,7 @@
+$ npm run build:content-status   (repo HEAD f71773ed96f566c1e421ec586142274b2fdf3acd, 2026-11-26T22:04:32.497Z)
+
+> bed-mega-textbook@0.1.0 build:content-status
+> node scripts/report-content-status.mjs
+
+✓ Wrote content status for 23 course(s) to static/content-status.json
+exit_code=0
