@@ -1,7 +1,7 @@
 # EFPG-402 Unit 1 Urdu translation handoff
 
 - Translator: agent:agy (crew job `efpg-402-u01-translate`), 2026-11-27, branch `crew/efpg-402-u01-translate`.
-- English baseline: `c6bbab221` (last change to the English unit, its figures and its figure manifest). No English unit file, figure manifest, sources, coverage or concepts file was changed, so the G2 evidence is untouched.
+- English baseline: `c6bbab221` (last change to the English unit, its figures and its figure manifest). No English unit file, figure manifest, sources, coverage or concepts file was changed. This handoff file itself is bound by the G2 input manifest (it names `unit-01` under `specs/content/efpg-402/`), so adding it made the earlier G2 evidence stale; the evidence was refreshed as described under "Validation and limits".
 - Complete same-name mirror under `i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-01/`: `index.mdx`, `topic-01.mdx`, `topic-02.mdx`, `topic-03.mdx`, `topic-04.mdx`, `topic-05.mdx`, `unit-assessment.mdx`.
 - Ten `.ur.svg` figures (`fig-U1-1` to `fig-U1-10`) with their `.ur.dark.svg` twins from `npm run figures:variants`, wired into the topic files. Each SVG text geometry was measured with `node scripts/measure-figure-text.mjs` and exits 0 with zero clipping, text collisions, or wordmark collisions.
 - `translation_status` stays `draft` in both `index.mdx` files: only an accepted independent G5 earns `reviewed`. The G4 tracker row keeps status ▢ with a factual note; no row was appended and G5 is not claimed.
@@ -75,6 +75,7 @@ Proposed terms for the curriculum owner and the G5 reviewer (none are banked):
 
 - `npm run check:content` with both `index.mdx` files temporarily flipped to `reviewed`: passes `validate:content` parity, `check:figures` Urdu parity and the `key_terms` bank check. The only reported findings are the expected incomplete G4 and G5 tracker rows for Unit 1. Both files were then restored byte-for-byte to `draft`.
 - `npm run check:content` at `draft` passes all 14 gates cleanly.
+- G2 evidence: adding this handoff made the earlier G2 evidence stale, because a path under `specs/content/efpg-402/` that names `unit-01` is bound by the G2 input manifest. `node scripts/prepare-gate-evidence.mjs --refresh-stale` re-ran the eight draft gates at HEAD (all PASS) and repointed the G2 en-draft tracker row to a refreshed `reviews/unit-01/G2/<stamp>-gates.json`; the tracker row names the current file. Editing this handoff again requires the same refresh.
 - Structural self-check: identical heading-level vectors across all 7 files, matching component counts (10 Figure, 6 PrintHandout, 1 TranslationStatusBadge), matching table rows, and 10/10/5 numbered items.
 - `scripts/render-inspect.mjs --locale ur` was NOT run. This job's brief forbids a dev server, `npm run build` and any local render-inspect run, and permits render-inspect only for a review job against `https://textbook.com.pk`. The rendered Urdu (Nastaliq shaping, 360px and A4 print, table scroll) is therefore unverified here and is a G5 task.
 
