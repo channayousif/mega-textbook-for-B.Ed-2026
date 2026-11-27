@@ -27,15 +27,15 @@ files:
  - specs/content/efpc-411/coverage/unit-02.md
  - specs/content/efpc-411/figures/unit-02.banner.md
  - specs/content/efpc-411/figures/unit-02.md
- - specs/content/efpc-411/reviews/unit-02/G2/20261127T021038913Z-gates.json
- - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021038913Z/check-bloom-bands.txt
- - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021038913Z/check-concept-graph.txt
- - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021038913Z/check-depth-gate.txt
- - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021038913Z/check-docs-sync.txt
- - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021038913Z/check-figures.txt
- - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021038913Z/check-no-answer-keys.txt
- - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021038913Z/check-no-em-dash.txt
- - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021038913Z/validate-content.txt
+ - specs/content/efpc-411/reviews/unit-02/G2/20261127T021552146Z-gates.json
+ - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021552146Z/check-bloom-bands.txt
+ - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021552146Z/check-concept-graph.txt
+ - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021552146Z/check-depth-gate.txt
+ - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021552146Z/check-docs-sync.txt
+ - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021552146Z/check-figures.txt
+ - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021552146Z/check-no-answer-keys.txt
+ - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021552146Z/check-no-em-dash.txt
+ - specs/content/efpc-411/reviews/unit-02/G2/logs-20261127T021552146Z/validate-content.txt
  - specs/content/efpc-411/sources/texts/hec-2013-edupsy.md
  - specs/content/efpc-411/sources/unit-02.md
  - specs/content/efpc-411/tasks.md
@@ -87,28 +87,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFPC-411 Unit 2 (School Placement Observation Tasks) from its approved content-spec: an index opening, four nine-part topic cycles, the 10/10/5 unit assessment with a bounded answers section, the coverage, sources, concept graph and figure manifest artifacts, and eight hand-authored schematic SVGs with derived dark variants. Recorded G2 gate evidence and pointed the tracker row at it.
+Authored EFPC-411 Unit 2 (School Placement Observation Tasks) as a four-topic per-topic English unit with a 10/10/5 assessment, eight placed schematic figures, full governance artefacts and G2 gate evidence, leaving `npm run check:content` green.
 
 ## Outcome
 
 - Impact: author for EFPC-411 Unit 2 by claude_crew (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the branch was committed.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 39 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFPC-411 Unit 2 English draft with placed schematic figures, governance artifacts and G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. English only; the Urdu mirror is a separate job.
+- Shipped / changed: Authored EFPC-411 Unit 2 (School Placement Observation Tasks) as a four-topic per-topic English unit with a 10/10/5 assessment, eight placed schematic figures, full governance artefacts and G2 gate evidence, leaving `npm run check:content` green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Banner figure fig-U2-9 is prompt-only in `specs/content/efpc-411/figures/unit-02.banner.md`, ready for the illustration pipeline.
-  - `mcburney-fry` and `elt-methods-texts` are declared under `## Unverifiable sources` in `sources/unit-02.md`; both are print-only and their scope matches the coverage matrix.
-  - `est_reading_minutes` was set at about 200 wpm (the top of the skill's 180-200 band, and near the corpus median of 189) to land the unit total at 59 inside the approved 44-64 band; the raw total at 180 wpm would be 66.
-  - The bound note for `hec-2013-edupsy` is new at `sources/texts/hec-2013-edupsy.md`; its evidence notes cite unit and theme names rather than page numbers because the guide's printed page numbering does not match the PDF pagination.
+  - Banner fig-U2-9 is `prompt-only` in `figures/unit-02.banner.md`, ready for the illustrate job.
+  - `mcburney-fry` and `elt-methods-texts` are print-only and declared under `## Unverifiable sources`; their scope matches the coverage matrix.
+  - `est_reading_minutes` was set at ~200 wpm (top of the skill's 180-200 band) to land the unit total at 59 inside the approved 44-64 band; at 180 wpm the raw total would be 66.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
