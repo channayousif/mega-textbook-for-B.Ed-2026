@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of essential qualities of an effective science teacher</title><desc id="d">Table categorising essential qualities of an effective science teacher across knowledge, practical skills, and professional dispositions.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="68"/>
+<rect class="plain" x="24" y="132" width="732" height="68"/>
+<rect class="panel" x="24" y="200" width="732" height="68"/>
+<rect class="plain" x="24" y="268" width="732" height="68"/>
+</g><g id="layer-edges">
+<line class="grid" x1="170" y1="24" x2="170" y2="336"/>
+<line class="grid" x1="420" y1="24" x2="420" y2="336"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Dimension</text>
+<text class="sh" x="182" y="49">Core Professional Qualities</text>
+<text class="sh" x="432" y="49">Observable Classroom Behavior</text>
+
+<text class="sh" x="36" y="94">1. Knowledge</text>
+<text class="cell" x="36" y="112">(Content &amp; PCK)</text>
+<text class="cell" x="182" y="93">Deep mastery of science facts;</text>
+<text class="cell" x="182" y="110">understanding pupil misconceptions</text>
+<text class="cell" x="432" y="93">Explains complex ideas simply; uses</text>
+<text class="cell" x="432" y="110">intuitive local analogies; diagnoses errors</text>
+
+<text class="sh" x="36" y="162">2. Skills</text>
+<text class="cell" x="36" y="180">(Instructional)</text>
+<text class="cell" x="182" y="161">Low-cost kit improvisation; inquiry</text>
+<text class="cell" x="182" y="178">questioning; safety management</text>
+<text class="cell" x="432" y="161">Builds apparatus from bottles and wire;</text>
+<text class="cell" x="432" y="178">frames open questions; maintains lab safety</text>
+
+<text class="sh" x="36" y="230">3. Dispositions</text>
+<text class="cell" x="36" y="248">(Scientific)</text>
+<text class="cell" x="182" y="229">Curiosity, intellectual honesty,</text>
+<text class="cell" x="182" y="246">open-mindedness, patience</text>
+<text class="cell" x="432" y="229">Welcomes unexpected results; admits gaps;</text>
+<text class="cell" x="432" y="246">encourages all pupils including girls</text>
+
+<text class="sh" x="36" y="298">4. Growth</text>
+<text class="cell" x="36" y="316">(Continuous CPD)</text>
+<text class="cell" x="182" y="297">Reflective mindset, action research,</text>
+<text class="cell" x="182" y="314">active professional networking</text>
+<text class="cell" x="432" y="297">Maintains reflective diary; observes peers;</text>
+<text class="cell" x="432" y="314">improves lessons based on assessment data</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="375">A tripartite framework balancing knowledge, practical skills, and ethical dispositions in science teaching.</text>
+</g><text class="wm" x="768" y="405" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

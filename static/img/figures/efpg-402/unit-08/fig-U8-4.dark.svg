@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Diagram of professional-growth pathway for beginning science teachers</title><desc id="d">Diagram showing a continuous professional-growth pathway for a science teacher, progressing from pre-service induction to peer collaboration, action research, and mentorship.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<rect class="panel-a" x="24" y="60" width="165" height="260" rx="8"/>
+<rect class="panel-b" x="214" y="60" width="165" height="260" rx="8"/>
+<rect class="panel-a" x="404" y="60" width="165" height="260" rx="8"/>
+<rect class="panel-b" x="594" y="60" width="165" height="260" rx="8"/>
+</g><g id="layer-edges">
+<line class="stroke" x1="189" y1="190" x2="210" y2="190" marker-end="url(#arrow)"/>
+<line class="stroke" x1="379" y1="190" x2="400" y2="190" marker-end="url(#arrow)"/>
+<line class="stroke" x1="569" y1="190" x2="590" y2="190" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="90">Phase 1</text>
+<text class="h" x="36" y="112">Pre-Service</text>
+<text class="cell" x="36" y="132">Foundation</text>
+<text class="cell" x="36" y="160">- B.Ed coursework</text>
+<text class="cell" x="36" y="185">- Nature of science</text>
+<text class="cell" x="36" y="210">- Field practicum</text>
+<text class="cell" x="36" y="235">- Microteaching</text>
+<text class="cell" x="36" y="260">- Student portfolio</text>
+
+<text class="sh" x="226" y="90">Phase 2</text>
+<text class="h" x="226" y="112">Induction</text>
+<text class="cell" x="226" y="132">Class Survival</text>
+<text class="cell" x="226" y="160">- Routine control</text>
+<text class="cell" x="226" y="185">- Syllabus mapping</text>
+<text class="cell" x="226" y="210">- Low-cost apparatus</text>
+<text class="cell" x="226" y="235">- Formative checks</text>
+<text class="cell" x="226" y="260">- Mentor coaching</text>
+
+<text class="sh" x="416" y="90">Phase 3</text>
+<text class="h" x="416" y="112">Collaboration</text>
+<text class="cell" x="416" y="132">Peer Learning</text>
+<text class="cell" x="416" y="160">- Peer observation</text>
+<text class="cell" x="416" y="185">- Joint lesson study</text>
+<text class="cell" x="416" y="210">- Teacher groups</text>
+<text class="cell" x="416" y="235">- CPD workshops</text>
+<text class="cell" x="416" y="260">- Reflective log</text>
+
+<text class="sh" x="606" y="90">Phase 4</text>
+<text class="h" x="606" y="112">Mastery</text>
+<text class="cell" x="606" y="132">Leadership</text>
+<text class="cell" x="606" y="160">- Action research</text>
+<text class="cell" x="606" y="185">- Mentoring peers</text>
+<text class="cell" x="606" y="210">- Curriculum input</text>
+<text class="cell" x="606" y="235">- STEM initiatives</text>
+<text class="cell" x="606" y="260">- Civic advocacy</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="380">Professional growth progresses from novice survival to collaborative inquiry and leadership.</text>
+</g><text class="wm" x="768" y="415" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

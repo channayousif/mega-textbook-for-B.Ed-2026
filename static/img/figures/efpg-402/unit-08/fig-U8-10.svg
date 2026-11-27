@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Timeline of historical evolution of science teaching approaches</title><desc id="d">Timeline tracing the historical evolution of science education from 19th-century rote learning to mid-20th-century laboratory exercises and 21st-century inquiry and sustainability.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-axis">
+<line class="stroke" x1="40" y1="220" x2="740" y2="220" marker-end="url(#arrow)"/>
+<circle cx="110" cy="220" r="6" class="ah"/>
+<circle cx="290" cy="220" r="6" class="ah"/>
+<circle cx="480" cy="220" r="6" class="ah"/>
+<circle cx="670" cy="220" r="6" class="ah"/>
+</g><g id="layer-regions">
+<rect class="panel-a" x="24" y="40" width="170" height="150" rx="8"/>
+<rect class="panel-b" x="204" y="250" width="170" height="150" rx="8"/>
+<rect class="panel-a" x="394" y="40" width="170" height="150" rx="8"/>
+<rect class="panel-b" x="584" y="250" width="170" height="150" rx="8"/>
+</g><g id="layer-edges">
+<line class="dash" x1="110" y1="190" x2="110" y2="220"/>
+<line class="dash" x1="290" y1="220" x2="290" y2="250"/>
+<line class="dash" x1="480" y1="190" x2="480" y2="220"/>
+<line class="dash" x1="670" y1="220" x2="670" y2="250"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="65">1890s-1920s</text>
+<text class="h" x="36" y="88">Recitation Era</text>
+<text class="cell" x="36" y="112">- Rote memorization</text>
+<text class="cell" x="36" y="132">- Static textbook facts</text>
+<text class="cell" x="36" y="152">- Latin classifications</text>
+<text class="cell" x="36" y="172">- Teacher recitation</text>
+
+<text class="sh" x="216" y="275">1950s-1970s</text>
+<text class="h" x="216" y="298">Verification Era</text>
+<text class="cell" x="216" y="322">- Recipe laboratory labs</text>
+<text class="cell" x="216" y="342">- Verifying known laws</text>
+<text class="cell" x="216" y="362">- Rigid step procedures</text>
+<text class="cell" x="216" y="382">- Elite scientist focus</text>
+
+<text class="sh" x="406" y="65">1980s-1990s</text>
+<text class="h" x="406" y="88">Inquiry Era</text>
+<text class="cell" x="406" y="112">- Science process skills</text>
+<text class="cell" x="406" y="132">- Conceptual change</text>
+<text class="cell" x="406" y="152">- Active learner inquiry</text>
+<text class="cell" x="406" y="172">- Hands-on minds-on</text>
+
+<text class="sh" x="596" y="275">2000s-Present</text>
+<text class="h" x="596" y="298">STEM &amp; ESD Era</text>
+<text class="cell" x="596" y="322">- Transdisciplinary STEM</text>
+<text class="cell" x="596" y="342">- Socio-scientific issues</text>
+<text class="cell" x="596" y="362">- Climate sustainability</text>
+<text class="cell" x="596" y="382">- Science for all citizens</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="420">Science teaching shifted from rote recitation to inquiry and sustainability.</text>
+</g><text class="wm" x="768" y="425" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

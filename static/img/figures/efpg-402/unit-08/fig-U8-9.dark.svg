@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of contemporary trends and innovations in science teaching</title><desc id="d">Table summarising five contemporary trends in science education: STEM/STEAM, inquiry-based learning, digital simulations, citizen science, and differentiated instruction.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="20" width="732" height="38" rx="6"/>
+<rect class="panel" x="24" y="58" width="732" height="58"/>
+<rect class="plain" x="24" y="116" width="732" height="58"/>
+<rect class="panel" x="24" y="174" width="732" height="58"/>
+<rect class="plain" x="24" y="232" width="732" height="58"/>
+<rect class="panel" x="24" y="290" width="732" height="58"/>
+</g><g id="layer-edges">
+<line class="grid" x1="200" y1="20" x2="200" y2="348"/>
+<line class="grid" x1="445" y1="20" x2="445" y2="348"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="44">Contemporary Trend</text>
+<text class="sh" x="212" y="44">Core Pedagogical Feature</text>
+<text class="sh" x="458" y="44">Low-Cost Classroom Application</text>
+
+<text class="sh" x="36" y="84">1. STEM &amp; STEAM</text>
+<text class="cell" x="36" y="101">Integration</text>
+<text class="cell" x="212" y="83">Transdisciplinary design solving</text>
+<text class="cell" x="212" y="100">authentic real-world problems</text>
+<text class="cell" x="458" y="83">Engineer model drip irrigation using scrap</text>
+<text class="cell" x="458" y="100">plastic bottles, saline tubes, and soil pots</text>
+
+<text class="sh" x="36" y="142">2. Inquiry &amp; 5E</text>
+<text class="cell" x="36" y="159">Instructional Model</text>
+<text class="cell" x="212" y="141">5E: Engage, explore, explain;</text>
+<text class="cell" x="212" y="158">evidence precedes definitions</text>
+<text class="cell" x="458" y="141">Pupils explore water evaporation rates from</text>
+<text class="cell" x="458" y="158">different dish surfaces before teacher lecture</text>
+
+<text class="sh" x="36" y="200">3. Simulations</text>
+<text class="cell" x="36" y="217">&amp; Phone Sensors</text>
+<text class="cell" x="212" y="199">Manipulate unobservable</text>
+<text class="cell" x="212" y="216">variables safely (PhET labs)</text>
+<text class="cell" x="458" y="199">Use teacher phone to demonstrate virtual DC</text>
+<text class="cell" x="458" y="216">circuits or measure classroom noise in dB</text>
+
+<text class="sh" x="36" y="258">4. Citizen Science</text>
+<text class="cell" x="36" y="275">Initiatives</text>
+<text class="cell" x="212" y="257">Pupils collect authentic data</text>
+<text class="cell" x="212" y="274">contributing to wider science</text>
+<text class="cell" x="458" y="257">Track seasonal arrival dates of local birds;</text>
+<text class="cell" x="458" y="274">record daily temperature and rain gauges</text>
+
+<text class="sh" x="36" y="316">5. Differentiated</text>
+<text class="cell" x="36" y="333">Science Learning</text>
+<text class="cell" x="212" y="315">Multi-sensory representations</text>
+<text class="cell" x="212" y="332">and bilingual lists for equity</text>
+<text class="cell" x="458" y="315">Provide cardboard cell models alongside</text>
+<text class="cell" x="458" y="332">bilingual Sindhi-Urdu vocabulary lists</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="385">Modern innovations prioritize problem-solving, inquiry mindsets, and inclusive multi-sensory science access.</text>
+</g><text class="wm" x="768" y="415" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
