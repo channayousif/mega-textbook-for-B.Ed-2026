@@ -3174,7 +3174,7 @@
    "id": "efpg-401",
    "locale": "ur",
    "kind": "short",
-   "state": "clips-qa",
+   "state": "qa3-pass",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -3191,6 +3191,18 @@
      "by": "claude",
      "date": "2026-11-27",
      "notes": "5/5 shots have a passing take; shot 1 take 2 (take 1 failed for a drawn REC overlay); shot 4 QG2 0.882 from whisper Urdu-script transcription, full line spoken"
+    },
+    "qa1": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG1",
+     "date": "2026-11-27",
+     "notes": "29.6 s, 1080x1920, -16.1 LUFS, peak -3.1 dBTP, no black or silent runs; nine frames, end card and thumbnail viewed: captions visible and RTL, end card shows the exact UR address. Notes for the owner: shot 1 book cover carries pseudo-Urdu lettering (no meaningful words); wall posters in shots 2-3 carry blurred pseudo-text; thumbnail badge text touches the box edge."
+    },
+    "qa3": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG3",
+     "date": "2026-11-27",
+     "notes": "list_videos: private on the channel, title and description intact, thumbnail served; playlist and thumbnail set. list_videos reports no processing status and a private Short cannot be opened without the owner sign-in, so playback is left to the owner spot-check."
     }
    },
    "clips": [
@@ -3374,9 +3386,29 @@
     {
      "state": "clips-qa",
      "at": "2026-11-26T23:30:59.441Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-27T00:21:44.525Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-27T00:21:44.657Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-27T00:22:17.897Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-27T00:22:18.040Z"
     }
    ],
-   "script_sha256": "174b861e2957d023e1851daaef9034db85d4b8f75f3f4592a5adcd3b92017931"
+   "script_sha256": "174b861e2957d023e1851daaef9034db85d4b8f75f3f4592a5adcd3b92017931",
+   "encoded_file": "/home/a2ahs/studio-media/teasers/efpg-401/ur/teaser.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/teasers/efpg-401/ur/teaser.thumb.jpg",
+   "youtube_id": "-mJSyWxcAyA",
+   "uploaded_at": "2026-11-27T00:22:17Z"
   },
   {
    "key": "gicp-400-ur",
