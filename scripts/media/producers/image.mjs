@@ -232,8 +232,9 @@ export async function fetchGflowImage(rel, filesUrl = GFLOW_FILES_URL) {
  * project is rotated after GFLOW_PROJECT_ROTATE images. GFLOW_PROJECT pins one project id instead.
  */
 export const GFLOW_PROJECT_ROTATE = 50;
-export const gflowProjectFile = () => process.env.MEGA_BOOK_GFLOW_PROJECT_FILE
-  || join(homedir(), '.cache', 'mega-book', 'gflow-project.json');
+/** `n` is '' for the first Google account and '2' for the second (Feature 036): each keeps its own project. */
+export const gflowProjectFile = (n = '') => process.env[`MEGA_BOOK_GFLOW${n}_PROJECT_FILE`]
+  || join(homedir(), '.cache', 'mega-book', `gflow-project${n}.json`);
 
 export function gflowProjectArgs(file = gflowProjectFile(), now = new Date()) {
   if (process.env.GFLOW_PROJECT) return { project: process.env.GFLOW_PROJECT };
@@ -254,12 +255,13 @@ export function recordGflowProject(projectId, file = gflowProjectFile(), now = n
   writeFileSync(file, `${JSON.stringify(next, null, 1)}\n`);
 }
 
-export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL, projectFile = gflowProjectFile() }) {
+export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL, projectFile = gflowProjectFile(),
+  name = 'gflow', profile = process.env.GFLOW_PROFILE || 'a2ahs-alpha' }) {
   let mcp;
   try {
     mcp = await mcpSession(mcpUrl);
   } catch (e) {
-    throw new UnavailableError('gflow', `gflow MCP unreachable at ${mcpUrl}: ${e.message}`);
+    throw new UnavailableError(name, `gflow MCP unreachable at ${mcpUrl}: ${e.message}`);
   }
   // No question may reach Flow's agent: gflow then waits 600 s and fails (studio-teaser skill).
   const prompt = `${brief}\nCreate this one image now. Do not ask any question.`;
@@ -270,29 +272,32 @@ export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL
       model: process.env.GFLOW_IMAGE_MODEL || 'nano2',
       aspect: aspect.startsWith('3:4') ? '3:4' : '16:9',
       count: 1,
-      profile: process.env.GFLOW_PROFILE || 'a2ahs-alpha',
+      profile,
       ui_mode: 'classic',
       wait: true,
       ...gflowProjectArgs(projectFile),
     }, 11 * 60 * 1000);
   } catch (e) {
-    if (GFLOW_QUOTA_RE.test(e.message)) throw new QuotaError('gflow', `gflow image quota reached: ${e.message}`);
-    throw new UnavailableError('gflow', `gflow call failed: ${e.message}`);
+    if (GFLOW_QUOTA_RE.test(e.message)) throw new QuotaError(name, `${name} image quota reached: ${e.message}`);
+    throw new UnavailableError(name, `${name} call failed: ${e.message}`);
   }
   const payload = gflowPayload(result);
   const files = Array.isArray(payload.files) ? payload.files : [];
   if (result?.isError || payload.status === 'failed' || Number(payload.status) >= 400 || !files.length) {
     const why = JSON.stringify(payload).slice(0, 400);
-    if (GFLOW_QUOTA_RE.test(why)) throw new QuotaError('gflow', `gflow image quota reached: ${why}`);
-    throw new Error(`gflow produced no image: ${why}`);
+    if (GFLOW_QUOTA_RE.test(why)) throw new QuotaError(name, `${name} image quota reached: ${why}`);
+    throw new Error(`${name} produced no image: ${why}`);
   }
   const bytes = await fetchGflowImage(gflowRelativePath(files[0]), filesUrl);
   // Flow saves JPEG; the pipeline stages PNG.
   const sharp = (await import('sharp')).default;
   await sharp(bytes).png().toFile(png);
   recordGflowProject(payload.flow_project_id, projectFile);
-  return { model: `${process.env.GFLOW_IMAGE_MODEL || 'nano2'} (Nano Banana via gflow)` };
+  return { model: `${process.env.GFLOW_IMAGE_MODEL || 'nano2'} (Nano Banana via ${name})` };
 }
+
+/** Nano Banana on the second Google account: the same gflow server, profile a2ahs-beta (Feature 036). */
+export const gflow2Producer = (args) => gflowProducer({ ...args, name: 'gflow2', profile: process.env.GFLOW2_PROFILE || 'a2ahs-beta', projectFile: gflowProjectFile('2') });
 
 // ------------------------------------------------------------------ codex
 
@@ -360,7 +365,7 @@ export function paced(name, fn, { pace: paceFn = pace, record = paceRecord } = {
   };
 }
 
-export const PRODUCER_FNS = { agy: paced('agy', agyProducer), agy2: paced('agy2', agy2Producer), gflow: paced('gflow', gflowProducer), codex: paced('codex', codexProducer) };
+export const PRODUCER_FNS = { agy: paced('agy', agyProducer), agy2: paced('agy2', agy2Producer), gflow: paced('gflow', gflowProducer), gflow2: paced('gflow2', gflow2Producer), codex: paced('codex', codexProducer) };
 
 /** Remove a stale staging file before a producer writes a new one. */
 export function clearStaged(png) {

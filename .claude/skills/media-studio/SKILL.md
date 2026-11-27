@@ -88,8 +88,8 @@ stops and asks the owner, never falling back (the next route could spend credits
 
 | Medium | Fallback order | Notes |
 |---|---|---|
-| image | agy, agy2 (second Google account, HOME=~/.agy2), gflow (Nano Banana), codex | `generate-illustration.mjs`; quota in `~/.cache/mega-book/image-quota.json` |
-| clip | gflow.video, manual.flow | `teaser-clips.mjs`; quota in `~/.cache/mega-book/media-quota.json` |
+| image | agy, agy2 (second Google account, HOME=~/.agy2), gflow (Nano Banana), gflow2 (Nano Banana, second account), codex | `generate-illustration.mjs`; quota in `~/.cache/mega-book/image-quota.json` |
+| clip | gflow.video, gflow2.video (second account's Flow credits), manual.flow | `teaser-clips.mjs`; quota in `~/.cache/mega-book/media-quota.json` |
 | overview | nlm | NotebookLM; expired cookies are `unavailable`; refresh from davinci's workspace Chrome: `nlm login --provider openclaw --cdp-url http://127.0.0.1:18802` |
 | schematic | codex, claude | generate-figures |
 
@@ -229,6 +229,14 @@ On davinci (user `ubuntu`, linger on; everything binds to localhost only):
 - `gflow-files` (user unit): `python3 -m http.server 18801` on that folder.
 - `workspace-chrome` (user unit): a normal Chrome profile (`~/.local/share/workspace-chrome`) on
   `:1` for NotebookLM, meta.ai and Meta Business Suite, DevTools on `127.0.0.1:9222`.
+- **Second Google account (Feature 036).** One `gflow serve` drives both Flow accounts per call:
+  profile `a2ahs-alpha` (first) and `a2ahs-beta` (second; `gflow auth login --browser chrome
+  --profile a2ahs-beta`). Each keeps its own project cache (`gflow-project2.json`,
+  `gflow-projects2.json`) and clip journal (`gflow-video-journal2.json`; CLI `journal --account 2`).
+  `workspace-chrome-2` (user unit) is the second account's NotebookLM Chrome
+  (`~/.local/share/workspace-chrome-2`, DevTools on `127.0.0.1:9223`, not tunnelled). Refresh its nlm
+  login with a one-off tunnel: `ssh -f -N -L 127.0.0.1:18803:127.0.0.1:9223 davinci`, then
+  `nlm login --profile second --provider openclaw --cdp-url http://127.0.0.1:18803`, then close the tunnel.
 
 The owner reaches the desktop from the laptop with `ssh -N -L 45901:127.0.0.1:15901
 textbook-editor` and a VNC viewer on `localhost:45901` (Windows reserves 5901 and 15901 on the

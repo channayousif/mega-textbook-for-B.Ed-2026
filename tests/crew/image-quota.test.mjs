@@ -30,7 +30,7 @@ test('a PHR alone is not work', () => {
 const tmpFile = () => join(mkdtempSync(join(tmpdir(), 'iq-')), 'sub', 'image-quota.json');
 const T0 = Date.parse('2026-11-16T12:00:00Z');
 const up = () => true;
-const down = (p) => p !== 'gflow';
+const down = (p) => !p.startsWith('gflow');
 
 test('each producer keeps its own record, which holds until its reset and then lapses', () => {
   const file = tmpFile();
@@ -64,18 +64,19 @@ test('an unknown or past reset time falls back to the producer hold (gflow quota
   assert.equal(FALLBACK_HOURS.gflow, 24);
 });
 
-test('producers are offered agy, agy2, gflow, codex; out of quota or offline ones drop out', () => {
+test('producers are offered agy, agy2, gflow, gflow2, codex; out of quota or offline ones drop out', () => {
   const file = tmpFile();
-  assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: up }), ['agy', 'agy2', 'gflow', 'codex']);
+  assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: up }), ['agy', 'agy2', 'gflow', 'gflow2', 'codex']);
   assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: down }), ['agy', 'agy2', 'codex']);
   recordImageQuota('agy', '2026-11-17T11:00:06Z', undefined, file, T0);
-  assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: up }), ['agy2', 'gflow', 'codex']);
+  recordImageQuota('gflow', null, undefined, file, T0);
+  assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: up }), ['agy2', 'gflow2', 'codex']);
   recordImageQuota('agy2', null, undefined, file, T0);
   recordImageQuota('codex', null, undefined, file, T0);
   assert.deepEqual(availableProducers({ file, nowMs: T0, reachable: down }), []);
   const six = new Date(T0 + 6 * 3600e3).toISOString();
   assert.equal(producerStatus({ file, nowMs: T0, reachable: down }),
-    `agy out until 2026-11-17T11:00:06.000Z · agy2 out until ${six} · gflow offline · codex out until ${six}`);
+    `agy out until 2026-11-17T11:00:06.000Z · agy2 out until ${six} · gflow out until ${new Date(T0 + 24 * 3600e3).toISOString()} · gflow2 offline · codex out until ${six}`);
 });
 
 test('an image-quota message is pinned on the producer it names', () => {
@@ -84,5 +85,6 @@ test('an image-quota message is pinned on the producer it names', () => {
   assert.equal(imageQuotaProducer('✗ fig-U7-5: gflow image quota reached: {"title":"RateLimitError"}'), 'gflow');
   assert.equal(imageQuotaProducer('Daily or per-minute model quota reached for nano2'), 'gflow');
   assert.equal(imageQuotaProducer('✗ fig-U7-5: codex image limit reached: usage limit'), 'codex');
+  assert.equal(imageQuotaProducer('✗ fig-U7-5: gflow2 image quota reached: {"title":"RateLimitError"}'), 'gflow2');
   assert.equal(imageQuotaProducer('✗ fig-U7-5: agy2 image quota exhausted (QUOTA_EXHAUSTED); resets at 2026-11-17T11:00:06Z'), 'agy2');
 });

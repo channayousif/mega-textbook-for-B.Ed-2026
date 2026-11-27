@@ -381,7 +381,7 @@ function mediaHoldReason(j) {
     return null;
   }
   if (load('control').media !== 'on') return 'media stages are off (crew media on)';
-  if (j.stage === 'teaser_clips' && (!gflowReachable() || activeMediaQuota('gflow.video'))) return 'hold: no clip producer (gflow offline or out of quota)';
+  if (j.stage === 'teaser_clips' && (!gflowReachable() || (activeMediaQuota('gflow.video') && activeMediaQuota('gflow2.video')))) return 'hold: no clip producer (gflow offline or both Flow accounts out of quota)';
   if (!['teaser_clips', 'media_publish'].includes(j.stage)) return null;
   const { item, sha } = teaserFacts(j.course);
   const approval = load('media').approvals[j.key ?? teaserKey(j.course)];

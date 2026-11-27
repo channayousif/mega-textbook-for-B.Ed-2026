@@ -164,3 +164,26 @@ test('agyProducerFor reads the quota log of its own account and skips an account
   const out = agyProducerFor({ name: 'agy2', bin: '/x/agy2', home, spawn: fail('') });
   assert.throws(() => out(args), (e) => e instanceof QuotaError && e.producer === 'agy2' && e.resetAt === '2026-11-29T04:00:00Z');
 });
+
+test('each Google account keeps its own Flow project, clip journal and pacing channel (Feature 036)', async () => {
+  const { gflowProjectFile } = await import('../../scripts/media/producers/image.mjs');
+  const { projectsFile, journalFile } = await import('../../scripts/media/producers/gflow-video.mjs');
+  const { IMAGE_CHANNEL, DEFAULTS } = await import('../../scripts/media/pacing.mjs');
+  assert.notEqual(gflowProjectFile(), gflowProjectFile('2'));
+  assert.match(gflowProjectFile('2'), /gflow-project2\.json$/);
+  assert.match(projectsFile('2'), /gflow-projects2\.json$/);
+  assert.match(journalFile('2'), /gflow-video-journal2\.json$/);
+  assert.notEqual(journalFile(), journalFile('2'));
+  assert.equal(IMAGE_CHANNEL.gflow2, 'gflow2.image');
+  for (const ch of ['gflow2.image', 'gflow2.video', 'nlm2.studio']) assert.ok(DEFAULTS.channels[ch], ch);
+});
+
+test('a studio job on notebook2 uses the second NotebookLM account and its own pacing channel', async () => {
+  const { nlmAccount, mediaTask } = await import('../../scripts/crew/media.mjs');
+  assert.deepEqual(nlmAccount('notebook'), { profile: 'default', channel: 'nlm.studio', note: '' });
+  assert.equal(nlmAccount('notebook2').profile, 'second');
+  const brief = mediaTask({ stage: 'studio_media', course: 'EFMP-301', unit: 5, lane: 'notebook2' });
+  assert.match(brief, /--profile second/);
+  assert.match(brief, /pacing\.mjs check nlm2\.studio/);
+  assert.doesNotMatch(mediaTask({ stage: 'studio_media', course: 'EFMP-301', unit: 5, lane: 'notebook' }), /--profile second/);
+});

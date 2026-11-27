@@ -13,19 +13,21 @@
  */
 
 /** Lanes, one running job each. `meta` is reserved for the Meta AI producer (specs/033). */
-export const LANES = ['notebook', 'flow', 'agy', 'agy2', 'codex', 'meta', 'youtube', 'social'];
+export const LANES = ['notebook', 'notebook2', 'flow', 'flow2', 'agy', 'agy2', 'codex', 'meta', 'youtube', 'social'];
 
 /** Image lanes, in the producer order of ADR-0029 (owner ruling 2026-11-18), and the
  * generate-illustration.mjs `--producer` name of each. */
-export const IMAGE_LANES = ['agy', 'agy2', 'flow', 'codex'];
-export const LANE_PRODUCER = { agy: 'agy', agy2: 'agy2', flow: 'gflow', codex: 'codex' };
+export const IMAGE_LANES = ['agy', 'agy2', 'flow', 'flow2', 'codex'];
+export const LANE_PRODUCER = { agy: 'agy', agy2: 'agy2', flow: 'gflow', flow2: 'gflow2', codex: 'codex' };
+/** The nlm profile a notebook lane uses (Feature 036): `notebook2` is the second Google account. */
+export const LANE_NLM_PROFILE = { notebook: 'default', notebook2: 'second' };
 
 /** Which lanes can run a stage; null for text and local stages (they use the text slots). */
 export function stageLanes(stage) {
   switch (stage) {
     case 'illustrate': return IMAGE_LANES;
     case 'teaser_clips': return ['flow'];
-    case 'studio_media': case 'audio_overview': return ['notebook'];
+    case 'studio_media': case 'audio_overview': return ['notebook', 'notebook2'];
     case 'media_assemble': case 'media_publish': case 'studio_publish': return ['youtube'];
     case 'social_roundup': return ['social'];
     default: return null;
@@ -42,12 +44,15 @@ export const laneOf = (j) => j.lane ?? stageLanes(j.stage)?.[0] ?? null;
  */
 export function laneChannels(stage, lane) {
   if (stage === 'media_publish' || stage === 'studio_publish') return [];
-  if (lane === 'flow') return [stage === 'teaser_clips' ? 'gflow.video' : 'gflow.image'];
+  // Clips try the first account, then the second (producers/index.mjs REGISTRY.clip): either has room.
+  if (lane === 'flow') return stage === 'teaser_clips' ? ['gflow.video', 'gflow2.video'] : ['gflow.image'];
+  if (lane === 'flow2') return ['gflow2.image'];
   if (lane === 'agy') return ['agy.image'];
   if (lane === 'agy2') return ['agy2.image'];
   if (lane === 'codex') return ['codex.image'];
   // A studio job either makes NotebookLM artifacts or uploads finished ones, so either counts.
   if (lane === 'notebook') return ['nlm.studio', 'youtube.upload'];
+  if (lane === 'notebook2') return ['nlm2.studio', 'youtube.upload'];
   if (lane === 'youtube') return ['youtube.upload'];
   if (lane === 'social') return ['social.facebook', 'social.instagram', 'social.linkedin'];
   return [];

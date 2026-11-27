@@ -119,6 +119,8 @@ const before = (state, edge) => STUDIO_STATES.indexOf(state) < STUDIO_STATES.ind
 export const studioKey = (course, unit) => `${course.toUpperCase()}#${Number(unit)}`;
 /** Units whose private items may wait for the owner's spot-check before no new unit is planned. */
 export const MAX_AWAITING_WATCH = 2;
+/** Units in progress at once: one per NotebookLM account (notebook, notebook2; Feature 036). */
+export const STUDIO_IN_PROGRESS = 2;
 
 /**
  * What the Study Studio needs next (owner, 2026-11-25: the crew plans, schedules and manages it).
@@ -145,10 +147,11 @@ export function studioNeeds(units, { candidates = [], approvals = {} } = {}) {
       jobs.push({ course: u.course, unit: u.unit, stage: 'studio_publish' });
     }
   }
-  // Plan a new unit only when no unit is mid-way and few wait for the owner, so NotebookLM and
-  // YouTube budgets finish units instead of starting many, and the owner's watch list stays short.
-  const working = jobs.some((j) => j.stage === 'studio_media');
-  if (!working && owner.watch.length < MAX_AWAITING_WATCH) {
+  // Plan a new unit only while fewer units are mid-way than there are NotebookLM accounts (one per
+  // notebook lane, Feature 036) and few wait for the owner, so budgets finish units instead of
+  // starting many, and the owner's watch list stays short.
+  const working = jobs.filter((j) => j.stage === 'studio_media').length;
+  if (working < STUDIO_IN_PROGRESS && owner.watch.length < MAX_AWAITING_WATCH) {
     const have = new Set(units.map((u) => studioKey(u.course, u.unit)));
     const next = candidates.find((c) => !have.has(studioKey(c.course, c.unit)));
     if (next) jobs.push({ course: next.course, unit: next.unit, stage: 'studio_media', plan: true });
@@ -305,16 +308,30 @@ export function mediaTask(j) {
 
 const L = 'node scripts/notebook-studio/media-ledger.mjs';
 /** NotebookLM artifact creation goes through MCP too, so the agent paces it like uploads. */
-export const PACE_NLM = 'Before every NotebookLM `studio_create` run `node scripts/media/pacing.mjs check nlm.studio`: on `hold`, create nothing more, print one CREW-HANDOFF line with the next allowed time and stop. Right after each successful creation run `node scripts/media/pacing.mjs record nlm.studio`.';
+export const paceNlm = (channel = 'nlm.studio') => `Before every NotebookLM \`studio_create\` run \`node scripts/media/pacing.mjs check ${channel}\`: on \`hold\`, create nothing more, print one CREW-HANDOFF line with the next allowed time and stop. Right after each successful creation run \`node scripts/media/pacing.mjs record ${channel}\`.`;
+export const PACE_NLM = paceNlm();
+
+/**
+ * The NotebookLM account a studio job uses, from its lane (Feature 036): `notebook` is the first
+ * Google account (nlm profile `default`), `notebook2` the second (profile `second`, channel nlm2.studio).
+ */
+export function nlmAccount(lane) {
+  if (lane !== 'notebook2') return { profile: 'default', channel: 'nlm.studio', note: '' };
+  return {
+    profile: 'second', channel: 'nlm2.studio',
+    note: 'This job holds the SECOND NotebookLM account (lane notebook2): pass `--profile second` to every `nlm` command, and if you use the NotebookLM MCP tools, first call `profile` with action `switch` and name `second` (never `make_default`). Create the notebook in that account; never use the default profile in this job. ',
+  };
+}
 
 function studioTask(j) {
   const c = j.course, u = j.unit, pad = String(u).padStart(2, '0');
+  const acct = nlmAccount(j.lane);
   const plan = j.plan
     ? `This unit has no Study Studio ledger yet: plan it first (studio-media skill, step 1) with the owner-approved LEAN recipe (\`specs/029-notebook-studio/rollout.md\`, 2026-11-27). For every topic of the unit, plan one audio brief (part 1) in English with \`${L} plan ${c} ${u} --json '...'\` (prompt \`specs/studio/prompts/audio.md\`, a title and alt text from the topic itself), and the same in Urdu when the topic's Urdu mirror exists. Plan ONE video per language for the whole unit, recorded on topic 1 (prompt \`specs/studio/prompts/video-unit.md\`, titled as the unit overview, with the whole unit as its source pack); Urdu only when every topic of the unit has its Urdu mirror. Plan no per-topic videos and no "go deeper" parts unless the owner names this unit for the full recipe. For every topic also plan one English mind map (kind \`mindmap\`, prompt \`specs/studio/prompts/mindmap.md\`), and plan ONE study guide per language for the whole unit on topic 1 (kind \`studyguide\`, prompt \`specs/studio/prompts/study-guide.md\`; Urdu only when every topic has its Urdu mirror). Build the source pack and the notebook as the skill says. `
     : '';
   const rejects = Object.entries(j.rejects ?? {}).map(([k, r]) => `${k}: "${r.note}"`);
   const redo = rejects.length ? `The owner asked for these items to be remade: ${rejects.join('; ')}. Block each with \`${L} block ${c} ${u} <key> "<the owner's words>"\`, regenerate it with a prompt that answers the note, then unblock it and carry it through the steps again. ` : '';
-  return `Run the Study Studio of ${c} Unit ${u} (studio-media skill): audio, video, mind maps and study guides. ${plan}${redo}Read \`${L} status ${c} ${u}\` and carry every audio and video item that is not blocked from its current state up to \`qa3-pass\`: generate, download, QG1, encode, QG2 (your own transcript check against the topic text), upload PRIVATE, QG3. Mind maps and study guides take the short path \`planned\` -> \`generated\` -> \`downloaded\` -> \`qa2-pass\` -> \`placed\` and are never uploaded: create them with NotebookLM (\`nlm mindmap create <notebook> --title "<topic title>"\`; \`nlm report create <notebook> --format 'Study Guide'\` in English, \`--format 'Create Your Own' --prompt "<study-guide prompt + Urdu register suffix>"\` in Urdu), download them under ~/studio-media/${c.toLowerCase()}/unit-${pad}/, and for QG2 check every node or section against the topic text. For a mind map write \`specs/studio/${c.toLowerCase()}/unit-${pad}-topic-NN-mindmap-labels.json\` (\`en_fix\` for corrected labels, \`ur\` with an Urdu label for every node, \`ur_title\`). At \`qa2-pass\` run \`node scripts/notebook-studio/place-media.mjs ${c.toLowerCase()} ${u}\`, which cleans each study guide of answer and rubric sections, writes the files under \`static/studio/\`, adds the manifest rows and advances them to \`placed\`; then run \`node scripts/check-studio-manifest.mjs\`. Never edit the ledger by hand; every change goes through \`${L} advance\`. ${PACE_NLM} ${PACE_UPLOAD} A hold is normal: commit what you advanced and stop with the CREW-HANDOFF line; the crew resumes in the next media hours. When every audio and video item is at \`qa3-pass\` (and every mind map and study guide \`placed\`), run \`${L} sheet ${c} ${u}\` and print one CREW-HANDOFF line with the private links the owner should watch and "reply \`crew approve-studio ${c} ${u}\`". If \`nlm\` reports expired cookies, stop and print one CREW-HANDOFF line asking the owner to run \`nlm login\`; commit nothing else. Commit \`specs/studio/${c.toLowerCase()}/media-unit-${pad}.json\`, any placed mind map and study guide files, their labels files and manifest rows, with your PHR. ${NEVER_PUBLIC}`;
+  return `Run the Study Studio of ${c} Unit ${u} (studio-media skill): audio, video, mind maps and study guides. ${acct.note}${plan}${redo}Read \`${L} status ${c} ${u}\` and carry every audio and video item that is not blocked from its current state up to \`qa3-pass\`: generate, download, QG1, encode, QG2 (your own transcript check against the topic text), upload PRIVATE, QG3. Mind maps and study guides take the short path \`planned\` -> \`generated\` -> \`downloaded\` -> \`qa2-pass\` -> \`placed\` and are never uploaded: create them with NotebookLM (\`nlm mindmap create <notebook> --title "<topic title>"\`; \`nlm report create <notebook> --format 'Study Guide'\` in English, \`--format 'Create Your Own' --prompt "<study-guide prompt + Urdu register suffix>"\` in Urdu), download them under ~/studio-media/${c.toLowerCase()}/unit-${pad}/, and for QG2 check every node or section against the topic text. For a mind map write \`specs/studio/${c.toLowerCase()}/unit-${pad}-topic-NN-mindmap-labels.json\` (\`en_fix\` for corrected labels, \`ur\` with an Urdu label for every node, \`ur_title\`). At \`qa2-pass\` run \`node scripts/notebook-studio/place-media.mjs ${c.toLowerCase()} ${u}\`, which cleans each study guide of answer and rubric sections, writes the files under \`static/studio/\`, adds the manifest rows and advances them to \`placed\`; then run \`node scripts/check-studio-manifest.mjs\`. Never edit the ledger by hand; every change goes through \`${L} advance\`. ${paceNlm(acct.channel)} ${PACE_UPLOAD} A hold is normal: commit what you advanced and stop with the CREW-HANDOFF line; the crew resumes in the next media hours. When every audio and video item is at \`qa3-pass\` (and every mind map and study guide \`placed\`), run \`${L} sheet ${c} ${u}\` and print one CREW-HANDOFF line with the private links the owner should watch and "reply \`crew approve-studio ${c} ${u}\`". If \`nlm\` reports expired cookies, stop and print one CREW-HANDOFF line asking the owner to run \`nlm login${acct.profile === 'second' ? ' --profile second' : ''}\`; commit nothing else. Commit \`specs/studio/${c.toLowerCase()}/media-unit-${pad}.json\`, any placed mind map and study guide files, their labels files and manifest rows, with your PHR. ${NEVER_PUBLIC}`;
 }
 
 function studioPublishTask(j) {
