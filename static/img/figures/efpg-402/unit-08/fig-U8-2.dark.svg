@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of community issues in Pakistan and science teacher actions</title><desc id="d">Table of four major community issues in Pakistan with science concepts and concrete classroom and community actions led by the science teacher.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="68"/>
+<rect class="plain" x="24" y="132" width="732" height="68"/>
+<rect class="panel" x="24" y="200" width="732" height="68"/>
+<rect class="plain" x="24" y="268" width="732" height="68"/>
+</g><g id="layer-edges">
+<line class="grid" x1="205" y1="24" x2="205" y2="336"/>
+<line class="grid" x1="440" y1="24" x2="440" y2="336"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Community Issue</text>
+<text class="sh" x="218" y="49">Underlying Science Concept</text>
+<text class="sh" x="452" y="49">Teacher-Led Community Action</text>
+
+<text class="sh" x="36" y="94">Waterborne Illness</text>
+<text class="cell" x="36" y="112">(Diarrhea, Typhoid)</text>
+<text class="cell" x="218" y="93">Microbial pathogens, physical</text>
+<text class="cell" x="218" y="110">filtration, boiling disinfection</text>
+<text class="cell" x="452" y="93">Class water testing; low-cost sand filters;</text>
+<text class="cell" x="452" y="110">pamphlets on the 1-minute boiling rule</text>
+
+<text class="sh" x="36" y="162">Dengue and Malaria</text>
+<text class="cell" x="36" y="180">(Post-monsoon season)</text>
+<text class="cell" x="218" y="161">Vector ecology, mosquito life</text>
+<text class="cell" x="218" y="178">cycle (eggs, larvae, pupae)</text>
+<text class="cell" x="452" y="161">Pupil audit of standing water; covering water</text>
+<text class="cell" x="452" y="178">pots; safe biological vector prevention</text>
+
+<text class="sh" x="36" y="230">Soil Salinity</text>
+<text class="cell" x="36" y="248">(Agricultural land)</text>
+<text class="cell" x="218" y="229">Capillary action, salt accumulation,</text>
+<text class="cell" x="218" y="246">osmosis in plant root cells</text>
+<text class="cell" x="452" y="229">Testing soil pH and salinity; promoting</text>
+<text class="cell" x="452" y="246">salt-tolerant crops and native shade trees</text>
+
+<text class="sh" x="36" y="298">Open Waste Burning</text>
+<text class="cell" x="36" y="316">(Smoke and smog)</text>
+<text class="cell" x="218" y="297">Incomplete combustion, toxic</text>
+<text class="cell" x="218" y="314">particulate matter (PM2.5)</text>
+<text class="cell" x="452" y="297">School composting pits for organic matter;</text>
+<text class="cell" x="452" y="314">campaigns against burning scrap plastic</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="375">Connecting elementary science concepts to direct civic action on authentic Pakistani community challenges.</text>
+</g><text class="wm" x="768" y="405" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

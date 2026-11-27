@@ -15,6 +15,7 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | 5 | Lesson Planning and Teaching Skills | ✓ | ☐ | ▣ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; Urdu mirror drafted; G3 and G5 open |
 | 6 | Maintenance and Organization of Science Laboratory | ✓ | ☐ | ▣ | ☐ | placed | English authored 2026-11-27; twelve schematic SVGs placed; Urdu mirror drafted; G3 and G5 open |
 | 7 | Assessment and Evaluation in Science | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; banner fig-U7-11 prompt-only; G3 and Urdu remain open |
+| 8 | Professional Growth and Contemporary Issues | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; G3 and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -66,3 +67,9 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 7 | G6 assets | ▣ | | Ten schematic SVGs (fig-U7-1 to fig-U7-10) placed with derived dark twins; Urdu .ur.svg labels pending the Urdu mirror job; banner fig-U7-11 prompt-only for the illustrate job |
 | Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-08/G2/20261127T140937795Z-gates.json |
+| Unit 8 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 8 | G4 ur-translation | ▢ | | Urdu mirror is a separate job |
+| Unit 8 | G5 ur-review | ▢ | | Awaiting translation and independent review |
+| Unit 8 | G6 assets | ▣ | | Ten schematic SVGs (fig-U8-1 to fig-U8-10) placed with derived dark twins; Urdu .ur.svg labels pending the Urdu mirror job |
+| Unit 8 | G7 publish | ▢ | | No publication or deployment performed by this job |
