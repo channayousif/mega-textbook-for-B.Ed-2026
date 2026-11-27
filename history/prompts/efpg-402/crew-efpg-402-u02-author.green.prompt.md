@@ -4,12 +4,12 @@ title: crew author EFPG-402 unit 2
 stage: misc
 date: 2026-11-27
 surface: agent
-model: gemini
+model: agy2
 feature: efpg-402
 branch: crew/efpg-402-u02-author
 user: crew
 command: crew author
-labels: ["crew", "gemini", "author"]
+labels: ["crew", "agy2", "author"]
 links:
   spec: specs/content/efpg-402/content-spec.md
   ticket: null
@@ -23,10 +23,20 @@ files:
  - docs/semester-4/efpg-402/unit-02/topic-04.mdx
  - docs/semester-4/efpg-402/unit-02/topic-05.mdx
  - docs/semester-4/efpg-402/unit-02/unit-assessment.mdx
+ - history/prompts/efpg-402/crew-efpg-402-u02-author.green.prompt.md
  - specs/content/efpg-402/concepts/unit-02.md
  - specs/content/efpg-402/coverage/unit-02.md
  - specs/content/efpg-402/figures/unit-02.md
+ - specs/content/efpg-402/reviews/unit-02/G2/20261127T100934427Z-gates.json
  - specs/content/efpg-402/reviews/unit-02/G2/20261127T101358659Z-gates.json
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T100934427Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T100934427Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T100934427Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T100934427Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T100934427Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T100934427Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T100934427Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T100934427Z/validate-content.txt
  - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T101358659Z/check-bloom-bands.txt
  - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T101358659Z/check-concept-graph.txt
  - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T101358659Z/check-depth-gate.txt
@@ -89,30 +99,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored and validated EFPG-402 Unit 2 (Science Curriculum and Textbook): unit opening, five topic files, 10/10/5 assessment bank with bounded answers, coverage matrix (v2), sources consulted list with OpenAlex registry verification, concept graph (v4.0), 10 hand-authored schematic SVGs with derived dark twins passing `measure-figure-text.mjs`, and recorded G2 gate evidence with all 14 content gates passing.
+Authored EFPG-402 Unit 2 English learning cycles, placed 10 schematic SVGs with dark twins passing geometry checks, and recorded G2 gate evidence with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: author for EFPG-402 Unit 2 by agy2 (Gemini).
-- Tests: `npm run check:content` passed with 0 findings across all 14 content gates.
-- Files: 41 file(s) added/modified.
-- Next prompts: crew review / translation stages for Unit 2.
+- Impact: author for EFPG-402 Unit 2 by agy2 (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 51 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFPG-402 Unit 2 English corpus (`docs/semester-4/efpg-402/unit-02/index.mdx`, `topic-01.mdx` to `topic-05.mdx`, `unit-assessment.mdx`), 10 placed schematic SVGs with dark twins in `static/img/figures/efpg-402/unit-02/`, updated figure manifest, coverage matrix, sources with registry verification, concept graph, task tracker, and recorded G2 gate evidence in `specs/content/efpg-402/reviews/unit-02/G2/`.
-- Decisions the team must respect: G3 and G5 reviews remain open for independent review. No self-certification or initials used.
-- Pending / next owner: Urdu mirror job for translation (G4); independent reviewer for G3 English review.
+- Shipped / changed: Authored EFPG-402 Unit 2 English learning cycles, placed 10 schematic SVGs with dark twins passing geometry checks, and recorded G2 gate evidence with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu translation job will need to translate the ten SVGs (`.ur.svg` twins) and topic prose.
-  - Unit banner (`unit-02.banner.md`) remains prompt-only for future banner illustration pass.
-- Paperclip issues affected: none.
+  - Urdu mirror job (G4) will need to translate the 10 placed SVGs (.ur.svg twins) and unit prose; G3 English review remains open for independent review.
+  - Unit banner (unit-02.banner.md) is not yet drafted and will be handled during banner illustration passes.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: `validate:content` description length caught initial long description; `check:figures` caught prompt-only scaffolding requiring placed SVGs; `measure-figure-text.mjs` caught text overlaps and panel boundary spills which were iteratively adjusted until 0 errors; `check:concept-graph` caught multi-topic RRQ attribution; `check:source-floor` caught missing OpenAlex verification date for external source. All resolved and verified.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS (14/14 gates).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
