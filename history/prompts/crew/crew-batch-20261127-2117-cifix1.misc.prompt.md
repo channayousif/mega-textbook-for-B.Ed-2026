@@ -1,28 +1,147 @@
 ---
 id: crew-batch-20261127-2117-cifix1
-title: crew fix EFMP-303 unit 3 figure geometry
+title: crew fix CREW unit 0
 stage: misc
-date: 2026-11-28
+date: 2026-11-27
 surface: agent
 model: claude_crew
-feature: efmp-303
+feature: crew
 branch: crew/batch-20261127-2117
 user: crew
 command: crew fix
 labels: ["crew", "claude_crew", "fix"]
 links:
-  spec: specs/content/efmp-303/content-spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/947
+  pr: null
 files:
- - static/img/figures/efmp-303/unit-03/fig-U3-4.ur.svg
- - static/img/figures/efmp-303/unit-03/fig-U3-4.ur.dark.svg
+ - docs/semester-4/efpg-402/unit-02/index.mdx
+ - docs/semester-4/efpg-402/unit-02/topic-01.mdx
+ - docs/semester-4/efpg-402/unit-02/topic-02.mdx
+ - docs/semester-4/efpg-402/unit-02/topic-03.mdx
+ - docs/semester-4/efpg-402/unit-02/topic-04.mdx
+ - docs/semester-4/efpg-402/unit-02/topic-05.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-01.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-02.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-03.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-04.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-05.mdx
+ - docs/semester-4/efpg-402/unit-05/topic-01.mdx
+ - docs/semester-4/efpg-402/unit-05/topic-02.mdx
+ - docs/semester-4/efpg-402/unit-05/topic-03.mdx
+ - docs/semester-4/efpg-402/unit-05/topic-04.mdx
+ - docs/semester-4/efpg-402/unit-05/topic-05.mdx
+ - history/prompts/029-notebook-studio/crew-guhq-301-u00-teaser_script.green.prompt.md
+ - history/prompts/032-textbook-visuals/20261307-efmp-303-u03-refresh-figures.green.prompt.md
  - history/prompts/crew/crew-batch-20261127-2117-cifix1.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u03-refresh_figures.misc.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u02-illustrate.misc.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u04-plan_illustrations.misc.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u05-plan_illustrations.misc.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u07-review_en.misc.prompt.md
+ - history/prompts/guhq-301/crew-guhq-301-u00-teaser_script.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-02/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-02/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-02/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-02/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-02/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-02/topic-05.mdx
+ - specs/content/efmp-303/reviews/unit-03/G2/20261127T203951987Z-gates.json
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261127T203951987Z/check-bloom-bands.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261127T203951987Z/check-concept-graph.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261127T203951987Z/check-depth-gate.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261127T203951987Z/check-docs-sync.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261127T203951987Z/check-figures.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261127T203951987Z/check-no-answer-keys.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261127T203951987Z/check-no-em-dash.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261127T203951987Z/validate-content.txt
+ - specs/content/efmp-303/tasks.md
+ - specs/content/efpg-402/figures/unit-02.banner.md
+ - specs/content/efpg-402/figures/unit-02.md
+ - specs/content/efpg-402/figures/unit-04.banner.md
+ - specs/content/efpg-402/figures/unit-04.md
+ - specs/content/efpg-402/figures/unit-05.banner.md
+ - specs/content/efpg-402/figures/unit-05.md
+ - specs/content/efpg-402/reviews/unit-02/G2/20261127T210428728Z-gates.json
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T210428728Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T210428728Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T210428728Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T210428728Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T210428728Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T210428728Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T210428728Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-02/G2/logs-20261127T210428728Z/validate-content.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/20261127T200729357Z-gates.json
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T200729357Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T200729357Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T200729357Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T200729357Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T200729357Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T200729357Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T200729357Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T200729357Z/validate-content.txt
+ - specs/content/efpg-402/reviews/unit-05/G2/20261127T204926798Z-gates.json
+ - specs/content/efpg-402/reviews/unit-05/G2/logs-20261127T204926798Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-05/G2/logs-20261127T204926798Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-05/G2/logs-20261127T204926798Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-05/G2/logs-20261127T204926798Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-05/G2/logs-20261127T204926798Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-05/G2/logs-20261127T204926798Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-05/G2/logs-20261127T204926798Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-05/G2/logs-20261127T204926798Z/validate-content.txt
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/advisory-tracker-row.md
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/assessment-solutions.md
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89.json
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/limitations.md
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/build-content-status.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/check-content.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/check:depth-gate.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/check:docs-sync.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/check:figures.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/check:no-answer-keys.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/check:no-em-dash.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/measure-figure-text.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/render-review.txt
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/validate:content.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/manifest.json
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/source-checks/ncp-science-2022-assessment-search.txt
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/summary.md
+ - specs/content/efpg-402/tasks.md
+ - specs/studio/teasers/guhq-301.json
+ - specs/studio/teasers/media-teasers.json
+ - static/img/figures/efmp-303/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-1.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-1.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-1.ur.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-2.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-2.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-2.ur.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-3.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-3.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-3.ur.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-4.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-4.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-4.ur.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-5.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-5.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-5.ur.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-6.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-6.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-6.ur.svg
+ - static/img/figures/efpg-402/unit-02/fig-U2-11.webp
+ - static/img/figures/efpg-402/unit-02/fig-U2-12.webp
+ - static/img/figures/efpg-402/unit-02/fig-U2-13.webp
+ - static/img/figures/efpg-402/unit-02/fig-U2-14.webp
+ - static/img/figures/efpg-402/unit-02/fig-U2-15.webp
+ - static/img/figures/efpg-402/unit-02/fig-U2-16.webp
 tests:
- - npm run check:content (14/14 gates PASS)
- - node scripts/measure-figure-text.mjs --ci-fonts --changed 8a962478456e763a24f6cccfbc7961d0651300ae (0 problems)
- - npm run figures:variants:check (OK, 1971 figures)
+ - npm run check:content
 ---
 
 ## Prompt
@@ -57,31 +176,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261127-1517-cifix1, fix, claude_crew) CI's figure-geometry job must re-run on PR #936 to confirm; the local `--ci-fonts --changed 956c4ba...` run is the same measurement and exits 0.
 - (batch-20261127-1517-cifix1, fix, claude_crew) Keep these wrapped two-line forms; restoring the single-line labels reintroduces the DejaVu overlaps. `fig-U4-10.ur.svg` row 2 now has three lines in the right column where the other rows have two (the 68px row fits it).
 
+
 ## Response snapshot
 
-Read `gh pr checks 947` and the failed figure-geometry run 46069466396. `measure-figure-text.mjs --changed 8a962478...` failed on two files: `static/img/figures/efmp-303/unit-03/fig-U3-4.ur.svg` and its dark twin, because the Urdu row-header label `‫مائکرو منصوبہ بندی‬` (Micro planning) is 134px wide in the CI fallback face (DejaVu Sans) but its `قسم` column is only 130px, so it started 2px left of the panel and the holder logic attributed it to the neighbouring `دائرہ` panel, reporting a 132px spill.
-
-Fix: wrapped the label into two lines (`مائکرو` at y=137, `منصوبہ بندی` at y=163, matching the two-line cells in the same row), then regenerated the derived dark variant with `npm run figures:variants`. No English unit file, manifest, sources, coverage or concepts changed, so no G2 evidence refresh was required (the `.ur.svg` assets are not in the G3 input manifest).
+Wrapped the EFMP-303 Unit 3 Urdu «مائکرو منصوبہ بندی» table header onto two lines (and regenerated its dark variant) to clear the PR #947 figure-geometry failure, with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: the figure-geometry job's two failures are cleared; the Urdu table header now sits inside its column.
-- Tests: all 14 content gates PASS; the full `--ci-fonts --changed 8a962478...` measurement reports 0 problems; `figures:variants:check` OK.
-- Files: the Urdu light and dark figure SVGs, plus this PHR.
-- Next prompts: CI figure-geometry must re-run and confirm on PR #947.
-- Reflection: the holder rule assigns a centred label to the panel containing its left edge, so a label a few px wider than its column is reported as a large spill against the wrong neighbour. Wrapping is the established remedy.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 124 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: wrapped the EFMP-303 Unit 3 Urdu `مائکرو منصوبہ بندی` row header onto two lines in `fig-U3-4.ur.svg` and regenerated `fig-U3-4.ur.dark.svg`.
-- Decisions the team must respect: no G3/G5 status, reviewer registry, signed evidence, publication state or figure manifest changed. No push and no PR opened. Zero em dashes.
-- Pending / next owner: CI figure-geometry on PR #947.
-- Notes for the next job on this unit: keep the two-line form; restoring the single-line label reintroduces the 132px DejaVu spill. The `قسم` column is 130px wide, the narrowest in the Urdu table.
-- Paperclip issues affected: PR #947; crew job batch-20261127-2117-cifix1.
+- Shipped / changed: Wrapped the EFMP-303 Unit 3 Urdu «مائکرو منصوبہ بندی» table header onto two lines (and regenerated its dark variant) to clear the PR #947 figure-geometry failure, with all 14 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - CI's figure-geometry job must re-run and confirm on PR #947; the local `--ci-fonts --changed 8a962478...` run is the same measurement and exits 0.
+  - Keep the two-line form; restoring the single-line label reintroduces the 132px DejaVu spill. The `قسم` column is 130px wide, the narrowest in the Urdu table.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a centred Urdu label 4px wider than its 130px column starts 2px into the neighbouring panel, so the holder rule reports a 132px spill against the wrong panel; local measurement with Noto Nastaliq installed does not reproduce CI, so `--ci-fonts` is required.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14); measure-figure-text --ci-fonts --changed PASS (0 problems); figures:variants:check PASS.
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): teach the holder rule to prefer the panel containing the text's centre, so a centred label is measured against its own column.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
