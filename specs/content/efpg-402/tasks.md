@@ -18,7 +18,7 @@ English-only authoring from the approved Unit 1 content-spec subsection. No publ
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-01/G2/20261127T062540795Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-01/G2/20261127T101250536Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 1 | G4 ur-translation | ▢ | | Complete seven-file draft Urdu mirror and ten localized SVG pairs (with derived dark twins) prepared from English c6bbab221; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-01/handoff.md |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
