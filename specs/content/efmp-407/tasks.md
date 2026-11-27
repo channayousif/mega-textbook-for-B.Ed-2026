@@ -5,34 +5,34 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261110T020358345Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-01/G2/20261127T223209988Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F8 and missing render/provenance evidence: [report](reviews/unit-01/G3/20261107-codex.json). No certification. |
 | Unit 1 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U1-7 remains prompt-only |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-02/G2/20261107T151215073Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-02/G2/20261127T223210275Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Advisory escalation by agent:agy; report at specs/content/efmp-407/reviews/unit-02/G3/fa119959-1e9c-4a6e-a37c-5c0336b92ab6.json; authority, sources, coverage, assessment, readability and pedagogy pass; visual render uninspected (brief prohibits build/server/browser); G3 remains open and unsigned |
 | Unit 2 | G4 ur-translation | ▢ | | Separate Urdu job; retain draft front matter until accepted translation. |
 | Unit 2 | G5 ur-review | ▢ | | Pending English review and Urdu translation; authored concept labels need register review. |
 | Unit 2 | G6 assets | ▣ | | Six English SVG schematics placed with derived dark variants; browser geometry check barred by crew brief and pending CI; Urdu and banner remain separate jobs. |
 | Unit 2 | G7 publish | ▢ | | Publication and catalog integration are outside this authoring job. |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-03/G2/20261123T034841126Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-03/G2/20261127T223210699Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. Source support, conflicting category guidance, readability and pedagogy require repairs; render/provenance incomplete. [Report](reviews/unit-03/G3/20261107-codex.json). No certification. |
 | Unit 3 | G4 ur-translation | ▣ | agent:opencode | Five Urdu pages and six RTL schematic variants with derived dark twins prepared from English acf1104dfa; draft pending independent G5 and CI render/A4 inspection. [Translation handoff](translation/unit-03.md). No completion or review certification claimed. |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 3 | G6 assets | ▣ | | Six EN schematic SVGs placed with derived dark variants; banner remains prompt-only. Browser geometry check pending under crew prohibition |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-04/G2/20261107T200113556Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-04/G2/20261127T223211050Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | agent:agy | Advisory escalation only; G3 remains open. Findings F1-F4 and missing render/provenance evidence: [report](reviews/unit-04/G3/5c3f21c1-e47f-42d8-9764-e1974cb4dcdb.json). No certification. |
 | Unit 4 | G4 ur-translation | ▣ | agent:codex | Six Urdu pages and six RTL schematic variants with derived dark twins prepared; draft pending independent G5 and permitted render/geometry inspection. [Translation handoff](translation/unit-04.md). No completion or review certification claimed. |
 | Unit 4 | G5 ur-review | ▢ | | Pending independent English review and Urdu translation. |
 | Unit 4 | G6 assets | ▣ | agent:codex | Six English schematics placed with derived dark twins. Browser text-geometry measurement deferred to CI because crew prohibits Playwright. Banner remains prompt-only for illustration job; Urdu assets pending. |
 | Unit 4 | G7 publish | ▢ | | No publication, push or PR requested in this job. |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-06/G2/20261108T144356015Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-06/G2/20261127T223211989Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | agent:agy | Advisory escalation only; G3 remains open. Findings F1-F4 and missing render/provenance evidence: [report](reviews/unit-06/G3/ebbc1750-23d0-4383-b305-07c7fb09db2a.json). No certification. |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U6-7 remains prompt-only |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261110T022251179Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-05/G2/20261127T223211491Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 5 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory: revise; F1 blocking - IUCN Pakistan 2004 citation URL resolves to an unrelated Tanzania report and the glacier-grafting claim is not in the bound excerpt; F2 uncertain - two per-topic retrieval items tagged Analyze above the formative band; F3-F7 advisory; report: specs/content/efmp-407/reviews/unit-05/G3/crew-efmp-407-u05-review_en/crew-efmp-407-u05-review_en.json |
 | Unit 5 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory r1 escalation on unchanged inputs; prior F1-F7 unresolved; missing parent provenance and required browser/print evidence. [Report](reviews/unit-05/G3/crew-efmp-407-u05-review_en-r1.json). G3 remains open and unsigned. |
@@ -41,7 +41,7 @@ The course content-spec is approved; this tracker does not re-evaluate G0 or G1.
 | Unit 5 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notice |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | six schematic SVGs placed with derived dark variants; browser geometry check not run under the crew brief; banner fig-U5-7 remains prompt-only |
-| Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-08/G2/20261110T024249494Z-gates.json |
+| Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-08/G2/20261127T223212794Z-gates.json |
 | Unit 8 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 8 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory: revise; F1 blocking - Jumani and Abbasi (2015) bound passage is not in the paper (full PDF checked 2026-11-07); F4/F8 uncertain - Tilbury causal claim exceeds title-level support and topic-02 formative item 3 is tagged Analyze above the band; F2,F3,F5,F6,F7,F9 advisory; report: specs/content/efmp-407/reviews/unit-08/G3/crew-efmp-407-u08-review_en/crew-efmp-407-u08-review_en.json |
 | Unit 8 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory r1 escalation on unchanged inputs; prior F1-F9 unresolved; missing parent runtime provenance and required browser/print evidence. [Report](reviews/unit-08/G3/crew-efmp-407-u08-review_en-r1.json). G3 remains open and unsigned. |
@@ -76,7 +76,7 @@ Reading estimates use final visible text at 180 words per minute: index 4, Topic
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261115T020325192Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-407/reviews/unit-07/G2/20261127T223212298Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | Advisory escalation only; G3 remains open. Findings F1-F5 and missing render/provenance evidence: [report](reviews/unit-07/G3/crew-efmp-407-u07-review_en/crew-efmp-407-u07-review_en.json). No certification. |
 | Unit 7 | G3 en-review | ▢ | agent:opencode-g3-reviewer | advisory r1: revise; F1 blocking - NEP 2009 cited to section 6.1, passage is in section 6.2 (Curriculum Reform), policy action 5; repair in topic-01.mdx:33 and :107, sources/unit-07.md:7, sources/texts/nep-2009.md:7; F2-F6 advisory; report: specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/crew-efmp-407-u07-review_en-r1.json |
 | Unit 7 | G3 en-review | ▢ | | advisory: revise; repairs applied at b02ba6e6e and a9c118a0a; report specs/content/efmp-407/reviews/unit-07/G3/crew-efmp-407-u07-review_en-r1/crew-efmp-407-u07-review_en-r1.json; F1 NEP 2009 locator now section 6.2 (Curriculum Reform), policy action 5; F4 `## Unverifiable sources` declaration added; F6 DOI given a descriptive label; needs a fresh G3 run |
