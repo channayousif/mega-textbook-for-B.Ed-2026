@@ -1,0 +1,27 @@
+# render-review precondition (crew brief): production build is a valid rendered input only if
+# the unit's English dir and figure dir are unchanged between the deployed SHA and HEAD.
+# run 2026-11-27T16:40:10Z
+deployed_sha=956c4ba9149ccc34e41e7d1dc31c624f7709d1b6 (from ~/deploy/deployed-sha)
+head=7254e6a3917a1f7c5a052daa88ee40a728f6cb82
+$ git diff --quiet 956c4ba9149ccc34e41e7d1dc31c624f7709d1b6 HEAD -- docs/semester-4/efpc-411/unit-01 static/img/figures/efpc-411/unit-01/
+# exit 1
+$ git diff --stat 956c4ba9149ccc34e41e7d1dc31c624f7709d1b6 HEAD -- docs/semester-4/efpc-411/unit-01 static/img/figures/efpc-411/unit-01/
+ docs/semester-4/efpc-411/unit-01/index.mdx               |  1 +
+ docs/semester-4/efpc-411/unit-01/topic-01.mdx            |  6 +++---
+ docs/semester-4/efpc-411/unit-01/topic-02.mdx            |  4 ++--
+ docs/semester-4/efpc-411/unit-01/topic-03.mdx            |  8 ++++----
+ docs/semester-4/efpc-411/unit-01/topic-04.mdx            |  6 +++---
+ docs/semester-4/efpc-411/unit-01/unit-assessment.mdx     | 10 +++-------
+ static/img/figures/efpc-411/unit-01/fig-U1-1.dark.svg    |  2 +-
+ static/img/figures/efpc-411/unit-01/fig-U1-1.svg         |  2 +-
+ static/img/figures/efpc-411/unit-01/fig-U1-1.ur.dark.svg |  2 +-
+ static/img/figures/efpc-411/unit-01/fig-U1-1.ur.svg      |  2 +-
+ static/img/figures/efpc-411/unit-01/fig-U1-6.dark.svg    |  2 +-
+ static/img/figures/efpc-411/unit-01/fig-U1-6.svg         |  2 +-
+ static/img/figures/efpc-411/unit-01/fig-U1-6.ur.dark.svg |  2 +-
+ static/img/figures/efpc-411/unit-01/fig-U1-6.ur.svg      |  2 +-
+ 14 files changed, 24 insertions(+), 27 deletions(-)
+
+RESULT: render-review UNAVAILABLE. The live site at https://textbook.com.pk serves deployed SHA 956c4ba9149ccc34e41e7d1dc31c624f7709d1b6, which predates
+the G3 repair merge 1b5fc79c2 (repair commit edaed1188). The rendered input therefore is not the reviewed input.
+scripts/render-inspect.mjs was NOT run; no local build or server was started (host rules). No PNG evidence exists for this attempt.
