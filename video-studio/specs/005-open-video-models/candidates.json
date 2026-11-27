@@ -1,0 +1,52 @@
+{
+  "_comment": "VS-005 video bench candidates. Revisions and SHA-256s fetched from the Hugging Face API on 2026-11-09 (lfs oid = SHA-256). Only active candidates spend GPU time. Settings sources are recorded per candidate.",
+  "comfyui": {
+    "repo": "https://github.com/comfyanonymous/ComfyUI",
+    "tag": "v0.44.0",
+    "commit": "2c75dc1b379a59e0880619d029607af5169a62ef"
+  },
+  "workers": 2,
+  "seeds": [101, 202],
+  "smoke": { "shot": "S1", "seed": 101, "length": 25 },
+  "candidates": [
+    {
+      "id": "wan22-5b",
+      "active": true,
+      "family": "wan22_ti2v",
+      "workflow": "wan22_ti2v.json",
+      "kinds": ["i2v", "t2v"],
+      "licence": "Apache-2.0",
+      "hf_repo": "Comfy-Org/Wan-2.2",
+      "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+      "files": [
+        { "role": "unet", "dir": "diffusion_models", "path": "split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors", "size": 9999658848, "sha256": "456f901338bd9eadbded3828b819109a9b68e8a525ca5cf8d0049a69fcfeca1e" },
+        { "role": "clip", "dir": "text_encoders", "path": "split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors", "size": 6735906897, "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68" },
+        { "role": "vae", "dir": "vae", "path": "split_files/vae/wan2.2_vae.safetensors", "size": 1409400960, "sha256": "e40321bd36b9709991dae2530eb4ac303dd168276980d3e9bc4b6e2b75fed156" }
+      ],
+      "params": { "width": 704, "height": 1280, "length": 121, "fps": 24, "steps": 20, "cfg": 5, "sampler": "uni_pc", "scheduler": "simple", "shift": 8 },
+      "settings_source": "Comfy-Org/workflow_templates templates/video_wan2_2_5B_ti2v.json (main, 2026-11-09); portrait size swapped from 1280x704",
+      "comfy_args": ["--use-pytorch-cross-attention"]
+    },
+    {
+      "id": "hunyuan15-480p-i2v",
+      "active": false,
+      "inactive_reason": "Tencent Hunyuan Community License section 5(c) bars displaying output in the EU, UK and South Korea, which conflicts with public shorts; evaluation-only and only if the owner agrees (tasks.md OV004)",
+      "family": "hunyuan15_i2v",
+      "workflow": "hunyuan15_i2v.json",
+      "kinds": ["i2v"],
+      "licence": "Tencent Hunyuan Community License (territory and MAU limits; see history/reviews/2026-11-09-video-model-licence-check.md)",
+      "hf_repo": "Comfy-Org/Hunyuan-Video-1.5",
+      "revision": "1405a2b738c29b890cf6d03fc038d8d3e92eeed7",
+      "files": [
+        { "role": "unet", "dir": "diffusion_models", "path": "split_files/diffusion_models/hunyuanvideo1.5_480p_i2v_step_distilled_fp8_scaled.safetensors", "size": 8335127098, "sha256": "302636263ad01e2659a18b78e96e95f44433b92def7cae1dab29b5105eeb63b1" },
+        { "role": "clip1", "dir": "text_encoders", "path": "split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors", "size": 9384670680, "sha256": "cb5636d852a0ea6a9075ab1bef496c0db7aef13c02350571e388aea959c5c0b4" },
+        { "role": "clip2", "dir": "text_encoders", "path": "split_files/text_encoders/byt5_small_glyphxl_fp16.safetensors", "size": 438643184, "sha256": "516910bb4c9b225370290e40585d1b0e6c8cd3583690f7eec2f7fb593990fb48" },
+        { "role": "vae", "dir": "vae", "path": "split_files/vae/hunyuanvideo15_vae_fp16.safetensors", "size": 2521292758, "sha256": "e7c3091949c27e2d55ae6d5df917b99dadfebbf308e5a50d0ade0d16c90297ae" },
+        { "role": "clip_vision", "dir": "clip_vision", "path": "split_files/clip_vision/sigclip_vision_patch14_384.safetensors", "size": 856505640, "sha256": "1fee501deabac72f0ed17610307d7131e3e9d1e838d0363aa3c2b97a6e03fb33" }
+      ],
+      "params": { "width": 480, "height": 848, "length": 121, "fps": 24, "steps": 8, "cfg": 1, "sampler": "euler", "scheduler": "simple", "shift": 7 },
+      "settings_source": "unverified: the official template (video_hunyuan_video_1.5_720p_i2v.json) uses the non-distilled 720p model with 20 steps, CFG 6, shift 7; 8 steps and CFG 1 are assumed for the step-distilled file and must be tuned on the smoke run",
+      "comfy_args": ["--use-pytorch-cross-attention"]
+    }
+  ]
+}
