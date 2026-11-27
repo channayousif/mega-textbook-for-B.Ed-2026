@@ -4,50 +4,50 @@ title: crew review_en EFPC-411 unit 2
 stage: misc
 date: 2026-11-27
 surface: agent
-model: agy
+model: agy2
 feature: efpc-411
 branch: crew/efpc-411-u02-review_en
 user: crew
 command: crew review_en
-labels: ["crew", "agy", "review_en"]
+labels: ["crew", "agy2", "review_en"]
 links:
   spec: specs/content/efpc-411/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - history/prompts/efpc-411/crew-efpc-411-u02-review_en.misc.prompt.md
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb.json
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/advisory-tracker-row.md
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/assessment-solutions.md
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/build-content-status.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check-content.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:depth-gate.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:docs-sync.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:figures.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:no-answer-keys.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:no-em-dash.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/measure-figure-text.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/validate:content.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/make-report.mjs
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/manifest.json
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-index.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-topic-01.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-topic-02.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-topic-03.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-topic-04.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-unit-assessment.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-index.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-topic-01.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-topic-02.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-topic-03.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-topic-04.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-unit-assessment.png
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/render-inspect.json
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/render-inspect.log
-  - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/summary.md
+ - history/prompts/efpc-411/crew-efpc-411-u02-review_en.misc.prompt.md
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb.json
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/advisory-tracker-row.md
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/assessment-solutions.md
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/build-content-status.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check-content.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:depth-gate.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:docs-sync.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:figures.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:no-answer-keys.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/check:no-em-dash.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/measure-figure-text.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/logs/validate:content.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/make-report.mjs
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/manifest.json
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-index.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-topic-01.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-topic-02.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-topic-03.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-topic-04.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/desktop-unit-assessment.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-index.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-topic-01.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-topic-02.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-topic-03.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-topic-04.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/narrow360-unit-assessment.png
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/render-inspect.json
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/renders/render-inspect.log
+ - specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/summary.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -78,27 +78,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Conducted independent G3 English review of EFPC-411 Unit 2, producing validated advisory report specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb.json (disposition pass with 0 defects and full live visual inspection evidence against textbook.com.pk) and supporting evidence artifacts.
+Produced validated independent G3 English review report (disposition: pass) and supporting visual/command evidence for EFPC-411 Unit 2 without modifying unit prose or certifying the stage.
 
 ## Outcome
 
-- Impact: review_en for EFPC-411 Unit 2 by agy.
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: review_en for EFPC-411 Unit 2 by agy2 (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G3 English review of EFPC-411 Unit 2, producing validated advisory report specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb.json (disposition pass) and supporting evidence artifacts.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify or publish anything.
+- Shipped / changed: Produced validated independent G3 English review report (disposition: pass) and supporting visual/command evidence for EFPC-411 Unit 2 without modifying unit prose or certifying the stage.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All content criteria pass; live visual render and print inspection passed with 0 defects against deployed SHA c8efed9b430b39867c1418fae61194c49cefcda9.
-  - Advisory finding F1 notes that MCQ correct answers are concentrated in B (7) and C (3), with zero A or D options keyed; balancing across A-D in future revisions is recommended.
-  - Advisory tracker row prepared in specs/content/efpc-411/reviews/unit-02/G3/cbe2e670-0dc7-446a-a8e2-b41ac6087cdb/advisory-tracker-row.md; G3 remains open.
+  - Live site inspection passed with 0 defects against deployed SHA c8efed9b430b39867c1418fae61194c49cefcda9.
+  - Advisory finding F1 notes that MCQ answer keys are concentrated on B (7) and C (3), with 0 options keyed to A or D.
+  - Proposed advisory tracker row is ready for parent handoff in advisory-tracker-row.md; G3 remains open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
