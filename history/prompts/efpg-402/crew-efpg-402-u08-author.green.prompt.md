@@ -4,12 +4,12 @@ title: crew author EFPG-402 unit 8
 stage: misc
 date: 2026-11-27
 surface: agent
-model: agy2
+model: agy
 feature: efpg-402
 branch: crew/efpg-402-u08-author
 user: crew
 command: crew author
-labels: ["crew", "agy2", "author"]
+labels: ["crew", "agy", "author"]
 links:
   spec: specs/content/efpg-402/content-spec.md
   ticket: null
@@ -76,7 +76,7 @@ tests:
 
 # Crew job efpg-402-u08-author
 
-You are the agy2 worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efpg-402-u08-author`.
+You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efpg-402-u08-author`.
 Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or the Playwright e2e suite (a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server), keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`. Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0. `static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git, never mark G3/G5 done, never self-sign or use
 human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec. After changing any English unit file or its figures manifest, sources, coverage or concepts, the job commits, runs `node scripts/prepare-gate-evidence.mjs <course> <unit>`, commits the JSON and every `logs-*` directory it writes, and points the unit's G2 en-draft tracker row at the new file before `npm run check:content`.
 
@@ -103,24 +103,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored EFPG-402 Unit 8 English learning cycles, placed 10 schematic SVGs with verified text geometry, and recorded passing G2 gate evidence across all 14 content gates.
+Verified EFPG-402 Unit 8 authored learning cycles, 10 placed schematic SVGs, zero em-dash compliance, and passing G2 gate evidence across all 14 content gates.
 
 ## Outcome
 
-- Impact: author for EFPG-402 Unit 8 by agy2 (attempt 1).
+- Impact: author for EFPG-402 Unit 8 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 43 file(s), listed above.
+- Files: 52 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFPG-402 Unit 8 English learning cycles, placed 10 schematic SVGs with verified text geometry, and recorded passing G2 gate evidence across all 14 content gates.
+- Shipped / changed: Verified EFPG-402 Unit 8 authored learning cycles, 10 placed schematic SVGs, zero em-dash compliance, and passing G2 gate evidence across all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Urdu mirror job (G4) will need to localize the 10 placed SVGs (.ur.svg pairs) and translate the seven unit files.
-  - Independent qualified G3 English content review remains open.
+  - Independent qualified G3 English content review remains open and awaiting qualification.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
