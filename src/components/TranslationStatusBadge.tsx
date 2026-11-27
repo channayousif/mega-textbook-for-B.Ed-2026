@@ -31,7 +31,7 @@ export default function TranslationStatusBadge({
 
   const label =
     state === 'draft'
-      ? 'Draft translation - not yet human-reviewed / مسودہ ترجمہ'
+      ? 'Draft translation - not yet reviewed / مسودہ ترجمہ'
       : 'Urdu translation not yet available - showing English / اردو ترجمہ ابھی دستیاب نہیں';
 
   return (
