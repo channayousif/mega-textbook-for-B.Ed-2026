@@ -4,12 +4,12 @@ title: crew review_en EFPG-402 unit 7
 stage: misc
 date: 2026-11-27
 surface: agent
-model: LongCat-2.5
+model: claude_crew
 feature: efpg-402
 branch: crew/efpg-402-u07-review_en
 user: crew
 command: crew review_en
-labels: ["crew", "claude", "review_en"]
+labels: ["crew", "claude_crew", "review_en"]
 links:
   spec: specs/content/efpg-402/content-spec.md
   ticket: null
@@ -17,13 +17,10 @@ links:
   pr: null
 files:
  - history/prompts/efpg-402/crew-efpg-402-u07-review_en.misc.prompt.md
- - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89.json
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/advisory-tracker-row.md
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/assessment-solutions.md
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89.json
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/limitations.md
- - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/summary.md
- - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/manifest.json
- - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/source-checks/ncp-science-2022-assessment-search.txt
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/build-content-status.log
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/check-content.log
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/check:depth-gate.log
@@ -34,9 +31,11 @@ files:
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/measure-figure-text.log
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/render-review.txt
  - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/logs/validate:content.log
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/manifest.json
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/source-checks/ncp-science-2022-assessment-search.txt
+ - specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89/summary.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate <report.json>
 ---
 
 ## Prompt
@@ -67,45 +66,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Conducted the independent G3 English review of EFPG-402 Unit 7 and wrote the validated advisory
-report `f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89.json` (disposition `escalate`). All six deterministic
-gates plus `check:content` exit 0; `sources` fails on the NCP attribution, and `render-review` is
-unavailable because the deployed SHA differs from HEAD.
+Added the validated advisory G3 English review of EFPG-402 Unit 7 (report `f3b32de7-…json`, disposition `escalate`: `sources` fails on the NCP attribution and `render-review` is unavailable) plus its evidence, logs and PHR, all committed on `crew/efpg-402-u07-review_en`.
 
 ## Outcome
 
-- Impact: review_en for EFPG-402 Unit 7 by claude (attempt 1).
-- Tests: `npm run check:content` passed; `node scripts/review-evidence.mjs validate` passed.
-- Files: 20 file(s), listed above.
+- Impact: review_en for EFPG-402 Unit 7 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: independent G3 English review of EFPG-402 Unit 7; validated advisory report
-  `specs/content/efpg-402/reviews/unit-07/G3/f3b32de7-5599-49ac-9cf7-0c3b8eb4fc89.json`, disposition
-  `escalate`, with assessment solutions, limitations, source-check evidence and an advisory tracker
-  row.
-- Decisions the team must respect: G3 stays advisory and open; this report certifies nothing and
-  inserts no tracker row. The `sources` criterion fails, so the unit cannot be certified until the
-  assessment attribution is repaired and re-reviewed.
-- Pending / next owner: crew lead / author. Repair the NCP attribution (topics 7.1-7.5), then a new
-  bundle and a fresh reviewer.
+- Shipped / changed: Added the validated advisory G3 English review of EFPG-402 Unit 7 (report `f3b32de7-…json`, disposition `escalate`: `sources` fails on the NCP attribution and `render-review` is unavailable) plus its evidence, logs and PHR, all committed on `crew/efpg-402-u07-review_en`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `render-review` is unavailable: deployed `9d45720686522bf6f9cb5678852f14e29eb5b08f` differs from
-    HEAD `8a962478456e763a24f6cccfbc7961d0651300ae` on `index.mdx` and `fig-U7-11.webp`; visual
-    accessibility is unverified.
-  - Advisory items: duplicated word at `topic-01.mdx:43`; MCQ key skew (B 8, D 0); `fig-U7-10`
-    caption/alt say five but the table has four rows; `fig-U7-3`/`fig-U7-8` prompt mismatches; BSCS
-    ERIC number `ED536125` vs `ED502570`.
-  - The Urdu mirror exists with `translation_status: draft`; G4/G5 remain open.
+  - `sources` fails, so the unit cannot be certified until the NCP assessment attribution is repaired (bind a supporting assessment source, or correct the attribution and disclose the unretrievable reliance), then a fresh bundle and reviewer.
+  - `render-review` is unavailable because deployed `9d45720686522bf6f9cb5678852f14e29eb5b08f` differs from HEAD `8a962478456e763a24f6cccfbc7961d0651300ae` on `index.mdx` and `fig-U7-11.webp`; visual accessibility stays unverified.
+  - Advisory repairs for the next author: `topic-01.mdx:43` duplicated word; MCQ key skew (B 8, D 0); `fig-U7-10` caption/alt "five" vs four rows; `fig-U7-3`/`fig-U7-8` prompt mismatches; BSCS ERIC number.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
