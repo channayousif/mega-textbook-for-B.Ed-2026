@@ -4,18 +4,19 @@ title: crew review_en EFPG-402 unit 3
 stage: misc
 date: 2026-11-27
 surface: agent
-model: agy
+model: agy2
 feature: efpg-402
 branch: crew/efpg-402-u03-review_en
 user: crew
 command: crew review_en
-labels: ["crew", "agy", "review_en"]
+labels: ["crew", "agy2", "review_en"]
 links:
   spec: specs/content/efpg-402/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - history/prompts/efpg-402/crew-efpg-402-u03-review_en.misc.prompt.md
  - specs/content/efpg-402/reviews/unit-03/G3/3043d3cb-2c9a-4666-bb72-3769cdb90044.json
  - specs/content/efpg-402/reviews/unit-03/G3/agy-run1-20261127/advisory-tracker-row.md
  - specs/content/efpg-402/reviews/unit-03/G3/agy-run1-20261127/assessment-solutions.md
@@ -68,24 +69,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Conducted independent G3 English review of EFPG-402 Unit 3, producing validated advisory report specs/content/efpg-402/reviews/unit-03/G3/3043d3cb-2c9a-4666-bb72-3769cdb90044.json (disposition escalate due to unavailable live render) and evidence artifacts.
+Conducted independent G3 English review of EFPG-402 Unit 3, generating validated advisory report 3043d3cb-2c9a-4666-bb72-3769cdb90044.json with disposition escalate due to unavailable production render, and committed all supporting evidence.
 
 ## Outcome
 
-- Impact: review_en for EFPG-402 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: review_en for EFPG-402 Unit 3 by agy2 (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G3 English review of EFPG-402 Unit 3, producing validated advisory report specs/content/efpg-402/reviews/unit-03/G3/3043d3cb-2c9a-4666-bb72-3769cdb90044.json (disposition escalate due to unavailable live render) and evidence artifacts.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Conducted independent G3 English review of EFPG-402 Unit 3, generating validated advisory report 3043d3cb-2c9a-4666-bb72-3769cdb90044.json with disposition escalate due to unavailable production render, and committed all supporting evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All content criteria pass; visual accessibility remains unverified because deployed SHA differs from HEAD on unit index and banner illustration; report disposition is advisory escalate.
-  - Advisory tracker row prepared in specs/content/efpg-402/reviews/unit-03/G3/agy-run1-20261127/advisory-tracker-row.md; G3 remains open pending parent integration.
+  - All content criteria pass; visual rendering remains unverified because deployed SHA differs from HEAD on unit index and banner illustration; report disposition is advisory escalate.
+  - Advisory tracker row prepared in specs/content/efpg-402/reviews/unit-03/G3/agy-run1-20261127/advisory-tracker-row.md; G3 stage row in tasks.md remains open for parent integration.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
