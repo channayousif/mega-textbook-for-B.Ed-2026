@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of weak versus strong science instructional objectives</title><desc id="d">Comparison table displaying weak, vague instructional objectives alongside strong, measurable science objectives, highlighting the shift from unmeasurable to observable verbs.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="68"/>
+<rect class="plain" x="24" y="132" width="732" height="68"/>
+<rect class="panel" x="24" y="200" width="732" height="68"/>
+<rect class="plain" x="24" y="268" width="732" height="68"/>
+</g><g id="layer-edges">
+<line class="grid" x1="150" y1="24" x2="150" y2="336"/>
+<line class="grid" x1="360" y1="24" x2="360" y2="336"/>
+<line class="grid" x1="620" y1="24" x2="620" y2="336"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Topic</text>
+<text class="sh" x="162" y="49">Weak Statement</text>
+<text class="sh" x="372" y="49">Strong / Measurable SLO</text>
+<text class="sh" x="632" y="49">Action Verb</text>
+<text class="sh" x="36" y="103">Leaves</text>
+<text class="cell" x="162" y="91">"Pupils understand</text>
+<text class="cell" x="162" y="108">photosynthesis"</text>
+<text class="cell" x="372" y="91">"Given a diagram, pupils state</text>
+<text class="cell" x="372" y="108">3 inputs and 2 outputs"</text>
+<text class="sh" x="632" y="100">State</text>
+<text class="sh" x="36" y="171">Circuits</text>
+<text class="cell" x="162" y="159">"To teach pupils about</text>
+<text class="cell" x="162" y="176">electric circuits"</text>
+<text class="cell" x="372" y="159">"Using cells and wires, pupils</text>
+<text class="cell" x="372" y="176">assemble a working circuit in 3 min"</text>
+<text class="sh" x="632" y="168">Assemble</text>
+<text class="sh" x="36" y="239">Matter</text>
+<text class="cell" x="162" y="227">"Pupils know the</text>
+<text class="cell" x="162" y="244">particle model"</text>
+<text class="cell" x="372" y="227">"From memory, pupils draw particle</text>
+<text class="cell" x="372" y="244">spacing in solids, liquids, and gases"</text>
+<text class="sh" x="632" y="236">Draw / Model</text>
+<text class="sh" x="36" y="307">Water</text>
+<text class="cell" x="162" y="295">"Pupils appreciate</text>
+<text class="cell" x="162" y="312">clean water"</text>
+<text class="cell" x="372" y="295">"Pupils evaluate 2 filtration methods</text>
+<text class="cell" x="372" y="312">and justify which is safer for villages"</text>
+<text class="sh" x="632" y="304">Evaluate</text>
+</g><text class="wm" x="768" y="375" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

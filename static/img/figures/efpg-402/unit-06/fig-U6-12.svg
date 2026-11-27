@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of weekly science laboratory management routines</title><desc id="d">Table specifying the science teacher's weekly operational inspection checklist to maintain laboratory safety and inventory readiness.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="180" y1="24" x2="180" y2="364"/>
+<line class="grid" x1="470" y1="24" x2="470" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Day &amp; Focus</text>
+<text class="sh" x="192" y="49">Operational Maintenance Tasks</text>
+<text class="sh" x="482" y="49">Documentation and Action</text>
+
+<text class="sh" x="36" y="94">Monday</text>
+<text class="small" x="36" y="112">Facility Safety</text>
+<text class="cell" x="192" y="89">Inspect main gas shutoff, electric</text>
+<text class="cell" x="192" y="107">breakers, and emergency exit doors</text>
+<text class="cell" x="482" y="89">Sign weekly Facility Status</text>
+<text class="cell" x="482" y="107">entry in laboratory logbook</text>
+
+<text class="sh" x="36" y="154">Tuesday</text>
+<text class="small" x="36" y="172">Chemical Reagents</text>
+<text class="cell" x="192" y="149">Inspect bottle caps and seals; replace</text>
+<text class="cell" x="192" y="167">faded labels; wipe acid trays</text>
+<text class="cell" x="482" y="149">Update reagent inventory and</text>
+<text class="cell" x="482" y="167">mark low supplies for re-order</text>
+
+<text class="sh" x="36" y="214">Wednesday</text>
+<text class="small" x="36" y="232">Apparatus Audit</text>
+<text class="cell" x="192" y="209">Inspect beakers and test tubes for</text>
+<text class="cell" x="192" y="227">hairline cracks; discard chips</text>
+<text class="cell" x="482" y="209">Enter damaged items in the</text>
+<text class="cell" x="482" y="227">Breakage Register for write-off</text>
+
+<text class="sh" x="36" y="274">Thursday</text>
+<text class="small" x="36" y="292">First-Aid Kit</text>
+<text class="cell" x="192" y="269">Refill eyewash bottles with clean water;</text>
+<text class="cell" x="192" y="287">replenish sterile gauze and bandages</text>
+<text class="cell" x="482" y="269">Sign first-aid inspection card</text>
+<text class="cell" x="482" y="287">kept inside safety box</text>
+
+<text class="sh" x="36" y="334">Friday</text>
+<text class="small" x="36" y="352">Security Lockup</text>
+<text class="cell" x="192" y="329">Clean student benches; clear sinks;</text>
+<text class="cell" x="192" y="347">lock chemical store; secure windows</text>
+<text class="cell" x="482" y="329">Final weekly security sign-off</text>
+<text class="cell" x="482" y="347">with school headmaster</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="395">Systematic weekly inspection schedule to maintain laboratory readiness and safety.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

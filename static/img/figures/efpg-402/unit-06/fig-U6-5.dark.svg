@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of chemical storage by compatibility groups</title><desc id="d">Table showing storage separation rules by chemical compatibility groups based on CPSC and NIOSH laboratory safety guidance.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="180" y1="24" x2="180" y2="364"/>
+<line class="grid" x1="460" y1="24" x2="460" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Chemical Group</text>
+<text class="sh" x="192" y="49">Storage Location &amp; Shelving</text>
+<text class="sh" x="472" y="49">Incompatible Groups (Store Apart)</text>
+
+<text class="sh" x="36" y="94">Inorganic Acids</text>
+<text class="small" x="36" y="112">HCl, H2SO4, HNO3</text>
+<text class="cell" x="192" y="89">Corrosion-resistant cabinet;</text>
+<text class="cell" x="192" y="107">lower shelves with plastic trays</text>
+<text class="cell" x="472" y="89">Bases, organic solvents, and reactive</text>
+<text class="cell" x="472" y="107">metals; keep nitric acid isolated</text>
+
+<text class="sh" x="36" y="154">Inorganic Bases</text>
+<text class="small" x="36" y="172">NaOH, KOH, NH3</text>
+<text class="cell" x="192" y="149">Dedicated cupboard or shelf</text>
+<text class="cell" x="192" y="167">away from acids and flammables</text>
+<text class="cell" x="472" y="149">Mineral acids and organic acids;</text>
+<text class="cell" x="472" y="167">prevents violent exothermic reaction</text>
+
+<text class="sh" x="36" y="214">Flammable Liquids</text>
+<text class="small" x="36" y="232">Ethanol, acetone</text>
+<text class="cell" x="192" y="209">Steel flammables cabinet in a</text>
+<text class="cell" x="192" y="227">cool, well-ventilated location</text>
+<text class="cell" x="472" y="209">Oxidizers, open flames, electrical</text>
+<text class="cell" x="472" y="227">heaters, and concentrated acids</text>
+
+<text class="sh" x="36" y="274">Oxidizers</text>
+<text class="small" x="36" y="292">KMnO4, H2O2</text>
+<text class="cell" x="192" y="269">Dry shelf, glass containers,</text>
+<text class="cell" x="192" y="287">separated from organic stock</text>
+<text class="cell" x="472" y="269">Reducing agents, organic powders,</text>
+<text class="cell" x="472" y="287">sulfur, charcoal, and flammables</text>
+
+<text class="sh" x="36" y="334">Water-Reactives</text>
+<text class="small" x="36" y="352">Sodium, calcium</text>
+<text class="cell" x="192" y="329">Sealed in dry mineral oil inside</text>
+<text class="cell" x="192" y="347">airtight cans on dry shelves</text>
+<text class="cell" x="472" y="329">Water, aqueous solutions, sinks,</text>
+<text class="cell" x="472" y="347">and atmospheric dampness</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="395">Safe storage classification segregating mutually reactive chemical families in schools.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

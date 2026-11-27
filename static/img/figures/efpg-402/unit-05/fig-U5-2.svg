@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 390" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Comparison of unplanned and planned science lessons</title><desc id="d">Comparison table contrasting an unplanned science lesson with a planned science lesson across five dimensions: teacher readiness, pupil activity, time use, resource management, and assessment.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="390"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="56"/>
+<rect class="plain" x="24" y="120" width="732" height="56"/>
+<rect class="panel" x="24" y="176" width="732" height="56"/>
+<rect class="plain" x="24" y="232" width="732" height="56"/>
+<rect class="panel" x="24" y="288" width="732" height="56"/>
+</g><g id="layer-edges">
+<line class="grid" x1="160" y1="24" x2="160" y2="344"/>
+<line class="grid" x1="450" y1="24" x2="450" y2="344"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Dimension</text>
+<text class="sh" x="172" y="49">Unplanned Science Lesson</text>
+<text class="sh" x="462" y="49">Planned Science Lesson</text>
+<text class="sh" x="36" y="98">Readiness</text>
+<text class="cell" x="172" y="89">Hunts for materials during class;</text>
+<text class="cell" x="172" y="106">nervous, reactive, and scattered</text>
+<text class="cell" x="462" y="89">Apparatus staged beforehand;</text>
+<text class="cell" x="462" y="106">confident, focused, and purposeful</text>
+<text class="sh" x="36" y="154">Pupil Activity</text>
+<text class="cell" x="172" y="145">Passive listening or rote copying;</text>
+<text class="cell" x="172" y="162">frequent off-task talking</text>
+<text class="cell" x="462" y="145">Collaborative investigation, data</text>
+<text class="cell" x="462" y="162">recording, and structured dialogue</text>
+<text class="sh" x="36" y="210">Time Use</text>
+<text class="cell" x="172" y="201">Minutes wasted on setup; rushed</text>
+<text class="cell" x="172" y="218">definitions before the bell rings</text>
+<text class="cell" x="462" y="201">Timed phases (hook, inquiry, concept</text>
+<text class="cell" x="462" y="218">explanation, synthesis, clean-up)</text>
+<text class="sh" x="36" y="266">Safety</text>
+<text class="cell" x="172" y="257">Unsupervised movement; high risk</text>
+<text class="cell" x="172" y="274">of spills, breakage, and burns</text>
+<text class="cell" x="462" y="257">Assigned group roles; clear rules;</text>
+<text class="cell" x="462" y="274">safe handling and clean-up routines</text>
+<text class="sh" x="36" y="322">Assessment</text>
+<text class="cell" x="172" y="313">Hasty chorus: "Do you understand?";</text>
+<text class="cell" x="172" y="330">no record of individual learning</text>
+<text class="cell" x="462" y="313">Aligned formative retrieval checks</text>
+<text class="cell" x="462" y="330">and exit tickets measuring SLOs</text>
+</g><text class="wm" x="768" y="375" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

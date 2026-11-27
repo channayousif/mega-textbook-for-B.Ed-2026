@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of laboratory layout features and safety rationale</title><desc id="d">Table detailing five essential architectural features of a school science laboratory and the safety justification for each.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="190" y1="24" x2="190" y2="364"/>
+<line class="grid" x1="460" y1="24" x2="460" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Layout Feature</text>
+<text class="sh" x="202" y="49">Design Standard</text>
+<text class="sh" x="472" y="49">Safety and Functional Rationale</text>
+
+<text class="sh" x="36" y="94">Dual Exits</text>
+<text class="small" x="36" y="112">Two outwards doors</text>
+<text class="cell" x="202" y="89">Doors placed at opposite ends</text>
+<text class="cell" x="202" y="107">of the room, kept unblocked</text>
+<text class="cell" x="472" y="89">Prevents stampedes; ensures escape</text>
+<text class="cell" x="472" y="107">if one door is blocked by fire or spill</text>
+
+<text class="sh" x="36" y="154">Wide Gangways</text>
+<text class="small" x="36" y="172">Aisle dimensions</text>
+<text class="cell" x="202" y="149">Minimum 1.5 metre width between</text>
+<text class="cell" x="202" y="167">benches and room perimeters</text>
+<text class="cell" x="472" y="149">Avoids collisions while carrying glass;</text>
+<text class="cell" x="472" y="167">enables teacher to reach pupils swiftly</text>
+
+<text class="sh" x="36" y="214">Perimeter Sinks</text>
+<text class="small" x="36" y="232">Wash stations</text>
+<text class="cell" x="202" y="209">Multiple sinks along outer walls</text>
+<text class="cell" x="202" y="227">with reliable water pressure</text>
+<text class="cell" x="472" y="209">Immediate flushing of acid splashes;</text>
+<text class="cell" x="472" y="227">prevents crowded lines during clean up</text>
+
+<text class="sh" x="36" y="274">Master Controls</text>
+<text class="small" x="36" y="292">Utility shutoffs</text>
+<text class="cell" x="202" y="269">Single master valves for gas and</text>
+<text class="cell" x="202" y="287">power near teacher demonstration desk</text>
+<text class="cell" x="472" y="269">Enables instant cutoff of gas or power</text>
+<text class="cell" x="472" y="287">during electrical sparks or gas leaks</text>
+
+<text class="sh" x="36" y="334">Prep &amp; Store Room</text>
+<text class="small" x="36" y="352">Chemical storage</text>
+<text class="cell" x="202" y="329">Adjoining ventilated room with</text>
+<text class="cell" x="202" y="347">lockable cupboards for stock</text>
+<text class="cell" x="472" y="329">Prevents student tampering; isolates</text>
+<text class="cell" x="472" y="347">hazardous chemical fumes from classroom</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="395">Key architectural standards that prevent accidents and safeguard laboratory occupants.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

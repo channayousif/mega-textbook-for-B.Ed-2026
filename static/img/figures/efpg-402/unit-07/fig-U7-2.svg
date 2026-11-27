@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table distinguishing measurement, assessment, and evaluation</title><desc id="d">Table distinguishing measurement, assessment, and evaluation across scope, nature of data, primary question answered, and science classroom examples.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="66"/>
+<rect class="plain" x="24" y="130" width="732" height="66"/>
+<rect class="panel" x="24" y="196" width="732" height="66"/>
+<rect class="plain" x="24" y="262" width="732" height="66"/>
+</g><g id="layer-edges">
+<line class="grid" x1="140" y1="24" x2="140" y2="328"/>
+<line class="grid" x1="330" y1="24" x2="330" y2="328"/>
+<line class="grid" x1="530" y1="24" x2="530" y2="328"/>
+</g><g id="layer-nodes">
+<text class="sh" x="34" y="49">Dimension</text>
+<text class="sh" x="150" y="49">Measurement</text>
+<text class="sh" x="340" y="49">Assessment</text>
+<text class="sh" x="540" y="49">Evaluation</text>
+
+<text class="sh" x="34" y="94">Core Nature</text>
+<text class="cell" x="150" y="86">Assigning numbers or scores</text>
+<text class="cell" x="150" y="104">by explicit testing rules</text>
+<text class="cell" x="340" y="86">Gathering multi-source data</text>
+<text class="cell" x="340" y="104">on learner understanding</text>
+<text class="cell" x="540" y="86">Passing qualitative value</text>
+<text class="cell" x="540" y="104">judgments against standards</text>
+
+<text class="sh" x="34" y="160">Data Form</text>
+<text class="cell" x="150" y="152">Purely quantitative</text>
+<text class="cell" x="150" y="170">(marks, raw counts, scales)</text>
+<text class="cell" x="340" y="152">Quantitative &amp; qualitative</text>
+<text class="cell" x="340" y="170">(work samples, rubrics)</text>
+<text class="cell" x="540" y="152">Evaluative &amp; interpretive</text>
+<text class="cell" x="540" y="170">(quality, program decisions)</text>
+
+<text class="sh" x="34" y="226">Core Question</text>
+<text class="cell" x="150" y="218">"How much or how many</text>
+<text class="cell" x="150" y="236">points did the pupil get?"</text>
+<text class="cell" x="340" y="218">"What evidence shows what</text>
+<text class="cell" x="340" y="236">the pupil knows and can do?"</text>
+<text class="cell" x="540" y="218">"How good is it, and what</text>
+<text class="cell" x="540" y="236">teaching steps should follow?"</text>
+
+<text class="sh" x="34" y="292">Class Example</text>
+<text class="cell" x="150" y="284">Scoring 14/20 on a written</text>
+<text class="cell" x="150" y="302">test on separation methods</text>
+<text class="cell" x="340" y="284">Observing lab filtration and</text>
+<text class="cell" x="340" y="302">reviewing student notebooks</text>
+<text class="cell" x="540" y="284">Judging inquiry competence</text>
+<text class="cell" x="540" y="302">and adapting pore-size demo</text>
+</g><g id="layer-labels">
+<text class="small" x="30" y="360">Systematic differentiation among measurement, assessment, and evaluation in science.</text>
+</g><text class="wm" x="768" y="380" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

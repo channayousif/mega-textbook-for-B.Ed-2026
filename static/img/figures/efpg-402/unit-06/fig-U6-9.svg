@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of common laboratory accidents and first-aid responses</title><desc id="d">Table outlining immediate first-aid protocols for chemical splashes, thermal burns, cuts, and fume inhalation in the science laboratory.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="195" y1="24" x2="195" y2="364"/>
+<line class="grid" x1="485" y1="24" x2="485" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Accident Incident</text>
+<text class="sh" x="208" y="49">Immediate Action (First 15 Minutes)</text>
+<text class="sh" x="498" y="49">Follow-Up and Medical Referral</text>
+
+<text class="sh" x="36" y="94">Eye Chemical Splash</text>
+<text class="small" x="36" y="112">(Acid or alkali)</text>
+<text class="cell" x="208" y="89">Hold eyelids open; flush continuously</text>
+<text class="cell" x="208" y="107">with water at eyewash for 15 minutes</text>
+<text class="cell" x="498" y="89">Cover loosely with sterile gauze;</text>
+<text class="cell" x="498" y="107">send for urgent ophthalmic check</text>
+
+<text class="sh" x="36" y="154">Skin Acid Splash</text>
+<text class="small" x="36" y="172">(Corrosive liquid)</text>
+<text class="cell" x="208" y="149">Remove contaminated clothing; flood</text>
+<text class="cell" x="208" y="167">skin with cold water for 15 minutes</text>
+<text class="cell" x="498" y="149">Do not apply oil or ointment;</text>
+<text class="cell" x="498" y="167">refer to doctor if skin is blistered</text>
+
+<text class="sh" x="36" y="214">Thermal Burn</text>
+<text class="small" x="36" y="232">(Hot tripod or gauze)</text>
+<text class="cell" x="208" y="209">Immerse burnt area in clean cool water</text>
+<text class="cell" x="208" y="227">for 10 to 15 minutes to reduce pain</text>
+<text class="cell" x="498" y="209">Cover with clean dry dressing;</text>
+<text class="cell" x="498" y="227">never burst blisters or apply paste</text>
+
+<text class="sh" x="36" y="274">Glassware Cut</text>
+<text class="small" x="36" y="292">(Broken tube glass)</text>
+<text class="cell" x="208" y="269">Apply direct pressure with sterile pad;</text>
+<text class="cell" x="208" y="287">elevate limb above heart to stem blood</text>
+<text class="cell" x="498" y="269">Clean with saline; apply bandage;</text>
+<text class="cell" x="498" y="287">check for embedded glass splinters</text>
+
+<text class="sh" x="36" y="334">Fume Inhalation</text>
+<text class="small" x="36" y="352">(Toxic gas fumes)</text>
+<text class="cell" x="208" y="329">Move student immediately into outdoor</text>
+<text class="cell" x="208" y="347">fresh air; loosen collar and keep warm</text>
+<text class="cell" x="498" y="329">Monitor breathing; call physician</text>
+<text class="cell" x="498" y="347">promptly if coughing or wheezing</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="395">Emergency first-aid protocols to stabilize injuries before professional medical care.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
