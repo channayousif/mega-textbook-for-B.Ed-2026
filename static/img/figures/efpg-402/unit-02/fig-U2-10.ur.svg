@@ -27,8 +27,10 @@ text { font-size: 14px; fill: var(--ink); }
 <line class="grid" x1="214" y1="33.6" x2="214" y2="515.2"/>
 </g><g id="layer-nodes">
 <text class="sh" x="746" y="68.6">مضمون</text>
-<text class="sh" x="626" y="68.6">سائنس کیا لیتی ہے</text>
-<text class="sh" x="506" y="68.6">سائنس کیا دیتی ہے</text>
+<text class="sh" x="626" y="58.6">سائنس</text>
+<text class="sh" x="626" y="80.6">کیا لیتی ہے</text>
+<text class="sh" x="506" y="58.6">سائنس</text>
+<text class="sh" x="506" y="80.6">کیا دیتی ہے</text>
 <text class="sh" x="380" y="68.6">جماعت 6 تا 8 مثال</text>
 <text class="sh" x="204" y="68.6">منصوبہ بندی کا مشورہ</text>
 

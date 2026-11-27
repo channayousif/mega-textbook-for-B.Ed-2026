@@ -31,7 +31,8 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="sh" x="298" y="68.6">کیوں اہم ہے</text>
 
 <text class="sh" x="746" y="134.4">درستی</text>
-<text class="cell" x="608" y="134.4">حقائق موجودہ سائنس اور قومی نصاب کے SLOs کے مطابق</text>
+<text class="cell" x="608" y="123.2">حقائق موجودہ سائنس اور قومی نصاب کے SLOs</text>
+<text class="cell" x="608" y="147">کے مطابق</text>
 <text class="cell" x="298" y="134.4">غلط حقائق غلط سائنس سکھاتے ہیں</text>
 
 <text class="sh" x="746" y="198.8">نصاب سے</text>
