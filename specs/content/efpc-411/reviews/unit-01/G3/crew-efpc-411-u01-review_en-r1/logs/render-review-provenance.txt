@@ -1,0 +1,22 @@
+render-review provenance - EFPC-411 Unit 1 G3
+=============================================
+
+Rendered input identity: production build at https://textbook.com.pk, deployed SHA
+66a1991270e8800bdc55e838140e5b90c45b1524 (== review HEAD), cited from ~/deploy/deployed-sha.
+
+Sequence:
+1. First check (2026-11-27T11:44Z): ~/deploy/deployed-sha held cde64d26706aa29162b507b7989019d32e7e2ade,
+   which differed from HEAD 66a1991270e8800bdc55e838140e5b90c45b1524 for this unit (index.mdx
+   modified, fig-U1-9.webp added). Per the brief, the live site was then not the reviewed input.
+2. The deployed SHA file was updated to 66a1991270e8800bdc55e838140e5b90c45b1524 at 16:45 local
+   (2026-11-27), after the production build from HEAD.
+3. Re-check: `git diff --quiet 66a199127 HEAD -- docs/semester-4/efpc-411/unit-01/
+   static/img/figures/efpc-411/unit-01/` exits 0. The brief's condition is met, so
+   `scripts/heavy.sh node scripts/render-inspect.mjs EFPC-411 1 --base https://textbook.com.pk
+   --no-pdf` was run. Exit code 0, defects 0. Log: logs/render-review.txt; machine record:
+   render/render-inspect.json; per-page screenshots: render/*.png.
+
+Inspected: 6 pages (index, topic-01..04, unit-assessment), desktop 1280x900, narrow 360x780,
+A4 print 794x1123. All 8 SVGs and the banner fig-U1-9.webp load; no missing alt; no heading
+skip; no document overflow; every wide table is its own scroll container with tabindex=0 and an
+aria-label; clippedElems=0 on every page in print; all 16 EN SVG variants clean by text geometry.
