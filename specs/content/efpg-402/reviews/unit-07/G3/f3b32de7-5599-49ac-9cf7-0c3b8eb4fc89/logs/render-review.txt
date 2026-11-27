@@ -1,0 +1,19 @@
+Command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efpg-402/unit-07/ static/img/figures/efpg-402/unit-07/
+Exit code: 1
+Deployed SHA: 9d45720686522bf6f9cb5678852f14e29eb5b08f
+HEAD SHA: 8a962478456e763a24f6cccfbc7961d0651300ae
+
+Differences between deployed SHA and HEAD on Unit 7:
+ docs/semester-4/efpg-402/unit-07/index.mdx         |   2 ++
+ static/img/figures/efpg-402/unit-07/fig-U7-11.webp | Bin 0 -> 129896 bytes
+ 2 files changed, 2 insertions(+)
+
+Name-status:
+M	docs/semester-4/efpg-402/unit-07/index.mdx
+A	static/img/figures/efpg-402/unit-07/fig-U7-11.webp
+
+Status: UNAVAILABLE
+In accordance with the crew brief and repository rules:
+"For the rendered-page and print evidence, inspect the production build (CI-built from main) and never build or serve the site: if git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- <this unit's English dir> static/img/figures/efpg-402/unit-07/ exits 0, run scripts/heavy.sh node scripts/render-inspect.mjs EFPG-402 7 --base https://textbook.com.pk --no-pdf, record its log and PNGs (stage the folder with git add --sparse) as the render-review command evidence, and cite the deployed SHA as the rendered input identity. If the diff is not empty, the live site is not your input: record render-review as unavailable and name the deployed SHA and HEAD."
+
+Because git diff is non-empty, the live site does not reflect current HEAD for EFPG-402 Unit 7. A local build, dev server, or local browser run is strictly prohibited by repository host resource limits. Therefore, render-review is recorded as unavailable (exit code 1).
