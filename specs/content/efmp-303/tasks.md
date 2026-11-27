@@ -148,3 +148,4 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261122T175629Z-g3-desk-309f4324.json |
 | Unit 6 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U6-4 did not render (malformed XML: duplicate attribute); fixed; the review above predates it; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |
+| Unit 2 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |
