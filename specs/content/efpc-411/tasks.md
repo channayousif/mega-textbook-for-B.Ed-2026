@@ -10,7 +10,7 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 |---|---|---|---|---|---|---|---|
 | 1 | Foundations of Classroom Observation | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-26; eight schematic SVGs and banner fig-U1-9 placed; G3 and Urdu remain open |
 | 2 | School Placement Observation Tasks | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; eight schematic SVGs placed; banner fig-U2-9 prompt-only; G3 and Urdu remain open |
-| 3 | The Observation Portfolio and Reflective Practice | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; eight schematic SVGs placed; G3 and Urdu remain open |
+| 3 | The Observation Portfolio and Reflective Practice | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; eight schematic SVGs and five raster illustrations (fig-U3-9 to fig-U3-13) placed; G3 and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -32,9 +32,9 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 2 | G6 assets | ▣ | | Eight schematic SVGs (fig-U2-1 to fig-U2-8) placed; banner fig-U2-9 prompt-only for illustrate job |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-03/G2/20261127T054702338Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-03/G2/20261127T115323213Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 3 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and eight localised schematic SVGs with dark twins; translator handoff: specs/content/efpc-411/reviews/unit-03/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review |
-| Unit 3 | G6 assets | ▣ | | Eight schematic SVGs (fig-U3-1 to fig-U3-8) placed |
+| Unit 3 | G6 assets | ✅ | auto:gates | Eight schematic SVGs (fig-U3-1 to fig-U3-8), banner fig-U3-9 and four topic illustrations (fig-U3-10 to fig-U3-13) placed |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
