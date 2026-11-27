@@ -1,0 +1,1 @@
+✓ Wrote content status for 23 course(s) to static/content-status.json

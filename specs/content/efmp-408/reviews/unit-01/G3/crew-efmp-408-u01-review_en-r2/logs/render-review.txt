@@ -1,0 +1,15 @@
+render-review: unavailable (exit 1)
+reason: the production build is not the reviewed input; no build, server or browser run is permitted by the crew brief.
+deployed SHA: 7d1ba965530b409ac8e425d07bf86ec24930310d
+HEAD: 7fb77de68f5d59bbc507e85c07a892a3cbf93eca
+
+$ git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efmp-408/unit-01/ static/img/figures/efmp-408/unit-01/
+exit=1
+
+$ git diff --name-status "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efmp-408/unit-01/ static/img/figures/efmp-408/unit-01/
+M	docs/semester-4/efmp-408/unit-01/topic-01.mdx
+M	docs/semester-4/efmp-408/unit-01/topic-02.mdx
+M	docs/semester-4/efmp-408/unit-01/topic-03.mdx
+M	docs/semester-4/efmp-408/unit-01/unit-assessment.mdx
+
+Changed images can be served stale for up to 30 days, so a missing or mismatched asset is treated as unverified, not as a content defect.

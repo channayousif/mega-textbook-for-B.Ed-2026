@@ -6,19 +6,25 @@
  *   teaser_clips    only after the owner's `crew approve-script` on the current script hash
  *   media_assemble  assemble, QG1, upload PRIVATE, QG3, stop at `qa3-pass`
  *   media_publish   only after the owner's `crew publish`; the one stage that may set a video public
- *   audio_overview  NotebookLM audio for a planned Notebook Studio ledger item
+ *   studio_media    Study Studio (NotebookLM audio and video) for one unit: plan, generate, check,
+ *                   upload PRIVATE, stop at `qa3-pass` for the owner's spot-check (`crew studio on`)
+ *   studio_publish  only after the owner's `crew approve-studio`: set public, place the links
+ *   audio_overview  the old name of studio_media, kept so old board rows still launch
  *
- * Every stage writes the shared teaser or media ledger, so at most one media job is in flight
- * (FR-016, and two PRs appending to one JSON ledger conflict). The stages are off until the owner
- * turns them on (`crew media on`).
+ * Jobs that write one ledger never overlap (FR-016, and two PRs appending to one JSON ledger
+ * conflict): one teaser-ledger job at a time, one job per unit's Study Studio ledger
+ * (resources.mjs ledgerOf). Each runs on its producer lane (resources.mjs). Teasers are off until
+ * the owner turns them on (`crew media on`); Study Studio has its own switch (`crew studio on`).
  */
+import { ledgerOf } from './resources.mjs';
 
-export const MEDIA_STAGES = ['teaser_script', 'teaser_clips', 'media_assemble', 'media_publish', 'audio_overview'];
+export const MEDIA_STAGES = ['teaser_script', 'teaser_clips', 'media_assemble', 'media_publish', 'audio_overview', 'studio_media', 'studio_publish'];
+export const STUDIO_STAGES = ['studio_media', 'studio_publish', 'audio_overview'];
 export const isMediaStage = (stage) => MEDIA_STAGES.includes(stage);
 /** Scripts waiting for the owner, at most: drafting more only piles up review work. */
 export const MAX_AWAITING_SCRIPTS = 6;
 /** Finish what was started first: publish, then assemble, then clips, then new scripts. */
-const PRIORITY = ['media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script'];
+const PRIORITY = ['media_publish', 'studio_publish', 'media_assemble', 'teaser_clips', 'studio_media', 'audio_overview', 'teaser_script'];
 
 export const teaserKey = (code) => `${code.toLowerCase()}-ur`;
 const newer = (a, b) => Date.parse(a ?? 0) > Date.parse(b ?? 0);
@@ -106,16 +112,65 @@ export function audioNeeds(units) {
     .map((u) => ({ course: u.course, unit: u.unit, stage: 'audio_overview' }));
 }
 
-/** One media job in flight; new scripts only while fewer than MAX_AWAITING_SCRIPTS wait for the owner. */
+/** Study Studio ledger states, in order (scripts/notebook-studio/media-ledger.mjs STATES). */
+export const STUDIO_STATES = ['planned', 'generated', 'downloaded', 'qa1-pass', 'encoded', 'qa2-pass',
+  'uploaded-private', 'qa3-pass', 'approved', 'public', 'placed'];
+const before = (state, edge) => STUDIO_STATES.indexOf(state) < STUDIO_STATES.indexOf(edge);
+export const studioKey = (course, unit) => `${course.toUpperCase()}#${Number(unit)}`;
+/** Units whose private items may wait for the owner's spot-check before no new unit is planned. */
+export const MAX_AWAITING_WATCH = 2;
+
+/**
+ * What the Study Studio needs next (owner, 2026-11-25: the crew plans, schedules and manages it).
+ * Per unit ledger: items before `qa3-pass` -> `studio_media` (resume from any state); items at
+ * `qa3-pass` wait for the owner's `crew approve-studio` and then -> `studio_publish`, as do
+ * approved or public items not yet placed. When no unit has work left before the owner, the next
+ * candidate (certified units without a ledger, in the order given) is planned: one unit in progress
+ * at a time, and none while MAX_AWAITING_WATCH units wait for the owner.
+ * @param {{course: string, unit: number, items: object[]}[]} units   existing ledgers
+ * @param {{ candidates?: {course: string, unit: number}[], approvals?: object }} opts
+ */
+export function studioNeeds(units, { candidates = [], approvals = {} } = {}) {
+  const jobs = [];
+  const owner = { watch: [] };
+  const studio = approvals.studio ?? {};
+  for (const u of units) {
+    const live = u.items.filter((i) => !i.blocked);
+    const key = studioKey(u.course, u.unit);
+    const ok = new Set(studio[key]?.keys ?? []);
+    const kept = new Set(studio[key]?.except ?? []);
+    if (live.some((i) => before(i.state, 'qa3-pass'))) jobs.push({ course: u.course, unit: u.unit, stage: 'studio_media' });
+    else if (live.some((i) => i.state === 'qa3-pass' && !ok.has(i.key) && !kept.has(i.key))) owner.watch.push(key);
+    if (live.some((i) => ['approved', 'public'].includes(i.state) || (i.state === 'qa3-pass' && ok.has(i.key)))) {
+      jobs.push({ course: u.course, unit: u.unit, stage: 'studio_publish' });
+    }
+  }
+  // Plan a new unit only when no unit is mid-way and few wait for the owner, so NotebookLM and
+  // YouTube budgets finish units instead of starting many, and the owner's watch list stays short.
+  const working = jobs.some((j) => j.stage === 'studio_media');
+  if (!working && owner.watch.length < MAX_AWAITING_WATCH) {
+    const have = new Set(units.map((u) => studioKey(u.course, u.unit)));
+    const next = candidates.find((c) => !have.has(studioKey(c.course, c.unit)));
+    if (next) jobs.push({ course: next.course, unit: next.unit, stage: 'studio_media', plan: true });
+  }
+  return { jobs, owner };
+}
+
+/**
+ * Jobs writing one ledger never overlap: one teaser-ledger job, and one job per unit's Study Studio
+ * ledger, in flight at a time (finish first: publish, then assemble, then clips, then studio, then
+ * new scripts). New scripts only while fewer than MAX_AWAITING_SCRIPTS wait for the owner.
+ */
 export function limitMedia(added, inFlight, { awaitingScripts = 0 } = {}) {
   const media = added.filter((j) => isMediaStage(j.stage)).sort((a, b) => PRIORITY.indexOf(a.stage) - PRIORITY.indexOf(b.stage));
-  let slot = !inFlight.some((j) => isMediaStage(j.stage));
+  const busy = new Set(inFlight.filter((j) => isMediaStage(j.stage)).map(ledgerOf));
   const keep = new Set();
   for (const j of media) {
-    if (!slot) break;
+    const ledger = ledgerOf(j);
+    if (busy.has(ledger)) continue;
     if (j.stage === 'teaser_script' && awaitingScripts >= MAX_AWAITING_SCRIPTS) continue;
     keep.add(j);
-    slot = false;
+    busy.add(ledger);
   }
   return added.filter((j) => !isMediaStage(j.stage) || keep.has(j));
 }
@@ -126,6 +181,7 @@ export function limitMedia(added, inFlight, { awaitingScripts = 0 } = {}) {
  */
 export function mediaLaunchProblem(j, { item, approval, currentSha }) {
   if (j.stage === 'teaser_clips') { const c = clipsAllowed(item, approval, currentSha); return c.ok ? null : c.why; }
+  if (j.stage === 'studio_publish') return approval ? null : 'no owner approve-studio';
   if (j.stage === 'media_publish') {
     if (!approval?.publish) return 'no owner publish approval';
     if (!['qa3-pass', 'approved'].includes(item?.state)) return `state ${item?.state ?? 'missing'}`;
@@ -177,6 +233,30 @@ export function approvePublish(approvals, key, { item, via, at }) {
   return `publishing ${key} (https://youtube.com/shorts/${item.youtube_id}) at the next tick`;
 }
 
+/**
+ * `crew approve-studio <course> <unit> [except <key>...]`: the owner watched the private Study Studio
+ * items of a unit (the spot-check, studio-media step 9). Items named after `except` stay private
+ * and are blocked for a redo with `crew reject-studio`.
+ */
+export function approveStudio(approvals, course, unit, { items, except = [], via, at }) {
+  const ready = (items ?? []).filter((i) => i.state === 'qa3-pass' && !i.blocked);
+  if (!ready.length) throw new Error(`${course} Unit ${unit} has no checked private item (qa3-pass) to approve`);
+  const unknown = except.filter((k) => !ready.some((i) => i.key === k));
+  if (unknown.length) throw new Error(`not a qa3-pass item of ${course} Unit ${unit}: ${unknown.join(', ')}`);
+  const st = (approvals.studio ??= {});
+  st[studioKey(course, unit)] = { at, via, except, keys: ready.filter((i) => !except.includes(i.key)).map((i) => i.key) };
+  return `approved ${st[studioKey(course, unit)].keys.length} item(s) of ${course} Unit ${unit}${except.length ? ` (kept private: ${except.join(', ')})` : ''}; they go public and onto the unit page at the next media hours`;
+}
+
+/** `crew reject-studio <course> <unit> <key> <note>`: the item is blocked and remade with the note. */
+export function rejectStudio(approvals, course, unit, key, note, { items, via, at }) {
+  if (!key || !note) throw new Error('usage: crew reject-studio <course> <unit> <item key> <what must change>');
+  if (!(items ?? []).some((i) => i.key === key)) throw new Error(`no item ${key} in ${course} Unit ${unit}`);
+  const st = (approvals.studioRejects ??= {});
+  (st[studioKey(course, unit)] ??= {})[key] = { note, at, via };
+  return `${key} of ${course} Unit ${unit} will be blocked and remade with your note; it stays private`;
+}
+
 /** One line for the owner: what waits on them. */
 export function ownerLine(owner) {
   const parts = [];
@@ -185,6 +265,7 @@ export function ownerLine(owner) {
   if (owner.held?.length) parts.push(`held private by you: ${owner.held.join(', ')}`);
   if (owner.scheduled?.length) parts.push(`scheduled to go public: ${owner.scheduled.join(', ')}`);
   if (owner.voided.length) parts.push(`approval void (script changed): ${owner.voided.join(', ')}`);
+  if (owner.watch?.length) parts.push(`Study Studio units to watch (private): ${owner.watch.join(', ')} - reply \`crew approve-studio <course> <unit>\``);
   return parts.join(' · ') || 'nothing';
 }
 
@@ -213,15 +294,38 @@ export function mediaTask(j) {
       if (!j.publish?.at) throw new Error(`${j.id}: media_publish needs the owner's crew publish approval`);
       return `The owner approved publishing ${key} (\`crew publish\` via ${j.publish.via} at ${j.publish.at}, video ${j.publish.youtube_id}). If the item is \`qa3-pass\`, advance it: \`${T} advance ${key} approved --json '{"gates":{"owner":{"verdict":"approve","by":"owner","date":"${j.publish.at.slice(0, 10)}","note":"crew publish via ${j.publish.via}"}}}'\`. Then set exactly that video (${j.publish.youtube_id}) public with youtube-uploader \`update_video\` (privacy_status public), confirm with \`list_videos\`, and advance to \`public\` with \`{"published_at":"<now ISO>"}\`. Then run \`node scripts/notebook-studio/teaser-stats.mjs\` and commit \`specs/studio/teaser-stats.json\` (the home page ranks teasers by it). Change no other video.`;
     case 'audio_overview':
-      return `Make the planned NotebookLM audio briefs of ${j.course} Unit ${j.unit} (studio-media skill: generate, download, QG1, QG2, encode, upload PRIVATE, QG3), recording every step in its media ledger. ${PACE_UPLOAD} If \`nlm\` reports expired cookies, stop and print one CREW-HANDOFF line asking the owner to run \`nlm login\`; commit nothing else. ${NEVER_PUBLIC}`;
+    case 'studio_media':
+      return studioTask(j);
+    case 'studio_publish':
+      return studioPublishTask(j);
     default:
       throw new Error(`not a media stage: ${j.stage}`);
   }
 }
 
+const L = 'node scripts/notebook-studio/media-ledger.mjs';
+/** NotebookLM artifact creation goes through MCP too, so the agent paces it like uploads. */
+export const PACE_NLM = 'Before every NotebookLM `studio_create` run `node scripts/media/pacing.mjs check nlm.studio`: on `hold`, create nothing more, print one CREW-HANDOFF line with the next allowed time and stop. Right after each successful creation run `node scripts/media/pacing.mjs record nlm.studio`.';
+
+function studioTask(j) {
+  const c = j.course, u = j.unit, pad = String(u).padStart(2, '0');
+  const plan = j.plan
+    ? `This unit has no Study Studio ledger yet: plan it first (studio-media skill, step 1) with the owner-approved LEAN recipe (\`specs/029-notebook-studio/rollout.md\`, 2026-11-27). For every topic of the unit, plan one audio brief (part 1) in English with \`${L} plan ${c} ${u} --json '...'\` (prompt \`specs/studio/prompts/audio.md\`, a title and alt text from the topic itself), and the same in Urdu when the topic's Urdu mirror exists. Plan ONE video per language for the whole unit, recorded on topic 1 (prompt \`specs/studio/prompts/video-unit.md\`, titled as the unit overview, with the whole unit as its source pack); Urdu only when every topic of the unit has its Urdu mirror. Plan no per-topic videos and no "go deeper" parts unless the owner names this unit for the full recipe. Build the source pack and the notebook as the skill says. `
+    : '';
+  const rejects = Object.entries(j.rejects ?? {}).map(([k, r]) => `${k}: "${r.note}"`);
+  const redo = rejects.length ? `The owner asked for these items to be remade: ${rejects.join('; ')}. Block each with \`${L} block ${c} ${u} <key> "<the owner's words>"\`, regenerate it with a prompt that answers the note, then unblock it and carry it through the steps again. ` : '';
+  return `Run the Study Studio of ${c} Unit ${u} (studio-media skill), audio and video. ${plan}${redo}Read \`${L} status ${c} ${u}\` and carry every item that is not blocked from its current state up to \`qa3-pass\`: generate, download, QG1, encode, QG2 (your own transcript check against the topic text), upload PRIVATE, QG3. Never edit the ledger by hand; every change goes through \`${L} advance\`. ${PACE_NLM} ${PACE_UPLOAD} A hold is normal: commit what you advanced and stop with the CREW-HANDOFF line; the crew resumes in the next media hours. When every item is at \`qa3-pass\`, run \`${L} sheet ${c} ${u}\` and print one CREW-HANDOFF line with the private links the owner should watch and "reply \`crew approve-studio ${c} ${u}\`". If \`nlm\` reports expired cookies, stop and print one CREW-HANDOFF line asking the owner to run \`nlm login\`; commit nothing else. Commit \`specs/studio/${c.toLowerCase()}/media-unit-${pad}.json\` with your PHR. ${NEVER_PUBLIC}`;
+}
+
+function studioPublishTask(j) {
+  if (!j.studioApproval?.at) throw new Error(`${j.id}: studio_publish needs the owner's crew approve-studio`);
+  const a = j.studioApproval, c = j.course, u = j.unit;
+  return `The owner watched the private Study Studio items of ${c} Unit ${u} and approved them with \`crew approve-studio\` (via ${a.via} at ${a.at}). Approved keys: ${a.keys.join(', ')}${a.except?.length ? `; kept private: ${a.except.join(', ')} (change nothing about them)` : ''}. For each approved key still at \`qa3-pass\`: \`${L} advance ${c} ${u} <key> approved --json '{"gates":{"owner":{"verdict":"approve","by":"owner","date":"${a.at.slice(0, 10)}","note":"crew approve-studio via ${a.via}"}}}'\`. Then for each approved item (and any already \`approved\` from an earlier run) set exactly that video public with youtube-uploader \`update_video\` (privacy_status public), confirm with \`list_videos\`, and \`${L} advance ${c} ${u} <key> public --json '{"published_at":"<now ISO>"}'\`. Then run \`node scripts/notebook-studio/place-media.mjs ${c} ${u}\`, \`node scripts/check-studio-manifest.mjs\` and \`node scripts/build-studio-index.mjs\`, and commit the ledger, the unit's Studio manifest and your PHR. Change no other video.`;
+}
+
 /** Files a media job may touch. */
 export function mediaScope(j) {
-  if (j.stage === 'audio_overview') return `${j.course} Unit ${j.unit} Study Studio only: \`specs/studio/${j.course.toLowerCase()}/media-unit-${String(j.unit).padStart(2, '0')}.json\` and its manifest row, plus your PHR. Media files live under ~/studio-media and never enter git.`;
+  if (STUDIO_STAGES.includes(j.stage)) return `${j.course} Unit ${j.unit} Study Studio only: \`specs/studio/${j.course.toLowerCase()}/media-unit-${String(j.unit).padStart(2, '0')}.json\` and its manifest row, plus your PHR. Media files live under ~/studio-media and never enter git.`;
   return `The ${j.course} teaser only: \`specs/studio/teasers/${j.course.toLowerCase()}.json\` and its own item in \`specs/studio/teasers/media-teasers.json\` (no other item), plus your PHR. Media files live under ~/studio-media and never enter git.`;
 }
 

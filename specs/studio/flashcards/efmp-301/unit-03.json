@@ -1,0 +1,302 @@
+{
+ "course": "EFMP-301",
+ "unit": 3,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Behaviorism",
+     "definition": "The view of learning that focuses on changes in observable behaviour: changes in what people say or do. It started from what can be seen, because thinking cannot be seen."
+    },
+    {
+     "term": "Classical conditioning",
+     "definition": "Learning by association: a neutral signal comes to trigger a response because it repeatedly arrived just before something that already triggered it. Pavlov showed it with dogs, a bell and food."
+    },
+    {
+     "term": "Unconditioned stimulus",
+     "definition": "In classical conditioning, the stimulus that already triggers the response without any learning, such as the food that makes Pavlov's dogs salivate."
+    },
+    {
+     "term": "Conditioned stimulus",
+     "definition": "A neutral stimulus, such as the bell, that has repeatedly come just before the unconditioned stimulus and now triggers the response on its own."
+    },
+    {
+     "term": "Extinction",
+     "definition": "The fading of a conditioned response when the signal stops predicting. Associations a school creates by accident fade only when the pairing stops, not when anyone announces they should."
+    },
+    {
+     "term": "Operant conditioning",
+     "definition": "Learning from consequences: behaviour followed by good outcomes happens more often, and behaviour followed by bad outcomes happens less often. B. F. Skinner mapped it with laboratory rats."
+    },
+    {
+     "term": "Consequence",
+     "definition": "What actually follows a behaviour, not what the teacher intends or says will follow. A promised prize that never arrives is not a consequence but a broken signal."
+    },
+    {
+     "term": "Positive reinforcement",
+     "definition": "Adding something the pupil wants, such as praise, a star or a turn at the plants, so that the behaviour becomes more frequent."
+    },
+    {
+     "term": "Negative reinforcement",
+     "definition": "Removing something the pupil dislikes, so that the behaviour becomes more frequent. It strengthens behaviour and is not punishment; reading \"negative\" as \"bad\" is the classic error."
+    },
+    {
+     "term": "Punishment",
+     "definition": "A consequence that makes behaviour less frequent, by adding something disliked (positive punishment) or removing something wanted (negative punishment). It suppresses behaviour but does not teach."
+    }
+   ],
+   "ur": [
+    {
+     "term": "طرزِ عمل پسندی",
+     "definition": "تعلم کا وہ نظریہ جو مشاہدے میں آنے والے رویے کی تبدیلیوں پر توجہ رکھتا ہے: لوگ کیا کہتے یا کرتے ہیں اس کی تبدیلیوں پر۔ یہ اس سے شروع ہوا جو دیکھا جا سکتا ہے، کیونکہ سوچ دیکھی نہیں جا سکتی۔"
+    },
+    {
+     "term": "کلاسیکی شرطندگی",
+     "definition": "وابستگی سے تعلم: ایک بے اثر اشارہ ردعمل پیدا کرنے لگتا ہے کیونکہ وہ بار بار کسی ایسی چیز سے ٹھیک پہلے آیا جو پہلے سے وہ ردعمل پیدا کرتی تھی۔ پاولوف نے اسے کتوں، گھنٹی اور کھانے سے دکھایا۔"
+    },
+    {
+     "term": "غیر شرطی محرک",
+     "definition": "کلاسیکی شرطندگی میں وہ محرک جو بغیر کسی تعلم کے پہلے سے ردعمل پیدا کرتا ہے، جیسے وہ کھانا جس سے پاولوف کے کتوں میں لعاب آتا ہے۔"
+    },
+    {
+     "term": "شرطی محرک",
+     "definition": "ایک بے اثر محرک، جیسے گھنٹی، جو بار بار غیر شرطی محرک سے ٹھیک پہلے آیا اور اب اکیلا ہی ردعمل پیدا کرتا ہے۔"
+    },
+    {
+     "term": "زوال",
+     "definition": "جب اشارہ پیشن گوئی کرنا چھوڑ دے تو شرطی ردعمل کا مدھم ہو جانا۔ اسکول جو وابستگیاں حادثاتی طور پر بناتا ہے وہ صرف تب مدھم ہوتی ہیں جب جوڑی بند ہو، نہ کہ جب کوئی اعلان کرے کہ انہیں ختم ہونا چاہیے۔"
+    },
+    {
+     "term": "عملی شرطندگی",
+     "definition": "نتائج سے تعلم: جو رویہ اچھے نتائج کے بعد آتا ہے وہ زیادہ ہوتا ہے، اور جو رویہ برے نتائج کے بعد آتا ہے وہ کم ہوتا ہے۔ بی ایف اسکنر نے تجربہ گاہ کے چوہوں کے ساتھ اس کا نقشہ بنایا۔"
+    },
+    {
+     "term": "نتیجہ",
+     "definition": "وہ جو واقعی رویے کے بعد آتا ہے، نہ وہ جس کا استاد ارادہ رکھتا ہے یا جس کے آنے کا کہتا ہے۔ وعدہ کیا گیا انعام جو کبھی نہ آئے نتیجہ نہیں بلکہ ایک ٹوٹا ہوا اشارہ ہے۔"
+    },
+    {
+     "term": "مثبت تقویت",
+     "definition": "ایسی چیز شامل کرنا جو شاگرد چاہتا ہے، جیسے تعریف، ستارہ یا پودوں کو پانی دینے کی باری، تاکہ رویہ زیادہ کثرت سے ہو۔"
+    },
+    {
+     "term": "منفی تقویت",
+     "definition": "ایسی چیز ہٹانا جو شاگرد پسند نہیں کرتا، تاکہ رویہ زیادہ کثرت سے ہو۔ یہ رویہ مضبوط کرتی ہے اور سزا نہیں ہے؛ \"منفی\" کو \"برا\" پڑھنا کلاسیکی غلطی ہے۔"
+    },
+    {
+     "term": "سزا",
+     "definition": "ایسا نتیجہ جو رویے کو کم کثرت سے کرتا ہے، کوئی ناپسندیدہ چیز شامل کر کے (مثبت سزا) یا کوئی پسندیدہ چیز ہٹا کر (منفی سزا)۔ یہ رویہ دباتی ہے مگر سکھاتی نہیں۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Cognitive view",
+     "definition": "The view that asks what learners think, and defines learning as change in thinking: new understandings, new connections and new ways of representing the world. It corrected behaviourism rather than rejecting it."
+    },
+    {
+     "term": "Schema",
+     "definition": "An organised packet of knowledge, such as \"cat\", \"fractions\" or \"how school days go\". In Piaget's account, learning is the constant adjustment of schemas to experience."
+    },
+    {
+     "term": "Assimilation",
+     "definition": "Fitting new experience into an existing schema, as when a Class 1 pupil calls every four-legged animal \"billi\" (cat). It is efficient and mostly silent."
+    },
+    {
+     "term": "Accommodation",
+     "definition": "Changing a schema to fit experience that will not go in, as when the pupil finally separates dog from cat. It is effortful, confusion lives there, and it is where real learning happens."
+    },
+    {
+     "term": "Enactive representation",
+     "definition": "In Bruner's three modes, knowing by doing, through concrete materials and actions, such as halving a roti. It comes first in Bruner's order."
+    },
+    {
+     "term": "Iconic representation",
+     "definition": "In Bruner's three modes, knowing by image, such as a drawing of the roti. It comes after the enactive mode and before the symbolic mode."
+    },
+    {
+     "term": "Symbolic representation",
+     "definition": "In Bruner's three modes, knowing by sign, such as words or the written 1/2. It comes last, after enactive and iconic experience of the concept."
+    },
+    {
+     "term": "Discovery learning",
+     "definition": "Bruner's idea that pupils learn best when they discover the structure of a subject for themselves, with guidance. The teacher arranges the experience so the structure shows up; the discovery is guided, or it does not happen."
+    },
+    {
+     "term": "Spiral curriculum",
+     "definition": "A curriculum that introduces an idea early in an intuitive form and returns to it later in a more formal one, as fractions move from sharing food to rotis and diagrams to number operations."
+    }
+   ],
+   "ur": [
+    {
+     "term": "ادراکی نظریہ",
+     "definition": "وہ نظریہ جو پوچھتا ہے کہ سیکھنے والے کیا سوچتے ہیں، اور تعلم کو سوچ میں تبدیلی قرار دیتا ہے: نئی سمجھ، نئے رابطے اور دنیا کو ظاہر کرنے کے نئے طریقے۔ اس نے طرزِ عمل پسندی کی اصلاح کی، اسے رد نہیں کیا۔"
+    },
+    {
+     "term": "خاکہ",
+     "definition": "علم کا ایک منظم پیکٹ، جیسے \"بلی\"، \"کسور\" یا \"اسکول کے دن کیسے گزرتے ہیں\"۔ پیاژے کے بیان میں تعلم خاکوں کو تجربے کے مطابق مسلسل ترتیب دینا ہے۔"
+    },
+    {
+     "term": "ہم آہنگی",
+     "definition": "نئے تجربے کو موجود خاکے میں فٹ کرنا، جیسے جماعت اول کا شاگرد ہر چار پیروں والے جانور کو \"بلی\" کہتا ہے۔ یہ مؤثر ہے اور زیادہ تر خاموش رہتی ہے۔"
+    },
+    {
+     "term": "مطابقت",
+     "definition": "خاکے کو بدلنا تاکہ وہ تجربہ فٹ ہو جائے جو اندر نہیں جاتا، جیسے جب شاگرد آخر کار کتے کو بلی سے الگ کرتا ہے۔ یہ محنت طلب ہے، الجھن یہیں رہتی ہے، اور اصل تعلم یہیں ہوتا ہے۔"
+    },
+    {
+     "term": "عملی نمائندگی",
+     "definition": "برنر کے تین انداز میں کر کے جاننا، ٹھوس سامان اور اعمال کے ذریعے، جیسے روٹی کو آدھا کرنا۔ برنر کی ترتیب میں یہ پہلے آتی ہے۔"
+    },
+    {
+     "term": "تصویری نمائندگی",
+     "definition": "برنر کے تین انداز میں تصویر سے جاننا، جیسے روٹی کی ڈرائنگ۔ یہ عملی انداز کے بعد اور علامتی انداز سے پہلے آتی ہے۔"
+    },
+    {
+     "term": "علامتی نمائندگی",
+     "definition": "برنر کے تین انداز میں علامت سے جاننا، جیسے الفاظ یا لکھا ہوا 1/2۔ یہ آخر میں آتی ہے، تصور کے عملی اور تصویری تجربے کے بعد۔"
+    },
+    {
+     "term": "دریافت سیکھنا",
+     "definition": "برنر کا خیال کہ شاگرد بہترین سیکھتے ہیں جب وہ کسی مضمون کا ڈھانچہ رہنمائی کے ساتھ خود دریافت کریں۔ استاد تجربے کو اس طرح ترتیب دیتا ہے کہ ڈھانچہ سامنے آئے؛ دریافت رہنمائی شدہ ہوتی ہے، ورنہ ہوتی ہی نہیں۔"
+    },
+    {
+     "term": "مارپیچ نصاب",
+     "definition": "ایسا نصاب جو کوئی خیال جلدی ایک وجدانی شکل میں متعارف کراتا ہے اور بعد میں زیادہ رسمی شکل میں اس پر واپس آتا ہے، جیسے کسور کھانا بانٹنے سے روٹیوں اور ڈایاگراموں اور پھر عددی عملوں تک جاتے ہیں۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Social learning theory",
+     "definition": "Albert Bandura's theory that humans learn a great deal by observing others, watching what they do and what happens to them, rather than only by doing and being reinforced themselves."
+    },
+    {
+     "term": "Observational learning",
+     "definition": "Learning by watching a model. Attention and retention support acquiring and remembering what the model does; reproduction and motivation explain whether the observer performs it."
+    },
+    {
+     "term": "Model",
+     "definition": "The person whose behaviour is observed. The strongest models are seen as important, similar or warmly related to the learner, and a teacher is a model in every interaction."
+    },
+    {
+     "term": "Attention",
+     "definition": "The first observational-learning step: the learner must notice the model. In a classroom, attention is engineered by salience, such as the teacher's first response to a wrong answer."
+    },
+    {
+     "term": "Retention",
+     "definition": "The observational-learning step in which the learner remembers what was seen, in a form that can be used later. A vivid, structured episode retains better than a rushed one."
+    },
+    {
+     "term": "Reproduction",
+     "definition": "The observational-learning step in which the learner must be able to do the behaviour. Complex behaviours need practice and often a script."
+    },
+    {
+     "term": "Motivation",
+     "definition": "The observational-learning step in which the expected outcome must make the behaviour worth doing. A pupil may remember a modelled behaviour yet lack the incentive to perform it."
+    },
+    {
+     "term": "Vicarious reinforcement",
+     "definition": "Reinforcement by watching someone else be reinforced, which works almost as well as being reinforced personally. Watching negative behaviour bring attention reinforces it in every pupil who saw it."
+    }
+   ],
+   "ur": [
+    {
+     "term": "سماجی تعلم کا نظریہ",
+     "definition": "البرٹ بینڈورا کا نظریہ کہ انسان بہت کچھ دوسروں کو دیکھ کر سیکھتے ہیں: یہ دیکھ کر کہ وہ کیا کرتے ہیں اور ان کے ساتھ کیا ہوتا ہے، نہ کہ صرف خود کر کے اور خود تقویت پا کر۔"
+    },
+    {
+     "term": "مشاہداتی تعلم",
+     "definition": "کسی نمونے کو دیکھ کر سیکھنا۔ توجہ اور حفظ نمونے کے عمل کو سیکھنے اور یاد رکھنے میں مدد دیتے ہیں؛ دہرانا اور محرک بتاتے ہیں کہ دیکھنے والا اسے عملی طور پر کرتا ہے یا نہیں۔"
+    },
+    {
+     "term": "نمونہ",
+     "definition": "وہ شخص جس کا رویہ دیکھا جاتا ہے۔ سب سے مضبوط نمونے وہ ہیں جو سیکھنے والے کو اہم، مماثل یا شفقت سے جڑے ہوئے لگیں، اور استاد ہر بات چیت میں نمونہ ہوتا ہے۔"
+    },
+    {
+     "term": "توجہ",
+     "definition": "مشاہداتی تعلم کا پہلا مرحلہ: سیکھنے والے کو نمونہ نوٹ کرنا ہوگا۔ جماعت میں توجہ نمایاں ہونے سے بنتی ہے، جیسے غلط جواب پر استاد کا پہلا ردعمل۔"
+    },
+    {
+     "term": "حفظ",
+     "definition": "مشاہداتی تعلم کا وہ مرحلہ جس میں سیکھنے والا دیکھی ہوئی چیز ایسی شکل میں یاد رکھتا ہے جو بعد میں استعمال ہو سکے۔ واضح اور منظم منظر جلدی والے منظر سے بہتر یاد رہتا ہے۔"
+    },
+    {
+     "term": "دہرانا",
+     "definition": "مشاہداتی تعلم کا وہ مرحلہ جس میں سیکھنے والے کو رویہ کرنا آنا چاہیے۔ پیچیدہ رویوں کو مشق اور اکثر ایک اسکرپٹ کی ضرورت ہوتی ہے۔"
+    },
+    {
+     "term": "محرک",
+     "definition": "مشاہداتی تعلم کا وہ مرحلہ جس میں متوقع نتیجہ رویے کو کرنے کے قابل بناتا ہے۔ شاگرد نمونے کا رویہ یاد رکھ سکتا ہے مگر اسے کرنے کی ترغیب نہ رکھتا ہو۔"
+    },
+    {
+     "term": "بدلی تقویت",
+     "definition": "کسی دوسرے کو تقویت پاتے دیکھ کر تقویت پانا، جو تقریباً ذاتی طور پر تقویت پانے جتنا ہی کام کرتا ہے۔ منفی رویے کو توجہ لاتے دیکھنا اسے ہر اُس شاگرد میں تقویت دیتا ہے جس نے دیکھا۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "Constructivism",
+     "definition": "The perspective that learners do not receive knowledge but construct it, actively, out of experience and what they already hold. Its hard edge: understanding cannot be transmitted by the teacher, however clear the explanation."
+    },
+    {
+     "term": "Psychological constructivism",
+     "definition": "The Piaget stream of constructivism, which puts the construction inside the individual: the learner organises and reorganises experience."
+    },
+    {
+     "term": "Social constructivism",
+     "definition": "The stream of constructivism that puts the construction in the assistance: learners build understanding with the help of others who know the way."
+    },
+    {
+     "term": "Zone of proximal development",
+     "definition": "Vygotsky's gap between what a learner can do alone and what the same learner can do with help, where learning is located. Teaching aims at the zone: not too hard to reach with support, not so easy that support is decoration."
+    },
+    {
+     "term": "Scaffolding",
+     "definition": "Bruner's word for that support: a temporary framework that lets a stronger structure be built within it. Its discipline is in \"temporary\": the scaffold is matched to the gap and removed deliberately."
+    },
+    {
+     "term": "Permanent crutch",
+     "definition": "Help that never comes down. It is not scaffolding, and the pupil learns to need it."
+    },
+    {
+     "term": "Lens",
+     "definition": "How this unit treats its four theory families (behaviourist, cognitive, social learning, constructivist): not rivals to be ranked, but lenses that each see something the others miss. The professional skill is choosing among them on evidence."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تعمیریت",
+     "definition": "وہ نقطہ نظر کہ سیکھنے والے علم وصول نہیں کرتے بلکہ فعال طور پر اسے تجربے اور اپنے پاس پہلے سے موجود علم سے تعمیر کرتے ہیں۔ اس کی سخت دھار: سمجھ استاد سے منتقل نہیں ہو سکتی، وضاحت جتنی بھی صاف ہو۔"
+    },
+    {
+     "term": "نفسیاتی تعمیریت",
+     "definition": "تعمیریت کی پیاژے والی دھار، جو تعمیر کو فرد کے اندر رکھتی ہے: سیکھنے والا تجربے کو منظم اور دوبارہ منظم کرتا ہے۔"
+    },
+    {
+     "term": "سماجی تعمیریت",
+     "definition": "تعمیریت کی وہ دھار جو تعمیر کو مدد میں رکھتی ہے: سیکھنے والے سمجھ ان لوگوں کی مدد سے بناتے ہیں جو راستہ جانتے ہیں۔"
+    },
+    {
+     "term": "علاقہ ہائے قربی نشوونما",
+     "definition": "ویگوٹسکی کے مطابق وہ شگاف جو سیکھنے والا اکیلے کر سکتا ہے اور جو وہی سیکھنے والا مدد سے کر سکتا ہے، ان کے درمیان؛ تعلم یہیں ہوتا ہے۔ تدریس اسی کو نشانہ بناتی ہے: سہارے سے پہنچنے کے لیے بہت مشکل نہیں، اتنا آسان نہیں کہ سہارا سجاوٹ ہو۔"
+    },
+    {
+     "term": "معاونتی تدریس",
+     "definition": "اس سہارے کے لیے برنر کا لفظ: ایک عارضی ڈھانچہ جو اپنے اندر مضبوط عمارت بننے دیتا ہے۔ اس کی پوری نظم \"عارضی\" میں ہے: سہارا شگاف کے مطابق چنا جاتا ہے اور جان بوجھ کر ہٹایا جاتا ہے۔"
+    },
+    {
+     "term": "مستقل بیساکھی",
+     "definition": "ایسی مدد جو کبھی نیچے نہ آئے۔ یہ معاونتی تدریس نہیں ہے، اور شاگرد اس کا محتاج ہونا سیکھ لیتا ہے۔"
+    },
+    {
+     "term": "شیشہ",
+     "definition": "یہ یونٹ اپنے چار نظریاتی خاندانوں (طرزِ عمل پسندی، ادراکی، سماجی تعلم، تعمیری) کو یوں دیکھتا ہے: درجہ بندی کے لیے حریف نہیں بلکہ شیشے، جن میں سے ہر ایک وہ دیکھتا ہے جو باقی نہیں دیکھتے۔ پیشہ ورانہ مہارت ثبوت پر ان میں سے چناؤ ہے۔"
+    }
+   ]
+  }
+ }
+}

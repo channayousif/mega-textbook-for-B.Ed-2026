@@ -5191,7 +5191,7 @@ content-improvement loop with no further cycle.
   media stages still run only under the owner's existing gates (`crew media on`, script approval).
 
 ## D-2026-0100 - Media creation is paced: office hours, gaps, hourly and daily caps
-- **Status:** confirmed
+- **Status:** confirmed; point 1 amended by D-2026-0101 (2026-11-25): media hours are every hour except 09:00-15:00 PKT
 - **Gate:** none (Feature 029/030/031 media; not video-studio)
 - **Scope:** every automated call to Google Flow (Veo, Nano Banana), Gemini (agy), Codex images,
   NotebookLM, YouTube uploads and Meta, TikTok and LinkedIn posts, by the crew or by scripts
@@ -5210,3 +5210,24 @@ content-improvement loop with no further cycle.
   credits spent until reset" and "9 to 3 office hours".
 - **Limits:** Adds limits only; changes no owner gate (script approval, private-first uploads,
   spot-check before public). Manual work over the davinci desktop is outside the automated ledger.
+
+## D-2026-0101 - Media hours are every hour except the owner's 09:00-15:00 office hours
+- **Status:** confirmed
+- **Gate:** none (Feature 029/030/031 media; not video-studio)
+- **Scope:** the media-hours window of D-2026-0100 point 1, for every automated media call by the
+  crew or by scripts (`scripts/media/pacing.mjs` DEFAULTS.hours, the crew's media launches and
+  producer lanes, the social roundup)
+- **Decided by:** curriculum owner, 2026-11-25 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **Media hours are 15:00-09:00 PKT**, every hour except 09:00-15:00, the owner's office hours.
+     No automated media call is made between 09:00 and 15:00 PKT, and the crew does not launch
+     media stages that call outside services then. The window runs across midnight.
+  2. **Daily caps reset at 00:00 PKT**, which falls inside the window; the gaps, hourly and daily
+     caps and the Veo budget of D-2026-0100 points 2 and 3 are unchanged.
+  3. **The social roundup is due from 15:00 PKT**, the opening of media hours.
+- **Basis:** owner message 2026-11-25: "what are the media hours, I asked to set allthe hours except
+  9am to 3pm." D-2026-0100 recorded the answer "9 to 3 office hours" and was built as media running
+  only 09:00-15:00; this corrects it to the owner's meaning. Implemented in PR #793 (PHR 20261271).
+- **Limits:** Changes only the window. No owner gate changes (script approval, private-first
+  uploads, spot-check before public). The owner may still override the window in the host-local
+  `~/.config/mega-book/media-limits.json`.

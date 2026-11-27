@@ -25,7 +25,7 @@
 ## Phase 5: Rollout (owner approval required)
 - [x] T015 Apply 0052 and 0053 to the shared Supabase (before CI's RLS job can pass).
 - [x] T016 Add `DIGEST_CRON_SECRET`, `DIGEST_TOKEN_SECRET` to the edge-runtime env, copy the functions, restart the functions container.
-- [ ] T017 After merge and deploy: admin preview and test send, checked in Gmail desktop and mobile.
+- [ ] T017 After merge and deploy: admin preview and test send, checked in Gmail desktop and mobile. (#810)
 - [x] T018 Install the crontab line `0 10 * * 0` for `ops/news/weekly-digest.sh`.
 
 ## Phase 6: Three-row ticker, full list, pinning, fresher feed (owner, 2026-11-17)

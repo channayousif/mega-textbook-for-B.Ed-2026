@@ -49,13 +49,13 @@ const BLOOM_LEVELS = [
 const isEl = (node, tag) => node && node.type === 'element' && (!tag || node.tagName === tag);
 const isBlank = (node) => node && node.type === 'text' && !node.value.trim();
 
-function textOf(node) {
+export function textOf(node) {
   if (!node) return '';
   if (node.type === 'text') return node.value;
   return (node.children || []).map(textOf).join('');
 }
 
-function addClass(node, ...names) {
+export function addClass(node, ...names) {
   node.properties = node.properties || {};
   const current = node.properties.className || [];
   node.properties.className = [...(Array.isArray(current) ? current : [current]), ...names];
@@ -119,7 +119,7 @@ function enhanceSection(kind, children) {
 }
 
 /** Replace a trailing `*(Level)*` emphasis inside a list item with a Bloom chip. */
-function chipBloom(node) {
+export function chipBloom(node) {
   for (const child of node.children || []) {
     if (isEl(child, 'em')) {
       const m = /^\((.+)\)$/.exec(textOf(child).trim());

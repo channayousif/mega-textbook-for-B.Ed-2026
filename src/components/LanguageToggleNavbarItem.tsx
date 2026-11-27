@@ -8,13 +8,18 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAlternatePageUtils } from '@docusaurus/theme-common/internal';
 import LanguageToggle from './LanguageToggle';
+import { useUrduAvailability } from '@site/src/lib/urduAvailability';
 
 export default function LanguageToggleNavbarItem({ mobile = false }: { mobile?: boolean }): React.ReactElement | null {
   const { i18n } = useDocusaurusContext();
   const alternate = useAlternatePageUtils();
+  const { missing } = useUrduAvailability();
   if (mobile) {
     const other = i18n.locales.find((l) => l !== i18n.currentLocale);
     if (!other) return null;
+    if (other === 'ur' && missing) {
+      return <li className="menu__list-item"><span className="menu__link" aria-disabled="true" style={{ opacity: 0.6 }} lang="ur">{i18n.localeConfigs[other].label} (اردو ترجمہ ابھی دستیاب نہیں)</span></li>;
+    }
     return (
       <li className="menu__list-item">
         <a className="menu__link" href={alternate.createUrl({ locale: other, fullyQualified: false })} lang={other} hrefLang={other}>

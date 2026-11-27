@@ -1,0 +1,7 @@
+$ npm run check:bloom-bands   (repo HEAD 6a810e62c, 2026-11-26T20:41:39.174Z)
+
+> bed-mega-textbook@0.1.0 check:bloom-bands
+> node scripts/check-bloom-bands.mjs
+
+✓ Bloom tags honour their unit spec's blueprint bands (2575 items checked).
+exit_code=0

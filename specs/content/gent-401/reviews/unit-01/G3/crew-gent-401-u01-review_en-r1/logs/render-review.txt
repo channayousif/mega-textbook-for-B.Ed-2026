@@ -1,0 +1,17 @@
+render-review: unavailable (exit 1)
+
+Reason: the CI-built production site is not the reviewed input.
+Deployed SHA: 366019f8ace647e892523e553b81ab6d1832ec68
+Reviewed HEAD: 6a810e62c7b9d4ff7643b56a17f75cb9db2ce98e
+Command: git diff --quiet $DEPLOYED HEAD -- docs/semester-4/gent-401/unit-01/ static/img/figures/gent-401/unit-01/
+Exit code: 1 (differences found)
+
+Command: git diff --stat $DEPLOYED HEAD -- docs/semester-4/gent-401/unit-01/ static/img/figures/gent-401/unit-01/
+ docs/semester-4/gent-401/unit-01/index.mdx        |   2 ++
+ static/img/figures/gent-401/unit-01/fig-U1-5.webp | Bin 0 -> 134928 bytes
+ 2 files changed, 2 insertions(+)
+
+Consequence: no render-inspect run against https://textbook.com.pk, because the live pages
+would not show the reviewed bytes. The brief also forbids building or serving the site.
+Changed images can be served stale for up to 30 days, so the missing/mismatched
+fig-U1-5.webp asset is treated as unverified, not as a content defect.

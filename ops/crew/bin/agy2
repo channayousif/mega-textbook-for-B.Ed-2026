@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Feature 034: the second Antigravity account for the crew's agy2 and agy2_claude workers.
+# agy keeps its login under $HOME/.gemini, so a separate HOME isolates the account; ~/.agy2 links
+# .gitconfig, .ssh, .nvm, .local and ~/.config/{gh,git} back to the real home so git, gh and node
+# behave the same. Install: ln -s "$PWD/ops/crew/bin/agy2" ~/.local/bin/agy2
+# Sign in once (interactive): HOME=~/.agy2 agy
+set -euo pipefail
+PROFILE="${AGY2_HOME:-$HOME/.agy2}"
+if [ ! -s "$PROFILE/.gemini/antigravity-cli/antigravity-oauth-token" ]; then
+  # Same wording the crew already treats as a provider refusal (PROVIDER_RE), so the worker cools
+  # down instead of a job waiting forever for an interactive login.
+  echo "agy2: UNAUTHENTICATED (code 401): no login in $PROFILE; run: HOME=$PROFILE agy" >&2
+  exit 1
+fi
+HOME="$PROFILE" exec agy "$@"

@@ -37,3 +37,7 @@ a.seg:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offse
 :global(html[data-theme='dark']) .seg { color: #e9f1ef; }
 :global(html[data-theme='dark']) a.seg:hover { background: #2a5a60; color: #fff; }
 :global(html[data-theme='dark']) .on { background: #a6dfdc; color: #123e43; }
+
+/* Feature 034 T020 (#807): Urdu not available for this page. */
+.unavailable { border: 0; background: transparent; color: #7c8b8e; cursor: help; font: inherit; opacity: .75; }
+.unavailable:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }

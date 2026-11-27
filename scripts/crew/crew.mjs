@@ -37,10 +37,11 @@ import { OWN_PR, queueReview, recordReview, fanOutJobs } from './maintjobs.mjs';
 import { boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from './intel.mjs';
 import { noteStall, clearStall, stallAlertDue, heldFor, stallLine } from './stall.mjs';
 import { resumeHere } from './resume.mjs';
-import { isMediaStage, teaserNeeds, audioNeeds, limitMedia, mediaLaunchProblem, approveScript, rejectMedia, approvePublish, ownerLine, mediaTask, mediaScope, mediaHold, teaserKey } from './media.mjs';
+import { isMediaStage, teaserNeeds, studioNeeds, limitMedia, mediaLaunchProblem, approveScript, rejectMedia, approvePublish, approveStudio, rejectStudio, studioKey, STUDIO_STAGES, ownerLine, mediaTask, mediaScope, mediaHold, teaserKey } from './media.mjs';
+import { stageLanes, isLaneStage, laneOf, pickLane, ledgerOf, dailyRoom, dailyUse, todayPlan, LANE_PRODUCER } from './resources.mjs';
 import { scriptSha, scriptPath, loadLedger as loadTeaserLedger } from '../notebook-studio/teaser.mjs';
 import { gflowReachable } from '../media/producers/quota.mjs';
-import { withinHours, limits as paceLimits } from '../media/pacing.mjs';
+import { withinHours, nextOpen, limits as paceLimits, events as paceEvents, CHANNELS as PACE_CHANNELS } from '../media/pacing.mjs';
 import { mediaStatus, ownerSection } from '../media/status.mjs';
 import { SOCIAL_STAGE, ROUNDUP_HOUR_PKT, pkt, socialDue, socialTask, socialScope, socialOwnerLine } from './social.mjs';
 import { LEDGER as SOCIAL_LEDGER, loadLedger as loadSocialLedger, pending as socialPending, approve as approveSocial, reject as rejectSocial } from '../social/updates.mjs';
@@ -156,6 +157,7 @@ function plan() {
   const awaiting = [];
   const refreshCandidates = [];
   const slidesCandidates = [];
+  const studioCandidates = [];
   const queue = (course, unit, stage, extra = {}) => {
     const base = jobId(course, unit, stage);
     const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
@@ -174,6 +176,9 @@ function plan() {
       for (const stage of stagesFor(u, facts)) queue(c.course_code, u.unit_no, stage);
       if (refreshCandidate(u, facts)) refreshCandidates.push({ course: c.course_code, unit: u.unit_no, count: facts.unstructuredSchematics });
       if (slidesCandidate(u, facts, existsSync(join(ROOT, 'specs', 'studio', 'slides', c.course_code.toLowerCase(), `unit-${pad(u.unit_no)}.json`)))) slidesCandidates.push({ course: c.course_code, unit: u.unit_no });
+      // Study Studio audio and video are made only from certified text (G3 done), so a later
+      // review cannot leave a published video saying something the unit no longer says.
+      if (u.authored && u.gates?.G3 === 'done') studioCandidates.push({ course: c.course_code, unit: u.unit_no });
     }
   }
   // Units an approved spec defines but nobody has written yet are not in the content status at all.
@@ -203,7 +208,9 @@ function plan() {
   if (held.length) added.splice(0, added.length, ...added.filter((j) => !held.includes(j)));
   const inFlight = board.jobs.filter((j) => IN_FLIGHT.includes(j.status));
   added.splice(0, added.length, ...limitPlanIllustrations(limitIllustrate(added, inFlight), inFlight));
-  planMedia(board, queue, added, inFlight);
+  const catalogIndex = (code) => { const i = catalogOrder.indexOf(code); return i < 0 ? 999 : i; };
+  studioCandidates.sort((a, b) => (b.course === board.focus.course) - (a.course === board.focus.course) || catalogIndex(a.course) - catalogIndex(b.course) || a.unit - b.unit);
+  planMedia(board, queue, added, inFlight, studioCandidates);
   planRefresh(board, queue, added, inFlight, refreshCandidates);
   planFlashcards(board, queue, added, inFlight);
   planSlides(board, queue, added, inFlight, slidesCandidates);
@@ -294,17 +301,30 @@ function teaserFacts(course) {
 }
 
 /**
- * Media Studio stages (scripts/crew/media.mjs), only while the owner has them on (`crew media on`).
- * Teasers for every B.Ed course with an overview page; audio for planned Notebook Studio items.
+ * Media Studio stages (scripts/crew/media.mjs). Teasers while the owner has them on (`crew media on`);
+ * Study Studio audio and video for certified units while `crew studio on` (owner, 2026-11-25: the crew
+ * plans, schedules and manages it). Each job then runs on its producer lane (resources.mjs).
  */
-function planMedia(board, queue, added, inFlight) {
+function planMedia(board, queue, added, inFlight, studioCandidates = []) {
   const control = load('control');
   const { approvals } = load('media');
   const courses = walkCourses(ROOT).filter((c) => relative(ROOT, c.courseDir).startsWith('docs/') && existsSync(join(c.courseDir, 'course-overview.mdx'))).map((c) => ({ code: c.courseCode }));
   const items = Object.fromEntries(loadTeaserLedger(ROOT).items.map((i) => [i.key, i]));
   const { jobs, owner } = teaserNeeds({ courses, items, approvals, shaOf: (id) => (existsSync(scriptPath(id, ROOT)) ? scriptSha(id, ROOT) : undefined) });
-  board.media = { on: control.media === 'on', owner, at: now() };
-  if (control.media !== 'on') return;
+  const units = studioLedgers();
+  const studio = studioNeeds(units, { candidates: studioCandidates, approvals });
+  board.media = { on: control.media === 'on', owner: { ...owner, watch: studio.owner.watch }, at: now() };
+  board.studio = { on: control.studio === 'on', watch: studio.owner.watch, candidates: studioCandidates.length, ledgers: units.length, at: now() };
+  const before = added.length;
+  if (control.media === 'on') for (const j of jobs) queue(j.course, 0, j.stage, { key: j.key, ...(j.note ? { note: j.note } : {}) });
+  if (control.studio === 'on') for (const j of studio.jobs) queue(j.course, j.unit, j.stage, j.plan ? { plan: true } : {});
+  const awaitingScripts = Object.values(items).filter((i) => i.state === 'scripted').length;
+  const media = added.splice(before);
+  added.push(...limitMedia(media, inFlight, { awaitingScripts }));
+}
+
+/** Every Study Studio ledger on main: specs/studio/<course>/media-unit-NN.json. */
+function studioLedgers() {
   const units = [];
   for (const d of existsSync(join(ROOT, 'specs/studio')) ? readdirSync(join(ROOT, 'specs/studio')) : []) {
     const dir = join(ROOT, 'specs/studio', d);
@@ -314,12 +334,24 @@ function planMedia(board, queue, added, inFlight) {
       if (m) units.push({ course: d.toUpperCase(), unit: Number(m[1]), items: JSON.parse(readFileSync(join(dir, f), 'utf8')).items ?? [] });
     }
   }
-  const before = added.length;
-  for (const j of jobs) queue(j.course, 0, j.stage, { key: j.key, ...(j.note ? { note: j.note } : {}) });
-  for (const j of audioNeeds(units)) queue(j.course, j.unit, j.stage);
-  const awaitingScripts = Object.values(items).filter((i) => i.state === 'scripted').length;
-  const media = added.splice(before);
-  added.push(...limitMedia(media, inFlight, { awaitingScripts }));
+  return units;
+}
+
+/** The producer lanes for BOARD.md (resources.mjs todayPlan). Never breaks the board. */
+function mediaPlanSection(board) {
+  try {
+    const lim = paceLimits();
+    const nowMs = Date.now();
+    const use = Object.fromEntries(PACE_CHANNELS.filter((c) => !c.endsWith('tiktok')).map((c) => [c, dailyUse(c, paceEvents(c), lim, nowMs)]));
+    return todayPlan({
+      open: withinHours(nowMs, lim.hours),
+      nextOpenAt: new Date(nextOpen(nowMs, lim.hours)).toISOString(),
+      running: board.jobs.filter((j) => j.status === 'running' && isLaneStage(j.stage)),
+      queued: queueOrder(board, load('control')).filter((j) => isLaneStage(j.stage)),
+      waits: board.lanes?.waits ?? {},
+      use,
+    });
+  } catch (e) { return `(media plan unavailable: ${e.message})`; }
 }
 
 /** Owner actions across every media kind (scripts/media/status.mjs), for BOARD.md. Never breaks the board. */
@@ -330,6 +362,21 @@ function mediaOwnerSection() {
 /** Launch-time guard for media jobs: FR-012/FR-013 checked against the current ledger and script. */
 function mediaHoldReason(j) {
   if (!isMediaStage(j.stage)) return null;
+  if (STUDIO_STAGES.includes(j.stage)) {
+    if (load('control').studio !== 'on') return 'media stages: Study Studio is off (crew studio on)';
+    const media = load('media');
+    const key = studioKey(j.course, j.unit);
+    if (j.stage === 'studio_publish') {
+      const approval = media.approvals.studio?.[key];
+      const why = mediaLaunchProblem(j, { approval });
+      if (!why) j.studioApproval = approval;
+      return why;
+    }
+    // The owner's reject notes travel with the job that remakes those items.
+    const rejects = media.approvals.studioRejects?.[key];
+    if (rejects && !DRY) { j.rejects = rejects; delete media.approvals.studioRejects[key]; save('media', media); }
+    return null;
+  }
   if (load('control').media !== 'on') return 'media stages are off (crew media on)';
   if (j.stage === 'teaser_clips' && (!gflowReachable() || activeMediaQuota('gflow.video'))) return 'hold: no clip producer (gflow offline or out of quota)';
   if (!['teaser_clips', 'media_publish'].includes(j.stage)) return null;
@@ -395,10 +442,42 @@ function mediaCommand(v, arg, control, via) {
   return msg;
 }
 
+/**
+ * Owner commands for the Study Studio: studio on|off|status, approve-studio <course> <unit>
+ * [except <key>...] (the spot-check), reject-studio <course> <unit> <key> <note>.
+ */
+function studioCommand(v, arg, control, via) {
+  const words = arg.split(/\s+/).filter(Boolean);
+  if (v === 'studio') {
+    const sub = (words[0] || 'status').toLowerCase();
+    if (sub === 'on' || sub === 'off') { control.studio = sub; return `Study Studio ${sub}${sub === 'on' ? ': the crew plans NotebookLM audio and video for certified units one at a time, makes them in media hours on the notebook lane, uploads them private, and asks you to watch them before anything goes public' : ''}`; }
+    const b = load('board');
+    return `Study Studio ${control.studio === 'on' ? 'on' : 'off'}${b.studio ? `: ${b.studio.ledgers} unit ledger(s), ${b.studio.candidates} certified unit(s) eligible; waiting for your watch: ${b.studio.watch?.join(', ') || 'nothing'}` : ''}.`;
+  }
+  const [course, unitArg, ...rest] = words;
+  const unit = Number(unitArg);
+  if (!course || !Number.isInteger(unit)) return `usage: crew ${v} <course> <unit>${v === 'approve-studio' ? ' [except <item key>...]' : ' <item key> <what must change>'}`;
+  const C = course.toUpperCase();
+  const f = join(ROOT, 'specs/studio', C.toLowerCase(), `media-unit-${String(unit).padStart(2, '0')}.json`);
+  if (!existsSync(f)) return `no Study Studio ledger for ${C} Unit ${unit}`;
+  const items = JSON.parse(readFileSync(f, 'utf8')).items ?? [];
+  const media = load('media');
+  const ctx = { items, via, at: now() };
+  let msg;
+  try {
+    if (v === 'approve-studio') {
+      const except = rest[0]?.toLowerCase() === 'except' ? rest.slice(1) : [];
+      msg = approveStudio(media.approvals, C, unit, { ...ctx, except });
+    } else msg = rejectStudio(media.approvals, C, unit, rest[0], rest.slice(1).join(' ').trim(), ctx);
+  } catch (e) { return e.message; }
+  save('media', media);
+  return msg;
+}
+
 // ---------------------------------------------------------------- social updates (Feature 031)
 
 /**
- * Queue the day's roundup (from 18:00 PKT, when a dry collect finds deployed work not yet posted)
+ * Queue the day's roundup (from 15:00 PKT, in media hours, when a dry collect finds deployed work not yet posted)
  * or a publish run (an approved post not yet posted everywhere). The ledger lives on this host
  * (scripts/social/updates.mjs), so state never waits on a batch merge.
  */
@@ -436,7 +515,7 @@ function socialPhase(board, events) {
 function socialCommand(v, arg, control, via) {
   if (v === 'social') {
     const sub = (arg.split(/\s+/)[0] || 'status').toLowerCase();
-    if (sub === 'on' || sub === 'off') { control.social = sub; return `social updates ${sub}${sub === 'on' ? ': a roundup of deployed work is drafted from 18:00 PKT each day; content posts publish once the first one is approved (the pilot), feature posts always wait for \`crew post <id>\`' : ''}`; }
+    if (sub === 'on' || sub === 'off') { control.social = sub; return `social updates ${sub}${sub === 'on' ? ': a roundup of deployed work is drafted from 15:00 PKT each day (media hours: every hour except 09:00-15:00); content posts publish once the first one is approved (the pilot), feature posts always wait for \`crew post <id>\`' : ''}`; }
     const b = load('board');
     return `Social updates ${control.social === 'on' ? 'on' : 'off'}. Waiting on you: ${b.social?.owner ? socialOwnerLine(b.social.owner) : 'nothing'}`;
   }
@@ -477,7 +556,7 @@ export const STAGE_TASK = {
   slides: (j) => `Make the slide deck for ${j.course} Unit ${j.unit} (Feature 032 phase B; model: specs/studio/slides/efmp-301/unit-04.json). Read every English topic file of the unit and its Urdu mirror. Write \`specs/studio/slides/${j.course.toLowerCase()}/unit-${pad(j.unit)}.json\` with the unit title and a subtitle naming the course code and title, then 10 to 16 slides: a section slide per topic, two or three points slides per topic and one summary slide, plus a figure slide for any placed schematic that carries a topic's core idea (figure is its base path, /img/figures/<course>/unit-NN/fig-..., without .svg). Every point restates the topic's Summary or Explanation in plain words (no new facts, numbers or examples), at most 5 points of at most 110 characters; each Urdu point says what the Urdu topic says. No long dashes. Run \`node scripts/build-studio-index.mjs\` (it must not print "skipped slides" for this unit), then \`node scripts/studio/figure-pngs.mjs <outline> /tmp/slides-png\` and, for en and ur, \`uv run --with python-pptx python scripts/studio/slides-pptx.py <outline> <lang> /tmp/slides-png static/studio/slides/${j.course.toLowerCase()}/unit-${pad(j.unit)}.<lang>.pptx\`. Commit the outline and both .pptx files. Do not edit topic MDX or any file under specs/content/.`,
   flashcards: (j) => `Author the flashcard deck for ${j.course} Unit ${j.unit} (Feature 032 phase C; owner, 2026-11-23: "Terms + server marking"). Read every English topic file of the unit and its Urdu mirror. For each topic, pick 6 to 10 key terms a learner must know from that topic, each one used in the topic's own text; prefer the topic's bold or defined terms. Write a plain definition of each in one or two sentences (at most 300 characters), saying only what the topic says (no new facts, no examples the text does not give), and its Urdu card: the Urdu term from \`specs/content/terminology.csv\` when a pair exists, otherwise the term as the Urdu topic writes it, and an academic-plain Urdu definition matching the English one. Write \`specs/studio/flashcards/${j.course.toLowerCase()}/unit-${pad(j.unit)}.json\` as { "course": "${j.course}", "unit": ${j.unit}, "topics": { "1": { "en": [{ "term": "...", "definition": "..." }], "ur": [ ...same order... ] }, ... } }. No long dashes. Run \`node scripts/build-studio-index.mjs --coverage\` (it must not print "skipped" for this unit, and the unit leaves flashcards-needed.json) and commit both files. Do not edit glossary.json, terminology.csv, topic MDX or any file under specs/content/: decks stay outside the review evidence.`,
   refresh_figures: (j) => `Redraw the placed SVG schematics of ${j.course} Unit ${j.unit} to the improved standard (Feature 032 phase D, D-2026-0097/0098; owner, 2026-11-23: "we can rewrite existing figures and diagrams to improved versions"). Read \`.claude/skills/generate-figures/references/svg-authoring.md\` (structure layers and ids, connectors, grid, flowchart shapes, the self-check) and \`references/bilingual-figures.md\`. For every \`static/img/figures/${j.course.toLowerCase()}/unit-${pad(j.unit)}/fig-*.svg\` without \`id="layer-nodes"\`: redraw it as the same figure, keeping its file name, figure id, alt text, manifest row and meaning (a visual redraw, never a content change: no new facts, labels or arrows the text does not support). A complex picture (people, rooms, objects, dense pictograms) is not redrawn as SVG: leave it and say so in your handoff, since D-2026-0098 makes it a raster for the owner to schedule. Rebuild each Urdu twin from the new English drawing with the Urdu labels of the old \`.ur.svg\`, then \`node scripts/mirror-figure-rtl.mjs <file.ur.svg>\` (never a whole-drawing transform); number lines, charts and curves keep their left-to-right axes. Run \`npm run figures:variants\`, \`node scripts/measure-figure-text.mjs <every changed svg>\` until it exits 0, and \`npm run check:svg-style\`. Render every changed figure, English beside Urdu, with \`scripts/heavy.sh\` and read the images: every label visible (no text on a dark shape drawn ink on ink, nothing painted over by a later shape), nothing clipped, Urdu right to left. Commit, then \`scripts/heavy.sh node scripts/prepare-gate-evidence.mjs ${j.course} ${j.unit}\` (repoint the G2 row) and \`npm run check:content\`. If the unit's latest G3 row is ⏳ or carries an agent report, append a ▢ G3 row: "figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run". Do not edit topic MDX, assessments or any other unit.`,
-  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it picks the image producer itself (agy, then gflow while the owner's PC is reachable, then Codex; each image's producer is printed on its ✓ line), optimises to WebP and moves each row to generated. Never call an image tool (generate_image, image_gen) yourself: every image goes through that script. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, any depiction of a prophet, companion, angel or other sacred person, any scripture or calligraphy, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job. If generate-illustration.mjs exits 3 (every image producer is out of quota), stop at once: commit nothing, not even a PHR, print one CREW-HANDOFF line with the reset time, and exit; the crew holds this job until the quota resets.`,
+  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}${j.producer ? ` --producer ${j.producer}` : ''}\` for the topic scenes and again with \`--banner\` (same flags) for the unit banner (unit-NN.banner.md); ${j.producer ? `this job holds the crew's ${j.producer} image lane, so use only that producer (other units' jobs use the other producers at the same time; each image's producer is printed on its ✓ line). If it exits 3 (${j.producer} is out of quota), stop as described below and the crew moves the job to a free producer` : 'it picks the image producer itself (agy, then gflow while the owner\'s PC is reachable, then Codex; each image\'s producer is printed on its ✓ line)'}, optimises to WebP and moves each row to generated. Never call an image tool (generate_image, image_gen) yourself: every image goes through that script. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, any depiction of a prophet, companion, angel or other sacred person, any scripture or calligraphy, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job. If generate-illustration.mjs exits 3 (every image producer is out of quota), stop at once: commit nothing, not even a PHR, print one CREW-HANDOFF line with the reset time, and exit; the crew holds this job until the quota resets.`,
   review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row; write the report JSON directly under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/ (supporting evidence may sit in a subfolder). Never tick G3, never add reviewer initials, never self-sign.${renderStep(j, false)}${latestReport(j.course, j.unit, 'G3') ? ' This is the second and last review cycle (ADR-0019): repairs were applied for the latest report under the unit\'s reviews/.../G3/ folder. Verify each of its findings against the current files, carry any that remain unresolved, and give a new name to your report.' : ''}`,
   translate: (j) => `Translate ${j.course} Unit ${j.unit} into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft. Topic titles read "موضوع N.M - ...", matching the English numbering.`,
   review_ur: (j) => `Act as the INDEPENDENT G5 Urdu reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row; write the report JSON directly under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G5/ (supporting evidence may sit in a subfolder). Never tick G5, never self-sign.${renderStep(j, true)}`,
@@ -493,6 +572,8 @@ export const STAGE_TASK = {
   media_assemble: mediaTask,
   media_publish: mediaTask,
   audio_overview: mediaTask,
+  studio_media: mediaTask,
+  studio_publish: mediaTask,
   social_roundup: socialTask,
   maint_review: (j) => `Act as the INDEPENDENT reviewer of maintenance PR #${j.pr} (weekly-maintenance skill, "Review"). Another model family wrote it. Read the task it answers and \`git diff origin/main...HEAD\`, check every acceptance item and the rules, and change nothing.\n\n${j.task}`,
 };
@@ -629,7 +710,7 @@ function launch(board, j, worker) {
   const briefText = brief(j, board);
   writeFileSync(join(j.worktree, '.crew', 'brief.md'), briefText);
   const prompt = `Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.`;
-  const [bin, binArgs] = WORKERS[worker].cmd(prompt);
+  const [bin, binArgs] = WORKERS[worker].cmd(prompt, j.stage);
   j.log = join(LOG_DIR, `${j.id}.${(j.attempts || 0) + 1}.log`);
   const exitFile = `${j.log}.exit`;
   // A requeued job reuses its log name (retry and a quota requeue both lower the attempt count),
@@ -703,33 +784,55 @@ function launchQueued(board, health, control, events) {
   const queue = queueOrder(board, control);
   if (resourceHold(control, events, queue.length)) return 0;
   let launched = 0;
-  // An illustrate job needs one image producer (agy, gflow while the tunnel is up, or Codex) that is
-  // not out of quota; with none, every illustrate job would fail, so they wait. Probed only when needed.
-  const noImageProducer = queue.some((j) => j.stage === 'illustrate') && !availableProducers().length;
-  // Stages that call Flow, Gemini, NotebookLM, YouTube or Meta launch only in media hours
-  // (D-2026-0100); text and local work is untouched. The producers enforce the same window.
-  const mediaClosed = !withinHours(Date.now(), paceLimits().hours);
+  // Text and local stages share the CREW_MAX_PARALLEL slots. Media stages run on producer lanes
+  // instead (resources.mjs; owner, 2026-11-25): one job per producer, lanes in parallel, only in
+  // media hours (D-2026-0100) and only while the lane's paced channel has room today.
+  const textRunning = () => running.filter((r) => !isLaneStage(r.stage)).length;
+  const busyLanes = new Set(running.filter((r) => isLaneStage(r.stage)).map(laneOf));
+  const busyLedgers = new Set(running.map(ledgerOf).filter(Boolean));
+  const lim = paceLimits();
+  const open = withinHours(Date.now(), lim.hours);
+  const evs = {};
+  const room = (ch) => dailyRoom(ch, (evs[ch] ??= paceEvents(ch)), lim);
+  let producers = null; // image producers not out of quota (and gflow reachable), probed once when needed
+  const imageOk = (lane) => (producers ??= availableProducers()).includes(LANE_PRODUCER[lane]);
+  const waits = {};
+  // In media hours a lane job picks its worker before text jobs do: the window is short and a text
+  // job can run at any hour, so a free worker goes to the media job first (stable otherwise).
+  // The day's social roundup goes first among them: it is due once a day and finishes quickly.
+  const rank = (j) => (j.stage === SOCIAL_STAGE ? 0 : isLaneStage(j.stage) ? 1 : 2);
+  if (open) queue.sort((a, b) => rank(a) - rank(b));
   for (const j of queue) {
-    if (running.length >= MAX_PARALLEL) break;
-    if (mediaClosed && OUTSIDE_SERVICE_STAGES.includes(j.stage)) continue;
-    if (j.stage === 'illustrate' && noImageProducer) continue;
-    // Media jobs: the owner's gates are checked again against main right before launch (FR-012/013).
+    const onLane = isLaneStage(j.stage);
+    if (!onLane && textRunning() >= MAX_PARALLEL) continue;
+    if (OUTSIDE_SERVICE_STAGES.includes(j.stage) && !open) continue;
     if (j.stage === SOCIAL_STAGE && load('control').social !== 'on') continue; // switched off after queueing: wait
+    let pick = null;
+    if (onLane) {
+      pick = pickLane(j, { open, busy: busyLanes, room, producerOk: (lane) => j.stage !== 'illustrate' || imageOk(lane) });
+      if (pick.wait) { waits[j.id] = pick.wait; continue; }
+      const ledger = ledgerOf(j);
+      if (ledger && busyLedgers.has(ledger)) { waits[j.id] = 'another job is writing its ledger'; continue; }
+    }
+    // Media jobs: the owner's gates are checked again against main right before launch (FR-012/013).
     const mediaWhy = mediaHoldReason(j);
     if (mediaWhy) {
       if (!mediaWhy.startsWith('hold') && !mediaWhy.startsWith('media stages')) { j.status = 'closed'; log(board, j, `not launched: ${mediaWhy}`); events.push(`⏹ ${j.id} not launched: ${mediaWhy}`); }
+      else waits[j.id] = mediaWhy;
       continue;
     }
     // Each launch uses memory and disk, so the floors are checked again before the next one.
     if (memAvailableMb() < MIN_FREE_MB) { console.log(`memory below ${MIN_FREE_MB} MB; not launching`); break; }
     if (diskFreeMb() < MIN_FREE_DISK_MB) { console.log(`disk below ${MIN_FREE_DISK_MB} MB; not launching`); break; }
     // A fix or review works on its parent's open PR, so the parent's unit being busy is the point.
-    if (busyUnits.has(unitKey(j)) && j.stage !== 'fix' && !j.parent) continue;
+    if (busyUnits.has(unitKey(j)) && j.stage !== 'fix' && !j.parent) { if (onLane) waits[j.id] = 'its unit is busy with another job'; continue; }
     // Children of one parent (a review and a fix) share its worktree: one at a time.
     if (j.parent && running.some((r) => r.parent === j.parent)) continue;
     const worker = pickWorker(j.stage, { health, running, excludeFamilies: excludedFamilies(board, j), avoid: j.avoid || [] });
-    if (!worker) continue; // waits; other stages keep flowing
-    if (DRY) { console.log(`[dry-run] would launch ${j.id} on ${worker}`); running.push({ worker }); continue; }
+    if (!worker) { if (onLane) waits[j.id] = `no worker free (${STAGES[j.stage].chain.join(', ')} busy or cooling)`; continue; } // waits; other stages keep flowing
+    const where = pick ? ` on lane ${pick.lane}${pick.producer ? ` (producer ${pick.producer})` : ''}` : '';
+    if (DRY) { console.log(`[dry-run] would launch ${j.id} on ${worker}${where}`); running.push({ worker, stage: j.stage, lane: pick?.lane }); if (pick) busyLanes.add(pick.lane); continue; }
+    if (pick) { j.lane = pick.lane; if (pick.producer) j.producer = pick.producer; else delete j.producer; }
     try {
       launch(board, j, worker);
     } catch (e) {
@@ -740,11 +843,16 @@ function launchQueued(board, health, control, events) {
       if (j.launchErrors >= 3) { j.status = 'gate_red'; events.push(`🔴 ${j.id} could not be launched 3 times: ${e.message.slice(-160)}`); }
       continue;
     }
+    if (where) log(board, j, `media${where}`);
     save('board', board);
     running.push(j);
     busyUnits.add(unitKey(j));
+    if (pick) busyLanes.add(pick.lane);
+    if (ledgerOf(j)) busyLedgers.add(ledgerOf(j));
     launched++;
   }
+  board.lanes = { at: now(), open, waits };
+  if (DRY) for (const [id, why] of Object.entries(waits)) console.log(`[dry-run] ${id} waits: ${why}`);
   return launched;
 }
 
@@ -1000,6 +1108,8 @@ function imageQuotaRequeue(board, events, j, tail) {
   j.status = 'queued';
   j.attempts = Math.max(0, (j.attempts || 1) - 1);
   delete j.feedback;
+  // Free the image lane: the next launch picks a producer that still has quota.
+  delete j.lane; delete j.producer;
   log(board, j, `image quota hit (${status}); nothing made, PHR dropped; requeued`);
   return true;
 }
@@ -1438,7 +1548,7 @@ function ask(decisions, question, options = ['yes', 'no'], extra = {}) {
   return id;
 }
 
-const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | crew maintenance now|skip|status | crew intel now|status | crew media on|off|status | crew approve-script <key> | crew reject <key> <note> | crew publish <key> | crew social on|off|status | crew post <post id> | crew reject-post <post id> <note> | C-### <option> [note]';
+const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | crew maintenance now|skip|status | crew intel now|status | crew media on|off|status | crew approve-script <key> | crew reject <key> <note> | crew publish <key> | crew studio on|off|status | crew approve-studio <course> <unit> [except <key>...] | crew reject-studio <course> <unit> <key> <note> | crew social on|off|status | crew post <post id> | crew reject-post <post id> <note> | C-### <option> [note]';
 
 /**
  * One owner message -> one reply (or null when it is not for the crew). Shared by the tick's
@@ -1486,6 +1596,7 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
       return intelStatus(board);
     }
     if (['media', 'approve-script', 'publish', 'reject'].includes(v)) return mediaCommand(v, arg, control, via);
+    if (['studio', 'approve-studio', 'reject-studio'].includes(v)) return studioCommand(v, arg, control, via);
     if (['social', 'post', 'reject-post'].includes(v)) return socialCommand(v, arg, control, via);
     if (v === 'refresh') return refreshCommand(arg, control);
     if (v === 'flashcards') return flashcardsCommand(arg, control);
@@ -1600,8 +1711,11 @@ ${decisions.items.filter((d) => d.status === 'open').map((d) => `- **${d.id}** $
 Agent review is done; only a person's G3 sign-off (ADR-0019) lets these units move on to the Urdu review.
 ${(board.awaitingG3?.units || []).map((x) => `- ${x.course} Unit ${x.unit}: advisory ${x.disposition}, \`${x.report}\``).join('\n') || 'none'}
 
+## Today's media plan
+${mediaPlanSection(board)}
+
 ## Media Studio (Feature 030)
-Crew media stages ${board.media?.on ? 'on' : 'off (\`crew media on\`)'}.
+Crew media stages ${board.media?.on ? 'on' : 'off (\`crew media on\`)'}. Study Studio ${board.studio?.on ? 'on' : 'off (\`crew studio on\`)'}${board.studio ? `: ${board.studio.ledgers} unit ledger(s), ${board.studio.candidates} certified unit(s) eligible${board.studio.watch?.length ? `; waiting for your watch: ${board.studio.watch.join(', ')} (\`crew approve-studio <course> <unit>\`)` : ''}` : ''}.
 ${mediaOwnerSection()}
 
 ## Social updates (Feature 031)

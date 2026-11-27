@@ -1,14 +1,28 @@
 /**
- * The closing panel's art: a student teacher climbs five steps, book in hand, and lifts
- * it on the top step. Hand-drawn SVG from the v2 boards. Decorative; the panel's
- * heading carries the meaning. Mirrored on Urdu pages so she climbs toward the start.
+ * The closing panel's art (Feature 034 T017, #804, redesigning the 2026-11-06 climb): a student
+ * teacher climbs the page's own four-step ladder (Read, Practise, Check, Apply in your school),
+ * using the same icons as the "climb" section above. Each step's badge lights as she reaches it;
+ * on the top step she lifts her book. Decorative; the panel's heading carries the meaning. The SVG
+ * is mirrored on Urdu pages so she climbs toward the reading start; the badge icons are flipped
+ * back so they never read mirrored. Keyframes come from the step geometry (see climb.module.css).
  */
 import React from 'react';
 import clsx from 'clsx';
 import useReveal from '@site/src/lib/useReveal';
+import { ICONS, type IconName } from '@site/src/components/icons/paths';
 import s from './climb.module.css';
 
-const STEPS = 'M60 216H160V182H260V148H360V114H460V80H560';
+const BLOCK = 'M40 280V266H130V236H240V206H350V176H460V146H560V280Z';
+const STEPS = 'M40 266H130V236H240V206H350V176H460V146H560';
+/** Badge centre on each step, in climb order, with the ladder's icons. */
+const BADGES: readonly { cx: number; cy: number; icon: IconName }[] = [
+  { cx: 185, cy: 258, icon: 'explain' },
+  { cx: 295, cy: 228, icon: 'activity' },
+  { cx: 405, cy: 198, icon: 'check' },
+  { cx: 510, cy: 168, icon: 'chalkboard' },
+];
+const DISC = [s.d1, s.d2, s.d3, s.d4];
+const ICO = [s.i1, s.i2, s.i3, s.i4];
 
 export default function ClimbArt({ rtl }: { rtl: boolean }): React.ReactElement {
   const [ref, state] = useReveal<SVGSVGElement>();
@@ -16,14 +30,27 @@ export default function ClimbArt({ rtl }: { rtl: boolean }): React.ReactElement 
     <svg
       ref={ref}
       className={clsx(s.svg, rtl && s.rtl, state === 'pending' && s.pending, state === 'shown' && s.shown)}
-      viewBox="0 0 560 250"
+      viewBox="0 0 560 280"
       aria-hidden="true"
       focusable="false"
     >
-      <path d="M60 250V216H160V182H260V148H360V114H460V80H560V250Z" fill="#2F7C80" />
+      <path d={BLOCK} fill="#2F7C80" />
       <path d={STEPS} fill="none" stroke="#ffffff40" strokeWidth="4" />
-      <path className={s.trace} d={STEPS} fill="none" stroke="#E5A333" strokeWidth="5" />
-      <path className={s.star} d="M510 12l3.5 7.5 8 1-6 5.5 1.7 8-7.2-4-7.2 4 1.7-8-6-5.5 8-1z" fill="#E5A333" />
+      <path className={s.trace} d={STEPS} fill="none" stroke="#E5A333" strokeWidth="5" strokeLinejoin="round" />
+      {BADGES.map(({ cx, cy, icon }, i) => {
+        const [base, accent] = ICONS[icon];
+        return (
+          <g key={icon} transform={rtl ? `matrix(-1 0 0 1 ${2 * cx} 0)` : undefined}>
+            <circle className={clsx(s.disc, DISC[i])} cx={cx} cy={cy} r="13" strokeWidth="2" />
+            <g className={clsx(s.ico, ICO[i])} transform={`translate(${cx - 9} ${cy - 9}) scale(.75)`}
+              fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d={base} />
+              {accent && <path d={accent} />}
+            </g>
+          </g>
+        );
+      })}
+      <path className={s.star} d="M536 40l3.5 7.5 8 1-6 5.5 1.7 8-7.2-4-7.2 4 1.7-8-6-5.5 8-1z" fill="#E5A333" />
       <g className={s.walker}>
         <rect x="-16" y="-50" width="11" height="24" rx="4" fill="#B97F1F" />
         <g className={s.legB}>

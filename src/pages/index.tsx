@@ -24,6 +24,7 @@ import s from '@site/src/components/landing/landing.module.css';
 import NewsTicker from '@site/src/components/NewsTicker';
 import HomeTeasers from '@site/src/components/landing/HomeTeasers';
 import HomeCtaBanner from '@site/src/components/landing/HomeCtaBanner';
+import Carousel from '@site/src/components/landing/Carousel';
 
 type Stats = { courses: number; units: number; urduUnits: number; figures: number };
 type Locale = 'en' | 'ur';
@@ -61,11 +62,18 @@ const TITLES: Record<string, { en: string; ur?: string }> = {};
   }
 })(catalog);
 
-function Scene({ id, locale, className, eager }: { id: SceneId; locale: Locale; className?: string; eager?: boolean }): React.ReactElement {
+/** Feature 034 T015 (#802): every landing picture wider than 640 px has a `-640w.webp` copy next to
+ *  it (a new path, so the 30-day static cache never serves a stale file); phones at up to 2x
+ *  pixel density pick the smaller one through srcset. */
+const small = (src: string): string => src.replace(/\.webp$/, '-640w.webp');
+
+function Scene({ id, locale, className, eager, sizes }: { id: SceneId; locale: Locale; className?: string; eager?: boolean; sizes: string }): React.ReactElement {
   const sc = SCENES[id];
   const src = useBaseUrl(sc.src);
+  const src640 = useBaseUrl(small(sc.src));
   return (
-    <img className={className} src={src} width={sc.w} height={sc.h} alt={sc[locale]}
+    <img className={className} src={src} srcSet={sc.w > 640 ? `${src640} 640w, ${src} ${sc.w}w` : undefined}
+      sizes={sc.w > 640 ? sizes : undefined} width={sc.w} height={sc.h} alt={sc[locale]}
       loading={eager ? undefined : 'lazy'} decoding="async" />
   );
 }
@@ -91,6 +99,7 @@ export default function Home(): React.ReactElement {
   const c = COPY[locale];
   const stats = siteConfig.customFields?.siteStats as Stats;
   const hero = useBaseUrl('/img/site/hero-efmp-302-fig-U1-10.webp');
+  const hero640 = useBaseUrl(small('/img/site/hero-efmp-302-fig-U1-10.webp'));
   const [aud, setAud] = useState(0);
   const [lang, setLang] = useState<Locale>(locale);
   const track = (what: string) => () => trackEvent('landing_click', { what });
@@ -111,7 +120,6 @@ export default function Home(): React.ReactElement {
       {/* Without JavaScript every audience panel stays readable. */}
       <noscript><style>{`.${s.panel}[hidden]{display:block}`}</style></noscript>
       <ReturningStrip c={c} />
-      <NewsTicker />
       <main className={s.root}>
         <section className={s.hero}>
           <svg className={s.heroMark} viewBox="0 0 116 135" aria-hidden="true" focusable="false">
@@ -125,14 +133,14 @@ export default function Home(): React.ReactElement {
               <h1 className={s.h1}>{c.h1a}{c.h1b}<span className={s.h1Urdu} lang="ur">{c.h1c}</span>{c.h1d}</h1>
               <p className={s.lead}>{c.lead}</p>
               <div className={s.ctas}>
-                <Link className={clsx('button button--lg', s.btnAmber)} to="#who" onClick={track('hero-programme')}>{c.cta1} <Icon name="arrow" size={20} accent={false} /></Link>
+                <Link className={clsx('button button--lg', s.btnAmber)} to="/intro" onClick={track('hero-programme')}>{c.cta1} <Icon name="arrow" size={20} accent={false} /></Link>
                 <Link className={clsx('button button--lg', s.btnGhost)} to={SAMPLE_TOPIC} onClick={track('hero-sample')}>{c.cta2}</Link>
               </div>
               <Ticks items={[c.r1, c.r2, c.r3]} onTeal />
             </div>
             <div className={s.heroArt}>
               <div className={s.heroBlock} aria-hidden="true" />
-              <img className={s.heroImg} src={hero} width={1100} height={614} alt={c.alt} fetchPriority="high" />
+              <img className={s.heroImg} src={hero} srcSet={`${hero640} 640w, ${hero} 1100w`} sizes="(max-width: 996px) calc(100vw - 36px), 46vw" width={1100} height={614} alt={c.alt} fetchPriority="high" />
               <div className={s.heroCard}>
                 <div className={s.heroCardHead}>
                   <p className={s.meta}>{c.card_k} · {c.card_min}</p>
@@ -151,6 +159,9 @@ export default function Home(): React.ReactElement {
           </div>
           <StepsEdge rtl={rtl} height={rtl ? 308 : 180} />
         </section>
+
+        {/* Feature 034 T013 (#800): the ticker follows the hero so the hero fills the first view. */}
+        <NewsTicker />
 
         <HomeTeasers c={c} locale={locale} titles={TITLES} />
 
@@ -192,7 +203,7 @@ export default function Home(): React.ReactElement {
                   </div>
                   <div className={s.stack}>
                     {AUDIENCE_STACKS[i].map((id, k) => (
-                      <figure key={id} className={clsx(s.photo, s[`stack${k}`])}><Scene id={id} locale={locale} /></figure>
+                      <figure key={id} className={clsx(s.photo, s[`stack${k}`])}><Scene id={id} locale={locale} sizes={k === 0 ? '(max-width: 996px) 84vw, 42vw' : '(max-width: 996px) 46vw, 23vw'} /></figure>
                     ))}
                   </div>
                 </div>
@@ -213,10 +224,10 @@ export default function Home(): React.ReactElement {
         <section className={clsx(s.wrap, s.sec)} id="gallery">
           <p className={s.eye}>{c.e_gal}</p>
           <h2 className={s.h2}>{c.h_gal}</h2>
-          <div className={s.gallery}>
+          <Carousel label={c.h_gal} locale={locale} className={s.gallery}>
             {GALLERY.map(([id, code]) => (
               <figure key={id} className={s.photo}>
-                <Scene id={id} locale={locale} />
+                <Scene id={id} locale={locale} sizes="(max-width: 760px) 82vw, (max-width: 996px) 50vw, 33vw" />
                 <figcaption>
                   {/* Seven of these are site scenes, not textbook figures: say so (owner, 2026-11-08). */}
                   {FROM_TEXTBOOK.has(id)
@@ -226,13 +237,13 @@ export default function Home(): React.ReactElement {
                 </figcaption>
               </figure>
             ))}
-          </div>
+          </Carousel>
         </section>
 
         <section className={clsx(s.wrap, s.sec)} id="features">
           <p className={s.eye}>{c.e_feat}</p>
           <h2 className={s.h2}>{c.h_feat}</h2>
-          <div className={s.g3}>
+          <Carousel label={c.h_feat} locale={locale}>
             {c.f.map(([, title, text], i) => (
               <Reveal as="article" key={title} className={s.bubble}>
                 <span className={s.tile}><Icon name={FEATURE_ICONS[i]} size={26} /></span>
@@ -240,7 +251,7 @@ export default function Home(): React.ReactElement {
                 <p className={s.small}>{text}</p>
               </Reveal>
             ))}
-          </div>
+          </Carousel>
         </section>
 
         <section className={s.white}>
@@ -290,13 +301,30 @@ export default function Home(): React.ReactElement {
           </div>
         </section>
 
+        {/* Feature 034 T018 (#805): invite readers to review. Applications are open to the public
+            (/app/reviewer/apply); approval stays with the admins. */}
+        <section className={s.band} id="review">
+          <div className={clsx(s.wrap, s.sec, s.reviewGrid)}>
+            <div>
+              <p className={clsx(s.eye, s.eyeOnTeal)}>{c.rv_eye}</p>
+              <h2 className={clsx(s.h2, s.h2OnTeal)}>{c.rv_h}</h2>
+              <p className={s.lead}>{c.rv_d}</p>
+            </div>
+            <div className={s.reviewCard}>
+              <Ticks items={c.rv_l} />
+              <Link className={clsx('button button--lg', s.btnAmber)} to="/app/reviewer/apply" onClick={track('review-apply')}>{c.rv_cta} <Icon name="arrow" size={20} accent={false} /></Link>
+              <p className={s.reviewNote}>{c.rv_note}</p>
+            </div>
+          </div>
+        </section>
+
         <section className={clsx(s.wrap, s.sec)}>
           <div className={s.final}>
             <div className={s.finalArt}><ClimbArt rtl={rtl} /></div>
             <div className={s.finalText}>
               <h2 className={s.finalH}>{c.f_h}</h2>
               <p>{c.f_d}</p>
-              <Link className={clsx('button button--lg', s.btnAmber)} to="#who" onClick={track('final-programme')}>{c.cta1} <Icon name="arrow" size={20} accent={false} /></Link>
+              <Link className={clsx('button button--lg', s.btnAmber)} to="/intro" onClick={track('final-programme')}>{c.cta1} <Icon name="arrow" size={20} accent={false} /></Link>
             </div>
           </div>
         </section>

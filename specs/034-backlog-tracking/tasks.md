@@ -1,0 +1,310 @@
+# Tasks: Feature 034 - backlog consolidation and issue tracking
+
+Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written back by
+`node scripts/issue-sync.mjs --create specs/034-backlog-tracking/tasks.md`.
+
+## Stage 0 and 1: tracking system (this PR)
+
+- [x] T001 Create spec, plan and consolidated task list for Feature 034
+  - Stage: 0 | Area: ops | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: `specs/034-backlog-tracking/` holds spec.md, plan.md and tasks.md.
+- [x] T002 Create labels, stage milestones and the issue template
+  - Stage: 0 | Area: ops | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: labels and milestones from plan.md exist; `.github/ISSUE_TEMPLATE/task.yml` exists.
+- [x] T003 Add `scripts/issue-sync.mjs` with a drift report and an idempotent `--create` mode, plus tests
+  - Stage: 0 | Area: ops | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: `npm test -- tests/unit/issue-sync.test.mjs` passes.
+- [x] T004 Close out superseded plans 018-022 and triage `specs/backlog.md`
+  - Stage: 0 | Area: ops | Type: new | Priority: p2 | Owner: no
+  - Source: inventory 2026-11-25
+  - Done when: the superseded boxes no longer count as open; each backlog item says delivered or names its issue.
+- [x] T005 Add the issue rule to AGENTS.md (unticked task at PR end carries an issue number)
+  - Stage: 0 | Area: ops | Type: new | Priority: p2 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: AGENTS.md Work records has the rule.
+- [ ] T006 Grant the `project` token scope so the Projects board can be created and filled (#796)
+  - Stage: 6 | Area: ops | Type: new | Priority: p1 | Owner: yes
+  - Source: Feature 034 plan
+  - Done when: the owner has run `gh auth refresh -s project`; the board "textbook.com.pk work" exists with columns Todo, In progress, Blocked on owner, In review, Done, and every open issue is on it.
+
+## Stage 2: quick fixes
+
+- [x] T010 Rename the navbar "Institutions" link to "Contact" (#797)
+  - Stage: 2 | Area: navbar | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: `docusaurus.config.ts` navbar item for `/contact` reads "Contact" and the Urdu navbar translation matches; build passes.
+- [x] T011 Change both "Choose your programme" CTAs to "Explore the course catalogue" (#798)
+  - Stage: 2 | Area: landing | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: the hero CTA (`src/components/landing/copy.ts` `cta1`) and the "Start with one topic today" section CTA say "Explore the course catalogue" in English, with a matching Urdu string.
+- [x] T012 Make the admin guide admin-only by moving it into the admin console (#799)
+  - Stage: 2 | Area: admin | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25; owner ruling: move into `/app/admin`
+  - Done when: the guide renders at `/app/admin/guide` behind the existing admin role check; `guides/admin-guide/` is gone from the public guides sidebar, search index and sitemap; `/guides/admin-guide/*` redirects to the new page; students and teachers see no link to it.
+
+## Stage 3: landing page and navbar
+
+- [x] T013 Fit the landing hero in the first viewport below the navbar and news ticker (#800)
+  - Stage: 3 | Area: landing | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: at 360x740, 390x844 and 1366x768 the whole hero (heading, text, CTA) is visible without scrolling, in English and Urdu.
+- [x] T014 Mobile navbar: initial-letter avatar and icon-only search, language and profile (#801)
+  - Stage: 3 | Area: navbar | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: under the mobile breakpoint the profile name is replaced by a round avatar with the user's initial, only search, language and profile icons show beside the logo, every icon has an accessible name, and the logo is not squeezed.
+- [x] T015 Optimise landing page images for speed, especially on mobile (#802)
+  - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: landing images are responsive (`srcset`/sizes, WebP or AVIF, explicit width and height), lazy below the fold, the hero image is preloaded; changed images use new paths (30-day cache); Lighthouse mobile before and after is recorded in the PR.
+- [x] T016 Turn the "Learning aids" and "Features" card grids into carousels (#803)
+  - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: both sections scroll horizontally with snap, swipe, previous and next buttons and keyboard support, respect reduced motion, work in RTL, and degrade to a readable list without JavaScript.
+- [x] T017 Redesign the moving character in "Start with one topic today" (#804)
+  - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
+  - Source: owner request 2026-11-25 ("too basic and feels confusing sometime")
+  - Done when: the animation (`ClimbArt.tsx`, `climb.module.css`, `scenes.ts`) tells one clear story that matches the section text, looks finished, respects reduced motion, and the owner approves a screenshot or recording.
+- [x] T018 Add a persuasive "Become a reviewer" section to the landing page (#805)
+  - Stage: 3 | Area: landing | Type: new | Priority: p2 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: a landing section invites readers to help find errors and improvements in the content, in English and Urdu, and links to the reviewer sign-up flow (Feature 017).
+
+## Stage 4: learning features
+
+- [x] T019 Floating notes widget for students and teachers, linked to the dashboard (#806)
+  - Stage: 4 | Area: notes | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: signed-in students and teachers can open a floating notes panel on any textbook page, save a note tied to that page (reusing `src/lib/studentNotes.ts`), and follow a link to the dashboard Notes page; signed-out readers see a sign-in prompt; works in RTL and on mobile; e2e test added.
+- [x] T020 Grey out the language toggle on pages with no Urdu translation and show a callout (#807)
+  - Stage: 4 | Area: i18n | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25
+  - Done when: on a page with no Urdu version the locale dropdown entry for Urdu is disabled with a tooltip, and the page shows a callout saying the Urdu translation is not available yet (reusing the translation status behind `TranslationStatusBadge.tsx`).
+- [x] T021 Unit assessment: one set of question cards (MCQ, RRQ, ERQ) and no duplicated MCQs (#808)
+  - Stage: 4 | Area: assessment | Type: new | Priority: p1 | Owner: no
+  - Source: owner request 2026-11-25; duplication seen on `/semester-1/geng-300/unit-02/unit-assessment/`
+  - Done when: MCQs render once as cards built from the `SelfCheck` design (stem, then choices with radios, or checkboxes for multi-select items), wired to the existing server-side marking; RRQ and ERQ render as cards with stem, Bloom level and marks; the plain MDX list stays as the print and no-JavaScript fallback; done at render time with no unit MDX edits; no answer key reaches the client; works on every course and unit, English and Urdu.
+
+## Stage 5: carried-over engineering
+
+- [ ] T022 Rewrite page titles and H1s for search intent, course by course (#809)
+  - Stage: 5 | Area: content | Type: carryover | Priority: p2 | Owner: no
+  - Source: `specs/013-authoring-system-v2/tasks.md` T053 and T054; `specs/backlog.md` (013)
+  - Done when: each course's titles lead with the topic and course terms, `validate:content` passes after each course, and no URL changes.
+- [ ] T023 News ticker email: admin preview and test send checked in Gmail desktop and mobile (#810)
+  - Stage: 5 | Area: platform | Type: carryover | Priority: p3 | Owner: yes
+  - Source: `specs/028-news-ticker/tasks.md` T017
+  - Done when: the owner confirms the test email renders correctly in Gmail on desktop and mobile.
+- [ ] T024 Fix the 22 Urdu figures that keep English polygon coordinates (#811)
+  - Stage: 5 | Area: figures | Type: carryover | Priority: p1 | Owner: yes
+  - Source: `specs/032-textbook-visuals/tasks.md` T008
+  - Done when: every affected `.ur.svg` matches its English geometry (EFMP-301 fig-U4-1 first); `measure-figure-text.mjs` exits 0; the owner approved any fix that re-opens G3 evidence.
+- [x] T025 Build the `<Chart>` component and the GQUR-301 pilot (#812)
+  - Stage: 5 | Area: figures | Type: carryover | Priority: p2 | Owner: no
+  - Source: `specs/032-textbook-visuals/tasks.md` T020 (Flashcards and SelfCheck already shipped)
+  - Done when: a data-driven `<Chart>` with a print fallback and tests exists and one GQUR-301 unit uses it.
+- [ ] T026 Review the first `refresh_figures` pilot unit before and after (#813)
+  - Stage: 5 | Area: crew | Type: carryover | Priority: p2 | Owner: yes
+  - Source: `specs/032-textbook-visuals/tasks.md` T030 (stage turned on 2026-11-25)
+  - Done when: the owner has compared the pilot unit's figures before and after and kept or adjusted the stage.
+- [ ] T027 Upload, publish and place the remaining five Study Studio media files (#814)
+  - Stage: 5 | Area: media | Type: carryover | Priority: p2 | Owner: no
+  - Source: `specs/029-notebook-studio/tasks.md` (t2-ur-video, t3-en-audio-p1, t3-ur-audio-p1, t3-en-video, t3-ur-video)
+  - Done when: all five are on YouTube, approved by the owner and linked in the Studio manifest.
+- [ ] T028 Put slide deck v4 on Google Drive with link sharing and place it (#815)
+  - Stage: 5 | Area: media | Type: carryover | Priority: p3 | Owner: yes
+  - Source: `specs/029-notebook-studio/tasks.md`
+  - Done when: the owner confirmed "anyone with the link" sharing and the deck is linked in the manifest.
+- [ ] T029 Urdu-reader check of the Study Studio Urdu assets (#816)
+  - Stage: 5 | Area: media | Type: carryover | Priority: p2 | Owner: yes
+  - Source: `specs/029-notebook-studio/tasks.md`
+  - Done when: an Urdu reader has checked every UR asset and findings are fixed or recorded.
+- [ ] T030 Urdu corpus register proposal (style guide and terminology) (#817)
+  - Stage: 5 | Area: i18n | Type: carryover | Priority: p2 | Owner: yes
+  - Source: `specs/029-notebook-studio/tasks.md` (separate track); `specs/backlog.md` (EFMP-301 G5, the noun `جانچ`)
+  - Done when: a register proposal is written for the owner, including the context-by-context `جانچ` noun pass; it lands only when the style-guide freeze allows.
+- [x] T031 Study Studio per-course rollout plan (#818)
+  - Stage: 5 | Area: media | Type: carryover | Priority: p3 | Owner: no
+  - Source: `specs/029-notebook-studio/tasks.md`
+  - Done when: a rollout order and schedule per course is written and approved by the owner.
+- [x] T032 Add `description` frontmatter to the Student and Teacher Guide pages (#819)
+  - Stage: 5 | Area: content | Type: backlog | Priority: p3 | Owner: no
+  - Source: `specs/backlog.md` (013)
+  - Done when: every page under `guides/student-guide/` and `guides/teacher-guide/`, English and Urdu, has a description.
+- [x] T033 Author the EFMP-302 `course-review.mdx` page (#820)
+  - Stage: 5 | Area: content | Type: backlog | Priority: p2 | Owner: no
+  - Source: `specs/backlog.md` (007); plan seeded in the EFMP-302 content-spec
+  - Done when: the page exists from the content-spec's course review plan and passes the content gates.
+- [ ] T034 Resolve human-initials tracker rows' review references in `validateAgentTrackerRow` (#821)
+  - Stage: 5 | Area: review-gov | Type: backlog | Priority: p3 | Owner: yes
+  - Source: `specs/backlog.md` (017)
+  - Done when: a human row's `review:<path>` is resolved and must have disposition `pass`. This edits a gate script, so it re-opens G2 evidence and needs the owner's timing.
+- [x] T035 Make wide figures legible on phones (#822)
+  - Stage: 5 | Area: figures | Type: backlog | Priority: p2 | Owner: no
+  - Source: `specs/backlog.md` (EFMP-301 G5 F-11)
+  - Done when: a design decision is recorded (scroll wrapper or stacked narrow variant) and wide schematics are readable at 360 px in both languages.
+- [ ] T036 Give overflowing figures a visible scroll affordance (#823)
+  - Stage: 5 | Area: figures | Type: backlog | Priority: p3 | Owner: no
+  - Source: `specs/backlog.md` (EFMP-302 G3 reviews)
+  - Done when: a horizontally overflowing figure shows an at-rest cue like tables do, with one shared component change.
+- [ ] T037 Rebalance recall-heavy RRQ mark schemes across reviewed units (#824)
+  - Stage: 5 | Area: content | Type: backlog | Priority: p3 | Owner: yes
+  - Source: `specs/backlog.md` (EFMP-302 G3 reviews)
+  - Done when: a bank-wide pass is scheduled with the owner, since it changes reviewed content.
+- [ ] T038 Finish Urdu for theme strings, navbar, footer and remaining course names (#825)
+  - Stage: 5 | Area: i18n | Type: backlog | Priority: p2 | Owner: yes
+  - Source: `specs/backlog.md` (EFMP-301 G5 F-12)
+  - Done when: `i18n/ur/code.json`, navbar and footer have real Urdu; course names without approved Urdu wait for the owner.
+- [-] T039 Decide rejoin-after-removal semantics for class enrolments (#826)
+  - Stage: 5 | Area: platform | Type: backlog | Priority: p3 | Owner: no
+  - Source: `specs/backlog.md` (003)
+  - Done when: a story needs "rejoined" versus "never left", or the item is closed as not needed.
+- [-] T040 Grading-queue pagination and observability at scale (#827)
+  - Stage: 5 | Area: platform | Type: backlog | Priority: p3 | Owner: no
+  - Source: `specs/backlog.md` (003)
+  - Done when: the queue paginates beyond 200 students, or the item is closed as not needed.
+- [ ] T041 Cross-unit and cross-course prerequisite edges in the concept graph (#828)
+  - Stage: 5 | Area: content | Type: backlog | Priority: p3 | Owner: yes
+  - Source: `specs/backlog.md` (016, style-guide freeze batch)
+  - Done when: applied in the batch when the style-guide freeze lifts.
+- [ ] T042 Widen `course_code` and `clo_refs` patterns when an SSC/HSC scheme lands (#829)
+  - Stage: 5 | Area: content | Type: backlog | Priority: p3 | Owner: yes
+  - Source: `specs/backlog.md` (016)
+  - Done when: an SSC/HSC scheme is in the repository and the schema is widened to fit it.
+- [ ] T043 Decide whether CI may apply an approved review export (#830)
+  - Stage: 5 | Area: review-gov | Type: backlog | Priority: p3 | Owner: yes
+  - Source: `specs/backlog.md` (017)
+  - Done when: the owner decides (ADR candidate); if yes, it is implemented under that ADR.
+- [ ] T044 Cross-check the checklist `Topic` column in `check:depth-gate` (#831)
+  - Stage: 5 | Area: review-gov | Type: curriculum-gap | Priority: p3 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-91
+  - Done when: the gate cross-checks the column. This edits a gate script, so it re-opens G2 evidence and needs the owner's timing.
+
+## Stage 6: owner and infrastructure
+
+- [ ] T050 Golden-unit sign-off and template freeze (#832)
+  - Stage: 6 | Area: review-gov | Type: carryover | Priority: p2 | Owner: yes
+  - Source: `specs/001-content-platform/tasks.md` T041
+  - Done when: content, engineering and a teacher have signed off, or the owner closes it as superseded by the style-guide freeze.
+- [ ] T051 Provision the protected signing host and CI trust root (#833)
+  - Stage: 6 | Area: review-gov | Type: carryover | Priority: p2 | Owner: yes
+  - Source: `specs/014-agent-review-governance/tasks.md` T007
+  - Done when: the signing host and trust root exist (within OCI Always Free limits).
+- [ ] T052 Record real reviewer qualification results and activate eligible scopes (#834)
+  - Stage: 6 | Area: review-gov | Type: carryover | Priority: p2 | Owner: yes
+  - Source: `specs/014-agent-review-governance/tasks.md` T008
+  - Done when: qualification results are recorded and eligible stages are active. Blocked by T051.
+- [ ] T053 Qualify and grant one external human reviewer (#835)
+  - Stage: 6 | Area: review-gov | Type: backlog | Priority: p1 | Owner: yes
+  - Source: `specs/backlog.md` (017)
+  - Done when: a second entry appears in `specs/reviewers/human-reviewers.md`.
+- [ ] T054 Approve the video-studio discovery document (#836)
+  - Stage: 6 | Area: media | Type: carryover | Priority: p2 | Owner: yes
+  - Source: `specs/027-video-studio/tasks.md` P006
+  - Done when: the owner approves `video-studio/specs/000-discovery/discovery.md`.
+- [ ] T055 Confirm the Kaggle token and `MEDIA_ROOT` on the host (#837)
+  - Stage: 6 | Area: media | Type: carryover | Priority: p3 | Owner: yes
+  - Source: `specs/027-video-studio/tasks.md` P007
+  - Done when: the owner confirms the token is in place (the animation Kaggle route already runs) and `MEDIA_ROOT` exists; tick P007.
+- [ ] T056 Video studio VS-001 Phase 0 and the Kaggle render spike (#838)
+  - Stage: 6 | Area: media | Type: carryover | Priority: p3 | Owner: no
+  - Source: `specs/027-video-studio/tasks.md` P008
+  - Done when: Checkpoint 0 is passed. Blocked by T054 and T055.
+- [ ] T057 Constitution Art. VI.3 wording amendment (#839)
+  - Stage: 6 | Area: review-gov | Type: carryover | Priority: p3 | Owner: yes
+  - Source: `specs/027-video-studio/tasks.md` P009
+  - Done when: batched with the next planned standard change so the corpus re-opens once.
+- [ ] T058 Verify the YouTube channel and OAuth setup and tick the 029 task (#840)
+  - Stage: 6 | Area: media | Type: carryover | Priority: p3 | Owner: yes
+  - Source: `specs/029-notebook-studio/tasks.md` (channel, playlists, Data API, OAuth production)
+  - Done when: the owner confirms the OAuth app is in production and the playlists exist (videos are already public, so this is likely done); the 029 box is ticked.
+- [ ] T059 Finish the VS Code containment checks on the host (#841)
+  - Stage: 6 | Area: ops | Type: carryover | Priority: p2 | Owner: yes
+  - Source: `specs/maintenance/vscode-containment/tasks.md` (seven open checks)
+  - Done when: buffers saved and old sessions migrated; port forwarding, shared budget, reconnect and Windows editing verified; extension bisect done and any offender found from evidence; one normal workday observed.
+- [ ] T060 Optional `fig-U1-2` pictorial version and accent pass (EFMP-302 Unit 1) (#842)
+  - Stage: 6 | Area: figures | Type: backlog | Priority: p3 | Owner: yes
+  - Source: `specs/backlog.md` (008, 013)
+  - Done when: the owner wants it (then a raster re-do and accent pass), or closes it.
+- [ ] T061 G-2026-19: translating a unit invalidates its English review evidence (#843)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-19
+  - Done when: confirmed fixed by the narrowed binding (ADR-0027) and marked resolved in gaps.md, or fixed.
+- [ ] T062 EFMP-302 Unit 2: two unresolved source references (#844)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p3 | Owner: yes
+  - Source: `specs/gaps.md` (EFMP-302 Unit 2, 2026-09-15)
+  - Done when: both references resolve or are replaced, and gaps.md records the outcome.
+- [ ] T063 GNAS-301 Units 1, 4, 5 and 6: third G3 cycle needs the owner (#845)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-24, G-2026-31, G-2026-32, G-2026-33
+  - Done when: the owner authorises or declines a third cycle per unit (recorded in `specs/decisions/log.md`).
+- [ ] T064 G-2026-34: GNAS-301 Unit 2 G5 has a stale G3 dependency (#846)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-34
+  - Done when: G3 is refreshed and G5 re-bound, or the owner rules.
+- [ ] T065 G-2026-25: GICT-300 term length and week distribution are the spec's construction (#847)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p3 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-25
+  - Done when: the owner rules and gaps.md records it.
+- [ ] T066 G-2026-26: GICT-300 review cycles closed at budget with post-cycle repairs (#848)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-26
+  - Done when: the owner rules on fresh review or acceptance.
+- [ ] T067 G-2026-29: GQUR-300 linear inequalities (U3-03) has no verifiable source (#849)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p3 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-29
+  - Done when: a verifiable source is bound or the owner rules.
+- [ ] T068 G-2026-30: GQUR-300 has no accepted G3 evidence for the current English inputs (#850)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-30
+  - Done when: a fresh G3 covers the current inputs.
+- [ ] T069 G-2026-41: GQUR-300 Urdu terminology and register rulings (#851)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-41
+  - Done when: the owner rules and the terminology is updated in the next allowed batch.
+- [ ] T070 G-2026-62: EFMP-302 figure re-optimisation shipped overlapping text (#852)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-62
+  - Done when: verified fixed on production (`measure-figure-text.mjs` exits 0) and marked resolved, or fixed.
+- [ ] T071 G-2026-63: EFMP-302 Unit 2 G3 post-report figure repair is unreviewed (#853)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-63
+  - Done when: reviewed or the owner rules.
+- [ ] T072 G-2026-64: EFMP-302 Unit 6 G3 sources blockers need owner decisions (#854)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-64
+  - Done when: the owner decides each source blocker.
+- [ ] T073 G-2026-65: EFMP-302 has no accepted G3 evidence for the current English inputs (#855)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-65
+  - Done when: a fresh G3 covers the current inputs so G5 can bind to it.
+- [ ] T074 EFMP-302 Units 4, 5 and 6 G5: cycles consumed with residual repairs (#856)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-66, G-2026-67, G-2026-68
+  - Done when: the owner rules on each unit's G5 (third cycle or acceptance).
+- [ ] T075 G-2026-70: fifteen illustrations inserted into three reviewed EFMP-302 units (#857)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-70
+  - Done when: the insertions are reviewed or the owner rules.
+- [ ] T076 G-2026-71: a licence-track feature invalidated EFMP-302's review evidence (#858)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-71
+  - Done when: the binding is narrowed or the evidence refreshed, and gaps.md records it.
+- [ ] T077 EFMP-302 Unit 4 fig-U4-12 raster illustration contradicts its prompt (TEX-30) (#859)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` (TEX-30)
+  - Done when: the illustration is regenerated to match its prompt, or the owner rules.
+- [ ] T078 G-2026-76: EFMP-305 tracker records G1 done on a never-approved spec (#860)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-76
+  - Done when: verified against the later approval (`D-2026-0053`) and resolved in gaps.md.
+- [ ] T079 G-2026-90: GENG-301 G1 recorded complete before any intake evaluation (#861)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-90
+  - Done when: verified against the later approval (`D-2026-0053`) and resolved in gaps.md.
+- [x] T080 G-2026-235: EFMP-408 Unit 5 grade point average scale has no verifiable source (#862)
+  - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
+  - Source: `specs/gaps.md` G-2026-235
+  - Done when: a verifiable source is bound or the owner rules.

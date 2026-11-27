@@ -1,12 +1,14 @@
 // Feature 031: the crew's daily social roundup (social-updates skill). Off until the owner sends
-// `crew social on`. One `social_roundup` job a day from 13:00 PKT when there is something new, and
+// `crew social on`. One `social_roundup` job a day from 15:00 PKT when there is something new, and
 // one, still inside media hours, when an approved post waits to be published (the owner's `crew post`).
 // Content posts publish without the owner after the pilot; feature posts never do.
 import { withinHours, limits as paceLimits } from '../media/pacing.mjs';
 
 export const SOCIAL_STAGE = 'social_roundup';
-/** Inside media hours (09:00-15:00 PKT, D-2026-0100), with two hours left to draft and publish. */
-export const ROUNDUP_HOUR_PKT = 13;
+// From the opening of media hours, 15:00 PKT (media hours are every hour except the owner's 09:00-15:00
+// office hours; owner, 2026-11-25), so the day's deployed work is posted that afternoon and evening.
+// Posting itself stays paced: 2 h gaps and 3 posts a day per platform.
+export const ROUNDUP_HOUR_PKT = 15;
 
 /** The Pakistan date and hour of an instant. */
 export const pkt = (d = new Date()) => {

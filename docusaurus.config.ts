@@ -4,6 +4,7 @@ import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import rehypeTopicEnhance from './src/rehype/topic-enhance.mjs';
+import rehypeAssessmentCards from './src/rehype/assessment-cards.mjs';
 import { textbookSidebarItems } from './sidebarItemsGenerator';
 import { buildFigureAnimationIndex } from './src/lib/figureAnimations';
 
@@ -269,7 +270,8 @@ const config: Config = {
           sidebarItemsGenerator: textbookSidebarItems,
           // UX refresh: styles the nine-part topic cycle (sections, callouts,
           // Bloom chips) from existing markup, without editing any content file.
-          rehypePlugins: [rehypeTopicEnhance],
+          // Feature 034 T021 (#808): question cards on unit assessment pages, same approach.
+          rehypePlugins: [rehypeTopicEnhance, rehypeAssessmentCards],
         },
         blog: false,
         theme: {
@@ -297,6 +299,8 @@ const config: Config = {
   ],
 
   plugins: [
+    // Feature 034 T020 (#807): pages without an Urdu file, for the language toggle and callout.
+    './src/plugins/urdu-pages.mjs',
     /**
      * Second docs-plugin instance for the Student/Teacher Guides (Spec 004,
      * ADR-0009, research.md R6, T001). Kept deliberately separate from the
@@ -345,9 +349,13 @@ const config: Config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        redirects: (JSON.parse(readFileSync('./catalog/licence-redirects.json', 'utf8')) as {
-          redirects: { from: string; to: string }[];
-        }).redirects,
+        redirects: [
+          ...(JSON.parse(readFileSync('./catalog/licence-redirects.json', 'utf8')) as {
+            redirects: { from: string; to: string }[];
+          }).redirects,
+          // Feature 034 T012 (#799): the admin guide moved into the admin console (admins only).
+          { from: '/guides/admin-guide', to: '/app/admin/guide' },
+        ],
       },
     ],
   ],
@@ -399,7 +407,7 @@ const config: Config = {
         },
         { to: '/#features', label: 'Features', position: 'left', activeBaseRegex: '^$' },
         { to: '/guides/teacher-guide/', label: 'Teachers', position: 'left' },
-        { to: '/contact', label: 'Institutions', position: 'left' },
+        { to: '/contact', label: 'Contact', position: 'left' },
         // Spec 010 follow-up, 2026-09-07 - registers
         // src/components/MobileTopBarWidgets.tsx; renders nothing at
         // desktop widths, a compact locale-switch + sign-in-status pair at

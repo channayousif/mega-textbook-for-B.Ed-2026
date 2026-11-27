@@ -1,0 +1,9 @@
+render-review unavailable
+deployed_sha=366019f8ace647e892523e553b81ab6d1832ec68
+HEAD=4f558d48a8508e40f21fb072b6c4ddbe4608368c
+diff command: git diff --quiet 366019f8ace647e892523e553b81ab6d1832ec68 HEAD -- docs/semester-4/gent-401/unit-04/ static/img/figures/gent-401/unit-04/
+diff exit code: 1
+changed paths:
+M	docs/semester-4/gent-401/unit-04/index.mdx
+A	static/img/figures/gent-401/unit-04/fig-U4-5.webp
+deployed is ancestor of HEAD: yes

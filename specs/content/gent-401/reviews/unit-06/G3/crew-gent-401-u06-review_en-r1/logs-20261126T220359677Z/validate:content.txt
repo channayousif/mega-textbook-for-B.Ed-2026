@@ -1,0 +1,7 @@
+$ npm run validate:content   (repo HEAD f71773ed96f566c1e421ec586142274b2fdf3acd, 2026-11-26T22:04:12.384Z)
+
+> bed-mega-textbook@0.1.0 validate:content
+> node scripts/validate-content.mjs
+
+✓ Content validation passed.
+exit_code=0

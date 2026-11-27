@@ -56,7 +56,7 @@
 .btnAmber:hover { background: #f0b44b; border-color: #f0b44b; }
 .btnGhost, .btnGhost:hover { background: transparent; color: #fff; border: 0; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .6); }
 .btnGhost:hover { box-shadow: inset 0 0 0 2px #fff; }
-.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
 .ctas :global(.button), .final :global(.button), .audience :global(.button) { display: inline-flex; align-items: center; gap: 8px; }
 
 /* Ticks */
@@ -66,17 +66,19 @@
 .ticks.ticksOnTeal { color: var(--lp-on-teal); font-size: .95rem; }
 .ticks.ticksOnTeal svg { color: #fff; }
 
-/* Hero */
+/* Hero. Feature 034 T013 (#800): sized so the heading, lead and buttons sit in the first
+   viewport below the navbar at 1280x720 and up, and on 360x740 phones; the news ticker
+   now follows the hero (src/pages/index.tsx). */
 .hero { position: relative; overflow: hidden; background: var(--lp-teal); color: #fff; }
 .heroMark { position: absolute; inset-block-start: -30px; inset-inline-end: -60px; height: 620px; width: auto; opacity: .07; fill: #fff; pointer-events: none; }
-.heroGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: center; padding-block: 56px 34px; }
-.tagline { font-family: 'Noto Nastaliq Urdu', serif; font-weight: 700; color: var(--lp-amber); font-size: 1.9rem; line-height: 2.6; margin: 0; text-align: start; }
-.taglineEn { font-family: var(--ifm-heading-font-family); font-weight: 700; color: var(--lp-amber); margin: 0 0 12px; }
-.h1 { color: #fff; font-size: clamp(2.1rem, 4.6vw, 3.6rem); line-height: 1.12; margin: 0 0 18px; text-wrap: balance; }
+.heroGrid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 28px; align-items: center; padding-block: clamp(20px, 4vh, 48px) clamp(16px, 3vh, 32px); }
+.tagline { font-family: 'Noto Nastaliq Urdu', serif; font-weight: 700; color: var(--lp-amber); font-size: 1.55rem; line-height: 2.1; margin: 0; text-align: start; }
+.taglineEn { font-family: var(--ifm-heading-font-family); font-weight: 700; color: var(--lp-amber); margin: 0 0 8px; }
+.h1 { color: #fff; font-size: clamp(1.85rem, 3.3vw, 3rem); line-height: 1.12; margin: 0 0 14px; text-wrap: balance; }
 .h1Urdu { color: var(--lp-amber); font-family: 'Noto Nastaliq Urdu', serif; font-weight: 700; display: inline-block; line-height: 1.75; font-size: .82em; }
-:global(html[dir='rtl']) .h1 { font-size: clamp(1.75rem, 3.4vw, 2.75rem); line-height: 2.6; }
+:global(html[dir='rtl']) .h1 { font-size: clamp(1.6rem, 2.9vw, 2.4rem); line-height: 2.6; }
 :global(html[dir='rtl']) .h1Urdu { display: inline; font-size: 1em; line-height: inherit; }
-.lead { font-size: 1.13rem; color: var(--lp-on-teal); margin: 0 0 24px; max-width: 56ch; }
+.lead { font-size: 1.13rem; color: var(--lp-on-teal); margin: 0 0 18px; max-width: 56ch; }
 .heroArt { position: relative; padding-block-end: 128px; }
 .heroBlock { position: absolute; inset-block-end: 40px; inset-inline-start: -16px; width: 66%; height: 64%; background: var(--lp-amber); border-radius: 20px; }
 .heroImg { position: relative; display: block; width: 100%; height: auto; border-radius: 20px; }
@@ -140,11 +142,8 @@
 .countL { margin: 0; color: var(--lp-on-teal); }
 
 /* Gallery */
-.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+/* .gallery is the Carousel root since Feature 034 T016 (#803); only the caption style remains. */
 .gallery figcaption { font-size: .88rem; padding: 8px 4px 2px; color: #3b5154; }
-.gallery .photo:nth-child(3n + 1) { transform: rotate(-1deg); }
-.gallery .photo:nth-child(3n + 2) { transform: translateY(14px) rotate(.8deg); }
-.gallery .photo:nth-child(3n) { transform: rotate(-.6deg); }
 
 /* Grids */
 .g3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 22px; }
@@ -189,8 +188,15 @@
 .finalText p { margin: 0 0 18px; color: var(--lp-on-teal); }
 :global(html[dir='rtl']) .finalH { font-size: 1.75rem; line-height: 2.6; }
 
+/* Become a reviewer (Feature 034 T018, #805) */
+.reviewGrid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 36px; align-items: center; }
+.eye.eyeOnTeal { color: var(--lp-amber); }
+.h2.h2OnTeal { color: #fff; margin-block-end: 14px; }
+.reviewCard { background: var(--lp-surface); color: var(--ifm-font-color-base); border-radius: 20px; padding: 24px; box-shadow: var(--lp-shadow); }
+.reviewCard :global(.button) { display: inline-flex; align-items: center; gap: 8px; }
+.reviewNote { margin: 14px 0 0; font-size: .92rem; color: var(--ifm-color-content-secondary); }
 @media (max-width: 996px) {
-  .heroGrid, .audience { grid-template-columns: minmax(0, 1fr); }
+  .heroGrid, .audience, .reviewGrid { grid-template-columns: minmax(0, 1fr); }
   .climb, .g4, .counts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .g3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .riser { display: none; }
@@ -199,13 +205,20 @@
 }
 @media (max-width: 760px) {
   .wrap { padding-inline: 18px; }
+  .heroGrid { padding-block: 16px; gap: 20px; }
+  .tagline { font-size: 1.3rem; line-height: 1.9; }
+  .taglineEn { font-size: .9rem; margin-block-end: 4px; }
+  .h1 { font-size: 1.75rem; margin-block-end: 10px; }
+  :global(html[dir='rtl']) .h1 { font-size: 1.45rem; line-height: 2.4; }
+  .lead { font-size: 1rem; margin-block-end: 14px; }
+  .ctas { gap: 8px; }
+  .ctas :global(.button--lg) { padding-block: 8px; font-size: 1rem; }
   .sec { padding-block: 48px; }
   .edge { height: 96px; }
   .heroBlock { display: none; }
   .heroArt { padding-block-end: 0; }
   .heroCard { position: relative; inset: auto; margin-block-start: 12px; }
   .climb, .g3, .g4 { grid-template-columns: minmax(0, 1fr); }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .teasers { padding-block: 40px 48px; }
   /* Phones: one swipeable row; the row scrolls, never the page. */
   .teaserRow { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-block-end: 8px; overscroll-behavior-x: contain; }

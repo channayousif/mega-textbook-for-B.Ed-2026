@@ -26,8 +26,11 @@
  * inspected the image for pedagogy, cultural accuracy and absence of text (ADR-0029 point 3).
  *
  * This is the ONE repository script allowed to call an image service (ADR-0029 point 4). It is
- * operator-run on the owner's host, serial (guarded by a lock file), and never part of CI or the
- * site build.
+ * operator-run on the owner's host, serial per producer (guarded by a lock file), and never part of
+ * CI or the site build. A run pinned to one producer (`--producer agy|gflow|codex`, as the crew's
+ * image lanes do) holds that producer's lock, so different producers work in parallel (owner,
+ * 2026-11-25); an `auto` run may use any producer, so it holds the shared lock and waits for no
+ * pinned run to be alive, and a pinned run refuses while an `auto` run is alive.
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync, openSync, closeSync, unlinkSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
@@ -37,7 +40,8 @@ import { PRODUCERS, activeImageQuota, recordImageQuota, clearImageQuota, availab
 import { PRODUCER_FNS, QuotaError, UnavailableError, sceneBrief, clearStaged } from './lib/image-producers.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
-const LOCK = '/tmp/mega-book-imagegen.lock';
+const AUTO_LOCK = '/tmp/mega-book-imagegen.lock';
+const producerLock = (p) => `/tmp/mega-book-imagegen.${p}.lock`;
 
 /** One house style for every generated scene, so two producers do not drift apart. */
 const HOUSE_STYLE = [
@@ -64,6 +68,9 @@ const [course, unitArg] = args.filter((a, i) => !a.startsWith('--') && !['--id',
 if (!course || !unitArg) die('usage: <course> <unit> [--id fig-UN-M] [--producer auto|agy|gflow|codex] [--dry-run]');
 const producerArg = opt('--producer') || 'auto';
 if (producerArg !== 'auto' && !PRODUCERS.includes(producerArg)) die(`unknown --producer ${producerArg}; use auto, ${PRODUCERS.join(', ')}`);
+const LOCK = producerArg === 'auto' ? AUTO_LOCK : producerLock(producerArg);
+/** Locks another run would collide with: every producer lock for an auto run, the auto lock for a pinned one. */
+const CONFLICTS = producerArg === 'auto' ? PRODUCERS.map(producerLock) : [AUTO_LOCK];
 
 const pad = String(Number(unitArg)).padStart(2, '0');
 const courseDir = course.toLowerCase();
@@ -139,8 +146,19 @@ if (flag('--dry-run')) {
   process.exit(first ? 0 : 3);
 }
 
+/** The live pid holding a lock file, or 0 (a run killed mid-batch does not block the next one). */
+function lockOwner(file) {
+  if (!existsSync(file)) return 0;
+  const owner = Number(readFileSync(file, 'utf8').trim());
+  try { return owner > 0 && process.kill(owner, 0) ? owner : 0; } catch { return 0; }
+}
+
 /** The lock records its owner's pid, so a run killed mid-batch does not block the next one. */
 function takeLock() {
+  for (const f of CONFLICTS) {
+    const other = lockOwner(f);
+    if (other) die(`generation run ${other} holds ${f}; ${producerArg === 'auto' ? 'an auto run waits for pinned producer runs' : 'a pinned run waits for the auto run'} (ADR-0029).`);
+  }
   try {
     const fd = openSync(LOCK, 'wx');
     writeFileSync(fd, String(process.pid));
@@ -153,7 +171,7 @@ function takeLock() {
     } catch {
       alive = false;
     }
-    if (alive) die(`generation run ${owner} holds ${LOCK}; generation is serial by design (ADR-0029).`);
+    if (alive) die(`generation run ${owner} holds ${LOCK}; generation is serial per producer (ADR-0029).`);
     unlinkSync(LOCK);
     return takeLock();
   }

@@ -247,7 +247,7 @@ async function postLinkedin(file, caption, title) {
  * domain, so update cards are not posted there.
  */
 /**
- * Paced per platform (scripts/media/pacing.mjs, D-2026-0100): office hours, a gap of about two
+ * Paced per platform (scripts/media/pacing.mjs, D-2026-0100): media hours (never 09:00-15:00 PKT), a gap of about two
  * hours and three posts a day per platform. A hold throws with its reset time; publishPost keeps
  * that platform as failed and the next run retries it. Drafts post nothing public and are not paced.
  */

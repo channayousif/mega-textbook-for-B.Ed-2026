@@ -1,0 +1,135 @@
+### render-inspect  EFMP-408 Unit 3
+### route: /semester-4/efmp-408/unit-03  pages: 7  placed figures: 8
+### host: https://textbook.com.pk   browser: chromium 149.0.7827.0
+### started: 2026-11-25T16:32:05.007Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=1 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-408/unit-03/fig-U3-9.webp natural=1376x768 shown=true loading=lazy alt="Two Pakistani teachers in a school staff room collaborate over a table of specifications a"
+   heading order: no skipped levels
+
+-- topic-01: headings=17 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-408/unit-03/fig-U3-1.svg natural=244x150 shown=true loading=lazy alt="Table showing a worked table of specifications for a Grade 6 general science unit on matte"
+   img /img/figures/efmp-408/unit-03/fig-U3-1.dark.svg natural=0x0 shown=false loading=lazy alt="Table showing a worked table of specifications for a Grade 6 general science unit on matte"
+   img /img/figures/efmp-408/unit-03/fig-U3-5.svg natural=234x150 shown=true loading=lazy alt="Flowchart showing the systematic test construction process from curriculum syllabus analys"
+   img /img/figures/efmp-408/unit-03/fig-U3-5.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart showing the systematic test construction process from curriculum syllabus analys"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://open.umn.edu/opentextbooks/textbooks/153
+
+-- topic-02: headings=20 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-408/unit-03/fig-U3-6.svg natural=234x150 shown=true loading=lazy alt="Diagram illustrating marker score divergence between two examiners evaluating the same stu"
+   img /img/figures/efmp-408/unit-03/fig-U3-6.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram illustrating marker score divergence between two examiners evaluating the same stu"
+   img /img/figures/efmp-408/unit-03/fig-U3-2.svg natural=244x150 shown=true loading=lazy alt="Table comparing essay questions and short-answer items across cognitive demand, breadth of"
+   img /img/figures/efmp-408/unit-03/fig-U3-2.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing essay questions and short-answer items across cognitive demand, breadth of"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://open.umn.edu/opentextbooks/textbooks/153
+
+-- topic-03: headings=20 imgs=4 visibleBroken=1 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-408/unit-03/fig-U3-3.svg natural=244x150 shown=true loading=lazy alt="Diagram dissecting a classroom multiple-choice question into its component parts: the prob"
+   img /img/figures/efmp-408/unit-03/fig-U3-3.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram dissecting a classroom multiple-choice question into its component parts: the prob"
+   img /img/figures/efmp-408/unit-03/fig-U3-7.svg natural=0x0 shown=true loading=lazy alt="Table comparing multiple-choice, true-false, and matching item formats by target cognitive"
+   img /img/figures/efmp-408/unit-03/fig-U3-7.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing multiple-choice, true-false, and matching item formats by target cognitive"
+   heading order: no skipped levels
+   DEFECT visible image did not load: /img/figures/efmp-408/unit-03/fig-U3-7.svg
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://open.umn.edu/opentextbooks/textbooks/153
+
+-- topic-04: headings=25 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-408/unit-03/fig-U3-4.svg natural=234x150 shown=true loading=lazy alt="Table presenting core item-writing guidelines with contrasting examples of flawed items co"
+   img /img/figures/efmp-408/unit-03/fig-U3-4.dark.svg natural=0x0 shown=false loading=lazy alt="Table presenting core item-writing guidelines with contrasting examples of flawed items co"
+   img /img/figures/efmp-408/unit-03/fig-U3-8.svg natural=234x150 shown=true loading=lazy alt="Diagram illustrating the three-step revision of a flawed classroom test item, removing neg"
+   img /img/figures/efmp-408/unit-03/fig-U3-8.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram illustrating the three-step revision of a flawed classroom test item, removing neg"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://open.umn.edu/opentextbooks/textbooks/153
+
+-- unit-assessment: headings=25 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=8 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=1 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=593 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=593 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=581 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=581 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=573 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=573 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-04: docHorizontalOverflow=0px tables=2 figures=2 spill=8
+   table[0] client=328 scroll=415 fits=false lastHeader="Status" scroller=TABLE. (client=328 scroll=415 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[1] client=328 scroll=614 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=614 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=0 figures=0 spill=4
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=1 answerHeadings=[]
+   printfig /img/figures/efmp-408/unit-03/fig-U3-9.webp w=762 right=778 fits
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efmp-408/unit-03/fig-U3-1.svg w=709 right=754 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-5.svg w=762 right=778 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-5.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=["Short-answer items​","Mini-rubric​"]
+   printfig /img/figures/efmp-408/unit-03/fig-U3-6.svg w=709 right=754 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-6.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-2.svg w=762 right=778 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-2.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efmp-408/unit-03/fig-U3-3.svg w=709 right=754 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-7.svg w=2 right=398 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-7.dark.svg w=0 right=0 fits
+
+-- topic-04 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efmp-408/unit-03/fig-U3-4.svg w=709 right=754 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-4.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-8.svg w=762 right=778 fits
+   printfig /img/figures/efmp-408/unit-03/fig-U3-8.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=["2. Double-blind essay marking experiment​"]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U3-1.light [table] viewBox=780x480 texts=58 wordmark@x=675.7 -> clean
+   fig-U3-1.dark [table] viewBox=780x480 texts=58 wordmark@x=675.7 -> clean
+   fig-U3-5.light [flowchart] viewBox=780x500 texts=13 wordmark@x=675.7 -> clean
+   fig-U3-5.dark [flowchart] viewBox=780x500 texts=13 wordmark@x=675.7 -> clean
+   fig-U3-2.light [table] viewBox=780x480 texts=36 wordmark@x=675.7 -> clean
+   fig-U3-2.dark [table] viewBox=780x480 texts=36 wordmark@x=675.7 -> clean
+   fig-U3-6.light [diagram] viewBox=780x500 texts=27 wordmark@x=675.7 -> clean
+   fig-U3-6.dark [diagram] viewBox=780x500 texts=27 wordmark@x=675.7 -> clean
+   fig-U3-3.light [diagram] viewBox=780x480 texts=18 wordmark@x=675.7 -> clean
+   fig-U3-3.dark [diagram] viewBox=780x480 texts=18 wordmark@x=675.7 -> clean
+   fig-U3-7.light [table] viewBox=780x480 texts=47 wordmark@x=675.7 -> clean
+   fig-U3-7.dark [table] viewBox=780x480 texts=47 wordmark@x=675.7 -> clean
+   fig-U3-4.light [table] viewBox=780x500 texts=42 wordmark@x=675.7 -> clean
+   fig-U3-4.dark [table] viewBox=780x500 texts=42 wordmark@x=675.7 -> clean
+   fig-U3-8.light [diagram] viewBox=780x500 texts=16 wordmark@x=675.7 -> clean
+   fig-U3-8.dark [diagram] viewBox=780x500 texts=16 wordmark@x=675.7 -> clean
+
+### finished: 2026-11-25T16:33:08.779Z
+### defects: 1
+###   topic-03: visible image did not load: /img/figures/efmp-408/unit-03/fig-U3-7.svg
+### exit_code: 1

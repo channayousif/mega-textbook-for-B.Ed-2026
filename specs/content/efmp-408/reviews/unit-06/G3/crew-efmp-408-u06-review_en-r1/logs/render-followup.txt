@@ -1,0 +1,4 @@
+heavy: slot acquired; waiting for 30 seconds of memory/PSI headroom
+topic-01 #fig-U6-4: {"src":"/img/figures/efmp-408/unit-06/fig-U6-4.svg","alt":"Timeline diagram tracing the historical evolution of standardized assessment in Pakistan from provincial board examinations through NAT, GAT, NEAS, and international survey participation.","complete":true,"w":244,"h":150,"boxW":860,"boxH":530} -> LOADED
+topic-03 #fig-U6-6: {"src":"/img/figures/efmp-408/unit-06/fig-U6-6.svg","alt":"Diagram comparing one competency assessed continuously through formative cycles versus assessed by a single terminal written examination.","complete":true,"w":244,"h":150,"boxW":860,"boxH":530} -> LOADED
+FOLLOW-UP: both flagged figures load after scrollIntoView

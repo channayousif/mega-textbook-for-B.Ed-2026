@@ -1,0 +1,77 @@
+{
+ "id": "efpg-401",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "EFPG-401",
+ "semester": 3,
+ "title": {
+  "en": "Teaching of English (EFPG-401)",
+  "ur": "انگریزی کی تدریس (EFPG-401)"
+ },
+ "sources": [
+  "docs/semester-3/efpg-401/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: government primary and middle schools with whitewashed walls, plain green blackboards with no writing, wooden desks, a shaded school verandah, pupils aged six to thirteen in school uniform, girls in white dupattas. Modest dress. No maps, globes, flags or emblems. No on-screen text, letters, alphabet charts, captions, logos or watermarks anywhere in the frame; books, flashcards, picture cards, papers and screens are plain, blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident young Pakistani woman teacher in her late twenties in a maroon shalwar kameez with a cream dupatta over her shoulders, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "In a bright primary classroom with a plain green blackboard, a confident young Pakistani woman teacher in a maroon shalwar kameez with a cream dupatta holds a closed plain storybook, then turns to the camera; quick push-in to a close-up as young pupils in uniform sit at wooden desks behind her."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Smooth dolly shot along rows of wooden desks where pupils in uniform and girls in white dupattas listen with cupped ears to their teacher, then turn to talk in pairs, gesturing and smiling; all books and papers are plain, blurred and unreadable."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Tracking shot through a middle-school classroom as a woman teacher in a modest dupatta acts out a short poem with her hands while small groups of pupils in uniform follow along, holding plain unmarked picture cards and blurred notebooks."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a shaded school verandah where a teacher holds up a small portable speaker and a plain picture chart with no writing, while pupils in uniform listen, raise their hands and nod; the teacher moves between desks checking blurred notebooks."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor with whitewashed walls, a confident young Pakistani woman teacher in a maroon shalwar kameez with a cream dupatta walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "انگریزی پڑھانا مشکل لگتا ہے؟ سننا، بولنا، پڑھنا اور لکھنا، یہ چاروں مہارتیں کیسے سکھائیں؟",
+    "اس کورس میں آپ listening، speaking، reading اور writing کی سرگرمیاں تیار کرنا سیکھیں گے۔",
+    "جدید methods اور approaches، اور prose، poetry، composition اور grammar کے lesson plans بنانا بھی۔",
+    "audio-visual aids کا مؤثر استعمال، اور پہلی سے آٹھویں جماعت تک انگریزی میں ترقی کی جانچ۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "انگریزی کی تدریس (EFPG-401)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "انگریزی پڑھانا مشکل لگتا ہے؟ انگریزی کی تدریس | EFPG-401",
+   "keywords": [
+    "teaching of English",
+    "انگریزی کی تدریس",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "four language skills",
+    "English lesson plan",
+    "audio-visual aids",
+    "ESL teaching"
+   ],
+   "course_summary": "سمسٹر 3 کا یہ کورس مستقبل کے اساتذہ کو پہلی سے آٹھویں جماعت تک انگریزی مؤثر انداز میں پڑھانے کے لیے تیار کرتا ہے۔ یہ بچوں کی listening، speaking، reading اور writing کی مہارتیں بڑھانے، active-learning طریقے اپنانے، audio-visual aids شامل کرنے، منظم lesson plans بنانے اور انگریزی بطور دوسری یا غیر ملکی زبان میں ان کی ترقی کی جانچ کرنے کی صلاحیت دیتا ہے۔"
+  }
+ }
+}

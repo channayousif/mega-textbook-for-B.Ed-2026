@@ -1,0 +1,21 @@
+$ npm run build:content-status && npm run check:content
+date: 2026-11-27T00:12:59Z  HEAD: 01fde1b302e083ffef3098d3dadd40fbb90cf8d7 (tracker row appended, uncommitted)
+Running 14 content gates
+
+  validate:content        PASS  1.0s
+  check:pipeline-gate     PASS  34.2s
+  check:depth-gate        PASS  0.7s
+  check:figures           PASS  1.2s
+  check:svg-style         PASS  0.5s
+  check:no-em-dash        PASS  0.7s
+  check:no-answer-keys    PASS  0.7s
+  check:concept-graph     PASS  0.5s
+  check:bloom-bands       PASS  0.3s
+  check:source-floor      PASS  0.3s
+  check:licence           PASS  0.4s
+  licence:map:check       PASS  0.3s
+  check:content-status    PASS  0.7s
+  check:docs-sync         PASS  0.2s
+
+All content gates passed.
+exit: 0

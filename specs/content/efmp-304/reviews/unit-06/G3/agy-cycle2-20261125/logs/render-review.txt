@@ -1,0 +1,25 @@
+Command: render-review (inspection of production build)
+Course: EFMP-304
+Unit: 6
+Timestamp: 2026-11-25T10:22:00Z
+
+Inspection check per .crew/brief.md:
+git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-2/efmp-304/unit-06/ static/img/figures/efmp-304/unit-06/
+
+Deployed SHA: b7417e1e0271fd01f1984a48afe830f8ecc3ab85
+HEAD SHA: 68fbc2c264a7ef751515e197475f8a0a996fec20
+
+Exit code: 1
+Diff output:
+ docs/semester-2/efmp-304/unit-06/index.mdx         |   2 ++
+ docs/semester-2/efmp-304/unit-06/topic-02.mdx      |   2 +-
+ docs/semester-2/efmp-304/unit-06/topic-04.mdx      |   2 +-
+ static/img/figures/efmp-304/unit-06/fig-U6-10.webp | Bin 0 -> 75202 bytes
+ static/img/figures/efmp-304/unit-06/fig-U6-11.webp | Bin 0 -> 49484 bytes
+ static/img/figures/efmp-304/unit-06/fig-U6-9.webp  | Bin 0 -> 75300 bytes
+ 6 files changed, 4 insertions(+), 2 deletions(-)
+
+Result: the diff is NOT empty, so the production build (CI-built from main) is not the reviewed input.
+Per the crew brief, render-review is recorded as unavailable; no build, dev server or Playwright run was attempted.
+scripts/render-inspect.mjs EFMP-304 6 --base https://textbook.com.pk --no-pdf was NOT run.
+Visual accessibility remains unverified; structural accessibility and figure geometry pass from source.

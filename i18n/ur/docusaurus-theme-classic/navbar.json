@@ -35,10 +35,6 @@
     "message": "اساتذہ",
     "description": "Navbar item with label Teachers"
   },
-  "item.label.Institutions": {
-    "message": "ادارے",
-    "description": "Navbar item with label Institutions"
-  },
   "item.label.Start reading": {
     "message": "پڑھنا شروع کریں",
     "description": "Navbar item with label Start reading"

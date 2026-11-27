@@ -1,0 +1,7 @@
+# Unit banner - EFMP-409 Unit 5 (Education Reports and Policies)
+
+Raster banner illustration for the unit `index.mdx` (ADR-0029). Same columns and lifecycle as the unit figure manifest, kept in this sidecar file so `check:figures` does not need to change. To be produced by the illustrate job (`scripts/generate-illustration.mjs efmp-409 5 --banner`) and inspected before `placed`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U5-7 | index | illustration | unit banner, wide 16:9 landscape scene in a calm documentary illustration style: a government primary school staff room in interior Sindh, whitewashed walls and a wooden table; a woman head teacher in shalwar kameez and dupatta sits with three young B.Ed trainees, also in shalwar kameez, around a spread of official documents, a policy folder, a newspaper and a clipboard; one trainee points at a chart on the wall showing a rising line and a school building; through the doorway pupils in uniform walk past a boundary wall under a hot afternoon sky; warm light, thoughtful and serious mood; no readable text, maps, flags, emblems, calligraphy, logos or watermarks | A head teacher and three B.Ed trainees sit around a table with official education documents and a wall chart in a Sindh school staff room, while pupils pass the doorway. | /img/figures/efmp-409/unit-05/fig-U5-7.webp | placed |

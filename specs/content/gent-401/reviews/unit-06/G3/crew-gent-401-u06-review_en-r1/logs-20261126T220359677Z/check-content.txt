@@ -1,0 +1,24 @@
+$ npm run check:content   (repo HEAD f71773ed96f566c1e421ec586142274b2fdf3acd, 2026-11-26T22:04:33.307Z)
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 14 content gates
+
+  validate:content        PASS  0.9s
+  check:pipeline-gate     PASS  37.0s
+  check:depth-gate        PASS  0.7s
+  check:figures           PASS  1.4s
+  check:svg-style         PASS  0.6s
+  check:no-em-dash        PASS  0.7s
+  check:no-answer-keys    PASS  0.8s
+  check:concept-graph     PASS  0.4s
+  check:bloom-bands       PASS  0.3s
+  check:source-floor      PASS  0.3s
+  check:licence           PASS  0.4s
+  licence:map:check       PASS  0.4s
+  check:content-status    PASS  0.8s
+  check:docs-sync         PASS  0.3s
+
+All content gates passed.
+exit_code=0

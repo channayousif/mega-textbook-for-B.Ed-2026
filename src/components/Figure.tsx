@@ -1,6 +1,7 @@
 import React from 'react';
 import { WORDMARK_TEXT } from '@site/src/lib/brand';
 import FigureAnimationButton from '@site/src/components/Studio/FigureAnimation';
+import FigureZoom from './FigureZoom';
 
 /**
  * Renders a teaching figure (Spec 009, extended by Spec 013).
@@ -99,6 +100,8 @@ export default function Figure({
         <span className="figure__credit" dir="ltr">{WORDMARK_TEXT}</span>
         {/* Feature 032: only when this figure has an approved, playable animation. */}
         <FigureAnimationButton src={src} alt={alt} />
+        {/* Feature 034 T035 (#822): full-size viewer for wide figures; the control shows on phones only. */}
+        {(!width || width >= 700) && <FigureZoom src={src} darkSrc={darkSrc} alt={alt} width={width} height={height} />}
       </figcaption>
     </figure>
   );

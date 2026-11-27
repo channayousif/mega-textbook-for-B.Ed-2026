@@ -1,0 +1,53 @@
+Static figure and accessibility inspection (no render available)   (repo HEAD f71773ed96f566c1e421ec586142274b2fdf3acd, 2026-11-26T22:16:18.887Z)
+
+Figure carriers and alt text:
+  docs/semester-4/gent-401/unit-06/topic-02.mdx:29:<Figure id="fig-U6-3" src="/img/figures/gent-401/unit-06/fig-U6-3.svg" alt="A vertical process flowchart showing the sequential steps for company incorporation in Pakistan through SECP's digital eZfile system." />
+  docs/semester-4/gent-401/unit-06/topic-02.mdx:73:<Figure id="fig-U6-4" src="/img/figures/gent-401/unit-06/fig-U6-4.svg" alt="Table detailing four types of intellectual property under IPO-Pakistan: trademark, copyright, patent, and industrial design with legal scope and practical examples." />
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:29:<Figure id="fig-U6-1" src="/img/figures/gent-401/unit-06/fig-U6-1.svg" alt="A two-axis market positioning map plotting four educational ventures by price and quality to demonstrate strategic market space." />
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:71:<Figure id="fig-U6-2" src="/img/figures/gent-401/unit-06/fig-U6-2.svg" alt="Comparison table of four startup promotion channels: word of mouth, print materials, social media, and community events with cost, reach, and suitable use cases." />
+  docs/semester-4/gent-401/unit-06/index.mdx:20:<Figure id="fig-U6-5" kind="illustration" src="/img/figures/gent-401/unit-06/fig-U6-5.webp" alt="In a Hyderabad community room, two young entrepreneurs present science kits to interested school teachers beside a whiteboard displaying a market positioning grid." width={1200} height={675} />
+
+SVG title/desc presence:
+  static/img/figures/gent-401/unit-06/fig-U6-1.dark.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-1.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-1.ur.dark.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-1.ur.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-2.dark.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-2.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-2.ur.dark.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-2.ur.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-3.dark.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-3.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-3.ur.dark.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-3.ur.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-4.dark.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-4.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-4.ur.dark.svg title=1 desc=1
+  static/img/figures/gent-401/unit-06/fig-U6-4.ur.svg title=1 desc=1
+
+Manifest src paths vs carriers: fig-U6-1..4 srcs match the topic carriers; fig-U6-5 banner src matches index.mdx and figures/unit-06.banner.md.
+
+measure-figure-text: all 8 English/dark SVGs exit 0 (see measure-figure-text.txt).
+
+Content tables (markdown) in the unit (scroll containers to check at 360px when a render is available):
+  docs/semester-4/gent-401/unit-06/topic-02.mdx:166:| Criterion | Emerging (1 mark) | Developing (2 marks) | Proficient (3 marks) |
+  docs/semester-4/gent-401/unit-06/topic-02.mdx:167:|---|---|---|---|
+  docs/semester-4/gent-401/unit-06/topic-02.mdx:168:| **Legal structure recommendation** *(Understand)* | Mentions business structures vaguely; fails to distinguish personal liability from corporate liability. | Recommends a business structure and notes liability differences, but omits specific SECP registration context. | Clearly contrasts personal liability risks, recommends appropriate formal registration under the Companies Act 2017, and outlines eZfile benefits. |
+  docs/semester-4/gent-401/unit-06/topic-02.mdx:169:| **Intellectual property analysis** *(Apply)* | Fails to recognize copyright infringement or treats digital media as free for all uses. | Identifies copyright infringement, but provides vague recommendations for lawful content sourcing. | Correctly applies Copyright Ordinance standards, explains why unauthorized use is unlawful, and provides practical, lawful alternatives (such as open educational resources or licensing). |
+  docs/semester-4/gent-401/unit-06/topic-02.mdx:170:| **Ethical evaluation and honest alternative** *(Evaluate)* | Does not see a problem with exaggerated claims or labels it normal sales behavior. | Notes that the ministry claim is misleading, but offers only superficial ethical critique. | Thoroughly evaluates the legal fraud and reputational damage of false endorsement; crafts a persuasive, legally compliant, and honest marketing message. |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:56:| Venture | Price level | Perceived quality / Academic depth | Market position |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:57:|---|---|---|---|
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:58:| Unregulated street-corner photocopier | Very low | Very low (blurry notes, factual errors) | Economy, unreliable baseline |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:59:| Commercial testing academy chain | Very high | Moderate to high (rigid exam drills) | Premium commercial exam factory |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:60:| Standard textbook bookstore | Moderate | Moderate (standard government textbooks) | Mass market standard |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:61:| Tariq and Hina's Hands-on STEM Kit | Moderate | High (curriculum-aligned, hands-on, reusable) | High-value practical innovator |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:147:| Criterion | Emerging (1 mark) | Developing (2 marks) | Proficient (3 marks) |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:148:|---|---|---|---|
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:149:| **Brand and positioning clarity** *(Understand)* | Brand promise is vague or confused with product features; competitors are not clearly identified. | Brand promise is stated; positioning compares the venture to competitors along at least one clear dimension. | Articulates a compelling, realistic brand promise; clearly locates the venture on two distinct competitive dimensions. |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:150:| **Promotional mix feasibility** *(Apply)* | Relies on unrealistic or high-cost advertising channels unsuitable for a micro-venture budget. | Selects low-cost channels, but does not fully adapt them to local community communication habits. | Recommends practical, low-cost bootstrap channels tailored to how local parents and teachers actually receive information. |
+  docs/semester-4/gent-401/unit-06/topic-01.mdx:151:| **Customer trust analysis** *(Analyze)* | Simply asserts that customers will buy; does not analyze customer skepticism or trust factors. | Identifies why customers might hesitate, but offers only generic solutions. | Critically analyzes customer risks and trust barriers; justifies how transparent communication and demonstrations create durable trust. |
+
+Observed static inconsistencies (recorded as findings):
+  - topic-01.mdx:56-61 prose positioning table lists four ventures (photocopier, academy, bookstore, STEM kit); fig-U6-1.svg plots a different four (STEM kit, academy, photocopier, Unverified Tutor). The prose says 'as shown in Figure 6.1'.
+  - topic-01.mdx:73-78 prose names four channels (word of mouth, targeted print, demonstrations, referral incentives); fig-U6-2.svg rows are word of mouth, targeted print, digital & social, demonstrations; the alt text says 'community events' for the fourth row.
+  - fig-U6-4.svg patent example says 'at half normal cost'; topic-02.mdx:88 says 'using 80 percent less wire'.

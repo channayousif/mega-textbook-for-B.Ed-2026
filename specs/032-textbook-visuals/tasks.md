@@ -10,7 +10,7 @@
 - [x] T006 Pilot renders: EFMP-301 U4 fig-U4-3 EN/UR x 16x9/9x16 with colours and icons; owner approved the look 2026-11-23. fig-U4-1 (EN only: its published .ur.svg has unmirrored polygons) and fig-U4-5 (EN/UR) rendered in batch 2.
 - [x] T007a Site: `specs/studio/animations/placed.json` ledger, `figureAnimations` customField, `Figure.tsx` "Watch it animate" button + 16:9 dialog (only public/unlisted entries show).
 - [x] T007b Owner made all ten videos public (2026-11-23); ledger `status: public`; Study Studio listing; e2e `tests/e2e/figure-animation.spec.ts`.
-- [ ] T008 Urdu figure defect: 22 `.ur.svg` files keep the English polygon coordinates (EFMP-301 fig-U4-1 visually confirmed broken); fix needs owner approval where it re-opens G3 evidence.
+- [ ] T008 Urdu figure defect: 22 `.ur.svg` files keep the English polygon coordinates (EFMP-301 fig-U4-1 visually confirmed broken); fix needs owner approval where it re-opens G3 evidence. (#811)
 
 ## Phase B
 - [x] T010 Web slide decks from unit outlines (specs/studio/slides/, outside review evidence): scripts/studio-slides.mjs renders a self-contained 16:9 deck per language at build time; PowerPoint export (scripts/studio/slides-pptx.py, python-pptx via uv; figures rasterised in Chromium); Presentation tab in the Study Studio panel; crew stage `slides` (`crew slides on`); EFMP-301 Unit 4 pilot (13 slides EN and UR).
@@ -18,7 +18,7 @@
 ## Phase C
 - [x] T020a Self-check (owner, 2026-11-23: "Terms + server marking"): migration 0055 (self_check_items, self_check_attempts, self_check_questions(), check_self_quiz() with a daily cap), importer scripts/quiz/import-assessment-mcq.mjs (all 259 pages: 140 units EN, 119 UR; 2,590 items live), <SelfCheck> on assessment pages, RLS + unit + e2e tests. Done 2026-11-23.
 - [x] T020b Flashcards: decks built from the reviewed glossary (ranked per topic, own-course terms via specs/studio/glossary-origin.json) for 61 units; crew stage `flashcards` (`crew flashcards on`) authors decks in specs/studio/flashcards/ for the other 79 (flashcards-needed.json), outside every review manifest (glossary.json is review-bound); <Flashcards> tab in the Study Studio panel; tests.
-- [ ] T020 `<Flashcards>`, `<SelfCheck>`, `<Chart>` (data-driven, print fallback, tests); pilots EFMP-301 U4 and one GQUR-301 unit.
+- [ ] T020 `<Flashcards>`, `<SelfCheck>`, `<Chart>` (data-driven, print fallback, tests); pilots EFMP-301 U4 and one GQUR-301 unit. (#812)
 
 ## Phase D
-- [ ] T030 Crew stage `refresh_figures` (planner rules, brief, tests); pilot unit before and after; `crew refresh on`.
+- [ ] T030 Crew stage `refresh_figures` (planner rules, brief, tests); pilot unit before and after; `crew refresh on`. (#813)

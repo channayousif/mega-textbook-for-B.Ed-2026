@@ -143,6 +143,19 @@ draft and upload private, while script approval before credits and making a vide
 the owner; shared rules, producers and checks are in `.claude/skills/media-studio/SKILL.md`, course
 teaser Shorts in `studio-teaser`, and every media job is listed by `node scripts/media/status.mjs`.
 
+## Model routing and context (Feature 034)
+
+Plan and decide with Opus; hand a written, file-level plan to the `implementer` subagent (Sonnet);
+use `scout` (Haiku) for read-only searches and `content-checker` (Sonnet) for advisory content
+checks. Builds, tests and browsers stay in the main session. Use `/clear` between unrelated tasks.
+The routing table, crew per-stage models and the usage report are in
+`.claude/skills/quota-wise/SKILL.md`.
+
+# Compact instructions
+
+When compacting, keep: owner rulings and decisions, files changed and why, open PRs and issue
+numbers with their state, pending owner actions, and commands that failed with their cause.
+
 ## Work records
 
 **Strict PHR rule (board, 2026-10-04).** PHRs are how the owner and agents learn what was done
@@ -161,6 +174,11 @@ write it to `history/prompts/constitution/`, `history/prompts/<feature>/` or
 `history/prompts/general/` (`<ID>-<slug>.<stage>.prompt.md`). Fill every placeholder, keep the
 prompt verbatim and untruncated, and leave no `{{...}}` behind. The full procedure is in
 `.specify/memory/agent-reference.md`; `/sp.phr` follows it.
+
+**Leftover tasks become issues (Feature 034).** A task still unticked when a feature PR merges
+carries a GitHub issue number, `(#N)`, on its line; create it with
+`node scripts/issue-sync.mjs --create specs/<feature>/tasks.md`. PRs close issues with `Closes #N`.
+`node scripts/issue-sync.mjs` reports drift. Course trackers under `specs/content/` are exempt.
 
 **ADR suggestions.** When a decision has long-term impact, had real alternatives and cuts across
 the system, say: "📋 Architectural decision detected: <brief>. Document? Run `/sp.adr <title>`."
@@ -211,23 +229,10 @@ never certify or recommend approval for its own output. Raster illustration prod
 with Codex under ADR-0024. The `revise-topic` skill is available for bounded content-revision
 jobs; the `review-unit` skill is for separate independent review runs only.
 
-Invocation, verified 2026-09-20 against `agy` 1.2.7:
-
-```bash
-agy -p "<task>" --add-dir /home/a2ahs/mega_book_for_B.Ed \
-    --model gemini-3.1-pro-high --effort high \
-    --output-format json --print-timeout 55m
-```
-
-`--add-dir` is required and there is no `--cwd`: without it the workspace is unset, and neither
-`AGENTS.md` nor `.agents/skills.json` is loaded. Headless runs cannot prompt for a tool
-permission, so a denied command aborts the turn while still reporting `status: SUCCESS` with an
-empty response; the cause is printed on stderr. `permissions.allow` does not fix this, because
-project scope clears it ("no grants for project ... cleared project permissions"). Set
-`toolPermission: "always-proceed"` in `~/.gemini/antigravity-cli/settings.json` instead, which
-is narrower than `--dangerously-skip-permissions`. Do not pass `--disable-slash-commands`, which
-switches off skill expansion. `--mode plan` cannot be used for review, because the reviewer must
-write its report. See `history/adr/0019-*` and the Feature 014 evidence contract.
+**Before invoking `agy` yourself, read "Antigravity (`agy`) invocation" in
+`.specify/memory/agent-reference.md`**: it gives the required flags (`--add-dir`), the permission
+setting headless runs need, and the flags you must not pass (`--disable-slash-commands`, `--mode plan`
+for a review).
 
 The change from reviewer-only policy is an ADR candidate recorded in
 `specs/decisions/adr-proposals.md`; no ADR has been adopted yet.

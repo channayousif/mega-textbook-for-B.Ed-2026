@@ -3579,8 +3579,15 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the `## Reading list` Guide-listed table and the readings criterion.
 
 ## G-2026-235 - EFMP-408 Unit 5: the grade point average scale has no verifiable source
-- **Status:** open
+- **Status:** resolved 2026-11-27 (owner ruling on #862: cite HEC's CGPA equivalence letter of 24 March 2017, Ref. 1-22 (NQAC)/QAD/2017/HEC/03-360, via the IIU-hosted copy; percentage bands from HEC's uniform semester system guidelines, section 13.1; both bound as `hec-2017-cgpa-equivalence` and `hec-uss-guidelines`)
 - **Raised by:** agent:claude, crew job `efmp-408-u05-author` (2026-11-24)
 - **Detail:** the 2026 EFMP-408 guide names "GPA, percentages" in its Week 11 outline without defining a grade-point scale, and the HEC `Test Development and Evaluation` guide it derives from reports grades as percentages (`4TH SEMESTER.txt:258-261`; `TestDevEval_Sept13.txt` Unit 3 and the grading-policy table). A four-point scale (A = 4.0 down to F = 0.0) is used in Topic 5.1 purely as an illustration, and the prose says at the point of use that it is a general convention rather than a guide rule. No verifiable topically-related open-access source for a Pakistani grade-point scale was located from this host. The sub-topic is otherwise grounded: percentages are covered by `hec-2013-testdev`, and `no-external-source` in `specs/content/efmp-408/sources/unit-05.md` records the gap.
 - **Needed from the owner:** either a citable source for the grade-point scale used in Pakistani universities, or confirmation that the illustrative scale may stand as general knowledge with the existing disclosure.
 - **Blocks:** U5-02 only, and only the grade-point half of it; the percentage half is fully sourced.
+
+## G-2026-236 - EFMP-408 Unit 6: factual descriptions of external assessment bodies and policies
+- **Status:** open
+- **Raised by:** agent:agy, crew job `efmp-408-u06-repair_en` (2026-11-26)
+- **Detail:** Specific factual statements regarding Pakistani assessment institutions (NTS established 2002 with NAT/GAT, NEAS Grade 4/8 diagnostic cycles, STEDA and the Sindh Teaching Licence, FPSC CBT adoption, SEF and PEAC assessment programs), international programs (CIE O/A Levels, IB), computer-adaptive testing mechanisms, and academic integrity breach classifications are taught from general educational and policy knowledge without an independent scholarly source. The course guides (HEC 2012 TestDev and Classroom Assessment) and NPSTP (2009) do not cover these specific institutional histories and technical mechanisms. The gap is declared under `no-external-source` in `specs/content/efmp-408/sources/unit-06.md` per style-guide.md:293.
+- **Needed from the owner:** confirmation that standard descriptive facts about Pakistani testing bodies and academic integrity classifications may stand as general knowledge with the existing disclosure, or direction on citable primary sources.
+- **Blocks:** None; the unit is fully grounded by its guide-required sources for core competencies.

@@ -22,6 +22,13 @@ Google Drive. Final visibility is **public**. Uploads go to the **textbook.com.p
 channel**. The last gate is an **owner spot-check sample**, after Claude has checked every
 transcript.
 
+**Run by the crew** (owner, 2026-11-25): with `crew studio on`, the crew's `studio_media` job
+does steps 1-8 for one unit at a time (certified units, G3 done), on the `notebook` lane in media
+hours, and stops at `qa3-pass` with the owner sheet; the owner replies `crew approve-studio <course>
+<unit>` and `studio_publish` does step 10 (no browser check in a crew job). NotebookLM creation is
+paced like uploads: `node scripts/media/pacing.mjs check nlm.studio` before each `studio_create`,
+`record nlm.studio` after (media-studio skill, "Pacing").
+
 The ledger `specs/studio/<course>/media-unit-NN.json` is the only record of progress. Read it
 first with `node scripts/notebook-studio/media-ledger.mjs status <course> <unit>`, and resume
 from there. Every state change goes through `media-ledger.mjs advance`; the script refuses

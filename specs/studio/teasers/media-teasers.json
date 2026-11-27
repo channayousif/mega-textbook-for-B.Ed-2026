@@ -2689,7 +2689,7 @@
    "id": "efmp-406",
    "locale": "ur",
    "kind": "short",
-   "state": "script-approved",
+   "state": "qa3-pass",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -2700,6 +2700,23 @@
      "by": "owner",
      "date": "2026-11-22",
      "note": "crew approve-script via openclaw"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "claude",
+     "date": "2026-11-25",
+     "notes": "Passing takes: shot 1 t1, 2 t1, 3 t1, 4 t1, 5 t2 (5 t1 failed on drawn viewfinder marks)."
+    },
+    "qa1": {
+     "verdict": "pass",
+     "at": "2026-11-25T13:54:30Z",
+     "notes": "29.37 s, 1080x1920, -16.3 LUFS, -3.1 dBTP, no silence or black runs; nine-frame grid checked: captions fully visible, Urdu RTL correct, end card shows the exact address; thumbnail hook reads at phone size"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-25",
+     "notes": "list_videos: DQxspPM4QmE private on the channel, processed, title and description intact; teaser playlist PLCJn7gAoYIJs and custom thumbnail set (update_video success)"
     }
    },
    "clips": [
@@ -2759,6 +2776,120 @@
       "by": "claude",
       "notes": "Computer-lab scene, students in blue uniforms and head scarves, teacher in modest dress; no readable text, map or flag. QG2 0.714 only because whisper wrote online/social in Urdu script and joined zimmedar; every word of the line is spoken. One background student face is soft."
      }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-25T04:49:49.251Z",
+     "artifact_id": "32f1033d-c21b-4dd7-9cee-9e08e99d3ac0",
+     "media_id": "32f1033d-c21b-4dd7-9cee-9e08e99d3ac0",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-2-t1.mp4",
+     "sha256": "6065973425b2c2d8e03b74bd9d0529a41e4840fedae8c69d3d11cc3c55b3ec31",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.857,
+      "qg2_suggested": "pass",
+      "heard": "اس کورس میں آپ کرٹیکل, ڈیجیکل, میڈیا, ویجول اور انفرمیشن لٹریسی کو سمجھیں گے",
+      "missing": [
+       "digital",
+       "visual"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-2-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Dolly along desks, pupils in uniform (girl in white dupatta) with a newspaper, picture card and tablet; newspaper print and screen are blurred and unreadable, no camera UI, map or flag. QG2 0.857: whisper spelled digital and visual in Urdu script; the whole line is spoken."
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-25T04:56:07.120Z",
+     "artifact_id": "fa59eb1f-81f5-44bd-bb3c-91c9ac1e78f4",
+     "media_id": "fa59eb1f-81f5-44bd-bb3c-91c9ac1e78f4",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-4-t1.mp4",
+     "sha256": "790eb90e3aee52b980eeff6e3c1f7bd18fd30fc3f90dd4fb0b937daf940696a0",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.875,
+      "qg2_suggested": "pass",
+      "heard": "چھ یونٹس تاکہ آپ لرنر سینٹریڈ اور پروجیکٹ بیس طریقوں سے\nہاج کی لٹریسی پڑھا سکیں",
+      "missing": [
+       "based",
+       "آج"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-4-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Rising view over a school courtyard with pupil groups on mats arranging photo and drawing cards on chart paper; girls in uniform with dupattas, teacher in modest shalwar kameez moving between groups. No readable text, camera UI, map or flag. QG2 0.875: whisper heard project-based as بیس and آج as ہاج; the line is spoken in full."
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-25T05:00:41.238Z",
+     "artifact_id": "5e03eb2b-1a5f-4324-bfce-bf5370b94be0",
+     "media_id": "5e03eb2b-1a5f-4324-bfce-bf5370b94be0",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-5-t1.mp4",
+     "sha256": "816ee196f548bb97d54f816e04f61a79367eefe247774048e8288718b691e1b4",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.929,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑھیں\ntextbook.com.p کے پر\nلنک نیچے ہے",
+      "missing": [
+       "ڈاٹ"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-5-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "Presenter, dress, corridor and phone with blank screen are right and the line is spoken (QG2 0.929, only ڈاٹ dropped by whisper), but the closing close-up shows drawn viewfinder corner marks (camera interface)."
+     }
+    },
+    {
+     "shot": 5,
+     "take": 2,
+     "at": "2026-11-25T08:49:24.501Z",
+     "artifact_id": "c833692b-1ccd-45af-9025-06c698ceddcb",
+     "media_id": "c833692b-1ccd-45af-9025-06c698ceddcb",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-406/ur/shot-5-t2.mp4",
+     "sha256": "962e5c9e1363fca93a267f09b840595c1d5e23fcdc7aa7d8606af45a71f4226c",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.929,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑھیں\ntextbook.com.p کے پر\nلنک نیچے ہے",
+      "missing": [
+       "ڈاٹ"
+      ],
+      "strip": "~/studio-media/teasers/efmp-406/ur/qg2/shot-5-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Presenter in grey shalwar kameez and navy waistcoat walks the school corridor, holds up a phone with a blank screen, push-in to a smiling close-up; pupils in uniform soft behind. No viewfinder marks, readable text, map or flag. QG2 0.929: whisper dropped ڈاٹ inside the address; the line is spoken in full."
+     }
     }
    ],
    "history": [
@@ -2773,13 +2904,515 @@
     {
      "state": "script-approved",
      "at": "2026-11-23T02:46:49.495Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-25T08:52:29.083Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-25T08:52:29.199Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-25T13:53:57.023Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-25T13:54:05.643Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-25T13:55:35.073Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-25T13:57:26.255Z"
     }
    ],
-   "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b"
+   "script_sha256": "b209bab9a2d8420920e188d9c35cb6eb5f5ff90e8e36d15a94494aafaf63dc5b",
+   "encoded_file": "/home/a2ahs/studio-media/teasers/efmp-406/ur/teaser.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/teasers/efmp-406/ur/teaser.thumb.jpg",
+   "youtube_id": "DQxspPM4QmE",
+   "uploaded_at": "2026-11-25T13:56:00Z"
   },
   {
    "key": "efmp-407-ur",
    "id": "efmp-407",
+   "locale": "ur",
+   "kind": "short",
+   "state": "qa3-pass",
+   "gates": {
+    "qg0": {
+     "verdict": "pass",
+     "by": "teaser.mjs"
+    },
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-26",
+     "note": "crew approve-script via openclaw"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "claude",
+     "date": "2026-11-26",
+     "notes": "5/5 shots pass; shot 3 take 1 failed on a drawn REC viewfinder overlay, take 2 passes; QG1 all pass, QG2 0.941-1.0"
+    },
+    "qa1": {
+     "verdict": "pass",
+     "at": "2026-11-26T19:55:12Z",
+     "notes": "28.9 s, 1080x1920, -14.8 LUFS, -3.0 dBTP, no silence or black runs; frames checked: captions fully visible, Urdu RTL correct, end card shows the exact address /ur/semester-3/efmp-407/course-overview/; thumbnail hook reads at phone size"
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "Claude QG3",
+     "date": "2026-11-27",
+     "notes": "list_videos: Xgx6-JJ5ReY private on the channel, processed, title and description intact; teaser playlist PLCJn7gAoYIJs and custom thumbnail set (update_video success)"
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-26T18:04:50.119Z",
+     "artifact_id": "00f66900-6c68-440b-aeb5-18cd9c219f89",
+     "media_id": "00f66900-6c68-440b-aeb5-18cd9c219f89",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-1-t1.mp4",
+     "sha256": "a3e5018669c1d90d77e1690fecc349c0785c4ba4ffa6995d652f5b1c6ed80418",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "ماحول، معاشرہ اور معیشت کیا یہ سب ہماری کلاس روم سے جڑے ہیں؟",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-1-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; male presenter olive shalwar kameez and brown waistcoat holding a clay-potted sapling in a sunlit school garden, pupils in blue uniform behind; no text, map, flag or viewfinder marks"
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-26T18:10:40.544Z",
+     "artifact_id": "b8a9ca2e-fbc3-4dbe-bce3-898636589f0d",
+     "media_id": "b8a9ca2e-fbc3-4dbe-bce3-898636589f0d",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-2-t1.mp4",
+     "sha256": "260050164b1aa16a8a3f6bf7971e73d8cf06d9b69c7cc3bf29a0c546f72f9fa3",
+     "source": "generated",
+     "producer": "gflow.video",
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; pupils in uniform and girls in dupattas at wooden desks with leaves, a water jar and potted plants, notebooks blurred; no readable text, map, flag or viewfinder marks"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-26T18:17:12.010Z",
+     "artifact_id": "705bb9f0-c42c-4241-97cf-5fbfbfbad4bd",
+     "media_id": "705bb9f0-c42c-4241-97cf-5fbfbfbad4bd",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-3-t1.mp4",
+     "sha256": "3d5c3436284aa139b488da53e4eaad7a859c88454cf2d3babe159b8c2d5d880c",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "project-based or inquiry-based learning, systems thinking\nاور امن, gender equality اور green economy جیسے موضوعات بھی",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-3-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "QG1 pass but QG2 1.0; drawn camera overlay: REC indicator top-left, battery icon top-right and viewfinder corner brackets in every frame; not usable without a heavy crop"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-26T18:25:49.056Z",
+     "artifact_id": "edf45ff0-9b5d-41bf-851c-ee7b0aa7025e",
+     "media_id": "edf45ff0-9b5d-41bf-851c-ee7b0aa7025e",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-4-t1.mp4",
+     "sha256": "2dad90697544483b02028c65810019e0b5978764418810498db7c4c57e1aafbc",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.941,
+      "qg2_suggested": "pass",
+      "heard": "آٹھ یونٹس پاکستان میں ای ایس ڈی کی پولیسی اور اسکول اور کمیونٹی کے ساتھ سسٹینیبیلٹی پروجیکٹس بنانا سیکھیں",
+      "missing": [
+       "esd"
+      ],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-4-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 0.941 (whisper wrote units/ESD/community/sustainability projects in Urdu script; every word of the line is spoken); crane shot over a whitewashed courtyard, pupils teachers and parents planting saplings and passing watering cans; modest dress, no readable text, map, flag or viewfinder marks"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-26T18:30:35.824Z",
+     "artifact_id": "b57d7ae0-2fa2-45a5-89bc-e215c7a03b68",
+     "media_id": "b57d7ae0-2fa2-45a5-89bc-e215c7a03b68",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-5-t1.mp4",
+     "sha256": "33e942a0dbf668d42c755e5b63c7097aa24df821efdfb492840709630bd5a119",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑھیں\ntextbook.com.pk پر\nلنک نیچے ہے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-5-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 (heard the site address spelled out); presenter walks toward camera in a plant-lined corridor holding a phone with a blurred screen; no readable text, map, flag or viewfinder marks"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 2,
+     "at": "2026-11-26T18:37:29.670Z",
+     "artifact_id": "3bfbae03-84aa-48e7-a2d0-cb3fc330ff51",
+     "media_id": "3bfbae03-84aa-48e7-a2d0-cb3fc330ff51",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efmp-407/ur/shot-3-t2.mp4",
+     "sha256": "772b4a39c41fcad20bdab601ebe81483fe554e681e4d25427f493a37e81e1144",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.944,
+      "qg2_suggested": "pass",
+      "heard": "project-based or inquiry-based learning, systems thinking or aman, gender equality or green economy\nجیسے موزواد بھی",
+      "missing": [
+       "موضوعات"
+      ],
+      "strip": "~/studio-media/teasers/efmp-407/ur/qg2/shot-3-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 0.944 (whisper wrote the Urdu اور as or and موضوعات as موزواد; every word of the line is spoken); retake without the REC overlay: pupils sort plain bottles, paper and cloth into baskets while a woman teacher in a modest dupatta leans in; no readable text, map, flag or viewfinder marks"
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-22T21:03:29.393Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-22T21:03:29.516Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-26T18:02:32.770Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-26T18:40:32.237Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-26T18:41:03.369Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-26T19:55:05.557Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-26T19:55:12.993Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-26T20:50:46.827Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-26T20:52:19.692Z"
+    }
+   ],
+   "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874",
+   "encoded_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.thumb.jpg",
+   "youtube_id": "Xgx6-JJ5ReY",
+   "uploaded_at": "2026-11-26T20:50:46Z"
+  },
+  {
+   "key": "efpg-401-ur",
+   "id": "efpg-401",
+   "locale": "ur",
+   "kind": "short",
+   "state": "qa3-pass",
+   "gates": {
+    "qg0": {
+     "verdict": "pass",
+     "by": "teaser.mjs"
+    },
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-26",
+     "note": "crew approve-script via openclaw"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "claude",
+     "date": "2026-11-27",
+     "notes": "5/5 shots have a passing take; shot 1 take 2 (take 1 failed for a drawn REC overlay); shot 4 QG2 0.882 from whisper Urdu-script transcription, full line spoken"
+    },
+    "qa1": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG1",
+     "date": "2026-11-27",
+     "notes": "29.6 s, 1080x1920, -16.1 LUFS, peak -3.1 dBTP, no black or silent runs; nine frames, end card and thumbnail viewed: captions visible and RTL, end card shows the exact UR address. Notes for the owner: shot 1 book cover carries pseudo-Urdu lettering (no meaningful words); wall posters in shots 2-3 carry blurred pseudo-text; thumbnail badge text touches the box edge."
+    },
+    "qa3": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG3",
+     "date": "2026-11-27",
+     "notes": "list_videos: private on the channel, title and description intact, thumbnail served; playlist and thumbnail set. list_videos reports no processing status and a private Short cannot be opened without the owner sign-in, so playback is left to the owner spot-check."
+    }
+   },
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-26T22:50:43.357Z",
+     "artifact_id": "d017aa0f-38c1-4711-896a-3c14b7e08a2b",
+     "media_id": "d017aa0f-38c1-4711-896a-3c14b7e08a2b",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-1-t1.mp4",
+     "sha256": "ee87c3cd60265b9d58d762ffed5e88316758512b814a70ec7db21db57746a3e1",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "انگریزی پڑھانا مشکل لگتا ہے؟\nسننا، بولنا، پڑھنا اور لکھنا\nیہ چاروں مہارتیں کیسے سکھائیں؟",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-1-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "QG1 pass, QG2 1.0, but drawn camera interface throughout: REC indicator top-left, battery icon top-right and viewfinder corner brackets; not usable without a heavy crop. The book cover is blurred pseudo-script, not the reason."
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-26T23:02:32.762Z",
+     "artifact_id": "9291c266-6857-4f8d-ba5f-406dc96016ad",
+     "media_id": "9291c266-6857-4f8d-ba5f-406dc96016ad",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-2-t1.mp4",
+     "sha256": "47f46ca7450b9f9561c88120cd4e42d44905bc8635ed3844ab68827af7b2641d",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "اس کورس میں آپ لسننگ، سپیکنگ، ریڈنگ اور رائٹنگ کی سرگرمیاں تیار کرنا سیکھیں گے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-2-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; dolly along desks, pupils in blue uniform and girls in white dupattas, teacher in modest dress; wall poster and notebooks carry only blurred unreadable pseudo-text, no camera UI, map or flag"
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-26T23:06:56.821Z",
+     "artifact_id": "016b7cb1-44f4-42c5-b5d3-96cb35a3759d",
+     "media_id": "016b7cb1-44f4-42c5-b5d3-96cb35a3759d",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-3-t1.mp4",
+     "sha256": "b6ccdc0a0b5389907a6ce1497b05238833f04b32046bd17de81930420c3c798a",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "جدید methods اور approaches اور prose, poetry, composition اور grammar کے lesson plans بنانا بھی",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-3-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; tracking shot of a woman teacher in a modest blue dupatta acting out a poem while pupils in green-uniform middle-school uniform hold plain picture cards; wall chart and clock blurred, no readable text, camera UI, map or flag"
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-26T23:11:14.701Z",
+     "artifact_id": "e55dac0a-9c7a-43de-a422-fd33903cf10c",
+     "media_id": "e55dac0a-9c7a-43de-a422-fd33903cf10c",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-4-t1.mp4",
+     "sha256": "0c15605c8e77108ce0847907bbdacc986a67d1d562b205c9f4627c192294185f",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.882,
+      "qg2_suggested": "pass",
+      "heard": "آڈیو ویجول ایڈز کا مؤثر استعمال\nاور پہلی سے آٹھویں جماعت تک انگریزی میں ترقی کی جانچ",
+      "missing": [
+       "visual",
+       "aids"
+      ],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-4-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 0.882 (whisper wrote audio-visual aids in Urdu script; the whole line is spoken); crane-style view over a shaded verandah, teacher in modest cream dress holding a plain picture chart and a portable speaker, pupils in uniform raising hands; chart text is blurred pseudo-script, notebooks plain, no camera UI, map or flag"
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-26T23:15:27.457Z",
+     "artifact_id": "ef69cf5b-7594-4aba-8010-80078e2c9463",
+     "media_id": "ef69cf5b-7594-4aba-8010-80078e2c9463",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-5-t1.mp4",
+     "sha256": "7cb2dca01bb080557b6c8254942eb12ef6233107de2da8cf0f93bd54676f52b6",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑیں\ntextbook.com.pk\nپر\nلنک نیچے ہے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-5-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 (heard the site address spelled out); presenter in maroon shalwar kameez and cream dupatta walks toward camera in a sunlit whitewashed corridor holding a phone with a dark blank screen, pupils in uniform soft behind; wall board blurred, no readable text, camera UI, map or flag"
+     }
+    },
+    {
+     "shot": 1,
+     "take": 2,
+     "at": "2026-11-26T23:24:31.859Z",
+     "artifact_id": "0d83994d-384f-432d-bc16-c74e0e88aa6c",
+     "media_id": "0d83994d-384f-432d-bc16-c74e0e88aa6c",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/efpg-401/ur/shot-1-t2.mp4",
+     "sha256": "b865a23e0f95aa285bcac90582b0a48f008774f8e84cb0e25acc28c3fa6d7e3c",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "انگریزی پڑھانا مشکل لگتا ہے سننا بولنا پڑھنا اور لکھنا یہ چاروں مہارتیں کیسے سکھائیں",
+      "missing": [],
+      "strip": "~/studio-media/teasers/efpg-401/ur/qg2/shot-1-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass-with-notes",
+      "by": "claude",
+      "notes": "QG1 pass; QG2 1.0 exact line; presenter in maroon shalwar kameez and cream dupatta holds a red book and turns to camera in a bright classroom, pupils behind; no camera UI, map or flag. The book cover carries sharp Urdu-like pseudo-script (not meaningful words), the only blemish."
+     }
+    }
+   ],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-25T16:48:57.739Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-25T16:48:57.846Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-26T22:48:02.936Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-26T23:30:59.335Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-26T23:30:59.441Z"
+    },
+    {
+     "state": "assembled",
+     "at": "2026-11-27T00:21:44.525Z"
+    },
+    {
+     "state": "qa-pass",
+     "at": "2026-11-27T00:21:44.657Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-27T00:22:17.897Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-27T00:22:18.040Z"
+    }
+   ],
+   "script_sha256": "174b861e2957d023e1851daaef9034db85d4b8f75f3f4592a5adcd3b92017931",
+   "encoded_file": "/home/a2ahs/studio-media/teasers/efpg-401/ur/teaser.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/teasers/efpg-401/ur/teaser.thumb.jpg",
+   "youtube_id": "-mJSyWxcAyA",
+   "uploaded_at": "2026-11-27T00:22:17Z"
+  },
+  {
+   "key": "gicp-400-ur",
+   "id": "gicp-400",
    "locale": "ur",
    "kind": "short",
    "state": "scripted",
@@ -2793,14 +3426,39 @@
    "history": [
     {
      "state": "planned",
-     "at": "2026-11-22T21:03:29.393Z"
+     "at": "2026-11-25T18:35:05.021Z"
     },
     {
      "state": "scripted",
-     "at": "2026-11-22T21:03:29.516Z"
+     "at": "2026-11-25T18:35:08.552Z"
     }
    ],
-   "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874"
+   "script_sha256": "30292cc711993deff83a0b3439ffc26a0f883fc02cfff9cafbdb4b78e6a8f7df"
+  },
+  {
+   "key": "giss-401-ur",
+   "id": "giss-401",
+   "locale": "ur",
+   "kind": "short",
+   "state": "scripted",
+   "gates": {
+    "qg0": {
+     "verdict": "pass",
+     "by": "teaser.mjs"
+    }
+   },
+   "clips": [],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-26T10:21:58.842Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-26T10:22:03.763Z"
+    }
+   ],
+   "script_sha256": "686d0c21bf9eb90bd2054dc9f1191e4831253a884a5872d24378ed23bf3c41e2"
   }
  ]
 }

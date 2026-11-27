@@ -1,0 +1,37 @@
+Source verification for GENT-401 Unit 7 G3 (reviewer run crew/gent-401-u07-review_en-r1)
+Method: OpenStax pages fetched 2026-11-27 (UTC 00:32-00:34) with the Firecrawl scrape tool in
+directQuote query mode, plus the bound notes in specs/content/gent-401/sources/texts/.
+Each line: unit claim -> source passage -> verdict.
+
+Section 7.3 https://openstax.org/books/entrepreneurship/pages/7-3-developing-pitches-for-various-audiences-and-goals
+- topic-02.mdx:34 "a formal but brief presentation" -> "we defined a pitch as a formal but brief presentation that is delivered (usually) to potential investors" -> SUPPORTED.
+- topic-02.mdx:36 six elements (need, market opportunity, innovative solution, management, funding, risk mitigation) -> Figure 7.6 caption "Key elements of pitch include identifying the need, the market opportunity, an innovative solution, how the venture will be managed, what funding is needed, and how risks will be mitigated." and opening sentence "key problem or unmet need, the market opportunity, the innovative solution, the management plan, the financial needs, and any risks" -> SUPPORTED. (The bound note 16 instead records the separate "six key elements ... from Media Innovation and Entrepreneurship": brand identity, problem-solution narrative, features/value proposition, product-market fit, competitive analysis, financial projections. Both lists exist in 7.3.)
+- topic-02.mdx:51 "clear, concise, and compelling"; ask = specific money, assistance or outcome -> "a pitch is designed to be clear, concise, and compelling"; "The ask in a pitch is the specific amount of money, type of assistance you request, or outcome you are seeking." -> SUPPORTED.
+- topic-02.mdx:53 core deck no more than ten slides, two-minute version -> "keep your core deck to no more than ten slides and that you practice a two-minute version that covers all six of these concepts" -> SUPPORTED.
+- topic-02.mdx:57 investors want team, product, value proposition, return; what makes the market good -> "Individual investors want to know about team, product, value proposition, and potential return on investment." / "A good pitch explains not only what makes the product or service good but what makes a market good." -> SUPPORTED.
+- topic-02.mdx:61 deck visual, easy to edit, matched to the speaker -> "Pitch presentations should be visual and engaging. They should be easy to edit and rearrange ... make sure the visuals match the script." -> SUPPORTED.
+- topic-02.mdx:67 "investors value a team that can explain a market and admit what it still has to learn" -> market half supported (above); a second directQuote query for any sentence about a team admitting what it does not know or still has to learn returned NONE -> NOT SUPPORTED (second half).
+- topic-02.mdx:67 and :80 feedback useful / to be considered carefully -> "If an investor offers feedback, it must be considered ... consider the pitch development and performance feedback a valuable experience." -> SUPPORTED.
+- topic-02.mdx:73 write it down, clear buzzwords, practise aloud -> "write your pitch down in order to edit it and perfect it"; "clear away the buzzwords and corporate-speak, and, finally, practice performing your pitch aloud. Elevator speeches, after all, are given in person." -> SUPPORTED.
+
+Section 10.5 https://openstax.org/books/entrepreneurship/pages/10-5-growth-signs-pains-and-cautions
+- topic-01.mdx:36 "the owner usually wears many hats" -> "The owner usually wears many hats to launch the operation." -> SUPPORTED.
+- topic-01.mdx:50 quoted "managing cash, delegating tasks to others, and ensuring the right people and systems are in place" -> source: "... manage cash, delegate tasks to others, and ensure the right people and systems are in place." -> QUOTATION ALTERED (verb forms changed inside quotation marks; bound note 12 repeats the altered form).
+- topic-01.mdx:60 "a riskier path to growth" -> "Developing new markets is a riskier path to growth." -> SUPPORTED (fragment exact).
+- topic-01.mdx:62 franchising definition -> "Franchising is a form of licensing that allows the business (franchisor) to share its business model to expand the business through various distributors (franchisees) for a fee. In turn, the franchisor provides the training, marketing, know-how, management, and support" -> SUPPORTED.
+- topic-01.mdx:67 "there is usually an increase in cash coming in and going out" + watch costs and payments -> "There is usually an increase in cash coming in and going out. A key factor in this phase is to avoid cash strain by paying close attention to costs and ensuring the payment from customers" -> SUPPORTED.
+
+Section 12.2 https://openstax.org/books/entrepreneurship/pages/12-2-building-the-entrepreneurial-dream-team
+- topic-01.mdx:38 rarely one person; complementary skills -> "Rarely does an entrepreneurial venture start or function due to the effort of only one person. Having staff with complementary skills and who get along improves the likelihood of success" -> SUPPORTED.
+- topic-01.mdx:38 rule "identify the tasks, identify the skills each needs, then search for people with those skills" -> the directQuote query did not return such a passage; bound note 14 asserts it -> UNVERIFIED by this reviewer.
+
+Section 13.7 https://openstax.org/books/entrepreneurship/pages/13-7-mitigating-and-managing-risks
+- topic-01.mdx:71 identification, assessment, abatement; natural/economic/human causes -> "a multistage process of risk identification, risk assessment, and risk abatement. Examples of risks ... natural causes, economic causes, and human causes." -> SUPPORTED. Examples: flooding (natural); rising raw-material prices, competition (economic); "shortages of qualified trained workers", "embezzlement" (human) -> SUPPORTED.
+- topic-01.mdx:75 risk matrix -> "Businesses sometimes use a risk matrix to assess or characterize the probability and impact of risk (Figure 13.11)". Figure 13.11 is a 3x3 grid (low/moderate/high on both axes); it has no quadrant actions. The unit's four-quadrant reading is the author's device (declared as such in sources/texts/openstax-entrepreneurship.md line 71).
+- topic-01.mdx:86 not all risks insurable; bad market-entry decision -> "not all risks can be insured against - for example, a bad economy that leads to a loss of business or a bad decision by the owner to enter a market that does not work out." -> SUPPORTED.
+
+Abstract-only substitutes (bound notes read; not re-fetched):
+- sme-risk-review (Yuwono & Rachmawati 2024) and pitch-competition (Blair 2021) appear only in Further reading (topic-01.mdx:148, topic-02.mdx:147). The one-line glosses stay within the bound abstract notes. Neither is cited in the Explanation prose, although coverage/unit-07.md maps them to Explanation sections.
+- mellor-2009 appears only in Further reading; it is declared under ## Unverifiable sources and no claim in the prose rests on it. The tracker's request (mellor premise only; DOAJ substitutes within abstracts) is satisfied.
+
+Note on bound-note provenance: sources/texts/openstax-entrepreneurship.md:71 calls the seven-part pitch structure "the author's teaching device", while sources/texts/pitch-competition.md says "The seven-part pitch structure itself is taken from the OpenStax textbook". The OpenStax text verified above supports the former.

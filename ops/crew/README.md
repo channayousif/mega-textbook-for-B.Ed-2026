@@ -13,6 +13,21 @@ definition of done. Paperclip is paused (its data is kept); nothing here depends
 | agy | `agy -p` | google | review_en (G3), illustrate (ADR-0029; the image itself comes from `generate-illustration.mjs`, which tries agy, gflow, then Codex and holds the job only when all three are out, D-2026-0085; gflow images share one Flow project, recorded in `~/.cache/mega-book/gflow-project.json` and rotated every 50 images, or pinned with `GFLOW_PROJECT`) |
 | agy_claude | `agy -p --model claude-opus-4-6-thinking` | anthropic | none: next after claude in every chain that has claude (agy's separate Claude/GPT quota) |
 | opencode | `opencode run -m longcat/LongCat-2.0` | longcat | fix (mechanical gate repairs) |
+| agy2 | `agy2 -p` (agy with `HOME=~/.agy2`, `ops/crew/bin/agy2`) | google | none: right after agy in every chain except illustrate (a second Antigravity account, Feature 034) |
+| agy2_claude | `agy2 -p --model claude-opus-4-6-thinking` | anthropic | none: right after agy_claude in every chain |
+
+**Second Antigravity account (Feature 034).** `agy2` runs agy with `HOME=~/.agy2`, a profile with its
+own `.gemini` login that links `.gitconfig`, `.ssh`, `.nvm`, `.local` and `~/.config/{gh,git}` back to the
+real home. Install with `ln -s ~/crew-system/ops/crew/bin/agy2 ~/.local/bin/agy2` and sign in once
+with `HOME=~/.agy2 agy`. Until then the wrapper exits with `UNAUTHENTICATED (code 401)`, so both
+agy2 workers cool down like any refused provider instead of holding a job.
+
+**Claude model per stage (Feature 034, quota efficiency).** The `claude` worker passes `--model` and
+`--effort` from `CLAUDE_ROUTING` in `scripts/crew/workers.mjs`: Opus (high) for author, review_en,
+review_ur, maint_survey and maint_review; Opus (medium) for plan_illustrations, teaser_script,
+intel_distill and maint_adr; Sonnet (medium) for every other stage. Override one stage on the host
+with `CREW_CLAUDE_MODEL_<STAGE>` / `CREW_CLAUDE_EFFORT_<STAGE>`. `node scripts/ops/claude-usage.mjs`
+reports the effect by model and by kind (interactive, crew, subagent).
 
 openclaw is not a worker. It is the owner channel: Discord `#etextbook-platform` for everything,
 WhatsApp as well for urgent items and decisions.
@@ -181,11 +196,26 @@ Rules, producers and checks: `.claude/skills/media-studio/SKILL.md` (ADR-0037, D
 `crew approve-script` on the current script hash and spends Flow credits through
 `scripts/media/teaser-clips.mjs` (lost-clip recovery, never a second payment); `media_assemble`
 assembles and uploads **private**, then stops at `qa3-pass`; `media_publish` is queued only by
-`crew publish`, and is the one job allowed to set a video public; `audio_overview` makes planned
-NotebookLM audio. One media job is in flight at a time (they all write a shared ledger), at most six
-scripts wait for the owner, and `teaser_clips` is held without spending an attempt while gflow is
-offline or out of quota. Clip, upload and NotebookLM stages run only on the claude worker (it has
-the gflow and youtube-uploader MCP servers). Approvals live in `~/.crew/mega-book/media.json`.
+`crew publish`, and is one of the two jobs allowed to set a video public. Study Studio (`crew studio
+on`): `studio_media` (formerly `audio_overview`) resumes a unit's NotebookLM audio and video from
+any state to `qa3-pass` and plans the next certified unit; `studio_publish` runs only after
+`crew approve-studio <course> <unit>` and is the other job allowed to set a video public. Jobs that
+write one ledger never overlap, at most six scripts wait for the owner, and `teaser_clips` is held
+without spending an attempt while gflow is offline or out of quota. Clip, upload and NotebookLM
+stages run on claude, or claude_crew when claude is cooling (both have the gflow, youtube-uploader
+and gemini-notebook-studio MCP servers). Approvals live in `~/.crew/mega-book/media.json`.
+
+**Producer lanes** (`scripts/crew/resources.mjs`; owner, 2026-11-25: "different media producers in
+parallel, each producer max one slot" in media hours). Every outside-service stage runs on a lane
+with at most one running job: `notebook` (NotebookLM: `studio_media`), `flow` (gflow images and Veo:
+`teaser_clips`, or `illustrate` pinned with `--producer gflow`), `agy` and `codex` (`illustrate`
+pinned to that producer), `youtube` (`media_assemble`, `media_publish`, `studio_publish`), `social`
+(`social_roundup`) and `meta` (reserved, specs/033). Lanes run in parallel and outside the text
+slots (`CREW_MAX_PARALLEL`); a lane takes a job only in media hours and while its paced channel has
+room today, the memory and disk floors still apply, and in media hours media jobs pick a worker
+before text jobs (the social roundup first). Jobs that write one ledger never overlap (the teaser
+ledger; each unit's Study Studio ledger). BOARD.md "Today's media plan" shows each lane, its next
+job and why it waits.
 
 Two paths deliver them, and each command is applied once:
 

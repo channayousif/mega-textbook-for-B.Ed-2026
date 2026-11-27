@@ -11,31 +11,49 @@ import { produce } from '../../scripts/media/producers/index.mjs';
 import { OUTSIDE_SERVICE_STAGES, STAGES } from '../../scripts/crew/workers.mjs';
 import { socialDue, ROUNDUP_HOUR_PKT } from '../../scripts/crew/social.mjs';
 
-// D-2026-0100: media hours 09:00-15:00 PKT (UTC+5), gaps with jitter, hourly and daily caps,
-// Veo 200 credits a day until 1,000 in the cycle, then 50 a day.
+// D-2026-0100 as corrected by the owner on 2026-11-25: media hours are every hour EXCEPT the owner's
+// 09:00-15:00 PKT office hours (15:00-09:00, across midnight), gaps with jitter, hourly and daily
+// caps, Veo 200 credits a day until 1,000 in the cycle, then 50 a day. The gap and cap tests below
+// use a same-day 09:00-15:00 window (`lim`) so they also cover windows that do not wrap.
 
 const pkt = (iso) => Date.parse(`${iso}+05:00`); // a PKT wall-clock time as epoch ms
-const lim = { hours: { ...DEFAULTS.hours }, cycleDay: 1, channels: { ...DEFAULTS.channels } };
+const lim = { hours: { start: 9, end: 15 }, cycleDay: 1, channels: { ...DEFAULTS.channels } };
+const dlim = { ...lim, hours: { ...DEFAULTS.hours } };
 const ev = (...items) => items.map(([iso, units = 1]) => ({ at: pkt(iso), units }));
 const noJitter = () => 0;
 
-test('media hours are 09:00-15:00 PKT and the next opening crosses the day boundary', () => {
-  assert.equal(withinHours(pkt('2026-11-24T09:00:00')), true);
-  assert.equal(withinHours(pkt('2026-11-24T14:59:00')), true);
-  assert.equal(withinHours(pkt('2026-11-24T15:00:00')), false);
-  assert.equal(withinHours(pkt('2026-11-24T08:59:00')), false);
-  assert.equal(nextOpen(pkt('2026-11-24T07:00:00')), pkt('2026-11-24T09:00:00'));
-  assert.equal(nextOpen(pkt('2026-11-24T16:00:00')), pkt('2026-11-25T09:00:00'));
-  assert.equal(nextOpen(pkt('2026-11-30T23:30:00')), pkt('2026-12-01T09:00:00'));
+test('media hours are every hour except 09:00-15:00 PKT, across midnight', () => {
+  assert.deepEqual(DEFAULTS.hours, { start: 15, end: 9 });
+  assert.equal(withinHours(pkt('2026-11-24T15:00:00')), true);
+  assert.equal(withinHours(pkt('2026-11-24T23:59:00')), true);
+  assert.equal(withinHours(pkt('2026-11-25T00:00:00')), true);
+  assert.equal(withinHours(pkt('2026-11-25T08:59:00')), true);
+  assert.equal(withinHours(pkt('2026-11-25T09:00:00')), false);
+  assert.equal(withinHours(pkt('2026-11-25T14:59:00')), false);
+  assert.equal(nextOpen(pkt('2026-11-25T10:00:00')), pkt('2026-11-25T15:00:00'));
+  assert.equal(nextOpen(pkt('2026-11-25T02:00:00')), pkt('2026-11-25T02:00:00')); // already open
+  // a same-day window still works
+  assert.equal(withinHours(pkt('2026-11-24T09:00:00'), lim.hours), true);
+  assert.equal(withinHours(pkt('2026-11-24T15:00:00'), lim.hours), false);
+  assert.equal(nextOpen(pkt('2026-11-24T16:00:00'), lim.hours), pkt('2026-11-25T09:00:00'));
+  assert.equal(nextOpen(pkt('2026-11-30T23:30:00'), lim.hours), pkt('2026-12-01T09:00:00'));
+  assert.equal(withinHours(pkt('2026-11-24T12:00:00'), { start: 0, end: 0 }), true); // 24 hours
 });
 
-test('outside hours every channel holds until 09:00', () => {
+test("in the owner's office hours every channel holds until 15:00", () => {
   for (const ch of CHANNELS) {
-    const d = decide(ch, { nowMs: pkt('2026-11-24T20:00:00'), lim, random: noJitter });
+    const d = decide(ch, { nowMs: pkt('2026-11-24T11:00:00'), lim: dlim, random: noJitter });
     assert.equal(d.ok, false, ch);
-    assert.equal(d.resetAt, new Date(pkt('2026-11-25T09:00:00')).toISOString());
+    assert.equal(d.resetAt, new Date(pkt('2026-11-24T15:00:00')).toISOString());
     assert.match(d.reason, /outside media hours/);
   }
+  // at night the default window is open; a daily cap reached at 23:00 resets at midnight PKT
+  const four = ev(['2026-11-24T15:10:00'], ['2026-11-24T17:10:00'], ['2026-11-24T19:10:00'], ['2026-11-24T21:10:00']);
+  const y = decide('youtube.upload', { events: four, nowMs: pkt('2026-11-24T23:00:00'), lim: dlim, random: noJitter });
+  assert.equal(y.ok, false);
+  assert.match(y.reason, /daily cap of 4/);
+  assert.equal(y.resetAt, new Date(pkt('2026-11-25T00:00:00')).toISOString());
+  assert.equal(decide('youtube.upload', { events: four, nowMs: pkt('2026-11-25T01:00:00'), lim: dlim, random: noJitter }).ok, true);
 });
 
 test('a short gap is slept, with jitter; a long one is a hold', () => {
@@ -86,7 +104,7 @@ test('the owner override file changes one channel and keeps the rest', () => {
   const f = join(dir, 'limits.json');
   writeFileSync(f, JSON.stringify({ hours: { end: 17 }, cycleDay: 15, channels: { 'gflow.image': { perDayCount: 5 } } }));
   const l = limits(f);
-  assert.equal(l.hours.start, 9);
+  assert.equal(l.hours.start, 15);
   assert.equal(l.hours.end, 17);
   assert.equal(l.cycleDay, 15);
   assert.equal(l.channels['gflow.image'].perDayCount, 5);
@@ -136,10 +154,11 @@ test('a paced clip hold is recorded and never falls back to the manual producer'
 
 test('every outside-service stage exists, and the roundup runs inside media hours', () => {
   for (const s of OUTSIDE_SERVICE_STAGES) assert.ok(s in STAGES || s === 'social_roundup', s);
-  assert.ok(ROUNDUP_HOUR_PKT >= DEFAULTS.hours.start && ROUNDUP_HOUR_PKT < DEFAULTS.hours.end);
   const hours = DEFAULTS.hours;
-  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-24T13:30:00')), fresh: true, hours }), 'roundup');
-  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-24T18:30:00')), fresh: true, hours }), null);
-  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-24T08:00:00')), toPublish: 1, hours }), null);
-  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-24T10:00:00')), toPublish: 1, hours }), 'publish');
+  assert.equal(ROUNDUP_HOUR_PKT, hours.start); // due from the opening of media hours
+  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-24T15:30:00')), fresh: true, hours }), 'roundup');
+  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-24T13:30:00')), fresh: true, hours }), null); // office hours
+  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-24T10:00:00')), toPublish: 1, hours }), null);
+  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-24T20:00:00')), toPublish: 1, hours }), 'publish');
+  assert.equal(socialDue({ on: true, now: new Date(pkt('2026-11-25T07:00:00')), toPublish: 1, hours }), 'publish');
 });

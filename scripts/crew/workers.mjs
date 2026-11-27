@@ -8,12 +8,45 @@
  * (notify.mjs), not a worker.
  */
 
+/**
+ * Feature 034 (quota efficiency): the `claude` worker's model and effort per stage, so the weekly
+ * Max quota goes further. Opus where judgement dominates (authoring, reviewing, planning,
+ * surveying); Sonnet where the worker follows a written brief (repairs, translation, figures,
+ * decks, media and maintenance chores). A stage not listed uses `default`. Override one stage
+ * without a code change: CREW_CLAUDE_MODEL_<STAGE>=opus, CREW_CLAUDE_EFFORT_<STAGE>=high
+ * (stage name upper-cased). Measure the effect with scripts/ops/claude-usage.mjs.
+ */
+export const CLAUDE_ROUTING = {
+  default: { model: 'sonnet', effort: 'medium' },
+  author: { model: 'opus', effort: 'high' },
+  review_en: { model: 'opus', effort: 'high' },
+  review_ur: { model: 'opus', effort: 'high' },
+  plan_illustrations: { model: 'opus', effort: 'medium' },
+  teaser_script: { model: 'opus', effort: 'medium' },
+  intel_distill: { model: 'opus', effort: 'medium' },
+  maint_survey: { model: 'opus', effort: 'high' },
+  maint_adr: { model: 'opus', effort: 'medium' },
+  maint_review: { model: 'opus', effort: 'high' },
+};
+
+export function claudeRouting(stage, env = process.env) {
+  const base = { ...CLAUDE_ROUTING.default, ...(CLAUDE_ROUTING[stage] || {}) };
+  const key = String(stage || '').toUpperCase();
+  return {
+    model: env[`CREW_CLAUDE_MODEL_${key}`] || base.model,
+    effort: env[`CREW_CLAUDE_EFFORT_${key}`] || base.effort,
+  };
+}
+
 /** `family` is the model family; review stages never use the author's family. */
 export const WORKERS = {
   claude: {
     family: 'anthropic',
     maxConcurrent: 1,
-    cmd: (prompt) => ['claude', ['-p', prompt, '--dangerously-skip-permissions']],
+    cmd: (prompt, stage) => {
+      const { model, effort } = claudeRouting(stage);
+      return ['claude', ['-p', prompt, '--dangerously-skip-permissions', '--model', model, '--effort', effort]];
+    },
   },
   codex: {
     family: 'openai',
@@ -32,6 +65,20 @@ export const WORKERS = {
     maxConcurrent: 1,
     cmd: (prompt) => ['agy', ['-p', prompt, '--model', process.env.CREW_AGY_CLAUDE_MODEL || 'claude-opus-4-6-thinking', '--dangerously-skip-permissions', '--print-timeout', '0s']],
   },
+  // Feature 034: a second Antigravity account, isolated by HOME (ops/crew/bin/agy2 runs agy with
+  // HOME=~/.agy2, which keeps its own ~/.gemini). Its Gemini and Claude quotas are separate from
+  // agy's, so each follows its sibling in every chain and cools down on its own. Not in illustrate:
+  // the image lane calls agy through scripts/generate-illustration.mjs, not this table.
+  agy2: {
+    family: 'google',
+    maxConcurrent: 1,
+    cmd: (prompt) => ['agy2', ['-p', prompt, '--dangerously-skip-permissions', '--print-timeout', '0s']],
+  },
+  agy2_claude: {
+    family: 'anthropic',
+    maxConcurrent: 1,
+    cmd: (prompt) => ['agy2', ['-p', prompt, '--model', process.env.CREW_AGY2_CLAUDE_MODEL || process.env.CREW_AGY_CLAUDE_MODEL || 'claude-opus-4-6-thinking', '--dangerously-skip-permissions', '--print-timeout', '0s']],
+  },
   claude_crew: {
     family: 'longcat',
     maxConcurrent: 2,
@@ -45,41 +92,47 @@ export const WORKERS = {
  * `reviewOf` names the stage (or stages) whose producer family a review must exclude.
  */
 export const STAGES = {
-  salvage:    { chain: ['claude', 'agy_claude', 'codex', 'agy', 'claude_crew'], skill: null },
-  author:     { chain: ['claude', 'agy_claude', 'codex', 'agy', 'claude_crew'], skill: 'author-unit' },
-  repair_en:  { chain: ['claude', 'agy_claude', 'codex', 'agy', 'claude_crew'], skill: 'revise-topic' },
-  figures:    { chain: ['codex', 'claude', 'agy_claude', 'agy', 'claude_crew'], skill: 'generate-figures' },
+  salvage:    { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex', 'agy', 'agy2', 'claude_crew'], skill: null },
+  author:     { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex', 'agy', 'agy2', 'claude_crew'], skill: 'author-unit' },
+  repair_en:  { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex', 'agy', 'agy2', 'claude_crew'], skill: 'revise-topic' },
+  figures:    { chain: ['codex', 'claude', 'agy_claude', 'agy2_claude', 'agy', 'agy2', 'claude_crew'], skill: 'generate-figures' },
   // Claude owns raster prompts and alt text (ADR-0024); the skill reference is named in the task.
-  plan_illustrations: { chain: ['claude', 'agy_claude'], skill: null },
+  plan_illustrations: { chain: ['claude', 'agy_claude', 'agy2_claude'], skill: null },
   illustrate: { chain: ['agy', 'codex'], skill: 'generate-figures' },
   // Feature 032 phase D: redraw a unit's placed schematics to the improved SVG standard (owner switch `crew refresh on`).
-  refresh_figures: { chain: ['claude', 'agy_claude', 'codex'], skill: 'generate-figures' },
+  refresh_figures: { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex'], skill: 'generate-figures' },
   // Feature 032 phase C: author a unit's flashcard deck in specs/studio/flashcards/ (owner switch `crew flashcards on`).
-  flashcards: { chain: ['claude', 'agy_claude', 'codex'], skill: null },
-  review_en:  { chain: ['agy', 'codex', 'claude_crew', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
-  translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'claude_crew'], skill: 'translate-unit' },
-  review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'claude_crew', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
-  fix:        { chain: ['claude_crew', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
+  flashcards: { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex'], skill: null },
+  review_en:  { chain: ['agy', 'agy2', 'codex', 'claude_crew', 'claude', 'agy_claude', 'agy2_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
+  translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy2_claude', 'agy', 'agy2', 'claude_crew'], skill: 'translate-unit' },
+  review_ur:  { chain: ['claude', 'agy_claude', 'agy2_claude', 'agy', 'agy2', 'claude_crew', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
+  fix:        { chain: ['claude_crew', 'codex', 'agy', 'agy2', 'claude', 'agy_claude', 'agy2_claude'], skill: null },
   // Feature 032 phase B: a unit's slide outline, web deck and PowerPoint (owner switch `crew slides on`).
-  slides: { chain: ['claude', 'agy_claude', 'codex'], skill: null },
-  // Media Studio (Feature 030, scripts/crew/media.mjs). Clips, uploads and NotebookLM need the gflow
-  // and youtube-uploader MCP servers, which only the claude worker has; a script draft needs neither.
-  teaser_script:  { chain: ['claude', 'agy_claude'], skill: 'studio-teaser' },
-  teaser_clips:   { chain: ['claude'], skill: 'studio-teaser' },
-  media_assemble: { chain: ['claude'], skill: 'studio-teaser' },
-  media_publish:  { chain: ['claude'], skill: 'studio-teaser' },
-  social_roundup: { chain: ['claude'], skill: 'social-updates' },
-  audio_overview: { chain: ['claude'], skill: 'studio-media' },
+  slides: { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex'], skill: null },
+  // Media Studio (Feature 030, scripts/crew/media.mjs). Clips, uploads and NotebookLM need the gflow,
+  // youtube-uploader and gemini-notebook-studio MCP servers, which the claude and claude_crew workers
+  // have (~/.claude-crew/.claude.json carries the same servers); a script draft needs none. claude_crew
+  // stands in when claude is cooling, so one cooling worker no longer stalls media (2026-11-25).
+  teaser_script:  { chain: ['claude', 'agy_claude', 'agy2_claude'], skill: 'studio-teaser' },
+  teaser_clips:   { chain: ['claude', 'claude_crew'], skill: 'studio-teaser' },
+  media_assemble: { chain: ['claude', 'claude_crew'], skill: 'studio-teaser' },
+  media_publish:  { chain: ['claude', 'claude_crew'], skill: 'studio-teaser' },
+  // The roundup runs scripts and gh only (no MCP), so any worker can carry it.
+  social_roundup: { chain: ['claude', 'agy_claude', 'agy2_claude', 'claude_crew', 'codex'], skill: 'social-updates' },
+  studio_media:   { chain: ['claude', 'claude_crew'], skill: 'studio-media' },
+  studio_publish: { chain: ['claude', 'claude_crew'], skill: 'studio-media' },
+  // The old name of studio_media, kept so board rows queued before the rename still launch.
+  audio_overview: { chain: ['claude', 'claude_crew'], skill: 'studio-media' },
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.
-  intel_distill:  { chain: ['agy', 'codex', 'claude', 'agy_claude'], skill: 'intel-distill' },
-  maint_survey:   { chain: ['claude', 'agy_claude', 'codex', 'agy', 'claude_crew'], skill: 'weekly-maintenance' },
-  maint_refactor: { chain: ['codex', 'claude', 'agy_claude', 'claude_crew', 'agy'], skill: 'weekly-maintenance' },
-  maint_docs:     { chain: ['claude', 'agy_claude', 'agy', 'codex', 'claude_crew'], skill: 'weekly-maintenance' },
-  maint_adr:      { chain: ['claude', 'agy_claude', 'codex', 'agy'], skill: 'weekly-maintenance' },
-  maint_skill:    { chain: ['claude', 'agy_claude', 'codex'], skill: 'weekly-maintenance' },
+  intel_distill:  { chain: ['agy', 'agy2', 'codex', 'claude', 'agy_claude', 'agy2_claude'], skill: 'intel-distill' },
+  maint_survey:   { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex', 'agy', 'agy2', 'claude_crew'], skill: 'weekly-maintenance' },
+  maint_refactor: { chain: ['codex', 'claude', 'agy_claude', 'agy2_claude', 'claude_crew', 'agy', 'agy2'], skill: 'weekly-maintenance' },
+  maint_docs:     { chain: ['claude', 'agy_claude', 'agy2_claude', 'agy', 'agy2', 'codex', 'claude_crew'], skill: 'weekly-maintenance' },
+  maint_adr:      { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex', 'agy', 'agy2'], skill: 'weekly-maintenance' },
+  maint_skill:    { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex'], skill: 'weekly-maintenance' },
   // `reviewOf: 'parent'`: never the family of the job whose PR is under review.
-  maint_review:   { chain: ['agy', 'codex', 'claude', 'agy_claude', 'claude_crew'], skill: 'weekly-maintenance', reviewOf: 'parent' },
+  maint_review:   { chain: ['agy', 'agy2', 'codex', 'claude', 'agy_claude', 'agy2_claude', 'claude_crew'], skill: 'weekly-maintenance', reviewOf: 'parent' },
 };
 
 /**
@@ -91,11 +144,11 @@ export const STAGES = {
  */
 /** Stages whose workers call outside media services (Flow, Gemini, NotebookLM, YouTube, Meta);
  * crew.mjs launches them only in media hours (scripts/media/pacing.mjs, D-2026-0100). */
-export const OUTSIDE_SERVICE_STAGES = ['illustrate', 'teaser_clips', 'audio_overview', 'media_assemble', 'media_publish', 'social_roundup'];
+export const OUTSIDE_SERVICE_STAGES = ['illustrate', 'teaser_clips', 'audio_overview', 'studio_media', 'studio_publish', 'media_assemble', 'media_publish', 'social_roundup'];
 
 export const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
   'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author',
-  'media_publish', 'media_assemble', 'teaser_clips', 'audio_overview', 'teaser_script', 'social_roundup',
+  'media_publish', 'studio_publish', 'media_assemble', 'teaser_clips', 'studio_media', 'audio_overview', 'teaser_script', 'social_roundup',
   'refresh_figures', 'flashcards', 'slides'];
 
 /** Text in a worker's log that means "out of quota", not "bad work". */

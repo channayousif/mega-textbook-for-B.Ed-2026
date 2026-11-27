@@ -112,10 +112,12 @@ working day, not a bot (`scripts/media/pacing.mjs`). The producers enforce it th
 gap is slept, anything longer becomes a `quota` hold with `paced: true` and its reset time (the job
 waits; clips never fall back to `manual.flow` for a pacing hold).
 
-- **Media hours: 09:00-15:00 PKT.** Outside them no Flow, Gemini, Codex image, NotebookLM, YouTube or
-  Meta call is made, and the crew does not launch `illustrate`, `teaser_clips`, `audio_overview`,
-  `media_assemble`, `media_publish` or `social_roundup` (text and local stages run as usual). The
-  social roundup is due from 13:00 PKT.
+- **Media hours: 15:00-09:00 PKT, every hour except the owner's 09:00-15:00 office hours** (owner,
+  2026-11-25, correcting the first build, which had it the other way round). In office hours no Flow, Gemini, Codex image, NotebookLM, YouTube or
+  Meta call is made, and the crew does not launch `illustrate`, `teaser_clips`, `studio_media`,
+  `studio_publish`, `media_assemble`, `media_publish` or `social_roundup` (text and local stages run
+  as usual). The social roundup is due from 15:00 PKT (the opening of media hours). Daily caps
+  reset at 00:00 PKT, inside the window.
 - **Limits** (defaults; the owner may override any of them in `~/.config/mega-book/media-limits.json`):
 
 | Channel | Gap (+ random jitter) | Per hour | Per day |
@@ -152,14 +154,37 @@ waits; clips never fall back to `manual.flow` for a pacing hold).
 
 ## Crew stages and owner commands
 
-Off until the owner sends `crew media on` (`crew media off|status`). Stages
+Teasers are off until the owner sends `crew media on` (`crew media off|status`). Stages
 (`scripts/crew/media.mjs`): `teaser_script` (draft, QG0, stop at `scripted`), `teaser_clips` (after
 approval; held while gflow is offline or out of quota), `media_assemble` (assemble, upload private,
-QG3, stop at `qa3-pass`), `media_publish` (only after `crew publish`), `audio_overview`. One media
-job runs at a time; at most six scripts wait for the owner. Owner commands:
-`crew approve-script <key>`, `crew reject <key> <note>`, `crew publish <key>`. Approvals live in
-`~/.crew/mega-book/media.json`. Clip, upload and NotebookLM stages run only on the claude worker,
-which has the gflow and youtube-uploader MCP servers.
+QG3, stop at `qa3-pass`), `media_publish` (only after `crew publish`). At most six scripts wait for
+the owner. Owner commands: `crew approve-script <key>`, `crew reject <key> <note>`,
+`crew publish <key>`.
+
+The Study Studio has its own switch, `crew studio on|off|status` (owner, 2026-11-25: the crew plans,
+schedules and manages it). `studio_media` (formerly `audio_overview`, still accepted) resumes every
+item of a unit's ledger from any state up to `qa3-pass`, audio and video, and plans the next
+certified unit (G3 done; focus course, then catalogue order) when no unit is mid-way and fewer
+than two wait for the owner. It stops at `qa3-pass` with the owner sheet. The owner watches the
+private items and replies `crew approve-studio <course> <unit> [except <key>...]`, or
+`crew reject-studio <course> <unit> <key> <note>` to have one remade; only then does
+`studio_publish` set the approved items public and place them (`place-media.mjs`).
+
+Approvals live in `~/.crew/mega-book/media.json`. Clip, upload and NotebookLM stages run on the
+claude worker, or on claude_crew when claude is cooling (both have the gflow, youtube-uploader and
+gemini-notebook-studio MCP servers).
+
+**Producer lanes** (`scripts/crew/resources.mjs`; owner, 2026-11-25: "different media producers in
+parallel, each producer max one slot" in media hours). Every outside-service stage runs on a lane
+with at most one running job: `notebook` (NotebookLM: `studio_media`), `flow` (gflow images and Veo:
+`teaser_clips`, or `illustrate` pinned with `--producer gflow`), `agy` and `codex` (`illustrate`
+pinned to that producer), `youtube` (`media_assemble`, `media_publish`, `studio_publish`), `social`
+(`social_roundup`) and `meta` (reserved, specs/033). Lanes run in parallel and outside the text
+slots (`CREW_MAX_PARALLEL`); a lane takes a job only in media hours and while its paced channel has
+room today, the memory and disk floors still apply, and in media hours media jobs pick a worker
+before text jobs (the social roundup first). Jobs that write one ledger never overlap (the teaser
+ledger; each unit's Study Studio ledger). BOARD.md "Today's media plan" shows each lane, its next
+job and why it waits.
 
 ## Social cross-posting (D-2026-0084)
 

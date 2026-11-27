@@ -1,0 +1,31 @@
+name: Task
+description: A unit of work tracked against a spec task list (Feature 034)
+title: "<short imperative title>"
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: The spec task, backlog item, gap or request this comes from (e.g. specs/032-textbook-visuals/tasks.md T008)
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: Acceptance criteria someone else can check
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options: ["Stage 2 - Quick fixes", "Stage 3 - Landing and navbar", "Stage 4 - Learning features", "Stage 5 - Carried-over engineering", "Stage 6 - Owner and infrastructure", "Unstaged"]
+  - type: input
+    id: blocked
+    attributes:
+      label: Blocked by
+      description: Issue numbers or "owner" when only the owner can unblock it
+  - type: markdown
+    attributes:
+      value: "Add the task line with `(#N)` to the spec's tasks.md, and close this issue with `Closes #N` in the PR that finishes it."

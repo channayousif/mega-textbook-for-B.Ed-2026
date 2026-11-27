@@ -7,7 +7,7 @@
 - [x] T005 Run negative fixtures and independent skill behavior exercise.
 - [x] T006 Update documentation and submit implementation for CI and authorized merge.
 - [x] T007a Harden input manifest reproducibility, script binding scope and gate-tier drift.
-- [ ] T007 Provision protected signing host and CI trust root.
-- [ ] T008 Record real qualification results and activate eligible stage/scope.
+- [ ] T007 Provision protected signing host and CI trust root. (#833)
+- [ ] T008 Record real qualification results and activate eligible stage/scope. (#834)
 
 T007/T008 are activation gates. Never mark them done using synthetic fixture results.

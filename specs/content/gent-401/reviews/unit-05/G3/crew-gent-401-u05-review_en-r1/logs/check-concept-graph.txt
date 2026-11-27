@@ -1,0 +1,4 @@
+$ npm run check:concept-graph
+date: 2026-11-27T00:07:38Z  HEAD: 01fde1b302e083ffef3098d3dadd40fbb90cf8d7
+✓ Concept graph is consistent (coverage, no orphans, acyclic, resolvable prerequisites, assessment linkage).
+exit: 0

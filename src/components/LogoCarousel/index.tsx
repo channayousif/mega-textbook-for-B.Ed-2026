@@ -52,7 +52,7 @@ export default function LogoCarousel(): React.ReactElement {
         </button>
       </div>
       <div className={paused ? `${styles.marquee} ${styles.paused}` : styles.marquee} dir="ltr">
-        <div className={styles.track}>{set(false)}{set(true)}{set(true)}{set(true)}</div>
+        <div className={styles.track} data-testid="logo-track">{set(false)}{set(true)}{set(true)}{set(true)}</div>
       </div>
     </section>
   );

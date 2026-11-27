@@ -53,9 +53,11 @@ export default function NavbarLogo(): React.ReactElement {
   };
   return (
     <Link to="/" className="navbar__brand" aria-label={WORDMARK_TEXT}>
-      {/* Spans carry the swap: ThemedImage's own display rule would beat a class on the img. */}
-      <span className="brand-logo-slot brand-logo-slot--tall"><ThemedImage className="brand-logo" alt="" width={960} height={240} sources={bilingual} /></span>
-      <span className="brand-logo-slot brand-logo-slot--short"><ThemedImage className="brand-logo" alt="" width={960} height={190} sources={horizontal} /></span>
+      {/* Spans carry the swap: ThemedImage's own display rule would beat a class on the img.
+          loading="lazy" (Feature 034 T015, #802): browsers skip a lazy image that is display:none,
+          so only the one visible logo of the four (tall/short x light/dark) downloads. */}
+      <span className="brand-logo-slot brand-logo-slot--tall"><ThemedImage className="brand-logo" alt="" width={960} height={240} loading="lazy" sources={bilingual} /></span>
+      <span className="brand-logo-slot brand-logo-slot--short"><ThemedImage className="brand-logo" alt="" width={960} height={190} loading="lazy" sources={horizontal} /></span>
     </Link>
   );
 }

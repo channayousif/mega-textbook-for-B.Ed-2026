@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-408",
+  "unit_no": 6,
+  "locale": "en",
+  "base": "https://textbook.com.pk",
+  "route": "/semester-4/efmp-408/unit-06",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U6-1",
+    "fig-U6-4",
+    "fig-U6-2",
+    "fig-U6-5",
+    "fig-U6-3",
+    "fig-U6-6",
+    "fig-U6-7",
+    "fig-U6-8"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "topic-01: visible image did not load: /img/figures/efmp-408/unit-06/fig-U6-4.svg",
+    "topic-03: visible image did not load: /img/figures/efmp-408/unit-06/fig-U6-6.svg",
+    "fig-U6-5.light: text \"Proportionate pedagogical and admi\" past viewBox right edge",
+    "fig-U6-5.dark: text \"Proportionate pedagogical and admi\" past viewBox right edge"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-11-25T18:44:45.491Z"
+}

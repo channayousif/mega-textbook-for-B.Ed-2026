@@ -40,6 +40,7 @@ export const teacherNav: readonly NavItem[] = [
   { key: 'analytics', label: { en: 'Analytics', ur: 'تجزیات' }, to: '/app/teacher/analytics', activeMatch: /^\/app\/teacher\/(analytics|student|class)/, icon: 'analytics' },
   { key: 'quiz-authoring', label: { en: 'Quiz authoring', ur: 'کوئز تیاری' }, to: '/app/teacher/quiz-authoring', activeMatch: /^\/app\/teacher\/quiz-authoring/, icon: 'quiz' },
   { key: 'teaching-log', label: { en: 'Teaching log', ur: 'تدریسی نوٹ بک' }, to: '/app/teacher/teaching-log', activeMatch: /^\/app\/teacher\/teaching-log/, icon: 'log' },
+  { key: 'notes', label: { en: 'Notes', ur: 'نوٹس' }, to: '/app/teacher/notes', activeMatch: /^\/app\/teacher\/notes/, icon: 'notes' },
   { key: 'feedback', label: { en: 'Feedback & suggestions', ur: 'رائے اور تجاویز' }, to: '/app/teacher/feedback-suggestions', activeMatch: /^\/app\/teacher\/feedback-suggestions/, icon: 'feedback' },
   { key: 'review', label: { en: 'Review content', ur: 'مواد کا جائزہ' }, to: '/app/reviewer/apply', activeMatch: /^\/app\/reviewer/, icon: 'review' },
 ] as const;
@@ -64,6 +65,7 @@ export const adminNav: readonly NavItem[] = [
   { key: 'content-status', label: { en: 'Content status', ur: 'مواد کی صورتحال' }, to: '/app/admin/overview', activeMatch: /^\/app\/admin\/overview/, icon: 'analytics' },
   { key: 'agent-jobs', label: { en: 'Agent jobs', ur: 'ایجنٹ کے کام' }, to: '/app/admin/agent-jobs', activeMatch: /^\/app\/admin\/agent-jobs/, icon: 'jobs' },
   { key: 'audit', label: { en: 'Privilege audit', ur: 'اختیارات کا ریکارڈ' }, to: '/app/admin/audit', activeMatch: /^\/app\/admin\/(audit|feedback\/?$)/, icon: 'audit' },
+  { key: 'guide', label: { en: 'Admin guide', ur: 'منتظم کی رہنمائی' }, to: '/app/admin/guide', activeMatch: /^\/app\/admin\/guide/, icon: 'reading' },
 ] as const;
 
 /** Reviewer tools, shown to accounts with the reviewer capability. */

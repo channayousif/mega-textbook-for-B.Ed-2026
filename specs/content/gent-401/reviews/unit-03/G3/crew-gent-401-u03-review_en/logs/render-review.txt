@@ -1,0 +1,18 @@
+render-review: unavailable (exit 1)
+Deployed SHA: 366019f8ace647e892523e553b81ab6d1832ec68
+HEAD SHA: d45dac6df448377759ad4c8f2ba5780a42409744
+
+git diff 366019f8ace647e892523e553b81ab6d1832ec68 HEAD -- docs/semester-4/gent-401/unit-03/ static/img/figures/gent-401/unit-03/
+reports changes in 2 files:
+ docs/semester-4/gent-401/unit-03/index.mdx        |   2 ++
+ static/img/figures/gent-401/unit-03/fig-U3-5.webp | Bin 0 -> 147130 bytes
+ 2 files changed, 2 insertions(+)
+
+The production site at https://textbook.com.pk serves the pre-illustration build and does not reflect the reviewed unit inputs at HEAD.
+Per crew brief and AGENTS.md host resource limits:
+- Prohibited from running npm run build, a dev server, or Playwright e2e suite.
+- scripts/render-inspect.mjs may only run with --base https://textbook.com.pk when deployed SHA matches HEAD.
+- Because deployed SHA differs from HEAD on unit English files and illustration assets, live site is not input.
+- render-review is recorded as unavailable (exit 1).
+Visual accessibility (360px viewport, horizontal table scrolling, desktop layout, A4 print layout, figure clipping) remains unverified.
+Structural accessibility (semantic HTML, heading hierarchy, Figure alt text, SVG accessibility attributes) and figure geometry pass from source inspection.
