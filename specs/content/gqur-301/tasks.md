@@ -78,7 +78,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 9 | G6 assets | ▢ | | |
 | Unit 9 | G7 publish | ▢ | | |
 | Unit 10 | G1 unit-spec | ▢ | | guide Chapter 10; intake re-evaluation advised (D-2026-0070) |
-| Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-10/G2/20261115T023216189Z-gates.json |
+| Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-10/G2/20261127T191013748Z-gates.json |
 | Unit 10 | G3 en-review | ▢ | | |
 | Unit 10 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localized SVG pairs prepared from ed514d03; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and rendered inspection pending; see reviews/unit-10/translation-validation/handoff.md. |
 | Unit 10 | G5 ur-review | ▢ | | |
@@ -194,7 +194,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 13 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-13/G2/20261115T060201102Z-gates.json |
 | Unit 10 | G3 en-review | ▢ | | advisory: revise; repairs applied to tracking and handoff only for report specs/content/gqur-301/reviews/unit-10/G3/20261102T212207Z-g3-desk-36d2970a.json; no content repair was possible or required. The sole blocking render-review finding remains unresolved because the crew brief prohibits builds, dev servers and Playwright on this production host. Owner must arrange a non-production review host for independent desktop, 360px table-scroll and A4 inspection with actual rendered artifacts. See reviews/unit-10/repair-en-handoff.md. G3 stays open, unsigned (ADR-0019); Urdu remains draft and unchanged. |
 | Unit 11 | G3 en-review | ▢ | agent:agy | advisory: revise; repairs applied from specs/content/gqur-301/reviews/unit-11/G3/20261102T212207Z-g3-desk-7832f50b.json; corrected RRQ 10 distractor calculation (expected score 2.75), added explicit rubric values for Topic 11.1 and ERQ 1, credited precise normal-tail areas in ERQ 3, relabeled MCQ 2 to Understand, aligned OpenStax Section 6.1 source citation, and clarified probabilistic model in teacher notes. G3 remains open; fresh independent review and unresolved authority/evidence checks required. |
-| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-11/G2/20261115T033203289Z-gates.json |
+| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-11/G2/20261127T192915847Z-gates.json |
 
 | Unit 12 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied to EN and UR from specs/content/gqur-301/reviews/unit-12/G3/20261102T212207Z-g3-desk-a6099778.json; supplied paired data and coordinate plot, scored inference analysis, corrected definitions and conditional assessment guidance. Concept-map panels already separated in baseline. G3 remains open; browser/print inspection, historical provenance, G1 and bound source evidence await authorised independent follow-up. |
 | Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261115T044721270Z-gates.json |

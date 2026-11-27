@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 660" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنسی تعلیم میں معاصر رجحانات اور اختراعات</title><desc id="d">جدول جس میں تدریسِ سائنس کے پانچ معاصر رجحانات، ان کی تدریسی خصوصیات اور کم لاگت جماعتی اطلاقات کا خلاصہ پیش کیا گیا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="660"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="50" rx="6"/>
+<rect class="panel" x="24" y="74" width="732" height="100"/>
+<rect class="plain" x="24" y="174" width="732" height="100"/>
+<rect class="panel" x="24" y="274" width="732" height="100"/>
+<rect class="plain" x="24" y="374" width="732" height="100"/>
+<rect class="panel" x="24" y="474" width="732" height="100"/>
+</g><g id="layer-edges">
+<line class="grid" x1="570" y1="24" x2="570" y2="574"/>
+<line class="grid" x1="310" y1="24" x2="310" y2="574"/>
+</g><g id="layer-nodes">
+<text class="sh" x="740" y="55">معاصر رجحان</text>
+<text class="sh" x="556" y="55">بنیادی تدریسی خصوصیت</text>
+<text class="sh" x="296" y="55">کم لاگت جماعتی اطلاق</text>
+
+<text class="sh" x="740" y="105">1۔ اسٹیم تعلیم</text>
+<text class="cell" x="740" y="130">(STEM/STEAM)</text>
+<text class="cell" x="556" y="105">حقیقی مسائل حل کرنے کے لیے</text>
+<text class="cell" x="556" y="132">بین المضامین اور تخلیقی ڈیزائن</text>
+<text class="cell" x="296" y="105">پلاسٹک بوتلوں اور ڈرپ ٹیوبوں سے</text>
+<text class="cell" x="296" y="132">ڈرپ اریگیشن کا ماڈل بنانا</text>
+
+<text class="sh" x="740" y="205">2۔ 5E استفساری ماڈل</text>
+<text class="cell" x="740" y="230">(Inquiry Model)</text>
+<text class="cell" x="556" y="205">Engage, Explore, Explain...</text>
+<text class="cell" x="556" y="232">تعریف سے پہلے شواہد کی کھوج</text>
+<text class="cell" x="296" y="205">وضاحت سے پہلے مختلف برتنوں سے</text>
+<text class="cell" x="296" y="232">پانی کے بخارات بننے کا موازنہ</text>
+
+<text class="sh" x="740" y="305">3۔ ڈیجیٹل سمولیشنز</text>
+<text class="cell" x="740" y="330">(PhET اور فونز)</text>
+<text class="cell" x="556" y="305">نادیدہ سائنسی عوامل کی کمپیوٹر</text>
+<text class="cell" x="556" y="332">اور فون پر محفوظ آزمائش</text>
+<text class="cell" x="296" y="305">استاد کے فون سے ورچوئل سرکٹ</text>
+<text class="cell" x="296" y="332">بنانا یا آواز کی شدت ناپنا</text>
+
+<text class="sh" x="740" y="405">4۔ عوامی سائنس</text>
+<text class="cell" x="740" y="430">(Citizen Science)</text>
+<text class="cell" x="556" y="405">طلبہ کا حقیقی ڈیٹا جمع کرنا جو</text>
+<text class="cell" x="556" y="432">بڑے سائنسی کاموں میں مدد دے</text>
+<text class="cell" x="296" y="405">مقامی پرندوں کی آمد نوٹ کرنا؛</text>
+<text class="cell" x="296" y="432">روزانہ بارش کی پیمائش کا اندراج</text>
+
+<text class="sh" x="740" y="505">5۔ امتیازی تدریس</text>
+<text class="cell" x="740" y="530">(Differentiated)</text>
+<text class="cell" x="556" y="505">مختلف صلاحیتوں کے بچوں کے لیے</text>
+<text class="cell" x="556" y="532">کثیر حسی ذرائع (بصری، لمسی)</text>
+<text class="cell" x="296" y="505">گتے کے ماڈلز کے ساتھ سندھی اور</text>
+<text class="cell" x="296" y="532">اردو الفاظ کی فرہنگ فراہم کرنا</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="615">جدید رجحانات مسئلہ حل کرنے کی صلاحیت اور شمولیت کو ترجیح دیتے ہیں۔</text>
+</g><text class="wm" x="12" y="625" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

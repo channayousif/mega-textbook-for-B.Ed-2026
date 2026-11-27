@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 640" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">اسکول سائنس اور اقوامِ متحدہ کے پائیدار ترقی کے اہداف</title><desc id="d">تصوراتی نقشہ جو ایلیمنٹری اسکول سائنس کو پائیدار ترقی کے چھ اہداف سے جوڑتا ہے: اچھی صحت، صاف پانی، سستی توانائی، ذمہ دارانہ کھپت، موسمیاتی اقدامات اور زمین پر زندگی۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="640"/><g id="layer-edges">
+<line class="stroke" x1="470" y1="280" x2="520" y2="150" marker-end="url(#arrow)"/>
+<line class="stroke" x1="510" y1="320" x2="520" y2="320" marker-end="url(#arrow)"/>
+<line class="stroke" x1="470" y1="360" x2="520" y2="490" marker-end="url(#arrow)"/>
+<line class="stroke" x1="310" y1="280" x2="260" y2="150" marker-end="url(#arrow)"/>
+<line class="stroke" x1="270" y1="320" x2="260" y2="320" marker-end="url(#arrow)"/>
+<line class="stroke" x1="310" y1="360" x2="260" y2="490" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="node-center"><ellipse class="panel-b" cx="390" cy="320" rx="120" ry="55"/><text class="h" x="390" y="316" text-anchor="middle">اسکول سائنس</text><text class="sh" x="390" y="342" text-anchor="middle">اور عالمی اہداف (SDGs)</text></g>
+
+<g id="node-sdg3"><rect class="panel-a" x="520" y="40" width="236" height="130" rx="8"/><text class="h" x="740" y="72">SDG 3: اچھی صحت</text><text class="cell" x="740" y="102">جراثیم، حفظانِ صحت، بیماریوں</text><text class="cell" x="740" y="128">کی روک تھام اور صاف ہوا</text></g>
+
+<g id="node-sdg6"><rect class="panel-a" x="520" y="210" width="236" height="130" rx="8"/><text class="h" x="740" y="242">SDG 6: صاف پانی</text><text class="cell" x="740" y="272">پانی کو چھاننا، جراثیم کشی اور</text><text class="cell" x="740" y="298">دریائے سندھ کے طاس کا تحفظ</text></g>
+
+<g id="node-sdg7"><rect class="panel-a" x="520" y="380" width="236" height="130" rx="8"/><text class="h" x="740" y="412">SDG 7: صاف توانائی</text><text class="cell" x="740" y="442">شمسی پینل، ونڈ پاور، بائیو گیس</text><text class="cell" x="740" y="468">اور توانائی کی بچت کے طریقے</text></g>
+
+<g id="node-sdg15"><rect class="panel-a" x="24" y="40" width="236" height="130" rx="8"/><text class="h" x="244" y="72">SDG 15: زمین پر زندگی</text><text class="cell" x="244" y="102">شجرکاری، حیاتیاتی تنوع اور</text><text class="cell" x="244" y="128">مقامی نایاب حیات کا تحفظ</text></g>
+
+<g id="node-sdg13"><rect class="panel-a" x="24" y="210" width="236" height="130" rx="8"/><text class="h" x="244" y="242">SDG 13: موسمیاتی اقدامات</text><text class="cell" x="244" y="272">سیلاب سے نمٹنا، ہیٹ ویوز کا</text><text class="cell" x="244" y="298">مقابلہ، گرین ہاؤس گیسوں کا فہم</text></g>
+
+<g id="node-sdg12"><rect class="panel-a" x="24" y="380" width="236" height="130" rx="8"/><text class="h" x="244" y="412">SDG 12: ذمہ دارانہ کھپت</text><text class="cell" x="244" y="442">3Rs: کمی، دوبارہ استعمال، ری سائیکلنگ</text><text class="cell" x="244" y="468">اور پلاسٹک کچرے کی روک تھام</text></g>
+</g><g id="layer-labels">
+<text class="small" x="750" y="585">پرائمری اور مڈل سائنس تعلیم کو اقوامِ متحدہ کے چھ پائیدار ترقی کے اہداف سے مربوط کرنا۔</text>
+</g><text class="wm" x="12" y="605" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
