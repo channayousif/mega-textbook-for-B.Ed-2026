@@ -128,8 +128,8 @@ Producers, quotas and the gflow route are shared with audio and video under Medi
   target path at `prompt-only` first. ADR-0029 (2026-10-04) then lets Claude produce it with
   Gemini via `agy generate_image` through `scripts/generate-illustration.mjs` (local, serial,
   never in CI), optimise it, inspect it for pedagogy and cultural accuracy, and mark it
-  `generated` then `placed`. Codex remains an approved alternative producer; Claude never uses
-  any other image generator.
+  `generated` then `placed`. Codex remains an approved alternative producer, and Meta AI is approved
+  as the last producer (D-2026-0102); Claude never uses any other image generator.
 - Either agent may identify a conceptual or accessibility problem. Claude remains responsible
   for judging pedagogical meaning; a generated image is never accepted only because it rendered
   successfully. G3/G5 independence and human escalation rules remain unchanged.

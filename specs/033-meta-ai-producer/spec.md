@@ -2,7 +2,7 @@
 
 **Feature Branch**: `033-meta-ai-producer`
 **Created**: 2026-11-25
-**Status**: Draft (spec only; nothing is built until the owner approves this spec)
+**Status**: Approved 2026-11-28 (D-2026-0102); User Story 1 smoke test passed (`smoke-test.md`, PR #948), User Story 2 built (`scripts/media/producers/meta.mjs`)
 **Input**: Owner, 2026-11-25: "do all three fixes" (the third: "draft a spec for Meta AI as an image and video maker"), and "we can use different media producers in parallel (eg notebook, flow, meta, agy, codex); each producer has max one slot in allotted time already decided".
 
 ## Context
