@@ -1,6 +1,6 @@
 ---
 id: crew-gict-300-u01-illustrate-r1
-title: crew illustrate GICT-300 unit 1 r1
+title: crew illustrate GICT-300 unit 1
 stage: misc
 date: 2026-11-27
 surface: agent
@@ -16,23 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/gict-300/unit-01/index.mdx
-  - history/prompts/gict-300/crew-gict-300-u01-illustrate-r1.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/index.mdx
-  - specs/content/gict-300/figures/unit-01.banner.md
-  - specs/content/gict-300/reviews/unit-01/G2/20261127T031016266Z-gates.json
-  - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-bloom-bands.txt
-  - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-concept-graph.txt
-  - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-depth-gate.txt
-  - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-docs-sync.txt
-  - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-figures.txt
-  - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-no-answer-keys.txt
-  - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-no-em-dash.txt
-  - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/validate-content.txt
-  - specs/content/gict-300/tasks.md
-  - static/img/figures/gict-300/unit-01/fig-U1-9.webp
+ - docs/semester-1/gict-300/unit-01/index.mdx
+ - history/prompts/gict-300/crew-gict-300-u01-illustrate-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/index.mdx
+ - specs/content/gict-300/figures/unit-01.banner.md
+ - specs/content/gict-300/reviews/unit-01/G2/20261127T031016266Z-gates.json
+ - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-bloom-bands.txt
+ - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-concept-graph.txt
+ - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-depth-gate.txt
+ - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-docs-sync.txt
+ - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-figures.txt
+ - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-no-answer-keys.txt
+ - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/check-no-em-dash.txt
+ - specs/content/gict-300/reviews/unit-01/G2/logs-20261127T031016266Z/validate-content.txt
+ - specs/content/gict-300/tasks.md
+ - static/img/figures/gict-300/unit-01/fig-U1-9.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -70,28 +70,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gict-300-u01-plan_illustrations, plan_illustrations, claude) The illustrate job should produce and place `fig-U1-9` (banner, via `--banner`) and `fig-U1-10` to `fig-U1-13`, adding the Urdu `<Figure>` elements with Urdu alt text in the Urdu topic files at placement.
 - (gict-300-u01-plan_illustrations, plan_illustrations, claude) The new markers changed the English topic files, so the G2 evidence is new and any later G3 run must bind to it; G3 was already stale.
 
+
 ## Response snapshot
 
-Generated unit banner fig-U1-9 via gflow, inspected and placed banner illustration in English and Urdu index.mdx, updated banner manifest to placed, refreshed G2 gate evidence (20261127T031016266Z-gates.json), updated task tracker G2 row, and confirmed all 14 content gates pass cleanly.
+Generated banner illustration fig-U1-9 with gflow, inspected and placed it into Unit 1 English and Urdu index pages, updated manifests, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
-- ✅ Impact: illustrate for GICT-300 Unit 1 (r1) by agy.
-- 🧪 Tests: npm run check:content passed in the job worktree before completing.
-- 📁 Files: 15 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: illustrate for GICT-300 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed unit banner illustration fig-U1-9 into English index.mdx and Urdu mirror, updated unit-01.banner.md to placed, generated fresh G2 gate evidence (20261127T031016266Z-gates.json), and pointed task tracker G2 row at the new evidence file.
-- Decisions the team must respect: ADR-0029 raster illustrations workflow followed; zero em dashes in content or commit messages; G3 English review and G5 Urdu review remain stale and require separate independent reviewer sessions.
-- Pending / next owner: G3 English review agent for Unit 1.
-- Paperclip issues affected: null
+- Shipped / changed: Generated banner illustration fig-U1-9 with gflow, inspected and placed it into Unit 1 English and Urdu index pages, updated manifests, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Banner illustration `fig-U1-9` is placed in English and Urdu index pages; topic illustrations `fig-U1-10` through `fig-U1-13` were previously placed.
+  - G2 gate evidence refreshed at `specs/content/gict-300/reviews/unit-01/G2/20261127T031016266Z-gates.json`; G3 English and G5 Urdu reviews remain stale and require fresh independent review sessions.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): validate:content PASS, check:pipeline-gate PASS, check:depth-gate PASS, check:figures PASS, check:svg-style PASS, check:no-em-dash PASS, check:no-answer-keys PASS, check:concept-graph PASS, check:bloom-bands PASS, check:source-floor PASS, check:licence PASS, licence:map:check PASS, check:content-status PASS, check:docs-sync PASS
-- Prompt variant (if applicable): none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
