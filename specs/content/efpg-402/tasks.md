@@ -1,6 +1,6 @@
 # EFPG-402 Teaching of Science - Task tracker
 
-## Status: content spec approved (G0/G1); Unit 1 English draft authored; G3 review open
+## Status: content spec approved (G0/G1); Unit 1 English draft authored; G2 gate evidence recorded; G3 review open
 
 English-only authoring from the approved Unit 1 content-spec subsection. No publication or review certification is claimed by this tracker. Units 2-8 are outside this job.
 
@@ -18,7 +18,7 @@ English-only authoring from the approved Unit 1 content-spec subsection. No publ
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ▣ | | English draft authored 2026-11-27; gate evidence to be recorded |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-01/G2/20261127T062540795Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 1 | G4 ur-translation | ▢ | | Urdu mirror is a separate job |
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
