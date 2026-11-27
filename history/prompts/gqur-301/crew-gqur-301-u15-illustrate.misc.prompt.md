@@ -20,6 +20,16 @@ files:
  - history/prompts/gqur-301/crew-gqur-301-u15-illustrate.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-01.mdx
  - specs/content/gqur-301/figures/unit-15.md
+ - specs/content/gqur-301/reviews/unit-15/G2/20261127T230927009Z-gates.json
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261127T230927009Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261127T230927009Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261127T230927009Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261127T230927009Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261127T230927009Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261127T230927009Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261127T230927009Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261127T230927009Z/validate-content.txt
+ - specs/content/gqur-301/tasks.md
  - static/img/figures/gqur-301/unit-15/fig-U15-8.webp
 tests:
  - npm run check:content
