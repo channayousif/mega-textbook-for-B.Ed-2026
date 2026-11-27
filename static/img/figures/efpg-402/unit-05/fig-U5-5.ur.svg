@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">کمزور اور مضبوط سائنسی تدریسی مقاصد کا جدول</title><desc id="d">موازنے کا جدول جو کمزور، مبہم تدریسی مقاصد کو مضبوط، قابلِ پیمائش سائنسی مقاصد کے ساتھ دکھاتا ہے، اور ناقابلِ پیمائش سے قابلِ مشاہدہ افعال کی طرف تبدیلی کو نمایاں کرتا ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="560"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="95.2"/>
+<rect class="plain" x="24" y="184.8" width="732" height="95.2"/>
+<rect class="panel" x="24" y="280" width="732" height="95.2"/>
+<rect class="plain" x="24" y="375.2" width="732" height="95.2"/>
+</g><g id="layer-edges">
+<line class="grid" x1="630" y1="33.6" x2="630" y2="470.4"/>
+<line class="grid" x1="420" y1="33.6" x2="420" y2="470.4"/>
+<line class="grid" x1="160" y1="33.6" x2="160" y2="470.4"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="68.6">موضوع</text>
+<text class="sh" x="618" y="68.6">کمزور بیان</text>
+<text class="sh" x="408" y="68.6">مضبوط / قابلِ پیمائش SLO</text>
+<text class="sh" x="148" y="68.6">عملی فعل</text>
+<text class="sh" x="744" y="144.2">پتے</text>
+<text class="cell" x="618" y="127.4">”شاگرد ضیائی تالیف</text>
+<text class="cell" x="618" y="151.2">سمجھیں گے“</text>
+<text class="cell" x="408" y="127.4">”خاکہ ملنے پر شاگرد 3 داخل</text>
+<text class="cell" x="408" y="151.2">اور 2 خارج اشیا بیان کریں“</text>
+<text class="sh" x="148" y="140">بیان کرنا</text>
+<text class="sh" x="744" y="239.4">سرکٹ</text>
+<text class="cell" x="618" y="222.6">”برقی سرکٹ کے بارے</text>
+<text class="cell" x="618" y="246.4">میں پڑھانا“</text>
+<text class="cell" x="408" y="222.6">”سیل اور تار سے شاگرد 3 منٹ</text>
+<text class="cell" x="408" y="246.4">میں چلتا سرکٹ جوڑیں“</text>
+<text class="sh" x="148" y="235.2">جوڑنا</text>
+<text class="sh" x="744" y="334.6">مادہ</text>
+<text class="cell" x="618" y="317.8">”شاگرد ذراتی ماڈل</text>
+<text class="cell" x="618" y="341.6">جانتے ہیں“</text>
+<text class="cell" x="408" y="317.8">”یادداشت سے ٹھوس، مائع اور گیس</text>
+<text class="cell" x="408" y="341.6">میں ذرات کا فاصلہ بنائیں“</text>
+<text class="sh" x="148" y="330.4">خاکہ / ماڈل</text>
+<text class="sh" x="744" y="429.8">پانی</text>
+<text class="cell" x="618" y="413">”شاگرد صاف پانی</text>
+<text class="cell" x="618" y="436.8">کی قدر کریں“</text>
+<text class="cell" x="408" y="413">”چھاننے کے 2 طریقے جانچیں اور</text>
+<text class="cell" x="408" y="436.8">گاؤں کے لیے محفوظ تر کا جواز دیں“</text>
+<text class="sh" x="148" y="425.6">جائزہ لینا</text>
+</g><text class="wm" x="12" y="548" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

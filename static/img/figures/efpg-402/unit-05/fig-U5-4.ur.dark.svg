@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">ہربارٹ، بلوم اور 5E سبقی ماڈلز کا موازنہ</title><desc id="d">موازنے کا جدول جو ہربارٹ ماڈل، بلوم کے مقاصد پر مبنی ماڈل اور تعمیریتی 5E ماڈل کا چار معیاروں پر فرق دکھاتا ہے: فلسفیانہ بنیاد، استاد کا کردار، شاگرد کا کردار اور مثالی جماعتی استعمال۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="560"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="81.2"/>
+<rect class="plain" x="24" y="170.8" width="732" height="81.2"/>
+<rect class="panel" x="24" y="252" width="732" height="81.2"/>
+<rect class="plain" x="24" y="333.2" width="732" height="81.2"/>
+<rect class="panel" x="24" y="414.4" width="732" height="81.2"/>
+</g><g id="layer-edges">
+<line class="grid" x1="640" y1="33.6" x2="640" y2="495.6"/>
+<line class="grid" x1="440" y1="33.6" x2="440" y2="495.6"/>
+<line class="grid" x1="230" y1="33.6" x2="230" y2="495.6"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="68.6">خصوصیت</text>
+<text class="sh" x="630" y="68.6">ہربارٹ کے 5 مراحل</text>
+<text class="sh" x="430" y="68.6">بلوم کا مقاصد پر مبنی</text>
+<text class="sh" x="220" y="68.6">BSCS 5E تحقیقی ماڈل</text>
+<text class="sh" x="744" y="137.2">نظریہ</text>
+<text class="cell" x="630" y="124.6">ادراکِ ذہنی کی نفسیات؛</text>
+<text class="cell" x="630" y="148.4">تلازمی تعلم</text>
+<text class="cell" x="430" y="124.6">طرزِ عمل کی نفسیات؛</text>
+<text class="cell" x="430" y="148.4">قابلِ پیمائش مقاصد</text>
+<text class="cell" x="220" y="124.6">تعمیریتی نفسیات؛</text>
+<text class="cell" x="220" y="148.4">تصوراتی ازسرِ نو ترتیب</text>
+<text class="sh" x="744" y="218.4">استاد کا کردار</text>
+<text class="cell" x="630" y="205.8">معلومات پہنچانے والا؛</text>
+<text class="cell" x="630" y="229.6">لیکچرر اور مظاہرہ کار</text>
+<text class="cell" x="430" y="205.8">تدریسی ڈیزائنر؛</text>
+<text class="cell" x="430" y="229.6">تعلمی کام ترتیب دیتا ہے</text>
+<text class="cell" x="220" y="205.8">سہولت کار، تحقیقی رہنما</text>
+<text class="cell" x="220" y="229.6">اور تصور سمیٹنے والا</text>
+<text class="sh" x="744" y="299.6">شاگرد</text>
+<text class="cell" x="630" y="287">وصول کرنے والا سامع،</text>
+<text class="cell" x="630" y="310.8">جواب دہ اور نقل نویس</text>
+<text class="cell" x="430" y="287">مقررہ طرزِ عمل کے</text>
+<text class="cell" x="430" y="310.8">نتائج دکھانے والا</text>
+<text class="cell" x="220" y="287">فعال محقق،</text>
+<text class="cell" x="220" y="310.8">شریکِ کار، معنی ساز</text>
+<text class="sh" x="744" y="380.8">ترتیب</text>
+<text class="cell" x="630" y="368.2">تیاری، پیشکش،</text>
+<text class="cell" x="630" y="392">ربط، تعمیم</text>
+<text class="cell" x="430" y="368.2">مدخل (SLOs)، پھر عمل</text>
+<text class="cell" x="430" y="392">(کام)، پھر حاصل (آزمائش)</text>
+<text class="cell" x="220" y="368.2">5E تحقیقی چکر:</text>
+<text class="cell" x="220" y="392">دلچسپی سے جانچ تک</text>
+<text class="sh" x="744" y="462">وضاحت</text>
+<text class="cell" x="630" y="449.4">پیشکش کے مرحلے میں</text>
+<text class="cell" x="630" y="473.2">شروع ہی میں دی جاتی ہے</text>
+<text class="cell" x="430" y="449.4">عمل کے مرحلے میں</text>
+<text class="cell" x="430" y="473.2">ساتھ ساتھ شامل</text>
+<text class="cell" x="220" y="449.4">تجرباتی شواہد کھوجنے کے</text>
+<text class="cell" x="220" y="473.2">بعد ہی دی جاتی ہے</text>
+</g><text class="wm" x="12" y="548" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
