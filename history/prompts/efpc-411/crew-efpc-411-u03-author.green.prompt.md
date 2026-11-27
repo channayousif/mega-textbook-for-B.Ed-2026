@@ -1,0 +1,117 @@
+---
+id: crew-efpc-411-u03-author
+title: crew author EFPC-411 unit 3
+stage: green
+date: 2026-11-27
+surface: agent
+model: agy
+feature: efpc-411
+branch: crew/efpc-411-u03-author
+user: crew
+command: crew author
+labels: ["crew", "agy", "author"]
+links:
+  spec: specs/content/efpc-411/content-spec.md
+  ticket: null
+  adr: null
+  pr: null
+files:
+ - docs/semester-4/efpc-411/unit-03/index.mdx
+ - docs/semester-4/efpc-411/unit-03/topic-01.mdx
+ - docs/semester-4/efpc-411/unit-03/topic-02.mdx
+ - docs/semester-4/efpc-411/unit-03/topic-03.mdx
+ - docs/semester-4/efpc-411/unit-03/topic-04.mdx
+ - docs/semester-4/efpc-411/unit-03/unit-assessment.mdx
+ - history/prompts/efpc-411/crew-efpc-411-u03-author.green.prompt.md
+ - specs/content/efpc-411/concepts/unit-03.md
+ - specs/content/efpc-411/coverage/unit-03.md
+ - specs/content/efpc-411/figures/unit-03.md
+ - specs/content/efpc-411/reviews/unit-03/G2/20261127T031939895Z-gates.json
+ - specs/content/efpc-411/reviews/unit-03/G2/logs-20261127T031939895Z/check-bloom-bands.txt
+ - specs/content/efpc-411/reviews/unit-03/G2/logs-20261127T031939895Z/check-concept-graph.txt
+ - specs/content/efpc-411/reviews/unit-03/G2/logs-20261127T031939895Z/check-depth-gate.txt
+ - specs/content/efpc-411/reviews/unit-03/G2/logs-20261127T031939895Z/check-docs-sync.txt
+ - specs/content/efpc-411/reviews/unit-03/G2/logs-20261127T031939895Z/check-figures.txt
+ - specs/content/efpc-411/reviews/unit-03/G2/logs-20261127T031939895Z/check-no-answer-keys.txt
+ - specs/content/efpc-411/reviews/unit-03/G2/logs-20261127T031939895Z/check-no-em-dash.txt
+ - specs/content/efpc-411/reviews/unit-03/G2/logs-20261127T031939895Z/validate-content.txt
+ - specs/content/efpc-411/sources/texts/mcburney-fry.md
+ - specs/content/efpc-411/sources/texts/richards-lockhart-1994.md
+ - specs/content/efpc-411/sources/texts/scoupe-2024.md
+ - specs/content/efpc-411/sources/unit-03.md
+ - specs/content/efpc-411/tasks.md
+ - static/img/figures/efpc-411/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-1.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-2.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-3.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-4.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-5.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-6.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-7.dark.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-7.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-8.dark.svg
+ - static/img/figures/efpc-411/unit-03/fig-U3-8.svg
+tests:
+ - npm run check:content
+---
+
+## Prompt
+
+# Crew job efpc-411-u03-author
+
+You are the agy2 worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efpc-411-u03-author`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or the Playwright e2e suite (a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server), keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`. Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0. `static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec. After changing any English unit file or its figures manifest, sources, coverage or concepts, the job commits, runs `node scripts/prepare-gate-evidence.mjs <course> <unit>`, commits the JSON and every `logs-*` directory it writes, and points the unit's G2 en-draft tracker row at the new file before `npm run check:content`.
+
+## Task
+Author EFPC-411 Unit 3 from its approved content-spec, following the author-unit skill end to end (English only; the Urdu mirror is a separate job). Topic titles read "Topic N.M - Title" (validate:content checks it).
+
+Follow `.claude/skills/author-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFPC-411 Unit 3 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efpc-411/`, and `static/img/figures/efpc-411/unit-03/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Response snapshot
+
+Authored EFPC-411 Unit 3 with placed schematic figures, governance artifacts, and G2 gate evidence.
+
+## Outcome
+
+- Impact: author for EFPC-411 Unit 3 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before completing the job.
+- Files: 39 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
+
+## Handoff (for CEO and agents)
+
+- Shipped / changed: Authored EFPC-411 Unit 3 with eight placed schematic SVGs and derived dark variants, complete governance artifacts, and G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Pending / next owner: crew lead (merge when CI is green).
+- Notes for the next job on this unit:
+  - Unit 3 English draft is ready for independent G3 review; all eight schematic figures are placed.
+- Paperclip issues affected: none (work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
