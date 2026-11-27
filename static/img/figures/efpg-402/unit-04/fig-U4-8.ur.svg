@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" direction="rtl"><title id="t">ڈیجیٹل آئی سی ٹی اور حقیقی اشیاء کے انتخاب کا فریم ورک</title><desc id="d">سائنسی تدریس میں ڈیجیٹل آئی سی ٹی اور حقیقی مادی اشیاء کے بہترین تدریسی استعمال کا تقابلی خاکہ۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<rect class="panel-a" x="520" y="50" width="236" height="280" rx="8"/>
+<rect class="panel-b" x="275" y="90" width="230" height="200" rx="8"/>
+<rect class="panel-a" x="24" y="50" width="236" height="280" rx="8"/>
+</g><g id="layer-edges">
+<line class="stroke" x1="505" y1="140" x2="520" y2="140" marker-end="url(#arrow)"/>
+<line class="stroke" x1="275" y1="240" x2="260" y2="240" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<text class="h" x="638" y="80" text-anchor="middle">ڈیجیٹل آئی سی ٹی استعمال کریں</text>
+<text class="cell" x="740" y="110">• انتہائی چھوٹے پیمانے</text>
+<text class="cell" x="728" y="128">(ایٹم، نظامِ شمسی)</text>
+<text class="cell" x="740" y="156">• خطرناک کیمیائی تعاملات</text>
+<text class="cell" x="728" y="174">(زہریلی گیسیں، دھماکے)</text>
+<text class="cell" x="740" y="202">• طویل وقتی پیمانے</text>
+<text class="cell" x="728" y="220">(لاکھوں سال میں پلیٹوں کی حرکت)</text>
+<text class="cell" x="740" y="248">• متحرک پیرامیٹر ٹیسٹ</text>
+<text class="cell" x="728" y="266">(فوری طبیعیاتی تبدیلیاں)</text>
+
+<text class="h" x="390" y="125" text-anchor="middle">تدریسی کسوٹی</text>
+<text class="sh" x="390" y="155" text-anchor="middle">کیا سمولیشن لیبارٹری کی</text>
+<text class="sh" x="390" y="175" text-anchor="middle">ضروری عملی مہارتوں کو ختم</text>
+<text class="sh" x="390" y="195" text-anchor="middle">کیے بغیر تصور میں</text>
+<text class="sh" x="390" y="215" text-anchor="middle">اضافی وضاحت لاتی ہے؟</text>
+
+<text class="h" x="142" y="80" text-anchor="middle">حقیقی اشیاء استعمال کریں</text>
+<text class="cell" x="244" y="110">• عملی مہارتوں کی مشق</text>
+<text class="cell" x="232" y="128">(شیشہ سنبھالنا، وائرنگ)</text>
+<text class="cell" x="244" y="156">• براہِ راست حسی شواہد</text>
+<text class="cell" x="232" y="174">(بو، حرارت کا احساس)</text>
+<text class="cell" x="244" y="202">• پیمائش کی حقیقی حدود</text>
+<text class="cell" x="232" y="220">(رگڑ، زاویہ نگاہ کی غلطی)</text>
+<text class="cell" x="244" y="248">• گروہی باہمی تعاون</text>
+<text class="cell" x="232" y="266">(مشترکہ آلات پر کام)</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="375">آئی سی ٹی سائنسی تدریس کو مالا مال کرتی ہے مگر لیبارٹری کے عملی تجربات کا مکمل متبادل نہیں بن سکتی۔</text>
+</g><text class="wm" x="12" y="420" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

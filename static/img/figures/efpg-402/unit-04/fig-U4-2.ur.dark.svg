@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" direction="rtl"><title id="t">سائنس تدریس کے لیے ڈیل کا مخروطِ تجربہ</title><desc id="d">ڈیل کا مخروطِ تجربہ جس میں بنیاد پر براہِ راست تجربات سے چوٹی پر لفظی علامات تک کا سفر دکھایا گیا ہے، جو سائنسی معاونات کے انتخاب میں رہنمائی کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<polygon class="panel-a" points="390,30 530,110 250,110"/>
+<polygon class="panel-b" points="535,116 605,200 175,200 245,116"/>
+<polygon class="panel-a" points="610,206 680,296 100,296 170,206"/>
+<polygon class="panel-b" points="685,302 750,396 30,396 95,302"/>
+</g><g id="layer-nodes">
+<text class="h" x="390" y="75" text-anchor="middle">لفظی اور تحریری علامات</text>
+<text class="cell" x="390" y="95" text-anchor="middle">لیکچرز، فارمولے اور درسی کتاب کے الفاظ (سب سے تجریدی)</text>
+
+<text class="h" x="390" y="150" text-anchor="middle">بصری اور سماعتی ذرائع</text>
+<text class="cell" x="390" y="172" text-anchor="middle">چارٹس، تعلیمی ویڈیوز، اینیمیشنز اور سلائیڈز</text>
+
+<text class="h" x="390" y="242" text-anchor="middle">مظاہرے اور فعال ماڈلز</text>
+<text class="cell" x="390" y="264" text-anchor="middle">اساتذہ کے عملی مظاہرے، نمائشیں اور کم خرچ ماڈلز</text>
+
+<text class="h" x="390" y="340" text-anchor="middle">براہِ راست بامقصد تجربات</text>
+<text class="cell" x="390" y="362" text-anchor="middle">طلبہ کے اپنے ہاتھوں سے تجربات، حقیقی نمونے اور فیلڈ ورک (سب سے ٹھوس)</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="422">ڈیل کا مخروط: مؤثر سائنسی تدریس تجریدی علامات کو ٹھوس حسی تجربات پر قائم کرتی ہے۔</text>
+</g><text class="wm" x="12" y="430" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

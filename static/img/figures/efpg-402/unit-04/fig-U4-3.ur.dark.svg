@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" direction="rtl"><title id="t">عام سائنسی آلات، استعمال اور حفاظتی اصولوں کا جدول</title><desc id="d">اسکول کی سائنس لیب کے عام آلات، ان کے سائنسی افعال اور محفوظ طریقے سے استعمال کے اصول۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="54"/>
+<rect class="plain" x="24" y="118" width="732" height="54"/>
+<rect class="panel" x="24" y="172" width="732" height="54"/>
+<rect class="plain" x="24" y="226" width="732" height="54"/>
+<rect class="panel" x="24" y="280" width="732" height="54"/>
+</g><g id="layer-edges">
+<line class="grid" x1="596" y1="24" x2="596" y2="334"/>
+<line class="grid" x1="350" y1="24" x2="350" y2="334"/>
+</g><g id="layer-nodes">
+<text class="sh" x="740" y="49">آلہ</text>
+<text class="sh" x="580" y="49">سائنسی استعمال</text>
+<text class="sh" x="334" y="49">سنبھالنے اور حفاظت کے اصول</text>
+
+<text class="sh" x="740" y="96">امتحانی نلی (ٹیسٹ ٹیوب)</text>
+<text class="cell" x="580" y="88">مائع یا ٹھوس کی معمولی مقدار</text>
+<text class="cell" x="580" y="105">کو گرم کرنا اور ملانا</text>
+<text class="cell" x="334" y="88">ہولڈر سے پکڑیں؛ نلی کا رخ اپنی</text>
+<text class="cell" x="334" y="105">اور دوسروں کی طرف نہ رکھیں</text>
+
+<text class="sh" x="740" y="150">بیکر</text>
+<text class="cell" x="580" y="142">عام تجربات میں مائعات رکھنا،</text>
+<text class="cell" x="580" y="159">ہلانا اور گرم کرنا</text>
+<text class="cell" x="334" y="142">تپائی پر جالی رکھ کر گرم کریں؛</text>
+<text class="cell" x="334" y="159">گرم شیشے کو فوراً ٹھنڈے پانی میں نہ ڈالیں</text>
+
+<text class="sh" x="740" y="204">گریجویٹڈ سلنڈر</text>
+<text class="cell" x="580" y="196">مائعات کا درست حجم ناپنا</text>
+<text class="cell" x="580" y="213">(کیوبک سینٹی میٹر یا ملی لیٹر)</text>
+<text class="cell" x="334" y="196">ہموار میز پر رکھیں؛ آنکھ کی سطح پر</text>
+<text class="cell" x="334" y="213">ہلالہ پڑھیں؛ کبھی گرم نہ کریں</text>
+
+<text class="sh" x="740" y="258">اسپرٹ لیمپ</text>
+<text class="cell" x="580" y="250">ابتدائی سائنسی تجربات کے لیے</text>
+<text class="cell" x="580" y="267">معتدل حرارت فراہم کرنا</text>
+<text class="cell" x="334" y="250">شعلے پر پھونک نہ ماریں؛ ڈھکن رکھ کر</text>
+<text class="cell" x="334" y="267">بجھائیں؛ ایندھن آدھے سے زیادہ رکھیں</text>
+
+<text class="sh" x="740" y="312">اسپرنگ بیلنس</text>
+<text class="cell" x="580" y="304">کششِ ثقل کی قوت اور وزن</text>
+<text class="cell" x="580" y="321">نیوٹن (N) میں ناپنا</text>
+<text class="cell" x="334" y="304">وزن لٹکانے سے پہلے صفر کا نشان پرکھیں؛</text>
+<text class="cell" x="334" y="321">زیادہ بوجھ ڈالنے سے گریز کریں</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="365">گریڈ 4 تا 8 کی سائنس کے بنیادی آلات اور تجربہ گاہ میں حفاظتی اصول۔</text>
+</g><text class="wm" x="12" y="390" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
