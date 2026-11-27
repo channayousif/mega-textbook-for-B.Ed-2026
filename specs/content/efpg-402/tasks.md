@@ -43,7 +43,7 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 3 | G6 assets | ▣ | | Fourteen schematic SVGs (fig-U3-1 to fig-U3-14) placed with derived dark twins; Urdu .ur.svg labels placed and verified with measure-figure-text; banner fig-U3-15 placed |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-04/G2/20261127T145728845Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-04/G2/20261127T200729357Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 4 | G4 ur-translation | ▢ | | Complete seven-file draft Urdu mirror and ten localized SVG pairs (with derived dark twins) prepared from English baseline; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-04/handoff.md |
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review |
