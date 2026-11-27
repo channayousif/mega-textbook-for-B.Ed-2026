@@ -1,0 +1,20 @@
+render-review - EFPC-411 Unit 3 G3 - 2026-11-27
+Command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efpc-411/unit-03/ static/img/figures/efpc-411/unit-03/
+deployed SHA: c8efed9b430b39867c1418fae61194c49cefcda9
+HEAD: 0cbed86bb96f7a6a03420ad3e5d726a47e8f5513
+diff exit code: 1
+Changed paths between deployed SHA and HEAD:
+docs/semester-4/efpc-411/unit-03/index.mdx
+docs/semester-4/efpc-411/unit-03/topic-01.mdx
+docs/semester-4/efpc-411/unit-03/topic-02.mdx
+docs/semester-4/efpc-411/unit-03/topic-03.mdx
+docs/semester-4/efpc-411/unit-03/topic-04.mdx
+static/img/figures/efpc-411/unit-03/fig-U3-10.webp
+static/img/figures/efpc-411/unit-03/fig-U3-11.webp
+static/img/figures/efpc-411/unit-03/fig-U3-12.webp
+static/img/figures/efpc-411/unit-03/fig-U3-13.webp
+static/img/figures/efpc-411/unit-03/fig-U3-9.webp
+
+Result: the diff is NOT empty, so the production build (CI-built from main) is not the reviewed input.
+Per the crew brief, render-review is recorded as unavailable; no build, dev server or Playwright run was attempted.
+scripts/render-inspect.mjs EFPC-411 3 --base https://textbook.com.pk --no-pdf was NOT run.
