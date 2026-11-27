@@ -2,7 +2,7 @@
 id: crew-gqur-301-u13-illustrate
 title: crew illustrate GQUR-301 unit 13
 stage: misc
-date: 2026-11-28
+date: 2026-11-27
 surface: agent
 model: agy
 feature: gqur-301
@@ -78,7 +78,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Produced, inspected, and placed raster illustrations fig-U13-5, fig-U13-6, and fig-U13-7 for GQUR-301 Unit 13 in English unit MDX files, updated manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated and placed raster illustrations fig-U13-5, fig-U13-6, and fig-U13-7 for GQUR-301 Unit 13, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
@@ -90,12 +90,12 @@ Produced, inspected, and placed raster illustrations fig-U13-5, fig-U13-6, and f
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced, inspected, and placed raster illustrations fig-U13-5, fig-U13-6, and fig-U13-7 for GQUR-301 Unit 13 in English unit files, updated manifests to placed, refreshed G2 gate evidence and updated authoritative tracker row in `tasks.md`.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Generated and placed raster illustrations fig-U13-5, fig-U13-6, and fig-U13-7 for GQUR-301 Unit 13, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 13 has no Urdu mirror yet; translation/G5 job must mirror the repaired English, carry figure markers and translated alt text into Urdu topic files, and recover the U+FFFD label flagged in concepts/unit-13.md.
-  - G3 remains open and unticked pending fresh independent review under ADR-0019; G1 authority, author/run provenance, and actual rendered inspection need separate owners.
+  - Unit 13 has no Urdu mirror yet, so the translate job must carry the `fig-U13-6` and `fig-U13-7` markers/figures and translated alt text into the Urdu topic files.
+  - G3 stays unticked; G1 authority, author/run provenance, bound source capture, and actual rendered inspection need separate review hosts/owners.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
