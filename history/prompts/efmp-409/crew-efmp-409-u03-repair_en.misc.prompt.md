@@ -30,15 +30,15 @@ files:
  - specs/content/efmp-409/coverage/unit-03.md
  - specs/content/efmp-409/figures/unit-03.md
  - specs/content/efmp-409/sources/unit-03.md
- - specs/content/efmp-409/reviews/unit-03/G2/20261127T234857426Z-gates.json
- - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-bloom-bands.txt
- - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-concept-graph.txt
- - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-depth-gate.txt
- - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-docs-sync.txt
- - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-figures.txt
- - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-no-answer-keys.txt
- - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-no-em-dash.txt
- - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/validate-content.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/20261127T235736825Z-gates.json
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/validate-content.txt
  - specs/content/efmp-409/tasks.md
  - history/prompts/efmp-409/crew-efmp-409-u03-repair_en.misc.prompt.md
 tests:
@@ -110,7 +110,7 @@ Applied the G3 report's four blocking findings and its advisories to EFMP-409 Un
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Unit 3 G3 repairs in EN and UR, coverage and concept traces corrected, G2 evidence refreshed to `20261127T234857426Z-gates.json`, tracker rows updated.
+- Shipped / changed: Unit 3 G3 repairs in EN and UR, coverage and concept traces corrected, G2 evidence refreshed to `20261127T235736825Z-gates.json`, tracker rows updated.
 - Decisions the team must respect: MCQ-06 was rebuilt as a Dewey-Ibn Khaldun convergence item traced to U3-18 so the 10-item bank still gives every topic at least one MCQ; MCQ-10 stays the Iqbal item traced to U3-14. G3 stays open and unsigned.
 - Pending / next owner: fresh independent G3 review; render and print inspection still needs a permitted render job once the reviewed commit is deployed.
 - Paperclip issues affected: none.
