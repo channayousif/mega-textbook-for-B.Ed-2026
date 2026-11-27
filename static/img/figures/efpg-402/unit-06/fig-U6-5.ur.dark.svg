@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">کیمیائی مطابقت کے گروہوں کے مطابق ذخیرہ کاری کا جدول</title><desc id="d">جدول جو CPSC اور NIOSH لیبارٹری سیفٹی گائیڈنس کی بنیاد پر کیمیائی مطابقت کے گروہوں کے لحاظ سے علیحدہ ذخیرہ کاری کے اصول دکھاتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="600" y1="24" x2="600" y2="364"/>
+<line class="grid" x1="320" y1="24" x2="320" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="49">کیمیائی گروہ</text>
+<text class="sh" x="588" y="49">ذخیرہ کاری کا مقام اور شیلف</text>
+<text class="sh" x="308" y="49">غیر مطابقت رکھنے والے گروہ</text>
+
+<text class="sh" x="744" y="94">غیر نامیاتی تیزاب</text>
+<text class="small" x="744" y="112">HCl, H2SO4, HNO3</text>
+<text class="cell" x="588" y="89">زنگ سے محفوظ الماری؛ نچلی</text>
+<text class="cell" x="588" y="107">شیلفوں پر پلاسٹک کی ٹرے</text>
+<text class="cell" x="308" y="89">اساس، سالوینٹس اور دھاتیں؛</text>
+<text class="cell" x="308" y="107">نائٹرک ایسڈ کو بالکل الگ رکھیں</text>
+
+<text class="sh" x="744" y="154">غیر نامیاتی اساس</text>
+<text class="small" x="744" y="172">NaOH, KOH, NH3</text>
+<text class="cell" x="588" y="149">تیزابوں اور آتش گیر مادوں سے</text>
+<text class="cell" x="588" y="167">دور مخصوص الماری یا شیلف</text>
+<text class="cell" x="308" y="149">معدنی تیزاب اور نامیاتی تیزاب؛</text>
+<text class="cell" x="308" y="167">حرارت کے شدید اخراج سے بچاؤ</text>
+
+<text class="sh" x="744" y="214">آتش گیر مائعات</text>
+<text class="small" x="744" y="232">ایتھنول، ایسیٹون</text>
+<text class="cell" x="588" y="209">ٹھنڈی، ہوادار جگہ پر اسٹیل</text>
+<text class="cell" x="588" y="227">کی مخصوص آتش گیر الماری</text>
+<text class="cell" x="308" y="209">آکسیڈائزرز، شعلے، ہیٹرز،</text>
+<text class="cell" x="308" y="227">اور مرتکز تیزاب</text>
+
+<text class="sh" x="744" y="274">آکسیڈائزرز</text>
+<text class="small" x="744" y="292">KMnO4, H2O2</text>
+<text class="cell" x="588" y="269">خشک شیلف، شیشے کے برتن،</text>
+<text class="cell" x="588" y="287">نامیاتی اسٹاک سے الگ</text>
+<text class="cell" x="308" y="269">تخفیفی مادے، نامیاتی پاؤڈر،</text>
+<text class="cell" x="308" y="287">سلفر، کوئلہ، اور سالوینٹس</text>
+
+<text class="sh" x="744" y="334">پانی سے متاثرہ مادے</text>
+<text class="small" x="744" y="352">سوڈیم، کیلشیم</text>
+<text class="cell" x="588" y="329">خشک شیلفوں پر بند کین کے اندر</text>
+<text class="cell" x="588" y="347">خشک منرل آئل میں سیل شدہ</text>
+<text class="cell" x="308" y="329">پانی، آبی محلول، سنک،</text>
+<text class="cell" x="308" y="347">اور فضا کی نمی</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="395">اسکولوں میں باہم ردِ عمل کرنے والے کیمیائی خاندانوں کو الگ رکھنے والی درجہ بندی۔</text>
+</g><text class="wm" x="12" y="420" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">کیمیائی برتن کے جی ایچ ایس معیاری لیبل کا خاکہ</title><desc id="d">خاکہ جو محفوظ کیمیکل کنٹینر لیبل کے مطلوبہ اجزا بشمول نام، ارتکاز، خطرے کی تصویری علامت اور تاریخوں کی وضاحت کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel" x="40" y="25" width="700" height="340" rx="8" stroke-width="2.5"/>
+<rect class="panel-a" x="55" y="40" width="670" height="60" rx="4"/>
+<polygon class="panel" points="675,120 715,160 675,200 635,160" stroke="var(--a3)" stroke-width="2"/>
+<rect class="plain" x="55" y="225" width="670" height="125" rx="4"/>
+</g><g id="layer-nodes">
+<text class="h" x="390" y="65" text-anchor="middle">ہائیڈروکلورک ایسڈ، ہلکا (Hydrochloric Acid, Dilute)</text>
+<text class="sh" x="390" y="88" text-anchor="middle">کیمیائی فارمولا: HCl (1.0 M آبی محلول)</text>
+
+<text class="sh" x="675" y="165" text-anchor="middle" fill="var(--a3)">تیزاب</text>
+
+<text class="h" x="615" y="138" fill="var(--a3)">اشاراتی لفظ: خطرہ (DANGER)</text>
+<text class="sh" x="615" y="160">خطرے کا بیان: جلد کو شدید جلانے اور آنکھوں کو نقصان پہنچانے کا سبب بنتا ہے۔</text>
+<text class="cell" x="615" y="180">احتیاطی تدابیر: حفاظتی چشمہ اور دستانے پہنیں۔ جلد کو فوری پانی سے دھوئیں؛ ہوادار جگہ میں استعمال کریں۔</text>
+
+<text class="sh" x="710" y="248">انتظامی اور احتسابی معلومات:</text>
+<text class="cell" x="710" y="272">تاریخ تیاری: 14 اکتوبر 2026</text>
+<text class="cell" x="710" y="292">تیار کنندہ: جناب نوید، سائنس ٹیچر</text>
+<text class="cell" x="710" y="312">بیچ نمبر: LAB-2026-088</text>
+
+<text class="cell" x="380" y="272">تاریخ وصولی: 10 اکتوبر 2026</text>
+<text class="cell" x="380" y="292">مقام: تیزاب کی الماری ب (نچلی شیلف)</text>
+<text class="cell" x="380" y="312">ہنگامی رابطہ: ہیلتھ کلینک ایکسٹینشن 12</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="390">معیاری لیبل کے اجزا: کیمیکل کی شناخت، جی ایچ ایس انتباہ اور اسٹاک کی معلومات۔</text>
+</g><text class="wm" x="12" y="415" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

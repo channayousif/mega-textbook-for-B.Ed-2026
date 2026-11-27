@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">ہفتہ وار سائنس لیبارٹری معمولات کا جدول</title><desc id="d">جدول جو لیبارٹری کی حفاظت اور انوینٹری کو برقرار رکھنے کے لیے سائنس استاد کے ہفتہ وار معائنے کی فہرست کی وضاحت کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="600" y1="24" x2="600" y2="364"/>
+<line class="grid" x1="310" y1="24" x2="310" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="49">دن اور توجہ</text>
+<text class="sh" x="588" y="49">عملی دیکھ بھال کے فرائض</text>
+<text class="sh" x="298" y="49">دستاویزات اور کارروائی</text>
+
+<text class="sh" x="744" y="94">پیر</text>
+<text class="small" x="744" y="112">بنیادی حفاظت</text>
+<text class="cell" x="588" y="89">مین گیس والو، الیکٹرک بریکرز،</text>
+<text class="cell" x="588" y="107">اور ہنگامی دروازوں کا معائنہ</text>
+<text class="cell" x="298" y="89">لیبارٹری لاگ بک میں ہفتہ وار</text>
+<text class="cell" x="298" y="107">صورتِ حال پر دستخط</text>
+
+<text class="sh" x="744" y="154">منگل</text>
+<text class="small" x="744" y="172">کیمیکل ری ایجنٹس</text>
+<text class="cell" x="588" y="149">بوتلوں کے ڈھکن چیک کریں؛ مٹے لیبلز</text>
+<text class="cell" x="588" y="167">تبدیل کریں؛ تیزاب کی ٹرے پونچھیں</text>
+<text class="cell" x="298" y="149">ری ایجنٹ انوینٹری اپ ڈیٹ کریں اور</text>
+<text class="cell" x="298" y="167">کم سپلائی کا اندراج کریں</text>
+
+<text class="sh" x="744" y="214">بدھ</text>
+<text class="small" x="744" y="232">آلات کا معائنہ</text>
+<text class="cell" x="588" y="209">بیکرز اور نالیوں کے بال برابر شگاف</text>
+<text class="cell" x="588" y="227">دیکھیں؛ ٹوٹے ہوئے ضائع کریں</text>
+<text class="cell" x="298" y="209">ٹوٹ پھوٹ کے رجسٹر میں منسوخی</text>
+<text class="cell" x="298" y="227">کے لیے خراب اشیا کا اندراج</text>
+
+<text class="sh" x="744" y="274">جمعرات</text>
+<text class="small" x="744" y="292">فرسٹ ایڈ کٹ</text>
+<text class="cell" x="588" y="269">آنکھ دھونے کی بوتل میں صاف پانی بھریں؛</text>
+<text class="cell" x="588" y="287">جراثیم کش پٹیاں پوری کریں</text>
+<text class="cell" x="298" y="269">حفاظتی بکس کے اندر رکھے فرسٹ</text>
+<text class="cell" x="298" y="287">ایڈ معائنہ کارڈ پر دستخط</text>
+
+<text class="sh" x="744" y="334">جمعہ</text>
+<text class="small" x="744" y="352">سیکیورٹی لاک اپ</text>
+<text class="cell" x="588" y="329">طلبہ کی میزیں اور سنک صاف کریں؛</text>
+<text class="cell" x="588" y="347">کیمیکل اسٹور اور کھڑکیاں مقفل کریں</text>
+<text class="cell" x="298" y="329">اسکول ہیڈ ماسٹر کے ساتھ ہفتہ</text>
+<text class="cell" x="298" y="347">وار سیکیورٹی جائزہ اور دستخط</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="395">لیبارٹری کی تیاری اور حفاظت کو برقرار رکھنے کے لیے منظم ہفتہ وار معائنے کا شیڈول۔</text>
+</g><text class="wm" x="12" y="420" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
