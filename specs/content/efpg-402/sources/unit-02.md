@@ -8,7 +8,7 @@ Checked on 2026-11-27. All prose is original; quotations are under 15 words and 
 | dcar-science-4-8 | Directorate of Curriculum, Assessment and Research, Sindh. *National curriculum for General Science, Grades IV-VIII*. | https://dcar.gos.pk/National_Curriculum/General%20Science%20Grades%20IV-VIII.pdf | U2-02: Sindh adoption of the national curriculum, provincial SLOs; official PDF, HTTP 200 on 2026-11-18 | author-selected (content-spec reading list) |
 | kochhar-science | Kochhar, S. K. *Teaching of Science*. Sterling Publishers. | (print) | U2-01, U2-03, U2-04, U2-05: guide-listed methods text on curriculum principles, content organisation, textbook evaluation and correlation; not found in Open Library; title-level support (`D-2026-0001`) | guide-required |
 | aggarwal-science | Aggarwal, J. C. *Teaching of Science*. Vikas Publishing House. | (print) | U2-01, U2-03, U2-04, U2-05: guide-listed methods text on curriculum principles, content organisation, textbook evaluation and correlation; not found in Open Library; title-level support (`D-2026-0001`) | guide-required |
-| bruner-1960 | Bruner, J. S. (1960). *The process of education*. Harvard University Press. | (print) | U2-03: the spiral curriculum concept and the hypothesis that any subject can be taught in some honest form to any child; widely cited, Open Library OL5856628M; title-level support | open-access-substitute |
+| bruner-1960 | Bruner, J. S. (1960). *The process of education*. Harvard University Press. | https://openlibrary.org/works/OL5856628M | U2-03: the spiral curriculum concept and the hypothesis that any subject can be taught in some honest form to any child; OpenAlex W2047879483 verified 2026-11-27; title-level support | open-access-substitute |
 
 ## Unverifiable sources
 
