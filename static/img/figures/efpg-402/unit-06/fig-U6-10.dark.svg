@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Diagram of standard laboratory hazard pictograms and their meanings</title><desc id="d">Diagram showing six globally harmonized hazard pictograms used in science laboratories: corrosive, flammable, toxic, explosive, oxidizer, and health hazard.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel" x="24" y="24" width="732" height="330" rx="8"/>
+<rect class="panel-a" x="40" y="40" width="210" height="135" rx="6"/>
+<polygon class="plain" points="145,55 175,85 145,115 115,85"/>
+<rect class="panel-a" x="285" y="40" width="210" height="135" rx="6"/>
+<polygon class="plain" points="390,55 420,85 390,115 360,85"/>
+<rect class="panel-a" x="530" y="40" width="210" height="135" rx="6"/>
+<polygon class="plain" points="635,55 665,85 635,115 605,85"/>
+<rect class="panel-b" x="40" y="200" width="210" height="135" rx="6"/>
+<polygon class="plain" points="145,215 175,245 145,275 115,245"/>
+<rect class="panel-b" x="285" y="200" width="210" height="135" rx="6"/>
+<polygon class="plain" points="390,215 420,245 390,275 360,245"/>
+<rect class="panel-b" x="530" y="200" width="210" height="135" rx="6"/>
+<polygon class="plain" points="635,215 665,245 635,275 605,245"/>
+</g><g id="layer-edges">
+
+</g><g id="layer-nodes">
+<text class="sh" x="145" y="90" text-anchor="middle">Acid</text>
+<text class="h" x="145" y="135" text-anchor="middle">CORROSIVE</text>
+<text class="cell" x="145" y="155" text-anchor="middle">Attacks skin and metal</text>
+
+<text class="sh" x="390" y="90" text-anchor="middle">Flame</text>
+<text class="h" x="390" y="135" text-anchor="middle">FLAMMABLE</text>
+<text class="cell" x="390" y="155" text-anchor="middle">Catches fire easily</text>
+
+<text class="sh" x="635" y="90" text-anchor="middle">Skull</text>
+<text class="h" x="635" y="135" text-anchor="middle">TOXIC / POISON</text>
+<text class="cell" x="635" y="155" text-anchor="middle">Fatal if swallowed</text>
+
+<text class="sh" x="145" y="250" text-anchor="middle">O-Ring</text>
+<text class="h" x="145" y="295" text-anchor="middle">OXIDIZING</text>
+<text class="cell" x="145" y="315" text-anchor="middle">Promotes combustion</text>
+
+<text class="sh" x="390" y="250" text-anchor="middle">Blast</text>
+<text class="h" x="390" y="295" text-anchor="middle">EXPLOSIVE</text>
+<text class="cell" x="390" y="315" text-anchor="middle">Explodes on heat/shock</text>
+
+<text class="sh" x="635" y="250" text-anchor="middle">Exclaim</text>
+<text class="h" x="635" y="295" text-anchor="middle">HEALTH HAZARD</text>
+<text class="cell" x="635" y="315" text-anchor="middle">Irritant to skin/lungs</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="380">Standard GHS chemical hazard pictograms required on science laboratory reagent bottles.</text>
+</g><text class="wm" x="768" y="415" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table showing a sample school laboratory stock register page</title><desc id="d">Sample stock register format illustrating mandatory columns for tracking consumable and permanent science apparatus in schools.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="95" y1="24" x2="95" y2="364"/>
+<line class="grid" x1="280" y1="24" x2="280" y2="364"/>
+<line class="grid" x1="365" y1="24" x2="365" y2="364"/>
+<line class="grid" x1="425" y1="24" x2="425" y2="364"/>
+<line class="grid" x1="485" y1="24" x2="485" y2="364"/>
+<line class="grid" x1="545" y1="24" x2="545" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Date</text>
+<text class="sh" x="105" y="49">Item &amp; Specification</text>
+<text class="sh" x="290" y="49">Voucher</text>
+<text class="sh" x="375" y="49">In</text>
+<text class="sh" x="435" y="49">Out</text>
+<text class="sh" x="495" y="49">Bal</text>
+<text class="sh" x="555" y="49">Remarks &amp; Storage</text>
+
+<text class="cell" x="36" y="99">12-Oct</text>
+<text class="sh" x="105" y="89">Beaker Pyrex 250mL</text>
+<text class="small" x="105" y="107">Permanent apparatus</text>
+<text class="cell" x="290" y="99">VR-101</text>
+<text class="cell" x="375" y="99">24</text>
+<text class="cell" x="435" y="99">-</text>
+<text class="cell" x="495" y="99">24</text>
+<text class="cell" x="555" y="99">Cupboard A, shelf 1</text>
+
+<text class="cell" x="36" y="159">15-Oct</text>
+<text class="sh" x="105" y="149">Dilute HCl (1.0 M)</text>
+<text class="small" x="105" y="167">Consumable acid stock</text>
+<text class="cell" x="290" y="159">VR-104</text>
+<text class="cell" x="375" y="159">2.5 L</text>
+<text class="cell" x="435" y="159">-</text>
+<text class="cell" x="495" y="159">2.5 L</text>
+<text class="cell" x="555" y="159">Acid cupboard, bottom</text>
+
+<text class="cell" x="36" y="219">22-Oct</text>
+<text class="sh" x="105" y="209">Beaker Pyrex 250mL</text>
+<text class="small" x="105" y="227">Issued to Grade 8</text>
+<text class="cell" x="290" y="219">IS-008</text>
+<text class="cell" x="375" y="219">-</text>
+<text class="cell" x="435" y="219">6</text>
+<text class="cell" x="495" y="219">18</text>
+<text class="cell" x="555" y="219">Bench practical loan</text>
+
+<text class="cell" x="36" y="279">02-Nov</text>
+<text class="sh" x="105" y="269">Glass Stirring Rods</text>
+<text class="small" x="105" y="287">20 cm round glass</text>
+<text class="cell" x="290" y="279">VR-110</text>
+<text class="cell" x="375" y="279">30</text>
+<text class="cell" x="435" y="279">-</text>
+<text class="cell" x="495" y="279">30</text>
+<text class="cell" x="555" y="279">General store cupboard</text>
+
+<text class="cell" x="36" y="339">10-Nov</text>
+<text class="sh" x="105" y="329">Beaker Pyrex 250mL</text>
+<text class="small" x="105" y="347">Thermal break damage</text>
+<text class="cell" x="290" y="339">BR-002</text>
+<text class="cell" x="375" y="339">-</text>
+<text class="cell" x="435" y="339">1</text>
+<text class="cell" x="495" y="339">17</text>
+<text class="cell" x="555" y="339">Condemned in break log</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="395">Sample stock ledger documenting incoming shipments, loans, balances, and breakages.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
