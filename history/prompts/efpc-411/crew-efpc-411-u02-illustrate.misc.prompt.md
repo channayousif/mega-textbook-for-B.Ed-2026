@@ -73,24 +73,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated and placed Unit 2 raster banner fig-U2-9 via gflow, verified pedagogical and cultural compliance, mirrored to Urdu index.mdx, prepared fresh G2 evidence, and validated all 14 content gates.
+Generated and placed Unit 2 raster banner fig-U2-9 via gflow, mirrored to Urdu index.mdx, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: illustrate for EFPC-411 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated raster banner fig-U2-9 via gflow, placed in English and Urdu index.mdx, updated banner manifest to placed, refreshed G2 evidence, and repointed tracker.
-- Decisions the team must respect: G3/G5 stay advisory until qualified independent sign-off; this PR does not certify G3/G5.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Shipped / changed: Generated and placed Unit 2 raster banner fig-U2-9 via gflow, mirrored to Urdu index.mdx, refreshed G2 gate evidence, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - English G3 remains open (▢); independent G3 review pending.
-  - Urdu G5 remains open (▢); independent G5 review pending.
+  - English G3 and Urdu G5 remain open (▢) awaiting independent reviewer evaluation.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
