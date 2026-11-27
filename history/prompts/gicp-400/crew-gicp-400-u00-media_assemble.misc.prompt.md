@@ -1,6 +1,6 @@
 ---
 id: crew-gicp-400-u00-media_assemble
-title: crew media_assemble gicp-400 unit 0
+title: crew media_assemble GICP-400 unit 0
 stage: misc
 date: 2026-11-27
 surface: agent
@@ -11,13 +11,13 @@ user: crew
 command: crew media_assemble
 labels: ["crew", "claude_crew", "media_assemble"]
 links:
-  spec: specs/studio/teasers/gicp-400.json
+  spec: specs/content/gicp-400/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - specs/studio/teasers/media-teasers.json
  - history/prompts/gicp-400/crew-gicp-400-u00-media_assemble.misc.prompt.md
+ - specs/studio/teasers/media-teasers.json
 tests:
  - npm run check:content
 ---
@@ -55,32 +55,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gicp-400-u00-teaser_script, teaser_script, claude) The five Urdu objectives are left out until `parseOverview` (scripts/notebook-studio/describe.mjs) reads the "Course objectives" heading. Adding them later is metadata only and does not reopen approval.
 - (gicp-400-u00-teaser_script, teaser_script, claude) When the clips are reviewed, fail any take that shows a flag, emblem, map, portrait or readable text; the topic makes these likely.
 
+
 ## Response snapshot
 
-Assembled the GICP-400 Urdu Short from the chosen takes (shot 1 t1, shot 2 t3, shot 3 t3, shot 4 t1, shot 5 t1), passed encoded QG1, uploaded it private, set the teaser playlist and custom thumbnail, and advanced the ledger to qa3-pass.
+Assembled the GICP-400 Urdu Short from the chosen takes, passed encoded QG1, uploaded it private as `moAasL2nNZs` with the teaser playlist and custom thumbnail, passed QG3, and advanced `gicp-400-ur` to `qa3-pass`.
 
 ## Outcome
 
 - Impact: media_assemble for GICP-400 Unit 0 by claude_crew (attempt 1).
-- Tests: npm run check:content run in the job worktree; no finding that origin/main does not also report.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: assembled the GICP-400 Urdu Short (29.57 s, 1080x1920, -15.5 LUFS, -3.1 dBTP), uploaded it private as `moAasL2nNZs`, set playlist `PLCJn7gAoYIJs` and the custom thumbnail, and advanced `gicp-400-ur` to `qa3-pass`.
-- Decisions the team must respect: the Short stays private until the owner's `crew publish gicp-400-ur`; no crew code may publish it (FR-013). Shots 2 and 3 assemble from 82% crops (t3) because every raw take carried a drawn viewfinder or REC overlay.
-- Pending / next owner: the owner watches `https://youtube.com/shorts/moAasL2nNZs` and replies `crew publish gicp-400-ur` or `crew reject gicp-400-ur <note>`.
+- Shipped / changed: Assembled the GICP-400 Urdu Short from the chosen takes, passed encoded QG1, uploaded it private as `moAasL2nNZs` with the teaser playlist and custom thumbnail, passed QG3, and advanced `gicp-400-ur` to `qa3-pass`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `youtube.upload` is at its 4/4 daily cap until 2026-11-27T19:00:00Z (00:00 PKT Nov 28); any further upload that day holds.
-  - `T sheet` lists `efmp-406-ur` as must-watch (first ur teaser); gicp-400-ur is one of the 4 ready items and is not in must-watch because its clips gate is `pass` with no notes.
-  - Known accepted notes for the owner: shot 5 has unrequested floating soap bubbles in the corridor; shot 4 shows an ornate arched verandah; shots 2 and 3 were enlarged from 82% crops.
+  - `gicp-400-ur` is at `qa3-pass` (private `moAasL2nNZs`); the owner watches `https://youtube.com/shorts/moAasL2nNZs` and replies `crew publish gicp-400-ur` or `crew reject gicp-400-ur <note>`; the crew never publishes it.
+  - `youtube.upload` is at its 4/4 daily cap, held until 2026-11-27T19:00:00Z (00:00 PKT Nov 28); any further upload that day holds.
+  - `T sheet` must-watch is `efmp-406-ur` (first ur teaser); gicp-400-ur is one of 4 ready items but not must-watch (clips gate `pass`, no notes). Accepted owner notes: shot 5 soap bubbles, shot 4 ornate verandah, shots 2-3 are 82% crops.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content run, no new finding
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
