@@ -33,10 +33,10 @@ files:
  - specs/content/gqur-301/reviews/unit-06/G2/logs-20261127T022316416Z/check-no-em-dash.txt
  - specs/content/gqur-301/reviews/unit-06/G2/logs-20261127T022316416Z/validate-content.txt
  - specs/content/gqur-301/tasks.md
+ - static/img/figures/gqur-301/unit-06/fig-U6-10.webp
  - static/img/figures/gqur-301/unit-06/fig-U6-7.webp
  - static/img/figures/gqur-301/unit-06/fig-U6-8.webp
  - static/img/figures/gqur-301/unit-06/fig-U6-9.webp
- - static/img/figures/gqur-301/unit-06/fig-U6-10.webp
 tests:
  - npm run check:content
 ---
@@ -76,27 +76,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u06-repair_en-r1, repair_en, opencode) F1 (G1 authority), F2 (historical author provenance) and F8 (rendered narrow-screen/A4 inspection) aren't author-repairable and stay with the owner/review host; no Urdu mirror exists, so G4 remains blocked.
 - (gqur-301-u06-repair_en-conflict1, fix, codex) G3 remains open pending authority, provenance and rendered inspection; Urdu translation remains pending.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed all four GQUR-301 Unit 6 raster illustrations and banner (fig-U6-7, fig-U6-8, fig-U6-9, fig-U6-10) in English topic files and index, transitioned figure manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated and placed all four GQUR-301 Unit 6 raster illustrations and banner (fig-U6-7, fig-U6-8, fig-U6-9, fig-U6-10), updated figure manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for GQUR-301 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree with all 14 content gates green.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated the unit banner illustration (fig-U6-7) via gflow, verified all four raster illustrations against prompt, alt, cultural and text requirements, placed <Figure> elements in the English index and topic files, transitioned manifest rows to placed, and refreshed G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything. Unit 6 does not have an Urdu mirror yet; translation must carry fig-U6-8 to fig-U6-10 into the Urdu topic files.
+- Shipped / changed: Generated and placed all four GQUR-301 Unit 6 raster illustrations and banner (fig-U6-7, fig-U6-8, fig-U6-9, fig-U6-10), updated figure manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All four raster illustrations (unit banner fig-U6-7, topic scenes fig-U6-8, fig-U6-9, fig-U6-10) are placed with zero em dashes and verified passing all 14 content gates.
-  - G3 English review remains open for independent review on committed bytes; G1, provenance and narrow/A4 inspection remain open for the evaluator/review host.
-  - Unit 6 has no Urdu mirror yet; translate job must carry fig-U6-8 through fig-U6-10 into Urdu topic files.
+  - Unit 6 has no Urdu mirror yet; translation must carry fig-U6-8 to fig-U6-10 into the Urdu topic files.
+  - G3 English review remains open for independent review on committed bytes; G1 authority, provenance and narrow/A4 inspection remain open for the evaluator/review host.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
