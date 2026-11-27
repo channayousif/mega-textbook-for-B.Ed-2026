@@ -66,25 +66,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpg-402-u03-author, author, claude) The 14 Unit 3 SVGs were drawn by Claude because Codex was out of quota; G3 should check whether each one fits its point. Urdu `.ur.svg` labels and banner fig-U3-15 (prompt-only) are still to do.
 - (efpg-402-u03-author, author, claude) Unit 3 cites the existing `ncp-science-2022` and `sep-scientific-method` excerpts unchanged. Editing either file will make both Unit 1's and Unit 3's G2 evidence out of date.
 
+
 ## Response snapshot
 
-Generated and placed Unit 3 raster banner fig-U3-15 via gflow, placed in index.mdx and marked placed in unit-03.banner.md, refreshed G2 gate evidence, and passed all content gates.
+Generated and placed the Unit 3 raster banner illustration fig-U3-15 via gflow, refreshed G2 gate evidence, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: illustrate for EFPG-402 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 14 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed Unit 3 raster banner fig-U3-15 via gflow, placed in index.mdx and marked placed in unit-03.banner.md, refreshed G2 gate evidence, and passed all 14 content gates.
+- Shipped / changed: Generated and placed the Unit 3 raster banner illustration fig-U3-15 via gflow, refreshed G2 gate evidence, and passed all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - English G3 and Urdu translation/review (G4/G5) remain open awaiting translation and independent review.
+  - English G3 review and Urdu mirror (G4/G5) remain open; Urdu translation job will need to translate topic files and create the 14 `.ur.svg` twins.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
