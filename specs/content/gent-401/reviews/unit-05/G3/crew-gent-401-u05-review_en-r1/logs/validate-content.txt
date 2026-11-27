@@ -1,0 +1,4 @@
+$ npm run validate:content
+date: 2026-11-27T00:07:22Z  HEAD: 01fde1b302e083ffef3098d3dadd40fbb90cf8d7
+✓ Content validation passed.
+exit: 0

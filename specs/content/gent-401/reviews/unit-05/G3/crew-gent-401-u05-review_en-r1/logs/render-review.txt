@@ -1,0 +1,34 @@
+render-review: unavailable (exit 1)
+
+Reason: the CI-built production site is not the reviewed input.
+Deployed SHA (~/deploy/deployed-sha): 366019f8ace647e892523e553b81ab6d1832ec68
+Reviewed HEAD: 01fde1b302e083ffef3098d3dadd40fbb90cf8d7
+Checked at: 2026-11-27T00:08:28Z
+Command: git diff --quiet $DEPLOYED HEAD -- docs/semester-4/gent-401/unit-05/ static/img/figures/gent-401/unit-05/
+Exit code: 1 (differences found)
+
+Command: git diff --stat $DEPLOYED HEAD -- docs/semester-4/gent-401/unit-05/ static/img/figures/gent-401/unit-05/
+ docs/semester-4/gent-401/unit-05/index.mdx        |   2 ++
+ static/img/figures/gent-401/unit-05/fig-U5-5.webp | Bin 0 -> 91554 bytes
+ 2 files changed, 2 insertions(+)
+
+Command: git diff $DEPLOYED HEAD -- docs/semester-4/gent-401/unit-05/index.mdx
+diff --git a/docs/semester-4/gent-401/unit-05/index.mdx b/docs/semester-4/gent-401/unit-05/index.mdx
+index efade547c..a6bb6182b 100644
+--- a/docs/semester-4/gent-401/unit-05/index.mdx
++++ b/docs/semester-4/gent-401/unit-05/index.mdx
+@@ -17,6 +17,8 @@ import TranslationStatusBadge from '@site/src/components/TranslationStatusBadge'
+ 
+ # Financial Planning and Funding
+ 
++<Figure id="fig-U5-5" kind="illustration" src="/img/figures/gent-401/unit-05/fig-U5-5.webp" alt="A young man writes figures in a notebook at a table in a simply furnished tuition room in Sindh, with a calculator, worksheets and a chalkboard of arithmetic behind him, while a woman holds a ledger at the door." width={1344} height={756} />
++
+ "Imran thinks 15 pupils will join his tuition centre. He has not counted the rent, the assistant's pay or the printing." A B.Ed trainee on practicum in Larkana hears this from her friend, and the answer is not as simple as "will 15 pupils come?". This unit shows how a new venture plans its money before it opens, works out how much it must sell to cover its costs, reads the three basic financial statements, and chooses where the money to start will come from. Every later decision in this course, from marketing to growth, depends on these numbers.
+ 
+ ## Unit learning outcomes
+
+Consequence: scripts/render-inspect.mjs was not run against https://textbook.com.pk, because the live
+pages would not show the reviewed bytes (the banner fig-U5-5 and its <Figure> line are newer than the
+deployment). The brief forbids building or serving the site. No narrow-view (360px) or A4 print
+inspection was performed, so accessibility is unverified. Changed images can be served stale for up
+to 30 days, so the missing fig-U5-5.webp is treated as unverified, not as a content defect.
