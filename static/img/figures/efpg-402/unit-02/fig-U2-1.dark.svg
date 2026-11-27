@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 530" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Concept map of five principles of science curriculum construction</title><desc id="d">Concept map with science curriculum at the centre and five principles around it: child-centred, activity-based, relevant, flexible and integrated, each with a short meaning.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="530"/><g id="layer-edges">
+<line class="stroke" x1="390" y1="230" x2="390" y2="114" marker-end="url(#arrow)"/>
+<line class="stroke" x1="310" y1="250" x2="260" y2="212" marker-end="url(#arrow)"/>
+<line class="stroke" x1="470" y1="250" x2="520" y2="212" marker-end="url(#arrow)"/>
+<line class="stroke" x1="330" y1="290" x2="260" y2="360" marker-end="url(#arrow)"/>
+<line class="stroke" x1="450" y1="290" x2="520" y2="360" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="node-child"><rect class="panel-a" x="270" y="30" width="240" height="84" rx="8"/><text class="h" x="284" y="58">Child-centred</text><text class="cell" x="284" y="80">built around the learner's</text><text class="cell" x="284" y="97">age, needs and interests</text></g>
+<g id="node-activity"><rect class="panel-a" x="30" y="170" width="230" height="84" rx="8"/><text class="h" x="44" y="198">Activity-based</text><text class="cell" x="44" y="220">learning through doing,</text><text class="cell" x="44" y="237">not only reading</text></g>
+<g id="node-relevant"><rect class="panel-a" x="520" y="170" width="230" height="84" rx="8"/><text class="h" x="534" y="198">Relevant</text><text class="cell" x="534" y="220">connected to daily life</text><text class="cell" x="534" y="237">and community</text></g>
+<g id="node-flexible"><rect class="panel-a" x="40" y="360" width="230" height="84" rx="8"/><text class="h" x="54" y="388">Flexible</text><text class="cell" x="54" y="410">adaptable to local</text><text class="cell" x="54" y="427">conditions and context</text></g>
+<g id="node-integrated"><rect class="panel-a" x="510" y="360" width="230" height="84" rx="8"/><text class="h" x="524" y="388">Integrated</text><text class="cell" x="524" y="410">linking science with</text><text class="cell" x="524" y="427">other subjects and life</text></g>
+<g id="node-center"><ellipse class="panel-b" cx="390" cy="270" rx="95" ry="38"/><text class="h" x="390" y="276" text-anchor="middle">Science curriculum</text></g>
+</g><g id="layer-labels">
+<text class="small" x="24" y="480">Five core principles that guide the design of an effective science curriculum.</text>
+</g><text class="wm" x="768" y="520" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

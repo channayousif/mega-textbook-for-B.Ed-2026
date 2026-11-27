@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of curriculum principles in the NCP 2022-23 science curriculum</title><desc id="d">Table showing each of the five principles of curriculum construction with how the NCP 2022-23 science curriculum demonstrates it.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="370"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="54"/>
+<rect class="plain" x="24" y="118" width="732" height="54"/>
+<rect class="panel" x="24" y="172" width="732" height="54"/>
+<rect class="plain" x="24" y="226" width="732" height="54"/>
+<rect class="panel" x="24" y="280" width="732" height="54"/>
+</g><g id="layer-edges">
+<line class="grid" x1="170" y1="24" x2="170" y2="334"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Principle</text>
+<text class="sh" x="182" y="49">How the NCP 2022-23 Science curriculum shows it</text>
+<text class="sh" x="36" y="96">Child-centred</text>
+<text class="cell" x="182" y="96">Different SLOs for each grade; concepts grow deeper from Grade 4 to Grade 8</text>
+<text class="sh" x="36" y="150">Activity-based</text>
+<text class="cell" x="182" y="142">Scientific Enquiry strand runs through every grade; sample</text>
+<text class="cell" x="182" y="159">activities are provided in every content domain</text>
+<text class="sh" x="36" y="204">Relevant</text>
+<text class="cell" x="182" y="196">Science in Context strand: recognise the importance of science and technology</text>
+<text class="cell" x="182" y="213">to solve everyday problems in the local community</text>
+<text class="sh" x="36" y="258">Flexible</text>
+<text class="cell" x="182" y="258">National framework adopted and adapted by provinces such as Sindh (DCAR)</text>
+<text class="sh" x="36" y="312">Integrated</text>
+<text class="cell" x="182" y="304">Links to mathematics in data handling; links to social studies in environment</text>
+<text class="cell" x="182" y="321">and health education across grade levels</text>
+</g><text class="wm" x="768" y="360" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
