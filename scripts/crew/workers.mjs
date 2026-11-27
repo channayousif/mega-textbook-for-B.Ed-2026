@@ -133,6 +133,9 @@ export const STAGES = {
   maint_skill:    { chain: ['claude', 'agy_claude', 'agy2_claude', 'codex'], skill: 'weekly-maintenance' },
   // `reviewOf: 'parent'`: never the family of the job whose PR is under review.
   maint_review:   { chain: ['agy', 'agy2', 'codex', 'claude', 'agy_claude', 'agy2_claude', 'claude_crew'], skill: 'weekly-maintenance', reviewOf: 'parent' },
+  // Independent review of a non-crew PR for the reviewer account (scripts/crew/reviewer.mjs). Those
+  // PRs come from the owner's Claude sessions, so only other model families may judge them.
+  pr_review:      { chain: ['agy', 'agy2', 'codex'], skill: null },
 };
 
 /**
@@ -146,7 +149,7 @@ export const STAGES = {
  * crew.mjs launches them only in media hours (scripts/media/pacing.mjs, D-2026-0100). */
 export const OUTSIDE_SERVICE_STAGES = ['illustrate', 'teaser_clips', 'audio_overview', 'studio_media', 'studio_publish', 'media_assemble', 'media_publish', 'social_roundup'];
 
-export const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
+export const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'pr_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
   'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'plan_illustrations', 'illustrate', 'author',
   'media_publish', 'studio_publish', 'media_assemble', 'teaser_clips', 'studio_media', 'audio_overview', 'teaser_script', 'social_roundup',
   'refresh_figures', 'flashcards', 'slides'];
