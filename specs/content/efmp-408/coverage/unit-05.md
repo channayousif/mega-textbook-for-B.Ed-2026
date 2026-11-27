@@ -6,7 +6,8 @@ Contract: `contracts/coverage-matrix-v2.md`. Every sub-topic from the content-sp
 |---|---|---|---|
 | U5-01 | topic-01.mdx | ### Marking versus grading systems | hec-2013-testdev |
 | U5-02 | topic-01.mdx | ### Percentages and grade point average | hec-2013-testdev |
-| U5-02 | topic-01.mdx | ### Percentages and grade point average | no-external-source |
+| U5-02 | topic-01.mdx | ### Percentages and grade point average | hec-2017-cgpa-equivalence |
+| U5-02 | topic-01.mdx | ### Percentages and grade point average | hec-uss-guidelines |
 | U5-03 | topic-01.mdx | ### Report cards and reporting to stakeholders | hec-2013-testdev |
 | U5-03 | topic-01.mdx | ### Report cards and reporting to stakeholders | seifert-sutton-2009 |
 | U5-04 | topic-02.mdx | ### Mean, median and mode | openstax-statistics-2e |

@@ -304,7 +304,7 @@ Format and tracking loop: see [plan.md](./plan.md). Issue numbers are written ba
   - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
   - Source: `specs/gaps.md` G-2026-90
   - Done when: verified against the later approval (`D-2026-0053`) and resolved in gaps.md.
-- [ ] T080 G-2026-235: EFMP-408 Unit 5 grade point average scale has no verifiable source (#862)
+- [x] T080 G-2026-235: EFMP-408 Unit 5 grade point average scale has no verifiable source (#862)
   - Stage: 6 | Area: curriculum | Type: curriculum-gap | Priority: p2 | Owner: yes
   - Source: `specs/gaps.md` G-2026-235
   - Done when: a verifiable source is bound or the owner rules.
