@@ -80,25 +80,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed all three GQUR-301 Unit 7 raster illustrations (banner fig-U7-5, topic scenes fig-U7-6 and fig-U7-7) in English and Urdu topic and index files, transitioned figure manifests to placed, and refreshed G2 gate evidence.
+Produced, visually inspected, and placed all three GQUR-301 Unit 7 raster illustrations across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for GQUR-301 Unit 7 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all three GQUR-301 Unit 7 raster illustrations and banner, transitioned figure manifests to placed, and refreshed G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Produced, visually inspected, and placed all three GQUR-301 Unit 7 raster illustrations across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - All three raster illustrations (unit banner fig-U7-5, topic scenes fig-U7-6 and fig-U7-7) were generated via gflow, inspected, accepted, placed with zero em dashes, and wired across both English and Urdu index and topic files.
-  - Unit 7 G2 en-draft rows in tasks.md (both line 60 and line 204) were repointed to the fresh gate evidence (20261127T025027674Z-gates.json).
-  - The pending Unit 7 G3 review request (g3-desk-253d4cd9) was prepared against the files before the illustration placement, so it is stale and should be re-prepared on committed bytes.
+  - Unit 7 G2 en-draft rows in tasks.md (lines 60 and 204) were repointed to fresh gate evidence (20261127T025027674Z-gates.json).
+  - The pending Unit 7 G3 review request (g3-desk-253d4cd9) was prepared against files prior to illustration placement, so it is stale and should be re-prepared on committed bytes.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
