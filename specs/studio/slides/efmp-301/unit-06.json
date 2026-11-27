@@ -1,0 +1,201 @@
+{
+  "course": "EFMP-301",
+  "unit": 6,
+  "note": "Feature 032 phase B. Every point restates the unit's topic summaries and explanations (EN and UR); no new claims. Outside every review manifest.",
+  "title": {
+    "en": "Motivation and Emotion",
+    "ur": "محرک اور جذبہ"
+  },
+  "subtitle": {
+    "en": "EFMP-301 Educational Psychology, Unit 6",
+    "ur": "EFMP-301 تعلیمی نفسیات، یونٹ 6"
+  },
+  "slides": [
+    {
+      "kind": "section",
+      "topic": 1,
+      "title": {
+        "en": "Topic 6.1: Why learners try",
+        "ur": "موضوع 6.1: سیکھنے والے کیوں کوشش کرتے ہیں"
+      }
+    },
+    {
+      "kind": "points",
+      "topic": 1,
+      "title": {
+        "en": "Motivation: intrinsic and extrinsic",
+        "ur": "محرک: باطنی اور خارجی"
+      },
+      "points": {
+        "en": [
+          "Motivation is the wants or needs that direct behaviour toward a goal",
+          "Intrinsic motivation runs on personal satisfaction",
+          "Extrinsic motivation runs on what others give",
+          "Overjustification: paying for what a pupil already owns can eat it"
+        ],
+        "ur": [
+          "محرک وہ خواہشات یا ضرورتیں ہیں جو رویے کو ہدف کی طرف لے جاتی ہیں",
+          "باطنی محرک ذاتی اطمینان پر چلتا ہے",
+          "خارجی محرک اس پر چلتا ہے جو دوسرے دیں",
+          "حد سے زیادہ جواز کا اثر: جو شاگرد پہلے سے رکھتا ہے اس کی ادائیگی اسے کھا سکتی ہے"
+        ]
+      }
+    },
+    {
+      "kind": "figure",
+      "topic": 1,
+      "title": {
+        "en": "Maslow's hierarchy of needs",
+        "ur": "میسلو کی ضرورتوں کی ترتیب"
+      },
+      "figure": "/img/figures/efmp-301/unit-06/fig-U6-1",
+      "caption": {
+        "en": "Deficit needs come before growth, giving the teacher a triage list.",
+        "ur": "خسارے والی ضرورتیں نشوونما سے پہلے آتی ہیں، اور استاد کو ترتیب بندی کی فہرست ملتی ہے۔"
+      }
+    },
+    {
+      "kind": "points",
+      "topic": 1,
+      "title": {
+        "en": "Herzberg: two different jobs",
+        "ur": "ہرزبرگ: دو مختلف کام"
+      },
+      "points": {
+        "en": [
+          "Motivators, such as achievement and recognition, drive satisfaction",
+          "The absence of hygiene factors causes dissatisfaction",
+          "A school needs both jobs done",
+          "Use it as a diagnostic: the theory was built on adult workers"
+        ],
+        "ur": [
+          "محرک، جیسے کامیابی اور پہچان، اطمینان چلاتے ہیں",
+          "صفائی عوامل کی غیر موجودگی غیر اطمینانی کو جنم دیتی ہے",
+          "اسکول کو دونوں کام کرنے پڑتے ہیں",
+          "اسے تشخیص کے طور پر استعمال کریں: نظریہ بالغ مزدوروں پر بنا"
+        ]
+      }
+    },
+    {
+      "kind": "points",
+      "topic": 1,
+      "title": {
+        "en": "Self-determination theory",
+        "ur": "خود ارادیت کا نظریہ"
+      },
+      "points": {
+        "en": [
+          "Three needs feed intrinsic motivation: autonomy, competence, relatedness",
+          "Autonomy: give choice inside a frame",
+          "Competence: make progress visible, not only ranks",
+          "Relatedness: build connection deliberately",
+          "Each costs attention rather than money"
+        ],
+        "ur": [
+          "تین ضرورتیں باطنی محرک کو پالتی ہیں: خود مختاری، مہارت، تعلق",
+          "خود مختاری: فریم کے اندر انتخاب دیں",
+          "مہارت: پیش قدمی نظر آنے لگائیں، صرف درجہ نہیں",
+          "تعلق: تعلق جان بوجھ کر بنائیں",
+          "ہر ایک کی قیمت توجہ ہے، پیسے نہیں"
+        ]
+      }
+    },
+    {
+      "kind": "section",
+      "topic": 2,
+      "title": {
+        "en": "Topic 6.2: Achievement motivation and emotions",
+        "ur": "موضوع 6.2: کامیابی کا محرک اور جذبات"
+      }
+    },
+    {
+      "kind": "points",
+      "topic": 2,
+      "title": {
+        "en": "Why some pupils aim and some protect",
+        "ur": "کچھ شاگرد آگے بڑھتے ہیں اور کچھ بچاتے ہیں"
+      },
+      "points": {
+        "en": [
+          "Mastery goals aim to get better",
+          "Performance goals aim to look good",
+          "Failure-avoidant goals aim simply not to look bad",
+          "The aiming and the protecting pupil differ most after failure"
+        ],
+        "ur": [
+          "مہارت کے ہدف کا نشانہ بہتر ہونا ہے",
+          "کارکردگی کے ہدف کا نشانہ اچھا دکھنا ہے",
+          "ناکامی سے بچاؤ کے ہدف کا نشانہ صرف برا نہ لگنا ہے",
+          "آگے بڑھنے والا اور بچانے والا شاگرد سب سے زیادہ ناکامی کے بعد فرق رکھتے ہیں"
+        ]
+      }
+    },
+    {
+      "kind": "points",
+      "topic": 2,
+      "title": {
+        "en": "Attributions: explaining the outcome",
+        "ur": "اسناد: نتیجے کی وضاحت"
+      },
+      "points": {
+        "en": [
+          "The loop runs: outcome, explanation, expectation, attempt",
+          "Three dimensions: locus, stability and controllability",
+          "Changeable, controllable explanations feed the approach loop",
+          "Stable, uncontrollable explanations feed the protect loop",
+          "Structured experience moves them, not argument"
+        ],
+        "ur": [
+          "چکر چلتا ہے: نتیجہ، وضاحت، توقع، کوشش",
+          "تین پہلو: مقام، استحکام، قابو پذیری",
+          "بدلنے والی، قابل قابو وضاحتیں آگے بڑھنے کا چکر کھلاتی ہیں",
+          "مستحکم، ناقابل قابو وضاحتیں بچانے کا چکر کھلاتی ہیں",
+          "انہیں ڈھانچے والا تجربہ ہٹاتا ہے، دلیل نہیں"
+        ]
+      }
+    },
+    {
+      "kind": "points",
+      "topic": 2,
+      "title": {
+        "en": "Emotions in learning",
+        "ur": "تعلیم میں جذبات"
+      },
+      "points": {
+        "en": [
+          "Anxiety narrows the workbench",
+          "Interest widens attention and holds it",
+          "Curiosity opens gaps",
+          "Each has a teacher move that costs attention, not money"
+        ],
+        "ur": [
+          "اضطراب کام کی میز تنگ کرتی ہے",
+          "دلچسپی وسیع کرتی اور تھامتی ہے",
+          "تجسس شگاف کھولتا ہے",
+          "ہر ایک کا ایک استاد کا اقدام ہے جس کی قیمت توجہ ہے، پیسے نہیں"
+        ]
+      }
+    },
+    {
+      "kind": "summary",
+      "title": {
+        "en": "Summary: why does a pupil bother?",
+        "ur": "خلاصہ: شاگرد زحمت کیوں کرتا ہے؟"
+      },
+      "points": {
+        "en": [
+          "Look for unmet deficit needs before asking for growth",
+          "Feed autonomy, competence and relatedness",
+          "Move attributions through structured experience",
+          "Answer anxiety, interest and curiosity with a teacher move"
+        ],
+        "ur": [
+          "نشوونما مانگنے سے پہلے دیکھیں کہ کون سی خسارے والی ضرورتیں پوری نہیں",
+          "خود مختاری، مہارت اور تعلق کو پالیں",
+          "اسناد کو ڈھانچے والے تجربے سے ہٹائیں",
+          "اضطراب، دلچسپی اور تجسس کا جواب استاد کے اقدام سے دیں"
+        ]
+      }
+    }
+  ]
+}
