@@ -7,7 +7,7 @@
  * - UnavailableError: the producer cannot be reached now (skip it for this run, try the next);
  * - Error: this image failed (the caller counts a failure for the row).
  *
- * Producers: agy (Gemini via Antigravity), gflow (Nano Banana via Google Flow on the owner's PC,
+ * Producers: agy (Gemini via Antigravity), agy2 (the same on the second Google account, Feature 036), gflow (Nano Banana via Google Flow on the owner's PC,
  * over the SSH tunnel; owner ruling 2026-11-18 amending D-2026-0082), codex (built-in image_gen).
  */
 import { existsSync, readFileSync, readdirSync, statSync, unlinkSync, copyFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -57,14 +57,25 @@ export function agyQuotaReset(logDir = join(homedir(), '.gemini/antigravity-cli/
   }
 }
 
-export function agyProducer({ brief, png, stagingDir }) {
+/**
+ * An Antigravity image producer for one account. agy keeps its login and logs under $HOME/.gemini, so
+ * the second account (ops/crew/bin/agy2, ADR-0039) runs with HOME=~/.agy2 and its quota log is there.
+ */
+export function agyProducerFor({ name, bin, home, spawn = spawnSync }) {
+  const logDir = join(home, '.gemini/antigravity-cli/log');
+  return function producer({ brief, png, stagingDir }) {
+    return agyRun({ name, bin, logDir, spawn, brief, png, stagingDir });
+  };
+}
+
+function agyRun({ name, bin, logDir, spawn, brief, png, stagingDir }) {
   const instruction = [
     'Use your generate_image tool exactly once to create this image.',
     brief,
     `Save the image as a PNG file at exactly this path: ${png}`,
     'Then reply with only the file path and the name of the image model you used.',
   ].join('\n');
-  const res = spawnSync('agy', ['-p', instruction, '--add-dir', stagingDir, '--output-format', 'json', '--print-timeout', '10m'], {
+  const res = spawn(bin, ['-p', instruction, '--add-dir', stagingDir, '--output-format', 'json', '--print-timeout', '10m'], {
     encoding: 'utf8',
     timeout: 11 * 60 * 1000,
   });
@@ -75,12 +86,18 @@ export function agyProducer({ brief, png, stagingDir }) {
     reply = (res.stdout || '').slice(0, 400);
   }
   if (res.status !== 0 || !existsSync(png) || statSync(png).size === 0) {
-    const reset = agyQuotaReset();
-    if (reset) throw new QuotaError('agy', `agy image quota exhausted (QUOTA_EXHAUSTED); resets at ${reset}`, reset);
-    throw new Error(`agy did not produce ${png} (exit ${res.status}): ${reply || res.stderr}`);
+    // No login (agy2 before its first sign-in): skip the producer for this run, like an offline one.
+    if (/UNAUTHENTICATED/.test(res.stderr || '')) throw new UnavailableError(name, `${name}: not signed in`);
+    const reset = agyQuotaReset(logDir);
+    if (reset) throw new QuotaError(name, `${name} image quota exhausted (QUOTA_EXHAUSTED); resets at ${reset}`, reset);
+    throw new Error(`${name} did not produce ${png} (exit ${res.status}): ${reply || res.stderr}`);
   }
-  return { model: (reply.match(/(imagen[\w.-]*|gemini[\w.-]*image[\w.-]*)/i) || [])[0] || 'agy (model unreported)' };
+  return { model: (reply.match(/(imagen[\w.-]*|gemini[\w.-]*image[\w.-]*)/i) || [])[0] || `${name} (model unreported)` };
 }
+
+export const agyProducer = agyProducerFor({ name: 'agy', bin: 'agy', home: homedir() });
+const AGY2_BIN = join(dirname(new URL(import.meta.url).pathname), '../../../ops/crew/bin/agy2');
+export const agy2Producer = agyProducerFor({ name: 'agy2', bin: AGY2_BIN, home: process.env.AGY2_HOME || join(homedir(), '.agy2') });
 
 // ------------------------------------------------------------------ gflow (MCP over HTTP)
 
@@ -343,7 +360,7 @@ export function paced(name, fn, { pace: paceFn = pace, record = paceRecord } = {
   };
 }
 
-export const PRODUCER_FNS = { agy: paced('agy', agyProducer), gflow: paced('gflow', gflowProducer), codex: paced('codex', codexProducer) };
+export const PRODUCER_FNS = { agy: paced('agy', agyProducer), agy2: paced('agy2', agy2Producer), gflow: paced('gflow', gflowProducer), codex: paced('codex', codexProducer) };
 
 /** Remove a stale staging file before a producer writes a new one. */
 export function clearStaged(png) {

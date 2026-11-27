@@ -191,6 +191,7 @@ export function imageQuotaProducer(text) {
   const t = String(text);
   if (/\bgflow\b|nano.?banana|RateLimitError|model quota reached/i.test(t)) return 'gflow';
   if (/\bcodex\b[^\n]{0,40}(image|limit)|image_gen/i.test(t)) return 'codex';
+  if (/\bagy2\b/i.test(t)) return 'agy2';
   return 'agy';
 }
 

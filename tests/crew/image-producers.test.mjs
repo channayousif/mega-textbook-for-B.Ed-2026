@@ -142,3 +142,25 @@ test('codex: only an image written after the call started is taken', () => {
   assert.equal(newestCodexImage(since, dir), join(dir, 's2', 'exec-new.png'));
   assert.equal(newestCodexImage(since, join(dir, 'missing')), null);
 });
+
+// Feature 036: agy2 is the same producer on the second Google account (HOME=~/.agy2, ADR-0039).
+test('agyProducerFor reads the quota log of its own account and skips an account with no login', async () => {
+  const { agyProducerFor, QuotaError, UnavailableError } = await import('../../scripts/media/producers/image.mjs');
+  const { mkdtempSync, mkdirSync, writeFileSync } = await import('node:fs');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const home = mkdtempSync(join(tmpdir(), 'agy2-'));
+  const logDir = join(home, '.gemini/antigravity-cli/log');
+  mkdirSync(logDir, { recursive: true });
+  const calls = [];
+  const fail = (stderr) => (bin, args) => { calls.push(bin); return { status: 1, stdout: '{}', stderr }; };
+  const args = { brief: 'b', png: join(home, 'none.png'), stagingDir: home };
+
+  const noLogin = agyProducerFor({ name: 'agy2', bin: '/x/agy2', home, spawn: fail('agy2: UNAUTHENTICATED (code 401): no login') });
+  assert.throws(() => noLogin(args), (e) => e instanceof UnavailableError && e.producer === 'agy2');
+  assert.equal(calls[0], '/x/agy2');
+
+  writeFileSync(join(logDir, 'cli-2026-11-28.log'), '{"error":"QUOTA_EXHAUSTED"} "quotaResetTimeStamp": "2026-11-29T04:00:00Z"');
+  const out = agyProducerFor({ name: 'agy2', bin: '/x/agy2', home, spawn: fail('') });
+  assert.throws(() => out(args), (e) => e instanceof QuotaError && e.producer === 'agy2' && e.resetAt === '2026-11-29T04:00:00Z');
+});

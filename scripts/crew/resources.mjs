@@ -13,12 +13,12 @@
  */
 
 /** Lanes, one running job each. `meta` is reserved for the Meta AI producer (specs/033). */
-export const LANES = ['notebook', 'flow', 'agy', 'codex', 'meta', 'youtube', 'social'];
+export const LANES = ['notebook', 'flow', 'agy', 'agy2', 'codex', 'meta', 'youtube', 'social'];
 
 /** Image lanes, in the producer order of ADR-0029 (owner ruling 2026-11-18), and the
  * generate-illustration.mjs `--producer` name of each. */
-export const IMAGE_LANES = ['agy', 'flow', 'codex'];
-export const LANE_PRODUCER = { agy: 'agy', flow: 'gflow', codex: 'codex' };
+export const IMAGE_LANES = ['agy', 'agy2', 'flow', 'codex'];
+export const LANE_PRODUCER = { agy: 'agy', agy2: 'agy2', flow: 'gflow', codex: 'codex' };
 
 /** Which lanes can run a stage; null for text and local stages (they use the text slots). */
 export function stageLanes(stage) {
@@ -44,6 +44,7 @@ export function laneChannels(stage, lane) {
   if (stage === 'media_publish' || stage === 'studio_publish') return [];
   if (lane === 'flow') return [stage === 'teaser_clips' ? 'gflow.video' : 'gflow.image'];
   if (lane === 'agy') return ['agy.image'];
+  if (lane === 'agy2') return ['agy2.image'];
   if (lane === 'codex') return ['codex.image'];
   // A studio job either makes NotebookLM artifacts or uploads finished ones, so either counts.
   if (lane === 'notebook') return ['nlm.studio', 'youtube.upload'];

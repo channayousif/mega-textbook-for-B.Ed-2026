@@ -92,11 +92,11 @@ export function figureBacklog(rows) {
 }
 
 /**
- * One illustrate job per image producer lane (agy, gflow, codex; resources.mjs IMAGE_LANES): each
- * job is pinned to one producer at launch, so up to three units' images are made at once (owner,
+ * One illustrate job per image producer lane (agy, agy2, gflow, codex; resources.mjs IMAGE_LANES): each
+ * job is pinned to one producer at launch, so up to four units' images are made at once (owner,
  * 2026-11-25: "different media producers in parallel, each producer max one slot").
  */
-export const MAX_ILLUSTRATE = 3;
+export const MAX_ILLUSTRATE = 4;
 export function limitIllustrate(added, inFlight) {
   let slots = MAX_ILLUSTRATE - inFlight.filter((j) => j.stage === 'illustrate').length;
   return added.filter((j) => j.stage !== 'illustrate' || slots-- > 0);

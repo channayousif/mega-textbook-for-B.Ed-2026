@@ -15,11 +15,12 @@ import { homedir } from 'node:os';
 
 export const IMAGE_QUOTA_FILE = process.env.MEGA_BOOK_IMAGE_QUOTA_FILE || join(homedir(), '.cache', 'mega-book', 'image-quota.json');
 
-/** Owner ruling 2026-11-18: agy first, then gflow while the tunnel is up, then Codex. */
-export const PRODUCERS = ['agy', 'gflow', 'codex'];
+/** Owner ruling 2026-11-18: agy first, then gflow while the tunnel is up, then Codex. Owner ruling
+ * 2026-11-27 (Feature 036): agy2, the second Google account's Antigravity, right after agy. */
+export const PRODUCERS = ['agy', 'agy2', 'gflow', 'codex'];
 
 /** Hold used when a producer says its quota is gone but names no reset time. gflow quotas are daily. */
-export const FALLBACK_HOURS = { agy: 6, gflow: 24, codex: 6 };
+export const FALLBACK_HOURS = { agy: 6, agy2: 6, gflow: 24, codex: 6 };
 /** Kept for callers of the single-producer API. */
 export const UNKNOWN_RESET_HOURS = FALLBACK_HOURS.agy;
 

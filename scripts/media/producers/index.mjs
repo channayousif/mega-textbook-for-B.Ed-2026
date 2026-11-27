@@ -21,7 +21,7 @@ import { save } from '../ledger.mjs';
 
 /** Producers per medium, in fallback order. */
 export const REGISTRY = {
-  image: ['agy', 'gflow', 'codex'],
+  image: ['agy', 'agy2', 'gflow', 'codex'],
   clip: ['gflow.video', 'manual.flow'],
   overview: ['nlm'],
   schematic: ['codex', 'claude'],

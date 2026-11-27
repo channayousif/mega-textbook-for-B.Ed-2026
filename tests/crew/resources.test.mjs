@@ -24,14 +24,16 @@ test('lanes run in parallel: a busy lane blocks only its own stages', () => {
 });
 
 test('illustrate takes the first free image lane with quota and budget, pinned to its producer', () => {
-  assert.deepEqual(IMAGE_LANES, ['agy', 'flow', 'codex']);
+  assert.deepEqual(IMAGE_LANES, ['agy', 'agy2', 'flow', 'codex']);
   const j = { stage: 'illustrate' };
   assert.deepEqual(pickLane(j, open), { lane: 'agy', producer: 'agy' });
-  assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy']) }), { lane: 'flow', producer: 'gflow' });
-  assert.deepEqual(pickLane(j, { ...open, producerOk: (l) => l !== 'agy' }), { lane: 'flow', producer: 'gflow' });
+  assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy']) }), { lane: 'agy2', producer: 'agy2' });
+  assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy', 'agy2']) }), { lane: 'flow', producer: 'gflow' });
+  assert.deepEqual(pickLane(j, { ...open, producerOk: (l) => !l.startsWith('agy') }), { lane: 'flow', producer: 'gflow' });
+  assert.deepEqual(pickLane(j, { ...open, room: (ch) => ch === 'agy2.image' }), { lane: 'agy2', producer: 'agy2' });
   assert.deepEqual(pickLane(j, { ...open, room: (ch) => ch === 'codex.image' }), { lane: 'codex', producer: 'codex' });
-  const none = pickLane(j, { ...open, busy: new Set(['agy', 'flow', 'codex']) });
-  assert.match(none.wait, /agy busy, flow busy, codex busy/);
+  const none = pickLane(j, { ...open, busy: new Set(['agy', 'agy2', 'flow', 'codex']) });
+  assert.match(none.wait, /agy busy, agy2 busy, flow busy, codex busy/);
 });
 
 test('outside media hours no lane takes a job', () => {
