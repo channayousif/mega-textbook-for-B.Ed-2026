@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Flowchart of the four-stage formative feedback cycle</title><desc id="d">Flowchart illustrating the four-stage formative feedback cycle: teach and clarify goals, elicit evidence of learning, provide descriptive feedback, and adjust instruction.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-edges">
+<line class="stroke" x1="380" y1="85" x2="410" y2="85" marker-end="url(#arrow)"/>
+<path class="stroke" d="M575,130 L575,195 L575,260 L410,260" marker-end="url(#arrow)"/>
+<line class="stroke" x1="185" y1="260" x2="155" y2="260" marker-end="url(#arrow)"/>
+<path class="stroke" d="M155,215 L155,170 L155,130" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="step1"><rect class="panel-a" x="60" y="40" width="320" height="90" rx="8"/><text class="h" x="76" y="68">1. Clarify Learning Intentions</text><text class="cell" x="76" y="92">Share explicit science SLOs and concrete</text><text class="cell" x="76" y="110">success criteria with pupils beforehand</text></g>
+<g id="step2"><rect class="panel-a" x="410" y="40" width="320" height="90" rx="8"/><text class="h" x="426" y="68">2. Elicit Observable Evidence</text><text class="cell" x="426" y="92">Use hinge questions, mini-whiteboards,</text><text class="cell" x="426" y="110">and lab observation to probe thinking</text></g>
+<g id="step3"><rect class="panel-b" x="410" y="215" width="320" height="90" rx="8"/><text class="h" x="426" y="243">3. Provide Descriptive Feedback</text><text class="cell" x="426" y="267">Deliver actionable, task-focused</text><text class="cell" x="426" y="285">guidance without judgmental grading</text></g>
+<g id="step4"><rect class="panel-b" x="60" y="215" width="320" height="90" rx="8"/><text class="h" x="76" y="243">4. Adjust Teaching &amp; Learning</text><text class="cell" x="76" y="267">Modify lesson pacing, re-teach with new</text><text class="cell" x="76" y="285">models, or facilitate peer discussions</text></g>
+</g><g id="layer-labels">
+<text class="small" x="60" y="370">The cyclical formative feedback loop for real-time instructional adaptation in science.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

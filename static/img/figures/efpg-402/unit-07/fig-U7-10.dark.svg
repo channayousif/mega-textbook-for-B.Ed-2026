@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of common science misconceptions and remedial strategies</title><desc id="d">Table of five common secondary science misconceptions in Pakistan classrooms alongside diagnostic probes and targeted remedial activities.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="66"/>
+<rect class="plain" x="24" y="130" width="732" height="66"/>
+<rect class="panel" x="24" y="196" width="732" height="66"/>
+<rect class="plain" x="24" y="262" width="732" height="66"/>
+</g><g id="layer-edges">
+<line class="grid" x1="180" y1="24" x2="180" y2="328"/>
+<line class="grid" x1="430" y1="24" x2="430" y2="328"/>
+</g><g id="layer-nodes">
+<text class="sh" x="34" y="49">Misconception</text>
+<text class="sh" x="194" y="49">Cognitive Origin</text>
+<text class="sh" x="444" y="49">Targeted Remedial Intervention</text>
+
+<text class="sh" x="34" y="94">Plant Respiration</text>
+<text class="cell" x="34" y="112">"Respiring only at night"</text>
+<text class="cell" x="194" y="86">Confuses breathing with cellular</text>
+<text class="cell" x="194" y="104">respiration; views photosynthesis</text>
+<text class="cell" x="194" y="120">as replacing respiration in day</text>
+<text class="cell" x="444" y="86">Germinating seeds demo: limewater turns</text>
+<text class="cell" x="444" y="104">milky in daylight in closed flask,</text>
+<text class="cell" x="444" y="120">proving CO2 output without leaves</text>
+
+<text class="sh" x="34" y="160">Falling Bodies</text>
+<text class="cell" x="34" y="178">"Heavy falls faster"</text>
+<text class="cell" x="194" y="152">Air drag on flat objects;</text>
+<text class="cell" x="194" y="170">conflates gravitational force</text>
+<text class="cell" x="194" y="186">with acceleration rate</text>
+<text class="cell" x="444" y="152">Discrepant event: drop flat sheet vs</text>
+<text class="cell" x="444" y="170">crumpled paper of equal mass; drop</text>
+<text class="cell" x="444" y="186">paper disc resting on falling coin</text>
+
+<text class="sh" x="34" y="226">Electric Current</text>
+<text class="cell" x="34" y="244">"Current used up in bulb"</text>
+<text class="cell" x="194" y="218">Source-consumer intuition;</text>
+<text class="cell" x="194" y="236">assumes bulb consumes fluid</text>
+<text class="cell" x="194" y="252">rather than converting energy</text>
+<text class="cell" x="444" y="218">Dual ammeters in series: measure current</text>
+<text class="cell" x="444" y="236">before and after glowing bulb to prove</text>
+<text class="cell" x="444" y="252">charge flow rate is fully conserved</text>
+
+<text class="sh" x="34" y="292">Heat vs Temperature</text>
+<text class="cell" x="34" y="310">"Heat equals temp"</text>
+<text class="cell" x="194" y="284">Sensory perception; lacks concept</text>
+<text class="cell" x="194" y="302">of total internal kinetic energy</text>
+<text class="cell" x="194" y="318">versus average kinetic motion</text>
+<text class="cell" x="444" y="284">Dual beaker demo: heat 100 mL and 500 mL</text>
+<text class="cell" x="444" y="302">to 80 deg C; compare time needed</text>
+<text class="cell" x="444" y="318">to melt identical ice blocks</text>
+</g><g id="layer-labels">
+<text class="small" x="30" y="360">Five common secondary science misconceptions with targeted inquiry remedial activities.</text>
+</g><text class="wm" x="768" y="380" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
