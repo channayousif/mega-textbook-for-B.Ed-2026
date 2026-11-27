@@ -1,0 +1,200 @@
+{
+ "course": "EFMP-301",
+ "unit": 9,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Assessment",
+     "definition": "The gathering of evidence about learning so that somebody can decide something. The decision, not the instrument, is what organises it."
+    },
+    {
+     "term": "Diagnostic",
+     "definition": "An assessment given before instruction to find the starting point. It feeds the decision of where to begin and what to repair first."
+    },
+    {
+     "term": "Formative assessment",
+     "definition": "Assessment given during learning to shape the next move: re-teach, advance or re-group. Its purpose is to change teaching while there is still teaching left to change."
+    },
+    {
+     "term": "Summative assessment",
+     "definition": "Assessment after instruction is completed, showing how well pupils mastered the material. It feeds decisions about readiness for the next unit and grades."
+    },
+    {
+     "term": "Certification",
+     "definition": "The purpose that asks what a person can do. Its decision extends beyond the classroom, into selection and qualification, as with the board examination."
+    },
+    {
+     "term": "Teacher-made assessments",
+     "definition": "Assessments the teacher writes for this class, this week. They are free, fast and exactly matched, at the price of comparability."
+    },
+    {
+     "term": "Standardised assessments",
+     "definition": "Assessments written for many classes at once, administered and scored the same way everywhere. They are comparable and defensible, at the price of fit."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تشخیص",
+     "definition": "تعلم کے بارے میں ثبوت جمع کرنا تاکہ کوئی کچھ فیصلہ کر سکے۔ اسے آلہ نہیں بلکہ فیصلہ منظم کرتا ہے۔"
+    },
+    {
+     "term": "تشخیصی",
+     "definition": "تدریس سے پہلے دی جانے والی جانچ تاکہ نقطہ آغاز معلوم ہو۔ یہ اس فیصلے کو کھلاتی ہے کہ کہاں سے شروع کریں اور پہلے کیا مرمت کریں۔"
+    },
+    {
+     "term": "تشکیلی تشخیص",
+     "definition": "تعلم کے دوران دی جانے والی جانچ جو اگلا قدم تراشتی ہے: دوبارہ پڑھائیں، آگے بڑھیں یا دوبارہ گروپ کریں۔ اس کا مقصد تدریس بدلنا ہے جبکہ تدریس ابھی باقی ہو۔"
+    },
+    {
+     "term": "مجموعی جائزہ",
+     "definition": "تدریس مکمل ہونے کے بعد کی جانچ، جو بتاتی ہے کہ طلبہ نے مواد کتنا اچھا سیکھا۔ یہ اگلے یونٹ کی تیاری اور نمبروں کے فیصلے کھلاتی ہے۔"
+    },
+    {
+     "term": "تصدیق",
+     "definition": "وہ مقصد جو پوچھتا ہے کہ یہ شخص کیا کر سکتا ہے۔ اس کا فیصلہ جماعت سے آگے انتخاب اور اہلیت تک جاتا ہے، جیسے بورڈ کے امتحان میں۔"
+    },
+    {
+     "term": "استاد ساختہ جانچیں",
+     "definition": "وہ جانچیں جو استاد اسی جماعت کے لیے، اسی ہفتے لکھتا ہے۔ یہ آزاد، تیز اور بالکل فٹ ہوتی ہیں، مگر موازنے کی قیمت پر۔"
+    },
+    {
+     "term": "معیاری جانچیں",
+     "definition": "وہ جانچیں جو ایک ساتھ بہت سی جماعتوں کے لیے لکھی جاتی ہیں اور ہر جگہ ایک ہی طرح دی اور نمبر دی جاتی ہیں۔ یہ قابل موازنہ اور قابل دفاع ہوتی ہیں، مگر فٹ ہونے کی قیمت پر۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Psychological or educational test",
+     "definition": "A standardised instrument: a set of tasks with fixed administration conditions and fixed scoring rules, built so that results can be compared across pupils, classes and years."
+    },
+    {
+     "term": "Standardised test",
+     "definition": "A test with the same items, given and scored the same way everywhere. It compares across the province but asks a class's current question only by coincidence."
+    },
+    {
+     "term": "Teacher-made test",
+     "definition": "A test written for this class, this week. It fits its decision exactly but cannot be compared with any other class's result."
+    },
+    {
+     "term": "Interpretation",
+     "definition": "The claim made about what a score means. Every score is a performance on a sample of tasks, so quality lives in the interpretation, not in the score."
+    },
+    {
+     "term": "Validity",
+     "definition": "The adequacy and appropriateness of the interpretations and uses of assessment results for a given group. It belongs to the claim made about a score, not to the test itself."
+    },
+    {
+     "term": "Reliability",
+     "definition": "The consistency of the measurement: whether scores would be similar on different occasions, with different items from the same unit, or with a different marker."
+    },
+    {
+     "term": "Bias",
+     "definition": "Systematic disadvantage to a group of pupils from content or language irrelevant to what is being measured. A good measure requires its absence."
+    }
+   ],
+   "ur": [
+    {
+     "term": "نفسیاتی یا تعلیمی ٹیسٹ",
+     "definition": "ایک معیاری آلہ: کاموں کا سیٹ جس کی دینے کی شرائط اور نمبر دینے کے قواعد طے شدہ ہوں، تاکہ شاگردوں، جماعتوں اور برسوں کے نتائج کا موازنہ ہو سکے۔"
+    },
+    {
+     "term": "معیاری آزمائش",
+     "definition": "وہ ٹیسٹ جس کے سوال ہر جگہ وہی ہوں اور ایک ہی طرح دیے اور نمبر دیے جائیں۔ یہ صوبے بھر میں موازنہ کرتا ہے مگر کسی جماعت کا موجودہ سوال صرف اتفاق سے پوچھتا ہے۔"
+    },
+    {
+     "term": "استاد ساختہ ٹیسٹ",
+     "definition": "وہ ٹیسٹ جو اسی جماعت کے لیے، اسی ہفتے لکھا گیا ہو۔ یہ اپنے فیصلے سے بالکل فٹ ہوتا ہے مگر کسی دوسری جماعت کے نتیجے سے اس کا موازنہ نہیں ہو سکتا۔"
+    },
+    {
+     "term": "تشریح",
+     "definition": "یہ دعویٰ کہ کسی نمبر کا کیا مطلب ہے۔ ہر نمبر کاموں کے ایک نمونے پر کارکردگی ہے، اس لیے کیفیت نمبر میں نہیں بلکہ تشریح میں رہتی ہے۔"
+    },
+    {
+     "term": "صداقت",
+     "definition": "کسی دیے گئے گروپ کے لیے جانچ کے نتائج کی تشریح اور استعمال کا مناسب اور موزوں ہونا۔ یہ نمبر کے بارے میں کیے گئے دعوے کی خصوصیت ہے، خود ٹیسٹ کی نہیں۔"
+    },
+    {
+     "term": "اعتماديت",
+     "definition": "پیمائش کا تسلسل: کیا مختلف مواقع پر، اسی یونٹ کے مختلف سوالوں سے، یا کسی دوسرے نمبر دینے والے سے نمبر یکساں آتے۔"
+    },
+    {
+     "term": "تعصب",
+     "definition": "ناپی جانے والی چیز سے غیر متعلق مواد یا زبان کی وجہ سے شاگردوں کے کسی گروپ کا باقاعدہ نقصان۔ اچھی پیمائش کے لیے اس کی غیر موجودگی ضروری ہے۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Formative assessment",
+     "definition": "Assessment whose purpose is to shape learning while learning is still under way."
+    },
+    {
+     "term": "Formative cycle",
+     "definition": "Three steps: elicit evidence, interpret it against the goal, and act on the next teaching move. The third step is the one that makes it formative."
+    },
+    {
+     "term": "Elicit",
+     "definition": "The first step of the formative cycle: gather evidence of learning now, with an instrument small enough to read and act on the same day."
+    },
+    {
+     "term": "Interpret",
+     "definition": "The second step of the formative cycle: read the evidence against the instructional goal, not the class average, to see what landed, what did not, and for whom."
+    },
+    {
+     "term": "Act",
+     "definition": "The third step of the formative cycle: use the evidence to choose the next teaching move, such as re-teaching a gap, advancing the ready or re-grouping pupils."
+    },
+    {
+     "term": "Summative assessment",
+     "definition": "Assessment after instruction is complete, informing how well pupils mastered the material, whether they are ready for the next unit, and what grades should be given."
+    },
+    {
+     "term": "Formative use",
+     "definition": "Use of evidence that shapes ongoing or future learning through evidence, interpretation and action."
+    },
+    {
+     "term": "Summative use",
+     "definition": "Use of evidence that reports mastery, readiness or grades after instruction."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تشکیلی تشخیص",
+     "definition": "وہ جانچ جس کا مقصد تعلم کو تراشنا ہے جبکہ تعلم ابھی چل رہا ہو۔"
+    },
+    {
+     "term": "تشکیلی چکر",
+     "definition": "تین قدم: ثبوت جمع کریں، ہدف کے مقابل تشریح کریں، اور اگلے تدریسی قدم پر عمل کریں۔ تیسرا قدم ہی اسے تشکیلی بناتا ہے۔"
+    },
+    {
+     "term": "ثبوت جمع کریں",
+     "definition": "تشکیلی چکر کا پہلا قدم: اب تعلم کا ثبوت جمع کریں، ایسے آلے سے جو اتنا چھوٹا ہو کہ اسی دن پڑھا اور اس پر عمل کیا جا سکے۔"
+    },
+    {
+     "term": "تشریح کریں",
+     "definition": "تشکیلی چکر کا دوسرا قدم: ثبوت کو جماعت کی اوسط کے نہیں بلکہ تدریسی ہدف کے مقابل پڑھیں، کہ کیا اترا، کیا نہیں، اور کس کے لیے۔"
+    },
+    {
+     "term": "عمل کریں",
+     "definition": "تشکیلی چکر کا تیسرا قدم: ثبوت سے اگلا تدریسی قدم چنیں، جیسے خلا دوبارہ پڑھانا، تیار شاگرد آگے بڑھانا یا گروپ بدلنا۔"
+    },
+    {
+     "term": "مجموعی جائزہ",
+     "definition": "تدریس مکمل ہونے کے بعد کی جانچ، جو بتاتی ہے کہ طلبہ نے مواد کتنا اچھا سیکھا، کیا وہ اگلے یونٹ کے لیے تیار ہیں، اور کون سے نمبر دیے جانے چاہئیں۔"
+    },
+    {
+     "term": "تشکیلی استعمال",
+     "definition": "ثبوت کا وہ استعمال جو ثبوت، تشریح اور عمل سے جاری یا آئندہ سیکھنے میں مدد دیتا ہے۔"
+    },
+    {
+     "term": "مجموعی استعمال",
+     "definition": "ثبوت کا وہ استعمال جو تدریس کے بعد مہارت، تیاری یا نمبر بتاتا ہے۔"
+    }
+   ]
+  }
+ }
+}
