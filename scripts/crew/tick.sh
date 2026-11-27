@@ -24,4 +24,7 @@ node scripts/crew/crew.mjs status > /dev/null
 # must not fail the tick.
 if [ -f "$STATE/signoff.env" ]; then
   ( set -a; . "$STATE/signoff.env"; set +a; node scripts/crew/signoff-sync.mjs ) || echo "signoff-sync failed"
+  # Owner decisions from the Decisions page (Feature 035): apply queued ones through `crew.mjs cmd`
+  # (this script still holds tick.lock, hence --in-tick) and push what waits on the owner.
+  ( set -a; . "$STATE/signoff.env"; set +a; node scripts/crew/decisions-sync.mjs --in-tick ) || echo "decisions-sync failed"
 fi

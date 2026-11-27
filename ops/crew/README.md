@@ -194,6 +194,13 @@ one failure recurred 25 times before a person found it.
 
 ## Owner commands (Discord or WhatsApp, only from the owner's own ID)
 
+Every decision below can also be made on the **Decisions page** (`/app/admin/decisions`, Feature 035):
+it lists what waits on the owner with the script lines, review notes and YouTube links, and its
+buttons queue the same command. `scripts/crew/decisions-sync.mjs` (run by `tick.sh` with the
+sign-off key) applies queued decisions through `crew.mjs cmd ... --via web --json`, refuses a
+decision made on an older version of the item, marks it applied or refused with the reply, and
+pushes the fresh list (`owner_queue`). Approvals made there show `via: "web"` in `media.json`.
+
 - `C-007 merge` / `C-007 hold` / `C-007 yes ...`: answer a decision (free text after it is kept).
 - `crew status`, `crew pause`, `crew resume`, `crew prioritise EFMP-305`, `crew stop <job>`,
   `crew retry <job>`, `crew note <directions>`, `crew help`. A leading `/` is accepted.

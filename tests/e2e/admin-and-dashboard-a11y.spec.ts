@@ -48,6 +48,12 @@ test('admin can reach the landing page and inspect selected records', async ({ p
     await page.getByLabel('Select person').selectOption(teacherProfile.data!.id);
     await expect(page.getByText('Classes taught')).toBeVisible();
 
+    // Feature 035: the Decisions page renders for an admin and passes the AA audit.
+    await page.goto('/app/admin/decisions');
+    await expect(page.getByRole('heading', { name: 'Decisions', level: 1 })).toBeVisible();
+    const decisionsAudit = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
+    expect(decisionsAudit.violations).toEqual([]);
+
     await page.goto('/ur/app/admin/');
     await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
     await expect(page.locator('h1')).toContainText('منتظم');
