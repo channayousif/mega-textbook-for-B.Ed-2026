@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">اسکول لیبارٹری کے اسٹاک رجسٹر کے صفحے کا نمونہ</title><desc id="d">اسٹاک رجسٹر فارمیٹ کا نمونہ جو اسکولوں میں قابلِ صرف اور مستقل سائنسی آلات کی جانچ پڑتال کے لیے لازمی کالموں کی وضاحت کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="685" y1="24" x2="685" y2="364"/>
+<line class="grid" x1="500" y1="24" x2="500" y2="364"/>
+<line class="grid" x1="415" y1="24" x2="415" y2="364"/>
+<line class="grid" x1="355" y1="24" x2="355" y2="364"/>
+<line class="grid" x1="295" y1="24" x2="295" y2="364"/>
+<line class="grid" x1="235" y1="24" x2="235" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="49">تاریخ</text>
+<text class="sh" x="673" y="49">شے اور وضاحت</text>
+<text class="sh" x="488" y="49">واؤچر</text>
+<text class="sh" x="400" y="49">آمد</text>
+<text class="sh" x="340" y="49">خرچ</text>
+<text class="sh" x="280" y="49">بقایا</text>
+<text class="sh" x="223" y="49">کیفیات و ذخیرہ کاری</text>
+
+<text class="cell" x="744" y="99">12 اکتوبر</text>
+<text class="sh" x="673" y="89">بیکر پائریکس 250mL</text>
+<text class="small" x="673" y="107">مستقل آلات</text>
+<text class="cell" x="488" y="99">VR-101</text>
+<text class="cell" x="400" y="99">24</text>
+<text class="cell" x="340" y="99">-</text>
+<text class="cell" x="280" y="99">24</text>
+<text class="cell" x="223" y="99">الماری الف، شیلف 1</text>
+
+<text class="cell" x="744" y="159">15 اکتوبر</text>
+<text class="sh" x="673" y="149">ہلکا HCl (1.0 M)</text>
+<text class="small" x="673" y="167">قابلِ صرف تیزاب</text>
+<text class="cell" x="488" y="159">VR-104</text>
+<text class="cell" x="400" y="159">2.5 L</text>
+<text class="cell" x="340" y="159">-</text>
+<text class="cell" x="280" y="159">2.5 L</text>
+<text class="cell" x="223" y="159">تیزاب کی الماری</text>
+
+<text class="cell" x="744" y="219">22 اکتوبر</text>
+<text class="sh" x="673" y="209">بیکر پائریکس 250mL</text>
+<text class="small" x="673" y="227">جماعت 8 کو جاری</text>
+<text class="cell" x="488" y="219">IS-008</text>
+<text class="cell" x="400" y="219">-</text>
+<text class="cell" x="340" y="219">6</text>
+<text class="cell" x="280" y="219">18</text>
+<text class="cell" x="223" y="219">پریکٹیکل اجراء</text>
+
+<text class="cell" x="744" y="279">02 نومبر</text>
+<text class="sh" x="673" y="269">شیشے کی سلاخیں</text>
+<text class="small" x="673" y="287">20cm گول شیشہ</text>
+<text class="cell" x="488" y="279">VR-110</text>
+<text class="cell" x="400" y="279">30</text>
+<text class="cell" x="340" y="279">-</text>
+<text class="cell" x="280" y="279">30</text>
+<text class="cell" x="223" y="279">جنرل اسٹور الماری</text>
+
+<text class="cell" x="744" y="339">10 نومبر</text>
+<text class="sh" x="673" y="329">بیکر پائریکس 250mL</text>
+<text class="small" x="673" y="347">حرارتی دباؤ سے ٹوٹا</text>
+<text class="cell" x="488" y="339">BR-002</text>
+<text class="cell" x="400" y="339">-</text>
+<text class="cell" x="340" y="339">1</text>
+<text class="cell" x="280" y="339">17</text>
+<text class="cell" x="223" y="339">منسوخی کا اندراج</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="395">اسکول لیبارٹری کے اسٹاک رجسٹر کا مثالی صفحہ جو آلات کے اندراج کے لازمی کالم دکھاتا ہے۔</text>
+</g><text class="wm" x="12" y="420" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
