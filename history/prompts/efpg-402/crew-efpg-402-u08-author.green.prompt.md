@@ -28,6 +28,7 @@ files:
  - specs/content/efpg-402/coverage/unit-08.md
  - specs/content/efpg-402/figures/unit-08.md
  - specs/content/efpg-402/reviews/unit-08/G2/20261127T140658374Z-gates.json
+ - specs/content/efpg-402/reviews/unit-08/G2/20261127T140937795Z-gates.json
  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140658374Z/check-bloom-bands.txt
  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140658374Z/check-concept-graph.txt
  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140658374Z/check-depth-gate.txt
@@ -36,6 +37,14 @@ files:
  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140658374Z/check-no-answer-keys.txt
  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140658374Z/check-no-em-dash.txt
  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140658374Z/validate-content.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140937795Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140937795Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140937795Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140937795Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140937795Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140937795Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140937795Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261127T140937795Z/validate-content.txt
  - specs/content/efpg-402/sources/texts/unesco-2017-esd.md
  - specs/content/efpg-402/sources/unit-08.md
  - specs/content/efpg-402/tasks.md
