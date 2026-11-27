@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">عملی سائنس کے انتظامی معمولات کا جدول</title><desc id="d">عملی سائنس کی تدریس کے لیے لازمی جماعتی انتظام کے معمولات کا جدول، جس میں سامان کی تقسیم، گروہی کردار، توجہ کے اشارے اور صفائی کے ضابطے شامل ہیں۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="560"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="95.2"/>
+<rect class="plain" x="24" y="184.8" width="732" height="95.2"/>
+<rect class="panel" x="24" y="280" width="732" height="95.2"/>
+<rect class="plain" x="24" y="375.2" width="732" height="95.2"/>
+</g><g id="layer-edges">
+<line class="grid" x1="620" y1="33.6" x2="620" y2="470.4"/>
+<line class="grid" x1="330" y1="33.6" x2="330" y2="470.4"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="68.6">معمول کا شعبہ</text>
+<text class="sh" x="608" y="68.6">عملی انتظامی ضابطہ</text>
+<text class="sh" x="318" y="68.6">تجربہ گاہ کی بدنظمی کیوں رکتی ہے</text>
+<text class="sh" x="744" y="134.4">اشتراکی</text>
+<text class="cell" x="744" y="158.2">گروہی کردار</text>
+<text class="cell" x="608" y="127.4">باری باری کرداروں والی 4 کی ٹیمیں: سامان</text>
+<text class="cell" x="608" y="151.2">منتظم، سہولت کار، محرر، حفاظتی افسر</text>
+<text class="cell" x="318" y="127.4">ایک شاگرد کا غلبہ ختم کرتا ہے اور</text>
+<text class="cell" x="318" y="151.2">ہر طالب علم کو جوابدہ بناتا ہے</text>
+<text class="sh" x="744" y="229.6">ٹرے کا نظام</text>
+<text class="cell" x="744" y="253.4">تقسیم</text>
+<text class="cell" x="608" y="222.6">آلات ٹرے میں پہلے سے تیار؛</text>
+<text class="cell" x="608" y="246.4">صرف سامان کا منتظم لاتا ہے</text>
+<text class="cell" x="318" y="222.6">سامنے کی میز پر ہجوم، رکاوٹ،</text>
+<text class="cell" x="318" y="246.4">ٹکراؤ اور شیشہ ٹوٹنا روکتا ہے</text>
+<text class="sh" x="744" y="324.8">غیر زبانی</text>
+<text class="cell" x="744" y="348.6">توجہ کا اشارہ</text>
+<text class="cell" x="608" y="317.8">اٹھے ہاتھ کی 5 سیکنڈ گنتی یا گھنٹی؛</text>
+<text class="cell" x="608" y="341.6">شاگرد فوراً رک کر سنتے ہیں</text>
+<text class="cell" x="318" y="317.8">چلائے یا آواز تھکائے بغیر</text>
+<text class="cell" x="318" y="341.6">45 شاگردوں کی سرگرمی روکتا ہے</text>
+<text class="sh" x="744" y="420">صفائی اور</text>
+<text class="cell" x="744" y="443.8">حفاظتی وقت</text>
+<text class="cell" x="608" y="413">گھنٹی سے پہلے سخت 7 منٹ؛ ڈیسک</text>
+<text class="cell" x="608" y="436.8">خشک؛ استاد تمام آلات گنتا ہے</text>
+<text class="cell" x="318" y="413">کوئی سامان گم نہ ہونے کی ضمانت</text>
+<text class="cell" x="318" y="436.8">اور کمرہ اگلی کلاس کے لیے تیار</text>
+</g><text class="wm" x="12" y="548" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 476" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">مؤثر سائنسی وضاحت کے پانچ مراحل کا فلو چارٹ</title><desc id="d">فلو چارٹ جو مؤثر سائنسی وضاحت کے پانچ ترتیب وار مراحل دکھاتا ہے: سابقہ علم سے سمت دینا، تشبیہ کے ساتھ تصور متعارف کرانا، منطقی قدم پیش کرنا، سمجھ جانچنا اور سمیٹنا۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="476"/><g id="layer-edges">
+<line class="stroke" x1="534" y1="98" x2="500" y2="98" marker-end="url(#arrow)"/>
+<line class="stroke" x1="284" y1="98" x2="250" y2="98" marker-end="url(#arrow)"/>
+<path class="stroke" d="M 140,154 L 140,203 L 534,203 L 534,238" marker-end="url(#arrow)"/>
+<line class="stroke" x1="390" y1="294" x2="350" y2="294" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="exp-1"><rect class="panel-a" x="534" y="42" width="216" height="112" rx="8"/><text class="h" x="736" y="81.2">1. سمت اور ربط</text><text class="cell" x="736" y="112">مانوس مظہر سے آغاز</text><text class="cell" x="736" y="135.8">(مثلاً مٹکا)</text></g>
+<g id="exp-2"><rect class="panel-a" x="284" y="42" width="216" height="112" rx="8"/><text class="h" x="486" y="81.2">2. ٹھوس تشبیہ</text><text class="cell" x="486" y="112">مانوس طبعی ماڈل</text><text class="cell" x="486" y="135.8">(مثلاً حد پھلانگتے دوڑنے والے)</text></g>
+<g id="exp-3"><rect class="panel-a" x="34" y="42" width="216" height="112" rx="8"/><text class="h" x="236" y="81.2">3. منطقی ترتیب</text><text class="cell" x="236" y="112">سبب و نتیجہ کے قدم کھولیں؛</text><text class="cell" x="236" y="135.8">سائنسی اصطلاحات لائیں</text></g>
+<g id="exp-4"><rect class="panel-b" x="390" y="238" width="216" height="112" rx="8"/><text class="h" x="592" y="277.2">4. تشکیلی جانچ</text><text class="cell" x="592" y="308">وقفہ سوچ کے ساتھ رکیں؛</text><text class="cell" x="592" y="331.8">شاگردوں کی سمجھ کریدیں</text></g>
+<g id="exp-5"><rect class="panel-a" x="134" y="238" width="216" height="112" rx="8"/><text class="h" x="336" y="277.2">5. قاعدہ سمیٹیں</text><text class="cell" x="336" y="308">بنیادی سائنسی اصول</text><text class="cell" x="336" y="331.8">اور اطلاق مضبوط کریں</text></g>
+</g><g id="layer-labels">
+<text class="small" x="756" y="420">مؤثر سائنسی وضاحتیں روزمرہ تجربے اور رسمی سائنسی ماڈلز کو جوڑتی ہیں۔</text>
+</g><text class="wm" x="12" y="464" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

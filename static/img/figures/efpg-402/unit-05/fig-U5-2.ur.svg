@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 546" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس کے بغیر منصوبہ اور منصوبہ بند اسباق کا موازنہ</title><desc id="d">موازنے کا جدول جو سائنس کے بغیر منصوبہ سبق اور منصوبہ بند سبق کا پانچ پہلوؤں سے فرق دکھاتا ہے: استاد کی تیاری، شاگردوں کی سرگرمی، وقت کا استعمال، وسائل کا انتظام اور جانچ۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="546"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="78.4"/>
+<rect class="plain" x="24" y="168" width="732" height="78.4"/>
+<rect class="panel" x="24" y="246.4" width="732" height="78.4"/>
+<rect class="plain" x="24" y="324.8" width="732" height="78.4"/>
+<rect class="panel" x="24" y="403.2" width="732" height="78.4"/>
+</g><g id="layer-edges">
+<line class="grid" x1="620" y1="33.6" x2="620" y2="481.6"/>
+<line class="grid" x1="330" y1="33.6" x2="330" y2="481.6"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="68.6">پہلو</text>
+<text class="sh" x="608" y="68.6">بغیر منصوبہ سائنس کا سبق</text>
+<text class="sh" x="318" y="68.6">منصوبہ بند سائنس کا سبق</text>
+<text class="sh" x="744" y="137.2">تیاری</text>
+<text class="cell" x="608" y="124.6">کلاس کے دوران سامان ڈھونڈتا ہے؛</text>
+<text class="cell" x="608" y="148.4">گھبرایا ہوا، ردِ عمل والا اور بکھرا ہوا</text>
+<text class="cell" x="318" y="124.6">آلات پہلے سے رکھے ہوئے؛</text>
+<text class="cell" x="318" y="148.4">پُراعتماد، مرکوز اور بامقصد</text>
+<text class="sh" x="744" y="215.6">سرگرمی</text>
+<text class="cell" x="608" y="203">بے عمل سننا یا رٹی نقل؛</text>
+<text class="cell" x="608" y="226.8">اکثر غیر متعلقہ باتیں</text>
+<text class="cell" x="318" y="203">اشتراکی تحقیق، اعداد کا اندراج</text>
+<text class="cell" x="318" y="226.8">اور منظم مکالمہ</text>
+<text class="sh" x="744" y="294">وقت کا استعمال</text>
+<text class="cell" x="608" y="281.4">تیاری میں منٹ ضائع؛ گھنٹی سے</text>
+<text class="cell" x="608" y="305.2">پہلے جلدی میں تعریفیں</text>
+<text class="cell" x="318" y="281.4">وقت بند مراحل (آغاز، تحقیق، تصور کی</text>
+<text class="cell" x="318" y="305.2">وضاحت، تالیف، صفائی)</text>
+<text class="sh" x="744" y="372.4">حفاظت</text>
+<text class="cell" x="608" y="359.8">بغیر نگرانی نقل و حرکت؛ گرنے،</text>
+<text class="cell" x="608" y="383.6">ٹوٹنے اور جلنے کا زیادہ خطرہ</text>
+<text class="cell" x="318" y="359.8">مقررہ گروہی کردار؛ واضح قواعد؛</text>
+<text class="cell" x="318" y="383.6">محفوظ استعمال اور صفائی کے معمولات</text>
+<text class="sh" x="744" y="450.8">جانچ</text>
+<text class="cell" x="608" y="438.2">جلد بازی میں اجتماعی ”سمجھ گئے؟“؛</text>
+<text class="cell" x="608" y="462">انفرادی تعلم کا کوئی ریکارڈ نہیں</text>
+<text class="cell" x="318" y="438.2">ہم آہنگ تشکیلی یادداشت کی پڑتال</text>
+<text class="cell" x="318" y="462">اور SLOs ناپنے والی اخراجی پرچیاں</text>
+</g><text class="wm" x="12" y="534" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
