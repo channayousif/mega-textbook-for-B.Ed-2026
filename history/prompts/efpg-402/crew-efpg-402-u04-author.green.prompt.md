@@ -1,7 +1,7 @@
 ---
 id: crew-efpg-402-u04-author
 title: crew author EFPG-402 unit 4
-stage: green
+stage: misc
 date: 2026-11-27
 surface: agent
 model: agy2
@@ -16,59 +16,59 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-4/efpg-402/unit-04/index.mdx
-  - docs/semester-4/efpg-402/unit-04/topic-01.mdx
-  - docs/semester-4/efpg-402/unit-04/topic-02.mdx
-  - docs/semester-4/efpg-402/unit-04/topic-03.mdx
-  - docs/semester-4/efpg-402/unit-04/topic-04.mdx
-  - docs/semester-4/efpg-402/unit-04/topic-05.mdx
-  - docs/semester-4/efpg-402/unit-04/unit-assessment.mdx
-  - history/prompts/efpg-402/crew-efpg-402-u04-author.green.prompt.md
-  - specs/content/efpg-402/concepts/unit-04.md
-  - specs/content/efpg-402/coverage/unit-04.md
-  - specs/content/efpg-402/figures/unit-04.md
-  - specs/content/efpg-402/reviews/unit-04/G2/20261127T112054911Z-gates.json
-  - specs/content/efpg-402/reviews/unit-04/G2/20261127T112310784Z-gates.json
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-bloom-bands.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-concept-graph.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-depth-gate.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-docs-sync.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-figures.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-no-answer-keys.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-no-em-dash.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/validate-content.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-bloom-bands.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-concept-graph.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-depth-gate.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-docs-sync.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-figures.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-no-answer-keys.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-no-em-dash.txt
-  - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/validate-content.txt
-  - specs/content/efpg-402/sources/unit-04.md
-  - specs/content/efpg-402/tasks.md
-  - static/img/figures/efpg-402/unit-04/fig-U4-1.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-1.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-10.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-10.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-2.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-2.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-3.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-3.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-4.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-4.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-5.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-5.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-6.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-6.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-7.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-7.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-8.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-8.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-9.dark.svg
-  - static/img/figures/efpg-402/unit-04/fig-U4-9.svg
+ - docs/semester-4/efpg-402/unit-04/index.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-01.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-02.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-03.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-04.mdx
+ - docs/semester-4/efpg-402/unit-04/topic-05.mdx
+ - docs/semester-4/efpg-402/unit-04/unit-assessment.mdx
+ - history/prompts/efpg-402/crew-efpg-402-u04-author.green.prompt.md
+ - specs/content/efpg-402/concepts/unit-04.md
+ - specs/content/efpg-402/coverage/unit-04.md
+ - specs/content/efpg-402/figures/unit-04.md
+ - specs/content/efpg-402/reviews/unit-04/G2/20261127T112054911Z-gates.json
+ - specs/content/efpg-402/reviews/unit-04/G2/20261127T112310784Z-gates.json
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112054911Z/validate-content.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T112310784Z/validate-content.txt
+ - specs/content/efpg-402/sources/unit-04.md
+ - specs/content/efpg-402/tasks.md
+ - static/img/figures/efpg-402/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-1.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-10.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-10.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-2.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-2.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-3.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-3.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-4.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-4.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-5.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-5.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-6.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-6.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-7.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-7.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-8.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-8.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-9.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-9.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -102,23 +102,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored EFPG-402 Unit 4 English learning cycles, placed 10 schematic SVGs with dark twins passing text-geometry checks, and recorded G2 gate evidence with all 14 content gates passing.
+Authored EFPG-402 Unit 4 English learning cycles, placed 10 schematic SVGs with verified text geometry, and recorded passing G2 gate evidence across all 14 content gates.
 
 ## Outcome
 
 - Impact: author for EFPG-402 Unit 4 by agy2 (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 51 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFPG-402 Unit 4 English learning cycles, placed 10 schematic SVGs with dark twins passing text-geometry checks, and recorded G2 gate evidence with all 14 content gates passing.
+- Shipped / changed: Authored EFPG-402 Unit 4 English learning cycles, placed 10 schematic SVGs with verified text geometry, and recorded passing G2 gate evidence across all 14 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu mirror job (G4) will need to translate the 10 placed SVGs (.ur.svg twins) and unit prose; G3 English review remains open for independent review.
+  - Urdu mirror job (G4) will need to localize the 10 placed SVGs (.ur.svg pairs) and translate the seven unit files.
+  - Independent qualified G3 English content review remains open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
