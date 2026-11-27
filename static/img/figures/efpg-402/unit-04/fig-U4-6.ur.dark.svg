@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" direction="rtl"><title id="t">گھریلو اشیاء سے بنی پانچ کم خرچ تدریسی معاونات کا جدول</title><desc id="d">ری سائیکل شدہ اشیاء سے تیار کردہ پانچ کم خرچ تدریسی معاونات اور ان کے ذریعے پڑھائے جانے والے سائنسی تصورات کی تفصیل۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="610" y1="24" x2="610" y2="364"/>
+<line class="grid" x1="350" y1="24" x2="350" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="740" y="49">تدریسی معاون</text>
+<text class="sh" x="596" y="49">روزمرہ استعمال کی اشیاء</text>
+<text class="sh" x="334" y="49">سائنسی تصور (گریڈ 4 تا 8)</text>
+
+<text class="sh" x="740" y="99">پھیپھڑوں کا ماڈل</text>
+<text class="cell" x="596" y="91">پلاسٹک بوتل، غبارے، اسٹرا،</text>
+<text class="cell" x="596" y="108">ربڑ کی شیٹ، چپکنے والی ٹیپ</text>
+<text class="cell" x="334" y="91">سانس کے دوران ڈایافرام کی حرکت اور</text>
+<text class="cell" x="334" y="108">پھیپھڑوں میں ہوا کے دباؤ کی تبدیلیاں</text>
+
+<text class="sh" x="740" y="159">برقی سرکٹ ٹیسٹر</text>
+<text class="cell" x="596" y="151">ڈرائی سیل، ٹارچ کا بلب، تار،</text>
+<text class="cell" x="596" y="168">پیپر کلپس، گتے کی پٹی</text>
+<text class="cell" x="334" y="151">بند برقی سرکٹ اور مختلف روزمرہ</text>
+<text class="cell" x="334" y="168">اشیاء کی برقی موصلیت کی جانچ</text>
+
+<text class="sh" x="740" y="219">پن ہول کیمرہ</text>
+<text class="cell" x="596" y="211">جوتوں کا گتے کا ڈبہ، ٹریسنگ پیپر،</text>
+<text class="cell" x="596" y="228">ایلومینیم فوائل، باریک پن</text>
+<text class="cell" x="334" y="211">روشنی کی خطِ مستقیم میں اشاعت اور</text>
+<text class="cell" x="334" y="228">الٹے حقیقی عکس کی تشکیل کا مشاہدہ</text>
+
+<text class="sh" x="740" y="279">واٹر فلٹر</text>
+<text class="cell" x="596" y="271">پلاسٹک بوتل، سوتی کپڑا، ریت،</text>
+<text class="cell" x="596" y="288">چھوٹی بجری، لکڑی کا کوئلہ</text>
+<text class="cell" x="334" y="271">پانی کی صفائی میں مکینیکل فلٹریشن</text>
+<text class="cell" x="334" y="288">اور سطحی جذب (adsorption) کا عمل</text>
+
+<text class="sh" x="740" y="339">کثافت کا کالم</text>
+<text class="cell" x="596" y="331">شیشے کا جار، پکانے کا تیل،</text>
+<text class="cell" x="596" y="348">رنگین پانی، شہد، چھوٹا پتھر</text>
+<text class="cell" x="334" y="331">مختلف مائعات کے درمیان کثافت کا فرق</text>
+<text class="cell" x="334" y="348">اور ٹھوس اشیاء کے تیرنے اور ڈوبنے کا اصول</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="395">بنیادی سائنسی تصورات سکھانے کے لیے گھریلو اشیاء سے تیار کردہ کم خرچ تدریسی معاونات۔</text>
+</g><text class="wm" x="12" y="420" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

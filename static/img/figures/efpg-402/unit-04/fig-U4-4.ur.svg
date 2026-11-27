@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" direction="rtl"><title id="t">گریویٹی فلٹریشن کے سیٹ اپ کا وضاحتی خاکہ</title><desc id="d">اسکول لیبارٹری کے بنیادی فلٹریشن سیٹ اپ کا لیبل شدہ خاکہ جس میں اسٹینڈ، کیف، فلٹر پیپر اور بیکر دکھایا گیا ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="460"/><g id="layer-regions">
+<rect class="panel" x="440" y="370" width="160" height="20" rx="4"/>
+<line class="stroke" x1="580" y1="370" x2="580" y2="40"/>
+<line class="stroke" x1="580" y1="180" x2="510" y2="180"/>
+<circle class="panel" cx="510" cy="180" r="14"/>
+<polygon class="panel-a" points="550,170 470,170 500,230 500,280 520,280 520,230"/>
+<polygon class="plain" points="540,170 480,170 510,220"/>
+<polygon class="panel-b" points="550,270 470,270 475,370 545,370"/>
+<line class="stroke" x1="450" y1="80" x2="510" y2="175"/>
+</g><g id="layer-edges">
+<line class="dash" x1="300" y1="90" x2="470" y2="110" marker-end="url(#arrow)"/>
+<line class="dash" x1="300" y1="150" x2="485" y2="178" marker-end="url(#arrow)"/>
+<line class="dash" x1="300" y1="200" x2="490" y2="210" marker-end="url(#arrow)"/>
+<line class="dash" x1="300" y1="260" x2="575" y2="150" marker-end="url(#arrow)"/>
+<line class="dash" x1="300" y1="320" x2="490" y2="330" marker-end="url(#arrow)"/>
+<line class="dash" x1="300" y1="375" x2="520" y2="380" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<rect class="panel-a" x="40" y="70" width="260" height="42" rx="6"/><text class="sh" x="285" y="96">شیشے کی ہلانے والی سلاخ</text>
+<rect class="panel-a" x="40" y="128" width="260" height="42" rx="6"/><text class="sh" x="285" y="154">تہہ شدہ فلٹر پیپر (مخروطی)</text>
+<rect class="panel-a" x="40" y="184" width="260" height="42" rx="6"/><text class="sh" x="285" y="210">شیشے کی کیف (فینل)</text>
+<rect class="panel-a" x="40" y="240" width="260" height="42" rx="6"/><text class="sh" x="285" y="266">ریٹارٹ اسٹینڈ اور رنگ کلیمپ</text>
+<rect class="panel-a" x="40" y="298" width="260" height="42" rx="6"/><text class="sh" x="285" y="324">صاف فلٹریٹ جمع کرنے والا بیکر</text>
+<rect class="panel-a" x="40" y="356" width="260" height="42" rx="6"/><text class="sh" x="285" y="382">وزنی مستحکم لوہے کی بنیاد</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="430">گریڈ 6 تا 8 میں مائع سے غیر حل پذیر ٹھوس الگ کرنے کے لیے معیاری گریویٹی فلٹریشن اسمبلی۔</text>
+</g><text class="wm" x="12" y="445" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

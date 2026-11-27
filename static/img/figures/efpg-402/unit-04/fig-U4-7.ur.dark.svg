@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" direction="rtl"><title id="t">سائنس تدریس میں آئی سی ٹی ٹولز اور آف لائن متبادلات کا جدول</title><desc id="d">سائنس کی تدریس کے ڈیجیٹل آئی سی ٹی ٹولز اور محدود بجلی یا انٹرنیٹ والے اسکولوں کے لیے آف لائن متبادلات۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="64"/>
+<rect class="plain" x="24" y="128" width="732" height="64"/>
+<rect class="panel" x="24" y="192" width="732" height="64"/>
+<rect class="plain" x="24" y="256" width="732" height="64"/>
+</g><g id="layer-edges">
+<line class="grid" x1="620" y1="24" x2="620" y2="320"/>
+<line class="grid" x1="350" y1="24" x2="350" y2="320"/>
+</g><g id="layer-nodes">
+<text class="sh" x="740" y="49">ڈیجیٹل ٹول</text>
+<text class="sh" x="606" y="49">تدریسی افادیت</text>
+<text class="sh" x="334" y="49">آف لائن متبادل</text>
+
+<text class="sh" x="740" y="96">سمولیشنز</text>
+<text class="cell" x="740" y="113">(جیسے PhET)</text>
+<text class="cell" x="606" y="93">غیر مرئی متغیرات کی محفوظ جانچ؛</text>
+<text class="cell" x="606" y="110">خردبینی ذرات کا بصری مشاہدہ</text>
+<text class="cell" x="334" y="93">طلبہ کا حرکی کردار (role-play) اور</text>
+<text class="cell" x="334" y="110">بلیک بورڈ پر علامتی ترتیب</text>
+
+<text class="sh" x="740" y="160">ویڈیو کلپس</text>
+<text class="cell" x="740" y="177">(خان اکیڈمی)</text>
+<text class="cell" x="606" y="157">خطرناک، مہنگے، نایاب یا شدید</text>
+<text class="cell" x="606" y="174">صنعتی و قدرتی مظاہر دکھانا</text>
+<text class="cell" x="334" y="157">محفوظ گھریلو اشیاء کا استعمال کرتے ہوئے</text>
+<text class="cell" x="334" y="174">استاد کا محتاط عملی مظاہرہ</text>
+
+<text class="sh" x="740" y="224">ڈیٹا لاگرز</text>
+<text class="cell" x="740" y="241">(ڈیجیٹل سینسرز)</text>
+<text class="cell" x="606" y="221">مسلسل حقیقی وقت کا ڈیٹا ریکارڈ کرنا</text>
+<text class="cell" x="606" y="238">اور فوری طور پر گراف بنانا</text>
+<text class="cell" x="334" y="221">طلبہ کے جوڑوں میں اسٹاپ واچ کا استعمال</text>
+<text class="cell" x="334" y="238">اور کاغذ پر ہاتھ سے گراف بنانا</text>
+
+<text class="sh" x="740" y="288">موبائل ایپس</text>
+<text class="cell" x="740" y="305">(انواع کی شناخت)</text>
+<text class="cell" x="606" y="285">فوری سائنسی درجہ بندی اور</text>
+<text class="cell" x="606" y="302">حوالہ جاتی تصاویر تک رسائی</text>
+<text class="cell" x="334" y="285">پودوں اور حشرات کے پرنٹ شدہ چارٹس</text>
+<text class="cell" x="334" y="302">اور دو شاخہ شناختی کنجیاں</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="355">برابری پر مبنی تدریسی متبادل جو بجلی یا انٹرنیٹ کی بندش کے دوران بھی سائنسی تعلیم جاری رکھتے ہیں۔</text>
+</g><text class="wm" x="12" y="380" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
