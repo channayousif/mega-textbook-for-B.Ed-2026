@@ -39,3 +39,6 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 3 | G6 assets | ✅ | auto:gates | Eight schematic SVGs (fig-U3-1 to fig-U3-8), banner fig-U3-9 and four topic illustrations (fig-U3-10 to fig-U3-13) placed |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 2 | G3 en-review | ✅ | CMY | review:specs/content/efpc-411/reviews/unit-02/G3/20261127T192751Z-g3-desk-74a8990f.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efpc-411/reviews/unit-01/G3/20261127T192818Z-g3-desk-b2d611b9.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efpc-411/reviews/unit-03/G3/20261127T192818Z-g3-desk-f6c9628b.json |
