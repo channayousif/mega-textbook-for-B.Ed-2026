@@ -1,15 +1,15 @@
 ---
 id: crew-efpc-411-u03-author
 title: crew author EFPC-411 unit 3
-stage: green
+stage: misc
 date: 2026-11-27
 surface: agent
-model: agy
+model: agy2
 feature: efpc-411
 branch: crew/efpc-411-u03-author
 user: crew
 command: crew author
-labels: ["crew", "agy", "author"]
+labels: ["crew", "agy2", "author"]
 links:
   spec: specs/content/efpc-411/content-spec.md
   ticket: null
@@ -88,26 +88,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFPC-411 Unit 3 with placed schematic figures, governance artifacts, and G2 gate evidence.
+Authored EFPC-411 Unit 3 English draft and governance artifacts, created eight placed schematic figures with dark variants, and verified all content gates and G2 evidence.
 
 ## Outcome
 
-- Impact: author for EFPC-411 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the job.
-- Files: 39 file(s), listed above.
+- Impact: author for EFPC-411 Unit 3 by agy2 (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 40 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFPC-411 Unit 3 with eight placed schematic SVGs and derived dark variants, complete governance artifacts, and G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (merge when CI is green).
+- Shipped / changed: Authored EFPC-411 Unit 3 English draft and governance artifacts, created eight placed schematic figures with dark variants, and verified all content gates and G2 evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 3 English draft is ready for independent G3 review; all eight schematic figures are placed.
-- Paperclip issues affected: none (work tracked by the crew board).
+  - Unit 3 English draft is complete with all eight schematic figures placed and verified; ready for independent G3 English review and subsequent G4 Urdu translation.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
