@@ -102,7 +102,12 @@ export function checkStudio(root = ROOT) {
     const unit = Number(file.match(/media-unit-(\d{2})\.json$/)[1]);
     if (l.course !== course || l.unit !== unit) findings.push(`${rel(file)}: course/unit (${l.course}/${l.unit}) do not match the path`);
     const POST_UPLOAD = ['uploaded-private', 'qa3-pass', 'approved', 'public', 'placed'];
-    for (const i of l.items) if (POST_UPLOAD.includes(i.state) && !i.youtube_id) findings.push(`${rel(file)}: ${i.key} is ${i.state} without a youtube_id`);
+    for (const i of l.items) {
+      const doc = ['mindmap', 'studyguide'].includes(i.kind);
+      if (!doc && POST_UPLOAD.includes(i.state) && !i.youtube_id) findings.push(`${rel(file)}: ${i.key} is ${i.state} without a youtube_id`);
+      if (doc && i.youtube_id) findings.push(`${rel(file)}: ${i.key} is a ${i.kind} with a youtube_id`);
+      if (doc && i.state === 'placed' && !(i.asset_path && existsSync(join(root, 'static', i.asset_path)))) findings.push(`${rel(file)}: ${i.key} is placed but ${i.asset_path ?? 'its asset_path'} is not in static/`);
+    }
   }
   // studio-teaser (D-2026-0082): every teaser script passes QG0; the ledger has a known state and a
   // YouTube id once uploaded.
