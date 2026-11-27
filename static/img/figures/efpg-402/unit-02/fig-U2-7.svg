@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of six criteria for evaluating a science textbook</title><desc id="d">Table listing six criteria for evaluating a science textbook: accuracy, curriculum alignment, language, activities, illustrations and inclusivity, each with what to look for and why it matters.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="54"/>
+<rect class="plain" x="24" y="118" width="732" height="54"/>
+<rect class="panel" x="24" y="172" width="732" height="54"/>
+<rect class="plain" x="24" y="226" width="732" height="54"/>
+<rect class="panel" x="24" y="280" width="732" height="54"/>
+<rect class="plain" x="24" y="334" width="732" height="54"/>
+</g><g id="layer-edges">
+<line class="grid" x1="160" y1="24" x2="160" y2="388"/>
+<line class="grid" x1="470" y1="24" x2="470" y2="388"/>
+</g><g id="layer-nodes">
+<text class="sh" x="34" y="49">Criterion</text>
+<text class="sh" x="172" y="49">What to look for</text>
+<text class="sh" x="482" y="49">Why it matters</text>
+
+<text class="sh" x="34" y="96">Accuracy</text>
+<text class="cell" x="172" y="96">Facts match current science and NCP SLOs</text>
+<text class="cell" x="482" y="96">Wrong facts teach wrong science</text>
+
+<text class="sh" x="34" y="142">Curriculum</text>
+<text class="sh" x="34" y="159">alignment</text>
+<text class="cell" x="172" y="142">Chapter topics and activities cover</text>
+<text class="cell" x="172" y="159">NCP SLOs for that specific grade</text>
+<text class="cell" x="482" y="150">Missing SLOs leaves learning gaps</text>
+
+<text class="sh" x="34" y="204">Language</text>
+<text class="cell" x="172" y="196">Clear, age-appropriate wording; key</text>
+<text class="cell" x="172" y="213">terms defined; no confusing jargon</text>
+<text class="cell" x="482" y="204">Difficult language blocks learning</text>
+
+<text class="sh" x="34" y="258">Activities</text>
+<text class="cell" x="172" y="250">Hands-on experiments using</text>
+<text class="cell" x="172" y="267">low-cost and available materials</text>
+<text class="cell" x="482" y="258">Science is learned by doing</text>
+
+<text class="sh" x="34" y="312">Illustrations</text>
+<text class="cell" x="172" y="304">Diagrams are clear, labelled and</text>
+<text class="cell" x="172" y="321">culturally appropriate for Pakistan</text>
+<text class="cell" x="482" y="312">Good visuals support understanding</text>
+
+<text class="sh" x="34" y="366">Inclusivity</text>
+<text class="cell" x="172" y="358">Shows girls, boys, rural and urban</text>
+<text class="cell" x="172" y="375">settings without bias or stereotypes</text>
+<text class="cell" x="482" y="366">Pupils see themselves in science</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

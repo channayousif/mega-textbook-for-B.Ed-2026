@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 390" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table comparing topical, concentric and spiral curriculum organisation</title><desc id="d">Table comparing topical, concentric and spiral organisation of curriculum content on five features, showing that the spiral approach reduces forgetting and matches the NCP 2022-23 progression grid.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="390"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="56"/>
+<rect class="plain" x="24" y="120" width="732" height="56"/>
+<rect class="panel" x="24" y="176" width="732" height="56"/>
+<rect class="plain" x="24" y="232" width="732" height="56"/>
+<rect class="panel" x="24" y="288" width="732" height="56"/>
+</g><g id="layer-edges">
+<line class="grid" x1="150" y1="24" x2="150" y2="344"/>
+<line class="grid" x1="310" y1="24" x2="310" y2="344"/>
+<line class="grid" x1="490" y1="24" x2="490" y2="344"/>
+</g><g id="layer-nodes">
+<text class="sh" x="34" y="49">Feature</text>
+<text class="sh" x="162" y="49">Topical</text>
+<text class="sh" x="322" y="49">Concentric</text>
+<text class="sh" x="502" y="49">Spiral</text>
+
+<text class="sh" x="34" y="88">How content</text>
+<text class="sh" x="34" y="105">appears</text>
+<text class="cell" x="162" y="88">Each topic taught</text>
+<text class="cell" x="162" y="105">once at one grade</text>
+<text class="cell" x="322" y="88">Topics revisited each</text>
+<text class="cell" x="322" y="105">year with more detail</text>
+<text class="cell" x="502" y="88">Core concepts revisited with new</text>
+<text class="cell" x="502" y="105">depth, connections and applications</text>
+
+<text class="sh" x="34" y="152">Revisiting</text>
+<text class="cell" x="162" y="152">None</text>
+<text class="cell" x="322" y="144">Yes, but depth may</text>
+<text class="cell" x="322" y="161">not grow</text>
+<text class="cell" x="502" y="144">Yes, with planned depth increase</text>
+<text class="cell" x="502" y="161">at each grade cycle</text>
+
+<text class="sh" x="34" y="200">Risk of</text>
+<text class="sh" x="34" y="217">forgetting</text>
+<text class="cell" x="162" y="208">High - no return</text>
+<text class="cell" x="322" y="208">Lower</text>
+<text class="cell" x="502" y="208">Lowest - regular reinforcement</text>
+
+<text class="sh" x="34" y="256">Example:</text>
+<text class="sh" x="34" y="273">matter</text>
+<text class="cell" x="162" y="256">All of matter in</text>
+<text class="cell" x="162" y="273">Grade 6 only</text>
+<text class="cell" x="322" y="256">Matter in Grades 4, 6, 8</text>
+<text class="cell" x="322" y="273">with more facts added</text>
+<text class="cell" x="502" y="256">Matter in Grades 4, 6 and 8:</text>
+<text class="cell" x="502" y="273">particle model added when ready</text>
+
+<text class="sh" x="34" y="312">Used in NCP?</text>
+<text class="cell" x="162" y="320">No</text>
+<text class="cell" x="322" y="320">Partly</text>
+<text class="cell" x="502" y="320">Yes - the progression grid</text>
+</g><text class="wm" x="768" y="375" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

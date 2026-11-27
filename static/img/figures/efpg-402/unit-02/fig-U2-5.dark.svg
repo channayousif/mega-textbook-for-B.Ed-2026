@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Spiral diagram of the concept of matter across grades</title><desc id="d">Spiral diagram showing the concept of matter revisited in Grades 4, 6 and 8 with growing depth: from classifying objects by senses, to the particle model, to using the model to explain changes of state and diffusion.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-edges">
+<path class="stroke" d="M 80,345 C 35,300 35,240 80,205" marker-end="url(#arrow)"/>
+<path class="stroke" d="M 80,205 C 35,160 35,100 80,65" marker-end="url(#arrow)"/>
+<line class="stroke" x1="650" y1="360" x2="650" y2="70" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="box-gr8"><rect class="panel-a" x="90" y="30" width="530" height="74" rx="8"/><text class="h" x="106" y="56">Grade 8: Model applied to explain phenomena</text><text class="cell" x="106" y="77">Use particle model to explain changes of state, gas pressure and diffusion;</text><text class="cell" x="106" y="94">relate energy changes to movement of particles during heating and cooling</text></g>
+<g id="box-gr6"><rect class="panel-a" x="90" y="165" width="530" height="74" rx="8"/><text class="h" x="106" y="191">Grade 6: Particle model introduced</text><text class="cell" x="106" y="212">Explain states of matter using the particle model: particles closely packed</text><text class="cell" x="106" y="229">(solid), sliding past each other (liquid), and moving freely (gas)</text></g>
+<g id="box-gr4"><rect class="panel-a" x="90" y="300" width="530" height="74" rx="8"/><text class="h" x="106" y="326">Grade 4: Direct observation and sensory classification</text><text class="cell" x="106" y="347">Classify everyday objects as solid, liquid or gas using the senses;</text><text class="cell" x="106" y="364">observe that ice, liquid water and steam are forms of the same substance</text></g>
+</g><g id="layer-labels">
+<text class="small" x="660" y="210">same concept,</text>
+<text class="small" x="660" y="228">growing depth</text>
+<text class="small" x="24" y="415">Bruner's spiral curriculum: returning to core concepts with planned increase in depth.</text>
+</g><text class="wm" x="768" y="425" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

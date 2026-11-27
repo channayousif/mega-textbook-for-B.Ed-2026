@@ -12,8 +12,9 @@ Checked on 2026-11-27. All prose is original; quotations are under 15 words and 
 
 ## Unverifiable sources
 
-Bound excerpts could not be committed for these print-only monographs. They are listed here so `check:depth-gate` and reviewers see the limitation rather than infer it from silence. No claim in the unit rests on them alone: each sub-topic they are mapped to is also grounded in a source with a bound excerpt or a verifiable open-access reference.
+Bound excerpts could not be committed for these print-only monographs or large provincial documents. They are listed here so `check:depth-gate` and reviewers see the limitation rather than infer it from silence. No claim in the unit rests on them alone: each sub-topic they are mapped to is also grounded in a source with a bound excerpt or a verifiable open-access reference.
 
+- dcar-science-4-8: Official curriculum document (Directorate of Curriculum, Assessment and Research, Sindh). Official PDF verified HTTP 200 on 2026-11-18; bound excerpt not committed on this host. Cited for U2-02 for Sindh provincial curriculum adoption; U2-02 is also grounded in the bound excerpt for ncp-science-2022.
 - kochhar-science: Print monograph (Sterling Publishers). Not found in Open Library; title-level only (`D-2026-0001`). Cited for U2-01, U2-03, U2-04 and U2-05 as a methods text on curriculum principles, content organisation, textbook evaluation and correlation.
 - aggarwal-science: Print monograph (Vikas Publishing House). Not found in Open Library (the author's *Teaching of Political Science and Civics* is there); title-level only (`D-2026-0001`). Cited for U2-01, U2-03, U2-04 and U2-05 on the same topics.
 - bruner-1960: Print monograph (Harvard University Press, 1960). Open Library OL5856628M checked 2026-11-27; widely cited but no full text on this host. The spiral curriculum idea is taught from the concept and the well-known quotation, not from a bound excerpt.
