@@ -34,7 +34,7 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-03/G2/20261127T031939895Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
-| Unit 3 | G4 ur-translation | ▢ | | Awaiting independent English review and Urdu translation |
+| Unit 3 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and eight localised schematic SVGs with dark twins; translator handoff: specs/content/efpc-411/reviews/unit-03/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 3 | G6 assets | ▣ | | Eight schematic SVGs (fig-U3-1 to fig-U3-8) placed |
 | Unit 3 | G7 publish | ▢ | | No publication or deployment performed by this job |
