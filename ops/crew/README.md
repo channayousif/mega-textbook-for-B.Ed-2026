@@ -90,9 +90,11 @@ is healthy, the review waits while every other kind of job keeps flowing.
    own run passes, so main moved on before any run finished and production stopped deploying.
    `CREW_BATCH_EVERY_MIN` changes the interval. A batch PR closed by hand holds its jobs
    (`blocked`); a batch still red after two CI fixes stops batching until the lead acts.
-6. **PRs**: green CI leads to auto-merge (main auto-deploys). The merge uses `gh pr merge --admin`
-   because every PR comes from the owner account, which cannot approve its own PR. The owner ruled
-   "auto-merge when CI green" on 2026-10-17, so CI is the review gate. Red CI queues a fix job on the
+6. **PRs**: green CI leads to auto-merge (main auto-deploys). Every PR comes from the owner
+   account, which cannot approve its own PR. With the reviewer account configured (see "Reviewer
+   account" below) the crew approves the green PR as that account and merges it without the admin
+   bypass, pinned to the approved head; without it, the merge still uses `gh pr merge --admin`. The
+   owner ruled "auto-merge when CI green" on 2026-10-17, so CI is the review gate. Red CI queues a fix job on the
    same branch. A PR that touches a protected path (style guide, constitution, ADRs, scripts, catalog,
    `.github/`, an approved content-spec or intake) is never auto-merged: the owner is asked.
 7. **launch**: up to 3 jobs run at once, one per unit (a unit with `ready` or `batched` work waits for it to merge), and none start while the host has under
@@ -127,6 +129,26 @@ the files and prints the commit without pushing or touching the ledger.
 After a salvage PR merges, the tick deletes the Paperclip branches it replaced (its
 `supersedes` PRs' head branches and its `base`), unless an open PR still uses one
 (owner ruling, 2026-10-17). Each job does this once and logs `retired superseded branches`.
+
+## Reviewer account (owner ruling 2026-11-27)
+
+Only the owner's account works on the repo, so the `main` ruleset's "1 approving review" could only
+be met with `gh pr merge --admin`, and that bypass also let PRs with a red `e2e` onto main (#875/#876,
+#894/#900). A second GitHub user, driven by the crew (`scripts/crew/reviewer.mjs`), gives approvals:
+
+- **Crew PRs** (batches, maintenance): approved on the crew's own checks once CI is green, then
+  merged with `--match-head-commit` and no `--admin`. The approval text says no human read the diff.
+- **Other PRs** (owner sessions): each green, non-draft head gets one `pr_review` job on a model
+  family other than Claude (`agy`, `agy2`, `codex`), read-only, ending in `CREW-VERDICT`. A pass is
+  posted as the reviewer account's approval, a revise as its review comment. The owner still merges.
+  A new push gets a new review; three per PR at most.
+- **Setup (owner)**: create the account with 2FA, invite it with Write access, and as that account
+  make a fine-grained token for this repo only (Pull requests read/write, Contents read). Put
+  `REVIEWER_GH_TOKEN=<token>` in `~/.crew/mega-book/reviewer.env` (mode 600). The crew reads that
+  file only for its own `gh` calls; workers never inherit it. No file: everything above is off.
+- **Then**: the `main` ruleset drops its admin bypass and requires the `changes`, `build`,
+  `figure-geometry`, `rls` and `e2e` checks (skipped counts as passing, so content-only PRs still
+  merge).
 
 ## Weekly maintenance (Sunday 02:00 PKT)
 

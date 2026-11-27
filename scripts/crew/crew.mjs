@@ -49,6 +49,7 @@ import { update as updateLedger } from '../media/ledger.mjs';
 import { activeQuota as activeMediaQuota, recordQuota as recordMediaQuota } from '../media/producers/index.mjs';
 import { briefRules } from './brief.mjs';
 import { closePrDecisions, closeLandedDecisions } from './decisions.mjs';
+import { readReviewerToken, reviewerEnv, mergeArgs, approveArgs, commentArgs, crewApprovalBody, prsToReview, prReviewJob, prReviewAction, prReviewBody } from './reviewer.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -63,6 +64,8 @@ const PUSH_SETTLE_MS = 3 * 60e3;
 // Self-maintenance stages sit just after fixes: a handful a week, so the corpus queue cannot starve them.
 /** Self-maintenance (scripts/crew/maintenance.mjs) and intelligence (scripts/crew/intel.mjs) stages. */
 const isSelf = (stage) => /^(maint|intel)_/.test(stage);
+/** Stages that judge a PR and commit nothing; they end with a CREW-VERDICT line. */
+const REVIEW_STAGES = new Set(['maint_review', 'pr_review']);
 const INTEL_DIR = join(STATE_DIR, 'intel');
 /** A PR touching any of these is never auto-merged; the owner is asked instead. */
 const PROTECTED = [/^specs\/content\/style-guide\.md$/, /^\.specify\//, /^history\/adr\//, /^\.github\//,
@@ -75,8 +78,8 @@ const flag = (name) => args.includes(`--${name}`);
 const opt = (name) => { const i = args.indexOf(`--${name}`); return i >= 0 ? args[i + 1] : undefined; };
 const DRY = flag('dry-run');
 
-function sh(cmd, cmdArgs, cwd = ROOT, { allowFail = false } = {}) {
-  const r = spawnSync(cmd, cmdArgs, { cwd, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+function sh(cmd, cmdArgs, cwd = ROOT, { allowFail = false, env } = {}) {
+  const r = spawnSync(cmd, cmdArgs, { cwd, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, ...(env ? { env } : {}) });
   if (r.status !== 0 && !allowFail) throw new Error(`${cmd} ${cmdArgs.join(' ')}: ${(r.stderr || r.stdout).trim().slice(-800)}`);
   return { ok: r.status === 0, out: (r.stdout || '').trim(), err: (r.stderr || '').trim() };
 }
@@ -575,13 +578,14 @@ export const STAGE_TASK = {
   studio_media: mediaTask,
   studio_publish: mediaTask,
   social_roundup: socialTask,
+  pr_review: (j) => `Act as the INDEPENDENT reviewer of PR #${j.pr} (branch \`${j.prBranch}\`, head ${String(j.headSha).slice(0, 7)}). Another model family wrote it and its CI is green. Read AGENTS.md, the PR description below and \`git diff origin/main...HEAD\`. Judge correctness (bugs, broken behaviour, missing or wrong tests), AGENTS.md rules (no em dash, PHR present, no secrets, smallest viable diff) and whether it does what its description says. Pass only what you would approve as a careful maintainer; small style preferences are not a reason to revise. Change nothing.\n\n${j.task}`,
   maint_review: (j) => `Act as the INDEPENDENT reviewer of maintenance PR #${j.pr} (weekly-maintenance skill, "Review"). Another model family wrote it. Read the task it answers and \`git diff origin/main...HEAD\`, check every acceptance item and the rules, and change nothing.\n\n${j.task}`,
 };
 
 /** The rules line every brief opens with; self-maintenance may touch what content jobs must not. */
 /** How a job proves it is finished. */
 function doneWhen(j, self) {
-  if (j.stage === 'maint_review') return `1. You changed nothing and committed nothing.
+  if (REVIEW_STAGES.has(j.stage)) return `1. You changed nothing and committed nothing.
 2. Your final output ends with one line: \`CREW-VERDICT: pass\` or \`CREW-VERDICT: revise - <what must change, specifically>\`.
 3. Just before it, one line \`CREW-SUMMARY: <your verdict in one sentence>\`.`;
   const handoff = `4. Optional, just before it: up to 3 lines \`CREW-HANDOFF: <note>\` for facts the next job needs
@@ -1015,7 +1019,7 @@ function finishReview(j, logText) {
 }
 
 function finishSuccess(board, j, logText) {
-  if (j.stage === 'maint_review') return finishReview(j, logText);
+  if (REVIEW_STAGES.has(j.stage)) return finishReview(j, logText);
   const wt = j.worktree;
   if (sh('git', ['status', '--porcelain'], wt).out.replace(/^.. (\.crew|node_modules).*$/gm, '').trim()) {
     excludeCrewFiles(wt);
@@ -1144,6 +1148,7 @@ function reapOne(board, health, events, j) {
   if (result.ok) {
     health[j.worker] = { state: 'ok', strikes: 0 };
     if (j.stage === 'maint_review') { recordReview(board, j, result.verdict, result.summary, events); return; }
+    if (j.stage === 'pr_review') { recordPrReview(board, j, result.verdict, result.summary, events); return; }
     if (j.parent) {
       // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
       j.status = 'merged';
@@ -1423,10 +1428,45 @@ function landed(board, j, how) {
   }
 }
 
+/**
+ * A finished independent review of a non-crew PR (stage pr_review): the reviewer account approves a
+ * pass on the head that was reviewed, or posts the requested changes as a review comment. The owner
+ * (or their session) still merges; the ruleset then sees a real approval and green CI.
+ */
+function recordPrReview(board, j, verdict, summary, events) {
+  j.status = 'merged';
+  log(board, j, `verdict ${verdict.verdict} on ${j.worker}`);
+  if (j.worktree && existsSync(j.worktree)) sh('git', ['worktree', 'remove', '--force', j.worktree], ROOT, { allowFail: true });
+  sh('git', ['branch', '-D', j.branch], ROOT, { allowFail: true });
+  const token = readReviewerToken(STATE_DIR);
+  if (!token) { log(board, j, 'no reviewer account configured; verdict kept on the board only'); return; }
+  const v = sh('gh', ['pr', 'view', String(j.pr), '--json', 'state,headRefOid'], ROOT, { allowFail: true });
+  const pr = v.ok ? JSON.parse(v.out) : null;
+  const action = prReviewAction(verdict, pr, j.headSha);
+  if (action === 'skip' || action === 'stale') { log(board, j, `not posted: PR ${action === 'stale' ? 'has a newer head' : 'is not open'}`); return; }
+  const body = prReviewBody(j, verdict, summary);
+  const args = action === 'approve' ? approveArgs(j.pr, body, j.headSha) : commentArgs(j.pr, body);
+  const r = sh('gh', args, ROOT, { allowFail: true, env: reviewerEnv(token) });
+  if (!r.ok) { events.push(`⚠️ reviewer account could not post its review on PR #${j.pr}: ${r.err.slice(0, 160)}`); return; }
+  events.push(action === 'approve' ? `👍 PR #${j.pr} approved by the reviewer account (${j.worker})` : `✋ PR #${j.pr}: the reviewer account asked for changes (${j.worker}): ${summary.slice(0, 160)}`);
+}
+
+/** Queue an independent review for each green, non-crew, non-draft PR head (reviewer account only). */
+function prReviewPhase(board, events) {
+  if (!readReviewerToken(STATE_DIR)) return;
+  const r = sh('gh', ['pr', 'list', '--state', 'open', '--limit', '50', '--json', 'number,title,body,headRefName,headRefOid,isDraft,statusCheckRollup'], ROOT, { allowFail: true });
+  if (!r.ok) return;
+  for (const pr of prsToReview(JSON.parse(r.out || '[]'), board, latestChecks)) {
+    if (DRY) { console.log(`[dry-run] would queue an independent review of PR #${pr.number}`); continue; }
+    board.jobs.push(prReviewJob(pr, now()));
+    events.push(`🔎 PR #${pr.number} is green: independent review queued`);
+  }
+}
+
 function managePrs(board, decisions, events) {
   const red = [];
   for (const j of board.jobs.filter((x) => x.status === 'pr_open' && x.prNumber)) {
-    const v = sh('gh', ['pr', 'view', String(j.prNumber), '--json', 'state,mergeable,statusCheckRollup,isDraft'], ROOT, { allowFail: true });
+    const v = sh('gh', ['pr', 'view', String(j.prNumber), '--json', 'state,mergeable,statusCheckRollup,isDraft,headRefOid'], ROOT, { allowFail: true });
     if (!v.ok) continue;
     const pr = JSON.parse(v.out);
     if (DRY && pr.state !== 'OPEN') { console.log(`[dry-run] PR #${j.prNumber} is ${pr.state.toLowerCase()}`); continue; }
@@ -1486,9 +1526,17 @@ function managePrs(board, decisions, events) {
       }
       continue;
     }
-    if (DRY) { console.log(`[dry-run] would merge PR #${j.prNumber}`); continue; }
+    // With the reviewer account (scripts/crew/reviewer.mjs) the PR is approved by it and merged
+    // without the admin bypass, pinned to the approved head; without it, the old --admin merge.
+    const token = readReviewerToken(STATE_DIR);
+    if (DRY) { console.log(`[dry-run] would ${token ? 'approve as the reviewer and ' : ''}merge PR #${j.prNumber}: gh ${mergeArgs(j.prNumber, { reviewer: !!token, headSha: pr.headRefOid }).join(' ')}`); continue; }
     if (pr.isDraft) sh('gh', ['pr', 'ready', String(j.prNumber)], ROOT, { allowFail: true });
-    const m = sh('gh', ['pr', 'merge', String(j.prNumber), '--merge', '--admin'], ROOT, { allowFail: true });
+    if (token) {
+      const a = sh('gh', approveArgs(j.prNumber, crewApprovalBody(j), pr.headRefOid), ROOT, { allowFail: true, env: reviewerEnv(token) });
+      if (!a.ok) { log(board, j, `reviewer approval failed: ${a.err.slice(0, 200)}`); events.push(`⚠️ reviewer account could not approve PR #${j.prNumber}: ${a.err.slice(0, 160)}`); continue; }
+    }
+    const m = sh('gh', mergeArgs(j.prNumber, { reviewer: !!token, headSha: pr.headRefOid }), ROOT, { allowFail: true });
+    if (!m.ok && token) log(board, j, `merge after approval failed: ${m.err.slice(0, 200)}`);
     if (m.ok) {
       noteClosedDecisions(closePrDecisions(decisions, j.prNumber, 'auto-merged (CI green)', now()), events);
       landed(board, j, 'auto-merged (CI green)');
@@ -1938,6 +1986,7 @@ function tick() {
     // A cooling worker becomes eligible again when its time passes; the next real job is the probe.
     for (const [w, h] of Object.entries(health)) if (h.state === 'cooling' && Date.parse(h.until) <= Date.now()) health[w] = { ...h, state: 'ok' };
     phase('prs', () => managePrs(board, decisions, events));
+    phase('pr-review', () => prReviewPhase(board, events));
     phase('retire', () => retireSuperseded(board, events));
     if (!control.paused) phase('launch', () => launchQueued(board, health, control, events));
     const eligible = Object.keys(WORKERS).filter((w) => !['down', 'cooling'].includes(health[w]?.state));

@@ -47,7 +47,9 @@ test('2026-W45 M1 removes only claude_crew from intel_distill', () => {
     'maint_docs': ['claude', 'agy_claude', 'agy2_claude', 'agy', 'agy2', 'codex', 'claude_crew'],
     'maint_adr': ['claude', 'agy_claude', 'agy2_claude', 'codex', 'agy', 'agy2'],
     'maint_skill': ['claude', 'agy_claude', 'agy2_claude', 'codex'],
-    'maint_review': ['agy', 'agy2', 'codex', 'claude', 'agy_claude', 'agy2_claude', 'claude_crew']
+    'maint_review': ['agy', 'agy2', 'codex', 'claude', 'agy_claude', 'agy2_claude', 'claude_crew'],
+    // Independent review of non-crew PRs for the reviewer account: never the anthropic family.
+    'pr_review': ['agy', 'agy2', 'codex'],
   };
   assert.deepEqual(Object.fromEntries(Object.entries(STAGES).map(([stage, { chain }]) => [stage, chain])), expected);
 });
