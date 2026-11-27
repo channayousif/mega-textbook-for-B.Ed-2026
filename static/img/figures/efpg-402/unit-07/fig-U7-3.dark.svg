@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Comparison of formative and summative assessment in science</title><desc id="d">Comparison table contrasting formative assessment and summative assessment across purpose, timing, nature of feedback, impact on instruction, and science classroom examples.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="66"/>
+<rect class="plain" x="24" y="130" width="732" height="66"/>
+<rect class="panel" x="24" y="196" width="732" height="66"/>
+<rect class="plain" x="24" y="262" width="732" height="66"/>
+</g><g id="layer-edges">
+<line class="grid" x1="160" y1="24" x2="160" y2="328"/>
+<line class="grid" x1="450" y1="24" x2="450" y2="328"/>
+</g><g id="layer-nodes">
+<text class="sh" x="34" y="49">Feature</text>
+<text class="sh" x="174" y="49">Formative (Assessment for Learning)</text>
+<text class="sh" x="464" y="49">Summative (Assessment of Learning)</text>
+
+<text class="sh" x="34" y="94">Primary Goal</text>
+<text class="cell" x="174" y="86">Improve learning, identify gaps, and</text>
+<text class="cell" x="174" y="104">adapt ongoing instructional pacing</text>
+<text class="cell" x="464" y="86">Certify achievement, assign formal</text>
+<text class="cell" x="464" y="104">grades, and evaluate program quality</text>
+
+<text class="sh" x="34" y="160">Timing</text>
+<text class="cell" x="174" y="152">Continuous throughout daily lessons</text>
+<text class="cell" x="174" y="170">and each phase of the inquiry cycle</text>
+<text class="cell" x="464" y="152">At the conclusion of a unit, school</text>
+<text class="cell" x="464" y="170">term, semester, or academic year</text>
+
+<text class="sh" x="34" y="226">Feedback Type</text>
+<text class="cell" x="174" y="218">Descriptive, non-punitive guidance</text>
+<text class="cell" x="174" y="236">explaining how to correct misconceptions</text>
+<text class="cell" x="464" y="218">Evaluative numerical marks, letter</text>
+<text class="cell" x="464" y="236">grades, or percentile rankings</text>
+
+<text class="sh" x="34" y="292">Class Example</text>
+<text class="cell" x="174" y="284">Hinge question on plant mass to</text>
+<text class="cell" x="174" y="302">check concepts before teaching food chains</text>
+<text class="cell" x="464" y="284">End-of-term 50-mark written test on</text>
+<text class="cell" x="464" y="302">living systems and chemical change</text>
+</g><g id="layer-labels">
+<text class="small" x="30" y="360">Contrasting formative and summative assessment in science instruction.</text>
+</g><text class="wm" x="768" y="380" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

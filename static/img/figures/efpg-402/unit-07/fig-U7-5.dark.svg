@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of science assessment tools and techniques</title><desc id="d">Table classifying science assessment tools and techniques, showing what each measures, appropriate learning domains, and practical classroom examples.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="54"/>
+<rect class="plain" x="24" y="118" width="732" height="54"/>
+<rect class="panel" x="24" y="172" width="732" height="54"/>
+<rect class="plain" x="24" y="226" width="732" height="54"/>
+<rect class="panel" x="24" y="280" width="732" height="54"/>
+</g><g id="layer-edges">
+<line class="grid" x1="160" y1="24" x2="160" y2="334"/>
+<line class="grid" x1="360" y1="24" x2="360" y2="334"/>
+<line class="grid" x1="560" y1="24" x2="560" y2="334"/>
+</g><g id="layer-nodes">
+<text class="sh" x="34" y="49">Tool</text>
+<text class="sh" x="174" y="49">Domain Measured</text>
+<text class="sh" x="374" y="49">Pedagogical Strength</text>
+<text class="sh" x="574" y="49">Science Application</text>
+
+<text class="sh" x="34" y="96">Written Test</text>
+<text class="cell" x="174" y="88">Concepts, recall, and</text>
+<text class="cell" x="174" y="105">analytical reasoning</text>
+<text class="cell" x="374" y="88">Standardized, wide sampling,</text>
+<text class="cell" x="374" y="105">efficient for large cohorts</text>
+<text class="cell" x="574" y="88">Unit achievement tests</text>
+<text class="cell" x="574" y="105">and board examinations</text>
+
+<text class="sh" x="34" y="150">Performance Task</text>
+<text class="cell" x="174" y="142">Manipulative lab skills</text>
+<text class="cell" x="174" y="159">and apparatus setup</text>
+<text class="cell" x="374" y="142">Direct authentic evidence</text>
+<text class="cell" x="374" y="159">of manual laboratory mastery</text>
+<text class="cell" x="574" y="142">Assessing filtration,</text>
+<text class="cell" x="574" y="159">titration, or circuit wiring</text>
+
+<text class="sh" x="34" y="204">Checklist</text>
+<text class="cell" x="174" y="196">Presence or absence of</text>
+<text class="cell" x="174" y="213">key procedure and safety</text>
+<text class="cell" x="374" y="196">Rapid recording, high scoring</text>
+<text class="cell" x="374" y="213">consistency across observers</text>
+<text class="cell" x="574" y="196">Monitoring burner safety</text>
+<text class="cell" x="574" y="213">and meniscus reading</text>
+
+<text class="sh" x="34" y="258">Analytic Rubric</text>
+<text class="cell" x="174" y="250">Inquiry process quality</text>
+<text class="cell" x="174" y="267">and data interpretation</text>
+<text class="cell" x="374" y="250">Explicit criteria descriptions,</text>
+<text class="cell" x="374" y="267">fair diagnostic grading</text>
+<text class="cell" x="574" y="250">Evaluating open investigation</text>
+<text class="cell" x="574" y="267">reports and experiments</text>
+
+<text class="sh" x="34" y="312">Science Portfolio</text>
+<text class="cell" x="174" y="304">Growth over time and</text>
+<text class="cell" x="174" y="321">reflective habits</text>
+<text class="cell" x="374" y="304">Longitudinal development,</text>
+<text class="cell" x="374" y="321">fosters self-regulation</text>
+<text class="cell" x="574" y="304">Cumulative project files</text>
+<text class="cell" x="574" y="321">and nature study logs</text>
+</g><g id="layer-labels">
+<text class="small" x="30" y="370">Classification of major assessment tools across science inquiry domains.</text>
+</g><text class="wm" x="768" y="380" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

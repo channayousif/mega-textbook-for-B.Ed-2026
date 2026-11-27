@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of specifications for a Grade 7 science examination</title><desc id="d">Table of specifications for a Grade 7 science unit showing content sub-topics mapped against cognitive levels from Remember to Apply and Analyze, detailing item counts and percentage weightings.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 14px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 12px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 11px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="52"/>
+<rect class="plain" x="24" y="116" width="732" height="52"/>
+<rect class="panel" x="24" y="168" width="732" height="52"/>
+<rect class="plain" x="24" y="220" width="732" height="52"/>
+<rect class="panel-a" x="24" y="272" width="732" height="52" rx="4"/>
+</g><g id="layer-edges">
+<line class="grid" x1="190" y1="24" x2="190" y2="324"/>
+<line class="grid" x1="330" y1="24" x2="330" y2="324"/>
+<line class="grid" x1="470" y1="24" x2="470" y2="324"/>
+<line class="grid" x1="610" y1="24" x2="610" y2="324"/>
+</g><g id="layer-nodes">
+<text class="sh" x="34" y="49">Content Unit</text>
+<text class="sh" x="202" y="49">Remember (30%)</text>
+<text class="sh" x="342" y="49">Understand (40%)</text>
+<text class="sh" x="480" y="49">Apply/Analyze</text>
+<text class="sh" x="626" y="49">Total Marks</text>
+
+<text class="sh" x="34" y="95">Living Systems</text>
+<text class="cell" x="202" y="95">4 m (2 MCQ, 1 RRQ)</text>
+<text class="cell" x="342" y="95">6 m (1 RRQ, 1 ERQ)</text>
+<text class="cell" x="482" y="95">5 m (1 ERQ scenario)</text>
+<text class="sh" x="622" y="95">15 m (30%)</text>
+
+<text class="sh" x="34" y="147">Chemical World</text>
+<text class="cell" x="202" y="147">6 m (2 MCQ, 2 RRQ)</text>
+<text class="cell" x="342" y="147">8 m (2 RRQ, 1 ERQ)</text>
+<text class="cell" x="482" y="147">6 m (2 RRQ tasks)</text>
+<text class="sh" x="622" y="147">20 m (40%)</text>
+
+<text class="sh" x="34" y="199">Physical Energy</text>
+<text class="cell" x="202" y="199">5 m (3 MCQ, 1 RRQ)</text>
+<text class="cell" x="342" y="199">6 m (2 RRQ items)</text>
+<text class="cell" x="482" y="199">4 m (1 ERQ task)</text>
+<text class="sh" x="622" y="199">15 m (30%)</text>
+
+<text class="sh" x="34" y="251">Item Counts</text>
+<text class="cell" x="202" y="251">15 m (7 items)</text>
+<text class="cell" x="342" y="251">20 m (8 items)</text>
+<text class="cell" x="482" y="251">15 m (5 items)</text>
+<text class="sh" x="622" y="251">50 m (20 items)</text>
+
+<text class="h" x="34" y="303">Weight Target</text>
+<text class="h" x="202" y="303">30%</text>
+<text class="h" x="342" y="303">40%</text>
+<text class="h" x="482" y="303">30%</text>
+<text class="h" x="622" y="303">50 marks (100%)</text>
+</g><g id="layer-labels">
+<text class="small" x="30" y="360">Two-dimensional Table of Specifications grid balancing content topics and cognitive domains.</text>
+</g><text class="wm" x="768" y="380" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
