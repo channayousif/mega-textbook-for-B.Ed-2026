@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 572" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">جماعتوں کے ساتھ مادے کے تصور کا حلزونی خاکہ</title><desc id="d">حلزونی خاکہ جو دکھاتا ہے کہ مادے کا تصور چوتھی، چھٹی اور آٹھویں جماعت میں بڑھتی ہوئی گہرائی کے ساتھ دوبارہ آتا ہے: حواس سے چیزوں کی درجہ بندی سے لے کر ذراتی ماڈل تک، اور پھر ماڈل کی مدد سے حالت کی تبدیلی اور نفوذ کی وضاحت تک۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="572"/><g id="layer-edges">
+<path class="stroke" d="M700 448.5 C745 390 745 312 700 266.5" marker-end="url(#arrow)"/>
+<path class="stroke" d="M700 266.5 C745 208 745 130 700 84.5" marker-end="url(#arrow)"/>
+<line class="stroke" x1="130" y1="468" x2="130" y2="91" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="box-gr8"><rect class="panel-a" x="160" y="39" width="530" height="96.2" rx="8"/><text class="h" x="674" y="72.8">جماعت 8: مظاہر کی وضاحت میں ماڈل کا اطلاق</text><text class="cell" x="674" y="100.1">ذراتی ماڈل سے حالت کی تبدیلی، گیس کا دباؤ اور نفوذ سمجھانا؛</text><text class="cell" x="674" y="122.2">گرم اور ٹھنڈا کرنے میں توانائی کی تبدیلی کو ذرات کی حرکت سے جوڑنا</text></g>
+<g id="box-gr6"><rect class="panel-a" x="160" y="214.5" width="530" height="96.2" rx="8"/><text class="h" x="674" y="248.3">جماعت 6: ذراتی ماڈل کا تعارف</text><text class="cell" x="674" y="275.6">مادے کی حالتیں ذراتی ماڈل سے سمجھانا: ذرات قریب قریب جڑے</text><text class="cell" x="674" y="297.7">(ٹھوس)، ایک دوسرے پر پھسلتے (مائع)، اور آزاد حرکت کرتے (گیس)</text></g>
+<g id="box-gr4"><rect class="panel-a" x="160" y="390" width="530" height="96.2" rx="8"/><text class="h" x="674" y="423.8">جماعت 4: براہِ راست مشاہدہ اور حواس سے درجہ بندی</text><text class="cell" x="674" y="451.1">روزمرہ چیزوں کو حواس سے ٹھوس، مائع یا گیس میں بانٹنا؛</text><text class="cell" x="674" y="473.2">دیکھنا کہ برف، پانی اور بھاپ ایک ہی چیز کی شکلیں ہیں</text></g>
+</g><g id="layer-labels">
+<text class="small" x="120" y="273">وہی تصور،</text>
+<text class="small" x="120" y="296.4">بڑھتی گہرائی</text>
+<text class="small" x="756" y="539.5">Bruner کا حلزونی نصاب: بنیادی تصورات کی طرف منصوبہ بند بڑھتی گہرائی کے ساتھ واپسی۔</text>
+</g><text class="wm" x="12" y="552.5" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

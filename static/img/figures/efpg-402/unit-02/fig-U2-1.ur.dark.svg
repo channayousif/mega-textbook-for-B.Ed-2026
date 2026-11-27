@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 716" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس کی نصاب سازی کے پانچ اصولوں کا تصوراتی نقشہ</title><desc id="d">تصوراتی نقشہ جس کے مرکز میں سائنس کا نصاب ہے اور اس کے گرد پانچ اصول: بچے پر مرکوز، سرگرمی پر مبنی، متعلقہ، لچک دار اور مربوط، ہر ایک کا مختصر مفہوم۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="715.5"/><g id="layer-edges">
+<line class="stroke" x1="390" y1="310.5" x2="390" y2="153.9" marker-end="url(#arrow)"/>
+<line class="stroke" x1="470" y1="337.5" x2="520" y2="286.2" marker-end="url(#arrow)"/>
+<line class="stroke" x1="310" y1="337.5" x2="260" y2="286.2" marker-end="url(#arrow)"/>
+<line class="stroke" x1="450" y1="391.5" x2="520" y2="486" marker-end="url(#arrow)"/>
+<line class="stroke" x1="330" y1="391.5" x2="260" y2="486" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="node-child"><rect class="panel-a" x="270" y="40.5" width="240" height="113.4" rx="8"/><text class="h" x="496" y="78.3">بچے پر مرکوز</text><text class="cell" x="496" y="108">سیکھنے والے کی عمر، ضروریات</text><text class="cell" x="496" y="131">اور دلچسپیوں کے گرد</text></g>
+<g id="node-activity"><rect class="panel-a" x="520" y="229.5" width="230" height="113.4" rx="8"/><text class="h" x="736" y="267.3">سرگرمی پر مبنی</text><text class="cell" x="736" y="297">صرف پڑھنے سے نہیں،</text><text class="cell" x="736" y="320">کر کے سیکھنا</text></g>
+<g id="node-relevant"><rect class="panel-a" x="30" y="229.5" width="230" height="113.4" rx="8"/><text class="h" x="246" y="267.3">متعلقہ</text><text class="cell" x="246" y="297">روزمرہ زندگی اور</text><text class="cell" x="246" y="320">برادری سے جڑا ہوا</text></g>
+<g id="node-flexible"><rect class="panel-a" x="510" y="486" width="230" height="113.4" rx="8"/><text class="h" x="726" y="523.8">لچک دار</text><text class="cell" x="726" y="553.5">مقامی حالات اور سیاق</text><text class="cell" x="726" y="576.5">کے مطابق ڈھلنے والا</text></g>
+<g id="node-integrated"><rect class="panel-a" x="40" y="486" width="230" height="113.4" rx="8"/><text class="h" x="256" y="523.8">مربوط</text><text class="cell" x="256" y="553.5">سائنس کو دیگر مضامین</text><text class="cell" x="256" y="576.5">اور زندگی سے جوڑنا</text></g>
+<g id="node-center"><ellipse class="panel-b" cx="390" cy="364.5" rx="95" ry="51.3"/><text class="h" x="390" y="372.6" text-anchor="middle">سائنس کا نصاب</text></g>
+</g><g id="layer-labels">
+<text class="small" x="756" y="648">پانچ بنیادی اصول جو مؤثر سائنس نصاب کے ڈیزائن کی رہنمائی کرتے ہیں۔</text>
+</g><text class="wm" x="12" y="702" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
