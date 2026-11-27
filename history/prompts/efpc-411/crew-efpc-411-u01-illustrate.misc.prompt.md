@@ -70,27 +70,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpc-411-u01-author-cifix1, fix, claude_crew) Push the branch so PR #882 re-runs CI; the RLS red was shared-DB schema drift (main's 0058), not EFPC-411 content.
 - (efpc-411-u01-author-cifix1, fix, claude_crew) Unit 1 English is ready for independent G3; banner figure fig-U1-9 is still prompt-only for the illustration pipeline.
 
+
 ## Response snapshot
 
-Generated and inspected the unit banner illustration fig-U1-9 with gflow, placed it as a Figure component in both English and Urdu index.mdx files, updated manifest and tasks, prepared G2 gate evidence, and validated check:content.
+Generated and placed the EFPC-411 Unit 1 raster banner illustration (fig-U1-9) in English and Urdu index files, updated figure and task manifests, and refreshed G2 gate evidence.
 
 ## Outcome
 
-- Impact: illustration for EFPC-411 Unit 1 by agy.
-- Tests: npm run check:content passed.
+- Impact: illustrate for EFPC-411 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated unit banner illustration fig-U1-9 using gflow via scripts/generate-illustration.mjs, inspected image against cultural and pedagogical requirements (authentic Sindh classroom setting, modest dress, no text/calligraphy, matches alt text), placed in docs/semester-4/efpc-411/unit-01/index.mdx and i18n Urdu mirror, updated unit-01.banner.md to placed, generated G2 gate evidence, and updated tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until qualified independent review; this PR does not certify anything.
-- Pending / next owner: crew lead / independent reviewer for G3 English and G5 Urdu reviews.
+- Shipped / changed: Generated and placed the EFPC-411 Unit 1 raster banner illustration (fig-U1-9) in English and Urdu index files, updated figure and task manifests, and refreshed G2 gate evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - English G3 is open; Urdu G4 draft mirror is in place.
-  - All Unit 1 figures (eight schematic SVGs fig-U1-1 through fig-U1-8, and banner fig-U1-9) are now placed.
-- Paperclip issues affected: none.
+  - All nine Unit 1 figures (eight schematic SVGs fig-U1-1 to fig-U1-8, and banner illustration fig-U1-9) are placed and gate-clean.
+  - Unit 1 English is ready for independent G3 review, and Urdu G4 draft mirror is ready for independent G5 review.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
