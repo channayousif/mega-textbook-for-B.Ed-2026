@@ -95,9 +95,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored EFPG-402 Unit 6 English learning cycles across 6 topics, placed 12 schematic SVGs with verified geometry and dark twins, emitted coverage, sources, figure manifest, concept graph, and recorded passing G2 gate evidence.
+Authored EFPG-402 Unit 6 English learning cycles across 6 topics, placed 12 schematic SVGs with verified geometry and dark twins, and recorded passing G2 gate evidence.
 
 ## Outcome
 
@@ -109,7 +110,16 @@ Authored EFPG-402 Unit 6 English learning cycles across 6 topics, placed 12 sche
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFPG-402 Unit 6 English learning cycles, placed 12 schematic SVGs with verified text geometry, and recorded passing G2 gate evidence across all content gates.
+- Shipped / changed: Authored EFPG-402 Unit 6 English learning cycles across 6 topics, placed 12 schematic SVGs with verified geometry and dark twins, and recorded passing G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
-- Notes for the next job on this unit: Urdu mirror remains to be translated and reviewed under G4/G5.
+- Notes for the next job on this unit:
+  - Urdu mirror remains to be translated and reviewed under G4/G5.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
