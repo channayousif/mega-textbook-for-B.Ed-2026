@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">چار مرحلہ جاتی تشکیلی تاثراتی چکر کا فلو چارٹ</title><desc id="d">فلو چارٹ جو چار مرحلوں پر مشتمل تشکیلی تاثراتی چکر کی وضاحت کرتا ہے: تدریس اور اہداف کی وضاحت، تعلم کے شواہد کا حصول، وضاحتی تاثرات کی فراہمی، اور تدریس میں مطابقت۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="500"/><g id="layer-edges">
+<line class="stroke" x1="410" y1="102" x2="380" y2="102" marker-end="url(#arrow)"/>
+<path class="stroke" d="M210,160 L210,240" marker-end="url(#arrow)"/>
+<line class="stroke" x1="370" y1="307" x2="400" y2="307" marker-end="url(#arrow)"/>
+<path class="stroke" d="M570,250 L570,170" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="step1"><rect class="panel-a" x="410" y="45" width="320" height="115" rx="8"/><text class="h" x="714" y="80">1. تعلیمی اہداف کی وضاحت</text><text class="cell" x="714" y="112">طلبہ کے ساتھ سائنس کے واضح SLOs اور</text><text class="cell" x="714" y="138">کامیابی کے ٹھوس معیارات پیشگی شیئر کرنا</text></g>
+<g id="step2"><rect class="panel-a" x="50" y="45" width="320" height="115" rx="8"/><text class="h" x="354" y="80">2. قابلِ مشاہدہ شواہد کا حصول</text><text class="cell" x="354" y="112">سوچ کو پرکھنے کے لیے ہنج سوالات، وائٹ</text><text class="cell" x="354" y="138">بورڈز اور لیب مشاہدات کا استعمال کرنا</text></g>
+<g id="step3"><rect class="panel-b" x="50" y="250" width="320" height="115" rx="8"/><text class="h" x="354" y="285">3. وضاحتی تاثرات کی فراہمی</text><text class="cell" x="354" y="317">فیصلہ کن گریڈنگ کے بغیر قابلِ عمل اور</text><text class="cell" x="354" y="343">کام پر مرکوز سائنسی رہنمائی فراہم کرنا</text></g>
+<g id="step4"><rect class="panel-b" x="410" y="250" width="320" height="115" rx="8"/><text class="h" x="714" y="285">4. تدریس و تعلم میں مطابقت</text><text class="cell" x="714" y="317">سبق کی رفتار بدلنا، نئے طریقوں سے دوبارہ</text><text class="cell" x="714" y="343">سمجھانا، یا باہمی مکالمے کو منظم کرنا</text></g>
+</g><g id="layer-labels">
+<text class="small" x="750" y="430">سائنس میں حقیقی وقت کی تدریسی مطابقت کے لیے تشکیلی تاثرات کا چکر۔</text>
+</g><text class="wm" x="12" y="460" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

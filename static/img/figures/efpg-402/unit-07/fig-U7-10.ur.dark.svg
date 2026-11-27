@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">عام سائنسی غلط فہمیوں اور تلافی حکمتِ عملیوں کا جدول</title><desc id="d">پاکستانی کلاس رومز میں ثانوی سائنس کی پانچ عام غلط فہمیوں کا جدول بمعہ تشخیصی جانچ اور ہدف شدہ تلافی سرگرمیاں۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="540"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="48" rx="6"/>
+<rect class="panel" x="24" y="72" width="732" height="96"/>
+<rect class="plain" x="24" y="168" width="732" height="96"/>
+<rect class="panel" x="24" y="264" width="732" height="96"/>
+<rect class="plain" x="24" y="360" width="732" height="96"/>
+</g><g id="layer-edges">
+<line class="grid" x1="600" y1="24" x2="600" y2="456"/>
+<line class="grid" x1="360" y1="24" x2="360" y2="456"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="54">غلط فہمی</text>
+<text class="sh" x="586" y="54">ادراکی ماخذ</text>
+<text class="sh" x="346" y="54">ہدف شدہ تلافی مداخلت</text>
+
+<text class="sh" x="744" y="104">پودوں کا تنفس</text>
+<text class="cell" x="744" y="132">"صرف رات کو سانس لیتے ہیں"</text>
+<text class="cell" x="586" y="104">سانس کو ریسپریشن سمجھنا؛ ضیائی</text>
+<text class="cell" x="586" y="132">تالیف کو دن میں تنفس کا بدل جاننا</text>
+<text class="cell" x="346" y="104">اگتے بیجوں کا ڈیمو: بند فلاسک میں دن کو چونے کا</text>
+<text class="cell" x="346" y="132">پانی دودھیا ہونا، بغیر پتوں کے CO2 خارج ہونا</text>
+
+<text class="sh" x="744" y="200">گرتے ہوئے اجسام</text>
+<text class="cell" x="744" y="228">"بھاری چیز تیز گرتی ہے"</text>
+<text class="cell" x="586" y="200">ہوا کی رگڑ؛ کششِ ثقل کی قوت</text>
+<text class="cell" x="586" y="228">اور اسراع کی شرح میں التباس</text>
+<text class="cell" x="346" y="200">متضاد مظاہرہ: برابر کمیت کے کھلے اور مڑے کاغذ</text>
+<text class="cell" x="346" y="228">گرانا؛ گرتے سکے پر کاغذ کا ٹکڑا رکھ کر دکھانا</text>
+
+<text class="sh" x="744" y="296">برقی رو</text>
+<text class="cell" x="744" y="324">"بلب میں کرنٹ خرچ ہوتا ہے"</text>
+<text class="cell" x="586" y="296">یہ گمان کہ بلب توانائی بدلنے کے</text>
+<text class="cell" x="586" y="324">بجائے روانی مادے کو پی جاتا ہے</text>
+<text class="cell" x="346" y="296">سیریز میں دو ایم میٹرز: بلب سے پہلے اور بعد میں</text>
+<text class="cell" x="346" y="324">کرنٹ ناپ کر چارج کے مکمل بقا کا ثبوت دینا</text>
+
+<text class="sh" x="744" y="392">حرارت بمقابلہ درجہ حرارت</text>
+<text class="cell" x="744" y="420">"حرارت اور ٹمپریچر ایک ہی ہیں"</text>
+<text class="cell" x="586" y="392">کل اندرونی حرکی توانائی اور اوسط</text>
+<text class="cell" x="586" y="420">مالیکیولی حرکت میں فرق نہ سمجھنا</text>
+<text class="cell" x="346" y="392">دو بیکرز کا مظاہرہ: 100mL اور 500mL کو 80°C تک</text>
+<text class="cell" x="346" y="420">گرم کر کے برف پگھلانے کی شرح کا تقابل کرنا</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="485">ثانوی سائنس کی عام غلط فہمیاں اور ان کے لیے مخصوص تلافی سرگرمیاں۔</text>
+</g><text class="wm" x="12" y="515" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

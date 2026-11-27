@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس میں تشکیلی اور مجموعی تشخیص کا تقابل</title><desc id="d">موازنے کا جدول جو مقصد، وقت، تاثرات کی نوعیت، تدریس پر اثر، اور سائنس کلاس روم کی مثالوں کے لحاظ سے تشکیلی تشخیص اور مجموعی جائزے کا تقابل کرتا ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="540"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="48" rx="6"/>
+<rect class="panel" x="24" y="72" width="732" height="96"/>
+<rect class="plain" x="24" y="168" width="732" height="96"/>
+<rect class="panel" x="24" y="264" width="732" height="96"/>
+<rect class="plain" x="24" y="360" width="732" height="96"/>
+</g><g id="layer-edges">
+<line class="grid" x1="620" y1="24" x2="620" y2="456"/>
+<line class="grid" x1="330" y1="24" x2="330" y2="456"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="54">خصوصیت</text>
+<text class="sh" x="606" y="54">تشکیلی (تعلم کے لیے تشخیص)</text>
+<text class="sh" x="316" y="54">مجموعی (تعلم کا جائزہ)</text>
+
+<text class="sh" x="744" y="112">بنیادی مقصد</text>
+<text class="cell" x="606" y="104">سیکھنے کو بہتر بنانا، خامیوں کی نشاندہی،</text>
+<text class="cell" x="606" y="132">اور تدریسی رفتار کو ڈھالنا</text>
+<text class="cell" x="316" y="104">کامیابی کی تصدیق، باقاعدہ درجات دینا،</text>
+<text class="cell" x="316" y="132">اور پروگرام کے معیار کا جائزہ لینا</text>
+
+<text class="sh" x="744" y="208">وقت</text>
+<text class="cell" x="606" y="200">روزمرہ کے اسباق اور سائنسی تفتیش کے</text>
+<text class="cell" x="606" y="228">ہر مرحلے کے دوران مسلسل</text>
+<text class="cell" x="316" y="200">کسی یونٹ، اسکول ٹرم، سمسٹر، یا</text>
+<text class="cell" x="316" y="228">تعلیمی سال کے اختتام پر</text>
+
+<text class="sh" x="744" y="304">تاثرات کی قسم</text>
+<text class="cell" x="606" y="296">وضاحتی، غیر تعزیری رہنمائی جو غلط</text>
+<text class="cell" x="606" y="324">فہمیوں کو درست کرنے کا طریقہ بتائے</text>
+<text class="cell" x="316" y="296">قدری عددی نمبر، حروفی گریڈز، یا</text>
+<text class="cell" x="316" y="324">پرسنٹائل کی بنیاد پر درجہ بندی</text>
+
+<text class="sh" x="744" y="400">جماعتی مثال</text>
+<text class="cell" x="606" y="392">فوڈ چین پڑھانے سے پہلے پودوں کے وزن پر</text>
+<text class="cell" x="606" y="420">ہنج سوال کے ذریعے تصورات کی پڑتال</text>
+<text class="cell" x="316" y="392">جاندار نظاموں اور کیمیائی تبدیلیوں پر</text>
+<text class="cell" x="316" y="420">مدت کے اختتام پر 50 نمبر کا تحریری امتحان</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="485">سائنسی تدریس میں تشکیلی اور مجموعی تشخیص کا باہمی موازنہ۔</text>
+</g><text class="wm" x="12" y="515" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

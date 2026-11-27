@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 580" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس میں تخمینہ قدر کے مقاصد کا تصوراتی نقشہ</title><desc id="d">تصوراتی نقشہ جو سائنس کی تعلیم میں تخمینہ قدر کے چار بڑے مقاصد دکھاتا ہے: تشخیصی بنیاد، تشکیلی تاثرات، تعلیمی رکاوٹوں کی نشاندہی، اور مجموعی درجات اور بہتری۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="580"/><g id="layer-edges">
+<line class="stroke" x1="480" y1="250" x2="560" y2="150" marker-end="url(#arrow)"/>
+<line class="stroke" x1="300" y1="250" x2="220" y2="150" marker-end="url(#arrow)"/>
+<line class="stroke" x1="480" y1="330" x2="560" y2="430" marker-end="url(#arrow)"/>
+<line class="stroke" x1="300" y1="330" x2="220" y2="430" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="node-placement"><rect class="panel-a" x="500" y="45" width="250" height="115" rx="8"/><text class="h" x="734" y="80">جگہ بندی اور تیاری</text><text class="cell" x="734" y="112">تدریس سے قبل پیشگی تصورات اور</text><text class="cell" x="734" y="138">داخلے کی مہارتوں کی جانچ</text></g>
+<g id="node-formative"><rect class="panel-a" x="30" y="45" width="250" height="115" rx="8"/><text class="h" x="264" y="80">تشکیلی تاثرات</text><text class="cell" x="264" y="112">تدریس کو ڈھالنے اور رہنمائی کے</text><text class="cell" x="264" y="138">لیے مسلسل پیش رفت کی نگرانی</text></g>
+<g id="node-diagnostic"><rect class="panel-a" x="500" y="415" width="250" height="115" rx="8"/><text class="h" x="734" y="450">تشخیصی جانچ</text><text class="cell" x="734" y="482">مستقل غلط فہمیوں اور سیکھنے کی</text><text class="cell" x="734" y="508">رکاوٹوں کی اصل جڑوں کی نشاندہی</text></g>
+<g id="node-summative"><rect class="panel-a" x="30" y="415" width="250" height="115" rx="8"/><text class="h" x="264" y="450">مجموعی تصدیق</text><text class="cell" x="264" y="482">قومی SLOs کے حصول کی مجموعی</text><text class="cell" x="264" y="508">تصدیق اور درجات کا تعین</text></g>
+<g id="node-center"><ellipse class="panel-b" cx="390" cy="290" rx="115" ry="50"/><text class="h" x="390" y="285" text-anchor="middle">سائنس میں تخمینہ قدر</text><text class="sh" x="390" y="315" text-anchor="middle">بنیادی تعلیمی دائرے</text></g>
+</g><g id="layer-labels">
+<text class="small" x="750" y="555">ثانوی سائنس کی تدریس میں تخمینہ قدر کے چار بڑے ہم آہنگ مقاصد۔</text>
+</g><text class="wm" x="12" y="565" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
