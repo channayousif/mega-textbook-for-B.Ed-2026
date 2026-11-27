@@ -1,0 +1,1846 @@
+                                                                                                                Sector H-9
+                                                                                                       Islamabad, Pakistan
+                                                                                                  Phone : +92-51-90402111
+                                 HIGHER EDUCATION COMMISSION                                               www.hec.gov.pk
+                                                                                                         hkasi@hec.gov.pk
+                                          Government of Pakistan, Islamabad
+
+ Deputy Director (Curriculum)                                         No. HEC/NCRC/EDUCATION/2025/7367
+ Academics Division                                                                        April 11, 2025
+
+
+SUBJECT:               REVISED CURRICULUM FOR DEGREE PROGRAMS IN EDUCATION
+
+                      The Higher Education Commission (HEC) of Pakistan, as mandated by its law, provides
+guidance to Higher Education Institutions (HEIs) on curricula for tertiary education levels in alignment with the
+National Qualifications Framework (NQF). To address evolving academic trends and market demands, HEC has
+revised the curriculum standards for Education degree programs at NQF level, 5, 6 and 7. These updated
+standards are aligned with HEC’s Undergraduate Education Policy V 1.1 (2023) and Graduate Education Policy
+(2023), ensuring coherence with national priorities and adherence to international benchmarks.
+
+2.                    The revised curricula for Education degree programs, incorporating option for advanced
+electives are hereby notified. Universities offering these programs are advised to align their Education curricula
+with these updated standards as a minimum requirement. Additionally, the respective departments must develop
+course content in accordance with the prescribed framework, ensuring that the programs address both national
+and local needs. The finalized course content should be submitted electronically to this office at the earliest. An
+electronic copy of the revised curricula is available on HEC’s official website.
+
+
+
+
+ Vice Chancellors/Rectors/Heads
+ All Public/Private Sector Universities/DAIs
+ Copy for information to:
+        i.    ES to Chairman, Higher Education Commission, Islamabad
+       ii.    ES to Executive Director, Higher Education Commission, Islamabad
+       iii.   PS to Chairman NACTE, Islamabad
+       iv.    PS to Consultant, Quality Assurance, Higher Education Commission, Islamabad
+        v.    PS to Managing Director, NAHE, Higher Education Commission, Islamabad
+       vi.    PS to Advisor, Human Resource Development Division, Higher Education Commission, Islamabad
+      vii.    PS to Director General, Academics Division, Higher Education Commission, Islamabad
+     viii.    PS to Director General, A&A Division, Higher Education Commission, Islamabad
+       ix.    PS to Director General, Higher Education Commission, Regional Centers in Karachi, Lahore,
+              Peshawar & Quetta
+        x.    Director, Academics Division, Higher Education Commission, Islamabad
+       xi.    Director / In-charge, Higher Education Data Repository, Higher Education Commission, Islamabad
+      xii.    Director / In-charge, Quality Assurance Agency, Higher Education Commission, Islamabad
+        CURRICULUM
+
+                 FOR
+
+EDUCATION DEGREE PROGRAMS
+
+     ASSOCIATE DEGREE
+        B.ED 4 -YEAR
+       B.ED 2.5 -YEAR
+       B.ED 1.5 -YEAR
+     MPHIL EDUCATION
+                (2025)
+
+
+
+
+           HIG HER                        ISSIO N
+                     EDUC ATIO N   COMM
+
+
+
+
+HIGHER EDUCATION COMMISSION
+     ISLAMABAD – PAKISTAN
+HEC CURRICULUM BOOKLET – EDUCATION                   2025
+
+
+
+
+Prepared by:
+Subject Experts
+Different Universities
+
+Facilitated by:
+Mr. Hidayatullah Kasi
+Deputy Director, Academics Division
+Higher Education Commission
+
+Design, Composed and Edited by:
+Mr. Tanveer Ali
+IT Administrator, Academics Division
+Higher Education Commission
+
+
+Coordinated by:
+Mr. Atif Wazir, Superintendent, Academics Division
+Muhammad Naeem, Assistant, Academics Division
+Higher Education Commission
+HEC CURRICULUM BOOKLET – EDUCATION                                             2025
+
+
+
+
+TABLE OF CONTENTS
+ Contributions                                                                  iv
+ Preface                                                                         v
+ Guiding Principles                                                              1
+ Minimum standards                                                               1
+ Course sequences, Titles & credits                                              1
+ Course learning outcomes                                                        1
+ Course syllabus                                                                 1
+ General Education                                                               1
+ Requirements of Field Experience/Internship                                     1
+ Requirements for Capstone Project                                               2
+ Associate Degree in Education                                                   2
+ Entry & Exit Provisions                                                         2
+ Bachelor of Education (B.ED)                                                    3
+ Program Description                                                             3
+ Standard Nomenclature                                                           4
+ Eligibility and admission criteria                                              4
+ Program Learning Outcomes                                                       4
+ Program Structure- B.ED (04 year)                                               4
+ Scheme of studies Bachelor of Education B.ED (04 year)                        5-7
+ List of Major Professional Courses (Mandatory for Education Programs in All     8
+ Specializations)
+ List of Major Pedagogy Courses                                                 8
+ Suggested List of Interdisciplinary Courses                                    8
+ Suggested List of Natural Science Courses                                      9
+ Suggested List of Social Science Courses                                       9
+ Suggested List of Arts and Humanities Courses                                  9
+ Areas of Specialization (Tracks for Specialization Courses/Electives)          9
+ Specialization 1: Early Childhood Care and Education                          10
+ Specialization 2: Educational Research                                        10
+ Specialization 3: Educational Assessment                                      10
+ Specialization 4: Child Rights and Safety Education                           11
+ Specialization 5: Educational Policy and Planning                             11
+ Specialization 6: Curriculum Studies                                          11
+ Specialization 7: Educational Leadership and Management                       11
+ Specialization 8: Educational Psychology                                      11
+ Specialization 9: Guidance and Counselling                                    12
+ Specialization 10: Inclusive Education                                        12
+ Specialization 11: Literacy and Non-Formal Education                          12
+ Specialization 12: Online and Distance Education                              12
+ Specialization 13: Quality Assurance in Education                             12
+ Specialization 14: Comparative Education                                      12
+ Specialization 15: Teacher Professional Development                           13
+ Specialization 16: Mathematics Education                                      13
+
+                                               ii
+HEC CURRICULUM BOOKLET – EDUCATION                                         2025
+
+ Specialization 17: STEM Education                                          13
+ Specialization 18: Islamic Education                                       13
+ Specialization 19: Education for Sustainable Development                   13
+ Specialization 20: Educational Entrepreneurship                            13
+ Specialization 21: Educational Technology                                  14
+ Specialization 22: Health and Physical Education                           14
+ Specialization 23: Artificial Intelligence in Education                    14
+ Specialization 24: Special Education (Intellectual Impairments)            14
+ Specialization 25: Special Education (Physical Impairments)                14
+ Specialization 26: Special Education (Hearing Impairments)                 14
+ Specialization 27: Special Education (Visual Impairments)                  15
+ Specialization 28: Special Education (Learning Disabilities)               15
+ Specialization 29: Special Education (Autism Spectrum Disorders)           15
+ Associate degree in Education (ADE)                                        15
+ Bachelor of Education – B.ED (2.5 year)                                    15
+ Program Description                                                        15
+ Eligibility and admission criteria                                         16
+ Program Learning Outcomes                                                  16
+ Program Structure – B.ED (2.5 year)                                        16
+ Scheme of studies Bachelor of Education B.ED (2.5 year)                 17-18
+ Bachelor of Education – B.ED (1.5 year)                                    18
+ Program Description                                                        18
+ Eligibility and admission criteria                                         19
+ Program Learning Outcomes                                                  19
+ Program Structure – B.ED (1.5 year)                                        19
+ Scheme of studies Bachelor of Education B.ED (1.5 year)                    20
+ Suggested List of Interdisciplinary Courses                                21
+ List of Major Pedagogy Courses                                             21
+ Masters of Philosophy in Education (M.Phil)                                22
+ Program Description                                                        22
+ Standard Nomenclature                                                      22
+ Program Learning Outcomes                                                  22
+ Eligibility and admission criteria                                         23
+ Program Structure – M.Phil in Education                                    23
+ Scheme of studies – M.Phil in Education                                 23-24
+ List of Major Compulsory Courses                                           24
+ Areas of Specialization (Tracks for Specialization Courses/Electives)      24
+ Degree Award Requirements                                                  25
+ Course Learning Outcomes (CLOs)                                            26
+ Professional Courses Education                                          26-29
+ Pedagogy Courses                                                        29-30
+ Practice Teaching                                                       30-31
+
+
+
+
+                                                 iii
+HEC CURRICULUM BOOKLET – EDUCATION                                                           2025
+
+
+CONTRIBUTIONS
+
+ 1.    Prof. Dr. Nasir Mahmood, Vice Chancellor (AIOU), Chairman (NACTE), Islamabad
+ 2.    Prof. Dr. Wasim Qazi, Vice Chancellor, Karachi Metropolitan University, Karachi
+ 3.    Prof. Dr. Muhammad Naseer Ud din, Vice Chancellor, Kohat University of Science and
+       Technology
+ 4.    Prof. Dr. Rafaqat Ali Akbar, Dean/Professor of Education, Lahore Leads University, Lahore
+ 5.    Prof. Dr. Hafiz Muhammad Inamullah, Director, Institute of Education & Research (IER),
+       University of Peshawar
+ 6.    Prof. Dr. Muhammad Shahid Farooq, Professor & Chairman, Department of Advanced
+       Studies in Education, Institute of Education & Research (IER), University of Punjab, Lahore
+ 7.    Prof. Dr. Abdul Qayyum Ch., Director, Institute of Education and Research (IER), University
+       of the Punjab, Lahore
+ 8.    Prof. Dr. Malik Ghulam Behlol, Professor / Chairperson, Department of Education, Fatima
+       Jinnah Women University, Rawalpindi
+ 9.    Dr. Muhammad Imran Yousuf, Professor / Chairman, Department of Education, Pir Mehr
+       Ali Shah Arid Agriculture, University, Rawalpindi
+ 10.   Dr Rizwan Akram Rana, Chairperson, Department of Education, Professor, School of Social
+       Sciences and Humanities, University of Management & Technology, Lahore
+ 11.   Prof. Dr. Ayaz Muhammad Khan, Director/Dean, University of Education, Lahore
+ 12.   Dr. Abdul Nasir Kiazai, Director, Institute of Education & Research (IER), University of
+       Balochistan, Quetta
+ 13.   Dr. Sadruddin Qutoshi, Chairman, Department of Educational Development, Karakurum
+       International University, Gilgit, Gilgit Baltistan
+ 14.   Prof. Dr. Muhammad Sarwar, Dean, Department of Education, International Islamic
+       University, Islamabad
+ 15.   Dr. Ashar Johnson Khokhar, Head, of Education Department, Forman Christian College,
+       Lahore
+ 16.   Prof. Dr. Rana Muhammad Dilshad, Head, Department of Education, Bahauddin Zakariya
+       University, Multan
+ 17.   Dr. Abdul Sattar Almani, Dean, University of Sindh, Jamshoro
+ 18.   Prof. Dr. Nasreen Akhter, Chairperson/ Dean, Islamia University, Bahawalpur
+ 19.   Dr. Muhammad Ilyas Khan, Chairman, Department of Education, Hazara University
+ 20.   Dr. Zahid Majeed, Director, Department of Education, Allama Iqbal Open University,
+       Islamabad
+ 21.   Dr. Rabia Abdul Karim, Associate Professor, Department of Education and Teacher
+       Education, Jinnah University for Women, Karachi
+ 22.   Dr. Riffat Un Nisa Awan, Director, University of Sargodha, Sargodha
+ 23.   Dr. Muhammad Idress, Director, PIE (Pakistan Institute of Education), Islamabad
+ 24.   Dr. Shamsa Aziz, Secretary, NACTE, Islamabad
+ 25.   Dr. Batool Atta, Assistant Professor, Department of Education, University of AJK
+
+
+
+                                               iv
+HEC CURRICULUM BOOKLET – EDUCATION                                                               2025
+
+
+PREFACE
+The curriculum, with varying definitions, is said to be a plan of the teaching-learning process that
+students of an academic program are required to undergo to achieve some specific objectives. It
+includes a scheme of studies, objectives & learning outcomes, course contents, teaching
+methodologies and assessment/ evaluation. Since knowledge in all disciplines and fields is expanding
+at a fast pace and new disciplines are also emerging; it is imperative that curricula be developed and
+revised accordingly.
+
+Higher Education Commission, since its inception, has been involved in developing /revising the
+curricula on periodic basis through National Curriculum Revision Committees (NCRCs) comprising
+of eminent academics, researchers from HEC recognized universities/DAIs, professional councils,
+R&D organizations of repute and industry professionals. So far, HEC has developed and revised
+curricula of 150+ disciplines for undergraduate and graduate programs in various fields of Natural
+Sciences, Applied Sciences, Social Sciences, Art & Humanities, Engineering & Technology, Medical,
+Allied Health Sciences, Agriculture, Computing, Law, and Administration.
+
+Over the period of time, labor markets in the world have substantially changed, hence, the demand
+for workforce skills has also altered. Due to these transformations, there is a need to produce well-
+rounded individuals who not only have the required knowledge base of specific discipline but also
+possess the required skills to increase their market readiness for them to contribute to the overall
+socio-economic development of the country. HEC has introduced the Undergraduate Education
+Policy 2023, which provides an overarching framework for undergraduate programs. This curriculum
+document is prepared in light of the UGE Policy 2023.
+
+
+Dr. Amjad Hussain
+Director General
+Academics Division
+
+
+
+
+                                                  v
+HEC CURRICULUM BOOKLET – EDUCATION                                                                2025
+
+GUIDING PRINCIPLES
+
+Minimum Standards
+The curriculum standards and guidelines prescribed under this policy are mandatory at minimum level.
+Universities or the concerned departments may however set higher standards provided that the
+standards prescribed herein are not reduced or compromised.
+
+Course Sequence, Titles and Credits
+For Bachelor of Education (B.Ed) and MS/MPhil in Education degree program, the sequence of
+courses prescribed under this document is logically arranged for guidance of Institutions. The offering
+department may rearrange the sequence provided that the essence of the courses prescribed in policy
+remains intact. The department may add more courses as and when required subject to approval of
+university’s relevant statutory body.
+
+Course Learning Outcomes
+Course learning outcomes (CLOs) are the bare minimum standards of learning that students must
+achieve upon completing a specific course. These outcomes serve as essential benchmarks, ensuring
+consistency in the quality of education across institutions. The CLOs prescribed herein represent the
+minimum level of competency and understanding expected from students. While these standards must
+not be compromised, departments are encouraged to enhance the rigor of the CLOs by incorporating
+additional learning outcomes, provided these do not alter the essence of the prescribed standards. In
+this policy, CLOs are exclusively developed for major field courses within the program. For
+interdisciplinary courses, departments offering these courses are responsible for developing their
+CLOs in alignment with their respective disciplines and program requirements. Moreover, CLOs for
+elective courses are not prescribed here, as these are advanced or specialized courses. The
+development of CLOs for electives is the responsibility of the respective departments, taking into
+account the course's advanced nature and relevance to the program. For general education courses as
+required under the HEC Undergraduate Education Policy V 1.1., departments may adopt the CLOs
+prescribed in the HEC-developed model courses.
+
+Course Syllabus
+This document serves as a comprehensive guideline describing the course learning outcomes (CLOs)
+for each course offered in the B.Ed and MS/MPhil in Education degree program as minimum
+standards. The offering department is mandated to meticulously prepare, modify, and tailor the
+syllabus of each course, ensuring alignment with the stipulated learning outcomes. It is in this regard
+imperative that the department utilizes instructional, reference, and reading materials that it deems
+appropriate to effectively meet the CLOs.
+
+General Education
+For B.Ed and Associate Degree programs, the courses prescribed for General Education component
+must mandatorily be offered with the same titles and credits as prescribed under HEC Undergraduate
+Education Policy V 1.1. The concerned departments may adopt and follow the learning outcomes and
+study contents developed by HEC for these courses as available on its website.
+
+Requirement of Field Experience / Internship
+It is a mandatory degree award requirement of three (03) credit hours for Bachelor of Education
+(B.Ed). Internship of six (06) to eight (08) weeks (preferably undertaken during semester or summer
+break) must be graded by a faculty member in collaboration with the supervisor in the field. This
+requirement cannot be substituted with additional course work, capstone or project work.
+
+                                                  1
+HEC CURRICULUM BOOKLET – EDUCATION                                                              2025
+
+
+Requirement of Capstone Project
+It is a mandatory degree award requirement of three (03) credit hours for Bachelor of Education
+(B.Ed). A capstone project is multifaceted body of work that serves as a culminating academic and
+intellectual experience for students. The capstone project must be supervised and graded by a faculty
+member as per the protocols prescribed by the concerned department. This requirement cannot be
+substituted with additional course work or internship.
+
+Associate Degree in Education
+The first-four semesters of the Bachelor of Education (B.Ed) as prescribed in this policy are aligned
+with the structure of Associate Degree Program in Education. Capstone Project and Field experience
+is not a mandatory requirement for the Associate Degree in Education.
+
+Entry And Exit Provisions at Undergraduate Level
+ a.   Pathway for Graduates with Associate Degree
+      •    Students having completed Associate Degree in Education and related disciplines are
+           allowed admission in the fifth semester of the Bachelor of Education (B.Ed) program.
+      •    Students having completed Associate Degree in disciplines other than Education may
+           be offered deficiency courses from 15-18 credits through bridging semester prior to
+           enrollment in 5th Semester of B.Ed Program. The bridging courses shall be determined
+           by the concerned admitting department.
+      •    The minimum eligibility for admission in the fifth semester in above cases is 2.00/4.00
+           CGPA in the prior qualification i.e., Associate Degree. The concerned university may,
+           however, set higher eligibility and admission criteria for admission in the fifth semester
+           of B.Ed four year degree program.
+ b.   Pathway for Graduates with Conventional BA/BSc/Equivalent Degree Programs
+      •    Students having completed two-year conventional BA/BSc/equivalent degree programs
+           are allowed admission in the fifth semester of B.Ed four year degree program, in which
+           case, such students shall be required to complete deficiency courses from 15-18 credit
+           hours through bridging semester. The bridging courses shall be determined by the
+           concerned admitting department.
+      •    The minimum eligibility for admission in the fifth semester in this case is 45%
+           cumulative score in the prior qualification i.e., two-year conventional
+           BA/BSc/equivalent degree programs. The concerned university may however set higher
+           eligibility and admission criteria for admission in the fifth semester of B.Ed program.
+
+ c.    Exiting from Bachelor of Education with the Associate Degree
+       •     Students enrolled in B.Ed four year degree program are allowed to exit with Associate
+             Degree in Education provided that they have completed the requirements of the first-
+             four semesters of the B.Ed program as prescribed in this policy.
+
+
+
+
+                                                 2
+HEC CURRICULUM BOOKLET – EDUCATION                                                                   2025
+
+
+
+BACHELOR OF EDUCATION (B.ED)
+PROGRAM DESCRIPTION
+The role of a teacher in shaping the future of society has an extraordinary significance. They not only
+impart knowledge but also inspire, motivate, and guide students in their developmental journey. To
+perform this multifaceted role efficiently and effectively, they must possess a strong foundation of
+content knowledge, pedagogical skills, certain level of professionalism, and a variety of competencies
+tailored to meet diverse student needs across different educational levels. The program’s holistic
+approach ensures that graduates will not only be knowledgeable in their subject areas but also
+proficient at engaging and inspiring students from diverse backgrounds. To address all these concerns
+and to make teaching a profession of choice, B.Ed. (12+4) program was developed in 2006. By
+cultivating a strong foundation in these areas, the B.Ed program focuses to produce skilled, reflective,
+and compassionate educators who can make a meaningful impact in the lives of their students and
+community at large. The changing landscape of teaching and learning, and the increasing demand of
+well-trained and committed teachers, are making this degree program not just an academic pursuit but
+a vital contribution to societal development. The B.Ed program provides a comprehensive curriculum
+that covers a wide range of subjects including mathematical reasoning, science, language, social
+sciences, and the arts. This breadth of knowledge ensures that future educators are well-prepared to
+teach various subjects at different educational levels, from early years to higher levels. In an ever-
+evolving world where new information and discoveries are made daily, teachers must stay updated
+with the latest developments in their respective fields. The B.Ed curriculum incorporates
+contemporary educational resources, research methodologies, and technological advancements,
+enabling educators to provide their students with the most accurate and engaging content. The
+pedagogical training aspect of the B.Ed program is designed to enhance teachers' understanding of
+how students learn, the various learning styles and modalities, and the best practices for fostering an
+inclusive and positive learning environment. Prospective teachers engage in hands-on experiences,
+including school observations, simulations, and teaching practicums as practice teaching, that allow
+them to apply their theoretical learning in real classroom settings. Learning how to design effective
+lesson plans, assess student performance, and adapt instruction based on student needs are crucial
+components of pedagogical training. Furthermore, the integration of technology into pedagogy is a
+key focus of the B.Ed program, preparing educators to leverage digital tools to enhance learning and
+engagement. The B.Ed degree program instills a sense of ethical responsibility, accountability, and
+commitment to lifelong learning. Educators are encouraged to reflect on their practices, engage in
+professional development, and collaborate with colleagues to improve their skills and support one
+another. Future teachers learn the importance of building relationships with students, parents, and the
+broader community. This involves effective communication skills, cultural competence, and an
+understanding of the social and emotional factors that influence learning. An emphasis on equity and
+inclusivity ensures that all students, regardless of their backgrounds or abilities, receive the attention
+and support they need to succeed. In the clinical model of developing teachers as professionals, it is
+important for that prospective teacher to gain adequate insight into the ground realities of school and
+classrooms through their attachments in schools and communities. This rich experience of practice
+enables prospective teachers to bring a positive attitude in classroom teaching and understanding a
+plurality of cultures. This breakthrough is expected to facilitate the process of multiculturalism and
+pluralism in our education system to bring about social transformation in the society. Hence, a blend
+of content and pedagogical courses has been provided in the scheme of studies – the two years of
+graduate courses and two years long professional courses to prepare prospective teachers as
+professionals in education. In addition, the revised curriculum is based on the principal of choice and
+flexibility, allowing different entry points and the accumulation of credits for the two year degree
+
+                                                    3
+HEC CURRICULUM BOOKLET – EDUCATION                                                                  2025
+
+courses to be transferred to join the 4 year B.Ed program. The revised Bachelor of Education (B.Ed)
+is designed in accordance with the provisions of the HEC Undergraduate Education Policy V 1.1. to
+provide students with a comprehensive understanding of teaching and learning process.
+
+STANDARD NOMENCLATURE
+For the sake of standardization, all the undergraduate degree programs (NQF level 6 qualifications)
+in the discipline of Education shall only be offered with the title of “Bachelor of Education
+(B.Ed)” and henceforth, degree programs at equivalent level with same purpose and scope having
+different nomenclatures shall accordingly be renamed as Bachelor of Education (B.Ed) and
+specializations shall be reflected on transcripts only and not on degrees.
+
+ELIGIBILITY AND ADMISSION CRITERIA
+Higher Secondary School Certificate (involving 12 years of schooling) in any discipline or an Inter
+Board Coordination Commission (IBCC) equivalent qualification is the eligibility requirement for
+admission in the Bachelor of Education (B.Ed) four year degree program and Associate Degree
+Program in Education (ADE).
+
+The admitting university may set minimum eligibility scores and may conduct entry / admission test
+through its own testing body or an external testing services provider of repute as per the screening,
+admission and merit calculation criteria approved by its statutory bodies.
+
+PROGRAM LEARNING OUTCOMES
+By the completion of Bachelor of Education (B.Ed) degree program, the graduates will be able to:
+ a) Demonstrate a comprehensive understanding of content knowledge, educational theories,
+      instructional strategies, and assessment methods to effectively plan, deliver, and evaluate lessons
+      that engage and support diverse learners.
+ b) Apply differentiated student centered instructional techniques to accommodate varied learning
+      styles, abilities, and backgrounds, ensuring all students can succeed academically and socially in
+      an equitable environment to foster collaboration, critical thinking and problem solving skills.
+ c) Exhibit a strong commitment to professional ethics, including respect, integrity, and
+      confidentiality, while fostering an inclusive, equitable, and culturally responsive learning
+      environment.
+ d) Show a commitment to lifelong learning by staying informed of current research, technological
+      advancements, and innovations in education that enhance instructional effectiveness and
+      contribute to professional growth.
+
+PROGRAM STRUCTURE – B.ED (04 YEAR)
+The Bachelor of Education (B.Ed) 04 year degree program is structured in accordance with the
+provisions of the HEC Undergraduate Education Policy V 1.1. and comprises of minimum 132 credit
+hours (including internship / field experience) spread over eight (08) regular semesters. Universities
+may offer courses up-to maximum of 148 credit hours provided that the total number of credit hours
+are reasonably set to achieve the Program Learning Objectives (PLOs) without putting undue burden
+on students.
+
+
+
+
+                                                   4
+HEC CURRICULUM BOOKLET – EDUCATION                                                               2025
+
+
+
+
+              Credit Hours                      132 credit hours
+       General Education Courses                34 credit hours (14 courses)
+        Major Education Courses                 80 credit hours
+ Major Professional Courses                     36 credit hours (12 courses)
+  (80    Education (Compulsory/Fixed)
+ Credit Class Observation and Practice          02+06 = 08 Credits (3 courses)
+ Hours) Teaching (Practical/Fixed)
+         Pedagogy Courses                       18 credit hours (06 courses)
+         (Compulsory/Fixed)
+         Specialization Courses                 18 credit hours (6 courses) – (From Pool of
+         (Electives)                            Courses for Area of Specialization from Pool of
+                                                Specializations)
+           Interdisciplinary Courses            12 credit hours (4 courses)
+                                                (From Pool of Courses)
+                 Internship                     3 credit hours
+           Capstone Project/Thesis              3 credit hours
+             Program Duration                   Minimum: 4 Years
+                                                Maximum: 6 Years
+              Semester Duration                 16-18 weeks for regular semesters
+                                                (1-2 weeks for examination)
+                                                8-9 weeks for summer semesters
+                                                (1 week for examination)
+         Course Load (per semester)             15-21 credit hours for regular semesters
+                                                Up-to 9 credit hours for summer semesters
+                                                (for remedial/deficiency/failure/repetition courses
+                                                only)
+           3 Credit Hours (Theory)              3 classes (1 hour each) OR 2 classes (1.5 hour each)
+                                                OR 1 class (3 hours) per week throughout the
+                                                semester
+       1 Credit Hour (Lab / Field Work)         1 credit hour in laboratory or practical work would
+                                                require lab / field contact of 3 hours per week
+                                                throughout the semester.
+
+Standard Scheme of Study for the program of Bachelor of Education (B.Ed) four-year degree program
+is given as under:
+
+                                          SEMESTER I
+ S. No     COURSE                                    CREDIT HOURS                CATEGORY
+   1       Quantitative Reasoning – I *                    3 (3-0)             General Education
+   2       Natural Science **                              3 (2-1)             General Education
+   3       Functional English *                            3 (3-0)             General Education
+   4       Applications of Information &                   3 (2-1)             General Education
+           Communication Technologies (ICT) *
+   5       Professional Course Education I                 3 (3-0)         Major: Professional Course
+   6       Professional Course Education II                3 (3-0)         Major: Professional Course
+                                         Total Credits (18)
+
+
+                                                 5
+HEC CURRICULUM BOOKLET – EDUCATION                                                                            2025
+
+
+
+
+                                                SEMESTER II
+ S. No     COURSE                                            CREDIT HOURS                   CATEGORY
+   1       Quantitative Reasoning – II *                   3 (3-0)                      General Education
+   2       Social Sciences ***                             2 (2-0)                      General Education
+   3       Expository Writing *                            3 (3-0)                      General Education
+   4       Professional Course Education III               3 (3-0)                   Major: Professional Course
+   5       Professional Course Education IV                3 (3-0)                   Major: Professional Course
+   6       Professional Course Education V                 3 (3-0)                   Major: Professional Course
+   7       Fehm-e-Quran – I (for Muslim Students)         01(0-1)                       General Education
+                                         Total Credits (18)
+
+
+
+                                               SEMESTER III
+ S. No     COURSE                                             CREDIT HOURS                  CATEGORY
+   1       Arts & Humanities ****                           2 (2-0)                     General Education
+   2       Islamic Studies *                                2 (2-0)                     General Education
+           (Ethics for non-Muslim students)
+   3       Ideology & Constitution of Pakistan *            2 (2-0)                     General Education
+   4       Professional Course Education VI                 3 (3-0)                  Major: Professional Course
+   5       Professional Course Education VII                3 (3-0)                  Major: Professional Course
+   6       Professional Course Education VIII               3 (3-0)                  Major: Professional Course
+   7       Pedagogy Course - I                              3 (3-0)                  Major: Pedagogy Course
+   8       Fehm-e-Quran – II (for Muslim Students)         01(0-1)                       General Education
+                                         Total Credits (19)
+
+
+
+                                               SEMESTER IV
+ S. No     COURSE                                             CREDIT HOURS                  CATEGORY
+   1       Pakistan Studies *                                       2 (2-0)             General Education
+   2       Civics & Community Engagement *                          2 (1-1)             General Education
+            a)   Scouting OR Emergency Training
+             b)  Community Service
+   3        Entrepreneurship *                                     2 (2-0)               General Education
+   4        Professional Course Education IX                       3 (3-0)            Major: Professional Course
+   5        Professional Course Education X                        3 (3-0)            Major: Professional Course
+   6        School Observation                                     2 (0-2)                      Major
+   7       Pedagogy Course - II                                    3 (3-0)            Major: Pedagogy Course
+                                             Total Credits (17)
+   •     The student may Exit with Associate Degree in Education after completion of 04 Semesters in B.Ed four year
+         degree program.
+
+
+
+
+                                                        6
+HEC CURRICULUM BOOKLET – EDUCATION                                                              2025
+
+
+
+
+                                           SEMESTER V
+ S. No     COURSE                                      CREDIT HOURS             CATEGORY
+     1     Interdisciplinary Course - I                      3 (3-0)      Interdisciplinary Courses
+     2     Interdisciplinary Course - II                     3 (3-0)      Interdisciplinary Courses
+     3     Professional Course Education XI                  3 (3-0)      Major: Professional Course
+     4     Pedagogy Course - III                             3 (3-0)      Major: Pedagogy Course
+     5     Specialization Elective Course I                  3 (3-0)          Major: Elective
+                                          Total Credits (15)
+
+
+                                          SEMESTER VI
+ S. No     COURSE                                      CREDIT HOURS             CATEGORY
+     1     Interdisciplinary Course - III                    3 (3-0)      Interdisciplinary Courses
+     2     Professional Course Education XII                 3 (3-0)      Major: Professional Course
+     3     Pedagogy Course - IV                              3 (3-0)      Major: Pedagogy Course
+     4     Pedagogy Course - V                               3 (3-0)      Major: Pedagogy Course
+     5     Specialization Elective Course II                 3 (3-0)          Major: Elective
+                                          Total Credits (15)
+
+
+                                          SEMESTER VII
+ S. No     COURSE                                      CREDIT HOURS             CATEGORY
+     1     Practice Teaching - I                             3 (0-3)      Major: Practical Course
+     2     Pedagogy Course - VI                              3 (3-0)      Major: Pedagogy Course
+     3     Specialization Elective Course– III               3(3–0)           Major: Elective
+     4     Specialization Elective Course– IV                3(3–0)           Major: Elective
+     5     Capstone Project                                     3            Capstone Project
+                                          Total Credits (15)
+
+
+                                         SEMESTER VIII
+ S. No     COURSE                                      CREDIT HOURS             CATEGORY
+     1     Practice Teaching - II                            3 (0-3)       Major: Practical Course
+     2     Interdisciplinary Course - IV                     3 (3-0)      Interdisciplinary Courses
+     3     Specialization Elective Course– V                 3(3–0)            Major: Elective
+     4     Specialization Elective Course– VI                3(3–0)            Major: Elective
+     5     Internship                                           3                Internship
+                                          Total Credits (15)
+
+*        HEC designed model courses may be used by the university.
+**       The university / offering department may offer any course in the broader category of
+         “Natural Sciences” which should have relevance to the purpose of the degree program. The
+         course of “General Science / Environmental Science” is suggestive one only. A detailed list
+         of courses related to the Natural Sciences is also given.
+
+
+
+                                                   7
+HEC CURRICULUM BOOKLET – EDUCATION                                                                            2025
+
+***     The university / offering department may offer any course in the broader category of “Social
+        Sciences” including but not limited to a course of Psychology, Sociology, Anthropology etc.
+        The course of “Sociology” is suggestive one only. A detailed list of courses related to the
+        Social Sciences is also given.
+****    The university / offering department may offer any course in the broader category of “Arts
+        and Humanities” including but not limited to a course of regional or international language
+        such as Chinese, Arabic, French, Spanish etc. or any other course such as Philosophy,
+        History etc. The course of “History” is suggestive one only. A detailed list of courses related
+        to the Arts and Humanities is also given.
+
+List of Major Professional Courses (Mandatory for Education Programs in All
+Specializations)
+   1.    Foundations of Education
+   2.    Inclusive Education
+   3.    Education for Sustainable Development
+   4.    Educational Psychology
+   5.    Research Methods in Education
+   6.    Curriculum Development
+   7.    Critical Thinking and Reflective Practices
+   8.    Educational Assessment and Evaluation
+   9.    School Management
+   10. Educational Policies and Plans of Pakistan
+   11. Contemporary Literacies
+   12. Teaching Profession
+
+
+List of Major Pedagogy Courses
+   1.    Teaching of English
+   2.    Teaching of Urdu
+   3.    Teaching of Art, Crafts and Calligraphy
+   4.    Teaching of Mathematics
+   5.    Teaching of Science
+   6.    Teaching of Social Studies and Islamiat
+
+Suggested List of Interdisciplinary Courses
+(The student has to choose 04 courses within below mentioned Interdisciplinary courses offered by HEI. HEIs are at
+ liberty to add more courses to the list)
+    1.      Education, Power and Politics
+    2.      Economics of Education
+    3.      Health and Safety Education
+    4.      Child Abuse and Safety
+    5.      Education in Pakistan
+    6.      Islamic Education
+    7.      Sociology of Education
+    8.      History of Education
+    9.      Media Education
+    10. Science, Technology and Society
+    11. Comparative Education
+
+
+                                                         8
+HEC CURRICULUM BOOKLET – EDUCATION                                                                                     2025
+
+    12.    Guidance and Counselling in School
+    13.    Production of Resource Materials
+    14.    Human Growth and Development
+    15.    Exceptional Children
+    16.    Development of Individualized Education Plan
+    17.    Family Problems and Interventions
+
+Suggested List of Natural Science Courses
+(The student has to choose 01 course within below mentioned courses offered by HEI)
+    1.     General Science
+    2.     Environmental Science
+    3.     Public Health
+    4.     Human Nutrition
+    5.     General Mathematics
+
+Suggested List of Social Science Courses
+(The student has to choose 01 course within below mentioned courses offered by HEI)
+   1.     Psychology
+   2.     Philosophy
+   3.     Economics
+   4.     History
+   5.     Political Science
+   6.     Sociology
+   7.     Social Work
+
+Suggested List of Arts and Humanities Courses
+(The student has to choose 01 course within below mentioned courses offered by HEI)
+   1.     Urdu
+   2.     Arabic
+   3.     Persian
+   4.     Statistics
+   5.     Fine Arts
+   6.     Journalism
+   7.     Physical Education
+   8.     Geography
+
+Areas of Specialization (Tracks for Specialization Courses/Electives)
+(The student has to choose any 01-specialization track from this given list of 25+ areas of specializations. Once
+specialization track is chosen, the student shall opt 06 courses from the selected specialization to fulfill requirement of
+the four-year degree program in Education. In each specialization track, 07 suggestive courses are given. HEIs may
+add more to the list depending on availability of faculty and resources. Similarly, more Specialization tracks under
+Education could also be added by HEIs)
+    1.     Early Childhood Care and Education
+    2.     Educational Research
+    3.     Educational Assessment
+    4.     Child Rights and Safety Education
+    5.     Educational Policy and Planning
+    6.     Curriculum Studies
+    7.     Educational Leadership and Management
+
+
+                                                              9
+HEC CURRICULUM BOOKLET – EDUCATION                                               2025
+
+  8.    Educational Psychology
+  9.    Guidance and Counseling
+  10.   Inclusive Education
+  11.   Literacy and Non-Formal Education
+  12.   Online and Distance Learning
+  13.   Quality Assurance in Education
+  14.   Comparative Education
+  15.   Teacher Professional Development
+  16.   Mathematics Education
+  17.   STEM Education
+  18.   Islamic Education
+  19.   Education for Sustainable Development
+  20.   Educational Entrepreneurship
+  21.   Educational Technology
+  22.   Health and Physical Education
+  23.   Artificial Intelligence in Education
+  24.   Special Education (Intellectual Impairments)
+  25.   Special Education (Visual Impairments)
+  26.   Special Education (Physical Impairments)
+  27.   Special Education (Hearing Impairments)
+  28.   Special Education (Learning Disabilities)
+  29.   Special Education (Autism Spectrum Disorder)
+
+ Specialization 1: Early Childhood Care and Education (Select any Six Courses)
+  1.    Child Care and Development
+  2.    Early Childhood Education: History, Theory & Practice
+  3.    Early language and Literacy Development
+  4.    Models of Early Childhood Care and Education
+  5.    Educational Games at ECE Level
+  6.    Assessment of Learning in Early Years
+  7.    Creative Arts and Expression for Early learners
+  8.    Technology in Early Childhood Education
+ Specialization 2: Educational Research (Select any Six Courses)
+  1.    Data Analysis: Qualitative and Quantitative Techniques
+  2.    Project Management
+  3.    Report Writing
+  4.    Instrument Development
+  5.    Technology and Tools for Educational Research
+  6.    Research Methods for Education in the Digital Age
+  7.    Research Ethics and Professional Writing
+  8.    Applied Research in Education
+ Specialization 3: Educational Assessment (Select any Six Courses)
+  1.    Test Development
+  2.    Classroom Assessment Strategies
+  3.    Alternative Assessment Techniques
+  4.    Educational Assessment in the Digital Age
+  5.    Data-driven Decision Making in Educational Assessment
+
+
+                                               10
+HEC CURRICULUM BOOKLET – EDUCATION                                                  2025
+
+  6.    Assessment and Reporting of Students’ Learning
+  7.    Technology based Assessment
+  8.    Psychometrics and Standardized Testing
+ Specialization 4: Child Rights and Safety Education (Select any Six Courses)
+  1.    Child Development and Child Welfare
+  2.    Children's Abuse and Safety
+  3.    Child Protection Law
+  4.    Creating Safe and Inclusive Learning Environments
+  5.    Health Care and Hygienic Safety of Children
+  6.    Child Rights: Global Perspective
+  7.    Developing Safe Schools
+  8.    Child Safety and Wellbeing
+ Specialization 5: Educational Policy and Planning (Select any Six Courses)
+  1.    Introduction to Policy and Planning
+  2.    Educational Policy and Planning in Pakistan
+  3.    Policy and Planning: Models and Techniques
+  4.    Challenges of Policy Development and Planning
+  5.    Policy and Planning in Comparative Perspective
+  6.    Education Policy and Reform
+  7.    Education Policy and Practice
+ Specialization 6: Curriculum Studies (Select any Six Courses)
+  1.    Curriculum Planning, Design and Implementation
+  2.    Curriculum Evaluation and Assessment
+  3.    Models of Curriculum
+  4.    Localization and Contextualization of Curriculum
+  5.    Curriculum Change & Innovation
+  6.    Curriculum Adaptation
+  7.    Comparative Curriculum Studies
+  8.    Instructional Materials Development
+ Specialization 7: Educational Leadership and Management (Select any Six Courses)
+  1.    School Organization and Management
+  2.    Foundations of Educational Leadership
+  3.    Educational Laws and Policies
+  4.    Leadership for Inclusive and Culturally Responsive Schools
+  5.    Human Resource Management in Education
+  6.    Human Relations in Schools
+  7.    Financial Management for School Leaders
+  8.    Educational Planning & Financing
+ Specialization 8: Educational Psychology (Select any Six Courses)
+  1.    Foundations of Education Psychology
+  2.    Social and Emotional Learning
+  3.    Mental Health and Wellbeing in Education
+  4.    Positive Psychology
+  5.    Behavioral Management and Classroom Discipline
+  6.    Cognition and Metacognition
+  7.    Child Development and Learning
+
+
+                                                 11
+HEC CURRICULUM BOOKLET – EDUCATION                                              2025
+
+  8.    School Psychology
+Specialization 9: Guidance and Counselling (Select any Six Courses)
+  1.    Guidance and Counselling: Theory and Practice
+  2.    Counselling Children in Schools
+  3.    Child Guidance: Theory and Practice
+  4.    Models of Counselling
+  5.    Career Counselling in Schools
+  6.    Mental Health and Wellbeing in Schools
+  7.    Counseling Theories and Techniques
+Specialization 10: Inclusive Education (Select any Six Courses)
+  1.    Inclusive Education: Theory and Practice
+  2.    Assessment in Inclusive Education
+  3.    Inclusive School Leadership
+  4.    Inclusive Classroom Pedagogies
+  5.    Creating Inclusive Schools
+  6.    Comparative Perspectives of Inclusive Education
+  7.    Instructional Adaptation for Inclusion
+Specialization 11: Literacy and Non-Formal Education (Select any Six Courses)
+  1.   Introduction to Literacy and Non-Formal Education
+  2.   Approaches and Methods of Non-Formal Education
+  3.   Global Practices for Literacy and Non-Formal Education
+  4.   Non-Formal Education and Innovative Teaching Strategies
+  5.   Designing Literacy Programs for Marginalized Groups
+  6.   Foundations of Literacy
+  7.   Digital Literacy for Education
+Specialization 12: Online and Distance Education (Select any Six Courses)
+  1.    Instructional Design for Online Learning
+  2.    Theories and Models of Distance Education
+  3.    Technology Tools and Platforms for Distance Learning
+  4.    Pedagogy and Best Practices in Online Teaching
+  5.    Leadership in E-Learning and Distance Education
+  6.    Designing and Implementing e-Learning
+  7.    Distance Education: Global Challenges and Trends
+Specialization 13: Quality Assurance in Education (Select any Six Courses)
+  1.    Fundamentals of Quality Management
+  2.    Total Quality Management in Education
+  3.    Quality Tools and Techniques for Schools
+  4.    Quality Control and Inspection of Schools
+  5.    Quality Auditing in Schools
+  6.    Introduction to Quality Assurance in Education
+  7.    Managing Educational Quality
+Specialization 14: Comparative Education (Select any Six Courses)
+  1.    Models of Comparative Education
+  2.    Education in Muslim World: Comparative Perspective
+  3.    Education in Developed World: Comparative Perspective
+
+
+                                              12
+HEC CURRICULUM BOOKLET – EDUCATION                                                   2025
+
+  4.    Global Education: Trends and Challenges
+  5.    Educational Effectiveness and Ineffectiveness
+  6.    Introduction to Comparative and International Education
+  7.    Education and Social Change: Comparative Perspective
+ Specialization 15: Teacher Professional Development (Select any Six Courses)
+  1.    Teacher Education Theories and Models
+  2.    Teacher Education in Pakistan: Historical Perspective
+  3.    Teacher Education in Islamic Perspective
+  4.    Teacher Education in Global Perspective
+  5.    Teacher Education: Problems and Prospects
+  6.    Professional Development for Teachers
+  7.    Transforming Teacher Learning with Technology
+ Specialization 16: Mathematics Education (Select any Six Courses)
+  1.    Calculus
+  2.    Plane Curves & Analytical geometry
+  3.    Vectors & Mechanics
+  4.    Linear Algebra and Ordinary Differential Equations
+  5.    Metric Spaces & Group Theory
+  6.    Mathematical Thinking and Learning
+  7.    Mathematics Education in 21st Century
+ Specialization 17: STEM Education (Select any Six Courses)
+  1.    Instructional Scaffolding in STEM Education
+  2.    Integrating STEM Education Methods
+  3.    Introduction to STEM Education
+  4.    STEM Curriculum Design and Instructional Materials
+  5.    Learning in STEM
+  6.    Innovative STEM Education
+  7.    Technology in STEM Education
+ Specialization 18: Islamic Education (Select any Six Courses)
+  1.    Islamic Pedagogy and Teaching Methods
+  2.    Foundations of Islamic Education
+  3.    Quranic Teachings and Modern World
+  4.    Islamization of Education
+  5.    Seerat Un Nabi (PBUH)
+  6.    Islamic Education Leadership and School Management
+  7.    Comparative Islamic and Western Education Systems
+ Specialization 19: Education for Sustainable Development (Select any Six Courses)
+  1.    Principles and Practices of Education for Sustainable Development
+  2.    Global Citizenship Education and Sustainability
+  3.    Change Management for Sustainable Development
+  4.    Global Challenges and Sustainable Futures
+  5.    Community Engagement and Sustainable Development
+  6.    Foundations of Education for Sustainable Development
+  7.    Sustainability and Development Education
+ Specialization 20: Educational Entrepreneurship (Select any Six Courses)
+  1.    Foundations of Educational Entrepreneurship
+
+
+                                               13
+HEC CURRICULUM BOOKLET – EDUCATION                                                         2025
+
+  2.    Design Thinking for Education Innovation
+  3.    Building and Scaling Educational Ventures
+  4.    Education Technology and Entrepreneurship
+  5.    Social Entrepreneurship in Education
+  6.    Leadership and Educational Entrepreneurship
+  7.    Educational Entrepreneurship: Innovation in Learning
+Specialization 21: Educational Technology (Select any Six Courses)
+  1.    Instructional Design and Technology
+  2.    Emerging Technologies in Education
+  3.    Learning Analytics and Educational Data
+  4.    Mobile and Online Learning Development
+  5.    Learning Management Systems (LMS) and E-Learning Tools
+  6.    Digital Teaching and Learning
+  7.    Gamification and Interactive Learning
+Specialization 22: Health and Physical Education (Select any Six Courses)
+  1.    Foundations of Health and Physical Education
+  2.    Kinesiology and Exercise Science
+  3.    Health Education and Wellness Promotion
+  4.    Sports Coaching and Pedagogy
+  5.    Inclusive Physical Education
+  6.    Teaching Health Education in Schools
+  7.    Physical Education for 21st Century Schools
+Specialization 23: Artificial Intelligence in Education (Select any Six Courses)
+  1.    Introduction to Artificial Intelligence in Education
+  2.    Artificial Intelligence in Schools
+  3.    Artificial Intelligence for Teachers and Education Leaders
+  4.    Artificial Intelligence Supported Educational Technologies
+  5.    Artificial Intelligence in Education: Ethics and Impacts
+  6.    Future Trends and Innovations in AI for Education
+  7.    Artificial Intelligence Powered Learning Tools and Platforms
+Specialization 24: Special Education (Intellectual Impairments) (Select any Six Courses)
+  1.    Introduction to Intellectual and Developmental Disabilities
+  2.    Teaching Children with Intellectual and Developmental Disabilities
+  3.    Transition Planning for Students with IDD
+  4.    Assessment Practices for Intellectual and Developmental Disability
+  5.    Functional and Independent Living Skills for Children with IDD
+  6.    Behavior Management of Children with IDD
+  7.    Assistive Technologies for Students with IDD
+Specialization 25: Special Education (Physical Impairments) (Select any Six Courses)
+  1.    Teaching Children with Physically Impairment
+  2.    Assistive Technologies for Children with Physical and Health Impairment
+  3.    Etiology of Physical and Health Impairment
+  4.    Curriculum Development in Physical Education
+  5.    Management of Physical and Health Impairment
+  6.    Educational Adaptation for Children with Physical and Health Impairment
+  7.    Accessible Learning Environment for Children with Physical and Health Impairment
+Specialization 26: Special Education (Hearing Impairments) (Select any Six Courses)
+
+                                               14
+HEC CURRICULUM BOOKLET – EDUCATION                                                                2025
+
+  1.     Teaching Children with Hearing Impairment
+  2.     Assistive Technologies for Children with Hearing Impairment
+  3.     Sign Language
+  4.     Audiology and Hearing Disorder
+  5.     Speech and Language Development
+  6.     Inclusion and Accessibility for Deaf and Hard-of-Hearing Students
+  7.     Cognitive and Social-Emotional Development in Deaf Children
+ Specialization 27: Special Education (Visual Impairments) (Select any Six Courses)
+  1.     Teaching Children with Visual Impairments
+  2.     Assistive Technologies for Children with Visual Impairments
+  3.     Braille Literacy, Tactile and Digital Learning for Blind Students
+  4.     Etiology of Visual Impairments
+  5.     Orientation and Mobility Skills for Visual Impairments
+  6.     Cognitive and Social-Emotional Development in Children with Visual Impairments
+  7.     Inclusive Education and Accessibility for Students with Visual Impairments
+ Specialization 28: Special Education (Learning Disabilities) (Select any Six Courses)
+  1.    Teaching Children with Learning Disabilities
+  2.    Assistive Technologies and Digital Learning for Children with Learning Disabilities
+  3.    Etiology of Learning Disabilities
+  4.    Intervention and Assessment of Learning Disabilities
+  5.    Cognitive and Neurodevelopmental Approaches to Learning Disabilities
+  6.     Instructional and Management Strategies for Learning Disabilities
+  7.     Behavioral and Emotional Regulation Strategies for Students with Learning Disabilities
+ Specialization 29: Special Education (Autism Spectrum Disorders) (Select any Six Courses)
+  1.    Teaching Children with Autism Spectrum Disorders
+  2.    Assistive Technologies and Communication Strategies for Children with Autism Spectrum
+         Disorders
+  3.     Autism Spectrum Disorders: Nature, Needs and Etiology
+  4.     Assessment of Children with Autism Spectrum Disorder
+  5.     Neuroscience and Autism: Understanding the Brain
+  6.     Therapeutics Interventions in Autism Spectrum Disorder
+  7.     Social-Emotional Learning and Autism: Strategies for Inclusion
+
+
+ASSOCIATE DEGREE IN EDUCATION (ADE)
+PROGRAM STRUCTURE – ASSOCAITE DEGREE IN EDUCATION
+The Associate Degree in Education (ADE) is structured in accordance with the provisions of the
+HEC Undergraduate Education Policy V 1.1. and comprises of minimum 72 credit hours spread over
+four (04) regular semesters. Scheme of ADE is same as that of first four semesters of B.Ed Four year
+degree program mentioned above.
+
+BACHELOR OF EDUCATION (B.ED) 2.5 YEAR
+PROGRAM DESCRIPTION
+The B.Ed 2.5 year (14+2.5) program focuses to produce skilled, reflective, and compassionate
+educators who can make a meaningful impact in the lives of their students and community at large.
+
+                                                    15
+HEC CURRICULUM BOOKLET – EDUCATION                                                                    2025
+
+The changing landscape of teaching and learning, and the increasing demand of well-trained and
+committed teachers, are making this degree program not just an academic pursuit but a vital
+contribution to societal development. This breadth of knowledge ensures that future educators are
+well-prepared to teach various subjects at different educational levels, from early years to higher levels.
+The Bachelor of Education (B.Ed) 2.5 year program is designed in accordance with the provisions of
+the HEC Undergraduate Education Policy V 1.1. to provide students with a comprehensive
+understanding of teaching and learning process.
+
+ELIGIBILITY AND ADMISSION CRITERIA
+The eligibility requirement for admission in the Bachelor of Education (B.Ed) 2.5 year degree
+program is 14 years qualification in disciplines other than Education.
+
+The admitting university may set minimum eligibility scores and may conduct entry / admission test
+through its own testing body or an external testing services provider of repute as per the screening,
+admission and merit calculation criteria approved by its statutory bodies.
+
+PROGRAM LEARNING OUTCOMES
+By the completion of Bachelor of Education (B.Ed) 2.5 year degree program, the graduates will be
+able to:
+a)    Demonstrate a comprehensive understanding of content knowledge, educational theories,
+      instructional strategies, and assessment methods to effectively plan, deliver, and evaluate lessons
+      that engage and support diverse learners.
+b)    Apply differentiated student centered instructional techniques to accommodate varied learning
+      styles, abilities, and backgrounds, ensuring all students can succeed academically and socially in
+      an equitable environment to foster collaboration, critical thinking and problem solving skills.
+c)    Exhibit a strong commitment to professional ethics, including respect, integrity, and
+      confidentiality, while fostering an inclusive, equitable, and culturally responsive learning
+      environment.
+d)    Show a commitment to lifelong learning by staying informed of current research, technological
+      advancements, and innovations in education that enhance instructional effectiveness and
+      contribute to professional growth.
+
+PROGRAM STRUCTURE – B.ED (2.5 YEAR)
+The Bachelor of Education (B.Ed) 2.5 year degree program is structured in accordance with the
+provisions of the HEC Undergraduate Education Policy V 1.1. and comprises of minimum 84 credit
+hours (including internship / field experience) spread over five (05) regular semesters. Universities
+may offer courses 84-90 credit hours provided that the total number of credit hours are reasonably
+set to achieve the Program Learning Objectives (PLOs) without putting undue burden on students.
+
+                Credit Hours                       84 credit hours
+                Major Courses                      78 credit hours
+  Major      Professional Courses                  36 credit hours (12 courses)
+   (78       Education (Compulsory/Fixed)
+  Credit     Practice Teaching (Practical          06 Credits (2 courses)
+  hours)     Compulsory/Fixed)
+             Pedagogy Courses                      18 credit hours (06 courses)
+             (Compulsory/Fixed)
+
+
+
+
+                                                    16
+HEC CURRICULUM BOOKLET – EDUCATION                                                                            2025
+
+             Specialization Courses                    18 credit hours (6 courses) – Any One Area of
+             (Electives, From Pool of                  Specialization from pool of Specializations
+             Courses)
+                  Internship                           3 credit hours
+           Capstone Project/Thesis                     3 credit hours
+              Program Duration                         Minimum: 2.5 Years (05 Semesters)
+                                                       Maximum: 3.5 Years
+               Semester Duration                       16-18 weeks for regular semesters
+                                                       (1-2 weeks for examination)
+                                                       8-9 weeks for summer semesters
+                                                       (1 week for examination)
+          Course Load (per semester)                   15-21 credit hours for regular semesters
+                                                       Up-to 9 credit hours for summer semesters
+                                                       (for remedial/deficiency/failure/repetition courses
+                                                       only)
+            3 Credit Hours (Theory)                    3 classes (1 hour each) OR 2 classes (1.5 hour
+                                                       each) OR 1 class (3 hours) per week throughout
+                                                       the semester
+       1 Credit Hour (Lab / Field Work)                1 credit hour in laboratory or practical work would
+                                                       require lab / field contact of 3 hours per week
+                                                       throughout the semester.
+
+•     Major Professional Courses, Pedagogy Courses and Choice of Specialization/Electives shall remain same as that
+      of B.Ed four year degree program.
+•     The university / offering department may offer any Specialization from the list of
+      Specializations given in this document. Any six courses may be selected from the list of elective
+      courses for respective specialization or any other course where required as per its program
+      objectives, university’s geographical location and available academic and faculty resources. Credit
+      combination (reflecting balance of theory and lab / field work) must be arranged in accordance
+      with the nature of the course.
+
+                                         SEMESTER I
+    S. No COURSE                              CREDIT HOURS                              CATEGORY
+       1  Professional Course Education - I         3 (3-0)                      Major: Professional Course
+       2  Professional Course Education - II        3 (3-0)                      Major: Professional Course
+       3  Professional Course Education - III       3 (3-0)                      Major: Professional Course
+       4  Professional Course Education - IV        3 (3-0)                      Major: Professional Course
+       5  Professional Course Education - V         3 (3-0)                      Major: Professional Course
+       6  Professional Course Education - VI        3 (3-0)                      Major: Professional Course
+                                       Total Credits (18)
+
+
+
+
+                                                        17
+HEC CURRICULUM BOOKLET – EDUCATION                                                               2025
+
+                                      SEMESTER II
+ S. No COURSE                              CREDIT HOURS                       CATEGORY
+    1 Professional Course Education – VII        3 (3-0)               Major: Professional Course
+    2 Professional Course Education – VIII       3 (3-0)               Major: Professional Course
+    3 Professional Course Education – IX         3 (3-0)               Major: Professional Course
+    4 Professional Course Education – X          3 (3-0)               Major: Professional Course
+    5 Professional Course Education – XI         3 (3-0)               Major: Professional Course
+    6 Professional Course Education – XII        3 (3-0)               Major: Professional Course
+                                    Total Credits (18)
+
+                                        SEMESTER III
+ S. No   COURSE                                CREDIT HOURS                   CATEGORY
+    1    Pedagogy Course - I                         3 (3-0)           Major: Pedagogy Course
+    2    Pedagogy Course - II                        3 (3-0)           Major: Pedagogy Course
+    3    Pedagogy Course - III                       3 (3-0)           Major: Pedagogy Course
+    4    Pedagogy Course - IV                        3 (3-0)           Major: Pedagogy Course
+    5    Pedagogy Course - V                         3 (3-0)           Major: Pedagogy Course
+    6    Pedagogy Course - VI                        3 (3-0)           Major: Pedagogy Course
+                                        Total Credits (18)
+
+                                          SEMESTER IV
+ S. No   COURSE                                CREDIT HOURS                   CATEGORY
+    1    Specialization Elective Course I            3 (3-0)           Major: Elective
+    2    Specialization Elective Course II            3(3-0)           Major: Elective
+    3    Specialization Elective Course III           3(3-0)           Major: Elective
+    4    Capstone- Project/Thesis                     3(0-3)           Capstone Project
+    5    Practice Teaching I                         3 (0-3)           Major: Practical Course
+                                        Total Credits (15)
+
+                                       SEMESTER V
+ S. No COURSE                                CREDIT HOURS                     CATEGORY
+    1  Specialization Elective Course IV            3(3-0)             Major: Elective
+    2  Specialization Elective Course V             3(3-0)             Major: Elective
+    3  Specialization Elective Course VI            3(3-0)             Major: Elective
+    4  Practice Teaching II                        3 (0-3)             Major: Practical Course
+    5  Internship                                   3(0-3)             Internship
+                                     Total Credits (15)
+
+
+BACHELOR OF EDUCATION (B.ED) 1.5 YEAR
+PROGRAM DESCRIPTION
+
+The B.Ed 1.5 year program focuses to produce skilled, reflective, and compassionate educators who
+can make a meaningful impact in the lives of their students and community at large. The changing
+landscape of teaching and learning, and the increasing demand of well-trained and committed teachers,
+are making this degree program not just an academic pursuit but a vital contribution to societal
+
+
+                                                 18
+HEC CURRICULUM BOOKLET – EDUCATION                                                                  2025
+
+development. This breadth of knowledge ensures that future educators are well-prepared to teach
+various subjects at different educational levels, from early years to higher levels. The Bachelor of
+Education (B.Ed) 1.5 year program is designed in accordance with Revised Teacher Education
+Roadmap notified on December 30, 2022 and the provisions of the HEC Undergraduate Education
+Policy V 1.1. to provide students with a comprehensive understanding of teaching and learning
+process.
+
+ELIGIBILITY AND ADMISSION CRITERIA
+The eligibility requirement for admission in the Bachelor of Education (B.Ed) 1.5 year degree
+program is 16 years qualification in disciplines other than Education.
+
+The admitting university may set minimum eligibility scores and may conduct entry / admission test
+through its own testing body or an external testing services provider of repute as per the screening,
+admission and merit calculation criteria approved by its statutory bodies.
+
+PROGRAM LEARNING OUTCOMES
+By the completion of Bachelor of Education (B.Ed) 1.5 year degree program, the graduates will be
+able to:
+a)    Demonstrate a comprehensive understanding of content knowledge, educational theories,
+      instructional strategies, and assessment methods to effectively plan, deliver, and evaluate lessons
+      that engage and support diverse learners.
+b)    Apply differentiated student centered instructional techniques to accommodate varied learning
+      styles, abilities, and backgrounds, ensuring all students can succeed academically and socially in
+      an equitable environment to foster collaboration, critical thinking and problem solving skills.
+c)    Exhibit a strong commitment to professional ethics, including respect, integrity, and
+      confidentiality, while fostering an inclusive, equitable, and culturally responsive learning
+      environment.
+d)    Show a commitment to lifelong learning by staying informed of current research, technological
+      advancements, and innovations in education that enhance instructional effectiveness and
+      contribute to professional growth.
+
+PROGRAM STRUCTURE – B.ED (1.5 YEAR)
+The Bachelor of Education (B.Ed) 1.5 year degree program is structured for students who have already
+completed their four year degrees in specific field other than Education. B.Ed 1.5 year degree program
+comprises of 54 credit hours spread over three (03) semesters, provided that the total number of
+credit hours are reasonably set to achieve the Program Learning Objectives (PLOs) without putting
+undue burden on students.
+
+             Credit Hours                         54 credit hours
+            Major Courses                         45 credit hours
+ Major Professional Courses Education             36 credit hours (12 courses)
+  (42    (Compulsory/Fixed)
+ Credit Pedagogy Courses                          03 credit hours (01 course) (Any one from the
+ Hours) (Compulsory/Fixed)                        Pool related to previous field in BS/MA/MSc)
+         Practice Teaching                        06 credits (02 courses)
+         (Practical/Fixed)
+       Interdisciplinary Courses                  06 credit hours (2 courses)
+                                                  (From Pool of Courses)
+          Capstone Project/Thesis                 3 Credit hours
+
+                                                   19
+HEC CURRICULUM BOOKLET – EDUCATION                                                        2025
+
+             Program Duration             Minimum: 03 Semesters
+                                          Maximum: 04 Semesters
+             Semester Duration            16-18 weeks for regular semesters
+                                          (1-2 weeks for examination)
+                                          8-9 weeks for summer semesters
+                                          (1 week for examination)
+         Course Load (per semester)       15-21 credit hours for regular semesters
+                                          Up-to 9 credit hours for summer semesters
+                                          (for remedial/deficiency/failure/repetition courses
+                                          only)
+          3 Credit Hours (Theory)         3 classes (1 hour each) OR 2 classes (1.5 hour
+                                          each) OR 1 class (3 hours) per week throughout
+                                          the semester
+    1 Credit Hour (Lab / Field Work)      1 credit hour in laboratory or practical work would
+                                          require lab / field contact of 3 hours per week
+                                          throughout the semester.
+
+                                          SEMESTER I
+ S. No    COURSE                                  CREDIT HOURS           CATEGORY
+    1     Professional Course Education I                3(3-0)     Major: Professional Course
+    2     Professional Course Education II               3(3-0)     Major: Professional Course
+    3     Professional Course Education III              3(3-0)     Major: Professional Course
+    4     Professional Course Education IV               3(3-0)     Major: Professional Course
+    5     Interdisciplinary Course I                     3(3-0)     Interdisciplinary Courses
+    6     Pedagogy Course                                3(3-0)     Major: Pedagogy Course
+                                       Total Credits (18)
+
+                                     SEMESTER II
+ S. No COURSE                                  CREDIT HOURS              CATEGORY
+    1  Professional Course Education V                3(3-0)        Major: Professional Course
+    2  Professional Course Education VI               3(3-0)        Major: Professional Course
+    3  Professional Course Education VII              3(3-0)        Major: Professional Course
+    4  Interdisciplinary Course II                    3(3-0)        Interdisciplinary Courses
+    5  Practice Teaching-I                            3(0-3)        Major: Practical Course
+    6  Capstone Project/Thesis                        3(0-3)        Capstone Project
+                                    Total Credits (18)
+
+
+                                        SEMESTER III
+ S. No    COURSE                                  CREDIT HOURS           CATEGORY
+    1     Professional Course Education VIII             3(3-0)     Major: Professional Course
+    2     Professional Course Education IX               3(3-0)     Major: Professional Course
+    3     Professional Course Education X                3(3-0)     Major: Professional Course
+    4     Professional Course Education XI               3(3-0)     Major: Professional Course
+    5     Professional Course Education XII              3(3-0)     Major: Professional Course
+    6     Practice Teaching-II                           3(3-0)     Practice Teaching
+                                       Total Credits (18)
+
+                                           20
+HEC CURRICULUM BOOKLET – EDUCATION                                                     2025
+
+
+Suggested List of Interdisciplinary Courses
+(The student has to choose 02 courses within below mentioned courses offered by HEI)
+  1.    Education, Power and Politics
+  2.    Economics of Education
+  3.    Health and Safety Education
+  4.    Child Abuse and Safety
+  5.    Education in Pakistan
+  6.    Islamic Education
+  7.    Sociology of Education
+  8.    History of Education
+  9.    Media Education
+  10. Science, Technology and Society
+  11. Comparative Education
+  12. Guidance and Counselling in School
+  13. Production of Resource Materials
+  14. Human Growth and Development
+  15. Exceptional Children
+  16. Development of Individualized Education Plan
+  17. Family Problems and Interventions
+
+ List of Major Pedagogy Courses
+ (Select any One Course related to Previous field of Study in BS/MA/MSc)
+ 1.     Teaching of Science
+ 2.     Teaching of Social Science
+ 3.     Teaching of Languages
+
+
+
+
+                                                        21
+HEC CURRICULUM BOOKLET – EDUCATION                                                                 2025
+
+              MASTERS OF PHILOSOPHY IN EDUCATION
+                     (M.PHIL IN EDUCATION)
+PROGRAM DESCRIPTION
+The Masters of Philosophy in Education (M.Phil in Education) is a rigorous research-based graduate
+program designed to develop advanced expertise in educational theory, research methodologies, and
+practice in the light of HEC’s Graduate Education Policy 2023. It provides scholars with a deep
+understanding of qualitative, quantitative, and mixed-methods research approaches, equipping them
+to address complex educational challenges. This program fosters intellectual curiosity and innovation,
+encouraging scholars to critically examine pressing issues such as policy development, quality
+management, access to education and teaching approaches for an equitable education. Scholars engage
+in original research, culminating in a thesis that contributes to the academic and practical
+advancements in the field of education. Faculty members, who are experienced researchers, offer
+personalized mentor-ship to guide students through their academic endeavour. Coursework is tailored
+to students' areas of interest, in the form of different specialization areas. The program emphasizes
+the application of research findings to real-world educational settings, ensuring practical relevance.
+Students have opportunities to present their work at seminars, conferences, and workshops, fostering
+professional growth and networking. Additionally, the program develops critical skills in academic
+writing, research ethics, and scholarly publication. Collaborative learning environments encourage
+peer interaction and critical dialogue, enhancing the learning experience. Graduates are well-prepared
+for careers in academia, educational leadership, consultancy, and policy-making. The program nurtures
+reflective practitioners who are committed to lifelong learning and the advancement of equitable
+education. By engaging with contemporary educational challenges, scholars contribute to meaningful
+improvements in teaching and learning practices. The M. Phil in Education serves as a pathway for
+those aspiring to influence educational discourse and drive positive change in the global educational
+landscape.
+
+STANDARD NOMENCLATURE
+To ensure uniformity, the standard nomenclature of all graduate degree programs (NQF-7) in
+Education must be Masters of Philosophy in Education “M.Phil in Education”, henceforth, degree
+programs at equivalent level with same purpose and scope having different nomenclatures shall
+accordingly be renamed as M.Phil in Education and specializations shall be reflected on transcripts
+only and not on degrees.
+
+PROGRAM LEARNING OUTCOMES
+By the completion of M.Phil in Education the graduates will be able to:
+a)    demonstrate expertise in designing, conducting, and critically analyzing original research using
+      qualitative, quantitative, and mixed-methods approaches to address complex educational
+      challenges.
+b)    apply advanced theoretical knowledge to analyze and develop innovative solutions for real-
+      world educational issues, contributing to improved teaching, learning, and policy practices.
+c)    exhibit strong scholarly writing and presentation skills, enabling them to effectively disseminate
+      research findings through publications, conferences, and professional forums.
+d)    integrate ethical principles and inclusive perspectives into their research and practice, ensuring
+      equity, respect, and sensitivity to diverse educational contexts and stakeholders.
+e)    demonstrate the capacity for leadership in educational settings and a commitment to lifelong
+      learning, adapting to evolving trends and contributing to the advancement of education at local,
+      national, and global levels.
+
+
+                                                  22
+HEC CURRICULUM BOOKLET – EDUCATION                                                             2025
+
+ ELIGIBILITY CRITERIA
+  i. An undergraduate degree (level 06 qualification) in the field of Education is the eligibility
+     requirement for admission in the M.Phil Education.
+ ii. Candidates having undergraduate degrees (involving 16 years of education) in any other
+     discipline of Education are also eligible for admission in the M.Phil Education subject to
+     completion of deficiency courses up-to 18 credit hours to be determined by the offering
+     department. This deficiency shall be in addition to the prescribed time duration for M.Phil
+     Education program.
+iii. In addition to the basic eligibility, the admitting university is further required to conduct a
+     rigorous admission test as an eligibility condition for admission to the program, with a pass
+     score of 50% (OR) accept the GRE/HAT General/equivalent tests, with a pass score of 50%.
+     The admitting university may also set minimum eligibility scores (above 50%) as per the
+     screening, admission and merit calculation criteria approved by its statutory bodies.
+
+PROGRAM STRUCTURE
+The M.Phil in Education is structured in accordance with the provisions of the HEC Graduate
+Education Policy (GEP) 2023. Standard structure of the program is as follows:
+
+            Credit Hours                 32 credit hours
+            Course Work                  Minimum 26 credit hours (9 courses)
+       Research Work / Thesis            Minimum 06 credit hours
+         Program Duration                Minimum: 1.5 Years (3 Regular semesters)
+                                         Maximum: 4 Years
+          Semester Duration              16-18 weeks for regular semesters
+                                         (1-2 weeks for examination)
+                                         8-9 weeks for summer semesters
+                                         (1 week for examination)
+     Course Load (per semester)          09-13 credit hours for regular semesters
+                                         Up-to 8 credit hours for summer semesters
+                                         (for remedial/deficiency/failure/repetition courses only)
+       3 Credit Hours (Theory)           3 classes (1 hour each) OR 2 classes (1.5 hour each) OR 1
+                                         class (3 hours)
+
+The standard scheme of studies for M.Phil in Education is as follows:
+
+
+                                         SEMESTER I
+ S. No   COURSE                                               CREDIT HOURS CATEGORY
+    1    Major Course – I*                                          3       Compulsory
+    2    Major Course – II*                                         3       Compulsory
+    3    Major Course – III*                                        3       Compulsory
+    4    Major Course – IV*                                         3       Compulsory
+    5    Fehm-e-Quran I                                          1 (0-1)    Mandatory
+                                                                            GE Course
+                                       Total Credits (13)
+
+
+
+
+                                                 23
+HEC CURRICULUM BOOKLET – EDUCATION                                                                                   2025
+
+                                                   SEMESTER II
+S. No COURSE                                                              CREDIT                 CATEGORY
+                                                                          HOURS
+      1      Specialization/Elective– I**                                     3              Major Specialization
+      2      Specialization/Elective– II**                                    3              Major Specialization
+      3      Specialization/Elective– III**                                   3              Major Specialization
+      4      Specialization/Elective– IV**                                    3              Major Specialization
+      5      Fehm-e-Quran II                                               1 (0-1)            Mandatory GE
+                                                                                                   Course
+                                              Total Credit Hours (13)
+
+                                                  SEMESTER III
+    S. No COURSE                                                          CREDIT                 CATEGORY
+                                                                          HOURS
+              Thesis ***                                                   6 ****                   Research
+
+                                                   SEMESTER IV
+    S.N.      COURSE                                                      CREDIT                 CATEGORY
+                                                                           HOURS
+              Thesis ***                                                  Continued                 Research
+
+*    These are Major Professional/mandatory courses for the program. Pool of these courses is given
+     below.
+** The university / offering department may offer any advanced course in the field of Education
+     as a Specialization/elective, where required as per its program objectives, university’s
+     geographical location and available academic and faculty resources. Credit combination
+     (reflecting balance of theory and lab / field work) must be arranged in accordance with the
+     nature of the course. A proposed list of areas of specialization is given.
+*** Research work for thesis must be performed by students individually as per university’s policy
+     on the same including but not limited to the protocols for topic selection, allocation of
+     supervisor and co-supervisor (where required), thesis submission, defense and evaluation as
+     approved through its statutory bodies.
+**** Credit hours for research work / thesis may be increased (above 6 credit hours) subject to
+     approval of the university’s relevant statutory body.
+
+    List of Major Compulsory Courses (Select any Four Courses)
+    1.    Advanced Research Methods
+    2.    Quantitative Research Methods
+    3.    Qualitative Research Methods
+    4.    Instrument Development
+    5.    Data Analytics
+    6.    IT Integrated Approaches in Educational Research
+    7.    Research Grant Writing and Proposal Development
+
+    Areas of Specialization (Tracks for Specialization Courses/Electives)
+    (The student has to choose any 01 area of specialization from this given list of 25+ areas of specialization. Once
+    specialization is chosen, the student has to choose 04 advance level courses from the pool of courses offered by HEI)
+     1.     Early Childhood Care and Education
+
+                                                             24
+HEC CURRICULUM BOOKLET – EDUCATION                                                            2025
+
+ 2.    Educational Research
+ 3.     Educational Assessment
+ 4.    Child Rights and Safety Education
+ 5.    Educational Policy and Planning
+ 6.    Curriculum Studies
+ 7.    Educational Leadership and Management
+ 8.    Educational Psychology
+ 9.    Guidance and Counseling
+ 10.   Inclusive Education
+ 11.   Literacy and Non Formal Education
+ 12.   Online & Distance Learning
+ 13.   Quality Assurance in Education
+ 14.   Comparative Education
+ 15.   Teacher Professional Development
+ 16.   Mathematics Education
+ 17.   STEM Education
+ 18.   Islamic Education
+ 19.   Education for Sustainable Development
+ 20.   Educational Entrepreneurship
+ 21.   Educational Technology
+ 22.   Health and Physical Education
+ 23.   Artificial Intelligence in Education
+ 24.   Special Education (Intellectual Impairments)
+ 25.   Special Education (Visual Impairments)
+ 26.   Special Education (Physical Impairments)
+ 27.   Special Education (Hearing Impairments)
+ 28.   Special Education (Learning Disabilities)
+ 29.   Special Education (Autism Spectrum Disorder)
+
+
+DEGREE AWARD REQUIREMENTS
+The following minimum requirements are prescribed for award of MPhil Education:
+ a) Minimum of twenty-four (26) credit hours including twelve (12) credit hours for Professional
+     courses and twelve (12) credit hours for specialization/elective courses as prescribed in this
+     policy document must be completed, whereas 02 credits for Fehm-e-Quran Course as notified
+     by HEC.
+ b) In addition to coursework of twenty-four (26) credit hours, research work / thesis of minimum
+     six (06) credit hours must also be completed individually as partial fulfillment of the degree
+     program. Requirement of research work / thesis cannot be substituted with additional course
+     work.
+ c) CGPA must not be below 2.50/4.00 at the time of completion of the degree program. The
+     university may however set higher standard in this regard.
+ d) The minimum duration required to complete the degree is four (03) regular semesters which
+     may be extended up to maximum of eight (08) regular semesters. Summer semester is not
+     considered as a regular semester.
+
+
+
+
+                                                25
+HEC CURRICULUM BOOKLET – EDUCATION                                                                2025
+
+COURSE LEARNING OUTCOMES
+
+Professional Courses Education
+Foundations of Education
+By the end of the course, students will be able to:
+ •     Analyze the Philosophical, Historical, Psychological, Sociological, Anthropological, Political,
+       Economic, Legal, Technological and Curriculum Foundations of education and their impact
+       on contemporary education systems.
+ •     Evaluate various educational theories and frameworks and their implications for teaching and
+       learning.
+ •     Demonstrate an understanding of the role of education in promoting social justice and equity.
+
+Inclusive Education
+By the end of the course, students will be able to:
+ •      Assess various approaches and models of inclusive education and their effectiveness in diverse
+        classroom settings.
+ •      Design and implement differentiated instructional strategies that cater to the diverse learning
+        needs of students, including those with disabilities and special educational needs by using
+        inclusive teaching techniques, such as Universal Design for Learning (UDL) and differentiated
+        instruction.
+ •      Critically reflect on personal biases and assumptions regarding inclusivity in education.
+
+General Methods of Teaching
+By the end of the course, students will be able to:
+ •      Apply a variety of instructional approaches, methodologies, techniques and strategies to
+        enhance student engagement and learning outcomes by adopting key theories, principles, and
+        models of teaching and learning, including behaviorist, cognitive, and constructivist
+        approaches.
+ •      Design and implement lesson plans that incorporate diverse teaching techniques to meet the
+        needs of all learners in inclusive settings incorporating the ICTs.
+ •      Reflect on and evaluate the effectiveness of selected teaching methods through peer feedback
+        and self-assessment.
+
+Educational Psychology
+By the end of the course, students will be able to:
+ •      Analyze key theories of learning, motivation, and development, including cognitive,
+        behavioral, and socio-cultural perspectives and their applications to teaching and learning
+        processes.
+ •      Examine the cognitive, emotional, and social development of learners and its impact on
+        educational practices and demonstrate an appreciation for the role of psychological principles
+        in education by reflecting on personal learning experiences and adapting teaching practices
+        accordingly.
+ •      Apply psychological principles to create supportive and effective learning environments.
+
+Contemporary Literacies
+By the end of the course, students will be able to:
+ •      Identify and evaluate the various literacy practices that are essential for success in the 21st
+        century.
+
+                                                  26
+HEC CURRICULUM BOOKLET – EDUCATION                                                                  2025
+
+ •      Design instructional materials and activities that promote critical and digital literacies among
+        students.
+ •      Reflect on the changing nature of literacy in a globalized and digitalized society and its
+        implications for teaching.
+
+Curriculum Development
+By the end of the course, students will be able to:
+ •      Analyze curriculum frameworks and standards to inform the design of educational programs
+        and resources.
+ •      Develop a coherent and inclusive curriculum that responds to the diverse needs and interests
+        of learners.
+ •      Evaluate and revise curricular materials based on current research and best practices in
+        education.
+
+Critical Thinking and Reflective Practices
+By the end of the course, students will be able to:
+ •      Demonstrate the ability to think critically and reflectively about teaching practices and student
+        learning experiences.
+ •      Develop a reflective practice framework to assess one’s own teaching effectiveness.
+ •      Engage in collaborative discussions and peer evaluations to enhance critical thinking skills in
+        educational contexts.
+
+Educational Assessment and Evaluation
+By the end of the course, students will be able to:
+ •      Analyze various assessment methods and tools and their suitability for measuring student
+        learning outcomes.
+ •      Design formative and summative assessments that provide meaningful feedback to students.
+ •      Use assessment data to inform instructional planning and improve student learning
+        experiences.
+
+School Management
+By the end of the course, students will be able to:
+ •      Examine the principles of effective school management and leadership in creating a positive
+        school culture.
+ •      Develop organizational strategies that promote collaboration and communication among
+        staff, students, and the community to develop and a social inclusion.
+ •      Analyze legal, ethical, and policy issues affecting school management and decision-making.
+
+Educational Technology
+By the end of the course, students will be able to:
+ •      Explore and analyze current educational technologies and their applications in enhancing
+        teaching and learning.
+ •      Design and implement technology-enhanced lesson plans that foster student engagement and
+        collaboration.
+ •      Demonstrate a positive attitude towards the adoption of emerging technologies in education
+        by critically reflecting on their potential to improve teaching practices and student learning
+        outcomes and reflect on ethical considerations.
+
+
+
+
+                                                   27
+HEC CURRICULUM BOOKLET – EDUCATION                                                                 2025
+
+Professional Courses Education
+Guidance and Counseling
+By the end of the course, students will be able to:
+ •      Explain the role and functions of guidance and counseling in schools and educational
+        institutions.
+ •      Identify the different types of guidance and counseling services provided to students, teachers,
+        and parents.
+ •      Develop skills to plan, implement, and evaluate guidance and counseling programs.
+ •      Understand the importance of confidentiality and the legal aspects of guidance and counseling.
+ •      Apply various techniques and strategies for assessing student needs and developing effective
+        guidance plans.
+
+Research Methods in Education
+By the end of the course, students will be able to:
+ •      Understand the principles and processes of research in education.
+ •      Identify and explain different research designs, methods, and instruments used in educational
+        research.
+ •      Develop skills to formulate research questions, hypotheses, and objectives.
+ •      Collect, analyze, and interpret data using various research methods and techniques.
+ •      Write a research report using proper APA style.
+
+Education for Sustainable Development
+By the end of the course, students will be able to:
+ •      Define and explain the concept of sustainable development and its relevance to education.
+ •      Identify the key principles and goals of Education for Sustainable Development (ESD).
+ •      Analyze the importance of ESD in promoting global citizenship and environmental awareness.
+ •      Develop skills to integrate ESD into curriculum planning and teaching practices.
+ •      Evaluate the impact of ESD on student learning outcomes and community development.
+
+Comparative Education
+By the end of the course, students will be able to:
+ •      Define and explain the concept of comparative education.
+ •      Compare and contrast educational systems, policies, and practices across different countries.
+ •      Analyze the historical development of educational systems in different countries.
+ •      Identify the cultural, social, and economic factors that influence educational systems.
+ •      Evaluate the effectiveness of different educational systems in achieving their goals.
+
+Learning Theories
+By the end of the course, students will be able to:
+ •      Explain the major learning theories (Behaviorist, Cognitive, Humanist) and their applications
+        in education.
+ •      Identify the key concepts and principles of different learning theories.
+ •      Analyze the strengths and limitations of different learning theories.
+ •      Apply learning theories to design instructional strategies for diverse learners.
+ •      Evaluate the impact of learning theories on student learning outcomes.
+
+Educational Policies and Plans of Pakistan
+By the end of the course, students will be able to:
+
+                                                  28
+HEC CURRICULUM BOOKLET – EDUCATION                                                                  2025
+
+ •      Explain the concept of educational policy and its significance in Pakistan.
+ •      Identify the major educational policies and plans of Pakistan (e.g., National Education
+        Policies, Vision-2025).
+ •      Analyze the historical development of educational policies in Pakistan.
+ •      Evaluate the impact of educational policies on student learning outcomes and education
+        system.
+ •      Develop skills to critique and recommend improvements in educational policies.
+
+Teaching Profession
+By the end of the course, students will be able to:
+ •      Define and explain the role and responsibilities of teachers in education.
+ •      Identify the characteristics and qualities of an effective teacher.
+ •      Analyze the importance of teacher professionalism and accountability.
+ •      Develop skills to plan, implement, and evaluate teaching strategies for diverse learners.
+ •      Evaluate the impact of teacher effectiveness on student learning outcomes.
+
+Pedagogy Courses
+Teaching of English
+By the end of the course, students will be able to:
+ •      Demonstrate a comprehensive understanding of English language structure, including
+        grammar, vocabulary, and phonetics.
+ •      Design and implement effective lesson plans that incorporate diverse methodologies for
+        teaching English as a second language.
+ •      Facilitate various forms of communication (speaking, listening, reading, writing) through
+        interactive and engaging classroom activities.
+ •      Utilize technology and multimedia resources to enhance English language learning and
+        teaching.
+
+Teaching of Art, Crafts, and Calligraphy
+By the end of the course, students will be able to:
+ •      Develop proficiency in various art techniques, including drawing, painting, and craft-making.
+ •      Create lesson plans that promote creativity, self-expression, and appreciation for the arts in
+        students.
+ •      Incorporate principles of design and aesthetics into visual arts teaching.
+ •      Assess students' artistic work using appropriate criteria and provide constructive feedback to
+        encourage improvement.
+
+Teaching of Mathematics
+By the end of the course, students will be able to:
+ •      Master core mathematical concepts and operations, demonstrating the ability to solve
+        problems using various approaches.
+ •      Create engaging and culturally relevant lesson plans that promote critical thinking and
+        problem-solving skills in mathematics.
+ •      Apply differentiated instruction strategies to meet the diverse needs of learners in mathematics
+        classrooms.
+ •      Use technology effectively to enhance teaching and learning in mathematics.
+
+
+
+
+                                                  29
+HEC CURRICULUM BOOKLET – EDUCATION                                                                      2025
+
+Teaching of Science
+By the end of the course, students will be able to:
+ •      Demonstrate a deep understanding of scientific concepts across various science disciplines
+ •      Design and conduct inquiry-based science lessons that encourage curiosity and
+        experimentation among students.
+ •      Integrate hands-on activities and demonstrations to illustrate scientific principles effectively.
+ •      Evaluate students' scientific understanding through formative and summative assessments.
+
+Teaching of Social Studies and Islamiat
+By the end of the course, students will be able to:
+ •      Understand and explain key historical, geographical, and cultural concepts relevant to social
+        studies and Islamiat.
+ •      Create inclusive lesson plans that explore diverse cultural perspectives and values in social
+        studies education.
+ •      Foster critical thinking and discussion on social issues, civic responsibilities, and ethical values.
+ •      Develop assessment tools that accurately gauge students’ understanding of social studies and
+        Islamiat content.
+
+Teaching of Urdu
+By the end of the course, students will be able to:
+ •      Display a strong command of Urdu language skills, including reading, writing, listening, and
+        speaking.
+ •      Craft lesson plans that effectively integrate literature, poetry, and contemporary texts to
+        promote literacy in Urdu.
+ •      Employ culturally responsive teaching practices to engage students from diverse backgrounds
+        in learning Urdu.
+ •      Assess students’ progress in Urdu using varied evaluation methods, including formative and
+        summative assessments.
+
+Practice Teaching
+For Classroom Observation
+By the end of the course, students will be able to:
+ ⚫       Describe key concepts, principles, and models related to classroom observation, including
+         observation techniques, tools, and protocols.
+ ⚫       Analyze classroom interactions, teaching strategies, and student behaviors to identify
+         effective instructional practices and areas for improvement.
+ ⚫       Demonstrate proficiency in conducting systematic classroom observations using
+         standardized tools and accurately documenting findings.
+ ⚫       Reflect on classroom observation experiences to develop self-awareness and a deeper
+         understanding of effective teaching and learning practices.
+ ⚫       Demonstrate ethical and professional behavior during classroom observations, respecting
+         confidentiality, cultural diversity, and the integrity of the educational environment.
+ ⚫       Effectively communicate observation findings through structured reports and constructive
+         feedback, considering both teacher performance and student learning outcomes.
+
+Practice Teaching -I
+By the end of the course, students will be able to:
+
+
+                                                     30
+HEC CURRICULUM BOOKLET – EDUCATION                                                            2025
+
+ ⚫       Classroom Management: Demonstrate effective classroom management strategies that
+         promote a positive learning environment.
+ ⚫       Lesson Planning: Design and implement lesson plans that align with curriculum objectives
+         and accommodate diverse learning needs.
+ ⚫       Instructional Strategies: Apply a variety of instructional strategies and teaching
+         methodologies to engage students and facilitate learning by using ICTs.
+ ⚫       Assessment Techniques: Use formative and summative assessment techniques to evaluate
+         student learning and provide constructive feedback.
+ ⚫       Reflective Practice: Engage in reflective practice to assess personal teaching performance
+         and identify areas for improvement.
+ ⚫       Communication Skills: Exhibit effective communication skills in interacting with students,
+         parents, and colleagues.
+
+Practice Teaching -II
+By the end of the course, students will be able to:
+ ⚫       Advanced Teaching Skills: Demonstrate advanced teaching skills and techniques to
+         enhance student engagement and learning outcomes.
+ ⚫       Curriculum Implementation: Effectively implement and adapt the curriculum to meet the
+         needs of individual learners and diverse classroom settings.
+ ⚫       Student-Centered Learning: Foster student-centered learning experiences that promote
+         critical thinking, collaboration, and creativity.
+ ⚫       Integration of Technology: Integrate technology into lesson plans and classroom activities
+         to enhance instructional effectiveness.
+ ⚫       Professional Development: Recognize the importance of ongoing professional
+         development and actively seek opportunities for growth and learning as an educator.
+ ⚫       Community Involvement: Collaborate with the school community, including parents and
+         other stakeholders, to support student learning and development.
+
+
+
+
+                                                31
+

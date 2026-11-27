@@ -4607,3 +4607,28 @@ content-improvement loop with no further cycle.
     intake runs on a newly prepared manifest.
   - Certifies no content, qualifies no reviewer (including the scholar review drafting note 7
     asks for), and authorises no publication.
+
+## D-2026-0081 - HEC's 2025 Education curriculum is a cited reference; the Sindh guides still decide what is taught
+
+- **Decided by:** curriculum owner, 2026-11-04 (board-direct session).
+- **Decision:**
+  1. Course pages cite HEC's *Revised Curriculum for Degree Programs in Education 2025*
+     (No. HEC/NCRC/EDUCATION/2025/7367, 11 April 2025), with the owner's wording "According to the
+     Revised Curriculum for Degree Programs in Education 2025".
+  2. Major courses list the HEC outcomes verified as taught. `partial` and `gap` outcomes do not
+     appear on the site; they go to the owner, who decides what becomes a revision
+     (`specs/hec-curriculum-2025/crosswalk.md`).
+- **Why:** so each course reads as nationally authoritative across Pakistan, truthfully.
+- **Limits:**
+  - Constitution Art. II is unchanged: the approved scheme and course guides remain the source of
+    truth for what is taught. HEC is a reference, and this entry changes no lesson text.
+  - HEC notifies a standard for universities and approves no textbook. No page may say
+    "HEC-approved textbook".
+  - The booklet must not be committed under `Scheme-and-Course-guides/`, which is a bound review
+    input. The published copy is `static/guides/hec-education-curriculum-2025.pdf`.
+  - The crosswalk is the authoring agent's reading, not a G3 review. It certifies no content.
+  - The licence track's "HEC 2025 course guide" means the older pre-service guide series, a
+    different document, and is unaffected.
+- **Left open:** `.specify/memory/constitution.md` Art. I still says "2025 Proposed Curriculum",
+  which is out of date. Editing it re-opens all review evidence, so it waits for the next bundled
+  amendment.

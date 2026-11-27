@@ -86,6 +86,8 @@ bank (Spec 003, RLS-protected - different from this file's public self-study ans
 5. Keep a running list `{key, full citation, url/doi, what it supports, kind}` - becomes
    `sources/unit-NN.md`. Each topic's `## Further reading` will cite a subset of it.
 
+**HEC outcomes.** If `catalog/hec-curriculum.json` lists outcomes for this course, read them while planning topics, and when the unit is done update the course's rows in `specs/hec-curriculum-2025/crosswalk.md`. The course guide still decides what is taught (Constitution Art. II).
+
 ## Step 2 - Design backward, per topic (Understanding by Design)
 
 For **each topic** in the `### Topic list`:

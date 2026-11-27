@@ -1,0 +1,798 @@
+{
+  "$comment": "How each University of Sindh course sits in HEC's notified 'Revised Curriculum for Degree Programs in Education' (2025). A cited reference only: Constitution Art. II still makes the Sindh scheme and guides decide what is taught. Deliberately a separate file: catalog/courses.json, Scheme-and-Course-guides/ and course-overview.mdx are bound review inputs. 'page' is the booklet's printed page; PDF page = page + document.pdf_page_offset. 'text' is verbatim HEC wording and is checked against specs/hec-curriculum-2025/booklet.txt by tests/unit/hec-curriculum.test.mjs. 'status' comes from specs/hec-curriculum-2025/crosswalk.md: only 'covered' outcomes appear on the site. 'relation': named = HEC names this course in the scheme or course list; suggested = HEC names a category and this subject as a suggestion or example; pool = from HEC's suggested interdisciplinary list.",
+  "document": {
+    "title": "Revised Curriculum for Degree Programs in Education",
+    "title_ur": "تعلیمی ڈگری پروگراموں کا نظرثانی شدہ نصاب",
+    "year": 2025,
+    "issuer": "Higher Education Commission",
+    "notification_no": "HEC/NCRC/EDUCATION/2025/7367",
+    "date": "2025-04-11",
+    "pdf": "guides/hec-education-curriculum-2025.pdf",
+    "pdf_page_offset": 7
+  },
+  "courses": {
+    "GENG-300": {
+      "category": "general_education",
+      "hec_title": "Functional English",
+      "hec_title_ur": "فنکشنل انگریزی",
+      "credit_hours": "3 (3-0)",
+      "page": 5,
+      "relation": "named"
+    },
+    "GNAS-301": {
+      "category": "general_education",
+      "hec_title": "Natural Science (Environmental Science is a course HEC suggests)",
+      "hec_title_ur": "قدرتی سائنس (ماحولیاتی سائنس ایچ ای سی کا تجویز کردہ کورس ہے)",
+      "credit_hours": "3 (2-1)",
+      "page": 5,
+      "relation": "suggested"
+    },
+    "GICT-300": {
+      "category": "general_education",
+      "hec_title": "Applications of Information & Communication Technologies (ICT)",
+      "hec_title_ur": "معلوماتی و مواصلاتی ٹیکنالوجی (ICT) کے اطلاقات",
+      "credit_hours": "3 (2-1)",
+      "page": 5,
+      "relation": "named"
+    },
+    "GQUR-300": {
+      "category": "general_education",
+      "hec_title": "Quantitative Reasoning - I",
+      "hec_title_ur": "مقداری استدلال - I",
+      "credit_hours": "3 (3-0)",
+      "page": 5,
+      "relation": "named"
+    },
+    "EFMP-301": {
+      "category": "professional",
+      "hec_title": "Educational Psychology",
+      "hec_title_ur": "تعلیمی نفسیات",
+      "credit_hours": "3 (3-0)",
+      "page": 26,
+      "relation": "named",
+      "clo_heading": "Educational Psychology",
+      "outcomes": [
+        {
+          "text": "Analyze key theories of learning, motivation, and development, including cognitive, behavioral, and socio-cultural perspectives and their applications to teaching and learning processes.",
+          "status": "covered",
+          "units": [
+            2,
+            3,
+            6
+          ],
+          "text_ur": "ادراکی، کرداری اور سماجی و ثقافتی نقطۂ نظر سمیت تعلم، محرک اور نشوونما کے اہم نظریات کا تجزیہ کرنا اور تدریس و تعلم کے عمل میں ان کا اطلاق دیکھنا۔"
+        },
+        {
+          "text": "Examine the cognitive, emotional, and social development of learners and its impact on educational practices and demonstrate an appreciation for the role of psychological principles in education by reflecting on personal learning experiences and adapting teaching practices accordingly.",
+          "status": "covered",
+          "units": [
+            2
+          ],
+          "text_ur": "سیکھنے والوں کی ادراکی، جذباتی اور معاشرتی نشوونما اور تعلیمی عمل پر اس کے اثر کا جائزہ لینا، اور اپنے تعلمی تجربات پر غور کرکے اور تدریس کو اس کے مطابق ڈھال کر تعلیم میں نفسیاتی اصولوں کے کردار کی قدر ظاہر کرنا۔"
+        },
+        {
+          "text": "Apply psychological principles to create supportive and effective learning environments.",
+          "status": "covered",
+          "units": [
+            8,
+            11
+          ],
+          "text_ur": "مددگار اور مؤثر تعلمی ماحول بنانے کے لیے نفسیاتی اصولوں کا اطلاق کرنا۔"
+        }
+      ]
+    },
+    "EFMP-302": {
+      "category": "professional",
+      "hec_title": "Teaching Profession",
+      "hec_title_ur": "پیشۂ تدریس",
+      "credit_hours": "3 (3-0)",
+      "page": 29,
+      "relation": "named",
+      "clo_heading": "Teaching Profession",
+      "outcomes": [
+        {
+          "text": "Define and explain the role and responsibilities of teachers in education.",
+          "status": "covered",
+          "units": [
+            2,
+            3
+          ],
+          "text_ur": "تعلیم میں اساتذہ کے کردار اور ذمہ داریوں کی تعریف اور وضاحت کرنا۔"
+        },
+        {
+          "text": "Identify the characteristics and qualities of an effective teacher.",
+          "status": "covered",
+          "units": [
+            3
+          ],
+          "text_ur": "مؤثر استاد کی خصوصیات اور اوصاف کی نشاندہی کرنا۔"
+        },
+        {
+          "text": "Analyze the importance of teacher professionalism and accountability.",
+          "status": "covered",
+          "units": [
+            1,
+            5
+          ],
+          "text_ur": "اساتذہ کی پیشہ واریت اور جواب دہی کی اہمیت کا تجزیہ کرنا۔"
+        },
+        {
+          "text": "Develop skills to plan, implement, and evaluate teaching strategies for diverse learners.",
+          "status": "gap",
+          "units": []
+        },
+        {
+          "text": "Evaluate the impact of teacher effectiveness on student learning outcomes.",
+          "status": "covered",
+          "units": [
+            3
+          ],
+          "text_ur": "سیکھنے والوں کے نتیجہ ہائے تعلم پر معلم کی افادیت کے اثر کو جانچنا۔"
+        }
+      ]
+    },
+    "GQUR-301": {
+      "category": "general_education",
+      "hec_title": "Quantitative Reasoning - II",
+      "hec_title_ur": "مقداری استدلال - II",
+      "credit_hours": "3 (3-0)",
+      "page": 6,
+      "relation": "named"
+    },
+    "GSOS-301": {
+      "category": "general_education",
+      "hec_title": "Social Sciences (Sociology is a course HEC suggests)",
+      "hec_title_ur": "سماجی علوم (عمرانیات ایچ ای سی کا تجویز کردہ کورس ہے)",
+      "credit_hours": "2 (2-0)",
+      "page": 6,
+      "relation": "suggested"
+    },
+    "GENG-301": {
+      "category": "general_education",
+      "hec_title": "Expository Writing",
+      "hec_title_ur": "توضیحی تحریر",
+      "credit_hours": "3 (3-0)",
+      "page": 6,
+      "relation": "named"
+    },
+    "EFMP-303": {
+      "category": "professional",
+      "hec_title": "Educational Policies and Plans of Pakistan",
+      "hec_title_ur": "پاکستان کی تعلیمی پالیسیاں اور منصوبے",
+      "credit_hours": "3 (3-0)",
+      "page": 28,
+      "relation": "named",
+      "clo_heading": "Educational Policies and Plans of Pakistan",
+      "outcomes": [
+        {
+          "text": "Explain the concept of educational policy and its significance in Pakistan.",
+          "status": "covered",
+          "units": [
+            1
+          ],
+          "text_ur": "تعلیمی پالیسی کے تصور اور پاکستان میں اس کی اہمیت کی وضاحت کرنا۔"
+        },
+        {
+          "text": "Identify the major educational policies and plans of Pakistan (e.g., National Education Policies, Vision-2025).",
+          "status": "covered",
+          "units": [
+            2,
+            3
+          ],
+          "text_ur": "پاکستان کی بڑی تعلیمی پالیسیوں اور منصوبوں (مثلاً قومی تعلیمی پالیسیاں، ویژن 2025) کی نشاندہی کرنا۔"
+        },
+        {
+          "text": "Analyze the historical development of educational policies in Pakistan.",
+          "status": "covered",
+          "units": [
+            1,
+            2
+          ],
+          "text_ur": "پاکستان میں تعلیمی پالیسیوں کے تاریخی ارتقا کا تجزیہ کرنا۔"
+        },
+        {
+          "text": "Evaluate the impact of educational policies on student learning outcomes and education system.",
+          "status": "covered",
+          "units": [
+            2,
+            5
+          ],
+          "text_ur": "سیکھنے والوں کے نتیجہ ہائے تعلم اور نظامِ تعلیم پر تعلیمی پالیسیوں کے اثر کو جانچنا۔"
+        },
+        {
+          "text": "Develop skills to critique and recommend improvements in educational policies.",
+          "status": "covered",
+          "units": [
+            4,
+            6
+          ],
+          "text_ur": "تعلیمی پالیسیوں پر تنقید کرنے اور ان میں بہتری تجویز کرنے کی مہارتیں پیدا کرنا۔"
+        }
+      ]
+    },
+    "EFMP-304": {
+      "category": "professional",
+      "hec_title": "Critical Thinking and Reflective Practices",
+      "hec_title_ur": "تنقیدی سوچ اور تاملی مشقیں",
+      "credit_hours": "3 (3-0)",
+      "page": 27,
+      "relation": "named",
+      "clo_heading": "Critical Thinking and Reflective Practices",
+      "outcomes": [
+        {
+          "text": "Demonstrate the ability to think critically and reflectively about teaching practices and student learning experiences.",
+          "status": "covered",
+          "units": [
+            1,
+            4
+          ],
+          "text_ur": "تدریسی طریقوں اور سیکھنے والوں کے تعلمی تجربات پر تنقیدی اور تاملی انداز میں سوچنے کی صلاحیت ظاہر کرنا۔"
+        },
+        {
+          "text": "Develop a reflective practice framework to assess one’s own teaching effectiveness.",
+          "status": "covered",
+          "units": [
+            5,
+            6
+          ],
+          "text_ur": "اپنی تدریسی افادیت کو جانچنے کے لیے تاملی مشق کا ایک خاکہ تیار کرنا۔"
+        },
+        {
+          "text": "Engage in collaborative discussions and peer evaluations to enhance critical thinking skills in educational contexts.",
+          "status": "partial",
+          "units": []
+        }
+      ]
+    },
+    "EFMP-305": {
+      "category": "professional",
+      "hec_title": "Inclusive Education",
+      "hec_title_ur": "شمولیتی تعلیم",
+      "credit_hours": "3 (3-0)",
+      "page": 26,
+      "relation": "named",
+      "clo_heading": "Inclusive Education",
+      "outcomes": [
+        {
+          "text": "Assess various approaches and models of inclusive education and their effectiveness in diverse classroom settings.",
+          "status": "partial",
+          "units": []
+        },
+        {
+          "text": "Design and implement differentiated instructional strategies that cater to the diverse learning needs of students, including those with disabilities and special educational needs by using inclusive teaching techniques, such as Universal Design for Learning (UDL) and differentiated instruction.",
+          "status": "covered",
+          "units": [
+            3,
+            4
+          ],
+          "text_ur": "تعلم کے لیے عالمگیر ڈیزائن (UDL) اور متنوع ہدایات جیسی شمولیتی تدریسی تکنیکوں کے ذریعے ایسی متنوع تدریسی حکمتِ عملیاں بنانا اور نافذ کرنا جو معذوری اور خصوصی تعلیمی ضروریات والے طلبہ سمیت سب کی مختلف تعلمی ضرورتیں پوری کریں۔"
+        },
+        {
+          "text": "Critically reflect on personal biases and assumptions regarding inclusivity in education.",
+          "status": "covered",
+          "units": [
+            5
+          ],
+          "text_ur": "تعلیم میں شمولیت کے بارے میں اپنے ذاتی تعصبات اور مفروضات پر تنقیدی غور کرنا۔"
+        }
+      ]
+    },
+    "GPKS-402": {
+      "category": "general_education",
+      "hec_title": "Pakistan Studies",
+      "hec_title_ur": "مطالعۂ پاکستان",
+      "credit_hours": "2 (2-0)",
+      "page": 6,
+      "relation": "named"
+    },
+    "GARH-400": {
+      "category": "general_education",
+      "hec_title": "Arts & Humanities (Philosophy is an example HEC gives)",
+      "hec_title_ur": "فنون و انسانیات (فلسفہ ایچ ای سی کی دی ہوئی ایک مثال ہے)",
+      "credit_hours": "2 (2-0)",
+      "page": 6,
+      "relation": "suggested"
+    },
+    "GISS-401": {
+      "category": "general_education",
+      "hec_title": "Islamic Studies",
+      "hec_title_ur": "اسلامیات",
+      "credit_hours": "2 (2-0)",
+      "page": 6,
+      "relation": "named"
+    },
+    "GETH-401": {
+      "category": "general_education",
+      "hec_title": "Ethics for non-Muslim students",
+      "hec_title_ur": "غیر مسلم طلبہ کے لیے اخلاقیات",
+      "credit_hours": "2 (2-0)",
+      "page": 6,
+      "relation": "named"
+    },
+    "GICP-400": {
+      "category": "general_education",
+      "hec_title": "Ideology & Constitution of Pakistan",
+      "hec_title_ur": "نظریہ اور آئینِ پاکستان",
+      "credit_hours": "2 (2-0)",
+      "page": 6,
+      "relation": "named"
+    },
+    "EFMP-406": {
+      "category": "professional",
+      "hec_title": "Contemporary Literacies",
+      "hec_title_ur": "عصری خواندگیاں",
+      "credit_hours": "3 (3-0)",
+      "page": 26,
+      "relation": "named",
+      "clo_heading": "Contemporary Literacies",
+      "outcomes": [
+        {
+          "text": "Identify and evaluate the various literacy practices that are essential for success in the 21st century.",
+          "status": "covered",
+          "units": [
+            1,
+            2
+          ],
+          "text_ur": "اکیسویں صدی میں کامیابی کے لیے ضروری مختلف خواندگی کے طریقوں کی نشاندہی کرنا اور انہیں جانچنا۔"
+        },
+        {
+          "text": "Design instructional materials and activities that promote critical and digital literacies among students.",
+          "status": "covered",
+          "units": [
+            2,
+            4,
+            5
+          ],
+          "text_ur": "ایسا تدریسی مواد اور سرگرمیاں بنانا جو طلبہ میں تنقیدی اور ڈیجیٹل خواندگی کو فروغ دیں۔"
+        },
+        {
+          "text": "Reflect on the changing nature of literacy in a globalized and digitalized society and its implications for teaching.",
+          "status": "partial",
+          "units": []
+        }
+      ]
+    },
+    "EFMP-407": {
+      "category": "professional",
+      "hec_title": "Education for Sustainable Development",
+      "hec_title_ur": "پائیدار ترقی کے لیے تعلیم",
+      "credit_hours": "3 (3-0)",
+      "page": 28,
+      "relation": "named",
+      "clo_heading": "Education for Sustainable Development",
+      "outcomes": [
+        {
+          "text": "Define and explain the concept of sustainable development and its relevance to education.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Identify the key principles and goals of Education for Sustainable Development (ESD).",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Analyze the importance of ESD in promoting global citizenship and environmental awareness.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Develop skills to integrate ESD into curriculum planning and teaching practices.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Evaluate the impact of ESD on student learning outcomes and community development.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "EFPG-401": {
+      "category": "pedagogy",
+      "hec_title": "Teaching of English",
+      "hec_title_ur": "انگریزی کی تدریس",
+      "credit_hours": "3 (3-0)",
+      "page": 29,
+      "relation": "named",
+      "clo_heading": "Teaching of English",
+      "outcomes": [
+        {
+          "text": "Demonstrate a comprehensive understanding of English language structure, including grammar, vocabulary, and phonetics.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Design and implement effective lesson plans that incorporate diverse methodologies for teaching English as a second language.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Facilitate various forms of communication (speaking, listening, reading, writing) through interactive and engaging classroom activities.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Utilize technology and multimedia resources to enhance English language learning and teaching.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "GUHQ-301": {
+      "category": "general_education",
+      "hec_title": "Fehm-e-Quran - I",
+      "hec_title_ur": "فہمِ قرآن - I",
+      "credit_hours": "1 (0-1)",
+      "page": 6,
+      "relation": "named"
+    },
+    "GCCE-400": {
+      "category": "general_education",
+      "hec_title": "Civics & Community Engagement",
+      "hec_title_ur": "شہریت اور سماجی شمولیت",
+      "credit_hours": "2 (1-1)",
+      "page": 6,
+      "relation": "named"
+    },
+    "GENT-401": {
+      "category": "general_education",
+      "hec_title": "Entrepreneurship",
+      "hec_title_ur": "کاروباری صلاحیت",
+      "credit_hours": "2 (2-0)",
+      "page": 6,
+      "relation": "named"
+    },
+    "EFMP-408": {
+      "category": "professional",
+      "hec_title": "Educational Assessment and Evaluation",
+      "hec_title_ur": "تعلیمی جانچ اور تعین قدر",
+      "credit_hours": "3 (3-0)",
+      "page": 27,
+      "relation": "named",
+      "clo_heading": "Educational Assessment and Evaluation",
+      "outcomes": [
+        {
+          "text": "Analyze various assessment methods and tools and their suitability for measuring student learning outcomes.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Design formative and summative assessments that provide meaningful feedback to students.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Use assessment data to inform instructional planning and improve student learning experiences.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "EFMP-409": {
+      "category": "professional",
+      "hec_title": "Foundations of Education",
+      "hec_title_ur": "تعلیم کی بنیادیں",
+      "credit_hours": "3 (3-0)",
+      "page": 26,
+      "relation": "named",
+      "clo_heading": "Foundations of Education",
+      "outcomes": [
+        {
+          "text": "Analyze the Philosophical, Historical, Psychological, Sociological, Anthropological, Political, Economic, Legal, Technological and Curriculum Foundations of education and their impact on contemporary education systems.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Evaluate various educational theories and frameworks and their implications for teaching and learning.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Demonstrate an understanding of the role of education in promoting social justice and equity.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "MFPG-402": {
+      "category": "pedagogy",
+      "hec_title": "Teaching of Science",
+      "hec_title_ur": "سائنس کی تدریس",
+      "credit_hours": "3 (3-0)",
+      "page": 30,
+      "relation": "named",
+      "clo_heading": "Teaching of Science",
+      "outcomes": [
+        {
+          "text": "Demonstrate a deep understanding of scientific concepts across various science disciplines",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Design and conduct inquiry-based science lessons that encourage curiosity and experimentation among students.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Integrate hands-on activities and demonstrations to illustrate scientific principles effectively.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Evaluate students' scientific understanding through formative and summative assessments.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "GUHQ-400": {
+      "category": "general_education",
+      "hec_title": "Fehm-e-Quran - II",
+      "hec_title_ur": "فہمِ قرآن - II",
+      "credit_hours": "1 (0-1)",
+      "page": 6,
+      "relation": "named"
+    },
+    "EFID-501": {
+      "category": "interdisciplinary",
+      "hec_title": "Human Growth and Development",
+      "hec_title_ur": "انسانی بالیدگی اور نشوونما",
+      "credit_hours": "3 (3-0)",
+      "page": 9,
+      "relation": "pool"
+    },
+    "EFID-502": {
+      "category": "interdisciplinary",
+      "hec_title": "Media Education",
+      "hec_title_ur": "میڈیا کی تعلیم",
+      "credit_hours": "3 (3-0)",
+      "page": 8,
+      "relation": "pool"
+    },
+    "EFMP-510": {
+      "category": "professional",
+      "hec_title": "School Management",
+      "hec_title_ur": "اسکول کا انتظام",
+      "credit_hours": "3 (3-0)",
+      "page": 27,
+      "relation": "named",
+      "clo_heading": "School Management",
+      "outcomes": [
+        {
+          "text": "Examine the principles of effective school management and leadership in creating a positive school culture.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Develop organizational strategies that promote collaboration and communication among staff, students, and the community to develop and a social inclusion.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Analyze legal, ethical, and policy issues affecting school management and decision-making.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "EFMP-511": {
+      "category": "professional",
+      "hec_title": "Curriculum Development",
+      "hec_title_ur": "نصاب سازی",
+      "credit_hours": "3 (3-0)",
+      "page": 27,
+      "relation": "named",
+      "clo_heading": "Curriculum Development",
+      "outcomes": [
+        {
+          "text": "Analyze curriculum frameworks and standards to inform the design of educational programs and resources.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Develop a coherent and inclusive curriculum that responds to the diverse needs and interests of learners.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Evaluate and revise curricular materials based on current research and best practices in education.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "EFPG-503": {
+      "category": "pedagogy",
+      "hec_title": "Teaching of Urdu",
+      "hec_title_ur": "اردو کی تدریس",
+      "credit_hours": "3 (3-0)",
+      "page": 30,
+      "relation": "named",
+      "clo_heading": "Teaching of Urdu",
+      "outcomes": [
+        {
+          "text": "Display a strong command of Urdu language skills, including reading, writing, listening, and speaking.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Craft lesson plans that effectively integrate literature, poetry, and contemporary texts to promote literacy in Urdu.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Employ culturally responsive teaching practices to engage students from diverse backgrounds in learning Urdu.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Assess students’ progress in Urdu using varied evaluation methods, including formative and summative assessments.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "EFID-503": {
+      "category": "interdisciplinary",
+      "hec_title": "Child Abuse and Safety",
+      "hec_title_ur": "بچوں سے بدسلوکی اور تحفظ",
+      "credit_hours": "3 (3-0)",
+      "page": 8,
+      "relation": "pool"
+    },
+    "EFPG-505": {
+      "category": "pedagogy",
+      "hec_title": "Teaching of Mathematics",
+      "hec_title_ur": "ریاضی کی تدریس",
+      "credit_hours": "3 (3-0)",
+      "page": 29,
+      "relation": "named",
+      "clo_heading": "Teaching of Mathematics",
+      "outcomes": [
+        {
+          "text": "Master core mathematical concepts and operations, demonstrating the ability to solve problems using various approaches.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Create engaging and culturally relevant lesson plans that promote critical thinking and problem-solving skills in mathematics.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Apply differentiated instruction strategies to meet the diverse needs of learners in mathematics classrooms.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Use technology effectively to enhance teaching and learning in mathematics.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "EFPG-506": {
+      "category": "pedagogy",
+      "hec_title": "Teaching of Social Studies and Islamiat",
+      "hec_title_ur": "معاشرتی علوم اور اسلامیات کی تدریس",
+      "credit_hours": "3 (3-0)",
+      "page": 30,
+      "relation": "named",
+      "clo_heading": "Teaching of Social Studies and Islamiat",
+      "outcomes": [
+        {
+          "text": "Understand and explain key historical, geographical, and cultural concepts relevant to social studies and Islamiat.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Create inclusive lesson plans that explore diverse cultural perspectives and values in social studies education.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Foster critical thinking and discussion on social issues, civic responsibilities, and ethical values.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Develop assessment tools that accurately gauge students’ understanding of social studies and Islamiat content.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "FDEX-560": {
+      "category": "internship",
+      "hec_title": "Internship",
+      "hec_title_ur": "انٹرن شپ",
+      "credit_hours": "3",
+      "page": 7,
+      "relation": "named"
+    },
+    "EFPG-607": {
+      "category": "pedagogy",
+      "hec_title": "Teaching of Art, Crafts and Calligraphy",
+      "hec_title_ur": "فن، دستکاری اور خطاطی کی تدریس",
+      "credit_hours": "3 (3-0)",
+      "page": 29,
+      "relation": "named",
+      "clo_heading": "Teaching of Art, Crafts, and Calligraphy",
+      "outcomes": [
+        {
+          "text": "Develop proficiency in various art techniques, including drawing, painting, and craft-making.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Create lesson plans that promote creativity, self-expression, and appreciation for the arts in students.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Incorporate principles of design and aesthetics into visual arts teaching.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Assess students' artistic work using appropriate criteria and provide constructive feedback to encourage improvement.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "EFMP-612": {
+      "category": "professional",
+      "hec_title": "Research Methods in Education",
+      "hec_title_ur": "تعلیم میں تحقیق کے طریقے",
+      "credit_hours": "3 (3-0)",
+      "page": 28,
+      "relation": "named",
+      "clo_heading": "Research Methods in Education",
+      "outcomes": [
+        {
+          "text": "Understand the principles and processes of research in education.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Identify and explain different research designs, methods, and instruments used in educational research.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Develop skills to formulate research questions, hypotheses, and objectives.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Collect, analyze, and interpret data using various research methods and techniques.",
+          "status": "pending",
+          "units": []
+        },
+        {
+          "text": "Write a research report using proper APA style.",
+          "status": "pending",
+          "units": []
+        }
+      ]
+    },
+    "EFID-604": {
+      "category": "interdisciplinary",
+      "hec_title": "Science, Technology and Society",
+      "hec_title_ur": "سائنس، ٹیکنالوجی اور معاشرہ",
+      "credit_hours": "3 (3-0)",
+      "page": 8,
+      "relation": "pool"
+    },
+    "CPPR-650": {
+      "category": "capstone",
+      "hec_title": "Capstone Project",
+      "hec_title_ur": "کیپ اسٹون پروجیکٹ",
+      "credit_hours": "3",
+      "page": 7,
+      "relation": "named"
+    }
+  }
+}

@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import ReviewStatusBanner from '@site/src/components/ReviewStatusBanner';
 import CourseGuideNotice from '@site/src/components/CourseGuideNotice';
+import HecCurriculumNotice from '@site/src/components/HecCurriculumNotice';
 import FeedbackWidget from '@site/src/components/FeedbackWidget';
 import { trackEvent } from '@site/src/lib/analytics';
 import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/selfAssessment';
@@ -437,6 +438,7 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
       <ReadingProgress locale={locale} />
       <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
       <ReadingToolbar minutes={minutes} locale={locale} />
+      {isCourseOverview && <HecCurriculumNotice courseCode={courseCode} locale={locale} />}
       {isCourseOverview && <CourseGuideNotice courseCode={courseCode} locale={locale} />}
       <ContentOriginal {...props} />
       {(courseCode !== null && unitNo !== null) && <FeedbackWidget />}

@@ -133,3 +133,8 @@ base-voice-samples/
 *.ogg
 # The package archive the sub-project was installed from
 video-studio-sdd-ri*.zip
+
+# HEC 2025 curriculum: the owner's copy stays out of git. Every tracked file under
+# Scheme-and-Course-guides/ is a bound review input, so committing it here would make the
+# evidence of every reviewed unit stale. The published copy is static/guides/hec-education-curriculum-2025.pdf.
+Scheme-and-Course-guides/EDUCATION 2025.pdf
