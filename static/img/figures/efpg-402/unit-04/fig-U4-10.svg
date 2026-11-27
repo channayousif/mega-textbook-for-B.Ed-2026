@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of four phases of planning an effective school science exhibition</title><desc id="d">Table detailing the four planning phases of a school science exhibition: preparation, project development, event day, and post-exhibition reflection.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="68"/>
+<rect class="plain" x="24" y="132" width="732" height="68"/>
+<rect class="panel" x="24" y="200" width="732" height="68"/>
+<rect class="plain" x="24" y="268" width="732" height="68"/>
+</g><g id="layer-edges">
+<line class="grid" x1="170" y1="24" x2="170" y2="336"/>
+<line class="grid" x1="430" y1="24" x2="430" y2="336"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Exhibition Phase</text>
+<text class="sh" x="182" y="49">Core Student Actions</text>
+<text class="sh" x="442" y="49">Teacher Facilitation and Safety Role</text>
+
+<text class="sh" x="36" y="94">1. Preparation</text>
+<text class="cell" x="36" y="112">(4-6 weeks prior)</text>
+<text class="cell" x="182" y="93">Form student inquiry teams;</text>
+<text class="cell" x="182" y="110">select local science problems</text>
+<text class="cell" x="442" y="93">Approve curriculum links; review safety;</text>
+<text class="cell" x="442" y="110">ensure questions demand real testing</text>
+
+<text class="sh" x="36" y="162">2. Development</text>
+<text class="cell" x="36" y="180">(2-4 weeks prior)</text>
+<text class="cell" x="182" y="161">Construct working models; collect</text>
+<text class="cell" x="182" y="178">data; create explanatory boards</text>
+<text class="cell" x="442" y="161">Guide materials choice; verify accuracy;</text>
+<text class="cell" x="442" y="178">inspect apparatus for mechanical safety</text>
+
+<text class="sh" x="36" y="230">3. Exhibition Day</text>
+<text class="cell" x="36" y="248">(Event day)</text>
+<text class="cell" x="182" y="229">Demonstrate models; explain</text>
+<text class="cell" x="182" y="246">findings; answer visitor questions</text>
+<text class="cell" x="442" y="229">Organise visitor flow; supervise flame</text>
+<text class="cell" x="442" y="246">and electrical safety; facilitate peer reviews</text>
+
+<text class="sh" x="36" y="298">4. Debrief</text>
+<text class="cell" x="36" y="316">(Post-event week)</text>
+<text class="cell" x="182" y="297">Reflect on project learning;</text>
+<text class="cell" x="182" y="314">dismantle and store materials</text>
+<text class="cell" x="442" y="297">Consolidate concepts; link discoveries</text>
+<text class="cell" x="442" y="314">to syllabus; celebrate student effort</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="375">A structured four-phase framework turns school science exhibitions into authentic inquiry events.</text>
+</g><text class="wm" x="768" y="405" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

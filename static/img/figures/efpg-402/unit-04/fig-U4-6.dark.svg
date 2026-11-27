@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of five low-cost teaching aids made from household materials</title><desc id="d">Table detailing five low-cost teaching aids constructed from recycled materials and the science concepts they teach.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="170" y1="24" x2="170" y2="364"/>
+<line class="grid" x1="430" y1="24" x2="430" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Teaching Aid</text>
+<text class="sh" x="182" y="49">Everyday Materials</text>
+<text class="sh" x="442" y="49">Science Concept (Grades 4-8)</text>
+
+<text class="sh" x="36" y="99">Lung model</text>
+<text class="cell" x="182" y="91">Plastic bottle, balloons,</text>
+<text class="cell" x="182" y="108">straw, rubber sheet, tape</text>
+<text class="cell" x="442" y="91">Diaphragm movement and air pressure</text>
+<text class="cell" x="442" y="108">changes during breathing</text>
+
+<text class="sh" x="36" y="159">Circuit tester</text>
+<text class="cell" x="182" y="151">Dry cell, torch bulb, wire,</text>
+<text class="cell" x="182" y="168">paper clips, card strip</text>
+<text class="cell" x="442" y="151">Closed electric circuits and</text>
+<text class="cell" x="442" y="168">electrical conductivity of materials</text>
+
+<text class="sh" x="36" y="219">Pinhole camera</text>
+<text class="cell" x="182" y="211">Cardboard shoe box,</text>
+<text class="cell" x="182" y="228">tracing paper, foil, pin</text>
+<text class="cell" x="442" y="211">Rectilinear propagation of light and</text>
+<text class="cell" x="442" y="228">formation of inverted real images</text>
+
+<text class="sh" x="36" y="279">Water filter</text>
+<text class="cell" x="182" y="271">Plastic bottle, cotton cloth,</text>
+<text class="cell" x="182" y="288">fine sand, gravel, charcoal</text>
+<text class="cell" x="442" y="271">Mechanical filtration and surface</text>
+<text class="cell" x="442" y="288">adsorption in water purification</text>
+
+<text class="sh" x="36" y="339">Density column</text>
+<text class="cell" x="182" y="331">Glass jar, cooking oil,</text>
+<text class="cell" x="182" y="348">coloured water, honey, stone</text>
+<text class="cell" x="442" y="331">Density differences between liquids</text>
+<text class="cell" x="442" y="348">and buoyancy of solid objects</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="395">Low-cost teaching aids constructed from household items to teach core science concepts.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

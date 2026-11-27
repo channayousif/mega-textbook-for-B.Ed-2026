@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Diagram of Dale's cone of experience applied to science learning</title><desc id="d">Diagram of Dale's cone of experience showing the progression from direct purposeful experiences at the base to verbal symbols at the apex, guiding the choice of science teaching aids.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<polygon class="panel-a" points="390,30 250,110 530,110"/>
+<polygon class="panel-b" points="245,116 175,200 605,200 535,116"/>
+<polygon class="panel-a" points="170,206 100,296 680,296 610,206"/>
+<polygon class="panel-b" points="95,302 30,396 750,396 685,302"/>
+</g><g id="layer-nodes">
+<text class="h" x="390" y="75" text-anchor="middle">Verbal &amp; Text Symbols</text>
+<text class="cell" x="390" y="95" text-anchor="middle">Lectures, formulas, written textbook terms (Most abstract)</text>
+
+<text class="h" x="390" y="150" text-anchor="middle">Visual &amp; Auditory Media</text>
+<text class="cell" x="390" y="172" text-anchor="middle">Charts, recorded videos, educational animations, slide presentations</text>
+
+<text class="h" x="390" y="242" text-anchor="middle">Demonstrations &amp; Working Models</text>
+<text class="cell" x="390" y="264" text-anchor="middle">Teacher demonstrations, exhibits, low-cost functional apparatus</text>
+
+<text class="h" x="390" y="340" text-anchor="middle">Direct Purposeful Experiences</text>
+<text class="cell" x="390" y="362" text-anchor="middle">Hands-on student experiments, handling real specimens, fieldwork (Most concrete)</text>
+</g><g id="layer-labels">
+<text class="small" x="30" y="422">Dale's cone: effective science teaching grounds abstract symbols in concrete experiential bases.</text>
+</g><text class="wm" x="768" y="430" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
