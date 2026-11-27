@@ -1,0 +1,10 @@
+$ git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/gent-401/unit-07/ static/img/figures/gent-401/unit-07/   (repo HEAD 01fde1b302e083ffef3098d3dadd40fbb90cf8d7, 2026-11-27T00:36:56Z)
+deployed SHA: 366019f8ace647e892523e553b81ab6d1832ec68
+reviewed HEAD: 01fde1b302e083ffef3098d3dadd40fbb90cf8d7
+exit_code=1 (nonzero means the diff is not empty)
+
+$ git diff --name-status "366019f8ace647e892523e553b81ab6d1832ec68" HEAD -- docs/semester-4/gent-401/unit-07/ static/img/figures/gent-401/unit-07/
+M	docs/semester-4/gent-401/unit-07/index.mdx
+A	static/img/figures/gent-401/unit-07/fig-U7-5.webp
+
+render-review: UNAVAILABLE. The production build at textbook.com.pk is built from 366019f8ace647e892523e553b81ab6d1832ec68, which differs from the reviewed HEAD 01fde1b302e083ffef3098d3dadd40fbb90cf8d7 for this unit (docs/semester-4/gent-401/unit-07/index.mdx modified: the fig-U7-5 banner carrier added; static/img/figures/gent-401/unit-07/fig-U7-5.webp added). The crew brief prohibits building or serving the site, so the live pages are not the reviewed input and scripts/render-inspect.mjs was not run. No narrow-screen (360px), reading-order, table-scroll, clipping or A4 print inspection was performed. Rendered input identity: deployed 366019f8ace647e892523e553b81ab6d1832ec68 vs reviewed HEAD 01fde1b302e083ffef3098d3dadd40fbb90cf8d7.

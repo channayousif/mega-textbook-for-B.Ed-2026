@@ -1,0 +1,22 @@
+Independent assessment solving, GENT-401 Unit 7 (unit-assessment.mdx), done before reading the key.
+
+MCQ derived answers: 1 B, 2 A, 3 B, 4 B, 5 A, 6 C, 7 C, 8 B, 9 B, 10 B.
+Supplied key (unit-assessment.mdx:110-119): 1 B, 2 A, 3 B, 4 B, 5 A, 6 C, 7 C, 8 B, 9 B, 10 B. All ten agree.
+Key distribution: A 2, B 6, C 2, D 0. An all-B response scores 6/10.
+Item notes:
+- MCQ 3 (line 42) asks for "one of the three shifts as a venture's team grows". topic-01.mdx:38 teaches that "The shift runs in two directions" (doing -> arranging; memory -> written routines). No three shifts are taught. B is still the only defensible option, but the stem states a count the text contradicts.
+- MCQ 4 rationale (line 113) says "A describes market penetration"; the unit never introduces market penetration.
+- MCQ 7 option D (delivery accident) is keyed as a human cause; defensible only as negligence. C is unambiguous, so the item stands.
+
+RRQs: model answers (lines 123-132) checked against the topics; marks add up (2/3/4/3/3/2/3/4/3/4). RRQ 6 is labelled Analyze but asks the learner to explain a rule the topic states (topic-01.mdx:82); the demand is Understand.
+
+ERQs vs rubrics:
+- ERQ 1 (line 98) asks how leadership/team building must change "if she takes the chance" and which tasks to delegate. The rubric's fourth criterion "Judgement on taking the chance" (line 145) scores a decision the task never asks for (3 of 12 marks).
+- ERQ 5 (line 102) asks for hook, problem, solution, market, model, team, ask, one risk, first sentence and a non-verbal habit. The rubric criterion "Ask and next step (Create)" (line 180) requires "plus a next step" for full marks; the task does not ask for one.
+- ERQ 2, 3, 4 rubrics align with their tasks.
+Blueprint: 10/10/5 present; MCQs Remember-Apply; RRQs Understand-Analyze; ERQs Analyze-Create with one Create item (ERQ 5, the three-minute course-project pitch the content-spec requires). Topic split of ERQs: 7.1 x3 (ERQ 1-3), 7.2 x2 (ERQ 4-5); spec asks 2 per topic plus 1 integrative and ERQ 5 draws almost only on 7.2.
+
+Worked-example arithmetic (topic-02.mdx:40-49, "Hira's three-minute reading-corner pitch"):
+- Times: 20+30+40+30+30+20+20+10 = 200 s = 3 min 20 s, over the stated three minutes.
+- Model: 18,000 per corner; schools 12,000 + sponsor 6,000. Four corners: total 72,000; school share 48,000; sponsor share 24,000. The ask "60,000 rupees to equip the first four corners" matches none of these, and the text does not explain it, although line 65 of the same topic tells learners to use "Numbers that can be checked".
+- Market row: "Three head teachers said they would try one" while the ask funds four corners.

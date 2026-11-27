@@ -1,0 +1,22 @@
+Figure inspection for GENT-401 Unit 7 (source-level; no rendered page was available, see render-review-unavailable.txt)
+Method: read each committed SVG's text, title/desc and geometry; viewed fig-U7-5.webp locally after
+conversion with ImageMagick (convert static/img/figures/gent-401/unit-07/fig-U7-5.webp -resize 900x).
+SVGs use CSS custom properties that ImageMagick cannot rasterise, so SVG geometry was read from the
+source coordinates. measure-figure-text exited 0 for all four SVGs (see measure-figure-text.txt).
+
+fig-U7-1 (table, topic-01.mdx:26): four strategies (new market, new product, franchise, online), each with benefit and risk. Matches prose lines 60-63 and the alt text. OK.
+
+fig-U7-2 (diagram, topic-01.mdx:77): plot frame x 100-700, y 80-440; vertical grid x=400, horizontal grid y=260.
+  x axis = "likelihood of the risk" (low left, high right); y axis = "impact if it happens" (high top).
+  node-flood  circle (190,150): low likelihood, high impact  -> prose "High impact, low likelihood: prepare and insure" (topic-01.mdx:82). Consistent.
+  node-competitor (620,150): high/high -> prose item 1 "act now". Consistent.
+  node-helper (400,260): exact centre -> prose item 3 "Medium on both". Consistent.
+  node-accident (620,390): HIGH likelihood, LOW impact (bottom-right) -> prose item 4 says "Low on both: accept" (topic-01.mdx:84). CONTRADICTION.
+  Caption: "Act first on the top-right; prepare for the top-left; watch the middle; accept the rest." The bottom-right quadrant (high likelihood, low impact) is folded into "accept the rest"; the prose names no such quadrant.
+  Axis drawing: the horizontal axis (100,440)-(700,440) has no arrowhead at its high end; two short strokes (100,440)-(94,452) and (100,440)-(106,452) form an upward arrowhead at the origin; no low/high tick labels on either axis.
+
+fig-U7-3 (flowchart, topic-02.mdx:26): boxes hook, problem, solution, market, model, team, ask, then "next step: what the listener can do now". Title "Seven parts of a three-minute pitch". Alt text matches. The worked example (topic-02.mdx:40-49) tabulates eight parts including Next step and line 69 refers to "the eight parts above".
+
+fig-U7-4 (table, topic-02.mdx:85): two columns only, "Do" and "Don't", five rows; caption "Each habit is a communication skill, not a trick." No row names a communication skill. Alt text says "each linked to a communication skill"; lead-in topic-02.mdx:83 says "The table below links each do and don't to the skill behind it"; content-spec figure plan says "pitch do's and don'ts linked to communication skills". The claimed linkage is absent from the image.
+
+fig-U7-5 (illustration banner, index.mdx:20): a young woman presents a hand-drawn rising chart on an easel to a seated panel of three adults at a table; three pupils in uniform hold a crate and book stacks behind her; audience seated. Alt text matches the image. Culturally plausible Sindh setting (ajrak shawl, Sindhi cap). Not on the live site yet (added after deployed SHA).
