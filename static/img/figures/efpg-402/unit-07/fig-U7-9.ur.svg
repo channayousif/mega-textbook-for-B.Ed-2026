@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">پانچ مرحلہ جاتی تشخیصی اور تلافی چکر کا فلو چارٹ</title><desc id="d">فلو چارٹ جو پانچ مرحلوں پر مشتمل تشخیصی اور تلافی تدریسی چکر دکھاتا ہے: تشخیصی ٹیسٹ کا انعقاد، مخصوص تصوراتی رکاوٹ کی نشاندہی، متبادل تلافی مداخلت کا ڈیزائن، ہدف شدہ تدریس کا نفاذ، اور تلافی کے بعد تخمینہ قدر۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 15px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="500"/><g id="layer-edges">
+<line class="stroke" x1="530" y1="102" x2="500" y2="102" marker-end="url(#arrow)"/>
+<line class="stroke" x1="280" y1="102" x2="250" y2="102" marker-end="url(#arrow)"/>
+<path class="stroke" d="M140,160 L140,307 L280,307" marker-end="url(#arrow)"/>
+<line class="stroke" x1="500" y1="307" x2="530" y2="307" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="step1"><rect class="panel-a" x="530" y="45" width="220" height="115" rx="8"/><text class="h" x="734" y="78">1. تشخیصی سوال</text><text class="cell" x="734" y="108">غلطیوں کے پیٹرن تلاش کرنے</text><text class="cell" x="734" y="134">کے لیے دو سطحی ٹیسٹ لینا</text></g>
+<g id="step2"><rect class="panel-a" x="280" y="45" width="220" height="115" rx="8"/><text class="h" x="484" y="78">2. رکاوٹ کی کھوج</text><text class="cell" x="484" y="108">غلط متبادلات کا تجزیہ کر کے</text><text class="cell" x="484" y="134">اصل غلط فہمی کی نشاندہی</text></g>
+<g id="step3"><rect class="panel-a" x="30" y="45" width="220" height="115" rx="8"/><text class="h" x="234" y="78">3. نیا تدریسی انداز</text><text class="cell" x="234" y="108">ٹھوس ماڈلز یا متضاد</text><text class="cell" x="234" y="134">سائنسی مظاہرے منتخب کرنا</text></g>
+<g id="step4"><rect class="panel-b" x="280" y="250" width="220" height="115" rx="8"/><text class="h" x="484" y="283">4. ادراکی تصادم</text><text class="cell" x="484" y="313">غلط فہمی کی نفی اور فہم</text><text class="cell" x="484" y="339">کی ازسرِ نو سائنسی تشکیل</text></g>
+<g id="step5"><rect class="panel-b" x="530" y="250" width="220" height="115" rx="8"/><text class="h" x="734" y="283">5. بعد از تلافی جانچ</text><text class="cell" x="734" y="313">نئی صورتحال پر اطلاق کر کے</text><text class="cell" x="734" y="339">پائیدار فہم کی تصدیق کرنا</text></g>
+</g><g id="layer-labels">
+<text class="small" x="750" y="430">تکراری لیکچر کے بجائے تصوراتی تبدیلی لانے والا پانچ مرحلہ جاتی تشخیصی اور تلافی چکر۔</text>
+</g><text class="wm" x="12" y="460" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">ساتویں جماعت سائنس امتحان کا جدولِ تفصیلات</title><desc id="d">ساتویں جماعت کے سائنس یونٹ کے لیے جدولِ تفصیلات جس میں مواد کے ذیلی موضوعات کو یاد رکھنے سے لے کر اطلاق اور تجزیہ کرنے تک کے ادراکی درجات کے ساتھ دکھایا گیا ہے، جس میں سوالات کی تعداد اور فیصد اوزان کی تفصیل ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 14px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 12px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 11px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="540"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="48" rx="6"/>
+<rect class="panel" x="24" y="72" width="732" height="72"/>
+<rect class="plain" x="24" y="144" width="732" height="72"/>
+<rect class="panel" x="24" y="216" width="732" height="72"/>
+<rect class="plain" x="24" y="288" width="732" height="72"/>
+<rect class="panel-a" x="24" y="360" width="732" height="72" rx="4"/>
+</g><g id="layer-edges">
+<line class="grid" x1="600" y1="24" x2="600" y2="432"/>
+<line class="grid" x1="460" y1="24" x2="460" y2="432"/>
+<line class="grid" x1="320" y1="24" x2="320" y2="432"/>
+<line class="grid" x1="170" y1="24" x2="170" y2="432"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="54">نصابی یونٹ</text>
+<text class="sh" x="586" y="54">یاد رکھنا (30%)</text>
+<text class="sh" x="446" y="54">سمجھنا (40%)</text>
+<text class="sh" x="306" y="54">اطلاق/تجزیہ (30%)</text>
+<text class="sh" x="156" y="54">کل نمبر</text>
+
+<text class="sh" x="744" y="112">جانداروں کے نظام</text>
+<text class="cell" x="586" y="112">4 نم (2 MCQ, 1 RRQ)</text>
+<text class="cell" x="446" y="112">6 نم (1 RRQ, 1 ERQ)</text>
+<text class="cell" x="306" y="112">5 نم (1 ERQ منظرنامہ)</text>
+<text class="sh" x="156" y="112">15 نم (30%)</text>
+
+<text class="sh" x="744" y="184">کیمیائی دنیا</text>
+<text class="cell" x="586" y="184">6 نم (2 MCQ, 2 RRQ)</text>
+<text class="cell" x="446" y="184">8 نم (2 RRQ, 1 ERQ)</text>
+<text class="cell" x="306" y="184">6 نم (2 RRQ سوالات)</text>
+<text class="sh" x="156" y="184">20 نم (40%)</text>
+
+<text class="sh" x="744" y="256">طبعی توانائی</text>
+<text class="cell" x="586" y="256">5 نم (3 MCQ, 1 RRQ)</text>
+<text class="cell" x="446" y="256">6 نم (2 RRQ سوالات)</text>
+<text class="cell" x="306" y="256">4 نم (1 ERQ سوال)</text>
+<text class="sh" x="156" y="256">15 نم (30%)</text>
+
+<text class="sh" x="744" y="328">سوالات کی تعداد</text>
+<text class="cell" x="586" y="328">15 نم (7 سوالات)</text>
+<text class="cell" x="446" y="328">20 نم (8 سوالات)</text>
+<text class="cell" x="306" y="328">15 نم (5 سوالات)</text>
+<text class="sh" x="156" y="328">50 نم (20 سوالات)</text>
+
+<text class="h" x="744" y="402">ہدف وزن</text>
+<text class="h" x="586" y="402">30%</text>
+<text class="h" x="446" y="402">40%</text>
+<text class="h" x="306" y="402">30%</text>
+<text class="h" x="156" y="402">50 نمبر (100%)</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="478">دو رخی جدولِ تفصیلات جو نصابی موضوعات اور ادراکی دائروں کو متوازن کرتا ہے۔</text>
+</g><text class="wm" x="12" y="508" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

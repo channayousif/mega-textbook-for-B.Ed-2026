@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 580" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنسی تشخیصی آلات اور تکنیکوں کا جدول</title><desc id="d">جدول جو سائنسی تشخیص کے آلات اور تکنیکوں کی درجہ بندی کرتا ہے، جس میں دکھایا گیا ہے کہ ہر ایک کیا جانچتا ہے، مناسب تعلیمی دائرے، اور عملی جماعتی مثالیں۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="580"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="48" rx="6"/>
+<rect class="panel" x="24" y="72" width="732" height="80"/>
+<rect class="plain" x="24" y="152" width="732" height="80"/>
+<rect class="panel" x="24" y="232" width="732" height="80"/>
+<rect class="plain" x="24" y="312" width="732" height="80"/>
+<rect class="panel" x="24" y="392" width="732" height="80"/>
+</g><g id="layer-edges">
+<line class="grid" x1="620" y1="24" x2="620" y2="472"/>
+<line class="grid" x1="420" y1="24" x2="420" y2="472"/>
+<line class="grid" x1="220" y1="24" x2="220" y2="472"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="54">آلہ</text>
+<text class="sh" x="606" y="54">پیمائش کا دائرہ</text>
+<text class="sh" x="406" y="54">تدریسی طاقت</text>
+<text class="sh" x="206" y="54">سائنسی اطلاق</text>
+
+<text class="sh" x="744" y="104">تحریری ٹیسٹ</text>
+<text class="cell" x="606" y="98">تصورات، معلومات اور</text>
+<text class="cell" x="606" y="124">تجزیاتی استدلال</text>
+<text class="cell" x="406" y="98">معیاری، وسیع نمونہ، بڑی</text>
+<text class="cell" x="406" y="124">کلاسوں کے لیے مؤثر</text>
+<text class="cell" x="206" y="98">یونٹ اچیومنٹ ٹیسٹ اور</text>
+<text class="cell" x="206" y="124">بورڈ کے امتحانات</text>
+
+<text class="sh" x="744" y="184">کارکردگی کا کام</text>
+<text class="cell" x="606" y="178">حرکی لیب مہارتیں اور</text>
+<text class="cell" x="606" y="204">آلات کی درست ترتیب</text>
+<text class="cell" x="406" y="178">دستی لیب مہارت کا براہِ</text>
+<text class="cell" x="406" y="204">راست اور مستند ثبوت</text>
+<text class="cell" x="206" y="178">فلٹریشن، ٹائٹریشن یا</text>
+<text class="cell" x="206" y="204">سرکٹ جوڑنے کی جانچ</text>
+
+<text class="sh" x="744" y="264">چیک لسٹ</text>
+<text class="cell" x="606" y="258">طریقہ کار اور حفاظتی</text>
+<text class="cell" x="606" y="284">اقدامات کی موجودگی</text>
+<text class="cell" x="406" y="258">فوری اندراج، اساتذہ کے</text>
+<text class="cell" x="406" y="284">درمیان یکساں اسکورنگ</text>
+<text class="cell" x="206" y="258">برنر کی حفاظت اور</text>
+<text class="cell" x="206" y="284">مینیسکس کی ریڈنگ</text>
+
+<text class="sh" x="744" y="344">تجزیاتی معیارِ جانچ</text>
+<text class="cell" x="606" y="338">تفتیشی عمل کا معیار اور</text>
+<text class="cell" x="606" y="364">اعداد و شمار کی تشریح</text>
+<text class="cell" x="406" y="338">واضح معیارات کی تفصیل،</text>
+<text class="cell" x="406" y="364">منصفانہ تشخیصی گریڈنگ</text>
+<text class="cell" x="206" y="338">تحقیقاتی رپورٹس اور</text>
+<text class="cell" x="206" y="364">آزاد تجربات کی جانچ</text>
+
+<text class="sh" x="744" y="424">سائنس پورٹ فولیو</text>
+<text class="cell" x="606" y="418">علمی نشوونما اور تامل</text>
+<text class="cell" x="606" y="444">کی طویل مدتی عادات</text>
+<text class="cell" x="406" y="418">مسلسل ترقی کا ریکارڈ،</text>
+<text class="cell" x="406" y="444">خود ضابطگی کا فروغ</text>
+<text class="cell" x="206" y="418">طلبہ کے پروجیکٹ فائلز</text>
+<text class="cell" x="206" y="444">اور سائنسی ڈائری لاگز</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="520">سائنسی تفتیشی دائروں میں بڑے تشخیصی آلات کی درجہ بندی۔</text>
+</g><text class="wm" x="12" y="550" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
