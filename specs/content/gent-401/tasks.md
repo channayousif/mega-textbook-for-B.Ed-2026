@@ -72,6 +72,11 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review; all six concept Urdu labels are authored and need checking |
 | Unit 7 | G6 assets | ▣ | | Four English schematic SVGs (fig-U7-1 to fig-U7-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U7-5 placed |
 | Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-01/G3/20261127T192818Z-g3-desk-688055d1.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-04/G3/20261127T192818Z-g3-desk-73f18e1c.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-05/G3/20261127T192818Z-g3-desk-f43b7b2c.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-06/G3/20261127T192818Z-g3-desk-3318f22a.json |
+| Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-07/G3/20261127T192818Z-g3-desk-ccff9884.json |
 Reading estimates use final visible text at about 200 words per minute: Unit 1 index 2, Topic 1.1 11, Topic 1.2 11, assessment 15, teacher notes 2, total 41 minutes, inside the approved 32-44 depth budget band. Its assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 4 is the blueprint's Analyze item comparing an entrepreneur and a salaried manager in a school-supplies business. The guide supplies teaching strategies and practical work, so a short unit teacher-notes page adds a local entrepreneur case study. The course overview uses the programme default weighting (formative 40, summative 60), as the guide gives no marks.
 
 Unit 2 estimates on the same basis: index 2, Topic 2.1 12, Topic 2.2 12, assessment 15, teacher notes 2, total 43 minutes, inside the same 32-44 band. Each assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; Unit 2 ERQ 4 is the blueprint's Evaluate item screening three ideas for a small town with a weighted checklist. The guide supplies teaching strategies and practical work, so each unit carries a short teacher-notes page with a practical activity.

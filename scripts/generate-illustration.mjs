@@ -3,7 +3,7 @@
  * Raster illustration producer (ADR-0029): agy (Gemini), then gflow (Nano Banana via Google Flow,
  * while the tunnel to the owner's PC is up), then Codex (built-in image_gen). Owner ruling 2026-11-18.
  *
- *   node scripts/generate-illustration.mjs <course> <unit> [--id fig-U1-9] [--producer auto|agy|gflow|codex]
+ *   node scripts/generate-illustration.mjs <course> <unit> [--id fig-U1-9] [--producer auto|agy|agy2|gflow|codex]
  *        [--dry-run] [--reuse-staging] [--banner] [--force]
  *
  * `--producer auto` (default) takes the first producer whose quota is not recorded as exhausted
@@ -27,7 +27,7 @@
  *
  * This is the ONE repository script allowed to call an image service (ADR-0029 point 4). It is
  * operator-run on the owner's host, serial per producer (guarded by a lock file), and never part of
- * CI or the site build. A run pinned to one producer (`--producer agy|gflow|codex`, as the crew's
+ * CI or the site build. A run pinned to one producer (`--producer agy|agy2|gflow|codex`, as the crew's
  * image lanes do) holds that producer's lock, so different producers work in parallel (owner,
  * 2026-11-25); an `auto` run may use any producer, so it holds the shared lock and waits for no
  * pinned run to be alive, and a pinned run refuses while an `auto` run is alive.
@@ -65,7 +65,7 @@ const args = process.argv.slice(2);
 const flag = (name) => args.includes(name);
 const opt = (name) => (args.indexOf(name) >= 0 ? args[args.indexOf(name) + 1] : null);
 const [course, unitArg] = args.filter((a, i) => !a.startsWith('--') && !['--id', '--producer'].includes(args[i - 1]));
-if (!course || !unitArg) die('usage: <course> <unit> [--id fig-UN-M] [--producer auto|agy|gflow|codex] [--dry-run]');
+if (!course || !unitArg) die('usage: <course> <unit> [--id fig-UN-M] [--producer auto|agy|agy2|gflow|codex] [--dry-run]');
 const producerArg = opt('--producer') || 'auto';
 if (producerArg !== 'auto' && !PRODUCERS.includes(producerArg)) die(`unknown --producer ${producerArg}; use auto, ${PRODUCERS.join(', ')}`);
 const LOCK = producerArg === 'auto' ? AUTO_LOCK : producerLock(producerArg);

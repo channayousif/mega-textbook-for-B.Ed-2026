@@ -54,7 +54,12 @@ export const DEFAULTS = {
   channels: {
     'gflow.video': { gapMs: 3 * MIN, jitterMs: 90e3, perHourCount: 8, perDayUnits: 200, monthlyPool: 1000, afterPoolPerDay: 50 },
     'gflow.image': { gapMs: 90e3, jitterMs: 60e3, perHourCount: 12, perDayCount: 40 },
+    // Second Google account (Feature 036): its own Flow credits and NotebookLM quota, same rhythm.
+    'gflow2.video': { gapMs: 3 * MIN, jitterMs: 90e3, perHourCount: 8, perDayUnits: 200, monthlyPool: 1000, afterPoolPerDay: 50 },
+    'gflow2.image': { gapMs: 90e3, jitterMs: 60e3, perHourCount: 12, perDayCount: 40 },
+    'nlm2.studio': { gapMs: 15 * MIN, jitterMs: 3 * MIN, perHourCount: 2, perDayCount: 6 },
     'agy.image': { gapMs: 60e3, jitterMs: 45e3, perHourCount: 15, perDayCount: 50 },
+    'agy2.image': { gapMs: 60e3, jitterMs: 45e3, perHourCount: 15, perDayCount: 50 },
     'codex.image': { gapMs: 2 * MIN, jitterMs: 30e3, perHourCount: 6, perDayCount: 15 },
     'nlm.studio': { gapMs: 15 * MIN, jitterMs: 3 * MIN, perHourCount: 2, perDayCount: 6 },
     'youtube.upload': { gapMs: 45 * MIN, jitterMs: 5 * MIN, perHourCount: 1, perDayCount: 4 },
@@ -67,7 +72,7 @@ export const DEFAULTS = {
 export const CHANNELS = Object.keys(DEFAULTS.channels);
 
 /** Image producer names (producers/image.mjs) to pacing channels. */
-export const IMAGE_CHANNEL = { agy: 'agy.image', gflow: 'gflow.image', codex: 'codex.image' };
+export const IMAGE_CHANNEL = { agy: 'agy.image', agy2: 'agy2.image', gflow: 'gflow.image', gflow2: 'gflow2.image', codex: 'codex.image' };
 
 export class PaceHold extends Error {
   constructor(channel, message, resetAt) {

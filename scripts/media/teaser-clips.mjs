@@ -17,7 +17,7 @@ import { join, resolve, dirname } from 'node:path';
 import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { produce } from './producers/index.mjs';
-import { gflowVideo } from './producers/gflow-video.mjs';
+import { gflowVideo, gflow2Video } from './producers/gflow-video.mjs';
 import { manualFlow } from './producers/manual-flow.mjs';
 import { recipeFor } from './recipes.mjs';
 import { qg2 } from './qg2.mjs';
@@ -48,7 +48,7 @@ export async function makeClips(id, { shots, impls, log = console.log, root = RO
   if (item.gates?.script?.by !== 'owner' || item.script_sha256 !== sha) throw new Error(`${key}: the owner approved a different script (or none); no credits are spent`);
   const outDir = join(homedir(), 'studio-media', 'teasers', id, 'ur');
   const job = { key, script, recipe, locale: 'ur', outDir };
-  impls ??= { 'gflow.video': gflowVideo(), 'manual.flow': manualFlow() };
+  impls ??= { 'gflow.video': gflowVideo(), 'gflow2.video': gflow2Video(), 'manual.flow': manualFlow() };
   const made = [];
   for (const n of shotsToMake(item, shots)) {
     const L = loadLedger(root);

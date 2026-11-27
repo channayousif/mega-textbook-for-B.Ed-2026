@@ -36,6 +36,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review; authored concept labels also need checking |
 | Unit 5 | G6 assets | ▣ | | Six English schematic SVGs (fig-U5-1 to fig-U5-6) placed with derived dark variants; measure-figure-text clean; banner fig-U5-7 placed |
 | Unit 5 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-409/reviews/unit-03/G3/20261127T192818Z-g3-desk-5c9d1a52.json |
 
 Unit 1 reading estimates use final visible text at about 200 words per minute: index 2, Topic 1.1 14, Topic 1.2 13, assessment 14, teacher notes 3, total 46 minutes, inside the approved 36-48 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section; ERQ 4 is the blueprint's Analyze item identifying the aims implied in three statements by Pakistani policy-makers (Jinnah 1947; National Education Policy 2009 aims 4 and 8). The guide supplies teaching strategies and practical work, so a unit teacher-notes page is included. The course overview uses the programme default weighting (formative 40, summative 60), as the guide gives no marks.
 

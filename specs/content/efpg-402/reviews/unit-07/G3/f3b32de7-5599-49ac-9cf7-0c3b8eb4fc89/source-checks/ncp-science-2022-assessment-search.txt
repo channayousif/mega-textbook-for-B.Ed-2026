@@ -1,0 +1,34 @@
+Source support check: ncp-science-2022 (National Curriculum of Pakistan 2022-23: Science, Grades 4-8)
+Date: 2026-11-27 (UTC)
+
+Bound excerpt: specs/content/efpg-402/sources/texts/ncp-science-2022.md
+  11 excerpts, all science content/SLOs (scientific enquiry, models, Science in Context, domain topics, SLOs).
+  No occurrence of assessment, evaluation, formative, summative, achievement test, diagnostic or remedial.
+
+Independent check of the full published PDF (74 pages, 19.6 MB) downloaded from the cited URL:
+  curl -s -o .crew/ncp-science.pdf 'https://ncc.gov.pk/SiteImage/Misc/files/8_%20NCP%20Science%20PG%204-8.pdf'  -> HTTP 200, 19606893 bytes
+  pdftotext -layout .crew/ncp-science.pdf .crew/ncp-science.txt
+  grep -in 'assess|evaluat|formative|summative|examin|test' .crew/ncp-science.txt
+
+Result (complete):
+31:teaching, classroom practice, and assessments to ensure compliance with contemplated student
+39:boards, assessment departments, teacher training departments, deeni madaris, public and private
+71:o        ©   Ask questions                                                    @   Identify whether a given hypothesis is testable.
+74:             fair test, research-by finding information).                         etc.
+467:                             and respond to the             their pulse rate, test their
+495:and large intestine).       many vertebrates have a        [SLO: S-06-A-12]            circulates in the human
+652:                                                        they are tested and
+1135:                              Evaluate Impact of
+1633:solutions.                                                 Evaluate through investigation the relationship between pressure, force and area.
+1723:                                                           Examine the effect of an
+1748:Examine the effect of
+
+The only assessment mention is the foreword (lines 31-32): the National Curriculum aims to shift
+classroom instruction from rote learning to concept-based learning and aligns textbooks, teaching,
+classroom practice, and assessments to ensure compliance with contemplated student learning outcomes.
+The document contains no assessment guidelines, no formative/summative strategies, no evaluation
+purposes, no achievement-test construction, and no diagnostic/remedial content.
+
+Unit 7 attributes assessment claims to this source: topic-01.mdx:40 (measurement/assessment/evaluation
+definitions), topic-02.mdx:40 (formative/summative paradigms), topic-03.mdx:40 (techniques/tools),
+topic-04.mdx:40 (achievement test), topic-05.mdx:40 (diagnostic testing).

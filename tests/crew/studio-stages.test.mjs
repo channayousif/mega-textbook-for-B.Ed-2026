@@ -33,12 +33,15 @@ test('checked private items wait for the owner; approved ones are published, kep
   assert.deepEqual(studioNeeds([unit('A', 2, [it('x', 'public')])]).jobs.map((j) => j.stage), ['studio_publish']);
 });
 
-test('the next certified unit is planned only when no unit is mid-way and few wait for the owner', () => {
+test('the next certified unit is planned while fewer units are mid-way than NotebookLM accounts and few wait for the owner', () => {
   const candidates = [{ course: 'EFMP-301', unit: 4 }, { course: 'EFMP-301', unit: 5 }, { course: 'GENG-300', unit: 1 }];
   const done = unit('EFMP-301', 4, [it('a', 'placed')]);
   assert.deepEqual(studioNeeds([done], { candidates }).jobs, [{ course: 'EFMP-301', unit: 5, stage: 'studio_media', plan: true }]);
   const busy = unit('EFMP-301', 4, [it('a', 'encoded')]);
-  assert.deepEqual(studioNeeds([busy], { candidates }).jobs.map((j) => `${j.unit} ${j.stage}`), ['4 studio_media']);
+  // one unit mid-way: the second account starts the next one (Feature 036)
+  assert.deepEqual(studioNeeds([busy], { candidates }).jobs.map((j) => `${j.unit} ${j.stage}${j.plan ? ' plan' : ''}`), ['4 studio_media', '5 studio_media plan']);
+  const busy2 = unit('EFMP-301', 5, [it('a', 'generated')]);
+  assert.deepEqual(studioNeeds([busy, busy2], { candidates }).jobs.map((j) => `${j.unit} ${j.stage}`), ['4 studio_media', '5 studio_media']);
   const watching = Array.from({ length: MAX_AWAITING_WATCH }, (_, i) => unit('X', i + 1, [it('a', 'qa3-pass')]));
   assert.deepEqual(studioNeeds(watching, { candidates }).jobs, []);
   assert.equal(studioNeeds(watching.slice(1), { candidates }).jobs[0].plan, true);

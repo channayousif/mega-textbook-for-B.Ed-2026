@@ -45,7 +45,7 @@ a `concept-map` and two `flowchart`s as the Art. III.10 schematics. G1 unit-spec
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-03/G2/20261113T223614301Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-03/G2/20261127T203951987Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ▢ | | Six-file draft mirror and six Urdu figure pairs retained; R1 repairs (2026-10-19) restore activity grouping, boundary-wall means, lowest-performing/enrolment qualifiers and minimum rubric/checklist requirements; teacher-note register clarified. translation_status remains draft; translate-unit Step 7 leaves stage open. Handoff: specs/content/efmp-303/reviews/unit-03/G4/translation-handoff-r1.md |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -149,3 +149,4 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 6 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U6-4 did not render (malformed XML: duplicate attribute); fixed; the review above predates it; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |
 | Unit 2 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |
+| Unit 3 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |

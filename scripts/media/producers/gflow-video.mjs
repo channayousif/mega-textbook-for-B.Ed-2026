@@ -28,8 +28,10 @@ export const CLIP_CREDITS = { veo_lite: 10, veo_fast: 20, veo_quality: 100 };
 export const CREDIT_FLOOR = 100;
 export const CALL_TIMEOUT_MS = 15 * 60 * 1000;
 const cache = (name, env) => process.env[env] || join(homedir(), '.cache', 'mega-book', name);
-export const projectsFile = () => cache('gflow-projects.json', 'MEGA_BOOK_GFLOW_PROJECTS_FILE');
-export const journalFile = () => cache('gflow-video-journal.json', 'MEGA_BOOK_GFLOW_JOURNAL_FILE');
+/** `n` is '' for the first Google account and '2' for the second (Feature 036): each account keeps
+ * its own Flow projects and its own never-pay-twice journal. */
+export const projectsFile = (n = '') => cache(`gflow-projects${n}.json`, `MEGA_BOOK_GFLOW${n}_PROJECTS_FILE`);
+export const journalFile = (n = '') => cache(`gflow-video-journal${n}.json`, `MEGA_BOOK_GFLOW${n}_JOURNAL_FILE`);
 const readJson = (p) => { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return {}; } };
 
 class Unavailable extends Error {}
@@ -168,7 +170,7 @@ export async function recover({ key, part, call, claimed, out, filesUrl, journal
  */
 export function gflowVideo({ mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL, profile = process.env.GFLOW_PROFILE || 'a2ahs-alpha',
   projects = projectsFile(), journal = journalFile(), timeoutMs = CALL_TIMEOUT_MS, floor = CREDIT_FLOOR,
-  pace: paceFn = pace, record: recordFn = paceRecord } = {}) {
+  channel = 'gflow.video', pace: paceFn = pace, record: recordFn = paceRecord } = {}) {
   const call = (name, args, ms) => mcpCall(name, args, { url: mcpUrl, timeoutMs: ms ?? 60000 });
   return async (job, part, ctx = {}) => {
     const { key, script, recipe, locale = 'ur', outDir } = job;
@@ -184,14 +186,14 @@ export function gflowVideo({ mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL,
       const { credits: before } = await call('gflow_get_credits', { profile });
       if (Number(before) - cost < floor) return { status: 'held', reason: `Flow balance ${before} would fall under the ${floor}-credit floor` };
       try {
-        await paceFn('gflow.video', cost);
+        await paceFn(channel, cost);
       } catch (e) {
         if (e instanceof PaceHold) return { status: 'quota', paced: true, resetAt: e.resetAt, reason: e.message };
         throw e;
       }
       // Flow charges on submission, so the spend is counted now (a clip recovered later after a
       // timeout is then counted once, and a refused submission errs on the safe side).
-      recordFn('gflow.video', cost);
+      recordFn(channel, cost);
       const proj = readJson(projects)[key];
       const at = new Date().toISOString();
       journalUpdate(journal, (x) => { x[jkey(key, part)] = { status: 'submitted', at, before: Number(before), credits: cost, model: recipe.model, project: proj ?? null }; });
@@ -226,6 +228,9 @@ export function gflowVideo({ mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL,
 }
 
 /** Drop a journalled submission after the owner checked Flow (CLI: `clear <key> <part>`). */
+/** The second account's clip producer (Feature 036): same gflow server, profile a2ahs-beta. */
+export const gflow2Video = (opts = {}) => gflowVideo({ profile: process.env.GFLOW2_PROFILE || 'a2ahs-beta', projects: projectsFile('2'), journal: journalFile('2'), channel: 'gflow2.video', ...opts });
+
 export function clearSubmission(key, part, journal = journalFile()) {
   if (!existsSync(journal)) return false;
   return journalUpdate(journal, (x) => { const had = jkey(key, part) in x; delete x[jkey(key, part)]; return had; });
@@ -233,8 +238,10 @@ export function clearSubmission(key, part, journal = journalFile()) {
 
 // CLI: node scripts/media/producers/gflow-video.mjs journal | clear <key> <part>
 if (process.argv[1] && process.argv[1].endsWith('gflow-video.mjs')) {
-  const [cmd, key, part] = process.argv.slice(2);
-  if (cmd === 'journal') console.log(JSON.stringify(readJson(journalFile()), null, 1));
-  else if (cmd === 'clear' && key && part) console.log(clearSubmission(key, Number(part)) ? `cleared ${key} part ${part}` : `no submission for ${key} part ${part}`);
-  else { console.error('usage: gflow-video.mjs journal | clear <key> <part>'); process.exit(2); }
+  // --account 2: the second Google account's journal.
+  const n = process.argv.includes('--account') ? process.argv[process.argv.indexOf('--account') + 1] === '2' ? '2' : '' : '';
+  const [cmd, key, part] = process.argv.slice(2).filter((a, i, all) => a !== '--account' && all[i - 1] !== '--account');
+  if (cmd === 'journal') console.log(JSON.stringify(readJson(journalFile(n)), null, 1));
+  else if (cmd === 'clear' && key && part) console.log(clearSubmission(key, Number(part), journalFile(n)) ? `cleared ${key} part ${part}` : `no submission for ${key} part ${part}`);
+  else { console.error('usage: gflow-video.mjs journal | clear <key> <part> [--account 2]'); process.exit(2); }
 }
