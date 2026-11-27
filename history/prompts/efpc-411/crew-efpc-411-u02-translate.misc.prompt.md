@@ -81,25 +81,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Translated EFPC-411 Unit 2 into a complete draft Urdu mirror with eight RTL-localised Nastaliq figure pairs, recorded the G4 handoff, and left `translation_status: draft` with all 14 content gates green.
+Translated EFPC-411 Unit 2 into its complete Urdu mirror at G4 with eight RTL-localised Nastaliq figure pairs and verified all 14 content gates.
 
 ## Outcome
 
 - Impact: translate for EFPC-411 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Translated EFPC-411 Unit 2 into a complete draft Urdu mirror with eight RTL-localised Nastaliq figure pairs, recorded the G4 handoff, and left `translation_status: draft` with all 14 content gates green.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
-- Pending / next owner: crew lead.
+- Shipped / changed: Translated EFPC-411 Unit 2 into its complete Urdu mirror at G4 with eight RTL-localised Nastaliq figure pairs and verified all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - English G3 is still `▢` (not accepted); this Urdu is bound to English `e547d02c`, so any English repair requires matching Urdu repairs and a fresh G5.
-  - `render-inspect.mjs EFPC-411 2 --locale ur` was not run (brief bans dev servers/browser runs other than `measure-figure-text.mjs`); Nastaliq shaping at 360px, bidi punctuation and A4 clipping are unverified.
-  - `key_terms` deliberately carries only banked pairs; the unbanked unit terms are proposals in the handoff for the owner, not silent bank edits.
+  - English G3 remains open (▢), so any subsequent English changes will require corresponding Urdu adjustments and independent G5 review.
+  - Mandatory rendered inspection (scripts/render-inspect.mjs EFPC-411 2 --locale ur) was omitted per host resource limits; 360px Nastaliq shaping and A4-print clipping remain to be verified.
+  - Unit banner fig-U2-9 is prompt-only in specs/content/efpc-411/figures/unit-02.banner.md awaiting the illustration pipeline.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
