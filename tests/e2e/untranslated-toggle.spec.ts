@@ -10,7 +10,8 @@ test('English page without Urdu greys out the Urdu toggle and explains on tap', 
   await expect(urdu).toBeVisible();
   await expect(urdu).toHaveAttribute('aria-disabled', 'true');
   await expect(page.locator('.urdu-unavailable')).toHaveCount(0);
-  await urdu.click();
+  // aria-disabled makes Playwright treat the button as not clickable; readers can still tap it.
+  await urdu.click({ force: true });
   await expect(page.locator('.urdu-unavailable')).toBeVisible();
 });
 
