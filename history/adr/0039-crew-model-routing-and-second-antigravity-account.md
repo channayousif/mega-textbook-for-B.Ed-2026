@@ -59,6 +59,9 @@
      `agy_claude`, in every chain except `illustrate`.
    - The image lane calls agy through `scripts/generate-illustration.mjs`, not the worker table,
      so it keeps one agy account until that script learns a second producer.
+   - Amended 2026-11-28 (owner-approved plan of 2026-11-27, Feature 036): that script now has an
+     `agy2` image producer (same wrapper and HOME, own quota record, pacing channel `agy2.image`
+     and crew lane), right after `agy`.
    - Each worker has its own health and cooldown.
 
 ## Consequences

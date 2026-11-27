@@ -7,7 +7,7 @@
  * - UnavailableError: the producer cannot be reached now (skip it for this run, try the next);
  * - Error: this image failed (the caller counts a failure for the row).
  *
- * Producers: agy (Gemini via Antigravity), gflow (Nano Banana via Google Flow on the owner's PC,
+ * Producers: agy (Gemini via Antigravity), agy2 (the same on the second Google account, Feature 036), gflow (Nano Banana via Google Flow on the owner's PC,
  * over the SSH tunnel; owner ruling 2026-11-18 amending D-2026-0082), codex (built-in image_gen).
  */
 import { existsSync, readFileSync, readdirSync, statSync, unlinkSync, copyFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -57,14 +57,25 @@ export function agyQuotaReset(logDir = join(homedir(), '.gemini/antigravity-cli/
   }
 }
 
-export function agyProducer({ brief, png, stagingDir }) {
+/**
+ * An Antigravity image producer for one account. agy keeps its login and logs under $HOME/.gemini, so
+ * the second account (ops/crew/bin/agy2, ADR-0039) runs with HOME=~/.agy2 and its quota log is there.
+ */
+export function agyProducerFor({ name, bin, home, spawn = spawnSync }) {
+  const logDir = join(home, '.gemini/antigravity-cli/log');
+  return function producer({ brief, png, stagingDir }) {
+    return agyRun({ name, bin, logDir, spawn, brief, png, stagingDir });
+  };
+}
+
+function agyRun({ name, bin, logDir, spawn, brief, png, stagingDir }) {
   const instruction = [
     'Use your generate_image tool exactly once to create this image.',
     brief,
     `Save the image as a PNG file at exactly this path: ${png}`,
     'Then reply with only the file path and the name of the image model you used.',
   ].join('\n');
-  const res = spawnSync('agy', ['-p', instruction, '--add-dir', stagingDir, '--output-format', 'json', '--print-timeout', '10m'], {
+  const res = spawn(bin, ['-p', instruction, '--add-dir', stagingDir, '--output-format', 'json', '--print-timeout', '10m'], {
     encoding: 'utf8',
     timeout: 11 * 60 * 1000,
   });
@@ -75,12 +86,18 @@ export function agyProducer({ brief, png, stagingDir }) {
     reply = (res.stdout || '').slice(0, 400);
   }
   if (res.status !== 0 || !existsSync(png) || statSync(png).size === 0) {
-    const reset = agyQuotaReset();
-    if (reset) throw new QuotaError('agy', `agy image quota exhausted (QUOTA_EXHAUSTED); resets at ${reset}`, reset);
-    throw new Error(`agy did not produce ${png} (exit ${res.status}): ${reply || res.stderr}`);
+    // No login (agy2 before its first sign-in): skip the producer for this run, like an offline one.
+    if (/UNAUTHENTICATED/.test(res.stderr || '')) throw new UnavailableError(name, `${name}: not signed in`);
+    const reset = agyQuotaReset(logDir);
+    if (reset) throw new QuotaError(name, `${name} image quota exhausted (QUOTA_EXHAUSTED); resets at ${reset}`, reset);
+    throw new Error(`${name} did not produce ${png} (exit ${res.status}): ${reply || res.stderr}`);
   }
-  return { model: (reply.match(/(imagen[\w.-]*|gemini[\w.-]*image[\w.-]*)/i) || [])[0] || 'agy (model unreported)' };
+  return { model: (reply.match(/(imagen[\w.-]*|gemini[\w.-]*image[\w.-]*)/i) || [])[0] || `${name} (model unreported)` };
 }
+
+export const agyProducer = agyProducerFor({ name: 'agy', bin: 'agy', home: homedir() });
+const AGY2_BIN = join(dirname(new URL(import.meta.url).pathname), '../../../ops/crew/bin/agy2');
+export const agy2Producer = agyProducerFor({ name: 'agy2', bin: AGY2_BIN, home: process.env.AGY2_HOME || join(homedir(), '.agy2') });
 
 // ------------------------------------------------------------------ gflow (MCP over HTTP)
 
@@ -215,8 +232,9 @@ export async function fetchGflowImage(rel, filesUrl = GFLOW_FILES_URL) {
  * project is rotated after GFLOW_PROJECT_ROTATE images. GFLOW_PROJECT pins one project id instead.
  */
 export const GFLOW_PROJECT_ROTATE = 50;
-export const gflowProjectFile = () => process.env.MEGA_BOOK_GFLOW_PROJECT_FILE
-  || join(homedir(), '.cache', 'mega-book', 'gflow-project.json');
+/** `n` is '' for the first Google account and '2' for the second (Feature 036): each keeps its own project. */
+export const gflowProjectFile = (n = '') => process.env[`MEGA_BOOK_GFLOW${n}_PROJECT_FILE`]
+  || join(homedir(), '.cache', 'mega-book', `gflow-project${n}.json`);
 
 export function gflowProjectArgs(file = gflowProjectFile(), now = new Date()) {
   if (process.env.GFLOW_PROJECT) return { project: process.env.GFLOW_PROJECT };
@@ -237,12 +255,13 @@ export function recordGflowProject(projectId, file = gflowProjectFile(), now = n
   writeFileSync(file, `${JSON.stringify(next, null, 1)}\n`);
 }
 
-export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL, projectFile = gflowProjectFile() }) {
+export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL, filesUrl = GFLOW_FILES_URL, projectFile = gflowProjectFile(),
+  name = 'gflow', profile = process.env.GFLOW_PROFILE || 'a2ahs-alpha' }) {
   let mcp;
   try {
     mcp = await mcpSession(mcpUrl);
   } catch (e) {
-    throw new UnavailableError('gflow', `gflow MCP unreachable at ${mcpUrl}: ${e.message}`);
+    throw new UnavailableError(name, `gflow MCP unreachable at ${mcpUrl}: ${e.message}`);
   }
   // No question may reach Flow's agent: gflow then waits 600 s and fails (studio-teaser skill).
   const prompt = `${brief}\nCreate this one image now. Do not ask any question.`;
@@ -253,29 +272,32 @@ export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL
       model: process.env.GFLOW_IMAGE_MODEL || 'nano2',
       aspect: aspect.startsWith('3:4') ? '3:4' : '16:9',
       count: 1,
-      profile: process.env.GFLOW_PROFILE || 'a2ahs-alpha',
+      profile,
       ui_mode: 'classic',
       wait: true,
       ...gflowProjectArgs(projectFile),
     }, 11 * 60 * 1000);
   } catch (e) {
-    if (GFLOW_QUOTA_RE.test(e.message)) throw new QuotaError('gflow', `gflow image quota reached: ${e.message}`);
-    throw new UnavailableError('gflow', `gflow call failed: ${e.message}`);
+    if (GFLOW_QUOTA_RE.test(e.message)) throw new QuotaError(name, `${name} image quota reached: ${e.message}`);
+    throw new UnavailableError(name, `${name} call failed: ${e.message}`);
   }
   const payload = gflowPayload(result);
   const files = Array.isArray(payload.files) ? payload.files : [];
   if (result?.isError || payload.status === 'failed' || Number(payload.status) >= 400 || !files.length) {
     const why = JSON.stringify(payload).slice(0, 400);
-    if (GFLOW_QUOTA_RE.test(why)) throw new QuotaError('gflow', `gflow image quota reached: ${why}`);
-    throw new Error(`gflow produced no image: ${why}`);
+    if (GFLOW_QUOTA_RE.test(why)) throw new QuotaError(name, `${name} image quota reached: ${why}`);
+    throw new Error(`${name} produced no image: ${why}`);
   }
   const bytes = await fetchGflowImage(gflowRelativePath(files[0]), filesUrl);
   // Flow saves JPEG; the pipeline stages PNG.
   const sharp = (await import('sharp')).default;
   await sharp(bytes).png().toFile(png);
   recordGflowProject(payload.flow_project_id, projectFile);
-  return { model: `${process.env.GFLOW_IMAGE_MODEL || 'nano2'} (Nano Banana via gflow)` };
+  return { model: `${process.env.GFLOW_IMAGE_MODEL || 'nano2'} (Nano Banana via ${name})` };
 }
+
+/** Nano Banana on the second Google account: the same gflow server, profile a2ahs-beta (Feature 036). */
+export const gflow2Producer = (args) => gflowProducer({ ...args, name: 'gflow2', profile: process.env.GFLOW2_PROFILE || 'a2ahs-beta', projectFile: gflowProjectFile('2') });
 
 // ------------------------------------------------------------------ codex
 
@@ -343,7 +365,7 @@ export function paced(name, fn, { pace: paceFn = pace, record = paceRecord } = {
   };
 }
 
-export const PRODUCER_FNS = { agy: paced('agy', agyProducer), gflow: paced('gflow', gflowProducer), codex: paced('codex', codexProducer) };
+export const PRODUCER_FNS = { agy: paced('agy', agyProducer), agy2: paced('agy2', agy2Producer), gflow: paced('gflow', gflowProducer), gflow2: paced('gflow2', gflow2Producer), codex: paced('codex', codexProducer) };
 
 /** Remove a stale staging file before a producer writes a new one. */
 export function clearStaged(png) {

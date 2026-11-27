@@ -17,21 +17,26 @@ test('every stage that calls an outside media service runs on a lane, and text s
 
 test('lanes run in parallel: a busy lane blocks only its own stages', () => {
   const busy = new Set(['notebook']);
-  assert.deepEqual(pickLane({ stage: 'studio_media' }, { ...open, busy }), { wait: 'notebook busy' });
+  // the second NotebookLM account takes a second unit (Feature 036)
+  assert.deepEqual(pickLane({ stage: 'studio_media' }, { ...open, busy }), { lane: 'notebook2' });
+  assert.deepEqual(pickLane({ stage: 'studio_media' }, { ...open, busy: new Set(['notebook', 'notebook2']) }), { wait: 'notebook busy, notebook2 busy' });
   assert.deepEqual(pickLane({ stage: 'teaser_clips' }, { ...open, busy }), { lane: 'flow' });
   assert.deepEqual(pickLane({ stage: 'social_roundup' }, { ...open, busy }), { lane: 'social' });
   assert.deepEqual(pickLane({ stage: 'media_assemble' }, { ...open, busy }), { lane: 'youtube' });
 });
 
 test('illustrate takes the first free image lane with quota and budget, pinned to its producer', () => {
-  assert.deepEqual(IMAGE_LANES, ['agy', 'flow', 'codex']);
+  assert.deepEqual(IMAGE_LANES, ['agy', 'agy2', 'flow', 'flow2', 'codex']);
   const j = { stage: 'illustrate' };
   assert.deepEqual(pickLane(j, open), { lane: 'agy', producer: 'agy' });
-  assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy']) }), { lane: 'flow', producer: 'gflow' });
-  assert.deepEqual(pickLane(j, { ...open, producerOk: (l) => l !== 'agy' }), { lane: 'flow', producer: 'gflow' });
+  assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy']) }), { lane: 'agy2', producer: 'agy2' });
+  assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy', 'agy2']) }), { lane: 'flow', producer: 'gflow' });
+  assert.deepEqual(pickLane(j, { ...open, producerOk: (l) => !l.startsWith('agy') }), { lane: 'flow', producer: 'gflow' });
+  assert.deepEqual(pickLane(j, { ...open, room: (ch) => ch === 'agy2.image' }), { lane: 'agy2', producer: 'agy2' });
   assert.deepEqual(pickLane(j, { ...open, room: (ch) => ch === 'codex.image' }), { lane: 'codex', producer: 'codex' });
-  const none = pickLane(j, { ...open, busy: new Set(['agy', 'flow', 'codex']) });
-  assert.match(none.wait, /agy busy, flow busy, codex busy/);
+  assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy', 'agy2', 'flow']) }), { lane: 'flow2', producer: 'gflow2' });
+  const none = pickLane(j, { ...open, busy: new Set(['agy', 'agy2', 'flow', 'flow2', 'codex']) });
+  assert.match(none.wait, /agy busy, agy2 busy, flow busy, flow2 busy, codex busy/);
 });
 
 test('outside media hours no lane takes a job', () => {
@@ -40,14 +45,18 @@ test('outside media hours no lane takes a job', () => {
 
 test('a lane waits when its paced channel has no room today; publishing spends nothing paced', () => {
   const full = { ...open, room: () => false };
-  assert.match(pickLane({ stage: 'studio_media' }, full).wait, /notebook daily cap reached/);
+  assert.match(pickLane({ stage: 'studio_media' }, full).wait, /notebook daily cap reached, notebook2 daily cap reached/);
   assert.match(pickLane({ stage: 'social_roundup' }, full).wait, /social daily cap reached/);
   assert.deepEqual(pickLane({ stage: 'studio_publish' }, full), { lane: 'youtube' });
   assert.deepEqual(pickLane({ stage: 'media_publish' }, full), { lane: 'youtube' });
   // a studio job can still upload finished items when NotebookLM is spent, and the reverse
   assert.deepEqual(laneChannels('studio_media', 'notebook'), ['nlm.studio', 'youtube.upload']);
   assert.deepEqual(pickLane({ stage: 'studio_media' }, { ...open, room: (ch) => ch === 'youtube.upload' }), { lane: 'notebook' });
-  assert.deepEqual(laneChannels('teaser_clips', 'flow'), ['gflow.video']);
+  assert.deepEqual(laneChannels('studio_media', 'notebook2'), ['nlm2.studio', 'youtube.upload']);
+  assert.deepEqual(pickLane({ stage: 'studio_media' }, { ...open, room: (ch) => ch === 'nlm2.studio' }), { lane: 'notebook2' });
+  assert.deepEqual(laneChannels('teaser_clips', 'flow'), ['gflow.video', 'gflow2.video']);
+  assert.deepEqual(pickLane({ stage: 'teaser_clips' }, { ...open, room: (ch) => ch === 'gflow2.video' }), { lane: 'flow' });
+  assert.deepEqual(laneChannels('illustrate', 'flow2'), ['gflow2.image']);
   assert.deepEqual(laneChannels('illustrate', 'flow'), ['gflow.image']);
 });
 

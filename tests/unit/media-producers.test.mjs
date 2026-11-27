@@ -20,24 +20,26 @@ const recipe = loadRecipe('teaser', 2, ROOT);
 
 describe('producer registry and fallback', () => {
   it('lists producers per medium in fallback order', () => {
-    expect(REGISTRY.clip).toEqual(['gflow.video', 'manual.flow']);
-    expect(REGISTRY.image).toEqual(['agy', 'gflow', 'codex']);
+    expect(REGISTRY.clip).toEqual(['gflow.video', 'gflow2.video', 'manual.flow']);
+    expect(REGISTRY.image).toEqual(['agy', 'agy2', 'gflow', 'gflow2', 'codex']);
   });
   it('records a quota, falls back, and skips the producer while its quota holds', async () => {
     const quotaFile = join(tmp(), 'q.json');
     const calls = [];
     const impls = {
       agy: async () => { calls.push('agy'); return { status: 'quota', resetAt: '2099-01-01T00:00:00Z', reason: 'QUOTA_EXHAUSTED' }; },
+      agy2: async () => { calls.push('agy2'); return { status: 'unavailable', reason: 'not signed in' }; },
       gflow: async () => { calls.push('gflow'); return { status: 'unavailable', reason: 'tunnel down' }; },
+      gflow2: async () => { calls.push('gflow2'); return { status: 'unavailable', reason: 'tunnel down' }; },
       codex: async () => { calls.push('codex'); return { status: 'ok', file: '/x.png', reason: 'made' }; },
     };
     const r1 = await produce('image', {}, 1, { impls, quotaFile });
     expect(r1).toMatchObject({ status: 'ok', producer: 'codex' });
-    expect(r1.tried.map((t) => t.status)).toEqual(['quota', 'unavailable', 'ok']);
+    expect(r1.tried.map((t) => t.status)).toEqual(['quota', 'unavailable', 'unavailable', 'unavailable', 'ok']);
     expect(activeQuota('agy', quotaFile).resetAt).toBe('2099-01-01T00:00:00.000Z');
     calls.length = 0;
     await produce('image', {}, 1, { impls, quotaFile });
-    expect(calls).toEqual(['gflow', 'codex']);
+    expect(calls).toEqual(['agy2', 'gflow', 'gflow2', 'codex']);
   });
   it('stops at failed or held without trying the next producer', async () => {
     const quotaFile = join(tmp(), 'q.json');
