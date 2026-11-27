@@ -70,6 +70,8 @@ English-only authoring from the approved Unit 1, Unit 2, Unit 3, Unit 4, Unit 5,
 | Unit 7 | G5 ur-review | ▢ | | Awaiting translation and independent review; all concept Urdu labels and six new glossary Urdu definitions are authored and need checking |
 | Unit 7 | G6 assets | ▣ | | Eight English schematic SVGs (fig-U7-1 to fig-U7-8) placed with derived dark variants; eight .ur.svg pairs added with derived .ur.dark.svg twins and measure-figure-text verified; banner fig-U7-9 placed in English and Urdu index |
 | Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gcce-400/reviews/unit-03/G3/20261127T192818Z-g3-desk-4b3d1361.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gcce-400/reviews/unit-05/G3/20261127T192818Z-g3-desk-fd20070f.json |
 
 Reading estimates use final visible text at about 200 words per minute: index 3, Topic 1.1 10, Topic 1.2 10, Topic 1.3 11, assessment 15, teacher notes 2, total 51 minutes, inside the approved 36-52 depth budget band. The assessment contains 10 MCQs, 10 RRQs and 5 ERQs with self-study guidance in its final bounded section. The course overview uses the guide's marks (formative 20, summative 80). The guide supplies practical activities, so a short unit teacher-notes page points to community storytelling.
 
