@@ -1,0 +1,125 @@
+### render-inspect  EFPC-411 Unit 2
+### route: /semester-4/efpc-411/unit-02  pages: 6  placed figures: 8
+### host: https://textbook.com.pk   browser: chromium 149.0.7827.0
+### started: 2026-11-27T13:38:14.488Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=1 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-9.webp natural=1344x756 shown=true loading=lazy alt="A student-teacher observes a Sindh government school classroom with a clipboard while a me"
+   heading order: no skipped levels
+
+-- topic-01: headings=14 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-1.svg natural=234x150 shown=true loading=lazy alt="A classroom seating map with the observer's interaction codes: teacher to pupil (T-P), pup"
+   img /img/figures/efpc-411/unit-02/fig-U2-1.dark.svg natural=0x0 shown=false loading=lazy alt="A classroom seating map with the observer's interaction codes: teacher to pupil (T-P), pup"
+   img /img/figures/efpc-411/unit-02/fig-U2-2.svg natural=234x150 shown=true loading=lazy alt="Observation sheet for the school environment: five areas with what to note and one example"
+   img /img/figures/efpc-411/unit-02/fig-U2-2.dark.svg natural=0x0 shown=false loading=lazy alt="Observation sheet for the school environment: five areas with what to note and one example"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://doi.org/10.1596/37669 | https://www.hec.gov.pk/english/services/universiti
+
+-- topic-02: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-3.svg natural=249x150 shown=true loading=lazy alt="A lesson-observation proforma with five focus rows and an example entry for each."
+   img /img/figures/efpc-411/unit-02/fig-U2-3.dark.svg natural=0x0 shown=false loading=lazy alt="A lesson-observation proforma with five focus rows and an example entry for each."
+   img /img/figures/efpc-411/unit-02/fig-U2-4.svg natural=300x150 shown=true loading=lazy alt="Flowchart of the five stages of a lesson an observer tracks, from opening to closure."
+   img /img/figures/efpc-411/unit-02/fig-U2-4.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart of the five stages of a lesson an observer tracks, from opening to closure."
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://doi.org/10.1596/37669 | https://www.hec.gov.pk/english/services/universiti
+
+-- topic-03: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-5.svg natural=272x150 shown=true loading=lazy alt="A time-on-task tally for a 35-minute lesson in five-minute blocks, with the proportion of "
+   img /img/figures/efpc-411/unit-02/fig-U2-5.dark.svg natural=0x0 shown=false loading=lazy alt="A time-on-task tally for a 35-minute lesson in five-minute blocks, with the proportion of "
+   img /img/figures/efpc-411/unit-02/fig-U2-6.svg natural=300x119 shown=true loading=lazy alt="A continuum of assessment methods from informal to formal, with five methods placed along "
+   img /img/figures/efpc-411/unit-02/fig-U2-6.dark.svg natural=0x0 shown=false loading=lazy alt="A continuum of assessment methods from informal to formal, with five methods placed along "
+   heading order: no skipped levels
+   advisory bare-URL link text: https://doi.org/10.1596/37669 | https://www.hec.gov.pk/english/services/universiti | https://www.hec.gov.pk/english/services/universiti
+
+-- topic-04: headings=14 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-7.svg natural=300x127 shown=true loading=lazy alt="A minute-by-minute timeline of one complete 35-minute lesson, from entry to the exit ticke"
+   img /img/figures/efpc-411/unit-02/fig-U2-7.dark.svg natural=0x0 shown=false loading=lazy alt="A minute-by-minute timeline of one complete 35-minute lesson, from entry to the exit ticke"
+   img /img/figures/efpc-411/unit-02/fig-U2-8.svg natural=293x150 shown=true loading=lazy alt="Four inclusive practices with an observable sign for each, from participation and grouping"
+   img /img/figures/efpc-411/unit-02/fig-U2-8.dark.svg natural=0x0 shown=false loading=lazy alt="Four inclusive practices with an observable sign for each, from participation and grouping"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://doi.org/10.1596/37669 | https://www.hec.gov.pk/english/services/universiti
+
+-- unit-assessment: headings=15 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=1 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=539 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=539 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=550 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=550 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=543 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=543 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-04: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=529 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=529 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=0 figures=0 spill=4
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=1 answerHeadings=[]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-9.webp w=762 right=778 fits
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-1.svg w=709 right=754 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-2.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-2.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-3.svg w=709 right=754 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-4.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-4.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-5.svg w=709 right=754 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-5.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-6.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-6.dark.svg w=0 right=0 fits
+
+-- topic-04 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-7.svg w=709 right=754 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-7.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-8.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-8.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U2-1.light [diagram] viewBox=780x500 texts=19 wordmark@x=675.7 -> clean
+   fig-U2-1.dark [diagram] viewBox=780x500 texts=19 wordmark@x=675.7 -> clean
+   fig-U2-2.light [table] viewBox=780x500 texts=33 wordmark@x=675.7 -> clean
+   fig-U2-2.dark [table] viewBox=780x500 texts=33 wordmark@x=675.7 -> clean
+   fig-U2-3.light [table] viewBox=780x470 texts=32 wordmark@x=675.7 -> clean
+   fig-U2-3.dark [table] viewBox=780x470 texts=32 wordmark@x=675.7 -> clean
+   fig-U2-4.light [flowchart] viewBox=780x390 texts=19 wordmark@x=675.7 -> clean
+   fig-U2-4.dark [flowchart] viewBox=780x390 texts=19 wordmark@x=675.7 -> clean
+   fig-U2-5.light [table] viewBox=780x430 texts=30 wordmark@x=675.7 -> clean
+   fig-U2-5.dark [table] viewBox=780x430 texts=30 wordmark@x=675.7 -> clean
+   fig-U2-6.light [diagram] viewBox=780x310 texts=16 wordmark@x=675.7 -> clean
+   fig-U2-6.dark [diagram] viewBox=780x310 texts=16 wordmark@x=675.7 -> clean
+   fig-U2-7.light [timeline] viewBox=780x330 texts=19 wordmark@x=675.7 -> clean
+   fig-U2-7.dark [timeline] viewBox=780x330 texts=19 wordmark@x=675.7 -> clean
+   fig-U2-8.light [table] viewBox=780x400 texts=18 wordmark@x=675.7 -> clean
+   fig-U2-8.dark [table] viewBox=780x400 texts=18 wordmark@x=675.7 -> clean
+
+### finished: 2026-11-27T13:39:07.667Z
+### defects: 0
+### exit_code: 0
