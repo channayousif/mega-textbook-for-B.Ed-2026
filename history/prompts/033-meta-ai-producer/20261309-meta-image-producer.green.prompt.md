@@ -13,7 +13,7 @@ labels: ["board-direct", "media-studio", "crew"]
 links:
   spec: specs/033-meta-ai-producer/spec.md
   ticket: null
-  adr: history/adr/0029-gemini-illustration-producer.md
+  adr: history/adr/0029-gemini-agy-raster-illustration-producer.md
   pr: null
 files:
  - scripts/media/producers/meta.mjs
