@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of NCP 2022-23 science domains and sample standards</title><desc id="d">Table showing the three science domains of the NCP 2022-23, life, physical and earth and space sciences, plus the cross-cutting Scientific Enquiry strand, each with a sample standard and what it builds.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="370"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="64"/>
+<rect class="plain" x="24" y="128" width="732" height="64"/>
+<rect class="panel" x="24" y="192" width="732" height="64"/>
+<rect class="plain" x="24" y="256" width="732" height="64"/>
+</g><g id="layer-edges">
+<line class="grid" x1="170" y1="24" x2="170" y2="320"/>
+<line class="grid" x1="340" y1="24" x2="340" y2="320"/>
+<line class="grid" x1="570" y1="24" x2="570" y2="320"/>
+</g><g id="layer-nodes">
+<text class="sh" x="34" y="49">Domain</text>
+<text class="sh" x="180" y="49">What it covers</text>
+<text class="sh" x="350" y="49">Sample standard (Grade 6)</text>
+<text class="sh" x="580" y="49">What it builds</text>
+
+<text class="sh" x="34" y="93">Life Sciences</text>
+<text class="cell" x="180" y="93">Living things, body</text>
+<text class="cell" x="180" y="110">systems, ecosystems</text>
+<text class="cell" x="350" y="93">Describe the functions of the main</text>
+<text class="cell" x="350" y="110">organs of the digestive system</text>
+<text class="cell" x="580" y="93">Understanding of</text>
+<text class="cell" x="580" y="110">living systems</text>
+
+<text class="sh" x="34" y="157">Physical Sciences</text>
+<text class="cell" x="180" y="157">Matter, energy,</text>
+<text class="cell" x="180" y="174">forces and motion</text>
+<text class="cell" x="350" y="157">Classify materials as conductors</text>
+<text class="cell" x="350" y="174">or insulators and test with circuit</text>
+<text class="cell" x="580" y="157">Understanding of the</text>
+<text class="cell" x="580" y="174">physical world</text>
+
+<text class="sh" x="34" y="221">Earth and Space</text>
+<text class="cell" x="180" y="213">Earth's structure,</text>
+<text class="cell" x="180" y="230">weather, solar system</text>
+<text class="cell" x="350" y="221">Explain the water cycle using</text>
+<text class="cell" x="350" y="238">a labelled diagram</text>
+<text class="cell" x="580" y="221">Understanding of</text>
+<text class="cell" x="580" y="238">Earth and space</text>
+
+<text class="sh" x="34" y="277">Scientific Enquiry</text>
+<text class="cell" x="34" y="294">(cross-cutting)</text>
+<text class="cell" x="180" y="277">Asking questions, fair</text>
+<text class="cell" x="180" y="294">testing, recording</text>
+<text class="cell" x="350" y="277">Plan a fair test with one variable</text>
+<text class="cell" x="350" y="294">changed and others controlled</text>
+<text class="cell" x="580" y="277">Process skills and</text>
+<text class="cell" x="580" y="294">scientific attitudes</text>
+</g><text class="wm" x="768" y="355" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
