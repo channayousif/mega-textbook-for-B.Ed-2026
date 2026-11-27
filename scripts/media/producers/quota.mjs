@@ -17,15 +17,17 @@ export const IMAGE_QUOTA_FILE = process.env.MEGA_BOOK_IMAGE_QUOTA_FILE || join(h
 
 /** Owner ruling 2026-11-18: agy first, then gflow while the tunnel is up, then Codex. Owner ruling
  * 2026-11-27 (Feature 036): agy2, the second Google account's Antigravity, right after agy. */
-export const PRODUCERS = ['agy', 'agy2', 'gflow', 'gflow2', 'codex'];
+export const PRODUCERS = ['agy', 'agy2', 'gflow', 'gflow2', 'codex', 'meta'];
 
 /** Hold used when a producer says its quota is gone but names no reset time. gflow quotas are daily. */
-export const FALLBACK_HOURS = { agy: 6, agy2: 6, gflow: 24, gflow2: 24, codex: 6 };
+export const FALLBACK_HOURS = { agy: 6, agy2: 6, gflow: 24, gflow2: 24, codex: 6, meta: 12 };
 /** Kept for callers of the single-producer API. */
 export const UNKNOWN_RESET_HOURS = FALLBACK_HOURS.agy;
 
 export const GFLOW_MCP_URL = process.env.GFLOW_MCP_URL || 'http://127.0.0.1:18800/mcp';
 export const GFLOW_FILES_URL = process.env.GFLOW_FILES_URL || 'http://127.0.0.1:18801/';
+/** The davinci workspace Chrome's DevTools through the media tunnel, where meta.ai runs (D-2026-0102). */
+export const META_CDP_URL = process.env.META_CDP_URL || 'http://127.0.0.1:18802';
 
 function readAll(file) {
   try {
@@ -97,6 +99,7 @@ export function availableProducers({ file = IMAGE_QUOTA_FILE, nowMs = Date.now()
   return PRODUCERS.filter((p) => {
     if (activeImageQuota(p, file, nowMs)) return false;
     if (p.startsWith('gflow')) return reachable ? reachable(p) : gflowReachable();
+    if (p === 'meta') return reachable ? reachable(p) : portOpen(META_CDP_URL);
     return true;
   });
 }
@@ -107,6 +110,7 @@ export function producerStatus({ file = IMAGE_QUOTA_FILE, nowMs = Date.now(), re
     const q = activeImageQuota(p, file, nowMs);
     if (q) return `${p} out until ${q.resetAt}`;
     if (p.startsWith('gflow') && !(reachable ? reachable(p) : gflowReachable())) return `${p} offline`;
+    if (p === 'meta' && !(reachable ? reachable(p) : portOpen(META_CDP_URL))) return `${p} offline`;
     return `${p} ok`;
   }).join(' · ');
 }
