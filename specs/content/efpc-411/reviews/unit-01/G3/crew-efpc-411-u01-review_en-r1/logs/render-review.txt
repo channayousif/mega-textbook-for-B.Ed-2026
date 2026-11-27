@@ -1,0 +1,127 @@
+heavy: slot acquired; waiting for 30 seconds of memory/PSI headroom
+### render-inspect  EFPC-411 Unit 1
+### route: /semester-4/efpc-411/unit-01  pages: 6  placed figures: 8
+### host: https://textbook.com.pk   browser: chromium 149.0.7827.0
+### started: 2026-11-27T11:54:15.243Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=1 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-01/fig-U1-9.webp natural=1344x756 shown=true loading=lazy alt="A student-teacher sits quietly at the side of a Sindh government classroom, taking structu"
+   heading order: no skipped levels
+
+-- topic-01: headings=16 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=1 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-01/fig-U1-1.svg natural=229x150 shown=true loading=lazy alt="Table comparing formal, informal, peer, and supervisor-led classroom observation across pu"
+   img /img/figures/efpc-411/unit-01/fig-U1-1.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing formal, informal, peer, and supervisor-led classroom observation across pu"
+   img /img/figures/efpc-411/unit-01/fig-U1-2.svg natural=217x150 shown=true loading=lazy alt="Concept map illustrating the five core ethical principles governing classroom observation "
+   img /img/figures/efpc-411/unit-01/fig-U1-2.dark.svg natural=0x0 shown=false loading=lazy alt="Concept map illustrating the five core ethical principles governing classroom observation "
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti
+
+-- topic-02: headings=15 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-01/fig-U1-3.svg natural=213x150 shown=true loading=lazy alt="Concept map outlining five classroom observation focus areas with guiding analytical quest"
+   img /img/figures/efpc-411/unit-01/fig-U1-3.dark.svg natural=0x0 shown=false loading=lazy alt="Concept map outlining five classroom observation focus areas with guiding analytical quest"
+   img /img/figures/efpc-411/unit-01/fig-U1-4.svg natural=239x150 shown=true loading=lazy alt="Comparative table of four observation instruments showing purpose, sample entry, strengths"
+   img /img/figures/efpc-411/unit-01/fig-U1-4.dark.svg natural=0x0 shown=false loading=lazy alt="Comparative table of four observation instruments showing purpose, sample entry, strengths"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://documents1.worldbank.org/curated/en/872291 | https://www.hec.gov.pk/english/services/universiti
+
+-- topic-03: headings=16 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-01/fig-U1-5.svg natural=244x150 shown=true loading=lazy alt="Flowchart illustrating the four sequential stages of the classroom observation cycle."
+   img /img/figures/efpc-411/unit-01/fig-U1-5.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart illustrating the four sequential stages of the classroom observation cycle."
+   img /img/figures/efpc-411/unit-01/fig-U1-6.svg natural=225x150 shown=true loading=lazy alt="Table contrasting biased observation notes with objective factual evidence across six clas"
+   img /img/figures/efpc-411/unit-01/fig-U1-6.dark.svg natural=0x0 shown=false loading=lazy alt="Table contrasting biased observation notes with objective factual evidence across six clas"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://documents1.worldbank.org/curated/en/872291
+
+-- topic-04: headings=15 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-01/fig-U1-7.svg natural=244x150 shown=true loading=lazy alt="Flowchart mapping the four-step constructive post-observation feedback protocol."
+   img /img/figures/efpc-411/unit-01/fig-U1-7.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart mapping the four-step constructive post-observation feedback protocol."
+   img /img/figures/efpc-411/unit-01/fig-U1-8.svg natural=239x150 shown=true loading=lazy alt="Table showing translation of observation findings into analytical insights and personal pr"
+   img /img/figures/efpc-411/unit-01/fig-U1-8.dark.svg natural=0x0 shown=false loading=lazy alt="Table showing translation of observation findings into analytical insights and personal pr"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://documents1.worldbank.org/curated/en/872291
+
+-- unit-assessment: headings=15 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=1 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=560 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=560 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=596 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=596 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=610 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=610 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-04: docHorizontalOverflow=0px tables=1 figures=2 spill=8
+   table[0] client=328 scroll=603 fits=false lastHeader="Exceeds Standard (3 mark" scroller=TABLE. (client=328 scroll=603 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=0 figures=0 spill=4
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=1 answerHeadings=[]
+   printfig /img/figures/efpc-411/unit-01/fig-U1-9.webp w=762 right=778 fits
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efpc-411/unit-01/fig-U1-1.svg w=709 right=754 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-2.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-2.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efpc-411/unit-01/fig-U1-3.svg w=709 right=754 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-4.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-4.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efpc-411/unit-01/fig-U1-5.svg w=709 right=754 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-5.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-6.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-6.dark.svg w=0 right=0 fits
+
+-- topic-04 @print: clippedElems=0 figureImgs=4 answerHeadings=["Mini-rubric​"]
+   printfig /img/figures/efpc-411/unit-01/fig-U1-7.svg w=709 right=754 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-7.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-8.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-01/fig-U1-8.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U1-1.light [table] viewBox=780x510 texts=39 wordmark@x=675.7 -> clean
+   fig-U1-1.dark [table] viewBox=780x510 texts=39 wordmark@x=675.7 -> clean
+   fig-U1-2.light [concept-map] viewBox=780x540 texts=20 wordmark@x=675.7 -> clean
+   fig-U1-2.dark [concept-map] viewBox=780x540 texts=20 wordmark@x=675.7 -> clean
+   fig-U1-3.light [concept-map] viewBox=780x550 texts=25 wordmark@x=675.6 -> clean
+   fig-U1-3.dark [concept-map] viewBox=780x550 texts=25 wordmark@x=675.6 -> clean
+   fig-U1-4.light [table] viewBox=780x490 texts=37 wordmark@x=675.7 -> clean
+   fig-U1-4.dark [table] viewBox=780x490 texts=37 wordmark@x=675.7 -> clean
+   fig-U1-5.light [flowchart] viewBox=780x480 texts=23 wordmark@x=675.7 -> clean
+   fig-U1-5.dark [flowchart] viewBox=780x480 texts=23 wordmark@x=675.7 -> clean
+   fig-U1-6.light [table] viewBox=780x520 texts=26 wordmark@x=675.7 -> clean
+   fig-U1-6.dark [table] viewBox=780x520 texts=26 wordmark@x=675.7 -> clean
+   fig-U1-7.light [flowchart] viewBox=780x480 texts=23 wordmark@x=675.7 -> clean
+   fig-U1-7.dark [flowchart] viewBox=780x480 texts=23 wordmark@x=675.7 -> clean
+   fig-U1-8.light [table] viewBox=780x490 texts=30 wordmark@x=675.7 -> clean
+   fig-U1-8.dark [table] viewBox=780x490 texts=30 wordmark@x=675.7 -> clean
+
+### finished: 2026-11-27T11:55:57.545Z
+### defects: 0
+
+Artifacts: /home/a2ahs/crew-wt/efpc-411-u01-review_en/specs/content/efpc-411/reviews/unit-01/G3/crew-efpc-411-u01-review_en-r1/render
