@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of management routines for practical science</title><desc id="d">Table of essential classroom management routines for practical science teaching, covering material distribution, group roles, attention signals, and clean-up protocols.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="68"/>
+<rect class="plain" x="24" y="132" width="732" height="68"/>
+<rect class="panel" x="24" y="200" width="732" height="68"/>
+<rect class="plain" x="24" y="268" width="732" height="68"/>
+</g><g id="layer-edges">
+<line class="grid" x1="160" y1="24" x2="160" y2="336"/>
+<line class="grid" x1="450" y1="24" x2="450" y2="336"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Routine Area</text>
+<text class="sh" x="172" y="49">Practical Management Protocol</text>
+<text class="sh" x="462" y="49">Why It Prevents Laboratory Chaos</text>
+<text class="sh" x="36" y="96">Cooperative</text>
+<text class="cell" x="36" y="113">Group Roles</text>
+<text class="cell" x="172" y="91">Teams of 4 with rotating roles: Materials</text>
+<text class="cell" x="172" y="108">Manager, Facilitator, Scribe, Safety Officer</text>
+<text class="cell" x="462" y="91">Eliminates domination by one pupil and</text>
+<text class="cell" x="462" y="108">ensures every student has accountability</text>
+<text class="sh" x="36" y="164">Tray System</text>
+<text class="cell" x="36" y="181">Distribution</text>
+<text class="cell" x="172" y="159">Apparatus pre-assembled in trays;</text>
+<text class="cell" x="172" y="176">only Materials Manager collects it</text>
+<text class="cell" x="462" y="159">Prevents mobbing the front desk; stops</text>
+<text class="cell" x="462" y="176">bottlenecks, collisions, and broken glass</text>
+<text class="sh" x="36" y="232">Non-Verbal</text>
+<text class="cell" x="36" y="249">Attention Signal</text>
+<text class="cell" x="172" y="227">Raised-hand 5-second countdown or chime;</text>
+<text class="cell" x="172" y="244">pupils immediately freeze and listen</text>
+<text class="cell" x="462" y="227">Halts activity across 45 pupils without</text>
+<text class="cell" x="462" y="244">shouting or straining teacher voice</text>
+<text class="sh" x="36" y="300">Clean-up &amp;</text>
+<text class="cell" x="36" y="317">Safety Buffer</text>
+<text class="cell" x="172" y="295">Strict 7-minute buffer before bell; desks</text>
+<text class="cell" x="172" y="312">wiped dry; teacher counts all apparatus</text>
+<text class="cell" x="462" y="295">Guarantees zero missing equipment and</text>
+<text class="cell" x="462" y="312">leaves room ready for the next class</text>
+</g><text class="wm" x="768" y="375" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

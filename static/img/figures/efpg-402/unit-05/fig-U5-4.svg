@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Comparison of Herbartian, Bloom and 5E lesson models</title><desc id="d">Comparison table contrasting the Herbartian model, Bloom's objective-based model, and the 5E constructivist model across four criteria: philosophical basis, teacher role, student role, and ideal classroom use.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="58"/>
+<rect class="plain" x="24" y="122" width="732" height="58"/>
+<rect class="panel" x="24" y="180" width="732" height="58"/>
+<rect class="plain" x="24" y="238" width="732" height="58"/>
+<rect class="panel" x="24" y="296" width="732" height="58"/>
+</g><g id="layer-edges">
+<line class="grid" x1="140" y1="24" x2="140" y2="354"/>
+<line class="grid" x1="340" y1="24" x2="340" y2="354"/>
+<line class="grid" x1="550" y1="24" x2="550" y2="354"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Feature</text>
+<text class="sh" x="150" y="49">Herbartian 5-Step</text>
+<text class="sh" x="350" y="49">Bloom's Objective-Based</text>
+<text class="sh" x="560" y="49">BSCS 5E Inquiry Model</text>
+<text class="sh" x="36" y="98">Theory</text>
+<text class="cell" x="150" y="89">Apperception psychology;</text>
+<text class="cell" x="150" y="106">associative learning</text>
+<text class="cell" x="350" y="89">Behavioural psychology;</text>
+<text class="cell" x="350" y="106">measurable objectives</text>
+<text class="cell" x="560" y="89">Constructivist psychology;</text>
+<text class="cell" x="560" y="106">conceptual restructuring</text>
+<text class="sh" x="36" y="156">Teacher Role</text>
+<text class="cell" x="150" y="147">Information transmitter;</text>
+<text class="cell" x="150" y="164">lecturer &amp; demonstrator</text>
+<text class="cell" x="350" y="147">Instructional designer;</text>
+<text class="cell" x="350" y="164">arranges learning tasks</text>
+<text class="cell" x="560" y="147">Facilitator, inquiry coach,</text>
+<text class="cell" x="560" y="164">and concept synthesizer</text>
+<text class="sh" x="36" y="214">Student Role</text>
+<text class="cell" x="150" y="205">Receptive listener,</text>
+<text class="cell" x="150" y="222">answerer, and copier</text>
+<text class="cell" x="350" y="205">Performer of specified</text>
+<text class="cell" x="350" y="222">behavioural outcomes</text>
+<text class="cell" x="560" y="205">Active investigator,</text>
+<text class="cell" x="560" y="222">collaborator, sense-maker</text>
+<text class="sh" x="36" y="272">Sequence</text>
+<text class="cell" x="150" y="263">Preparation, Presentation,</text>
+<text class="cell" x="150" y="280">Association, Generalization</text>
+<text class="cell" x="350" y="263">Input (SLOs) -> Process</text>
+<text class="cell" x="350" y="280">(Tasks) -> Output (Test)</text>
+<text class="cell" x="560" y="263">5E inquiry cycle:</text>
+<text class="cell" x="560" y="280">Engage to Evaluate</text>
+<text class="sh" x="36" y="330">Explanation</text>
+<text class="cell" x="150" y="321">Delivered early during</text>
+<text class="cell" x="150" y="338">the Presentation step</text>
+<text class="cell" x="350" y="321">Integrated throughout the</text>
+<text class="cell" x="350" y="338">Process phase</text>
+<text class="cell" x="560" y="321">Offered only AFTER pupils</text>
+<text class="cell" x="560" y="338">explore empirical evidence</text>
+</g><text class="wm" x="768" y="385" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

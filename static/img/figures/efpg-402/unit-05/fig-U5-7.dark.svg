@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 390" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Taxonomy of science question types</title><desc id="d">Taxonomic table of science question types showing recall, process, and open evaluative questions, along with their pedagogical purpose, Bloom level, and science classroom examples.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="390"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="68"/>
+<rect class="plain" x="24" y="132" width="732" height="68"/>
+<rect class="panel" x="24" y="200" width="732" height="68"/>
+<rect class="plain" x="24" y="268" width="732" height="68"/>
+</g><g id="layer-edges">
+<line class="grid" x1="160" y1="24" x2="160" y2="336"/>
+<line class="grid" x1="280" y1="24" x2="280" y2="336"/>
+<line class="grid" x1="470" y1="24" x2="470" y2="336"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Question Type</text>
+<text class="sh" x="172" y="49">Bloom Level</text>
+<text class="sh" x="292" y="49">Instructional Role</text>
+<text class="sh" x="482" y="49">Science Example (Grade 7-8)</text>
+<text class="sh" x="36" y="96">Recall</text>
+<text class="cell" x="36" y="113">(Convergent)</text>
+<text class="sh" x="172" y="104">Remember</text>
+<text class="cell" x="292" y="94">Checks baseline terms,</text>
+<text class="cell" x="292" y="111">symbols, and definitions</text>
+<text class="cell" x="482" y="94">"What is the boiling point of pure</text>
+<text class="cell" x="482" y="111">water at sea level in degrees Celsius?"</text>
+<text class="sh" x="36" y="164">Process</text>
+<text class="cell" x="36" y="181">(Divergent)</text>
+<text class="sh" x="172" y="172">Understand,</text>
+<text class="cell" x="172" y="189">Apply</text>
+<text class="cell" x="292" y="162">Elicits cause-and-effect</text>
+<text class="cell" x="292" y="179">and explanation of data</text>
+<text class="cell" x="482" y="162">"Why does water boil at lower</text>
+<text class="cell" x="482" y="179">temperatures at high altitude?"</text>
+<text class="sh" x="36" y="232">Evaluative</text>
+<text class="cell" x="36" y="249">(Open inquiry)</text>
+<text class="sh" x="172" y="240">Analyze,</text>
+<text class="cell" x="172" y="257">Evaluate</text>
+<text class="cell" x="292" y="230">Weighs evidence and</text>
+<text class="cell" x="292" y="247">justifies decisions</text>
+<text class="cell" x="482" y="230">"Which water purification method is best</text>
+<text class="cell" x="482" y="247">for flood-hit villages, and why?"</text>
+<text class="sh" x="36" y="300">Metacognitive</text>
+<text class="cell" x="36" y="317">(Reflective)</text>
+<text class="sh" x="172" y="308">Evaluate</text>
+<text class="cell" x="292" y="298">Prompts reflection on one's</text>
+<text class="cell" x="292" y="315">thinking and ideas</text>
+<text class="cell" x="482" y="298">"What observation changed your</text>
+<text class="cell" x="482" y="315">initial idea about heat transfer?"</text>
+</g><text class="wm" x="768" y="375" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

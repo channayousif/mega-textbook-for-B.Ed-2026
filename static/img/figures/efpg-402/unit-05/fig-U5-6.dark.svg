@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Diagram of operational instructional objective components</title><desc id="d">Component diagram illustrating the three essential parts of an operational instructional objective: Condition, Observable Behaviour, and Criterion of Mastery, with a concrete science example.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="340"/><g id="layer-edges">
+<line class="stroke" x1="250" y1="120" x2="280" y2="120" marker-end="url(#arrow)"/>
+<line class="stroke" x1="500" y1="120" x2="530" y2="120" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="box-cond"><rect class="panel-a" x="30" y="50" width="220" height="140" rx="8"/><text class="h" x="44" y="80">1. Condition</text><text class="sh" x="44" y="105">Given setting &amp; tools</text><text class="cell" x="44" y="132">"Given an unlabelled diagram</text><text class="cell" x="44" y="151">of an animal cell and a list</text><text class="cell" x="44" y="170">of organelle names..."</text></g>
+<g id="box-beh"><rect class="panel-b" x="280" y="50" width="220" height="140" rx="8"/><text class="h" x="294" y="80">2. Behaviour</text><text class="sh" x="294" y="105">Observable action verb</text><text class="cell" x="294" y="132">"...pupils will correctly</text><text class="cell" x="294" y="151">identify and label five</text><text class="cell" x="294" y="170">cellular structures..."</text></g>
+<g id="box-crit"><rect class="panel-a" x="530" y="50" width="220" height="140" rx="8"/><text class="h" x="544" y="80">3. Criterion</text><text class="sh" x="544" y="105">Standard of mastery</text><text class="cell" x="544" y="132">"...with at least 80%</text><text class="cell" x="544" y="151">accuracy in under</text><text class="cell" x="544" y="170">four minutes."</text></g>
+</g><g id="layer-labels">
+<rect class="panel" x="30" y="220" width="720" height="60" rx="6"/>
+<text class="sh" x="44" y="245">Operational SLO Formula:</text>
+<text class="cell" x="44" y="260">Under Conditions (C), the Learner (A) will perform an</text>
+<text class="cell" x="44" y="275">Observable Behaviour (B) to a defined Criterion (D).</text>
+</g><text class="wm" x="768" y="325" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
