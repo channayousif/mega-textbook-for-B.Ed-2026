@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Decision framework for choosing between digital ICT tools and physical objects</title><desc id="d">Diagram contrasting when digital ICT is pedagogically superior versus when real physical objects must be used in science teaching.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<rect class="panel-a" x="24" y="50" width="236" height="280" rx="8"/>
+<rect class="panel-b" x="275" y="90" width="230" height="200" rx="8"/>
+<rect class="panel-a" x="520" y="50" width="236" height="280" rx="8"/>
+</g><g id="layer-edges">
+<line class="stroke" x1="275" y1="140" x2="260" y2="140" marker-end="url(#arrow)"/>
+<line class="stroke" x1="505" y1="240" x2="520" y2="240" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<text class="h" x="142" y="80" text-anchor="middle">Use Digital ICT</text>
+<text class="cell" x="36" y="110">• Extreme spatial scales</text>
+<text class="cell" x="46" y="128">(solar system, atoms)</text>
+<text class="cell" x="36" y="156">• Hazardous reactions</text>
+<text class="cell" x="46" y="174">(toxic fumes, explosive)</text>
+<text class="cell" x="36" y="202">• Unobservable time scales</text>
+<text class="cell" x="46" y="220">(geological plate shifts)</text>
+<text class="cell" x="36" y="248">• Dynamic parameter tests</text>
+<text class="cell" x="46" y="266">(instant physics variation)</text>
+
+<text class="h" x="390" y="125" text-anchor="middle">Pedagogical Filter</text>
+<text class="sh" x="390" y="155" text-anchor="middle">Does simulation add</text>
+<text class="sh" x="390" y="175" text-anchor="middle">clarity without displacing</text>
+<text class="sh" x="390" y="195" text-anchor="middle">essential manual</text>
+<text class="sh" x="390" y="215" text-anchor="middle">laboratory skills?</text>
+
+<text class="h" x="638" y="80" text-anchor="middle">Use Real Objects</text>
+<text class="cell" x="532" y="110">• Manual skill practice</text>
+<text class="cell" x="542" y="128">(handling glass, wiring)</text>
+<text class="cell" x="532" y="156">• Direct sensory feedback</text>
+<text class="cell" x="542" y="174">(odour, heat sensations)</text>
+<text class="cell" x="532" y="202">• Real measurement limits</text>
+<text class="cell" x="542" y="220">(friction, parallax error)</text>
+<text class="cell" x="532" y="248">• Team collaboration</text>
+<text class="cell" x="542" y="266">(shared tool handling)</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="375">ICT enriches science teaching but should never displace necessary hands-on laboratory experiences.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

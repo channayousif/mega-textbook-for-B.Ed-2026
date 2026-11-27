@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of ICT tools in science teaching and low-resource offline alternatives</title><desc id="d">Table showing digital ICT tools for science teaching alongside offline alternatives for schools with limited electricity or connectivity.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="64"/>
+<rect class="plain" x="24" y="128" width="732" height="64"/>
+<rect class="panel" x="24" y="192" width="732" height="64"/>
+<rect class="plain" x="24" y="256" width="732" height="64"/>
+</g><g id="layer-edges">
+<line class="grid" x1="160" y1="24" x2="160" y2="320"/>
+<line class="grid" x1="430" y1="24" x2="430" y2="320"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Digital Tool</text>
+<text class="sh" x="172" y="49">Pedagogical Strength</text>
+<text class="sh" x="442" y="49">Offline Alternative</text>
+
+<text class="sh" x="36" y="96">Simulations</text>
+<text class="cell" x="36" y="113">(e.g. PhET)</text>
+<text class="cell" x="172" y="93">Manipulate unseen variables safely;</text>
+<text class="cell" x="172" y="110">visualise sub-microscopic particles</text>
+<text class="cell" x="442" y="93">Kinesthetic pupil role-play and</text>
+<text class="cell" x="442" y="110">chalkboard token arrangements</text>
+
+<text class="sh" x="36" y="160">Video clips</text>
+<text class="cell" x="36" y="177">(Khan Academy)</text>
+<text class="cell" x="172" y="157">Show hazardous, costly, rare or</text>
+<text class="cell" x="172" y="174">extreme industrial/natural events</text>
+<text class="cell" x="442" y="157">Careful teacher demonstration</text>
+<text class="cell" x="442" y="174">using benign household materials</text>
+
+<text class="sh" x="36" y="224">Data loggers</text>
+<text class="cell" x="36" y="241">(digital sensors)</text>
+<text class="cell" x="172" y="221">Continuous real-time data</text>
+<text class="cell" x="172" y="238">logging with instant graphs</text>
+<text class="cell" x="442" y="221">Stopwatch timing in student pairs</text>
+<text class="cell" x="442" y="238">and manual line graphing on paper</text>
+
+<text class="sh" x="36" y="288">Mobile apps</text>
+<text class="cell" x="36" y="305">(species IDs)</text>
+<text class="cell" x="172" y="285">Instant taxonomic identification</text>
+<text class="cell" x="172" y="302">and access to reference photos</text>
+<text class="cell" x="442" y="285">Printed dichotomous classification</text>
+<text class="cell" x="442" y="302">keys and local plant charts</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="355">Equitable pedagogical bridges ensure science learning continues during power or connectivity outages.</text>
+</g><text class="wm" x="768" y="380" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
