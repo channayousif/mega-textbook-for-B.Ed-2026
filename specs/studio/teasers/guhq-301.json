@@ -1,0 +1,78 @@
+{
+ "id": "guhq-301",
+ "kind": "course",
+ "recipe": {
+  "name": "teaser",
+  "version": 3
+ },
+ "course_code": "GUHQ-301",
+ "semester": 3,
+ "title": {
+  "en": "Fehm-e-Quran - I (GUHQ-301)",
+  "ur": "فہمِ قرآن - I (GUHQ-301)"
+ },
+ "sources": [
+  "docs/semester-3/guhq-301/course-overview.mdx",
+  "catalog/courses.json"
+ ],
+ "visual_style": "Vertical 9:16, crisp warm daylight, energetic realistic cinematic look with named camera moves. Pakistani settings: a government teacher-training college and school with whitewashed walls, plain green blackboards with no writing, wooden desks. Modest dress; women wear dupattas covering the hair. No books with visible covers or script, no Arabic or any other writing, no calligraphy, no scripture, no religious symbols or sacred figures. No on-screen text, letters, captions, logos or watermarks anywhere in the frame; papers and screens are blurred and unreadable. Recipe v2: in shots 1 and 5 the on-screen presenter speaks to the camera; in shots 2-4 an unseen narrator speaks as a voice-over and nobody on screen speaks.",
+ "narrator": {
+  "name": "presenter and voice-over",
+  "description": "On screen in shots 1 and 5: a confident young Pakistani woman teacher in a dark green shalwar kameez with a cream dupatta covering her hair, speaking Urdu to the camera with a lively, quick, enthusiastic delivery. Shots 2-4: an unseen Pakistani woman narrator, lively and quick, voice-over only."
+ },
+ "shots": [
+  {
+   "n": 1,
+   "beat": "hook",
+   "visual": "In a bright teacher-training college classroom with a plain green blackboard with no writing, a confident young Pakistani woman teacher in a dark green shalwar kameez with a cream dupatta covering her hair closes a plain notebook on her desk, looks up thoughtfully, then turns to the camera; quick push-in to a close-up as student teachers sit at wooden desks behind her."
+  },
+  {
+   "n": 2,
+   "beat": "learn",
+   "visual": "Smooth dolly shot along rows of wooden desks where student teachers in modest shalwar kameez and dupattas write carefully in notebooks with blurred pages; a woman tutor in a modest dupatta leans in to guide one of them with a pencil; every page is blurred and unreadable."
+  },
+  {
+   "n": 3,
+   "beat": "learn",
+   "visual": "Tracking shot around a small group of student teachers in modest dress seated in a circle on a shaded college verandah, discussing animatedly and taking turns to speak; one nods and points to a blurred notebook page, then a quick whip-pan to two others comparing notes; no readable writing anywhere."
+  },
+  {
+   "n": 4,
+   "beat": "why",
+   "visual": "Rising crane shot over a sunlit classroom where student teachers work in pairs on exercises, some at laptops with blurred screens, others with blurred notebooks, helping each other and smiling; focused, cooperative atmosphere."
+  },
+  {
+   "n": 5,
+   "beat": "cta",
+   "visual": "In a sunlit school corridor with whitewashed walls, a confident young Pakistani woman teacher in a dark green shalwar kameez with a cream dupatta covering her hair walks briskly toward the camera, holds up a phone with a blurred screen and smiles; fast push-in to a close-up as pupils walk past softly in the background."
+  }
+ ],
+ "locales": {
+  "ur": {
+   "narration": [
+    "قرآن پڑھتے تو ہیں، مگر کیا ہم اسے سمجھتے بھی ہیں؟",
+    "اس کورس میں آپ قرآن کی عربی کے حروف، الفاظ اور ان کی بناوٹ سیکھیں گے۔",
+    "پھر grammar اور جملے، اور مختصر حصوں کا ترجمہ، ان پر غور اور ان کا پس منظر۔",
+    "ایک عملی کورس، جس میں زیادہ وقت خود متن کے ساتھ مشقوں میں گزرتا ہے۔",
+    "پورا کورس مفت پڑھیں textbook ڈاٹ کام ڈاٹ پی کے پر۔ لنک نیچے ہے۔"
+   ],
+   "end_card": {
+    "headline": "فہمِ قرآن - I (GUHQ-301)",
+    "cta": "پورا کورس مفت پڑھیں"
+   },
+   "youtube_title": "قرآن پڑھتے ہیں، سمجھتے بھی ہیں؟ فہمِ قرآن | GUHQ-301",
+   "keywords": [
+    "Fehm-e-Quran",
+    "فہمِ قرآن",
+    "Quranic Arabic",
+    "قرآنی عربی",
+    "B.Ed notes Urdu",
+    "بی ایڈ",
+    "Quranic vocabulary",
+    "Arabic grammar",
+    "GUHQ-301"
+   ],
+   "course_summary": "سمسٹر 3 کا یہ کورس آپ کو قرآنِ مجید پڑھنے سے آگے بڑھا کر اسے سمجھنے کی طرف لے جاتا ہے۔ آپ قرآن کی عربی پڑھیں گے: اس کے حروف، اس کے الفاظ اور ان کی بناوٹ، اس کی grammar اور اس کے جملے۔ پھر آپ مختصر حصے پڑھیں گے، ان کا ترجمہ کریں گے، ان پر غور کریں گے اور دیکھیں گے کہ ان کا پس منظر انہیں سمجھنے میں کیسے مدد دیتا ہے۔ یہ ایک عملی کورس ہے، اس لیے زیادہ وقت خود متن کے ساتھ مشقوں میں گزرتا ہے۔"
+  }
+ }
+}

@@ -3738,6 +3738,31 @@
     }
    ],
    "script_sha256": "686d0c21bf9eb90bd2054dc9f1191e4831253a884a5872d24378ed23bf3c41e2"
+  },
+  {
+   "key": "guhq-301-ur",
+   "id": "guhq-301",
+   "locale": "ur",
+   "kind": "short",
+   "state": "scripted",
+   "gates": {
+    "qg0": {
+     "verdict": "pass",
+     "by": "teaser.mjs"
+    }
+   },
+   "clips": [],
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T20:18:06.023Z"
+    },
+    {
+     "state": "scripted",
+     "at": "2026-11-27T20:18:06.153Z"
+    }
+   ],
+   "script_sha256": "5705c610dc42646d66219867754f5c06ec4e12bbeb8781221cccab5ff9a5fb59"
   }
  ]
 }
