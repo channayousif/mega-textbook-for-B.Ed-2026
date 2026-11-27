@@ -1,0 +1,3 @@
+$ node scripts/review-evidence.mjs validate specs/content/efpc-411/reviews/unit-01/G3/crew-efpc-411-u01-review_en-cycle2.json
+Report structurally valid: escalate. This does not authorize gate completion.
+# exit 0

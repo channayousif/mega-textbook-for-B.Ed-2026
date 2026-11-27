@@ -1,0 +1,4 @@
+$ npm run check:svg-style
+# run 2026-11-27T16:38:14Z at HEAD 7254e6a3917a1f7c5a052daa88ee40a728f6cb82
+✓ svg-style: 1905 figure(s) checked, 372 grandfathered.
+# exit 0
