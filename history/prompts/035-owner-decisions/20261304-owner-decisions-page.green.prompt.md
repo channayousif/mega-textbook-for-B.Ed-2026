@@ -86,7 +86,7 @@ applying them through `crew.mjs cmd ... --via web --json`, and the `/app/admin/d
 
 - Shipped / changed: Feature 035 code, migration 0059 (not yet applied), tick step `decisions-sync.mjs --in-tick`, `crew.mjs cmd --json`, BOARD.md link to the page.
 - Decisions the team must respect: the page only records instructions; the crew applies them via `crew.mjs cmd` (via `web`) with the existing checks; a decision on a changed item (digest) is refused; the service key stays in signoff.env and is stripped from the child command.
-- Pending / next owner: owner confirms applying 0059 to live Supabase, then makes one real decision (tasks T009, T010). Claude does Features 036 and 037 next.
+- Pending / next owner: 0059 applied to live Supabase on 2026-11-27 after the owner's "ok" (psql --single-transaction on supabase-db, then NOTIFY pgrst; grants verified; RLS test passes live; rollback: `drop table public.owner_decisions, public.owner_queue cascade; drop function public.record_owner_decision(text,text,text,jsonb), public.withdraw_owner_decision(uuid), public.replace_owner_queue(jsonb,timestamptz), public.mark_owner_decision(uuid,text,text,text);`). Owner merges #935, then makes one real decision (T010, #934). Claude does Features 036 and 037 next.
 - Paperclip issues affected: none (Paperclip retired); GitHub issues for T009/T010.
 
 ## Evaluation notes (flywheel)
