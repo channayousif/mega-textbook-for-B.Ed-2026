@@ -1,6 +1,6 @@
 # EFMP-409 Unit 3 - Sources consulted
 
-Checked 2026-11-25. Prose is original; quotations are under 15 words and cited. Every external key has a bound note in `sources/texts/`. The guide-listed print anthologies (`canestrari-marlowe`, `semel-2010`) were not available to the author, so no claim rests on them and they are not bound; the course overview names them as recommended reading only. Project Gutenberg was in maintenance on 2026-11-25, so `gutenberg-primary` is not bound; primary works are cited through their scholarly Stanford Encyclopedia entries, the HEC course guide, and the Iqbal Cyber Library.
+Checked 2026-11-25. Prose is original; quotations are attributed and cited (two public-domain primary quotations run longer than 15 words). Every external key has a bound note in `sources/texts/`. The guide-listed print anthologies (`canestrari-marlowe`, `semel-2010`) were not available to the author, so no claim rests on them and they are not bound; the course overview names them as recommended reading only. Project Gutenberg was in maintenance on 2026-11-25, so `gutenberg-primary` is not bound; primary works are cited through their scholarly Stanford Encyclopedia entries, the HEC course guide, and the Iqbal Cyber Library.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
@@ -18,3 +18,4 @@ Checked 2026-11-25. Prose is original; quotations are under 15 words and cited. 
 - `hec-2013-foundations` is read from the repository's bundled extraction (`Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt`), which the content spec records as identical to the public PDF.
 - `cheddadi-1994-ibn-khaldun` supplies verified details from Chapter 6 of the *Muqaddimah* regarding gradual instruction (*at-tadrij*), acquisition of a habit or faculty (*malaka*), and condemnation of severe punishment.
 - `iqbal-cyber-library` provides verified texts and contexts of Iqbal's Urdu and Persian poems and his lectures on the reconstruction of religious thought.
+- The SEP entries are general philosophical references; they do not carry the specific educational detail taught in U3-02, U3-03, U3-04, U3-05, U3-08 and U3-09 (Plato's curriculum stages, Aristotle's habituation and public schooling, Rousseau's age stages). That detail is attributed in prose to the named primary works (*The Republic*, *Nicomachean Ethics*, *Politics*, *Emile*).
