@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">پیمائش، تشخیص اور تخمینہ قدر کا تقابلی جدول</title><desc id="d">جدول جو دائرہ کار، اعداد و شمار کی نوعیت، بنیادی جوابی سوال، اور سائنسی جماعت کی مثالوں کے لحاظ سے پیمائش، تشخیص اور تخمینہ قدر میں تفریق کرتا ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="540"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="48" rx="6"/>
+<rect class="panel" x="24" y="72" width="732" height="96"/>
+<rect class="plain" x="24" y="168" width="732" height="96"/>
+<rect class="panel" x="24" y="264" width="732" height="106"/>
+<rect class="plain" x="24" y="370" width="732" height="106"/>
+</g><g id="layer-edges">
+<line class="grid" x1="640" y1="24" x2="640" y2="476"/>
+<line class="grid" x1="440" y1="24" x2="440" y2="476"/>
+<line class="grid" x1="240" y1="24" x2="240" y2="476"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="54">پہلو</text>
+<text class="sh" x="626" y="54">پیمائش (Measurement)</text>
+<text class="sh" x="426" y="54">تشخیص (Assessment)</text>
+<text class="sh" x="226" y="54">تخمینہ قدر (Evaluation)</text>
+
+<text class="sh" x="744" y="112">بنیادی نوعیت</text>
+<text class="cell" x="626" y="104">واضح امتحانی قواعد کے تحت</text>
+<text class="cell" x="626" y="132">نمبر یا اعداد تفویض کرنا</text>
+<text class="cell" x="426" y="104">طالب علم کے فہم پر متعدد</text>
+<text class="cell" x="426" y="132">ذرائع سے ڈیٹا اکٹھا کرنا</text>
+<text class="cell" x="226" y="104">معیارات کے تحت کیفی اور</text>
+<text class="cell" x="226" y="132">قدر پیمائی فیصلے صادر کرنا</text>
+
+<text class="sh" x="744" y="208">ڈیٹا کی شکل</text>
+<text class="cell" x="626" y="200">خالصتاً مقداری اعداد</text>
+<text class="cell" x="626" y="228">(نمبر، گنتی، پیمانے)</text>
+<text class="cell" x="426" y="200">مقداری اور کیفی دونوں</text>
+<text class="cell" x="426" y="228">(کام کے نمونے، معیاراتِ جانچ)</text>
+<text class="cell" x="226" y="200">کیفی اور تشریحی فیصلے</text>
+<text class="cell" x="226" y="228">(معیار، تدریسی فیصلے)</text>
+
+<text class="sh" x="744" y="306">بنیادی سوال</text>
+<text class="cell" x="626" y="298">"طالب علم نے کتنے نمبر یا</text>
+<text class="cell" x="626" y="326">پوائنٹس حاصل کیے؟"</text>
+<text class="cell" x="426" y="298">"طالب علم کیا جانتا ہے اور کیا</text>
+<text class="cell" x="426" y="326">کر سکتا ہے، اس کے کیا ثبوت ہیں؟"</text>
+<text class="cell" x="226" y="298">"کارکردگی کتنی بہتر ہے اور</text>
+<text class="cell" x="226" y="326">اگلا تدریسی قدم کیا ہونا چاہیے؟"</text>
+
+<text class="sh" x="744" y="412">جماعتی مثال</text>
+<text class="cell" x="626" y="404">علیحدگی کے طریقوں پر تحریری</text>
+<text class="cell" x="626" y="432">ٹیسٹ میں 20 میں سے 14 نمبر لینا</text>
+<text class="cell" x="426" y="404">لیب فلٹریشن کا مشاہدہ کرنا اور</text>
+<text class="cell" x="426" y="432">طلبہ کی کاپیوں کا جائزہ لینا</text>
+<text class="cell" x="226" y="404">تحقیقی اہلیت کا فیصلہ کرنا اور</text>
+<text class="cell" x="226" y="432">مساموں کے ڈیمو میں مطابقت لانا</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="505">سائنس میں پیمائش، تشخیص اور تخمینہ قدر کے مابین باقاعدہ تفریق۔</text>
+</g><text class="wm" x="12" y="525" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

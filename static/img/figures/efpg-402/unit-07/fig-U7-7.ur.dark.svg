@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس کارکردگی آزمائش کی تیاری کا فلو چارٹ</title><desc id="d">فلو چارٹ جو استاد کی بنائی ہوئی سائنس کارکردگی آزمائش کی تیاری کے پانچ باقاعدہ مراحل دکھاتا ہے: مقاصد اور اوزان کی منصوبہ بندی، جدولِ تفصیلات کی تیاری، سوالات اور مارکنگ اسکیم بنانا، ہم عصر جائزہ اور تدوین، اور آئٹم اینالیسس کے ساتھ ٹیسٹ کا انعقاد۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 15px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 12px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="500"/><g id="layer-edges">
+<line class="stroke" x1="530" y1="102" x2="500" y2="102" marker-end="url(#arrow)"/>
+<line class="stroke" x1="280" y1="102" x2="250" y2="102" marker-end="url(#arrow)"/>
+<path class="stroke" d="M140,160 L140,307 L280,307" marker-end="url(#arrow)"/>
+<line class="stroke" x1="500" y1="307" x2="530" y2="307" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="step1"><rect class="panel-a" x="530" y="45" width="220" height="115" rx="8"/><text class="h" x="734" y="78">1. اہداف کی منصوبہ بندی</text><text class="cell" x="734" y="108">مقاصد، نصابی نتائج (SLOs)،</text><text class="cell" x="734" y="134">امتحانی وقت اور کل نمبر طے کرنا</text></g>
+<g id="step2"><rect class="panel-a" x="280" y="45" width="220" height="115" rx="8"/><text class="h" x="484" y="78">2. خاکہ (ToS) بنانا</text><text class="cell" x="484" y="108">نصابی موضوعات اور بلوم کے</text><text class="cell" x="484" y="134">ادراکی درجات میں توازن لانا</text></g>
+<g id="step3"><rect class="panel-a" x="30" y="45" width="220" height="115" rx="8"/><text class="h" x="234" y="78">3. سوالات تحریر کرنا</text><text class="cell" x="234" y="108">ماڈل جوابات کے ساتھ MCQs،</text><text class="cell" x="234" y="134">RRQs اور ERQs تیار کرنا</text></g>
+<g id="step4"><rect class="panel-b" x="280" y="250" width="220" height="115" rx="8"/><text class="h" x="484" y="283">4. جائزہ اور تدوین</text><text class="cell" x="484" y="313">سائنسی درستی، لسانی وضاحت،</text><text class="cell" x="484" y="339">اور تعصب سے پاک ہونے کی جانچ</text></g>
+<g id="step5"><rect class="panel-b" x="530" y="250" width="220" height="115" rx="8"/><text class="h" x="734" y="283">5. ٹیسٹ اور تجزیہ</text><text class="cell" x="734" y="313">منصفانہ انعقاد اور سوالات کی</text><text class="cell" x="734" y="339">دشواری و امتیازی صلاحیت کی جانچ</text></g>
+</g><g id="layer-labels">
+<text class="small" x="750" y="430">سائنس میں معتبر کارکردگی آزمائش کی باقاعدہ تیاری کے پانچ منظم مراحل۔</text>
+</g><text class="wm" x="12" y="460" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
