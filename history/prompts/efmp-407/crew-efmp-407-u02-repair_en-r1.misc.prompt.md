@@ -2,14 +2,14 @@
 id: crew-efmp-407-u02-repair_en-r1
 title: crew repair_en EFMP-407 unit 2
 stage: misc
-date: 2026-11-28
+date: 2026-11-27
 surface: agent
-model: claude
+model: claude_crew
 feature: efmp-407
 branch: crew/efmp-407-u02-repair_en-r1
 user: crew
 command: crew repair_en
-labels: ["crew", "claude", "repair_en"]
+labels: ["crew", "claude_crew", "repair_en"]
 links:
   spec: specs/content/efmp-407/content-spec.md
   ticket: null
@@ -17,23 +17,80 @@ links:
   pr: null
 files:
  - docs/semester-3/efmp-407/course-overview.mdx
- - specs/content/efmp-407/tasks.md
+ - history/prompts/efmp-407/crew-efmp-407-u02-repair_en-r1.misc.prompt.md
  - specs/content/efmp-407/reviews/unit-01/G2/20261127T223209988Z-gates.json
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/validate-content.txt
  - specs/content/efmp-407/reviews/unit-02/G2/20261127T223210275Z-gates.json
+ - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/validate-content.txt
  - specs/content/efmp-407/reviews/unit-03/G2/20261127T223210699Z-gates.json
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/validate-content.txt
  - specs/content/efmp-407/reviews/unit-04/G2/20261127T223211050Z-gates.json
+ - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/validate-content.txt
  - specs/content/efmp-407/reviews/unit-05/G2/20261127T223211491Z-gates.json
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/validate-content.txt
  - specs/content/efmp-407/reviews/unit-06/G2/20261127T223211989Z-gates.json
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/validate-content.txt
  - specs/content/efmp-407/reviews/unit-07/G2/20261127T223212298Z-gates.json
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/validate-content.txt
  - specs/content/efmp-407/reviews/unit-08/G2/20261127T223212794Z-gates.json
- - specs/content/efmp-407/reviews/unit-01/G2/logs-20261127T223209988Z/
- - specs/content/efmp-407/reviews/unit-02/G2/logs-20261127T223210275Z/
- - specs/content/efmp-407/reviews/unit-03/G2/logs-20261127T223210699Z/
- - specs/content/efmp-407/reviews/unit-04/G2/logs-20261127T223211050Z/
- - specs/content/efmp-407/reviews/unit-05/G2/logs-20261127T223211491Z/
- - specs/content/efmp-407/reviews/unit-06/G2/logs-20261127T223211989Z/
- - specs/content/efmp-407/reviews/unit-07/G2/logs-20261127T223212298Z/
- - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/check-bloom-bands.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/check-concept-graph.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/check-depth-gate.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/check-docs-sync.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/check-figures.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/check-no-answer-keys.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/check-no-em-dash.txt
+ - specs/content/efmp-407/reviews/unit-08/G2/logs-20261127T223212794Z/validate-content.txt
+ - specs/content/efmp-407/tasks.md
 tests:
  - npm run check:content
 ---
@@ -79,33 +136,33 @@ From `specs/content/efmp-407/reviews/unit-02/G3/20261127T192818Z-g3-desk-7239298
 - (efmp-407-u02-illustrate, illustrate, agy) Unit banner fig-U2-7 is placed as a WebP figure in both English index.mdx and Urdu index.mdx.
 - (efmp-407-u02-translate, translate, codex) Browser geometry, narrow-screen/A4 inspection and independent review remain pending; translation stays draft.
 
+
 ## Response snapshot
 
-Resolved the three findings from report 20261127T192818Z-g3-desk-72392980.json. F1 (duplicated Unit 1 rows in the Unit 2 backward-design alignment table) was verified already absent on main, removed by cf6a68972, so no edit was made. F2 was fixed: course-overview line 46 now reads "Units 1 and 2 are available now", because Unit 2 is published under ADR-0026 (G2 auto:gates evidence) and its English pages are live under the "Draft - expert review pending" notice. F3 cannot be executed under the crew brief and is recorded as an open handoff. Appended an advisory "repairs applied" Unit 2 G3 tracker row naming the report, unticked. Because course-overview.mdx is a bound review input for all eight EFMP-407 units, the edit stale-dated every G2 manifest, so the draft gates were re-run at e7a934cf2 and all eight G2 rows were repointed. origin/main was merged (27 commits) before the final gate run.
+Resolved the EFMP-407 Unit 2 G3 advisories by updating course-overview line 46 to list Unit 2 as available (F1 verified already fixed, F3 documented as a permitted-render handoff), appended the unticked "advisory: revise; repairs applied" G3 tracker row, and refreshed all eight EFMP-407 G2 evidence manifests it stale-dated.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-407 Unit 2 by claude (attempt 1, r1).
-- Tests: npm run check:content passed on the merged tree (14/14 content gates).
-- Files: 18, listed above (2 content/tracker files plus 8 G2 evidence JSONs and their 8 logs directories).
+- Impact: repair_en for EFMP-407 Unit 2 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 75 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: course-overview line 46 now lists Unit 2 as available; Unit 2 G3 tracker row appended (unticked, no initials); all eight EFMP-407 G2 evidence manifests refreshed and their tracker rows repointed after the course-overview edit.
-- Decisions the team must respect: Unit 2 counts as published under ADR-0026 because its G2 auto:gates evidence passes and its English pages are live, so the overview availability line was updated rather than deferred to a G7 row. G3 stays open and unsigned; this job certifies nothing.
+- Shipped / changed: Resolved the EFMP-407 Unit 2 G3 advisories by updating course-overview line 46 to list Unit 2 as available (F1 verified already fixed, F3 documented as a permitted-render handoff), appended the unticked "advisory: revise; repairs applied" G3 tracker row, and refreshed all eight EFMP-407 G2 evidence manifests it stale-dated.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Browser, 360px, keyboard table-scrolling and A4 print inspection of Unit 2 is still open and needs a permitted render job, using `render-inspect.mjs` against `https://textbook.com.pk`.
-  - `docs/semester-3/efmp-407/course-overview.mdx` has no Urdu mirror (English-only page), so no UR parity edit was made.
-  - Units 3-8 are also G2-published and live, so the overview availability line may need a course-level refresh by a course-scoped job.
-  - The 20261127 G3 report re-reported the 20261122 advisory about five duplicated Unit 1 rows that cf6a68972 had already removed; the next reviewer should re-check the table rather than the report text.
+  - Unit 2 browser, 360px, keyboard table-scrolling and A4 print inspection is still open; it needs a permitted render job running `render-inspect.mjs` against `https://textbook.com.pk`.
+  - `course-overview.mdx` has no Urdu mirror, and units 3-8 are also G2-published and live, so the availability line won the course-level refresh a course-scoped job should consider.
+  - The 20261127 G3 report re-reported the five duplicated Unit 1 rows that `cf6a68972` already removed; the next reviewer should read the table itself, not the report text.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the 20261127 G3 report repeated an advisory that main had already repaired, so the finding was verified rather than re-edited; a course-level bound input forced a course-wide evidence refresh from a unit-scoped job.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
