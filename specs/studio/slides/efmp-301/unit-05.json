@@ -29,7 +29,7 @@
       "points": { "en": ["Fluency: how many ideas", "Flexibility: how many kinds of ideas", "Originality: ideas that are new here", "Elaboration: how far an idea is worked out", "Divergent thinking finds many solutions; convergent gives the correct or established one"],
                   "ur": ["روانی: کتنے خیالات", "لچک: کتنی قسم کے خیالات", "انفرادیت: جو خیالات یہاں نئے ہیں", "تفصیل: خیال کتنی دور تک نکالا گیا", "بکھری سوچ متعدد حل تک پہنچتی ہے؛ مرکوز سوچ درست یا قائم جواب دیتی ہے"] } },
     { "kind": "points", "topic": 2, "title": { "en": "Growing creativity in the classroom", "ur": "جماعت میں تخلیقیت بڑھانا" },
-      "points": { "en": ["Questions with more than one defensible answer", "Time to generate before anyone evaluates", "Wrong answers safe in public, because originality takes risk", "Real audiences give effort a reason", "Every marking scheme either has a box for originality or trains it out"],
+      "points": { "en": ["Questions with more than one defensible answer", "Time to generate before anyone evaluates", "Wrong answers safe in public, because originality takes risk", "Real audiences give effort a reason", "Every way of giving marks either has a box for originality or trains it out"],
                   "ur": ["ایسے سوال جن کا ایک سے زیادہ قابل دفاع جواب ہو", "جانچ سے پہلے پیدا کرنے کا وقت", "غلط جواب عوام میں محفوظ، کیونکہ انفرادیت خطرہ لینا ہے", "اصل سامعین محنت کو وجہ دیتے ہیں", "نمبر دینے کے ہر طریقے میں یا تو انفرادیت کا خانہ ہے یا وہ اسے ختم کر دیتا ہے"] } },
     { "kind": "figure", "topic": 2, "title": { "en": "Four classroom observations re-read", "ur": "چار جماعتی مشاہدے دوبارہ پڑھے گئے" },
       "figure": "/img/figures/efmp-301/unit-05/fig-U5-4",
