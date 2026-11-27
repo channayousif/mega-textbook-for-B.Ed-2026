@@ -73,22 +73,22 @@ Conducted independent G3 English review (cycle 2) of GICT-300 Unit 1, producing 
 
 ## Outcome
 
-- Impact: review_en for GICT-300 Unit 1 by agy (cycle 2).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: review_en for GICT-300 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G3 English review of GICT-300 Unit 1, producing validated advisory report specs/content/gict-300/reviews/unit-01/G3/agy-cycle2-20261127.json (disposition escalate due to unavailable live render) and evidence artifacts.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this review does not certify anything.
+- Shipped / changed: Conducted independent G3 English review (cycle 2) of GICT-300 Unit 1, producing validated advisory report specs/content/gict-300/reviews/unit-01/G3/agy-cycle2-20261127.json (disposition escalate due to unavailable live render) and evidence artifacts.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All content criteria pass; visual accessibility remains unverified because deployed SHA differs from HEAD on 5 MDX and 5 WebP illustration files; report disposition is advisory escalate.
-  - Earlier findings F1 (gender over-attribution), F2 (fig-U1-6 label clipping), F3 (hecICT in further reading), and F4 (history declaration) are verified resolved. F5 (bare URLs in further reading) carried unresolved (advisory).
+  - All content criteria pass; visual accessibility remains unverified because deployed SHA 366019f8a differs from HEAD on 5 MDX and 5 WebP illustration files, yielding advisory disposition escalate.
+  - Earlier findings F1-F4 are verified repaired; advisory finding F5 (bare URLs in Further reading) remains carried; advisory finding F7 notes 1.41:1 contrast on fig-U1-3 dark secondary timeline date labels.
   - Advisory tracker row prepared in specs/content/gict-300/reviews/unit-01/G3/agy-cycle2-20261127/advisory-tracker-row.md; G3 remains open pending parent integration.
-- Paperclip issues affected: none (work tracked by the crew board).
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
