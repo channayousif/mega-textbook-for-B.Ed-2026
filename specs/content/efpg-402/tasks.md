@@ -1,6 +1,6 @@
 # EFPG-402 Teaching of Science - Task tracker
 
-## Status: content spec approved (G0/G1); Units 1, 2 and 4 English draft authored; G2 gate evidence recorded; G3 review open
+## Status: content spec approved (G0/G1); Units 1-4 and 6 English draft authored; G2 gate evidence recorded; G3 review open
 
 English-only authoring from the approved content-spec subsections. No publication or review certification is claimed by this tracker.
 
@@ -12,6 +12,7 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | 2 | Science Curriculum and Textbook | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; G3 and Urdu remain open |
 | 3 | Methods and Approaches of Teaching Science | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; fourteen schematic SVGs placed; banner fig-U3-15 prompt-only; G3 and Urdu remain open |
 | 4 | Teaching-Learning Resources | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; G3 and Urdu remain open |
+| 6 | Maintenance and Organization of Science Laboratory | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; twelve schematic SVGs placed; G3 and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -45,3 +46,9 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 4 | G6 assets | ▣ | | Ten schematic SVGs (fig-U4-1 to fig-U4-10) placed with derived dark twins; Urdu .ur.svg labels pending the Urdu mirror job |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-06/G2/20261127T130423954Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
+| Unit 6 | G4 ur-translation | ▢ | | Urdu mirror is a separate job |
+| Unit 6 | G5 ur-review | ▢ | | Awaiting translation and independent review |
+| Unit 6 | G6 assets | ▣ | | Twelve schematic SVGs (fig-U6-1 to fig-U6-12) placed with derived dark twins; Urdu .ur.svg labels pending the Urdu mirror job |
+| Unit 6 | G7 publish | ▢ | | No publication or deployment performed by this job |
