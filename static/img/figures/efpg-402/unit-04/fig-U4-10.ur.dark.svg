@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif" direction="rtl"><title id="t">اسکول سائنس نمائش کی منصوبہ بندی کے چار مراحل کا جدول</title><desc id="d">اسکول سائنس نمائش کے چار مراحل کا جدول: تیاری، پراجیکٹ کی تیاری، نمائش کا دن، اور نمائش کے بعد کا تامل۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="68"/>
+<rect class="plain" x="24" y="132" width="732" height="68"/>
+<rect class="panel" x="24" y="200" width="732" height="68"/>
+<rect class="plain" x="24" y="268" width="732" height="68"/>
+</g><g id="layer-edges">
+<line class="grid" x1="610" y1="24" x2="610" y2="336"/>
+<line class="grid" x1="350" y1="24" x2="350" y2="336"/>
+</g><g id="layer-nodes">
+<text class="sh" x="740" y="49">نمائش کا مرحلہ</text>
+<text class="sh" x="596" y="49">طلبہ کے بنیادی اقدامات</text>
+<text class="sh" x="334" y="49">استاد کی سہولت کاری اور حفاظتی کردار</text>
+
+<text class="sh" x="740" y="94">1. تیاری کا مرحلہ</text>
+<text class="cell" x="740" y="112">(4 تا 6 ہفتے قبل)</text>
+<text class="cell" x="596" y="93">طلبہ کی تحقیقی ٹیمیں بنانا؛</text>
+<text class="cell" x="596" y="110">مقامی سائنسی مسائل کا انتخاب</text>
+<text class="cell" x="334" y="93">نصابی ربط کی منظوری؛ حفاظت کا جائزہ؛</text>
+<text class="cell" x="334" y="110">تحقیقی سوالات کی درستی یقینی بنانا</text>
+
+<text class="sh" x="740" y="149">2. پراجیکٹ</text>
+<text class="sh" x="740" y="166">کی تعمیر</text>
+<text class="cell" x="740" y="183">(2 تا 4 ہفتے قبل)</text>
+<text class="cell" x="596" y="161">کم خرچ ماڈلز بنانا؛ ڈیٹا جمع</text>
+<text class="cell" x="596" y="178">کرنا؛ وضاحتی بورڈز تیار کرنا</text>
+<text class="cell" x="334" y="161">مواد کے انتخاب میں رہنمائی؛ درستی کی</text>
+<text class="cell" x="334" y="178">جانچ؛ مکینیکل حفاظت کا معائنہ</text>
+
+<text class="sh" x="740" y="230">3. نمائش کا دن</text>
+<text class="cell" x="740" y="248">(تقریب کا دن)</text>
+<text class="cell" x="596" y="229">ماڈلز کا عملی مظاہرہ؛ نتائج کی</text>
+<text class="cell" x="596" y="246">وضاحت؛ زائرین کے سوالات کے جواب</text>
+<text class="cell" x="334" y="229">زائرین کے بہاؤ کا انتظام؛ آگ اور بجلی کی</text>
+<text class="cell" x="334" y="246">حفاظت کی نگرانی؛ طلبہ کا باہمی جائزہ</text>
+
+<text class="sh" x="740" y="298">4. اختتامی تامل</text>
+<text class="cell" x="740" y="316">(تقریب کے بعد کا ہفتہ)</text>
+<text class="cell" x="596" y="297">پراجیکٹ سے سیکھنے پر خود تامل؛</text>
+<text class="cell" x="596" y="314">قابلِ استعمال اشیاء محفوظ کرنا</text>
+<text class="cell" x="334" y="297">تصورات کو پختہ کرنا؛ دریافتوں کو نصاب سے</text>
+<text class="cell" x="334" y="314">جوڑنا؛ طلبہ کی کوششوں کی حوصلہ افزائی</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="375">ایک منظم چار مرحلہ جاتی فریم ورک اسکول سائنس نمائشوں کو حقیقی تحقیقی سرگرمی میں تبدیل کرتا ہے۔</text>
+</g><text class="wm" x="12" y="405" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
