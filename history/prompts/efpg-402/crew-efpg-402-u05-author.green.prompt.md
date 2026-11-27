@@ -92,26 +92,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
 Authored EFPG-402 Unit 5 English learning cycles, placed 10 schematic SVGs with derived dark twins passing geometry checks, and recorded G2 draft gate evidence with all 14 content gates passing.
 
 ## Outcome
 
-- Impact: author for EFPG-402 Unit 5 by agy2.
-- Tests: npm run check:content passed with all 14 content gates green.
-- Files: 44 file(s) added/modified across docs, specs, static figures, and history.
+- Impact: author for EFPG-402 Unit 5 by agy2 (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 44 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored EFPG-402 Unit 5 English learning cycles, placed 10 schematic SVGs with dark twins passing geometry checks, and recorded G2 gate evidence with all 14 content gates passing.
+- Shipped / changed: Authored EFPG-402 Unit 5 English learning cycles, placed 10 schematic SVGs with derived dark twins passing geometry checks, and recorded G2 draft gate evidence with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu mirror job (G4) will need to translate the 10 placed SVGs (.ur.svg twins) and unit prose; G3 English review remains open for independent review.
-  - Unit banner (unit-05.banner.md) is not yet drafted and will be handled during banner illustration passes.
+  - Urdu mirror job (G4) will need to localize the 10 placed SVGs (.ur.svg twins) and unit prose; G3 English review remains open for independent review.
+  - Unit banner (unit-05.banner.md) is not yet drafted and will be planned during raster illustration passes.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
