@@ -1,6 +1,6 @@
 ---
 id: crew-efpc-411-u01-translate
-title: crew translate EFPC-411 unit 1 into Urdu
+title: crew translate EFPC-411 unit 1
 stage: misc
 date: 2026-11-27
 surface: agent
@@ -8,7 +8,7 @@ model: claude_crew
 feature: efpc-411
 branch: crew/efpc-411-u01-translate
 user: crew
-command: Read .crew/brief.md and carry it out completely
+command: crew translate
 labels: ["crew", "claude_crew", "translate"]
 links:
   spec: specs/content/efpc-411/content-spec.md
@@ -42,15 +42,7 @@ files:
  - static/img/figures/efpc-411/unit-01/fig-U1-8.ur.dark.svg
  - static/img/figures/efpc-411/unit-01/fig-U1-8.ur.svg
 tests:
- - npm run build:content-status (before every check:content run)
- - npm run check:content: 14/14 PASS in the draft state
- - Temporary reviewed flip of both index.mdx files: all gates PASS except the two expected G4/G5 pipeline findings; reverted to draft and the derived report regenerated
- - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efpc-411/unit-01/*.ur.svg: exit 0 on all eight
- - npm run figures:variants:check: OK
- - npm run check:svg-style: PASS with no new baseline entry
- - Heading-vector, file-set, component, figure-ID and alt/desc parity self-check: PASS
- - Urdu MCQs answered from the Urdu alone and compared with the translated key: 10/10 agree
- - npm run build and scripts/render-inspect.mjs: not run, prohibited by the crew brief
+ - npm run check:content
 ---
 
 ## Prompt
@@ -86,61 +78,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efpc-411-u01-author-cifix1, fix, claude_crew) Unit 1 English is ready for independent G3; banner figure fig-U1-9 is still prompt-only for the illustration pipeline.
 - (efpc-411-u01-author, author, agy) Unit 1 English draft is ready for independent G3 review; banner figure fig-U1-9 is prompt-only for the illustration pipeline.
 
+
 ## Response snapshot
 
-Translated the complete EFPC-411 Unit 1 into a same-named academic-plain Urdu mirror, authored
-eight localised Nastaliq schematic SVGs with derived dark twins, recorded the G4 tracker note
-and the translator handoff, and left `translation_status: draft` everywhere. All content gates
-pass in draft; the reviewed-only flip passes except the two expected G4/G5 findings. No push,
-no PR.
+Translated EFPC-411 Unit 1 into a complete draft Urdu mirror with eight RTL-localised Nastaliq figure pairs, recorded the G4 handoff, and left `translation_status: draft` with all 14 content gates green.
 
 ## Outcome
 
-- ✅ Impact: Unit 1 now has a complete draft Urdu mirror (index, four topics, the 10/10/5
-  assessment with bounded answers) plus eight RTL-mirrored figure pairs, bound to the frozen
-  terminology bank where it holds terms and recording the rest as owner proposals.
-- 🧪 Tests: `npm run check:content` 14/14 PASS in draft. Reviewed-only flip PASS except the two
-  expected pipeline findings, then reverted. `measure-figure-text.mjs` exit 0 on all eight
-  `.ur.svg`. `figures:variants:check` clean. `check:svg-style` clean with no new baseline entry.
-  Parity self-check PASS (file set, heading vectors, imports, components, figure IDs, item
-  counts, alt/desc pairs). Urdu MCQ self-solve 10/10 against the translated key.
-- 📁 Files: six Urdu MDX pages, eight `.ur.svg` plus eight `.ur.dark.svg`, the G4 tracker note
-  and `specs/content/efpc-411/reviews/unit-01/G4/translation-handoff.md`.
-- 🔁 Next prompts: independent G5 Urdu review in a fresh session; rendered narrow-width and A4
-  inspection; any English G3 repair followed by matching Urdu repairs.
-- 🧠 Reflection: The unit's own key terms (classroom observation, checklist, rating scale,
-  anecdotal record, observer bias, constructive feedback) are absent from `terminology.csv`, so
-  `key_terms` carries the 28 banked terms the unit actually uses and the rest are listed as
-  proposals rather than silently banked. Nastaliq set wider than the Latin it replaced but the
-  mirrored table columns still measured clean. The Chromium geometry check ran; rendered
-  Nastaliq, bidi punctuation and A4 clipping remain unverified under the brief's browser ban.
+- Impact: translate for EFPC-411 Unit 1 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 25 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: complete draft Urdu mirror for EFPC-411 Unit 1 and eight localised
-  schematic SVG pairs; the Unit 1 `G4 ur-translation` tracker row now points at the translator
-  handoff and stays `▢`; `translation_status` is still `draft` on every page.
-- Decisions the team must respect: the frozen terminology bank was not edited. No G3/G5
-  certification, reviewer identity or publication authority was fabricated. No em dash anywhere;
-  heavy jobs went through `scripts/heavy.sh`; no build, dev server or Playwright run.
-- Pending / next owner: G5 belongs to a fresh independent session and must inspect actual
-  rendered Urdu at narrow width and in A4 print. English G3 is still `▢` (not accepted), so any
-  English repair invalidates this translation's baseline (`ff6248a9`). The banner `fig-U1-9`
-  stays `prompt-only` for the illustration job.
-- Paperclip issues affected: crew job efpc-411-u01-translate; no issue identifier supplied.
+- Shipped / changed: Translated EFPC-411 Unit 1 into a complete draft Urdu mirror with eight RTL-localised Nastaliq figure pairs, recorded the G4 handoff, and left `translation_status: draft` with all 14 content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - English G3 is still `▢` (not accepted); this Urdu is bound to English `ff6248a9`, so any English repair requires matching Urdu repairs and a fresh G5.
+  - `render-inspect.mjs EFPC-411 1 --locale ur` was not run (brief bans dev servers/browser runs other than `measure-figure-text.mjs`); Nastaliq shaping at 360px, bidi punctuation and A4 clipping are unverified.
+  - `key_terms` deliberately carries only banked pairs; the 27 unbanked unit terms (classroom observation, checklist, rating scale, anecdotal record, observer bias, constructive feedback and so on) are proposals in the handoff for the owner, not silent bank edits.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: generated Urdu prose drifted into Cyrillic and CJK look-alikes for
-  "mechanism" twice and once for a quoted string, caught by a script scanning for non-Arabic,
-  non-Latin code points before commit. The first mirror run is not an involution, so
-  `mirror-figure-rtl.mjs --check` reports "would change" on an already-mirrored file; that is
-  expected and is not a signal to mirror again.
-- Graders run and results (PASS/FAIL): check:content 14/14 PASS on the draft tree;
-  reviewed-only flip PASS except the two expected pipeline findings; measure-figure-text exit 0
-  on eight files; figures:variants:check PASS; check:svg-style PASS. Build, dev server and
-  render-inspect intentionally not run under the brief.
-- Prompt variant (if applicable): none
-- Next experiment (smallest change to try): run `scripts/render-inspect.mjs EFPC-411 1 --locale ur`
-  in an authorised session to confirm Nastaliq shaping, bidi punctuation and A4 clipping, and to
-  check the RTL table column order by eye.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
