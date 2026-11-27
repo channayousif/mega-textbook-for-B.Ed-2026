@@ -67,6 +67,8 @@ status becomes "approved".
 - The crew's Studio planner (`studioTask` in `scripts/crew/media.mjs`) now plans the lean recipe
   for new units: an audio brief per topic in English, and in Urdu where the mirror exists, plus one
   unit overview video per language on topic 1 (`specs/studio/prompts/video-unit.md`).
-- Mind maps and study guides are in the lean recipe but not yet in the crew pipeline (the media
-  ledger and the NotebookLM producer handle audio and video only). Until a follow-up adds document
-  kinds, they are made the way the pilot's were.
+- Mind maps and study guides joined the crew pipeline in #908 (2026-11-27): the media ledger takes
+  `mindmap` (English, one per topic; Urdu labels from the labels file) and `studyguide` (one per
+  language per unit, on topic 1) items on the short path `planned`, `generated`, `downloaded`,
+  `qa2-pass`, `placed`. `place-media.mjs` writes them under `static/studio/` without any upload or
+  owner watch, since QG2 checks them against the topic text like the pilot's.

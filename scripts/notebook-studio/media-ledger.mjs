@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 // Feature 029 studio-media pipeline: the per-unit ledger at specs/studio/<course>/media-unit-NN.json.
 //
-// One item per audio/video artifact (topic x locale x kind x part). The ledger is the single record
+// One item per artifact (topic x locale x kind x part). Audio and video walk the full YouTube path;
+// mind maps and study guides (#908, lean recipe) are text assets that walk DOC_STATES and are placed
+// as files under static/studio/ by place-media.mjs, with no upload and no owner watch. The ledger is the single record
 // of where an item is, which gates it passed, and its YouTube id, so runs are resumable and an
 // upload is never repeated (sha256 dedupe) or pushed past the daily quota.
 //
@@ -25,6 +27,11 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
 export const STATES = ['planned', 'generated', 'downloaded', 'qa1-pass', 'encoded', 'qa2-pass',
   'uploaded-private', 'qa3-pass', 'approved', 'public', 'placed'];
+/** Text kinds: generated, downloaded, content-checked against the topic (QG2), placed as a file. */
+export const DOC_KINDS = ['mindmap', 'studyguide'];
+export const KINDS = ['audio', 'video', ...DOC_KINDS];
+export const DOC_STATES = ['planned', 'generated', 'downloaded', 'qa2-pass', 'placed'];
+export const statesFor = (kind) => (DOC_KINDS.includes(kind) ? DOC_STATES : STATES);
 /** Fields a transition into a state must carry (on the item after the merge). */
 const REQUIRES = {
   generated: ['artifact_id'],
@@ -37,6 +44,8 @@ const REQUIRES = {
   approved: ['gates.owner'],
   public: ['published_at'],
 };
+/** Doc kinds enter `placed` only with the published file's site path. */
+const DOC_REQUIRES = { placed: ['asset_path'] };
 
 export const itemKey = (i) => `t${i.topic}-${i.locale}-${i.kind}${i.part ? `-p${i.part}` : ''}`;
 export const ledgerPath = (course, unit, root = ROOT) =>
@@ -68,7 +77,10 @@ export function planItem(ledger, item, now = new Date()) {
   full.key = itemKey(full);
   if (ledger.items.some((i) => i.key === full.key)) throw new Error(`${full.key} already in the ledger`);
   for (const f of ['topic', 'locale', 'kind', 'title', 'prompt_ref']) if (full[f] == null) throw new Error(`plan: ${f} is required`);
-  if (!['audio', 'video'].includes(full.kind)) throw new Error('plan: kind must be audio or video');
+  if (!KINDS.includes(full.kind)) throw new Error(`plan: kind must be one of ${KINDS.join(', ')}`);
+  // NotebookLM makes mind maps in English only; the Urdu tree comes from the EN item's labels file.
+  if (full.kind === 'mindmap' && full.locale !== 'en') throw new Error('plan: a mind map is planned in English only (its Urdu labels are added at placement)');
+  if (DOC_KINDS.includes(full.kind) && full.part) throw new Error(`plan: a ${full.kind} has no parts`);
   full.history.push({ state: 'planned', at: now.toISOString() });
   ledger.items.push(full);
   return full;
@@ -79,10 +91,12 @@ export function advance(ledger, key, to, fields = {}, { ledgers = [ledger], now 
   const item = ledger.items.find((i) => i.key === key);
   if (!item) throw new Error(`no item ${key}`);
   if (item.blocked) throw new Error(`${key} is blocked: ${item.blocked}`);
-  const from = STATES.indexOf(item.state);
-  if (STATES.indexOf(to) !== from + 1) throw new Error(`${key}: ${item.state} -> ${to} is not the next state (${STATES[from + 1]})`);
+  const path = statesFor(item.kind);
+  const from = path.indexOf(item.state);
+  if (path.indexOf(to) !== from + 1) throw new Error(`${key}: ${item.state} -> ${to} is not the next state (${path[from + 1]})`);
   const next = { ...item, ...fields, gates: { ...item.gates, ...(fields.gates ?? {}) } };
-  for (const f of REQUIRES[to] ?? []) if (get(next, f) == null) throw new Error(`${key}: entering ${to} needs ${f}`);
+  const needs = DOC_KINDS.includes(item.kind) ? [...(REQUIRES[to] ?? []), ...(DOC_REQUIRES[to] ?? [])] : REQUIRES[to] ?? [];
+  for (const f of needs) if (get(next, f) == null) throw new Error(`${key}: entering ${to} needs ${f}`);
   if (to === 'downloaded') {
     const dup = ledgers.flatMap((l) => l.items).find((i) => i.key !== key && i.sha256 === next.sha256);
     if (dup) throw new Error(`${key}: file is identical to ${dup.key} (sha256 ${next.sha256.slice(0, 12)})`);

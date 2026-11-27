@@ -7,7 +7,7 @@ import { planItem, advance, block, uploadsOn, spotCheckSheet, itemKey, DAILY_UPL
 import { parseProbe, parseEbur128, parseSilences, parseBlack, evaluate } from '../../scripts/notebook-studio/media-qa.mjs';
 import { buildMeta, routeFromIndex } from '../../scripts/notebook-studio/youtube-meta.mjs';
 import { wrap, cardSvg } from '../../scripts/notebook-studio/audio-to-video.mjs';
-import { placeIntoManifest } from '../../scripts/notebook-studio/place-media.mjs';
+import { placeIntoManifest, placeDocs } from '../../scripts/notebook-studio/place-media.mjs';
 import { checkStudio } from '../../scripts/check-studio-manifest.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -84,6 +84,55 @@ describe('media ledger state machine', () => {
     expect(s.must_hear.map((r) => r.key)).toEqual([a, c]);
     expect(s.others).toBe(1);
     expect(s.must_hear[0].url).toBe('https://youtu.be/dQw4w9WgXcQ');
+  });
+});
+
+describe('mind map and study guide items (#908)', () => {
+  const mm = { topic: 1, locale: 'en', kind: 'mindmap', title: 'Topic 2.1 mind map', alt: 'Mind map of the topic', prompt_ref: 'specs/studio/prompts/mindmap.md v1' };
+  const sg = { topic: 1, locale: 'ur', kind: 'studyguide', title: 'اسٹڈی گائیڈ', prompt_ref: 'specs/studio/prompts/study-guide.md v1' };
+
+  it('plans English-only mind maps and walks the short doc path to placed', () => {
+    const l = { course: 'geng-300', unit: 2, items: [] };
+    expect(planItem(l, mm).key).toBe('t1-en-mindmap');
+    expect(() => planItem(l, { ...mm, locale: 'ur' })).toThrow(/English only/);
+    expect(() => planItem(l, { ...sg, part: 2 })).toThrow(/no parts/);
+    expect(() => planItem(l, { ...mm, kind: 'poster' })).toThrow(/kind must be/);
+    advance(l, 't1-en-mindmap', 'generated', { artifact_id: 'n1' });
+    advance(l, 't1-en-mindmap', 'downloaded', { file: '~/studio-media/geng-300/unit-02/t1-en-mindmap.json', sha256: SHA('c') });
+    expect(() => advance(l, 't1-en-mindmap', 'qa1-pass', { gates: { qa1: gate() } })).toThrow(/not the next state \(qa2-pass\)/);
+    advance(l, 't1-en-mindmap', 'qa2-pass', { gates: { qa2: gate() } });
+    expect(() => advance(l, 't1-en-mindmap', 'placed', {})).toThrow(/needs asset_path/);
+    advance(l, 't1-en-mindmap', 'placed', { asset_path: '/studio/geng-300/unit-02/topic-01/mindmap.en.json' });
+    expect(l.items[0].state).toBe('placed');
+  });
+
+  it('places a cleaned study guide and an EN+UR mind map with asset paths', () => {
+    const ledger = { course: 'geng-300', unit: 2, items: [
+      { ...mm, key: 't1-en-mindmap', state: 'qa2-pass', artifact_id: 'n1', file: 'mm.json', gates: { qa2: gate() }, history: [] },
+      { ...sg, key: 't1-ur-studyguide', state: 'qa2-pass', file: 'sg.md', gates: { qa2: { ...gate('pass-with-notes'), notes: 'one term fixed' } }, history: [] },
+      { ...mm, topic: 2, key: 't2-en-mindmap', state: 'downloaded', file: 'x', gates: {}, history: [] },
+    ] };
+    const files = {
+      'mm.json': JSON.stringify({ name: 'Reading', children: [{ name: 'Fluency', children: [] }] }),
+      'sg.md': '# گائیڈ\n\n## Key ideas\nText.\n\n## Answer Key\n1. secret\n',
+    };
+    const manifest = { course: 'geng-300', unit: 2, notebook_id: 'nb-12345678', artifacts: [] };
+    const r = placeDocs(manifest, ledger, {
+      read: (f) => files[f],
+      labels: (t) => (t === 1 ? { en_fix: { Fluency: 'Reading fluency' }, ur: { Reading: 'مطالعہ', 'Reading fluency': 'روانی' }, ur_title: 'موضوع 2.1 mind map' } : null),
+      now: new Date('2026-11-27T10:00:00Z'),
+    });
+    expect(r.placed.map((p) => p.key)).toEqual(['t1-en-mindmap', 't1-ur-studyguide']);
+    const by = Object.fromEntries(r.writes.map((w) => [w.asset_path, w.body]));
+    expect(JSON.parse(by['/studio/geng-300/unit-02/topic-01/mindmap.en.json']).children[0].label).toBe('Reading fluency');
+    expect(JSON.parse(by['/studio/geng-300/unit-02/topic-01/mindmap.ur.json']).label).toBe('مطالعہ');
+    expect(by['/studio/geng-300/unit-02/topic-01/studyguide.ur.md']).not.toMatch(/secret|Answer Key/);
+    expect(manifest.artifacts.map((a) => `${a.locale}-${a.kind}`)).toEqual(['en-mindmap', 'ur-mindmap', 'ur-studyguide']);
+    expect(manifest.artifacts[1]).toMatchObject({ status: 'placed', title: 'موضوع 2.1 mind map', asset_path: '/studio/geng-300/unit-02/topic-01/mindmap.ur.json' });
+    expect(manifest.artifacts[2].review).toMatchObject({ verdict: 'pass-with-notes', notes: 'one term fixed' });
+    // a mind map node with no Urdu label stops placement instead of shipping English in the Urdu tree
+    ledger.items[0].state = 'qa2-pass';
+    expect(() => placeDocs({ artifacts: [] }, ledger, { read: (f) => files[f], labels: () => ({ ur: { Reading: 'مطالعہ' } }) })).toThrow(/No Urdu label/);
   });
 });
 
@@ -170,11 +219,15 @@ describe('placement and gate', () => {
     writeFileSync(join(root, 'static', 'studio', 'efmp-301', 'leak.m4a'), 'x');
     writeFileSync(join(root, 'specs', 'studio', 'efmp-301', 'media-unit-04.json'), JSON.stringify({
       course: 'efmp-301', unit: 4,
-      items: [{ key: 't1-en-audio-p1', topic: 1, locale: 'en', kind: 'audio', part: 1, title: 'Brief', prompt_ref: 'specs/studio/prompts/audio.md v2', state: 'public', gates: {}, history: [] }],
+      items: [{ key: 't1-en-audio-p1', topic: 1, locale: 'en', kind: 'audio', part: 1, title: 'Brief', prompt_ref: 'specs/studio/prompts/audio.md v2', state: 'public', gates: {}, history: [] },
+        { key: 't1-en-mindmap', topic: 1, locale: 'en', kind: 'mindmap', title: 'Map', prompt_ref: 'specs/studio/prompts/mindmap.md v1', state: 'placed', asset_path: '/studio/efmp-301/unit-04/topic-01/mindmap.en.json', gates: {}, history: [] },
+        { key: 't2-en-studyguide', topic: 2, locale: 'en', kind: 'studyguide', title: 'Guide', prompt_ref: 'specs/studio/prompts/study-guide.md v1', state: 'placed', asset_path: '/studio/efmp-301/unit-04/topic-02/studyguide.en.md', gates: {}, history: [] }],
     }));
     mkdirSync(join(root, 'static', 'studio', 'tmp'), { recursive: true });
     const f = checkStudio(root).join('\n');
     expect(f).toMatch(/leak\.m4a: media file in the repo/);
     expect(f).toMatch(/t1-en-audio-p1 is public without a youtube_id/);
+    expect(f).not.toMatch(/t1-en-mindmap/);
+    expect(f).toMatch(/t2-en-studyguide is placed but \/studio\/efmp-301\/unit-04\/topic-02\/studyguide\.en\.md is not in static/);
   });
 });
