@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 390" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of practical alternatives for schools without a dedicated science laboratory</title><desc id="d">Table showing four alternative practical science teaching strategies for schools without a dedicated laboratory, drawn from national curriculum guidelines.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="390"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="195" y1="24" x2="195" y2="304"/>
+<line class="grid" x1="485" y1="24" x2="485" y2="304"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Practical Approach</text>
+<text class="sh" x="208" y="49">Classroom Implementation</text>
+<text class="sh" x="498" y="49">Target Science Outcomes</text>
+
+<text class="sh" x="36" y="94">Mobile Science Kit</text>
+<text class="small" x="36" y="112">(Portable kit box)</text>
+<text class="cell" x="208" y="89">Store essential tubes, burners,</text>
+<text class="cell" x="208" y="107">and lenses in a secure box</text>
+<text class="cell" x="498" y="89">Optics, acid-base tests, and</text>
+<text class="cell" x="498" y="107">simple electrical circuits</text>
+
+<text class="sh" x="36" y="154">Teacher Demo Desk</text>
+<text class="small" x="36" y="172">(Front workstation)</text>
+<text class="cell" x="208" y="149">Sturdy table with water jug, wash</text>
+<text class="cell" x="208" y="167">tray, and safe clearance</text>
+<text class="cell" x="498" y="149">Thermal changes, gas generation,</text>
+<text class="cell" x="498" y="167">and chemical reactions</text>
+
+<text class="sh" x="36" y="214">Pupil Group Station</text>
+<text class="small" x="36" y="232">(Corner workspaces)</text>
+<text class="cell" x="208" y="209">Rear table using safe household items</text>
+<text class="cell" x="208" y="227">like jars, vinegar, and seeds</text>
+<text class="cell" x="498" y="209">Plant growth, liquid density,</text>
+<text class="cell" x="498" y="227">and water filtration</text>
+
+<text class="sh" x="36" y="274">Outdoor Inquiries</text>
+<text class="small" x="36" y="292">(School grounds)</text>
+<text class="cell" x="208" y="269">Structured investigation of soil,</text>
+<text class="cell" x="208" y="287">plants, and local water points</text>
+<text class="cell" x="498" y="269">Ecosystems, soil porosity, and</text>
+<text class="cell" x="498" y="287">environmental observation</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="340">Viable instructional strategies to conduct practical science without a dedicated laboratory room.</text>
+</g><text class="wm" x="768" y="375" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

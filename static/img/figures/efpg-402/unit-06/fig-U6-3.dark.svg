@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Diagram of a model school science laboratory floor plan layout</title><desc id="d">Model school science laboratory plan showing student benches, perimeter sinks, teacher demonstration bench, preparation room, dual emergency exits, and safety station.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel" x="24" y="24" width="732" height="330" rx="8"/>
+<rect class="panel-b" x="40" y="40" width="460" height="50" rx="4"/>
+<rect class="panel-a" x="520" y="40" width="220" height="85" rx="4"/>
+<rect class="plain" x="50" y="125" width="180" height="70" rx="4"/>
+<rect class="plain" x="270" y="125" width="180" height="70" rx="4"/>
+<rect class="plain" x="50" y="220" width="180" height="70" rx="4"/>
+<rect class="plain" x="270" y="220" width="180" height="70" rx="4"/>
+<rect class="panel-a" x="520" y="145" width="220" height="70" rx="4"/>
+<rect class="panel-b" x="520" y="235" width="220" height="55" rx="4"/>
+<rect class="panel" x="40" y="308" width="120" height="34" rx="4"/>
+<rect class="panel" x="620" y="308" width="120" height="34" rx="4"/>
+</g><g id="layer-edges">
+
+</g><g id="layer-nodes">
+<text class="sh" x="270" y="70" text-anchor="middle">Teacher Demonstration Bench &amp; Master Board</text>
+<text class="sh" x="630" y="65" text-anchor="middle">Prep Room &amp; Store</text>
+<text class="small" x="630" y="85" text-anchor="middle">Locked chemical cupboard</text>
+<text class="small" x="630" y="105" text-anchor="middle">Ventilated reagent shelves</text>
+
+<text class="sh" x="140" y="155" text-anchor="middle">Student Bench 1</text>
+<text class="cell" x="140" y="175" text-anchor="middle">6 to 8 pupils</text>
+
+<text class="sh" x="360" y="155" text-anchor="middle">Student Bench 2</text>
+<text class="cell" x="360" y="175" text-anchor="middle">6 to 8 pupils</text>
+
+<text class="sh" x="140" y="250" text-anchor="middle">Student Bench 3</text>
+<text class="cell" x="140" y="270" text-anchor="middle">6 to 8 pupils</text>
+
+<text class="sh" x="360" y="250" text-anchor="middle">Student Bench 4</text>
+<text class="cell" x="360" y="270" text-anchor="middle">6 to 8 pupils</text>
+
+<text class="sh" x="630" y="170" text-anchor="middle">Safety Station</text>
+<text class="cell" x="630" y="190" text-anchor="middle">Eyewash &amp; First Aid</text>
+<text class="small" x="630" y="206" text-anchor="middle">Fire blanket &amp; sand bucket</text>
+
+<text class="sh" x="630" y="260" text-anchor="middle">Perimeter Sinks</text>
+<text class="cell" x="630" y="278" text-anchor="middle">Drainage wash basins</text>
+
+<text class="sh" x="100" y="330" text-anchor="middle">&lt; Exit 1</text>
+<text class="sh" x="680" y="330" text-anchor="middle">Exit 2 &gt;</text>
+<text class="small" x="360" y="330" text-anchor="middle">Central gangway: 1.5 m clearance between all benches</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="380">Standard floor plan providing wide walkways, dual exits, and segregated chemical storage.</text>
+</g><text class="wm" x="768" y="415" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Diagram of a correct GHS-compliant school chemical reagent label</title><desc id="d">Diagram illustrating the required components of a safe chemical container label including name, concentration, hazard pictogram, and dates.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel" x="50" y="30" width="680" height="330" rx="8"/>
+<rect class="panel-a" x="70" y="45" width="640" height="55" rx="4"/>
+<rect class="panel" x="70" y="110" width="120" height="110" rx="6"/>
+<polygon class="panel-b" points="130,120 180,165 130,210 80,165"/>
+<rect class="panel-b" x="205" y="110" width="505" height="110" rx="4"/>
+<rect class="plain" x="70" y="230" width="640" height="115" rx="4"/>
+</g><g id="layer-edges">
+<line class="grid" x1="70" y1="265" x2="710" y2="265"/>
+</g><g id="layer-nodes">
+<text class="h" x="85" y="70">HYDROCHLORIC ACID, DILUTE</text>
+<text class="sh" x="85" y="90">Formula: HCl (aq)   |   Concentration: 1.0 Molar (1.0 M)</text>
+
+<text class="sh" x="130" y="165" text-anchor="middle">CORROSIVE</text>
+<text class="small" x="130" y="183" text-anchor="middle">GHS Symbol</text>
+
+<text class="h" x="220" y="135">SIGNAL WORD: DANGER</text>
+<text class="sh" x="220" y="158">Hazard Statements:</text>
+<text class="cell" x="220" y="176">Causes severe skin burns and serious eye damage.</text>
+<text class="sh" x="220" y="196">Precautionary Guidance:</text>
+<text class="cell" x="220" y="212">Wear safety goggles and gloves. Rinse skin with water.</text>
+
+<text class="sh" x="85" y="252">Administrative and Accountability Metadata</text>
+<text class="cell" x="85" y="285">Date Prepared: 14 October 2026</text>
+<text class="cell" x="380" y="285">Prepared By: Sir Naveed, Science Teacher</text>
+<text class="cell" x="85" y="308">Date Received: 10 October 2026</text>
+<text class="cell" x="380" y="308">Storage Location: Acid Cupboard B (Bottom shelf)</text>
+<text class="cell" x="85" y="331">Batch No: LAB-2026-088</text>
+<text class="cell" x="380" y="331">Emergency Contact: Health Clinic Ext 12</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="385">Standard label components: chemical identity, GHS hazard warning, and stock metadata.</text>
+</g><text class="wm" x="768" y="415" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

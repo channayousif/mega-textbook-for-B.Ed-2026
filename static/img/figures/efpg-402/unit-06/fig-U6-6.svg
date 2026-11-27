@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Flowchart for deciding chemical waste disposal in school laboratory</title><desc id="d">Flowchart showing decision pathway for disposing of chemical waste: identifying hazardous properties, neutralizing, collecting heavy metals, or sewer flushing.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<rect class="panel-b" x="40" y="35" width="220" height="55" rx="6"/>
+<polygon class="panel" points="150,125 250,165 150,205 50,165"/>
+<rect class="panel-a" x="330" y="135" width="240" height="60" rx="6"/>
+<polygon class="panel" points="150,235 250,275 150,315 50,275"/>
+<rect class="panel-a" x="330" y="245" width="240" height="60" rx="6"/>
+<rect class="panel" x="40" y="335" width="690" height="40" rx="6"/>
+</g><g id="layer-edges">
+<line class="stroke" x1="150" y1="90" x2="150" y2="125" marker-end="url(#arrow)"/>
+<line class="stroke" x1="250" y1="165" x2="330" y2="165" marker-end="url(#arrow)"/>
+<line class="stroke" x1="150" y1="205" x2="150" y2="235" marker-end="url(#arrow)"/>
+<line class="stroke" x1="250" y1="275" x2="330" y2="275" marker-end="url(#arrow)"/>
+<line class="stroke" x1="150" y1="315" x2="150" y2="335" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<text class="sh" x="150" y="58" text-anchor="middle">Chemical Waste</text>
+<text class="small" x="150" y="78" text-anchor="middle">Generated after practical</text>
+
+<text class="sh" x="150" y="160" text-anchor="middle">Non-toxic &amp; Soluble?</text>
+<text class="small" x="150" y="180" text-anchor="middle">(Salt, glucose, buffer)</text>
+
+<text class="sh" x="345" y="160">Drain Flush Disposal</text>
+<text class="cell" x="345" y="180">Wash down with 20x tap water</text>
+
+<text class="sh" x="150" y="270" text-anchor="middle">Dilute Acid or Base?</text>
+<text class="small" x="150" y="290" text-anchor="middle">(pH below 6 or above 8)</text>
+
+<text class="sh" x="345" y="270">Neutralise Before Drain</text>
+<text class="cell" x="345" y="290">Bring to pH 6-8, then flush</text>
+
+<text class="sh" x="55" y="360">Toxic Heavy Metals:</text>
+<text class="cell" x="220" y="360">Never drain; collect in sealed labelled containers</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="395">Decision tree for safe, environmentally responsible chemical disposal in schools.</text>
+</g><text class="wm" x="768" y="425" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
