@@ -29,7 +29,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-04/G2/20261126T172545046Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-04/G2/20261127T222455890Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, advisory findings F1-F2) at specs/content/geng-301/reviews/unit-04/G3/agent:g3-reviewer:20261019T162139Z.json; agent reviews advisory under ADR-0019; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
@@ -93,3 +93,4 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 2 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U2-3 boxes rendered black, hiding their text; fig-U2-6 did not render (unquoted attribute); fixed; the review above predates it; needs a fresh G3 run |
 | Unit 4 | G3 en-review | ▢ | | figure fix 2026-11-23 (D-2026-0098): fig-U4-1 boxes rendered black, hiding their text; fixed; the review above predates it; needs a fresh G3 run |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-04/G3/20261127T192818Z-g3-desk-88e82e93.json |
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-04/G3/20261127T192818Z-g3-desk-88e82e93.json (agy crew geng-301-u04-repair_en, 2026-11-28). Blocking: sources/unit-04.md dated Open Library retrieval lookups under D-2026-0001 recorded; unchecked chapter-level attributions removed from topics 4.1-4.3 Further reading; RRQ 9 mark scheme reconciled to Marks (2) with 1 mark for goal and 1 mark for steps in order. Advisories: figure manifest Alt text aligned with carrier alt on all six schematics; openstax2021/UNESCO2022 open-access binding note added to sources/unit-04.md; MCQ 6 stem updated to a concrete illustrative instance; MCQ 4, 7 and 9 option lengths rebalanced. Fresh independent G3 review, frozen handoff, session provenance, and narrow/print inspection remain pending; G3 unticked. |
