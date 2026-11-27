@@ -19,7 +19,7 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/
   - static/img/figures/efpg-402/unit-06/
   - specs/content/efpg-402/tasks.md
-  - specs/content/efpg-402/translations/unit-06/handoff.md
+  - specs/content/efpg-402/reviews/unit-06/G4/translation-handoff.md
 tests:
   - npm run check:content
   - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efpg-402/unit-06/*.ur.svg
@@ -45,5 +45,5 @@ Translated EFPG-402 Unit 6 into Urdu (eight files), created twelve right-to-left
 
 - Shipped / changed: draft Urdu mirror and Urdu figures for EFPG-402 Unit 6 on the crew branch; not pushed.
 - Decisions the team must respect: translation_status stays draft; no G4 completion or G5 claim.
-- Pending / next owner: G3 and G5 reviewers; owner on proposed terms in translations/unit-06/handoff.md.
+- Pending / next owner: G3 and G5 reviewers; owner on proposed terms in reviews/unit-06/G4/translation-handoff.md.
 - Paperclip issues affected: none.
