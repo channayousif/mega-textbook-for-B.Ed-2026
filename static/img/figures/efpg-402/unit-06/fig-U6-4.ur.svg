@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">لیبارٹری کے نقشے کے پہلو اور حفاظتی جواز کا جدول</title><desc id="d">جدول جو اسکول سائنس لیبارٹری کے پانچ اہم تعمیراتی پہلوؤں اور ہر ایک کے حفاظتی جواز کی تفصیل پیش کرتا ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="600" y1="24" x2="600" y2="364"/>
+<line class="grid" x1="310" y1="24" x2="310" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="49">نقشے کی خصوصیت</text>
+<text class="sh" x="588" y="49">ڈیزائن کا معیار</text>
+<text class="sh" x="298" y="49">حفاظتی اور عملی جواز</text>
+
+<text class="sh" x="744" y="94">دو طرفہ اخراج</text>
+<text class="small" x="744" y="112">باہر کھلنے والے دروازے</text>
+<text class="cell" x="588" y="89">کمرے کے مخالف سروں پر دروازے</text>
+<text class="cell" x="588" y="107">جو کھلے اور بلا رکاوٹ ہوں</text>
+<text class="cell" x="298" y="89">بھگدڑ روکتا ہے؛ آگ یا کیمیکل گرنے</text>
+<text class="cell" x="298" y="107">پر محفوظ انخلا ممکن بناتا ہے</text>
+
+<text class="sh" x="744" y="154">کشادہ راستے</text>
+<text class="small" x="744" y="172">راہداری کی پیمائش</text>
+<text class="cell" x="588" y="149">میزوں اور دیواروں کے درمیان</text>
+<text class="cell" x="588" y="167">کم از کم 1.5 میٹر چوڑائی</text>
+<text class="cell" x="298" y="149">شیشہ لے جاتے ہوئے ٹکراؤ سے بچاؤ؛</text>
+<text class="cell" x="298" y="167">استاد کی طلبہ تک فوری رسائی</text>
+
+<text class="sh" x="744" y="214">بیرونی سنک</text>
+<text class="small" x="744" y="232">دھلائی کے اسٹیشن</text>
+<text class="cell" x="588" y="209">باہر کی دیواروں پر وافر پانی کے</text>
+<text class="cell" x="588" y="227">دباؤ کے ساتھ متعدد سنک</text>
+<text class="cell" x="298" y="209">تیزابی چھینٹوں کی فوری دھلائی؛</text>
+<text class="cell" x="298" y="227">صفائی کے دوران بھیڑ سے بچاؤ</text>
+
+<text class="sh" x="744" y="274">مین کنٹرولز</text>
+<text class="small" x="744" y="292">یوٹیلیٹی شٹ آف</text>
+<text class="cell" x="588" y="269">استاد کی ڈیمو میز کے پاس</text>
+<text class="cell" x="588" y="287">گیس اور بجلی کے مین والو</text>
+<text class="cell" x="298" y="269">برقی چنگاری یا گیس رسنے پر</text>
+<text class="cell" x="298" y="287">گیس یا بجلی کا فوری انقطاع</text>
+
+<text class="sh" x="744" y="334">تیاری اور اسٹور روم</text>
+<text class="small" x="744" y="352">کیمیکل اسٹوریج</text>
+<text class="cell" x="588" y="329">ملحقہ ہوادار کمرہ جس میں</text>
+<text class="cell" x="588" y="347">کیمیکلز کے لیے مقفل الماریاں ہوں</text>
+<text class="cell" x="298" y="329">طلبہ کی چھیڑ چھاڑ سے بچاؤ؛ کلاس</text>
+<text class="cell" x="298" y="347">سے خطرناک بخارات کو الگ رکھنا</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="395">اہم تعمیراتی معیارات جو حادثات کو روکتے ہیں اور لیبارٹری کے افراد کی حفاظت کرتے ہیں۔</text>
+</g><text class="wm" x="12" y="420" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">عام لیبارٹری حادثات اور ابتدائی طبی امداد کا جدول</title><desc id="d">جدول جو سائنس لیبارٹری میں کیمیائی چھینٹوں، حرارتی جلن، کٹنے اور دھوئیں کے سانس میں جانے کے لیے فوری ابتدائی طبی امداد کے اصولوں کا خاکہ پیش کرتا ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="60"/>
+<rect class="plain" x="24" y="124" width="732" height="60"/>
+<rect class="panel" x="24" y="184" width="732" height="60"/>
+<rect class="plain" x="24" y="244" width="732" height="60"/>
+<rect class="panel" x="24" y="304" width="732" height="60"/>
+</g><g id="layer-edges">
+<line class="grid" x1="600" y1="24" x2="600" y2="364"/>
+<line class="grid" x1="310" y1="24" x2="310" y2="364"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="49">حادثاتی واقعہ</text>
+<text class="sh" x="588" y="49">فوری اقدام (پہلے 15 منٹ)</text>
+<text class="sh" x="298" y="49">بعد کی نگہداشت اور طبی امداد</text>
+
+<text class="sh" x="744" y="94">آنکھ میں کیمیکل پڑنا</text>
+<text class="small" x="744" y="112">(تیزاب یا اساس)</text>
+<text class="cell" x="588" y="89">پلکیں کھلی رکھیں؛ آنکھ دھونے کے</text>
+<text class="cell" x="588" y="107">فوارے پر 15 منٹ پانی بہائیں</text>
+<text class="cell" x="298" y="89">جراثیم کش پٹی سے ڈھانپیں؛</text>
+<text class="cell" x="298" y="107">آنکھوں کے فوری معائنے کو بھیجیں</text>
+
+<text class="sh" x="744" y="154">جلد پر تیزاب گرنا</text>
+<text class="small" x="744" y="172">(سنکنرن پیدا کرنے والا)</text>
+<text class="cell" x="588" y="149">آلودہ کپڑے فوری اتار دیں؛ 15 منٹ</text>
+<text class="cell" x="588" y="167">تک جلد پر وافر ٹھنڈا پانی بہائیں</text>
+<text class="cell" x="298" y="149">تیل یا مرہم بالکل نہ لگائیں؛</text>
+<text class="cell" x="298" y="167">چھالے بننے پر ڈاکٹر کو دکھائیں</text>
+
+<text class="sh" x="744" y="214">حرارتی جلن</text>
+<text class="small" x="744" y="232">(گرم جالی یا لیمپ)</text>
+<text class="cell" x="588" y="209">درد کم کرنے کو جلی جگہ کو</text>
+<text class="cell" x="588" y="227">10 تا 15 منٹ ٹھنڈے پانی میں رکھیں</text>
+<text class="cell" x="298" y="209">صاف خشک پٹی سے ڈھانپیں؛</text>
+<text class="cell" x="298" y="227">چھالے نہ پھوڑیں، پیسٹ نہ لگائیں</text>
+
+<text class="sh" x="744" y="274">شیشے سے کٹ لگنا</text>
+<text class="small" x="744" y="292">(ٹوٹا شیشہ)</text>
+<text class="cell" x="588" y="269">جراثیم کش پیڈ سے دباؤ ڈالیں؛ خون</text>
+<text class="cell" x="588" y="287">روکنے کو عضو دل سے اونچا رکھیں</text>
+<text class="cell" x="298" y="269">سیلائن سے صاف کر کے پٹی باندھیں؛</text>
+<text class="cell" x="298" y="287">شیشے کی کرچیوں کی جانچ کریں</text>
+
+<text class="sh" x="744" y="334">دھوئیں کا اخراج</text>
+<text class="small" x="744" y="352">(زہریلی گیسیں)</text>
+<text class="cell" x="588" y="329">طالب علم کو فوری کھلی تازہ ہوا</text>
+<text class="cell" x="588" y="347">میں لے جائیں؛ کالر ڈھیلا رکھیں</text>
+<text class="cell" x="298" y="329">سانس کی نگرانی کریں؛ کھانسی یا</text>
+<text class="cell" x="298" y="347">تکلیف پر فوری ڈاکٹر کو بلائیں</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="395">پیشہ ورانہ طبی نگہداشت سے قبل چوٹوں کو سنبھالنے کے ہنگامی طبی ضوابط۔</text>
+</g><text class="wm" x="12" y="420" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

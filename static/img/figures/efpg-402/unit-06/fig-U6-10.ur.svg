@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">لیبارٹری میں خطرے کی معیاری علامات اور ان کے مفاہیم</title><desc id="d">خاکہ جو سائنس لیبارٹریوں میں استعمال ہونے والی خطرے کی چھ عالمی علامات کو ظاہر کرتا ہے: سنکنرن، آتش گیر، زہریلا، دھماکہ خیز، آکسیڈائزر اور صحت کے لیے خطرناک۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/><g id="layer-regions">
+<polygon class="panel" points="690,30 745,85 690,140 635,85" stroke="var(--a3)" stroke-width="2"/>
+<polygon class="panel" points="430,30 485,85 430,140 375,85" stroke="var(--a3)" stroke-width="2"/>
+<polygon class="panel" points="170,30 225,85 170,140 115,85" stroke="var(--a3)" stroke-width="2"/>
+<polygon class="panel" points="690,200 745,255 690,310 635,255" stroke="var(--a3)" stroke-width="2"/>
+<polygon class="panel" points="430,200 485,255 430,310 375,255" stroke="var(--a3)" stroke-width="2"/>
+<polygon class="panel" points="170,200 225,255 170,310 115,255" stroke="var(--a3)" stroke-width="2"/>
+</g><g id="layer-nodes">
+<text class="sh" x="690" y="90" text-anchor="middle" fill="var(--a3)">تیزاب</text>
+<text class="h" x="620" y="75">سنکنرن</text>
+<text class="small" x="620" y="95">جلد اور دھات کو گلاتا ہے</text>
+
+<text class="sh" x="430" y="90" text-anchor="middle" fill="var(--a3)">شعلہ</text>
+<text class="h" x="360" y="75">آتش گیر</text>
+<text class="small" x="360" y="95">باآسانی آگ پکڑتا ہے</text>
+
+<text class="sh" x="170" y="90" text-anchor="middle" fill="var(--a3)">کھوپڑی</text>
+<text class="h" x="100" y="75">زہریلا</text>
+<text class="small" x="100" y="95">نگلنے پر مہلک ہے</text>
+
+<text class="sh" x="690" y="260" text-anchor="middle" fill="var(--a3)">حلقہ</text>
+<text class="h" x="620" y="245">آکسیڈائزر</text>
+<text class="small" x="620" y="265">جلنے کو تیز کرتا ہے</text>
+
+<text class="sh" x="430" y="260" text-anchor="middle" fill="var(--a3)">دھماکہ</text>
+<text class="h" x="360" y="245">دھماکہ خیز</text>
+<text class="small" x="360" y="265">حرارت سے پھٹتا ہے</text>
+
+<text class="sh" x="170" y="260" text-anchor="middle" fill="var(--a3)">انتباہ</text>
+<text class="h" x="100" y="245">صحت کا خطرہ</text>
+<text class="small" x="100" y="265">جلد و پھیپھڑوں میں جلن</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="380">سائنس لیبارٹری کی ری ایجنٹ بوتلوں پر درکار معیاری جی ایچ ایس علامات۔</text>
+</g><text class="wm" x="12" y="415" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

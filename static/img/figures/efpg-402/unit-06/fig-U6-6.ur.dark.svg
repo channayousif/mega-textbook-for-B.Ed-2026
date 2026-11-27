@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">اسکول لیبارٹری میں کیمیائی فضلے کے اخراج کا فلو چارٹ</title><desc id="d">فلو چارٹ جو کیمیائی فضلے کے اخراج کے لیے فیصلے کا راستہ دکھاتا ہے: خطرناک خصوصیات کی شناخت، تعدیل، بھاری دھاتوں کو جمع کرنا، یا نالی میں بہانا۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-regions">
+<rect class="panel-b" x="520" y="35" width="220" height="55" rx="6"/>
+<polygon class="panel" points="630,125 530,165 630,205 730,165"/>
+<rect class="panel-a" x="210" y="135" width="240" height="60" rx="6"/>
+<polygon class="panel" points="630,235 530,275 630,315 730,275"/>
+<rect class="panel-a" x="210" y="245" width="240" height="60" rx="6"/>
+<rect class="panel" x="50" y="335" width="680" height="40" rx="6"/>
+</g><g id="layer-edges">
+<line class="stroke" x1="630" y1="90" x2="630" y2="125" marker-end="url(#arrow)"/>
+<line class="stroke" x1="530" y1="165" x2="450" y2="165" marker-end="url(#arrow)"/>
+<line class="stroke" x1="630" y1="205" x2="630" y2="235" marker-end="url(#arrow)"/>
+<line class="stroke" x1="530" y1="275" x2="450" y2="275" marker-end="url(#arrow)"/>
+<line class="stroke" x1="630" y1="315" x2="630" y2="335" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<text class="sh" x="630" y="58" text-anchor="middle">کیمیائی فضلہ</text>
+<text class="small" x="630" y="78" text-anchor="middle">پریکٹیکل کے بعد حاصل شدہ</text>
+
+<text class="sh" x="630" y="160" text-anchor="middle">غیر زہریلا اور حل پذیر؟</text>
+<text class="small" x="630" y="180" text-anchor="middle">(نمک، گلوکوز، بفر)</text>
+
+<text class="sh" x="435" y="160">نالی میں بہا کر اخراج</text>
+<text class="cell" x="435" y="180">20 گنا نلکے کے پانی کے ساتھ بہائیں</text>
+
+<text class="sh" x="630" y="270" text-anchor="middle">ہلکا تیزاب یا اساس؟</text>
+<text class="small" x="630" y="290" text-anchor="middle">(پی ایچ 6 سے کم یا 8 سے زیادہ)</text>
+
+<text class="sh" x="435" y="270">نالی میں بہانے سے پہلے تعدیل</text>
+<text class="cell" x="435" y="290">پی ایچ 6 تا 8 پر لائیں، پھر بہائیں</text>
+
+<text class="sh" x="715" y="360">زہریلی بھاری دھاتیں:</text>
+<text class="cell" x="560" y="360">نالی میں کبھی نہ بہائیں؛ بند لیبل شدہ برتنوں میں جمع کریں</text>
+</g><g id="layer-labels">
+<text class="small" x="756" y="395">اسکولوں میں کیمیائی فضلے کے محفوظ اور ماحول دوست اخراج کا فیصلہ کن شجرہ۔</text>
+</g><text class="wm" x="12" y="425" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
