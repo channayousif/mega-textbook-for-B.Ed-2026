@@ -49,6 +49,13 @@ Gate authority is `scripts/lib/gates.mjs` (`CONTENT_GATES` vs `FULL_GATES`). `ch
 
 CI runs against a live shared Supabase instance with concurrency serialization (`shared-supabase` group, `queue: max`). Running `test:rls` locally while CI is in flight races on shared fixture rows.
 
+Never merge a PR whose checks are red or still pending, and never merge past a red check with
+`gh pr merge --admin`: main went red for hours twice (2026-11-25/26) because PRs with a failing
+`e2e` were admin-merged. Fix the test or the code first. Approvals come from the reviewer account
+the crew drives (`scripts/crew/reviewer.mjs`, `ops/crew/README.md` "Reviewer account"); once it is
+live the `main` ruleset requires CI with no bypass. Emergency only (CI broken by an outside
+outage): the owner switches the ruleset off, merges, and switches it back on.
+
 ## Host resource limits (production server, must follow)
 
 This repo is developed on the same 2-CPU / 12 GB OCI host that serves textbook.com.pk
