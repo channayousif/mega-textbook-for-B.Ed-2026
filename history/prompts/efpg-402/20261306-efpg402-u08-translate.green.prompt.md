@@ -20,6 +20,7 @@ files:
   - static/img/figures/efpg-402/unit-08/
   - specs/content/efpg-402/tasks.md
   - specs/content/efpg-402/translations/unit-08/handoff.md
+  - specs/content/efpg-402/reviews/unit-08/G2/
 tests:
   - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efpg-402/unit-08/*.ur.svg
   - npm run figures:variants
