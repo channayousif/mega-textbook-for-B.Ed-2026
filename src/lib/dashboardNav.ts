@@ -54,6 +54,7 @@ export function activeKey(items: readonly NavItem[], pathname: string): string |
 /** Admin console pages (src/pages/app/admin/), in the order of the admin hub. */
 export const adminNav: readonly NavItem[] = [
   { key: 'admin-home', label: { en: 'Console', ur: 'کنسول' }, to: '/app/admin/', activeMatch: /^\/app\/admin\/?$/, icon: 'overview' },
+  { key: 'decisions', label: { en: 'Decisions', ur: 'فیصلے' }, to: '/app/admin/decisions', activeMatch: /^\/app\/admin\/decisions/, icon: 'queue' },
   { key: 'users', label: { en: 'Users and roles', ur: 'صارفین اور کردار' }, to: '/app/admin/users', activeMatch: /^\/app\/admin\/users/, icon: 'users' },
   { key: 'records', label: { en: 'Class records', ur: 'کلاسوں کا ریکارڈ' }, to: '/app/admin/records', activeMatch: /^\/app\/admin\/records/, icon: 'records' },
   { key: 'reviewers', label: { en: 'Reviewers', ur: 'جائزہ کار' }, to: '/app/admin/reviewers', activeMatch: /^\/app\/admin\/reviewers/, icon: 'shield' },

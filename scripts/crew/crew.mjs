@@ -429,7 +429,7 @@ function mediaCommand(v, arg, control, via) {
     return `Media stages ${control.media === 'on' ? 'on' : 'off'}. Waiting on you: ${b.media ? ownerLine(b.media.owner) : 'not planned yet'}`;
   }
   const [rawKey, ...rest] = arg.split(/\s+/);
-  if (!rawKey) return `usage: crew ${v} <teaser key, e.g. gqur-300-ur>`;
+  if (!rawKey) return refuse(`usage: crew ${v} <teaser key, e.g. gqur-300-ur>`);
   const key = /-(ur|en)$/.test(rawKey.toLowerCase()) ? rawKey.toLowerCase() : `${rawKey.toLowerCase()}-ur`;
   const course = key.replace(/-(ur|en)$/, '').toUpperCase();
   const { item, sha } = teaserFacts(course);
@@ -440,7 +440,7 @@ function mediaCommand(v, arg, control, via) {
     msg = v === 'approve-script' ? approveScript(media.approvals, key, ctx)
       : v === 'publish' ? approvePublish(media.approvals, key, ctx)
         : rejectMedia(media.approvals, key, rest.join(' ').trim(), ctx);
-  } catch (e) { return e.message; }
+  } catch (e) { return refuse(e.message); }
   save('media', media);
   return msg;
 }
@@ -459,10 +459,10 @@ function studioCommand(v, arg, control, via) {
   }
   const [course, unitArg, ...rest] = words;
   const unit = Number(unitArg);
-  if (!course || !Number.isInteger(unit)) return `usage: crew ${v} <course> <unit>${v === 'approve-studio' ? ' [except <item key>...]' : ' <item key> <what must change>'}`;
+  if (!course || !Number.isInteger(unit)) return refuse(`usage: crew ${v} <course> <unit>${v === 'approve-studio' ? ' [except <item key>...]' : ' <item key> <what must change>'}`);
   const C = course.toUpperCase();
   const f = join(ROOT, 'specs/studio', C.toLowerCase(), `media-unit-${String(unit).padStart(2, '0')}.json`);
-  if (!existsSync(f)) return `no Study Studio ledger for ${C} Unit ${unit}`;
+  if (!existsSync(f)) return refuse(`no Study Studio ledger for ${C} Unit ${unit}`);
   const items = JSON.parse(readFileSync(f, 'utf8')).items ?? [];
   const media = load('media');
   const ctx = { items, via, at: now() };
@@ -472,7 +472,7 @@ function studioCommand(v, arg, control, via) {
       const except = rest[0]?.toLowerCase() === 'except' ? rest.slice(1) : [];
       msg = approveStudio(media.approvals, C, unit, { ...ctx, except });
     } else msg = rejectStudio(media.approvals, C, unit, rest[0], rest.slice(1).join(' ').trim(), ctx);
-  } catch (e) { return e.message; }
+  } catch (e) { return refuse(e.message); }
   save('media', media);
   return msg;
 }
@@ -523,7 +523,7 @@ function socialCommand(v, arg, control, via) {
     return `Social updates ${control.social === 'on' ? 'on' : 'off'}. Waiting on you: ${b.social?.owner ? socialOwnerLine(b.social.owner) : 'nothing'}`;
   }
   const [id, ...rest] = arg.split(/\s+/);
-  if (!id) return `usage: crew ${v} <post id, e.g. 2026-11-22-feature>`;
+  if (!id) return refuse(`usage: crew ${v} <post id, e.g. 2026-11-22-feature>`);
   try {
     return updateLedger(SOCIAL_LEDGER, (L) => {
       if (v === 'reject-post') { rejectSocial(L, id, rest.join(' ').trim() || `rejected by the owner via ${via}`); return `rejected ${id}; its items return in the next roundup`; }
@@ -534,7 +534,7 @@ function socialCommand(v, arg, control, via) {
       if (ended) L.config.pilot = false;
       return `approved ${id}; it publishes at the next tick${ended ? '. Pilot passed: content roundups now publish without waiting for you' : ''}`;
     });
-  } catch (e) { return e.message; }
+  } catch (e) { return refuse(e.message); }
 }
 
 // ---------------------------------------------------------------- briefs
@@ -1604,6 +1604,7 @@ const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise
  * in seconds instead of at the next tick.
  */
 function handleCommand(text, { board, decisions, control, health }, via = 'cli') {
+  refused = false;
   text = text.trim();
   const c = text.match(/^\/?crew\b[\s:,.]*([\w-]+)?\s*([\s\S]*)$/i);
   if (c) {
@@ -1655,16 +1656,16 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
       appendFileSync(join(STATE_DIR, 'OWNER-NOTES.md'), `\n## ${now()} (${via})\n${arg}\n`);
       return 'noted. The crew lead reads owner notes before planning; anything that needs a decision comes back to you as a C-### question.';
     }
-    return `unknown crew command "${v}". ${HELP}`;
+    return refuse(`unknown crew command "${v}". ${HELP}`);
   }
   const d = text.match(/^\/?(C-\d{3})\b\s*[:,-]?\s*(\S+)?\s*([\s\S]*)/i);
   if (!d) return null; // ordinary chat is openclaw's business, not the crew's
   const item = decisions.items.find((x) => x.id.toUpperCase() === d[1].toUpperCase());
-  if (!item) return `no decision ${d[1].toUpperCase()}.`;
-  if (item.status === 'closed') return `${item.id} was closed: ${item.note}`;
-  if (item.status !== 'open') return `${item.id} was already answered: ${item.answer}.`;
+  if (!item) return refuse(`no decision ${d[1].toUpperCase()}.`);
+  if (item.status === 'closed') return refuse(`${item.id} was closed: ${item.note}`);
+  if (item.status !== 'open') return refuse(`${item.id} was already answered: ${item.answer}.`);
   const answer = (d[2] || '').toLowerCase();
-  if (!item.options.includes(answer)) return `${item.id} options are: ${item.options.join(' / ')}. Reply e.g. "${item.id} ${item.options[0]}".`;
+  if (!item.options.includes(answer)) return refuse(`${item.id} options are: ${item.options.join(' / ')}. Reply e.g. "${item.id} ${item.options[0]}".`);
   item.status = 'answered'; item.answer = answer; item.note = d[3]?.trim(); item.answeredAt = now(); item.via = via;
   let extra = '';
   if (item.pr && answer === 'merge') {
@@ -1677,6 +1678,11 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
   if (item.job && answer === 'hold') { const j = board.jobs.find((x) => x.id === item.job); if (j) j.status = 'blocked'; }
   return `noted ${item.id}: ${answer}${extra}`;
 }
+
+// Set when the last handled command was refused (bad key, wrong state, missing note): `cmd --json`
+// reports it as { ok: false } so the Decisions page sync (decisions-sync.mjs) never guesses from the text.
+let refused = false;
+const refuse = (msg) => { refused = true; return msg; };
 
 const norm = (t) => t.trim().toLowerCase().replace(/^\//, '').replace(/\s+/g, ' ');
 
@@ -1763,6 +1769,7 @@ ${(board.awaitingG3?.units || []).map((x) => `- ${x.course} Unit ${x.unit}: advi
 ${mediaPlanSection(board)}
 
 ## Media Studio (Feature 030)
+Decide on the web: https://textbook.com.pk/app/admin/decisions
 Crew media stages ${board.media?.on ? 'on' : 'off (\`crew media on\`)'}. Study Studio ${board.studio?.on ? 'on' : 'off (\`crew studio on\`)'}${board.studio ? `: ${board.studio.ledgers} unit ledger(s), ${board.studio.candidates} certified unit(s) eligible${board.studio.watch?.length ? `; waiting for your watch: ${board.studio.watch.join(', ')} (\`crew approve-studio <course> <unit>\`)` : ''}` : ''}.
 ${mediaOwnerSection()}
 
@@ -2019,7 +2026,9 @@ else if (cmd === 'cmd') {
   }
   const state = { board: load('board'), decisions: load('decisions'), control: load('control'), health: load('health') };
   const r = handleCommand(text, state, opt('via') || 'openclaw');
-  console.log(r ?? `not a crew command. ${HELP}`);
+  // --json (decisions-sync.mjs): one line { ok, reply }; a refused command changes nothing worth saving.
+  if (flag('json')) console.log(JSON.stringify({ ok: r != null && !refused, reply: r ?? `not a crew command. ${HELP}` }));
+  else console.log(r ?? `not a crew command. ${HELP}`);
   if (r && !DRY) {
     if (flag('locked')) { save('board', state.board); save('decisions', state.decisions); save('control', state.control); }
     const handled = load('handled');

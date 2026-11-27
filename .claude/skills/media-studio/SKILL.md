@@ -170,6 +170,8 @@ private items and replies `crew approve-studio <course> <unit> [except <key>...]
 `crew reject-studio <course> <unit> <key> <note>` to have one remade; only then does
 `studio_publish` set the approved items public and place them (`place-media.mjs`).
 
+The owner may also decide every owner gate on the Decisions page (`/app/admin/decisions`, Feature 035), which queues the same commands (`via: web`).
+
 Approvals live in `~/.crew/mega-book/media.json`. Clip, upload and NotebookLM stages run on the
 claude worker, or on claude_crew when claude is cooling (both have the gflow, youtube-uploader and
 gemini-notebook-studio MCP servers).

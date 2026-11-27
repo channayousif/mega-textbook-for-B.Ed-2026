@@ -8,6 +8,7 @@ import { PageHeader } from '@site/src/components/ui';
 import Icon, { type IconName } from '@site/src/components/icons/Icon';
 
 const sections = [
+  ['decisions', 'Decisions', 'فیصلے', 'Everything waiting on you: teaser scripts, private Shorts, Study Studio units, social posts and crew questions.'],
   ['users', 'Users and roles', 'صارفین اور کردار', 'Select an account, manage access and suspension.'],
   ['records', 'Classes and learner records', 'کلاسیں اور طلبہ کا ریکارڈ', 'Inspect a selected class, student or teacher.'],
   ['reviewers', 'Reviewer applications', 'جائزہ کار کی درخواستیں', 'Decide applications, grant scopes and revoke access.'],
@@ -23,7 +24,7 @@ const sections = [
 ] as const;
 
 const HUB_ICONS: Record<(typeof sections)[number][0], IconName> = {
-  users: 'users', records: 'records', reviewers: 'shield', 'g3-signoff': 'signoff', 'review-decisions': 'review',
+  decisions: 'queue', users: 'users', records: 'records', reviewers: 'shield', 'g3-signoff': 'signoff', 'review-decisions': 'review',
   'feedback-queue': 'feedback', suggestions: 'suggest', news: 'megaphone', overview: 'analytics', 'agent-jobs': 'jobs', audit: 'audit', guide: 'reading',
 };
 
