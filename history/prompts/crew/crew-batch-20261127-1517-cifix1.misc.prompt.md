@@ -14,17 +14,107 @@ links:
   spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/936
+  pr: null
 files:
- - static/img/figures/efpg-402/unit-04/fig-U4-3.ur.svg
- - static/img/figures/efpg-402/unit-04/fig-U4-3.ur.dark.svg
- - static/img/figures/efpg-402/unit-04/fig-U4-10.ur.svg
- - static/img/figures/efpg-402/unit-04/fig-U4-10.ur.dark.svg
+ - docs/semester-4/efpc-411/unit-01/index.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-01.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-02.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-03.mdx
+ - docs/semester-4/efpc-411/unit-01/topic-04.mdx
+ - docs/semester-4/efpc-411/unit-01/unit-assessment.mdx
  - history/prompts/crew/crew-batch-20261127-1517-cifix1.misc.prompt.md
+ - history/prompts/efpc-411/crew-efpc-411-u01-repair_en.misc.prompt.md
+ - history/prompts/efpc-411/crew-efpc-411-u03-review_en.misc.prompt.md
+ - history/prompts/efpg-402/20261304-efpg402-u04-translate-g2-refresh.green.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u04-translate.green.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u04-translate.misc.prompt.md
+ - history/prompts/general/20261304-efpc411-u01-repair-en.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpc-411/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpc-411/unit-01/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpc-411/unit-01/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpc-411/unit-01/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpc-411/unit-01/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-04/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-04/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-04/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-04/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-04/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-04/topic-05.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-04/unit-assessment.mdx
+ - specs/content/efpc-411/concepts/unit-01.md
+ - specs/content/efpc-411/figures/unit-01.md
+ - specs/content/efpc-411/reviews/unit-01/G2/20261127T143453751Z-gates.json
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261127T143453751Z/check-bloom-bands.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261127T143453751Z/check-concept-graph.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261127T143453751Z/check-depth-gate.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261127T143453751Z/check-docs-sync.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261127T143453751Z/check-figures.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261127T143453751Z/check-no-answer-keys.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261127T143453751Z/check-no-em-dash.txt
+ - specs/content/efpc-411/reviews/unit-01/G2/logs-20261127T143453751Z/validate-content.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1.json
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/advisory-tracker-row.md
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/assessment-solutions.md
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/build-content-status.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/check-content.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checkbloom-bands.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checkconcept-graph.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checkdepth-gate.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checkdocs-sync.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checkfigures.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checkno-answer-keys.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checkno-em-dash.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checksource-floor.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/checksvg-style.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/measure-figure-text.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/render-review.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/logs/validatecontent.txt
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/manifest.json
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/source-verification.md
+ - specs/content/efpc-411/reviews/unit-03/G3/crew-efpc-411-u03-review_en-r1/summary.md
+ - specs/content/efpc-411/sources/texts/hec-2013-practicum.md
+ - specs/content/efpc-411/tasks.md
+ - specs/content/efpg-402/reviews/unit-04/G2/20261127T145728845Z-gates.json
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T145728845Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T145728845Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T145728845Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T145728845Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T145728845Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T145728845Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T145728845Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-04/G2/logs-20261127T145728845Z/validate-content.txt
+ - specs/content/efpg-402/tasks.md
+ - specs/content/efpg-402/translations/unit-04/handoff.md
+ - static/img/figures/efpc-411/unit-01/fig-U1-1.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-1.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-1.ur.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-1.ur.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-6.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-6.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-6.ur.dark.svg
+ - static/img/figures/efpc-411/unit-01/fig-U1-6.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-1.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-1.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-10.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-10.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-2.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-2.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-3.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-3.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-4.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-4.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-5.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-5.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-6.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-6.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-7.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-7.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-8.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-8.ur.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-9.ur.dark.svg
+ - static/img/figures/efpg-402/unit-04/fig-U4-9.ur.svg
 tests:
- - npm run check:content (14/14 gates PASS)
- - node scripts/measure-figure-text.mjs --ci-fonts --changed 956c4ba9149ccc34e41e7d1dc31c624f7709d1b6 (exit 0)
- - node scripts/measure-figure-text.mjs --changed 956c4ba9149ccc34e41e7d1dc31c624f7709d1b6 (exit 0)
+ - npm run check:content
 ---
 
 ## Prompt
@@ -59,38 +149,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261127-1147-cifix1, fix, claude_crew) CI's build job on PR #930 must re-run and confirm; the `ur` locale build never ran because `en` SSG failed first, so it is worth watching.
 - (batch-20261127-1147-cifix1, fix, claude_crew) Brace-free `$...$` spans remain in Unit 4 (`topic-02.mdx` `$\pm 10\%$`, `$N$`; `unit-assessment.mdx` `$\rightarrow$`, `$v = f\lambda$`); they build fine but render literally because the repo has no math plugin.
 
+
 ## Response snapshot
 
-Read `gh pr checks 936` and the failed figure-geometry run 46023799280 (job 140589875565). Six text-geometry problems in two EFPG-402 Unit 4 Urdu figures: `fig-U4-3.ur.svg` overlapped by 20.2px and 20.8px ("امتحانی نلی (ٹیسٹ ٹیوب)" over the middle-column cell) and `fig-U4-10.ur.svg` overlapped by 3.6px ("کم خرچ ماڈلز بنانا؛ ڈیٹا جمع" against "2. پراجیکٹ کی تعمیر"). Reproduced locally with `node scripts/measure-figure-text.mjs --ci-fonts`.
-
-Root cause: in both tables the right-hand column is 146px wide (grid line at x=610, anchor x=740), and the single-line Urdu labels are wider than that (180.2px and 146.5px in DejaVu Sans, the CI fallback face), so they crossed the divider into the next column. The English counterparts use short labels ("Test tube", "2. Development") and pass.
-
-Fix: wrapped each over-long label onto two lines, the convention already used in the efpc-411 Urdu figures ("باقاعدہ" / "مشاہدہ" and similar), keeping the wording unchanged. `fig-U4-3`: "امتحانی نلی" (y=88) / "(ٹیسٹ ٹیوب)" (y=105). `fig-U4-10`: "2. پراجیکٹ" (y=149) / "کی تعمیر" (y=166), with the existing date line moved 180 to 183 to keep the 17px line pitch. Applied the identical edit to both `.ur.svg` and `.ur.dark.svg` (they differ only in the `:root` palette). No English file, figure manifest, source, coverage or concept was touched, so no G2 evidence refresh was due.
+Wrapped the two over-wide right-column Urdu labels in EFPG-402 Unit 4 figures fig-U4-3 and fig-U4-10 (plus their dark twins) onto two lines, clearing the CI figure-geometry overlaps, and committed the fix with its PHR.
 
 ## Outcome
 
-- Impact: the four changed SVGs now measure clean, so CI's figure-geometry job on PR #936 should pass; the two Urdu tables no longer print labels over their neighbours.
-- Tests: `npm run check:content` 14/14 gates PASS; `measure-figure-text.mjs --ci-fonts --changed 956c4ba...` exit 0 (28 SVGs); same command without `--ci-fonts` exit 0.
-- Files: four EFPG-402 Unit 4 Urdu figure SVGs and this PHR.
-- Next prompts: CI figure-geometry on PR #936 must re-run and confirm.
-- Reflection: the Urdu mirror can be wider than the English original it mirrors, so a label that fits the English column can still overflow its Urdu column; measure the Urdu SVG itself, not the English one.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 97 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: wrapped the over-long right-column labels in `static/img/figures/efpg-402/unit-04/fig-U4-3.ur.svg` and `fig-U4-10.ur.svg` (and their `.ur.dark.svg` twins) onto two lines; wording unchanged.
-- Decisions the team must respect: no G3/G5 status, reviewer registry, signed evidence, tracker gate status or publication state changed. No push and no PR opened. Zero em dashes. No English unit file, manifest, source, coverage or concept touched, so no `prepare-gate-evidence` run was required.
-- Pending / next owner: CI figure-geometry on PR #936.
+- Shipped / changed: Wrapped the two over-wide right-column Urdu labels in EFPG-402 Unit 4 figures fig-U4-3 and fig-U4-10 (plus their dark twins) onto two lines, clearing the CI figure-geometry overlaps, and committed the fix with its PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - CI's figure-geometry job must re-run on PR #936 to confirm; the local `--ci-fonts --changed 956c4ba...` run is the same measurement and exits 0.
-  - Keep these wrapped two-line forms; restoring the single-line labels reintroduces the DejaVu overlaps.
-  - `fig-U4-10.ur.svg` row 2 now carries three lines in the right column ("2. پراجیکٹ" / "کی تعمیر" / date) where the other rows carry two; the row is 68px tall so it fits, but a future re-translation that shortens the phase name could collapse it back to two.
-  - Brace-free `$...$` spans remain in Unit 4 (`topic-02.mdx` `$\pm 10\%$`, `$N$`; `unit-assessment.mdx` `$\rightarrow$`, `$v = f\lambda$`); they build fine but render literally because the repo has no math plugin.
-  - EFPG-402 Unit 4 G3/G4/G5 stay open; this job certifies nothing.
-- Paperclip issues affected: PR #936; crew job batch-20261127-1517-cifix1.
+  - Keep these wrapped two-line forms; restoring the single-line labels reintroduces the DejaVu overlaps. `fig-U4-10.ur.svg` row 2 now has three lines in the right column where the other rows have two (the 68px row fits it).
+  - Brace-free `$...$` spans remain in Unit 4 (`topic-02.mdx`, `unit-assessment.mdx`); they build fine but render literally, as before. EFPG-402 Unit 4 G3/G4/G5 stay open; this job certifies nothing.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a Urdu label wider than its table column crosses the grid line and prints over the next column; the English original passing does not predict the Urdu mirror passing, because Nastaliq fallback (DejaVu Sans in CI) metrics differ from the English labels.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14); measure-figure-text --ci-fonts PASS (exit 0); measure-figure-text local fonts PASS (exit 0).
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): have the translate skill run `measure-figure-text.mjs --ci-fonts` on the Urdu SVGs it writes, so this class is caught before CI.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
