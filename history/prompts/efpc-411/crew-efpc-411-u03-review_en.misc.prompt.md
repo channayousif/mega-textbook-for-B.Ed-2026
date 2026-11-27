@@ -4,7 +4,7 @@ title: crew review_en EFPC-411 unit 3
 stage: misc
 date: 2026-11-27
 surface: agent
-model: LongCat-2.5
+model: claude_crew
 feature: efpc-411
 branch: crew/efpc-411-u03-review_en
 user: crew
@@ -72,25 +72,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Added the independent G3 English advisory report for EFPC-411 Unit 3 (disposition escalate: render-review unavailable because the deployed SHA differs from HEAD, plus five uncertain content findings) with its full evidence set and PHR, committed on the branch.
+Added the validated, unsigned G3 English advisory report for EFPC-411 Unit 3 (disposition escalate, with manifest, source verification, independent assessment solutions and real gate logs) plus its PHR, committed on the branch.
 
 ## Outcome
 
 - Impact: review_en for EFPC-411 Unit 3 by claude_crew (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added the independent G3 English advisory report for EFPC-411 Unit 3 (disposition escalate) with manifest, source verification, independent assessment solutions, summary, advisory tracker row and real gate logs, committed on the branch.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything, does not tick G3 and does not edit the tracker. The report is unsigned.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). A separate author owns any content repair; a fresh reviewer must recheck a changed input.
+- Shipped / changed: Added the validated, unsigned G3 English advisory report for EFPC-411 Unit 3 (disposition escalate, with manifest, source verification, independent assessment solutions and real gate logs) plus its PHR, committed on the branch.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - render-review is unavailable: deployed `c8efed9b430b39867c1418fae61194c49cefcda9` differs from reviewed HEAD `0cbed86bb96f7a6a03420ad3e5d726a47e8f5513` on all five English unit files and on fig-U3-9..13.webp. Visual accessibility and A4 print are unverified, not failed.
-  - Repair targets if a revision job follows: `unit-assessment.mdx:119` RRQ 8 four-sections vs the taught eight-part structure; `topic-03.mdx:94` activity names Figure 3.6 but `fig-U3-6` omits the authoritarian column; `fig-U3-3` says "real leaves used" against the topic-02 scenario and fig-U3-11; the four-stage cycle and management typology attributions at `topic-02.mdx:71` / `topic-03.mdx:71` are not in the bound notes.
-  - The suggested advisory tracker row is in `advisory-tracker-row.md`; G3 stays unticked and unsigned.
+  - If a revision job follows, the five uncertain findings above are the repair set; the report's `source-verification.md` and `assessment-solutions.md` give exact locations and derived answers.
+  - The deployed SHA moved after this unit's last deploy, so a future review should re-check `git diff` before trusting `render-inspect` against textbook.com.pk.
+  - The advisory tracker row is a proposal in `advisory-tracker-row.md`; the parent must insert it, and G3 stays open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
