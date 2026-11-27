@@ -97,7 +97,7 @@ States: `planned → scripted → script-approved → clips-generated → clips-
 5. **Advance.** When every shot has a take: `T advance <key> clips-generated`; when every shot has
    a passing take: `T advance <key> clips-qa --json '{"gates":{"clips":{"verdict":"…","by":"Claude QG2","date":"…","notes":"…"}}}'`.
    The former off-screen-only narrator and the NotebookLM speech check are retired: recipe v2 has
-   an on-screen presenter, and QG2 is local whisper (`scripts/media/qg2.mjs`).
+   an on-screen presenter, and QG2 is whisper (`scripts/media/qg2.mjs`: Workers AI, local whisper as fallback).
 6. **Assemble.**
    `scripts/heavy.sh node scripts/notebook-studio/assemble-teaser.mjs <id> <loc> <out.mp4> <chosen shot1..5>`
    (use `chosenTakes`, the latest passing take per shot; speed and the 30 s limit come from the

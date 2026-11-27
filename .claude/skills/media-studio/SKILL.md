@@ -145,11 +145,18 @@ waits; clips never fall back to `manual.flow` for a pacing hold).
 - **QG0** script: `teaser.mjs check <id>` (schema, sources, beats, the recipe's word budget and
   camera moves, no long dash).
 - **QG1** technical: `scripts/heavy.sh node scripts/notebook-studio/media-qa.mjs <file> --kind clip|short|audio|video [--stage encoded]`.
-- **QG2** meaning: `node scripts/media/qg2.mjs <clip> --line "<approved line>"` runs whisper turbo,
+- **QG2** meaning: `node scripts/media/qg2.mjs <clip> --line "<approved line>"` runs whisper turbo
+  (on Workers AI when `~/.config/mega-book/cloudflare-ai.env` exists, else or on refusal local whisper;
+  `--engine local` forces local; D-2026-0103),
   scores the transcript against the line (English words written in Urdu script still match; a
   spoken site address matches its spelled-out form) and writes a 3-frame strip. The verdict it
   suggests is only a suggestion: look at the strip (drawn camera interface, text, maps, dress) and
   record the verdict yourself. Calibrated on batch 3: the CTA and ordinary lines score 0.93-1.0.
+- **Drafts (Workers AI, D-2026-0103):** `node scripts/media/cfai-text.mjs youtube|caption|alt --context "<facts>"`
+  prints a DRAFT YouTube description, social caption or alt text from the facts given (Gemma, thinking
+  off, about 2-4 neurons each). Always check and edit it; it writes nothing. Workers AI usage is capped
+  at 9,000 of the free 10,000 neurons a day (UTC), ledger `~/.cache/mega-book/cfai-neurons.json`;
+  never images (owner ruling 2026-11-28).
 - **QG3** after upload: `list_videos` shows it private and processed with title and description intact.
 
 ## Crew stages and owner commands
