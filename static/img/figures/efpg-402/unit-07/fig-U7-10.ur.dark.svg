@@ -29,7 +29,8 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="sh" x="346" y="54">ہدف شدہ تلافی مداخلت</text>
 
 <text class="sh" x="744" y="104">پودوں کا تنفس</text>
-<text class="cell" x="744" y="132">"صرف رات کو سانس لیتے ہیں"</text>
+<text class="cell" x="744" y="128">"صرف رات کو سانس</text>
+<text class="cell" x="744" y="145">لیتے ہیں"</text>
 <text class="cell" x="586" y="104">سانس کو ریسپریشن سمجھنا؛ ضیائی</text>
 <text class="cell" x="586" y="132">تالیف کو دن میں تنفس کا بدل جاننا</text>
 <text class="cell" x="346" y="104">اگتے بیجوں کا ڈیمو: بند فلاسک میں دن کو چونے کا</text>
@@ -49,8 +50,10 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="cell" x="346" y="296">سیریز میں دو ایم میٹرز: بلب سے پہلے اور بعد میں</text>
 <text class="cell" x="346" y="324">کرنٹ ناپ کر چارج کے مکمل بقا کا ثبوت دینا</text>
 
-<text class="sh" x="744" y="392">حرارت بمقابلہ درجہ حرارت</text>
-<text class="cell" x="744" y="420">"حرارت اور ٹمپریچر ایک ہی ہیں"</text>
+<text class="sh" x="744" y="384">حرارت بمقابلہ</text>
+<text class="sh" x="744" y="401">درجہ حرارت</text>
+<text class="cell" x="744" y="418">"حرارت اور ٹمپریچر</text>
+<text class="cell" x="744" y="435">ایک ہی ہیں"</text>
 <text class="cell" x="586" y="392">کل اندرونی حرکی توانائی اور اوسط</text>
 <text class="cell" x="586" y="420">مالیکیولی حرکت میں فرق نہ سمجھنا</text>
 <text class="cell" x="346" y="392">دو بیکرز کا مظاہرہ: 100mL اور 500mL کو 80°C تک</text>
