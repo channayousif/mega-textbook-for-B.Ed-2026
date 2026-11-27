@@ -37,10 +37,10 @@ files:
  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261127T111735617Z/check-no-em-dash.txt
  - specs/content/gqur-301/reviews/unit-08/G2/logs-20261127T111735617Z/validate-content.txt
  - specs/content/gqur-301/tasks.md
+ - static/img/figures/gqur-301/unit-08/fig-U8-10.webp
  - static/img/figures/gqur-301/unit-08/fig-U8-7.webp
  - static/img/figures/gqur-301/unit-08/fig-U8-8.webp
  - static/img/figures/gqur-301/unit-08/fig-U8-9.webp
- - static/img/figures/gqur-301/unit-08/fig-U8-10.webp
 tests:
  - npm run check:content
 ---
@@ -80,27 +80,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u08-repair_en-r1, repair_en, opencode) F5-F8 (author-run provenance, open G1, rendered narrow/A4 inspection, bound Lane Chapter 5 source / answer-blind evidence) remain for the review host and evaluator; G3 stays open and unticked.
 - (gqur-301-u08-repair_en-conflict1, fix, opencode) `static/content-status.json` is a gitignored build artifact; regenerate it (`npm run build:content-status`) after any content-affecting merge or the `check:content-status` gate fails.
 
+
 ## Response snapshot
 
-Produced, visually inspected, and placed all four GQUR-301 Unit 8 raster illustrations across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated, inspected, and placed all 4 raster illustrations for GQUR-301 Unit 8 in English and Urdu, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for GQUR-301 Unit 8 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the commit was made.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced, visually inspected, and placed all four GQUR-301 Unit 8 raster illustrations across English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Shipped / changed: Generated, inspected, and placed all 4 raster illustrations for GQUR-301 Unit 8 in English and Urdu, refreshed G2 gate evidence, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All four raster illustrations (unit banner fig-U8-7, topic scenes fig-U8-8, fig-U8-9, fig-U8-10) were generated via gflow, inspected, accepted, placed with zero em dashes, and wired across both English and Urdu index and topic files.
-  - Unit 8 G2 en-draft row in tasks.md (line 67) was repointed to fresh gate evidence (20261127T111735617Z-gates.json).
-  - Unit 8 G3 review remains open; a fresh independent G3 review run against committed bytes is needed before acceptance.
+  - All four Unit 8 raster illustrations (banner fig-U8-7, topic scenes fig-U8-8, fig-U8-9, fig-U8-10) are placed and wired across EN and UR; G2 evidence is refreshed to 20261127T111735617Z-gates.json.
+  - Unit 8 G3 review remains open; a fresh independent G3 run against committed bytes is required before acceptance.
+  - F5-F8 (author-run provenance, open G1, rendered inspection, bound Lane Chapter 5 source / answer-blind evidence) remain open for the review host and evaluator.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
