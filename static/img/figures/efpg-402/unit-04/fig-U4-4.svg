@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Labelled diagram of a standard gravity filtration apparatus set-up</title><desc id="d">Labelled diagram of a basic school laboratory filtration set-up showing stand, funnel, filter paper, and collection beaker.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="460"/><g id="layer-regions">
+<rect class="panel" x="180" y="370" width="160" height="20" rx="4"/>
+<line class="stroke" x1="200" y1="370" x2="200" y2="40"/>
+<line class="stroke" x1="200" y1="180" x2="270" y2="180"/>
+<circle class="panel" cx="270" cy="180" r="14"/>
+<polygon class="panel-a" points="230,170 310,170 280,230 280,280 260,280 260,230"/>
+<polygon class="plain" points="240,170 300,170 270,220"/>
+<polygon class="panel-b" points="230,270 310,270 305,370 235,370"/>
+<line class="stroke" x1="330" y1="80" x2="270" y2="175"/>
+</g><g id="layer-edges">
+<line class="dash" x1="480" y1="90" x2="310" y2="110" marker-end="url(#arrow)"/>
+<line class="dash" x1="480" y1="150" x2="295" y2="178" marker-end="url(#arrow)"/>
+<line class="dash" x1="480" y1="200" x2="290" y2="210" marker-end="url(#arrow)"/>
+<line class="dash" x1="480" y1="260" x2="205" y2="150" marker-end="url(#arrow)"/>
+<line class="dash" x1="480" y1="320" x2="290" y2="330" marker-end="url(#arrow)"/>
+<line class="dash" x1="480" y1="375" x2="260" y2="380" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<rect class="panel-a" x="480" y="70" width="260" height="42" rx="6"/><text class="sh" x="495" y="96">Glass stirring rod</text>
+<rect class="panel-a" x="480" y="128" width="260" height="42" rx="6"/><text class="sh" x="495" y="154">Folded filter paper (cone)</text>
+<rect class="panel-a" x="480" y="184" width="260" height="42" rx="6"/><text class="sh" x="495" y="210">Glass filter funnel</text>
+<rect class="panel-a" x="480" y="240" width="260" height="42" rx="6"/><text class="sh" x="495" y="266">Retort stand and ring clamp</text>
+<rect class="panel-a" x="480" y="298" width="260" height="42" rx="6"/><text class="sh" x="495" y="324">Beaker collecting clear filtrate</text>
+<rect class="panel-a" x="480" y="356" width="260" height="42" rx="6"/><text class="sh" x="495" y="382">Stable weighted iron base</text>
+</g><g id="layer-labels">
+<text class="small" x="30" y="430">Standard laboratory gravity filtration assembly for separating insoluble solids from liquids in Grades 6-8.</text>
+</g><text class="wm" x="768" y="445" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

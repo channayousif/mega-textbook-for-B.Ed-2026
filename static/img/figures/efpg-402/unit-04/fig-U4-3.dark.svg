@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of common laboratory apparatus with uses and handling rules</title><desc id="d">Table showing common science laboratory equipment with their functions and safe handling rules.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="400"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="24" width="732" height="40" rx="6"/>
+<rect class="panel" x="24" y="64" width="732" height="54"/>
+<rect class="plain" x="24" y="118" width="732" height="54"/>
+<rect class="panel" x="24" y="172" width="732" height="54"/>
+<rect class="plain" x="24" y="226" width="732" height="54"/>
+<rect class="panel" x="24" y="280" width="732" height="54"/>
+</g><g id="layer-edges">
+<line class="grid" x1="184" y1="24" x2="184" y2="334"/>
+<line class="grid" x1="430" y1="24" x2="430" y2="334"/>
+</g><g id="layer-nodes">
+<text class="sh" x="36" y="49">Apparatus</text>
+<text class="sh" x="198" y="49">Scientific Use</text>
+<text class="sh" x="442" y="49">Handling and Safety Rule</text>
+
+<text class="sh" x="36" y="96">Test tube</text>
+<text class="cell" x="198" y="88">Heating and mixing small</text>
+<text class="cell" x="198" y="105">quantities of liquid or solid</text>
+<text class="cell" x="442" y="88">Hold with clamp; point mouth away</text>
+<text class="cell" x="442" y="105">from yourself and other pupils</text>
+
+<text class="sh" x="36" y="150">Beaker</text>
+<text class="cell" x="198" y="142">Holding, stirring, and heating</text>
+<text class="cell" x="198" y="159">liquids in general experiments</text>
+<text class="cell" x="442" y="142">Use wire gauze on tripod; do not</text>
+<text class="cell" x="442" y="159">cool hot glass abruptly with cold water</text>
+
+<text class="sh" x="36" y="204">Graduated cylinder</text>
+<text class="cell" x="198" y="196">Measuring precise volumes of</text>
+<text class="cell" x="198" y="213">liquids (cm³ or mL)</text>
+<text class="cell" x="442" y="196">Place on bench; read water meniscus</text>
+<text class="cell" x="442" y="213">at eye level; never heat liquids in it</text>
+
+<text class="sh" x="36" y="258">Spirit burner</text>
+<text class="cell" x="198" y="250">Providing moderate heat for</text>
+<text class="cell" x="198" y="267">elementary science tests</text>
+<text class="cell" x="442" y="250">Never blow out flame; cover with</text>
+<text class="cell" x="442" y="267">cap; keep fuel level above half full</text>
+
+<text class="sh" x="36" y="312">Spring balance</text>
+<text class="cell" x="198" y="304">Measuring gravitational force</text>
+<text class="cell" x="198" y="321">and weight in Newtons</text>
+<text class="cell" x="442" y="304">Check zero mark before loading;</text>
+<text class="cell" x="442" y="321">avoid exceeding maximum rated load</text>
+</g><g id="layer-labels">
+<text class="small" x="24" y="365">Essential apparatus for Grades 4-8 science, with standard laboratory handling protocols.</text>
+</g><text class="wm" x="768" y="390" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
