@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 490" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Diagram from aim to objective to classroom outcome</title><desc id="d">Diagram of three linked boxes that narrow from top to bottom: a long-term aim of developing scientific literacy, a one-lesson objective about tracing the path of food, and the classroom outcome a teacher can see when pupils draw the path on a diagram.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="490"/><g id="layer-regions"></g><g id="layer-edges"><line id="edge-aim-objective" class="stroke" x1="390" y1="110" x2="390" y2="170" marker-end="url(#arrow)"/><line id="edge-objective-outcome" class="stroke" x1="390" y1="260" x2="390" y2="320" marker-end="url(#arrow)"/></g><g id="layer-nodes"><g id="node-aim"><rect class="panel-a" x="40" y="30" width="700" height="80" rx="8"/><text class="h" x="390" y="62" text-anchor="middle">Aim (years)</text><text class="cell" x="390" y="88" text-anchor="middle">develop scientific literacy</text></g><g id="node-objective"><rect class="panel-a" x="110" y="170" width="560" height="90" rx="8"/><text class="h" x="390" y="202" text-anchor="middle">Objective (one lesson)</text><text class="cell" x="390" y="230" text-anchor="middle">pupils will trace the path of food from mouth to large intestine</text></g><g id="node-outcome"><rect class="panel-a" x="180" y="320" width="420" height="104" rx="8"/><text class="h" x="390" y="352" text-anchor="middle">Classroom outcome (seen at the bell)</text><text class="cell" x="390" y="380" text-anchor="middle">each pupil draws arrows on a diagram</text><text class="cell" x="390" y="397" text-anchor="middle">showing the path correctly</text></g></g><g id="layer-labels"><text id="label-broken-down" class="small" x="404" y="145">broken down into</text><text id="label-checked-by" class="small" x="404" y="295">checked by</text><text id="label-caption" class="small" x="24" y="456">Each step narrows the scope: from years of schooling, to one lesson, to what you can see when the bell rings.</text></g><text class="wm" x="768" y="480" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

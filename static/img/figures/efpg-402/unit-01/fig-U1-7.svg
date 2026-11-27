@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 279" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of the intellectual, moral and social values of science education</title><desc id="d">Table of the three values of science education, intellectual, moral and social, each with a short meaning and a classroom example from a Pakistani elementary school.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><rect class="bg" x="0" y="0" width="780" height="279"/><g id="layer-regions"><rect id="region-header" class="panel-b" x="24" y="24" width="732" height="40" rx="6"/><rect id="region-row-1" class="panel" x="24" y="64" width="732" height="56"/><rect id="region-row-2" class="plain" x="24" y="120" width="732" height="56"/><rect id="region-row-3" class="panel" x="24" y="176" width="732" height="73"/></g><g id="layer-edges"><line class="grid" x1="154" y1="24" x2="154" y2="249"/><line class="grid" x1="414" y1="24" x2="414" y2="249"/></g><g id="layer-nodes"><text class="sh" x="32" y="48">Value</text><text class="sh" x="162" y="48">What it means</text><text class="sh" x="422" y="48">Classroom example</text><text class="sh" x="32" y="88">Intellectual</text><text class="cell" x="162" y="88">clear reasoning, judging</text><text class="cell" x="162" y="105">evidence, solving problems</text><text class="cell" x="422" y="88">pupils decide from their results whether</text><text class="cell" x="422" y="105">soap removes more chalk than plain water</text><text class="sh" x="32" y="144">Moral</text><text class="cell" x="162" y="144">honesty, responsibility,</text><text class="cell" x="162" y="161">respect for life</text><text class="cell" x="422" y="144">a group reports that its seeds did not</text><text class="cell" x="422" y="161">sprout instead of copying another group</text><text class="sh" x="32" y="200">Social</text><text class="cell" x="162" y="200">cooperation, care for</text><text class="cell" x="162" y="217">community health and</text><text class="cell" x="162" y="234">the environment</text><text class="cell" x="422" y="200">pupils make a hand-washing poster for the</text><text class="cell" x="422" y="217">school and take turns at a shared tap</text></g><g id="layer-labels"></g><text class="wm" x="768" y="269" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

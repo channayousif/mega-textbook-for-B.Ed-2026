@@ -25,6 +25,7 @@
     "GENT-401": { "source": "static/guides/sources/4th-semester.pdf", "pages": [10, 13], "pdf": "guides/semester-4/gent-401.pdf" },
     "EFMP-408": { "source": "static/guides/sources/4th-semester.pdf", "pages": [7, 9], "pdf": "guides/semester-4/efmp-408.pdf" },
     "EFMP-409": { "source": "static/guides/sources/4th-semester.pdf", "pages": [13, 15], "pdf": "guides/semester-4/efmp-409.pdf" },
-    "EFPC-411": { "source": "static/guides/sources/4th-semester.pdf", "pages": [16, 20], "pdf": "guides/semester-4/efpc-411.pdf" }
+    "EFPC-411": { "source": "static/guides/sources/4th-semester.pdf", "pages": [16, 20], "pdf": "guides/semester-4/efpc-411.pdf" },
+    "EFPG-402": { "source": "static/guides/sources/4th-semester.pdf", "pages": [21, 24], "pdf": "guides/semester-4/efpg-402.pdf" }
   }
 }
