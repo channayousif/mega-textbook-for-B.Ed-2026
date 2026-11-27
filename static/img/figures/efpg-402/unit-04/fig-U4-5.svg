@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Flowchart of five steps for preparing and using low-cost teaching aids</title><desc id="d">Flowchart showing five steps in making and using low-cost science teaching aids: identify outcome, source materials, construct prototype, test and refine, and teach and reflect.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="440"/><g id="layer-edges">
+<line class="stroke" x1="250" y1="85" x2="280" y2="85" marker-end="url(#arrow)"/>
+<line class="stroke" x1="500" y1="85" x2="530" y2="85" marker-end="url(#arrow)"/>
+<path class="stroke" d="M640,130 L640,195 L640,260 L500,260" marker-end="url(#arrow)"/>
+<line class="stroke" x1="280" y1="260" x2="250" y2="260" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="step1"><rect class="panel-a" x="30" y="40" width="220" height="90" rx="8"/><text class="h" x="45" y="68">1. Target Outcome</text><text class="cell" x="45" y="92">Identify specific SLO and</text><text class="cell" x="45" y="110">concrete concept to teach</text></g>
+<g id="step2"><rect class="panel-a" x="280" y="40" width="220" height="90" rx="8"/><text class="h" x="295" y="68">2. Source Materials</text><text class="cell" x="295" y="92">Gather safe, discarded or</text><text class="cell" x="295" y="110">free local household items</text></g>
+<g id="step3"><rect class="panel-a" x="530" y="40" width="220" height="90" rx="8"/><text class="h" x="545" y="68">3. Build Prototype</text><text class="cell" x="545" y="92">Construct model ensuring</text><text class="cell" x="545" y="110">mechanical safety &amp; durability</text></g>
+<g id="step4"><rect class="panel-b" x="280" y="215" width="220" height="90" rx="8"/><text class="h" x="295" y="243">4. Test &amp; Calibrate</text><text class="cell" x="295" y="267">Trial demonstration; check</text><text class="cell" x="295" y="285">visibility from back bench</text></g>
+<g id="step5"><rect class="panel-b" x="30" y="215" width="220" height="90" rx="8"/><text class="h" x="45" y="243">5. Teach &amp; Reflect</text><text class="cell" x="45" y="267">Involve pupils in manipulation;</text><text class="cell" x="45" y="285">evaluate learning and refine</text></g>
+</g><g id="layer-labels">
+<text class="small" x="30" y="380">Systematic five-step instructional design cycle for developing effective low-cost teaching resources.</text>
+</g><text class="wm" x="768" y="420" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

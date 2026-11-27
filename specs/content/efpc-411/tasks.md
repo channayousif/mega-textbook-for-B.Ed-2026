@@ -26,11 +26,11 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 1 | G6 assets | ✅ | auto:gates | Eight schematic SVGs (fig-U1-1 to fig-U1-8) and banner fig-U1-9 placed |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-02/G2/20261127T021552146Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-02/G2/20261127T104231432Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 2 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and eight localised schematic SVGs with dark twins; translator handoff: specs/content/efpc-411/reviews/unit-02/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review |
-| Unit 2 | G6 assets | ▣ | | Eight schematic SVGs (fig-U2-1 to fig-U2-8) placed; banner fig-U2-9 prompt-only for illustrate job |
+| Unit 2 | G6 assets | ▣ | | Eight schematic SVGs (fig-U2-1 to fig-U2-8) and banner fig-U2-9 placed |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-03/G2/20261127T054702338Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |

@@ -1,0 +1,232 @@
+{
+ "course": "EFMP-301",
+ "unit": 8,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Classroom management",
+     "definition": "The design and running of the classroom so that learning has somewhere to happen: arranging space, time, routines and responses to keep pupils on learning tasks. It does not mean control, silence or obedience."
+    },
+    {
+     "term": "Learning time",
+     "definition": "The minutes actually spent on learning. It is one of the three things that classroom management serves."
+    },
+    {
+     "term": "Safety",
+     "definition": "Physical and social safety in the classroom, including belonging. It is one of the three things that classroom management serves."
+    },
+    {
+     "term": "Participation",
+     "definition": "The chance for every pupil to take part, not only the loud ones. It is one of the three things that classroom management serves."
+    },
+    {
+     "term": "Prevention",
+     "definition": "The principle that the easiest management problems to solve are those that do not happen. The teacher asks in advance what the room invites, such as what a pupil who finishes early does next."
+    },
+    {
+     "term": "Routine",
+     "definition": "A decided answer to a recurring question, such as bags, the register or the ending of the lesson. Every question already answered returns working memory to the learning."
+    },
+    {
+     "term": "Engagement",
+     "definition": "The principle that work pupils can start, carry and finish grips them better than any order. A class absorbed in work it can do does not need managing."
+    },
+    {
+     "term": "Consistency",
+     "definition": "The same response to the same behaviour, every time. It binds the teacher too: a rule that is not enforced every day is not a rule but a mood."
+    }
+   ],
+   "ur": [
+    {
+     "term": "جماعتی انتظام",
+     "definition": "کمرۂ جماعت کا ڈیزائن اور اسے چلانا تاکہ تعلم کو ہونے کی جگہ ملے: جگہ، وقت، معمولات اور جوابات کی ایسی ترتیب جو شاگردوں کو تعلیمی کاموں پر رکھے۔ اس کا مطلب کنٹرول، خاموشی یا فرمانبرداری نہیں۔"
+    },
+    {
+     "term": "تعلیمی وقت",
+     "definition": "وہ منٹ جو اصل میں تعلم پر صرف ہوتے ہیں۔ یہ ان تین چیزوں میں سے ایک ہے جنہیں جماعتی انتظام سہارا دیتا ہے۔"
+    },
+    {
+     "term": "حفاظت",
+     "definition": "کمرۂ جماعت میں جسمانی اور سماجی حفاظت، جس میں تعلق کا احساس شامل ہے۔ یہ ان تین چیزوں میں سے ایک ہے جنہیں جماعتی انتظام سہارا دیتا ہے۔"
+    },
+    {
+     "term": "شرکت",
+     "definition": "ہر شاگرد کے لیے حصہ لینے کا موقع، صرف بلند آواز والوں کے لیے نہیں۔ یہ ان تین چیزوں میں سے ایک ہے جنہیں جماعتی انتظام سہارا دیتا ہے۔"
+    },
+    {
+     "term": "روک تھام",
+     "definition": "یہ اصول کہ حل کرنے کے لیے سب سے آسان مسائل وہ ہیں جو پیدا ہی نہ ہوں۔ استاد پہلے سے پوچھتا ہے کہ کمرہ کس چیز کو دعوت دیتا ہے، مثلاً جلدی کام مکمل کرنے والا شاگرد آگے کیا کرے۔"
+    },
+    {
+     "term": "معمول",
+     "definition": "بار بار آنے والے سوال کا طے شدہ جواب، جیسے بستے، حاضری یا سبق کا اختتام۔ پہلے سے طے شدہ ہر سوال کام کرنے والی یادداشت کو تعلم کی طرف لوٹاتا ہے۔"
+    },
+    {
+     "term": "مشغولیت",
+     "definition": "یہ اصول کہ جو کام شاگرد شروع کر سکیں، جاری رکھ سکیں اور مکمل کر سکیں وہ انہیں کسی بھی حکم سے زیادہ باندھے رکھتا ہے۔ اپنی پہنچ کے کام میں محو جماعت کو سنبھالنے کی ضرورت نہیں ہوتی۔"
+    },
+    {
+     "term": "تسلسل",
+     "definition": "ایک جیسے رویے پر ہر بار ایک جیسا جواب۔ یہ استاد کو بھی باندھتا ہے: جو قاعدہ ہر روز لاگو نہ ہو وہ قاعدہ نہیں بلکہ مزاج ہے۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Positive learning environment",
+     "definition": "Not a mood but a set of designed parts, each of which can be built, starved or broken."
+    },
+    {
+     "term": "Physical space",
+     "definition": "Desks arranged so every pupil can see the board and the teacher can see every pupil, walls that show the pupils' own work, and materials within reach."
+    },
+    {
+     "term": "Routines",
+     "definition": "The decided answers that give the day its shape. In a positive environment pupils can know them, not merely have them enforced on them."
+    },
+    {
+     "term": "Relationships",
+     "definition": "The teacher knows the names early, greets pupils at the door and sees each pupil as a person before a roll number. The relationship has to exist before it is needed."
+    },
+    {
+     "term": "Participation norms",
+     "definition": "What the room does when someone speaks: hands go up even when unsure, wrong answers are worked with and not laughed at, and the quiet pupil is reached by design."
+    },
+    {
+     "term": "Feedback",
+     "definition": "Naming the next step rather than delivering a verdict. It sits at the centre of the environment because it touches every part."
+    },
+    {
+     "term": "First week",
+     "definition": "The week with the highest management leverage of the year: each routine taught then saves many later decisions, and each norm set then is defended by the room itself."
+    },
+    {
+     "term": "First-week move",
+     "definition": "A cheap action in the first week that builds a part of the environment, such as seating for sight, learning names or marking the first work for the next step only."
+    }
+   ],
+   "ur": [
+    {
+     "term": "مثبت تعلیمی ماحول",
+     "definition": "یہ کوئی مزاج نہیں بلکہ ڈیزائن کیے گئے حصوں کا مجموعہ ہے، جن میں سے ہر ایک کو بنایا، محروم رکھا یا توڑا جا سکتا ہے۔"
+    },
+    {
+     "term": "جسمانی جگہ",
+     "definition": "میزوں کی ایسی ترتیب کہ ہر شاگرد تختہ دیکھ سکے اور استاد ہر شاگرد کو، دیواروں پر شاگردوں کا اپنا کام، اور سامان آسان پہنچ میں۔"
+    },
+    {
+     "term": "معمولات",
+     "definition": "طے شدہ جوابات جو دن کی شکل بناتے ہیں۔ مثبت ماحول میں شاگرد انہیں جان سکتے ہیں، یہ صرف ان پر لاگو نہیں کیے جاتے۔"
+    },
+    {
+     "term": "تعلقات",
+     "definition": "استاد جلد نام جان لیتا ہے، دروازے پر سلام کرتا ہے اور شاگرد کو رول نمبر سے پہلے ایک شخص کے طور پر دیکھتا ہے۔ تعلق کا ضرورت سے پہلے موجود ہونا لازم ہے۔"
+    },
+    {
+     "term": "شرکت کے اصول",
+     "definition": "جب کوئی بولتا ہے تو کمرہ کیا کرتا ہے: یقین نہ ہو تب بھی ہاتھ اٹھتے ہیں، غلط جواب پر ہنسا نہیں جاتا بلکہ اس پر کام ہوتا ہے، اور خاموش شاگرد تک منصوبے کے ساتھ پہنچا جاتا ہے۔"
+    },
+    {
+     "term": "بازخورد",
+     "definition": "فیصلہ سنانے کے بجائے اگلا قدم بتانا۔ یہ ماحول کے مرکز میں ہے کیونکہ یہ ہر حصے کو چھوتا ہے۔"
+    },
+    {
+     "term": "پہلا ہفتہ",
+     "definition": "سال میں انتظام پر سب سے زیادہ اثر رکھنے والا ہفتہ: اس وقت سکھایا گیا ہر معمول بعد کے بہت سے فیصلوں سے بچاتا ہے، اور اس وقت قائم کیے گئے اصول کا دفاع کمرہ خود کرتا ہے۔"
+    },
+    {
+     "term": "پہلے ہفتے کا اقدام",
+     "definition": "پہلے ہفتے کا ایک سستا قدم جو ماحول کا کوئی حصہ بناتا ہے، جیسے دیکھنے کو مدنظر رکھ کر بٹھانا، نام سیکھنا یا پہلے کام پر صرف اگلا قدم لکھنا۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Discipline",
+     "definition": "The class-level face of management: the standards a room holds and how it holds them."
+    },
+    {
+     "term": "Rules",
+     "definition": "Standards of behaviour for which individual pupils need to take responsibility. They should be few, and are best written with the class in the pupils' own words."
+    },
+    {
+     "term": "Natural consequences",
+     "definition": "Consequences that happen on their own, as when the pupil who arrives late misses the instructions."
+    },
+    {
+     "term": "Logical consequences",
+     "definition": "Consequences that follow from the responses or decisions of others but have an obvious relationship to the original action, as when a pupil who takes a lunch replaces it."
+    },
+    {
+     "term": "Arbitrary consequence",
+     "definition": "A consequence not connected to the act, such as missing the mathematics test for talking in Urdu. It teaches only that power exists."
+    },
+    {
+     "term": "Escalation ladder",
+     "definition": "Five steps tried one at a time: proximity, the private word, the choice, the consequence and the parent meeting. Every step keeps the pupil's dignity."
+    },
+    {
+     "term": "Proximity",
+     "definition": "The first step of the ladder: walking near the pupil and saying nothing. It often settles low-level disruption without a raised voice."
+    },
+    {
+     "term": "Private word",
+     "definition": "Speaking to the pupil at the desk, not to the room. It removes the audience that the behaviour was partly for."
+    },
+    {
+     "term": "Choice",
+     "definition": "A step that moves the decision to the pupil, for example work now or at break. The consequence is stated before it is chosen and never invented in anger."
+    },
+    {
+     "term": "Dignity",
+     "definition": "Kept at every step of the ladder: no step needs an audience, a label or a comparison. A pupil corrected privately learns that the behaviour, not the self, is the problem."
+    }
+   ],
+   "ur": [
+    {
+     "term": "نظم و ضبط",
+     "definition": "انتظام کا جماعت کی سطح والا پہلو: وہ معیار جو کمرہ رکھتا ہے اور انہیں قائم رکھنے کا طریقہ۔"
+    },
+    {
+     "term": "قواعد",
+     "definition": "رویے کے وہ معیار جن کی ذمہ داری ہر طالب علم کو خود لینی چاہیے۔ یہ کم ہوں، اور بہتر ہے کہ جماعت کے ساتھ شاگردوں کے اپنے الفاظ میں لکھے جائیں۔"
+    },
+    {
+     "term": "قدرتی نتائج",
+     "definition": "وہ نتائج جو خود بخود سامنے آتے ہیں، جیسے دیر سے آنے والا شاگرد ہدایات سے محروم رہ جاتا ہے۔"
+    },
+    {
+     "term": "منطقی نتائج",
+     "definition": "وہ نتائج جو دوسروں کے ردعمل یا فیصلوں سے آتے ہیں مگر اصل عمل سے واضح تعلق رکھتے ہیں، جیسے کسی کا کھانا لینے والا شاگرد اس کی جگہ کھانا لا کر دے۔"
+    },
+    {
+     "term": "من مانا نتیجہ",
+     "definition": "ایسا نتیجہ جس کا عمل سے کوئی تعلق نہ ہو، جیسے اردو بولنے پر ریاضی کے ٹیسٹ سے محروم کرنا۔ یہ صرف یہ سکھاتا ہے کہ طاقت موجود ہے۔"
+    },
+    {
+     "term": "بڑھتی سیڑھی",
+     "definition": "ایک ایک کر کے آزمائے جانے والے پانچ قدم: قربت، نجی بات، انتخاب، نتیجہ اور والدین کی میٹنگ۔ ہر قدم پر شاگرد کا وقار برقرار رہتا ہے۔"
+    },
+    {
+     "term": "قربت",
+     "definition": "سیڑھی کا پہلا قدم: کچھ کہے بغیر شاگرد کے قریب سے گزرنا۔ یہ اکثر معمولی خلل کو آواز بلند کیے بغیر ختم کر دیتا ہے۔"
+    },
+    {
+     "term": "نجی بات",
+     "definition": "پورے کمرے کے بجائے میز پر شاگرد سے الگ بات کرنا۔ اس سے وہ سامعین ہٹ جاتے ہیں جن کے لیے رویہ کچھ حد تک تھا۔"
+    },
+    {
+     "term": "انتخاب",
+     "definition": "ایسا قدم جو فیصلہ شاگرد کے ہاتھ میں دیتا ہے، مثلاً کام ابھی کرو یا وقفے میں۔ نتیجہ چنے جانے سے پہلے بتایا جاتا ہے اور غصے میں کبھی نہیں گھڑا جاتا۔"
+    },
+    {
+     "term": "وقار",
+     "definition": "اسے سیڑھی کے ہر قدم پر برقرار رکھا جاتا ہے: کسی قدم کو سامعین، لیبل یا موازنے کی ضرورت نہیں۔ نجی اصلاح پانے والا شاگرد سیکھتا ہے کہ مسئلہ رویہ ہے، اس کی ذات نہیں۔"
+    }
+   ]
+  }
+ }
+}
