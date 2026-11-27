@@ -1,0 +1,4 @@
+$ npm run check:source-floor
+date: 2026-11-27T00:07:40Z  HEAD: 01fde1b302e083ffef3098d3dadd40fbb90cf8d7
+✓ Open-access source floor met (136 unit(s) across 20 course(s) declaring a floor).
+exit: 0

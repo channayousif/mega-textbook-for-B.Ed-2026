@@ -1,0 +1,4 @@
+$ npm run check:depth-gate
+date: 2026-11-27T00:07:26Z  HEAD: 01fde1b302e083ffef3098d3dadd40fbb90cf8d7
+✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
+exit: 0
