@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 518" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس کے قومی نصاب 2022-23 کے شعبوں اور نمونہ معیارات کا جدول</title><desc id="d">جدول جو سائنس کے قومی نصاب 2022-23 کے تین سائنسی شعبے دکھاتا ہے: حیاتیاتی سائنس، طبعی سائنس، اور زمین اور خلا کی سائنس، نیز سب میں شامل سائنسی تحقیق کا حصہ، ہر ایک کے ساتھ ایک نمونہ معیار اور یہ کہ وہ کیا تعمیر کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="518"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="89.6"/>
+<rect class="plain" x="24" y="179.2" width="732" height="89.6"/>
+<rect class="panel" x="24" y="268.8" width="732" height="89.6"/>
+<rect class="plain" x="24" y="358.4" width="732" height="89.6"/>
+</g><g id="layer-edges">
+<line class="grid" x1="610" y1="33.6" x2="610" y2="448"/>
+<line class="grid" x1="440" y1="33.6" x2="440" y2="448"/>
+<line class="grid" x1="210" y1="33.6" x2="210" y2="448"/>
+</g><g id="layer-nodes">
+<text class="sh" x="746" y="68.6">شعبہ</text>
+<text class="sh" x="600" y="68.6">کیا شامل ہے</text>
+<text class="sh" x="430" y="68.6">نمونہ معیار (جماعت 6)</text>
+<text class="sh" x="200" y="68.6">کیا تعمیر کرتا ہے</text>
+
+<text class="sh" x="746" y="130.2">حیاتیاتی سائنس</text>
+<text class="cell" x="600" y="130.2">جاندار، جسم کے</text>
+<text class="cell" x="600" y="154">نظام، ماحولیاتی نظام</text>
+<text class="cell" x="430" y="130.2">نظامِ انہضام کے اہم</text>
+<text class="cell" x="430" y="154">اعضا کے افعال بیان کرنا</text>
+<text class="cell" x="200" y="130.2">زندہ نظاموں</text>
+<text class="cell" x="200" y="154">کی سمجھ</text>
+
+<text class="sh" x="746" y="219.8">طبعی سائنس</text>
+<text class="cell" x="600" y="219.8">مادہ، توانائی،</text>
+<text class="cell" x="600" y="243.6">قوتیں اور حرکت</text>
+<text class="cell" x="430" y="219.8">مواد کو موصل یا غیر موصل</text>
+<text class="cell" x="430" y="243.6">میں بانٹ کر سرکٹ سے آزمانا</text>
+<text class="cell" x="200" y="219.8">طبعی دنیا</text>
+<text class="cell" x="200" y="243.6">کی سمجھ</text>
+
+<text class="sh" x="746" y="309.4">زمین اور خلا</text>
+<text class="cell" x="600" y="298.2">زمین کی ساخت،</text>
+<text class="cell" x="600" y="322">موسم، نظامِ شمسی</text>
+<text class="cell" x="430" y="309.4">نام زدہ خاکے سے</text>
+<text class="cell" x="430" y="333.2">آبی چکر سمجھانا</text>
+<text class="cell" x="200" y="309.4">زمین اور خلا</text>
+<text class="cell" x="200" y="333.2">کی سمجھ</text>
+
+<text class="sh" x="746" y="387.8">سائنسی تحقیق</text>
+<text class="cell" x="746" y="411.6">(سب میں شامل)</text>
+<text class="cell" x="600" y="387.8">سوال پوچھنا، منصفانہ</text>
+<text class="cell" x="600" y="411.6">آزمائش، ریکارڈ کرنا</text>
+<text class="cell" x="430" y="387.8">ایک متغیر بدل کر منصفانہ</text>
+<text class="cell" x="430" y="411.6">آزمائش کی منصوبہ بندی</text>
+<text class="cell" x="200" y="387.8">عملی مہارتیں اور</text>
+<text class="cell" x="200" y="411.6">سائنسی رویے</text>
+</g><text class="wm" x="12" y="497" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

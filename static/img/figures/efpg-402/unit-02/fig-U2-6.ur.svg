@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 546" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">موضوعاتی، مرکزی اور حلزونی نصابی تنظیم کے موازنے کا جدول</title><desc id="d">جدول جو نصابی مواد کی موضوعاتی، مرکزی اور حلزونی تنظیم کا پانچ پہلوؤں پر موازنہ کرتا ہے اور دکھاتا ہے کہ حلزونی طریقہ بھولنے کو کم کرتا ہے اور قومی نصاب 2022-23 کے تدریجی جدول سے میل کھاتا ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="546"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="78.4"/>
+<rect class="plain" x="24" y="168" width="732" height="78.4"/>
+<rect class="panel" x="24" y="246.4" width="732" height="78.4"/>
+<rect class="plain" x="24" y="324.8" width="732" height="78.4"/>
+<rect class="panel" x="24" y="403.2" width="732" height="78.4"/>
+</g><g id="layer-edges">
+<line class="grid" x1="630" y1="33.6" x2="630" y2="481.6"/>
+<line class="grid" x1="470" y1="33.6" x2="470" y2="481.6"/>
+<line class="grid" x1="290" y1="33.6" x2="290" y2="481.6"/>
+</g><g id="layer-nodes">
+<text class="sh" x="746" y="68.6">پہلو</text>
+<text class="sh" x="618" y="68.6">موضوعاتی</text>
+<text class="sh" x="458" y="68.6">مرکزی</text>
+<text class="sh" x="278" y="68.6">حلزونی</text>
+
+<text class="sh" x="746" y="123.2">مواد کیسے</text>
+<text class="sh" x="746" y="147">آتا ہے</text>
+<text class="cell" x="618" y="123.2">ہر موضوع ایک جماعت</text>
+<text class="cell" x="618" y="147">میں ایک بار</text>
+<text class="cell" x="458" y="123.2">ہر سال موضوعات</text>
+<text class="cell" x="458" y="147">مزید تفصیل کے ساتھ</text>
+<text class="cell" x="278" y="123.2">بنیادی تصورات نئی گہرائی،</text>
+<text class="cell" x="278" y="147">روابط اور اطلاقات کے ساتھ</text>
+
+<text class="sh" x="746" y="212.8">دوبارہ دیکھنا</text>
+<text class="cell" x="618" y="212.8">نہیں</text>
+<text class="cell" x="458" y="201.6">ہاں، مگر گہرائی شاید</text>
+<text class="cell" x="458" y="225.4">نہ بڑھے</text>
+<text class="cell" x="278" y="201.6">ہاں، ہر جماعتی چکر میں</text>
+<text class="cell" x="278" y="225.4">منصوبہ بند گہرائی کے ساتھ</text>
+
+<text class="sh" x="746" y="280">بھولنے کا</text>
+<text class="sh" x="746" y="303.8">خطرہ</text>
+<text class="cell" x="618" y="291.2">زیادہ: واپسی نہیں</text>
+<text class="cell" x="458" y="291.2">کم</text>
+<text class="cell" x="278" y="291.2">سب سے کم: باقاعدہ دہرائی</text>
+
+<text class="sh" x="746" y="358.4">مثال:</text>
+<text class="sh" x="746" y="382.2">مادہ</text>
+<text class="cell" x="618" y="358.4">پورا مادہ صرف</text>
+<text class="cell" x="618" y="382.2">چھٹی جماعت میں</text>
+<text class="cell" x="458" y="358.4">مادہ جماعت 4، 6، 8 میں</text>
+<text class="cell" x="458" y="382.2">مزید حقائق کے ساتھ</text>
+<text class="cell" x="278" y="358.4">مادہ جماعت 4، 6 اور 8 میں:</text>
+<text class="cell" x="278" y="382.2">تیار ہونے پر ذراتی ماڈل</text>
+
+<text class="sh" x="746" y="436.8">قومی نصاب میں؟</text>
+<text class="cell" x="618" y="448">نہیں</text>
+<text class="cell" x="458" y="448">جزوی طور پر</text>
+<text class="cell" x="278" y="448">ہاں: تدریجی جدول</text>
+</g><text class="wm" x="12" y="525" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 616" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس کی درسی کتاب کی جانچ کے چھ معیاروں کا جدول</title><desc id="d">جدول جو سائنس کی درسی کتاب کی جانچ کے چھ معیار درج کرتا ہے: درستی، نصاب سے ہم آہنگی، زبان، سرگرمیاں، تصاویر اور شمولیت، ہر ایک کے ساتھ کہ کیا دیکھنا ہے اور وہ کیوں اہم ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="616"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="75.6"/>
+<rect class="plain" x="24" y="165.2" width="732" height="75.6"/>
+<rect class="panel" x="24" y="240.8" width="732" height="75.6"/>
+<rect class="plain" x="24" y="316.4" width="732" height="75.6"/>
+<rect class="panel" x="24" y="392" width="732" height="75.6"/>
+<rect class="plain" x="24" y="467.6" width="732" height="75.6"/>
+</g><g id="layer-edges">
+<line class="grid" x1="620" y1="33.6" x2="620" y2="543.2"/>
+<line class="grid" x1="310" y1="33.6" x2="310" y2="543.2"/>
+</g><g id="layer-nodes">
+<text class="sh" x="746" y="68.6">معیار</text>
+<text class="sh" x="608" y="68.6">کیا دیکھنا ہے</text>
+<text class="sh" x="298" y="68.6">کیوں اہم ہے</text>
+
+<text class="sh" x="746" y="134.4">درستی</text>
+<text class="cell" x="608" y="123.2">حقائق موجودہ سائنس اور قومی نصاب کے SLOs</text>
+<text class="cell" x="608" y="147">کے مطابق</text>
+<text class="cell" x="298" y="134.4">غلط حقائق غلط سائنس سکھاتے ہیں</text>
+
+<text class="sh" x="746" y="198.8">نصاب سے</text>
+<text class="sh" x="746" y="222.6">ہم آہنگی</text>
+<text class="cell" x="608" y="198.8">باب کے موضوعات اور سرگرمیاں اس جماعت</text>
+<text class="cell" x="608" y="222.6">کے قومی نصابی SLOs کا احاطہ کریں</text>
+<text class="cell" x="298" y="210">SLOs چھوٹنے سے تعلم میں خلا</text>
+
+<text class="sh" x="746" y="285.6">زبان</text>
+<text class="cell" x="608" y="274.4">واضح، عمر کے مطابق الفاظ؛ کلیدی</text>
+<text class="cell" x="608" y="298.2">اصطلاحات کی تعریف؛ الجھانے والی زبان نہیں</text>
+<text class="cell" x="298" y="285.6">مشکل زبان تعلم روکتی ہے</text>
+
+<text class="sh" x="746" y="361.2">سرگرمیاں</text>
+<text class="cell" x="608" y="350">کم قیمت اور دستیاب سامان</text>
+<text class="cell" x="608" y="373.8">سے عملی تجربے</text>
+<text class="cell" x="298" y="361.2">سائنس کرنے سے سیکھی جاتی ہے</text>
+
+<text class="sh" x="746" y="436.8">تصاویر</text>
+<text class="cell" x="608" y="425.6">خاکے واضح، نام زدہ اور پاکستان</text>
+<text class="cell" x="608" y="449.4">کے لیے ثقافتی طور پر موزوں</text>
+<text class="cell" x="298" y="436.8">اچھی تصاویر سمجھ میں مدد دیتی ہیں</text>
+
+<text class="sh" x="746" y="512.4">شمولیت</text>
+<text class="cell" x="608" y="501.2">لڑکیاں، لڑکے، دیہی اور شہری</text>
+<text class="cell" x="608" y="525">ماحول، تعصب یا گھسے پٹے تصور کے بغیر</text>
+<text class="cell" x="298" y="512.4">شاگرد خود کو سائنس میں دیکھیں</text>
+</g><text class="wm" x="12" y="588" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
