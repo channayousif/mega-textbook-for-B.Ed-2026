@@ -2,7 +2,7 @@
 id: crew-efpg-402-u07-illustrate
 title: crew illustrate EFPG-402 unit 7
 stage: misc
-date: 2026-11-28
+date: 2026-11-27
 surface: agent
 model: agy
 feature: efpg-402
@@ -73,7 +73,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Produced, inspected, and placed the EFPG-402 Unit 7 banner illustration (fig-U7-11) into English and Urdu unit index files, updated manifests and task tracker, and refreshed G2 gate evidence.
+Generated and placed the EFPG-402 Unit 7 raster banner illustration fig-U7-11 in English and Urdu index files, updated manifests and task tracker, and refreshed G2 gate evidence with all 14 content gates passing.
 
 ## Outcome
 
@@ -85,13 +85,13 @@ Produced, inspected, and placed the EFPG-402 Unit 7 banner illustration (fig-U7-
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced, inspected, and placed the EFPG-402 Unit 7 banner illustration (fig-U7-11) into English and Urdu unit index files, updated manifests and task tracker, and refreshed G2 gate evidence.
+- Shipped / changed: Generated and placed the EFPG-402 Unit 7 raster banner illustration fig-U7-11 in English and Urdu index files, updated manifests and task tracker, and refreshed G2 gate evidence with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Banner illustration fig-U7-11 generated via gflow, verified against cultural guidelines, and placed in both English and Urdu index.mdx files.
-  - Refreshed G2 gate evidence recorded at specs/content/efpg-402/reviews/unit-07/G2/20261127T195312238Z-gates.json with all 14 content gates passing cleanly.
-  - G3 and G5 review stages remain open for independent qualified review; rendered Urdu layout inspection at 360px and A4 print remains pending G5.
+  - Banner illustration fig-U7-11 placed in English and Urdu unit index files with refreshed G2 gate evidence recorded.
+  - Independent qualified G3 English review and G5 Urdu review (with 360px and A4 print layout inspection) remain open in tasks.md.
+  - Downstream G4 Urdu mirror has all 10 localized .ur.svg schematic pairs placed and verified with measure-figure-text.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
