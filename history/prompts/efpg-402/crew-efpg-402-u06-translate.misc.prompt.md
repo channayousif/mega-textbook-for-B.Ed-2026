@@ -4,24 +4,56 @@ title: crew translate EFPG-402 unit 6
 stage: misc
 date: 2026-11-27
 surface: agent
-model: gemini-3.8-flash
+model: agy
 feature: efpg-402
 branch: crew/efpg-402-u06-translate
 user: crew
 command: crew translate
-labels: ["crew", "gemini", "translation"]
+labels: ["crew", "agy", "translate"]
 links:
   spec: specs/content/efpg-402/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - history/prompts/efpg-402/20261304-efpg402-u06-translate.green.prompt.md
-  - history/prompts/efpg-402/crew-efpg-402-u06-translate.misc.prompt.md
-  - specs/content/efpg-402/reviews/unit-06/G4/translation-handoff.md
-  - specs/content/efpg-402/tasks.md
+ - history/prompts/efpg-402/20261304-efpg402-u06-translate.green.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u06-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/topic-05.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/topic-06.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-06/unit-assessment.mdx
+ - specs/content/efpg-402/reviews/unit-06/G4/translation-handoff.md
+ - specs/content/efpg-402/tasks.md
+ - static/img/figures/efpg-402/unit-06/fig-U6-1.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-1.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-10.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-10.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-11.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-11.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-12.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-12.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-2.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-2.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-3.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-3.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-4.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-4.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-5.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-5.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-6.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-6.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-7.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-7.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-8.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-8.ur.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-9.ur.dark.svg
+ - static/img/figures/efpg-402/unit-06/fig-U6-9.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -60,31 +92,33 @@ npm run check:content has 2 finding(s) that main does not have:
 ✗ Pipeline gate failed with 1 finding(s):
 - EFPG-402 Unit 6 (docs/semester-4/efpg-402/unit-06): G2 en-draft: stale or incomplete input manifest
 
+
 ## Response snapshot
 
-Relocated the Unit 6 translation handoff from `specs/content/efpg-402/translations/unit-06/handoff.md` to `specs/content/efpg-402/reviews/unit-06/G4/translation-handoff.md` and updated the tracker reference in `tasks.md`. This removes the unexcluded translation directory path that caused G2 input manifest drift, restoring clean G2 validation without invalidating recorded gate evidence.
+Relocated EFPG-402 Unit 6 translation handoff into the review directory and updated tracker notes, resolving G2 input manifest drift and making all 14 content gates pass cleanly.
 
 ## Outcome
 
-- Impact: fixed G2 input manifest drift for EFPG-402 Unit 6 translation job (attempt 2).
-- Tests: all 14 content gates pass (`check:pipeline-gate` PASS, `validate:content` PASS, `check:no-em-dash` PASS).
-- Files: 4 files modified/renamed.
-- Next prompts: independent G3 and G5 reviews.
-- Reflection: keeping handoffs inside `reviews/` avoids polluting the in-scope input manifest for existing gate evidence.
+- Impact: translate for EFPG-402 Unit 6 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 36 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: relocated Unit 6 G4 translation handoff into `reviews/unit-06/G4/translation-handoff.md` and updated tracker note in `specs/content/efpg-402/tasks.md`.
-- Decisions the team must respect: translation_status stays draft; G4 and G5 tracker rows remain open.
-- Pending / next owner: independent G3 and G5 reviewers.
+- Shipped / changed: Relocated EFPG-402 Unit 6 translation handoff into the review directory and updated tracker notes, resolving G2 input manifest drift and making all 14 content gates pass cleanly.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 6 draft Urdu mirror comprises 8 MDX files and 12 localized SVG pairs with dark twins.
-  - Figures text geometry verified with `measure-figure-text.mjs` (exited 0).
-- Paperclip issues affected: none.
+  - Draft Urdu mirror for EFPG-402 Unit 6 (8 files) and 12 localized SVG pairs with dark twins are complete; translation_status remains draft pending independent G5 review.
+  - Translation handoff lives in `specs/content/efpg-402/reviews/unit-06/G4/translation-handoff.md`, keeping it excluded from G2/G3 manifest hashing.
+  - Rendered Urdu inspection across mobile (360px) and print layouts remains pending for the G5 review session.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 1 earlier attempt failed pipeline gate due to unexcluded handoff path staling G2 input manifest.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14 gates).
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
