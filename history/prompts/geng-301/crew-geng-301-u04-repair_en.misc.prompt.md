@@ -1,0 +1,114 @@
+---
+id: crew-geng-301-u04-repair_en
+title: crew repair_en GENG-301 unit 4
+stage: misc
+date: 2026-11-28
+surface: agent
+model: agy
+feature: geng-301
+branch: crew/geng-301-u04-repair_en
+user: crew
+command: crew repair_en
+labels: ["crew", "agy", "repair_en"]
+links:
+  spec: specs/content/geng-301/content-spec.md
+  ticket: null
+  adr: null
+  pr: null
+files:
+ - docs/semester-2/geng-301/unit-04/topic-01.mdx
+ - docs/semester-2/geng-301/unit-04/topic-02.mdx
+ - docs/semester-2/geng-301/unit-04/topic-03.mdx
+ - docs/semester-2/geng-301/unit-04/unit-assessment.mdx
+ - history/prompts/geng-301/crew-geng-301-u04-repair_en.misc.prompt.md
+ - specs/content/geng-301/figures/unit-04.md
+ - specs/content/geng-301/reviews/unit-04/G2/20261127T222455890Z-gates.json
+ - specs/content/geng-301/sources/unit-04.md
+ - specs/content/geng-301/tasks.md
+tests:
+ - npm run check:content
+---
+
+## Prompt
+
+Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+
+# Crew job geng-301-u04-repair_en
+
+You are the agy2 worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/geng-301-u04-repair_en`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or the Playwright e2e suite (a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server), keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`. Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0. `static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec. After changing any English unit file or its figures manifest, sources, coverage or concepts, the job commits, runs `node scripts/prepare-gate-evidence.mjs <course> <unit>`, commits the JSON and every `logs-*` directory it writes, and points the unit's G2 en-draft tracker row at the new file before `npm run check:content`.
+
+## Task
+Apply the findings of the latest G3 report under specs/content/geng-301/reviews/unit-04/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit 4 G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.
+
+Follow `.claude/skills/revise-topic/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+GENG-301 Unit 4 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/geng-301/`, and `static/img/figures/geng-301/unit-04/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Open findings from the latest G3 report
+From `specs/content/geng-301/reviews/unit-04/G3/20261127T192818Z-g3-desk-88e82e93.json` (disposition: revise). Resolve each one:
+- [blocking] sources/unit-04.md `## Unverifiable sources` (lines 12-20) does not meet the unavailable-source convention: it records no retrieval attempt, no date and no owner authorisation under D-2026-0001, unlike the repaired declarations in units 01, 02, 03 and 06 of the same course. The unit prose also states more than the declaration supports: topic-01.mdx:119-120 (Zinsser chapter 6), topic-02.mdx:122-123 (Rosenwasser and Stephen chapter 3) and topic-03.mdx:125-126 (Faigley and Selzer chapter 7) assert chapter-level content of monographs whose text was not obtained, without disclosing that the claims are uncorroborated. Repair: add a dated retrieval record citing D-2026-0001, and either remove the chapter numbers and content claims or label them unverified reading suggestions, as unit-03.md does.
+- [blocking] unit-assessment.mdx:195 (RRQ 9 mark scheme) reads "Marks (2): 1 - goal stated; 2 - steps in order". The components sum to 3 against a 2-mark header, so a teacher cannot award the scheme as written. Repair: make the header and the components agree, either "Marks (3): 1 - goal stated; 2 - steps in order" or "Marks (2): 1 - goal stated; 1 - steps in order".
+- [advisory] Figure manifest Alt text is stale for all six schematics. specs/content/geng-301/figures/unit-04.md rows carry the short authoring-time alt (for example fig-U4-1 "A diagram comparing description (sensory detail) and illustration (concrete examples)"), while the carrier alt and the SVG <desc> carry the longer aligned text (for example " ... as two ways to make abstract ideas concrete."). The four illustrations match. ADR-0024 makes the manifest row and the carrier the same handoff contract, so the six rows should be brought in line with the carrier alt unless a content correction is recorded.
+- [advisory] The approved content-spec Unit 4 topic list and figure plan (content-spec.md:356-373) still list only the six schematics. The four placed illustrations (fig-U4-7 banner, fig-U4-8..10) are recorded in the figure manifest and banner sidecar but not in the spec, so the frozen spec and the delivered unit diverge. The spec is approved and frozen, so aligning it is an owner decision.
+- [advisory] content-spec.md:331-335 maps UNESCO2022 and openstax2021 section 11.3 to Unit 4 as open-access readings, but neither key appears in sources/unit-04.md, coverage/unit-04.md or the unit prose, and the unit carries no open-access binding note of the kind sources/unit-01.md and unit-02.md record for the same situation. The open-access floor itself is met by writing2015, so this is a mapping gap, not a floor failure.
+- [advisory] MCQ 6 (unit-assessment.mdx:67-71) keys on the signal phrase "For example" over the concept: the stem sentence "For example, many schools lack libraries" is a generalisation rather than a concrete example, and topic-01.mdx:81-83 teaches that a "For example" sentence can fail to illustrate. The key (B Illustration) is defensible, but a concrete instance would remove the tension.
+- [advisory] Residual MCQ option-length cue (unit-assessment.mdx:34-98). The keyed option is the uniquely longest option in 3 of 10 items (4, 7 and 9) and is tied longest with a distractor in item 2, so a pupil who follows the convention "the longest option is usually right" is rewarded in four items. Every key is defensible on content and the effect is much weaker than the 9-of-10 giveaway recorded for EFMP-408 cycle 1, so this is advisory. Rebalancing the option wording in items 4, 7 and 9 would remove it.
+- [advisory] Prior report finding F2 (narrow-viewport and A4-print inspection never performed with a real browser) is NOT resolved. It is carried as the uncertain finding above; the limitation is now caused by the deployed build lagging HEAD rather than only by the absent browser.
+- [uncertain] Rendered-page and A4-print evidence is unavailable, so this carries forward prior finding F2 (no real browser inspection). The deployed build 366019f8ace647e892523e553b81ab6d1832ec68 differs from HEAD 6a810e62c7b9d4ff7643b56a17f75cb9db2ce98e on the unit, and the brief forbids a local build or server, so render-review is recorded as unavailable (logs/render-review.txt, exit 1). Narrow-viewport scrolling, print clipping and visual accessibility of the current bytes remain unverified. Changed images can be served stale for up to 30 days, so this is a tooling limitation, not a content defect.
+
+## Response snapshot
+
+Applied blocking and advisory repairs for GENG-301 Unit 4 G3 review report 20261127T192818Z-g3-desk-88e82e93.json:
+- Recorded dated Open Library retrieval lookups under D-2026-0001 in `sources/unit-04.md` and added an open-access binding note for `openstax2021`/`UNESCO2022`.
+- Removed uncorroborated chapter claims from `topic-01.mdx`, `topic-02.mdx`, and `topic-03.mdx` Further reading.
+- Reconciled RRQ 9 mark scheme in `unit-assessment.mdx` (1 mark for goal, 1 mark for steps in order).
+- Rebalanced MCQ option lengths in items 4, 7, and 9 and updated MCQ 6 stem to a concrete illustrative instance.
+- Aligned figure manifest alt text for all six schematics with their carrier alt text in `specs/content/geng-301/figures/unit-04.md`.
+- Prepared and committed fresh G2 gate evidence and updated `specs/content/geng-301/tasks.md` with an advisory G3 revise tracker row leaving G3 unticked.
+
+## Outcome
+
+- Impact: repair_en for GENG-301 Unit 4 by agy.
+- Tests: `npm run build:content-status && npm run check:content` passed (14/14 gates).
+- Files: 9 file(s) modified/added.
+- Next prompts: fresh independent G3 review run after deployment.
+
+## Handoff (for CEO and agents)
+
+- Shipped / changed:
+  - Repaired sources declaration and open-access binding note in `specs/content/geng-301/sources/unit-04.md`.
+  - Removed chapter assertions from Further reading in `topic-01.mdx`, `topic-02.mdx`, `topic-03.mdx`.
+  - Reconciled RRQ 9 mark arithmetic and repaired MCQ 4, 6, 7, 9 cues in `unit-assessment.mdx`.
+  - Aligned figure manifest alt text for 6 schematics in `specs/content/geng-301/figures/unit-04.md`.
+  - Generated G2 gate evidence and appended advisory revise tracker row in `tasks.md`.
+- Decisions the team must respect:
+  - Unit 4 G3 remains advisory, unticked and uncertified (ADR-0019).
+  - Content-spec figure plan and open-access mappings divergence remains an owner decision.
+- Pending / next owner:
+  - Fresh independent G3 review cycle once repaired commit is deployed.
+  - Narrow-viewport (360px) and A4 print verification on authorized browser host.
+- Notes for the next job on this unit:
+  - G3 remains unticked; no certification.
+- Paperclip issues affected: none.
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none.
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
