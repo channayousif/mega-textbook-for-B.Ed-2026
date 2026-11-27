@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 546" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنسی سوالات کی اقسام کی درجہ بندی</title><desc id="d">سائنسی سوالات کی اقسام کا درجہ بندی جدول جو یادداشت، عمل اور کھلے جائزاتی سوالات دکھاتا ہے، ان کے تدریسی مقصد، بلوم کی سطح اور سائنس کی جماعت کی مثالوں کے ساتھ۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="546"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="95.2"/>
+<rect class="plain" x="24" y="184.8" width="732" height="95.2"/>
+<rect class="panel" x="24" y="280" width="732" height="95.2"/>
+<rect class="plain" x="24" y="375.2" width="732" height="95.2"/>
+</g><g id="layer-edges">
+<line class="grid" x1="620" y1="33.6" x2="620" y2="470.4"/>
+<line class="grid" x1="500" y1="33.6" x2="500" y2="470.4"/>
+<line class="grid" x1="310" y1="33.6" x2="310" y2="470.4"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="68.6">سوال کی قسم</text>
+<text class="sh" x="608" y="68.6">بلوم کی سطح</text>
+<text class="sh" x="488" y="68.6">تدریسی کردار</text>
+<text class="sh" x="298" y="68.6">سائنسی مثال (جماعت 7-8)</text>
+<text class="sh" x="744" y="134.4">یادداشت</text>
+<text class="cell" x="744" y="158.2">(متقارب)</text>
+<text class="sh" x="608" y="145.6">یاد رکھنا</text>
+<text class="cell" x="488" y="131.6">بنیادی اصطلاحات، علامتیں</text>
+<text class="cell" x="488" y="155.4">اور تعریفیں جانچتا ہے</text>
+<text class="cell" x="298" y="131.6">”سطحِ سمندر پر خالص پانی کا نقطۂ ابال</text>
+<text class="cell" x="298" y="155.4">ڈگری سیلسیئس میں کتنا ہے؟“</text>
+<text class="sh" x="744" y="229.6">عمل</text>
+<text class="cell" x="744" y="253.4">(متباعد)</text>
+<text class="sh" x="608" y="240.8">سمجھنا،</text>
+<text class="cell" x="608" y="264.6">اطلاق</text>
+<text class="cell" x="488" y="226.8">سبب و نتیجہ اور اعداد کی</text>
+<text class="cell" x="488" y="250.6">وضاحت ابھارتا ہے</text>
+<text class="cell" x="298" y="226.8">”اونچائی پر پانی کم درجۂ حرارت</text>
+<text class="cell" x="298" y="250.6">پر کیوں ابلتا ہے؟“</text>
+<text class="sh" x="744" y="324.8">جائزاتی</text>
+<text class="cell" x="744" y="348.6">(کھلی تحقیق)</text>
+<text class="sh" x="608" y="336">تجزیہ،</text>
+<text class="cell" x="608" y="359.8">جائزہ</text>
+<text class="cell" x="488" y="322">شواہد تولتا اور فیصلوں</text>
+<text class="cell" x="488" y="345.8">کا جواز دیتا ہے</text>
+<text class="cell" x="298" y="322">”سیلاب زدہ دیہات کے لیے پانی صاف</text>
+<text class="cell" x="298" y="345.8">کرنے کا کون سا طریقہ بہترین ہے، کیوں؟“</text>
+<text class="sh" x="744" y="420">مابعد ادراکی</text>
+<text class="cell" x="744" y="443.8">(تاملی)</text>
+<text class="sh" x="608" y="431.2">جائزہ</text>
+<text class="cell" x="488" y="417.2">اپنی سوچ اور خیالات پر</text>
+<text class="cell" x="488" y="441">غور کی ترغیب دیتا ہے</text>
+<text class="cell" x="298" y="417.2">”کس مشاہدے نے حرارت کی منتقلی کے</text>
+<text class="cell" x="298" y="441">بارے میں آپ کا ابتدائی خیال بدلا؟“</text>
+</g><text class="wm" x="12" y="534" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

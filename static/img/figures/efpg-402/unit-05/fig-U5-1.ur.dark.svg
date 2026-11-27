@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 672" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس کے سبقی منصوبے کے فوائد کا تصوراتی نقشہ</title><desc id="d">تصوراتی نقشہ جو استاد اور شاگردوں کے لیے سائنس کے سبقی منصوبے کے فوائد دکھاتا ہے، جن میں وقت کا انتظام، واضح مقاصد، شاگردوں کی فعال شرکت اور منظم غور و فکر شامل ہیں۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="672"/><g id="layer-edges">
+<line class="stroke" x1="390" y1="287" x2="390" y2="145.6" marker-end="url(#arrow)"/>
+<line class="stroke" x1="470" y1="315" x2="530" y2="259" marker-end="url(#arrow)"/>
+<line class="stroke" x1="310" y1="315" x2="250" y2="259" marker-end="url(#arrow)"/>
+<line class="stroke" x1="450" y1="371" x2="530" y2="469" marker-end="url(#arrow)"/>
+<line class="stroke" x1="330" y1="371" x2="250" y2="469" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="node-obj"><rect class="panel-a" x="270" y="35" width="240" height="112" rx="8"/><text class="h" x="496" y="72.8">واضح مقاصد</text><text class="cell" x="496" y="102.2">سبق کو NCP کے SLOs اور</text><text class="cell" x="496" y="126">قابلِ پیمائش نتائج سے جوڑتا ہے</text></g>
+<g id="node-time"><rect class="panel-a" x="530" y="203" width="220" height="112" rx="8"/><text class="h" x="736" y="240.8">وقت کا انتظام</text><text class="cell" x="736" y="270.2">متوازن تحقیقی مراحل؛</text><text class="cell" x="736" y="294">جلد بازی والے اختتام سے بچاؤ</text></g>
+<g id="node-res"><rect class="panel-a" x="30" y="203" width="220" height="112" rx="8"/><text class="h" x="236" y="240.8">وسائل پر قابو</text><text class="cell" x="236" y="270.2">گروہی آلات پہلے سے تیار</text><text class="cell" x="236" y="294">اور تجربہ گاہ کی حفاظت</text></g>
+<g id="node-engage"><rect class="panel-a" x="530" y="469" width="220" height="112" rx="8"/><text class="h" x="736" y="506.8">فعال شرکت</text><text class="cell" x="736" y="536.2">عملی تحقیقات اور</text><text class="cell" x="736" y="560">اشتراکی کھوج</text></g>
+<g id="node-eval"><rect class="panel-a" x="30" y="469" width="220" height="112" rx="8"/><text class="h" x="236" y="506.8">تشکیلی پڑتال</text><text class="cell" x="236" y="536.2">ہدف بند یادداشت کے سوالات</text><text class="cell" x="236" y="560">اور تاملی تطبیق</text></g>
+<g id="node-center"><ellipse class="panel-b" cx="390" cy="343" rx="100" ry="56"/><text class="h" x="390" y="340.2" text-anchor="middle">سائنس کا سبقی منصوبہ</text><text class="cell" x="390" y="365.4" text-anchor="middle">تدریسی نقشۂ راہ</text></g>
+</g><g id="layer-labels">
+<text class="small" x="756" y="630">باقاعدہ منصوبہ بندی مقاصد، آلات، رفتار اور شاگردوں کی جانچ کو ہم آہنگ کرتی ہے۔</text>
+</g><text class="wm" x="12" y="660" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
