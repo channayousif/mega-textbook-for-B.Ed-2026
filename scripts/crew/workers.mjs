@@ -192,6 +192,7 @@ export function imageQuotaProducer(text) {
   if (/\bgflow2\b/i.test(t)) return 'gflow2';
   if (/\bgflow\b|nano.?banana|RateLimitError|model quota reached/i.test(t)) return 'gflow';
   if (/\bcodex\b[^\n]{0,40}(image|limit)|image_gen/i.test(t)) return 'codex';
+  if (/\bmeta(\.ai)?\b[^\n]{0,40}(image|limit|quota)/i.test(t)) return 'meta';
   if (/\bagy2\b/i.test(t)) return 'agy2';
   return 'agy';
 }

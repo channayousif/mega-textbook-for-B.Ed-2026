@@ -8,7 +8,8 @@
  * - Error: this image failed (the caller counts a failure for the row).
  *
  * Producers: agy (Gemini via Antigravity), agy2 (the same on the second Google account, Feature 036), gflow (Nano Banana via Google Flow on the owner's PC,
- * over the SSH tunnel; owner ruling 2026-11-18 amending D-2026-0082), codex (built-in image_gen).
+ * over the SSH tunnel; owner ruling 2026-11-18 amending D-2026-0082), codex (built-in image_gen), meta (Meta AI in
+ * the davinci workspace Chrome over CDP; D-2026-0102).
  */
 import { existsSync, readFileSync, readdirSync, statSync, unlinkSync, copyFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
@@ -19,6 +20,7 @@ import https from 'node:https';
 import { QUOTA_RE, resetMinutes } from '../../crew/workers.mjs';
 import { GFLOW_MCP_URL, GFLOW_FILES_URL } from './quota.mjs';
 import { pace, paceRecord, PaceHold, IMAGE_CHANNEL } from '../pacing.mjs';
+import { metaImage } from './meta.mjs';
 
 export class QuotaError extends Error {
   constructor(producer, message, resetAt = null) {
@@ -299,6 +301,10 @@ export async function gflowProducer({ brief, png, aspect, mcpUrl = GFLOW_MCP_URL
 /** Nano Banana on the second Google account: the same gflow server, profile a2ahs-beta (Feature 036). */
 export const gflow2Producer = (args) => gflowProducer({ ...args, name: 'gflow2', profile: process.env.GFLOW2_PROFILE || 'a2ahs-beta', projectFile: gflowProjectFile('2') });
 
+// ------------------------------------------------------------------ meta (D-2026-0102)
+
+export const metaProducer = ({ brief, png, aspect }) => metaImage({ brief, png, aspect, errors: { QuotaError, UnavailableError } });
+
 // ------------------------------------------------------------------ codex
 
 export const CODEX_IMAGES = join(process.env.CODEX_HOME || join(homedir(), '.codex'), 'generated_images');
@@ -365,7 +371,7 @@ export function paced(name, fn, { pace: paceFn = pace, record = paceRecord } = {
   };
 }
 
-export const PRODUCER_FNS = { agy: paced('agy', agyProducer), agy2: paced('agy2', agy2Producer), gflow: paced('gflow', gflowProducer), gflow2: paced('gflow2', gflow2Producer), codex: paced('codex', codexProducer) };
+export const PRODUCER_FNS = { agy: paced('agy', agyProducer), agy2: paced('agy2', agy2Producer), gflow: paced('gflow', gflowProducer), gflow2: paced('gflow2', gflow2Producer), codex: paced('codex', codexProducer), meta: paced('meta', metaProducer) };
 
 /** Remove a stale staging file before a producer writes a new one. */
 export function clearStaged(png) {

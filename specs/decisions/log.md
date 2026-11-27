@@ -5231,3 +5231,37 @@ content-improvement loop with no further cycle.
 - **Limits:** Changes only the window. No owner gate changes (script approval, private-first
   uploads, spot-check before public). The owner may still override the window in the host-local
   `~/.config/mega-book/media-limits.json`.
+
+## D-2026-0102 - Meta AI is an approved image producer (spec 033)
+- **Status:** confirmed
+- **Gate:** none (raster illustrations, ADR-0024/ADR-0029; Feature 033)
+- **Scope:** `scripts/generate-illustration.mjs` and its producers; the crew's `meta` image lane
+- **Decided by:** curriculum owner, 2026-11-28 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **Meta AI (meta.ai, the owner's Meta account in the davinci workspace Chrome) may produce raster
+     illustrations**, as the last producer after agy, agy2, gflow, gflow2 and Codex, through
+     `generate-illustration.mjs` only (ADR-0029 point 4), with its own pacing channel `meta.image`
+     (30 a day, 2-minute gaps, media hours) and lane `meta`.
+  2. **Meta's terms of use allow this use**: the owner confirmed it is safe to use Meta AI images in the
+     free textbook.
+  3. Every Meta image passes the same inspection as any other producer's before it is placed.
+- **Basis:** owner messages 2026-11-28: "yes do it." (smoke test, `specs/033-meta-ai-producer/smoke-test.md`:
+  5/5 passed the hard rules, 1 pass and 4 pass-with-notes) and "go, its safe to use Meta's terms of use."
+- **Limits:** Adds one producer; changes no review or placement rule. ADR-0029's "Claude never uses any
+  other image generator" now reads with this exception (AGENTS.md updated).
+
+## D-2026-0103 - Cloudflare Workers AI is not an image producer; it may transcribe and draft
+- **Status:** confirmed
+- **Gate:** none (Feature 037 planning)
+- **Scope:** Cloudflare Workers AI on the owner's account (free allowance only)
+- **Decided by:** curriculum owner, 2026-11-28 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **No Cloudflare image producer.** FLUX.1 schnell and FLUX.2 dev were tried and rejected.
+  2. **Workers AI whisper may run the QG2 transcription**, with local whisper as the fallback, within the
+     free 10,000 neurons a day; text models may draft captions and descriptions that Claude or the owner
+     checks.
+- **Basis:** owner messages 2026-11-28: "the image is not good, try ... flux-2-dev" and "reject
+  cloudflare as image producer, test wisper". The whisper calibration on 24 teaser clips gave the same
+  QG2 verdict as local whisper on all 24.
+- **Limits:** Never upgrade to the Workers Paid plan; the token is scoped to Workers AI and stays host-local.
+

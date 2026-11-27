@@ -88,7 +88,7 @@ stops and asks the owner, never falling back (the next route could spend credits
 
 | Medium | Fallback order | Notes |
 |---|---|---|
-| image | agy, agy2 (second Google account, HOME=~/.agy2), gflow (Nano Banana), gflow2 (Nano Banana, second account), codex | `generate-illustration.mjs`; quota in `~/.cache/mega-book/image-quota.json` |
+| image | agy, agy2 (second Google account, HOME=~/.agy2), gflow (Nano Banana), gflow2 (Nano Banana, second account), codex, meta (Meta AI over CDP in the davinci workspace Chrome, D-2026-0102) | `generate-illustration.mjs`; quota in `~/.cache/mega-book/image-quota.json` |
 | clip | gflow.video, gflow2.video (second account's Flow credits), manual.flow | `teaser-clips.mjs`; quota in `~/.cache/mega-book/media-quota.json` |
 | overview | nlm | NotebookLM; expired cookies are `unavailable`; refresh from davinci's workspace Chrome: `nlm login --provider openclaw --cdp-url http://127.0.0.1:18802` |
 | schematic | codex, claude | generate-figures |
@@ -188,7 +188,7 @@ parallel, each producer max one slot" in media hours). Every outside-service sta
 with at most one running job: `notebook` (NotebookLM: `studio_media`), `flow` (gflow images and Veo:
 `teaser_clips`, or `illustrate` pinned with `--producer gflow`), `agy`, `agy2` and `codex` (`illustrate`
 pinned to that producer), `youtube` (`media_assemble`, `media_publish`, `studio_publish`), `social`
-(`social_roundup`) and `meta` (reserved, specs/033). Lanes run in parallel and outside the text
+(`social_roundup`) and `meta` (`illustrate` pinned to Meta AI, D-2026-0102). Lanes run in parallel and outside the text
 slots (`CREW_MAX_PARALLEL`); a lane takes a job only in media hours and while its paced channel has
 room today, the memory and disk floors still apply, and in media hours media jobs pick a worker
 before text jobs (the social roundup first). Jobs that write one ledger never overlap (the teaser

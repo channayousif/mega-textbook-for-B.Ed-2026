@@ -21,7 +21,7 @@ const recipe = loadRecipe('teaser', 2, ROOT);
 describe('producer registry and fallback', () => {
   it('lists producers per medium in fallback order', () => {
     expect(REGISTRY.clip).toEqual(['gflow.video', 'gflow2.video', 'manual.flow']);
-    expect(REGISTRY.image).toEqual(['agy', 'agy2', 'gflow', 'gflow2', 'codex']);
+    expect(REGISTRY.image).toEqual(['agy', 'agy2', 'gflow', 'gflow2', 'codex', 'meta']);
   });
   it('records a quota, falls back, and skips the producer while its quota holds', async () => {
     const quotaFile = join(tmp(), 'q.json');
