@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 518" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">قومی نصاب 2022-23 کے سائنس نصاب میں نصاب سازی کے اصولوں کا جدول</title><desc id="d">جدول جو نصاب سازی کے پانچ اصولوں میں سے ہر ایک کو دکھاتا ہے، اس کے ساتھ کہ سائنس کا قومی نصاب 2022-23 اسے کیسے ظاہر کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="518"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="75.6"/>
+<rect class="plain" x="24" y="165.2" width="732" height="75.6"/>
+<rect class="panel" x="24" y="240.8" width="732" height="75.6"/>
+<rect class="plain" x="24" y="316.4" width="732" height="75.6"/>
+<rect class="panel" x="24" y="392" width="732" height="75.6"/>
+</g><g id="layer-edges">
+<line class="grid" x1="610" y1="33.6" x2="610" y2="467.6"/>
+</g><g id="layer-nodes">
+<text class="sh" x="744" y="68.6">اصول</text>
+<text class="sh" x="598" y="68.6">سائنس کا قومی نصاب 2022-23 اسے کیسے دکھاتا ہے</text>
+<text class="sh" x="744" y="134.4">بچے پر مرکوز</text>
+<text class="cell" x="598" y="134.4">ہر جماعت کے لیے الگ SLOs؛ تصورات جماعت 4 سے 8 تک گہرے ہوتے ہیں</text>
+<text class="sh" x="744" y="210">سرگرمی پر مبنی</text>
+<text class="cell" x="598" y="198.8">سائنسی تحقیق کا حصہ ہر جماعت میں موجود ہے؛</text>
+<text class="cell" x="598" y="222.6">ہر مواد کے شعبے میں نمونہ سرگرمیاں دی گئی ہیں</text>
+<text class="sh" x="744" y="285.6">متعلقہ</text>
+<text class="cell" x="598" y="274.4">سیاق میں سائنس: روزمرہ مسائل کے حل کے لیے سائنس اور</text>
+<text class="cell" x="598" y="298.2">ٹیکنالوجی کی اہمیت پہچاننا، مقامی برادری میں</text>
+<text class="sh" x="744" y="361.2">لچک دار</text>
+<text class="cell" x="598" y="361.2">قومی خاکہ سندھ (DCAR) جیسے صوبے اختیار کرتے اور ڈھالتے ہیں</text>
+<text class="sh" x="744" y="436.8">مربوط</text>
+<text class="cell" x="598" y="425.6">اعداد و شمار میں ریاضی سے ربط؛ ماحول اور صحت کی تعلیم میں</text>
+<text class="cell" x="598" y="449.4">معاشرتی علوم سے ربط، تمام جماعتوں میں</text>
+</g><text class="wm" x="12" y="504" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

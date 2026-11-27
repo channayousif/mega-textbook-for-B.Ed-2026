@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 602" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس اور چار دیگر مضامین کے ربط کا جدول</title><desc id="d">جدول جو سائنس کا ریاضی، زبانوں، معاشرتی علوم اور اسلامیات سے ربط دکھاتا ہے، اس کے ساتھ کہ ہر مضمون سائنس کو کیا دیتا اور اس سے کیا لیتا ہے، جماعت 6 تا 8 کی ایک مثال اور اساتذہ کے لیے منصوبہ بندی کا مشورہ۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><rect class="bg" x="0" y="0" width="780" height="602"/><g id="layer-regions">
+<rect class="panel-b" x="24" y="33.6" width="732" height="56" rx="6"/>
+<rect class="panel" x="24" y="89.6" width="732" height="106.4"/>
+<rect class="plain" x="24" y="196" width="732" height="106.4"/>
+<rect class="panel" x="24" y="302.4" width="732" height="106.4"/>
+<rect class="plain" x="24" y="408.8" width="732" height="106.4"/>
+</g><g id="layer-edges">
+<line class="grid" x1="636" y1="33.6" x2="636" y2="515.2"/>
+<line class="grid" x1="516" y1="33.6" x2="516" y2="515.2"/>
+<line class="grid" x1="390" y1="33.6" x2="390" y2="515.2"/>
+<line class="grid" x1="214" y1="33.6" x2="214" y2="515.2"/>
+</g><g id="layer-nodes">
+<text class="sh" x="746" y="68.6">مضمون</text>
+<text class="sh" x="626" y="68.6">سائنس کیا لیتی ہے</text>
+<text class="sh" x="506" y="68.6">سائنس کیا دیتی ہے</text>
+<text class="sh" x="380" y="68.6">جماعت 6 تا 8 مثال</text>
+<text class="sh" x="204" y="68.6">منصوبہ بندی کا مشورہ</text>
+
+<text class="sh" x="746" y="130.2">ریاضی</text>
+<text class="cell" x="626" y="130.2">پیمائش، گراف</text>
+<text class="cell" x="626" y="154">اور اعداد</text>
+<text class="cell" x="506" y="130.2">اطلاق کے</text>
+<text class="cell" x="506" y="154">سیاق</text>
+<text class="cell" x="380" y="130.2">شاگرد پودے کی بڑھوتری</text>
+<text class="cell" x="380" y="154">کا لائن گراف بناتے ہیں</text>
+<text class="cell" x="204" y="130.2">گراف کے اسباق کا</text>
+<text class="cell" x="204" y="154">وقت طے کریں</text>
+
+<text class="sh" x="746" y="236.6">اردو/انگریزی</text>
+<text class="cell" x="626" y="236.6">پڑھنے کی مہارتیں،</text>
+<text class="cell" x="626" y="260.4">ذخیرۂ الفاظ</text>
+<text class="cell" x="506" y="236.6">سائنسی اصطلاحات،</text>
+<text class="cell" x="506" y="260.4">پڑھنے کے متن</text>
+<text class="cell" x="380" y="236.6">شاگرد کسی تجربے پر</text>
+<text class="cell" x="380" y="260.4">پیراگراف لکھتے ہیں</text>
+<text class="cell" x="204" y="236.6">کلیدی اصطلاحات زبان</text>
+<text class="cell" x="204" y="260.4">کے استاد کو دیں</text>
+
+<text class="sh" x="746" y="343">معاشرتی علوم</text>
+<text class="cell" x="626" y="343">مقامی اور</text>
+<text class="cell" x="626" y="366.8">سماجی سیاق</text>
+<text class="cell" x="506" y="343">شواہد پر مبنی</text>
+<text class="cell" x="506" y="366.8">سوچ</text>
+<text class="cell" x="380" y="343">تمر ماہی گیری کے لیے</text>
+<text class="cell" x="380" y="366.8">کیوں اہم ہیں، بحث</text>
+<text class="cell" x="204" y="343">ماحول کے یونٹ</text>
+<text class="cell" x="204" y="366.8">ساتھ رکھیں</text>
+
+<text class="sh" x="746" y="449.4">اسلامیات</text>
+<text class="cell" x="626" y="449.4">اخلاقیات اور</text>
+<text class="cell" x="626" y="473.2">امانت داری</text>
+<text class="cell" x="506" y="449.4">عملی اخلاقی</text>
+<text class="cell" x="506" y="473.2">انتخاب</text>
+<text class="cell" x="380" y="449.4">خلیفہ کو پانی اور</text>
+<text class="cell" x="380" y="473.2">درختوں کے تحفظ سے جوڑیں</text>
+<text class="cell" x="204" y="449.4">پوچھیں کس یونٹ میں</text>
+<text class="cell" x="204" y="473.2">امانت داری (خلیفہ) ہے</text>
+</g><text class="wm" x="12" y="567" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

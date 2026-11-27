@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 635" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">قومی پالیسی سے جماعت تک نصاب کی سطحوں کا خاکہ</title><desc id="d">خاکہ جو قومی نصاب سے صوبائی اختیار، پھر درسی کتاب اور پھر جماعت کے سبق تک چار سطحیں دکھاتا ہے، اور جماعت سے نصاب کی سطح کو واپس جانے والا فیڈ بیک کا تیر۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="634.5"/><g id="layer-edges">
+<line class="stroke" x1="450" y1="124.2" x2="450" y2="172.8" marker-end="url(#arrow)"/>
+<line class="stroke" x1="450" y1="259.2" x2="450" y2="307.8" marker-end="url(#arrow)"/>
+<line class="stroke" x1="450" y1="394.2" x2="450" y2="442.8" marker-end="url(#arrow)"/>
+<path class="dash" d="M120 486 L50 486 L50 83.7 L120 83.7" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="box-1"><rect class="panel-a" x="120" y="40.5" width="620" height="83.7" rx="8"/><text class="h" x="726" y="72.9">1. قومی نصاب (NCP 2022-23)</text><text class="cell" x="726" y="101.3">وسیع مقاصد، مواد کے شعبے، معیارات اور طالب علم کے نتیجہ ہائے تعلم (SLOs) طے کرتا ہے</text></g>
+<g id="box-2"><rect class="panel-a" x="120" y="175.5" width="620" height="83.7" rx="8"/><text class="h" x="726" y="207.9">2. صوبائی اختیار (DCAR Sindh)</text><text class="cell" x="726" y="236.3">قومی خاکے کو ڈھالتا ہے اور صوبائی سیاق اور مقامی تعلیمی ضروریات شامل کرتا ہے</text></g>
+<g id="box-3"><rect class="panel-a" x="120" y="310.5" width="620" height="83.7" rx="8"/><text class="h" x="726" y="342.9">3. درسی کتاب (سندھ ٹیکسٹ بک بورڈ)</text><text class="cell" x="726" y="371.3">SLOs کو ابواب، متن، سرگرمیوں اور یونٹ کے آخر کے جائزوں میں بدلتی ہے</text></g>
+<g id="box-4"><rect class="panel-b" x="120" y="445.5" width="620" height="83.7" rx="8"/><text class="h" x="726" y="477.9">4. جماعت کا سبق</text><text class="cell" x="726" y="506.3">استاد درسی کتاب اور عملی سرگرمیوں سے شاگردوں کو SLOs حاصل کرنے میں مدد دیتا ہے</text></g>
+</g><g id="layer-labels">
+<text class="small" x="50" y="270" text-anchor="middle">فیڈ بیک:</text>
+<text class="small" x="50" y="293" text-anchor="middle">شاگردوں کا</text>
+<text class="small" x="50" y="315.9" text-anchor="middle">تعلم</text>
+<text class="small" x="756" y="587.3">چاروں سطحیں قومی پالیسی کو جماعت کی روزمرہ تدریس سے جوڑتی ہیں۔</text>
+</g><text class="wm" x="12" y="614.3" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
