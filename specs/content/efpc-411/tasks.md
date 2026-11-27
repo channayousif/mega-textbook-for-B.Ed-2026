@@ -20,7 +20,7 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-01/G2/20261127T101218554Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-01/G2/20261127T143453751Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied; report reviews/unit-01/G3/crew-efpc-411-u01-review_en-r1.json (crew efpc-411-u01-review_en, 2026-11-27). Repairs applied to all nine findings (F1-F9); G3 stays unticked pending a fresh independent review. Advisory only; no certification, no row tick, no human initials |
 | Unit 1 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and eight localised schematic SVGs with dark twins; translator handoff: specs/content/efpc-411/reviews/unit-01/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
