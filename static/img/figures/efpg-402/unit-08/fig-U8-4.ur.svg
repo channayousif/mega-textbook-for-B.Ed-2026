@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس استاد کی مسلسل پیشہ ورانہ ترقی کا راستہ</title><desc id="d">خاکہ جو سائنس استاد کی مسلسل پیشہ ورانہ ترقی کے چار مراحل دکھاتا ہے: ملازمت سے قبل تیاری، باہمی اشتراکی مشق، جماعتی عملی تحقیق، اور پیشہ ورانہ قیادت۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="520"/><g id="layer-edges">
+<line class="stroke" x1="590" y1="200" x2="570" y2="200" marker-end="url(#arrow)"/>
+<line class="stroke" x1="400" y1="200" x2="380" y2="200" marker-end="url(#arrow)"/>
+<line class="stroke" x1="210" y1="200" x2="190" y2="200" marker-end="url(#arrow)"/>
+</g><g id="layer-regions">
+<rect class="panel-a" x="590" y="40" width="166" height="380" rx="8"/>
+<rect class="panel-b" x="400" y="40" width="166" height="380" rx="8"/>
+<rect class="panel-a" x="210" y="40" width="166" height="380" rx="8"/>
+<rect class="panel-b" x="24" y="40" width="166" height="380" rx="8"/>
+</g><g id="layer-nodes">
+<text class="h" x="744" y="75">1۔ قبل از ملازمت</text>
+<text class="cell" x="744" y="110">- بی ایڈ ڈگری کورس</text>
+<text class="cell" x="744" y="140">- تدریسی مشق (پریکٹکم)</text>
+<text class="cell" x="744" y="170">- سائنسی تصورات پر عبور</text>
+<text class="cell" x="744" y="200">- تدریسی طریقوں کا فہم</text>
+<text class="cell" x="744" y="230">- نصاب و گائیڈز کا مطالعہ</text>
+
+<text class="h" x="554" y="75">2۔ اشتراکی مشق</text>
+<text class="cell" x="554" y="110">- اسکول انڈکشن پروگرام</text>
+<text class="cell" x="554" y="140">- ہم منصب اساتذہ کا مشاہدہ</text>
+<text class="cell" x="554" y="170">- باہمی سبقی منصوبہ بندی</text>
+<text class="cell" x="554" y="200">- کم لاگت ماڈلز کی تیاری</text>
+<text class="cell" x="554" y="230">- تجربہ کار استاد کی سرپرستی</text>
+
+<text class="h" x="364" y="75">3۔ عملی تحقیق</text>
+<text class="cell" x="364" y="110">- تعلیمی مشکلات کی تشخیص</text>
+<text class="cell" x="364" y="140">- تدریسی مداخلت کا نفاذ</text>
+<text class="cell" x="364" y="170">- طلبہ کے شواہد جمع کرنا</text>
+<text class="cell" x="364" y="200">- نتائج پر تاملی غور و فکر</text>
+<text class="cell" x="364" y="230">- مستقل بہتری کا عمل</text>
+
+<text class="h" x="178" y="75">4۔ پیشہ ورانہ قیادت</text>
+<text class="cell" x="178" y="110">- نئے اساتذہ کی سرپرستی</text>
+<text class="cell" x="178" y="140">- نصابی ترقی میں کردار</text>
+<text class="cell" x="178" y="170">- تدریسی ورکشاپس کی قیادت</text>
+<text class="cell" x="178" y="200">- پیشہ ورانہ برادریاں</text>
+<text class="cell" x="178" y="230">- سائنسی تعلیم کی وکالت</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="465">نووارد استاد سے ماسٹر ٹیچر اور قائد بننے کا تدریجی راستہ۔</text>
+</g><text class="wm" x="12" y="490" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

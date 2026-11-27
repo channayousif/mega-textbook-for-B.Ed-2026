@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنسی تدریسی طریقوں کے تاریخی ارتقا کا خطِ زمانی</title><desc id="d">خطِ زمانی جو انیسویں صدی کے رٹے اور دہرائی سے لے کر اکیسویں صدی کے استفسار اور پائیداری تک سائنسی تعلیم کے تاریخی ارتقا کو ظاہر کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="540"/><g id="layer-axis">
+<line class="stroke" x1="740" y1="260" x2="40" y2="260" marker-end="url(#arrow)"/>
+<circle cx="670" cy="260" r="6" class="ah"/>
+<circle cx="480" cy="260" r="6" class="ah"/>
+<circle cx="290" cy="260" r="6" class="ah"/>
+<circle cx="110" cy="260" r="6" class="ah"/>
+</g><g id="layer-regions">
+<rect class="panel-a" x="584" y="40" width="170" height="180" rx="8"/>
+<rect class="panel-b" x="394" y="300" width="170" height="180" rx="8"/>
+<rect class="panel-a" x="204" y="40" width="170" height="180" rx="8"/>
+<rect class="panel-b" x="24" y="300" width="170" height="180" rx="8"/>
+</g><g id="layer-edges">
+<line class="dash" x1="670" y1="220" x2="670" y2="260"/>
+<line class="dash" x1="480" y1="260" x2="480" y2="300"/>
+<line class="dash" x1="290" y1="220" x2="290" y2="260"/>
+<line class="dash" x1="110" y1="260" x2="110" y2="300"/>
+</g><g id="layer-nodes">
+<text class="sh" x="740" y="70">1890s-1920s</text>
+<text class="h" x="740" y="98">دہرائی کا دور</text>
+<text class="cell" x="740" y="125">- درسی کتب کے جامد حقائق</text>
+<text class="cell" x="740" y="152">- لاطینی ناموں کا زبانی رٹا</text>
+<text class="cell" x="740" y="179">- استاد کی زبانی دہرائی</text>
+<text class="cell" x="740" y="206">- غیر فعال شاگرد</text>
+
+<text class="sh" x="550" y="330">1950s-1970s</text>
+<text class="h" x="550" y="358">تصدیق کا دور</text>
+<text class="cell" x="550" y="385">- بنے بنائے تجرباتی نسخے</text>
+<text class="cell" x="550" y="412">- معلوم قوانین کی تصدیق</text>
+<text class="cell" x="550" y="439">- سخت اور غیر لچکدار مراحل</text>
+<text class="cell" x="550" y="466">- سائنس دانوں پر فوکس</text>
+
+<text class="sh" x="360" y="70">1980s-1990s</text>
+<text class="h" x="360" y="98">استفساری دور</text>
+<text class="cell" x="360" y="125">- سائنسی عملی مہارتیں</text>
+<text class="cell" x="360" y="152">- تصوراتی تبدیلی کا ماڈل</text>
+<text class="cell" x="360" y="179">- فعال طالب علم کا استفسار</text>
+<text class="cell" x="360" y="206">- ہاتھوں اور ذہنوں سے کام</text>
+
+<text class="sh" x="180" y="330">2000s-تاحال</text>
+<text class="h" x="180" y="358">اسٹیم و پائیداری</text>
+<text class="cell" x="180" y="385">- بین المضامین اسٹیم تعلیم</text>
+<text class="cell" x="180" y="412">- معاشرتی و سائنسی مسائل</text>
+<text class="cell" x="180" y="439">- موسمیاتی پائیداری کا شعور</text>
+<text class="cell" x="180" y="466">- سب کے لیے سائنسی فہم</text>
+</g><g id="layer-labels">
+<text class="small" x="750" y="510">سائنس کی تدریس زبانی دہرائی سے فعال استفسار اور ماحولیاتی پائیداری کی طرف منتقل ہوئی۔</text>
+</g><text class="wm" x="12" y="525" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

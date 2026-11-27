@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 620" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">معاشرے میں سائنس کے استاد کے کردار کا تصوراتی نقشہ</title><desc id="d">تصوراتی نقشہ جو معاشرے میں سائنس کے استاد کے چار بنیادی کرداروں کی وضاحت کرتا ہے: عوامی صحت، ماحولیاتی تحفظ، سائنسی رویے کی نشوونما، اور سائنسی پیشوں میں رہنمائی۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="620"/><g id="layer-edges">
+<line class="stroke" x1="490" y1="270" x2="560" y2="194" marker-end="url(#arrow)"/>
+<line class="stroke" x1="290" y1="270" x2="220" y2="194" marker-end="url(#arrow)"/>
+<line class="stroke" x1="490" y1="350" x2="560" y2="426" marker-end="url(#arrow)"/>
+<line class="stroke" x1="290" y1="350" x2="220" y2="426" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="node-health"><rect class="panel-a" x="490" y="60" width="260" height="150" rx="8"/><text class="h" x="734" y="102">عوامی صحت کا فروغ</text><text class="cell" x="734" y="136">پانی سے پیدا ہونے والی بیماریوں،</text><text class="cell" x="734" y="164">حفظانِ صحت، حفاظتی ٹیکوں اور</text><text class="cell" x="734" y="192">ڈینگی ملیریا کی روک تھام کی وضاحت</text></g>
+<g id="node-env"><rect class="panel-a" x="30" y="60" width="260" height="150" rx="8"/><text class="h" x="274" y="102">ماحولیاتی تحفظ</text><text class="cell" x="274" y="136">شجرکاری، پانی کے تحفظ اور</text><text class="cell" x="274" y="164">کچرے کو سائنسی بنیادوں پر</text><text class="cell" x="274" y="192">ٹھکانے لگانے کا عملی شعور</text></g>
+<g id="node-temper"><rect class="panel-a" x="490" y="410" width="260" height="150" rx="8"/><text class="h" x="734" y="452">سائنسی رویے کی تربیت</text><text class="cell" x="734" y="486">نقصان دہ توہمات کا خاتمہ اور</text><text class="cell" x="734" y="514">روزمرہ زندگی میں شواہد پر مبنی</text><text class="cell" x="734" y="542">فیصلہ سازی کی ترغیب</text></g>
+<g id="node-career"><rect class="panel-a" x="30" y="410" width="260" height="150" rx="8"/><text class="h" x="274" y="452">پیشہ ورانہ رہنمائی</text><text class="cell" x="274" y="486">دیہی نوجوانوں اور طالبات کو</text><text class="cell" x="274" y="514">طبی، زرعی، ماحولیاتی اور</text><text class="cell" x="274" y="542">تکنیکی شعبوں کی طرف راغب کرنا</text></g>
+<g id="node-center"><ellipse class="panel-b" cx="390" cy="310" rx="130" ry="60"/><text class="h" x="390" y="306" text-anchor="middle">سائنس کا استاد</text><text class="sh" x="390" y="334" text-anchor="middle">معاشرے میں</text></g>
+</g><g id="layer-labels">
+<text class="small" x="750" y="595" text-anchor="start">چار بنیادی معاشرتی کردار جن کے ذریعے اسکول کی سائنس عوامی فلاح سے جڑتی ہے۔</text>
+</g><text class="wm" x="12" y="605" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>

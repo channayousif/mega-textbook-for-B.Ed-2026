@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 580" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">جماعتی عملی تحقیق کے چار مراحل کا چکر</title><desc id="d">فلو چارٹ جس میں عملی تحقیق کے چار مراحل دکھائے گئے ہیں: منصوبہ بندی، عمل، مشاہدہ اور غور و فکر، جو مسلسل جماعتی تحقیق کو اجاگر کرتے ہیں۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+.bg { fill: var(--bg); }
+.stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.panel { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+.panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+.plain { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.grid { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }
+.ah { fill: var(--ink); }
+text { font-size: 14px; fill: var(--ink); }
+.h { font-size: 16px; font-weight: 700; fill: var(--ink); }
+.sh { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cell { font-size: 13px; fill: var(--ink); }
+.small { font-size: 13px; fill: var(--muted); }
+.wm { fill: var(--wm); font-size: 11px; font-family: system-ui, sans-serif; }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="580"/><g id="layer-edges">
+<line class="stroke" x1="590" y1="210" x2="590" y2="280" marker-end="url(#arrow)"/>
+<line class="stroke" x1="450" y1="375" x2="340" y2="375" marker-end="url(#arrow)"/>
+<line class="stroke" x1="190" y1="280" x2="190" y2="210" marker-end="url(#arrow)"/>
+<line class="stroke" x1="330" y1="125" x2="440" y2="125" marker-end="url(#arrow)"/>
+</g><g id="layer-nodes">
+<g id="node-plan"><rect class="panel-a" x="450" y="40" width="280" height="170" rx="8"/><text class="h" x="710" y="75">1۔ منصوبہ بندی (Plan)</text><text class="cell" x="710" y="105">- جماعتی مسئلے کی واضح نشاندہی</text><text class="cell" x="710" y="132">- بنیادی وجوہات کا تفصیلی فہم</text><text class="cell" x="710" y="159">- تدریسی مداخلت کا منصوبہ تیار کرنا</text><text class="cell" x="710" y="186">- کامیابی کے واضح اشاریوں کا تعین</text></g>
+<g id="node-act"><rect class="panel-b" x="450" y="290" width="280" height="170" rx="8"/><text class="h" x="710" y="325">2۔ عمل (Act)</text><text class="cell" x="710" y="355">- نئی تدریسی حکمتِ عملی کا نفاذ</text><text class="cell" x="710" y="382">- طے شدہ مدت تک سرگرمیاں کرانا</text><text class="cell" x="710" y="409">- جماعتی ضرورت کے مطابق لچک</text><text class="cell" x="710" y="436">- تدریسی سازوسامان کا موثر استعمال</text></g>
+<g id="node-observe"><rect class="panel-a" x="50" y="290" width="280" height="170" rx="8"/><text class="h" x="310" y="325">3۔ مشاہدہ (Observe)</text><text class="cell" x="310" y="355">- طلبہ کا کام اور ٹیسٹ ڈیٹا اکٹھا کرنا</text><text class="cell" x="310" y="382">- قبل اور بعد کے کوئز کا موازنہ</text><text class="cell" x="310" y="409">- تدریسی مشاہداتی ڈائری کے نوٹس</text><text class="cell" x="310" y="436">- طلبہ کی تاثراتی تحریروں کا جائزہ</text></g>
+<g id="node-reflect"><rect class="panel-b" x="50" y="40" width="280" height="170" rx="8"/><text class="h" x="310" y="75">4۔ غور و فکر (Reflect)</text><text class="cell" x="310" y="105">- شواہد اور نتائج کا معروضی تجزیہ</text><text class="cell" x="310" y="132">- کامیاب اور ناکام پہلوؤں کی تفہیم</text><text class="cell" x="310" y="159">- رکاوٹوں اور وجوہات پر تاملی غور</text><text class="cell" x="310" y="186">- اگلے تحقیقی چکر کے لیے منصوبہ بندی</text></g>
+</g><g id="layer-labels">
+<text class="sh" x="390" y="255" text-anchor="middle">مسلسل تاملی چکر</text>
+<text class="small" x="750" y="525">عملی تحقیق ایک مسلسل چکر ہے جو ہر مرحلے کے بعد اگلی بہتری کی راہ دکھاتا ہے۔</text>
+</g><text class="wm" x="12" y="545" text-anchor="start" direction="ltr" aria-hidden="true">textbook.com.pk</text></svg>
