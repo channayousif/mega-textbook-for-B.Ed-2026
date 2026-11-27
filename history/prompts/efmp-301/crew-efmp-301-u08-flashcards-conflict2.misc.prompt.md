@@ -16,8 +16,11 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-301/crew-efmp-301-u08-flashcards-conflict1.misc.prompt.md
  - history/prompts/efmp-301/crew-efmp-301-u08-flashcards-conflict2.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u08-flashcards.misc.prompt.md
  - specs/studio/flashcards-needed.json
+ - specs/studio/flashcards/efmp-301/unit-08.json
 tests:
  - npm run check:content
 ---
@@ -55,27 +58,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u08-flashcards, flashcards, claude) The Urdu mirrors of topics 8.1 to 8.3 use "کاؤنٹرائزنگ" for "management" throughout the body text, not only in the figure description; the deck avoids it, and a G5 or translation job should fix the topics.
 - (efmp-301-u08-flashcards, flashcards, claude) `static/studio/flashcards/` is git-ignored but 61 files under it are still tracked, so `build-studio-index.mjs` dirties other courses' files; restore them before committing.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-301-u08-flashcards and resolved the lone flashcards-needed.json conflict by rerunning `node scripts/build-studio-index.mjs --coverage`, which drops efmp-301/8 and efmp-301/9 (both now have decks), keeps main's efpc-411/2 and efpc-411/3, and adds the new efpg-402/1 unit; restored the tracked static/studio files the script rewrote, committed the merge, and left all 14 content gates green.
+Merged origin/main into crew/efmp-301-u08-flashcards, resolving the lone specs/studio/flashcards-needed.json conflict by regenerating the coverage index (Units 8 and 9 leave the needed list, main's efpc-411 entries kept, efpg-402/1 added), committed the merge and its PHR, and left all 14 content gates green.
 
 ## Outcome
 
-- Impact: fix for EFMP-301 Unit 8 by claude_crew (attempt 2).
-- Tests: npm run check:content passed (all 14 content gates).
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-301 Unit 8 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 5 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-301-u08-flashcards and resolved the lone flashcards-needed.json conflict by regenerating the coverage index (rerun `node scripts/build-studio-index.mjs --coverage`): efmp-301/8 and efmp-301/9 both leave the needed list, main's efpc-411/2 and efpc-411/3 stay, and efpg-402/1 is added; restored the tracked static/studio files the script rewrote, committed the merge, and left all 14 content gates green.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into crew/efmp-301-u08-flashcards, resolving the lone specs/studio/flashcards-needed.json conflict by regenerating the coverage index (Units 8 and 9 leave the needed list, main's efpc-411 entries kept, efpg-402/1 added), committed the merge and its PHR, and left all 14 content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `flashcards-needed.json` is a generated coverage index; the fix for this recurring conflict is always to rerun `node scripts/build-studio-index.mjs --coverage` and then `git checkout -- static/studio/` before committing. It now also lists `efpg-402/1` (new main unit with no deck) and keeps `efpc-411/2` and `efpc-411/3`.
+  - `flashcards-needed.json` now lists `efpg-402/1` (new main unit, no deck) and keeps `efpc-411/2`/`efpc-411/3`; the standing fix is rerun `build-studio-index.mjs --coverage` then `git checkout -- static/studio/`.
   - `build-studio-index.mjs` rewrites tracked files under `static/studio/flashcards/` for other courses; restore them before committing.
-  - Known leftovers for a G5/translation job on this unit: topics 8.1-8.3 use "کاؤنٹرائزنگ" for "management", and fig-U8-1/fig-U8-2 retain the Urdu label typos recorded in the earlier notes.
+  - Known leftovers for a G5/translation job: topics 8.1-8.3 use "کاؤنٹرائزنگ" for "management", and fig-U8-1/fig-U8-2 retain the Urdu label typos.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
