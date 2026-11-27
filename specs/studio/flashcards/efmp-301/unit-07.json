@@ -1,0 +1,146 @@
+{
+ "course": "EFMP-301",
+ "unit": 7,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Learning style",
+     "definition": "In the claim the topic tests, a pupil's fixed preferred style (visual, auditory or kinaesthetic), with best learning when teaching matches it. The evidence does not support the matching part."
+    },
+    {
+     "term": "Self-report",
+     "definition": "A pupil's own account of a preference. It measures what the pupil likes, not what their memory and understanding run on."
+    },
+    {
+     "term": "Multimodal teaching",
+     "definition": "Teaching in which an idea is said, shown and done, so it has three routes in where a lecture has one. It reaches more pupils."
+    },
+    {
+     "term": "Individual Differences",
+     "definition": "The ways pupils differ, such as in prior knowledge, pace, interest and profile of abilities. In ability they are best read as a profile, not a point."
+    },
+    {
+     "term": "Profile",
+     "definition": "A shape of abilities across domains such as language, number, spatial work, social understanding, practical problem-solving and the body: a present level in each domain."
+    },
+    {
+     "term": "Single rank",
+     "definition": "One number reported by an examination that samples only two or three domains of a pupil's profile. It is a poor summary of the pupil."
+    },
+    {
+     "term": "Teaching to the profile",
+     "definition": "Finding where a pupil is in a domain and what the next step from there is, then starting there. It needs a look at the work and a starting point, not a chart or a verdict."
+    },
+    {
+     "term": "Matched teaching",
+     "definition": "Teaching that fits a learner's claimed style. Studies that could support style-based teaching assign learners randomly to matched and unmatched instruction."
+    }
+   ],
+   "ur": [
+    {
+     "term": "طرزِ تعلم",
+     "definition": "جانچے گئے دعوے میں شاگرد کا مقرر پسندیدہ اسلوب (بصری، سماعی یا حرکی)، کہ تدریس اس سے ملے تو وہ بہترین سیکھتا ہے۔ ثبوت ملانے والے حصے کو سہارا نہیں دیتا۔"
+    },
+    {
+     "term": "خود رپورٹ",
+     "definition": "ترجیح کے بارے میں شاگرد کا اپنا بیان۔ یہ ناپتی ہے کہ شاگرد کیا پسند کرتا ہے، نہ کہ اس کی یادداشت اور سمجھ کس پر چلتی ہے۔"
+    },
+    {
+     "term": "کثیر انداز تدریس",
+     "definition": "ایسی تدریس جس میں خیال کہا، دکھایا اور کروایا جاتا ہے، اس لیے اس کے اندر جانے کے تین راستے ہوتے ہیں جہاں لیکچر کا ایک۔ یہ زیادہ شاگردوں تک پہنچتی ہے۔"
+    },
+    {
+     "term": "انفرادی اختلافات",
+     "definition": "وہ طریقے جن میں شاگرد فرق رکھتے ہیں، جیسے پچھلا علم، رفتار، دلچسپی اور قابلیتوں کا پروفائل۔ قابلیت کے فرق کو نقطے کے بجائے پروفائل کے طور پر پڑھنا بہترین ہے۔"
+    },
+    {
+     "term": "پروفائل",
+     "definition": "زبان، عدد، مکانی کام، سماجی سمجھ، عملی مسئلہ حل کرنے اور جسم جیسے شعبوں پر قابلیتوں کی شکل: ہر شعبے میں موجودہ سطح۔"
+    },
+    {
+     "term": "اکیلا درجہ",
+     "definition": "امتحان کا بتایا ہوا ایک نمبر، جو شاگرد کے پروفائل کے صرف دو تین شعبوں کا نمونہ لیتا ہے۔ یہ شاگرد کا خراب خلاصہ ہے۔"
+    },
+    {
+     "term": "پروفائل کے مطابق پڑھانا",
+     "definition": "یہ دیکھنا کہ شاگرد کسی شعبے میں کہاں ہے اور اگلا قدم کیا ہے، پھر وہیں سے شروع کرنا۔ اسے کام کی ایک نظر اور نقطہ آغاز چاہئے، چارٹ اور فیصلہ نہیں۔"
+    },
+    {
+     "term": "ملی تدریس",
+     "definition": "سیکھنے والے کے دعوی شدہ اسلوب سے ملائی گئی تدریس۔ اسلوب پر مبنی تدریس کی تائید کر سکنے والے مطالعے سیکھنے والوں کو ملی اور نہ ملی تدریس میں بے ترتیب بانٹتے ہیں۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Slow Learner",
+     "definition": "A pupil who needs more time and more passes than the class average to reach the same place. The label describes pace, not a ceiling."
+    },
+    {
+     "term": "Prior-knowledge check",
+     "definition": "A check for a missing earlier step, which slow pace often hides. Supplying that step changes everything."
+    },
+    {
+     "term": "Gifted Learner",
+     "definition": "A learner with an unusual level of skill or knowledge, who needs real challenge, some choice, honestly high expectations and the group life every pupil needs."
+    },
+    {
+     "term": "Giftedness",
+     "definition": "An unusual level of skill or knowledge. It is an educational need rather than a prize and appears in every economic and cultural group."
+    },
+    {
+     "term": "Enrichment",
+     "definition": "The support the gifted learner needs, rather than acceleration: real problems rather than more worksheets, some choice of what is studied, and honestly high expectations."
+    },
+    {
+     "term": "Inclusive Education",
+     "definition": "Education in which the pupil with a disability participates in and contributes to the life of the class as much as possible."
+    },
+    {
+     "term": "Barrier",
+     "definition": "The specific thing that stands in the way of a pupil with a disability, such as a step, a font size or a hearing distance. The school's job is to remove it, not to manage the category."
+    },
+    {
+     "term": "Inclusion",
+     "definition": "Deliberately including the pupil with a disability in the life of the class. It is a direction, not a destination, and the first step is visible from where a school stands."
+    }
+   ],
+   "ur": [
+    {
+     "term": "کمزور متعلم",
+     "definition": "وہ شاگرد جسے اسی جگہ تک پہنچنے کے لیے جماعت کی اوسط سے زیادہ وقت اور زیادہ چکر چاہئے۔ یہ لیبل رفتار بیان کرتا ہے، چھت نہیں۔"
+    },
+    {
+     "term": "پچھلے علم کی جانچ",
+     "definition": "غائب پچھلے مرحلے کی جانچ، جسے سست رفتار اکثر چھپاتی ہے۔ وہ مرحلہ فراہم کرنا سب بدل دیتا ہے۔"
+    },
+    {
+     "term": "ذہین متعلم",
+     "definition": "مہارت یا علم کے غیر معمولی درجے والا متعلم، جسے اصل چیلنج، کچھ انتخاب، ایمانداری سے اونچی توقعات اور وہ گروپ زندگی چاہئے جو ہر شاگرد کو چاہئے۔"
+    },
+    {
+     "term": "خاص صلاحیت",
+     "definition": "مہارت یا علم کا غیر معمولی درجہ۔ یہ انعام کے بجائے ایک تعلیمی ضرورت ہے اور ہر معاشی اور ثقافتی گروہ میں نظر آتی ہے۔"
+    },
+    {
+     "term": "افزودگی",
+     "definition": "ذہین متعلم کا سہارا، جو تیزی کے بجائے دیا جاتا ہے: مزید ورک شیٹوں کے بجائے اصل مسائل، پڑھی جانے والی چیز کا کچھ انتخاب، اور ایمانداری سے اونچی توقعات۔"
+    },
+    {
+     "term": "شمولیتی تعلیم",
+     "definition": "ایسی تعلیم جس میں معذور شاگرد جماعت کی زندگی میں زیادہ سے زیادہ حصہ لے اور حصہ ڈالے۔"
+    },
+    {
+     "term": "رکاوٹ",
+     "definition": "وہ مخصوص چیز جو معذور شاگرد کے راستے میں آتی ہے، جیسے سیڑھی، حروف کا سائز یا سننے کا فاصلہ۔ اسکول کا کام اسے ہٹانا ہے، قسم سنبھالنا نہیں۔"
+    },
+    {
+     "term": "شمولیت",
+     "definition": "معذور شاگرد کو جان بوجھ کر جماعت کی زندگی میں شامل کرنا۔ یہ ایک سمت ہے، منزل نہیں، اور پہلا قدم اس جگہ سے نظر آتا ہے جہاں اسکول کھڑا ہے۔"
+    }
+   ]
+  }
+ }
+}

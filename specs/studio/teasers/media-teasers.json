@@ -3415,14 +3415,251 @@
    "id": "gicp-400",
    "locale": "ur",
    "kind": "short",
-   "state": "scripted",
+   "state": "clips-qa",
    "gates": {
     "qg0": {
      "verdict": "pass",
      "by": "teaser.mjs"
+    },
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-26",
+     "note": "crew approve-script via openclaw"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "claude",
+     "date": "2026-11-27",
+     "notes": "Shots 1, 4, 5 take 1; shots 2, 3 take 3 (82% crops). 70 credits."
     }
    },
-   "clips": [],
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-27T01:18:41.826Z",
+     "artifact_id": "2f248d61-4491-4fb2-8126-9f400f86b2ca",
+     "media_id": "2f248d61-4491-4fb2-8126-9f400f86b2ca",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-1-t1.mp4",
+     "sha256": "ab78554a92d7e208598f9c1ef30a6de289a478e82ea0a79a2063e1440962eb64",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "پاکستان کن نظریات پر بنا اور اس کا آئین ہمیں کیا حقوق دیتا ہے؟ آئیے جانے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/gicp-400/ur/qg2/shot-1-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "Line matches (QG2 1.0). Presenter in navy shalwar kameez and white dupatta, plain blackboard, closed unmarked book. No text, flag, map or overlay."
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-27T01:22:59.418Z",
+     "artifact_id": "1f84a03b-7352-491f-8ee5-3d0dc2263f04",
+     "media_id": "1f84a03b-7352-491f-8ee5-3d0dc2263f04",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-2-t1.mp4",
+     "sha256": "01aecda137e9c11959dd0adb6d699ed67aa9f77711434d60940359a3298e023c",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "اس کورس میں آپ پاکستان کی نظریاتی بنیاد اور آئینی ترقی کی تاریخ پڑھیں گے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/gicp-400/ur/qg2/shot-2-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "Drawn camera viewfinder corner brackets on screen for the whole shot. Speech matches (QG2 1.0). Notebook scribbles are unreadable."
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-27T01:27:12.426Z",
+     "artifact_id": "cb3fe733-7176-4761-8159-671998bc0023",
+     "media_id": "cb3fe733-7176-4761-8159-671998bc0023",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-3-t1.mp4",
+     "sha256": "142dde8a44da7eeef737cabb208180383a4255866fbb4ccf777690444f2aca78",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.938,
+      "qg2_suggested": "pass",
+      "heard": "انیس سو تہتر کے آئین کی نمائی خصوصیات، حکومت اور شہریوں کے بنیادی حقوق اور فرائض",
+      "missing": [
+       "نمایاں"
+      ],
+      "strip": "~/studio-media/teasers/gicp-400/ur/qg2/shot-3-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "Picture breaks from about 5 s: double-exposure dissolve, then the final scene carries a duplicated seamed band across the top of the frame. Speech matches apart from a whisper spelling of one word (QG2 0.94)."
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-27T01:31:23.801Z",
+     "artifact_id": "67542e0e-bb24-48ab-b91c-37af48a7a582",
+     "media_id": "67542e0e-bb24-48ab-b91c-37af48a7a582",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-4-t1.mp4",
+     "sha256": "c0c236cf4311c0b8fff7c1c514c6631643a0458ec145819c20f232fccdb8ded2",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.882,
+      "qg2_suggested": "pass",
+      "heard": "ایک استاد کے طور پر اسکول میں منصفانہ برتاؤ، شہری ذمہداری اور قومی یکجہتی کیسے سکھائیں؟",
+      "missing": [
+       "ذمہ",
+       "داری"
+      ],
+      "strip": "~/studio-media/teasers/gicp-400/ur/qg2/shot-4-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass-with-notes",
+      "by": "claude",
+      "notes": "Speech matches (QG2 0.88, only a joined-word spelling differs). No flag, map or readable text. Ornate arched verandah; a board with coloured shapes, blurred; a soft smear on one pupil's dupatta; slight lip movement on screen under the voice-over."
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-27T01:36:13.917Z",
+     "artifact_id": "5149ef33-d8c8-44c3-b4af-e7ada227b9a2",
+     "media_id": "5149ef33-d8c8-44c3-b4af-e7ada227b9a2",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-5-t1.mp4",
+     "sha256": "6c3ea2355d591250b5a45f56876ec66bec1d73970411f2175584843a9ec480ee",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.929,
+      "qg2_suggested": "pass",
+      "heard": "پورا کورس مفت پڑیں تیکسٹ بک ڈاٹ کام ڈاٹ پی کے پر\nلنک نیچے ہے",
+      "missing": [
+       "textbook"
+      ],
+      "strip": "~/studio-media/teasers/gicp-400/ur/qg2/shot-5-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass-with-notes",
+      "by": "claude",
+      "notes": "Speech matches (QG2 0.93, site name spoken). Unrequested floating soap bubbles in the corridor; wall posters are unreadable and are not maps or portraits; phone screen dark. No overlay or readable text."
+     }
+    },
+    {
+     "shot": 2,
+     "take": 2,
+     "at": "2026-11-27T01:44:50.666Z",
+     "artifact_id": "ddfbd1c5-a1eb-4b69-876f-485159a5f421",
+     "media_id": "ddfbd1c5-a1eb-4b69-876f-485159a5f421",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-2-t2.mp4",
+     "sha256": "ef3c7ceeab2ce1726acc69bbbe11993e619cf5c582f3dbe0678b475f9da0a3b3",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "heard": "اس کورس میں آپ پاکستان کی نظریاتی بنیاد اور آئینی ترقی کی تاریخ پڑھیں گے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/gicp-400/ur/qg2/shot-2-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "Drawn viewfinder corner brackets and equation-like writing on a whiteboard. Speech matches (QG2 1.0)."
+     }
+    },
+    {
+     "shot": 3,
+     "take": 2,
+     "at": "2026-11-27T01:49:46.698Z",
+     "artifact_id": "abee361f-1127-4591-aa64-56677777d130",
+     "media_id": "abee361f-1127-4591-aa64-56677777d130",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-3-t2.mp4",
+     "sha256": "4adc11d4192144eadea4ef3bd382764e5251c3e7613a8c8d674a3fe8b3f29482",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.875,
+      "qg2_suggested": "pass",
+      "heard": "انیسو تہتر کے آئین کی نمائی خصوصیات، حکومت اور شہریوں کے بنیادی حقوق اور فرائز",
+      "missing": [
+       "سو",
+       "نمایاں"
+      ],
+      "strip": "~/studio-media/teasers/gicp-400/ur/qg2/shot-3-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "Drawn camera interface (REC badge, red dot, corner marks, battery icons) for the whole shot. Speech matches (QG2 0.875)."
+     }
+    },
+    {
+     "shot": 2,
+     "take": 3,
+     "at": "2026-11-27T02:04:16.504Z",
+     "artifact_id": "gicp-400-ur-s2-crop-of-t1",
+     "model": "veo_3_1_lite (t1 cropped 82% to remove a drawn viewfinder overlay)",
+     "credits": 0,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-2-t3.mp4",
+     "sha256": "1da8799f5d44b9d57417eccbece9b066990c7e0770a265edc3d6ae7f734bba27",
+     "source": "crop",
+     "qa": {
+      "verdict": "pass-with-notes",
+      "by": "claude",
+      "notes": "Crop of take 1 removes the drawn viewfinder. QG1 pass, QG2 1.0. Lecturer and student teachers in modest dress; notebook pages carry small unreadable pseudo-script."
+     }
+    },
+    {
+     "shot": 3,
+     "take": 3,
+     "at": "2026-11-27T02:04:16.617Z",
+     "artifact_id": "gicp-400-ur-s3-crop-of-t2",
+     "model": "veo_3_1_lite (t2 cropped 82% to remove a drawn viewfinder overlay)",
+     "credits": 0,
+     "file": "~/studio-media/teasers/gicp-400/ur/shot-3-t3.mp4",
+     "sha256": "c3640717bed47a5509072fd2a466cb50fe4fb8255cc8636739eef3ca34fb3350",
+     "source": "crop",
+     "qa": {
+      "verdict": "pass-with-notes",
+      "by": "claude",
+      "notes": "Crop of take 2 removes the REC overlay. QG1 pass, QG2 0.875 (whisper spelling differences only: joined year word, nasal ending). Blank sheet and screen, background chart unreadable; one cross-fade between two classroom views."
+     }
+    }
+   ],
    "history": [
     {
      "state": "planned",
@@ -3431,6 +3668,18 @@
     {
      "state": "scripted",
      "at": "2026-11-25T18:35:08.552Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-27T01:16:54.024Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-27T02:04:16.961Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-27T02:04:17.064Z"
     }
    ],
    "script_sha256": "30292cc711993deff83a0b3439ffc26a0f883fc02cfff9cafbdb4b78e6a8f7df"
