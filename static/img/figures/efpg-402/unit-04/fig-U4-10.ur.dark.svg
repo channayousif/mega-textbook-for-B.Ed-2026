@@ -35,8 +35,9 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="cell" x="334" y="93">نصابی ربط کی منظوری؛ حفاظت کا جائزہ؛</text>
 <text class="cell" x="334" y="110">تحقیقی سوالات کی درستی یقینی بنانا</text>
 
-<text class="sh" x="740" y="162">2. پراجیکٹ کی تعمیر</text>
-<text class="cell" x="740" y="180">(2 تا 4 ہفتے قبل)</text>
+<text class="sh" x="740" y="149">2. پراجیکٹ</text>
+<text class="sh" x="740" y="166">کی تعمیر</text>
+<text class="cell" x="740" y="183">(2 تا 4 ہفتے قبل)</text>
 <text class="cell" x="596" y="161">کم خرچ ماڈلز بنانا؛ ڈیٹا جمع</text>
 <text class="cell" x="596" y="178">کرنا؛ وضاحتی بورڈز تیار کرنا</text>
 <text class="cell" x="334" y="161">مواد کے انتخاب میں رہنمائی؛ درستی کی</text>

@@ -29,7 +29,8 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="sh" x="580" y="49">سائنسی استعمال</text>
 <text class="sh" x="334" y="49">سنبھالنے اور حفاظت کے اصول</text>
 
-<text class="sh" x="740" y="96">امتحانی نلی (ٹیسٹ ٹیوب)</text>
+<text class="sh" x="740" y="88">امتحانی نلی</text>
+<text class="sh" x="740" y="105">(ٹیسٹ ٹیوب)</text>
 <text class="cell" x="580" y="88">مائع یا ٹھوس کی معمولی مقدار</text>
 <text class="cell" x="580" y="105">کو گرم کرنا اور ملانا</text>
 <text class="cell" x="334" y="88">ہولڈر سے پکڑیں؛ نلی کا رخ اپنی</text>
