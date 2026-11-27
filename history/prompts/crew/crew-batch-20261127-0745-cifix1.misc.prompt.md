@@ -1,6 +1,6 @@
 ---
 id: crew-batch-20261127-0745-cifix1
-title: fix EFMP-301 Unit 5 slide answer-key phrase
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-27
 surface: agent
@@ -11,17 +11,83 @@ user: crew
 command: crew fix
 labels: ["crew", "claude_crew", "fix"]
 links:
-  spec: specs/032-textbook-visuals/spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/927
+  pr: null
 files:
- - specs/studio/slides/efmp-301/unit-05.json
+ - history/prompts/032-textbook-visuals/20261298-efmp-301-u05-slide-deck.green.prompt.md
  - history/prompts/crew/crew-batch-20261127-0745-cifix1.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u05-slides.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u09-flashcards.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u02-refresh_figures.misc.prompt.md
+ - history/prompts/general/2487-efmp-301-u09-flashcards.general.prompt.md
+ - specs/content/efmp-303/reviews/unit-02/G2/20261127T064035854Z-gates.json
+ - specs/content/efmp-303/reviews/unit-02/G2/logs-20261127T064035854Z/check-bloom-bands.txt
+ - specs/content/efmp-303/reviews/unit-02/G2/logs-20261127T064035854Z/check-concept-graph.txt
+ - specs/content/efmp-303/reviews/unit-02/G2/logs-20261127T064035854Z/check-depth-gate.txt
+ - specs/content/efmp-303/reviews/unit-02/G2/logs-20261127T064035854Z/check-docs-sync.txt
+ - specs/content/efmp-303/reviews/unit-02/G2/logs-20261127T064035854Z/check-figures.txt
+ - specs/content/efmp-303/reviews/unit-02/G2/logs-20261127T064035854Z/check-no-answer-keys.txt
+ - specs/content/efmp-303/reviews/unit-02/G2/logs-20261127T064035854Z/check-no-em-dash.txt
+ - specs/content/efmp-303/reviews/unit-02/G2/logs-20261127T064035854Z/validate-content.txt
+ - specs/content/efmp-303/tasks.md
+ - specs/content/svg-style-baseline.json
+ - specs/studio/flashcards-needed.json
+ - specs/studio/flashcards/efmp-301/unit-09.json
+ - specs/studio/slides/efmp-301/unit-05.json
+ - static/img/figures/efmp-303/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-1.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-1.ur.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-1.ur.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-2.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-2.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-2.ur.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-2.ur.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-3.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-3.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-3.ur.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-3.ur.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-4.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-4.ur.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-4.ur.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-5.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-5.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-5.ur.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-5.ur.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-6.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-6.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-6.ur.dark.svg
+ - static/img/figures/efmp-303/unit-02/fig-U2-6.ur.svg
+ - static/studio/flashcards/efmp-303/unit-01.json
+ - static/studio/flashcards/efmp-303/unit-02.json
+ - static/studio/flashcards/efmp-303/unit-03.json
+ - static/studio/flashcards/efmp-303/unit-05.json
+ - static/studio/flashcards/efmp-303/unit-06.json
+ - static/studio/flashcards/efmp-304/unit-01.json
+ - static/studio/flashcards/efmp-304/unit-02.json
+ - static/studio/flashcards/efmp-304/unit-03.json
+ - static/studio/flashcards/efmp-304/unit-04.json
+ - static/studio/flashcards/efmp-304/unit-05.json
+ - static/studio/flashcards/efmp-304/unit-06.json
+ - static/studio/flashcards/efmp-305/unit-06.json
+ - static/studio/flashcards/geng-300/unit-01.json
+ - static/studio/flashcards/geng-301/unit-03.json
+ - static/studio/flashcards/gicp-400/unit-03.json
+ - static/studio/flashcards/gicp-400/unit-07.json
+ - static/studio/flashcards/gpks-402/unit-01.json
+ - static/studio/flashcards/gpks-402/unit-06.json
+ - static/studio/flashcards/gqur-301/unit-11.json
+ - static/studio/flashcards/gqur-301/unit-13.json
+ - static/studio/flashcards/gqur-301/unit-15.json
+ - static/studio/flashcards/gqur-301/unit-16.json
+ - static/studio/flashcards/gsos-301/unit-01.json
+ - static/studio/flashcards/gsos-301/unit-05.json
+ - static/studio/flashcards/gsos-301/unit-06.json
+ - static/studio/slides/efmp-301/unit-05.en.pptx
+ - static/studio/slides/efmp-301/unit-05.ur.pptx
 tests:
- - node scripts/check-no-answer-keys.mjs
- - node scripts/build-studio-index.mjs
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -57,31 +123,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261125-1831-cifix1, fix, claude_crew) CI's figure-geometry job still has to re-run and confirm on PR #869; earlier batches on this PR family had the same local-passes/CI-pending pattern.
 - (batch-20261125-1831-cifix1, fix, claude_crew) do not restore the longer `فطری طور پر پورا کرتی ہے` header line at x=448, it is the string that overran the column in DejaVu.
 
+
 ## Response snapshot
 
-Read the failed build log: the Docusaurus build itself passed and only the built-output answer-key check failed, on `build/studio/slides/efmp-301/unit-05.en.html` and its `/ur/` copy, for the phrase "marking scheme". Traced it to `specs/studio/slides/efmp-301/unit-05.json` (slide 7, topic 2), where the bullet had compressed the topic text's "every way of giving marks" into "every marking scheme". Restored the topic's own wording, rebuilt the studio index, confirmed the generated deck is clean, and ran the content gates green.
+Reworded the EFMP-301 Unit 5 slide outline bullet that introduced the forbidden phrase "marking scheme" (the PR #927 built-output answer-key failure), restoring topic-02's own wording, and committed the fix with its PHR; `npm run check:content` passes.
 
 ## Outcome
 
-- Impact: fix for CREW batch-20261127-0745 by claude_crew (attempt 1).
-- Tests: `npm run check:content` passed (all 14 content gates); `node scripts/check-no-answer-keys.mjs` exit 0; `node scripts/build-studio-index.mjs` printed no "skipped slides"; regenerated `static/studio/slides/efmp-301/unit-05.en.html` and `.ur.html` contain no forbidden phrase.
-- Files: 2 file(s), listed above.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 71 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: reworded the EFMP-301 Unit 5 slide outline bullet from "Every marking scheme either has a box for originality or trains it out" to the topic-02 wording "Every way of giving marks either has a box for originality or trains it out", removing the built-output answer-key hit on PR #927.
-- Decisions the team must respect: the three prose patterns (answer key / marking scheme / correct answer) stay forbidden in built public output; slide points must restate the topic text without introducing those phrases.
-- Pending / next owner: crew lead (auto-merge when CI is green). CI's build job must re-run and confirm on PR #927.
+- Shipped / changed: Reworded the EFMP-301 Unit 5 slide outline bullet that introduced the forbidden phrase "marking scheme" (the PR #927 built-output answer-key failure), restoring topic-02's own wording, and committed the fix with its PHR; `npm run check:content` passes.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The committed `static/studio/slides/efmp-301/unit-05.en.pptx` still contains the old phrase; the gate does not scan `.pptx`, so this is a consistency leftover, not a CI failure. Regenerate offline with `scripts/studio/slides-pptx.py` if the deck download should match the outline.
-  - The Urdu outline bullet already matched the new wording, so no UR change was needed.
+  - CI's build job must re-run and confirm on PR #927.
+  - `static/studio/slides/efmp-301/unit-05.en.pptx` still holds the old phrase; the gate does not scan `.pptx`, so regenerate offline if the download should match the outline.
+  - the source answer-key gate does not scan `specs/studio/` or generated `static/` decks, so this class of defect only fails in CI's built-output scan.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a slide outline paraphrase introduced a forbidden answer-key phrase that only the built-output scan (not the source scan) catches, because `specs/studio/` is outside the gate's roots.
-- Graders run and results (PASS/FAIL): check:content PASS; check:no-answer-keys PASS; build-studio-index PASS (no skipped slides).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
-- Next experiment (smallest change to try): consider scanning generated `static/studio/slides/*.html` in the source answer-key gate so this class of defect fails locally too.
+- Next experiment (smallest change to try): none
