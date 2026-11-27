@@ -1,4 +1,5 @@
-// nlm: NotebookLM audio and video overviews through the `nlm` CLI (Feature 030, T026).
+// nlm: NotebookLM audio and video overviews, mind maps and study guides through the `nlm` CLI
+// (Feature 030, T026; doc kinds #908).
 //
 // Wraps the studio-media skill's generate and download steps. Generation takes minutes, so the
 // producer is resumable: it creates the artifact once (job.artifact_id afterwards), waits up to
@@ -14,8 +15,12 @@ import { pace, paceRecord, PaceHold } from '../pacing.mjs';
 
 export const AUTH_RE = /cookies? (have|has) expired|authentication (may have )?expired|not authenticated|re-?authenticate|nlm login|401|unauthori[sz]ed/i;
 export const NLM_QUOTA_RE = /quota|limit reached|daily limit|too many requests|429/i;
-const TYPE = { 'audio.brief': 'audio', 'audio.deeper': 'audio', 'video.overview': 'video' };
-const EXT = { audio: 'm4a', video: 'mp4' };
+const TYPE = { 'audio.brief': 'audio', 'audio.deeper': 'audio', 'video.overview': 'video', 'doc.mindmap': 'mindmap', 'doc.studyguide': 'report' };
+const EXT = { audio: 'm4a', video: 'mp4', mindmap: 'json', report: 'md' };
+/** `nlm download <what>` per type. */
+const DOWNLOAD = { audio: 'audio', video: 'video', mindmap: 'mind-map', report: 'report' };
+/** A mind map is saved as a note the moment it is created; there is no studio status to wait on. */
+const INSTANT = new Set(['mindmap']);
 
 const defaultRun = (args, timeoutMs = 300000) => {
   const r = spawnSync('nlm', args, { encoding: 'utf8', timeout: timeoutMs });
@@ -50,9 +55,28 @@ export function artifactStatus(stdout) {
   } catch { return ''; }
 }
 
+/** The `nlm ... create` arguments for a job. */
+export function createArgs(type, job) {
+  if (type === 'mindmap') return ['mindmap', 'create', job.notebook_id, '--confirm', '--json', ...(job.title ? ['--title', job.title] : [])];
+  if (type === 'report') {
+    // English uses the built-in Study Guide (it takes no prompt); Urdu uses Create Your Own with the
+    // prompt from specs/studio/prompts/study-guide.md plus the Urdu register suffix.
+    const args = ['report', 'create', job.notebook_id, '--confirm', '--json', '--format', job.prompt ? 'Create Your Own' : 'Study Guide'];
+    if (job.prompt) args.push('--prompt', job.prompt);
+    if (job.language) args.push('--language', job.language);
+    return args;
+  }
+  const args = [type, 'create', job.notebook_id, '--confirm', '--json'];
+  if (job.format) args.push('--format', job.format);
+  if (job.length) args.push('--length', job.length);
+  if (job.language) args.push('--language', job.language);
+  if (job.focus) args.push('--focus', job.focus);
+  return args;
+}
+
 /**
- * job: { key, kind, notebook_id, artifact_id?, format?, length?, language?, focus?, outDir }.
- * part is unused (one artifact per job).
+ * job: { key, kind, notebook_id, artifact_id?, format?, length?, language?, focus?, title?, prompt?, outDir }.
+ * part is unused (one artifact per job). title is the mind map's title; prompt makes an Urdu study guide.
  */
 export function nlmProducer({ run = defaultRun, waitMs = 25 * 60 * 1000, pollMs = 30000, profile, pace: paceFn = pace, record: recordFn = paceRecord } = {}) {
   const pf = profile ? ['--profile', profile] : [];
@@ -69,18 +93,13 @@ export function nlmProducer({ run = defaultRun, waitMs = 25 * 60 * 1000, pollMs 
         throw e;
       }
       recordFn('nlm.studio', 1);
-      const args = [type, 'create', job.notebook_id, '--confirm', '--json', ...pf];
-      if (job.format) args.push('--format', job.format);
-      if (job.length) args.push('--length', job.length);
-      if (job.language) args.push('--language', job.language);
-      if (job.focus) args.push('--focus', job.focus);
-      const r = run(args);
+      const r = run([...createArgs(type, job), ...pf]);
       if (r.status !== 0) return classify(r);
       id = artifactId(r.stdout);
       if (!id) return { status: 'failed', reason: `nlm create gave no artifact id: ${r.stdout.slice(0, 200)}` };
     }
     const until = Date.now() + waitMs;
-    for (;;) {
+    while (!INSTANT.has(type)) {
       const s = run(['studio', 'status', job.notebook_id, '--json', '--artifact-id', id, ...pf], 120000);
       if (s.status !== 0) return { ...classify(s), mediaId: id };
       const st = artifactStatus(s.stdout);
@@ -91,7 +110,7 @@ export function nlmProducer({ run = defaultRun, waitMs = 25 * 60 * 1000, pollMs 
     }
     mkdirSync(job.outDir, { recursive: true });
     const out = join(job.outDir, `${job.key}.${EXT[type]}`);
-    const d = run(['download', type, job.notebook_id, '--id', id, '--output', out, ...pf], 600000);
+    const d = run(['download', DOWNLOAD[type], job.notebook_id, '--id', id, '--output', out, ...pf], 600000);
     if (d.status !== 0 || !existsSync(out) || statSync(out).size === 0) return { ...classify(d), mediaId: id };
     return { status: 'ok', source: 'generated', file: out, sha256: createHash('sha256').update(readFileSync(out)).digest('hex'), mediaId: id, credits: 0, model: `NotebookLM ${type}`, reason: 'generated' };
   };

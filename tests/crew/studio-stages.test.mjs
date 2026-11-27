@@ -87,3 +87,16 @@ test('the studio brief plans a new unit, paces NotebookLM and YouTube, and stops
   assert.equal(isCorpusStage('studio_media'), false);
   assert.match(ownerLine({ scripts: [], spotCheck: [], voided: [], watch: ['EFMP-301#4'] }), /crew approve-studio/);
 });
+
+test('placed mind maps and study guides do not hold a unit back from the owner watch (#908)', () => {
+  const u = unit('GENG-300', 2, [it('t1-en-audio-p1', 'qa3-pass'), it('t1-en-mindmap', 'placed', { kind: 'mindmap' }), it('t1-en-studyguide', 'placed', { kind: 'studyguide' })]);
+  assert.deepEqual(studioNeeds([u]).jobs, []);
+  assert.deepEqual(studioNeeds([u]).owner.watch, ['GENG-300#2']);
+  // a checked doc not yet placed is placed by the next studio_media run
+  const v = unit('GENG-300', 2, [it('t1-en-audio-p1', 'qa3-pass'), it('t1-en-mindmap', 'qa2-pass', { kind: 'mindmap' })]);
+  assert.deepEqual(studioNeeds([v]).jobs, [{ course: 'GENG-300', unit: 2, stage: 'studio_media' }]);
+  const brief = mediaTask({ id: 'x', stage: 'studio_media', course: 'GENG-300', unit: 2, plan: true });
+  assert.match(brief, /one English mind map/);
+  assert.match(brief, /ONE study guide per language/);
+  assert.match(brief, /place-media\.mjs geng-300 2/);
+});

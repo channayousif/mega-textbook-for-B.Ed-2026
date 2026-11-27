@@ -17,7 +17,9 @@
     "approve": "tsx scripts/approve.ts",
     "voice:bench": "tsx scripts/voice-bench.ts",
     "voice:blind": "tsx scripts/voice-blind.ts",
-    "voice:import": "tsx scripts/voice-import.ts"
+    "voice:import": "tsx scripts/voice-import.ts",
+    "video:bench": "tsx scripts/video-bench.ts",
+    "video:blind": "tsx scripts/video-blind.ts"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.535",

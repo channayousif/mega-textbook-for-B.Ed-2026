@@ -8,7 +8,7 @@ import { produce, activeQuota, fromThrowing, REGISTRY } from '../../scripts/medi
 import { QuotaError, UnavailableError } from '../../scripts/media/producers/image.mjs';
 import { gflowVideo, clearSubmission } from '../../scripts/media/producers/gflow-video.mjs';
 import { manualFlow, splitPoints, manualName } from '../../scripts/media/producers/manual-flow.mjs';
-import { nlmProducer, classify } from '../../scripts/media/producers/nlm.mjs';
+import { nlmProducer, classify, createArgs } from '../../scripts/media/producers/nlm.mjs';
 import { matchScore, suggestVerdict, skeleton, sameWord } from '../../scripts/media/qg2.mjs';
 import { loadRecipe } from '../../scripts/media/recipes.mjs';
 import { promptPage } from '../../scripts/media/prompt-page.mjs';
@@ -239,6 +239,27 @@ describe('nlm producer', () => {
     };
     expect(await nlmProducer({ ...noPace, run: run2 })(j)).toMatchObject({ status: 'ok', mediaId: 'a1' });
     expect(calls).not.toContain('audio create');
+  });
+  it('makes a mind map without polling and a Urdu study guide with Create Your Own (#908)', async () => {
+    const calls = [];
+    const run = (args) => {
+      calls.push(args);
+      if (args[1] === 'create') return { status: 0, stdout: JSON.stringify({ artifact_id: 'm1' }), stderr: '' };
+      if (args[0] === 'studio') return { status: 0, stdout: JSON.stringify([{ status: 'completed' }]), stderr: '' };
+      if (args[0] === 'download') { writeFileSync(args[args.indexOf('--output') + 1], '{}'); return { status: 0, stdout: '', stderr: '' }; }
+      return { status: 1, stdout: '', stderr: '' };
+    };
+    const r = await nlmProducer({ ...noPace, run })(job({ key: 't1-en-mindmap', kind: 'doc.mindmap', title: 'Topic 1' }));
+    expect(r).toMatchObject({ status: 'ok', mediaId: 'm1' });
+    expect(r.file).toMatch(/t1-en-mindmap\.json$/);
+    expect(calls.map((a) => a.slice(0, 2).join(' '))).toEqual(['mindmap create', 'download mind-map']);
+    expect(calls[0]).toEqual(expect.arrayContaining(['--title', 'Topic 1']));
+    calls.length = 0;
+    const g = await nlmProducer({ ...noPace, run })(job({ key: 't1-ur-studyguide', kind: 'doc.studyguide', prompt: 'Urdu study guide', language: 'ur' }));
+    expect(g.file).toMatch(/\.md$/);
+    expect(calls[0]).toEqual(expect.arrayContaining(['report', 'create', '--format', 'Create Your Own', '--prompt', 'Urdu study guide', '--language', 'ur']));
+    expect(calls.map((a) => a.slice(0, 2).join(' '))).toContain('download report');
+    expect(createArgs('report', { notebook_id: 'nb' })).toEqual(expect.arrayContaining(['--format', 'Study Guide']));
   });
 });
 

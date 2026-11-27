@@ -29,7 +29,7 @@ export function normaliseMindMap(node, labels = {}) {
   };
 }
 
-function translateTree(tree, map) {
+export function translateTree(tree, map) {
   const label = map[tree.label];
   if (!label) throw new Error(`No Urdu label for mind map node: "${tree.label}"`);
   return { label, children: tree.children.map((c) => translateTree(c, map)) };

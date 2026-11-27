@@ -11,9 +11,12 @@ test('the pilot page shows an accessible chart with a data table', async ({ page
   const svg = page.locator('svg[role="img"]');
   await expect(svg).toHaveAttribute('aria-label', 'Pupils absent per school day over 50 days (Larkana)');
   await expect(page.getByRole('img', { name: 'Pupils absent per school day over 50 days (Larkana)' })).toBeVisible();
-  // The chart sits directly after its heading.
+  // The chart sits after the table it summarises, in that heading's section (TopicCharts.tsx).
+  const slot = page.locator('[data-studio-chart="2"]');
+  await expect(slot).toHaveCount(1);
+  await expect(slot.locator('xpath=preceding-sibling::*[1][self::table or .//table]')).toHaveCount(1);
   const heading = page.locator('.markdown h3', { hasText: 'Building a distribution from records' });
-  await expect(heading.locator('xpath=following-sibling::*[1]')).toHaveAttribute('data-studio-chart', '2');
+  await expect(heading.locator('xpath=following-sibling::*[@data-studio-chart="2"]')).toHaveCount(1);
   const details = page.locator('[data-testid="studio-chart"] details');
   await details.locator('summary').click();
   await expect(details).toHaveAttribute('open', '');
