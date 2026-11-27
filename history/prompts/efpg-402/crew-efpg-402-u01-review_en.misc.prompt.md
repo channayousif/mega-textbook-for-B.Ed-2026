@@ -16,26 +16,26 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efpg-402/crew-efpg-402-u01-review_en.misc.prompt.md
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668.json
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/advisory-tracker-row.md
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/assessment-solutions.md
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/limitations.md
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/build-content-status.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check-content.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:depth-gate.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:docs-sync.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:figures.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:no-answer-keys.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:no-em-dash.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/measure-figure-text.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/render-review.txt
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/validate:content.log
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/make-report.mjs
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/manifest.json
-  - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/summary.md
+ - history/prompts/efpg-402/crew-efpg-402-u01-review_en.misc.prompt.md
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668.json
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/advisory-tracker-row.md
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/assessment-solutions.md
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/limitations.md
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/build-content-status.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check-content.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:depth-gate.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:docs-sync.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:figures.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:no-answer-keys.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/check:no-em-dash.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/measure-figure-text.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/render-review.txt
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/logs/validate:content.log
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/make-report.mjs
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/manifest.json
+ - specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668/summary.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -66,23 +66,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Produced validated independent G3 English review report (disposition: escalate) and supporting command and assessment evidence for EFPG-402 Unit 1 without modifying unit prose or certifying the stage. Render-review recorded as unavailable because deployed build differs from HEAD on index.mdx and fig-U1-11.webp.
+Recorded independent G3 English review evidence and advisory escalation report for EFPG-402 Unit 1 under specs/content/efpg-402/reviews/unit-01/G3/ without modifying unit content or tracker status.
 
 ## Outcome
 
-- Impact: review_en for EFPG-402 Unit 1 by agy.
-- Tests: node scripts/review-evidence.mjs validate and npm run check:content passed cleanly.
+- Impact: review_en for EFPG-402 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced validated independent G3 English review report (disposition: escalate) and supporting command/assessment evidence for EFPG-402 Unit 1 under specs/content/efpg-402/reviews/unit-01/G3/e9bd17ee-cecf-4f54-9149-3a5da9b53668.json.
-- Decisions the team must respect: G3 stays advisory until qualified sign-off; no gate was ticked and no certification issued.
-- Pending / next owner: crew lead.
+- Shipped / changed: Recorded independent G3 English review evidence and advisory escalation report for EFPG-402 Unit 1 under specs/content/efpg-402/reviews/unit-01/G3/ without modifying unit content or tracker status.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Content criteria (authority, sources, coverage, assessment, readability, pedagogy) all verified pass.
-  - Render-review was recorded as unavailable (exit code 1) because deployed SHA 0cbed86bb differs from HEAD 956c4ba91 on index.mdx and fig-U1-11.webp. Once a deployment containing fig-U1-11.webp is live, render inspection can verify visual presentation.
+  - All content criteria (authority, sources, coverage, assessment, readability, pedagogy) verified pass; render-review was recorded as unavailable because deployed SHA 0cbed86bb differs from HEAD on index.mdx and fig-U1-11.webp.
+  - Once a production deployment containing fig-U1-11.webp is live, a fresh review pass can run render-review against textbook.com.pk.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
