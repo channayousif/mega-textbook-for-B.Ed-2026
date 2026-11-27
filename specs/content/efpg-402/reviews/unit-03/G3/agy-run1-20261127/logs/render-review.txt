@@ -1,0 +1,18 @@
+render-review: unavailable (exit 1)
+Deployed SHA: 0cbed86bb96f7a6a03420ad3e5d726a47e8f5513
+HEAD SHA: 956c4ba9149ccc34e41e7d1dc31c624f7709d1b6
+
+git diff 0cbed86bb96f7a6a03420ad3e5d726a47e8f5513 HEAD -- docs/semester-4/efpg-402/unit-03/ static/img/figures/efpg-402/unit-03/
+reports changes in 2 files:
+ docs/semester-4/efpg-402/unit-03/index.mdx         |   2 ++
+ static/img/figures/efpg-402/unit-03/fig-U3-15.webp | Bin 0 -> 134852 bytes
+ 2 files changed, 2 insertions(+)
+
+The production site at https://textbook.com.pk serves the pre-illustration build and does not reflect the reviewed unit inputs at HEAD.
+Per crew brief and AGENTS.md host resource limits:
+- Prohibited from running npm run build, a dev server, or Playwright e2e suite.
+- scripts/render-inspect.mjs may only run with --base https://textbook.com.pk when deployed SHA matches HEAD.
+- Because deployed SHA differs from HEAD on unit English files and illustration assets, live site is not input.
+- render-review is recorded as unavailable (exit 1).
+Visual accessibility (360px viewport, table horizontal swipe containers, desktop layout, A4 print layout, figure clipping) remains unverified.
+Structural accessibility (semantic HTML, heading hierarchy, Figure alt text, SVG accessibility attributes) and figure geometry pass from source inspection.
