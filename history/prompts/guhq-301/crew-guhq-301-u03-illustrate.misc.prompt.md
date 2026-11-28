@@ -16,23 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/guhq-301/unit-03/index.mdx
-  - history/prompts/guhq-301/crew-guhq-301-u03-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-03/index.mdx
-  - specs/content/guhq-301/figures/unit-03.banner.md
-  - specs/content/guhq-301/reviews/unit-03/G2/20261128T131121355Z-gates.json
-  - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-bloom-bands.txt
-  - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-concept-graph.txt
-  - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-depth-gate.txt
-  - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-docs-sync.txt
-  - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-figures.txt
-  - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-no-answer-keys.txt
-  - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-no-em-dash.txt
-  - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/validate-content.txt
-  - specs/content/guhq-301/tasks.md
-  - static/img/figures/guhq-301/unit-03/fig-U3-5.webp
+ - docs/semester-3/guhq-301/unit-03/index.mdx
+ - history/prompts/guhq-301/crew-guhq-301-u03-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-03/index.mdx
+ - specs/content/guhq-301/figures/unit-03.banner.md
+ - specs/content/guhq-301/reviews/unit-03/G2/20261128T131121355Z-gates.json
+ - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-bloom-bands.txt
+ - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-concept-graph.txt
+ - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-depth-gate.txt
+ - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-docs-sync.txt
+ - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-figures.txt
+ - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-no-answer-keys.txt
+ - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/check-no-em-dash.txt
+ - specs/content/guhq-301/reviews/unit-03/G2/logs-20261128T131121355Z/validate-content.txt
+ - specs/content/guhq-301/tasks.md
+ - static/img/figures/guhq-301/unit-03/fig-U3-5.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -72,26 +72,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed the GUHQ-301 Unit 3 banner illustration (fig-U3-5) in the English and Urdu index pages, updated the banner manifest to placed, refreshed G2 gate evidence, and verified clean content gates.
+Generated and placed the GUHQ-301 Unit 3 banner illustration (fig-U3-5) in the English and Urdu index pages, updated the banner manifest to placed, recorded G2 gate evidence, and validated all content gates.
 
 ## Outcome
 
 - Impact: illustrate for GUHQ-301 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the run.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the GUHQ-301 Unit 3 banner illustration (fig-U3-5) in the English and Urdu index pages, updated the banner manifest, refreshed G2 gate evidence, and verified clean content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Generated and placed the GUHQ-301 Unit 3 banner illustration (fig-U3-5) in the English and Urdu index pages, updated the banner manifest to placed, recorded G2 gate evidence, and validated all content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit banner fig-U3-5 is placed; Unit 3 G3 review and G5 review remain open for independent evaluation.
-  - English defects for G3 or a revise-topic job: 2:284 is quoted as `فَىٓ` instead of `فِىٓ` (Topic 3.2 and MCQ 9, copied unchanged into the Urdu), and Topic 3.2 calls ءَامِنُوا۟ the result clause of إِذَا in 2:91 when it is قَالُوا۟ نُؤْمِنُ.
-  - G5 must check every Urdu verse meaning (rendered from Saheeh International English, not a published Urdu translation), the eight authored concept labels, and the rendered Urdu at 360 px and A4, which was not inspected.
-  - The "passive is common" claim rests on four counted examples, not a corpus frequency count, and is flagged in `sources/unit-03.md` for the G3 religious-content reviewer.
+  - Unit banner fig-U3-5 is placed; Unit 3 G3 English review and G5 Urdu review remain open for independent evaluation.
+  - English defects for G3 or revise-topic: 2:284 is quoted as `فَىٓ` instead of `فِىٓ` (Topic 3.2 and MCQ 9), and Topic 3.2 calls ءَامِنُوا۟ the result clause of إِذَا in 2:91 when it is قَالُوا۟ نُؤْمِنُ.
+  - G5 must check every Urdu verse meaning (rendered from Saheeh International English), the eight authored concept labels, and the rendered Urdu at 360 px and A4.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
