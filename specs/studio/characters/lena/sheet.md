@@ -1,6 +1,6 @@
 # Lena character sheet
 
-- **Version:** 1 (draft, not locked)
+- **Version:** 1 (descriptions approved by the owner 2026-11-28; sheet not locked)
 - **Locked on:** -
 - **Producer:** gflow Nano Banana (media hours only)
 - **Prompt:** `prompt-block.txt` + style token from `../_style-guide.md` + one view or expression per take

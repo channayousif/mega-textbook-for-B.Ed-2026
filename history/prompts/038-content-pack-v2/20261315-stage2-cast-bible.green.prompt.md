@@ -30,6 +30,10 @@ ok
 
 (reply to: "may I create these tables on the live database now? ... Stage 2 (the new cast) can start alongside it.")
 
+merge on green, show me cast as artifact for approval
+
+ok move on
+
 ## Response snapshot
 
 Drafted the season 1 cast bible: a style token (flat 2D vector, teal outlines, cel shading, house
@@ -52,7 +56,7 @@ sheets wait for the owner's review of the descriptions and for media hours.
 
 - Shipped / changed: specs/studio/characters/ (draft, not locked).
 - Decisions the team must respect: paste prompt-block.txt verbatim; no character is presented as a real or credentialed expert; Zara never appears outside a classroom setting.
-- Pending / next owner: owner approves or edits the cast; T009 sheet generation and lock.
+- Pending / next owner: none for the descriptions: the owner approved all four on the cast approval page (claude.ai artifact, 2026-11-28, decisions read back). T009 sheet generation waits for the Flow image caps (full until 00:00 PKT), then the owner locks the sheets.
 - Paperclip issues affected: none.
 
 ## Evaluation notes (flywheel)

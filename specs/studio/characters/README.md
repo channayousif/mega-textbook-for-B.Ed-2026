@@ -1,6 +1,6 @@
 # Content Pack cast (Feature 038, ADR-0040)
 
-Season 1 cast for long-form lessons and Shorts. Status: **draft, awaiting owner lock**.
+Season 1 cast for long-form lessons and Shorts. Status: **descriptions approved by the owner 2026-11-28** (cast approval page); sheets not yet generated or locked.
 
 | Slug | Name | Role | Flow voice |
 |---|---|---|---|
