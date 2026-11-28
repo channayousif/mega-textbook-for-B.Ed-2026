@@ -4,7 +4,7 @@ Source: https://doi.org/10.17951/h.2017.51.6.53
 
 Consulted: 2026-11-24. OpenAlex W2788736539: published 2018, diamond open access, abstract reconstructed from the OpenAlex record.
 
-Locator: Cegielska, E., & Zawadzka, D. (2018). Sources of startup financing in Poland. *Annales Universitatis Mariae Curie-Skłodowska sectio H Oeconomia, 51*(6), 53.
+Locator: Cegielska, E., & Zawadzka, D. (2017). Sources of startup financing in Poland. *Annales Universitatis Mariae Curie-Skłodowska sectio H Oeconomia, 51*(6), 53.
 
 ## Evidence notes (from the abstract)
 
