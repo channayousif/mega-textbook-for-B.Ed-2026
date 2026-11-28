@@ -12,9 +12,8 @@ Checked on 2026-11-27. All prose is original; quotations are under 15 words and 
 
 ## Unverifiable sources
 
-Bound excerpts could not be committed for these print-only monographs or online dynamic resources. They are listed here so `check:depth-gate` and reviewers see the limitation rather than infer it from silence. No claim in the unit rests on them alone: each sub-topic they are mapped to is also grounded in a source with a bound excerpt (`ncp-science-2022`).
+Bound excerpts could not be committed for these print-only monographs or online dynamic resources. They are listed here so `check:depth-gate` and reviewers see the limitation rather than infer it from silence. No claim in the unit rests on them alone: each sub-topic they are mapped to is also grounded in a source with a bound excerpt (`ncp-science-2022`, `khan-2019-low-cost`).
 
-- khan-2019-low-cost: Open-access journal article (Sir Syed Journal of Education & Social Research, 2019). Cited for U4-03 for empirical evidence on low-cost teaching materials in Pakistani secondary physics classrooms; bound excerpt not committed on this host. U4-03 is also grounded in the bound excerpt for ncp-science-2022.
 - khan-academy-science: Guide-listed educational website. Open access; cited for U4-04 for digital video demonstrations and simulation tools in science teaching; bound excerpt not committed on this host. U4-04 is also grounded in the bound excerpt for ncp-science-2022.
 - vaidya-science: Print monograph (Orient Longman). Not found in Open Library; title-level only (`D-2026-0001`). Cited for U4-01, U4-02 and U4-05 on teaching aids, laboratory equipment use and community science resources.
 - dale-1969: Print monograph (Dryden Press; Holt, Rinehart & Winston, 1969). Open Library OL9270043W verified 2026-11-27. Cited for U4-01 for Dale's cone of experience framework; bound excerpt not committed on this host.

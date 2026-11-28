@@ -26,7 +26,7 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="h" x="390" y="150" text-anchor="middle">بصری اور سماعتی ذرائع</text>
 <text class="cell" x="390" y="172" text-anchor="middle">چارٹس، تعلیمی ویڈیوز، اینیمیشنز اور سلائیڈز</text>
 
-<text class="h" x="390" y="242" text-anchor="middle">مظاہرے اور فعال ماڈلز</text>
+<text class="h" x="390" y="242" text-anchor="middle">تیار کردہ تجربات اور فعال ماڈلز</text>
 <text class="cell" x="390" y="264" text-anchor="middle">اساتذہ کے عملی مظاہرے، نمائشیں اور کم خرچ ماڈلز</text>
 
 <text class="h" x="390" y="340" text-anchor="middle">براہِ راست بامقصد تجربات</text>
