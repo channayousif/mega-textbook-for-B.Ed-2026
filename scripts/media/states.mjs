@@ -6,17 +6,24 @@ export const STATES = ['planned', 'scripted', 'approved', 'generating', 'generat
   'assembled', 'uploaded-private', 'owner-approved', 'public', 'placed'];
 
 export const KINDS = ['video.teaser', 'audio.brief', 'audio.deeper', 'video.overview', 'doc.poster',
-  'doc.mindmap', 'doc.brief', 'doc.studyguide', 'doc.slides', 'image.schematic', 'image.illustration'];
+  'doc.mindmap', 'doc.brief', 'doc.studyguide', 'doc.slides', 'image.schematic', 'image.illustration',
+  // Content Pack v2 (Feature 038, ADR-0040).
+  'video.longform', 'video.short', 'doc.infographic'];
 
 const VIDEO_UPLOAD = ['planned', 'generating', 'generated', 'checked', 'assembled', 'uploaded-private',
   'owner-approved', 'public', 'placed'];
 const DOC = ['planned', 'generating', 'generated', 'checked', 'placed'];
+// Pack videos spend credits and owner time, so a script and the owner's approval come first (FR-016).
+const SCRIPTED_VIDEO = ['planned', 'scripted', 'approved', 'generating', 'generated', 'checked', 'assembled',
+  'uploaded-private', 'owner-approved', 'public', 'placed'];
 
 /** The states each kind uses, in order. Kinds skip what they do not need (images never upload). */
 export const PATH = {
   // A teaser spends credits, so a script and the owner's approval come first (FR-012).
-  'video.teaser': ['planned', 'scripted', 'approved', 'generating', 'generated', 'checked', 'assembled',
-    'uploaded-private', 'owner-approved', 'public', 'placed'],
+  'video.teaser': SCRIPTED_VIDEO,
+  'video.longform': SCRIPTED_VIDEO,
+  'video.short': SCRIPTED_VIDEO,
+  'doc.infographic': DOC,
   'audio.brief': VIDEO_UPLOAD,
   'audio.deeper': VIDEO_UPLOAD,
   'video.overview': VIDEO_UPLOAD,

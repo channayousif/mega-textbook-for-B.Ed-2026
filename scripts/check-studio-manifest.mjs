@@ -78,6 +78,7 @@ export function checkStudio(root = ROOT) {
       if (a.status !== 'placed') return;
       const p = join(root, 'static', a.asset_path);
       if (!existsSync(p)) { findings.push(`${where}: asset missing at static${a.asset_path}`); return; }
+      if (!/\.(json|md)$/.test(p)) return; // pack images and PDFs (Feature 038) have no text checks
       const body = readFileSync(p, 'utf8');
       if (LONG_DASH.test(body)) findings.push(`${where}: asset contains a long dash (use a spaced hyphen)`);
       if (p.endsWith('.json')) { try { JSON.parse(body); } catch { findings.push(`${where}: asset is not valid JSON`); } }
@@ -86,6 +87,7 @@ export function checkStudio(root = ROOT) {
   }
   for (const p of walk(join(root, 'static', 'studio'))) {
     if (MEDIA_EXT.test(p)) { findings.push(`${rel(p)}: media file in the repo; studio audio/video live in ~/studio-media and on YouTube`); continue; }
+    if (/\.(webp|png|jpe?g|pdf)$/i.test(p)) continue;
     if (ANSWER_FIELD.test(readFileSync(p, 'utf8'))) findings.push(`${rel(p)}: carries a quiz answer field; quiz items belong only in quiz_items`);
   }
 

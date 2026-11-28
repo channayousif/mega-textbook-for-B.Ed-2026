@@ -6,10 +6,10 @@
 - [x] T003 Owner approves PLAN-v2 (2026-11-28); ADR-0040 adopted
 
 ## Stage 1: Data model
-- [ ] T004 Migration `content_packs`, `content_pack_events`, private upload bucket, admin RPCs (owner approval first)
-- [ ] T005 RLS tests for both tables and the bucket
-- [ ] T006 Manifest kinds `longform`, `short`, `infographic`, `deck_pdf` and new fields; schema tests
-- [ ] T007 Media kinds `video.longform`, `video.short`, `doc.infographic` in `states.mjs`; playlist map in `brand.mjs`
+- [x] T004 Migration `0060_content_packs.sql`: tables, private upload bucket (50 MB, no video), admin RPCs; applied to live Supabase 2026-11-28 after the owner's "ok"
+- [x] T005 RLS tests for both tables and the bucket (`tests/rls/content-packs.test.mjs` passes live)
+- [x] T006 Manifest kinds `longform`, `short`, `infographic`, `deck_pdf` and new fields; schema tests
+- [x] T007 Media kinds `video.longform`, `video.short`, `doc.infographic` in `states.mjs`; playlist map in `brand.mjs`
 
 ## Stage 2: Cast
 - [ ] T008 `specs/studio/characters/_style-guide.md` and four character folders
