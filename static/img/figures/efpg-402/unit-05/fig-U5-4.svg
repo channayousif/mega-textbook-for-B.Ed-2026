@@ -52,8 +52,9 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="cell" x="560" y="205">Active investigator,</text>
 <text class="cell" x="560" y="222">collaborator, sense-maker</text>
 <text class="sh" x="36" y="272">Sequence</text>
-<text class="cell" x="150" y="263">Preparation, Presentation,</text>
-<text class="cell" x="150" y="280">Association, Generalization</text>
+<text class="cell" x="150" y="260">Preparation, Presentation,</text>
+<text class="cell" x="150" y="277">Association, Generalization,</text>
+<text class="cell" x="150" y="294">Application</text>
 <text class="cell" x="350" y="263">Input (SLOs) -> Process</text>
 <text class="cell" x="350" y="280">(Tasks) -> Output (Test)</text>
 <text class="cell" x="560" y="263">5E inquiry cycle:</text>

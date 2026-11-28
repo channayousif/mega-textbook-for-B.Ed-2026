@@ -52,8 +52,8 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="cell" x="220" y="287">فعال محقق،</text>
 <text class="cell" x="220" y="310.8">شریکِ کار، معنی ساز</text>
 <text class="sh" x="744" y="380.8">ترتیب</text>
-<text class="cell" x="630" y="368.2">تیاری، پیشکش،</text>
-<text class="cell" x="630" y="392">ربط، تعمیم</text>
+<text class="cell" x="630" y="368.2">تیاری، پیشکش، ربط،</text>
+<text class="cell" x="630" y="392">تعمیم، استعمال</text>
 <text class="cell" x="430" y="368.2">مدخل (SLOs)، پھر عمل</text>
 <text class="cell" x="430" y="392">(کام)، پھر حاصل (آزمائش)</text>
 <text class="cell" x="220" y="368.2">5E تحقیقی چکر:</text>
