@@ -1,0 +1,11 @@
+-- topic-01
+   /img/figures/guhq-301/unit-01/fig-U1-2.svg before=262x150 after=262x150 shown=true
+   /img/figures/guhq-301/unit-01/fig-U1-2.dark.svg before=0x0 after=0x0 shown=false
+   /img/figures/guhq-301/unit-01/fig-U1-1.svg before=0x0 after=265x150 shown=true
+   /img/figures/guhq-301/unit-01/fig-U1-1.dark.svg before=0x0 after=0x0 shown=false
+-- topic-02
+   /img/figures/guhq-301/unit-01/fig-U1-3.svg before=238x150 after=238x150 shown=true
+   /img/figures/guhq-301/unit-01/fig-U1-3.dark.svg before=0x0 after=0x0 shown=false
+   /img/figures/guhq-301/unit-01/fig-U1-4.svg before=0x0 after=300x139 shown=true
+   /img/figures/guhq-301/unit-01/fig-U1-4.dark.svg before=0x0 after=0x0 shown=false
+exit_code=0

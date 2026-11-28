@@ -1,0 +1,43 @@
+Command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efpg-402/unit-06/ static/img/figures/efpg-402/unit-06/
+Exit code: 1
+Deployed SHA: fb0d38996a8231c160e8d1104c7c5a6935022911
+HEAD SHA: d103b2448df417cf34c30c95c362e103d962b2fc
+
+Differences between deployed SHA and HEAD on Unit 6:
+ docs/semester-4/efpg-402/unit-06/index.mdx         |   2 ++
+ docs/semester-4/efpg-402/unit-06/topic-01.mdx      |   2 +-
+ docs/semester-4/efpg-402/unit-06/topic-02.mdx      |   2 +-
+ docs/semester-4/efpg-402/unit-06/topic-03.mdx      |   2 +-
+ docs/semester-4/efpg-402/unit-06/topic-04.mdx      |   2 +-
+ docs/semester-4/efpg-402/unit-06/topic-05.mdx      |   2 +-
+ docs/semester-4/efpg-402/unit-06/topic-06.mdx      |   2 +-
+ static/img/figures/efpg-402/unit-06/fig-U6-13.webp | Bin 0 -> 108186 bytes
+ static/img/figures/efpg-402/unit-06/fig-U6-14.webp | Bin 0 -> 133884 bytes
+ static/img/figures/efpg-402/unit-06/fig-U6-15.webp | Bin 0 -> 136302 bytes
+ static/img/figures/efpg-402/unit-06/fig-U6-16.webp | Bin 0 -> 126930 bytes
+ static/img/figures/efpg-402/unit-06/fig-U6-17.webp | Bin 0 -> 120936 bytes
+ static/img/figures/efpg-402/unit-06/fig-U6-18.webp | Bin 0 -> 115744 bytes
+ static/img/figures/efpg-402/unit-06/fig-U6-19.webp | Bin 0 -> 108028 bytes
+ 14 files changed, 8 insertions(+), 6 deletions(-)
+
+Name-status:
+M	docs/semester-4/efpg-402/unit-06/index.mdx
+M	docs/semester-4/efpg-402/unit-06/topic-01.mdx
+M	docs/semester-4/efpg-402/unit-06/topic-02.mdx
+M	docs/semester-4/efpg-402/unit-06/topic-03.mdx
+M	docs/semester-4/efpg-402/unit-06/topic-04.mdx
+M	docs/semester-4/efpg-402/unit-06/topic-05.mdx
+M	docs/semester-4/efpg-402/unit-06/topic-06.mdx
+A	static/img/figures/efpg-402/unit-06/fig-U6-13.webp
+A	static/img/figures/efpg-402/unit-06/fig-U6-14.webp
+A	static/img/figures/efpg-402/unit-06/fig-U6-15.webp
+A	static/img/figures/efpg-402/unit-06/fig-U6-16.webp
+A	static/img/figures/efpg-402/unit-06/fig-U6-17.webp
+A	static/img/figures/efpg-402/unit-06/fig-U6-18.webp
+A	static/img/figures/efpg-402/unit-06/fig-U6-19.webp
+
+Status: UNAVAILABLE
+In accordance with the crew brief and repository rules, because git diff is non-empty the live
+site does not reflect current HEAD for EFPG-402 Unit 6. A local build, dev server, or local
+browser run is prohibited by repository host resource limits. render-review is recorded as
+unavailable (exit code 1).

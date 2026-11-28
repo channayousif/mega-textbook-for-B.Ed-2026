@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "course_code": "GUHQ-301",
+  "unit_no": 1,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:claude-crew",
+  "author_run_id": "crew:crew-guhq-301-u01-author",
+  "reviewer_run_id": "crew/guhq-301-u01-review_en-r1",
+  "model": "LongCat-2.5 (Claude Code crew session; exact deployment version unavailable)",
+  "started_at": "2026-11-28T12:52:19Z",
+  "completed_at": "2026-11-28T13:13:31.043Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d",
+    "D-2026-0080": "0a1be45e5c9af760c8220e71ab4e2c32f25113d209d24f4a589653ac688b5bf0"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/3rd 2026.pdf": "f0de34d0a166d0306afbb87aaca2caa58a077ca6024b26e192b6aa02e09eb028",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "ec6f06eaef7aa424265bcbcfed059f6af726cc97a35c5693c20b03ee83f209eb",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-3/guhq-301/course-overview.mdx": "4bad9a7e32bc2139b217019fb1f6b91044900eb4750b5ab181e311a3fc2d7530",
+    "docs/semester-3/guhq-301/unit-01/index.mdx": "928ddd605f711ce292fc4935b4d801a049530429fb6dd776617f0b013c5b6eb5",
+    "docs/semester-3/guhq-301/unit-01/topic-01.mdx": "13606006e386d54832cf7825f2de5a7dbcca57701e7ab8505f059a3a522c3fbd",
+    "docs/semester-3/guhq-301/unit-01/topic-02.mdx": "70368ca3ba66befc282973993b7e584c650c097aa3d486b0fd409dd03ecb804c",
+    "docs/semester-3/guhq-301/unit-01/unit-assessment.mdx": "0b01e4a32cac3b6661cdd0294739e81e52e9a522970a955bcb7cce3f34d2a347",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "33e46f435128a99f53a38c597b289d730c85b398a7f27b068392552540128622",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "22eaaee128cd13f1756a1c1d4037a8ed7143cfc9f0428c12f49a8b4752fb7f93",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/guhq-301/concepts/unit-01.md": "13b8a5eb19ff9b4398cf0754d277d43116d919519c28761f7549324617babfd2",
+    "specs/content/guhq-301/content-spec.md": "d43bb84ed2607a2636d34f0ffeef7d9625086541fd39a4cc2c7e8573503365d3",
+    "specs/content/guhq-301/coverage/unit-01.md": "f3815d39f390869b8f1ae6b3cd497770d0e0e846aea3eea4ed9b703910b95701",
+    "specs/content/guhq-301/figures/unit-01.banner.md": "167808b02388eaf8bc1e80265f123fb4e4294d6175ac8e67e013c4429cb10120",
+    "specs/content/guhq-301/figures/unit-01.md": "0d70668b2e031662c421c8ca798955511b4f6a7de367e3118cf31ca1bea2ff87",
+    "specs/content/guhq-301/sources/texts/yazar-batur-2025.md": "e2cdb1be51b3d0cd703b83a9f113b2e3a205ad1c32d239c79164b72489df005b",
+    "specs/content/guhq-301/sources/unit-01.md": "388f133a8c4c285a62efd77b847775cbc25e4860bcf7637bc72dde631113dd52",
+    "specs/content/guhq-301/translations/unit-01/check-content-parity.txt": "06d4d8ad80327da675f66637056cc9b34f52bc186dbb51d9e09fbc9a0603851e",
+    "specs/content/guhq-301/translations/unit-01/handoff.md": "8f1a140ee899bf4982299dd89360ed7d72ec6502ff178b4cd34352ffe23c4698",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/guhq-301/unit-01/fig-U1-1.dark.svg": "9d892855d4279d3d460076cba758fc94dbd84e9b860cdd218d6df167911c2143",
+    "static/img/figures/guhq-301/unit-01/fig-U1-1.svg": "db11e145a3ea3b17cbbe32c10b2d2019ccdcdeea5546d3cc77c6eae4a9ced667",
+    "static/img/figures/guhq-301/unit-01/fig-U1-2.dark.svg": "f924324367fbbae494c7c7aa9a2f4c8818d2b892077997cd1f31a0f883b930af",
+    "static/img/figures/guhq-301/unit-01/fig-U1-2.svg": "d4b5e5cc7da94378920fd536cf74ad98ad3cb0dd9dd80d729a8dba958cd649da",
+    "static/img/figures/guhq-301/unit-01/fig-U1-3.dark.svg": "3356c13417c0df47eb36c24aa351d44cf00dac463d28212258cd7099423c4158",
+    "static/img/figures/guhq-301/unit-01/fig-U1-3.svg": "da5221c1e329ef2d6a2b1fc7d3042c91543ff7ff4cd93e1eb2ba34338f7d4355",
+    "static/img/figures/guhq-301/unit-01/fig-U1-4.dark.svg": "a644d8caa5c291b6d97193f5cc7aeb6504416da31f9c0197ecf4756cddf40df2",
+    "static/img/figures/guhq-301/unit-01/fig-U1-4.svg": "e6ee44ade08b771d759502dcf921265fe28cb45930e1d39c4d9f399c8c021bdf",
+    "static/img/figures/guhq-301/unit-01/fig-U1-5.webp": "fe3bd24354f5c9a9b77cc3c5a5942943e4dba227ee5e3a2c296cec775ef511cc"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/3rd 2026.txt:135-145 (guide Unit 01, Weeks 1-2) leaves Importance of understanding the Qur'an, Characteristics of Quranic Arabic, Difference between Classical Arabic and Quranic Arabic, 1.4 alphabet and pronunciation, 1.5 word formation, 1.6 frequent expressions",
+        "specs/content/guhq-301/content-spec.md:71-115 (Unit 1 sub-topic checklist U1-01..U1-06, topic list, figure plan, assessment blueprint); D-2026-0080 approved the spec as drafted (specs/gaps.md:3107-3132)",
+        "docs/semester-3/guhq-301/unit-01/topic-01.mdx ### Importance of understanding the Qur'an / ### Characteristics of Quranic Arabic / ### Difference between Classical Arabic and Quranic Arabic; topic-02.mdx ### Arabic alphabet review and pronunciation (Quranic focus) / ### Word formation in Quranic Arabic / ### Frequently occurring Quranic expressions",
+        "specs/content/guhq-301/coverage/unit-01.md (every leaf mapped to a file and section); catalog/courses.json GUHQ-301 entry present"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "specs/content/guhq-301/sources/unit-01.md (four bound sources with URL/DOI and Kind); independently re-retrieved: Quran.com API verses, corpus dictionary pages, MDPI religions-16-01186.pdf, arXiv:2509.00094 abstract",
+        "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/source-checks.md (verse-by-verse and count-by-count comparison)",
+        "specs/content/guhq-301/sources/texts/yazar-batur-2025.md and abdelfattah-2025-tajweed.md (bound notes match the retrieved full text and abstract)"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/guhq-301/coverage/unit-01.md (U1-01..U1-06 all mapped; design and assessment trace per sub-topic)",
+        "docs/semester-3/guhq-301/unit-01/index.mdx ## In this unit (two topics); reading-minutes 3+12+13+12=40 within the 25-40 depth budget",
+        "specs/content/guhq-301/concepts/unit-01.md (seven concepts, prerequisites, assessment IDs match the 10/10/5 numbering); specs/content/guhq-301/figures/unit-01.md (two figures per topic, one concept-map and one flowchart)"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-3/guhq-301/unit-01/unit-assessment.mdx (10 MCQs, 10 RRQs, 5 ERQs; bands Remember-Apply, Understand-Analyze, Analyze-Evaluate-Create; rubrics in the bounded final section)",
+        "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/assessment-solutions.md (independent key and solutions; predicted MCQ key equals the supplied key 10/10)",
+        "specs/content/guhq-301/coverage/unit-01.md:20-30 (blueprint spreads met: MCQs and RRQs 5 per topic, ERQs 2+2+1 integrative)"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/render-review.txt (1280x900, 360x780, A4 794 print: no skipped heading levels, no missing alt, no document overflow, no print clipping, tables scroll with tabindex and aria-label)",
+        "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/measure-figure-text.txt (all 16 SVGs clean); every EN SVG <desc> equals its carrier alt (checked statically)",
+        "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/lazy-load-diagnostic.txt (both flagged figures load after a scroll pass)"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-3/guhq-301/unit-01/topic-01.mdx and topic-02.mdx (HSC register; tadabbur, nazira, hifz, Mu'allaqat, makhraj, sifāt, jadhr, wazn defined at first use)",
+        "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-no-em-dash.txt (exit 0)"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-3/guhq-301/unit-01/topic-01.mdx and topic-02.mdx (nine-part cycle in order; classroom situation, explanation with worked example, misconception correction, group activity, retrieval, self-assessment, practicum task, summative task with mini-rubric, further reading)",
+        "specs/content/guhq-301/content-spec.md:102 (the three named misconceptions are each corrected in the Explanation)"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "scripts/render-inspect.mjs exits 1 on this unit. Its desktop pass reads img.naturalWidth without scrolling, so fig-U1-1 (offset 4781px) and fig-U1-4 (offset 4408px) are below Chromium's lazy-load threshold and are reported as \"visible image did not load\", although notServed=0 (every src returns HTTP 200) and logs-20261128T125230Z/lazy-load-diagnostic.txt shows both load after a scroll pass (natural 265x150 and 300x139). The rendered evidence is otherwise clean. This is a tooling gap, not a content defect; the contract requires a successful render-review for a pass, so the disposition cannot be pass until the inspector scrolls or the owner rules otherwise."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "MCQ key is B6 / C4 with no item keyed A or D (docs/semester-3/guhq-301/unit-01/unit-assessment.mdx:106-117). This matches the course pattern (Unit 4 B7/C3, Unit 6 B9/A1), but a candidate who always picks B scores 6 of 10."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "specs/content/guhq-301/sources/unit-01.md:16-18 declares the Urdu letter-merger claim in prose under \"## Claims without a bound source\" rather than as a no-external-source table row (specs/content/style-guide.md:293). The declaration is honest and does not overstate what is unchecked."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "ERQ 3 (docs/semester-3/guhq-301/unit-01/unit-assessment.mdx:100) repeats the Topic 1.2 Summative task (docs/semester-3/guhq-301/unit-01/topic-02.mdx:156-174) with the same six-word list and the same three sub-questions."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Further-reading links use bare URLs as anchor text (docs/semester-3/guhq-301/unit-01/topic-01.mdx:155-157, topic-02.mdx:178-180); render-inspect reports this as an advisory on each page."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/render-review.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/advisory-tracker-row.md": "d0906d4f926b0edae36304adf6c82eab730f25482412e8d6c03788d24baadb8f",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/assessment-solutions.md": "87a85c52641404821d90773d20604eac6fc0b5388a08eacc882581879a7b2f16",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/limitations.md": "b2c67624a67fde70c54e25c69a8a61c0eefa14e5acff1b29de01f62831ed42ab",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-depth-gate.txt": "cb2a6c568dc3a6daaf727fa5d0cb053711602520e8bcb63f9084a4384c7d31b4",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-docs-sync.txt": "d90116820c1ec1f881b45e0818bc42ada52c16b2c34f19392a2a283ebb1ec2a3",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-figures.txt": "adf48998296138f6cefdc69de8614f6e224cbe02ee85e438230b31a6da604c18",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-no-answer-keys.txt": "d0abde3dc50a734baac7fac79b6b9da4846ed832fe0183dfabcbde9f0e265d3b",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/check-no-em-dash.txt": "9710020d052bf0aea0cebcc21b17aaf765d6f99a51807b3d5b0ea3b272af0909",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/lazy-load-diagnostic.txt": "f0a49e521c73c1031a4be50f8f8850250d8232d067580ac73aebf128172e4c3b",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/measure-figure-text.txt": "7306df259843dbcc724bb309d3970787a6c96b9eb2ffc8c1dc63e6c420edfe7d",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/render-review.txt": "cdcdd621116785296792363fa61a1e9b67247363559e7286152267231fc54fc5",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/logs-20261128T125230Z/validate-content.txt": "e656a7ba394afbabf45071b5be5420dcfec4b12c630c5aed18334810b1f37ba1",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/desktop-index.png": "0e8f16c1a2b03dd2386c1060802f0dadfb866b837cd86e71a8cf637eb6bc3719",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/desktop-topic-01.png": "ddc18b9117a50cfcc0e0e5abd00c1f0fc5ffebad4ecf8a1481b82d2871d355b6",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/desktop-topic-02.png": "3602edf2b7bcf2463adcde101dd9ea4aab5d81314769c974be6a80d8a7969fed",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/desktop-unit-assessment.png": "c346844088523d6c65e16662ded02c9b8c40c3c944fde4b8161ff6851fb41ed4",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/narrow360-index.png": "6dad444f0b5dd46a6b639bfaa13a38e3d05ff7ac779910514b3af4e78ba8b5a5",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/narrow360-topic-01.png": "103e40eb5ff0f74c11c9cca64222404902f56fb001283c084f56732e55c7c44a",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/narrow360-topic-02.png": "5bc6121817234f6b4875e277156ea9af49742e049dc847388c85d47591d2ed5c",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/narrow360-unit-assessment.png": "b042ba1e527c7f21a9024b94b09e591a7b9ae76dded392e5f939def586dc89a8",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/render-inspect.json": "73e5864aeb58ac2aaa807bfb89717e9f770b8f5a6cc890ed316c687b1c712fcf",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/renders/render-inspect.log": "99c7eafaad654b45335256b1f6275e995f593700bed1b256d7452b1fc2441aaf",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/source-checks.md": "150b5e1f1b158cbf2c2f6404effe056d65655175a2907fb8e81ef4b7800ba248",
+    "specs/content/guhq-301/reviews/unit-01/G3/crew-guhq-301-u01-review_en-r1/summary.md": "626981b287aee17adc64d823b4db3246a021c6a05cc12b2bc028ab328a28bb4f"
+  }
+}

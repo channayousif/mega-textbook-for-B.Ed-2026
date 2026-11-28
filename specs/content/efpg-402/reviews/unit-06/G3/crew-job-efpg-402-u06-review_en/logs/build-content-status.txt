@@ -1,0 +1,4 @@
+$ npm run -s build:content-status
+✓ Wrote content status for 25 course(s) to static/content-status.json
+
+exit_code=0
