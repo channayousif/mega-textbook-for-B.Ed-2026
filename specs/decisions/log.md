@@ -5265,3 +5265,33 @@ content-improvement loop with no further cycle.
   QG2 verdict as local whisper on all 24.
 - **Limits:** Never upgrade to the Workers Paid plan; the token is scoped to Workers AI and stays host-local.
 
+## D-2026-0104 - Content Pack v2: one topic, one teaching pack, international audience
+
+- **Status:** confirmed
+- **Gate:** none (Feature 038 planning; amends D-2026-0082, reverses D-2026-0083 for new work)
+- **Scope:** all new video and Study Studio media for `docs/` and `licence/` topics
+- **Decided by:** curriculum owner, 2026-11-28 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **Packs, not adverts.** Each topic gets one long-form lesson video, several Shorts cut from it
+     that each teach one thing, a slide deck, a mind map, an infographic, a site embed and a
+     metadata pack. About 90% teaching value, 10% brand. New teasers are not planned; published
+     teasers stay as they are.
+  2. **International audience, English first.** Urdu becomes a second audio track, Urdu subtitles and
+     Urdu versions of the best Shorts. D-2026-0083 (Urdu-only teasers) no longer governs new work.
+  3. **A new cast** of 3-4 clearly stylised characters with a versioned bible; the Ustani Farzana and
+     Bilal puppets are not used in new packs.
+  4. **NotebookLM output is trimmed** of its intro and outro/logo frames and re-wrapped in our brand frame.
+  5. **Visible watermarks** are removed only through the producer's official setting or by
+     regenerating; our AI disclosure is the standard. SynthID and C2PA marks are never removed or
+     defeated.
+  6. The pipeline extends the live Media Studio (Feature 030); the one-page app is an admin page on
+     the site backed by Supabase.
+- **Basis:** owner messages 2026-11-28: "I want to revise the plan to create one comprehensive
+  longform video per topic, the shorts will be high value clips and highlights from that long
+  video", "we should go for international audiences as well", "videos made with notebook should
+  crop the logo and initial few seconds and final loge view", "REmove any watermarks, our AI
+  disclosure is enough", and the answers "Extend Media Studio", "New cast for v2", "Admin page on
+  the site".
+- **Limits:** Certifies no content and authorises no publication. The Supabase migration, the cast
+  sheets, each pack script and each publication still need the owner's approval. An ADR amending
+  ADR-0037 waits for the owner's consent.

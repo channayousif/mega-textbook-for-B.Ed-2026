@@ -31,3 +31,13 @@ versus re-proving authoring quality (style guide v4.4, the Urdu parity workflow,
 answer-key gates) on a new model, and keeping the existing `.claude/skills/` authoring skills
 usable from a non-Claude agent (`.agents/skills.json` already exposes them to Antigravity). This
 note is a proposal, not an adopted ADR. ContentAuthor stays on Claude until the owner adopts it.
+
+## Content Pack v2 supersedes the teaser model (amends ADR-0037)
+
+Proposed 2026-11-28 for Feature 038 (D-2026-0104). New video work moves from course teaser Shorts
+(recipe teaser@3, Urdu only) to one content pack per topic: an English-first long-form lesson video,
+teaching Shorts cut from it, a deck, a mind map and an infographic, with Urdu as a second audio track
+and subtitles. Pack progress lives in a Supabase-backed admin page instead of JSON ledgers alone, and
+pack compositions render through the video-studio Remotion project on Kaggle. This crosses the Media
+Studio, the video-studio sub-project (ADR-0031), the site and the database, so it is proposed for an
+ADR. This note is a proposal, not an adopted ADR.
