@@ -1,0 +1,278 @@
+{
+ "course": "EFMP-302",
+ "unit": 4,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Professional standard",
+     "definition": "A written statement of the knowledge, values and practice expected of a competent member of a profession, specific enough that someone can judge whether it has been met."
+    },
+    {
+     "term": "Code of conduct",
+     "definition": "It answers how I should behave. It governs conduct, and the consequence of breaching it is disciplinary."
+    },
+    {
+     "term": "Curriculum",
+     "definition": "It answers what pupils should learn. It governs content."
+    },
+    {
+     "term": "Scope, granularity and stakes",
+     "definition": "Ways standards frameworks differ: what they cover, how detailed they are, and what depends on them. These differences show what a framework is for."
+    },
+    {
+     "term": "Initial training",
+     "definition": "A use of a standard in which it tells a teacher education programme what it is preparing people for."
+    },
+    {
+     "term": "Continuing development",
+     "definition": "A use of a standard in which a serving teacher finds the gap between current and competent practice, and chooses what to work on."
+    },
+    {
+     "term": "Appraisal",
+     "definition": "A use of a standard in which a school or system takes it as the reference for judging performance."
+    },
+    {
+     "term": "Public accountability",
+     "definition": "A use of a standard in which the profession makes a claim to society: this is what we hold ourselves to."
+    }
+   ],
+   "ur": [
+    {
+     "term": "پیشہ ورانہ معیارات",
+     "definition": "علم، اقدار اور مشق کا تحریری بیان جو پیشے کے اہل رکن سے متوقع ہے، اور اتنا مخصوص کہ کوئی جانچ سکے کہ وہ پورا ہوا ہے یا نہیں۔"
+    },
+    {
+     "term": "ضابطہ اخلاق",
+     "definition": "یہ اس سوال کا جواب دیتا ہے کہ میرا رویہ کیسا ہونا چاہیے۔ یہ طرزِ عمل کا احاطہ کرتا ہے، اور اس کی خلاف ورزی کا نتیجہ تادیبی ہوتا ہے۔"
+    },
+    {
+     "term": "نصاب",
+     "definition": "یہ اس سوال کا جواب دیتا ہے کہ شاگردوں کو کیا سیکھنا چاہیے۔ یہ مواد کا احاطہ کرتا ہے۔"
+    },
+    {
+     "term": "دائرہ، باریکی اور داؤ",
+     "definition": "وہ پہلو جن میں معیارات کے ڈھانچے مختلف ہوتے ہیں: وہ کس چیز کا احاطہ کرتے ہیں، کتنے تفصیلی ہیں، اور ان پر کیا منحصر ہے۔ یہ فرق بتاتے ہیں کہ ڈھانچہ کس کام کے لیے ہے۔"
+    },
+    {
+     "term": "ابتدائی تربیت",
+     "definition": "معیار کا وہ استعمال جس میں وہ استاد کی تربیت کے پروگرام کو بتاتا ہے کہ وہ لوگوں کو کس چیز کے لیے تیار کر رہا ہے۔"
+    },
+    {
+     "term": "مسلسل ترقی",
+     "definition": "معیار کا وہ استعمال جس میں زیرِ خدمت استاد اپنی موجودہ مشق اور اہل مشق کے درمیان فرق ڈھونڈتا ہے اور چنتا ہے کہ کس پر کام کرے۔"
+    },
+    {
+     "term": "جائزہ",
+     "definition": "معیار کا وہ استعمال جس میں اسکول یا نظام اسے کارکردگی پر فیصلہ کرنے کا حوالہ بناتا ہے۔"
+    },
+    {
+     "term": "عوامی جوابدہی",
+     "definition": "معیار کا وہ استعمال جس میں پیشہ معاشرے سے دعویٰ کرتا ہے کہ یہ وہ چیز ہے جس کا ہم خود کو پابند کرتے ہیں۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "National Professional Standards for Teachers",
+     "definition": "Issued by Pakistan's Ministry of Education in 2009 with UNESCO and USAID support, they are the framework against which teacher education programmes in Pakistan are designed."
+    },
+    {
+     "term": "Standard",
+     "definition": "A broad area of professional competence. Pakistan's framework has ten."
+    },
+    {
+     "term": "Knowledge and understanding",
+     "definition": "The part of each standard that concerns what the teacher knows about that area."
+    },
+    {
+     "term": "Dispositions",
+     "definition": "The attitudes and values the teacher holds in relation to the area a standard covers."
+    },
+    {
+     "term": "Performance and skills",
+     "definition": "The part of each standard that concerns what the teacher can actually do."
+    },
+    {
+     "term": "Indicator",
+     "definition": "A specific, observable statement of what meeting a part of a standard looks like in practice. It is what an appraiser looks for and what a teacher collects evidence against."
+    },
+    {
+     "term": "Good indicator",
+     "definition": "One that is observable, specific to the standard, and achievable under real conditions."
+    },
+    {
+     "term": "Proxy",
+     "definition": "Something easier to produce than the thing itself. The easier an indicator is to check, the more likely it is to measure a proxy."
+    }
+   ],
+   "ur": [
+    {
+     "term": "اساتذہ کے لیے قومی پیشہ ورانہ معیارات",
+     "definition": "پاکستان کی وزارتِ تعلیم نے یہ 2009 میں یونیسکو اور USAID کے تعاون سے جاری کیے۔ پاکستان میں استاد کی تربیت کے پروگرام اسی ڈھانچے کے مطابق ڈیزائن کیے جاتے ہیں۔"
+    },
+    {
+     "term": "معیار",
+     "definition": "پیشہ ورانہ اہلیت کا ایک وسیع شعبہ۔ پاکستان کے ڈھانچے میں ایسے دس معیارات ہیں۔"
+    },
+    {
+     "term": "علم اور سمجھ",
+     "definition": "ہر معیار کا وہ حصہ جو بتاتا ہے کہ استاد اس شعبے کے بارے میں کیا جانتا ہے۔"
+    },
+    {
+     "term": "رجحانات",
+     "definition": "وہ رویے اور اقدار جو استاد کسی معیار کے شعبے کے متعلق رکھتا ہے۔"
+    },
+    {
+     "term": "کارکردگی اور مہارتیں",
+     "definition": "ہر معیار کا وہ حصہ جو بتاتا ہے کہ استاد واقعی کیا کر سکتا ہے۔"
+    },
+    {
+     "term": "اشاریہ",
+     "definition": "ایک مخصوص اور مشاہدے کے قابل بیان کہ معیار کے کسی حصے کو پورا کرنا عمل میں کیسا دکھتا ہے۔ جائزہ لینے والا اسی کو دیکھتا ہے اور استاد اسی کے خلاف شہادت جمع کرتا ہے۔"
+    },
+    {
+     "term": "اچھا اشاریہ",
+     "definition": "وہ اشاریہ جو مشاہدے کے قابل ہو، اس معیار کے لیے مخصوص ہو، اور حقیقی حالات میں حاصل کیا جا سکے۔"
+    },
+    {
+     "term": "متبادل",
+     "definition": "ایسی چیز جسے پیدا کرنا اصل چیز سے آسان ہو۔ اشاریہ جانچنے میں جتنا آسان ہو، اس کے متبادل کو ناپنے کا امکان اتنا ہی زیادہ ہے۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Self-evaluation cycle",
+     "definition": "Evaluating your own practice against a standard one indicator at a time: choose, collect evidence, judge the gap, plan one change, and re-collect the same evidence."
+    },
+    {
+     "term": "Changing the evidence rather than the practice",
+     "definition": "A way the cycle breaks: the teacher improves the record, for example by calling on silent pupils once on observation day, and changes nothing."
+    },
+    {
+     "term": "Pupil work",
+     "definition": "The strongest evidence about learning. It shows what pupils can do but cannot show how they came to be able to do it."
+    },
+    {
+     "term": "Observation by a colleague",
+     "definition": "Evidence that shows practice directly, including what the teacher cannot see. It is expensive, samples one lesson, and being observed changes what you do."
+    },
+    {
+     "term": "Planning documents",
+     "definition": "Evidence of intention and structure. They are the easiest of all to produce without the underlying competence."
+    },
+    {
+     "term": "Pupil voice",
+     "definition": "What pupils say when asked properly, such as whether they feel able to ask questions. It is under-used and needs care, as pupils asked in front of the teacher say what is safe."
+    },
+    {
+     "term": "Teacher's own record",
+     "definition": "Counts, tallies and notes kept over time. Weak as proof to somebody else, but excellent for finding out something you did not know about your own room."
+    },
+    {
+     "term": "Triangulate cheaply",
+     "definition": "Use two kinds of evidence that fail in different ways. They are worth far more than one kind collected thoroughly."
+    }
+   ],
+   "ur": [
+    {
+     "term": "خود جائزہ چکر",
+     "definition": "معیار کے خلاف اپنی مشق کو ایک وقت میں ایک اشاریے پر جانچنا: اشاریہ چنیں، شہادت جمع کریں، فرق جانچیں، ایک تبدیلی کی منصوبہ بندی کریں، اور وہی شہادت دوبارہ جمع کریں۔"
+    },
+    {
+     "term": "مشق کے بجائے شہادت بدلنا",
+     "definition": "چکر ٹوٹنے کا ایک طریقہ: استاد ریکارڈ بہتر کر لیتا ہے، مثلاً مشاہدے والے دن خاموش شاگردوں کو ایک بار بلوا کر، مگر کچھ نہیں بدلتا۔"
+    },
+    {
+     "term": "شاگردوں کا کام",
+     "definition": "سیکھنے کے بارے میں سب سے مضبوط شہادت۔ یہ دکھاتا ہے کہ شاگرد کیا کر سکتے ہیں، مگر یہ نہیں کہ وہ اس قابل کیسے ہوئے۔"
+    },
+    {
+     "term": "کسی ساتھی کا مشاہدہ",
+     "definition": "ایسی شہادت جو مشق کو براہِ راست دکھاتی ہے، وہ باتیں بھی جو استاد خود نہیں دیکھ سکتا۔ یہ مہنگی ہے، ایک ہی سبق کا نمونہ لیتی ہے، اور دیکھے جانے سے رویہ بدل جاتا ہے۔"
+    },
+    {
+     "term": "منصوبہ بندی کے دستاویز",
+     "definition": "ارادے اور ڈھانچے کی شہادت۔ بنیادی اہلیت کے بغیر انہیں تیار کرنا سب سے آسان ہے۔"
+    },
+    {
+     "term": "شاگردوں کی آواز",
+     "definition": "درست طریقے سے پوچھنے پر شاگردوں کی رائے، مثلاً کیا وہ سوال پوچھ سکتے ہیں۔ یہ کم استعمال ہوتی ہے اور احتیاط چاہتی ہے، کیونکہ استاد کے سامنے شاگرد محفوظ جواب دیتے ہیں۔"
+    },
+    {
+     "term": "استاد کا اپنا ریکارڈ",
+     "definition": "وقت کے ساتھ رکھی گئی گنتیاں، نشانات اور نوٹ۔ دوسروں کے لیے ثبوت کے طور پر کمزور، مگر اپنے کمرۂ جماعت کے بارے میں انجانی بات معلوم کرنے کے لیے بہترین۔"
+    },
+    {
+     "term": "تین گوشے لگانا",
+     "definition": "ایسی دو اقسام کی شہادت استعمال کرنا جو مختلف طریقوں سے ناکام ہوتی ہیں۔ یہ مکمل طور پر جمع کی گئی ایک قسم سے کہیں زیادہ قیمتی ہیں۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "Certification",
+     "definition": "Confirmation that a person has completed the required preparation and met the entry standard for the profession. It is usually awarded once."
+    },
+    {
+     "term": "Teacher licensing",
+     "definition": "Permission to practise, issued by an authority, usually time-limited and renewable. Renewal can be made conditional on continued professional development."
+    },
+    {
+     "term": "Appraisal",
+     "definition": "The periodic judgement of a serving teacher's practice. It recurs, and it is where most teachers meet the standards most often."
+    },
+    {
+     "term": "Formative appraisal",
+     "definition": "Appraisal that exists to improve practice and asks what to work on next. A teacher must be able to admit a weakness without cost."
+    },
+    {
+     "term": "Summative appraisal",
+     "definition": "Appraisal that exists to reach a decision, such as to confirm or promote. It must be comparable across teachers, properly evidenced and appealable."
+    },
+    {
+     "term": "Development plan",
+     "definition": "The natural output of formative appraisal, which exists to improve practice."
+    },
+    {
+     "term": "Separate instruments",
+     "definition": "A summative appraisal and a confidential developmental cycle, linked deliberately: the first may state a priority, but the developmental record does not become evidence."
+    }
+   ],
+   "ur": [
+    {
+     "term": "سند بندی",
+     "definition": "اس بات کی تصدیق کہ ایک شخص نے مطلوبہ تیاری مکمل کی اور پیشے میں داخلے کا معیار پورا کیا۔ یہ عموماً ایک بار دی جاتی ہے۔"
+    },
+    {
+     "term": "اساتذہ کا لائسنس",
+     "definition": "کسی مجاز ادارے کی جاری کردہ مشق کی اجازت، جو عموماً مقررہ مدت کے لیے اور قابلِ تجدید ہوتی ہے۔ تجدید کو مسلسل پیشہ ورانہ ترقی سے مشروط کیا جا سکتا ہے۔"
+    },
+    {
+     "term": "جائزہ",
+     "definition": "زیرِ خدمت استاد کی مشق کا وقفے وقفے سے فیصلہ۔ یہ دہرایا جاتا ہے، اور بیشتر اساتذہ کا معیارات سے سب سے زیادہ سامنا یہیں ہوتا ہے۔"
+    },
+    {
+     "term": "تشکیلی جائزہ",
+     "definition": "وہ جائزہ جو مشق بہتر کرنے کے لیے ہے اور پوچھتا ہے کہ آگے کس پر کام کیا جائے۔ ضروری ہے کہ استاد بغیر کسی قیمت کے اپنی کمزوری مان سکے۔"
+    },
+    {
+     "term": "مجموعی جائزہ",
+     "definition": "وہ جائزہ جو کسی فیصلے، مثلاً تصدیق یا ترقی، تک پہنچنے کے لیے ہے۔ اسے اساتذہ کے درمیان قابلِ موازنہ، درست شہادت والا اور قابلِ اپیل ہونا چاہیے۔"
+    },
+    {
+     "term": "ترقی کا منصوبہ",
+     "definition": "تشکیلی جائزے کا قدرتی نتیجہ، جو مشق بہتر کرنے کے لیے ہوتا ہے۔"
+    },
+    {
+     "term": "الگ اوزار",
+     "definition": "مجموعی جائزہ اور رازدارانہ تشکیلی چکر، جو جان بوجھ کر جوڑے گئے ہوں: پہلا ترقی کی ترجیح بتا سکتا ہے، مگر ترقیاتی ریکارڈ خود شہادت نہیں بنتا۔"
+    }
+   ]
+  }
+ }
+}
