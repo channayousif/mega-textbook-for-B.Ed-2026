@@ -35,7 +35,7 @@ Redrew fig-U5-1 to fig-U5-4 (EN and UR) with layer groups and named nodes and ed
 ## Outcome
 
 - ✅ Impact: Unit 5 schematics meet the improved SVG standard.
-- 🧪 Tests: measure-figure-text and check:svg-style pass; check:content is run after gate evidence.
+- 🧪 Tests: measure-figure-text and check:svg-style pass; G2 evidence refreshed and all 14 content gates pass.
 - 📁 Files: 16 SVGs, style baseline, tracker.
 - 🔁 Next prompts: fresh G3 run for Unit 5.
 - 🧠 Reflection: the first render caught a box spill and misplaced Urdu brackets that the measure script did not flag.
