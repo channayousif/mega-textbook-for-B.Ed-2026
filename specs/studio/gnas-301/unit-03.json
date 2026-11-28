@@ -1,0 +1,45 @@
+{
+ "course": "gnas-301",
+ "unit": 3,
+ "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+ "artifacts": [
+  {
+   "topic": 1,
+   "locale": "en",
+   "kind": "studyguide",
+   "status": "placed",
+   "audience": "all",
+   "title": "GNAS-301 Unit 3 Study Guide",
+   "artifact_id": "5869621f-63c0-4f3b-89a5-092d57df6ff3",
+   "prompt_ref": "specs/studio/prompts/study-guide.md v1",
+   "asset_path": "/studio/gnas-301/unit-03/topic-01/studyguide.en.md",
+   "alt": "Student study guide for the whole unit: key concepts, cases, frameworks and glossary.",
+   "generated_at": "2026-11-28",
+   "review": {
+    "by": "Claude content check against the topic text (QG2)",
+    "date": "2026-11-28",
+    "verdict": "pass-with-notes",
+    "notes": "Every section matches the four topic texts: the air chain and six pollutants, the decibel ladder and health impacts, the five hazard classes with the Dadu and Karachi cases, and the risk grid, cycle and hierarchy. The built-in quiz, answer key and essay prompts are removed by the post-processor. Note: Gemini emitted LaTeX markup (for example PM subscripts and the risk formula) which the Studio markdown renderer shows as raw text; the owner may want it stripped before wider rollout."
+   }
+  },
+  {
+   "topic": 1,
+   "locale": "ur",
+   "kind": "studyguide",
+   "status": "placed",
+   "audience": "all",
+   "title": "GNAS-301 یونٹ 3 اسٹڈی گائیڈ",
+   "artifact_id": "0f3a23df-44b8-4aa9-9a12-3b6537edc81f",
+   "prompt_ref": "specs/studio/prompts/study-guide.md v1",
+   "asset_path": "/studio/gnas-301/unit-03/topic-01/studyguide.ur.md",
+   "alt": "پورے یونٹ کا اسٹڈی گائیڈ: اہم تصورات، مثالیں، فریم ورک اور الفاظ.",
+   "generated_at": "2026-11-28",
+   "review": {
+    "by": "Claude content check against the topic text (QG2)",
+    "date": "2026-11-28",
+    "verdict": "pass",
+    "notes": "Every section matches the four topic texts and the glossary is accurate. Simple everyday Urdu with the technical terms kept in English, per the owner register v2. No quiz, answer-key or rubric sections, and no LaTeX markup."
+   }
+  }
+ ]
+}
