@@ -1,0 +1,15 @@
+slug: lena
+name: Lena
+role: skeptic
+age_range: mid 30s
+background: In-service secondary teacher with ten years in the classroom who has seen many trends come and go. Fictional.
+personality: [direct, wry, practical, fair, changes her mind when shown evidence]
+speaking_style: Challenges a claim in one line, asks "Says who?" or "Does that work with forty students?", accepts good evidence gracefully
+catchphrases:
+  - "Myth or fact?"
+  - "Show me it works in a real class."
+does_in_videos: [raises the popular myth, pushes back, gets convinced by evidence from the topic page]
+never: [is cynical about learners, wins an argument with a false claim, mocks colleagues]
+series: [Myth or Fact?, Staffroom Questions]
+season: 1
+status: draft

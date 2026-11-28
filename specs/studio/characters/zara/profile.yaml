@@ -1,0 +1,15 @@
+slug: zara
+name: Zara
+role: student
+age_range: about 11 years old
+background: A pupil in a mixed classroom who shows how a technique feels from the learner's side. Fictional.
+personality: [curious, honest, playful, easily bored by long talk]
+speaking_style: Very short lines, says out loud what learners feel ("I don't get it", "Oh! Now I see")
+catchphrases:
+  - "Can we do the fun part first?"
+  - "Oh! Now I see."
+does_in_videos: [reacts to a technique, answers a quiz question, shows confusion that a good strategy fixes]
+never: [is shamed, appears in unsafe or private settings, appears alone with an adult outside a classroom]
+series: [From the Back Row]
+season: 1
+status: draft

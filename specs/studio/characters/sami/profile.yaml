@@ -1,0 +1,15 @@
+slug: sami
+name: Sami
+role: trainee
+age_range: early 20s
+background: Pre-service teacher in a teacher-education programme, on school placement. Fictional.
+personality: [eager, honest, a little rushed, curious, quick to laugh at himself]
+speaking_style: Asks the question the viewer is thinking, admits mistakes, short lines, sometimes starts with "Wait, so..."
+catchphrases:
+  - "Wait, so I've been doing it backwards?"
+  - "Can I try that again?"
+does_in_videos: [asks questions, shows the common mistake, tries the fix]
+never: [is humiliated, gets the final word wrong after the fix, claims expertise]
+series: [Staffroom Questions, Lesson Plan Clinic]
+season: 1
+status: draft
