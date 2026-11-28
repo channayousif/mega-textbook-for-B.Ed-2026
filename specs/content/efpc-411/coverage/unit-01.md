@@ -7,7 +7,7 @@ Contract: `contracts/coverage-matrix-v2.md`. Every sub-topic from the content-sp
 | U1-01 | topic-01.mdx | ### Meaning and importance of classroom observation | hec-2013-practicum |
 | U1-02 | topic-01.mdx | ### Types of classroom observation: formal, informal, peer, and supervisor-led | hec-2013-practicum |
 | U1-03 | topic-01.mdx | ### Roles of supervisors, mentors, and observers | hec-2013-practicum |
-| U1-04 | topic-01.mdx | ### Professional ethics during classroom observation | hec-2013-practicum |
+| U1-04 | topic-01.mdx | ### Professional ethics during classroom observation | teach-primary-2021 |
 | U1-05 | topic-02.mdx | ### Observation focus areas | teach-primary-2021 |
 | U1-05 | topic-02.mdx | ### Observation focus areas | hec-2013-methods |
 | U1-05 | topic-02.mdx | ### Observation focus areas | hec-2013-currdev |
@@ -24,3 +24,8 @@ Contract: `contracts/coverage-matrix-v2.md`. Every sub-topic from the content-sp
 | U1-12 | topic-04.mdx | ### Giving professional and constructive feedback | teach-primary-2021 |
 | U1-12 | topic-04.mdx | ### Giving professional and constructive feedback | hec-2013-methods |
 | U1-13 | topic-04.mdx | ### Linking observation to self-improvement: the role of reflection in teaching practice | hec-2013-practicum |
+| U1-13 | topic-04.mdx | ### Linking observation to self-improvement: the role of reflection in teaching practice | schon-1983 |
+
+## Author guidance in U1-04
+
+`teach-primary-2021` (p. 12) supports teacher consent, confidentiality and non-interference only. Written approval from the school head, pupil anonymity, the rule on photographs and video with parental consent, dress and arrival norms, and sharing records with the university supervisor are author guidance on professional conduct, not drawn from a bound source.
