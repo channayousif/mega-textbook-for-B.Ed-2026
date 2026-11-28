@@ -17,8 +17,8 @@ links:
   pr: null
 files:
  - history/prompts/efmp-407/crew-efmp-407-u00-media_publish.misc.prompt.md
- - specs/studio/teasers/media-teasers.json
  - specs/studio/teaser-stats.json
+ - specs/studio/teasers/media-teasers.json
 tests:
  - npm run check:content
 ---
@@ -48,7 +48,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
 3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
-   (known leftovers, risky spots it should check). Not a summary; omit them when nothing.
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
 ## Notes from earlier jobs on this unit
 - (efmp-407-u00-media_assemble-r1, media_assemble, claude_crew) The owner now watches the private Short at https://youtube.com/shorts/Xgx6-JJ5ReY and replies `crew publish efmp-407-ur` (or `crew reject efmp-407-ur <note>`); the publish job sets that one video public and commits specs/studio/teaser-stats.json.
@@ -57,27 +57,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-407-u00-media_assemble, media_assemble, claude_crew) efmp-407-ur is at qa-pass; the next job re-checks `youtube.upload` (held until 2026-11-26T20:22:25.607Z), uploads private, then `update_video` with playlist `PLCJn7gAoYIJs` and the recorded thumbnail, QG3, `qa3-pass`.
 - (efmp-407-u00-media_assemble, media_assemble, claude_crew) shot 3 assembles from take 2 (take 1 is the failed REC-overlay clip); nothing may be made public until the owner's `crew publish efmp-407-ur`.
 
+
 ## Response snapshot
 
-Published the EFMP-407 Urdu Short Xgx6-JJ5ReY (now public on the textbook.com.pk channel), advanced the ledger from qa3-pass through approved to public, and refreshed specs/studio/teaser-stats.json (16 views, 1 like).
+Published the owner-approved EFMP-407 Urdu teaser Xgx6-JJ5ReY, recorded the owner gate and published_at in the teaser ledger, and refreshed specs/studio/teaser-stats.json, all committed with the PHR.
 
 ## Outcome
 
-- Impact: media_publish for EFMP-407 Unit 0 by claude_crew.
-- Tests: npm run check:content run in the job worktree (see Evaluation notes).
+- Impact: media_publish for EFMP-407 Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Set the owner-approved EFMP-407 Urdu teaser Xgx6-JJ5ReY public, recorded gates.owner and published_at 2026-11-28T01:49:15Z in the teaser ledger, and refreshed specs/studio/teaser-stats.json.
-- Decisions the team must respect: only the owner's `crew publish` authorises making a video public (FR-013); the video went public with privacy_status public and no other video was touched.
+- Shipped / changed: Published the owner-approved EFMP-407 Urdu teaser Xgx6-JJ5ReY, recorded the owner gate and published_at in the teaser ledger, and refreshed specs/studio/teaser-stats.json, all committed with the PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `youtube.upload` is at its 4/4 daily cap until 2026-11-28T19:00:00Z, so any further YouTube upload must re-check pacing first.
-  - Cross-posting (studio-teaser step 11) is now unblocked for this public Short: render the per-platform variant, QG1 it, then `social-post.mjs post <platform> efmp-407-ur <file>`.
-  - Two other items (efmp-406-ur DQxspPM4QmE, efpg-401-ur -mJSyWxcAyA) also carry a `crew publish` approval in ~/.crew/mega-book/media.json and are still private; they belong to other jobs.
+  - `youtube.upload` is at its 4/4 daily cap until 2026-11-28T19:00:00Z; re-check pacing before any further upload.
+  - Cross-posting (studio-teaser step 11) is now unblocked for this public Short; render the platform variant, QG1 it, then `social-post.mjs post <platform> efmp-407-ur <file>`.
+  - efmp-406-ur (DQxspPM4QmE) and efpg-401-ur (-mJSyWxcAyA) also hold `crew publish` approvals and are still private; they belong to other jobs.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
