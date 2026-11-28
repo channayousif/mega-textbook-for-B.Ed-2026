@@ -3779,14 +3779,191 @@
    "id": "giss-401",
    "locale": "ur",
    "kind": "short",
-   "state": "scripted",
+   "state": "clips-qa",
    "gates": {
     "qg0": {
      "verdict": "pass",
      "by": "teaser.mjs"
+    },
+    "script": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-27",
+     "note": "crew approve-script via web"
+    },
+    "clips": {
+     "verdict": "pass",
+     "by": "claude"
     }
    },
-   "clips": [],
+   "clips": [
+    {
+     "shot": 1,
+     "take": 1,
+     "at": "2026-11-28T12:19:41.294Z",
+     "artifact_id": "287b08db-7e9e-4a20-a348-546fae197995",
+     "media_id": "287b08db-7e9e-4a20-a348-546fae197995",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/giss-401/ur/shot-1-t1.mp4",
+     "sha256": "5d465d1a2ef2c7b737ef6870ff734724e50678e8e57330e8a6b5cc43064d7a7b",
+     "source": "recovered",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "qg2_engine": "cfai",
+      "heard": "اسلام کے عقائد، اخلاق اور سماجی نظام کو ایک استاد کی نظر سے سمجھنا چاہتے ہیں؟",
+      "missing": [],
+      "strip": "~/studio-media/teasers/giss-401/ur/qg2/shot-1-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass, QG2 1.0. Presenter in cream shalwar kameez and brown waistcoat, plain green blackboard, pupils at desks, plain closed book. No overlay, no readable text, no map or flag."
+     }
+    },
+    {
+     "shot": 2,
+     "take": 1,
+     "at": "2026-11-28T12:23:23.976Z",
+     "artifact_id": "32408e66-4a2b-4b83-86f3-c68456175204",
+     "media_id": "32408e66-4a2b-4b83-86f3-c68456175204",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/giss-401/ur/shot-2-t1.mp4",
+     "sha256": "80ca159b767530062ff9c4f690f509ab658d3d331fa59edec2a07177decaa928",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "qg2_engine": "cfai",
+      "heard": "یہ کورس اسلام کے بنیادی اقائد، قرآن و سنت کے ماخذ، عبادات اور اخلاقی نظام سکھاتا ہے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/giss-401/ur/qg2/shot-2-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass, QG2 1.0. Dolly along desks; woman teacher in blue with white dupatta points at a pupil notebook. Pages carry faint blurred marks, no readable words. No overlay, no map or flag, modest dress."
+     }
+    },
+    {
+     "shot": 3,
+     "take": 1,
+     "at": "2026-11-28T12:26:36.283Z",
+     "artifact_id": "33c4b854-6cfa-4092-9512-d788bb023768",
+     "media_id": "33c4b854-6cfa-4092-9512-d788bb023768",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/giss-401/ur/shot-3-t1.mp4",
+     "sha256": "08780510bdba7fe801067e76340304708a7c69fd78d147f7cac909effb2c2d6b",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "qg2_engine": "cfai",
+      "heard": "معاشی، سیاسی اور سماجی نظام اور اسلام کی تعلیم، تہذیب اور اسری مسائل سے جوڑ بھی.",
+      "missing": [],
+      "strip": "~/studio-media/teasers/giss-401/ur/qg2/shot-3-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass, QG2 1.0. Tracking shot, student teachers in modest shalwar kameez and dupattas in a circle on a verandah, plain closed notebooks. No overlay, no readable text, no map or flag."
+     }
+    },
+    {
+     "shot": 4,
+     "take": 1,
+     "at": "2026-11-28T12:29:35.451Z",
+     "artifact_id": "1c2bc46f-6266-47b2-8607-5cafebdbaabf",
+     "media_id": "1c2bc46f-6266-47b2-8607-5cafebdbaabf",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/giss-401/ur/shot-4-t1.mp4",
+     "sha256": "bd2deb1d9ea1341a9b20b702d449fb026fb739a526806abeac69c1ad65145aac",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.933,
+      "qg2_suggested": "pass",
+      "qg2_engine": "cfai",
+      "heard": "تاکہ آپ بطور استاد، رواداری، آمن اور اخلاقی ترقی کو اسکول میں فروق دے سکیں",
+      "missing": [
+       "فروغ"
+      ],
+      "strip": "~/studio-media/teasers/giss-401/ur/qg2/shot-4-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass, QG2 0.933 (whisper heard فروغ as فروق; the line is spoken). Crane over a school courtyard, teacher in teal with pupils in uniform, one pupil helps a classmate up. No overlay, no readable text, no map or flag."
+     }
+    },
+    {
+     "shot": 5,
+     "take": 1,
+     "at": "2026-11-28T12:34:14.174Z",
+     "artifact_id": "f63044f5-a452-44c1-913b-5f3483f3485b",
+     "media_id": "f63044f5-a452-44c1-913b-5f3483f3485b",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/giss-401/ur/shot-5-t1.mp4",
+     "sha256": "1558c563ea8cac88b432d6b9e15bd254156d087d371aaf03e399279af64d3be9",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 0.929,
+      "qg2_suggested": "pass",
+      "qg2_engine": "cfai",
+      "heard": "پورا کورس مفت پڑیں textbook.com.p کے پر لنک نیچے ہے",
+      "missing": [
+       "ڈاٹ"
+      ],
+      "strip": "~/studio-media/teasers/giss-401/ur/qg2/shot-5-t1.strip.jpg"
+     },
+     "qa": {
+      "verdict": "fail",
+      "by": "claude",
+      "notes": "QG1 pass, QG2 0.929. Drawn camera interface: REC indicator with red dot and viewfinder/battery marks in the top corners of frames 2 and 3. Retake required."
+     }
+    },
+    {
+     "shot": 5,
+     "take": 2,
+     "at": "2026-11-28T12:37:24.299Z",
+     "artifact_id": "0e4683dd-4e9e-43e9-a18c-c8c61bf7d0bd",
+     "media_id": "0e4683dd-4e9e-43e9-a18c-c8c61bf7d0bd",
+     "model": "veo_lite",
+     "credits": 10,
+     "file": "~/studio-media/teasers/giss-401/ur/shot-5-t2.mp4",
+     "sha256": "ebbf55e769932d4200cfc879c72c5bc2def62b2bc4be37e8a6107043b837406e",
+     "source": "generated",
+     "producer": "gflow.video",
+     "precheck": {
+      "qg1": "pass",
+      "qg2_score": 1,
+      "qg2_suggested": "pass",
+      "qg2_engine": "cfai",
+      "heard": "پورا کورس مفت پڑھیں textbook.com.pk پر لنک نیچے ہے",
+      "missing": [],
+      "strip": "~/studio-media/teasers/giss-401/ur/qg2/shot-5-t2.strip.jpg"
+     },
+     "qa": {
+      "verdict": "pass",
+      "by": "claude",
+      "notes": "QG1 pass, QG2 1.0. Corridor CTA: presenter in cream shalwar kameez and brown waistcoat walks toward camera holding a phone with a dark blank screen, pupils behind. No overlay, no readable text, no map or flag."
+     }
+    }
+   ],
    "history": [
     {
      "state": "planned",
@@ -3795,6 +3972,18 @@
     {
      "state": "scripted",
      "at": "2026-11-26T10:22:03.763Z"
+    },
+    {
+     "state": "script-approved",
+     "at": "2026-11-28T12:16:42.193Z"
+    },
+    {
+     "state": "clips-generated",
+     "at": "2026-11-28T12:38:33.918Z"
+    },
+    {
+     "state": "clips-qa",
+     "at": "2026-11-28T12:38:34.033Z"
     }
    ],
    "script_sha256": "686d0c21bf9eb90bd2054dc9f1191e4831253a884a5872d24378ed23bf3c41e2"
