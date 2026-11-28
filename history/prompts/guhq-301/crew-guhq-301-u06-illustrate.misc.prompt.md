@@ -16,27 +16,27 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/guhq-301/unit-06/index.mdx
-  - docs/semester-3/guhq-301/unit-06/topic-01.mdx
-  - history/prompts/guhq-301/crew-guhq-301-u06-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/topic-01.mdx
-  - specs/content/guhq-301/figures/unit-06.banner.md
-  - specs/content/guhq-301/figures/unit-06.md
-  - specs/content/guhq-301/reviews/unit-06/G2/20261128T152533535Z-gates.json
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-bloom-bands.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-concept-graph.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-depth-gate.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-docs-sync.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-figures.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-no-answer-keys.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-no-em-dash.txt
-  - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/validate-content.txt
-  - specs/content/guhq-301/tasks.md
-  - static/img/figures/guhq-301/unit-06/fig-U6-4.webp
-  - static/img/figures/guhq-301/unit-06/fig-U6-5.webp
+ - docs/semester-3/guhq-301/unit-06/index.mdx
+ - docs/semester-3/guhq-301/unit-06/topic-01.mdx
+ - history/prompts/guhq-301/crew-guhq-301-u06-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/guhq-301/unit-06/topic-01.mdx
+ - specs/content/guhq-301/figures/unit-06.banner.md
+ - specs/content/guhq-301/figures/unit-06.md
+ - specs/content/guhq-301/reviews/unit-06/G2/20261128T152533535Z-gates.json
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-bloom-bands.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-concept-graph.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-depth-gate.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-docs-sync.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-figures.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-no-answer-keys.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/check-no-em-dash.txt
+ - specs/content/guhq-301/reviews/unit-06/G2/logs-20261128T152533535Z/validate-content.txt
+ - specs/content/guhq-301/tasks.md
+ - static/img/figures/guhq-301/unit-06/fig-U6-4.webp
+ - static/img/figures/guhq-301/unit-06/fig-U6-5.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -77,23 +77,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated topic illustration fig-U6-5 and unit banner fig-U6-4 via meta producer, inspected both assets for visual, pedagogical and cultural compliance, placed them in English and Urdu pages, updated manifests to placed, generated G2 gate evidence, and verified clean content gates.
+Generated, inspected, and placed the GUHQ-301 Unit 6 topic illustration and banner illustration across English and Urdu pages, updated manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
 - Impact: illustrate for GUHQ-301 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the GUHQ-301 Unit 6 topic illustration (fig-U6-5) and banner illustration (fig-U6-4) in both English and Urdu index/topic pages, updated figure manifests, refreshed G2 gate evidence, and verified that all 14 content gates pass cleanly.
+- Shipped / changed: Generated, inspected, and placed the GUHQ-301 Unit 6 topic illustration and banner illustration across English and Urdu pages, updated manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit banner fig-U6-4 and topic illustration fig-U6-5 are placed; Unit 6 G3 review and G5 review remain open for independent evaluation.
+  - Unit banner fig-U6-4 and topic illustration fig-U6-5 are placed; Unit 6 G3 and G5 reviews remain open for independent evaluation.
   - G5 independent review must verify the six authored Urdu concept labels in `specs/content/guhq-301/concepts/unit-06.md` and check every rendered verse meaning against trusted translations.
   - G3 review must make the religious-content check per content-spec drafting note 7.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
