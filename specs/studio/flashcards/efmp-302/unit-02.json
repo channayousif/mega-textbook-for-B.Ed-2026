@@ -1,0 +1,294 @@
+{
+ "course": "EFMP-302",
+ "unit": 2,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Professional ethics",
+     "definition": "The shared standards of conduct that belong to an occupation, owed by its practitioners because of the position their practice puts them in."
+    },
+    {
+     "term": "Personal morality",
+     "definition": "What you believe is right, formed by your family, faith, conscience and experience. It is private and varies legitimately between people."
+    },
+    {
+     "term": "The law",
+     "definition": "What the state requires and will punish you for breaching. It is a floor rather than a standard: it sets out what is intolerable, not what is good."
+    },
+    {
+     "term": "Code",
+     "definition": "A summary of settled judgement, not an exhaustive list of forbidden acts. It is always shorter than the situations a teacher meets."
+    },
+    {
+     "term": "Power asymmetry",
+     "definition": "The imbalance between teacher and pupil: the gap is large and permanent, the pupil cannot leave, and the effects are formative and invisible for years."
+    },
+    {
+     "term": "Trust",
+     "definition": "The working capital of a teacher's authority: built slowly through ordinary reliable acts, and able to be destroyed far faster in a single act."
+    },
+    {
+     "term": "Ethical model",
+     "definition": "A teacher functions as one whether or not they intend to, because pupils learn conduct by watching an adult who holds authority."
+    }
+   ],
+   "ur": [
+    {
+     "term": "پیشہ ورانہ اخلاقیات",
+     "definition": "طرزِ عمل کے وہ مشترکہ معیارات جو کسی پیشے سے تعلق رکھتے ہیں اور اس سے وابستہ افراد پر ان کے پیشہ ورانہ مقام کی وجہ سے لازم ہوتے ہیں۔"
+    },
+    {
+     "term": "ذاتی اخلاق",
+     "definition": "جسے آپ درست سمجھتے ہیں، جو خاندان، عقیدے، ضمیر اور تجربے سے بنتا ہے۔ یہ نجی ہے اور لوگوں کے درمیان جائز طور پر مختلف ہوتا ہے۔"
+    },
+    {
+     "term": "قانون",
+     "definition": "جس کا ریاست تقاضا کرتی ہے اور جس کی خلاف ورزی پر سزا دے گی۔ یہ معیار کے بجائے کم سے کم حد ہے: یہ بتاتا ہے کہ کیا ناقابلِ برداشت ہے، یہ نہیں کہ کیا اچھا ہے۔"
+    },
+    {
+     "term": "ضابطہ",
+     "definition": "طے شدہ فیصلوں کا خلاصہ، ممنوع اعمال کی مکمل فہرست نہیں۔ یہ ہمیشہ ان صورتحالوں سے مختصر ہوتا ہے جن سے استاد کا واسطہ پڑتا ہے۔"
+    },
+    {
+     "term": "اختیار کا عدم توازن",
+     "definition": "استاد اور شاگرد کے درمیان عدم توازن: خلا بڑا اور مستقل ہے، شاگرد جا نہیں سکتا، اور اثرات تشکیل دینے والے ہیں اور برسوں تک نظر نہیں آتے۔"
+    },
+    {
+     "term": "اعتماد",
+     "definition": "استاد کے اختیار کا کارآمد سرمایہ: یہ عام قابلِ بھروسہ اعمال سے آہستہ آہستہ جمع ہوتا ہے، اور ایک ہی عمل میں کہیں تیزی سے تباہ ہو سکتا ہے۔"
+    },
+    {
+     "term": "اخلاقی نمونہ",
+     "definition": "استاد یہ کام کرتا ہے، چاہے اس کا ارادہ ہو یا نہ ہو، کیونکہ شاگرد طرزِ عمل ایک بااختیار بالغ کو دیکھ کر سیکھتے ہیں۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Code of ethical conduct",
+     "definition": "A written statement of what a profession's members owe and to whom, usually organised by the party the obligation is owed to."
+    },
+    {
+     "term": "Conduct toward students",
+     "definition": "Protecting pupils from harm, treating them without discrimination, respecting their dignity and not exploiting the relationship for personal advantage."
+    },
+    {
+     "term": "Practice and performance",
+     "definition": "The domain about competence: being prepared, teaching the curriculum you are employed to teach, keeping subject knowledge current and assessing honestly."
+    },
+    {
+     "term": "Assessment honesty",
+     "definition": "Keeping marks truthful. It matters because a mark is a public claim about a pupil that others will rely on."
+    },
+    {
+     "term": "Parents and the community",
+     "definition": "This domain covers honesty with parents, respect for the family's circumstances, and the teacher's standing in the community they serve."
+    },
+    {
+     "term": "Colleagues and the profession",
+     "definition": "This domain covers fair dealing with colleagues, not undermining them in front of pupils, doing a share of joint work and not damaging the profession's standing."
+    },
+    {
+     "term": "National Professional Standards for Teachers",
+     "definition": "Pakistan's 2009 national statement of what a teacher is expected to know, value and be able to do."
+    },
+    {
+     "term": "Service rules",
+     "definition": "The rules that individual schools and systems hold for themselves, below the international and national levels. They say what happens on Monday."
+    }
+   ],
+   "ur": [
+    {
+     "term": "ضابطہ اخلاق",
+     "definition": "ایک تحریری بیان کہ کسی پیشے کے افراد پر کیا واجب ہے اور کس کے حوالے سے، جو عموماً اس فریق کے اعتبار سے ترتیب دیا جاتا ہے جس کے یہ واجب ہے۔"
+    },
+    {
+     "term": "طلبہ کے حوالے سے اخلاقی طرزِ عمل",
+     "definition": "شاگردوں کو نقصان سے بچانا، ان کے ساتھ امتیاز کے بغیر سلوک کرنا، ان کی عزتِ نفس کا احترام کرنا، اور ذاتی فائدے کے لیے اس تعلق کا ناجائز استعمال نہ کرنا۔"
+    },
+    {
+     "term": "مشق اور کارکردگی",
+     "definition": "اہلیت کا دائرہ: تیار ہونا، وہی نصاب پڑھانا جس کے لیے آپ ملازم ہیں، مضمون کا علم تازہ رکھنا، اور دیانتدار تشخیص کرنا۔"
+    },
+    {
+     "term": "تشخیص کی دیانت",
+     "definition": "نمبروں کو سچا رکھنا۔ یہ اس لیے اہم ہے کہ نمبر کسی شاگرد کے بارے میں ایک عوامی دعویٰ ہے جس پر دوسرے بھروسہ کریں گے۔"
+    },
+    {
+     "term": "والدین اور برادری",
+     "definition": "یہ دائرہ والدین کے ساتھ دیانت، خاندان کے حالات کے احترام، اور جس برادری کی خدمت استاد کرتا ہے اس میں اس کے مقام کا احاطہ کرتا ہے۔"
+    },
+    {
+     "term": "ساتھی اساتذہ اور پیشہ",
+     "definition": "یہ دائرہ ساتھیوں سے منصفانہ برتاؤ، شاگردوں کے سامنے انہیں کمزور نہ کرنے، مشترکہ کام میں حصہ ڈالنے اور پیشے کے مقام کو نقصان نہ پہنچانے کا احاطہ کرتا ہے۔"
+    },
+    {
+     "term": "اساتذہ کے لیے قومی پیشہ ورانہ معیارات",
+     "definition": "پاکستان کا 2009 کا قومی بیان کہ ایک استاد سے کیا جاننے، کس چیز کو اہمیت دینے اور کیا کر سکنے کی توقع ہے۔"
+    },
+    {
+     "term": "ملازمتی قواعد",
+     "definition": "وہ قواعد جو انفرادی اسکول اور نظام بین الاقوامی اور قومی سطحوں کے نیچے اپنے لیے رکھتے ہیں۔ یہ بتاتے ہیں کہ پیر کے دن کیا ہوگا۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Four-component model",
+     "definition": "Rest's model that ethical action needs sensitivity, judgement, motivation and character all to succeed. They need not happen in that order."
+    },
+    {
+     "term": "Moral sensitivity",
+     "definition": "Noticing that a situation has an ethical dimension at all, and recognising who is affected and how. It is perception, not reasoning."
+    },
+    {
+     "term": "Moral judgement",
+     "definition": "Working out which course of action is right, drawing on principles, codes and reasoning about consequences."
+    },
+    {
+     "term": "Moral motivation",
+     "definition": "Choosing to prioritise the ethical course over competing values, which are usually ordinary ones such as a quiet life or a manageable workload."
+    },
+    {
+     "term": "Moral character",
+     "definition": "Following through: persistence and enough courage to carry out the action once distraction, fatigue or resistance appears."
+    },
+    {
+     "term": "Empathy",
+     "definition": "The first step of the four-step framework: ask who is affected and what the situation looks like from where they stand."
+    },
+    {
+     "term": "Context",
+     "definition": "The second step: establish the facts and constraints before deciding, such as what happened, how often, what has been tried and what the rules require."
+    },
+    {
+     "term": "Reflect",
+     "definition": "The third step: weigh the options against your obligations, not against your comfort, and name the competing goods honestly."
+    },
+    {
+     "term": "Action",
+     "definition": "The fourth step: decide, do it, and then close the loop by reviewing what happened and what you would do differently."
+    },
+    {
+     "term": "Reflective decision making",
+     "definition": "The habit of treating your own decisions as things to be examined rather than defended. It is structured, seeks disconfirmation and is habitual."
+    }
+   ],
+   "ur": [
+    {
+     "term": "چار اجزائی ماڈل",
+     "definition": "ریسٹ کا ماڈل کہ اخلاقی عمل کے لیے حساسیت، فیصلہ، محرک اور کردار سب کا کامیاب ہونا ضروری ہے۔ ضروری نہیں کہ یہ اسی ترتیب سے پیش آئیں۔"
+    },
+    {
+     "term": "اخلاقی حساسیت",
+     "definition": "یہ محسوس کرنا کہ کسی صورتحال میں سرے سے کوئی اخلاقی پہلو ہے، اور پہچاننا کہ کون متاثر ہو رہا ہے اور کیسے۔ یہ ادراک ہے، استدلال نہیں۔"
+    },
+    {
+     "term": "اخلاقی فیصلہ",
+     "definition": "یہ طے کرنا کہ کون سا لائحہ عمل درست ہے، اصولوں، ضابطوں اور نتائج کے بارے میں استدلال سے کام لیتے ہوئے۔"
+    },
+    {
+     "term": "اخلاقی محرک",
+     "definition": "مسابقت کرنے والی اقدار پر اخلاقی راستے کو ترجیح دینے کا انتخاب۔ یہ اقدار عموماً عام سی ہوتی ہیں، جیسے پُرسکون زندگی یا قابلِ انتظام کام کا بوجھ۔"
+    },
+    {
+     "term": "اخلاقی کردار",
+     "definition": "تکمیل: ثابت قدمی اور اتنی ہمت کہ توجہ کے بٹنے، تھکن یا مزاحمت کے ظاہر ہونے کے بعد بھی عمل کر گزرا جائے۔"
+    },
+    {
+     "term": "ہمدردی",
+     "definition": "چار مرحلہ فریم ورک کا پہلا مرحلہ: پوچھیے کہ کون متاثر ہو رہا ہے اور جہاں وہ کھڑے ہیں وہاں سے یہ کیسا دکھائی دیتا ہے۔"
+    },
+    {
+     "term": "سیاق",
+     "definition": "دوسرا مرحلہ: فیصلہ کرنے سے پہلے حقائق اور پابندیاں متعین کرنا، جیسے کیا ہوا، کتنی بار ہوا، کیا آزمایا گیا اور قواعد کیا تقاضا کرتے ہیں۔"
+    },
+    {
+     "term": "غور",
+     "definition": "تیسرا مرحلہ: اختیارات کو اپنے آرام کے بجائے اپنی ذمہ داریوں کے مقابل تولنا، اور مسابقت کرنے والی بھلائیوں کا دیانتداری سے نام لینا۔"
+    },
+    {
+     "term": "عمل",
+     "definition": "چوتھا مرحلہ: فیصلہ کرنا، اسے کر گزرنا، اور پھر یہ جائزہ لے کر چکر مکمل کرنا کہ کیا ہوا اور آپ کیا مختلف کرتے۔"
+    },
+    {
+     "term": "غور و فکر پر مبنی فیصلہ سازی",
+     "definition": "اپنے فیصلوں کو دفاع کرنے کے بجائے جانچنے کے لائق سمجھنے کی عادت۔ یہ منظم ہے، اپنی تردید تلاش کرتی ہے اور استثنا کے بجائے عادت ہے۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "Ethical dilemma",
+     "definition": "A situation in which two or more things you are genuinely obliged to do cannot both be done, so whatever you choose, you fail an obligation."
+    },
+    {
+     "term": "Temptation",
+     "definition": "A choice between right and wrong. It can be difficult to resist, but it is not difficult to analyse."
+    },
+    {
+     "term": "The mark",
+     "definition": "A claim about the work. It is not a reward or a message of sympathy, and it is not yours to trade."
+    },
+    {
+     "term": "The response",
+     "definition": "What a teacher does besides the mark, where care operates: time, a second chance where rules allow, a conversation with the family or a referral."
+    },
+    {
+     "term": "Consistency drift",
+     "definition": "Marking the last ten scripts more harshly, or more kindly, than the first ten because you are tired."
+    },
+    {
+     "term": "Confidentiality",
+     "definition": "Holding information in trust with a known limit: where a pupil is at risk of harm, the duty to protect overrides the duty to keep the confidence."
+    },
+    {
+     "term": "Equity",
+     "definition": "Reaching fair outcomes, since identical treatment often produces unequal ones. Different treatment can also risk lowered expectations or seeming favouritism."
+    },
+    {
+     "term": "Public-reason test",
+     "definition": "Asking whether you could state your reason to the whole class and to the affected pupil's parents without embarrassment."
+    }
+   ],
+   "ur": [
+    {
+     "term": "اخلاقی مخمصہ",
+     "definition": "وہ صورتحال جس میں دو یا زیادہ ایسی چیزیں جو آپ پر واقعی واجب ہیں، دونوں نہیں کی جا سکتیں، چنانچہ آپ جو بھی چنیں، ایک ذمہ داری میں ناکام رہتے ہیں۔"
+    },
+    {
+     "term": "آزمائش",
+     "definition": "درست اور غلط کے درمیان انتخاب۔ اس کے سامنے ڈٹنا مشکل ہو سکتا ہے، مگر اس کا تجزیہ مشکل نہیں۔"
+    },
+    {
+     "term": "نمبر",
+     "definition": "کام کے بارے میں ایک دعویٰ۔ یہ انعام نہیں، ہمدردی کا پیغام نہیں، اور آپ کا سودا کرنے کے لیے نہیں۔"
+    },
+    {
+     "term": "ردِعمل",
+     "definition": "نمبر کے علاوہ استاد جو کرتا ہے، جہاں نگہداشت کام کرتی ہے: وقت، قواعد کی اجازت ہو تو دوبارہ موقع، خاندان سے گفتگو، یا کسی اور کے پاس بھیجنا۔"
+    },
+    {
+     "term": "جانچ کی یکسانی میں بتدریج تبدیلی",
+     "definition": "تھکن کی وجہ سے آخری دس پرچے پہلے دس سے زیادہ سختی یا زیادہ نرمی سے جانچنا۔"
+    },
+    {
+     "term": "رازداری",
+     "definition": "اطلاع کو ایک معلوم حد کے ساتھ امانت میں رکھنا: جہاں شاگرد کو نقصان کا خطرہ ہو، وہاں حفاظت کی ذمہ داری راز رکھنے کی ذمہ داری پر غالب آ جاتی ہے۔"
+    },
+    {
+     "term": "مساوات",
+     "definition": "منصفانہ نتائج تک پہنچنا، کیونکہ یکساں سلوک اکثر غیر مساوی نتائج دیتا ہے۔ مختلف سلوک سے توقع گھٹانے یا جانبداری دکھائی دینے کا خطرہ بھی ہوتا ہے۔"
+    },
+    {
+     "term": "عوامی وجہ کی کسوٹی",
+     "definition": "یہ پوچھنا کہ کیا آپ اپنی وجہ پوری جماعت کو اور متاثرہ شاگرد کے والدین کو بغیر شرمندگی کے بتا سکتے ہیں۔"
+    }
+   ]
+  }
+ }
+}
