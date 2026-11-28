@@ -16,27 +16,27 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/gsos-301/unit-06/index.mdx
-  - docs/semester-2/gsos-301/unit-06/topic-01.mdx
-  - docs/semester-2/gsos-301/unit-06/topic-02.mdx
-  - history/prompts/gsos-301/crew-gsos-301-u06-illustrate.misc.prompt.md
-  - specs/content/gsos-301/figures/unit-06.banner.md
-  - specs/content/gsos-301/figures/unit-06.md
-  - specs/content/gsos-301/reviews/unit-06/G2/20261128T104455062Z-gates.json
-  - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-bloom-bands.txt
-  - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-concept-graph.txt
-  - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-depth-gate.txt
-  - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-docs-sync.txt
-  - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-figures.txt
-  - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-no-answer-keys.txt
-  - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-no-em-dash.txt
-  - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/validate-content.txt
-  - specs/content/gsos-301/tasks.md
-  - static/img/figures/gsos-301/unit-06/fig-U6-5.webp
-  - static/img/figures/gsos-301/unit-06/fig-U6-6.webp
-  - static/img/figures/gsos-301/unit-06/fig-U6-7.webp
+ - docs/semester-2/gsos-301/unit-06/index.mdx
+ - docs/semester-2/gsos-301/unit-06/topic-01.mdx
+ - docs/semester-2/gsos-301/unit-06/topic-02.mdx
+ - history/prompts/gsos-301/crew-gsos-301-u06-illustrate.misc.prompt.md
+ - specs/content/gsos-301/figures/unit-06.banner.md
+ - specs/content/gsos-301/figures/unit-06.md
+ - specs/content/gsos-301/reviews/unit-06/G2/20261128T104455062Z-gates.json
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-bloom-bands.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-concept-graph.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-depth-gate.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-docs-sync.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-figures.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-no-answer-keys.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/check-no-em-dash.txt
+ - specs/content/gsos-301/reviews/unit-06/G2/logs-20261128T104455062Z/validate-content.txt
+ - specs/content/gsos-301/tasks.md
+ - static/img/figures/gsos-301/unit-06/fig-U6-5.webp
+ - static/img/figures/gsos-301/unit-06/fig-U6-6.webp
+ - static/img/figures/gsos-301/unit-06/fig-U6-7.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -77,7 +77,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed all GSOS-301 Unit 6 raster illustrations and banner in the English unit files, updated manifests and task tracker, and refreshed G2 gate evidence with all 14 content gates passing.
+Generated with gflow2, inspected, and placed GSOS-301 Unit 6 raster illustrations (fig-U6-6, fig-U6-7) and banner (fig-U6-5), updated manifests and tracker, and recorded clean G2 gate evidence.
 
 ## Outcome
 
@@ -89,12 +89,12 @@ Generated, inspected, and placed all GSOS-301 Unit 6 raster illustrations and ba
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all GSOS-301 Unit 6 raster illustrations and banner in the English unit files, updated manifests and task tracker, and refreshed G2 gate evidence with all 14 content gates passing.
+- Shipped / changed: Generated with gflow2, inspected, and placed GSOS-301 Unit 6 raster illustrations (fig-U6-6, fig-U6-7) and banner (fig-U6-5), updated manifests and tracker, and recorded clean G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 6 has no Urdu topic files yet, so the translation job must add the fig-U6-6 and fig-U6-7 markers when it creates them.
-  - G3 English review remains open and advisory per ADR-0019; G4 remains blocked until a fresh independent G3 confirms repairs.
+  - G3 English review remains advisory and G4 translation stays blocked until a fresh independent G3 confirms repairs.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
