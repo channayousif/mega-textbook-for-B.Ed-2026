@@ -16,6 +16,7 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-302/20261312-efmp-302-u04-flashcards.green.prompt.md
  - history/prompts/efmp-302/crew-efmp-302-u04-flashcards-conflict1.misc.prompt.md
  - history/prompts/efmp-302/crew-efmp-302-u04-flashcards-conflict2.misc.prompt.md
  - history/prompts/efmp-302/crew-efmp-302-u04-flashcards-conflict3.misc.prompt.md
@@ -23,7 +24,6 @@ files:
  - specs/studio/flashcards-needed.json
  - specs/studio/flashcards/efmp-302/unit-04.json
 tests:
- - npm run build:content-status
  - npm run check:content
 ---
 
@@ -60,31 +60,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-302-u04-flashcards-conflict1, fix, claude_crew) This branch also drops `gent-401/7` because `build-studio-index.mjs --coverage` regenerates the file that way (the glossary covers gent-401/7); main's committed copy is stale there.
 - (efmp-302-u04-flashcards-conflict1, fix, claude_crew) Urdu Topic 4.3 typo still open: "اڑتی آٹھ" should be "اڑتیس".
 
+
 ## Response snapshot
 
-Merged origin/main (18 commits, including the EFMP-302 Unit 5 deck from PR #961) into crew/efmp-302-u04-flashcards. The only conflict was specs/studio/flashcards-needed.json: main had dropped efmp-302/5 and kept efmp-302/4, while this branch dropped efmp-302/4. Resolved it by re-running `node scripts/build-studio-index.mjs --coverage`, which regenerated the file from the merged tree; the result differs from main only by dropping efmp-302/4 (this branch's deck now covers it). Restored the tracked-but-gitignored static/studio/flashcards/* files the generator rewrote, then committed the merge. Added this PHR. `npm run build:content-status` and all 14 `npm run check:content` gates pass.
+Merged origin/main into crew/efmp-302-u04-flashcards, resolved the sole flashcards-needed.json conflict by regeneration (dropping only efmp-302/4), restored generated studio artifacts, added the conflict3 PHR, and all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix for EFMP-302 Unit 4 by claude_crew (attempt 2).
-- Tests: npm run build:content-status and npm run check:content passed in the job worktree.
-- Files: 2 file(s) changed by this job (the merge resolution and this PHR), listed above.
+- Impact: fix for EFMP-302 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 7 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-302-u04-flashcards and resolved the sole conflict in specs/studio/flashcards-needed.json by regeneration, so it now differs from main only by dropping efmp-302/4 (this branch's deck covers it). Merge committed; all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything. The merge result was produced by the generator, not by hand-editing the registry.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into crew/efmp-302-u04-flashcards, resolved the sole flashcards-needed.json conflict by regeneration (dropping only efmp-302/4), restored generated studio artifacts, added the conflict3 PHR, and all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu Topic 4.3 typo still open in the i18n mirror at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-04/topic-03.mdx:35: "اڑتی آٹھ" should be "اڑتیس"; earlier jobs deferred it to a G5 or repair job, so this conflict job left it untouched.
-  - `specs/studio/flashcards-needed.json` is generator-derived: re-run `node scripts/build-studio-index.mjs --coverage` after any merge and restore the tracked-but-gitignored `static/studio/flashcards/*` before committing.
+  - Urdu Topic 4.3 typo still open at i18n/ur/.../semester-1/efmp-302/unit-04/topic-03.mdx:35 ("اڑتی آٹھ" should be "اڑتیس"); needs a G5 or repair job.
+  - specs/studio/flashcards-needed.json is generator-derived; after any further merge re-run `node scripts/build-studio-index.mjs --coverage` and restore tracked `static/studio/flashcards/*` before committing.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): build:content-status PASS, check:content PASS (14/14)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
