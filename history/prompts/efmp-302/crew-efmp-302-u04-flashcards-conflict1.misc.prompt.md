@@ -17,8 +17,8 @@ links:
   pr: null
 files:
  - history/prompts/efmp-302/20261312-efmp-302-u04-flashcards.green.prompt.md
- - history/prompts/efmp-302/crew-efmp-302-u04-flashcards.misc.prompt.md
  - history/prompts/efmp-302/crew-efmp-302-u04-flashcards-conflict1.misc.prompt.md
+ - history/prompts/efmp-302/crew-efmp-302-u04-flashcards.misc.prompt.md
  - specs/studio/flashcards-needed.json
  - specs/studio/flashcards/efmp-302/unit-04.json
 tests:
@@ -58,9 +58,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-302-u04-fix, fix, codex) Pre-existing dirty static/content-status.json was refreshed locally and remains unstaged.
 - (efmp-302-u04-fix, fix, codex) Fresh independent G3 required; G3/G5 remain open.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-302-u04-flashcards. Main had advanced to 42942847f (PR #957, NotebookLM health and Workers AI transcripts), but it did not touch specs/studio/flashcards-needed.json, so the anticipated conflict never materialised and the merge was clean. Kept the Unit 4 deck and its registry removal intact, restored the gitignored static/studio/flashcards working copies that build-studio-index rewrites, added this conflict-resolution PHR, and confirmed all 14 content gates pass.
+Merged origin/main (`42942847f`) into `crew/efmp-302-u04-flashcards` with no `flashcards-needed.json` conflict, kept the Unit 4 deck, added the conflict-resolution PHR, and all 14 content gates pass.
 
 ## Outcome
 
@@ -72,14 +73,13 @@ Merged origin/main into crew/efmp-302-u04-flashcards. Main had advanced to 42942
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main (42942847f) into crew/efmp-302-u04-flashcards with no conflict, kept the Unit 4 flashcard deck and its flashcards-needed.json removal intact, added the conflict-resolution PHR, and confirmed all 14 content gates pass.
+- Shipped / changed: Merged origin/main (`42942847f`) into `crew/efmp-302-u04-flashcards` with no `flashcards-needed.json` conflict, kept the Unit 4 deck, added the conflict-resolution PHR, and all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The anticipated `flashcards-needed.json` conflict never materialised: main's advance (PR #957) did not touch that file. Batch PR #958 carries the EFMP-302 Unit 3 deck and removes `efmp-302/3`; when it merges to main, this branch will conflict again in that file. The correct merged result drops `efmp-302/3`, `efmp-302/4` and `gent-401/7`.
-  - This branch's `flashcards-needed.json` also drops `gent-401/7` because `build-studio-index.mjs --coverage` regenerates it that way (the glossary covers gent-401/7); main's committed copy is stale there.
-  - Urdu Topic 4.3 (topic-03.mdx line 35) renders "thirty-eight pupils" as "اڑتی آٹھ"; it should be "اڑتیس". Fix it in a G5 or repair job.
-  - Unit 4 G3 en-review and G5 Urdu tracker rows remain open per ADR-0019; this merge touched no content or gate evidence.
+  - The `flashcards-needed.json` conflict never materialised because main's advance (PR #957) did not touch that file; batch PR #958 carries the EFMP-302 Unit 3 deck and removes `efmp-302/3`, so this branch will conflict again once #958 lands on main. Correct merged result there drops `efmp-302/3`, `efmp-302/4` and `gent-401/7`.
+  - This branch also drops `gent-401/7` because `build-studio-index.mjs --coverage` regenerates the file that way (the glossary covers gent-401/7); main's committed copy is stale there.
+  - Urdu Topic 4.3 typo still open: "اڑتی آٹھ" should be "اڑتیس".
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
