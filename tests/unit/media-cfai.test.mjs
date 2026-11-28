@@ -47,6 +47,8 @@ describe('classify', () => {
     expect(classify(429, {}).status).toBe('quota');
     expect(classify(400, { errors: [{ code: 4006, message: 'daily free allocation of 10,000 neurons used' }] }).status).toBe('quota');
     expect(classify(400, { errors: [{ code: 5006, message: 'Bad input' }] })).not.toBeInstanceOf(CfaiError);
+    expect(classify(500, {}).status).toBe('unavailable');
+    expect(classify(400, { errors: [{ code: 8004, message: 'AiError: Internal server error' }] }).status).toBe('unavailable');
   });
 });
 
@@ -102,5 +104,8 @@ describe('qg2 engine', () => {
     expect(viaCf).toMatchObject({ engine: 'cfai', score: 0.667 });
     const none = await qg2(clip, 'ایک دو تین', { outDir: join(d, 'q3'), cfai: { creds: null }, local, viaCfai, strip });
     expect(none.engine).toBe('local');
+    const broken = await qg2(clip, 'ایک دو تین', { outDir: join(d, 'q4'), cfai: { creds: { id: 'a', token: 't' } }, local, viaCfai: async () => { throw new Error('bad input'); }, strip });
+    expect(broken).toMatchObject({ engine: 'local', score: 1 });
+    expect(broken.fallback).toMatch(/^error: bad input/);
   });
 });

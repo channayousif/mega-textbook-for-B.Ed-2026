@@ -129,9 +129,9 @@ export async function qg2(file, line, { outDir = join(dirname(file), 'qg2'), lan
   let heard;
   let fallback = null;
   if (used === 'cfai') {
+    // Any Workers AI failure falls back to local whisper (spec 037 FR-003); the reason is reported.
     try { heard = await viaCfai(file, outDir, lang, cfai); } catch (e) {
-      if (!(e instanceof CfaiError)) throw e;
-      fallback = `${e.status}: ${e.message}`;
+      fallback = e instanceof CfaiError ? `${e.status}: ${e.message}` : `error: ${e.message}`;
       used = 'local';
     }
   }

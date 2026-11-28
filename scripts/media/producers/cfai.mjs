@@ -74,6 +74,8 @@ export function classify(httpStatus, body, ms = Date.now()) {
   const text = errs.map((e) => `${e.code} ${e.message}`).join('; ') || `HTTP ${httpStatus}`;
   if (httpStatus === 401 || httpStatus === 403 || errs.some((e) => [10000, 9109, 5035].includes(e.code))) return new CfaiError('unavailable', `Workers AI refused the token or model: ${text}`);
   if (httpStatus === 429 || errs.some((e) => [3036, 3040, 4006].includes(e.code)) || /allocation|capacity|rate limit|neurons/i.test(text)) return new CfaiError('quota', `Workers AI limit: ${text}`, nextUtcMidnight(ms));
+  // A server-side failure (HTTP 5xx, or AiError 8004 "Internal server error", seen 2026-11-28) is transient.
+  if (httpStatus >= 500 || errs.some((e) => e.code === 8004) || /internal server error/i.test(text)) return new CfaiError('unavailable', `Workers AI server error: ${text}`);
   return new Error(`Workers AI error: ${text}`);
 }
 
