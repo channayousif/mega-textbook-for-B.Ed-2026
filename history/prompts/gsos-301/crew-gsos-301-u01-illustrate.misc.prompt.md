@@ -16,33 +16,33 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/gsos-301/unit-01/index.mdx
-  - docs/semester-2/gsos-301/unit-01/topic-01.mdx
-  - docs/semester-2/gsos-301/unit-01/topic-02.mdx
-  - docs/semester-2/gsos-301/unit-01/topic-03.mdx
-  - history/prompts/gsos-301/crew-gsos-301-u01-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/topic-03.mdx
-  - specs/content/gsos-301/figures/unit-01.banner.md
-  - specs/content/gsos-301/figures/unit-01.md
-  - specs/content/gsos-301/reviews/unit-01/G2/20261128T014424605Z-gates.json
-  - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-bloom-bands.txt
-  - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-concept-graph.txt
-  - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-depth-gate.txt
-  - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-docs-sync.txt
-  - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-figures.txt
-  - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-no-answer-keys.txt
-  - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-no-em-dash.txt
-  - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/validate-content.txt
-  - specs/content/gsos-301/tasks.md
-  - static/img/figures/gsos-301/unit-01/fig-U1-10.webp
-  - static/img/figures/gsos-301/unit-01/fig-U1-7.webp
-  - static/img/figures/gsos-301/unit-01/fig-U1-8.webp
-  - static/img/figures/gsos-301/unit-01/fig-U1-9.webp
+ - docs/semester-2/gsos-301/unit-01/index.mdx
+ - docs/semester-2/gsos-301/unit-01/topic-01.mdx
+ - docs/semester-2/gsos-301/unit-01/topic-02.mdx
+ - docs/semester-2/gsos-301/unit-01/topic-03.mdx
+ - history/prompts/gsos-301/crew-gsos-301-u01-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/topic-03.mdx
+ - specs/content/gsos-301/figures/unit-01.banner.md
+ - specs/content/gsos-301/figures/unit-01.md
+ - specs/content/gsos-301/reviews/unit-01/G2/20261128T014424605Z-gates.json
+ - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-bloom-bands.txt
+ - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-concept-graph.txt
+ - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-depth-gate.txt
+ - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-docs-sync.txt
+ - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-figures.txt
+ - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-no-answer-keys.txt
+ - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/check-no-em-dash.txt
+ - specs/content/gsos-301/reviews/unit-01/G2/logs-20261128T014424605Z/validate-content.txt
+ - specs/content/gsos-301/tasks.md
+ - static/img/figures/gsos-301/unit-01/fig-U1-10.webp
+ - static/img/figures/gsos-301/unit-01/fig-U1-7.webp
+ - static/img/figures/gsos-301/unit-01/fig-U1-8.webp
+ - static/img/figures/gsos-301/unit-01/fig-U1-9.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -80,26 +80,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gsos-301-u01-review_en-r1, review_en, agy) Live browser 360px viewport and A4 print view inspection remain unperformed due to host execution limits.
 - (gsos-301-u01-review_en-r1, review_en, agy) This is cycle 2/2 under ADR-0019; G3 remains unticked/uncertified (advisory escalate), requiring owner authorization for further cycles.
 
+
 ## Response snapshot
 
-Generated all four raster illustrations (unit banner fig-U1-7 and topic scenes fig-U1-8, fig-U1-9, fig-U1-10) using gflow (nano2), visually inspected each WebP image against quality and cultural requirements (confirming authentic Pakistani dress and setting, zero text/lettering, and alignment with pedagogical goals and alt text), placed them with `<Figure>` tags in English and Urdu unit files, updated the manifest and banner files to `placed`, prepared and committed G2 gate evidence, and verified that all 14 content gates pass.
+Generated with gflow, inspected, and placed all four raster illustrations (banner fig-U1-7 and topic scenes fig-U1-8 through fig-U1-10) for GSOS-301 Unit 1 in English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for GSOS-301 Unit 1 by agy (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates green).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, visually inspected, and placed all four raster illustrations (unit banner fig-U1-7 and topic figures fig-U1-8, fig-U1-9, fig-U1-10) for GSOS-301 Unit 1 across English and Urdu files, recorded G2 gate evidence, and verified all 14 content gates pass cleanly.
-- Decisions the team must respect: G3 remains advisory escalate (cycle 2/2 completed under ADR-0019) and uncertified until owner authorization; G2 gate evidence is refreshed and recorded.
-- Pending / next owner: crew lead / reviewer (auto-merge when CI is green).
+- Shipped / changed: Generated with gflow, inspected, and placed all four raster illustrations (banner fig-U1-7 and topic scenes fig-U1-8 through fig-U1-10) for GSOS-301 Unit 1 in English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Narrow 360px and A4 print render inspection remain unperformed due to host execution limits.
-  - Cycle 2/2 under ADR-0019 was reached on prior review; further G3 review cycles require owner authorization.
+  - Narrow 360px viewport and A4 print view inspections remain unperformed due to host execution limits.
+  - Cycle 2/2 under ADR-0019 was reached in prior G3 review; further review cycles require owner authorization.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
