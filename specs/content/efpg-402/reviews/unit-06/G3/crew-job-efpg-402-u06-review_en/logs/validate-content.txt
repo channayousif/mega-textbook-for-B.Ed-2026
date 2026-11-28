@@ -1,0 +1,4 @@
+$ npm run -s validate:content
+✓ Content validation passed.
+
+exit_code=0
