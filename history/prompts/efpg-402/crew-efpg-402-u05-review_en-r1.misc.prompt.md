@@ -1,6 +1,6 @@
 ---
 id: crew-efpg-402-u05-review_en-r1
-title: crew review_en cycle 2 EFPG-402 unit 5
+title: crew review_en EFPG-402 unit 5
 stage: misc
 date: 2026-11-28
 surface: agent
@@ -13,14 +13,11 @@ labels: ["crew", "claude_crew", "review_en"]
 links:
   spec: specs/content/efpg-402/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
  - history/prompts/efpg-402/crew-efpg-402-u05-review_en-r1.misc.prompt.md
- - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/report.json
- - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/summary.md
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/assessment-solutions.md
- - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/manifest.json
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/build-content-status.txt
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-bloom-bands.txt
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-concept-graph.txt
@@ -33,8 +30,7 @@ files:
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/measure-figure-text.txt
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/render-review.txt
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/validate-content.txt
- - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/render-inspect.json
- - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/render-inspect.log
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/manifest.json
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-index.png
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-topic-01.png
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-topic-02.png
@@ -49,10 +45,13 @@ files:
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-topic-04.png
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-topic-05.png
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-unit-assessment.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/render-inspect.json
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/render-inspect.log
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/report.json
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/summary.md
  - specs/content/efpg-402/tasks.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/report.json
 ---
 
 ## Prompt
@@ -83,36 +82,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Added the validated cycle-2 advisory G3 English review of EFPG-402 Unit 5 (disposition revise) at
-`specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/report.json`, with its
-prepared manifest, eleven command logs, fourteen production render PNGs, independent assessment
-solutions, summary and an unticked advisory tracker row, all committed on
-`crew/efpg-402-u05-review_en-r1`.
+Added the validated cycle-2 independent G3 English review of EFPG-402 Unit 5 (disposition revise; all seven criteria pass, every cycle-1 content finding verified resolved) with its manifest, command logs, production render PNGs, assessment solutions, summary, PHR and an unticked advisory tracker row, committed on `crew/efpg-402-u05-review_en-r1`.
 
 ## Outcome
 
-- Impact: review_en cycle 2 for EFPG-402 Unit 5 by claude_crew (final ADR-0019 cycle).
-- Tests: `npm run check:content` passed (14/14) in the job worktree and on a clean `origin/main` worktree; `review-evidence.mjs validate` returned structurally valid.
-- Files: 36 file(s), listed above.
-- Next prompts: the crew planner decides the unit's next stage; a `pass` needs the render tool fixed first.
+- Impact: review_en for EFPG-402 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 34 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: the cycle-2 G3 report, its manifest, logs, production render PNGs, assessment solutions, summary, PHR and one unticked advisory tracker row on `crew/efpg-402-u05-review_en-r1`.
-- Decisions the team must respect: all seven G3 criteria pass and every cycle-1 content finding is verified resolved, but the disposition is `revise` rather than `pass` because the review contract requires `render-review` at exit 0 and `scripts/render-inspect.mjs` section D cannot exit 0 on a unit with WebP illustrations. G3 stays open and unticked; nothing is certified.
-- Pending / next owner: crew lead. The only thing standing between this unit and a `pass` is a tool fix: make `scripts/render-inspect.mjs` section D use the figure's real extension (or skip raster `illustration` rows) instead of always appending `.svg`. That is a repository tooling change, outside this unit's content scope and outside a reviewer's write authority.
+- Shipped / changed: Added the validated cycle-2 independent G3 English review of EFPG-402 Unit 5 (disposition revise; all seven criteria pass, every cycle-1 content finding verified resolved) with its manifest, command logs, production render PNGs, assessment solutions, summary, PHR and an unticked advisory tracker row, committed on `crew/efpg-402-u05-review_en-r1`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The ten `render-review` defects are all `fig-U5-12..16` `<id>.svg` URLs; direct HTTP checks return 200 for all five `.webp` files and the rendered pages show them, so this is a tool defect, not a content defect. Do not "fix" the content for it.
-  - Report at `specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/report.json`; evidence, logs and PNGs in the sibling folder. It supersedes `crew-job-efpg-402-u05-review_en.json`.
-  - `npm run check:content` was also run on a clean `origin/main` checkout and reports the same all-pass result, so this branch adds no finding main lacks.
+  - The only blocker to a `pass` is the render tool: `scripts/render-inspect.mjs` section D should derive its geometry URL from the manifest row's real extension instead of hardcoding `.svg`. That is a repo tooling change, outside this unit's content scope.
+  - The ten render defects are all `fig-U5-12..16`; do not repair content for them.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a mandatory review command (`render-review`) exits non-zero for a reason unrelated to content, so the contract's pass rule cannot be met by a content-complete unit. This is the second cycle to hit it.
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS (disposition revise).
-- Prompt variant (if applicable): crew brief v1, cycle-2 rerun.
-- Next experiment (smallest change to try): teach `scripts/render-inspect.mjs` section D to derive the geometry URL from the manifest row's `Src` extension rather than hardcoding `.svg`.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
