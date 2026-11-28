@@ -1,0 +1,25 @@
+render-review: UNAVAILABLE (production site is not the reviewed input)
+date: 2026-11-28T07:58:14Z
+
+deployed SHA (~/deploy/deployed-sha): b7b7e00c9a8640158b8d336ba1215e4fcfed01e9
+HEAD: b2dc2715255b31026bf257e58e451ecbf983d001
+
+$ git diff --quiet b7b7e00c9a8640158b8d336ba1215e4fcfed01e9 HEAD -- docs/semester-4/efpg-402/unit-04/ static/img/figures/efpg-402/unit-04/
+exit code: 1
+
+$ git diff --stat b7b7e00c9a8640158b8d336ba1215e4fcfed01e9 HEAD -- docs/semester-4/efpg-402/unit-04/ static/img/figures/efpg-402/unit-04/
+ docs/semester-4/efpg-402/unit-04/topic-01.mdx      |  3 +-
+ docs/semester-4/efpg-402/unit-04/topic-03.mdx      |  6 ++--
+ docs/semester-4/efpg-402/unit-04/topic-04.mdx      |  4 +--
+ .../efpg-402/unit-04/unit-assessment.mdx           | 36 +++++++++++-----------
+ .../img/figures/efpg-402/unit-04/fig-U4-2.dark.svg |  4 +--
+ static/img/figures/efpg-402/unit-04/fig-U4-2.svg   |  4 +--
+ .../figures/efpg-402/unit-04/fig-U4-2.ur.dark.svg  |  2 +-
+ .../img/figures/efpg-402/unit-04/fig-U4-2.ur.svg   |  2 +-
+ 8 files changed, 30 insertions(+), 31 deletions(-)
+
+deploy.log: b7b7e00c deployed 2026-11-28T07:15:36Z; HEAD b2dc27152 still holding for CI (in_progress/pending) at review time.
+Conclusion: the live unit pages and figure assets differ from the reviewed inputs, so the production
+build cannot serve as the rendered input identity. No build, dev server or Playwright run is permitted
+by the crew brief. render-review is recorded as unavailable (exit 1). Visual accessibility remains
+unverified; structural accessibility and figure geometry pass from source and measure-figure-text.
