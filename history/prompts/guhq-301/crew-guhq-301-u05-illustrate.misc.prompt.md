@@ -80,25 +80,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed the GUHQ-301 Unit 5 raster illustrations (fig-U5-6, fig-U5-7) and unit banner (fig-U5-5) in the English and Urdu topic/index pages, updated figure manifests to placed, refreshed G2 gate evidence, and verified clean content gates.
+Generated, inspected, and placed GUHQ-301 Unit 5 raster illustrations and banner, updated manifests, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
 - Impact: illustrate for GUHQ-301 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
-- Files: 21 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the GUHQ-301 Unit 5 raster illustrations (fig-U5-6, fig-U5-7) and unit banner (fig-U5-5) in the English and Urdu topic and index pages, updated figure manifests to placed, refreshed G2 gate evidence, and verified clean content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Generated, inspected, and placed GUHQ-301 Unit 5 raster illustrations and banner, updated manifests, refreshed G2 gate evidence, and passed all content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 5 banner fig-U5-5 and illustrations fig-U5-6 and fig-U5-7 are placed; Unit 5 G3 review and G5 review remain open for independent evaluation.
-  - G3 review needs to check the occasion-of-revelation claim for verses 22:3 and 22:4 and conduct the religious-content check in content-spec drafting note 7.
-  - G5 review needs to check verse meanings, honorifics, and the seven authored Urdu concept labels.
+  - Unit 5 banner (fig-U5-5) and illustrations (fig-U5-6, fig-U5-7) are placed and verified without text, calligraphy, or sacred figures; G3 and G5 reviews remain open.
+  - G3 review must check the occasion-of-revelation claim for verses 22:3 and 22:4 and conduct the religious-content check in content-spec drafting note 7.
+  - G5 review must check verse meanings, honorifics, and the seven authored Urdu concept labels.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
