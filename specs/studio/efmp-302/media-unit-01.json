@@ -280,12 +280,73 @@
    "key": "t1-ur-video"
   },
   {
-   "state": "planned",
-   "gates": {},
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 109.969705,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 110,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 110
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.6
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Faithful to topic-02.mdx: the two fractions lessons, the industrial model (efficiency, control, compliance, covering the syllabus, interchangeable classes, mass schooling gains), inquiry-based professionalism as noticing and adjusting on evidence (not furniture), and Hargreaves' four ages. No quiz answers; it does not name EFMP-302."
+    }
+   },
    "history": [
     {
      "state": "planned",
      "at": "2026-11-28T00:54:18.630Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T01:43:51.019Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T01:46:58.145Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T01:48:48.988Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T01:48:49.040Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T01:49:45.812Z"
     }
    ],
    "topic": 2,
@@ -296,7 +357,12 @@
    "alt": "Audio brief, about two minutes, with the three memory hooks for the industrial model, noticing and adjusting, and Hargreaves’ four ages.",
    "prompt_ref": "specs/studio/prompts/audio.md v2",
    "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
-   "key": "t2-en-audio-p1"
+   "key": "t2-en-audio-p1",
+   "artifact_id": "e65bd34e-d99f-421b-8044-d8ce453971ae",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-en-audio-p1.m4a",
+   "sha256": "b095a9052fae8240d39db4fe4f1adf323c89f6c62ad90a8a377636c921e68f46",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-en-audio-p1.mp4.thumb.jpg"
   },
   {
    "state": "planned",
@@ -317,12 +383,74 @@
    "key": "t2-en-mindmap"
   },
   {
-   "state": "planned",
-   "gates": {},
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 93.135238,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 93.166667,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 93.166667
+      },
+      "loudness": {
+       "integrated_lufs": -16.2,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Faithful to the Urdu topic: the fractions lesson stopped to read pupils' thinking, the industrial model as factory with cover/control/comply, syllabus coverage as the only measure of success, inquiry-based professionalism as notice/adjust on evidence, and Hargreaves' four ages; ends on a practicum action. Hooks kept in English as ruled.",
+     "urdu_flag": "Transcript came back in Devanagari, so exact Urdu wording was not checked; listen for register."
+    }
+   },
    "history": [
     {
      "state": "planned",
      "at": "2026-11-28T00:54:18.718Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T02:00:54.312Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T02:04:26.274Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T02:06:35.068Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T02:06:35.120Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T02:07:50.973Z"
     }
    ],
    "topic": 2,
@@ -333,7 +461,12 @@
    "alt": "دو منٹ کا مختصر بریف، صنعتی ماڈل، noticing and adjusting اور Hargreaves کے چار ادوار کے تین memory hooks کے ساتھ۔",
    "prompt_ref": "specs/studio/prompts/audio.md v2",
    "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
-   "key": "t2-ur-audio-p1"
+   "key": "t2-ur-audio-p1",
+   "artifact_id": "eae2350b-9ce7-4cac-ad2e-8028042e1bee",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-ur-audio-p1.m4a",
+   "sha256": "f712e26c80cf0dcf9ebafab5d12cb4af9a6001bb9a3a61599ed4663d30749be2",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-ur-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-ur-audio-p1.mp4.thumb.jpg"
   },
   {
    "state": "planned",
