@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 518" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس کے قومی نصاب 2022-23 کے شعبوں اور نمونہ معیارات کا جدول</title><desc id="d">جدول جو سائنس کے قومی نصاب 2022-23 کے تین سائنسی شعبے دکھاتا ہے: حیاتیاتی سائنس، طبعی سائنس، اور زمین اور خلا کی سائنس، نیز سب میں شامل سائنسی تحقیق کا حصہ، ہر ایک کے ساتھ ایک نمونہ معیار اور یہ کہ وہ کیا تعمیر کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 518" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">سائنس کے قومی نصاب 2022-23 کے شعبوں اور وضاحتی مثالوں کا جدول</title><desc id="d">جدول جو سائنس کے قومی نصاب 2022-23 کے تین سائنسی شعبے دکھاتا ہے: حیاتیاتی سائنس، طبعی سائنس، اور زمین اور خلا کی سائنس، نیز سب میں شامل سائنسی تحقیق کا حصہ، ہر ایک کے ساتھ ایک وضاحتی مثال اور یہ کہ وہ کیا تعمیر کرتا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
 .bg { fill: var(--bg); }
 .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
 .dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
@@ -27,7 +27,7 @@ text { font-size: 14px; fill: var(--ink); }
 </g><g id="layer-nodes">
 <text class="sh" x="746" y="68.6">شعبہ</text>
 <text class="sh" x="600" y="68.6">کیا شامل ہے</text>
-<text class="sh" x="430" y="68.6">نمونہ معیار (جماعت 6)</text>
+<text class="sh" x="430" y="68.6">ہماری وضاحتی مثال</text>
 <text class="sh" x="200" y="68.6">کیا تعمیر کرتا ہے</text>
 
 <text class="sh" x="746" y="130.2">حیاتیاتی سائنس</text>
