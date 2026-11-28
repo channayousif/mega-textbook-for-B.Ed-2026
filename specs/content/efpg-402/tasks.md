@@ -51,9 +51,10 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | Unit 4 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 4 | G6 assets | ▣ | | Ten schematic SVG pairs (fig-U4-1 to fig-U4-10) placed with derived dark twins and verified with measure-figure-text; Urdu .ur.svg labels placed; banner fig-U4-11 placed; topic scenes fig-U4-12 to fig-U4-16 placed |
 | Unit 4 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-05/G2/20261128T000350795Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-05/G2/20261128T070512414Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 5 | G3 en-review | ▢ | agent:claude-crew | Advisory revise: specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en.json; Topic 5.4 misstates Rowe (speculative guessing drops, the bound excerpt says speculative responses increase); sources declaration overstates grounding for U5-02/U5-07 (and U5-03/U5-08); production render inspected, tool limitation on WebP SVG variants; no certification |
+| Unit 5 | G3 en-review | ▢ | agent:claude-crew | advisory: revise; repairs applied for specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en.json (Rowe sentence corrected, sources declaration now names sub-topics resting on unread books, eight advisories fixed, EN and UR); render-review WebP tool limitation unchanged; fresh independent review pending; no certification |
 | Unit 5 | G4 ur-translation | ▢ | | Complete seven-file draft Urdu mirror and ten localized SVG pairs (with derived dark twins) prepared from English 67fd59bde; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and rendered Urdu page inspection pending; see translations/unit-05/handoff.md |
 | Unit 5 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 5 | G6 assets | ▣ | | Ten schematic SVGs (fig-U5-1 to fig-U5-10) placed with derived dark twins; Urdu .ur.svg labels placed and verified with measure-figure-text; banner fig-U5-11 placed; topic scenes fig-U5-12 to fig-U5-16 placed |

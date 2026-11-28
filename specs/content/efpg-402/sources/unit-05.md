@@ -13,8 +13,16 @@ Checked on 2026-11-27. All prose is original; quotations are under 15 words and 
 
 ## Unverifiable sources
 
-Bound excerpts could not be committed for these print monographs. They are listed here so `check:depth-gate` and reviewers see the limitation rather than infer it from silence. No claim in the unit rests on them alone: each sub-topic they are mapped to is also grounded in a source with a bound excerpt or a verifiable open-access reference.
+Bound excerpts could not be committed for these three books: their text was not read for this unit. They are listed here so `check:depth-gate` and reviewers see the limitation rather than infer it from silence. Several claims do rest on them alone, with only title-level support (`D-2026-0001`):
 
-- yadav-2002: Print monograph (Anmol Publications, 2002). Open Library OL10226886W checked 2026-11-27; no full text on this host (`D-2026-0001`). Cited for U5-01, U5-02, U5-03, U5-06, U5-07, and U5-08 as further reading on science teaching methods and Herbartian planning; core pedagogical structures are grounded in `ncp-science-2022`, `bscs-2006-5e`, and `rowe-1974-waittime`.
-- mager-1962-objectives: Print monograph (Fearon Publishers, 1962). Open Library OL18390776W and OpenAlex W2071960252 verified 2026-11-27. Cited for U5-03 and U5-05 for the condition-behaviour-criterion framework; the objectives are aligned directly with the National Curriculum of Pakistan 2022-23 SLOs.
-- wellington-2012-management: Academic textbook (Routledge, 2012). OpenAlex W1523498877 verified 2026-11-27. Cited for U5-08 for cooperative group roles and laboratory management in secondary science.
+- U5-01: the lesson-plan definition (topic-01) is attributed to yadav-2002; only the curriculum-alignment point rests on `ncp-science-2022`.
+- U5-02: the Herbartian account, including apperception and the five steps (topic-02), rests on yadav-2002 alone.
+- U5-03 and U5-05: Bloom's objective-based plan and the ABCD framework attributed to Mager (topic-02, topic-03) rest on mager-1962-objectives and yadav-2002, both unread. `ncp-science-2022` supports the curriculum context, not the framework.
+- U5-07: the explanation-skills material (topic-04) is the unit's own teaching guidance, mapped to yadav-2002 alone.
+- U5-08: the classroom-management framing (topic-05) rests on wellington-2012-management and yadav-2002, both unread.
+
+U5-04 and the wait-time part of U5-06 rest on bound excerpts (`bscs-2006-5e`, `rowe-1974-waittime`).
+
+- yadav-2002: Print monograph (Anmol Publications, 2002). Open Library OL10226886W checked 2026-11-27; no full text on this host (`D-2026-0001`). Cited for U5-01, U5-02, U5-03, U5-06, U5-07, and U5-08; its text has not been checked against any of these claims.
+- mager-1962-objectives: Print monograph (Fearon Publishers, 1962). Open Library OL18390776W and OpenAlex W2071960252 verify the record only. Cited for U5-03 and U5-05; the text has not been checked.
+- wellington-2012-management: Academic textbook (Routledge, 2012). OpenAlex W1523498877 verifies the record only. Cited for U5-08; the text has not been checked.
