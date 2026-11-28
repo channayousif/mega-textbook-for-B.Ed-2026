@@ -13,33 +13,33 @@ labels: ["crew", "agy", "illustrate"]
 links:
   spec: specs/content/gsos-301/content-spec.md
   ticket: null
-  adr: history/adr/0029-gemini-illustrations.md
+  adr: null
   pr: null
 files:
-  - docs/semester-2/gsos-301/unit-03/index.mdx
-  - docs/semester-2/gsos-301/unit-03/topic-01.mdx
-  - docs/semester-2/gsos-301/unit-03/topic-02.mdx
-  - history/prompts/gsos-301/crew-gsos-301-u03-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-03/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-03/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-03/topic-02.mdx
-  - specs/content/gsos-301/figures/unit-03.banner.md
-  - specs/content/gsos-301/figures/unit-03.md
-  - specs/content/gsos-301/reviews/unit-03/G2/20261128T030040050Z-gates.json
-  - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-bloom-bands.txt
-  - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-concept-graph.txt
-  - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-depth-gate.txt
-  - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-docs-sync.txt
-  - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-figures.txt
-  - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-no-answer-keys.txt
-  - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-no-em-dash.txt
-  - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/validate-content.txt
-  - specs/content/gsos-301/tasks.md
-  - static/img/figures/gsos-301/unit-03/fig-U3-5.webp
-  - static/img/figures/gsos-301/unit-03/fig-U3-6.webp
-  - static/img/figures/gsos-301/unit-03/fig-U3-7.webp
+ - docs/semester-2/gsos-301/unit-03/index.mdx
+ - docs/semester-2/gsos-301/unit-03/topic-01.mdx
+ - docs/semester-2/gsos-301/unit-03/topic-02.mdx
+ - history/prompts/gsos-301/crew-gsos-301-u03-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-03/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-03/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-03/topic-02.mdx
+ - specs/content/gsos-301/figures/unit-03.banner.md
+ - specs/content/gsos-301/figures/unit-03.md
+ - specs/content/gsos-301/reviews/unit-03/G2/20261128T030040050Z-gates.json
+ - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-bloom-bands.txt
+ - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-concept-graph.txt
+ - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-depth-gate.txt
+ - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-docs-sync.txt
+ - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-figures.txt
+ - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-no-answer-keys.txt
+ - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/check-no-em-dash.txt
+ - specs/content/gsos-301/reviews/unit-03/G2/logs-20261128T030040050Z/validate-content.txt
+ - specs/content/gsos-301/tasks.md
+ - static/img/figures/gsos-301/unit-03/fig-U3-5.webp
+ - static/img/figures/gsos-301/unit-03/fig-U3-6.webp
+ - static/img/figures/gsos-301/unit-03/fig-U3-7.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -77,13 +77,14 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gsos-301-u03-repair_en-r1, repair_en, opencode) Curriculum owner still owns the approved-spec worked-example conflation (`content-spec.md` line 279 calls a multi-status clash role strain).
 - (gsos-301-u03-repair_en-r1, repair_en, opencode) Historical author provenance and rendered narrow-screen/A4 inspection remain open and are not author-repairable.
 
+
 ## Response snapshot
 
-Completed GSOS-301 Unit 3 bilingual raster illustration and banner generation, visual inspection, placement in EN and UR docs, and G2 gate evidence recording.
+Generated and placed GSOS-301 Unit 3 banner and topic raster illustrations in English and Urdu, updated figure manifests, refreshed G2 gate evidence, and recorded the task PHR.
 
 ## Outcome
 
-- Impact: illustrate for GSOS-301 Unit 3 by agy (gflow2 lane).
+- Impact: illustrate for GSOS-301 Unit 3 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -91,9 +92,11 @@ Completed GSOS-301 Unit 3 bilingual raster illustration and banner generation, v
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated raster illustrations fig-U3-5 (banner), fig-U3-6 (Topic 3.1), and fig-U3-7 (Topic 3.2) using gflow2, inspected for cultural and pedagogical fidelity, placed in English and Urdu mirrors, updated manifests, refreshed G2 evidence, and updated tracker.
+- Shipped / changed: Generated and placed GSOS-301 Unit 3 banner and topic raster illustrations in English and Urdu, updated figure manifests, refreshed G2 gate evidence, and recorded the task PHR.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G3/G5 reviews remain open and require subsequent independent reviewer runs; historical author provenance and narrow-screen/A4 render inspection remain open.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
