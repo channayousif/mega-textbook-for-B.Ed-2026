@@ -18,6 +18,7 @@ links:
 files:
  - docs/semester-4/gent-401/unit-01/topic-01.mdx
  - docs/semester-4/gent-401/unit-01/unit-assessment.mdx
+ - history/prompts/gent-401/crew-gent-401-u01-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gent-401/unit-01/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gent-401/unit-01/unit-assessment.mdx
  - specs/content/gent-401/reviews/unit-01/G2/20261128T033548875Z-gates.json
@@ -30,7 +31,6 @@ files:
  - specs/content/gent-401/reviews/unit-01/G2/logs-20261128T033548875Z/check-no-em-dash.txt
  - specs/content/gent-401/reviews/unit-01/G2/logs-20261128T033548875Z/validate-content.txt
  - specs/content/gent-401/tasks.md
- - history/prompts/gent-401/crew-gent-401-u01-repair_en.misc.prompt.md
 tests:
  - npm run check:content
 ---
@@ -78,9 +78,10 @@ From `specs/content/gent-401/reviews/unit-01/G3/20261127T192818Z-g3-desk-688055d
 - (gent-401-u01-illustrate, illustrate, agy) Unit banner fig-U1-5 is placed in English and Urdu index pages; Unit 1 G3 review and G5 review remain open.
 - (gent-401-u01-illustrate, illustrate, agy) Proposed unbanked terms remain for owner/G5 review: "Entrepreneurship" -> "کاروباری صلاحیت", "Innovation" -> "جدت", "Calculated risk" -> "سوچا سمجھا خطرہ", "Managerial thinking" -> "انتظامی سوچ".
 
+
 ## Response snapshot
 
-Applied the two blocking G3 findings in English and Urdu: the unit 1 MCQ options were reordered and reworded so the key distribution is A3/B2/C2/D3 and no item keys its longest option (verified by a character count on both locales), and the topic-01 sentence now says the seven characteristics are drawn from the two sources. Refreshed the G2 gate evidence, repointed the G2 row, appended the advisory repair tracker row, and left G3 unticked.
+Applied the two blocking G3 repairs to GENT-401 Unit 1 (MCQ key/option-length rebalance and the "both sources" reword) in English and Urdu, refreshed the G2 evidence, and recorded the advisory repair tracker row with check:content green.
 
 ## Outcome
 
@@ -92,13 +93,12 @@ Applied the two blocking G3 findings in English and Urdu: the unit 1 MCQ options
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Applied the two blocking G3 findings in English and Urdu (MCQ key/length rebalance; the "both sources" reword), refreshed the G2 evidence, repointed the G2 row and appended the advisory repair row, with `npm run check:content` green.
+- Shipped / changed: Applied the two blocking G3 repairs to GENT-401 Unit 1 (MCQ key/option-length rebalance and the "both sources" reword) in English and Urdu, refreshed the G2 evidence, and recorded the advisory repair tracker row with check:content green.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Render and print inspection stays unverified; it needs this commit deployed (or an owner-run build) and a permitted render job.
-  - Advisory A-1 remains: the `butler-iea` edition year 2020 needs IEA confirmation (`sources/unit-01.md:17-19`).
-  - GENT-401 is still absent from `catalog/courses.json`; the owner ruling is pending and is course-level, not Unit 1 content.
+  - Render and print inspection remains unverified; it needs this commit deployed (or an owner-run build) before a fresh G3 render check.
+  - `butler-iea` edition year 2020 still needs IEA confirmation (`specs/content/gent-401/sources/unit-01.md:17-19`).
   - The Urdu MCQ options and key were reordered to mirror the English; G5 should check the Urdu option register and lengths.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
