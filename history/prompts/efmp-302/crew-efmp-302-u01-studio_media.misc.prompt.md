@@ -11,17 +11,16 @@ user: crew
 command: crew studio_media
 labels: ["crew", "claude_crew", "studio_media"]
 links:
-  spec: specs/029-notebook-studio/spec.md
+  spec: specs/content/efmp-302/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-302/crew-efmp-302-u01-studio_media.misc.prompt.md
  - specs/studio/efmp-302/media-unit-01.json
  - specs/studio/efmp-302/unit-01-mnemonics.md
- - history/prompts/efmp-302/crew-efmp-302-u01-studio_media.misc.prompt.md
 tests:
  - npm run check:content
- - node scripts/check-studio-manifest.mjs
 ---
 
 ## Prompt
@@ -59,32 +58,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 ## Feedback from the previous attempt
 the worker exited without committing any change
 
+
 ## Response snapshot
 
-Planned the lean-recipe Study Studio ledger for EFMP-302 Unit 1 (16 items: 8 audio briefs, 2 unit
-overview videos, 4 English mind maps, 2 study guides) on the second NotebookLM account, built the
-unit notebook and its eight topic source packs, carried six of the eight audio briefs through
-generate, download, QG1, encode and QG2, took `t1-en-audio-p1` to `qa3-pass` as a private YouTube
-upload, and stopped at the NotebookLM and YouTube daily caps.
+Planned and built the EFMP-302 Unit 1 Study Studio on the second NotebookLM account, carried six audio briefs through QG1/encode/QG2 with the first uploaded private at `qa3-pass`, and committed the ledger, mnemonics and PHR.
 
 ## Outcome
 
-- Impact: studio_media for EFMP-302 Unit 1 by claude_crew (attempt 1).
-- Tests: npm run check:content passed; node scripts/check-studio-manifest.mjs passed.
+- Impact: studio_media for EFMP-302 Unit 1 by claude_crew (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: planned the 16-item lean ledger, built the notebook and source packs, and processed six audio briefs. `t1-en-audio-p1` is `qa3-pass` (private upload `1EDcts9vRag`, EN audio podcast playlist). `t1-ur-audio-p1`, `t2-en-audio-p1`, `t2-ur-audio-p1`, `t3-en-audio-p1` and `t3-ur-audio-p1` are `qa2-pass`, encoded with thumbnails, waiting for a private upload slot.
-- Decisions the team must respect: second NotebookLM account only; uploads stay private until the owner approves; the ledger course key is lowercase `efmp-302`.
-- Pending / next owner: crew lead (auto-merge when CI is green). The owner can watch `https://youtu.be/1EDcts9vRag` now, but `crew approve-studio efmp-302 1` waits until the remaining audio and video items reach `qa3-pass`.
-- Notes for the next job on this unit: nlm2.studio is 6/6 and youtube.upload is 4/4 for the Pacific day, so the run stops at the caps. Still `planned`: `t4-en-audio-p1`, `t4-ur-audio-p1`, `t1-en-video`, `t1-ur-video`, the four English mind maps and the two study guides. The second nlm profile's cookies expire within minutes, so refresh from davinci's second-account Chrome (`sh .crew/nlm-refresh.sh`, then `refresh_auth`) before each NotebookLM batch. No EFMP-302 video playlist exists on the channel, so the videos go up without one.
+- Shipped / changed: Planned and built the EFMP-302 Unit 1 Study Studio on the second NotebookLM account, carried six audio briefs through QG1/encode/QG2 with the first uploaded private at `qa3-pass`, and committed the ledger, mnemonics and PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Both lanes are at their Pacific-day caps (`nlm2.studio` 6/6, `youtube.upload` 4/4, held until 2026-11-28T19:00Z), so the ten still-`planned` items (t4 audios, both unit videos, four mind maps, two study guides) resume next media day; the five `qa2-pass` briefs are encoded and only need an upload slot.
+  - The owner can watch the one ready item now, https://youtu.be/1EDcts9vRag, but `crew approve-studio efmp-302 1` should wait until the remaining audio and video items reach `qa3-pass`; no EFMP-302 video playlist exists, so the videos go up without one.
+  - The second `nlm` profile's cookies expire within minutes, so refresh before each NotebookLM batch (`sh .crew/nlm-refresh.sh`, then `refresh_auth`); the Urdu briefs' transcripts come back in Devanagari and carry an `urdu_flag` for the owner's ear.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the second nlm profile's cookies expire within minutes, so `nlm` CLI calls need a refresh from davinci's second-account Chrome before each batch; the ledger was first planned with an uppercase course name and had to be re-planned lowercase.
-- Graders run and results (PASS/FAIL): check:content PASS; check-studio-manifest PASS.
-- Prompt variant (if applicable): crew brief v1 (lean recipe, notebook2 lane).
-- Next experiment (smallest change to try): none.
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
