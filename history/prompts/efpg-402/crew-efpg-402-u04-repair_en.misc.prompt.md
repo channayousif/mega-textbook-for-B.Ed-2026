@@ -77,7 +77,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 ## Open findings from the latest G3 report
 From `specs/content/efpg-402/reviews/unit-04/G3/b389e9fb-33f5-41f9-ab56-7df8fd3419e9.json` (disposition: revise). Resolve each one:
 - [blocking] Dale's cone level count and naming disagree across the unit. docs/semester-4/efpg-402/unit-04/topic-01.mdx:57-61 teaches five levels (Direct purposeful experiences; Contrived experiences and models; Dramatisation and demonstrations; Visual and auditory media; Verbal and text symbols). static/img/figures/efpg-402/unit-04/fig-U4-2.svg renders four bands (Direct Purposeful Experiences; Demonstrations & Working Models; Visual & Auditory Media; Verbal & Text Symbols). docs/semester-4/efpg-402/unit-04/unit-assessment.mdx:105 asks for "the four main levels" and its key at :154 names Direct, Contri...
-- [blocking] ERQ 3 (docs/semester-4/efpg-402/unit-assessment.mdx:129) is required by specs/content/efpg-402/content-spec.md:268 to design a low-cost aid for a named Grade 5 concept, but it names "Closed Electric Circuits and Electrical Conductivity", which the National Curriculum of Pakistan 2022-23 places at Grade 6 (SLO S-06-B-37, Differentiate between open and closed circuits, PDF p. 56); "electrical conductivity" is not an NCP SLO (the grid names thermal conductivity at Grade 7). Repair: relabel the item to Grade 6 or substitute a Grade 5 concept such as S-05-B-16/S-05-B-17 (flow of current,...
+- [blocking] ERQ 3 (docs/semester-4/efpg-402/unit-04/unit-assessment.mdx:129) is required by specs/content/efpg-402/content-spec.md:268 to design a low-cost aid for a named Grade 5 concept, but it names "Closed Electric Circuits and Electrical Conductivity", which the National Curriculum of Pakistan 2022-23 places at Grade 6 (SLO S-06-B-37, Differentiate between open and closed circuits, PDF p. 56); "electrical conductivity" is not an NCP SLO (the grid names thermal conductivity at Grade 7). Repair: relabel the item to Grade 6 or substitute a Grade 5 concept such as S-05-B-16/S-05-B-17 (flow of current,...
 - [blocking] Several curriculum-grade references contradict the NCP progression grid (source-checks/ncp-science-2022-grade-check.txt). topic-03.mdx:28 says Grade 5 respiration expects diaphragm mechanics, but Grade 5 SLO S-05-A-02 excludes detailed respiratory-system knowledge and the air pathway is Grade 7 SLO S-07-A-11. topic-03.mdx:94 says Grade 5 transpiration and xylem flow, but transpiration is Grade 8 (Benchmark II) and xylem/phloem role is Grade 7 SLO S-07-A-02. topic-04.mdx:28 says Grade 8 atomic structure, but atomic structure is Grade 7 SLO S-07-B-01 (chemical bonds are Grade 8). topic-04.mdx...
 - [advisory] MCQ key distribution is skewed: B is the key for 7 of 10 items and A for none (docs/semester-4/efpg-402/unit-04/unit-assessment.mdx:139-148). All items and distractors are unambiguous, but the pattern is a weak test-design convention.
 - [advisory] Concept-graph assessment mappings for CON:EFPG-402-4-6 and -4-7 appear swapped: specs/content/efpg-402/concepts/unit-04.md:12 maps MCQ-09 (instructional field trip) and RRQ-09 (community resources) to Science exhibitions, and :13 maps RRQ-10 (exhibition safety inspections) to Field trips and community resources.
@@ -92,42 +92,32 @@ From `specs/content/efpg-402/reviews/unit-04/G3/b389e9fb-33f5-41f9-ab56-7df8fd34
 - (efpg-402-u04-illustrate, illustrate, agy) G3 English review and G5 Urdu review remain open and unsigned per ADR-0019.
 - (efpg-402-u04-plan_illustrations, plan_illustrations, claude) The illustrate job should add the Urdu `<Figure>` elements for fig-U4-12 to fig-U4-16 (with Urdu alt text) to the Urdu topic files when it places the images; none exist yet.
 
+
 ## Response snapshot
 
-Applied all findings from the G3 review report (`specs/content/efpg-402/reviews/unit-04/G3/b389e9fb-33f5-41f9-ab56-7df8fd3419e9.json`):
-1. Reconciled Dale's cone level count and naming to 4 canonical levels across `topic-01.mdx`, `fig-U4-2` (EN/UR and dark variants), and `unit-assessment.mdx` (RRQ 2 prompt and model answer).
-2. Repaired ERQ 3 to teach the Grade 5 General Science concept "Flow of Electric Current in a Circuit" (SLO S-05-B-16) in compliance with the blueprint in `content-spec.md:268`.
-3. Aligned curriculum-grade references with the NCP 2022-23 progression grid: Grade 7 respiration in `topic-03.mdx:28`, Grade 7 plant water transport in `topic-03.mdx:94`, Grade 7 atomic structure in `topic-04.mdx:28`, Grade 5 changes of state in `topic-04.mdx:94`, and Grade 8 properties of waves in `unit-assessment.mdx:125`.
-4. Rebalanced MCQ key distribution from skewed 7/10 B to a balanced A: 2, B: 3, C: 3, D: 2 across English and Urdu assessments.
-5. Corrected concept graph assessment mappings for CON:EFPG-402-4-6 (exhibitions) and CON:EFPG-402-4-7 (field trips and community resources).
-6. Committed bound source evidence for `khan-2019-low-cost` and removed it from `## Unverifiable sources` in `specs/content/efpg-402/sources/unit-04.md`.
-7. Re-measured all four modified SVGs with `measure-figure-text.mjs` (exit 0).
-8. Generated fresh G2 gate evidence (`20261128T065612223Z-gates.json`), updated `tasks.md` G2 row and appended G3 advisory repair row.
-9. Verified all 14 content gates pass (`npm run check:content`).
+Reconciled Dale's cone to four canonical levels across prose, SVGs, and assessments, aligned ERQ 3 and curriculum-grade references with the NCP progression grid, rebalanced MCQ keys, corrected concept-graph mappings, committed bound evidence for khan-2019-low-cost, and recorded fresh G2 gate evidence and G3 advisory tracker row.
 
 ## Outcome
 
-- Impact: repair_en for EFPG-402 Unit 4 by agy.
-- Tests: `npm run check:content` passed (14/14 content gates clean).
+- Impact: repair_en for EFPG-402 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 26 file(s), listed above.
-- Next prompts: fresh independent G3 review run for EFPG-402 Unit 4.
-- Reflection: all findings cleanly resolved with minimal diffs and bilingual parity.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Resolved blocking and advisory findings from G3 review report `b389e9fb-33f5-41f9-ab56-7df8fd3419e9.json` across English and Urdu texts, figures, concept graph, sources, and tasks tracker.
-- Decisions the team must respect: G3 remains open and unticked until independent qualified review and certification.
-- Pending / next owner: Fresh independent G3 review run (`g3-reviewer`).
+- Shipped / changed: Reconciled Dale's cone to four canonical levels across prose, SVGs, and assessments, aligned ERQ 3 and curriculum-grade references with the NCP progression grid, rebalanced MCQ keys, corrected concept-graph mappings, committed bound evidence for khan-2019-low-cost, and recorded fresh G2 gate evidence and G3 advisory tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Dale's cone is now unified at 4 levels across prose, figures, and assessment.
-  - ERQ 3 is aligned to Grade 5 SLO S-05-B-16.
-  - All NCP grade references are strictly aligned with the progression grid.
-  - Render-inspect limitation regarding WebP figure variant requests remains an external script issue (Section D looking for .svg for .webp illustrations), not content defect.
-- Paperclip issues affected: null.
+  - G3 remains open and unticked pending a fresh independent qualified review run.
+  - Section D of render-inspect.mjs fails on raster illustrations due to requesting .svg extensions for .webp files; desktop, narrow, and print inspections are clean.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): validate:content PASS, check:pipeline-gate PASS, check:depth-gate PASS, check:figures PASS, check:svg-style PASS, check:no-em-dash PASS, check:no-answer-keys PASS, check:concept-graph PASS, check:bloom-bands PASS, check:source-floor PASS, check:licence PASS, licence:map:check PASS, check:content-status PASS, check:docs-sync PASS. All 14 content gates passed.
-- Prompt variant: crew brief v1
-- Next experiment: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
