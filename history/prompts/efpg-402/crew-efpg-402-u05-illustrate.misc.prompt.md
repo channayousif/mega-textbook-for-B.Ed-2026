@@ -89,7 +89,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated and placed the EFPG-402 Unit 5 raster illustrations (banner fig-U5-11 and topic scenes fig-U5-12 to fig-U5-16) in English and Urdu files, updated manifests and task tracker, and refreshed G2 gate evidence with all 14 content gates passing.
+Generated and placed the EFPG-402 Unit 5 banner and topic raster illustrations in English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
@@ -101,13 +101,13 @@ Generated and placed the EFPG-402 Unit 5 raster illustrations (banner fig-U5-11 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed the EFPG-402 Unit 5 raster illustrations (banner fig-U5-11 and topic scenes fig-U5-12 to fig-U5-16) in English and Urdu files, updated manifests and task tracker, and refreshed G2 gate evidence with all 14 content gates passing.
+- Shipped / changed: Generated and placed the EFPG-402 Unit 5 banner and topic raster illustrations in English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Banner illustration fig-U5-11 and topic scenes fig-U5-12 to fig-U5-16 placed in English and Urdu unit files with refreshed G2 gate evidence recorded.
+  - Banner fig-U5-11 and topic scenes fig-U5-12 to fig-U5-16 are placed in English and Urdu unit files with refreshed G2 evidence passing all gates.
   - Independent qualified G3 English review and G5 Urdu review (with 360px and A4 print layout inspection) remain open in tasks.md.
-  - Downstream G4 Urdu mirror has all 10 localized .ur.svg schematic pairs placed and verified with measure-figure-text.
+  - G3 should review English defects noted in translations/unit-05/handoff.md (Topic 5.2 taste test safety issue, ERQ-04 rubric, fig-U5-4 missing Application step).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
