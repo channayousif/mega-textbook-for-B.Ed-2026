@@ -1,0 +1,38 @@
+Source support check: ncp-science-2022 (National Curriculum of Pakistan 2022-23: Science, Grades 4-8)
+Date: 2026-11-28 (UTC). Reviewer run: 1947560f-ec6d-49d7-86e1-0c8e0c563ccb.
+
+Bound excerpt: specs/content/efpg-402/sources/texts/ncp-science-2022.md (11 excerpts).
+
+Independent check of the full published PDF (74 pages, 19.6 MB) downloaded from the cited URL:
+  curl -s -o .crew/ncp-science.pdf 'https://ncc.gov.pk/SiteImage/Misc/files/8_%20NCP%20Science%20PG%204-8.pdf'  -> HTTP 200, 19606893 bytes
+  pdftotext -layout .crew/ncp-science.pdf .crew/ncp-science.txt  -> 2086 lines
+
+Searches run (grep -in):
+  aim|objective|literacy  -> only line 28 'aims to shift classroom instruction from rote learning to concept-based learning.'
+  spiral -> no occurrence.
+  'main parts of the human body' -> no occurrence.
+  'basic functions' -> no occurrence.
+  'main organs of the digestive' -> no occurrence.
+  'circulatory and respiratory' -> no occurrence.
+  'conductors or insulators' -> no occurrence.
+  'classify materials' -> no occurrence.
+  'plan a fair test with one variable' -> no occurrence ('fair test' only at line 74, as one of five enquiry types).
+  'properties of matter' -> line 1150 only (Domain B topic list).
+  'Recognise the importance of science and technology to solve everyday problems' -> line 860 (Benchmark VII).
+  'Integrate scientific concepts/ STEAM in daily life' -> lines 861-863 (Benchmark VII).
+  'Scientific Enquiry' -> lines 70-77; 'Science in Context' -> lines 102-108.
+  three domains A Life Sciences, B Physical Sciences, C Earth and Space Sciences -> lines 60-62.
+
+Actual NCP SLOs for the human body (progression grid, pdftotext -layout interleaves grade columns):
+  S-04-A-17 Describe the Human Digestive System including the simple functions of the organs involved (mouth, esophagus, stomach, small and large intestine).
+  S-05-A-04 Describe the Human Respiratory System in terms of oxygen from the air moving into the blood in the lungs ...
+  S-05-A-05 Identify by name the main parts of the Human Circulatory System, and describe briefly the functions of the heart, blood vessels and blood.
+  S-06-A-11 Describe the structure and function of the human heart.
+  S-06-A-12 Sequence the main regions of Alimentary Canal, its associated organs and describe the functions of different parts of the Alimentary Canal.
+  S-06-A-13 Briefly describe the role of enzymes in digestion.
+  S-08-A-14 Explain that living organisms have a complex transport system for transfer of various solids, liquids, and gases across the body.
+
+Conclusion: the quoted SLOs in topic-03 (Grade 4/6/8 human body) and the quoted 'classify materials as
+conductors or insulators' in the RRQ 1 model answer, and 'describe the functions of the main organs of
+the digestive system' in topic-04, do not occur in the published NCP. The NCP states no list of six
+aims and never uses the word 'spiral'.
