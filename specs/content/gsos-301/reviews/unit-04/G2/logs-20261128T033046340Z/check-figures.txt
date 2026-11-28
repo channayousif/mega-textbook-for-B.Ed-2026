@@ -1,0 +1,3 @@
+$ npm run check:figures   (repo HEAD ec9627e6e, 2026-11-28T03:30:20.180Z)
+✓ Figure gate passed (≥ 2 RENDERED figures per topic, a placed schematic per unit, well-formed, unique; manifest consistent; placed assets exist).
+exit_code=0
