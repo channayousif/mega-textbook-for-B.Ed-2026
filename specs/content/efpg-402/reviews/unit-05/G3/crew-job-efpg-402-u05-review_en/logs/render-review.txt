@@ -1,0 +1,44 @@
+render-review: EFPG-402 Unit 5 (G3 English review, attempt crew-job:efpg-402-u05-review_en, reviewer agent:claude_crew)
+date: 2026-11-28T05:06:40Z
+reviewed HEAD: e29224ece005924eae6038b8fe42c236d1c66fd4
+production deployed SHA (~/deploy/deployed-sha): e29224ece005924eae6038b8fe42c236d1c66fd4
+
+Eligibility check required by the crew brief:
+$ git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efpg-402/unit-05/ static/img/figures/efpg-402/unit-05/
+exit code: 0 (diff empty; the production site at https://textbook.com.pk is built from the reviewed HEAD)
+
+Execution:
+$ scripts/heavy.sh node scripts/render-inspect.mjs EFPG-402 5 --base https://textbook.com.pk --no-pdf --out specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders
+
+Full machine log: specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders/render-inspect.log
+Structured result: specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders/render-inspect.json
+
+Rendered input identity: production build of deployed SHA e29224ece005924eae6038b8fe42c236d1c66fd4, which equals the
+reviewed HEAD for this unit's English directory and figure assets. Route /semester-4/efpg-402/unit-05, 7 pages,
+15 placed figures. Chromium 149.0.7827.0.
+
+Result summary (from render-inspect.log):
+- A. Desktop 1280x900: all 7 pages HTTP 200; 0 visible broken images; 0 image assets not served; 0 images missing
+  alt text; 0 skipped heading levels; no horizontal document overflow. Every image carries descriptive alt text.
+  The five WebP classroom illustrations (fig-U5-12 to fig-U5-16) render (natural 1344x756 / 1200x675).
+  Advisory only: bare-URL link text in the Further reading lists of topic-02, topic-04 and topic-05.
+- B. Narrow 360x780: document horizontal overflow 0px on every page. The four content tables are wider than the
+  viewport and are their own scroll container (TABLE, client 328 / scroll 546-598, tabindex=0, aria-label
+  "Scrollable table, scroll sideways to see all columns"), so the last column is reachable by swipe and by
+  keyboard. No unreachable table, no clipped figure.
+- C. A4 print 794px: 0 clipped elements on every page; every figure image fits the page width (right edge
+  754-778px). The answers and marking guidance headings render on unit-assessment.
+- D. SVG text geometry: all ten schematic SVGs (fig-U5-1 to fig-U5-10, light and dark variants) are clean; no
+  text passes the viewBox and no text overprints the wordmark.
+
+Tool limitation (the only defects reported):
+render-inspect.mjs exited 1 with 10 defects, all of the form "fig-U5-12: variant light not served" and
+"variant .dark not served" for fig-U5-12 to fig-U5-16. Section D of the script builds its geometry URL as
+<img-id>.svg and <img-id>.dark.svg for every placed figure, but these five figures are WebP raster
+illustrations (manifest Src /img/figures/efpg-402/unit-05/fig-U5-1N.webp), so the .svg URLs are 404 by
+construction. The desktop pass fetched every distinct image src and confirmed all five WebP illustrations are
+served and rendered. This is a script limitation for raster figures, not a content defect and not a missing
+asset. In accordance with the crew brief, the automated tooling failure is treated as unverified rather than
+a content defect.
+
+render-review exit code: 1
