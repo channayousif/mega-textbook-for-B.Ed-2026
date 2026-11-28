@@ -572,12 +572,74 @@
    "key": "t3-en-mindmap"
   },
   {
-   "state": "planned",
-   "gates": {},
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 107.043991,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 107.044,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 107
+      },
+      "loudness": {
+       "integrated_lufs": -16.5,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Faithful to the Urdu topic: the Hyderabad science teacher reading a professional journal, the dress-and-punctuality misconception, the four dimensions, pedagogical content knowledge with the spoken-drill example, the accountability/autonomy/collegiality balance, and the practicum code-of-conduct or association-membership task. Hooks kept in English as ruled.",
+     "urdu_flag": "Transcript came back in Devanagari, so exact Urdu wording was not checked; listen for register."
+    }
+   },
    "history": [
     {
      "state": "planned",
      "at": "2026-11-28T00:54:18.854Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T03:02:29.889Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T03:05:25.896Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T03:07:37.859Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T03:07:37.912Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T03:08:20.799Z"
     }
    ],
    "topic": 3,
@@ -588,7 +650,12 @@
    "alt": "دو منٹ کا مختصر بریف، specialised knowledge، اخلاقی ضابطہ، accountability کا توازن اور پیشہ ورانہ اداروں کے تین memory hooks کے ساتھ۔",
    "prompt_ref": "specs/studio/prompts/audio.md v2",
    "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
-   "key": "t3-ur-audio-p1"
+   "key": "t3-ur-audio-p1",
+   "artifact_id": "78efd404-c1d4-4bf0-87ae-d260e4f26147",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-ur-audio-p1.m4a",
+   "sha256": "e43613226ebe3bd80cc41788303c9c388d23431522ad53773915522f968efbcf",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-ur-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-ur-audio-p1.mp4.thumb.jpg"
   },
   {
    "state": "planned",

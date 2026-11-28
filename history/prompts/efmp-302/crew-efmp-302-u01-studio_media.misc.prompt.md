@@ -63,8 +63,9 @@ the worker exited without committing any change
 
 Planned the lean-recipe Study Studio ledger for EFMP-302 Unit 1 (16 items: 8 audio briefs, 2 unit
 overview videos, 4 English mind maps, 2 study guides) on the second NotebookLM account, built the
-unit notebook and its eight topic source packs, carried the first English audio brief all the way to
-`qa3-pass` as a private YouTube upload, and took the first Urdu audio brief to `qa2-pass`.
+unit notebook and its eight topic source packs, carried six of the eight audio briefs through
+generate, download, QG1, encode and QG2, took `t1-en-audio-p1` to `qa3-pass` as a private YouTube
+upload, and stopped at the NotebookLM and YouTube daily caps.
 
 ## Outcome
 
@@ -76,10 +77,10 @@ unit notebook and its eight topic source packs, carried the first English audio 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: planned the 16-item lean ledger, built the notebook and source packs, took `t1-en-audio-p1` to `qa3-pass` (private upload `1EDcts9vRag`, EN audio podcast playlist) and `t1-ur-audio-p1` to `qa2-pass`.
+- Shipped / changed: planned the 16-item lean ledger, built the notebook and source packs, and processed six audio briefs. `t1-en-audio-p1` is `qa3-pass` (private upload `1EDcts9vRag`, EN audio podcast playlist). `t1-ur-audio-p1`, `t2-en-audio-p1`, `t2-ur-audio-p1`, `t3-en-audio-p1` and `t3-ur-audio-p1` are `qa2-pass`, encoded with thumbnails, waiting for a private upload slot.
 - Decisions the team must respect: second NotebookLM account only; uploads stay private until the owner approves; the ledger course key is lowercase `efmp-302`.
-- Pending / next owner: crew lead (auto-merge when CI is green).
-- Notes for the next job on this unit: nlm2.studio is 2/6 and youtube.upload 3/4 for the Pacific day, so the run stops at the caps; the remaining audio briefs, the two unit videos, the four mind maps and the two study guides resume in the next media hours.
+- Pending / next owner: crew lead (auto-merge when CI is green). The owner can watch `https://youtu.be/1EDcts9vRag` now, but `crew approve-studio efmp-302 1` waits until the remaining audio and video items reach `qa3-pass`.
+- Notes for the next job on this unit: nlm2.studio is 6/6 and youtube.upload is 4/4 for the Pacific day, so the run stops at the caps. Still `planned`: `t4-en-audio-p1`, `t4-ur-audio-p1`, `t1-en-video`, `t1-ur-video`, the four English mind maps and the two study guides. The second nlm profile's cookies expire within minutes, so refresh from davinci's second-account Chrome (`sh .crew/nlm-refresh.sh`, then `refresh_auth`) before each NotebookLM batch. No EFMP-302 video playlist exists on the channel, so the videos go up without one.
 
 ## Evaluation notes (flywheel)
 
