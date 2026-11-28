@@ -1,0 +1,65 @@
+Source check: ncp-science-2022 grade placement of the unit's example topics
+Independent G3 verification, run 2 (second and final cycle). Retrieved by this review on 2026-11-28.
+
+- URL: https://ncc.gov.pk/SiteImage/Misc/files/8_%20NCP%20Science%20PG%204-8.pdf
+- HTTP 200, 19,606,893 bytes, 74 pages, PDF ModDate 2023-11-22. Read through `pdftotext -layout`.
+- Local copy (scratch, not committed): .crew/ncp/ncp-science-2022.pdf
+  SHA-256 16030176303db31217dacfe5db9c626fc6f5b3204dd27608cec98530882e133f
+- SLO codes encode the grade: S-04 = Grade 4, S-05 = Grade 5, S-06 = Grade 6, S-07 = Grade 7,
+  S-08 = Grade 8. The grid is a three-column Grade 4 / Grade 5-6 / Grade 7-8 progression table.
+
+Re-check of every curriculum-grade reference in the repaired unit:
+
+1. topic-03.mdx:28 "Grade 7 respiration ... diaphragm muscle moves downward".
+   - Grade 5, SLO S-05-A-02 (PDF p. 17): "Recognize the integration of the different systems
+     (Respiratory, and Circulatory) in carrying out life processes." Same table note: "Detailed
+     knowledge of the respiratory system (e.g., alveoli) and circulatory system (e.g., heart
+     chambers and valves) is not required."
+   - Grade 7, SLO S-07-A-11 (PDF p. 17): "Trace the path of air in and out of the body and how
+     the oxygen it contains is used during the process of respiration."
+   - Verdict: Grade 7 is correct. RESOLVED.
+
+2. topic-03.mdx:94 "A Grade 7 teacher wants to teach plant water conduction (role of xylem ...)".
+   - Grade 7, SLO S-07-A-02 (PDF p. 14): "Predict the role of xylem and phloem in transport of
+     water and food in plants by observing the cross section of the stem."
+   - Grade 8, Benchmark II (PDF p. 13/16): transpiration. Grade 4 note: the terms xylem and phloem
+     are not required at Grade 4.
+   - Verdict: Grade 7 is correct. RESOLVED.
+
+3. topic-04.mdx:28 "Grade 7 ... atomic structure (electrons, protons, and neutrons)".
+   - Grade 7, SLO S-07-B-01 (PDF p. 36): "Describe and draw the structure of an atom in terms of
+     electrons, protons and neutrons."
+   - Grade 8 topic header (PDF p. 34-35): "Chemical Bonds".
+   - Verdict: Grade 7 is correct. RESOLVED.
+
+4. topic-04.mdx:94 "the Grade 5 topic: 'Changes of state: melting and boiling of water'".
+   - Grade 5, Benchmark VII (PDF p. 35): "Compare the properties of different states of matter and
+     identify the conditions that cause matter to change states."
+   - Grade 4, SLO S-04-B-02 (PDF p. 35): "Identify and describe the three states of matter ...".
+   - Verdict: Grade 5 is correct. RESOLVED.
+
+5. unit-assessment.mdx:125 ERQ 1 "the Grade 8 topic 'Properties of Waves'".
+   - Grade 8, Benchmark VIII (PDF p. 48): "Compare types and properties of waves and explain how
+     they interact with matter."
+   - Grade 5, SLOs S-05-B-11/S-05-B-12 (PDF p. 48): sound travel and sound-wave conduction.
+   - Verdict: "Properties of Waves" is a Grade 8 benchmark; the old combined "Sound Transmission
+     and Waves" label was the defect. RESOLVED.
+
+6. unit-assessment.mdx:129 ERQ 3 "Grade 5 ... 'Flow of Electric Current in a Circuit' (SLO S-05-B-16)".
+   - Grade 5, SLO S-05-B-16 (PDF p. 56): "Describe flow of electric current in an electric
+     circuit."; S-05-B-17: "Draw circuit diagram with symbols."
+   - Grade 6, SLO S-06-B-37 (PDF p. 56): "Differentiate between open and closed circuits."
+   - "Electrical conductivity" is not an NCP SLO; the grid names thermal conductivity (Grade 7,
+     S-07-B-18 and S-07-B-32).
+   - Verdict: the named concept is now a Grade 5 SLO, satisfying content-spec.md:268. RESOLVED.
+
+7. Other grade references checked and found consistent:
+   - topic-01.mdx:28 "Grade 7 ... human circulatory system": Grade 7 SLO S-07-A-12 (PDF p. 17)
+     "Sketch and label the human circulatory system"; the Grade 5 note excludes detailed heart
+     chambers and valves, so Grade 7 is the first grade for circulatory detail.
+   - topic-02.mdx: Grade 8 filtration, Grade 7 parallax, Grade 6 beaker misuse: apparatus-handling
+     contexts, not NCP topic-placement claims.
+   - topic-05.mdx: Grade 7 ecosystems and water resources: general context, no conflicting SLO.
+
+Conclusion: every curriculum-grade reference in the repaired unit now matches the NCP Science
+Grades 4-8 progression grid. The three blocking grade findings from run 1 are resolved.
