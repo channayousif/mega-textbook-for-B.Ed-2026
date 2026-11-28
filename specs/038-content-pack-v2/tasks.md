@@ -12,8 +12,8 @@
 - [x] T007 Media kinds `video.longform`, `video.short`, `doc.infographic` in `states.mjs`; playlist map in `brand.mjs`
 
 ## Stage 2: Cast
-- [ ] T008 `specs/studio/characters/_style-guide.md` and four character folders
-- [ ] T009 Character sheets with gflow Nano Banana; owner locks season 1; register in Flow
+- [x] T008 `specs/studio/characters/_style-guide.md` and four character folders (Noor, Sami, Lena, Zara); descriptions approved by the owner 2026-11-28
+- [ ] T009 Character sheets with gflow Nano Banana; owner locks season 1; register in Flow (Flow image caps full on 2026-11-28 until 00:00 PKT)
 
 ## Stage 3: Flow kit
 - [ ] T010 Prompt formula, shot-list template, credit log, prompt library

@@ -1,0 +1,15 @@
+slug: noor
+name: Noor
+role: mentor
+age_range: early 50s
+background: Experienced teacher educator who has taught in schools and trained new teachers for many years. Fictional; never presented as a real or credentialed expert.
+personality: [calm, patient, warm, precise, quietly funny]
+speaking_style: Short clear sentences, one idea at a time, always gives a classroom example, asks "What would you try first?"
+catchphrases:
+  - "Let's look at what the learner sees."
+  - "Small change, big difference."
+does_in_videos: [explains concepts, models good practice, closes each block with the key point]
+never: [lectures for more than one clip, mocks a trainee, claims a degree or title, gives exam answers, sells anything]
+series: [Staffroom Questions, Lesson Plan Clinic]
+season: 1
+status: approved-descriptions   # owner, 2026-11-28; sheet lock pending (T009)
