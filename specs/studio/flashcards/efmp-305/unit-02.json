@@ -1,0 +1,170 @@
+{
+ "course": "EFMP-305",
+ "unit": 2,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Learner diversity",
+     "definition": "The range of differences among pupils in a classroom. They fall into three broad categories: disabilities, learning difficulties and social differences."
+    },
+    {
+     "term": "Impairment",
+     "definition": "The medical condition itself, such as a hearing loss, a visual deficit or a limb difference. A medical professional diagnoses it, not the teacher."
+    },
+    {
+     "term": "Disability",
+     "definition": "The functional limitation an impairment creates, for example a pupil who cannot hear the teacher or read the textbook. The teacher observes and responds to it."
+    },
+    {
+     "term": "Handicap",
+     "definition": "The social disadvantage that results when the environment does not accommodate a disability, so the pupil is excluded. The teacher removes it by changing the environment."
+    },
+    {
+     "term": "Sensory disabilities",
+     "definition": "Disabilities that affect the senses. The most common in Pakistani classrooms are visual impairment and hearing impairment."
+    },
+    {
+     "term": "Intellectual disabilities",
+     "definition": "Disabilities that affect cognitive functioning. The pupil learns more slowly, needs more repetition and may struggle with abstract reasoning."
+    },
+    {
+     "term": "Learning difficulties",
+     "definition": "Specific challenges with particular academic skills, such as reading, writing, mathematics or attention, that are not explained by general intelligence or lack of teaching."
+    },
+    {
+     "term": "Dyslexia",
+     "definition": "Difficulty with reading and decoding text, despite adequate teaching and normal intelligence. The pupil may reverse letters or read very slowly."
+    },
+    {
+     "term": "ADHD",
+     "definition": "Attention Deficit Hyperactivity Disorder: difficulty sustaining attention, controlling impulses and regulating activity level."
+    },
+    {
+     "term": "Social differences",
+     "definition": "Differences in gender, language, ethnicity, religion, family income or caste that affect a pupil's experience of school and what others expect of them."
+    }
+   ],
+   "ur": [
+    {
+     "term": "متعلمین کا تنوع",
+     "definition": "ایک ہی کلاس روم کے طلبہ کے درمیان پائے جانے والے اختلافات کا دائرہ۔ یہ تین وسیع زمروں میں آتے ہیں: معذوریاں، سیکھنے کی مشکلات اور سماجی اختلافات۔"
+    },
+    {
+     "term": "خرابی",
+     "definition": "بذاتِ خود طبی حالت، جیسے سماعت کا نقص، بینائی کی خرابی یا عضو کا فرق۔ اس کی تشخیص طبی ماہر کرتا ہے، استاد نہیں۔"
+    },
+    {
+     "term": "معذوری",
+     "definition": "وہ عملی رکاوٹ جو خرابی سے جنم لیتی ہے، مثلاً طالب علم استاد کی آواز نہ سن سکے یا درسی کتاب نہ پڑھ سکے۔ استاد اس کا مشاہدہ کرتا اور تدریسی ردعمل دیتا ہے۔"
+    },
+    {
+     "term": "ہینڈی کیپ",
+     "definition": "وہ سماجی محرومی جو اس وقت پیدا ہوتی ہے جب ماحول معذوری کے لیے گنجائش پیدا نہ کرے اور طالب علم محروم رہ جائے۔ استاد ماحول بدل کر اسے ختم کرتا ہے۔"
+    },
+    {
+     "term": "حسی معذوریاں",
+     "definition": "وہ معذوریاں جو حواس پر اثر انداز ہوتی ہیں۔ پاکستانی کلاس رومز میں سب سے عام بصارت کی کمزوری اور سماعت کی کمزوری ہیں۔"
+    },
+    {
+     "term": "ذہنی معذوریاں",
+     "definition": "وہ معذوریاں جو ادراکی افعال کو متاثر کرتی ہیں۔ طالب علم آہستہ سیکھتا ہے، اسے زیادہ تکرار درکار ہوتی ہے اور تجریدی استدلال میں مشکل ہو سکتی ہے۔"
+    },
+    {
+     "term": "سیکھنے کی مشکلات",
+     "definition": "مخصوص تعلیمی مہارتوں، جیسے پڑھنے، لکھنے، ریاضی یا توجہ، میں درپیش دشواریاں جن کی وجہ عمومی ذہانت یا تدریس کی کمی نہیں ہوتی۔"
+    },
+    {
+     "term": "ڈسلیکسیا",
+     "definition": "مناسب تدریس اور عام ذہانت کے باوجود پڑھنے اور تحریر کو ڈی کوڈ کرنے میں دشواری۔ طالب علم حروف کو الٹ سکتا یا بہت آہستہ پڑھ سکتا ہے۔"
+    },
+    {
+     "term": "اے ڈی ایچ ڈی",
+     "definition": "توجہ برقرار رکھنے، جذبات پر قابو پانے اور جسمانی سرگرمی کو منظم کرنے میں دشواری (Attention Deficit Hyperactivity Disorder)۔"
+    },
+    {
+     "term": "سماجی اختلافات",
+     "definition": "صنف، زبان، نسل، مذہب، خاندانی آمدنی یا ذات پات کے وہ فرق جو اسکول میں طالب علم کے تجربے اور اس سے دوسروں کی توقعات پر اثر ڈالتے ہیں۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Observation",
+     "definition": "The first and most important tool for identifying individual needs: watching carefully what a pupil can do, with or without help, and when and how they struggle."
+    },
+    {
+     "term": "Informal assessment",
+     "definition": "Giving a pupil a small task at the edge of their ability and watching how they manage. It needs no special training, only attention and a simple record."
+    },
+    {
+     "term": "Referral",
+     "definition": "The next step when a pattern suggests a disability or significant learning difficulty that adaptations do not address: going to the head teacher, a learning support coordinator or the parents."
+    },
+    {
+     "term": "Labelling",
+     "definition": "Attaching a fixed description to a pupil, such as \"slow\" or \"weak\". Labels are hard to remove and shape how later teachers see the pupil."
+    },
+    {
+     "term": "Self-fulfilling prophecy",
+     "definition": "What a label becomes when it lowers expectations, the pupil internalises it, and falling effort and confidence then confirm it."
+    },
+    {
+     "term": "Stigma",
+     "definition": "The social cost of a label: the pupil is teased by peers, avoided in group work or treated as less capable by later teachers."
+    },
+    {
+     "term": "Person-first language",
+     "definition": "Language that keeps the person before the condition, for example \"a pupil with a hearing impairment\" instead of \"a deaf pupil\"."
+    },
+    {
+     "term": "Mixed-ability partnerships",
+     "definition": "Pairing a strong reader with a struggling reader on a shared task where both have something to contribute, so that neither is labelled."
+    },
+    {
+     "term": "Respect",
+     "definition": "A set of daily practices, not a slogan: expecting every pupil to learn and providing the support that makes learning possible."
+    }
+   ],
+   "ur": [
+    {
+     "term": "مشاہدہ",
+     "definition": "انفرادی ضروریات کی شناخت کا پہلا اور اہم ترین ذریعہ: غور سے دیکھنا کہ طالب علم خود یا مدد کے ساتھ کیا کر سکتا ہے، اور اسے کب اور کیسے دشواری ہوتی ہے۔"
+    },
+    {
+     "term": "غیر رسمی جانچ",
+     "definition": "طالب علم کو اس کی صلاحیت کی حد پر ایک چھوٹا کام دینا اور دیکھنا کہ وہ اسے کیسے نبھاتا ہے۔ اس کے لیے خصوصی تربیت نہیں، صرف توجہ اور سادہ ریکارڈ درکار ہے۔"
+    },
+    {
+     "term": "ماہرین سے رجوع",
+     "definition": "جب کوئی نمونہ معذوری یا شدید تعلیمی مشکل کی طرف اشارہ کرے جو تدریسی موافقت سے حل نہ ہو، تو ہیڈ ٹیچر، لرننگ سپورٹ کوآرڈینیٹر یا والدین سے رجوع کرنا۔"
+    },
+    {
+     "term": "لیبلنگ",
+     "definition": "طالب علم کے ساتھ ایک جامد وصف وابستہ کرنا، جیسے \"سست\" یا \"کمزور\"۔ لیبل مشکل سے ہٹتے ہیں اور بعد کے اساتذہ کی نظر پر اثر ڈالتے ہیں۔"
+    },
+    {
+     "term": "خود پورا ہونے والی پیشین گوئی",
+     "definition": "جب لیبل توقعات کم کر دے، طالب علم اسے اپنے اندر اتار لے، اور گرتی ہوئی کوشش اور اعتماد اسی لیبل کی تصدیق کر دیں۔"
+    },
+    {
+     "term": "داغ",
+     "definition": "لیبل کی سماجی قیمت: ساتھی طالب علم کا مذاق اڑاتے ہیں، گروہی کام میں اس سے بچا جاتا ہے، یا بعد کے اساتذہ اسے کم قابل سمجھتے ہیں۔"
+    },
+    {
+     "term": "شخصیت کو اولیت دینے والی زبان",
+     "definition": "وہ زبان جو کیفیت سے پہلے انسان کو سامنے رکھتی ہے، مثلاً \"بہرا طالب علم\" کے بجائے \"سماعت کی کمزوری کا حامل طالب علم\"۔"
+    },
+    {
+     "term": "مختلف صلاحیتوں کے جوڑے",
+     "definition": "مشترکہ کام کے لیے ایک اچھے قاری کو دشواری کا شکار قاری کے ساتھ جوڑنا جہاں دونوں حصہ ڈال سکیں اور کسی پر ٹھپا نہ لگے۔"
+    },
+    {
+     "term": "احترام",
+     "definition": "کوئی نعرہ نہیں بلکہ روزمرہ کے طریقے: ہر طالب علم سے سیکھنے کی توقع رکھنا اور وہ مدد فراہم کرنا جو سیکھنے کو ممکن بنائے۔"
+    }
+   ]
+  }
+ }
+}
