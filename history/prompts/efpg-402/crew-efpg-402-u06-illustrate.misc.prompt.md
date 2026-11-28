@@ -92,25 +92,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed all EFPG-402 Unit 6 raster illustrations and banner in English and Urdu files, refreshed G2 gate evidence, and passed all 14 content gates.
+Produced, validated, and placed the EFPG-402 Unit 6 unit banner and six topic raster illustrations across English and Urdu files, refreshed G2 gate evidence, and verified all content gates pass.
 
 ## Outcome
 
 - Impact: illustrate for EFPG-402 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 34 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed the EFPG-402 Unit 6 banner (fig-U6-13) and six topic raster illustrations (fig-U6-14..19) in English and Urdu unit files, updated manifests to placed, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Shipped / changed: Produced, validated, and placed the EFPG-402 Unit 6 unit banner and six topic raster illustrations across English and Urdu files, refreshed G2 gate evidence, and verified all content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Banner fig-U6-13 and topic scenes fig-U6-14 to fig-U6-19 are placed in English and Urdu unit files with refreshed G2 evidence passing all gates.
-  - Translation handoff lives in `specs/content/efpg-402/reviews/unit-06/G4/translation-handoff.md`.
+  - Banner fig-U6-13 and topic illustrations fig-U6-14..19 are placed in English and Urdu files with refreshed G2 gate evidence passing all content gates.
   - Independent qualified G3 English review and G5 Urdu review (with 360px and A4 print layout inspection) remain open in tasks.md.
+  - Urdu translation handoff lives in specs/content/efpg-402/reviews/unit-06/G4/translation-handoff.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
