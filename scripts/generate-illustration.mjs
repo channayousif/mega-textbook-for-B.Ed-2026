@@ -22,6 +22,11 @@
  *      static/img/figures/<course>/unit-NN/<figId>.webp;
  *   3. sets the row's Src and moves it to `generated`.
  *
+ * Cast mode (Feature 038, ADR-0040 point 6): `--cast <slug> [--view "<view>"]` makes one test or sheet
+ * image of a Content Pack character from specs/studio/characters/<slug>/prompt-block.txt and the cast
+ * style token, with no figure manifest and no Pakistan scene house style. The PNG goes to
+ * ~/studio-media/cast/ (outside git) for the owner to review before a sheet is locked.
+ *
  * It never places a figure or marks it `placed`: that happens only after a human or Claude has
  * inspected the image for pedagogy, cultural accuracy and absence of text (ADR-0029 point 3).
  *
@@ -35,6 +40,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, openSync, closeSync, unlinkSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
+import { homedir } from 'node:os';
 import { parseManifest } from './lib/figure-manifest.mjs';
 import { PRODUCERS, activeImageQuota, recordImageQuota, clearImageQuota, availableProducers, producerStatus, gflowReachable } from './lib/image-quota.mjs';
 import { PRODUCER_FNS, QuotaError, UnavailableError, sceneBrief, clearStaged } from './lib/image-producers.mjs';
@@ -64,8 +70,10 @@ function die(msg) {
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(name);
 const opt = (name) => (args.indexOf(name) >= 0 ? args[args.indexOf(name) + 1] : null);
-const [course, unitArg] = args.filter((a, i) => !a.startsWith('--') && !['--id', '--producer'].includes(args[i - 1]));
-if (!course || !unitArg) die('usage: <course> <unit> [--id fig-UN-M] [--producer auto|agy|agy2|gflow|gflow2|codex|meta] [--dry-run]');
+const [course, unitArg] = args.filter((a, i) => !a.startsWith('--') && !['--id', '--producer', '--cast', '--view'].includes(args[i - 1]));
+const castSlug = opt('--cast');
+if (castSlug && !/^[a-z][a-z0-9-]{1,30}$/.test(castSlug)) die(`bad --cast slug ${castSlug}`);
+if (!castSlug && (!course || !unitArg)) die('usage: <course> <unit> [--id fig-UN-M] [--producer auto|agy|agy2|gflow|gflow2|codex|meta] [--dry-run]');
 const producerArg = opt('--producer') || 'auto';
 if (producerArg !== 'auto' && !PRODUCERS.includes(producerArg)) die(`unknown --producer ${producerArg}; use auto, ${PRODUCERS.join(', ')}`);
 const LOCK = producerArg === 'auto' ? AUTO_LOCK : producerLock(producerArg);
@@ -73,15 +81,31 @@ const LOCK = producerArg === 'auto' ? AUTO_LOCK : producerLock(producerArg);
 const CONFLICTS = producerArg === 'auto' ? PRODUCERS.map(producerLock) : [AUTO_LOCK];
 
 const pad = String(Number(unitArg)).padStart(2, '0');
-const courseDir = course.toLowerCase();
-const manifestFile = join(ROOT, 'specs/content', courseDir, 'figures', `unit-${pad}${flag('--banner') ? '.banner' : ''}.md`);
-if (!existsSync(manifestFile)) die(`no manifest at ${manifestFile}`);
+const courseDir = (course ?? 'cast').toLowerCase();
+const manifestFile = castSlug ? null : join(ROOT, 'specs/content', courseDir, 'figures', `unit-${pad}${flag('--banner') ? '.banner' : ''}.md`);
+if (!castSlug && !existsSync(manifestFile)) die(`no manifest at ${manifestFile}`);
 
-const stagingDir = join(ROOT, 'specs/content', courseDir, 'figures', '.staging');
-const outDir = join(ROOT, 'static/img/figures', courseDir, `unit-${pad}`);
+const castDir = join(process.env.MEGA_BOOK_CAST_DIR || join(homedir(), 'studio-media', 'cast'));
+const stagingDir = castSlug ? castDir : join(ROOT, 'specs/content', courseDir, 'figures', '.staging');
+const outDir = castSlug ? castDir : join(ROOT, 'static/img/figures', courseDir, `unit-${pad}`);
 
-const rows = parseManifest(readFileSync(manifestFile, 'utf8')) || [];
-const todo = rows.filter((r) => r.kind === 'illustration' && r.status === 'prompt-only' && (!opt('--id') || r.id === opt('--id')));
+/** The one-row job for --cast: the character's verbatim block plus the cast style token. */
+function castRow(slug) {
+  const dir = join(ROOT, 'specs/studio/characters');
+  const blockFile = join(dir, slug, 'prompt-block.txt');
+  if (!existsSync(blockFile)) die(`no character ${slug} (${blockFile})`);
+  const guide = readFileSync(join(dir, '_style-guide.md'), 'utf8');
+  const m = guide.match(/\*\*Style token\*\*.*?\n\n((?:> .*\n)+)/);
+  if (!m) die('cannot read the style token from specs/studio/characters/_style-guide.md');
+  const style = m[1].trim().split('\n').map((l) => l.slice(2)).join(' ');
+  const view = opt('--view') || 'front view, full body, standing, neutral friendly expression, character reference sheet pose';
+  const castBrief = [readFileSync(blockFile, 'utf8').trim(), `Show: ${view}, alone on a plain paper-white background, no props unless named.`, style,
+    'Absolutely no text, letters, numbers, labels, logos or watermarks anywhere in the image. One character only. Portrait.'].join(' ');
+  return { id: `cast-${slug}-${view.split(',')[0].replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`, kind: 'illustration', status: 'prompt-only', prompt: 'portrait', castBrief };
+}
+
+const rows = castSlug ? [castRow(castSlug)] : parseManifest(readFileSync(manifestFile, 'utf8')) || [];
+const todo = rows.filter((r) => r.kind === 'illustration' && r.status === 'prompt-only' && (castSlug || !opt('--id') || r.id === opt('--id')));
 if (todo.length === 0) {
   console.log('Nothing to generate: no prompt-only illustration rows match.');
   process.exit(0);
@@ -142,7 +166,7 @@ const allOut = () => `✗ image quota exhausted on every producer (QUOTA_EXHAUST
 if (flag('--dry-run')) {
   const first = candidates()[0];
   console.log(`producers: ${producerStatus({ reachable })}; next: ${first || 'none'}`);
-  for (const r of todo) console.log(`would generate ${r.id} (${aspectOf(r.prompt)}) with ${first || 'no producer'} -> static/img/figures/${courseDir}/unit-${pad}/${r.id}.webp`);
+  for (const r of todo) console.log(`would generate ${r.id} (${aspectOf(r.prompt)}) with ${first || 'no producer'} -> ${castSlug ? join(castDir, `${r.id}-<producer>.png`) : `static/img/figures/${courseDir}/unit-${pad}/${r.id}.webp`}`);
   process.exit(first ? 0 : 3);
 }
 
@@ -186,7 +210,7 @@ const lockFd = takeLock();
 
 /** Generate one row on the first producer that can, moving past quotas and unreachable producers. */
 async function produce(row, png) {
-  const brief = sceneBrief(HOUSE_STYLE, row, aspectOf(row.prompt));
+  const brief = row.castBrief ?? sceneBrief(HOUSE_STYLE, row, aspectOf(row.prompt));
   for (;;) {
     const producer = candidates()[0];
     if (!producer) return null;
@@ -228,6 +252,13 @@ try {
           process.exitCode = 3;
           break;
         }
+      }
+      if (row.castBrief) {
+        // Cast images are reviewed as PNGs; a locked sheet is optimised and placed later (T009).
+        const out = join(outDir, `${row.id}-${made.producer}.png`);
+        writeFileSync(out, readFileSync(png));
+        console.log(`✓ ${row.id}: generated in ${made.seconds}s by ${made.producer} (${made.model}) -> ${out}. Owner reviews before any sheet is locked.`);
+        continue;
       }
       const webp = join(outDir, `${row.id}.webp`);
       await optimise(png, webp);
