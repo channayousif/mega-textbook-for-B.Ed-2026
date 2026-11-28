@@ -1,0 +1,46 @@
+Source check: khan-2019-low-cost (Khan, Farooq & Fleury 2019)
+
+Retrieved by this review on 2026-11-28.
+- DOI: https://doi.org/10.36902/sjesr-vol2-iss2-2019(33-47) (HTTP 200, landing page).
+- Full text: https://www.sjesr.org.pk/ojs/index.php/ojs/article/download/14/5 (HTTP 200, PDF, 15 pages).
+- Journal: Sir Syed Journal of Education & Social Research, 2(2), 33-47.
+- Authors: Saifullah Khan (Northern University Nowshera), Rehmat Ali Farooq, Nilsa Fleury (York College).
+- The article is diamond open access; the full text was read in full for this review.
+
+Abstract (verbatim, PDF p. 33):
+"The equipment's of science teaching in the most of secondary school is not available in
+Pakistan. The main purpose of this research is to find the effectiveness of low cost materials
+on diverse achievers in the physics instructing at secondary level. The nature of the study was
+experimental. ... The group which has been instructed with low cost teaching aids showed
+successful result scores in the posttest and their achievement level further gets improved."
+
+Method (PDF p. 40): pre-test/post-test equivalent-group design; 40 Grade X pupils of Government
+High School No.2 Nowshera Cantt; six/seven weeks; retention test after two months.
+
+Results (PDF p. 43):
+- Table 3, low achievers post-test: experimental mean 52.63 (SD 12.06) vs control 36.72 (SD 2.14),
+  t = 4.31 > table value 1.725. "students in the experimental group learned better than the
+  students of control group."
+- Table 4, high achievers post-test: experimental mean 76.77 (SD 4.02) vs control 53 (SD 5.70),
+  t = 10.22 > table value 1.746.
+
+Conclusions (PDF p. 44):
+a) "Using of low cost materials is found to be more fruitful for teaching science especially
+    physics contrary to conventional/traditional teaching."
+b) "low achiever students of the experimental group showed brilliant performance over the control
+    group as they were instructed with the help of low cost materials and took keen in interest in
+    the learning process."
+c) "The use of low cost materials also made an impact in the achievement of high achiever
+    students ..."
+
+Retention: the study administered a retention test two months after the post-test (PDF p. 40).
+The results section reproduced above reports post-test comparisons; the literature review states
+that improvisation "ensures a longer retention of the information gained" and "increases the
+retention margin" (PDF p. 35). No retention-result table appears in the extracted text.
+
+Verdict against the unit:
+- topic-03.mdx:44 "significantly higher conceptual comprehension, greater curiosity, and superior
+  retention" is supported in substance by (a), (b) and (c) and by the retention test, but
+  "superior retention" is a literature-review/general claim rather than a reported retention
+  result of this experiment. Advisory only.
+- RRQ 6 and ERQ 5 use the source accurately.

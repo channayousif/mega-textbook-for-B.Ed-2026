@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "course_code": "EFPG-402",
+  "unit_no": 4,
+  "locale": "en",
+  "base": "https://textbook.com.pk",
+  "route": "/semester-4/efpg-402/unit-04",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "topic-05",
+    "unit-assessment"
+  ],
+  "figures": [
+    "fig-U4-1",
+    "fig-U4-2",
+    "fig-U4-3",
+    "fig-U4-4",
+    "fig-U4-5",
+    "fig-U4-6",
+    "fig-U4-7",
+    "fig-U4-8",
+    "fig-U4-9",
+    "fig-U4-10",
+    "fig-U4-12",
+    "fig-U4-13",
+    "fig-U4-14",
+    "fig-U4-15",
+    "fig-U4-16"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "fig-U4-12: variant light not served",
+    "fig-U4-12: variant .dark not served",
+    "fig-U4-13: variant light not served",
+    "fig-U4-13: variant .dark not served",
+    "fig-U4-14: variant light not served",
+    "fig-U4-14: variant .dark not served",
+    "fig-U4-15: variant light not served",
+    "fig-U4-15: variant .dark not served",
+    "fig-U4-16: variant light not served",
+    "fig-U4-16: variant .dark not served"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-11-28T04:56:47.263Z"
+}

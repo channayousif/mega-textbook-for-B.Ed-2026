@@ -10,8 +10,8 @@
 
 - Topic titles read `موضوع 3.1 - ...` and `موضوع 3.2 - ...`, matching the English numbering, and each topic carries an H1 that repeats its title exactly (the English topics have H1s).
 - Core terms: fundamental rights بنیادی حقوق, liberty آزادی, Constitution آئینِ پاکستان, Article دفعہ, State ریاست, citizen شہری, right حق, duty فرض, responsibility ذمہ داری, law قانون, legal قانونی, civic شہری, democracy جمہوریت, democratic جمہوری, constitutional آئینی, due process مناسب قانونی طریقۂ کار, reasonable restrictions معقول پابندیاں, equality before law قانون کے سامنے مساوات.
-- Constitution articles use `دفعہ` (`دفعہ 8`، `دفعہ 25A`، `دفعہ 5(1)`، `دفعہ 184(3)`)؛ `آئینِ پاکستان` for the Constitution. Western digits throughout.
-- Institutions: پارلیمنٹ (مجلسِ شوریٰ)، قومی اسمبلی، سینیٹ، وزیرِ اعظم، آئین ساز اسمبلی، اعلی عدالتیں، ہائی کورٹ، سپریم کورٹ، مجسٹریٹ، وکیل، ہیڈ ماسٹر، ہیڈ مسٹریس، بلدیاتی ادارہ.
+- Constitution articles use `دفعہ` (`دفعہ 8`، `دفعہ 25A`، `دفعہ 5(1)`، `دفعہ 175E(3)`)؛ `آئینِ پاکستان` for the Constitution. Western digits throughout.
+- Institutions: پارلیمنٹ (مجلسِ شوریٰ)، قومی اسمبلی، سینیٹ، وزیرِ اعظم، آئین ساز اسمبلی، اعلی عدالتیں، ہائی کورٹ، سپریم کورٹ، وفاقی آئینی عدالت، مجسٹریٹ، وکیل، ہیڈ ماسٹر، ہیڈ مسٹریس، بلدیاتی ادارہ.
 - Legislation and history: قراردادِ مقاصد (banked)، ہندوستان کا حکومتی ایکٹ 1935، پاکستان کا عارضی آئینی حکم، مارشل لا، اسلامی جمہوریہ، یک ایوانی، دو ایوانی، بنیادی جمہوری (Basic Democrats)، پہلی آئینی ترمیم (1963)، اٹھارہویں ترمیم (2010)، فوجداری قانون، مدنی جائیداد کے قوانین، ماحولیاتی ضوابط، میونسپل ٹریفک قوانین.
 - Names and places: Bushra بوشرا، Marvi ماروی، Farhana فرحانہ، Sukkur سکھر، Hyderabad حیدرآباد، Mirpurkhas میرپورخاص، Larkana لاڑکانہ، Karachi کراچی، Thatta ٹھٹھہ، Liaquat Ali Khan لیاقت علی خان، Iskander Mirza اسکندر مرزا، Ayub Khan ایوب خان، Yahya Khan یحییٰ خان. Citations keep Latin author-year forms (Glencoe/McGraw-Hill, n.d.؛ Dean, 2005؛ Ahmad, 2004؛ Government of Pakistan, 2012).
 - `<Glossary>` attributes stay English (`Fundamental Rights`, `Writ petition`); wrapped surface text is translated (`بنیادی حقوق`, `درخواست`). Both resolve to bilingual `glossary.json` entries.
@@ -74,9 +74,10 @@ Proposed terms for the curriculum owner and the G5 reviewer (none are banked):
 | Public places | عوامی مقامات | Article 26 |
 | Government appointments | حکومتی تعیناتیاں | Article 27 |
 | Judicial review | عدالتی نظرثانی | 1962 Constitution history |
-| Superior courts | اعلی عدالتیں | Articles 199, 184(3) |
+| Superior courts | اعلی عدالتیں | Articles 199, 175E(3) |
 | High Court | ہائی کورٹ | Article 199 |
-| Supreme Court | سپریم کورٹ | Article 184(3) |
+| Federal Constitutional Court | وفاقی آئینی عدالت | Article 175E(3) |
+| Supreme Court | سپریم کورٹ | former Article 184 power (older books) |
 | Writ petition | درخواست | glossary.json definition_ur uses it |
 | Constituent assembly | آئین ساز اسمبلی | constitutional history |
 | Martial law | مارشل لا | constitutional history |
