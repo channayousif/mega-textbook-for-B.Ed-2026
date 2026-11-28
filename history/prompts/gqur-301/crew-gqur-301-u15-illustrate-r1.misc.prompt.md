@@ -1,44 +1,45 @@
 ---
 id: crew-gqur-301-u15-illustrate-r1
-title: crew illustrate GQUR-301 unit 15 retry 1
+title: crew illustrate GQUR-301 unit 15
 stage: misc
 date: 2026-11-28
 surface: agent
-model: gemini
+model: agy
 feature: gqur-301
 branch: crew/gqur-301-u15-illustrate-r1
 user: crew
 command: crew illustrate
-labels: ["crew", "agy", "illustrate", "gflow2"]
+labels: ["crew", "agy", "illustrate"]
 links:
   spec: specs/content/gqur-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - docs/semester-2/gqur-301/unit-15/index.mdx
-  - docs/semester-2/gqur-301/unit-15/topic-02.mdx
-  - docs/semester-2/gqur-301/unit-15/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-03.mdx
-  - specs/content/gqur-301/figures/unit-15.banner.md
-  - specs/content/gqur-301/figures/unit-15.md
-  - specs/content/gqur-301/reviews/unit-15/G2/20261128T024317601Z-gates.json
-  - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-bloom-bands.txt
-  - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-concept-graph.txt
-  - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-depth-gate.txt
-  - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-docs-sync.txt
-  - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-figures.txt
-  - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-no-answer-keys.txt
-  - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-no-em-dash.txt
-  - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/validate-content.txt
-  - specs/content/gqur-301/tasks.md
-  - static/img/figures/gqur-301/unit-15/fig-U15-7.webp
-  - static/img/figures/gqur-301/unit-15/fig-U15-9.webp
-  - static/img/figures/gqur-301/unit-15/fig-U15-10.webp
+ - docs/semester-2/gqur-301/unit-15/index.mdx
+ - docs/semester-2/gqur-301/unit-15/topic-02.mdx
+ - docs/semester-2/gqur-301/unit-15/topic-03.mdx
+ - history/prompts/gqur-301/crew-gqur-301-u15-illustrate-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-15/topic-03.mdx
+ - specs/content/gqur-301/figures/unit-15.banner.md
+ - specs/content/gqur-301/figures/unit-15.md
+ - specs/content/gqur-301/reviews/unit-15/G2/20261128T024317601Z-gates.json
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-15/G2/logs-20261128T024317601Z/validate-content.txt
+ - specs/content/gqur-301/tasks.md
+ - static/img/figures/gqur-301/unit-15/fig-U15-10.webp
+ - static/img/figures/gqur-301/unit-15/fig-U15-7.webp
+ - static/img/figures/gqur-301/unit-15/fig-U15-9.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -79,19 +80,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated raster illustrations fig-U15-9, fig-U15-10, and banner fig-U15-7 using producer gflow2, inspected for cultural and pedagogical accuracy without text or sacred figures, placed into English and Urdu MDX files, moved manifests to placed, and refreshed G2 gate evidence and tracker row.
+Generated raster illustrations fig-U15-7, fig-U15-9, and fig-U15-10 via gflow2, placed them in English and Urdu unit 15 MDX files, updated figure manifests to placed, and refreshed G2 gate evidence.
 
 ## Outcome
 
-- Impact: illustrate for GQUR-301 Unit 15 by agy (attempt 2, gflow2 producer).
-- Tests: npm run check:content passed in the job worktree before completing.
-- Files: 21 file(s), listed above.
+- Impact: illustrate for GQUR-301 Unit 15 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed raster illustrations (fig-U15-7 banner, fig-U15-9, fig-U15-10) for GQUR-301 Unit 15 in English and Urdu documents, updated manifests to placed, and refreshed G2 gate evidence.
+- Shipped / changed: Generated raster illustrations fig-U15-7, fig-U15-9, and fig-U15-10 via gflow2, placed them in English and Urdu unit 15 MDX files, updated figure manifests to placed, and refreshed G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
