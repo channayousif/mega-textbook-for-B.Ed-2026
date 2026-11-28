@@ -16,8 +16,12 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-302/20261312-efmp-302-u04-flashcards.green.prompt.md
+ - history/prompts/efmp-302/crew-efmp-302-u04-flashcards-conflict1.misc.prompt.md
  - history/prompts/efmp-302/crew-efmp-302-u04-flashcards-conflict2.misc.prompt.md
+ - history/prompts/efmp-302/crew-efmp-302-u04-flashcards.misc.prompt.md
  - specs/studio/flashcards-needed.json
+ - specs/studio/flashcards/efmp-302/unit-04.json
 tests:
  - npm run check:content
 ---
@@ -58,24 +62,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main (`f5cf2f288`, PR #958) into `crew/efmp-302-u04-flashcards`, resolving the `specs/studio/flashcards-needed.json` conflict by regenerating the file with `node scripts/build-studio-index.mjs --coverage`, which drops `efmp-302/3`, `efmp-302/4` and `gent-401/7`; restored the generated `static/studio/flashcards/*` artifacts, committed the merge, and all 14 content gates pass.
+Merged origin/main into crew/efmp-302-u04-flashcards, resolved the flashcards-needed.json conflict by regeneration (dropping efmp-302/3, efmp-302/4, gent-401/7), restored generated studio artifacts, added the conflict2 PHR, and all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix for EFMP-302 Unit 4 by claude_crew (attempt 2).
-- Tests: npm run check:content passed (14/14 gates) after `npm run build:content-status`.
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-302 Unit 4 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 6 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main (`f5cf2f288`) into `crew/efmp-302-u04-flashcards`; resolved the `specs/studio/flashcards-needed.json` conflict by regenerating it with `node scripts/build-studio-index.mjs --coverage`, which drops `efmp-302/3`, `efmp-302/4` and `gent-401/7`; restored the generated `static/studio/flashcards/*` files and committed the merge.
-- Decisions the team must respect: the resolved list is the generator's output, not a hand merge; `gent-401/7` is dropped because the glossary covers it (main's committed copy was stale). G3/G5 stay advisory until a qualified sign-off; this merge certifies nothing.
+- Shipped / changed: Merged origin/main into crew/efmp-302-u04-flashcards, resolved the flashcards-needed.json conflict by regeneration (dropping efmp-302/3, efmp-302/4, gent-401/7), restored generated studio artifacts, added the conflict2 PHR, and all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu Topic 4.3 typo still open: "اڑتی آٹھ" should be "اڑتیس" (i18n Urdu topic-03, line 35); fix it in a G5 or repair job.
-  - Any future merge that regenerates `specs/studio/flashcards-needed.json` must keep `efmp-302/4` dropped while this branch's deck is unmerged.
+  - Urdu Topic 4.3 typo still open in the i18n mirror: "اڑتی آٹھ" should be "اڑتیس"; earlier jobs deferred it to a G5 or repair job, so this conflict job left it untouched.
+  - `specs/studio/flashcards-needed.json` is generator-derived, so a future merge must re-run `node scripts/build-studio-index.mjs --coverage` and keep `efmp-302/4` dropped while this branch's deck is unmerged, then restore `static/studio/flashcards/*`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
