@@ -1,0 +1,680 @@
+{
+ "course": "gnas-301",
+ "unit": 3,
+ "items": [
+  {
+   "state": "qa3-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 94.644535,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 94.666667,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 94.666667
+      },
+      "loudness": {
+       "integrated_lufs": -16.9,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Covers the air pollution chain, the six pollutants, PM2.5 and the receptor-end teacher actions; stays with the topic and answers no self-check or summative question. TTS mispronunciations: Lahore rendered Lor, headteachers headteers, brick kilns brick kils; conversational filler throughout."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-28",
+     "notes": "private on channel UC7cQfkGkdNABCiyjmV5ZaFQ, title and description intact, custom thumbnail success, in the EN audio podcast playlist PLLdTwYdZvUFc; tags repaired in place via yt-describe.mjs after the MCP array/string mismatch; embed check deferred to the placement build"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:02.316Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-27T23:05:28.466Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-27T23:05:30.787Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-27T23:06:33.135Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-27T23:08:24.538Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-27T23:09:18.360Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-27T23:10:21.612Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-27T23:10:36.861Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Air Pollution: Sources, Effects and Controls",
+   "alt": "Two-minute audio brief on the air pollution chain, the six pollutants and the three control links.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t1-en-audio-p1",
+   "artifact_id": "0e0c34ee-f6f7-4379-9d15-a8ce18138ae1",
+   "file": "~/studio-media/gnas-301/unit-03/topic-01/t1-en-audio-p1.m4a",
+   "sha256": "e0a3066c497c5fa550e7a6675281e4ba01cb328ed32413d67288a2c8ff6a2584",
+   "encoded_file": "~/studio-media/gnas-301/unit-03/topic-01/t1-en-audio-p1.mp4",
+   "thumbnail_file": "~/studio-media/gnas-301/unit-03/topic-01/t1-en-audio-p1.mp4.thumb.jpg",
+   "youtube_id": "9nkUjk1sPYQ",
+   "uploaded_at": "2026-11-27T23:20:00Z"
+  },
+  {
+   "state": "qa3-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 88.978866,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 89,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 89
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Meaning matches the topic: the air pollution chain, PM2.5, the six pollutants, source-pathway-receptor and the receptor-end teacher actions; answers no self-check or summative question. Hooks kept in English as ruled.",
+     "urdu_flag": "The audio came back in Devanagari-script Hindi-style speech, not the owner Urdu register; the transcript is not exact Urdu. Recommend an Urdu-reader check before wider rollout."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-28",
+     "notes": "private on channel UC7cQfkGkdNABCiyjmV5ZaFQ, title and description intact, custom thumbnail success, in the UR audio podcast playlist PLH7WvExVOw8U; tags repaired in place via yt-describe.mjs; embed check deferred to the placement build"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:02.607Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-27T23:29:57.213Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-27T23:29:58.836Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-27T23:34:22.797Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-27T23:34:22.863Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-27T23:35:05.373Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-28T00:11:20.662Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-28T00:11:37.276Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "ہوا کی آلودگی: اسباب، اثرات اور قابو",
+   "alt": "ہوا کی آلودگی کی زنجیر، چھ آلودگیوں اور تین قابو کے روابط پر دو منٹ کا بریف۔",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t1-ur-audio-p1",
+   "artifact_id": "f2b8470e-2a9d-4d0f-8777-f934b8e47868",
+   "file": "~/studio-media/gnas-301/unit-03/topic-01/t1-ur-audio-p1.m4a",
+   "sha256": "ced317339057ccb5b71df10317bf3879ce5a7b5105b02da54c97e5f198d8ad1d",
+   "encoded_file": "~/studio-media/gnas-301/unit-03/topic-01/t1-ur-audio-p1.mp4",
+   "thumbnail_file": "~/studio-media/gnas-301/unit-03/topic-01/t1-ur-audio-p1.mp4.thumb.jpg",
+   "youtube_id": "O3gwH8nqS5w",
+   "uploaded_at": "2026-11-28T00:11:00Z"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:02.828Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Noise Pollution: Sources, Health Impacts and Controls",
+   "alt": "Two-minute audio brief on the decibel ladder, the health impacts beyond hearing and the three control links.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t2-en-audio-p1"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:02.987Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "شور کی آلودگی: ذرائع، صحت کے اثرات اور قابو",
+   "alt": "ڈیسیبل سیڑھی، سماعت سے بڑھ کر صحت کے اثرات اور تین قابو کے روابط پر دو منٹ کا بریف۔",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t2-ur-audio-p1"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:03.257Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Hazards in Health, Safety and Environment",
+   "alt": "Two-minute audio brief on the HSE idea of a hazard, the five hazard classes and environmental safety.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t3-en-audio-p1"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:03.407Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "صحت، حفاظت اور ماحول میں خطرات",
+   "alt": "ایچ ایس ای کے خطرے کا تصور، پانچ خطرے کی اقسام اور ماحولیاتی حفاظت پر دو منٹ کا بریف۔",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t3-ur-audio-p1"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:03.521Z"
+    }
+   ],
+   "topic": 4,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Risk Assessment and Management",
+   "alt": "Two-minute audio brief on the likelihood-severity grid, the risk management cycle and the hierarchy of controls.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t4-en-audio-p1"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:03.671Z"
+    }
+   ],
+   "topic": 4,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "خطرے کا اندازہ اور انتظام",
+   "alt": "امکان و شدت کا گرڈ، خطرے کے انتظام کا چکر اور قابو کی درجہ بندی پر دو منٹ کا بریف۔",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t4-ur-audio-p1"
+  },
+  {
+   "state": "qa3-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 537.42585,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 537.375
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.616077,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 537.5,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 537.375
+      },
+      "loudness": {
+       "integrated_lufs": -16.3,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 1,
+      "longest_silence_s": 3.613563,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Covers all four topics in unit order (air, noise, five hazard classes, risk management) and returns to the Lahore AQI classroom frame; stays with the sources and answers no self-check or summative question. TTS mispronunciations: Lahore rendered Lore and L-ore, Karachi as Karach, kilns as kilms and kils, decibels as decb, headteacher as headteer, HSE as HSC and HSSE."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-28",
+     "notes": "private on channel UC7cQfkGkdNABCiyjmV5ZaFQ, title and description intact, custom thumbnail success; no GNAS-301 video playlist exists, so it was uploaded without one (add with update_video when the owner creates it); tags repaired via yt-describe.mjs; embed check deferred to the placement build"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:03.741Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T00:03:08.308Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T00:22:41.700Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T00:25:54.346Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T00:25:54.409Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T00:27:21.944Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-28T01:12:15.850Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-28T01:12:38.166Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "video",
+   "title": "Air, Noise and Environmental Hazards: Unit Overview",
+   "alt": "Unit overview video: how air pollution, noise pollution, hazards and risk management connect.",
+   "prompt_ref": "specs/studio/prompts/video-unit.md v1",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t1-en-video",
+   "artifact_id": "3c4216a0-ef20-4080-8e24-1336921ae190",
+   "file": "~/studio-media/gnas-301/unit-03/topic-01/t1-en-video.mp4",
+   "sha256": "380f341b620d1d3f4232925f3c03ff71727dda898730066383a98ddb85e9afcf",
+   "encoded_file": "~/studio-media/gnas-301/unit-03/topic-01/t1-en-video.yt.mp4",
+   "thumbnail_file": "~/studio-media/gnas-301/unit-03/topic-01/t1-en-video.yt.mp4.thumb.jpg",
+   "youtube_id": "l3sREFNZwKA",
+   "uploaded_at": "2026-11-28T01:12:00Z"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 460.080181,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 460
+      },
+      "loudness": null,
+      "silences": 1,
+      "longest_silence_s": 3.782358,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 460.1,
+      "video": {
+       "codec": "h264",
+       "width": 1280,
+       "height": 720,
+       "duration_s": 460
+      },
+      "loudness": {
+       "integrated_lufs": -15.8,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 1,
+      "longest_silence_s": 3.774917,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Meaning matches the unit: the Lahore smog frame, the air pollution chain, noise and the 85 dB zone, the five hazard classes, the risk grid and cycle, the hierarchy of controls and the closing loop; answers no self-check or summative question.",
+     "urdu_flag": "The video came back in Devanagari-script Hindi-style speech, not the owner Urdu register; the transcript is not exact Urdu. Recommend an Urdu-reader check before wider rollout."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:03.793Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T00:28:04.753Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T00:44:53.274Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T00:48:02.112Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T00:48:02.175Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T00:59:59.332Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "ur",
+   "kind": "video",
+   "title": "ہوا، شور اور ماحولیاتی خطرات: یونٹ کا جائزہ",
+   "alt": "یونٹ کا جائزہ: ہوا کی آلودگی، شور کی آلودگی، خطرات اور خطرے کا انتظام ایک دوسرے سے کیسے جڑتے ہیں۔",
+   "prompt_ref": "specs/studio/prompts/video-unit.md v1",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t1-ur-video",
+   "artifact_id": "b26f5861-db10-413c-af80-2a8f33a8fda7",
+   "file": "~/studio-media/gnas-301/unit-03/topic-01/t1-ur-video.mp4",
+   "sha256": "95add235c7da63228ff8644f563c995d5787afa9a26a46f4e97c63fa4505695f",
+   "encoded_file": "~/studio-media/gnas-301/unit-03/topic-01/t1-ur-video.yt.mp4",
+   "thumbnail_file": "~/studio-media/gnas-301/unit-03/topic-01/t1-ur-video.yt.mp4.thumb.jpg"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:03.925Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "mindmap",
+   "title": "Topic 3.1 mind map",
+   "alt": "Mind map of air pollution: the chain, the six pollutants, the Lahore smog case and the three control links.",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t1-en-mindmap"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:04.009Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "mindmap",
+   "title": "Topic 3.2 mind map",
+   "alt": "Mind map of noise pollution: the decibel ladder, sources, health impacts and the three control links.",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t2-en-mindmap"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:04.110Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "mindmap",
+   "title": "Topic 3.3 mind map",
+   "alt": "Mind map of HSE hazards: the hazard idea, the five classes and the health-environment link.",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t3-en-mindmap"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:04.216Z"
+    }
+   ],
+   "topic": 4,
+   "locale": "en",
+   "kind": "mindmap",
+   "title": "Topic 3.4 mind map",
+   "alt": "Mind map of risk: the two axes, the management cycle and the hierarchy of controls.",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t4-en-mindmap"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Every section matches the four topic texts: the air chain and six pollutants, the decibel ladder and health impacts, the five hazard classes with the Dadu and Karachi cases, and the risk grid, cycle and hierarchy. The built-in quiz, answer key and essay prompts are removed by the post-processor. Note: Gemini emitted LaTeX markup (for example PM subscripts and the risk formula) which the Studio markdown renderer shows as raw text; the owner may want it stripped before wider rollout."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:04.316Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T01:03:19.052Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T01:12:38.243Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T01:13:59.450Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-28T01:14:08.129Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "studyguide",
+   "title": "GNAS-301 Unit 3 Study Guide",
+   "alt": "Student study guide for the whole unit: key concepts, cases, frameworks and glossary.",
+   "prompt_ref": "specs/studio/prompts/study-guide.md v1",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t1-en-studyguide",
+   "artifact_id": "5869621f-63c0-4f3b-89a5-092d57df6ff3",
+   "file": "~/studio-media/gnas-301/unit-03/topic-01/t1-en-studyguide.md",
+   "sha256": "8eae50a34972755e9ca2d2509a1b4de1ccdedafce3bff160a87f76209409a80e",
+   "asset_path": "/studio/gnas-301/unit-03/topic-01/studyguide.en.md"
+  },
+  {
+   "state": "placed",
+   "gates": {
+    "qa2": {
+     "verdict": "pass",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Every section matches the four topic texts and the glossary is accurate. Simple everyday Urdu with the technical terms kept in English, per the owner register v2. No quiz, answer-key or rubric sections, and no LaTeX markup."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-27T23:02:04.548Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T01:27:50.966Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T01:30:28.198Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T01:30:49.147Z"
+    },
+    {
+     "state": "placed",
+     "at": "2026-11-28T01:30:49.238Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "ur",
+   "kind": "studyguide",
+   "title": "GNAS-301 یونٹ 3 اسٹڈی گائیڈ",
+   "alt": "پورے یونٹ کا اسٹڈی گائیڈ: اہم تصورات، مثالیں، فریم ورک اور الفاظ.",
+   "prompt_ref": "specs/studio/prompts/study-guide.md v1",
+   "notebook_id": "a32ca676-5cc0-4c60-a9b9-73410aa8ec0d",
+   "key": "t1-ur-studyguide",
+   "artifact_id": "0f3a23df-44b8-4aa9-9a12-3b6537edc81f",
+   "file": "~/studio-media/gnas-301/unit-03/topic-01/t1-ur-studyguide.md",
+   "sha256": "c4be9fab154742d50cf721301fd7cc418372d54eadf0097cc0c2fca3136876f6",
+   "asset_path": "/studio/gnas-301/unit-03/topic-01/studyguide.ur.md"
+  }
+ ]
+}
