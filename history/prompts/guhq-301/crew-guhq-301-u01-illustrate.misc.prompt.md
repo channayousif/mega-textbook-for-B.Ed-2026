@@ -69,27 +69,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (guhq-301-u01-author, author, claude) The claim that everyday Urdu pronounces groups of Arabic letters alike (Topic 1.2 table) has no open-access source; the sources file flags it, along with the general-knowledge material (characteristics of Quranic Arabic, pattern names), for the G3 reviewer, who must also make the religious-content check in content-spec drafting note 7.
 - (guhq-301-u01-author, author, claude) The Urdu job needs `.ur.svg` versions of all four figures (two contain Arabic words) and must have the seven authored Urdu concept labels reviewed at G5; banner fig-U1-5 is still prompt-only for the illustrate job.
 
+
 ## Response snapshot
 
-Generated with gflow2, inspected, and placed the GUHQ-301 Unit 1 banner illustration (fig-U1-5) in the English index page and Urdu mirror, updated unit-01.banner.md status to placed, refreshed G2 gate evidence, and passed all 14 content gates.
+Generated, inspected, and placed the GUHQ-301 Unit 1 banner illustration (fig-U1-5) in the English and Urdu index pages, updated the banner manifest, refreshed G2 gate evidence, and verified clean content gates.
 
 ## Outcome
 
 - Impact: illustrate for GUHQ-301 Unit 1 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with gflow2, inspected, and placed the GUHQ-301 Unit 1 banner illustration (fig-U1-5) in the English index page and Urdu mirror, updated unit-01.banner.md status to placed, refreshed G2 gate evidence, and passed all 14 content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Generated, inspected, and placed the GUHQ-301 Unit 1 banner illustration (fig-U1-5) in the English and Urdu index pages, updated the banner manifest, refreshed G2 gate evidence, and verified clean content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit banner fig-U1-5 is placed; Unit 1 G3 review and G5 review remain open for independent evaluation.
-  - G5 is a separate fresh session; it must check the rendered Urdu verses (Saheeh International meaning), the religious-content note and the seven authored concept labels.
-  - The claim that everyday Urdu pronounces groups of Arabic letters alike (Topic 1.2 table) has no open-access source; the sources file flags it, along with the general-knowledge material, for the G3 reviewer, who must also make the religious-content check in content-spec drafting note 7.
+  - G5 must check the rendered Urdu verses (Saheeh International meaning), the religious-content note and the seven authored concept labels.
+  - The claim that everyday Urdu pronounces groups of Arabic letters alike (Topic 1.2 table) has no open-access source and is flagged for the G3 reviewer along with general-knowledge material.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
