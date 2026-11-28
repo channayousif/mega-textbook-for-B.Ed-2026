@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "course_code": "EFPC-411",
+  "unit_no": 2,
+  "locale": "ur",
+  "base": "https://textbook.com.pk",
+  "route": "/ur/semester-4/efpc-411/unit-02",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "unit-assessment"
+  ],
+  "figures": [
+    "fig-U2-1",
+    "fig-U2-2",
+    "fig-U2-3",
+    "fig-U2-4",
+    "fig-U2-5",
+    "fig-U2-6",
+    "fig-U2-7",
+    "fig-U2-8"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "fig-U2-1.ur: text \"بٹھک کا نقشہ ریکارڈ کرتا ہے کہ کون\" overlaps the wordmark",
+    "fig-U2-1.ur.dark: text \"بٹھک کا نقشہ ریکارڈ کرتا ہے کہ کون\" overlaps the wordmark",
+    "fig-U2-2.ur: text \"ہر اندراج بیان کرتا ہے کہ کیا موجو\" overlaps the wordmark",
+    "fig-U2-2.ur.dark: text \"ہر اندراج بیان کرتا ہے کہ کیا موجو\" overlaps the wordmark",
+    "fig-U2-3.ur: text \"ہر قطار ایک ایسا ریکارڈ مانگتی ہے \" overlaps the wordmark",
+    "fig-U2-3.ur.dark: text \"ہر قطار ایک ایسا ریکارڈ مانگتی ہے \" overlaps the wordmark",
+    "fig-U2-4.ur: text \"سبق ایک مربوط ساخت ہے: ہر مرحلہ اگ\" overlaps the wordmark",
+    "fig-U2-4.ur.dark: text \"سبق ایک مربوط ساخت ہے: ہر مرحلہ اگ\" overlaps the wordmark",
+    "fig-U2-5.ur: text \"یہ کمی منتقلی کے بعد آتی ہے، نہ کہ\" overlaps the wordmark",
+    "fig-U2-5.ur.dark: text \"یہ کمی منتقلی کے بعد آتی ہے، نہ کہ\" overlaps the wordmark",
+    "fig-U2-6.ur: text \"غیر رسمی طریقے تدریس کے دوران ہوتے\" overlaps the wordmark",
+    "fig-U2-6.ur.dark: text \"غیر رسمی طریقے تدریس کے دوران ہوتے\" overlaps the wordmark",
+    "fig-U2-7.ur: text \"سبق ایک مکمل ساخت کے طور پر پڑھا ج\" overlaps the wordmark",
+    "fig-U2-7.ur.dark: text \"سبق ایک مکمل ساخت کے طور پر پڑھا ج\" overlaps the wordmark",
+    "fig-U2-8.ur: text \"شمولیت کا فیصلہ اس بات سے ہوتا ہے \" overlaps the wordmark",
+    "fig-U2-8.ur.dark: text \"شمولیت کا فیصلہ اس بات سے ہوتا ہے \" overlaps the wordmark"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-11-28T06:04:02.592Z"
+}

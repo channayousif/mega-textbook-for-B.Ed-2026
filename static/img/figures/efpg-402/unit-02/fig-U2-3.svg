@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of NCP 2022-23 science domains and sample standards</title><desc id="d">Table showing the three science domains of the NCP 2022-23, life, physical and earth and space sciences, plus the cross-cutting Scientific Enquiry strand, each with a sample standard and what it builds.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Table of NCP 2022-23 science domains and illustrative outcomes</title><desc id="d">Table showing the three science domains of the NCP 2022-23, life, physical and earth and space sciences, plus the cross-cutting Scientific Enquiry strand, each with an illustrative example outcome and what it builds.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
 .bg { fill: var(--bg); }
 .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
 .dash { stroke: var(--ink); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
@@ -27,7 +27,7 @@ text { font-size: 14px; fill: var(--ink); }
 </g><g id="layer-nodes">
 <text class="sh" x="34" y="49">Domain</text>
 <text class="sh" x="180" y="49">What it covers</text>
-<text class="sh" x="350" y="49">Sample standard (Grade 6)</text>
+<text class="sh" x="350" y="49">Our example (illustrative)</text>
 <text class="sh" x="580" y="49">What it builds</text>
 
 <text class="sh" x="34" y="93">Life Sciences</text>
