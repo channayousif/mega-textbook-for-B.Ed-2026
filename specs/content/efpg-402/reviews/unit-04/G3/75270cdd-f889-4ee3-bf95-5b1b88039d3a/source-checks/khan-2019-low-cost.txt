@@ -1,0 +1,39 @@
+Source check: khan-2019-low-cost (Khan, Farooq & Fleury, 2019)
+Independent G3 verification, run 2. Retrieved by this review on 2026-11-28.
+
+- URL: https://www.sjesr.org.pk/ojs/index.php/ojs/article/download/14/5 (diamond open access)
+- DOI: https://doi.org/10.36902/sjesr-vol2-iss2-2019(33-47)
+- HTTP 200, 419,065 bytes, 15 pages. Read through `pdftotext -layout`.
+- Local copy (scratch, not committed): .crew/khan/khan-2019.pdf
+- The repository now binds the excerpt at specs/content/efpg-402/sources/texts/khan-2019-low-cost.md
+  and no longer lists the article under `## Unverifiable sources`.
+
+Claims checked against the retrieved article:
+
+1. Abstract (PDF p. 33): "The group which has been instructed with low cost teaching aids showed
+   successful result scores in the posttest and their achievement level further gets improved."
+   Supports topic-03.mdx:44 "significantly higher conceptual comprehension" and RRQ 6 "higher
+   academic achievement".
+2. Method (PDF p. 40): pre-test/post-test equivalent-group design, 40 Grade X pupils, Government
+   High School No. 2 Nowshera Cantt, six/seven weeks, retention test after two months. Supports
+   the "Pakistani secondary schools" framing.
+3. Low achievers (PDF p. 43, Table 3): experimental mean 52.63 (SD 12.06) vs control 36.72
+   (SD 2.14), t = 4.31 > table value 1.725; "students in the experimental group learned better
+   than the students of control group."
+4. High achievers (PDF p. 43, Table 4): experimental mean 76.77 (SD 4.02) vs control 53.00
+   (SD 5.70), t = 10.22 > table value 1.746.
+5. Conclusions (PDF p. 44): "Using of low cost materials is found to be more fruitful for teaching
+   science especially physics contrary to conventional/traditional teaching"; "low achiever
+   students ... took keen in interest in the learning process."
+   Supports topic-03.mdx:44 "greater curiosity, and active engagement" and RRQ 6 "increased student
+   curiosity/engagement".
+6. Literature review (PDF p. 35): improvisation connects classroom science to familiar
+   surroundings and stimulates interest and involvement. Supports "demystify science".
+
+Note on the run-1 finding: the earlier prose said "superior retention". The article's retention
+claim sits in its literature review (p. 35: "ensures a longer retention", "increases the retention
+margin"), not in the reported two-month retention-test result, so the repair replaced it with
+"active engagement", which the results and conclusions do support. The bound excerpt and the
+retrieved article agree; no unsupported claim remains.
+
+Verdict: the source is real, retrieved in full, and supports the repaired wording. RESOLVED.

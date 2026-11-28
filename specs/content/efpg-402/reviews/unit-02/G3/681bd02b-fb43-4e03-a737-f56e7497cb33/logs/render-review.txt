@@ -1,0 +1,18 @@
+render-review - EFPG-402 Unit 2 G3 - 2026-11-28T08:02:00Z
+Command: git diff --quiet "$(cat ~/deploy/deployed-sha)" HEAD -- docs/semester-4/efpg-402/unit-02/ static/img/figures/efpg-402/unit-02/
+deployed SHA: b7b7e00c9a8640158b8d336ba1215e4fcfed01e9
+HEAD: b2dc2715255b31026bf257e58e451ecbf983d001
+diff exit code: 1
+Changed paths between deployed SHA and HEAD:
+M	docs/semester-4/efpg-402/unit-02/topic-02.mdx
+M	docs/semester-4/efpg-402/unit-02/topic-03.mdx
+M	docs/semester-4/efpg-402/unit-02/topic-04.mdx
+M	docs/semester-4/efpg-402/unit-02/unit-assessment.mdx
+M	static/img/figures/efpg-402/unit-02/fig-U2-3.dark.svg
+M	static/img/figures/efpg-402/unit-02/fig-U2-3.svg
+M	static/img/figures/efpg-402/unit-02/fig-U2-3.ur.dark.svg
+M	static/img/figures/efpg-402/unit-02/fig-U2-3.ur.svg
+
+Result: the diff is NOT empty, so the production build (CI-built from main) is not the reviewed input.
+Per the crew brief, render-review is recorded as unavailable; no build, dev server or Playwright run was attempted.
+scripts/render-inspect.mjs EFPG-402 2 --base https://textbook.com.pk --no-pdf was NOT run.

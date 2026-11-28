@@ -1,0 +1,364 @@
+{
+ "course": "EFMP-302",
+ "unit": 3,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Teacher effectiveness",
+     "definition": "The effect a teacher has on what their pupils learn. The definitions in use disagree about which effects count and how to detect them."
+    },
+    {
+     "term": "Effectiveness as achievement gain",
+     "definition": "Judging a teacher by the improvement in pupils' measured attainment over a year. It is about learning, but it counts only what the test tests."
+    },
+    {
+     "term": "Effectiveness as observed practice",
+     "definition": "Inferring a teacher's effect from what they are seen to do, such as how they explain, question and manage time. It can reward a performance."
+    },
+    {
+     "term": "Effectiveness as breadth of learner outcomes",
+     "definition": "Counting attainment and also what else changed, such as willingness to attempt hard problems or attendance. These outcomes are hard to measure."
+    },
+    {
+     "term": "Within-classroom processes",
+     "definition": "Components of effectiveness found inside the room: subject and pedagogical knowledge, planning, explanation and questioning, use of assessment, and classroom climate and management."
+    },
+    {
+     "term": "Beyond the classroom",
+     "definition": "Components of effectiveness outside the room: contribution to colleagues, relationships with parents and community, and professional learning."
+    },
+    {
+     "term": "Use of assessment",
+     "definition": "Finding out what pupils have understood and then doing something different because of it. Testing often but teaching identically afterwards is not using assessment."
+    },
+    {
+     "term": "Classroom climate and management",
+     "definition": "Whether the room is a place where a pupil can risk being wrong."
+    },
+    {
+     "term": "Subject and pedagogical knowledge",
+     "definition": "Knowing the content, and knowing how that particular content is learned and misunderstood. The second is not implied by the first."
+    }
+   ],
+   "ur": [
+    {
+     "term": "معلم کی افادیت",
+     "definition": "وہ اثر جو استاد اپنے شاگردوں کے سیکھنے پر ڈالتا ہے۔ رائج تعریفیں اس پر اختلاف کرتی ہیں کہ کون سے اثرات شمار ہوں اور انہیں کیسے پکڑا جائے۔"
+    },
+    {
+     "term": "افادیت بطور حاصلات میں اضافہ",
+     "definition": "استاد کو ایک سال میں شاگردوں کی ناپی گئی کارکردگی کی بہتری سے پرکھنا۔ یہ سیکھنے کے بارے میں ہے، مگر صرف وہی شمار کرتا ہے جو ٹیسٹ جانچتا ہے۔"
+    },
+    {
+     "term": "افادیت بطور مشاہدہ شدہ عمل",
+     "definition": "استاد کا اثر اس سے نکالنا جو اسے کرتے دیکھا جاتا ہے، جیسے وضاحت کرنا، سوال کرنا اور وقت سنبھالنا۔ یہ محض ایک کارکردگی کو انعام دے سکتا ہے۔"
+    },
+    {
+     "term": "افادیت بطور سیکھنے والوں کے وسیع نتائج",
+     "definition": "کارکردگی کے ساتھ یہ بھی شمار کرنا کہ اور کیا بدلا، جیسے مشکل مسئلوں پر لگنے کی آمادگی یا حاضری۔ یہ نتائج ناپنا مشکل ہے۔"
+    },
+    {
+     "term": "جماعت کے اندر کے عوامل",
+     "definition": "افادیت کے وہ اجزاء جو کمرے کے اندر ہیں: مضمون اور تدریسی علم، منصوبہ بندی، وضاحت اور سوال کرنا، تشخیص کا استعمال، اور جماعتی ماحول اور انتظام۔"
+    },
+    {
+     "term": "جماعت سے باہر",
+     "definition": "افادیت کے وہ اجزاء جو کمرے سے باہر ہیں: ساتھی اساتذہ کے لیے حصہ داری، والدین اور برادری سے تعلقات، اور پیشہ ورانہ تعلم۔"
+    },
+    {
+     "term": "تشخیص کا استعمال",
+     "definition": "یہ معلوم کرنا کہ شاگردوں نے کیا سمجھا اور پھر اس کی وجہ سے کوئی مختلف کام کرنا۔ بار بار جانچ کر بھی ویسے ہی پڑھاتے رہنا تشخیص کا استعمال نہیں۔"
+    },
+    {
+     "term": "جماعتی ماحول اور انتظام",
+     "definition": "کیا کمرہ ایسی جگہ ہے جہاں شاگرد غلط ہونے کا خطرہ مول لے سکتا ہے۔"
+    },
+    {
+     "term": "مضمون اور تدریسی علم",
+     "definition": "مواد کو جاننا، اور یہ جاننا کہ وہ خاص مواد کیسے سیکھا جاتا ہے اور کہاں غلط سمجھا جاتا ہے۔ دوسری بات پہلی سے خود بخود نہیں نکلتی۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Attitude toward the profession",
+     "definition": "The disposition a teacher holds toward the work itself: a career they chose and intend to be good at, or employment they fell into and endure."
+    },
+    {
+     "term": "Professional image",
+     "definition": "The impression a teacher's presentation creates before they have taught anything. Appearance is its thin outer band, with conduct, reliability and competence beneath."
+    },
+    {
+     "term": "Empathy",
+     "definition": "The capacity to understand a pupil's situation from inside it, which makes a pupil willing to admit confusion. Overdone, it excuses everything and lowers expectations."
+    },
+    {
+     "term": "Patience",
+     "definition": "Tolerance of the time learning actually takes, which lets a pupil reach an idea rather than be handed it. Overdone, it becomes passivity."
+    },
+    {
+     "term": "Self-control",
+     "definition": "The regulation of your own reaction, particularly to provocation. Overdone, it becomes flatness that pupils cannot read."
+    },
+    {
+     "term": "Optimism",
+     "definition": "The working belief that a pupil can improve. Overdone, it becomes denial in the face of a pupil who is drowning and needs the problem named."
+    },
+    {
+     "term": "Humour",
+     "definition": "A trait that lowers the cost of being wrong. Overdone, nobody learns; aimed at a pupil, it raises that cost and is the trait inverted."
+    },
+    {
+     "term": "Resilience",
+     "definition": "Recovering from a bad lesson, a hostile parent or a failed innovation without abandoning the attempt. Overdone, it becomes stubbornness."
+    },
+    {
+     "term": "Adaptability",
+     "definition": "Changing the plan when the room tells you to. Overdone, it becomes incoherence, with every lesson improvised."
+    }
+   ],
+   "ur": [
+    {
+     "term": "پیشے کی جانب رویہ",
+     "definition": "وہ رجحان جو استاد خود کام کی جانب رکھتا ہے: ایسا پیشہ جسے اس نے چنا اور جس میں اچھا ہونا چاہتا ہے، یا ایسی ملازمت جس میں وہ آ پڑا اور اسے برداشت کرتا ہے۔"
+    },
+    {
+     "term": "پیشہ ورانہ تاثر",
+     "definition": "وہ تاثر جو استاد کی پیشکش کچھ پڑھانے سے پہلے بناتی ہے۔ ظاہری صورت اس کی باریک بیرونی پٹی ہے، اور اس کے نیچے طرزِ عمل، بھروسا مندی اور مہارت ہیں۔"
+    },
+    {
+     "term": "ہمدردی",
+     "definition": "شاگرد کی صورتحال کو اس کے اندر سے سمجھنے کی صلاحیت، جو شاگرد کو الجھن مان لینے پر تیار کرتی ہے۔ حد سے زیادہ ہو تو ہر چیز معاف کر دیتی ہے اور توقعات گرا دیتی ہے۔"
+    },
+    {
+     "term": "صبر",
+     "definition": "سیکھنے میں جو وقت واقعی لگتا ہے اس کا تحمل، جو شاگرد کو خیال تک خود پہنچنے دیتا ہے۔ حد سے زیادہ ہو تو سستی بن جاتا ہے۔"
+    },
+    {
+     "term": "ضبطِ نفس",
+     "definition": "اپنے ردِ عمل پر قابو رکھنا، خاص طور پر اشتعال کے وقت۔ حد سے زیادہ ہو تو ایسا سپاٹ پن بن جاتا ہے جسے شاگرد پڑھ نہیں پاتے۔"
+    },
+    {
+     "term": "خوش بینی",
+     "definition": "یہ عملی یقین کہ شاگرد بہتر ہو سکتا ہے۔ حد سے زیادہ ہو تو اس شاگرد کے سامنے انکار بن جاتا ہے جو ڈوب رہا ہے اور جسے مسئلے کا نام لینے کی ضرورت ہے۔"
+    },
+    {
+     "term": "مزاح",
+     "definition": "وہ خصوصیت جو غلط ہونے کی لاگت گھٹاتی ہے۔ حد سے زیادہ ہو تو کوئی سیکھتا نہیں؛ شاگرد پر نشانہ ہو تو یہ لاگت بڑھاتی ہے اور خصوصیت الٹ جاتی ہے۔"
+    },
+    {
+     "term": "لچک",
+     "definition": "برے سبق، ضدی والد یا ناکام نئے تجربے کے بعد کوشش چھوڑے بغیر سنبھل جانا۔ حد سے زیادہ ہو تو ضد بن جاتی ہے۔"
+    },
+    {
+     "term": "موزونیت",
+     "definition": "جب کمرہ اشارہ دے تو منصوبہ بدلنا۔ حد سے زیادہ ہو تو بے ترتیبی بن جاتی ہے جہاں ہر سبق اسی وقت گھڑا جاتا ہے۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Stakeholder relationship",
+     "definition": "A teacher's working relationship with pupils, parents, colleagues, the head or the community. Each exists because some part of the work is impossible without it."
+    },
+    {
+     "term": "Reliability",
+     "definition": "What builds the relationship with pupils far more than warmth: marking returned when promised, a rule applied the same way each day, a question taken seriously."
+    },
+    {
+     "term": "Being liked",
+     "definition": "Pleasant, but not the goal of a relationship with pupils. Pursuing it directly tends to produce a teacher who avoids the honest feedback a pupil needs."
+    },
+    {
+     "term": "Conflict",
+     "definition": "A normal condition of a job where many people have a stake in the same child. What distinguishes a professional is the handling."
+    },
+    {
+     "term": "De-escalation sequence",
+     "definition": "A workable default with four decision points in order: the right place, whether the person can hear a reply yet, whether you have the facts, and whether it is within your authority."
+    },
+    {
+     "term": "Escalating",
+     "definition": "Passing on a matter that is not yours to settle, such as one touching a pupil's safety. It is not weakness, but doing it without recording why is."
+    },
+    {
+     "term": "Separate the person from the position",
+     "definition": "Treating the angry person and the belief they hold as different things: Hina's father is not the problem, the belief that his daughter is penalised for poverty is."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تعلقِ فریق",
+     "definition": "شاگردوں، والدین، ساتھی اساتذہ، صدرِ اسکول یا برادری سے استاد کا کام کا تعلق۔ ہر تعلق اس لیے موجود ہے کہ کام کا کوئی حصہ اس کے بغیر ناممکن ہے۔"
+    },
+    {
+     "term": "بھروسا مندی",
+     "definition": "وہ چیز جو شاگردوں سے تعلق گرم جوشی سے کہیں زیادہ بناتی ہے: وعدے کے مطابق جانچ واپس کرنا، ہر دن ایک ہی اصول لاگو کرنا، سوال کو سنجیدگی سے لینا۔"
+    },
+    {
+     "term": "پسند کیا جانا",
+     "definition": "یہ خوشگوار ہے مگر شاگردوں سے تعلق کا مقصد نہیں۔ اس کا براہِ راست پیچھا کرنے والا استاد اکثر وہ دیانتدار تاثر دینے سے بچتا ہے جو شاگرد کو درکار ہے۔"
+    },
+    {
+     "term": "تنازع",
+     "definition": "اس کام کا عام حال جس میں بہت سے لوگوں کی دلچسپی ایک ہی بچے سے جڑی ہو۔ پیشہ ور کو الگ کرنے والی بات اسے سنبھالنے کا انداز ہے۔"
+    },
+    {
+     "term": "تنازع کم کرنے کی ترتیب",
+     "definition": "ایک قابلِ عمل ترتیب جس میں چار فیصلہ کے مقامات ہیں: ٹھیک جگہ، کیا شخص ابھی جواب سن سکتا ہے، کیا آپ کے پاس حقائق ہیں، اور کیا یہ آپ کے اختیار میں ہے۔"
+    },
+    {
+     "term": "اگلے سطح پر بھیجنا",
+     "definition": "ایسا معاملہ آگے بھیجنا جسے طے کرنا آپ کا کام نہیں، جیسے شاگرد کی سلامتی کی بات۔ یہ کمزوری نہیں، مگر وجہ ریکارڈ کیے بغیر بھیجنا کمزوری ہے۔"
+    },
+    {
+     "term": "شخص کو موقف سے الگ رکھیے",
+     "definition": "غصے والے شخص اور اس کے عقیدے کو الگ سمجھنا: ہنا کا باپ مسئلہ نہیں، یہ عقیدہ مسئلہ ہے کہ اس کی بیٹی کو غربت کی وجہ سے سزا مل رہی ہے۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "Verbal communication",
+     "definition": "The words themselves: what is said, how it is structured and whether the person hearing it can follow."
+    },
+    {
+     "term": "Non-verbal communication",
+     "definition": "Everything carried outside the words, through channels such as proximity, body orientation, gaze, facial expression, gesture and vocal variety."
+    },
+    {
+     "term": "Questioning",
+     "definition": "A verbal job in which a question either discovers what pupils think or only confirms that somebody can say the right words."
+    },
+    {
+     "term": "Responding",
+     "definition": "What a teacher says immediately after a pupil speaks. It teaches the rest of the class what happens to people who answer."
+    },
+    {
+     "term": "Proximity",
+     "definition": "Where you stand. Distance reads as detachment, while moving among desks reads as availability."
+    },
+    {
+     "term": "Gaze and eye contact",
+     "definition": "Who you look at, and how the looking is distributed across the room."
+    },
+    {
+     "term": "Vocal variety",
+     "definition": "Pace, pitch, volume and pause. It is the channel trainees under-use most."
+    },
+    {
+     "term": "Gesture",
+     "definition": "A non-verbal channel that, used well, carries structure words cannot, such as the shape of a graph. Used absently, it is noise."
+    },
+    {
+     "term": "Practitioner's heuristic",
+     "definition": "A rule widely held and consistent with what experienced teachers report, but not an established research finding. The claim that the non-verbal channel wins is treated as one."
+    }
+   ],
+   "ur": [
+    {
+     "term": "زبانی ابلاغ",
+     "definition": "خود الفاظ: کیا کہا جاتا ہے، کس ترتیب سے کہا جاتا ہے، اور کیا سننے والا اس کا پیچھا کر سکتا ہے۔"
+    },
+    {
+     "term": "غیر زبانی ابلاغ",
+     "definition": "وہ سب کچھ جو الفاظ سے باہر منتقل ہوتا ہے، ان ذرائع سے جیسے قربت، جسم کا رخ، نگاہ، چہرے کے تاثرات، اشارے اور آواز کی رنگینی۔"
+    },
+    {
+     "term": "سوال کرنا",
+     "definition": "ایک زبانی کام جس میں سوال یا تو شاگردوں کی سوچ دریافت کرتا ہے یا صرف یہ تصدیق کرتا ہے کہ کوئی درست الفاظ کہہ سکتا ہے۔"
+    },
+    {
+     "term": "جواب دینا",
+     "definition": "وہ جو استاد شاگرد کے بولنے کے فوراً بعد کہتا ہے۔ یہ باقی جماعت کو سکھاتا ہے کہ جواب دینے والوں کے ساتھ کیا ہوتا ہے۔"
+    },
+    {
+     "term": "قربت",
+     "definition": "آپ کہاں کھڑے ہیں۔ فاصلہ بے رغبتی سمجھا جاتا ہے، جبکہ بینچوں کے بیچ چلنا دستیابی سمجھا جاتا ہے۔"
+    },
+    {
+     "term": "نگاہ اور آنکھ کا ملاپ",
+     "definition": "آپ کس کو دیکھتے ہیں، اور یہ دیکھنا کمرے میں کیسے بانٹا جاتا ہے۔"
+    },
+    {
+     "term": "آواز کی رنگینی",
+     "definition": "رفتار، سُر، بلندی اور وقفہ۔ زیرِ تربیت اساتذہ یہ ذریعہ سب سے کم استعمال کرتے ہیں۔"
+    },
+    {
+     "term": "اشارے",
+     "definition": "ایک غیر زبانی ذریعہ جو اچھے استعمال پر وہ ڈھانچہ پہنچاتا ہے جو الفاظ نہیں پہنچا سکتے، جیسے گراف کی شکل۔ لاپروائی سے یہ محض شور ہے۔"
+    },
+    {
+     "term": "پیشہ ور کا قیاس",
+     "definition": "بڑے پیمانے پر مانا ہوا اور تجربہ کار اساتذہ کی بات سے ہم آہنگ اصول، جو ثابت شدہ تحقیقی دریافت نہیں۔ غیر زبانی ذریعے کی جیت کا دعویٰ ایسا ہی ہے۔"
+    }
+   ]
+  },
+  "5": {
+   "en": [
+    {
+     "term": "Facilitator",
+     "definition": "A teacher who arranges the conditions under which pupils do the intellectual work, rather than doing it in front of them."
+    },
+    {
+     "term": "Researcher",
+     "definition": "A teacher who treats their own classroom as a source of evidence about their own practice: notice something, change one thing and collect what shows whether it worked."
+    },
+    {
+     "term": "Change agent",
+     "definition": "A teacher who improves something beyond their own room, such as a colleague's practice, a departmental habit or a failing school routine."
+    },
+    {
+     "term": "Moral agent",
+     "definition": "A teacher who recognises that teaching forms people, whether intended or not, and chooses deliberately what its habits teach."
+    },
+    {
+     "term": "Life-long learner",
+     "definition": "A teacher who keeps developing after qualification, including in the years when nobody is requiring it."
+    },
+    {
+     "term": "Standing",
+     "definition": "What a teacher needs in order to bring change. It is earned by being visibly good at the ordinary work first."
+    },
+    {
+     "term": "Additions, not replacements",
+     "definition": "The later roles have been added on top of transmitting content, which is still needed but is no longer sufficient."
+    }
+   ],
+   "ur": [
+    {
+     "term": "سہولت کار",
+     "definition": "وہ استاد جو ایسی حالتیں بناتا ہے جن میں شاگرد ذہنی کام خود کریں، بجائے اس کے کہ وہ خود ان کے سامنے کرے۔"
+    },
+    {
+     "term": "محقق",
+     "definition": "وہ استاد جو اپنی جماعت کو اپنی مشق کی شہادت کا ذریعہ سمجھتا ہے: کچھ محسوس کرنا، ایک چیز بدلنا اور وہ جمع کرنا جو دکھائے کہ کام ہوا یا نہیں۔"
+    },
+    {
+     "term": "تبدیلی کا داعی",
+     "definition": "وہ استاد جو اپنے کمرے سے باہر کچھ بہتر کرتا ہے، جیسے کسی ساتھی کی مشق، شعبے کی عادت یا اسکول کی ناکام روٹین۔"
+    },
+    {
+     "term": "اخلاقی نمونہ",
+     "definition": "وہ استاد جو پہچانتا ہے کہ تدریس لوگوں کو ڈھالتی ہے، ارادہ ہو یا نہ ہو، اور سوچ سمجھ کر چنتا ہے کہ اس کی عادتیں کیا سکھائیں۔"
+    },
+    {
+     "term": "تاحیات سیکھنے والا",
+     "definition": "وہ استاد جو سند ملنے کے بعد بھی ترقی کرتا رہتا ہے، ان برسوں میں بھی جب کوئی اس کا تقاضا نہیں کرتا۔"
+    },
+    {
+     "term": "وقار",
+     "definition": "وہ چیز جو تبدیلی لانے کے لیے استاد کو چاہیے۔ یہ پہلے عام کام میں نمایاں طور پر اچھا ہونے سے کمائی جاتی ہے۔"
+    },
+    {
+     "term": "یہ اضافے ہیں، تبدیلیاں نہیں",
+     "definition": "بعد کے کردار مواد منتقل کرنے کے اوپر شامل ہوئے ہیں، جو اب بھی ضروری ہے مگر کافی نہیں رہا۔"
+    }
+   ]
+  }
+ }
+}

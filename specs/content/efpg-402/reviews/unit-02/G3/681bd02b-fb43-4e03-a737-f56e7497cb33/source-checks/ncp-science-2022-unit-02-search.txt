@@ -1,0 +1,87 @@
+Source support check: ncp-science-2022 (National Curriculum of Pakistan 2022-23: Science, Grades 4-8)
+Date: 2026-11-28 (UTC). Reviewer run: 681bd02b-fb43-4e03-a737-f56e7497cb33.
+
+Bound excerpt: specs/content/efpg-402/sources/texts/ncp-science-2022.md (11 excerpts).
+
+Independent check of the full published PDF downloaded from the cited URL:
+  curl -sS -o .crew/r1/ncp-science.pdf 'https://ncc.gov.pk/SiteImage/Misc/files/8_%20NCP%20Science%20PG%204-8.pdf'
+    -> HTTP 200, 19606893 bytes (matches the byte count recorded by the run-1 review).
+  pdftotext -layout .crew/r1/ncp-science.pdf .crew/r1/ncp-science.txt -> 2086 lines
+
+Searches run (grep -in on .crew/r1/ncp-science.txt):
+--- S-04-B-02 ---
+895:[SLO: S-04-B-02]                                        [SLO: S-06-B-01]               [SLO: S-07-B-01]
+
+--- S-05-B-05 ---
+1005:                           [SLO: S-05-B-05]            [SLO: S-06-B-11]
+
+--- S-06-B-11 ---
+1005:                           [SLO: S-05-B-05]            [SLO: S-06-B-11]
+
+--- S-04-A-17 ---
+488:[SLO: S-04-A-17]            [SLO: S-05-A-04]               [SLO: S-06-A-11]            [SLO: S-07-A-16]
+
+--- S-06-A-12 ---
+495:and large intestine).       many vertebrates have a        [SLO: S-06-A-12]            circulates in the human
+
+--- S-08-A-14 ---
+419:an exoskeleton.                circulatory system (e.g.,      the process of             [SLO: S-08-A-14]
+
+--- S-07-A-15 ---
+480:                                                            [SLO: S-07-A-15]
+
+--- complex transport ---
+483:                                                            complex transport
+
+--- fair test ---
+74:             fair test, research-by finding information).                         etc.
+
+--- variable ---
+
+--- spiral ---
+
+--- scientific literacy ---
+
+--- main parts of the human body ---
+
+--- main organs of the digestive ---
+
+--- conductors or insulators ---
+
+--- classify materials ---
+
+--- plan a fair test ---
+
+Column assignment check (pdftotext -f N -l N -layout, read against the rendered page images
+source-checks/ncp-science-p17.png and source-checks/ncp-science-p19.png):
+  p.13 (PDF page 17) columns are Grade 4, Grade 5, Grade 7, Grade 8.
+    [SLO: S-08-A-14] Identify the three major parts of the brain - cerebrum, cerebellum, the
+    fore brain, mid brain and hind brain, & describe their various functions.
+  p.15 (PDF page 19) columns are Grade 4, Grade 5, Grade 7.
+    [SLO: S-07-A-15] Explain that living organisms have a complex transport system for transfer
+    of various solids, liquids, and gases across the body.
+
+Verbatim NCP SLO text used by the unit:
+  S-04-B-02 Identify and describe three states of matter i.e., a solid has a definite shape and
+            volume, a liquid has a ...
+  S-05-B-05 Matter can be changed from one state to another by heating or cooling.
+  S-06-B-11 Use particle model of matter to investigate the movement and arrangement of particles
+            in three states.
+  S-04-A-17 Describe the Human Digestive System including the simple functions of the organs
+            involved (mouth, esophagus, stomach, small and large intestine).
+  S-06-A-12 Sequence the main regions of Alimentary Canal, its associated organs and describe
+            the functions of different parts of the Alimentary Canal.
+
+Conclusion:
+  1. RESOLVED from run 1: the three invented human-body quotations, the RRQ 1 'classify materials
+     as conductors or insulators' quotation and the topic-04 'describe the functions of the main
+     organs of the digestive system' quotation no longer appear; the replacement codes S-04-A-17,
+     S-06-A-12, S-04-B-02, S-05-B-05 and S-06-B-11 match the published NCP text.
+  2. NEW DEFECT: topic-03.mdx:54 cites S-08-A-14 for the 'complex transport system' outcome and
+     calls it a Grade 8 SLO. In the published NCP that outcome is S-07-A-15 (Grade 7); S-08-A-14
+     is the brain-parts SLO. Wrong code and wrong grade.
+  3. NEW DEFECT: topic-04.mdx:46 puts 'plan a fair test with one variable changed' in quotation
+     marks as NCP wording. The NCP names 'fair test' only as one of five enquiry types (line 74)
+     and never uses 'variable'.
+  4. The NCP states no list of aims and never uses 'spiral' or 'scientific literacy'; the unit now
+     discloses the six aims as its own synthesis.
