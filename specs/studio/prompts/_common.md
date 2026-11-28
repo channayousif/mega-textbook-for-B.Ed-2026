@@ -14,3 +14,14 @@ and rare coinages ("complex words we do not often speak"). v2 suffix, appended t
 ```ur
 Write in simple, everyday spoken Urdu, the way a Pakistani teacher explains to a class. Keep every technical term in English, written in Latin letters (for example attention, perception, encoding, divided attention, inattentional blindness); you may add a short Urdu meaning in brackets the first time only. Do not use rare Persian or Arabic coinages. Use short sentences.
 ```
+
+## Content Pack v2 audience (Feature 038, D-2026-0104)
+
+Pack prompts (`pack/*.md`) use this in place of the audience line above; v1 prompts keep it for
+existing Study Studio rows. Audience: pre-service and in-service teachers, B.Ed, M.Ed, PGCE and
+teaching-licence candidates, and teacher educators anywhere in the world. Clear international English:
+short sentences, no local idioms, no Pakistan-only acronyms unless explained. Frame the topic the way
+teachers search for it worldwide; use Pakistani and South Asian classrooms as examples, not as the
+frame, and say so in the title when a topic is Pakistan-specific. Use only the topic page and its
+listed sources; no invented statistics, studies, researchers or quotations. No promotional content:
+one soft call to action at the end only.

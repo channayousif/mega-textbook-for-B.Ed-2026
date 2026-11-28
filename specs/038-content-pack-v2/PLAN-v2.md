@@ -71,8 +71,8 @@ specs/studio/characters/            _style-guide.md, <slug>/{profile.yaml,voice.
 specs/studio/flow/                  prompt-formula.md, shot-list.template.csv, credit-log.csv, library.md
 specs/studio/prompts/pack/          script.md, angle.md, notebooklm-steering.md, flow-shot.md, metadata.md, translate.md
 specs/studio/packs/<course>/unit-NN/topic-NN/   script.md, angle.md, shots.csv, metadata.json, cuts.json, highlights.json
-scripts/media/pack/                 intake.mjs, debrand-notebooklm.py, transcribe-srt.mjs, find-highlights.mjs,
-                                    reframe-vertical.mjs, make-metadata.mjs, make-embed.mjs, README.md
+scripts/media/pack/                 intake.mjs, debrand.mjs, captions.mjs, highlights.mjs,
+                                    reframe.mjs, metadata.mjs, embed.mjs, paths.mjs, README.md
 video-studio/remotion/src/pack/     LongformFrame, ShortVertical, Opener, Closer, ChapterCard, InfographicFooter
 src/pages/app/admin/content-packs.tsx + src/lib/contentPacks.ts
 supabase/migrations/0060_content_packs.sql (next free number when written)
