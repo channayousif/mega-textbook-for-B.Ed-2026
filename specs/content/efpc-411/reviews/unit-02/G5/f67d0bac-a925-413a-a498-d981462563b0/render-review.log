@@ -1,0 +1,175 @@
+heavy: slot acquired; waiting for 30 seconds of memory/PSI headroom
+### render-inspect  EFPC-411 Unit 2 (ur)
+### route: /ur/semester-4/efpc-411/unit-02  pages: 6  placed figures: 8
+### host: https://textbook.com.pk   browser: chromium 149.0.7827.0
+### started: 2026-11-28T06:03:12.280Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=1 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-9.webp natural=1344x756 shown=true loading=lazy alt="سندھ کے ایک سرکاری اسکول کے کمرۂ جماعت میں ایک زیرِ تربیت استاد کلپ بورڈ تھامے مشاہدہ کر ر"
+   heading order: no skipped levels
+
+-- topic-01: headings=14 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-1.ur.svg natural=234x150 shown=true loading=lazy alt="ایک کلاس روم بٹھک کا نقشہ مع مشاہدہ کار کے تعاملی کوڈز: استاد سے شاگرد (T-P)، شاگرد سے شاگ"
+   img /img/figures/efpc-411/unit-02/fig-U2-1.ur.dark.svg natural=0x0 shown=false loading=lazy alt="ایک کلاس روم بٹھک کا نقشہ مع مشاہدہ کار کے تعاملی کوڈز: استاد سے شاگرد (T-P)، شاگرد سے شاگ"
+   img /img/figures/efpc-411/unit-02/fig-U2-2.ur.svg natural=234x150 shown=true loading=lazy alt="اسکول کے ماحول کی مشاہداتی شیٹ: پانچ شعبے، کیا نوٹ کرنا ہے اور ہر ایک کے لیے ایک نمونہ اند"
+   img /img/figures/efpc-411/unit-02/fig-U2-2.ur.dark.svg natural=0x0 shown=false loading=lazy alt="اسکول کے ماحول کی مشاہداتی شیٹ: پانچ شعبے، کیا نوٹ کرنا ہے اور ہر ایک کے لیے ایک نمونہ اند"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://doi.org/10.1596/37669 | https://www.hec.gov.pk/english/services/universiti
+
+-- topic-02: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-3.ur.svg natural=249x150 shown=true loading=lazy alt="سبقی مشاہدے کا پروفارما جس میں توجہ کے پانچ شعبے اور ہر ایک کے لیے نمونہ اندراج شامل ہے۔"
+   img /img/figures/efpc-411/unit-02/fig-U2-3.ur.dark.svg natural=0x0 shown=false loading=lazy alt="سبقی مشاہدے کا پروفارما جس میں توجہ کے پانچ شعبے اور ہر ایک کے لیے نمونہ اندراج شامل ہے۔"
+   img /img/figures/efpc-411/unit-02/fig-U2-4.ur.svg natural=300x150 shown=true loading=lazy alt="فلو چارٹ: سبق کے پانچ مراحل جن کا مشاہدہ کار آغاز سے اختتام تک سراغ لگاتا ہے۔"
+   img /img/figures/efpc-411/unit-02/fig-U2-4.ur.dark.svg natural=0x0 shown=false loading=lazy alt="فلو چارٹ: سبق کے پانچ مراحل جن کا مشاہدہ کار آغاز سے اختتام تک سراغ لگاتا ہے۔"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://doi.org/10.1596/37669 | https://www.hec.gov.pk/english/services/universiti
+
+-- topic-03: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-5.ur.svg natural=272x150 shown=true loading=lazy alt="35 منٹ کے سبق میں کام پر صرف ہونے والے وقت کی شماری پانچ منٹ کے وقفوں میں، جس میں ہر وقفے "
+   img /img/figures/efpc-411/unit-02/fig-U2-5.ur.dark.svg natural=0x0 shown=false loading=lazy alt="35 منٹ کے سبق میں کام پر صرف ہونے والے وقت کی شماری پانچ منٹ کے وقفوں میں، جس میں ہر وقفے "
+   img /img/figures/efpc-411/unit-02/fig-U2-6.ur.svg natural=300x119 shown=true loading=lazy alt="غیر رسمی سے باضابطہ تک تشخیص کے طریقوں کا تسلسل، جس پر پانچ طریقے دکھائے گئے ہیں۔"
+   img /img/figures/efpc-411/unit-02/fig-U2-6.ur.dark.svg natural=0x0 shown=false loading=lazy alt="غیر رسمی سے باضابطہ تک تشخیص کے طریقوں کا تسلسل، جس پر پانچ طریقے دکھائے گئے ہیں۔"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://doi.org/10.1596/37669 | https://www.hec.gov.pk/english/services/universiti | https://www.hec.gov.pk/english/services/universiti
+
+-- topic-04: headings=14 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efpc-411/unit-02/fig-U2-7.ur.svg natural=300x127 shown=true loading=lazy alt="ایک مکمل 35 منٹ کے سبق کی منٹ بہ منٹ ٹائم لائن، آمد سے ایگزٹ ٹکٹ تک۔"
+   img /img/figures/efpc-411/unit-02/fig-U2-7.ur.dark.svg natural=0x0 shown=false loading=lazy alt="ایک مکمل 35 منٹ کے سبق کی منٹ بہ منٹ ٹائم لائن، آمد سے ایگزٹ ٹکٹ تک۔"
+   img /img/figures/efpc-411/unit-02/fig-U2-8.ur.svg natural=293x150 shown=true loading=lazy alt="چار شمولیتی طریقہ ہائے تدریس مع ہر ایک کے لیے قابلِ مشاہدہ مظہر، شرکت اور گروہ بندی سے لے "
+   img /img/figures/efpc-411/unit-02/fig-U2-8.ur.dark.svg natural=0x0 shown=false loading=lazy alt="چار شمولیتی طریقہ ہائے تدریس مع ہر ایک کے لیے قابلِ مشاہدہ مظہر، شرکت اور گروہ بندی سے لے "
+   heading order: no skipped levels
+   advisory bare-URL link text: https://www.hec.gov.pk/english/services/universiti | https://doi.org/10.1596/37669 | https://www.hec.gov.pk/english/services/universiti
+
+-- unit-assessment: headings=15 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=1 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=358 fits=false lastHeader="معیار سے بہتر (3 نمبر)" scroller=TABLE. (client=328 scroll=358 tabindex=0 aria-label=قابلِ اسکرول جدول، تمام کالم دیکھنے کے لیے دائیں بائیں اسکرول کریں)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="معیار سے بہتر (3 نمبر)" scroller=NONE
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=339 fits=false lastHeader="معیار سے بہتر (3 نمبر)" scroller=TABLE. (client=328 scroll=339 tabindex=0 aria-label=قابلِ اسکرول جدول، تمام کالم دیکھنے کے لیے دائیں بائیں اسکرول کریں)
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-04: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="معیار سے بہتر (3 نمبر)" scroller=NONE
+   figure[0] .figure client=275 scroll=275 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=1 answerHeadings=[]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-9.webp w=762 right=778 fits
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-1.ur.svg w=709 right=749 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-1.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-2.ur.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-2.ur.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-3.ur.svg w=709 right=749 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-3.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-4.ur.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-4.ur.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-5.ur.svg w=709 right=749 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-5.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-6.ur.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-6.ur.dark.svg w=0 right=0 fits
+
+-- topic-04 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efpc-411/unit-02/fig-U2-7.ur.svg w=709 right=749 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-7.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-8.ur.svg w=762 right=778 fits
+   printfig /img/figures/efpc-411/unit-02/fig-U2-8.ur.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["مختصر جواب کے سوالات (RRQs)​","توسیعی جواب کے سوالات (ERQs)​","جوابات اور نمبر دہی کی رہنمائی​","ایم سی کیو جوابی کلید​","مختصر جواب کے سوالات کے مثالی جوابات اور نمبروں کی تقسیم​","توسیعی جواب کے سوالات کے معیاراتِ جانچ​"]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U2-1.ur [diagram] viewBox=780x500 texts=19 wordmark@x=12 -> PROBLEM
+      ! "بٹھک کا نقشہ ریکارڈ کرتا ہے کہ کون" x=361.9 right=756.9 bottom=485.8 (overlaps the wordmark)
+   DEFECT text "بٹھک کا نقشہ ریکارڈ کرتا ہے کہ کون" overlaps the wordmark
+   fig-U2-1.ur.dark [diagram] viewBox=780x500 texts=19 wordmark@x=12 -> PROBLEM
+      ! "بٹھک کا نقشہ ریکارڈ کرتا ہے کہ کون" x=361.9 right=756.9 bottom=485.8 (overlaps the wordmark)
+   DEFECT text "بٹھک کا نقشہ ریکارڈ کرتا ہے کہ کون" overlaps the wordmark
+   fig-U2-2.ur [table] viewBox=780x500 texts=33 wordmark@x=12 -> PROBLEM
+      ! "ہر اندراج بیان کرتا ہے کہ کیا موجو" x=374.1 right=756 bottom=469.8 (overlaps the wordmark)
+   DEFECT text "ہر اندراج بیان کرتا ہے کہ کیا موجو" overlaps the wordmark
+   fig-U2-2.ur.dark [table] viewBox=780x500 texts=33 wordmark@x=12 -> PROBLEM
+      ! "ہر اندراج بیان کرتا ہے کہ کیا موجو" x=374.1 right=756 bottom=469.8 (overlaps the wordmark)
+   DEFECT text "ہر اندراج بیان کرتا ہے کہ کیا موجو" overlaps the wordmark
+   fig-U2-3.ur [table] viewBox=780x470 texts=33 wordmark@x=12 -> PROBLEM
+      ! "ہر قطار ایک ایسا ریکارڈ مانگتی ہے " x=447.1 right=756 bottom=439.8 (overlaps the wordmark)
+   DEFECT text "ہر قطار ایک ایسا ریکارڈ مانگتی ہے " overlaps the wordmark
+   fig-U2-3.ur.dark [table] viewBox=780x470 texts=33 wordmark@x=12 -> PROBLEM
+      ! "ہر قطار ایک ایسا ریکارڈ مانگتی ہے " x=447.1 right=756 bottom=439.8 (overlaps the wordmark)
+   DEFECT text "ہر قطار ایک ایسا ریکارڈ مانگتی ہے " overlaps the wordmark
+   fig-U2-4.ur [flowchart] viewBox=780x390 texts=19 wordmark@x=12 -> PROBLEM
+      ! "سبق ایک مربوط ساخت ہے: ہر مرحلہ اگ" x=350.8 right=756 bottom=359.8 (overlaps the wordmark)
+   DEFECT text "سبق ایک مربوط ساخت ہے: ہر مرحلہ اگ" overlaps the wordmark
+   fig-U2-4.ur.dark [flowchart] viewBox=780x390 texts=19 wordmark@x=12 -> PROBLEM
+      ! "سبق ایک مربوط ساخت ہے: ہر مرحلہ اگ" x=350.8 right=756 bottom=359.8 (overlaps the wordmark)
+   DEFECT text "سبق ایک مربوط ساخت ہے: ہر مرحلہ اگ" overlaps the wordmark
+   fig-U2-5.ur [table] viewBox=780x430 texts=30 wordmark@x=12 -> PROBLEM
+      ! "یہ کمی منتقلی کے بعد آتی ہے، نہ کہ" x=354.6 right=757.5 bottom=399.8 (overlaps the wordmark)
+   DEFECT text "یہ کمی منتقلی کے بعد آتی ہے، نہ کہ" overlaps the wordmark
+   fig-U2-5.ur.dark [table] viewBox=780x430 texts=30 wordmark@x=12 -> PROBLEM
+      ! "یہ کمی منتقلی کے بعد آتی ہے، نہ کہ" x=354.6 right=757.5 bottom=399.8 (overlaps the wordmark)
+   DEFECT text "یہ کمی منتقلی کے بعد آتی ہے، نہ کہ" overlaps the wordmark
+   fig-U2-6.ur [diagram] viewBox=780x310 texts=16 wordmark@x=12 -> PROBLEM
+      ! "غیر رسمی طریقے تدریس کے دوران ہوتے" x=353.1 right=756 bottom=277.8 (overlaps the wordmark)
+   DEFECT text "غیر رسمی طریقے تدریس کے دوران ہوتے" overlaps the wordmark
+   fig-U2-6.ur.dark [diagram] viewBox=780x310 texts=16 wordmark@x=12 -> PROBLEM
+      ! "غیر رسمی طریقے تدریس کے دوران ہوتے" x=353.1 right=756 bottom=277.8 (overlaps the wordmark)
+   DEFECT text "غیر رسمی طریقے تدریس کے دوران ہوتے" overlaps the wordmark
+   fig-U2-7.ur [timeline] viewBox=780x330 texts=19 wordmark@x=12 -> PROBLEM
+      ! "سبق ایک مکمل ساخت کے طور پر پڑھا ج" x=283.3 right=756 bottom=297.8 (overlaps the wordmark)
+   DEFECT text "سبق ایک مکمل ساخت کے طور پر پڑھا ج" overlaps the wordmark
+   fig-U2-7.ur.dark [timeline] viewBox=780x330 texts=19 wordmark@x=12 -> PROBLEM
+      ! "سبق ایک مکمل ساخت کے طور پر پڑھا ج" x=283.3 right=756 bottom=297.8 (overlaps the wordmark)
+   DEFECT text "سبق ایک مکمل ساخت کے طور پر پڑھا ج" overlaps the wordmark
+   fig-U2-8.ur [table] viewBox=780x400 texts=19 wordmark@x=12 -> PROBLEM
+      ! "شمولیت کا فیصلہ اس بات سے ہوتا ہے " x=300.9 right=756 bottom=375.8 (overlaps the wordmark)
+   DEFECT text "شمولیت کا فیصلہ اس بات سے ہوتا ہے " overlaps the wordmark
+   fig-U2-8.ur.dark [table] viewBox=780x400 texts=19 wordmark@x=12 -> PROBLEM
+      ! "شمولیت کا فیصلہ اس بات سے ہوتا ہے " x=300.9 right=756 bottom=375.8 (overlaps the wordmark)
+   DEFECT text "شمولیت کا فیصلہ اس بات سے ہوتا ہے " overlaps the wordmark
+
+### finished: 2026-11-28T06:04:02.589Z
+### defects: 16
+###   fig-U2-1.ur: text "بٹھک کا نقشہ ریکارڈ کرتا ہے کہ کون" overlaps the wordmark
+###   fig-U2-1.ur.dark: text "بٹھک کا نقشہ ریکارڈ کرتا ہے کہ کون" overlaps the wordmark
+###   fig-U2-2.ur: text "ہر اندراج بیان کرتا ہے کہ کیا موجو" overlaps the wordmark
+###   fig-U2-2.ur.dark: text "ہر اندراج بیان کرتا ہے کہ کیا موجو" overlaps the wordmark
+###   fig-U2-3.ur: text "ہر قطار ایک ایسا ریکارڈ مانگتی ہے " overlaps the wordmark
+###   fig-U2-3.ur.dark: text "ہر قطار ایک ایسا ریکارڈ مانگتی ہے " overlaps the wordmark
+###   fig-U2-4.ur: text "سبق ایک مربوط ساخت ہے: ہر مرحلہ اگ" overlaps the wordmark
+###   fig-U2-4.ur.dark: text "سبق ایک مربوط ساخت ہے: ہر مرحلہ اگ" overlaps the wordmark
+###   fig-U2-5.ur: text "یہ کمی منتقلی کے بعد آتی ہے، نہ کہ" overlaps the wordmark
+###   fig-U2-5.ur.dark: text "یہ کمی منتقلی کے بعد آتی ہے، نہ کہ" overlaps the wordmark
+###   fig-U2-6.ur: text "غیر رسمی طریقے تدریس کے دوران ہوتے" overlaps the wordmark
+###   fig-U2-6.ur.dark: text "غیر رسمی طریقے تدریس کے دوران ہوتے" overlaps the wordmark
+###   fig-U2-7.ur: text "سبق ایک مکمل ساخت کے طور پر پڑھا ج" overlaps the wordmark
+###   fig-U2-7.ur.dark: text "سبق ایک مکمل ساخت کے طور پر پڑھا ج" overlaps the wordmark
+###   fig-U2-8.ur: text "شمولیت کا فیصلہ اس بات سے ہوتا ہے " overlaps the wordmark
+###   fig-U2-8.ur.dark: text "شمولیت کا فیصلہ اس بات سے ہوتا ہے " overlaps the wordmark
+
+Artifacts: /home/a2ahs/crew-wt/efpc-411-u02-review_ur/specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders
