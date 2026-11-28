@@ -65,6 +65,8 @@ export const PROFILE_REFERENCES = [
   ['agent_configuration', 'updated_by'],
   ['g3_signoffs', 'decided_by'],
   ['owner_decisions', 'decided_by'],
+  ['content_packs', 'created_by'],
+  ['content_pack_events', 'actor'],
   ['news_items', 'created_by'],
   ['news_pins', 'created_by'],
   ['self_check_attempts', 'profile_id'],

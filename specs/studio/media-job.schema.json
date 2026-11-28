@@ -7,7 +7,7 @@
  "properties": {
   "key": { "type": "string", "minLength": 3 },
   "kind": { "enum": ["video.teaser", "audio.brief", "audio.deeper", "video.overview", "doc.poster", "doc.mindmap",
-   "doc.brief", "doc.studyguide", "doc.slides", "image.schematic", "image.illustration"] },
+   "doc.brief", "doc.studyguide", "doc.slides", "doc.infographic", "video.longform", "video.short", "image.schematic", "image.illustration"] },
   "scope": {
    "type": "object",
    "required": ["course"],

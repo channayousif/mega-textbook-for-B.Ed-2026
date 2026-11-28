@@ -8,6 +8,23 @@ export const CHANNEL_URL = 'https://www.youtube.com/@textbookdotcomdotpk';
 export const SUBSCRIBE_URL = `${CHANNEL_URL}?sub_confirmation=1`;
 /** "Course teasers (اردو)" playlist. */
 export const TEASER_PLAYLIST = 'PLCJn7gAoYIJs';
+/**
+ * YouTube playlists by purpose (owner mapping 2026-11-09, studio-media SKILL "Channel facts").
+ * `video` is per course and locale; a course without one returns null and the owner creates it.
+ * Content Pack v2 long-form lessons use the course video playlist (Feature 038, ADR-0040).
+ */
+export const PLAYLISTS = {
+  teasers: TEASER_PLAYLIST,
+  podcast: { en: 'PLLdTwYdZvUFc', ur: 'PLH7WvExVOw8U' },
+  video: { 'efmp-301': { en: 'PLBPGR4jAnhh4', ur: 'PLZVdgN09a2qs' } },
+};
+/** The playlist for a media kind, course and locale, or null when none is mapped yet. */
+export function playlistFor(kind, course, locale = 'en') {
+  if (kind === 'video.teaser') return PLAYLISTS.teasers;
+  if (kind === 'audio.brief' || kind === 'audio.deeper') return PLAYLISTS.podcast[locale] ?? null;
+  if (['video.overview', 'video.longform', 'video.short'].includes(kind)) return PLAYLISTS.video[course]?.[locale] ?? null;
+  return null;
+}
 /** House colours used on end cards, overlays and thumbnails. */
 export const BRAND = { teal: '#123e43', amber: '#e5a333', paper: '#f8f5ef', pale: '#a6dfdc' };
 /** Long dashes are banned in authored text (Constitution Art. III.9). */
