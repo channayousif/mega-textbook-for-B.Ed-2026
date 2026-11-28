@@ -31,12 +31,13 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | Unit 1 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 1 | G6 assets | ▣ | | Ten schematic SVG pairs (fig-U1-1 to fig-U1-10) placed with derived dark twins and verified with measure-figure-text; Urdu .ur.svg labels placed; banner fig-U1-11 placed |
 | Unit 1 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-02/G2/20261127T210428728Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-02/G2/20261128T065228895Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 2 | G4 ur-translation | ▢ | | Complete seven-file draft Urdu mirror and ten localized SVG pairs (with derived dark twins) prepared from English 6476adf23; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and rendered Urdu page inspection pending; see translations/unit-02/handoff.md |
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 2 | G6 assets | ▣ | | Ten schematic SVGs (fig-U2-1 to fig-U2-10) placed with derived dark twins; Urdu .ur.svg labels placed and verified with measure-figure-text; banner fig-U2-11 placed; topic scenes fig-U2-12 to fig-U2-16 placed |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied (report specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb.json): invented NCP quotations replaced with real SLOs, six aims reframed as the unit's synthesis, RRQ 7 now names inclusivity, MCQ keys rebalanced, topic 2.4 wording softened, fig-U2-3 column labelled illustrative (EN and UR). render-review exit 1 on WebP illustrations is a tool limitation, not changed. Fresh independent G3 review needed; G3 stays open |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpg-402/reviews/unit-03/G2/20261127T170751869Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 3 | G4 ur-translation | ▢ | | Complete nine-file draft Urdu mirror and fourteen localized SVGs (with derived dark twins) prepared from English 8b58f672d; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and rendered Urdu page inspection pending; see translations/unit-03/handoff.md |
