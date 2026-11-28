@@ -337,6 +337,98 @@
     "verdict": "pass-with-notes",
     "notes": "Meaning matches the topic; hooks in English as ruled."
    }
+  },
+  {
+   "topic": 2,
+   "locale": "ur",
+   "kind": "video",
+   "status": "placed",
+   "audience": "all",
+   "title": "اکتوبر ٹیسٹ کا راز",
+   "artifact_id": "d640e220-5caf-4c57-ab86-8db42fb62bea",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "host_url": "https://www.youtube.com/watch?v=egOH0dxmmw4",
+   "alt": "memory systems، information processing اور forgetting پر اردو ویڈیو جائزہ؛ تکنیکی اصطلاحات انگریزی میں۔",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-27",
+    "verdict": "pass-with-notes",
+    "notes": "Faithful to the text: October/December cramming, four-item workbench, three processes, three faces of forgetting, three strategies."
+   }
+  },
+  {
+   "topic": 3,
+   "locale": "en",
+   "kind": "video",
+   "status": "placed",
+   "audience": "all",
+   "title": "Decoding the Classroom Mind",
+   "artifact_id": "894e11b4-2573-45e3-b434-8d3f103ab22b",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "host_url": "https://www.youtube.com/watch?v=eSxw0ibxBG4",
+   "alt": "Video overview of concepts, named problem-solving strategies and their obstacles, and inductive and deductive reasoning.",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-27",
+    "verdict": "pass",
+    "notes": "Faithful to the text: rickshaw problem, concepts and near-misses, five strategies, three obstacles, induction and deduction, lesson redesign (costs no money is in the text)."
+   }
+  },
+  {
+   "topic": 3,
+   "locale": "ur",
+   "kind": "video",
+   "status": "placed",
+   "audience": "all",
+   "title": "سوچ، مسائل حل کرنا، استدلال",
+   "artifact_id": "9fa0d6ff-2492-4e17-9863-13e7bbf8b1dc",
+   "prompt_ref": "specs/studio/prompts/video.md v1",
+   "host_url": "https://www.youtube.com/watch?v=lSrCeh7b0tE",
+   "alt": "thinking، problem-solving اور reasoning پر اردو ویڈیو جائزہ؛ تکنیکی اصطلاحات انگریزی میں۔",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-27",
+    "verdict": "pass-with-notes",
+    "notes": "Faithful to the text: rickshaw problem, five strategies, three obstacles, induction and deduction, lesson redesign; practice problems come from the topic activity, posed without answers."
+   }
+  },
+  {
+   "topic": 3,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "status": "placed",
+   "audience": "all",
+   "title": "Teaching Mental Moves for Problem Solving",
+   "artifact_id": "37928397-e083-46c1-bc52-b9af7b21ca2f",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "host_url": "https://www.youtube.com/watch?v=vWa7LGS1xjs",
+   "alt": "Audio brief, about 2 minutes, with the three memory hooks for strategies, obstacles and classroom activities.",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-27",
+    "verdict": "pass-with-notes",
+    "notes": "All three hooks exact; Ayesha and Bilal rickshaw problem and the strategy wall are from the text. Adds that the four steps cost zero money (not in the text)."
+   }
+  },
+  {
+   "topic": 3,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "status": "placed",
+   "audience": "all",
+   "title": "مسئلہ حل کرنے کی ۵ بہترین تدبیریں",
+   "artifact_id": "66f669fc-485e-4ca4-adf2-84e115a77bb4",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "host_url": "https://www.youtube.com/watch?v=kmia64M6asc",
+   "alt": "اردو آڈیو بریف، تقریباً دو منٹ کا؛ مسئلہ حل کرنے کی تدبیریں، رکاوٹیں اور کلاس کی سرگرمیاں، یاد رکھنے کے فارمولے انگریزی میں۔",
+   "review": {
+    "by": "owner spot-check + Claude transcript check (QG2)",
+    "date": "2026-11-27",
+    "verdict": "pass-with-notes",
+    "notes": "Strategies, obstacles and activities match the topic."
+   }
   }
  ]
 }

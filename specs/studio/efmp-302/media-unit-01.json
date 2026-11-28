@@ -1,0 +1,717 @@
+{
+ "course": "efmp-302",
+ "unit": 1,
+ "items": [
+  {
+   "state": "qa3-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 113.406259,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 113.406,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 113.333333
+      },
+      "loudness": {
+       "integrated_lufs": -17.1,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Covers the four marks of a profession, the shopkeeper-versus-teacher comparison, professionalism versus professionalisation, the semi-profession as work in progress, and the training route, bodies and judgement teaching is still building; ends on the practicum question. Transcript renders the K-T-C-A hook as 'No train code answer or ATCA', says 'Sind' for Sindh, and never names EFMP-302 or the topic number."
+    },
+    "qa3": {
+     "verdict": "pass",
+     "by": "list_videos + update_video results",
+     "date": "2026-11-28",
+     "notes": "private on channel UC7cQfkGkdNABCiyjmV5ZaFQ, title and description intact, custom thumbnail success, in the EN audio podcast playlist PLLdTwYdZvUFc; tags repaired in place via yt-describe.mjs after the MCP array/string mismatch; embed check deferred to the placement build"
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.312Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T00:54:43.212Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T00:54:43.271Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T00:54:43.329Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T00:54:43.380Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T00:54:43.436Z"
+    },
+    {
+     "state": "uploaded-private",
+     "at": "2026-11-28T01:11:56.630Z"
+    },
+    {
+     "state": "qa3-pass",
+     "at": "2026-11-28T01:12:51.736Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "What Makes Teaching a Profession",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for the four marks of a profession, professionalism versus professionalisation, and teaching in comparative view.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t1-en-audio-p1",
+   "artifact_id": "bdf4dedb-f4dd-4dc1-8638-1bbf32e6ee2b",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-01/t1-en-audio-p1.m4a",
+   "sha256": "31e84457a0ce6357968650e5f2d80131a5b0beb8805a2c5bdf275f7d19aa4467",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-01/t1-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-01/t1-en-audio-p1.mp4.thumb.jpg",
+   "youtube_id": "1EDcts9vRag",
+   "uploaded_at": "2026-11-28T01:12:00Z"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.354Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "mindmap",
+   "title": "Topic 1.1 - What makes teaching a profession",
+   "alt": "Mind map of the four marks of a profession, professionalism versus professionalisation, and teaching alongside other professions.",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t1-en-mindmap"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.407Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "studyguide",
+   "title": "Understanding Teaching: Unit 1 Study Guide",
+   "alt": "Study guide for the whole unit: the profession, the industrial-to-inquiry shift, the four dimensions and teacher identity.",
+   "prompt_ref": "specs/studio/prompts/study-guide.md v1",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t1-en-studyguide"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.452Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "en",
+   "kind": "video",
+   "title": "Understanding Teaching: Unit 1 Overview",
+   "alt": "Video overview of the whole unit: what makes teaching a profession, the shift to inquiry-based teaching, the four dimensions of professionalism, and developing teacher identity.",
+   "prompt_ref": "specs/studio/prompts/video-unit.md v1",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t1-en-video"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 100.240544,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 100.241,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 100.166667
+      },
+      "loudness": {
+       "integrated_lufs": -16.7,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Meaning matches the Urdu topic: the mother's question, the four marks, the shopkeeper meeting none, professionalism versus professionalisation, the training route, bodies and judgement, and the practicum question. Hooks are kept in English as ruled.",
+     "urdu_flag": "Transcript came back in Devanagari, so exact Urdu wording was not checked. One line ties personal professionalism to the whole system still being built, which reads close to backwards against the topic; listen in full."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.494Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T00:59:12.081Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T01:02:21.282Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T01:03:09.049Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T01:05:14.528Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T01:06:38.419Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "تدریس کو پیشہ کیا بناتا ہے",
+   "alt": "دو منٹ کا مختصر بریف، پیشے کی چار خصوصیات، professionalism بمقابلہ professionalisation اور تدریس کے تقابلی جائزے کے تین memory hooks کے ساتھ۔",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t1-ur-audio-p1",
+   "artifact_id": "9e3419e4-be3e-495f-9c53-24da148a30ca",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-01/t1-ur-audio-p1.m4a",
+   "sha256": "016583bdb7bb223ec41e70062dec0248cf335c1b737fbbf462142ca82e0600a9",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-01/t1-ur-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-01/t1-ur-audio-p1.mp4.thumb.jpg"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.536Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "ur",
+   "kind": "studyguide",
+   "title": "تدریس کو سمجھنا: یونٹ 1 اسٹڈی گائیڈ",
+   "alt": "پورے یونٹ کی اردو اسٹڈی گائیڈ: پیشہ، صنعتی سے تحقیقی تدریس کی طرف تبدیلی، پیشہ واریت کے چار پہلو اور استاد کی شناخت۔",
+   "prompt_ref": "specs/studio/prompts/study-guide.md v1",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t1-ur-studyguide"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.583Z"
+    }
+   ],
+   "topic": 1,
+   "locale": "ur",
+   "kind": "video",
+   "title": "تدریس کو سمجھنا: یونٹ 1 کا جائزہ",
+   "alt": "پورے یونٹ کا اردو ویڈیو جائزہ: تدریس کو پیشہ کیا بناتا ہے، تحقیق پر مبنی تدریس کی طرف تبدیلی، پیشہ واریت کے چار پہلو اور استاد کی شناخت۔",
+   "prompt_ref": "specs/studio/prompts/video-unit.md v1",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t1-ur-video"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 109.969705,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 110,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 110
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.6
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Faithful to topic-02.mdx: the two fractions lessons, the industrial model (efficiency, control, compliance, covering the syllabus, interchangeable classes, mass schooling gains), inquiry-based professionalism as noticing and adjusting on evidence (not furniture), and Hargreaves' four ages. No quiz answers; it does not name EFMP-302."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.630Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T01:43:51.019Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T01:46:58.145Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T01:48:48.988Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T01:48:49.040Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T01:49:45.812Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "From the Factory Model to Inquiry-Based Teaching",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for the industrial model, noticing and adjusting, and Hargreaves’ four ages.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t2-en-audio-p1",
+   "artifact_id": "e65bd34e-d99f-421b-8044-d8ce453971ae",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-en-audio-p1.m4a",
+   "sha256": "b095a9052fae8240d39db4fe4f1adf323c89f6c62ad90a8a377636c921e68f46",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-en-audio-p1.mp4.thumb.jpg"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.674Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "en",
+   "kind": "mindmap",
+   "title": "Topic 1.2 - From an industrial model to inquiry-based teaching",
+   "alt": "Mind map of the industrial model, the shift to inquiry-based professionalism and Hargreaves’ four ages.",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t2-en-mindmap"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 93.135238,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 93.166667,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 93.166667
+      },
+      "loudness": {
+       "integrated_lufs": -16.2,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Faithful to the Urdu topic: the fractions lesson stopped to read pupils' thinking, the industrial model as factory with cover/control/comply, syllabus coverage as the only measure of success, inquiry-based professionalism as notice/adjust on evidence, and Hargreaves' four ages; ends on a practicum action. Hooks kept in English as ruled.",
+     "urdu_flag": "Transcript came back in Devanagari, so exact Urdu wording was not checked; listen for register."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.718Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T02:00:54.312Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T02:04:26.274Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T02:06:35.068Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T02:06:35.120Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T02:07:50.973Z"
+    }
+   ],
+   "topic": 2,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "صنعتی ماڈل سے تحقیق پر مبنی تدریس",
+   "alt": "دو منٹ کا مختصر بریف، صنعتی ماڈل، noticing and adjusting اور Hargreaves کے چار ادوار کے تین memory hooks کے ساتھ۔",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t2-ur-audio-p1",
+   "artifact_id": "eae2350b-9ce7-4cac-ad2e-8028042e1bee",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-ur-audio-p1.m4a",
+   "sha256": "f712e26c80cf0dcf9ebafab5d12cb4af9a6001bb9a3a61599ed4663d30749be2",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-ur-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-ur-audio-p1.mp4.thumb.jpg"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 120.441905,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 120.5,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 120.5
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Faithful to topic-03.mdx: the science teacher joining an association, the four dimensions, pedagogical content knowledge with the Class 3 multi-grade spoken-drill example, the accountability/autonomy/collegiality balance with what each excess does, the dress-and-punctuality misconception, and the practicum code-of-conduct task. No quiz answers. Transcript renders the K-A-B-B hook as 'no act balance belong' and says 'erdo' for Urdu."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.764Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T02:44:59.471Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T02:47:46.104Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T02:51:50.164Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T02:51:50.317Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T02:52:58.205Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "The Four Dimensions of Teacher Professionalism",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for specialised knowledge, the ethical code, the accountability balance and professional bodies.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t3-en-audio-p1",
+   "artifact_id": "87c540ac-218a-4dd5-bf8c-5f0bcb8c85e8",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-en-audio-p1.m4a",
+   "sha256": "9e71d6bca7199fede6f660fe7623685f4ad45b6a8a5c7e0c1ef79c1798799cba",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-en-audio-p1.mp4.thumb.jpg"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.810Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "en",
+   "kind": "mindmap",
+   "title": "Topic 1.3 - The four dimensions of teacher professionalism",
+   "alt": "Mind map of specialised knowledge, the ethical code, the accountability, autonomy and collegiality balance, and professional bodies.",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t3-en-mindmap"
+  },
+  {
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 107.043991,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 107.044,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 107
+      },
+      "loudness": {
+       "integrated_lufs": -16.5,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass-with-notes",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Faithful to the Urdu topic: the Hyderabad science teacher reading a professional journal, the dress-and-punctuality misconception, the four dimensions, pedagogical content knowledge with the spoken-drill example, the accountability/autonomy/collegiality balance, and the practicum code-of-conduct or association-membership task. Hooks kept in English as ruled.",
+     "urdu_flag": "Transcript came back in Devanagari, so exact Urdu wording was not checked; listen for register."
+    }
+   },
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.854Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T03:02:29.889Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T03:05:25.896Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T03:07:37.859Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T03:07:37.912Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T03:08:20.799Z"
+    }
+   ],
+   "topic": 3,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "تدریسی پیشہ واریت کے چار پہلو",
+   "alt": "دو منٹ کا مختصر بریف، specialised knowledge، اخلاقی ضابطہ، accountability کا توازن اور پیشہ ورانہ اداروں کے تین memory hooks کے ساتھ۔",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t3-ur-audio-p1",
+   "artifact_id": "78efd404-c1d4-4bf0-87ae-d260e4f26147",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-ur-audio-p1.m4a",
+   "sha256": "e43613226ebe3bd80cc41788303c9c388d23431522ad53773915522f968efbcf",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-ur-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-ur-audio-p1.mp4.thumb.jpg"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.905Z"
+    }
+   ],
+   "topic": 4,
+   "locale": "en",
+   "kind": "audio",
+   "part": 1,
+   "title": "Becoming a Teacher: Identity and Reflection",
+   "alt": "Audio brief, about two minutes, with the three memory hooks for context and beliefs, reflection over diary-keeping, and the who-am-I-becoming question.",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t4-en-audio-p1"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:18.967Z"
+    }
+   ],
+   "topic": 4,
+   "locale": "en",
+   "kind": "mindmap",
+   "title": "Topic 1.4 - Becoming a teacher: developing your identity",
+   "alt": "Mind map of context and beliefs, reflection, and the who-am-I-becoming question.",
+   "prompt_ref": "specs/studio/prompts/mindmap.md v1",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t4-en-mindmap"
+  },
+  {
+   "state": "planned",
+   "gates": {},
+   "history": [
+    {
+     "state": "planned",
+     "at": "2026-11-28T00:54:19.024Z"
+    }
+   ],
+   "topic": 4,
+   "locale": "ur",
+   "kind": "audio",
+   "part": 1,
+   "title": "استاد بننا: شناخت اور غور و فکر",
+   "alt": "دو منٹ کا مختصر بریف، سیاق اور عقائد، reflection بمقابلہ ڈائری اور وہ سوال \"میں کون بن رہا ہوں\" کے تین memory hooks کے ساتھ۔",
+   "prompt_ref": "specs/studio/prompts/audio.md v2",
+   "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
+   "key": "t4-ur-audio-p1"
+  }
+ ]
+}
