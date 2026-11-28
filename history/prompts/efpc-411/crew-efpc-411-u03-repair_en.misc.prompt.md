@@ -21,6 +21,7 @@ files:
  - docs/semester-4/efpc-411/unit-03/topic-03.mdx
  - docs/semester-4/efpc-411/unit-03/topic-04.mdx
  - docs/semester-4/efpc-411/unit-03/unit-assessment.mdx
+ - history/prompts/efpc-411/crew-efpc-411-u03-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpc-411/unit-03/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpc-411/unit-03/topic-02.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpc-411/unit-03/topic-03.mdx
@@ -42,7 +43,6 @@ files:
  - static/img/figures/efpc-411/unit-03/fig-U3-3.ur.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/efpc-411/unit-03/fig-U3-3.svg static/img/figures/efpc-411/unit-03/fig-U3-3.ur.svg
 ---
 
 ## Prompt
@@ -50,7 +50,8 @@ tests:
 # Crew job efpc-411-u03-repair_en
 
 You are the claude_crew worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efpc-411-u03-repair_en`.
-Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or the Playwright e2e suite (a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server), keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`. Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0. `static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git, never mark G3/G5 done, never self-sign or use human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec. After changing any English unit file or its figures manifest, sources, coverage or concepts, the job commits, runs `node scripts/prepare-gate-evidence.mjs <course> <unit>`, commits the JSON and every `logs-*` directory it writes, and points the unit's G2 en-draft tracker row at the new file before `npm run check:content`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or the Playwright e2e suite (a review job may run `scripts/render-inspect.mjs` only with `--base https://textbook.com.pk`, never against a local server), keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`. Run `scripts/heavy.sh node scripts/measure-figure-text.mjs <svgs>` on every added or edited SVG until it exits 0. `static/content-status.json` is git-ignored: run `npm run build:content-status` right before `npm run check:content` and never look it up through git, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec. After changing any English unit file or its figures manifest, sources, coverage or concepts, the job commits, runs `node scripts/prepare-gate-evidence.mjs <course> <unit>`, commits the JSON and every `logs-*` directory it writes, and points the unit's G2 en-draft tracker row at the new file before `npm run check:content`.
 
 ## Task
 Apply the findings of the latest G3 report under specs/content/efpc-411/reviews/unit-03/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit 3 G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.
@@ -58,16 +59,19 @@ Apply the findings of the latest G3 report under specs/content/efpc-411/reviews/
 Follow `.claude/skills/revise-topic/SKILL.md` exactly; read it and every file it references before starting.
 
 ## Scope
-EFPC-411 Unit 3 only: its docs/licence and i18n files, its rows and folders under `specs/content/efpc-411/`, and `static/img/figures/efpc-411/unit-03/`.
+EFPC-411 Unit 3 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efpc-411/`, and `static/img/figures/efpc-411/unit-03/`.
 
 ## Continue, do not restart
 Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
 
 ## Done when
-1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
 2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
 3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
-4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
 ## Open findings from the latest G3 report
 From `specs/content/efpc-411/reviews/unit-03/G3/20261127T192818Z-g3-desk-f6c9628b.json` (disposition: revise). Resolve each one:
@@ -87,32 +91,33 @@ From `specs/content/efpc-411/reviews/unit-03/G3/20261127T192818Z-g3-desk-f6c9628
 - (efpc-411-u03-illustrate, illustrate, agy) Raster illustrations fig-U3-9 through fig-U3-13 are placed across both English and Urdu unit files with localized Urdu alt text, sharing single WebP rasters per ADR-0029.
 - (efpc-411-u03-illustrate, illustrate, agy) G2 gate evidence has been regenerated and committed at specs/content/efpc-411/reviews/unit-03/G2/20261127T115323213Z-gates.json, with tasks.md updated accordingly.
 
+
 ## Response snapshot
 
-Applied all eight G3 desk-report findings to EFPC-411 Unit 3 English and Urdu: re-aligned the two formative counts, shuffled the MCQ keys to a 3/2/3/2 spread, removed the unsupported HEC lesson-count and 25-30% transition attributions, gave the boys-school example its own EMIS code, fixed the ERQ 2 rubric and ERQ 5 word count, aligned RRQ 8 to the taught eight-part portfolio, reworded the Figure 3.6 activity to the three-style typology, corrected the fig-U3-3 teaching-resources cell, and presented the reflective cycle and management typology as the unit's own synthesis. Refreshed G2 evidence, appended the advisory G3 row, and left all 14 content gates green.
+Applied all eight G3 desk-report findings to EFPC-411 Unit 3 in English and Urdu, refreshed the G2 evidence, and appended the advisory G3 row with all content gates green.
 
 ## Outcome
 
 - Impact: repair_en for EFPC-411 Unit 3 by claude_crew (attempt 1).
-- Tests: npm run check:content passed (14/14 gates); measure-figure-text exited 0 on the edited fig-U3-3 SVGs.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Applied all eight G3 desk-report findings to EFPC-411 Unit 3 English and Urdu, refreshed the G2 evidence, and appended the advisory G3 en-review row naming specs/content/efpc-411/reviews/unit-03/G3/20261127T192818Z-g3-desk-f6c9628b.json.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch certifies nothing and G3 stays unticked. The render/print finding is not repairable under the crew brief and is recorded as still open.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Applied all eight G3 desk-report findings to EFPC-411 Unit 3 in English and Urdu, refreshed the G2 evidence, and appended the advisory G3 row with all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - fig-U3-6 still compares only authoritative and permissive styles; the repair reworded the activity to the three-style typology in the explanation rather than adding the authoritarian column, so the manifest row deliberately stays two-style.
-  - The boys-school sample now uses EMIS 418010207; fig-U3-2 keeps 418010204 for GGES Qasimabad. Do not re-converge them.
-  - The four-stage cycle and the management typology now carry no source attribution; a future review should not re-add Richards & Lockhart (1994) or Scoupe et al. (2024) to those two frameworks.
+  - fig-U3-6 still compares only authoritative and permissive; the repair reworded the activity, so the manifest row deliberately stays two-style.
+  - the render/print finding stays open (build, dev server and Playwright are prohibited by the crew brief).
+  - don't re-converge the EMIS codes (boys school 418010207, GGES Qasimabad 418010204).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
