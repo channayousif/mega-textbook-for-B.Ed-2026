@@ -2956,7 +2956,7 @@
    "id": "efmp-407",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -2984,6 +2984,12 @@
      "by": "Claude QG3",
      "date": "2026-11-27",
      "notes": "list_videos: Xgx6-JJ5ReY private on the channel, processed, title and description intact; teaser playlist PLCJn7gAoYIJs and custom thumbnail set (update_video success)"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-27",
+     "note": "crew publish via web"
     }
    },
    "clips": [
@@ -3176,13 +3182,22 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-26T20:52:19.692Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-28T01:48:41.813Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-28T01:49:15.458Z"
     }
    ],
    "script_sha256": "c4590a70ac6e9608e03150952efaeba6550f88f5ad53b2f9cfb6c9241acad874",
    "encoded_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.mp4",
    "thumbnail_file": "/home/a2ahs/studio-media/teasers/efmp-407/ur/teaser.thumb.jpg",
    "youtube_id": "Xgx6-JJ5ReY",
-   "uploaded_at": "2026-11-26T20:50:46Z"
+   "uploaded_at": "2026-11-26T20:50:46Z",
+   "published_at": "2026-11-28T01:49:15Z"
   },
   {
    "key": "efpg-401-ur",
