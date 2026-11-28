@@ -65,9 +65,12 @@ export function notebookJobs(root = ROOT) {
             youtube_id: i.youtube_id ?? null, blocked: i.blocked ?? null });
         }
       } else if ((m = f.match(/^unit-(\d{2})\.json$/))) {
+        // Manifest rows mirror the media ledger for every kind that ledger records (audio and video,
+        // and since #908 mind maps and study guides); count them there, not twice.
+        const lp = join(base, course, `media-unit-${m[1]}.json`);
+        const mirrored = new Set(existsSync(lp) ? readJson(lp).items.map((i) => i.kind) : []);
         for (const a of readJson(p).artifacts ?? []) {
-          // Audio and video manifest rows mirror the media ledger; count them there, not twice.
-          if (a.kind === 'audio' || a.kind === 'video') continue;
+          if (mirrored.has(a.kind)) continue;
           out.push({ source: `${course}/${f}`, key: `${course}-u${m[1]}-t${a.topic}-${a.locale}-${a.kind}`,
             kind: MANIFEST_KIND[a.kind], scope: { course: course.toUpperCase(), unit: Number(m[1]), topic: a.topic, locale: a.locale },
             state: mapState(MANIFEST_MAP, a.status, `${course}/${f} ${a.kind}`), legacy_state: a.status });

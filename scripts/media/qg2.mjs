@@ -1,18 +1,22 @@
 #!/usr/bin/env node
-// QG2 speech check for one take (Feature 030, T027): local whisper turbo transcript, a word-match
+// QG2 speech check for one take (Feature 030, T027): a whisper turbo transcript, a word-match
 // score against the approved line, a 3-frame strip for the reviewer, and a suggested verdict.
 // The verdict is a suggestion; the reviewer looks at the strip and records the gate.
+// The transcript comes from Workers AI whisper-large-v3-turbo when this host has the token (Feature
+// 037, D-2026-0103: same verdict as local whisper on 24 of 24 calibration clips, no heavy job here),
+// and from local whisper otherwise or when Workers AI refuses (daily cap, unreachable).
 //
-//   node scripts/media/qg2.mjs <clip.mp4> --line "<approved line>" [--out <dir>] [--lang ur]
+//   node scripts/media/qg2.mjs <clip.mp4> --line "<approved line>" [--out <dir>] [--lang ur] [--engine cfai|local]
 //
 // Whisper writes English words heard in Urdu speech in Urdu script ("ڈسکاؤنٹ" for "discount"), so
 // words are compared by a consonant skeleton that is the same in both scripts.
 // Do not import this file from any content gate (FR-018).
 import { spawnSync, execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, join, resolve, dirname } from 'node:path';
 import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
+import { credentials, transcribeAudio, CfaiError } from './producers/cfai.mjs';
 
 const bin = (t) => (process.env.FFMPEG_DIR ? join(process.env.FFMPEG_DIR, t) : t);
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -105,11 +109,36 @@ export function frameStrip(file, out) {
   return out;
 }
 
-export function qg2(file, line, { outDir = join(dirname(file), 'qg2'), lang = 'ur' } = {}) {
-  const heard = transcribe(file, outDir, lang);
+/** Workers AI transcript: a short mono mp3 is extracted here (light work) and sent; the .txt is kept beside the strip. */
+export async function transcribeCfai(file, outDir, lang = 'ur', opts = {}) {
+  mkdirSync(outDir, { recursive: true });
+  const stem = basename(file).replace(/\.[^.]+$/, '');
+  const mp3 = join(outDir, `${stem}.qg2.mp3`);
+  execFileSync(bin('ffmpeg'), ['-v', 'error', '-y', '-i', file, '-vn', '-ac', '1', '-ar', '16000', '-b:a', '48k', mp3]);
+  const seconds = Number(execFileSync(bin('ffprobe'), ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3], { encoding: 'utf8' })) || 10;
+  const text = await transcribeAudio(readFileSync(mp3), { seconds, language: lang, ...opts });
+  writeFileSync(join(outDir, `${stem}.txt`), `${text}\n`);
+  return text;
+}
+
+/** The engine to use: `cfai` when asked or when the token exists, else `local`. */
+export const pickEngine = (engine, creds = credentials()) => engine ?? (creds ? 'cfai' : 'local');
+
+export async function qg2(file, line, { outDir = join(dirname(file), 'qg2'), lang = 'ur', engine, cfai = {}, local = transcribe, viaCfai = transcribeCfai, strip: makeStrip = frameStrip } = {}) {
+  let used = pickEngine(engine, cfai.creds === undefined ? credentials() : cfai.creds);
+  let heard;
+  let fallback = null;
+  if (used === 'cfai') {
+    // Any Workers AI failure falls back to local whisper (spec 037 FR-003); the reason is reported.
+    try { heard = await viaCfai(file, outDir, lang, cfai); } catch (e) {
+      fallback = e instanceof CfaiError ? `${e.status}: ${e.message}` : `error: ${e.message}`;
+      used = 'local';
+    }
+  }
+  if (used === 'local') heard = local(file, outDir, lang);
   const { score, missing } = matchScore(line, heard);
-  const strip = frameStrip(file, join(outDir, `${basename(file).replace(/\.[^.]+$/, '')}.strip.jpg`));
-  return { file, line, heard, score, missing, strip, suggested: suggestVerdict(score) };
+  const strip = makeStrip(file, join(outDir, `${basename(file).replace(/\.[^.]+$/, '')}.strip.jpg`));
+  return { file, line, heard, score, missing, strip, suggested: suggestVerdict(score), engine: used, ...(fallback ? { fallback } : {}) };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -118,6 +147,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const line = opt('--line');
   const outDir = opt('--out');
   const lang = opt('--lang') ?? 'ur';
-  if (!a[0] || !line) { console.error('usage: qg2.mjs <clip.mp4> --line "<approved line>" [--out dir] [--lang ur]'); process.exit(2); }
-  console.log(JSON.stringify(qg2(resolve(a[0]), line, { ...(outDir ? { outDir: resolve(outDir) } : {}), lang }), null, 1));
+  const engine = opt('--engine');
+  if (!a[0] || !line || (engine && !['cfai', 'local'].includes(engine))) { console.error('usage: qg2.mjs <clip.mp4> --line "<approved line>" [--out dir] [--lang ur] [--engine cfai|local]'); process.exit(2); }
+  console.log(JSON.stringify(await qg2(resolve(a[0]), line, { ...(outDir ? { outDir: resolve(outDir) } : {}), lang, engine }), null, 1));
 }

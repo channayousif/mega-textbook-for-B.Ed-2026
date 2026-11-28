@@ -71,12 +71,12 @@ export async function makeClips(id, { shots, impls, log = console.log, root = RO
       const q1 = spawnSync(join(root, 'scripts/heavy.sh'), ['node', join(root, 'scripts/notebook-studio/media-qa.mjs'), r.file, '--kind', 'clip'], { encoding: 'utf8' });
       out.qg1 = q1.status === 0 ? 'pass' : `fail: ${(q1.stdout || q1.stderr).trim().split('\n').slice(-3).join(' | ')}`;
       try {
-        const q2 = qg2(r.file, script.locales.ur.narration[n - 1]);
-        Object.assign(out, { qg2_score: q2.score, qg2_suggested: q2.suggested, heard: q2.heard, missing: q2.missing, strip: q2.strip });
+        const q2 = await qg2(r.file, script.locales.ur.narration[n - 1]);
+        Object.assign(out, { qg2_score: q2.score, qg2_suggested: q2.suggested, heard: q2.heard, missing: q2.missing, strip: q2.strip, qg2_engine: q2.engine });
       } catch (e) { out.qg2 = `not run: ${e.message}`; }
       update(ledgerPath(root), (Lw) => {
         const c = Lw.items.find((i) => i.key === key).clips.find((x) => x.shot === n && x.take === rec.take);
-        c.precheck = { qg1: out.qg1, qg2_score: out.qg2_score, qg2_suggested: out.qg2_suggested, heard: out.heard, missing: out.missing, strip: out.strip?.replace(homedir(), '~') };
+        c.precheck = { qg1: out.qg1, qg2_score: out.qg2_score, qg2_suggested: out.qg2_suggested, qg2_engine: out.qg2_engine, heard: out.heard, missing: out.missing, strip: out.strip?.replace(homedir(), '~') };
       });
     }
     log(`shot ${n} take ${rec.take}: ${r.source}, ${out.qg1 ?? ''} QG2 ${out.qg2_score ?? '-'} (${out.qg2_suggested ?? '-'})`);
