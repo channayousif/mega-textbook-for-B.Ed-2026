@@ -25,7 +25,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ▣ | | English draft authored; gate evidence preparation pending commit |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-01/G2/20261126T173740774Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gent-401/reviews/unit-01/G2/20261128T033548875Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3. Reviewer should confirm the butler-iea edition year and that the unverifiable mellor-2009 row supports only the premise in its title (sources/unit-01.md) |
 | Unit 1 | G3 en-review | ▢ | agent:claude-crew | advisory: escalate; F1 blocking - MCQ key A1/B7/C2/D0 (an all-B answer scores 7/10) and the keyed option is the longest in 7 of 10 items; F2 blocking - topic-01.mdx:91 says seven characteristics appear in both sources, but confidence, problem-solving, openness to learning, persistence and curiosity are not in both bound lists; F3 uncertain - render-review unavailable (deployed 366019f8a vs reviewed HEAD 6a810e62c), accessibility unverified; report: specs/content/gent-401/reviews/unit-01/G3/crew-gent-401-u01-review_en-r1.json |
 | Unit 1 | G4 ur-translation | ▢ | | Complete five-page draft Urdu mirror and four localized SVG pairs (with derived dark variants) prepared from English bd60c874b; see reviews/unit-01/G4/translation-handoff.md; key_terms bound to terminology.csv; heading parity exact; zero em dash; translation_status stays draft pending independent G5 |
@@ -73,6 +73,7 @@ English-only authoring from the approved content-spec subsections for Units 1, 2
 | Unit 7 | G6 assets | ▣ | | Four English schematic SVGs (fig-U7-1 to fig-U7-4) and four Urdu schematic SVGs placed with derived dark variants; measure-figure-text verified clean; banner fig-U7-5 placed |
 | Unit 7 | G7 publish | ▢ | | No publication or deployment performed by this job |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-01/G3/20261127T192818Z-g3-desk-688055d1.json |
+| Unit 1 | G3 en-review | ▢ | agent:claude_crew | advisory: revise; repairs applied; report: specs/content/gent-401/reviews/unit-01/G3/20261127T192818Z-g3-desk-688055d1.json; MCQ keys rebalanced A3/B2/C2/D3 with no key-longest cue (EN+UR); topic-01.mdx:91 reworded from "appear in both sources" to "drawn from the two sources"; butler-iea 2020 edition year still needs IEA confirmation; GENT-401 catalog entry still awaits an owner ruling; render and print inspection remains unverified; G3 remains open and unsigned |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-04/G3/20261127T192818Z-g3-desk-73f18e1c.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-05/G3/20261127T192818Z-g3-desk-f43b7b2c.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gent-401/reviews/unit-06/G3/20261127T192818Z-g3-desk-3318f22a.json |
