@@ -3204,7 +3204,7 @@
    "id": "efpg-401",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -3233,6 +3233,12 @@
      "by": "Claude QG3",
      "date": "2026-11-27",
      "notes": "list_videos: private on the channel, title and description intact, thumbnail served; playlist and thumbnail set. list_videos reports no processing status and a private Short cannot be opened without the owner sign-in, so playback is left to the owner spot-check."
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-27",
+     "note": "crew publish via web"
     }
    },
    "clips": [
@@ -3432,13 +3438,22 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-27T00:22:18.040Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-28T10:03:32.246Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-28T10:03:49.196Z"
     }
    ],
    "script_sha256": "174b861e2957d023e1851daaef9034db85d4b8f75f3f4592a5adcd3b92017931",
    "encoded_file": "/home/a2ahs/studio-media/teasers/efpg-401/ur/teaser.mp4",
    "thumbnail_file": "/home/a2ahs/studio-media/teasers/efpg-401/ur/teaser.thumb.jpg",
    "youtube_id": "-mJSyWxcAyA",
-   "uploaded_at": "2026-11-27T00:22:17Z"
+   "uploaded_at": "2026-11-27T00:22:17Z",
+   "published_at": "2026-11-28T10:03:49Z"
   },
   {
    "key": "gicp-400-ur",
