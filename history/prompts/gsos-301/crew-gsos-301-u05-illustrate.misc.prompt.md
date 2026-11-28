@@ -80,24 +80,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed all GSOS-301 Unit 5 raster illustrations and banner in the English and Urdu unit files, updated manifests and task tracker, and refreshed G2 gate evidence with all content gates passing.
+Generated, inspected, and placed all GSOS-301 Unit 5 raster illustrations and banner in English and Urdu files, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
 - Impact: illustrate for GSOS-301 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all GSOS-301 Unit 5 raster illustrations (fig-U5-6, fig-U5-7) and unit banner (fig-U5-5) in English and Urdu files, updated manifests and task tracker, and refreshed G2 gate evidence.
-- Decisions the team must respect: G3/G5 stay advisory until qualified sign-off; this PR does not certify anything.
+- Shipped / changed: Generated, inspected, and placed all GSOS-301 Unit 5 raster illustrations and banner in English and Urdu files, refreshed G2 gate evidence, and passed all content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Urdu translation job still needs .ur.svg variants of schematic figures fig-U5-1 to fig-U5-4.
-  - Render inspection (360px/table-scroll/A4-print/figure-clipping) remains unperformed as brief prohibits build/server/browser.
+  - The Urdu translation job still needs .ur.svg variants of schematic figures fig-U5-1 to fig-U5-4.
+  - Render inspection (360px/table-scroll/A4-print/figure-clipping) remains unperformed because the brief prohibits build/server/browser.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
