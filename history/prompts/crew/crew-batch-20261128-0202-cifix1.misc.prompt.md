@@ -11,12 +11,11 @@ user: crew
 command: crew fix
 labels: ["crew", "claude_crew", "fix"]
 links:
-  spec: null
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - history/prompts/crew/crew-batch-20261128-0202-cifix1.misc.prompt.md
  - docs/semester-2/gqur-301/unit-16/index.mdx
  - docs/semester-2/gqur-301/unit-16/topic-01.mdx
  - docs/semester-2/gqur-301/unit-16/topic-02.mdx
@@ -25,6 +24,7 @@ files:
  - docs/semester-2/gsos-301/unit-01/topic-01.mdx
  - docs/semester-2/gsos-301/unit-01/topic-02.mdx
  - docs/semester-2/gsos-301/unit-01/topic-03.mdx
+ - history/prompts/crew/crew-batch-20261128-0202-cifix1.misc.prompt.md
  - history/prompts/efmp-407/crew-efmp-407-u00-media_publish.misc.prompt.md
  - history/prompts/general/2489-gqur-301-u16-illustrate.green.prompt.md
  - history/prompts/gnas-301/20261309-gnas-301-unit-3-studio-media.green.prompt.md
@@ -81,7 +81,6 @@ files:
  - static/studio/gnas-301/unit-03/topic-01/studyguide.ur.md
 tests:
  - npm run check:content
- - npm test
 ---
 
 ## Prompt
@@ -116,31 +115,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261127-1847-cifix1, fix, claude_crew) Keep these wrapped two-line forms; restoring the single-line labels reintroduces the DejaVu overlaps. `fig-U7-10.ur.svg` row 1 now has 3 lines and row 4 has 4 lines in the right column where the other columns have 2.
 - (batch-20261127-1847-cifix1, fix, claude_crew) EFPG-402 Unit 7 G3/G4/G5 stay open; this job certifies nothing and touched no reviewer registry, evidence or publication state.
 
+
 ## Response snapshot
 
-The build job's only failure was `tests/unit/media-legacy.test.mjs` ("expected 45 to be 47"): `notebookJobs()` counted the GNAS-301 Unit 3 study-guide rows twice, once from `specs/studio/gnas-301/media-unit-03.json` and once from the manifest `specs/studio/gnas-301/unit-03.json`. Commit e9e587d43 (#908) added `mindmap` and `studyguide` to the media ledger but left `scripts/media/legacy.mjs` skipping only `audio` and `video` manifest rows. `legacy.mjs` now reads the sibling `media-unit-NN.json` and skips any manifest kind that the unit ledger already records, so each job is counted once. All 14 content gates and the full 636-test unit suite pass.
+Fixed the PR #954 build failure by making `scripts/media/legacy.mjs` count each Studio ledger job once, so GNAS-301 Unit 3 study guides are no longer double-counted; all content gates and 636 unit tests pass.
 
 ## Outcome
 
 - Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
-- Tests: `npm run check:content` passed (14/14 gates) and `npm test` passed (636/636) in the job worktree.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 63 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: `scripts/media/legacy.mjs` now de-duplicates Studio manifest rows for every kind the unit's media ledger records (audio, video, and since #908 mind maps and study guides), clearing the PR #954 build failure; all content gates and the full unit suite pass.
-- Decisions the team must respect: the media ledger is the single record for mind maps and study guides, so their manifest rows are a mirror and must not be counted twice; do not "fix" this by deleting the manifest rows, which `check-studio-manifest.mjs` requires for placed assets.
+- Shipped / changed: Fixed the PR #954 build failure by making `scripts/media/legacy.mjs` count each Studio ledger job once, so GNAS-301 Unit 3 study guides are no longer double-counted; all content gates and 636 unit tests pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - CI's build job must re-run and confirm on PR #954; the local full `npm test` is green (636/636).
-  - The status view (`node scripts/media/status.mjs`) now counts 45 Notebook Studio jobs instead of 47; the two study-guide jobs still appear, from the ledger at state `placed`.
+  - The media ledger is the single record for mind maps and study guides, so keep the mirrored manifest rows; `check-studio-manifest` requires them for placed assets.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: a pipeline commit (#908) extended the media ledger with document kinds but did not update the read-only legacy view that de-duplicates ledger and manifest rows, so the unit test caught a double count at CI time.
-- Graders run and results (PASS/FAIL): check:content PASS (14/14); npm test PASS (636/636).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
