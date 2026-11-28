@@ -39,11 +39,11 @@ files:
  - specs/content/guhq-301/reviews/unit-02/G2/logs-20261128T124159705Z/check-no-em-dash.txt
  - specs/content/guhq-301/reviews/unit-02/G2/logs-20261128T124159705Z/validate-content.txt
  - specs/content/guhq-301/tasks.md
- - static/img/figures/guhq-301/unit-02/fig-U2-9.webp
  - static/img/figures/guhq-301/unit-02/fig-U2-10.webp
  - static/img/figures/guhq-301/unit-02/fig-U2-11.webp
  - static/img/figures/guhq-301/unit-02/fig-U2-12.webp
  - static/img/figures/guhq-301/unit-02/fig-U2-13.webp
+ - static/img/figures/guhq-301/unit-02/fig-U2-9.webp
 tests:
  - npm run check:content
 ---
@@ -83,9 +83,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (guhq-301-u02-translate, translate, agy) Translation handoff and parity checks are stored at specs/content/guhq-301/reviews/unit-02/G4/translation-handoff.md so they do not alter the English G2/G3 input manifest.
 - (guhq-301-u02-translate, translate, agy) Independent G5 review must verify verse meanings, the religious-content check (content-spec drafting note 7), and the twelve authored Urdu concept labels.
 
+
 ## Response snapshot
 
-Generated, inspected, and placed all GUHQ-301 Unit 2 raster illustrations (fig-U2-10..13) and unit banner (fig-U2-9) in English and Urdu files, refreshed G2 gate evidence, and passed all content gates.
+Generated the unit banner, inspected all five raster illustrations, placed them with bilingual alt text across English and Urdu MDX files, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
@@ -97,12 +98,12 @@ Generated, inspected, and placed all GUHQ-301 Unit 2 raster illustrations (fig-U
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all GUHQ-301 Unit 2 raster illustrations (fig-U2-10..13) and unit banner (fig-U2-9) in English and Urdu files, refreshed G2 gate evidence, and passed all content gates.
+- Shipped / changed: Generated the unit banner, inspected all five raster illustrations, placed them with bilingual alt text across English and Urdu MDX files, refreshed G2 gate evidence, and passed all content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All four topic illustrations and unit banner are placed; Unit 2 G3 review and G5 review remain open for independent evaluation.
-  - Independent G5 review must verify verse meanings, the religious-content check (content-spec drafting note 7), and the twelve authored Urdu concept labels.
+  - All four topic illustrations (fig-U2-10..13) and the unit banner (fig-U2-9) are placed; Unit 2 G3 and G5 reviews remain open for independent evaluation.
+  - Independent G5 review must verify verse meanings, the religious-content check in content-spec drafting note 7, and the twelve authored Urdu concept labels.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
