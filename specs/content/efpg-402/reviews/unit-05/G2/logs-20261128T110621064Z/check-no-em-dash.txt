@@ -1,0 +1,3 @@
+$ npm run check:no-em-dash   (repo HEAD de96b70b9, 2026-11-28T11:06:19.192Z)
+✓ no em dash in authored content (scanned: docs, licence, guides, i18n, specs/content, glossary.json)
+exit_code=0
