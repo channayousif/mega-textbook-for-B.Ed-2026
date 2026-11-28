@@ -30,11 +30,14 @@ tests:
  - scripts/heavy.sh npx vitest run (6 focused files, 53 pass, 11 new)
  - migration 0060 dry run on live supabase-db inside begin/rollback (valid; anon cannot execute RPCs; authenticated cannot insert; non-admin create refused; nothing left behind)
  - check-studio-manifest, check-docs-sync, check:no-em-dash pass
+ - live: 0060 applied (psql --single-transaction on supabase-db, NOTIFY pgrst); tests/rls/content-packs.test.mjs passes (1/1) after CI went idle
 ---
 
 ## Prompt
 
 approve plan, stage 1, run adr
+
+(follow-up, asked whether to apply 0060 live) ok
 
 ## Response snapshot
 
@@ -47,7 +50,7 @@ subtitle and text files, no video because block storage is at the free cap; path
 related video (required for a placed short), chapters (start at 00:00), captions and audio tracks;
 media kinds `video.longform`/`video.short` (scripted path) and `doc.infographic`; `playlistFor()` in
 brand.mjs. The Studio checker skips text checks on binary pack assets. None of these files is a
-bound review input, so no G2 evidence goes stale. The migration is not applied live yet.
+bound review input, so no G2 evidence goes stale. Applied live after the owner's "ok"; the RLS test passes against it.
 
 ## Outcome
 
@@ -61,7 +64,7 @@ bound review input, so no G2 evidence goes stale. The migration is not applied l
 
 - Shipped / changed: migration 0060 (unapplied), pack kinds in schemas and states, playlist map.
 - Decisions the team must respect: pack video never goes into Supabase storage; all pack writes go through the RPCs.
-- Pending / next owner: owner approves applying 0060 to live Supabase (psql --single-transaction on supabase-db, then NOTIFY pgrst). Rollback: `drop table public.content_pack_events, public.content_packs cascade; drop function public.create_content_pack(text,integer,integer,text,text), public.set_content_pack_stage(uuid,text,text,text), public.set_content_pack_link(uuid,text,jsonb), public.set_content_pack_watermark(uuid,text), public.content_pack_stage_keys(); drop policy content_pack_uploads_select on storage.objects; drop policy content_pack_uploads_insert on storage.objects; drop policy content_pack_uploads_delete on storage.objects; delete from storage.buckets where id = 'content-pack-uploads';`
+- Pending / next owner: none for Stage 1. 0060 applied live on 2026-11-28 after the owner's "ok" (psql --single-transaction on supabase-db, then NOTIFY pgrst); RLS test passes live. Rollback: `drop table public.content_pack_events, public.content_packs cascade; drop function public.create_content_pack(text,integer,integer,text,text), public.set_content_pack_stage(uuid,text,text,text), public.set_content_pack_link(uuid,text,jsonb), public.set_content_pack_watermark(uuid,text), public.content_pack_stage_keys(); drop policy content_pack_uploads_select on storage.objects; drop policy content_pack_uploads_insert on storage.objects; drop policy content_pack_uploads_delete on storage.objects; delete from storage.buckets where id = 'content-pack-uploads';`
 - Paperclip issues affected: none.
 
 ## Evaluation notes (flywheel)

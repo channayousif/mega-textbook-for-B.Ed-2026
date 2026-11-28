@@ -6,8 +6,8 @@
 - [x] T003 Owner approves PLAN-v2 (2026-11-28); ADR-0040 adopted
 
 ## Stage 1: Data model
-- [x] T004 Migration `0060_content_packs.sql`: tables, private upload bucket (50 MB, no video), admin RPCs; dry-run on live in a rolled-back transaction. Applying it live waits for the owner's go-ahead
-- [ ] T005 RLS tests for both tables and the bucket (`tests/rls/content-packs.test.mjs` written; runs once 0060 is applied)
+- [x] T004 Migration `0060_content_packs.sql`: tables, private upload bucket (50 MB, no video), admin RPCs; applied to live Supabase 2026-11-28 after the owner's "ok"
+- [x] T005 RLS tests for both tables and the bucket (`tests/rls/content-packs.test.mjs` passes live)
 - [x] T006 Manifest kinds `longform`, `short`, `infographic`, `deck_pdf` and new fields; schema tests
 - [x] T007 Media kinds `video.longform`, `video.short`, `doc.infographic` in `states.mjs`; playlist map in `brand.mjs`
 
