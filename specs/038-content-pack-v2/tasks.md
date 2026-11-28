@@ -30,7 +30,7 @@
 
 ## Stage 5: Remotion templates
 - [ ] T019 Confirm Remotion licence terms
-- [ ] T020 `LongformFrame`, `ShortVertical`, `Opener`, `Closer`, `ChapterCard`, `InfographicFooter` with a `locale` prop
+- [ ] T020 `LongformFrame`, `ShortVertical`, `Opener`, `Closer`, `ChapterCard`, `InfographicFooter` with a `locale` prop. Owner ruling 2026-11-28: the small "Gemini Notebook" corner mark on NotebookLM slides stays untouched; the frame is laid out around it, never over or cropping it
 - [ ] T021 Kaggle render job for pack compositions
 
 ## Stage 6: Admin page
@@ -38,7 +38,7 @@
 - [ ] T023 E2E test behind admin auth
 
 ## Stage 7: Prompts
-- [ ] T024 `specs/studio/prompts/pack/*` and the v2 audience section of `_common.md`
+- [x] T024 `specs/studio/prompts/pack/*` (angle, script, NotebookLM steering, Flow shots, metadata, translation) and the v2 audience section of `_common.md`
 
 ## Stage 8: Crew
 - [ ] T025 `pack_*` stages in `scripts/crew/media.mjs`, owner gates kept, pacing report, Shorts schedule

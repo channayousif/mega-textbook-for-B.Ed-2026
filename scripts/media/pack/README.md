@@ -29,7 +29,8 @@ node scripts/media/pack/reframe.mjs $P/longform.trimmed.mp4 --start 16.8 --end 4
 node scripts/media/pack/metadata.mjs draft efmp-301 4 1 --words $P/longform.trimmed.en.words.json
 ```
 
-Rules the scripts keep: trimming only (no blur, crop-out or inpainting of a watermark; SynthID and
+Rules the scripts keep: the small "Gemini Notebook" mark in the corner of NotebookLM slides stays
+untouched (owner ruling 2026-11-28; our frame is laid out around it); trimming only (no blur, crop-out or inpainting of a watermark; SynthID and
 C2PA untouched); every upload private first with the synthetic-media flag; the disclosure line is
 fixed in `metadata.mjs` (`DISCLOSURE`); renders of full videos go through `scripts/heavy.sh`.
 

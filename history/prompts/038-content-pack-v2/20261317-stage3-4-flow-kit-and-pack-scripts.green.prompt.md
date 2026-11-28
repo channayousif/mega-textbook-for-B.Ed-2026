@@ -22,6 +22,8 @@ files:
  - scripts/media/producers/cfai.mjs
  - tests/unit/media-pack-scripts.test.mjs
  - specs/038-content-pack-v2/{tasks.md,PLAN-v2.md}
+ - specs/studio/prompts/pack/{angle,script,notebooklm-steering,flow-shot,metadata,translate}.md
+ - specs/studio/prompts/_common.md
 tests:
  - scripts/heavy.sh npx vitest run (4 files, 52 pass; 17 new)
  - live on EFMP-301 U4 T1/T2 NotebookLM overviews: debrand detect found the outro logo card by its cut on all 3 (end - 3.00 s); confirmed tail render ends on content; captions 139 cues / 1,425 words in 43 s on Workers AI (about 370 neurons); highlights 6 candidates; reframe 1080x1920 stacked base clip; intake and metadata draft
@@ -31,6 +33,8 @@ tests:
 ## Prompt
 
 ok move on
+
+(answer to "How should the long-form videos handle the corner 'Gemini Notebook' mark?") Keep it, cover with frame (Recommended)
 
 ## Response snapshot
 
@@ -57,7 +61,8 @@ Node, not the Python the brief named, to reuse the repo's ffmpeg, Workers AI and
 
 - Shipped / changed: Flow kit; `scripts/media/pack/*`; `transcribeTimed` in cfai.mjs.
 - Decisions the team must respect: debrand never cuts the NotebookLM title-slide span (it carries narration); render refuses unconfirmed cuts; uploads are private with the synthetic-media flag; the disclosure line is fixed in `metadata.mjs`.
-- Pending / next owner: every NotebookLM slide carries a small "Gemini Notebook" mark in the bottom-right corner. ADR-0040 allows removing visible marks only by an official setting or by regenerating, and NotebookLM has no setting; owner to rule whether it stays, or whether flagship topics are rebuilt from our own visuals. Character test images (T009) after the Flow caps reset.
+- Pending / next owner: character test images (T009) after the Flow caps reset. Resolved: every NotebookLM slide carries a small "Gemini Notebook" corner mark; the owner ruled it stays untouched and our frame is laid out around it (no crop, no cover-up).
+- Also shipped: Stage 7 pack prompts (`specs/studio/prompts/pack/`) and the v2 audience section of `_common.md`.
 - Paperclip issues affected: none.
 
 ## Evaluation notes (flywheel)
