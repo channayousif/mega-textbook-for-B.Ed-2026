@@ -37,10 +37,10 @@ files:
  - specs/content/guhq-301/reviews/unit-04/G2/logs-20261128T135213972Z/check-no-em-dash.txt
  - specs/content/guhq-301/reviews/unit-04/G2/logs-20261128T135213972Z/validate-content.txt
  - specs/content/guhq-301/tasks.md
+ - static/img/figures/guhq-301/unit-04/fig-U4-10.webp
  - static/img/figures/guhq-301/unit-04/fig-U4-7.webp
  - static/img/figures/guhq-301/unit-04/fig-U4-8.webp
  - static/img/figures/guhq-301/unit-04/fig-U4-9.webp
- - static/img/figures/guhq-301/unit-04/fig-U4-10.webp
 tests:
  - npm run check:content
 ---
@@ -83,19 +83,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed the GUHQ-301 Unit 4 banner illustration (fig-U4-7) and three topic illustrations (fig-U4-8, fig-U4-9, fig-U4-10) in the English and Urdu topic/index pages, updated figure manifests, refreshed G2 gate evidence, and verified clean content gates.
+Generated, inspected, and placed GUHQ-301 Unit 4 banner (fig-U4-7) and topic illustrations (fig-U4-8, fig-U4-9, fig-U4-10) in English and Urdu topic/index pages, updated manifests, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
 - Impact: illustrate for GUHQ-301 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed the GUHQ-301 Unit 4 banner illustration (fig-U4-7) and three topic illustrations (fig-U4-8, fig-U4-9, fig-U4-10) in English and Urdu pages, updated manifests to placed, refreshed G2 gate evidence, and passed all content gates.
+- Shipped / changed: Generated, inspected, and placed GUHQ-301 Unit 4 banner (fig-U4-7) and topic illustrations (fig-U4-8, fig-U4-9, fig-U4-10) in English and Urdu topic/index pages, updated manifests, refreshed G2 gate evidence, and passed all content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
@@ -108,3 +108,4 @@ Generated, inspected, and placed the GUHQ-301 Unit 4 banner illustration (fig-U4
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
