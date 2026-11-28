@@ -17,10 +17,7 @@ links:
   pr: null
 files:
  - history/prompts/efpg-402/crew-efpg-402-u05-review_en.misc.prompt.md
- - specs/content/efpg-402/tasks.md
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en.json
- - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/manifest.json
- - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/summary.md
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/assessment-solutions.md
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/logs/check-bloom-bands.txt
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/logs/check-concept-graph.txt
@@ -33,6 +30,7 @@ files:
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/logs/measure-figure-text.txt
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/logs/render-review.txt
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/logs/validate-content.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/manifest.json
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders/desktop-index.png
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders/desktop-topic-01.png
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders/desktop-topic-02.png
@@ -49,9 +47,10 @@ files:
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders/narrow360-unit-assessment.png
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders/render-inspect.json
  - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/renders/render-inspect.log
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en/summary.md
+ - specs/content/efpg-402/tasks.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en.json
 ---
 
 ## Prompt
@@ -82,37 +81,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Added the validated advisory G3 English review of EFPG-402 Unit 5 (report
-`specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en.json`, disposition `revise`: a
-Rowe misstatement in Topic 5.4 and an overstated sources declaration), its prepared manifest, command logs,
-production render PNGs, independent assessment solutions and summary, plus the unticked advisory tracker row,
-all committed on `crew/efpg-402-u05-review_en`.
+Added the validated advisory G3 English review of EFPG-402 Unit 5 (disposition revise: a Rowe misstatement and an overstated sources declaration) with its manifest, logs, production render PNGs, assessment solutions, summary, PHR and unticked tracker row, all committed on `crew/efpg-402-u05-review_en`.
 
 ## Outcome
 
 - Impact: review_en for EFPG-402 Unit 5 by claude_crew (attempt 1).
-- Tests: `npm run check:content` passed (14 content gates); `node scripts/review-evidence.mjs validate` reports the report structurally valid with disposition `revise`.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 33 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: the advisory G3 English review of EFPG-402 Unit 5 and its evidence, logs and tracker row on `crew/efpg-402-u05-review_en`.
-- Decisions the team must respect: G3 stays advisory and unticked; this job does not certify, sign or mark G3 done.
-- Pending / next owner: the author repairs the two blocking findings, then the parent prepares a fresh bundle and a fresh reviewer rechecks it (ADR-0019, at most two cycles).
+- Shipped / changed: Added the validated advisory G3 English review of EFPG-402 Unit 5 (disposition revise: a Rowe misstatement and an overstated sources declaration) with its manifest, logs, production render PNGs, assessment solutions, summary, PHR and unticked tracker row, all committed on `crew/efpg-402-u05-review_en`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `topic-04.mdx:68` says "speculative guessing drops"; the bound Rowe excerpt says speculative responses increase. Fix the sentence.
-  - `sources/unit-05.md:16` claims every unverifiable-mapped sub-topic is also grounded in a bound or verifiable source, but `coverage/unit-05.md` maps U5-02 and U5-07 to `yadav-2002` alone and U5-03/U5-08 to `mager-1962-objectives` / `wellington-2012-management`. Correct the declaration or recast the prose attributions.
-  - `render-review` exited 1 only because `render-inspect.mjs` Section D probes `.svg` URLs for the five WebP illustrations; the live production pages, narrow view, A4 print and all ten schematic SVGs were clean. Accessibility is recorded unverified, not a content defect.
-  - Advisories: `fig-U5-4` alt text names a criterion the figure does not show; MCQ key A 0 / B 4 / C 6 / D 0; ERQ 4 rubric names a lesson the prompt does not set; bare-URL further-reading links; "cognitive dissonance" undefined; `fig-U5-7` alt omits the metacognitive row; the 5E worked example invites tasting.
+  - The two blocking findings are the whole blocker: fix the Rowe sentence and correct/recast the sources declaration, then a fresh bundle and reviewer are needed (ADR-0019 cycle 1 of 2).
+  - `render-review` exited 1 only on the WebP-as-SVG tool limitation; the live pages, narrow view, A4 print and schematic SVG geometry were clean, so accessibility is recorded unverified rather than failed.
+  - Report at `specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en.json`; evidence, logs and PNGs in the sibling `crew-job-efpg-402-u05-review_en/` folder.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS (disposition revise)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
