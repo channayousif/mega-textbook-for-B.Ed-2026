@@ -17,13 +17,10 @@ links:
   pr: null
 files:
  - history/prompts/efpg-402/crew-efpg-402-u06-review_en.misc.prompt.md
- - specs/content/efpg-402/reviews/unit-06/G3/manifest.json
  - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en.json
- - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/assessment-solutions.md
- - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/summary.md
- - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/limitations.md
  - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/advisory-tracker-row.md
- - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/source-checks/ncp-science-2022-unit-06-search.txt
+ - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/assessment-solutions.md
+ - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/limitations.md
  - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/logs/build-content-status.txt
  - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/logs/check-bloom-bands.txt
  - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/logs/check-concept-graph.txt
@@ -36,9 +33,11 @@ files:
  - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/logs/measure-figure-text.txt
  - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/logs/render-review.txt
  - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/logs/validate-content.txt
+ - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/source-checks/ncp-science-2022-unit-06-search.txt
+ - specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en/summary.md
+ - specs/content/efpg-402/reviews/unit-06/G3/manifest.json
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/efpg-402/reviews/unit-06/G3/crew-job-efpg-402-u06-review_en.json
 ---
 
 ## Prompt
@@ -69,32 +68,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Added the validated independent G3 English review of EFPG-402 Unit 6 (disposition escalate: `sources` fails because the unit grounds its laboratory-management content in `ncp-science-2022`, which contains none of it and is not mapped to Unit 6 by the approved content-spec; `accessibility` is unverified because the deployed SHA differs from HEAD, so render-review is unavailable), with its manifest, command logs, NCP source-check, assessment solutions, summary, limitations, PHR and an unticked advisory tracker row, committed on `crew/efpg-402-u06-review_en`.
+Added the validated independent G3 English review of EFPG-402 Unit 6 (disposition escalate: `sources` fails on false `ncp-science-2022` grounding, `accessibility` unverified because the deployed site is not the reviewed input) with its manifest, command logs, NCP source-check, assessment solutions, summary, limitations, advisory tracker row and PHR, committed on `crew/efpg-402-u06-review_en`.
 
 ## Outcome
 
 - Impact: review_en for EFPG-402 Unit 6 by claude_crew (attempt 1).
-- Tests: `npm run check:content` passed (14 content gates); `node scripts/review-evidence.mjs validate` reports the report structurally valid at disposition escalate; `measure-figure-text` exits 0 on all 24 English SVG variants.
-- Files: 21 file(s), listed above.
-- Next prompts: the crew planner derives the unit's next stage from main after merge; a repair job must close the sources finding before a fresh G3 review.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 20 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added the validated independent G3 English review of EFPG-402 Unit 6 (disposition escalate) with its manifest, command logs, NCP source-check, assessment solutions, summary, limitations, PHR and an unticked advisory tracker row, committed on `crew/efpg-402-u06-review_en`.
-- Decisions the team must respect: G3 stays open and unticked; the report is unsigned and advisory, and `accept` would fail for want of a trusted signature. The reviewer did not author, translate or illustrate the unit.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). A repair job owns the sources correction, then a fresh independent G3 review.
+- Shipped / changed: Added the validated independent G3 English review of EFPG-402 Unit 6 (disposition escalate: `sources` fails on false `ncp-science-2022` grounding, `accessibility` unverified because the deployed site is not the reviewed input) with its manifest, command logs, NCP source-check, assessment solutions, summary, limitations, advisory tracker row and PHR, committed on `crew/efpg-402-u06-review_en`.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Blocking: `specs/content/efpg-402/sources/unit-06.md:3,7,14` and `coverage/unit-06.md:7-25` falsely ground U6-01 to U6-09 in `ncp-science-2022`; the approved content-spec maps that source to Units 1,2,3,4,5,7,8 only. The full NCP PDF has no laboratory-management content (source-check log committed).
-  - `cpsc-niosh-2006` is a public-domain PDF confirmed HTTP 200 (content-spec reading list), so a bound excerpt can likely be committed to corroborate the storage, GHS labelling and first-aid claims; `minhas-2025-lab` and `kochhar-science` remain unretrievable.
-  - Render evidence is unavailable because deployed SHA `fb0d38996a8231c160e8d1104c7c5a6935022911` differs from reviewed HEAD `d103b2448df417cf34c30c95c362e103d962b2fc`; re-check the diff after the next deploy before attempting render-review.
+  - Blocking `sources` finding - `sources/unit-06.md:3,7,14` and `coverage/unit-06.md:7-25` ground U6-01..U6-09 in `ncp-science-2022`, but its bound excerpt and full 74-page PDF contain no laboratory layout, storage, GHS labelling, inventory, disposal, eyewash or PPE content, and the approved content-spec maps that source to Units 1,2,3,4,5,7,8 only (not 6).
+  - `cpsc-niosh-2006` is a public-domain PDF confirmed HTTP 200, so a bound excerpt can likely be committed to corroborate the storage/labelling/first-aid claims; `minhas-2025-lab` and `kochhar-science` stay unretrievable under D-2026-0001.
+  - `render-review` is unavailable because deployed SHA `fb0d3899` differs from reviewed HEAD `d103b2448` on all seven unit MDX files and seven new WebPs; re-check the diff after the next deploy before attempting rendered evidence.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none beyond the recorded sources and render limitations.
-- Graders run and results (PASS/FAIL): check:content PASS; review-evidence validate PASS (escalate); measure-figure-text PASS.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
