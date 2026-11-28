@@ -16,8 +16,11 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-302/crew-efmp-302-u02-flashcards-conflict1.misc.prompt.md
  - history/prompts/efmp-302/crew-efmp-302-u02-flashcards-conflict2.misc.prompt.md
+ - history/prompts/efmp-302/crew-efmp-302-u02-flashcards.misc.prompt.md
  - specs/studio/flashcards-needed.json
+ - specs/studio/flashcards/efmp-302/unit-02.json
 tests:
  - npm run check:content
 ---
@@ -55,31 +58,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-302-u02-refresh_figures, refresh_figures, claude) Urdu twins were rebuilt with the mirror script and checked by eye in this job, but they still need a G5 reviewer, especially the fig-U2-4 lines from the gaps and the wrapped fig-U2-5 labels.
 - (efmp-302-u02-repair_en-r1, repair_en, claude) All d78cf623 findings were already resolved on main, so the next step is a fresh independent G3 review, and running it needs owner sign-off under G-2026-63 (no review cycles are left under ADR-0019).
 
+
 ## Response snapshot
 
-Merged origin/main (59 commits) into crew/efmp-302-u02-flashcards, resolving the single conflict in specs/studio/flashcards-needed.json by dropping both sides' removed entries (main removed efmp-302/1 for its new deck, this branch removed efmp-302/2), then confirmed all 14 content gates pass with both Unit 1 and Unit 2 flashcard decks present.
+Merged origin/main into crew/efmp-302-u02-flashcards, resolving the flashcards-needed.json conflict by dropping both sides' removed efmp-302 entries, and confirmed all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix for EFMP-302 Unit 2 by claude_crew (attempt 2, merge conflict resolution).
-- Tests: npm run check:content passed (14/14 content gates) in the job worktree.
-- Files: 2 file(s), listed above (the merge resolution and this PHR).
+- Impact: fix for EFMP-302 Unit 2 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 5 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-302-u02-flashcards; the only conflict was specs/studio/flashcards-needed.json, resolved to list neither efmp-302/1 (deck added on main) nor efmp-302/2 (deck added on this branch). All 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Merged origin/main into crew/efmp-302-u02-flashcards, resolving the flashcards-needed.json conflict by dropping both sides' removed efmp-302 entries, and confirmed all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - specs/studio/flashcards/efmp-302/ now holds unit-01.json (from main) and unit-02.json (this branch); flashcards-needed.json lists efmp-302/3 through /6 only.
-  - A fresh independent G3 review is still needed for the changed figures and needs owner sign-off under G-2026-63; G5 stays pending per ADR-0019.
+  - A fresh independent G3 review of the changed figures still needs owner sign-off under G-2026-63; G5 stays pending per ADR-0019.
+  - `specs/studio/flashcards/efmp-302/` now carries both unit-01.json (main) and unit-02.json (this branch); flashcards-needed.json lists only efmp-302/3 through /6.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none beyond the expected coverage-list conflict.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
