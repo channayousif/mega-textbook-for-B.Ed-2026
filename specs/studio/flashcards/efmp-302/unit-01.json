@@ -1,0 +1,278 @@
+{
+ "course": "EFMP-302",
+ "unit": 1,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Profession",
+     "definition": "An occupation built on specialised knowledge, entered only after extended training, governed by a shared code of conduct, and held accountable to a community of practitioners, not only to an employer."
+    },
+    {
+     "term": "Professional",
+     "definition": "A member of a profession who is expected to use judgement, keep learning, and act in the interest of the people they serve even when no one is watching."
+    },
+    {
+     "term": "Specialised knowledge",
+     "definition": "A body of knowledge specific to the work that outsiders do not have. It is one of the four features of a profession."
+    },
+    {
+     "term": "Extended training and a qualification",
+     "definition": "The feature that you cannot enter the work simply by being hired: you must complete a recognised course of study and be certified."
+    },
+    {
+     "term": "Code of conduct",
+     "definition": "Shared standards of ethical behaviour that members of a profession agree to follow."
+    },
+    {
+     "term": "Accountability to a professional community",
+     "definition": "Being answerable to a body of peers, an association or a regulator that can judge your practice, not only your employer."
+    },
+    {
+     "term": "Professionalism in teaching",
+     "definition": "How one teacher conducts themselves day to day: their skill, ethics, judgement and willingness to keep improving."
+    },
+    {
+     "term": "Professionalisation of teaching",
+     "definition": "The slower, collective process by which teaching as a field builds its own training routes, licensing, standards and associations."
+    },
+    {
+     "term": "Semi-profession",
+     "definition": "A name sometimes given to teaching because its training route was historically shorter, it has had less collective control over entry, and much of its work is closely supervised. It describes work in progress."
+    }
+   ],
+   "ur": [
+    {
+     "term": "پیشہ",
+     "definition": "ایسا مشغلہ جو خصوصی علم پر قائم ہو، جس میں طویل تربیت کے بعد ہی داخلہ ملے، جو مشترکہ ضابطہ اخلاق کے تحت چلے، اور جو محض آجر کے نہیں بلکہ اہلِ پیشہ کی برادری کے سامنے جوابدہ ہو۔"
+    },
+    {
+     "term": "پیشہ ور",
+     "definition": "پیشے کا ایسا رکن جس سے توقع ہو کہ وہ فیصلہ استعمال کرے، سیکھتا رہے، اور جن کی خدمت کرتا ہے ان کے مفاد میں کام کرے، خواہ کوئی دیکھ نہ رہا ہو۔"
+    },
+    {
+     "term": "خصوصی علم",
+     "definition": "کام سے مخصوص علم کا ذخیرہ جو باہر کے لوگوں کے پاس نہیں ہوتا۔ یہ پیشے کی چار خصوصیات میں سے ایک ہے۔"
+    },
+    {
+     "term": "طویل تربیت اور سند",
+     "definition": "یہ خصوصیت کہ محض ملازم رکھے جانے سے داخلہ نہیں ملتا: تسلیم شدہ نصابِ تعلیم مکمل کرنا اور سند حاصل کرنا پڑتی ہے۔"
+    },
+    {
+     "term": "ضابطہ اخلاق",
+     "definition": "اخلاقی رویّے کے مشترکہ معیارات جن پر عمل کرنے پر پیشے کے ارکان متفق ہوتے ہیں۔"
+    },
+    {
+     "term": "پیشہ ورانہ برادری کے سامنے جوابدہی",
+     "definition": "ہم پیشہ افراد کے ادارے، انجمن یا ضابطہ کار کے سامنے جوابدہ ہونا جو صرف آپ کا آجر نہیں بلکہ آپ کی مشق کا جائزہ لے سکے۔"
+    },
+    {
+     "term": "تدریس میں پیشہ واریت",
+     "definition": "ایک استاد روز مرہ خود کو کیسے چلاتا ہے: اس کی مہارت، اخلاقیات، فیصلہ اور بہتری کے لیے آمادگی۔"
+    },
+    {
+     "term": "پیشہ ورانہ بنانے کا عمل",
+     "definition": "وہ سست، اجتماعی عمل جس سے تدریس بطور میدان اپنے تربیتی راستے، لائسنس، معیارات اور انجمنیں بناتی ہے۔"
+    },
+    {
+     "term": "نیم پیشہ",
+     "definition": "تدریس کو بعض اوقات دیا جانے والا نام، کیونکہ اس کا تربیتی راستہ چھوٹا رہا، داخلے پر اجتماعی اختیار کم رہا اور بیشتر کام قریبی نگرانی میں ہوتا ہے۔ یہ زیرِ تکمیل کام کی توصیف ہے۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Industrial model of teaching",
+     "definition": "A view of school as a factory-like plant, where the teacher's job is to deliver the curriculum efficiently, keep the class under control and comply with set procedures."
+    },
+    {
+     "term": "Inquiry-based professionalism",
+     "definition": "Teaching as a practice in which the teacher studies their own classroom, reflects on what worked and why, and adjusts on evidence rather than habit alone. The learner is at the centre."
+    },
+    {
+     "term": "Noticing and adjusting on evidence",
+     "definition": "The defining move of inquiry-based teaching: watching how pupils think and changing the next step in response. It does not depend on seating or relaxed rules."
+    },
+    {
+     "term": "Pre-professional age",
+     "definition": "The first of Hargreaves' four ages, in which teaching was seen as simple work learned by watching."
+    },
+    {
+     "term": "Age of the autonomous professional",
+     "definition": "The age in which teachers won the right to make their own classroom decisions but often worked alone."
+    },
+    {
+     "term": "Age of the collegial professional",
+     "definition": "The age in which teachers plan, observe and solve problems together."
+    },
+    {
+     "term": "Post-professional age",
+     "definition": "The fourth, postmodern age: teachers face competing pressures, such as greater public accountability, faster change and more stakeholders, and need inquiry and collaboration to cope."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تدریس کا صنعتی ماڈل",
+     "definition": "اسکول کو کارخانے کی طرح دیکھنے کا نظریہ، جس میں استاد کا کام نصاب مؤثر طریقے سے پہنچانا، جماعت کو قابو میں رکھنا اور مقررہ طریقہ کار کی پابندی کرنا ہے۔"
+    },
+    {
+     "term": "تحقیق پر مبنی پیشہ واریت",
+     "definition": "ایسی تدریسی مشق جس میں استاد اپنی جماعت کا مطالعہ کرتا ہے، غور کرتا ہے کہ کیا کارگر رہا اور کیوں، اور محض عادت کی بجائے شواہد پر تبدیلی کرتا ہے۔ مرکز میں سیکھنے والا ہوتا ہے۔"
+    },
+    {
+     "term": "شواہد پر دیکھنا اور تبدیل کرنا",
+     "definition": "تحقیق پر مبنی تدریس کی فیصلہ کن حرکت: دیکھنا کہ طلبہ کیسے سوچتے ہیں اور اس کے جواب میں اگلا قدم بدلنا۔ اس کا انحصار بیٹھنے کے نقشے یا قواعد میں نرمی پر نہیں۔"
+    },
+    {
+     "term": "قبلِ پیشہ ورانہ دور",
+     "definition": "ہارگریوز کے چار ادوار میں سے پہلا، جس میں تدریس کو دیکھ کر سیکھا جانے والا سادہ کام سمجھا جاتا تھا۔"
+    },
+    {
+     "term": "خود مختار پیشہ ور کا دور",
+     "definition": "وہ دور جس میں اساتذہ نے اپنے جماعتی فیصلے کرنے کا حق حاصل کیا مگر اکثر تنہا کام کرتے رہے۔"
+    },
+    {
+     "term": "ہم پیشہ تعاون کا دور",
+     "definition": "وہ دور جس میں اساتذہ مل کر منصوبہ بندی کرتے، مشاہدہ کرتے اور مسئلے حل کرتے ہیں۔"
+    },
+    {
+     "term": "بعدِ پیشہ ورانہ دور",
+     "definition": "چوتھا، مابعد جدید دور: اساتذہ متضاد دباؤ کا سامنا کرتے ہیں، جیسے زیادہ عوامی جوابدہی، تیز تر تبدیلی اور زیادہ متعلقین، اور ان سے نمٹنے کے لیے تحقیق اور تعاون درکار ہوتا ہے۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Knowledge base",
+     "definition": "The first dimension: knowledge of the subject, of how learners of a given age develop, and of pedagogical content knowledge, built through a recognised programme of study and continued reading."
+    },
+    {
+     "term": "Pedagogical content knowledge",
+     "definition": "Knowing the best ways to represent a particular topic so that particular learners understand it."
+    },
+    {
+     "term": "Code of conduct",
+     "definition": "Agreed standards for how a teacher behaves toward pupils, colleagues, parents and the wider community, such as fair assessment, honesty, protection from harm and confidentiality."
+    },
+    {
+     "term": "Accountability",
+     "definition": "Answering for the quality of your work to pupils, parents, employers and standards bodies."
+    },
+    {
+     "term": "Autonomy",
+     "definition": "The room to use professional judgement about how to teach a class, rather than following a rigid script."
+    },
+    {
+     "term": "Collegiality",
+     "definition": "Working with, learning from, and being answerable to fellow teachers."
+    },
+    {
+     "term": "Professional associations",
+     "definition": "Organisations that represent their members and often maintain a code."
+    },
+    {
+     "term": "Accreditation bodies",
+     "definition": "Bodies that judge whether a training programme or institution meets agreed standards."
+    }
+   ],
+   "ur": [
+    {
+     "term": "علمی بنیاد",
+     "definition": "پہلا پہلو: مضمون کا علم، خاص عمر کے سیکھنے والوں کی نشوونما کا علم اور تدریسی مضامین کا علم، جو تسلیم شدہ نصابِ تعلیم اور مسلسل مطالعے سے بنتا ہے۔"
+    },
+    {
+     "term": "تدریسی مضامین کا علم",
+     "definition": "یہ جاننا کہ کسی خاص موضوع کو پیش کرنے کے بہترین طریقے کون سے ہیں تاکہ خاص سیکھنے والے اسے سمجھ سکیں۔"
+    },
+    {
+     "term": "ضابطہ اخلاق",
+     "definition": "متفقہ معیارات کہ استاد طلبہ، ساتھیوں، والدین اور وسیع تر برادری کے ساتھ کیسے پیش آئے، جیسے تشخیص میں انصاف، دیانت، نقصان سے بچاؤ اور رازداری۔"
+    },
+    {
+     "term": "جوابدہی",
+     "definition": "طلبہ، والدین، آجروں اور معیاری اداروں کے سامنے اپنے کام کے معیار کا جواب دینا۔"
+    },
+    {
+     "term": "خود مختاری",
+     "definition": "کسی جماعت کو کیسے پڑھایا جائے، اس بارے میں پیشہ ورانہ فیصلہ استعمال کرنے کی گنجائش، ایک سخت خاکے پر عمل کرنے کی بجائے۔"
+    },
+    {
+     "term": "ہم پیشہ تعاون",
+     "definition": "ساتھی اساتذہ کے ساتھ کام کرنا، ان سے سیکھنا اور ان کے سامنے جوابدہ ہونا۔"
+    },
+    {
+     "term": "پیشہ ورانہ انجمنیں",
+     "definition": "ایسی تنظیمیں جو ارکان کی نمائندگی کرتی ہیں اور اکثر ایک ضابطہ برقرار رکھتی ہیں۔"
+    },
+    {
+     "term": "منظوری کے ادارے",
+     "definition": "ایسے ادارے جو فیصلہ کرتے ہیں کہ آیا کوئی تربیتی پروگرام یا ادارہ متفقہ معیارات پر پورا اترتا ہے۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "Teacher identity",
+     "definition": "Your evolving sense of who you are as a teacher: your purposes, your values, and the relationships you want with pupils."
+    },
+    {
+     "term": "Sociocultural and policy context",
+     "definition": "The surroundings that shape identity from outside, such as teachers' status, pay and trust, pupils' language and culture, and national policies and standards."
+    },
+    {
+     "term": "Prior beliefs",
+     "definition": "Beliefs a teacher already holds, which act as a filter through which new ideas from training are accepted, adapted or quietly resisted."
+    },
+    {
+     "term": "Reflection",
+     "definition": "Deliberately looking back at your teaching, noticing the gap between what you intended and what happened, and asking what that says about your assumptions."
+    },
+    {
+     "term": "Critically reflective teacher",
+     "definition": "In Brookfield's account, a teacher who examines their practice from the viewpoints of pupils, colleagues, research literature and their own past, rather than trusting first impressions."
+    },
+    {
+     "term": "Teaching diary",
+     "definition": "A record of events. It becomes reflection only when you use it to find and question an assumption and to change what you do next."
+    },
+    {
+     "term": "Who am I becoming as a teacher?",
+     "definition": "A question to ask and keep returning to from the start of training. Answering it honestly turns experience into learning instead of letting it pass by."
+    }
+   ],
+   "ur": [
+    {
+     "term": "استاد کی شناخت",
+     "definition": "اس بارے میں آپ کا ارتقا پذیر احساس کہ آپ بطور استاد کون ہیں: آپ کے مقاصد، اقدار اور طلبہ کے ساتھ مطلوبہ تعلقات۔"
+    },
+    {
+     "term": "سماجی و ثقافتی اور پالیسی سیاق",
+     "definition": "وہ ماحول جو شناخت کو باہر سے تشکیل دیتا ہے، جیسے اساتذہ کا مرتبہ، تنخواہ اور اعتماد، طلبہ کی زبان و ثقافت، اور قومی پالیسیاں و معیارات۔"
+    },
+    {
+     "term": "پہلے سے موجود عقائد",
+     "definition": "استاد کے پہلے سے موجود عقائد جو ایک چھلنی کی طرح کام کرتے ہیں، جس سے تربیت کے نئے خیالات قبول کیے، ڈھالے یا خاموشی سے رد کیے جاتے ہیں۔"
+    },
+    {
+     "term": "غور و فکر",
+     "definition": "ارادتاً اپنی تدریس پر پیچھے مڑ کر دیکھنا، اپنے ارادے اور جو ہوا اس کا فرق محسوس کرنا، اور پوچھنا کہ یہ آپ کے مفروضات کے بارے میں کیا کہتا ہے۔"
+    },
+    {
+     "term": "تنقیدی طور پر غور کرنے والا استاد",
+     "definition": "بروک فیلڈ کے مطابق ایسا استاد جو پہلے تاثرات پر بھروسا کرنے کی بجائے اپنی مشق کو طلبہ، ساتھیوں، تحقیقی ادب اور اپنے ماضی کے زاویوں سے دیکھتا ہے۔"
+    },
+    {
+     "term": "تدریسی ڈائری",
+     "definition": "واقعات کا ریکارڈ۔ یہ غور و فکر تب بنتا ہے جب آپ اسے استعمال کر کے کوئی مفروضہ ڈھونڈیں، اس پر سوال اٹھائیں اور اگلی بار اپنا عمل بدلیں۔"
+    },
+    {
+     "term": "میں بحیثیت استاد کیا بن رہا ہوں؟",
+     "definition": "تربیت کے آغاز سے پوچھا اور بار بار دہرایا جانے والا سوال۔ اس کا کھرا جواب تجربے کو گزر جانے دینے کی بجائے سیکھنے میں بدل دیتا ہے۔"
+    }
+   ]
+  }
+ }
+}

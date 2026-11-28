@@ -12,13 +12,13 @@
  * Pure (inputs are passed in), so tests/crew/resources.test.mjs can exercise it.
  */
 
-/** Lanes, one running job each. `meta` is reserved for the Meta AI producer (specs/033). */
+/** Lanes, one running job each. `meta` is the Meta AI image producer (spec 033, D-2026-0102). */
 export const LANES = ['notebook', 'notebook2', 'flow', 'flow2', 'agy', 'agy2', 'codex', 'meta', 'youtube', 'social'];
 
 /** Image lanes, in the producer order of ADR-0029 (owner ruling 2026-11-18), and the
  * generate-illustration.mjs `--producer` name of each. */
-export const IMAGE_LANES = ['agy', 'agy2', 'flow', 'flow2', 'codex'];
-export const LANE_PRODUCER = { agy: 'agy', agy2: 'agy2', flow: 'gflow', flow2: 'gflow2', codex: 'codex' };
+export const IMAGE_LANES = ['agy', 'agy2', 'flow', 'flow2', 'codex', 'meta'];
+export const LANE_PRODUCER = { agy: 'agy', agy2: 'agy2', flow: 'gflow', flow2: 'gflow2', codex: 'codex', meta: 'meta' };
 /** The nlm profile a notebook lane uses (Feature 036): `notebook2` is the second Google account. */
 export const LANE_NLM_PROFILE = { notebook: 'default', notebook2: 'second' };
 
@@ -50,6 +50,7 @@ export function laneChannels(stage, lane) {
   if (lane === 'agy') return ['agy.image'];
   if (lane === 'agy2') return ['agy2.image'];
   if (lane === 'codex') return ['codex.image'];
+  if (lane === 'meta') return ['meta.image'];
   // A studio job either makes NotebookLM artifacts or uploads finished ones, so either counts.
   if (lane === 'notebook') return ['nlm.studio', 'youtube.upload'];
   if (lane === 'notebook2') return ['nlm2.studio', 'youtube.upload'];
@@ -128,7 +129,7 @@ export function todayPlan({ open, nextOpenAt, running, queued, waits = {}, use =
   for (const lane of LANES) {
     const r = running.find((j) => laneOf(j) === lane);
     const next = queued.find((j) => stageLanes(j.stage)?.includes(lane));
-    const why = r ? '' : next ? (waits[next.id] ?? (open ? '' : 'media hours closed')) : (lane === 'meta' ? 'no producer yet (specs/033)' : 'nothing queued');
+    const why = r ? '' : next ? (waits[next.id] ?? (open ? '' : 'media hours closed')) : 'nothing queued';
     lines.push(`| ${lane} | ${r ? `\`${r.id}\`` : 'idle'} | ${next ? `\`${next.id}\`` : '-'} | ${why} |`);
   }
   const chans = Object.entries(use);

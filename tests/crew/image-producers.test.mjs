@@ -187,3 +187,15 @@ test('a studio job on notebook2 uses the second NotebookLM account and its own p
   assert.match(brief, /pacing\.mjs check nlm2\.studio/);
   assert.doesNotMatch(mediaTask({ stage: 'studio_media', course: 'EFMP-301', unit: 5, lane: 'notebook' }), /--profile second/);
 });
+
+test('meta.ai page state, prompt and crop (D-2026-0102)', async () => {
+  const { pageState, metaPrompt, cropBox } = await import('../../scripts/media/producers/meta.mjs');
+  assert.equal(pageState({ text: 'What can I do for you?', hasComposer: true }), 'ok');
+  assert.equal(pageState({ text: '', hasComposer: true, loginControls: true }), 'signed-out');
+  assert.equal(pageState({ text: 'Welcome', hasComposer: false }), 'signed-out');
+  assert.equal(pageState({ text: "You've reached your daily limit for images. Try again tomorrow.", hasComposer: true }), 'limited');
+  assert.equal(metaPrompt('Style: x\nScene: y', '16:9 landscape'), 'Create one image, 16:9 landscape. Style: x Scene: y');
+  assert.equal(cropBox(2048, 1152, '16:9 landscape'), null);
+  assert.deepEqual(cropBox(1024, 1024, '16:9 landscape'), { left: 0, top: 224, width: 1024, height: 576 });
+  assert.deepEqual(cropBox(2048, 1152, '3:4 portrait'), { left: 592, top: 0, width: 864, height: 1152 });
+});

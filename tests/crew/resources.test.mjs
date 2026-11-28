@@ -26,7 +26,7 @@ test('lanes run in parallel: a busy lane blocks only its own stages', () => {
 });
 
 test('illustrate takes the first free image lane with quota and budget, pinned to its producer', () => {
-  assert.deepEqual(IMAGE_LANES, ['agy', 'agy2', 'flow', 'flow2', 'codex']);
+  assert.deepEqual(IMAGE_LANES, ['agy', 'agy2', 'flow', 'flow2', 'codex', 'meta']);
   const j = { stage: 'illustrate' };
   assert.deepEqual(pickLane(j, open), { lane: 'agy', producer: 'agy' });
   assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy']) }), { lane: 'agy2', producer: 'agy2' });
@@ -35,8 +35,10 @@ test('illustrate takes the first free image lane with quota and budget, pinned t
   assert.deepEqual(pickLane(j, { ...open, room: (ch) => ch === 'agy2.image' }), { lane: 'agy2', producer: 'agy2' });
   assert.deepEqual(pickLane(j, { ...open, room: (ch) => ch === 'codex.image' }), { lane: 'codex', producer: 'codex' });
   assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy', 'agy2', 'flow']) }), { lane: 'flow2', producer: 'gflow2' });
-  const none = pickLane(j, { ...open, busy: new Set(['agy', 'agy2', 'flow', 'flow2', 'codex']) });
-  assert.match(none.wait, /agy busy, agy2 busy, flow busy, flow2 busy, codex busy/);
+  assert.deepEqual(pickLane(j, { ...open, busy: new Set(['agy', 'agy2', 'flow', 'flow2', 'codex']) }), { lane: 'meta', producer: 'meta' });
+  assert.deepEqual(laneChannels('illustrate', 'meta'), ['meta.image']);
+  const none = pickLane(j, { ...open, busy: new Set(['agy', 'agy2', 'flow', 'flow2', 'codex', 'meta']) });
+  assert.match(none.wait, /agy busy, agy2 busy, flow busy, flow2 busy, codex busy, meta busy/);
 });
 
 test('outside media hours no lane takes a job', () => {
@@ -95,7 +97,8 @@ test("today's media plan shows each lane's job, the next one and why it waits", 
   assert.match(md, /\| agy \| `efmp-304-u05-illustrate` \|/);
   assert.match(md, /\| notebook \| idle \| `efmp-301-u04-studio_media` \| notebook daily cap reached \|/);
   assert.match(md, /\| flow \| idle \| `geng-301-u01-illustrate` \|/);
-  assert.match(md, /\| meta \| idle \| - \| no producer yet/);
+  assert.match(md, /\| meta \| idle \| `geng-301-u01-illustrate` \|/);
+  assert.match(md, /\| social \| idle \| - \| nothing queued/);
   assert.match(md, /youtube\.upload 1\/4/);
   assert.match(todayPlan({ open: false, nextOpenAt: '2026-11-26T04:00:00.000Z', running: [], queued: [] }), /closed; next opening 2026-11-26/);
 });
