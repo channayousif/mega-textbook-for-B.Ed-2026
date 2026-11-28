@@ -4,7 +4,7 @@ title: crew review_ur EFPC-411 unit 2
 stage: misc
 date: 2026-11-28
 surface: agent
-model: LongCat-2.5
+model: claude_crew
 feature: efpc-411
 branch: crew/efpc-411-u02-review_ur
 user: crew
@@ -20,21 +20,18 @@ files:
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0.json
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/advisory-tracker-row.md
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/assessment-solutions.md
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/findings.md
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/summary.md
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/report-validation.log
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/validate_content.log
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_depth-gate.log
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_figures.log
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_no-em-dash.log
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_no-answer-keys.log
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_docs-sync.log
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check-content.log
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/build-content-status.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check-content.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_depth-gate.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_docs-sync.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_figures.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_no-answer-keys.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/check_no-em-dash.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/findings.md
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/measure-figure-text.log
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/render-review.log
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/render-inspect.json
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/render-inspect.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/crop-fig-U2-1.png
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/crop-fig-U2-1b.png
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/desktop-index.png
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/desktop-topic-01.png
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/desktop-topic-02.png
@@ -47,13 +44,14 @@ files:
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/narrow360-topic-03.png
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/narrow360-topic-04.png
  - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/narrow360-unit-assessment.png
- - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/crop-fig-U2-1b.png
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/render-inspect.json
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/renders/render-inspect.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/report-validation.log
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/summary.md
+ - specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0/validate_content.log
  - specs/content/efpc-411/reviews/unit-02/G5/prep-claude-f67d0bac/manifest.json
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0.json
- - scripts/heavy.sh node scripts/render-inspect.mjs EFPC-411 2 --locale ur --base https://textbook.com.pk --no-pdf
- - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efpc-411/unit-02/*.ur.svg
 ---
 
 ## Prompt
@@ -84,33 +82,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Produced a validated independent G5 Urdu review report (disposition: revise) with paired EN/UR findings, command logs and rendered-page/print evidence, without modifying unit prose or certifying the stage.
+Committed a validated advisory G5 Urdu review of EFPC-411 Unit 2 (disposition revise) with paired EN/UR findings, command logs and production renders, without ticking G5 or changing content.
 
 ## Outcome
 
 - Impact: review_ur for EFPC-411 Unit 2 by claude_crew (attempt 1).
-- Tests: `npm run check:content` passed (14/14); `review-evidence.mjs validate` exit 0; `measure-figure-text.mjs` exit 0 on all eight `.ur.svg`; `render-inspect.mjs` exit 1 with 16 false-positive wordmark flags.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 34 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Validated G5 Urdu review report `specs/content/efpc-411/reviews/unit-02/G5/f67d0bac-a925-413a-a498-d981462563b0.json` (revise) with findings, assessment re-solve, command logs and production renders.
-- Decisions the team must respect: G5 stays advisory until a qualified sign-off; this job does not certify anything, tick G5, or change `translation_status`.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). A separate repair job must fix F1-F5 and re-run G5 with a fresh manifest.
+- Shipped / changed: Committed a validated advisory G5 Urdu review of EFPC-411 Unit 2 (disposition revise) with paired EN/UR findings, command logs and production renders, without ticking G5 or changing content.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Five blocking semantic defects: F1 "period" -> "hour" in 8 places; F2 "marked" -> "solved"; F3 "managing complexity" dropped; F4 "exclusion" -> "تفریق"; F5 "stated, acknowledged and redirected" omitted.
-  - `render-inspect.mjs` wordmark flags are false positives on mirrored Urdu figures; `measure-figure-text.mjs` is the symmetric check.
-  - No signed G3 report exists; the tracker's Unit 2 G3 row is a human desk record outside the report schema.
-  - Proposed advisory tracker row is ready in `advisory-tracker-row.md`; G5 remains open.
+  - A repair job must fix F1-F5, then re-run G5 with a fresh manifest (the current report binds the pre-repair bytes).
+  - `render-inspect.mjs` wordmark flags on mirrored Urdu figures are false positives; use `measure-figure-text.mjs` (symmetric test) for figure geometry.
+  - No signed G3 report exists for the exact English inputs; the tracker's Unit 2 G3 row is a human desk record outside the report schema, and the translator's agy run id was not supplied.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS; report validate PASS
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
