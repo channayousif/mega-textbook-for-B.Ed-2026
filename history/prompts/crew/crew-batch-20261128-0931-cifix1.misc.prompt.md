@@ -14,11 +14,91 @@ links:
   spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: 961
+  pr: null
 files:
+ - docs/semester-4/efpg-402/unit-08/topic-01.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-02.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-03.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-04.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-05.mdx
+ - history/prompts/crew/crew-batch-20261128-0931-cifix1.misc.prompt.md
+ - history/prompts/efmp-302/crew-efmp-302-u05-flashcards.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u04-refresh_figures.misc.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u05-review_en-r1.misc.prompt.md
+ - history/prompts/efpg-402/crew-efpg-402-u08-plan_illustrations.misc.prompt.md
+ - history/prompts/general/20261312-efmp302-u05-flashcard-deck.general.prompt.md
+ - specs/content/efmp-303/reviews/unit-04/G2/20261128T090717743Z-gates.json
+ - specs/content/efmp-303/reviews/unit-04/G2/logs-20261128T090717743Z/check-bloom-bands.txt
+ - specs/content/efmp-303/reviews/unit-04/G2/logs-20261128T090717743Z/check-concept-graph.txt
+ - specs/content/efmp-303/reviews/unit-04/G2/logs-20261128T090717743Z/check-depth-gate.txt
+ - specs/content/efmp-303/reviews/unit-04/G2/logs-20261128T090717743Z/check-docs-sync.txt
+ - specs/content/efmp-303/reviews/unit-04/G2/logs-20261128T090717743Z/check-figures.txt
+ - specs/content/efmp-303/reviews/unit-04/G2/logs-20261128T090717743Z/check-no-answer-keys.txt
+ - specs/content/efmp-303/reviews/unit-04/G2/logs-20261128T090717743Z/check-no-em-dash.txt
+ - specs/content/efmp-303/reviews/unit-04/G2/logs-20261128T090717743Z/validate-content.txt
+ - specs/content/efmp-303/tasks.md
+ - specs/content/efpg-402/figures/unit-08.banner.md
+ - specs/content/efpg-402/figures/unit-08.md
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/assessment-solutions.md
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/build-content-status.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-content.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/measure-figure-text.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/render-review.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/logs/validate-content.txt
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/manifest.json
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-index.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-topic-01.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-topic-02.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-topic-03.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-topic-04.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-topic-05.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/desktop-unit-assessment.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-index.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-topic-01.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-topic-02.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-topic-03.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-topic-04.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-topic-05.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/narrow360-unit-assessment.png
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/render-inspect.json
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/renders/render-inspect.log
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/report.json
+ - specs/content/efpg-402/reviews/unit-05/G3/crew-job-efpg-402-u05-review_en-r1/summary.md
+ - specs/content/efpg-402/reviews/unit-08/G2/20261128T084902625Z-gates.json
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T084902625Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T084902625Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T084902625Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T084902625Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T084902625Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T084902625Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T084902625Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T084902625Z/validate-content.txt
+ - specs/content/efpg-402/tasks.md
+ - specs/studio/flashcards-needed.json
+ - specs/studio/flashcards/efmp-302/unit-05.json
+ - static/img/figures/efmp-303/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-1.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-1.ur.dark.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-1.ur.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-2.dark.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-2.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-2.ur.dark.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-2.ur.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-3.dark.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-3.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-3.ur.dark.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-3.ur.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-4.dark.svg
+ - static/img/figures/efmp-303/unit-04/fig-U4-4.svg
  - static/img/figures/efmp-303/unit-04/fig-U4-4.ur.dark.svg
  - static/img/figures/efmp-303/unit-04/fig-U4-4.ur.svg
- - history/prompts/crew/crew-batch-20261128-0931-cifix1.misc.prompt.md
 tests:
  - npm run check:content
 ---
@@ -58,29 +138,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Read the failed figure-geometry job for PR #961. It reported one text-geometry problem in two files: the Urdu edge label "رقم کی کمی کمزور کرتی ہے" on the Financial-to-failure arrow started 0.7px inside the failure panel under CI's DejaVu fallback (x1 454.3 against the panel edge 455), so the measurer took the panel as its holder and reported a 156.7px spill. Production Noto Nastaliq Urdu starts the same label at 480.6px and was never at fault. Moved the label from x=533 to x=545 in both the light and dark Urdu variants, which clears the panel under both faces (DejaVu x1 466.3, Nastaliq 492.6) with no new overlap.
+Moved the EFMP-303 Unit 4 Urdu edge label in fig-U4-4.ur.svg and its dark variant from x=533 to x=545 so it clears the failure panel under CI's DejaVu fallback, fixing the figure-geometry failure; all content gates pass.
 
 ## Outcome
 
-- Impact: fix EFMP-303 Unit 4 figure geometry for PR #961 by claude_crew (attempt 1).
-- Tests: `npm run check:content` passed (14/14 content gates); `node scripts/measure-figure-text.mjs --ci-fonts --changed f5cf2f28821092c6ef886cbfed5053ce008d25ad` exits 0, as does the same run without `--ci-fonts`.
-- Files: 3 file(s), listed above.
+- Impact: fix for CREW Unit 0 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 83 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: moved the Urdu "رقم کی کمی کمزور کرتی ہے" edge label in `fig-U4-4.ur.svg` and `fig-U4-4.ur.dark.svg` from x=533 to x=545 so its left edge clears the failure panel under CI's DejaVu fallback; no content, manifest or English figure change.
-- Decisions the team must respect: the label is a free edge annotation, not panel text; the panel-spill report was a font-metric false positive. G3/G5 stay advisory; this PR certifies nothing.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). CI's figure-geometry job must re-run and confirm on PR #961.
+- Shipped / changed: Moved the EFMP-303 Unit 4 Urdu edge label in fig-U4-4.ur.svg and its dark variant from x=533 to x=545 so it clears the failure panel under CI's DejaVu fallback, fixing the figure-geometry failure; all content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - CI's figure-geometry job must re-run on PR #961; the local `--ci-fonts --changed f5cf2f28821092c6ef886cbfed5053ce008d25ad` run is the same measurement and exits 0.
-  - The label now ends at 623.7px under DejaVu, still well inside the 780px viewBox, but a future font or text change there could re-expose a tight margin.
+  - CI's figure-geometry job must re-run and confirm on PR #961; the local `--ci-fonts --changed f5cf2f28821092c6ef886cbfed5053ce008d25ad` run is the same measurement and exits 0.
+  - The label now ends at 623.7px under DejaVu (viewBox 780px); a future text or font change there could re-expose a tight margin.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: CI's DejaVu fallback renders Urdu wider than production Noto Nastaliq, so a free edge label that starts a fraction of a pixel inside a panel rect is mis-read as panel text and reported as a spill.
-- Graders run and results (PASS/FAIL): check:content PASS; measure-figure-text --ci-fonts --changed PASS.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
