@@ -16,30 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/gsos-301/unit-02/index.mdx
-  - docs/semester-2/gsos-301/unit-02/topic-01.mdx
-  - docs/semester-2/gsos-301/unit-02/topic-02.mdx
-  - history/prompts/gsos-301/crew-gsos-301-u02-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/topic-02.mdx
-  - specs/content/gsos-301/figures/unit-02.banner.md
-  - specs/content/gsos-301/figures/unit-02.md
-  - specs/content/gsos-301/reviews/unit-02/G2/20261128T021403307Z-gates.json
-  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-bloom-bands.txt
-  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-concept-graph.txt
-  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-depth-gate.txt
-  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-docs-sync.txt
-  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-figures.txt
-  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-no-answer-keys.txt
-  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-no-em-dash.txt
-  - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/validate-content.txt
-  - specs/content/gsos-301/tasks.md
-  - static/img/figures/gsos-301/unit-02/fig-U2-5.webp
-  - static/img/figures/gsos-301/unit-02/fig-U2-6.webp
-  - static/img/figures/gsos-301/unit-02/fig-U2-7.webp
+ - docs/semester-2/gsos-301/unit-02/index.mdx
+ - docs/semester-2/gsos-301/unit-02/topic-01.mdx
+ - docs/semester-2/gsos-301/unit-02/topic-02.mdx
+ - history/prompts/gsos-301/crew-gsos-301-u02-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/topic-02.mdx
+ - specs/content/gsos-301/figures/unit-02.banner.md
+ - specs/content/gsos-301/figures/unit-02.md
+ - specs/content/gsos-301/reviews/unit-02/G2/20261128T021403307Z-gates.json
+ - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-bloom-bands.txt
+ - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-concept-graph.txt
+ - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-depth-gate.txt
+ - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-docs-sync.txt
+ - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-figures.txt
+ - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-no-answer-keys.txt
+ - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/check-no-em-dash.txt
+ - specs/content/gsos-301/reviews/unit-02/G2/logs-20261128T021403307Z/validate-content.txt
+ - specs/content/gsos-301/tasks.md
+ - static/img/figures/gsos-301/unit-02/fig-U2-5.webp
+ - static/img/figures/gsos-301/unit-02/fig-U2-6.webp
+ - static/img/figures/gsos-301/unit-02/fig-U2-7.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -77,9 +77,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gsos-301-u02-repair_en-r1, repair_en, opencode) Urdu translation remains draft pending independent G5; the 20261108 desk report's criteria/findings are stale copies, so a fresh independent review is needed after the missing evidence arrives.
 - (gsos-301-u02-repair_en, repair_en, codex) G3 remains unticked; render inspection and original provenance/complete source evidence remain pending.
 
+
 ## Response snapshot
 
-Generated and placed the GSOS-301 Unit 2 banner and topic raster illustrations in English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated and placed GSOS-301 Unit 2 raster illustrations and banner in English and Urdu unit files, refreshed G2 gate evidence, and passed all content gates.
 
 ## Outcome
 
@@ -91,11 +92,11 @@ Generated and placed the GSOS-301 Unit 2 banner and topic raster illustrations i
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated and placed the GSOS-301 Unit 2 banner (fig-U2-5) and topic raster illustrations (fig-U2-6, fig-U2-7) in English and Urdu unit files, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Shipped / changed: Generated and placed GSOS-301 Unit 2 raster illustrations and banner in English and Urdu unit files, refreshed G2 gate evidence, and passed all content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Banner fig-U2-5 and topic scenes fig-U2-6 and fig-U2-7 are placed in English and Urdu unit files with refreshed G2 evidence passing all gates.
+  - Banner fig-U2-5 and topic scenes fig-U2-6 and fig-U2-7 placed in English and Urdu files; all 14 content gates pass.
   - Independent qualified G3 English review and G5 Urdu review (with 360px and A4 print layout inspection) remain open in tasks.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
