@@ -33,7 +33,7 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | Unit 2 | G5 ur-review | ▢ | | Awaiting translation and independent review |
 | Unit 2 | G6 assets | ▣ | | Eight schematic SVGs (fig-U2-1 to fig-U2-8) and banner fig-U2-9 placed |
 | Unit 2 | G7 publish | ▢ | | No publication or deployment performed by this job |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-03/G2/20261127T115323213Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efpc-411/reviews/unit-03/G2/20261128T030729563Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 3 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and eight localised schematic SVGs with dark twins; translator handoff: specs/content/efpc-411/reviews/unit-03/G4/translation-handoff.md. Status remains open under translate-unit Step 7; independent G5 and browser/print inspection pending |
 | Unit 3 | G5 ur-review | ▢ | | Awaiting translation and independent review |
@@ -43,3 +43,4 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efpc-411/reviews/unit-01/G3/20261127T192818Z-g3-desk-b2d611b9.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efpc-411/reviews/unit-03/G3/20261127T192818Z-g3-desk-f6c9628b.json |
 | Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied; report reviews/unit-01/G3/20261127T192818Z-g3-desk-b2d611b9.json (crew efpc-411-u01-repair_en-r1, 2026-11-28). Source notes rewritten from the works; U1-04 bound to the Teach manual p. 12 with the rest recorded as author guidance; Schön (1983) cited and declared unverifiable (text not read); cycle sentence corrected. Render review still pending a deploy. G3 stays unticked; no certification, no human initials |
+| Unit 3 | G3 en-review | ▣ | | advisory: revise; repairs applied; report specs/content/efpc-411/reviews/unit-03/G3/20261127T192818Z-g3-desk-f6c9628b.json (crew efpc-411-u03-repair_en, 2026-11-28). Repairs applied to all eight findings; render and print inspection remains unavailable under the crew brief; G3 stays unticked pending a fresh independent review. Advisory only; no certification, no row tick, no human initials |
