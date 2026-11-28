@@ -4,7 +4,7 @@ title: crew repair_en EFMP-409 unit 3
 stage: misc
 date: 2026-11-28
 surface: agent
-model: claude
+model: claude_crew
 feature: efmp-409
 branch: crew/efmp-409-u03-repair_en
 user: crew
@@ -21,6 +21,7 @@ files:
  - docs/semester-4/efmp-409/unit-03/topic-06.mdx
  - docs/semester-4/efmp-409/unit-03/unit-assessment.mdx
  - docs/semester-4/efmp-409/unit-03/unit-teacher-notes.mdx
+ - history/prompts/efmp-409/crew-efmp-409-u03-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-04.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-05.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efmp-409/unit-03/topic-06.mdx
@@ -29,8 +30,16 @@ files:
  - specs/content/efmp-409/concepts/unit-03.md
  - specs/content/efmp-409/coverage/unit-03.md
  - specs/content/efmp-409/figures/unit-03.md
- - specs/content/efmp-409/sources/unit-03.md
+ - specs/content/efmp-409/reviews/unit-03/G2/20261127T234857426Z-gates.json
  - specs/content/efmp-409/reviews/unit-03/G2/20261127T235736825Z-gates.json
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-bloom-bands.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-concept-graph.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-depth-gate.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-docs-sync.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-figures.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-no-answer-keys.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/check-no-em-dash.txt
+ - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T234857426Z/validate-content.txt
  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-bloom-bands.txt
  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-concept-graph.txt
  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-depth-gate.txt
@@ -39,8 +48,8 @@ files:
  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-no-answer-keys.txt
  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/check-no-em-dash.txt
  - specs/content/efmp-409/reviews/unit-03/G2/logs-20261127T235736825Z/validate-content.txt
+ - specs/content/efmp-409/sources/unit-03.md
  - specs/content/efmp-409/tasks.md
- - history/prompts/efmp-409/crew-efmp-409-u03-repair_en.misc.prompt.md
 tests:
  - npm run check:content
 ---
@@ -96,28 +105,33 @@ From `specs/content/efmp-409/reviews/unit-03/G3/20261127T192818Z-g3-desk-5c9d1a5
 - (efmp-409-u03-illustrate, illustrate, agy) Unit banner fig-U3-13 is placed in English and Urdu index.mdx; Unit 3 G3 review and G5 review remain open for independent evaluation.
 - (efmp-409-u03-illustrate, illustrate, agy) G5 must inspect rendered Urdu pages at 360 px and A4, verify proposed terms, the 13 authored Urdu concept labels, and the Islamic-content scholar check.
 
+
 ## Response snapshot
 
-Applied the G3 report's four blocking findings and its advisories to EFMP-409 Unit 3 in English and Urdu: redistributed the MCQ keys across A-D with no key-longest cue, rebuilt MCQ-06 as a comparative item so every topic carries an MCQ, corrected the coverage and concept traces, Bloom-tagged the topic-06 formative items, standardised the Arabic transliterations, marked the Iqbal sentence as a paraphrase, corrected the sources declaration, figure alt typo, teacher-notes attribution, SEP scope note, citation years and specialised-term glosses, and refreshed the G2 gate evidence.
+Applied the EFMP-409 Unit 3 G3 report's four blocking findings and its advisories in English and Urdu, redistributing the MCQ keys across A-D with no length cue, correcting the assessment traces and Bloom tags, standardising terminology, and refreshing the G2 gate evidence, with `npm run check:content` green.
 
 ## Outcome
 
-- ✅ Impact: repair_en for EFMP-409 Unit 3 by claude_crew (attempt 1).
-- 🧪 Tests: `npm run check:content` passes after the G2 evidence refresh; the only intermediate failure was the expected stale G2 input manifest, cleared by `prepare-gate-evidence`.
-- 📁 Files: 25 file(s), listed above.
-- 🔁 Next prompts: a fresh independent G3 review of Unit 3 after this branch merges.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: repair_en for EFMP-409 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 34 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Unit 3 G3 repairs in EN and UR, coverage and concept traces corrected, G2 evidence refreshed to `20261127T235736825Z-gates.json`, tracker rows updated.
-- Decisions the team must respect: MCQ-06 was rebuilt as a Dewey-Ibn Khaldun convergence item traced to U3-18 so the 10-item bank still gives every topic at least one MCQ; MCQ-10 stays the Iqbal item traced to U3-14. G3 stays open and unsigned.
-- Pending / next owner: fresh independent G3 review; render and print inspection still needs a permitted render job once the reviewed commit is deployed.
-- Paperclip issues affected: none.
+- Shipped / changed: Applied the EFMP-409 Unit 3 G3 report's four blocking findings and its advisories in English and Urdu, redistributing the MCQ keys across A-D with no length cue, correcting the assessment traces and Bloom tags, standardising terminology, and refreshing the G2 gate evidence, with `npm run check:content` green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Render and print inspection stays unverified; it needs this commit deployed (or an owner-run build) and a permitted render job.
+  - The SEP bound notes under `specs/content/efmp-409/sources/texts/` still describe the curriculum and habituation detail as SEP-supported; `sources/unit-03.md` now attributes that detail to the primary works, so a fresh reviewer may reconcile the two.
+  - MCQ-06 was rebuilt as a Dewey-Ibn Khaldun convergence item traced to U3-18; if a fresh reviewer prefers U3-17 for the comparative item, it is a one-line trace change.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none.
-- Graders run and results (PASS/FAIL): check:content PASS (after evidence refresh).
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
