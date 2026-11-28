@@ -64,19 +64,19 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-05/G2/20261118T164700080Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-05/G2/20261128T101445681Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | 4 EN SVG figures placed with dark variants; `.ur.svg` labels pending G4 |
 | Unit 5 | G7 publish | ▢ | | |
 
-**Unit 6 - Social Change and Social Problems:** English content authored to the Spec 008 v3.0 per-topic layout: `index.mdx` + `topic-01..02.mdx` (nine-part cycles) + `unit-assessment.mdx` (10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. Governance artefacts (coverage, sources, figures, concepts) committed. Figures rendered and placed (4 SVGs + dark variants). G1 unit-spec drafted (pending G0 intake approval).
+**Unit 6 - Social Change and Social Problems:** English content authored to the Spec 008 v3.0 per-topic layout: `index.mdx` + `topic-01..02.mdx` (nine-part cycles) + `unit-assessment.mdx` (10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. Governance artefacts (coverage, sources, figures, concepts) committed. Figures rendered and placed (4 SVGs + dark variants, 2 topic illustrations, unit banner). G1 unit-spec drafted (pending G0 intake approval).
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-06/G2/20261118T180216051Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-06/G2/20261128T104455062Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/gsos-301/reviews/unit-06/G3/a90a7de2-a9f8-4abe-9afa-e66589e688ca.json; citation misattribution, coverage/concept mapping repairs; visual render uninspected (brief prohibits build/server/browser); no certification |
 | Unit 6 | G4 ur-translation | ▢ | | Blocked before translation: unresolved English citation and coverage/concept mapping defects trigger translate-unit stop rule; separate author repair required; handoff reviews/unit-06/G4/translation-handoff.md; translation_status stays draft |
 | Unit 6 | G5 ur-review | ▢ | | |

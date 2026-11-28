@@ -1,0 +1,294 @@
+{
+ "course": "EFMP-302",
+ "unit": 5,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Workload",
+     "definition": "Timetabled teaching plus everything else, such as marking, returns, cover, parent contact and assigned duties. The parts invisible from outside are the parts that expand."
+    },
+    {
+     "term": "Stress",
+     "definition": "The response to demands that exceed resources in the moment. It is normal and episodic, and it resolves when the demand passes or the resources arrive."
+    },
+    {
+     "term": "Burnout",
+     "definition": "What chronic, unresolved demand produces over time. It is not a strong word for stress, and it has three dimensions: exhaustion, cynicism and reduced personal accomplishment."
+    },
+    {
+     "term": "Cynicism (depersonalisation)",
+     "definition": "A growing distance from the work and from the people in it. It can look like competence, because the teacher has stopped investing and so is no longer visibly distressed."
+    },
+    {
+     "term": "Job demands",
+     "definition": "What the job asks of a teacher. Those measured by Skaalvik and Skaalvik (2020) were time pressure, low student motivation and a dissonant value context."
+    },
+    {
+     "term": "Job resources",
+     "definition": "The other side of the balance with demands. Those measured by Skaalvik and Skaalvik (2020) were autonomy and supervisory support. Adding a resource is a lever when removing a demand is not."
+    },
+    {
+     "term": "Multilingual classroom",
+     "definition": "A classroom with pupils whose home language is not the language of instruction, often with several home languages at once. The home language is not a problem to be excluded."
+    },
+    {
+     "term": "Cognitive load",
+     "definition": "The extra load carried by a pupil processing a lesson in a second or third language. It shows up as slowness or inattention that is easily misread as low ability."
+    },
+    {
+     "term": "Multi-grade classroom",
+     "definition": "A classroom in which a single teacher is responsible for pupils of two or more grade levels at the same time, in the same room."
+    }
+   ],
+   "ur": [
+    {
+     "term": "کام کا بوجھ",
+     "definition": "ٹائم ٹیبل کی تدریس اور باقی سب کام، جیسے کاپیاں جانچنا، رپورٹیں، غیر حاضر ساتھی کی جگہ پڑھانا، والدین سے رابطہ اور سونپی گئی ذمہ داریاں۔ باہر سے نظر نہ آنے والے حصے ہی بڑھتے ہیں۔"
+    },
+    {
+     "term": "دباؤ",
+     "definition": "اس لمحے کے ان تقاضوں کا جواب جو وسائل سے بڑھ جائیں۔ یہ عام اور وقتی ہے، اور تقاضا گزرنے یا وسائل پہنچنے پر ختم ہو جاتا ہے۔"
+    },
+    {
+     "term": "پیشہ ورانہ تھکن",
+     "definition": "مسلسل اور حل نہ ہونے والے تقاضوں سے وقت کے ساتھ پیدا ہونے والی حالت۔ یہ محض شدید دباؤ نہیں، اور اس کے تین پہلو ہیں: تھکن، بے دلی اور ذاتی کامیابی کے احساس میں کمی۔"
+    },
+    {
+     "term": "بے دلی (غیر شخصی برتاؤ)",
+     "definition": "کام اور اس سے وابستہ لوگوں سے بڑھتا فاصلہ۔ یہ مہارت لگ سکتی ہے، کیونکہ استاد دل لگانا چھوڑ چکا ہوتا ہے اور اس لیے پریشانی ظاہر نہیں کرتا۔"
+    },
+    {
+     "term": "کام کے تقاضے",
+     "definition": "وہ جو کام استاد سے مانگتا ہے۔ Skaalvik اور Skaalvik (2020) نے وقت کا دباؤ، شاگردوں میں سیکھنے کا کم محرک اور اقدار کا متصادم ماحول ناپا تھا۔"
+    },
+    {
+     "term": "کام کے وسائل",
+     "definition": "تقاضوں کے مقابل توازن کا دوسرا پلڑا۔ Skaalvik اور Skaalvik (2020) نے خود مختاری اور نگران کی معاونت ناپی تھی۔ تقاضا کم نہ ہو سکے تو وسیلہ بڑھانا دوسرا راستہ ہے۔"
+    },
+    {
+     "term": "کثیر اللسانی جماعت",
+     "definition": "ایسی جماعت جس کے شاگردوں کی گھریلو زبان تدریس کی زبان نہیں، اور اکثر ایک ساتھ کئی گھریلو زبانیں ہوتی ہیں۔ گھریلو زبان خارج کرنے والا مسئلہ نہیں۔"
+    },
+    {
+     "term": "ذہنی بوجھ",
+     "definition": "دوسری یا تیسری زبان میں سبق سمجھنے والے شاگرد پر پڑنے والا اضافی بوجھ۔ یہ سست رفتاری یا بے توجہی بن کر ظاہر ہوتا ہے، جسے آسانی سے کم صلاحیت سمجھ لیا جاتا ہے۔"
+    },
+    {
+     "term": "کثیر درجاتی کلاس روم",
+     "definition": "ایسی جماعت جس میں ایک استاد ایک ہی وقت اور ایک ہی کمرے میں دو یا زیادہ درجوں کے شاگردوں کا ذمہ دار ہو۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Accountability",
+     "definition": "Mechanisms that measure, compare and impose consequences. They do not, by themselves, supply anything that makes the measured work easier to do."
+    },
+    {
+     "term": "Autonomy",
+     "definition": "A teacher's power to affect the outcomes they are held responsible for. Accountability without autonomy produces compliance rather than improvement."
+    },
+    {
+     "term": "Compliance",
+     "definition": "What accountability without autonomy produces instead of improvement. A teacher given no power to affect an outcome will manage their exposure, which is rational."
+    },
+    {
+     "term": "Stakeholders",
+     "definition": "The parties who make demands on a teacher: pupils, parents, the head, the district, the examination system and the public. What each wants differs from what each measures."
+    },
+    {
+     "term": "Conflicting demands",
+     "definition": "Demands from different parties that cannot all be satisfied by the same action. A professional decides explicitly whose claim takes priority and can say why."
+    },
+    {
+     "term": "Occupational status",
+     "definition": "The standing a society accords a line of work: what it pays, who it attracts, how it is spoken about, and how much independence its members are granted."
+    },
+    {
+     "term": "Public recognition",
+     "definition": "The regard a community extends to its teachers. It is not the same as status, and what teachers do every day affects it among the people who deal with them."
+    }
+   ],
+   "ur": [
+    {
+     "term": "جوابدہی",
+     "definition": "وہ طریقے جو ناپتے، موازنہ کرتے اور نتائج کی بنیاد پر کارروائی کرتے ہیں۔ یہ بذاتِ خود ایسا کوئی وسیلہ نہیں دیتے جو ناپے جانے والے کام کو آسان بنائے۔"
+    },
+    {
+     "term": "خود مختاری",
+     "definition": "جن نتائج کی ذمہ داری استاد پر ڈالی جائے ان پر اثر ڈالنے کا اختیار۔ خود مختاری کے بغیر جوابدہی بہتری نہیں، فرماں برداری پیدا کرتی ہے۔"
+    },
+    {
+     "term": "فرماں برداری",
+     "definition": "خود مختاری کے بغیر جوابدہی سے بہتری کے بجائے پیدا ہونے والا رویہ۔ جس استاد کو نتیجے پر اختیار نہ ہو وہ اپنے خلاف کارروائی کے خطرے کو کم کرے گا، جو معقول ہے۔"
+    },
+    {
+     "term": "فریق",
+     "definition": "استاد سے تقاضے کرنے والے فریق: شاگرد، والدین، سربراہِ اسکول، ضلع، امتحانی نظام اور عوام۔ ہر ایک کی خواہش اس کے پیمانے سے مختلف ہوتی ہے۔"
+    },
+    {
+     "term": "متصادم تقاضے",
+     "definition": "مختلف فریقوں کے وہ تقاضے جو ایک ہی عمل سے سب پورے نہیں ہو سکتے۔ پیشہ ور استاد واضح طور پر طے کرتا ہے کہ کس کا تقاضا پہلے ہو، اور وجہ بتا سکتا ہے۔"
+    },
+    {
+     "term": "پیشے کا سماجی مقام",
+     "definition": "کسی کام کو معاشرے کی طرف سے دیا گیا درجہ: اس کی اجرت کتنی ہے، کون اس کی طرف آتا ہے، اس کے بارے میں کیسے بات ہوتی ہے، اور اس کے ارکان کو کتنی آزادی ملتی ہے۔"
+    },
+    {
+     "term": "عوامی پذیرائی",
+     "definition": "وہ قدر جو کوئی برادری اپنے اساتذہ کو دیتی ہے۔ یہ سماجی مقام جیسی چیز نہیں، اور واسطہ رکھنے والے لوگوں میں اس پر اساتذہ کا روزمرہ عمل اثر ڈالتا ہے۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Pressure to integrate technology",
+     "definition": "Pressure from donors, district offices, competing private schools and public belief. Very little of it originates in a question about learning."
+    },
+    {
+     "term": "Three questions",
+     "definition": "Ask of any proposed use: what does it add that was not possible before, what does it cost, and what does it replace that was already working?"
+    },
+    {
+     "term": "Cost",
+     "definition": "What a use of technology takes. It is not only money: time to set up, time lost when it fails, training you do not have, and attention spent on the device rather than the content."
+    },
+    {
+     "term": "Integrating technology",
+     "definition": "Deciding where technology earns its place, which sometimes means almost nowhere, and justifying that decision like any other instructional choice. It does not mean using it in every lesson."
+    },
+    {
+     "term": "Private messaging with pupils",
+     "definition": "The default is not to. Where contact is necessary, use a group or a channel that a parent or colleague can see, which protects the pupil and the teacher."
+    },
+    {
+     "term": "Class messaging group",
+     "definition": "Useful, with three quiet problems: pupils without a phone are excluded, the teacher's expected availability expands, and a hasty message is permanent and forwardable."
+    },
+    {
+     "term": "Personal accounts",
+     "definition": "A teacher's own online accounts. Calling them private is reasonable about privacy and false about professional consequence."
+    },
+    {
+     "term": "Pupil data and images",
+     "definition": "Marks, assessment records, medical or family information and photographs of children. They are not a teacher's to circulate."
+    },
+    {
+     "term": "Digital resources",
+     "definition": "Digital teaching materials, which carry two obligations: check them for accuracy and curriculum alignment, and credit what you use."
+    }
+   ],
+   "ur": [
+    {
+     "term": "ٹیکنالوجی شامل کرنے کا دباؤ",
+     "definition": "عطیہ دہندگان، ضلعی دفاتر، مقابلے کے پرائیویٹ اسکولوں اور عوامی عقیدے سے آنے والا دباؤ۔ اس کا بہت کم حصہ سیکھنے کے بارے میں کسی سوال سے پیدا ہوتا ہے۔"
+    },
+    {
+     "term": "تین سوال",
+     "definition": "ہر مجوزہ استعمال پر پوچھیے: وہ کیا شامل کرتا ہے جو پہلے ممکن نہ تھا، اس کی لاگت کیا ہے، اور وہ کس کام کرتی ہوئی چیز کی جگہ لیتا ہے؟"
+    },
+    {
+     "term": "لاگت",
+     "definition": "ٹیکنالوجی کے کسی استعمال پر جو کچھ صرف ہو۔ صرف رقم نہیں: تیار کرنے کا وقت، خرابی پر ضائع ہونے والا وقت، وہ تربیت جو آپ کو نہیں ملی، اور مواد کے بجائے آلے پر صرف ہونے والی توجہ۔"
+    },
+    {
+     "term": "ٹیکنالوجی شامل کرنا",
+     "definition": "طے کرنا کہ ٹیکنالوجی کہاں فائدہ مند ہے، جو کبھی تقریباً کہیں نہیں ہوتا، اور دوسرے تدریسی انتخاب کی طرح اس فیصلے کا جواز دینا۔ اس کا مطلب ہر سبق میں استعمال نہیں۔"
+    },
+    {
+     "term": "شاگردوں کے ساتھ نجی پیغام رسانی",
+     "definition": "بنیادی اصول اس سے گریز ہے۔ رابطہ ضروری ہو تو گروپ یا ایسا ذریعہ استعمال کیجیے جسے والدین یا کوئی ساتھی دیکھ سکے، جو شاگرد اور استاد دونوں کو تحفظ دیتا ہے۔"
+    },
+    {
+     "term": "جماعتی گروپ",
+     "definition": "کارآمد، مگر تین خاموش مسئلوں کے ساتھ: فون نہ رکھنے والے شاگرد باہر ہو جاتے ہیں، استاد کی دستیابی کی توقع پھیل جاتی ہے، اور جلدی کا پیغام مستقل اور آگے بھیجا جا سکتا ہے۔"
+    },
+    {
+     "term": "ذاتی اکاؤنٹس",
+     "definition": "استاد کے اپنے آن لائن اکاؤنٹس۔ انہیں نجی کہنا رازداری کے لحاظ سے معقول ہے، مگر پیشہ ورانہ نتائج کے لحاظ سے غلط۔"
+    },
+    {
+     "term": "شاگردوں کا ڈیٹا اور تصویریں",
+     "definition": "نمبر، تشخیصی ریکارڈ، طبی یا خاندانی معلومات اور بچوں کی تصویریں۔ انہیں پھیلانا استاد کا حق نہیں۔"
+    },
+    {
+     "term": "ڈیجیٹل مواد",
+     "definition": "ڈیجیٹل تدریسی مواد، جس پر دو ذمہ داریاں ہیں: درستی اور نصاب سے مطابقت کی جانچ کیجیے، اور جو استعمال کریں اس کا حوالہ دیجیے۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "What you control",
+     "definition": "The region that includes your preparation, your first ten minutes, how you speak to a pupil who is wrong, how you mark and what you do with your time."
+    },
+    {
+     "term": "What you can influence",
+     "definition": "The region of a colleague's practice, a departmental habit or a head's decision. You do not command these, but you are not powerless over them either."
+    },
+    {
+     "term": "What you do not control",
+     "definition": "The region of pay scales, class size, the examination system, electricity and paperwork. Most professional frustration comes from spending effort here."
+    },
+    {
+     "term": "Resilience",
+     "definition": "A real quality, but offered as the whole answer to difficult conditions it becomes a way of relocating a system's failure into an individual's character."
+    },
+    {
+     "term": "Growth",
+     "definition": "A response other than endurance: what deliberately adding resources looks like over a career."
+    },
+    {
+     "term": "Resource",
+     "definition": "The lever available when you cannot reduce a demand. Examples are an honest colleague, a method that reduces work, knowing the content well and a small improvement that worked."
+    },
+    {
+     "term": "Naming the challenge precisely",
+     "definition": "Stating the problem so that it can be acted on, for example that eleven of sixty-two pupils cannot read the textbook, not that the class is impossible."
+    },
+    {
+     "term": "Deciding the evidence in advance",
+     "definition": "Settling beforehand what would show that a change worked. It is the station most often skipped, and without it you will conclude whatever you hoped."
+    }
+   ],
+   "ur": [
+    {
+     "term": "جو آپ کے اختیار میں ہے",
+     "definition": "وہ دائرہ جس میں آپ کی تیاری، سبق کے پہلے دس منٹ، غلط جواب دینے والے شاگرد سے اندازِ گفتگو، کاپیاں جانچنے کا طریقہ اور وقت کا استعمال شامل ہیں۔"
+    },
+    {
+     "term": "جس پر آپ اثر ڈال سکتے ہیں",
+     "definition": "کسی ساتھی کا تدریسی عمل، شعبے کی عادت یا سربراہ کے فیصلے کا دائرہ۔ ان پر آپ کا حکم نہیں چلتا، مگر آپ بالکل بے بس بھی نہیں۔"
+    },
+    {
+     "term": "جو آپ کے اختیار میں نہیں",
+     "definition": "تنخواہ، جماعت کا سائز، امتحانی نظام، بجلی اور کاغذی کارروائی کا دائرہ۔ بیشتر پیشہ ورانہ مایوسی یہیں محنت لگانے سے آتی ہے۔"
+    },
+    {
+     "term": "لچک",
+     "definition": "ایک حقیقی خوبی، مگر مشکل حالات کا مکمل جواب بنا دی جائے تو نظام کی ناکامی کا بوجھ فرد کی شخصیت پر ڈال دیا جاتا ہے۔"
+    },
+    {
+     "term": "ترقی",
+     "definition": "برداشت کے بجائے ایک جواب: پیشہ ورانہ زندگی میں سوچ سمجھ کر مسلسل وسائل بڑھانا۔"
+    },
+    {
+     "term": "وسیلہ",
+     "definition": "تقاضا کم نہ ہو سکے تو دستیاب دوسرا راستہ۔ مثلاً کھل کر بات کرنے والا ساتھی، کام کم کرنے والا طریقہ، مواد کی اچھی سمجھ اور ایک کامیاب چھوٹی بہتری۔"
+    },
+    {
+     "term": "چیلنج کا ٹھیک نام لینا",
+     "definition": "مسئلہ ایسے بیان کرنا کہ اس پر عمل ہو سکے، مثلاً باسٹھ میں سے گیارہ شاگرد کتاب نہیں پڑھ سکتے، نہ کہ یہ کہ جماعت ناممکن ہے۔"
+    },
+    {
+     "term": "ثبوت پہلے سے طے کرنا",
+     "definition": "پہلے ہی طے کرنا کہ کیا چیز دکھائے گی کہ تبدیلی کامیاب ہوئی۔ یہ سب سے زیادہ چھوڑی جانے والی منزل ہے، اور اس کے بغیر آپ وہی نتیجہ نکالیں گے جس کی امید تھی۔"
+    }
+   ]
+  }
+ }
+}

@@ -723,6 +723,260 @@
      "at": "2026-11-26T14:35:17.334Z"
     }
    }
+  },
+  {
+   "id": "2026-11-28-content",
+   "kind": "content",
+   "date": "2026-11-28",
+   "state": "posted",
+   "headline": {
+    "en": "New on textbook.com.pk",
+    "ur": "نیا مواد"
+   },
+   "highlights": [
+    {
+     "type": "course",
+     "ids": [
+      "course:EFPG-402"
+     ],
+     "card_en": "New course: EFPG-402 Teaching of Science",
+     "card_ur": "نیا کورس: EFPG-402 سائنس کی تدریس",
+     "en": "New course: EFPG-402 Teaching of Science. It is free to read on textbook.com.pk, unit by unit, for anyone training to teach.",
+     "ur": "نیا کورس: EFPG-402 سائنس کی تدریس۔ یہ textbook.com.pk پر یونٹ وار مفت پڑھا جا سکتا ہے، ہر اس شخص کے لیے جو تدریس کی تربیت لے رہا ہے۔",
+     "link": "/semester-4/efpg-402/",
+     "date": "2026-11-27T11:25:31+05:00"
+    },
+    {
+     "type": "unit",
+     "ids": [
+      "unit:EFPG-402:8",
+      "unit:EFPG-402:6",
+      "unit:EFPG-402:7",
+      "unit:EFPG-402:5",
+      "unit:EFPG-402:4",
+      "unit:EFPG-402:3",
+      "unit:EFPG-402:2",
+      "unit:EFPG-402:1"
+     ],
+     "card_en": "EFPG-402 Teaching of Science: 8 new units",
+     "card_ur": "EFPG-402 سائنس کی تدریس: 8 نئے یونٹ",
+     "en": "EFPG-402 Teaching of Science: 8 new units to read for free, on Unit 1: Nature and Importance of Science; Unit 2: Science Curriculum and Textbook; Unit 3: Methods and Approaches of Teaching Science; Unit 4: Teaching-Learning Resources, and 4 more.",
+     "ur": "EFPG-402 سائنس کی تدریس: 8 نئے یونٹ مفت پڑھنے کے لیے، ان موضوعات پر: یونٹ 1: سائنس کی نوعیت اور اہمیت؛ یونٹ 2: سائنس کا نصاب اور درسی کتاب؛ یونٹ 3: سائنس پڑھانے کے طریقے اور انداز؛ یونٹ 4: تدریسی اور تعلیمی وسائل، اور 4 مزید۔",
+     "link": "/semester-4/efpg-402/",
+     "date": "2026-11-27T19:06:48+05:00"
+    },
+    {
+     "type": "unit",
+     "ids": [
+      "unit:EFPC-411:3",
+      "unit:EFPC-411:2"
+     ],
+     "card_en": "EFPC-411 School Observation: 2 new units",
+     "card_ur": "EFPC-411 اسکول کا مشاہدہ: 2 نئے یونٹ",
+     "en": "EFPC-411 School Observation: 2 new units to read for free, on Unit 2: School Placement Observation Tasks and Unit 3: The Observation Portfolio and Reflective Practice.",
+     "ur": "EFPC-411 اسکول کا مشاہدہ: 2 نئے یونٹ مفت پڑھنے کے لیے، ان موضوعات پر: یونٹ 2: اسکول پلیسمنٹ کے مشاہداتی کام اور یونٹ 3: مشاہداتی پورٹ فولیو اور تاملی مشق۔",
+     "link": "/semester-4/efpc-411/",
+     "date": "2026-11-27T08:19:28+05:00"
+    },
+    {
+     "type": "urdu",
+     "ids": [
+      "urdu:EFPG-402:8",
+      "urdu:EFPG-402:7",
+      "urdu:EFPG-402:6",
+      "urdu:EFPG-402:5",
+      "urdu:EFPG-402:3",
+      "urdu:EFPG-402:4",
+      "urdu:EFPG-402:2",
+      "urdu:EFPG-402:1"
+     ],
+     "card_en": "EFPG-402 Teaching of Science: 8 units now in Urdu",
+     "card_ur": "EFPG-402 سائنس کی تدریس: 8 یونٹ اب اردو میں",
+     "en": "8 units of EFPG-402 Teaching of Science can now be read in Urdu as well as English.",
+     "ur": "EFPG-402 سائنس کی تدریس کے 8 یونٹ اب انگریزی کے ساتھ اردو میں بھی پڑھے جا سکتے ہیں۔",
+     "link": "/semester-4/efpg-402/",
+     "date": "2026-11-27T23:52:19+05:00"
+    },
+    {
+     "type": "urdu",
+     "ids": [
+      "urdu:EFPC-411:3",
+      "urdu:EFPC-411:2",
+      "urdu:EFPC-411:1"
+     ],
+     "card_en": "EFPC-411 School Observation: 3 units now in Urdu",
+     "card_ur": "EFPC-411 اسکول کا مشاہدہ: 3 یونٹ اب اردو میں",
+     "en": "3 units of EFPC-411 School Observation can now be read in Urdu as well as English.",
+     "ur": "EFPC-411 اسکول کا مشاہدہ کے 3 یونٹ اب انگریزی کے ساتھ اردو میں بھی پڑھے جا سکتے ہیں۔",
+     "link": "/semester-4/efpc-411/",
+     "date": "2026-11-27T10:17:04+05:00"
+    }
+   ],
+   "more": 7,
+   "items": [
+    "course:EFPG-402",
+    "unit:EFPG-402:8",
+    "unit:EFPG-402:6",
+    "unit:EFPG-402:7",
+    "unit:EFPG-402:5",
+    "unit:EFPG-402:4",
+    "unit:EFPG-402:3",
+    "unit:EFPG-402:2",
+    "unit:EFPG-402:1",
+    "unit:EFPC-411:3",
+    "unit:EFPC-411:2",
+    "urdu:EFPG-402:8",
+    "urdu:EFPG-402:7",
+    "urdu:EFPG-402:6",
+    "urdu:EFPG-402:5",
+    "urdu:EFPG-402:3",
+    "urdu:EFPG-402:4",
+    "urdu:EFPG-402:2",
+    "urdu:EFPG-402:1",
+    "urdu:EFPC-411:3",
+    "urdu:EFPC-411:2",
+    "urdu:EFPC-411:1",
+    "teaser:efmp-407-ur",
+    "teaser:efmp-406-ur",
+    "figures:GSOS-301:4",
+    "figures:GSOS-301:3",
+    "figures:GSOS-301:2",
+    "figures:GSOS-301:1",
+    "figures:GQUR-301:15",
+    "figures:GQUR-301:16",
+    "figures:GQUR-301:14",
+    "figures:GQUR-301:13",
+    "figures:GQUR-301:12",
+    "figures:GQUR-301:11",
+    "figures:GQUR-301:10",
+    "figures:GQUR-301:8",
+    "figures:GQUR-301:7",
+    "figures:GQUR-301:6",
+    "figures:GICT-300:1",
+    "figures:GENG-301:4",
+    "updated:GENG-301:4",
+    "review:EFPC-411:2:G3"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-28T10:02:14.177Z",
+   "since": "2026-11-26T12:34:45.959Z",
+   "card": "~/studio-media/social/2026-11-28-content.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-28-content.jpg",
+   "approved": {
+    "by": "auto",
+    "at": "2026-11-28T10:04:07.112Z"
+   },
+   "platforms": {
+    "facebook": {
+     "state": "posted",
+     "post_id": "1404300426106517_122112600873545614",
+     "url": "https://www.facebook.com/1404300426106517_122112600873545614",
+     "at": "2026-11-28T10:04:42.655Z"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_id": "18360602017171613",
+     "url": "https://www.instagram.com/p/DgR_319nYHj/",
+     "at": "2026-11-28T10:04:42.655Z"
+    },
+    "linkedin": {
+     "state": "posted",
+     "post_id": "urn:li:share:7532383965165547520",
+     "url": "https://www.linkedin.com/feed/update/urn:li:share:7532383965165547520/",
+     "at": "2026-11-28T10:04:42.655Z"
+    }
+   }
+  },
+  {
+   "id": "2026-11-28-feature",
+   "kind": "feature",
+   "date": "2026-11-28",
+   "state": "drafted",
+   "headline": {
+    "en": "Platform update",
+    "ur": "پلیٹ فارم اپ ڈیٹ"
+   },
+   "highlights": [
+    {
+     "type": "feature",
+     "ids": [
+      "pr:935"
+     ],
+     "en": "Decisions page: see what the crew is waiting on and approve it in one place.",
+     "ur": "فیصلوں کا صفحہ: طاقم کو جو آپ کی ضرورت ہے وہ ایک جگہ دیکھیں اور منظور کریں۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 935,
+     "card_en": "Decisions page: approve crew work in one place",
+     "card_ur": "فیصلوں کا صفحہ: طاقم کا کام ایک جگہ منظور کریں"
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:900"
+     ],
+     "en": "Study page: GQUR-301 Topic 10.2 now shows a bar chart drawn from its own data.",
+     "ur": "مطالعہ صفحہ: GQUR-301 موضوع 10.2 اب اپنے ڈیٹا سے بنا بار چارٹ دکھاتا ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 900,
+     "card_en": "GQUR-301 Topic 10.2: data-driven chart",
+     "card_ur": "GQUR-301 موضوع 10.2: ڈیٹا سے بنا چارٹ"
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:898"
+     ],
+     "en": "Figures on phones: tap View full size to open a wide diagram full width and zoom in.",
+     "ur": "فون پر خاکے: چوڑا خاکہ پوری جسامت میں کھول کر بڑا کر کے دیکھا جا سکتا ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 898,
+     "card_en": "Phones: wide figures open full size",
+     "card_ur": "فون پر: چوڑے خاکے پوری جسامت میں"
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:896"
+     ],
+     "en": "Unit assessments: questions appear as cards with one MCQ set, not two repeats.",
+     "ur": "یونٹ امتحان: سوالات اب کارڈ کی شکل میں ہیں اور MCQ ایک ہی سیٹ دکھاتا ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 896,
+     "card_en": "Assessments: question cards, one MCQ set",
+     "card_ur": "امتحان: سوال کارڈ، ایک MCQ سیٹ"
+    },
+    {
+     "type": "feature",
+     "ids": [
+      "pr:894"
+     ],
+     "en": "Untranslated pages: the Urdu toggle is greyed out and explains itself in a callout.",
+     "ur": "غیر ترجمہ شدہ صفحات: اردو ٹوگل اب بے رنگ ہے اور وضاحتی پیغام دکھاتا ہے۔",
+     "link": "/",
+     "needs_copy": false,
+     "pr": 894,
+     "card_en": "Urdu toggle greyed on untranslated pages",
+     "card_ur": "غیر ترجمہ صفحات: اردو ٹوگل بے رنگ"
+    }
+   ],
+   "more": 1,
+   "items": [
+    "pr:935",
+    "pr:900",
+    "pr:898",
+    "pr:896",
+    "pr:894",
+    "pr:893"
+   ],
+   "link": "/",
+   "collected_at": "2026-11-28T10:02:14.177Z",
+   "since": "2026-11-26T12:34:45.959Z",
+   "card": "~/studio-media/social/2026-11-28-feature.jpg",
+   "card_url": "https://api.textbook.com.pk/storage/v1/object/public/social-cards/2026-11-28-feature.jpg"
   }
  ]
 }
