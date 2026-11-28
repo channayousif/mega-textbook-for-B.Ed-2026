@@ -469,12 +469,73 @@
    "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-02/t2-ur-audio-p1.mp4.thumb.jpg"
   },
   {
-   "state": "planned",
-   "gates": {},
+   "state": "qa2-pass",
+   "gates": {
+    "qa1": {
+     "verdict": "pass",
+     "by": "media-qa.mjs",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 120.441905,
+      "video": null,
+      "loudness": null,
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa1_encoded": {
+     "verdict": "pass",
+     "by": "media-qa.mjs --stage encoded",
+     "date": "2026-11-28",
+     "metrics": {
+      "duration_s": 120.5,
+      "video": {
+       "codec": "h264",
+       "width": 1920,
+       "height": 1080,
+       "duration_s": 120.5
+      },
+      "loudness": {
+       "integrated_lufs": -17,
+       "true_peak_dbfs": -1.5
+      },
+      "silences": 0,
+      "longest_silence_s": 0,
+      "black_runs": 0
+     }
+    },
+    "qa2": {
+     "verdict": "pass",
+     "by": "Claude QG2 transcript check",
+     "date": "2026-11-28",
+     "notes": "Faithful to topic-03.mdx: the science teacher joining an association, the four dimensions, pedagogical content knowledge with the Class 3 multi-grade spoken-drill example, the accountability/autonomy/collegiality balance with what each excess does, the dress-and-punctuality misconception, and the practicum code-of-conduct task. No quiz answers. Transcript renders the K-A-B-B hook as 'no act balance belong' and says 'erdo' for Urdu."
+    }
+   },
    "history": [
     {
      "state": "planned",
      "at": "2026-11-28T00:54:18.764Z"
+    },
+    {
+     "state": "generated",
+     "at": "2026-11-28T02:44:59.471Z"
+    },
+    {
+     "state": "downloaded",
+     "at": "2026-11-28T02:47:46.104Z"
+    },
+    {
+     "state": "qa1-pass",
+     "at": "2026-11-28T02:51:50.164Z"
+    },
+    {
+     "state": "encoded",
+     "at": "2026-11-28T02:51:50.317Z"
+    },
+    {
+     "state": "qa2-pass",
+     "at": "2026-11-28T02:52:58.205Z"
     }
    ],
    "topic": 3,
@@ -485,7 +546,12 @@
    "alt": "Audio brief, about two minutes, with the three memory hooks for specialised knowledge, the ethical code, the accountability balance and professional bodies.",
    "prompt_ref": "specs/studio/prompts/audio.md v2",
    "notebook_id": "3b21d14f-ea35-479b-bee7-dbf6c9494841",
-   "key": "t3-en-audio-p1"
+   "key": "t3-en-audio-p1",
+   "artifact_id": "87c540ac-218a-4dd5-bf8c-5f0bcb8c85e8",
+   "file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-en-audio-p1.m4a",
+   "sha256": "9e71d6bca7199fede6f660fe7623685f4ad45b6a8a5c7e0c1ef79c1798799cba",
+   "encoded_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-en-audio-p1.mp4",
+   "thumbnail_file": "/home/a2ahs/studio-media/efmp-302/unit-01/topic-03/t3-en-audio-p1.mp4.thumb.jpg"
   },
   {
    "state": "planned",
