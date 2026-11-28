@@ -4,7 +4,7 @@ title: crew review_en EFPG-402 unit 2
 stage: misc
 date: 2026-11-28
 surface: agent
-model: claude-longcat-2.5
+model: claude_crew
 feature: efpg-402
 branch: crew/efpg-402-u02-review_en
 user: crew
@@ -13,17 +13,48 @@ labels: ["crew", "claude_crew", "review_en"]
 links:
   spec: specs/content/efpg-402/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
-  - history/prompts/efpg-402/crew-efpg-402-u02-review_en.misc.prompt.md
-  - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb.json
-  - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/
+ - history/prompts/efpg-402/crew-efpg-402-u02-review_en.misc.prompt.md
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb.json
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/advisory-tracker-row.md
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/assessment-solutions.md
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/limitations.md
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/build-content-status.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/check-content.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/check:depth-gate.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/check:docs-sync.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/check:figures.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/check:no-answer-keys.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/check:no-em-dash.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/measure-figure-text.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/prepare.txt
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/render-input-identity.txt
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/render-review.txt
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/logs/validate:content.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/make-report.mjs
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/manifest.json
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/desktop-index.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/desktop-topic-01.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/desktop-topic-02.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/desktop-topic-03.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/desktop-topic-04.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/desktop-topic-05.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/desktop-unit-assessment.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/narrow360-index.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/narrow360-topic-01.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/narrow360-topic-02.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/narrow360-topic-03.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/narrow360-topic-04.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/narrow360-topic-05.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/narrow360-unit-assessment.png
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/render-inspect.json
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/renders/render-inspect.log
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/source-checks/ncp-science-2022-unit-02-search.txt
+ - specs/content/efpg-402/reviews/unit-02/G3/1947560f-ec6d-49d7-86e1-0c8e0c563ccb/summary.md
 tests:
-  - npm run check:content (14 content gates, all pass)
-  - node scripts/review-evidence.mjs validate (report valid, disposition revise)
-  - scripts/heavy.sh node scripts/measure-figure-text.mjs on 40 unit SVGs, exit 0
-  - scripts/heavy.sh node scripts/render-inspect.mjs EFPG-402 2 --base https://textbook.com.pk --no-pdf (exit 1 on WebP false positives; A/B/C clean)
+ - npm run check:content
 ---
 
 ## Prompt
@@ -54,46 +85,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Advisory G3 run 1 of EFPG-402 Unit 2 returns revise. Authority, coverage, readability and pedagogy
-pass; all ten MCQ keys were reproduced independently. One blocking source defect: three NCP SLO
-wordings are invented and presented in quotation marks (topic-03 worked example, the RRQ 1 model
-answer and topic-04), confirmed absent from the full 74-page NCP Science progression-grid PDF.
-Assessment fails because the RRQ 7 model answer names "relevance", which is not one of the six
-checklist criteria. render-inspect against the production build (deployed SHA matches HEAD for this
-unit) is clean on desktop, 360px and A4 print but exits 1 on the five WebP illustrations, so visual
-accessibility is unverified. No sign-off, no signature, no tracker change.
+Added the independent advisory G3 English review evidence for EFPG-402 Unit 2 (report, assessment solve, NCP source check, render PNGs, advisory tracker row and PHR), disposition revise, with no content or tracker change.
 
 ## Outcome
 
-- Impact: new input-bound advisory G3 evidence for EFPG-402 Unit 2; G3 remains open.
-- Tests: six mandatory deterministic commands exit 0; measure-figure-text 40/40 exit 0; check:content
-  14/14 pass; report validates as revise.
-- Files: report, prepared manifest, summary, assessment solutions, limitations, advisory row,
-  source-check log, hashed command logs and fourteen production render PNGs; this PHR.
-- Next prompts: a separate author repairs F1 (invented NCP quotations), F2 (six-aims framing) and
-  F3 (RRQ 7 model answer), then a fresh G3 run rechecks the repaired bytes.
-- Reflection: render-inspect requests `.svg` variants for every placed figure, so a unit with placed
-  WebP illustrations always exits 1 even when the rendered pages are clean; the A/B/C sections are
-  the usable evidence and the exit code must still be reported honestly.
+- Impact: review_en for EFPG-402 Unit 2 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 37 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: advisory G3 run 1 of EFPG-402 Unit 2 at HEAD e29224ece, rendered input deployed
-  SHA 00ac8dbb5ee318db7387243e2b3b92aed650ae8c (matches HEAD for the unit's English dir and figures).
-- Decisions the team must respect: G3 remains open and unsigned. No content, tracker, registry,
-  translation-status or publication change. The advisory tracker row is a proposal only.
-- Pending / next owner: content repair of F1-F3 by an author job; then a fresh independent G3 run.
-  Advisories F5-F8 can be folded into the same repair.
-- Issues affected: crew job efpg-402-u02-review_en; no issue ID supplied.
+- Shipped / changed: Added the independent advisory G3 English review evidence for EFPG-402 Unit 2 (report, assessment solve, NCP source check, render PNGs, advisory tracker row and PHR), disposition revise, with no content or tracker change.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - render-inspect will exit 1 for any unit with placed WebP illustrations (section D requests `.svg`); the A/B/C sections are the usable evidence, but the exit code must be recorded and accessibility left unverified until the script skips non-SVG kinds.
+  - the blocking repair is the invented NCP SLO wording in topic-03, the RRQ 1 model answer and topic-04; also reflex the "six aims" as the unit's synthesis and change RRQ 7's second criterion to inclusivity.
+  - G3 stays open and unsigned; the tracker row was not touched, and the advisory row is a proposal for the parent.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: render-inspect WebP-as-SVG false positives; NCP SLO wording invented in
-  quotation marks; a model answer naming a criterion outside the taught checklist.
-- Graders run and results (PASS/FAIL): PASS deterministic commands; PASS report validation; REVISE
-  semantic review.
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): teach render-inspect to skip non-SVG figure kinds in
-  section D so units with placed illustrations can produce a clean exit code.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
