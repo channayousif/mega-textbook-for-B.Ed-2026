@@ -42,3 +42,4 @@ English-only authoring from the approved Unit 1 and Unit 2 content-spec subsecti
 | Unit 2 | G3 en-review | ✅ | CMY | review:specs/content/efpc-411/reviews/unit-02/G3/20261127T192751Z-g3-desk-74a8990f.json |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efpc-411/reviews/unit-01/G3/20261127T192818Z-g3-desk-b2d611b9.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efpc-411/reviews/unit-03/G3/20261127T192818Z-g3-desk-f6c9628b.json |
+| Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied; report reviews/unit-01/G3/20261127T192818Z-g3-desk-b2d611b9.json (crew efpc-411-u01-repair_en-r1, 2026-11-28). Source notes rewritten from the works; U1-04 bound to the Teach manual p. 12 with the rest recorded as author guidance; Schön (1983) cited and declared unverifiable (text not read); cycle sentence corrected. Render review still pending a deploy. G3 stays unticked; no certification, no human initials |
