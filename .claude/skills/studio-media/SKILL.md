@@ -112,7 +112,11 @@ Notation: `L = node scripts/notebook-studio/media-ledger.mjs`, `M = ~/studio-med
    `node scripts/notebook-studio/yt-describe.mjs unit <course> <unit> <key>` (add `--dry-run` first).
    It reuses the youtube-uploader MCP's saved sign-in and prints no secret.
 6. **QG2 content (Claude).** Get a transcript:
-   - Add the source file (for a video, the m4a extracted with
+   - First choice (Feature 037, D-2026-0103): `node scripts/media/transcribe.mjs <file> --lang ur|en --out <file>.txt`.
+     Workers AI whisper returns Urdu in Urdu script (a 7.5-minute brief: about 60 s and 350 of the free
+     10,000 daily neurons); on any Workers AI failure it runs local whisper through `scripts/heavy.sh`.
+     It prints which engine it used. A video works directly (its audio is extracted).
+   - Otherwise add the source file (for a video, the m4a extracted with
      `ffmpeg -i in.mp4 -vn -c:a copy out.m4a`) to the course QA notebook with `source_add`
      (`source_type: "file"`), then read it with `source_get_content`.
    - If NotebookLM refuses audio sources, upload private first (stage 7) and check the YouTube

@@ -39,6 +39,7 @@ import { noteStall, clearStall, stallAlertDue, heldFor, stallLine } from './stal
 import { resumeHere } from './resume.mjs';
 import { isMediaStage, teaserNeeds, studioNeeds, limitMedia, mediaLaunchProblem, approveScript, rejectMedia, approvePublish, approveStudio, rejectStudio, studioKey, STUDIO_STAGES, ownerLine, mediaTask, mediaScope, mediaHold, teaserKey } from './media.mjs';
 import { stageLanes, isLaneStage, laneOf, pickLane, ledgerOf, dailyRoom, dailyUse, todayPlan, LANE_PRODUCER } from './resources.mjs';
+import { laneHealthy } from '../media/nlm-health.mjs';
 import { scriptSha, scriptPath, loadLedger as loadTeaserLedger } from '../notebook-studio/teaser.mjs';
 import { gflowReachable } from '../media/producers/quota.mjs';
 import { withinHours, nextOpen, limits as paceLimits, events as paceEvents, CHANNELS as PACE_CHANNELS } from '../media/pacing.mjs';
@@ -813,7 +814,8 @@ function launchQueued(board, health, control, events) {
     if (j.stage === SOCIAL_STAGE && load('control').social !== 'on') continue; // switched off after queueing: wait
     let pick = null;
     if (onLane) {
-      pick = pickLane(j, { open, busy: busyLanes, room, producerOk: (lane) => j.stage !== 'illustrate' || imageOk(lane) });
+      // A notebook lane whose NotebookLM login failed today's check (scripts/media/nlm-health.mjs) stays idle.
+      pick = pickLane(j, { open, busy: busyLanes, room, producerOk: (lane) => (j.stage === 'illustrate' ? imageOk(lane) : laneHealthy(lane)) });
       if (pick.wait) { waits[j.id] = pick.wait; continue; }
       const ledger = ledgerOf(j);
       if (ledger && busyLedgers.has(ledger)) { waits[j.id] = 'another job is writing its ledger'; continue; }
