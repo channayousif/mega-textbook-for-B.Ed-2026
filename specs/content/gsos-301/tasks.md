@@ -14,7 +14,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 |---|---|---|---|---|
 | Unit 1 | G0 course-intake | ▣ | | content-spec status: draft, pending G0/G1 intake |
 | Unit 1 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-01/G2/20261118T123217889Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-01/G2/20261128T014424605Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; figure text overflows and citation mismatches; report specs/content/gsos-301/reviews/unit-01/G3/7725a4f0-f3eb-4a48-aed1-23a2605c30d8.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-01/G3/7725a4f0-f3eb-4a48-aed1-23a2605c30d8.json; X1 geometry verified across 24 variants; S1 EN/UR citations aligned; A1 G0/G1 closure remains CurriculumOwner action; X2 mobile/print inspection pending permitted browser review; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | agent:agy | Advisory escalate (cycle 2/2, final): report specs/content/gsos-301/reviews/unit-01/G3/18895ffc-9133-4016-98ea-4feb32e69b98.json; prior X1 figure geometry and S1 citation/Further reading verified repaired; A1 G0/G1 intake closure remains CurriculumOwner action; visual 360px/print inspection unperformed under host constraints; G3 remains open, no certification; further cycles require recorded owner authorization |
@@ -28,7 +28,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261118T134725423Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261128T021403307Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ▣ | auto:gates | full UR mirror (5 files) and 4 figure variants retained; 2026-10-19 semantic and untranslated-prose repairs; 13 draft gates pass; parity probe has only expected G4/G5 status and derived-status failures; render pending; translation_status stays draft; handoff: figures/unit-02.translation-handoff.md |
 | Unit 2 | G5 ur-review | ▢ | | |
@@ -40,7 +40,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | approved authority recorded in confirmed D-2026-0066; owner to reconcile gate metadata |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-03/G2/20261118T144711535Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-03/G2/20261128T030040050Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-03/G3/01a16968-f1c8-7233-add1-497c86787970.json; role conflict/strain, missing figures, assessment and source/mapping repairs; provenance/render evidence incomplete; no certification |
 | Unit 3 | G4 ur-translation | ▢ | agent:claude-translate-unit | Urdu mirror drafted (5 files, .ur.svg wired, key_terms bank-conformant; flip probe clean except G4/G5 rows) against English 27261f59; faithful to unrepaired English incl. G3 role conflict/strain and RRQ 3 defects; handoff reviews/unit-03/G4/translation-handoff.md; translation_status stays draft; awaits English repair and independent G5 |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -52,11 +52,11 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ✅ | owner:D-2026-0066 | approved by confirmed intake decision D-2026-0066 (2026-10-10); content-spec status approved; nothing remains blocked at G0/G1 |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261118T154709641Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261128T033046340Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-04/G3/20261022-codex.json; numeric guidance, ERQ tables, RRQ demand and coverage mappings need author repair; provenance/source/render evidence incomplete; no certification; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▢ | | Blocked before translation: confirmed English assessment errors trigger translate-unit stop rule; separate author repair required; handoff reviews/unit-04/G4/translation-handoff.md; translation_status stays draft |
 | Unit 4 | G5 ur-review | ▢ | | |
-| Unit 4 | G6 assets | ▢ | | |
+| Unit 4 | G6 assets | ▣ | | Four schematic SVGs (fig-U4-1 to fig-U4-4) placed with dark variants; banner fig-U4-5 placed; topic scenes fig-U4-6 and fig-U4-7 placed |
 | Unit 4 | G7 publish | ▢ | | |
 
 **Unit 5 - Social Institutions:** English content authored to the Spec 008 per-topic layout: `index.mdx` + `topic-01..02.mdx` (nine-part cycles) + `unit-assessment.mdx` (10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. Coverage, sources, figures and concepts committed; four schematic SVG figures (two concept maps, two tables) placed with dark variants. Urdu mirror not started.

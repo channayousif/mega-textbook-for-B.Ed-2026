@@ -113,14 +113,14 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 14 | G6 assets | ▢ | | |
 | Unit 14 | G7 publish | ▢ | | |
 | Unit 15 | G1 unit-spec | ▢ | | guide Chapter 15; intake re-evaluation advised (D-2026-0070) |
-| Unit 15 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-15/G2/20261127T230927009Z-gates.json |
+| Unit 15 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-15/G2/20261128T024317601Z-gates.json |
 | Unit 15 | G3 en-review | ▣ | agent:claude-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-15/G3/crew-20261023.json; F1-F6 need separate author repair (five placed figures missing, fig-U15-2/3 contradict the worked examples, ERQ 2 and RRQ 10 keys wrong, 6 of 9 citation links broken); G1 approval, bound sources and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
 | Unit 15 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 15 | G5 ur-review | ▢ | | |
 | Unit 15 | G6 assets | ▢ | | |
 | Unit 15 | G7 publish | ▢ | | |
 | Unit 16 | G1 unit-spec | ▢ | | guide Chapter 16; intake re-evaluation advised (D-2026-0070) |
-| Unit 16 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-16/G2/20261118T111714202Z-gates.json |
+| Unit 16 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-16/G2/20261128T011309458Z-gates.json |
 | Unit 16 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 16 | G4 ur-translation | ▢ | | Complete six-page draft mirror and six Urdu SVG pairs prepared from 89d7c508; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Handoff: reviews/unit-16/translation-validation/handoff.md |
 | Unit 16 | G5 ur-review | ▢ | | |

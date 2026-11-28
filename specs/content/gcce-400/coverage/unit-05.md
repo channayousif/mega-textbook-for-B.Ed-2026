@@ -10,7 +10,6 @@ All three guide leaves (Week 10, sections 10.1-10.3) map to their approved topic
 | U5-02 | topic-02.mdx | Role of advocacy in addressing social issues | youniss-levine-2009 |
 | U5-02 | topic-02.mdx | Role of advocacy in addressing social issues | constitution-pakistan |
 | U5-03 | topic-03.mdx | Social action movements | openstax-sociology-3e |
-| U5-03 | topic-03.mdx | Social action movements | batool-2019-civil-society |
 | U5-03 | topic-03.mdx | Social action movements | constitution-pakistan |
 
 ## Design and assessment trace

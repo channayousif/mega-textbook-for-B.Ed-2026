@@ -1,0 +1,71 @@
+Source check: ncp-science-2022 grade placement of the unit's example topics
+
+Retrieved by this review on 2026-11-28.
+- URL: https://ncc.gov.pk/SiteImage/Misc/files/8_%20NCP%20Science%20PG%204-8.pdf
+- HTTP 200, 74 pages, 19.6 MB, PDF modified 2023-11-22. Read through pdftotext -layout.
+- SLO codes encode the grade: S-04 = Grade 4, S-05 = Grade 5, S-06 = Grade 6, S-07 = Grade 7,
+  S-08 = Grade 8. Page numbers are PDF page numbers.
+
+Checked claims:
+
+1. Human respiratory system / diaphragm mechanics.
+   - Grade 5, SLO S-05-A-02 (PDF p. 17): "Recognize the integration of the different systems
+     (Respiratory, and Circulatory) in carrying out life processes." The same table carries the
+     note: "Detailed knowledge of the respiratory system (e.g., alveoli) and circulatory system
+     (e.g., heart chambers and valves) is not required."
+   - Grade 7, SLO S-07-A-11 (PDF p. 17): "Trace the path of air in and out of the body and how
+     the oxygen it contains is used during the process of respiration."
+   - Unit claim under review: topic-03.mdx:28 "When teaching Grade 5 respiration, the curriculum
+     expects pupils to understand how the diaphragm muscle moves downward ...".
+   - Finding: Grade 5 expressly excludes detailed respiratory-system knowledge; the air-pathway
+     detail is a Grade 7 SLO.
+
+2. Plant water conduction / transpiration and xylem.
+   - Grade 8, Benchmark II (PDF p. 13 and 16): "Explain the root and shoot system of plants
+     emphasizing the process of photosynthesis, respiration, and transpiration."
+   - Grade 7, SLO S-07-A-02 (PDF p. 14): "Predict the role of xylem and phloem in transport of
+     water and food in plants ...".
+   - Grade 4, SLO S-04-A-07 (PDF p. 13): parts of the plant transport system, with the note that
+     the terms "xylem" and "phloem" are not required.
+   - Unit claim under review: topic-03.mdx:94 "A Grade 5 teacher wants to teach plant water
+     conduction (transpiration and xylem flow).".
+   - Finding: transpiration is Grade 8 and xylem/phloem role is Grade 7, not Grade 5.
+
+3. Electric circuits / closed circuits / conductivity.
+   - Grade 5, SLO S-05-B-16 (PDF p. 56): "Describe flow of electric current in an electric
+     circuit."; S-05-B-17 (PDF p. 56): "Draw circuit diagram with symbols."
+   - Grade 6, SLO S-06-B-37 (PDF p. 56): "Differentiate between open and closed circuits."
+   - "Electrical conductivity" is not an NCP SLO; the grid names thermal conductivity
+     (Grade 7, S-07-B-18 and S-07-B-32).
+   - Unit claim under review: unit-assessment.mdx:129 "the Grade 5 General Science concept of
+     'Closed Electric Circuits and Electrical Conductivity'".
+   - Finding: closed circuits is a Grade 6 SLO; the content-spec blueprint (content-spec.md:268)
+     requires a named Grade 5 concept.
+
+4. Atomic structure / chemical bonding.
+   - Grade 7, SLO S-07-B-01 (PDF p. 36): "Describe and draw the structure of an atom in terms of
+     electrons, protons and neutrons."
+   - Grade 8 topic header (PDF p. 34-35): "Chemical Bonds".
+   - Unit claim under review: topic-04.mdx:28 "Grade 8 ... atomic structure and chemical bonding".
+   - Finding: atomic structure is Grade 7; only chemical bonding is Grade 8.
+
+5. Changes of state.
+   - Grade 5, Benchmark VII (PDF p. 35): "Compare the properties of different states of matter and
+     identify the conditions that cause matter to change states."
+   - Grade 4, SLO S-04-B-02 (PDF p. 35): "Identify and describe the three states of matter ...".
+   - Unit claim under review: topic-04.mdx:94 "the Grade 6 topic: 'Changes of state: melting and
+     boiling of water'".
+   - Finding: changes of state is Grade 5 content (states are introduced in Grade 4), not Grade 6.
+
+6. Light and sound.
+   - Grade 5, SLO S-05-B-11 (PDF p. 48): "Demonstrate that sound can travel through different
+     states of matter with different speed."; S-05-B-12: "Describe the structure and discuss the
+     mechanism of the conduction of sound waves."
+   - Grade 5 (PDF p. 48): "Demonstrate the characteristics of light and sound with the physical
+     phenomena."
+   - Grade 8, Benchmark VIII (PDF p. 48): "Compare types and properties of waves and explain how
+     they interact with matter."
+   - Unit claim under review: unit-assessment.mdx:125 "the Grade 8 topic 'Sound Transmission and
+     Waves'".
+   - Finding: sound characteristics and sound transmission are Grade 5 SLOs; waves are a Grade 8
+     benchmark. The combined label is not a Grade 8 topic.
