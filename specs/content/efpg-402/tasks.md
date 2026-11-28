@@ -15,7 +15,7 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | 5 | Lesson Planning and Teaching Skills | ✓ | ☐ | ▣ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; Urdu mirror drafted; G3 and G5 open |
 | 6 | Maintenance and Organization of Science Laboratory | ✓ | ☐ | ▣ | ☐ | placed | English authored 2026-11-27; twelve schematic SVGs placed; Urdu mirror drafted; G3 and G5 open |
 | 7 | Assessment and Evaluation in Science | ✓ | ☐ | ▣ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; banner fig-U7-11 placed; Urdu mirror drafted; G3 and G5 open |
-| 8 | Professional Growth and Contemporary Issues | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; G3 and Urdu remain open |
+| 8 | Professional Growth and Contemporary Issues | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-11-27; ten schematic SVGs placed; banner fig-U8-11 placed; topic scenes fig-U8-12 to fig-U8-16 placed; G3 and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -77,5 +77,5 @@ English-only authoring from the approved content-spec subsections. No publicatio
 | Unit 8 | G3 en-review | ▢ | | Awaiting independent qualified review; author self-check is not G3 |
 | Unit 8 | G4 ur-translation | ▢ | | Complete seven-file draft Urdu mirror and ten localized SVG pairs (with derived dark twins) prepared from English d128e7371; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and permitted rendered Urdu inspection pending; see translations/unit-08/handoff.md |
 | Unit 8 | G5 ur-review | ▢ | | Awaiting translation and independent review |
-| Unit 8 | G6 assets | ▣ | | Ten schematic SVGs (fig-U8-1 to fig-U8-10) placed with derived dark twins and verified with measure-figure-text; Urdu .ur.svg labels placed |
+| Unit 8 | G6 assets | ▣ | | Ten schematic SVGs (fig-U8-1 to fig-U8-10) placed with derived dark twins and verified with measure-figure-text; Urdu .ur.svg labels placed; banner fig-U8-11 placed; topic scenes fig-U8-12 to fig-U8-16 placed |
 | Unit 8 | G7 publish | ▢ | | No publication or deployment performed by this job |
