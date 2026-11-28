@@ -1,0 +1,318 @@
+{
+ "course": "EFMP-302",
+ "unit": 6,
+ "topics": {
+  "1": {
+   "en": [
+    {
+     "term": "Continuous professional development",
+     "definition": "The ongoing process by which a professional maintains and extends the knowledge, judgement and skill their work requires, across a whole career rather than at its start."
+    },
+    {
+     "term": "Training course",
+     "definition": "An event with a start, an end and a certificate. It may contribute to development, but it is not development."
+    },
+    {
+     "term": "Qualification",
+     "definition": "It certifies that a threshold was met at a point in time. It answers whether the person was prepared, in the past tense."
+    },
+    {
+     "term": "Appraisal requirement",
+     "definition": "An obligation imposed by an employer. It may prompt development, and its natural product is compliance."
+    },
+    {
+     "term": "Drift",
+     "definition": "What happens to practice that is not examined: it does not stay the same but slowly adapts to convenience, without anybody deciding it."
+    },
+    {
+     "term": "Sustained over time",
+     "definition": "The principle that development which changes practice happens over months, not in a day. It rules out the one-day event as a complete intervention."
+    },
+    {
+     "term": "Embedded in your own classroom",
+     "definition": "The principle that development must reach your actual room. It rules out development that never touches it."
+    },
+    {
+     "term": "Collaborative",
+     "definition": "The principle that development done alongside colleagues persists, because the colleagues remain after the event ends."
+    },
+    {
+     "term": "Supported by feedback",
+     "definition": "The principle that someone has to see what you actually do. It rules out development that consists entirely of being told things."
+    },
+    {
+     "term": "Chosen rather than assigned",
+     "definition": "The principle that a teacher developing something they identified will persist through difficulty, while a teacher sent on a course will not."
+    }
+   ],
+   "ur": [
+    {
+     "term": "مسلسل پیشہ ورانہ ترقی",
+     "definition": "وہ جاری عمل جس کے ذریعے کوئی پیشہ ور اپنے کام کے لیے درکار علم، فیصلہ سازی اور مہارت کو برقرار رکھتا اور بڑھاتا ہے، صرف کیریئر کے شروع میں نہیں بلکہ پورے کیریئر میں۔"
+    },
+    {
+     "term": "تربیتی کورس",
+     "definition": "ایک تقریب جس کی ابتدا، اختتام اور سرٹیفکیٹ ہوتا ہے۔ یہ ترقی میں حصہ دے سکتی ہے، مگر یہ خود ترقی نہیں ہے۔"
+    },
+    {
+     "term": "سند",
+     "definition": "یہ تصدیق کرتی ہے کہ کسی وقت پر کوئی حد پوری ہوئی تھی۔ یہ ماضی کے صیغے میں بتاتی ہے کہ کیا شخص تیار کیا گیا تھا۔"
+    },
+    {
+     "term": "جائزے کی ضرورت",
+     "definition": "ملازم رکھنے والے کی لگائی ہوئی ذمہ داری۔ یہ ترقی کو ترغیب دے سکتی ہے، اور اس کا قدرتی نتیجہ فرماں برداری ہے۔"
+    },
+    {
+     "term": "بہاؤ",
+     "definition": "جو مشق نہ جانچی جائے اس کے ساتھ جو ہوتا ہے: وہ ایک جیسی نہیں رہتی بلکہ کسی کے فیصلے کے بغیر آہستہ آہستہ سہولت کی طرف جھک جاتی ہے۔"
+    },
+    {
+     "term": "وقت کے ساتھ مسلسل",
+     "definition": "یہ اصول کہ مشق بدلنے والی ترقی مہینوں پر ہوتی ہے، ایک دن میں نہیں۔ یہ ایک دن کی تقریب کو مکمل مداخلت کے طور پر رد کرتا ہے۔"
+    },
+    {
+     "term": "اپنے کلاس روم میں جڑی ہوئی",
+     "definition": "یہ اصول کہ ترقی آپ کے اصل کمرے تک پہنچے۔ یہ اس ترقی کو رد کرتا ہے جو اسے کبھی نہیں چھوتی۔"
+    },
+    {
+     "term": "باہمی",
+     "definition": "یہ اصول کہ ساتھیوں کے ساتھ کی گئی ترقی قائم رہتی ہے، کیونکہ تقریب ختم ہونے کے بعد ساتھی باقی رہتے ہیں۔"
+    },
+    {
+     "term": "تاثرات سے سہارا",
+     "definition": "یہ اصول کہ کسی کو آپ کا اصل کام دیکھنا ہوگا۔ یہ صرف بتائی جانے والی چیزوں پر مشتمل ترقی کو رد کرتا ہے۔"
+    },
+    {
+     "term": "چنی ہوئی، نہ کہ سونپی گئی",
+     "definition": "یہ اصول کہ اپنی پہچانی ہوئی چیز پر ترقی کرنے والا استاد مشکل میں بھی قائم رہے گا، جبکہ کورس پر بھیجا گیا استاد قائم نہیں رہے گا۔"
+    }
+   ]
+  },
+  "2": {
+   "en": [
+    {
+     "term": "Preservice stage",
+     "definition": "The stage of initial teacher education up to qualification. At its end, responsibility changes: a qualified teacher is accountable for the class."
+    },
+    {
+     "term": "Structured practice with feedback",
+     "definition": "What the preservice stage needs: practice in a real classroom on a small number of things at a time, rather than more content."
+    },
+    {
+     "term": "New teacher stage",
+     "definition": "Roughly the first three to five years, which begin with being alone with a class and responsible for what happens in it."
+    },
+    {
+     "term": "Survival",
+     "definition": "The characteristic difficulty of the new teacher stage: demands are immediate and continuous, and automatic routines that make room for thought are not yet built."
+    },
+    {
+     "term": "Mentor",
+     "definition": "One thing the new teacher stage needs, together with a reduced load and help with what is actually blocking the teacher."
+    },
+    {
+     "term": "Experienced teacher stage",
+     "definition": "The long remainder of a career and the least served. Mechanics have become automatic and attention is freed."
+    },
+    {
+     "term": "Genuine challenge",
+     "definition": "What the experienced stage needs: for example, someone who observes and says something true, a problem worth solving, or a role that requires learning something new."
+    },
+    {
+     "term": "Stage model",
+     "definition": "A description of a common pattern in a teaching career, not a law. It is for locating what you need, not for categorising people."
+    }
+   ],
+   "ur": [
+    {
+     "term": "تربیت سے پہلے کا مرحلہ",
+     "definition": "سند تک کی ابتدائی استاد کی تربیت کا مرحلہ۔ اس کے اختتام پر ذمہ داری بدلتی ہے: سند یافتہ استاد جماعت کے لیے جوابدہ ہوتا ہے۔"
+    },
+    {
+     "term": "تاثرات کے ساتھ منظم مشق",
+     "definition": "تربیت سے پہلے کے مرحلے کی ضرورت: حقیقی کلاس روم میں ایک وقت پر چند چیزوں پر مشق، نہ کہ مزید مواد۔"
+    },
+    {
+     "term": "نئے استاد کا مرحلہ",
+     "definition": "تقریباً پہلے تین سے پانچ برس، جو اس صورت سے شروع ہوتے ہیں کہ استاد جماعت کے ساتھ اکیلا اور اس میں ہونے والی باتوں کا ذمہ دار ہوتا ہے۔"
+    },
+    {
+     "term": "روزمرہ کام سنبھالنا",
+     "definition": "نئے استاد کے مرحلے کی خاص دشواری: تقاضے فوری اور مسلسل ہوتے ہیں، اور سوچنے کی جگہ بنانے والی خودکار روٹینیں ابھی نہیں بنی ہوتیں۔"
+    },
+    {
+     "term": "سرپرست",
+     "definition": "نئے استاد کے مرحلے کی ایک ضرورت، کم بوجھ اور اس چیز میں مدد کے ساتھ جو اصل میں استاد کا راستہ روک رہی ہے۔"
+    },
+    {
+     "term": "تجربہ کار استاد کا مرحلہ",
+     "definition": "کیریئر کا طویل باقی حصہ اور سب سے کم خدمت پانے والا مرحلہ۔ طریقے خودکار ہو چکے ہوتے ہیں اور توجہ آزاد ہو جاتی ہے۔"
+    },
+    {
+     "term": "حقیقی چیلنج",
+     "definition": "تجربہ کار مرحلے کی ضرورت: مثلاً کوئی جو دیکھے اور سچی بات کہے، کوئی حل کرنے قابل مسئلہ، یا ایسا کردار جس میں کچھ نیا سیکھنا پڑے۔"
+    },
+    {
+     "term": "مرحلے کا ماڈل",
+     "definition": "تدریسی کیریئر کے ایک عام نمونے کا بیان، قانون نہیں۔ یہ اپنی ضرورت معین کرنے کے لیے ہے، لوگوں کی زمرہ بندی کے لیے نہیں۔"
+    }
+   ]
+  },
+  "3": {
+   "en": [
+    {
+     "term": "Conference",
+     "definition": "A gathering of many practitioners for presentations, usually over one to three days and away from school. It cannot change your practice on its own."
+    },
+    {
+     "term": "Workshop",
+     "definition": "A shorter, more practical session, usually for a group, often in or near the school. It suits passing on a specific technique or curriculum change but cannot produce the practice."
+    },
+    {
+     "term": "Online platform",
+     "definition": "A service that delivers courses, video and materials at a distance. It offers reach at low marginal cost, but it cannot observe your practice."
+    },
+    {
+     "term": "Professional learning community",
+     "definition": "A group of teachers in the same school who meet regularly to examine their practice and pupils' learning, with a shared focus and an expectation of acting on what is discussed."
+    },
+    {
+     "term": "Reflective practice",
+     "definition": "The disciplined examination of your own teaching against evidence. It is not the same as keeping a diary of feelings."
+    },
+    {
+     "term": "Journal",
+     "definition": "The cheapest and most under-used reflective tool. It works with three structured sentences about a specific decision, not a general account of the day."
+    },
+    {
+     "term": "Portfolio",
+     "definition": "A collected body of evidence about your practice over time, such as plans, pupil work, observations and notes. It makes change over months visible."
+    },
+    {
+     "term": "Peer feedback",
+     "definition": "A colleague watches you teach and tells you something true. It is the most valuable and most avoided of the four reflective tools."
+    },
+    {
+     "term": "Lesson study",
+     "definition": "A group plans a lesson, one member teaches it while others observe the pupils rather than the teacher, then the group examines the evidence, revises and re-teaches."
+    }
+   ],
+   "ur": [
+    {
+     "term": "کانفرنس",
+     "definition": "بہت سے پیشہ وروں کا پیشکشوں کے لیے اجتماع، عموماً ایک تا تین دن اور اسکول سے دور۔ یہ اکیلے آپ کی مشق نہیں بدل سکتی۔"
+    },
+    {
+     "term": "ورکشاپ",
+     "definition": "چھوٹی، زیادہ عملی نشست، عموماً کسی گروپ کے لیے، اکثر اسکول میں یا قریب۔ یہ مخصوص تکنیک یا نصابی تبدیلی پہنچانے کے لیے موزوں ہے مگر مشق پیدا نہیں کر سکتی۔"
+    },
+    {
+     "term": "آن لائن پلیٹ فارم",
+     "definition": "دور سے کورس، ویڈیو اور مواد دینے والا ذریعہ۔ یہ کم اضافی لاگت پر رسائی دیتا ہے، مگر آپ کی مشق نہیں دیکھ سکتا۔"
+    },
+    {
+     "term": "پیشہ ورانہ تعلمی برادری",
+     "definition": "ایک ہی اسکول کے اساتذہ کا گروپ جو اپنی مشق اور شاگردوں کے سیکھنے کا جائزہ لینے کے لیے باقاعدگی سے ملتا ہے، مشترکہ توجہ اور زیرِ بحث باتوں پر عمل کی توقع کے ساتھ۔"
+    },
+    {
+     "term": "تاملی مشق",
+     "definition": "شہادت کی روشنی میں اپنی تدریس کا منظم جائزہ۔ یہ احساسات کی ڈائری رکھنے کے برابر نہیں ہے۔"
+    },
+    {
+     "term": "ڈائری",
+     "definition": "تامل کا سب سے سستا اور سب سے کم استعمال ہونے والا اوزار۔ یہ دن کے عمومی بیان کے بجائے کسی مخصوص فیصلے پر تین منظم جملوں سے کام کرتا ہے۔"
+    },
+    {
+     "term": "پورٹ فولیو",
+     "definition": "وقت کے ساتھ آپ کی مشق کی شہادت کا جمع شدہ ذخیرہ، جیسے منصوبے، شاگردوں کا کام، مشاہدے اور نوٹ۔ یہ مہینوں پر پھیلی تبدیلی کو نمایاں کرتا ہے۔"
+    },
+    {
+     "term": "ہم پیشہ کا تاثر",
+     "definition": "کوئی ساتھی آپ کا سبق دیکھتا ہے اور آپ کو کوئی سچی بات بتاتا ہے۔ یہ تامل کے چار اوزاروں میں سب سے قیمتی ہے اور اسی سے سب سے زیادہ گریز کیا جاتا ہے۔"
+    },
+    {
+     "term": "سبق کا مشترکہ مطالعہ",
+     "definition": "گروپ ایک سبق کا منصوبہ بناتا ہے، ایک رکن پڑھاتا ہے جبکہ باقی استاد کو نہیں بلکہ شاگردوں کو دیکھتے ہیں، پھر گروپ شہادت جانچ کر سبق درست کرتا اور دوبارہ پڑھاتا ہے۔"
+    }
+   ]
+  },
+  "4": {
+   "en": [
+    {
+     "term": "Professional development plan",
+     "definition": "A short written statement of what you intend to get better at, how, and how you will know. One page is the right length."
+    },
+    {
+     "term": "Gap",
+     "definition": "The first block of the plan: what needs improving, stated specifically enough to observe."
+    },
+    {
+     "term": "Evidence that the gap is real",
+     "definition": "Not a feeling but something such as a tally, a set of pupil work or a colleague's observation. It stops a plan being a list of virtues."
+    },
+    {
+     "term": "One goal",
+     "definition": "The rule that a plan holds a single goal. Having too many goals is the most common reason plans fail."
+    },
+    {
+     "term": "Activity",
+     "definition": "What you will actually do, such as a lesson study cycle, structured trials, a specific reading or a fortnightly conversation."
+    },
+    {
+     "term": "Evidence that would show change",
+     "definition": "What would show that change happened. It is decided at the start, when the plan is written, not at the end."
+    },
+    {
+     "term": "Review date",
+     "definition": "A date in the diary in the middle of the year when you reopen the plan and decide whether it survived."
+    },
+    {
+     "term": "Narrow the goal",
+     "definition": "A legitimate review outcome used when the goal turned out to be bigger than a year. It is a success, not a retreat."
+    },
+    {
+     "term": "Quiet abandonment",
+     "definition": "Letting the plan drop without deciding to. It is not a legitimate outcome, and the review date exists to prevent it."
+    }
+   ],
+   "ur": [
+    {
+     "term": "پیشہ ورانہ ترقی کا منصوبہ",
+     "definition": "اس بارے میں مختصر تحریری بیان کہ آپ کس میں بہتر ہونا چاہتے ہیں، کیسے، اور کیسے جان لیں گے۔ ایک صفحہ درست لمبائی ہے۔"
+    },
+    {
+     "term": "خلا",
+     "definition": "منصوبے کا پہلا خانہ: جس چیز کو بہتر کرنا ہے، اسے اتنی مخصوص طرح بیان کرنا کہ اس کا مشاہدہ ہو سکے۔"
+    },
+    {
+     "term": "خلا کے حقیقی ہونے کی شہادت",
+     "definition": "احساس نہیں بلکہ کوئی شمار، شاگردوں کے کام کا سیٹ یا کسی ساتھی کا مشاہدہ۔ یہ منصوبے کو فضیلتوں کی فہرست بننے سے روکتی ہے۔"
+    },
+    {
+     "term": "ایک ہدف",
+     "definition": "یہ اصول کہ منصوبے میں صرف ایک ہدف ہو۔ بہت سارے ہدف رکھنا منصوبوں کی ناکامی کی سب سے عام وجہ ہے۔"
+    },
+    {
+     "term": "سرگرمی",
+     "definition": "جو آپ اصل میں کریں گے، جیسے سبق کے مشترکہ مطالعے کا چکر، منظم آزمائشیں، کوئی مخصوص مطالعہ یا پندرہ روزہ بات چیت۔"
+    },
+    {
+     "term": "وہ شہادت جو تبدیلی دکھائے",
+     "definition": "وہ شہادت جو دکھائے کہ تبدیلی ہوئی۔ یہ آخر میں نہیں بلکہ شروع میں، منصوبہ لکھتے وقت، طے کی جاتی ہے۔"
+    },
+    {
+     "term": "جائزے کی تاریخ",
+     "definition": "سال کے بیچ میں ڈائری میں لکھی تاریخ، جب آپ منصوبہ دوبارہ کھول کر طے کرتے ہیں کہ وہ بچا یا نہیں۔"
+    },
+    {
+     "term": "ہدف تنگ کرنا",
+     "definition": "جائزے کا ایک جائز نتیجہ، جب ہدف ایک سال سے بڑا نکلے۔ یہ کامیابی ہے، پیچھے ہٹنا نہیں۔"
+    },
+    {
+     "term": "خاموشی سے چھوڑ دینا",
+     "definition": "فیصلہ کیے بغیر منصوبے کو ترک ہونے دینا۔ یہ جائز نتیجہ نہیں ہے، اور جائزے کی تاریخ اسے روکنے کے لیے ہے۔"
+    }
+   ]
+  }
+ }
+}
