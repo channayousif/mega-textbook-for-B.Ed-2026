@@ -40,4 +40,6 @@ teaching Shorts cut from it, a deck, a mind map and an infographic, with Urdu as
 and subtitles. Pack progress lives in a Supabase-backed admin page instead of JSON ledgers alone, and
 pack compositions render through the video-studio Remotion project on Kaggle. This crosses the Media
 Studio, the video-studio sub-project (ADR-0031), the site and the database, so it is proposed for an
-ADR. This note is a proposal, not an adopted ADR.
+ADR.
+
+**Adopted 2026-11-28 as [ADR-0040](../../history/adr/0040-content-pack-v2-supersedes-the-teaser-model.md)** by owner instruction ("approve plan, stage 1, run adr").

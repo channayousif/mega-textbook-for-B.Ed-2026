@@ -5293,5 +5293,5 @@ content-improvement loop with no further cycle.
   disclosure is enough", and the answers "Extend Media Studio", "New cast for v2", "Admin page on
   the site".
 - **Limits:** Certifies no content and authorises no publication. The Supabase migration, the cast
-  sheets, each pack script and each publication still need the owner's approval. An ADR amending
-  ADR-0037 waits for the owner's consent.
+  sheets, each pack script and each publication still need the owner's approval. PLAN-v2 approved
+  and ADR-0040 adopted by the owner on 2026-11-28 ("approve plan, stage 1, run adr").

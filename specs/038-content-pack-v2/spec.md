@@ -1,6 +1,6 @@
 # Feature 038: Content Pack v2 (one topic, one content pack)
 
-**Status**: draft, awaiting owner review of `PLAN-v2.md` | **Created**: 2026-11-28 | **Owner**: curriculum owner (board-direct)
+**Status**: approved 2026-11-28 (ADR-0040) | **Created**: 2026-11-28 | **Owner**: curriculum owner (board-direct)
 
 The owner's brief, "textbook.com.pk Video & Content Pipeline v2", is recorded verbatim in the PHR
 `history/prompts/038-content-pack-v2/20261312-content-pack-v2-plan.plan.prompt.md`. Where the brief

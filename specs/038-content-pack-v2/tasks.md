@@ -3,7 +3,7 @@
 ## Stage 0: Plan and records
 - [x] T001 Audit existing media systems; spec, PLAN-v2, plan and tasks
 - [x] T002 Decision D-2026-0104 (pack model, international audience, new cast, admin page, provenance rules)
-- [ ] T003 Owner approves PLAN-v2 (blocks T004 onwards)
+- [x] T003 Owner approves PLAN-v2 (2026-11-28); ADR-0040 adopted
 
 ## Stage 1: Data model
 - [ ] T004 Migration `content_packs`, `content_pack_events`, private upload bucket, admin RPCs (owner approval first)
