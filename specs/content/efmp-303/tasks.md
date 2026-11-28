@@ -151,3 +151,4 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 2 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |
 | Unit 3 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |
 | Unit 4 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |
+| Unit 5 | G3 en-review | ▢ | | figures redrawn (Feature 032); the review above predates it; needs a fresh G3 run |
