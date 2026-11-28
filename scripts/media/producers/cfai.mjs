@@ -109,6 +109,20 @@ export async function transcribeAudio(bytes, { seconds, language = 'ur', ...opts
 }
 
 /**
+ * Whisper with timings (Feature 038 captions): `{ text, segments: [{ start, end, text, words: [{ word, start, end }] }] }`,
+ * times in seconds from the start of `bytes`. Same cost as transcribeAudio.
+ */
+export async function transcribeTimed(bytes, { seconds, language = 'en', ...opts } = {}) {
+  const estimate = Math.max(1, (seconds / 60) * RATES.whisperPerMinute);
+  const r = await run(WHISPER, { audio: Buffer.from(bytes).toString('base64'), language, task: 'transcribe' }, { estimate, ...opts });
+  const segments = (r.segments ?? []).map((s) => ({
+    start: Number(s.start) || 0, end: Number(s.end) || 0, text: String(s.text ?? '').trim(),
+    words: (s.words ?? []).map((w) => ({ word: String(w.word ?? '').trim(), start: Number(w.start) || 0, end: Number(w.end) || 0 })),
+  }));
+  return { text: (r.text ?? '').trim(), segments };
+}
+
+/**
  * A text completion; returns the reply text. Thinking is off by default: with it on, Gemma spent about
  * 1,000 reasoning tokens (~140 neurons) per short draft and sometimes ran out before answering; off, the
  * same draft costs ~2 neurons (tested 2026-11-28).
