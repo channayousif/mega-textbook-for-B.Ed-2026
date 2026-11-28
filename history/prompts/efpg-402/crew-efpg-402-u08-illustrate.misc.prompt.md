@@ -16,39 +16,39 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-4/efpg-402/unit-08/index.mdx
-  - docs/semester-4/efpg-402/unit-08/topic-01.mdx
-  - docs/semester-4/efpg-402/unit-08/topic-02.mdx
-  - docs/semester-4/efpg-402/unit-08/topic-03.mdx
-  - docs/semester-4/efpg-402/unit-08/topic-04.mdx
-  - docs/semester-4/efpg-402/unit-08/topic-05.mdx
-  - history/prompts/efpg-402/crew-efpg-402-u08-illustrate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-04.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-05.mdx
-  - specs/content/efpg-402/figures/unit-08.banner.md
-  - specs/content/efpg-402/figures/unit-08.md
-  - specs/content/efpg-402/reviews/unit-08/G2/20261128T150916988Z-gates.json
-  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-bloom-bands.txt
-  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-concept-graph.txt
-  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-depth-gate.txt
-  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-docs-sync.txt
-  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-figures.txt
-  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-no-answer-keys.txt
-  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-no-em-dash.txt
-  - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/validate-content.txt
-  - specs/content/efpg-402/tasks.md
-  - static/img/figures/efpg-402/unit-08/fig-U8-11.webp
-  - static/img/figures/efpg-402/unit-08/fig-U8-12.webp
-  - static/img/figures/efpg-402/unit-08/fig-U8-13.webp
-  - static/img/figures/efpg-402/unit-08/fig-U8-14.webp
-  - static/img/figures/efpg-402/unit-08/fig-U8-15.webp
-  - static/img/figures/efpg-402/unit-08/fig-U8-16.webp
+ - docs/semester-4/efpg-402/unit-08/index.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-01.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-02.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-03.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-04.mdx
+ - docs/semester-4/efpg-402/unit-08/topic-05.mdx
+ - history/prompts/efpg-402/crew-efpg-402-u08-illustrate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/efpg-402/unit-08/topic-05.mdx
+ - specs/content/efpg-402/figures/unit-08.banner.md
+ - specs/content/efpg-402/figures/unit-08.md
+ - specs/content/efpg-402/reviews/unit-08/G2/20261128T150916988Z-gates.json
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-bloom-bands.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-concept-graph.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-depth-gate.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-docs-sync.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-figures.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-no-answer-keys.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/check-no-em-dash.txt
+ - specs/content/efpg-402/reviews/unit-08/G2/logs-20261128T150916988Z/validate-content.txt
+ - specs/content/efpg-402/tasks.md
+ - static/img/figures/efpg-402/unit-08/fig-U8-11.webp
+ - static/img/figures/efpg-402/unit-08/fig-U8-12.webp
+ - static/img/figures/efpg-402/unit-08/fig-U8-13.webp
+ - static/img/figures/efpg-402/unit-08/fig-U8-14.webp
+ - static/img/figures/efpg-402/unit-08/fig-U8-15.webp
+ - static/img/figures/efpg-402/unit-08/fig-U8-16.webp
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -89,7 +89,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Produced, inspected, and placed the EFPG-402 Unit 8 unit banner and five topic raster illustrations across English and Urdu files, refreshed G2 gate evidence, and verified all content gates pass.
+Generated and placed EFPG-402 Unit 8 unit banner and five topic raster illustrations in English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 
 ## Outcome
 
@@ -101,12 +101,12 @@ Produced, inspected, and placed the EFPG-402 Unit 8 unit banner and five topic r
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced, inspected, and placed the EFPG-402 Unit 8 unit banner (fig-U8-11) and five topic raster illustrations (fig-U8-12 through fig-U8-16) across English and Urdu files, refreshed G2 gate evidence, and verified all content gates pass.
+- Shipped / changed: Generated and placed EFPG-402 Unit 8 unit banner and five topic raster illustrations in English and Urdu files, refreshed G2 gate evidence, and verified all 14 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Banner fig-U8-11 and topic illustrations fig-U8-12..16 are placed in English and Urdu files with refreshed G2 gate evidence passing all content gates.
-  - Independent qualified G3 English review and G5 Urdu review remain open in tasks.md.
+  - Banner fig-U8-11 and topic scenes fig-U8-12..16 are placed in English and Urdu files with refreshed G2 gate evidence.
+  - Independent qualified G3 English review and G5 Urdu review (with rendered page inspection) remain open in tasks.md.
   - Urdu translation handoff lives in specs/content/efpg-402/translations/unit-08/handoff.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
