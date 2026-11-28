@@ -1,22 +1,24 @@
 ---
 id: crew-efmp-302-u03-flashcards-conflict1
-title: crew flashcards EFMP-302 unit 3 (merge conflict resolution)
+title: crew fix EFMP-302 unit 3
 stage: misc
 date: 2026-11-28
 surface: agent
-model: claude
+model: claude_crew
 feature: efmp-302
 branch: crew/efmp-302-u03-flashcards
 user: crew
-command: crew flashcards
-labels: ["crew", "claude", "flashcards"]
+command: crew fix
+labels: ["crew", "claude_crew", "fix"]
 links:
   spec: specs/content/efmp-302/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - history/prompts/032-textbook-visuals/20261310-efmp-302-u03-flashcards.green.prompt.md
  - history/prompts/efmp-302/crew-efmp-302-u03-flashcards-conflict1.misc.prompt.md
+ - history/prompts/efmp-302/crew-efmp-302-u03-flashcards.misc.prompt.md
  - specs/studio/flashcards-needed.json
  - specs/studio/flashcards/efmp-302/unit-03.json
 tests:
@@ -56,32 +58,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-302-u03-translate-r1, translate, agy) translation_status stays draft on all files pending independent G5 Urdu review; G4 and G5 tracker rows remain open per ADR-0019.
 - (efmp-302-u03-translate-r1, translate, agy) Build and dev server inspection were omitted per the brief; current rendered Urdu inspection (360px and A4 print) remains owed by the independent G5 review session.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-302-u03-flashcards. The anticipated conflict in specs/studio/flashcards-needed.json did not occur (main had not changed that file since the branch base), so the branch's removal of efmp-302/3 stood; no shared registry or ID collisions were involved. Regenerated static/content-status.json and confirmed all 14 content gates pass.
+Merged origin/main into crew/efmp-302-u03-flashcards with no conflicts, kept the Unit 3 flashcard deck and its registry removal intact, added the conflict-resolution PHR, and confirmed all 14 content gates pass.
 
 ## Outcome
 
-- Impact: flashcards for EFMP-302 Unit 3 by claude (attempt 1, conflict-resolution pass).
-- Tests: npm run check:content passed in the job worktree after the merge.
-- Files: 3 file(s), listed above.
+- Impact: fix for EFMP-302 Unit 3 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 5 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-302-u03-flashcards with no conflicts; the branch's flashcard deck and its flashcards-needed.json removal are intact, and all content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into crew/efmp-302-u03-flashcards with no conflicts, kept the Unit 3 flashcard deck and its registry removal intact, added the conflict-resolution PHR, and confirmed all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The brief predicted a conflict in specs/studio/flashcards-needed.json; at merge time origin/main had not touched it, so the merge was clean. If main later regenerates that file with efmp-302/3 still listed, re-remove it.
-  - Earlier handoff still stands: Urdu cards copy topic wording (e.g. "اگلے سطح پر بھیجنا", "موزونیت"); mirror any G5 topic fix in the deck.
-  - G3 en-review and G5 Urdu rows for Unit 3 remain open/stale per ADR-0019; this job did not touch content or evidence.
+  - The anticipated `flashcards-needed.json` conflict never materialized; if a later main regenerates that file with `efmp-302/3` still listed, re-remove it.
+  - Urdu cards still copy topic wording (e.g. "اگلے سطح پر بھیجنا", "موزونیت"); mirror any G5 topic correction into `specs/studio/flashcards/efmp-302/unit-03.json`.
+  - Unit 3 G3 en-review and G5 Urdu tracker rows remain open/stale per ADR-0019; this merge touched no content or gate evidence.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14 gates)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
