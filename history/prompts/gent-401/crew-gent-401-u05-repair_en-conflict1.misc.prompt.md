@@ -1,26 +1,53 @@
 ---
 id: crew-gent-401-u05-repair_en-conflict1
-title: crew merge GENT-401 unit 5 repair branch
+title: crew fix GENT-401 unit 5
 stage: misc
 date: 2026-11-28
 surface: agent
-model: claude
+model: claude_crew
 feature: gent-401
 branch: crew/gent-401-u05-repair_en
 user: crew
-command: crew merge
-labels: ["crew", "claude"]
+command: crew fix
+labels: ["crew", "claude_crew", "fix"]
 links:
   spec: specs/content/gent-401/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - docs/semester-4/gent-401/unit-05/topic-01.mdx
+ - docs/semester-4/gent-401/unit-05/topic-02.mdx
+ - docs/semester-4/gent-401/unit-05/unit-assessment.mdx
  - history/prompts/gent-401/crew-gent-401-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/gent-401/crew-gent-401-u05-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gent-401/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gent-401/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-4/gent-401/unit-05/unit-assessment.mdx
+ - specs/content/gent-401/figures/unit-05.md
+ - specs/content/gent-401/reviews/unit-05/G2/20261128T040717436Z-gates.json
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261128T040717436Z/check-bloom-bands.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261128T040717436Z/check-concept-graph.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261128T040717436Z/check-depth-gate.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261128T040717436Z/check-docs-sync.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261128T040717436Z/check-figures.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261128T040717436Z/check-no-answer-keys.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261128T040717436Z/check-no-em-dash.txt
+ - specs/content/gent-401/reviews/unit-05/G2/logs-20261128T040717436Z/validate-content.txt
+ - specs/content/gent-401/sources/texts/cegielska-2018-startup-financing.md
+ - specs/content/gent-401/sources/texts/scott-2017-efmd.md
+ - specs/content/gent-401/sources/unit-05.md
  - specs/content/gent-401/tasks.md
+ - static/img/figures/gent-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-1.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-1.ur.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-1.ur.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.ur.dark.svg
+ - static/img/figures/gent-401/unit-05/fig-U5-3.ur.svg
 tests:
  - npm run check:content
- - node scripts/measure-figure-text.mjs static/img/figures/gent-401/unit-05/fig-U5-1.svg static/img/figures/gent-401/unit-05/fig-U5-1.dark.svg static/img/figures/gent-401/unit-05/fig-U5-1.ur.svg static/img/figures/gent-401/unit-05/fig-U5-1.ur.dark.svg static/img/figures/gent-401/unit-05/fig-U5-3.svg static/img/figures/gent-401/unit-05/fig-U5-3.dark.svg static/img/figures/gent-401/unit-05/fig-U5-3.ur.svg static/img/figures/gent-401/unit-05/fig-U5-3.ur.dark.svg
 ---
 
 ## Prompt
@@ -56,39 +83,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gent-401-u05-review_en, review_en, claude) render-review stays unavailable until the deployed SHA includes the fig-U5-5 banner commit. The next G3 run should then use render-inspect against https://textbook.com.pk.
 - (gent-401-u05-illustrate, illustrate, agy) Unit banner fig-U5-5 is placed; Unit 5 G3 review and G5 review remain open for independent evaluation.
 
+
 ## Response snapshot
 
-Fetched origin and merged `origin/main` (480 files) into `crew/gent-401-u05-repair_en`. The only
-conflict was `specs/content/gent-401/tasks.md`, where main appended four G3 repair rows (Units 1, 6,
-4, 7) at the end of the tracker table and this branch appended its Unit 5 G3 repair row at the same
-anchor. Resolved append-only: main's four rows first, then this branch's Unit 5 row, no exact
-duplicates. The Unit 5 depth-estimate line kept this branch's counts (Topic 5.1 12, total 41), which
-are the only side that changed it from the merge base and reflect the repair edits. No registry file
-(glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) was touched by
-either side, so no ID renumbering was needed. Committed the merge as `c8fb8d5c6`.
-
-Then regenerated `static/content-status.json` and ran `npm run check:content`: all 14 gates pass.
-Ran `scripts/heavy.sh node scripts/measure-figure-text.mjs` over the eight fig-U5-1 and fig-U5-3
-variants this branch changes; exit 0.
+Merged origin/main into the Unit 5 repair branch, resolved the sole `specs/content/gent-401/tasks.md` conflict append-only (main's four repair rows plus this branch's Unit 5 row), and left all 14 content gates green with the branch committed.
 
 ## Outcome
 
-- ✅ Impact: branch is up to date with main and the Unit 5 G3 repair work is preserved alongside main's four other-unit repair rows.
-- 🧪 Tests: `npm run check:content` all 14 PASS; measure-figure-text exit 0 on the eight changed SVGs.
-- 📁 Files: `specs/content/gent-401/tasks.md` conflict resolved; this PHR added.
-- 🔁 Next prompts: a fresh independent G3 run on Unit 5 against the deployed site, then G5 on the Urdu mirror.
-- 🧠 Reflection: the conflict was a pure append collision at one table anchor; append-only ordering (main then branch) resolved it without losing either side.
+- Impact: fix for GENT-401 Unit 5 by claude_crew (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 30 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge `c8fb8d5c6` of origin/main into `crew/gent-401-u05-repair_en`; `tasks.md` now carries main's Unit 1/6/4/7 G3 repair rows plus this branch's Unit 5 row.
-- Decisions the team must respect: keep both sides' tracker rows, main's order first; the Unit 5 depth estimate stays at Topic 5.1 12 / total 41 (this branch changed it, main did not).
-- Pending / next owner: fresh independent G3 (render and A4/360px inspection against https://textbook.com.pk) and G5; G3 stays unticked and unsigned.
-- Paperclip issues affected: crew job gent-401-u05-repair_en-conflict1; no ticket supplied.
+- Shipped / changed: Merged origin/main into the Unit 5 repair branch, resolved the sole `specs/content/gent-401/tasks.md` conflict append-only (main's four repair rows plus this branch's Unit 5 row), and left all 14 content gates green with the branch committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 5 G3 stays unticked and unsigned; a fresh independent run still needs render and A4/360px inspection against https://textbook.com.pk.
+  - G5 should check the changed Urdu (topics 5.1/5.2, MCQ options and keys, fig-U5-1 and fig-U5-3 labels and alt text); fig-U5-3.ur.svg box-title punctuation needs a browser check.
+  - The merge deliberately keeps this branch's Unit 5 depth estimate (Topic 5.1 12 / total 41) over main's stale 11/40.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: long-lived branch colliding with main at a single append anchor in a shared tracker.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS; `measure-figure-text` PASS.
-- Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): none; the append-only rule was sufficient.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
