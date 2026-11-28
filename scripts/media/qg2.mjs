@@ -124,12 +124,12 @@ export async function transcribeCfai(file, outDir, lang = 'ur', opts = {}) {
 /** The engine to use: `cfai` when asked or when the token exists, else `local`. */
 export const pickEngine = (engine, creds = credentials()) => engine ?? (creds ? 'cfai' : 'local');
 
-export async function qg2(file, line, { outDir = join(dirname(file), 'qg2'), lang = 'ur', engine, cfai = {}, local = transcribe } = {}) {
+export async function qg2(file, line, { outDir = join(dirname(file), 'qg2'), lang = 'ur', engine, cfai = {}, local = transcribe, viaCfai = transcribeCfai, strip: makeStrip = frameStrip } = {}) {
   let used = pickEngine(engine, cfai.creds === undefined ? credentials() : cfai.creds);
   let heard;
   let fallback = null;
   if (used === 'cfai') {
-    try { heard = await transcribeCfai(file, outDir, lang, cfai); } catch (e) {
+    try { heard = await viaCfai(file, outDir, lang, cfai); } catch (e) {
       if (!(e instanceof CfaiError)) throw e;
       fallback = `${e.status}: ${e.message}`;
       used = 'local';
@@ -137,7 +137,7 @@ export async function qg2(file, line, { outDir = join(dirname(file), 'qg2'), lan
   }
   if (used === 'local') heard = local(file, outDir, lang);
   const { score, missing } = matchScore(line, heard);
-  const strip = frameStrip(file, join(outDir, `${basename(file).replace(/\.[^.]+$/, '')}.strip.jpg`));
+  const strip = makeStrip(file, join(outDir, `${basename(file).replace(/\.[^.]+$/, '')}.strip.jpg`));
   return { file, line, heard, score, missing, strip, suggested: suggestVerdict(score), engine: used, ...(fallback ? { fallback } : {}) };
 }
 

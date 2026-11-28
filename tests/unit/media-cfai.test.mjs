@@ -6,7 +6,6 @@ import { describe, it, expect } from 'vitest';
 import { mkdtempSync, writeFileSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { execFileSync } from 'node:child_process';
 import { credentials, checkBudget, record, usedToday, classify, run, CfaiError, nextUtcMidnight, complete } from '../../scripts/media/producers/cfai.mjs';
 import { qg2, pickEngine } from '../../scripts/media/qg2.mjs';
 import { draftMessages, cleanDashes } from '../../scripts/media/cfai-text.mjs';
@@ -87,16 +86,21 @@ describe('qg2 engine', () => {
     expect(pickEngine(undefined, { id: 'a', token: 't' })).toBe('cfai');
     expect(pickEngine(undefined, null)).toBe('local');
     expect(pickEngine('local', { id: 'a', token: 't' })).toBe('local');
+    // No ffmpeg in CI: the Workers AI transcriber (through cfai.run, so the real error mapping) and the
+    // frame strip are injected; everything else is the real qg2.
     const d = tmp();
     const clip = join(d, 'clip.mp4');
-    execFileSync('ffmpeg', ['-v', 'error', '-y', '-f', 'lavfi', '-i', 'color=c=gray:s=64x64:d=8', '-f', 'lavfi', '-i', 'sine=d=8', '-shortest', '-c:v', 'libx264', '-c:a', 'aac', clip]);
     const local = () => 'ایک دو تین';
+    const strip = (f, out) => out;
+    const viaCfai = async (f, o, lang, opts) => (await run('@cf/openai/whisper-large-v3-turbo', {}, { estimate: 1, ...opts })).text;
     const refused = async () => ({ ok: false, status: 429, json: async () => ({ success: false, errors: [{ code: 3040, message: 'Out of capacity' }] }) });
-    const r = await qg2(clip, 'ایک دو تین', { outDir: join(d, 'q'), cfai: { creds: { id: 'a', token: 't' }, ledger: join(d, 'l.json'), fetchImpl: refused }, local });
+    const r = await qg2(clip, 'ایک دو تین', { outDir: join(d, 'q'), cfai: { creds: { id: 'a', token: 't' }, ledger: join(d, 'l.json'), fetchImpl: refused }, local, viaCfai, strip });
     expect(r.engine).toBe('local');
     expect(r.fallback).toMatch(/^quota/);
     expect(r.score).toBe(1);
-    const viaCf = await qg2(clip, 'ایک دو تین', { outDir: join(d, 'q2'), cfai: { creds: { id: 'a', token: 't' }, ledger: join(d, 'l.json'), fetchImpl: okFetch({ text: 'ایک دو' }) }, local });
+    const viaCf = await qg2(clip, 'ایک دو تین', { outDir: join(d, 'q2'), cfai: { creds: { id: 'a', token: 't' }, ledger: join(d, 'l.json'), fetchImpl: okFetch({ text: 'ایک دو' }) }, local, viaCfai, strip });
     expect(viaCf).toMatchObject({ engine: 'cfai', score: 0.667 });
+    const none = await qg2(clip, 'ایک دو تین', { outDir: join(d, 'q3'), cfai: { creds: null }, local, viaCfai, strip });
+    expect(none.engine).toBe('local');
   });
 });
