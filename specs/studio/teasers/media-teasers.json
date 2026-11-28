@@ -3460,7 +3460,7 @@
    "id": "gicp-400",
    "locale": "ur",
    "kind": "short",
-   "state": "qa3-pass",
+   "state": "public",
    "gates": {
     "qg0": {
      "verdict": "pass",
@@ -3487,6 +3487,12 @@
      "verdict": "pass",
      "at": "2026-11-27T10:16:00Z",
      "notes": "list_videos: private on the channel, custom thumbnail and teaser playlist PLCJn7gAoYIJs set; title and description intact"
+    },
+    "owner": {
+     "verdict": "approve",
+     "by": "owner",
+     "date": "2026-11-27",
+     "note": "crew publish via web"
     }
    },
    "clips": [
@@ -3751,13 +3757,22 @@
     {
      "state": "qa3-pass",
      "at": "2026-11-27T10:15:16.782Z"
+    },
+    {
+     "state": "approved",
+     "at": "2026-11-28T11:03:02.295Z"
+    },
+    {
+     "state": "public",
+     "at": "2026-11-28T11:03:21.855Z"
     }
    ],
    "script_sha256": "30292cc711993deff83a0b3439ffc26a0f883fc02cfff9cafbdb4b78e6a8f7df",
    "encoded_file": "~/studio-media/teasers/gicp-400/ur/teaser.mp4",
    "thumbnail_file": "~/studio-media/teasers/gicp-400/ur/teaser.thumb.jpg",
    "youtube_id": "moAasL2nNZs",
-   "uploaded_at": "2026-11-27T10:14:38Z"
+   "uploaded_at": "2026-11-27T10:14:38Z",
+   "published_at": "2026-11-28T11:03:21Z"
   },
   {
    "key": "giss-401-ur",
