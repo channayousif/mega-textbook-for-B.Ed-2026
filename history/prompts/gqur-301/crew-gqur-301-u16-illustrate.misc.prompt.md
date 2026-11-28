@@ -21,6 +21,7 @@ files:
  - docs/semester-2/gqur-301/unit-16/topic-02.mdx
  - docs/semester-2/gqur-301/unit-16/topic-03.mdx
  - history/prompts/general/2489-gqur-301-u16-illustrate.green.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u16-illustrate.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-16/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-16/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-16/topic-02.mdx
@@ -37,10 +38,10 @@ files:
  - specs/content/gqur-301/reviews/unit-16/G2/logs-20261128T011309458Z/check-no-em-dash.txt
  - specs/content/gqur-301/reviews/unit-16/G2/logs-20261128T011309458Z/validate-content.txt
  - specs/content/gqur-301/tasks.md
+ - static/img/figures/gqur-301/unit-16/fig-U16-10.webp
  - static/img/figures/gqur-301/unit-16/fig-U16-7.webp
  - static/img/figures/gqur-301/unit-16/fig-U16-8.webp
  - static/img/figures/gqur-301/unit-16/fig-U16-9.webp
- - static/img/figures/gqur-301/unit-16/fig-U16-10.webp
 tests:
  - npm run check:content
 ---
@@ -80,21 +81,22 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u16-fix, fix, codex) Fresh independent G3 and Urdu rendering/G5 reviews remain pending.
 - (gqur-301-u16-translate, translate, codex) Urdu rendering inspection, terminology review and independent G5 remain pending; translation_status stays draft.
 
+
 ## Response snapshot
 
-Generated with gflow, inspected, and placed raster illustrations fig-U16-7, fig-U16-8, fig-U16-9, and fig-U16-10 in English and Urdu files for GQUR-301 Unit 16, refreshed G2 gate evidence, and verified all 14 content gates pass.
+Generated with gflow, inspected, and placed raster illustrations fig-U16-7, fig-U16-8, fig-U16-9, and fig-U16-10 in English and Urdu files for GQUR-301 Unit 16, updated manifests and G2 gate evidence, and verified all 14 content gates pass cleanly.
 
 ## Outcome
 
 - Impact: illustrate for GQUR-301 Unit 16 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 25 file(s), listed above.
+- Files: 26 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated with gflow, inspected, and placed raster illustrations fig-U16-7, fig-U16-8, fig-U16-9, and fig-U16-10 in English and Urdu files for GQUR-301 Unit 16, refreshed G2 gate evidence, and verified all 14 content gates pass.
+- Shipped / changed: Generated with gflow, inspected, and placed raster illustrations fig-U16-7, fig-U16-8, fig-U16-9, and fig-U16-10 in English and Urdu files for GQUR-301 Unit 16, updated manifests and G2 gate evidence, and verified all 14 content gates pass cleanly.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
