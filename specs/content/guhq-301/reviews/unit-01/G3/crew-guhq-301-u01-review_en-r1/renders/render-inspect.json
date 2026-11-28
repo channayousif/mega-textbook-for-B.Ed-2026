@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "course_code": "GUHQ-301",
+  "unit_no": 1,
+  "locale": "en",
+  "base": "https://textbook.com.pk",
+  "route": "/semester-3/guhq-301/unit-01",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "unit-assessment"
+  ],
+  "figures": [
+    "fig-U1-1",
+    "fig-U1-2",
+    "fig-U1-3",
+    "fig-U1-4"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "topic-01: visible image did not load: /img/figures/guhq-301/unit-01/fig-U1-1.svg",
+    "topic-02: visible image did not load: /img/figures/guhq-301/unit-01/fig-U1-4.svg"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-11-28T12:54:50.689Z"
+}
