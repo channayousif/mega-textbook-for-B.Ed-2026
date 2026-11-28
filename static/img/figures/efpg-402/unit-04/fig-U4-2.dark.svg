@@ -26,8 +26,8 @@ text { font-size: 14px; fill: var(--ink); }
 <text class="h" x="390" y="150" text-anchor="middle">Visual &amp; Auditory Media</text>
 <text class="cell" x="390" y="172" text-anchor="middle">Charts, recorded videos, educational animations, slide presentations</text>
 
-<text class="h" x="390" y="242" text-anchor="middle">Demonstrations &amp; Working Models</text>
-<text class="cell" x="390" y="264" text-anchor="middle">Teacher demonstrations, exhibits, low-cost functional apparatus</text>
+<text class="h" x="390" y="242" text-anchor="middle">Contrived Experiences &amp; Working Models</text>
+<text class="cell" x="390" y="264" text-anchor="middle">Working models, cutaways, demonstrations, low-cost functional apparatus</text>
 
 <text class="h" x="390" y="340" text-anchor="middle">Direct Purposeful Experiences</text>
 <text class="cell" x="390" y="362" text-anchor="middle">Hands-on student experiments, handling real specimens, fieldwork (Most concrete)</text>

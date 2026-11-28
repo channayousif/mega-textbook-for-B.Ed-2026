@@ -9,8 +9,8 @@ Contract: `specs/016-concept-graph-v4/contracts/concept-graph.md`. Assessment it
 | CON:EFPG-402-4-3 | Safe use of laboratory equipment | تجربہ گاہ کے آلات کا محفوظ استعمال | - | 4.2 | SLO:EFPG-402-4-1 | MCQ-03, MCQ-04, RRQ-04, ERQ-02, ERQ-05 |
 | CON:EFPG-402-4-4 | Low-cost and improvised teaching aids | کم خرچ اور خود ساختہ تدریسی معاونات | CON:EFPG-402-4-1 | 4.3 | SLO:EFPG-402-4-2 | MCQ-05, MCQ-06, RRQ-05, RRQ-06, ERQ-03, ERQ-05 |
 | CON:EFPG-402-4-5 | ICT tools in science teaching | سائنس تدریس میں آئی سی ٹی کے آلات | CON:EFPG-402-4-1 | 4.4 | SLO:EFPG-402-4-2 | MCQ-07, MCQ-08, RRQ-07, RRQ-08, ERQ-04, ERQ-05 |
-| CON:EFPG-402-4-6 | Science exhibitions as learning events | تعلیمی تقریب کے طور پر سائنس نمائشیں | CON:EFPG-402-4-4 | 4.5 | SLO:EFPG-402-4-2 | MCQ-09, RRQ-09, ERQ-05 |
-| CON:EFPG-402-4-7 | Field trips and community resources | فیلڈ ٹرپس اور کمیونٹی وسائل | CON:EFPG-402-4-1 | 4.5 | SLO:EFPG-402-4-2 | MCQ-10, RRQ-10, ERQ-05 |
+| CON:EFPG-402-4-6 | Science exhibitions as learning events | تعلیمی تقریب کے طور پر سائنس نمائشیں | CON:EFPG-402-4-4 | 4.5 | SLO:EFPG-402-4-2 | RRQ-10, ERQ-05 |
+| CON:EFPG-402-4-7 | Field trips and community resources | فیلڈ ٹرپس اور کمیونٹی وسائل | CON:EFPG-402-4-1 | 4.5 | SLO:EFPG-402-4-2 | MCQ-09, MCQ-10, RRQ-09, ERQ-05 |
 
 ## Urdu label provenance for G5
 
