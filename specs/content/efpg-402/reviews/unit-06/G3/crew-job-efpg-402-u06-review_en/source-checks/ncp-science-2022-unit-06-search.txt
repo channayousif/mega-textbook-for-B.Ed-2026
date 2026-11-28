@@ -1,0 +1,45 @@
+Source support check: ncp-science-2022 (National Curriculum of Pakistan 2022-23: Science, Grades 4-8)
+Date: 2026-11-28 (UTC)
+
+Bound excerpt: specs/content/efpg-402/sources/texts/ncp-science-2022.md
+  11 excerpts: foreword, domains, scientific enquiry, models, Science in Context, domain topics,
+  health/biotechnology SLOs, Benchmark VII, energy SLOs. No laboratory-management content.
+
+Independent check of the full published PDF (74 pages, 19.6 MB) downloaded from the cited URL:
+  curl -s --max-time 120 -o .crew/ncp-science.pdf 'https://ncc.gov.pk/SiteImage/Misc/files/8_%20NCP%20Science%20PG%204-8.pdf'  -> exit 0, 19606893 bytes
+  pdftotext -layout .crew/ncp-science.pdf .crew/ncp-science.txt  -> exit 0, 2086 lines
+  grep -in 'laborator|lab |safety|storage|store|label|inventory|first aid|chemical|waste|disposal|hazard|goggle|spectacle|apparatus|practical' .crew/ncp-science.txt
+
+Term counts in the full PDF text:
+  layout : 0
+  gangway : 0
+  exit : 1
+  storage : 0
+  compatibility : 0
+  GHS : 0
+  stock register : 0
+  inventory : 0
+  neutralise : 0
+  disposal : 0
+  sink : 1
+  eyewash : 0
+  goggles : 0
+  personal protective : 0
+  first aid : 2
+  safety : 2
+  hazard : 1
+
+Only laboratory-adjacent passages found:
+  p.5 Scientific Enquiry: "Know the meaning of hazard symbols, and consider them when planning
+    practical work"; "Enlist and practice safety procedures while carrying out practical activities".
+  p.23-25 Benchmark IV: "Recognize the items of the first aid box."; "Use a first aid box to dress a wound."
+  p.66 Technology in Everyday Life: "Practice safety measures for earthquake and fire drill".
+
+Absent from the full PDF: laboratory layout, gangways, emergency exits, chemical storage or
+compatibility grouping, GHS labelling elements, stock registers or inventory, waste neutralisation
+or disposal, eyewash stations, PPE/goggles, and teacher laboratory-management duties.
+
+Conclusion: ncp-science-2022 does not ground U6-02, U6-03, U6-04, U6-05, U6-06 or U6-09, and only
+partially touches U6-07 (hazard symbols, safety procedures) and U6-08 (first aid box). The unit
+sources declaration that each sub-topic is "also grounded in a source with a bound excerpt
+(ncp-science-2022)" is not supported.
