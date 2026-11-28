@@ -77,7 +77,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Generated, inspected, and placed all GSOS-301 Unit 4 raster illustrations (banner fig-U4-5, topic scenes fig-U4-6 and fig-U4-7) in English unit files, updated manifests and task tracker, refreshed G2 gate evidence, and verified all 14 content gates.
+Generated, inspected, and placed all GSOS-301 Unit 4 raster illustrations and banner in the English unit files, updated manifests and task tracker, and refreshed G2 gate evidence with all 14 content gates passing.
 
 ## Outcome
 
@@ -89,11 +89,11 @@ Generated, inspected, and placed all GSOS-301 Unit 4 raster illustrations (banne
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated, inspected, and placed all GSOS-301 Unit 4 raster illustrations (banner fig-U4-5, topic scenes fig-U4-6 and fig-U4-7) in English unit files, updated manifests and task tracker, refreshed G2 gate evidence, and verified all 14 content gates.
+- Shipped / changed: Generated, inspected, and placed all GSOS-301 Unit 4 raster illustrations and banner in the English unit files, updated manifests and task tracker, and refreshed G2 gate evidence with all 14 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - No Urdu mirror exists yet for Unit 4; G4 translation remains pending until independent G3 review confirms English repairs.
+  - No Urdu mirror exists yet for Unit 4; G4 translation remains blocked until independent G3 review confirms English repairs.
   - G3 English review remains open and unsigned per ADR-0019.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
