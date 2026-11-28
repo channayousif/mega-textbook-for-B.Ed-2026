@@ -13,8 +13,9 @@ import {
 type Form = { note: string; except: string[]; remakeKey: string; answer: string };
 const emptyForm = (): Form => ({ note: '', except: [], remakeKey: '', answer: '' });
 
+// Underlined so a link inside crew-written text is not told apart by colour alone (axe link-in-text-block).
 function ExtLink({ href, children }: { href: string; children: React.ReactNode }): React.ReactElement {
-  return <a href={href} target="_blank" rel="noreferrer">{children}</a>;
+  return <a href={href} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>{children}</a>;
 }
 
 /** What the owner needs to see to decide, per kind. */
