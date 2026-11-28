@@ -90,7 +90,7 @@ stops and asks the owner, never falling back (the next route could spend credits
 |---|---|---|
 | image | agy, agy2 (second Google account, HOME=~/.agy2), gflow (Nano Banana), gflow2 (Nano Banana, second account), codex, meta (Meta AI over CDP in the davinci workspace Chrome, D-2026-0102) | `generate-illustration.mjs`; quota in `~/.cache/mega-book/image-quota.json` |
 | clip | gflow.video, gflow2.video (second account's Flow credits), manual.flow | `teaser-clips.mjs`; quota in `~/.cache/mega-book/media-quota.json` |
-| overview | nlm | NotebookLM; expired cookies are `unavailable`; refresh from davinci's workspace Chrome: `nlm login --provider openclaw --cdp-url http://127.0.0.1:18802` |
+| overview | nlm | NotebookLM; expired cookies are `unavailable`; refresh from davinci's workspace Chrome: `nlm login --provider openclaw --cdp-url http://127.0.0.1:18802`; logins last about five hours, so `scripts/media/nlm-health.mjs` (tick.sh, every two hours from 14:00 PKT through media hours) checks both profiles, refreshes them from davinci and keeps a failing profile's notebook lane idle |
 | schematic | codex, claude | generate-figures |
 
 - **gflow.video** (`producers/gflow-video.mjs`): one Flow project per teaser

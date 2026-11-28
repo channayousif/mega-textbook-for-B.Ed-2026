@@ -19,6 +19,9 @@ bash scripts/crew/sync-owner-checkout.sh || true
 node scripts/crew/crew.mjs plan
 node scripts/crew/crew.mjs tick
 node scripts/crew/crew.mjs status > /dev/null
+# NotebookLM logins: checked once a day from 14:00 PKT (before media hours), refreshed from davinci
+# when expired; a failing profile keeps its notebook lane idle and tells the owner. Never fails the tick.
+timeout 600 node scripts/media/nlm-health.mjs --if-due || echo "nlm-health failed"
 # Owner G3 decisions from the sign-off desk become one PR (ADR-0032). The service key lives only in
 # $STATE/signoff.env and only this subshell sees it, so crew workers never inherit it. A failed sync
 # must not fail the tick.
